@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block mainbody %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-brand">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+      <div class="header col-md-8">
+        <h1>PokeAPI moderation</h1>
+      </div>
+      <div class="col-md-2">
+        </div>
+    </div><!-- /.header row -->
+    <div class="row pad_top">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <ul>
+                <li><a href="/moderate/pokemon/">Pokemon</a></li>
+                <li>Moves</li>
+                <li>Descriptions</li>
+                <li>Games</li>
+                <li>Items</li>
+                <li>Berries</li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div><!--row-->
+
+    </div><!-- /.container -->
+
+{% endblock %}

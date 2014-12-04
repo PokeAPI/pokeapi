@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block mainbody %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-brand">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="#">About</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+      <div class="header col-md-8">
+        <h1>Pokéapi - The Pokémon RESTful API</h1>
+      </div>
+      <div class="col-md-2">
+        </div>
+    </div><!-- /.header row -->
+    <div class="row pad_top">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <p class="lead">
+                What is this?
+            </p>
+            <div class="well">
+                <p>
+                    This website provides a RESTful API interface to <b>{{ site_data.total_items|intcomma }}</b> objects
+                    related to <a href="https://en.wikipedia.org/wiki/Pokemon">Pokémon</a>. We specifically cover the video game franchise, though we'd like to cover the card game too. Using this website you can consume information on Pokémon, their moves, abilities, types, egg groups and much much more.
+                </p>
+            </div>
+            <p class="lead">
+                What exactly is an API?
+            </p>
+            <div class="well">
+                <p>
+                    This is probably worth clearing up very quickly for those who don't know.<br />
+                    An API (Application Programming Interface) is a set of interfaces (in this case, url links)
+                    that are publicly available, that allow developers to interact with an application.<br />
+                    In this instance; the application is a database of <b>{{ site_data.total_items|intcomma }}</b> pokemon-related objects.
+                </p>
+            </div>
+            <p class="lead">
+                Isn't there 101 other Pokémon websites already?
+            </p>
+            <div class="well">
+                <p>
+                    Yes and that's exactly the problem!
+                </p>
+                <p>
+                    101 instances of the same website means 101 instances of the <b>same data</b>.
+                </p>
+                <p>
+                    We aim to provide a <b>single database</b> that any number of other websites
+                    can consume and use.
+                </p>
+                <p>
+                    Often, and especially when new Pokémon games or updates are released, the 101+ websites
+                    take <b>weeks</b> to update as people have to enter the same information in all those different places.
+                    </p>
+                    <p>This solves that problem.
+                </p>
+                <p>
+                    If all those sites consumed their data from here, they would have the exact same information that is updated at exactly the same time, with no errors between each website.
+                </p>
+                <p>
+                    The overall benefit is a better collaboration and consistency across all the different Pokémon
+                    websites and applications. It's good for all!
+                </p>
+            </div>
+            <p class="lead">
+                How much information is stored here?
+            </p>
+            <div class="well">
+                <p>
+                    I'm glad you asked because we've got an impressive amount of data!
+                </p>
+                <p>
+                    We currently have <b>{{ site_data.total_items|intcomma }}</b> individual items in our database:
+                </p>
+                <ul>
+                    <li>{{ site_data.pokemon }} Pokémon</li>
+                    <li>{{ site_data.moves }} Moves</li>
+                    <li>{{site_data.move_pokes|intcomma }} Pokémon<->move links</li>
+                    <li>{{ site_data.abilities }} Abilities</li>
+                    <li>{{ site_data.types }} Types</li>
+                    <li>{{ site_data.egg_groups }} Egg groups</li>
+                    <li>{{ site_data.descriptions }} Descriptions</li>
+                    <li>{{ site_data.sprites }} Sprites</li>
+                    <li>{{ site_data.games }} Games</li>
+                </ul>
+                <p class="lead">The server has processed <b>{{ total|intcomma }}</b> api calls at an average of <b>{{ average_day|intcomma }}</b> calls per day.</p>
+            </div>
+            <p class="lead">
+                The API is missing stuff!
+            </p>
+            <div class="well">
+                <p>
+                    I know! I'm a full time developer evangelist at <a href="https://twilio.com">Twilio</a> and I don't have
+                    much free time. Currently, I plan to add the following data:
+                </p>
+                <ul>
+                    <li><b>Items</b> - for each game, with different descriptions.</li>
+                    <li><b>Gym leaders / Trainers</b> - With details on their pokemon.</li>
+                    <li><b>Pokedex</b> - individual pokedex, with entire lists of their pokemon.</li>
+                    <li><b>Pokemon cards</b> - from each set, starting with the most recent.</li>
+                </ul>
+                <p>
+                    and I'd also love to add:
+                </p>
+                <ul>
+                    <li>API status information</li>
+                    <li>API status tweetbot</li>
+                    <li>A larger webserver to handle more traffic.</li>
+                </ul>
+                <p>
+                    If you're really serious about using this service then I could do
+                    with support through donations or moderation of the content. I don't want to make a profit from this, but I do want to keep providing it. <b>Just $5 will keep this site up for one extra month</b>. I have
+                    built nearly all of the data model needed for the above, I just need
+                    the content to be filled in!
+                </p>
+                <p>
+                    If you'd like to help, email me at <a href="mailto:hello@phalt.co">hello@phalt.co</a>
+                    with the subject line <b>support pokeapi</b> and I'll get in touch asap.
+                </p>
+            </div>
+            <p class="lead">
+                So who built this?
+            </p>
+            <div class="well">
+                <p>
+                    I'm Paul Hallett, a developer evangelist obsessed with creating things
+                    that benefit people. This was a weekend project of mine that has since grown
+                    beyond a single weekend's worth of work.
+                    <br />
+                    Find out more about me <a href="http://phalt.co">here</a>
+                </p>
+                <p>
+                    I gathered the information on this site from various resources:
+                </p>
+                <ul>
+                    <li><a href="https://github.com/veekun">Veekun</a> had a huge bunch of CSV's that
+                        I used to build most of the data on the site.</li>
+                    <li><a href="http://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a> has a tonne of extra information that proved useful when designing the data model.</li>
+                </ul>
+                <p>
+                    I'd also like to thank:
+                </p>
+                <ul>
+                    <li>Laven Pillay, who scraped together most of the sprites used on the site.</li>
+                </ul>
+            </div>
+            <p class="lead">
+                What's the technology stack?
+            </p>
+            <div class="well">
+                <p>
+                    The website framework is <a href="http://djangoproject.com">Django</a>,
+                    a super awesome framework built around <a hre="http://python.org">Python</a>.<br />
+                    We use a <a href="www.postgresql.org">Postgres</a> database to store all our data.<br />
+                    We use <a href="http://django-tastypie.readthedocs.org/en/latest/">Django-tastypie</a> to expose our data through a RESTful API.<br />
+                    We're hosted on <a href="https://www.digitalocean.com/?refcode=eab2fea41bc6
+">DigitalOcean</a> servers, click the link to help keep the site running!.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div><!--row-->
+
+    </div><!-- /.container -->
+
+{% endblock %}

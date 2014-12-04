@@ -1,0 +1,182 @@
+[
+    {
+        "pk": 1,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T13:09:51.769Z",
+            "name": "normal",
+            "created": "2013-11-02T12:08:58.787Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:04.348Z",
+            "name": "fighting",
+            "created": "2013-11-02T12:09:04.348Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T13:14:44.369Z",
+            "name": "flying",
+            "created": "2013-11-02T12:09:07.305Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:13.301Z",
+            "name": "poison",
+            "created": "2013-11-02T12:09:13.301Z"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:19.446Z",
+            "name": "ground",
+            "created": "2013-11-02T12:09:19.446Z"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:21.887Z",
+            "name": "rock",
+            "created": "2013-11-02T12:09:21.887Z"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:28.395Z",
+            "name": "bug",
+            "created": "2013-11-02T12:09:28.395Z"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:35.820Z",
+            "name": "ghost",
+            "created": "2013-11-02T12:09:35.820Z"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:41.060Z",
+            "name": "steel",
+            "created": "2013-11-02T12:09:41.060Z"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:46.396Z",
+            "name": "fire",
+            "created": "2013-11-02T12:09:46.396Z"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:09:59.942Z",
+            "name": "water",
+            "created": "2013-11-02T12:09:59.942Z"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:03.889Z",
+            "name": "grass",
+            "created": "2013-11-02T12:10:03.889Z"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:09.488Z",
+            "name": "electric",
+            "created": "2013-11-02T12:10:09.488Z"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:15.089Z",
+            "name": "pyschic",
+            "created": "2013-11-02T12:10:15.089Z"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:18.367Z",
+            "name": "ice",
+            "created": "2013-11-02T12:10:18.367Z"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:20.353Z",
+            "name": "dragon",
+            "created": "2013-11-02T12:10:20.353Z"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:25.862Z",
+            "name": "dark",
+            "created": "2013-11-02T12:10:25.862Z"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:29.507Z",
+            "name": "fairy",
+            "created": "2013-11-02T12:10:29.507Z"
+        }
+    },
+    {
+        "pk": 10001,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:29.507Z",
+            "name": "unknown",
+            "created": "2013-11-02T12:10:29.507Z"
+        }
+    },
+    {
+        "pk": 10002,
+        "model": "pokemon.type",
+        "fields": {
+            "modified": "2013-11-02T12:10:29.507Z",
+            "name": "shadow",
+            "created": "2013-11-02T12:10:29.507Z"
+        }
+    }
+]

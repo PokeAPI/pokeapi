@@ -1,0 +1,27 @@
+pokedex_id,local_language_id,name,description
+1,6,National,Komplette Nationale Dex
+1,9,National,Entire National dex
+2,6,Kanto,Rot/Blau/Gelb Kanto Dex
+2,9,Kanto,Red/Blue/Yellow Kanto dex
+3,6,Original Johto,"Gold/Silber/Kristall Johto Dex — Auch der ""Neue"" Pokédex im Spiel genannt"
+3,9,Original Johto,"Gold/Silver/Crystal Johto dex—called the ""New"" Pokédex in-game"
+4,6,Hoenn,Rubin/Saphir/Smaragd Hoenn Dex
+4,9,Hoenn,Ruby/Sapphire/Emerald Hoenn dex
+5,6,Original Sinnoh,Diamant/Perl Sinnoh Dex
+5,9,Original Sinnoh,Diamond/Pearl Sinnoh dex
+6,6,Erweitertes Sinnoh,Platin Sinnoh Dex — eine erweiterte Version von Diamant und Perl
+6,9,Extended Sinnoh,Platinum Sinnoh dex—an extended version of Diamond and Pearl's
+7,6,Aktualisiertes Johto,HeartGold/SoulSilver Johto Dex — Dex aus Gold/Silber/Kristall um Fähigkeiten basierende Entwicklungen aus Generation IV erweitert
+7,9,Updated Johto,"HeartGold/SoulSilver Johto dex—Gold/Silver/Crystal's, extended to add move-based Generation IV evolutions"
+8,6,Original Einall,Schwarz/Weiß Einall Dex
+8,9,Original Unova,Black/White Unova dex
+9,6,Aktualisiertes Einall,Schwarz 2/Weiß 2 Einall Dex
+9,9,Updated Unova,Black 2/White 2 Unova dex
+11,6,Gallerie,Pokémon Conquest Galerie Reihenfolge
+11,9,Gallery,Pokémon Conquest gallery order
+12,6,Kalos-Zentral,
+12,9,Central Kalos,
+13,6,Kalos-Küste,
+13,9,Coastal Kalos,
+14,6,Kalos-Gebirge,
+14,9,Mountain Kalos,

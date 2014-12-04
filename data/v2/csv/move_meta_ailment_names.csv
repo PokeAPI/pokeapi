@@ -1,0 +1,21 @@
+move_meta_ailment_id,local_language_id,name
+-1,9,????
+0,9,none
+1,9,Paralysis
+2,9,Sleep
+3,9,Freeze
+4,9,Burn
+5,9,Poison
+6,9,Confusion
+7,9,Infatuation
+8,9,Trap
+9,9,Nightmare
+12,9,Torment
+13,9,Disable
+14,9,Yawn
+15,9,Heal Block
+17,9,No type immunity
+18,9,Leech Seed
+19,9,Embargo
+20,9,Perish Song
+21,9,Ingrain

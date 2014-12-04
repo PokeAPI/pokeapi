@@ -1,0 +1,6 @@
+*.pyc
+*/media/*
+*/static/*
+*.DS_STORE
+db.*
+venv*

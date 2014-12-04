@@ -1,0 +1,4 @@
+move_battle_style_id,local_language_id,name
+1,9,Attack
+2,9,Defense
+3,9,Support

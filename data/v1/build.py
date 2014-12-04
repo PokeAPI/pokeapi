@@ -1,9 +1,24 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+"""
+This is very, very ugly. PokeAPI V1 was built in one day when I didn't quite
+understand how to process all this data, so it takes in a bunch of csv stuff
+and dumps it into the models.
+
+I used to go into the django shell and run these commands one at a time to
+load the data into the database on prod. It took around 30-40 minutes to run
+some of the scripts.
+
+The builder for V2 will be exceptionally better than this.
+
+So - if you want to see some of the worst code I've ever written, look below:
+
+- Paul Hallett
+
+"""
+
 import csv
-import time
-import re
 
 from pokemon_v1.models import *
 

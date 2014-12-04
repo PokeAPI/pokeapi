@@ -17,24 +17,25 @@ Quite a lot of data is missing from the V1 API.
 
 ## Setup
 
-1. Download this source code into a working directory.
+- Download this source code into a working directory.
 
-2. Install the requirements using pip::
-
-    $ make install
-
+- Install the requirements using pip:
+```
+$ make install
+```
 This will install all the required packages and libraries for using PokeAPI
 
-3. Set up the local developer environment using the following command::
-
-    $ make setup
-
-4. Run the server using the following command::
-
-    $ make serve
-
+- Set up the local developer environment using the following command:
+```
+$ make setup
+```
+- Run the server using the following command::
+```
+$ make serve
+```
 Visit localhost:8000 to see the running website!
 
-If you ever need to wipe the database use this command::
-
-    $ make wipe_db
+If you ever need to wipe the database use this command:
+```
+$ make wipe_db
+```

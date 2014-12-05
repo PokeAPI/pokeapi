@@ -54,13 +54,13 @@ To contribute to this repository:
 - [Fork the project to your own GitHub profile](https://help.github.com/articles/fork-a-repo/)
 
 - Download the project using git clone:
-
-    git clone git@github.com:<YOUR_USERNAME>/pokeapi.git
-
+```
+git clone git@github.com:<YOUR_USERNAME>/pokeapi.git
+```
 - Create a new branch with a descriptive name:
-
-    git checkout -b my_new_branch
-
+```
+git checkout -b my_new_branch
+```
 - Write some code, fix something, and add a test to prove that it works. **No pull request will be accepted without tests passing, or without new tests if new features are added.**
 
 - Commit your code and push it to GitHub

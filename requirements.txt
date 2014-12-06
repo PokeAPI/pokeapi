@@ -17,3 +17,4 @@ python-mimeparse==0.1.4
 simplejson==3.6.5
 six==1.8.0
 wsgiref==0.1.2
+django-cors-headers=0.13

@@ -4,7 +4,7 @@ import os
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

@@ -11,3 +11,4 @@ class HeaderTest(TestCase):
     )
     
     self.assertEqual(response['Access-Control-Allow-Origin'], '*')
+

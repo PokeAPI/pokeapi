@@ -7,7 +7,7 @@ class HeaderTest(TestCase):
 
     response = self.client.get(
       '/api/v1/pokemon/1/',
-      HTTP_ORIGIN="http://anpeterse.me"
+      HTTP_ORIGIN="http://pokemon.com"
     )
     
     self.assertEqual(response['Access-Control-Allow-Origin'], '*')

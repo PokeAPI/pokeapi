@@ -4,7 +4,6 @@ import os
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
-
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -62,6 +61,7 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,9 +119,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.humanize',
+    'corsheaders'
 ) + CUSTOM_APPS
 
 
 API_LIMIT_PER_PAGE = 1
 
 TASTYPIE_DEFAULT_FORMATS = ['json']
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_METHODS = (
+    'GET'
+)

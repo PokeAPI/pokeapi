@@ -108,7 +108,7 @@ SECRET_KEY = os.environ.get(
 
 CUSTOM_APPS = (
     'tastypie',
-    'pokemon_v1',
+    'pokemon',
     'hits',
 )
 INSTALLED_APPS = (

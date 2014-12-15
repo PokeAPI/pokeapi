@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from pokemon_v1.models import (
+from .models import (
     Pokemon, Sprite, Move, Description, Game,
     EggGroup, Type, Ability, Evolution, MovePokemon,
     TypeChart, Pokedex

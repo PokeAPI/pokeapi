@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models, migrations
 import imagekit.models.fields
-import pokemon_v1.utils
+import pokemon.utils
 
 
 class Migration(migrations.Migration):
@@ -109,7 +109,7 @@ class Migration(migrations.Migration):
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('learn_type', models.CharField(default=b'level up', max_length=15, choices=[(b'level up', b'level up'), (b'machine', b'machine'), (b'egg move', b'egg move'), (b'tutor', b'tutor'), (b'other', b'other')])),
                 ('level', models.IntegerField(default=0, max_length=6, null=True, blank=True)),
-                ('move', models.ForeignKey(related_name='pokemon', blank=True, to='pokemon_v1.Move', null=True)),
+                ('move', models.ForeignKey(related_name='pokemon', blank=True, to='pokemon.Move', null=True)),
             ],
             options={
                 'abstract': False,
@@ -154,9 +154,9 @@ class Migration(migrations.Migration):
                 ('speed', models.IntegerField(max_length=4)),
                 ('total', models.IntegerField(max_length=6)),
                 ('egg_cycles', models.IntegerField(max_length=6)),
-                ('abilities', models.ManyToManyField(to='pokemon_v1.Ability', null=True, blank=True)),
-                ('descriptions', models.ManyToManyField(to='pokemon_v1.Description', null=True, blank=True)),
-                ('egg_group', models.ManyToManyField(to='pokemon_v1.EggGroup', null=True, blank=True)),
+                ('abilities', models.ManyToManyField(to='pokemon.Ability', null=True, blank=True)),
+                ('descriptions', models.ManyToManyField(to='pokemon.Description', null=True, blank=True)),
+                ('egg_group', models.ManyToManyField(to='pokemon.EggGroup', null=True, blank=True)),
             ],
             options={
                 'abstract': False,
@@ -170,7 +170,7 @@ class Migration(migrations.Migration):
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('name', models.CharField(max_length=50)),
-                ('image', imagekit.models.fields.ProcessedImageField(upload_to=pokemon_v1.utils.unique_filename)),
+                ('image', imagekit.models.fields.ProcessedImageField(upload_to=pokemon.utils.unique_filename)),
             ],
             options={
                 'abstract': False,
@@ -197,8 +197,8 @@ class Migration(migrations.Migration):
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('ttype', models.CharField(blank=True, max_length=15, null=True, choices=[(b'weak', b'weak'), (b'super effective', b'super effective'), (b'resistant', b'resistant'), (b'ineffective', b'ineffective'), (b'noeffect', b'noeffect'), (b'resist', b'resist')])),
-                ('frm', models.ForeignKey(related_name='type_frm', blank=True, to='pokemon_v1.Type', null=True)),
-                ('to', models.ForeignKey(related_name='type_to', blank=True, to='pokemon_v1.Type', null=True)),
+                ('frm', models.ForeignKey(related_name='type_frm', blank=True, to='pokemon.Type', null=True)),
+                ('to', models.ForeignKey(related_name='type_to', blank=True, to='pokemon.Type', null=True)),
             ],
             options={
                 'abstract': False,
@@ -208,43 +208,43 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='pokemon',
             name='sprites',
-            field=models.ManyToManyField(to='pokemon_v1.Sprite', null=True, blank=True),
+            field=models.ManyToManyField(to='pokemon.Sprite', null=True, blank=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='pokemon',
             name='types',
-            field=models.ManyToManyField(to='pokemon_v1.Type', null=True, blank=True),
+            field=models.ManyToManyField(to='pokemon.Type', null=True, blank=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='movepokemon',
             name='pokemon',
-            field=models.ForeignKey(related_name='move', blank=True, to='pokemon_v1.Pokemon', null=True),
+            field=models.ForeignKey(related_name='move', blank=True, to='pokemon.Pokemon', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='move',
             name='etype',
-            field=models.ManyToManyField(to='pokemon_v1.Type', null=True),
+            field=models.ManyToManyField(to='pokemon.Type', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='evolution',
             name='frm',
-            field=models.ForeignKey(related_name='frm_evol_pokemon', blank=True, to='pokemon_v1.Pokemon', null=True),
+            field=models.ForeignKey(related_name='frm_evol_pokemon', blank=True, to='pokemon.Pokemon', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='evolution',
             name='to',
-            field=models.ForeignKey(related_name='to_evol_pokemon', blank=True, to='pokemon_v1.Pokemon', null=True),
+            field=models.ForeignKey(related_name='to_evol_pokemon', blank=True, to='pokemon.Pokemon', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='description',
             name='game',
-            field=models.ManyToManyField(to='pokemon_v1.Game', null=True, blank=True),
+            field=models.ManyToManyField(to='pokemon.Game', null=True, blank=True),
             preserve_default=True,
         ),
     ]

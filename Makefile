@@ -12,8 +12,7 @@ serve:
 	python manage.py runserver --settings=config.local
 
 test:
-	python manage.py test pokemon_v1 --settings=config.local
-	python manage.py test pokemon_v2 --settings=config.local
+	python manage.py test --settings=config.local
 
 clean:
 	rm -rf *.pyc

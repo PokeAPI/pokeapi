@@ -12,7 +12,7 @@ admin.autodiscover()
 
 
 # API v1
-from pokemon_v1.api import (
+from pokemon.api import (
     PokemonResource, TypeResource, AbilityResource, GameResource,
     SpriteResource, DescriptionResource, EggResource, MoveResource,
     PokedexResource

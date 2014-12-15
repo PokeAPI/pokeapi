@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 
-from pokemon_v1.models import (
+from pokemon.models import (
     Pokemon, Sprite, Move, Description, Game,
     EggGroup, Type, Ability, MovePokemon
 )

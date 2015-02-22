@@ -11,6 +11,8 @@ ADMINS = (
     ('Paul Hallett', 'paulandrewhallett@gmail.com'),
 )
 
+BASE_URL = 'http://pokeapi.co'
+
 MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False

@@ -1,4 +1,4 @@
-ability_id,version_group_id,language_id,flavor_text
+ability_id,ability_version_group_id,ability_language_id,ability_flavor_text
 1,5,9,Helps repel wild POKéMON.
 1,6,9,Helps repel wild POKéMON.
 1,7,9,Helps repel wild POKéMON.

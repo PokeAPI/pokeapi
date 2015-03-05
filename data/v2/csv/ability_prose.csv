@@ -1,4 +1,4 @@
-ability_id,local_language_id,short_effect,effect
+ability_id,ability_local_language_id,ability_short_effect,ability_effect
 1,9,Has a 10% chance of making target Pokémon [flinch]{mechanic:flinch} with each hit.,"This Pokémon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.
 
 This ability does not stack with a held item.

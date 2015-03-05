@@ -1,4 +1,4 @@
-ability_changelog_id,local_language_id,effect
+ability_changelog_id,ability_local_language_id,ability_effect
 1,9,Has no effect in battle.
 2,9,Does not prevent regular KOs from full [HP]{mechanic:hp}.
 3,9,Has no overworld effect.

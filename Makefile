@@ -1,9 +1,9 @@
 install:
-	sudo pip install -r requirements.txt
+	pip install -r requirements.txt
 
 setup:
 	python manage.py migrate --settings=config.local
-	python manage.py loaddata dev_data.json --settings=config.local
+	python manage.py loaddata dev-data.json --settings=config.local
 
 wipe_db:
 	rm -rf db.sqlite3

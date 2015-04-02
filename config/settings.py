@@ -8,7 +8,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Paul Hallett', 'paulandrewhallett@gmail.com'),
+    ('Zane Adickes', 'zaneadix@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pokeapi_co_db',
-        'USER': 'root',
+        'USER': 'zane',
         'PASSWORD': 'pokeapi',
         'HOST': 'localhost',
         'PORT': '',
@@ -108,7 +108,7 @@ SECRET_KEY = os.environ.get(
 
 CUSTOM_APPS = (
     'tastypie',
-    'pokemon',
+    'pokemon_v2',
     'hits',
 )
 INSTALLED_APPS = (

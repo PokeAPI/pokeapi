@@ -8,9 +8,9 @@ class AbilityDescription(models.Model):
 
   local_language_id = models.IntegerField()
 
-  short_effect = models.CharField(max_length=200)
+  short_effect = models.CharField(max_length=300)
 
-  effect = models.CharField(max_length=1000)
+  effect = models.CharField(max_length=2000)
 
 
 class AbilityFlavorText(models.Model):

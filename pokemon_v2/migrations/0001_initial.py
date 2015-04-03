@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('ability_id', models.IntegerField()),
                 ('local_language_id', models.IntegerField()),
                 ('short_effect', models.CharField(max_length=200)),
-                ('effect', models.CharField(max_length=1000)),
+                ('effect', models.CharField(max_length=2000)),
             ],
             options={
             },

@@ -434,30 +434,27 @@
             <p class="lead"> GET description/</p>
             <p class="lead"> GET description/ID/ </p>
             <h4>Example request</h4>
-            <pre>GET http://pokeapi.co/api/v1/description/1/</pre>
+            <pre>GET http://pokeapi.co/api/v1/description/2/</pre>
             <p>Result:</p>
             <pre class="pre-scrollable">
 {
-  "created": "2013-11-02T12:19:03.576753",
-  "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
-  "games": [
-    {
-      "name": "Pokemon Blue",
-      "resource_uri": "/api/v1/game/2/"
+    created: '2013-12-24T17:14:38.281429',
+    description: 'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKMON.',
+    games: [{
+        name: 'red(JPN)',
+        resource_uri: '/api/v1/game/1/'
+    }, {
+        name: 'green(JPN)',
+        resource_uri: '/api/v1/game/2/'
+    }],
+    id: 2,
+    modified: '2014-01-18T14:29:53.118541',
+    name: 'Bulbasaur_gen_1',
+    pokemon: {
+        name: 'bulbasaur',
+        resource_uri: '/api/v1/pokemon/1/'
     },
-    {
-      "name": "Pokemon Red",
-      "resource_uri": "/api/v1/game/1/"
-    }
-  ],
-  "id": 1,
-  "modified": "2013-11-02T12:19:24.334212",
-  "name": "Bulbasaur_red_blue",
-  "pokemon": {
-    "name": "bulbasaur",
-    "resource_uri": "/api/v1/pokemon/1/"
-  },
-  "resource_uri": "/api/v1/description/1/"
+    resource_uri: '/api/v1/description/2/'
 }
             </pre>
             <p>Fields:</p>

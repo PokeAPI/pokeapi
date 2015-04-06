@@ -12,9 +12,9 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='abilitydescription',
-            name='effect',
-            field=models.CharField(max_length=2001),
+            model_name='languagename',
+            name='language_id',
+            field=models.ForeignKey(related_name='language_id', blank=True, to='pokemon_v2.Language', null=True),
             preserve_default=True,
         ),
     ]

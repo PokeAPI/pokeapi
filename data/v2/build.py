@@ -1,16 +1,21 @@
 import csv
 import os
 
+from django.db import migrations
+
 from pokemon_v2.models import *
 
 
 data_location = 'data/v2/csv/'
+
+# migrations.RunSQL('INSERT INTO pokemon_v2_statname VALUES name=banana')
 
 
 def loadData(fileName):
   return csv.reader(open(data_location + fileName, 'rb'), delimiter=',')
 
 def clearTable(model):
+  print str(model)
   model.objects.all().delete()
 
 
@@ -19,7 +24,6 @@ def clearTable(model):
 ##############
 
 clearTable(Language)
-print str(Language)
 data = loadData('languages.csv')
 
 for index, info in enumerate(data):
@@ -145,6 +149,42 @@ for index, info in enumerate(data):
     versionName.save()
 
 
+
+###########
+#  STATS  #
+###########
+
+clearTable(Stat)
+data = loadData('stats.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    stat = Stat (
+        id = int(info[0]),
+        damage_class_id = int(info[3]) if info[3] else 0,
+        name = info[2],
+        is_battle_only = bool(info[3]),
+        game_index = int(info[3]) if info[3] else 0,
+      )
+    stat.save()
+
+
+clearTable(StatName)
+data = loadData('stat_names.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    statName = StatName (
+        stat = Stat.objects.filter(id = int(info[0]))[0],
+        language = Language.objects.filter(id = int(info[1]))[0],
+        name = info[2]
+      )
+    statName.save()
+
+
+
 ###############
 #  ABILITIES  #
 ###############
@@ -206,6 +246,170 @@ for index, info in enumerate(data):
         flavor_text = info[2]
       )
     abilityFlavorText.save()
+
+
+
+####################
+#  CHARACTERISTIC  #
+####################
+
+clearTable(Characteristic)
+data = loadData('characteristics.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = Characteristic (
+        id = int(info[0]),
+        stat = Stat.objects.filter(id = int(info[1]))[0],
+        gene_mod_5 = int(info[2])
+      )
+    model.save()
+
+
+clearTable(CharacteristicDescription)
+data = loadData('characteristic_text.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = CharacteristicDescription (
+        characteristic = Characteristic.objects.filter(id = int(info[0]))[0],
+        language = Language.objects.filter(id = int(info[1]))[0],
+        description = info[2]
+      )
+    model.save()
+
+
+
+###############
+#  EGG GROUP  #
+###############
+
+clearTable(EggGroup)
+data = loadData('egg_groups.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = EggGroup (
+        id = int(info[0]),
+        name = info[1]
+      )
+    model.save()
+
+
+clearTable(EggGroupName)
+data = loadData('egg_group_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = EggGroupName (
+        egg_group = EggGroup.objects.filter(id = int(info[0]))[0],
+        language = Language.objects.filter(id = int(info[1]))[0],
+        name = info[2]
+      )
+    model.save()
+
+
+
+#################
+#  GROWTH RATE  #
+#################
+
+clearTable(GrowthRate)
+data = loadData('growth_rates.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = GrowthRate (
+        id = int(info[0]),
+        name = info[1],
+        formula = info[2]
+      )
+    model.save()
+
+
+clearTable(GrowthRateDescription)
+data = loadData('growth_rate_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = GrowthRateDescription (
+        growth_rate = GrowthRate.objects.filter(id = int(info[0]))[0],
+        language = Language.objects.filter(id = int(info[1]))[0],
+        name = info[2]
+      )
+    model.save()
+
+
+
+############
+#  Nature  #
+############
+
+clearTable(Nature)
+data = loadData('natures.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    nature = Nature (
+        id = int(info[0]),
+        name = info[1],
+        decreased_stat_id = Stat.objects.filter(id = int(info[2]))[0],
+        increased_stat_id = Stat.objects.filter(id = int(info[3]))[0],
+        hates_flavor_id = info[4],
+        likes_flavor_id = info[5],
+        game_index = info[6]
+      )
+    nature.save()
+
+
+clearTable(NatureName)
+data = loadData('nature_names.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    natureName = NatureName (
+        nature = Nature.objects.filter(id = int(info[0]))[0],
+        language = Language.objects.filter(id = int(info[1]))[0],
+        name = info[2]
+      )
+    natureName.save()
+
+
+clearTable(NaturePokeathlonStat)
+data = loadData('nature_pokeathlon_stats.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    naturePokeathlonStat = NaturePokeathlonStat (
+        nature = Nature.objects.filter(id = int(info[0]))[0],
+        pokeathlon_stat_id = Stat.objects.filter(id = int(info[1]))[0],
+        max_change = info[2]
+      )
+    naturePokeathlonStat.save()
+
+
+clearTable(NatureBattleStylePreference)
+data = loadData('nature_battle_style_preferences.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = NatureBattleStylePreference (
+        nature = Nature.objects.filter(id = int(info[0]))[0],
+        move_battle_style_id = int(info[1]),
+        low_hp_preference = info[2],
+        high_hp_preference = info[3]
+      )
+    model.save()
 
 
 

@@ -6,6 +6,48 @@ from django.db import models
 #  ABSTRACT MODELS  #
 #####################
 
+class HasAbility(models.Model):
+
+  ability = models.ForeignKey('Ability', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+class HasCharacteristic(models.Model):
+
+  characteristic = models.ForeignKey('Characteristic', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+class HasDamageClass(models.Model):
+
+  damage_class_id = models.IntegerField(blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+class HasEggGroup(models.Model):
+
+  egg_group = models.ForeignKey('EggGroup', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+class HasGeneration(models.Model):
+
+  generation = models.ForeignKey('Generation', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+class HasGrowthRate(models.Model):
+
+  growth_rate = models.ForeignKey('GrowthRate', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
 class HasLanguage(models.Model):
 
   language = models.ForeignKey('Language', blank = True, null = True)
@@ -20,7 +62,9 @@ class HasName(models.Model):
   class Meta:
        abstract = True
 
-class IsName(HasLanguage, HasName):
+class HasNature(models.Model):
+
+  nature = models.ForeignKey('Nature', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -32,23 +76,9 @@ class HasOrder(models.Model):
   class Meta:
        abstract = True
 
-class HasAbility(models.Model):
+class HasStat(models.Model):
 
-  ability = models.ForeignKey('Ability', blank=True, null=True)
-
-  class Meta:
-       abstract = True
-
-class HasGeneration(models.Model):
-
-  generation = models.ForeignKey('Generation', blank=True, null=True)
-
-  class Meta:
-       abstract = True
-
-class HasVersionGroup(models.Model):
-
-  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
+  stat = models.ForeignKey('Stat', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -60,6 +90,17 @@ class HasType(models.Model):
   class Meta:
        abstract = True
 
+class HasVersionGroup(models.Model):
+
+  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+class IsName(HasLanguage, HasName):
+
+  class Meta:
+       abstract = True
 
 
 ####################
@@ -173,3 +214,99 @@ class TypeEfficacy(models.Model):
   target_type_id = models.IntegerField()
 
   damage_factor = models.IntegerField()
+
+
+
+#################
+#  STAT MODELS  #
+#################
+
+class Stat(HasName, HasDamageClass):
+
+  is_battle_only = models.BooleanField(default = False)
+
+  game_index = models.IntegerField()
+
+
+class StatName(IsName, HasStat):
+  pass
+
+
+
+###########################
+#  CHARACTERISTIC MODELS  #
+###########################
+
+class Characteristic(HasStat):
+
+  gene_mod_5 = models.IntegerField()
+
+
+class CharacteristicDescription(HasCharacteristic, HasLanguage):
+
+  description = models.CharField(max_length = 60)
+
+
+
+######################
+#  EGG GROUP MODELS  #
+######################
+
+class EggGroup(HasName):
+  pass
+
+
+class EggGroupName(IsName, HasEggGroup):
+  pass
+
+
+
+########################
+#  GROWTH RATE MODELS  #
+########################
+
+class GrowthRate(HasName):
+
+  formula = models.CharField(max_length = 500)
+
+
+class GrowthRateDescription(HasName, HasLanguage, HasGrowthRate):
+  pass
+
+
+
+###################
+#  NATURE MODELS  #
+###################
+
+class Nature(HasName):
+
+  decreased_stat_id = models.ForeignKey(Stat, blank = True, null = True, related_name = 'decreased')
+
+  increased_stat_id = models.ForeignKey(Stat, blank = True, null = True, related_name = 'increased')
+
+  hates_flavor_id = models.IntegerField()
+
+  likes_flavor_id = models.IntegerField()
+
+  game_index = models.IntegerField()
+
+
+class NatureName(IsName, HasNature):
+  pass
+
+
+class NaturePokeathlonStat(HasNature):
+
+  pokeathlon_stat_id = models.ForeignKey(Stat, blank = True, null = True)
+
+  max_change = models.IntegerField()
+
+
+class NatureBattleStylePreference(HasNature):
+
+  move_battle_style_id = models.IntegerField()
+
+  low_hp_preference = models.IntegerField()
+
+  high_hp_preference = models.IntegerField()

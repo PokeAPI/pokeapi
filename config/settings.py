@@ -8,7 +8,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Zane Adickes', 'zaneadix@gmail.com'),
+    ('Paul Hallett', 'paulandrewhallett@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pokeapi_co_db',
-        'USER': 'zane',
+        'USER': 'root',
         'PASSWORD': 'pokeapi',
         'HOST': 'localhost',
         'PORT': '',

@@ -13,6 +13,7 @@ class HasAbility(models.Model):
   class Meta:
        abstract = True
 
+
 class HasCharacteristic(models.Model):
 
   characteristic = models.ForeignKey('Characteristic', blank=True, null=True)
@@ -20,12 +21,14 @@ class HasCharacteristic(models.Model):
   class Meta:
        abstract = True
 
-class HasDamageClass(models.Model):
 
-  damage_class_id = models.IntegerField(blank = True, null = True)
+class HasDescription(models.Model):
+
+  description = models.CharField(max_length=200, default='')
 
   class Meta:
        abstract = True
+
 
 class HasEggGroup(models.Model):
 
@@ -34,12 +37,30 @@ class HasEggGroup(models.Model):
   class Meta:
        abstract = True
 
+
+class HasFlavorText(models.Model):
+
+  flavor_text = models.CharField(max_length=200)
+
+  class Meta:
+       abstract = True
+
+
+class HasGameIndex(models.Model):
+
+  game_index = models.IntegerField()
+
+  class Meta:
+       abstract = True
+
+
 class HasGeneration(models.Model):
 
   generation = models.ForeignKey('Generation', blank=True, null=True)
 
   class Meta:
        abstract = True
+
 
 class HasGrowthRate(models.Model):
 
@@ -48,6 +69,7 @@ class HasGrowthRate(models.Model):
   class Meta:
        abstract = True
 
+
 class HasLanguage(models.Model):
 
   language = models.ForeignKey('Language', blank = True, null = True)
@@ -55,12 +77,70 @@ class HasLanguage(models.Model):
   class Meta:
        abstract = True
 
-class HasName(models.Model):
 
-  name = models.CharField(max_length=30)
+class HasMetaAilment(models.Model):
+
+  move_meta_ailment = models.ForeignKey('MoveMetaAilment', blank = True, null = True)
 
   class Meta:
        abstract = True
+
+
+class HasMetaCategory(models.Model):
+
+  move_meta_category = models.ForeignKey('MoveMetaCategory', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasMove(models.Model):
+
+  move = models.ForeignKey('Move', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasMoveDamageClass(models.Model):
+
+  move_damage_class = models.ForeignKey('MoveDamageClass', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasMoveEffect(models.Model):
+
+  move_effect = models.ForeignKey('MoveEffect', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasMoveFlag(models.Model):
+
+  move_flag = models.ForeignKey('MoveFlag', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasMoveTarget(models.Model):
+
+  move_target = models.ForeignKey('MoveTarget', blank = True, null = True)
+
+  class Meta:
+       abstract = True
+
+
+class HasName(models.Model):
+
+  name = models.CharField(max_length=100)
+
+  class Meta:
+       abstract = True
+
 
 class HasNature(models.Model):
 
@@ -69,12 +149,14 @@ class HasNature(models.Model):
   class Meta:
        abstract = True
 
+
 class HasOrder(models.Model):
 
   order = models.IntegerField()
 
   class Meta:
        abstract = True
+
 
 class HasStat(models.Model):
 
@@ -83,12 +165,14 @@ class HasStat(models.Model):
   class Meta:
        abstract = True
 
+
 class HasType(models.Model):
 
   type = models.ForeignKey('Type', blank=True, null=True)
 
   class Meta:
        abstract = True
+
 
 class HasVersionGroup(models.Model):
 
@@ -97,7 +181,36 @@ class HasVersionGroup(models.Model):
   class Meta:
        abstract = True
 
+
 class IsName(HasLanguage, HasName):
+
+  class Meta:
+       abstract = True
+
+
+class IsDescription(HasLanguage, HasDescription):
+
+  class Meta:
+       abstract = True
+
+
+class IsEffectDescription(HasLanguage):
+
+  short_effect = models.CharField(max_length=300)
+
+  effect = models.CharField(max_length=4000)
+
+  class Meta:
+       abstract = True
+
+
+class IsName(HasLanguage, HasName):
+
+  class Meta:
+       abstract = True
+
+
+class IsFlavorText(HasLanguage, HasFlavorText):
 
   class Meta:
        abstract = True
@@ -172,16 +285,12 @@ class Ability(HasName, HasGeneration):
   is_main_series = models.BooleanField(default = False)
 
 
-class AbilityDescription(HasLanguage, HasAbility):
-
-  short_effect = models.CharField(max_length=300)
-
-  effect = models.CharField(max_length=2000)
+class AbilityDescription(IsEffectDescription, HasAbility):
+  pass
 
 
-class AbilityFlavorText(HasLanguage, HasAbility, HasVersionGroup):
-
-  flavor_text = models.CharField(max_length=100)
+class AbilityFlavorText(IsFlavorText, HasAbility, HasVersionGroup):
+  pass
 
 
 class AbilityName(IsName, HasAbility):
@@ -193,18 +302,16 @@ class AbilityName(IsName, HasAbility):
 #  TYPE MODELS  #
 #################
 
-class Type(HasName, HasGeneration):
-
-  damage_class_id = models.IntegerField(blank = True, null = True)
+class Type(HasName, HasGeneration, HasMoveDamageClass):
+  pass
 
 
 class TypeName(IsName, HasType):
   pass
 
 
-class TypeGameIndex(HasType, HasGeneration):
-
-  game_index = models.IntegerField()
+class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
+  pass
 
 
 class TypeEfficacy(models.Model):
@@ -221,7 +328,7 @@ class TypeEfficacy(models.Model):
 #  STAT MODELS  #
 #################
 
-class Stat(HasName, HasDamageClass):
+class Stat(HasName, HasMoveDamageClass):
 
   is_battle_only = models.BooleanField(default = False)
 
@@ -242,9 +349,8 @@ class Characteristic(HasStat):
   gene_mod_5 = models.IntegerField()
 
 
-class CharacteristicDescription(HasCharacteristic, HasLanguage):
-
-  description = models.CharField(max_length = 60)
+class CharacteristicDescription(HasCharacteristic, IsDescription):
+  pass
 
 
 
@@ -270,7 +376,7 @@ class GrowthRate(HasName):
   formula = models.CharField(max_length = 500)
 
 
-class GrowthRateDescription(HasName, HasLanguage, HasGrowthRate):
+class GrowthRateDescription(HasGrowthRate, IsDescription):
   pass
 
 
@@ -310,3 +416,176 @@ class NatureBattleStylePreference(HasNature):
   low_hp_preference = models.IntegerField()
 
   high_hp_preference = models.IntegerField()
+
+
+
+#################
+#  MOVE MODELS  #
+#################
+
+class Move(HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect, HasMoveTarget):
+
+  power = models.IntegerField(blank = True, null = True)
+
+  pp = models.IntegerField(blank = True, null = True)
+
+  accuracy = models.IntegerField(blank = True, null = True)
+
+  priority = models.IntegerField(blank = True, null = True)
+
+  move_effect_chance = models.IntegerField(blank = True, null = True)
+
+  contest_type_id = models.IntegerField(blank = True, null = True)
+
+  contest_effect_id = models.IntegerField(blank = True, null = True)
+
+  super_contest_effect_id = models.IntegerField(blank = True, null = True)
+
+
+class MoveName(HasMove, IsName):
+  pass
+
+
+class MoveFlavorText(HasMove, HasVersionGroup, IsFlavorText):
+  pass
+
+
+class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
+
+  power = models.IntegerField(blank = True, null = True)
+
+  pp = models.IntegerField(blank = True, null = True)
+
+  accuracy = models.IntegerField(blank = True, null = True)
+
+  move_effect_chance = models.IntegerField(blank = True, null = True)
+
+
+
+##############################
+#  MOVE DAMAGE CLASS MODELS  #
+##############################
+
+class MoveDamageClass(HasName):
+  pass
+
+
+class MoveDamageClassDescription(HasMoveDamageClass, IsDescription, HasName):
+  pass
+
+
+
+##############################
+#  MOVE BATTLE STYLE MODELS  #
+##############################
+
+class MoveBattleStyle(HasName):
+  pass
+
+
+class MoveBattleStyleName(IsName):
+
+  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True)
+
+
+
+########################
+#  MOVE EFFECT MODELS  #
+########################
+
+class MoveEffect(models.Model):
+  pass
+
+
+class MoveEffectDescription(HasMoveEffect, IsEffectDescription):
+  pass
+
+
+class MoveEffectChange(HasMoveEffect, HasVersionGroup):
+  pass
+
+
+class MoveEffectChangeDescription(HasLanguage):
+
+  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True)
+
+  effect = models.CharField(max_length=2000)
+
+
+
+######################
+#  MOVE FLAG MODELS  #
+######################
+
+class MoveFlag(HasName):
+  pass
+
+
+class MoveFlagDescription(HasMoveFlag, HasName, IsDescription):
+  pass
+
+
+class MoveFlagMap(HasMove, HasMoveFlag):
+  pass
+
+
+
+########################
+#  MOVE TARGET MODELS  #
+########################
+
+class MoveTarget(HasName):
+  pass
+
+
+class MoveTargetDescription(HasMoveTarget, IsDescription, HasName):
+  pass
+
+
+
+######################
+#  MOVE META MODELS  #
+######################
+
+class MoveMeta(HasMove, HasMetaAilment, HasMetaCategory):
+
+  min_hits = models.IntegerField(blank = True, null = True)
+
+  max_hits = models.IntegerField(blank = True, null = True)
+
+  min_turns = models.IntegerField(blank = True, null = True)
+
+  max_turns = models.IntegerField(blank = True, null = True)
+
+  drain = models.IntegerField(blank = True, null = True)
+
+  healing = models.IntegerField(blank = True, null = True)
+
+  crit_rate = models.IntegerField(blank = True, null = True)
+
+  ailment_chance = models.IntegerField(blank = True, null = True)
+
+  flinch_chance = models.IntegerField(blank = True, null = True)
+
+  stat_chance = models.IntegerField(blank = True, null = True)
+
+
+class MoveMetaAilment(HasName):
+  pass
+
+
+class MoveMetaAilmentName(HasMetaAilment, IsName):
+  pass
+
+
+class MoveMetaCategory(HasName):
+  pass
+
+
+class MoveMetaCategoryDescription(HasMetaCategory, IsDescription):
+  pass
+
+
+class MoveMetaStatChange(HasMove, HasStat):
+
+  change = models.IntegerField()

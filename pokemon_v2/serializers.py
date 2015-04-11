@@ -6,7 +6,10 @@ PokeAPI v2 serializers
 from rest_framework import serializers
 
 from pokemon_v2.models import (
-    Move
+    Ability,
+    Move,
+    Nature,
+    Type
 )
 
 
@@ -17,3 +20,30 @@ class MoveSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Move
+
+
+class NatureSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for the Nature resource
+    """
+
+    class Meta:
+        model = Nature
+
+
+class TypeSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for the Type resource
+    """
+
+    class Meta:
+        model = Type
+
+
+class AbilitySerializer(serializers.HyperlinkedModelSerializer):
+    """
+    Serializer for the Ability resource
+    """
+
+    class Meta:
+        model = Ability

@@ -24,7 +24,15 @@ class HasCharacteristic(models.Model):
 
 class HasDescription(models.Model):
 
-  description = models.CharField(max_length=200, default='')
+  description = models.CharField(max_length=1000, default='')
+
+  class Meta:
+       abstract = True
+
+
+class HasGender(models.Model):
+
+  gender = models.ForeignKey('Gender', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -38,9 +46,17 @@ class HasEggGroup(models.Model):
        abstract = True
 
 
+class HasEvolutionTrigger(models.Model):
+
+  evolution_trigger = models.ForeignKey('EvolutionTrigger', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
 class HasFlavorText(models.Model):
 
-  flavor_text = models.CharField(max_length=200)
+  flavor_text = models.CharField(max_length=500)
 
   class Meta:
        abstract = True
@@ -152,7 +168,71 @@ class HasNature(models.Model):
 
 class HasOrder(models.Model):
 
-  order = models.IntegerField()
+  order = models.IntegerField(blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokedex(models.Model):
+
+  pokedex = models.ForeignKey('Pokedex', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemon(models.Model):
+
+  pokemon = models.ForeignKey('Pokemon', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonColor(models.Model):
+
+  pokemon_color = models.ForeignKey('PokemonColor', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonForm(models.Model):
+
+  pokemon_form = models.ForeignKey('PokemonForm', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonHabitat(models.Model):
+
+  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonMoveMethod(models.Model):
+
+  pokemon_move_method = models.ForeignKey('PokemonMoveMethod', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonShape(models.Model):
+
+  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True)
+
+  class Meta:
+       abstract = True
+
+
+class HasPokemonSpecies(models.Model):
+
+  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -174,15 +254,17 @@ class HasType(models.Model):
        abstract = True
 
 
-class HasVersionGroup(models.Model):
+class HasVersion(models.Model):
 
-  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
+  version = models.ForeignKey('Version', blank=True, null=True)
 
   class Meta:
        abstract = True
 
 
-class IsName(HasLanguage, HasName):
+class HasVersionGroup(models.Model):
+
+  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -222,6 +304,7 @@ class IsFlavorText(HasLanguage, HasFlavorText):
 
 class Version(HasName, HasVersionGroup):
   pass
+
 
 class VersionName(IsName):
 
@@ -295,6 +378,17 @@ class AbilityFlavorText(IsFlavorText, HasAbility, HasVersionGroup):
 
 class AbilityName(IsName, HasAbility):
   pass
+
+
+class AbilityChange(HasAbility):
+  pass
+
+
+class AbilityChangeDescription(HasLanguage):
+
+  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True)
+
+  effect = models.CharField(max_length=1000)
 
 
 
@@ -589,3 +683,272 @@ class MoveMetaCategoryDescription(HasMetaCategory, IsDescription):
 class MoveMetaStatChange(HasMove, HasStat):
 
   change = models.IntegerField()
+
+
+
+#######################
+#  EXPERIENCE MODELS  #
+#######################
+
+class Experience(HasGrowthRate):
+
+  level = models.IntegerField()
+
+  experience = models.IntegerField()
+
+
+
+###################
+#  GENDER MODELS  #
+###################
+
+class Gender(HasName):
+  pass
+
+
+
+####################
+#  MACHINE MODELS  #
+####################
+
+class Machine(HasGrowthRate):
+
+  machine_number = models.IntegerField()
+
+  version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
+
+  item_id = models.IntegerField()
+
+  move = models.ForeignKey(Move, blank=True, null=True)
+
+
+
+######################
+#  EVOLUTION MODELS  #
+######################
+
+class EvolutionChain(models.Model):
+
+  baby_evolution_item_id = models.IntegerField(blank=True, null=True) #Just for now. Need Item models
+
+
+class EvolutionTrigger(HasName):
+  pass
+
+
+class EvolutionTriggerName(HasEvolutionTrigger, IsName):
+  pass
+
+
+
+####################
+#  POKEDEX MODELS  #
+####################
+
+class Pokedex(HasName):
+
+  region_id = models.IntegerField(blank=True, null=True)
+
+  is_main_series = models.BooleanField(default = False)
+
+
+class PokedexDescription(HasPokedex, HasName, IsDescription):
+  pass
+
+
+class PokedexVersionGroup(HasPokedex, HasVersionGroup):
+  pass
+
+
+
+####################
+#  POKEMON MODELS  #
+####################
+
+class PokemonSpecies(HasName, HasGeneration, HasPokemonColor,
+                     HasPokemonShape, HasGrowthRate, HasOrder):
+
+  evolves_from_species = models.ForeignKey('self', blank=True, null=True)
+
+  evolution_chain = models.ForeignKey(EvolutionChain, blank=True, null=True)
+
+  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True)
+
+  gender_rate = models.IntegerField()
+
+  capture_rate = models.IntegerField()
+
+  base_happiness = models.IntegerField()
+
+  is_baby = models.BooleanField(default = False)
+
+  hatch_counter = models.IntegerField()
+
+  has_gender_differences = models.BooleanField(default = False)
+
+  forms_switchable = models.BooleanField(default = False)
+
+
+class PokemonSpeciesName(IsName, HasPokemonSpecies):
+
+  genus = models.CharField(max_length = 30)
+
+
+class PokemonSpeciesDescription(HasPokemonSpecies, IsDescription):
+  pass
+
+
+class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
+  pass
+
+
+class Pokemon(HasName, HasPokemonSpecies, HasOrder):
+
+  height = models.IntegerField()
+
+  weight = models.IntegerField()
+
+  base_experience = models.IntegerField()
+
+  is_default = models.BooleanField(default = False)
+
+
+class PokemonAbility(HasPokemon, HasAbility):
+
+  is_hidden = models.BooleanField(default = False)
+
+  slot = models.IntegerField()
+
+
+class PokemonColor(HasName):
+  pass
+
+
+class PokemonColorName(HasPokemonColor, IsName):
+  pass
+
+
+class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
+
+  pokedex_number = models.IntegerField()
+
+
+class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
+  pass
+
+
+class PokemonEvolution(HasEvolutionTrigger, HasGender):
+
+  evolution_item_id = models.IntegerField(blank=True, null=True) # need item tables
+
+  evolved_species = models.ForeignKey(PokemonSpecies, related_name="evolved_species", blank=True, null=True)
+
+  min_level = models.IntegerField(blank=True, null=True)
+
+  location_id = models.IntegerField(blank=True, null=True) # need location tables
+
+  held_item_id = models.IntegerField(blank=True, null=True) # need item tables
+
+  time_of_day = models.CharField(max_length = 10, blank=True, null=True)
+
+  known_move = models.ForeignKey(Move, blank=True, null=True)
+
+  known_move_type = models.ForeignKey(Type, related_name="known_move", blank=True, null=True)
+
+  min_happiness = models.IntegerField(blank=True, null=True)
+
+  min_beauty = models.IntegerField(blank=True, null=True)
+
+  min_affection = models.IntegerField(blank=True, null=True)
+
+  relative_physical_stats = models.IntegerField(blank=True, null=True)
+
+  party_species = models.ForeignKey(PokemonSpecies, related_name="party_species", blank=True, null=True)
+
+  party_type = models.ForeignKey(Type, related_name="party_type", blank=True, null=True)
+
+  trade_species = models.ForeignKey(PokemonSpecies, related_name="trade_species", blank=True, null=True)
+
+  needs_overworld_rain = models.BooleanField(default = False)
+
+  turn_upside_down = models.BooleanField(default = False)
+
+
+class PokemonForm(HasName, HasPokemon, HasOrder):
+
+  form_identifier = models.CharField(max_length = 30)
+
+  introduced_in_version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
+
+  is_default = models.BooleanField(default = False)
+
+  is_battle_only = models.BooleanField(default = False)
+
+  is_mega = models.BooleanField(default = False)
+
+  form_order = models.IntegerField(blank=True, null=True)
+
+
+class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
+  pass
+
+
+class PokemonFormName(HasPokemonForm, IsName):
+
+  pokemon_name = models.CharField(max_length = 30)
+
+
+class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
+  pass
+
+
+class PokemonHabitat(HasName):
+  pass
+
+
+class PokemonHabitatName(IsName):
+
+  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True)
+
+
+class PokemonItem(HasPokemon, HasVersion):
+
+  item_id = models.IntegerField()
+
+  rarity = models.IntegerField()
+
+
+class PokemonMoveMethod(HasName):
+  pass
+
+
+class PokemonMoveMethodName(IsName, HasPokemonMoveMethod, HasDescription):
+  pass
+
+
+class PokemonMove(HasPokemon, HasPokemonMoveMethod, HasVersionGroup, HasMove, HasOrder):
+
+  level = models.IntegerField()
+
+
+class PokemonShape(HasName):
+  pass
+
+
+class PokemonShapeName(IsName):
+
+  awesome_name = models.CharField(max_length = 30)
+
+  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True)
+
+
+class PokemonStat(HasPokemon, HasStat):
+
+  base_stat = models.IntegerField()
+
+  effort = models.IntegerField()
+
+
+class PokemonType(HasPokemon, HasType):
+
+  slot = models.IntegerField()

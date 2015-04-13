@@ -6,8 +6,6 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    replaces = [(b'pokemon_v2', '0001_squashed_0021_auto_20150409_0453'), (b'pokemon_v2', '0002_auto_20150412_1636'), (b'pokemon_v2', '0003_auto_20150412_1705'), (b'pokemon_v2', '0004_auto_20150412_1715'), (b'pokemon_v2', '0005_auto_20150412_1721'), (b'pokemon_v2', '0006_auto_20150412_1808'), (b'pokemon_v2', '0007_auto_20150412_1809'), (b'pokemon_v2', '0008_auto_20150412_1810'), (b'pokemon_v2', '0009_auto_20150412_1814'), (b'pokemon_v2', '0010_auto_20150412_1818'), (b'pokemon_v2', '0011_auto_20150412_1820'), (b'pokemon_v2', '0012_auto_20150412_1821'), (b'pokemon_v2', '0013_auto_20150412_1822'), (b'pokemon_v2', '0014_auto_20150412_1823'), (b'pokemon_v2', '0015_auto_20150412_1825'), (b'pokemon_v2', '0016_auto_20150412_1827'), (b'pokemon_v2', '0017_auto_20150412_1828'), (b'pokemon_v2', '0018_auto_20150412_1833'), (b'pokemon_v2', '0019_auto_20150412_1837'), (b'pokemon_v2', '0020_machine')]
-
     dependencies = [
     ]
 

@@ -1,0 +1,5157 @@
+item_id,local_language_id,name
+1,1,マスターボール
+1,3,마스터볼
+1,5,Master Ball
+1,6,Meisterball
+1,7,Master Ball
+1,8,Master Ball
+1,9,Master Ball
+2,1,ハイパーボール
+2,3,하이퍼볼
+2,5,Hyper Ball
+2,6,Hyperball
+2,7,Ultra Ball
+2,8,Ultra Ball
+2,9,Ultra Ball
+3,1,スーパーボール
+3,3,수퍼볼
+3,5,Super Ball
+3,6,Superball
+3,7,Super Ball
+3,8,Mega Ball
+3,9,Great Ball
+4,1,モンスターボール
+4,3,몬스터볼
+4,5,Poké Ball
+4,6,Pokéball
+4,7,Poké Ball
+4,8,Poké Ball
+4,9,Poké Ball
+5,1,サファリボール
+5,3,사파리볼
+5,5,Safari Ball
+5,6,Safariball
+5,7,Safari Ball
+5,8,Safari Ball
+5,9,Safari Ball
+6,1,ネットボール
+6,3,넷트볼
+6,5,Filet Ball
+6,6,Netzball
+6,7,Malla Ball
+6,8,Rete Ball
+6,9,Net Ball
+7,1,ダイブボール
+7,3,다이브볼
+7,5,Scuba Ball
+7,6,Tauchball
+7,7,Buceo Ball
+7,8,Sub Ball
+7,9,Dive Ball
+8,1,ネストボール
+8,3,네스트볼
+8,5,Faiblo Ball
+8,6,Nestball
+8,7,Nido Ball
+8,8,Minor Ball
+8,9,Nest Ball
+9,1,リピートボール
+9,3,리피드볼
+9,5,Bis Ball
+9,6,Wiederball
+9,7,Acopio Ball
+9,8,Bis Ball
+9,9,Repeat Ball
+10,1,タイマーボール
+10,3,타이마볼
+10,5,Chrono Ball
+10,6,Timerball
+10,7,Turno Ball
+10,8,Timer Ball
+10,9,Timer Ball
+11,1,ゴージャスボール
+11,3,럭셔리볼
+11,5,Luxe Ball
+11,6,Luxusball
+11,7,Lujo Ball
+11,8,Chic Ball
+11,9,Luxury Ball
+12,1,プレミアボール
+12,3,프레미어볼
+12,5,Honor Ball
+12,6,Premierball
+12,7,Honor Ball
+12,8,Premier Ball
+12,9,Premier Ball
+13,1,ダークボール
+13,3,다크볼
+13,5,Sombre Ball
+13,6,Finsterball
+13,7,Ocaso Ball
+13,8,Scuro Ball
+13,9,Dusk Ball
+14,1,ヒールボール
+14,3,힐볼
+14,5,Soin Ball
+14,6,Heilball
+14,7,Sana Ball
+14,8,Cura Ball
+14,9,Heal Ball
+15,1,クイックボール
+15,3,퀵볼
+15,5,Rapide Ball
+15,6,Flottball
+15,7,Veloz Ball
+15,8,Velox Ball
+15,9,Quick Ball
+16,1,プレシャスボール
+16,3,프레셔스볼
+16,5,Mémoire Ball
+16,6,Jubelball
+16,7,Gloria Ball
+16,8,Pregio Ball
+16,9,Cherish Ball
+17,1,キズぐすり
+17,3,상처약
+17,5,Potion
+17,6,Trank
+17,7,Poción
+17,8,Pozione
+17,9,Potion
+18,1,どくけし
+18,3,해독제
+18,5,Antidote
+18,6,Gegengift
+18,7,Antídoto
+18,8,Antidoto
+18,9,Antidote
+19,1,やけどなおし
+19,3,화상치료제
+19,5,Anti-Brûle
+19,6,Feuerheiler
+19,7,Antiquemar
+19,8,Antiscottatura
+19,9,Burn Heal
+20,1,こおりなおし
+20,3,얼음상태치료제
+20,5,Antigel
+20,6,Eisheiler
+20,7,Antihielo
+20,8,Antigelo
+20,9,Ice Heal
+21,1,ねむけざまし
+21,3,잠깨는약
+21,5,Réveil
+21,6,Aufwecker
+21,7,Despertar
+21,8,Sveglia
+21,9,Awakening
+22,1,まひなおし
+22,3,마비치료제
+22,5,Anti-Para
+22,6,Para-Heiler
+22,7,Antiparalizador
+22,8,Antiparalisi
+22,9,Paralyze Heal
+23,1,かいふくのくすり
+23,3,회복약
+23,5,Guérison
+23,6,Top-Genesung
+23,7,Restaurar Todo
+23,8,Ricarica Totale
+23,9,Full Restore
+24,1,まんたんのくすり
+24,3,풀회복약
+24,5,Potion Max
+24,6,Top-Trank
+24,7,Poción Máxima
+24,8,Pozione Max
+24,9,Max Potion
+25,1,すごいキズぐすり
+25,3,고급상처약
+25,5,Hyper Potion
+25,6,Hypertrank
+25,7,Hiperpoción
+25,8,Iperpozione
+25,9,Hyper Potion
+26,1,いいキズぐすり
+26,3,좋은상처약
+26,5,Super Potion
+26,6,Supertrank
+26,7,Superpoción
+26,8,Superpozione
+26,9,Super Potion
+27,1,なんでもなおし
+27,3,만병통치제
+27,5,Total Soin
+27,6,Hyperheiler
+27,7,Cura Total
+27,8,Cura Totale
+27,9,Full Heal
+28,1,げんきのかけら
+28,3,기력의조각
+28,5,Rappel
+28,6,Beleber
+28,7,Revivir
+28,8,Revitalizzante
+28,9,Revive
+29,1,げんきのかたまり
+29,3,기력의덩어리
+29,5,Rappel Max
+29,6,Top-Beleber
+29,7,Revivir Máximo
+29,8,Revitalizz. Max
+29,9,Max Revive
+30,1,おいしいみず
+30,3,맛있는물
+30,5,Eau Fraîche
+30,6,Tafelwasser
+30,7,Agua Fresca
+30,8,Acqua Fresca
+30,9,Fresh Water
+31,1,サイコソーダ
+31,3,미네랄사이다
+31,5,Soda Cool
+31,6,Sprudel
+31,7,Refresco
+31,8,Gassosa
+31,9,Soda Pop
+32,1,ミックスオレ
+32,3,후르츠밀크
+32,5,Limonade
+32,6,Limonade
+32,7,Limonada
+32,8,Lemonsucco
+32,9,Lemonade
+33,1,モーモーミルク
+33,3,튼튼밀크
+33,5,Lait Meumeu
+33,6,Kuhmuh-Milch
+33,7,Leche Mu-mu
+33,8,Latte Mumu
+33,9,Moomoo Milk
+34,1,ちからのこな
+34,3,힘의가루
+34,5,Poudrénergie
+34,6,Energiestaub
+34,7,Polvo Energía
+34,8,Polvenergia
+34,9,Energy Powder
+35,1,ちからのねっこ
+35,3,힘의뿌리
+35,5,Racinénergie
+35,6,Kraftwurzel
+35,7,Raíz Energía
+35,8,Radicenergia
+35,9,Energy Root
+36,1,ばんのうごな
+36,3,만능가루
+36,5,Poudre Soin
+36,6,Heilpuder
+36,7,Polvo Curación
+36,8,Polvocura
+36,9,Heal Powder
+37,1,ふっかつそう
+37,3,부활초
+37,5,Herbe Rappel
+37,6,Vitalkraut
+37,7,Hierba Revivir
+37,8,Vitalerba
+37,9,Revival Herb
+38,1,ピーピーエイド
+38,3,PP에이드
+38,5,Huile
+38,6,Äther
+38,7,Éter
+38,8,Etere
+38,9,Ether
+39,1,ピーピーリカバー
+39,3,PP회복
+39,5,Huile Max
+39,6,Top-Äther
+39,7,Éter Máximo
+39,8,Etere Max
+39,9,Max Ether
+40,1,ピーピーエイダー
+40,3,PP에이더
+40,5,Élixir
+40,6,Elixier
+40,7,Elixir
+40,8,Elisir
+40,9,Elixir
+41,1,ピーピーマックス
+41,3,PP맥스
+41,5,Max Élixir
+41,6,Top-Elixier
+41,7,Elixir Máximo
+41,8,Elisir Max
+41,9,Max Elixir
+42,1,フエンせんべい
+42,3,용암전병
+42,5,Lava Cookie
+42,6,Lavakeks
+42,7,Galleta Lava
+42,8,Lavottino
+42,9,Lava Cookie
+43,1,きのみジュース
+43,3,나무열매쥬스
+43,5,Jus de Baie
+43,6,Beerensaft
+43,7,Zumo de Baya
+43,8,Succodibacca
+43,9,Berry Juice
+44,1,せいなるはい
+44,3,성스러운분말
+44,5,Cendre Sacrée
+44,6,Zauberasche
+44,7,Ceniza Sagrada
+44,8,Ceneremagica
+44,9,Sacred Ash
+45,1,マックスアップ
+45,3,맥스업
+45,5,PV Plus
+45,6,KP-Plus
+45,7,Más PS
+45,8,PS-Su
+45,9,HP Up
+46,1,タウリン
+46,3,타우린
+46,5,Protéine
+46,6,Protein
+46,7,Proteína
+46,8,Proteina
+46,9,Protein
+47,1,ブロムヘキシン
+47,3,사포닌
+47,5,Fer
+47,6,Eisen
+47,7,Hierro
+47,8,Ferro
+47,9,Iron
+48,1,インドメタシン
+48,3,알칼로이드
+48,5,Carbone
+48,6,Carbon
+48,7,Carburante
+48,8,Carburante
+48,9,Carbos
+49,1,リゾチウム
+49,3,리보플라빈
+49,5,Calcium
+49,6,Kalzium
+49,7,Calcio
+49,8,Calcio
+49,9,Calcium
+50,1,ふしぎなアメ
+50,3,이상한사탕
+50,5,Super Bonbon
+50,6,Sonderbonbon
+50,7,Caramelo Raro
+50,8,Caramella Rara
+50,9,Rare Candy
+51,1,ポイントアップ
+51,3,포인트업
+51,5,PP Plus
+51,6,AP-Plus
+51,7,Más PP
+51,8,PP-Su
+51,9,PP Up
+52,1,キトサン
+52,3,키토산
+52,5,Zinc
+52,6,Zink
+52,7,Zinc
+52,8,Zinco
+52,9,Zinc
+53,1,ポイントマックス
+53,3,포인트맥스
+53,5,PP Max
+53,6,AP-Top
+53,7,PP Máximos
+53,8,PP-Max
+53,9,PP Max
+54,1,もりのヨウカン
+54,3,숲의양갱
+54,5,Vieux Gâteau
+54,6,Spezialität
+54,7,Barrita Plus
+54,8,Dolce Gateau
+54,9,Old Gateau
+55,1,エフェクトガード
+55,3,이펙트가드
+55,5,Défense Spéciale
+55,6,Megablock
+55,7,Protec. Especial
+55,8,Superguardia
+55,9,Guard Spec.
+56,1,クリティカット
+56,3,크리티컬커터
+56,5,Muscle +
+56,6,Angriffplus
+56,7,Directo
+56,8,Supercolpo
+56,9,Dire Hit
+57,1,プラスパワー
+57,3,플러스파워
+57,5,Attaque +
+57,6,X-Angriff
+57,7,Ataque X
+57,8,Attacco X
+57,9,X Attack
+58,1,ディフェンダー
+58,3,디펜드업
+58,5,Défense +
+58,6,X-Abwehr
+58,7,Defensa X
+58,8,Difesa X
+58,9,X Defense
+59,1,スピーダー
+59,3,스피드업
+59,5,Vitesse +
+59,6,X-Tempo
+59,7,Velocidad X
+59,8,Velocità X
+59,9,X Speed
+60,1,ヨクアタール
+60,3,잘-맞히기
+60,5,Précision +
+60,6,X-Treffer
+60,7,Precisión X
+60,8,Precisione X
+60,9,X Accuracy
+61,1,スペシャルアップ
+61,3,스페셜업
+61,5,Spécial +
+61,6,X-Spezial
+61,7,Especial X
+61,8,Special X
+61,9,X Sp. Atk
+62,1,スペシャルガード
+62,3,스페셜가드
+62,5,Déf. Spé. +
+62,6,X-SpezialVer
+62,7,Def. Especial X
+62,8,Dif. Speciale X
+62,9,X Sp. Def
+63,1,ピッピにんぎょう
+63,3,삐삐인형
+63,5,Poképoupée
+63,6,Poképuppe
+63,7,Poké Muñeco
+63,8,Poké Bambola
+63,9,Poké Doll
+64,1,エネコのシッポ
+64,3,에나비꼬리
+64,5,Queue Skitty
+64,6,Eneco-Rute
+64,7,Cola Skitty
+64,8,Coda Skitty
+64,9,Fluffy Tail
+65,1,あおいビードロ
+65,3,파랑비드로
+65,5,Flûte Bleue
+65,6,Blaue Flöte
+65,7,Flauta Azul
+65,8,Flauto Blu
+65,9,Blue Flute
+66,1,きいろビードロ
+66,3,노랑비드로
+66,5,Flûte Jaune
+66,6,Gelbe Flöte
+66,7,Flauta Amarilla
+66,8,Flauto Giallo
+66,9,Yellow Flute
+67,1,あかいビードロ
+67,3,빨강비드로
+67,5,Flûte Rouge
+67,6,Rote Flöte
+67,7,Flauta Roja
+67,8,Flauto Rosso
+67,9,Red Flute
+68,1,くろいビードロ
+68,3,검정비드로
+68,5,Flûte Noire
+68,6,Schw. Flöte
+68,7,Flauta Negra
+68,8,Flauto Nero
+68,9,Black Flute
+69,1,しろいビードロ
+69,3,하양비드로
+69,5,Flûte Blanche
+69,6,Weiße Flöte
+69,7,Flauta Blanca
+69,8,Flauto Bianco
+69,9,White Flute
+70,1,あさせのしお
+70,3,여울소금
+70,5,Sel Tréfonds
+70,6,Küstensalz
+70,7,Sal Cardumen
+70,8,Sale Ondoso
+70,9,Shoal Salt
+71,1,あさせのかいがら
+71,3,여울조개껍질
+71,5,CoquilleTréfonds
+71,6,Küstenschale
+71,7,Concha Cardumen
+71,8,Gusciondoso
+71,9,Shoal Shell
+72,1,あかいかけら
+72,3,빨강조각
+72,5,Tesson Rouge
+72,6,Purpurstück
+72,7,Parte Roja
+72,8,Coccio Rosso
+72,9,Red Shard
+73,1,あおいかけら
+73,3,파랑조각
+73,5,Tesson Bleu
+73,6,Indigostück
+73,7,Parte Azul
+73,8,Coccio Blu
+73,9,Blue Shard
+74,1,きいろいかけら
+74,3,노랑조각
+74,5,Tesson Jaune
+74,6,Gelbstück
+74,7,Parte Amarilla
+74,8,Coccio Giallo
+74,9,Yellow Shard
+75,1,みどりのかけら
+75,3,초록조각
+75,5,Tesson Vert
+75,6,Grünstück
+75,7,Parte Verde
+75,8,Coccio Verde
+75,9,Green Shard
+76,1,シルバースプレー
+76,3,실버스프레이
+76,5,Superepousse
+76,6,Superschutz
+76,7,Superrepelente
+76,8,Superrepellente
+76,9,Super Repel
+77,1,ゴールドスプレー
+77,3,골드스프레이
+77,5,Max Repousse
+77,6,Top-Schutz
+77,7,Repelente Máximo
+77,8,Repellente Max
+77,9,Max Repel
+78,1,あなぬけのヒモ
+78,3,동굴탈출로프
+78,5,Corde Sortie
+78,6,Fluchtseil
+78,7,Cuerda Huida
+78,8,Fune di Fuga
+78,9,Escape Rope
+79,1,むしよけスプレー
+79,3,벌레회피스프레이
+79,5,Repousse
+79,6,Schutz
+79,7,Repelente
+79,8,Repellente
+79,9,Repel
+80,1,たいようのいし
+80,3,태양의돌
+80,5,Pierre Soleil
+80,6,Sonnenstein
+80,7,Piedra Solar
+80,8,Pietrasolare
+80,9,Sun Stone
+81,1,つきのいし
+81,3,달의돌
+81,5,Pierre Lune
+81,6,Mondstein
+81,7,Piedra Lunar
+81,8,Pietralunare
+81,9,Moon Stone
+82,1,ほのおのいし
+82,3,불꽃의돌
+82,5,Pierre Feu
+82,6,Feuerstein
+82,7,Piedra Fuego
+82,8,Pietrafocaia
+82,9,Fire Stone
+83,1,かみなりのいし
+83,3,천둥의돌
+83,5,Pierre Foudre
+83,6,Donnerstein
+83,7,Piedra Trueno
+83,8,Pietratuono
+83,9,Thunder Stone
+84,1,みずのいし
+84,3,물의돌
+84,5,Pierre Eau
+84,6,Wasserstein
+84,7,Piedra Agua
+84,8,Pietraidrica
+84,9,Water Stone
+85,1,リーフのいし
+85,3,리프의돌
+85,5,Pierre Plante
+85,6,Blattstein
+85,7,Piedra Hoja
+85,8,Pietrafoglia
+85,9,Leaf Stone
+86,1,ちいさなキノコ
+86,3,작은버섯
+86,5,Petit Champi
+86,6,Minipilz
+86,7,Mini Seta
+86,8,Minifungo
+86,9,Tiny Mushroom
+87,1,おおきなキノコ
+87,3,큰버섯
+87,5,Gros Champi
+87,6,Riesenpilz
+87,7,Seta Grande
+87,8,Grande Fungo
+87,9,Big Mushroom
+88,1,しんじゅ
+88,3,진주
+88,5,Perle
+88,6,Perle
+88,7,Perla
+88,8,Perla
+88,9,Pearl
+89,1,おおきなしんじゅ
+89,3,큰진주
+89,5,Grande Perle
+89,6,Riesenperle
+89,7,Perla Grande
+89,8,Grande Perla
+89,9,Big Pearl
+90,1,ほしのすな
+90,3,별의모래
+90,5,Poussière Étoile
+90,6,Sternenstaub
+90,7,Polvoestelar
+90,8,Polvostella
+90,9,Stardust
+91,1,ほしのかけら
+91,3,별의조각
+91,5,Morceau d'Étoile
+91,6,Sternenstück
+91,7,Trozo Estrella
+91,8,Pezzo Stella
+91,9,Star Piece
+92,1,きんのたま
+92,3,금구슬
+92,5,Pépite
+92,6,Nugget
+92,7,Pepita
+92,8,Pepita
+92,9,Nugget
+93,1,ハートのウロコ
+93,3,하트비늘
+93,5,Écaille Cœur
+93,6,Herzschuppe
+93,7,Escama Corazón
+93,8,Squama Cuore
+93,9,Heart Scale
+94,1,あまいミツ
+94,3,달콤한꿀
+94,5,Miel
+94,6,Honig
+94,7,Miel
+94,8,Miele
+94,9,Honey
+95,1,すくすくこやし
+95,3,무럭무럭비료
+95,5,Fertipousse
+95,6,Wachsmulch
+95,7,Abono Rápido
+95,8,Fertilrapido
+95,9,Growth Mulch
+96,1,じめじめこやし
+96,3,축축이비료
+96,5,Fertihumide
+96,6,Feuchtmulch
+96,7,Abono Lento
+96,8,Fertilidro
+96,9,Damp Mulch
+97,1,ながながこやし
+97,3,오래오래비료
+97,5,Fertistable
+97,6,Stabilmulch
+97,7,Abono Fijador
+97,8,Fertilsaldo
+97,9,Stable Mulch
+98,1,ねばねばこやし
+98,3,끈적끈적비료
+98,5,Fertiglu
+98,6,Neumulch
+98,7,Abono Brote
+98,8,Fertilcolla
+98,9,Gooey Mulch
+99,1,ねっこのカセキ
+99,3,뿌리화석
+99,5,Fossile Racine
+99,6,Wurzelfossil
+99,7,Fósil Raíz
+99,8,Radifossile
+99,9,Root Fossil
+100,1,ツメのカセキ
+100,3,발톱화석
+100,5,Fossile Griffe
+100,6,Klauenfossil
+100,7,Fósil Garra
+100,8,Fossilunghia
+100,9,Claw Fossil
+101,1,かいのカセキ
+101,3,조개화석
+101,5,Nautile
+101,6,Helixfossil
+101,7,Fósil Hélix
+101,8,Helixfossile
+101,9,Helix Fossil
+102,1,こうらのカセキ
+102,3,껍질화석
+102,5,Fossile Dôme
+102,6,Domfossil
+102,7,Fósil Domo
+102,8,Domofossile
+102,9,Dome Fossil
+103,1,ひみつのコハク
+103,3,비밀의호박
+103,5,Vieil Ambre
+103,6,Altbernstein
+103,7,Ámbar Viejo
+103,8,Ambra Antica
+103,9,Old Amber
+104,1,たてのカセキ
+104,3,방패의화석
+104,5,Fossile Armure
+104,6,Panzerfossil
+104,7,Fósil Coraza
+104,8,Fossilscudo
+104,9,Armor Fossil
+105,1,ずがいのカセキ
+105,3,두개의화석
+105,5,Fossile Crâne
+105,6,Kopffossil
+105,7,Fósil Cráneo
+105,8,Fossilcranio
+105,9,Skull Fossil
+106,1,きちょうなホネ
+106,3,귀중한뼈
+106,5,Os Rare
+106,6,Steinknochen
+106,7,Hueso Raro
+106,8,Osso Raro
+106,9,Rare Bone
+107,1,ひかりのいし
+107,3,빛의돌
+107,5,Pierre Éclat
+107,6,Leuchtstein
+107,7,Piedra Día
+107,8,Pietrabrillo
+107,9,Shiny Stone
+108,1,やみのいし
+108,3,어둠의돌
+108,5,Pierre Nuit
+108,6,Finsterstein
+108,7,Piedra Noche
+108,8,Neropietra
+108,9,Dusk Stone
+109,1,めざめいし
+109,3,각성의돌
+109,5,Pierre Aube
+109,6,Funkelstein
+109,7,Piedra Alba
+109,8,Pietralbore
+109,9,Dawn Stone
+110,1,まんまるいし
+110,3,동글동글돌
+110,5,Pierre Ovale
+110,6,Ovaler Stein
+110,7,Piedra Oval
+110,8,Pietraovale
+110,9,Oval Stone
+111,1,かなめいし
+111,3,쐐기돌
+111,5,Clé de Voûte
+111,6,Spiritkern
+111,7,Piedra Espíritu
+111,8,Roccianima
+111,9,Odd Keystone
+112,1,こんごうだま
+112,3,금강옥
+112,5,Orbe Adamant
+112,6,Adamant-Orb
+112,7,Diamansfera
+112,8,Adamasfera
+112,9,Adamant Orb
+113,1,しらたま
+113,3,백옥
+113,5,Orbe Perlé
+113,6,Weiß-Orb
+113,7,Lustresfera
+113,8,Splendisfera
+113,9,Lustrous Orb
+114,1,グラスメール
+114,5,Lettre Herbe
+114,6,Wiesenbrief
+114,7,Carta Hierba
+114,8,Mess. Erba
+114,9,Grass Mail
+115,1,フレイムメール
+115,5,Lettre Feu
+115,6,Feuerbrief
+115,7,Carta Fuego
+115,8,Mess. Fiamma
+115,9,Flame Mail
+116,1,ブルーメール
+116,5,Lettre Mer
+116,6,Wasserbrief
+116,7,Carta Pompas
+116,8,Mess. Bolla
+116,9,Bubble Mail
+117,1,ブルームメール
+117,5,Lett. Pétale
+117,6,Blütenbrief
+117,7,Carta Flores
+117,8,Mess. Petalo
+117,9,Bloom Mail
+118,1,トンネルメール
+118,5,Lettre Mine
+118,6,Minenbrief
+118,7,Carta Mina
+118,8,Mess. Tunnel
+118,9,Tunnel Mail
+119,1,スチールメール
+119,5,Lettre Acier
+119,6,Stahlbrief
+119,7,Carta Acero
+119,8,Mess. Lega
+119,9,Steel Mail
+120,1,ラブラブメール
+120,5,Lettre Coeur
+120,6,Rosabrief
+120,7,Car. Corazón
+120,8,Mess. Cuore
+120,9,Heart Mail
+121,1,ブリザードメール
+121,5,Lettre Neige
+121,6,Schneebrief
+121,7,Carta Nieve
+121,8,Mess. Neve
+121,9,Snow Mail
+122,1,スペースメール
+122,5,Lettre Cosmo
+122,6,Sternbrief
+122,7,Car. Sideral
+122,8,Mess. Spazio
+122,9,Space Mail
+123,1,エアメール
+123,5,Lettre Avion
+123,6,Luftbrief
+123,7,Carta Aérea
+123,8,Mess. Aereo
+123,9,Air Mail
+124,1,モザイクメール
+124,5,Lettremosaïk
+124,6,Mosaikbrief
+124,7,Car. Mosaico
+124,8,Mess. Iride
+124,9,Mosaic Mail
+125,1,ブリックメール
+125,5,Lettre Brik
+125,6,Ziegelbrief
+125,7,Carta Pared
+125,8,Mess. Muro
+125,9,Brick Mail
+126,1,クラボのみ
+126,3,버치열매
+126,5,Baie Ceriz
+126,6,Amrenabeere
+126,7,Baya Zreza
+126,8,Baccaliegia
+126,9,Cheri Berry
+127,1,カゴのみ
+127,3,유루열매
+127,5,Baie Maron
+127,6,Maronbeere
+127,7,Baya Atania
+127,8,Baccastagna
+127,9,Chesto Berry
+128,1,モモンのみ
+128,3,복슝열매
+128,5,Baie Pêcha
+128,6,Pirsifbeere
+128,7,Baya Meloc
+128,8,Baccapesca
+128,9,Pecha Berry
+129,1,チーゴのみ
+129,3,복분열매
+129,5,Baie Fraive
+129,6,Fragiabeere
+129,7,Baya Safre
+129,8,Baccafrago
+129,9,Rawst Berry
+130,1,ナナシのみ
+130,3,배리열매
+130,5,Baie Willia
+130,6,Wilbirbeere
+130,7,Baya Perasi
+130,8,Baccaperina
+130,9,Aspear Berry
+131,1,ヒメリのみ
+131,3,과사열매
+131,5,Baie Mepo
+131,6,Jonagobeere
+131,7,Baya Zanama
+131,8,Baccamela
+131,9,Leppa Berry
+132,1,オレンのみ
+132,3,오랭열매
+132,5,Baie Oran
+132,6,Sinelbeere
+132,7,Baya Aranja
+132,8,Baccarancia
+132,9,Oran Berry
+133,1,キーのみ
+133,3,시몬열매
+133,5,Baie Kika
+133,6,Persimbeere
+133,7,Baya Caquic
+133,8,Baccaki
+133,9,Persim Berry
+134,1,ラムのみ
+134,3,리샘열매
+134,5,Baie Prine
+134,6,Prunusbeere
+134,7,Baya Ziuela
+134,8,Baccaprugna
+134,9,Lum Berry
+135,1,オボンのみ
+135,3,자뭉열매
+135,5,Baie Sitrus
+135,6,Tsitrubeere
+135,7,Baya Zidra
+135,8,Baccacedro
+135,9,Sitrus Berry
+136,1,フィラのみ
+136,3,무화열매
+136,5,Baie Figuy
+136,6,Giefebeere
+136,7,Baya Higog
+136,8,Baccafico
+136,9,Figy Berry
+137,1,ウイのみ
+137,3,위키열매
+137,5,Baie Wiki
+137,6,Wikibeere
+137,7,Baya Wiki
+137,8,Baccakiwi
+137,9,Wiki Berry
+138,1,マゴのみ
+138,3,마고열매
+138,5,Baie Mago
+138,6,Magobeere
+138,7,Baya Ango
+138,8,Baccamango
+138,9,Mago Berry
+139,1,バンジのみ
+139,3,아바열매
+139,5,Baie Gowav
+139,6,Gauvebeere
+139,7,Baya Guaya
+139,8,Baccaguava
+139,9,Aguav Berry
+140,1,イアのみ
+140,3,파야열매
+140,5,Baie Papaya
+140,6,Yapabeere
+140,7,Baya Pabaya
+140,8,Baccapaia
+140,9,Iapapa Berry
+141,1,ズリのみ
+141,3,라즈열매
+141,5,Baie Framby
+141,6,Himmihbeere
+141,7,Baya Frambu
+141,8,Baccalampon
+141,9,Razz Berry
+142,1,ブリーのみ
+142,3,블리열매
+142,5,Baie Remu
+142,6,Morbbeere
+142,7,Baya Oram
+142,8,Baccamora
+142,9,Bluk Berry
+143,1,ナナのみ
+143,3,나나열매
+143,5,Baie Nanab
+143,6,Nanabbeere
+143,7,Baya Latano
+143,8,Baccabana
+143,9,Nanab Berry
+144,1,セシナのみ
+144,3,서배열매
+144,5,Baie Repoi
+144,6,Nirbebeere
+144,7,Baya Peragu
+144,8,Baccapera
+144,9,Wepear Berry
+145,1,パイルのみ
+145,3,파인열매
+145,5,Baie Nanana
+145,6,Sananabeere
+145,7,Baya Pinia
+145,8,Baccananas
+145,9,Pinap Berry
+146,1,ザロクのみ
+146,3,유석열매
+146,5,Baie Grena
+146,6,Granabeere
+146,7,Baya Grana
+146,8,Baccagrana
+146,9,Pomeg Berry
+147,1,ネコブのみ
+147,3,시마열매
+147,5,Baie Alga
+147,6,Setangbeere
+147,7,Baya Algama
+147,8,Baccalga
+147,9,Kelpsy Berry
+148,1,タポルのみ
+148,3,파비열매
+148,5,Baie Qualot
+148,6,Qualotbeere
+148,7,Baya Ispero
+148,8,Baccaloquat
+148,9,Qualot Berry
+149,1,ロメのみ
+149,3,로매열매
+149,5,Baie Lonme
+149,6,Honmelbeere
+149,7,Baya Meluce
+149,8,Baccamelon
+149,9,Hondew Berry
+150,1,ウブのみ
+150,3,또뽀열매
+150,5,Baie Résin
+150,6,Labrusbeere
+150,7,Baya Uvav
+150,8,Baccauva
+150,9,Grepa Berry
+151,1,マトマのみ
+151,3,토망열매
+151,5,Baie Tamato
+151,6,Tamotbeere
+151,7,Baya Tamate
+151,8,Baccamodoro
+151,9,Tamato Berry
+152,1,モコシのみ
+152,3,수숙열매
+152,5,Baie Siam
+152,6,Saimbeere
+152,7,Baya Mais
+152,8,Baccavena
+152,9,Cornn Berry
+153,1,ゴスのみ
+153,3,고스티열매
+153,5,Baie Mangou
+153,6,Magostbeere
+153,7,Baya Aostan
+153,8,Baccagostan
+153,9,Magost Berry
+154,1,ラブタのみ
+154,3,라부탐열매
+154,5,Baie Rabuta
+154,6,Rabutabeere
+154,7,Baya Rautan
+154,8,Baccambutan
+154,9,Rabuta Berry
+155,1,ノメルのみ
+155,3,노멜열매
+155,5,Baie Tronci
+155,6,Tronzibeere
+155,7,Baya Monli
+155,8,Baccalemon
+155,9,Nomel Berry
+156,1,ノワキのみ
+156,3,메호키열매
+156,5,Baie Kiwan
+156,6,Kiwanbeere
+156,7,Baya Wikano
+156,8,Baccamelos
+156,9,Spelon Berry
+157,1,シーヤのみ
+157,3,자야열매
+157,5,Baie Palma
+157,6,Pallmbeere
+157,7,Baya Plama
+157,8,Baccapalma
+157,9,Pamtre Berry
+158,1,カイスのみ
+158,3,슈박열매
+158,5,Baie Stekpa
+158,6,Wasmelbeere
+158,7,Baya Sambia
+158,8,Baccacomero
+158,9,Watmel Berry
+159,1,ドリのみ
+159,3,두리열매
+159,5,Baie Durin
+159,6,Durinbeere
+159,7,Baya Rudion
+159,8,Baccadurian
+159,9,Durin Berry
+160,1,ベリブのみ
+160,3,루베열매
+160,5,Baie Myrte
+160,6,Myrtilbeere
+160,7,Baya Andano
+160,8,Baccartillo
+160,9,Belue Berry
+161,1,オッカのみ
+161,3,오카열매
+161,5,Baie Chocco
+161,6,Koakobeere
+161,7,Baya Caoca
+161,8,Baccacao
+161,9,Occa Berry
+162,1,イトケのみ
+162,3,꼬시개열매
+162,5,Baie Pocpoc
+162,6,Foepasbeere
+162,7,Baya Pasio
+162,8,Baccapasflo
+162,9,Passho Berry
+163,1,ソクノのみ
+163,3,초나열매
+163,5,Baie Parma
+163,6,Kerzalbeere
+163,7,Baya Gualot
+163,8,Baccaparmen
+163,9,Wacan Berry
+164,1,リンドのみ
+164,3,린드열매
+164,5,Baie Ratam
+164,6,Grindobeere
+164,7,Baya Tamar
+164,8,Baccarindo
+164,9,Rindo Berry
+165,1,ヤチェのみ
+165,3,플카열매
+165,5,Baie Nanone
+165,6,Kiroyabeere
+165,7,Baya Rimoya
+165,8,Baccamoya
+165,9,Yache Berry
+166,1,ヨプのみ
+166,3,로플열매
+166,5,Baie Pomroz
+166,6,Rospelbeere
+166,7,Baya Pomaro
+166,8,Baccarosmel
+166,9,Chople Berry
+167,1,ビアーのみ
+167,3,으름열매
+167,5,Baie Kébia
+167,6,Grarzbeere
+167,7,Baya Kebia
+167,8,Baccakebia
+167,9,Kebia Berry
+168,1,シュカのみ
+168,3,슈캐열매
+168,5,Baie Jouca
+168,6,Schukebeere
+168,7,Baya Acardo
+168,8,Baccanaca
+168,9,Shuca Berry
+169,1,バコウのみ
+169,3,바코열매
+169,5,Baie Cobaba
+169,6,Kobabeere
+169,7,Baya Kouba
+169,8,Baccababa
+169,9,Coba Berry
+170,1,ウタンのみ
+170,3,야파열매
+170,5,Baie Yapap
+170,6,Pyapabeere
+170,7,Baya Payapa
+170,8,Baccapayapa
+170,9,Payapa Berry
+171,1,タンガのみ
+171,3,리체열매
+171,5,Baie Panga
+171,6,Tanigabeere
+171,7,Baya Yecana
+171,8,Baccaitan
+171,9,Tanga Berry
+172,1,ヨロギのみ
+172,3,루미열매
+172,5,Baie Charti
+172,6,Chiaribeere
+172,7,Baya Alcho
+172,8,Baccaciofo
+172,9,Charti Berry
+173,1,カシブのみ
+173,3,수불열매
+173,5,Baie Sédra
+173,6,Zitarzbeere
+173,7,Baya Drasi
+173,8,Baccacitrus
+173,9,Kasib Berry
+174,1,ハバンのみ
+174,3,하반열매
+174,5,Baie Fraigo
+174,6,Terirobeere
+174,7,Baya Anjiro
+174,8,Baccahaban
+174,9,Haban Berry
+175,1,ナモのみ
+175,3,마코열매
+175,5,Baie Lampou
+175,6,Burleobeere
+175,7,Baya Dillo
+175,8,Baccaxan
+175,9,Colbur Berry
+176,1,リリバのみ
+176,3,바리비열매
+176,5,Baie Babiri
+176,6,Babiribeere
+176,7,Baya Baribá
+176,8,Baccababiri
+176,9,Babiri Berry
+177,1,ホズのみ
+177,3,카리열매
+177,5,Baie Zalis
+177,6,Latchibeere
+177,7,Baya Chilan
+177,8,Baccacinlan
+177,9,Chilan Berry
+178,1,チイラのみ
+178,3,치리열매
+178,5,Baie Lichii
+178,6,Lydzibeere
+178,7,Baya Lichi
+178,8,Baccalici
+178,9,Liechi Berry
+179,1,リュガのみ
+179,3,용아열매
+179,5,Baie Lingan
+179,6,Linganbeere
+179,7,Baya Gonlan
+179,8,Baccalongan
+179,9,Ganlon Berry
+180,1,カムラのみ
+180,3,캄라열매
+180,5,Baie Sailak
+180,6,Salkabeere
+180,7,Baya Aslac
+180,8,Baccasalak
+180,9,Salac Berry
+181,1,ヤタピのみ
+181,3,야타비열매
+181,5,Baie Pitaye
+181,6,Tahaybeere
+181,7,Baya Yapati
+181,8,Baccapitaya
+181,9,Petaya Berry
+182,1,ズアのみ
+182,3,규살열매
+182,5,Baie Abriko
+182,6,Apikobeere
+182,7,Baya Aricoc
+182,8,Baccacocca
+182,9,Apicot Berry
+183,1,サンのみ
+183,3,랑사열매
+183,5,Baie Lansat
+183,6,Lansatbeere
+183,7,Baya Zonlan
+183,8,Baccalangsa
+183,9,Lansat Berry
+184,1,スターのみ
+184,3,스타열매
+184,5,Baie Frista
+184,6,Krambobeere
+184,7,Baya Arabol
+184,8,Baccambola
+184,9,Starf Berry
+185,1,ナゾのみ
+185,3,의문열매
+185,5,Baie Enigma
+185,6,Enigmabeere
+185,7,Baya Enigma
+185,8,Baccaenigma
+185,9,Enigma Berry
+186,1,ミクルのみ
+186,3,미클열매
+186,5,Baie Micle
+186,6,Wunfrubeere
+186,7,Baya Lagro
+186,8,Baccaracolo
+186,9,Micle Berry
+187,1,イバンのみ
+187,3,애슈열매
+187,5,Baie Chérim
+187,6,Eipfelbeere
+187,7,Baya Chiri
+187,8,Baccacrela
+187,9,Custap Berry
+188,1,ジャポのみ
+188,3,자보열매
+188,5,Baie Jaboca
+188,6,Jabocabeere
+188,7,Baya Jaboca
+188,8,Baccajaba
+188,9,Jaboca Berry
+189,1,レンブのみ
+189,3,애터열매
+189,5,Baie Pommo
+189,6,Roselbeere
+189,7,Baya Magua
+189,8,Baccaroam
+189,9,Rowap Berry
+190,1,ひかりのこな
+190,3,반짝가루
+190,5,Poudre Claire
+190,6,Blendpuder
+190,7,Polvo Brillo
+190,8,Luminpolvere
+190,9,Bright Powder
+191,1,しろいハーブ
+191,3,하양허브
+191,5,Herbe Blanche
+191,6,Schlohkraut
+191,7,Hierba Blanca
+191,8,Erbachiara
+191,9,White Herb
+192,1,きょうせいギプス
+192,3,교정깁스
+192,5,Bracelet Macho
+192,6,Machoband
+192,7,Brazal Firme
+192,8,Crescicappa
+192,9,Macho Brace
+193,1,がくしゅうそうち
+193,3,학습장치
+193,5,Multi Exp
+193,6,EP-Teiler
+193,7,Repartir Exp
+193,8,Condividi Esp.
+193,9,Exp. Share
+194,1,せんせいのツメ
+194,3,선제공격손톱
+194,5,Vive Griffe
+194,6,Flinkklaue
+194,7,Garra Rápida
+194,8,Rapidartigli
+194,9,Quick Claw
+195,1,やすらぎのすず
+195,3,평온의방울
+195,5,Grelot Zen
+195,6,Sanftglocke
+195,7,Campana Alivio
+195,8,Calmanella
+195,9,Soothe Bell
+196,1,メンタルハーブ
+196,3,멘탈허브
+196,5,Herbe Mental
+196,6,Mentalkraut
+196,7,Hierba Mental
+196,8,Mentalerba
+196,9,Mental Herb
+197,1,こだわりハチマキ
+197,3,구애머리띠
+197,5,Bandeau Choix
+197,6,Wahlband
+197,7,Cinta Elegida
+197,8,Bendascelta
+197,9,Choice Band
+198,1,おうじゃのしるし
+198,3,왕의징표석
+198,5,Roche Royale
+198,6,King-Stein
+198,7,Roca del Rey
+198,8,Roccia di Re
+198,9,King's Rock
+199,1,ぎんのこな
+199,3,은빛가루
+199,5,Poudre Argentée
+199,6,Silberstaub
+199,7,Polvo Plata
+199,8,Argenpolvere
+199,9,Silver Powder
+200,1,おまもりこばん
+200,3,부적금화
+200,5,Pièce Rune
+200,6,Münzamulett
+200,7,Moneda Amuleto
+200,8,Monetamuleto
+200,9,Amulet Coin
+201,1,きよめのおふだ
+201,3,순결의부적
+201,5,Rune Purifiante
+201,6,Schutzband
+201,7,Amuleto
+201,8,Velopuro
+201,9,Cleanse Tag
+202,1,こころのしずく
+202,3,마음의물방울
+202,5,Rosée Âme
+202,6,Seelentau
+202,7,Rocío Bondad
+202,8,Cuorugiada
+202,9,Soul Dew
+203,1,しんかいのキバ
+203,3,심해의이빨
+203,5,Dent Océan
+203,6,Abysszahn
+203,7,Diente Marino
+203,8,Dente Abissi
+203,9,Deep Sea Tooth
+204,1,しんかいのウロコ
+204,3,심해의비늘
+204,5,Écaille Océan
+204,6,Abyssplatte
+204,7,Escama Marina
+204,8,Squamabissi
+204,9,Deep Sea Scale
+205,1,けむりだま
+205,3,연막탄
+205,5,Boule Fumée
+205,6,Rauchball
+205,7,Bola Humo
+205,8,Palla Fumo
+205,9,Smoke Ball
+206,1,かわらずのいし
+206,3,변함없는돌
+206,5,Pierre Stase
+206,6,Ewigstein
+206,7,Piedra Eterna
+206,8,Pietrastante
+206,9,Everstone
+207,1,きあいのハチマキ
+207,3,기합의머리띠
+207,5,Bandeau
+207,6,Fokus-Band
+207,7,Cinta Focus
+207,8,Bandana
+207,9,Focus Band
+208,1,しあわせタマゴ
+208,3,행복의알
+208,5,Œuf Chance
+208,6,Glücks-Ei
+208,7,Huevo Suerte
+208,8,Fortunuovo
+208,9,Lucky Egg
+209,1,ピントレンズ
+209,3,초점렌즈
+209,5,Lentilscope
+209,6,Scope-Linse
+209,7,Periscopio
+209,8,Mirino
+209,9,Scope Lens
+210,1,メタルコート
+210,3,금속코트
+210,5,Peau Métal
+210,6,Metallmantel
+210,7,Revest. Metálico
+210,8,Metalcoperta
+210,9,Metal Coat
+211,1,たべのこし
+211,3,먹다남은음식
+211,5,Restes
+211,6,Überreste
+211,7,Restos
+211,8,Avanzi
+211,9,Leftovers
+212,1,りゅうのウロコ
+212,3,용의비늘
+212,5,Écaille Draco
+212,6,Drachenhaut
+212,7,Escamadragón
+212,8,Squama Drago
+212,9,Dragon Scale
+213,1,でんきだま
+213,3,전기구슬
+213,5,Balle Lumière
+213,6,Kugelblitz
+213,7,Bolaluminosa
+213,8,Elettropalla
+213,9,Light Ball
+214,1,やわらかいすな
+214,3,부드러운모래
+214,5,Sable Doux
+214,6,Pudersand
+214,7,Arena Fina
+214,8,Sabbia Soffice
+214,9,Soft Sand
+215,1,かたいいし
+215,3,딱딱한돌
+215,5,Pierre Dure
+215,6,Granitstein
+215,7,Piedra Dura
+215,8,Pietradura
+215,9,Hard Stone
+216,1,きせきのタネ
+216,3,기적의씨
+216,5,Grain Miracle
+216,6,Wundersaat
+216,7,Semilla Milagro
+216,8,Miracolseme
+216,9,Miracle Seed
+217,1,くろいメガネ
+217,3,검은안경
+217,5,Lunettes Noires
+217,6,Schattenglas
+217,7,Gafas de Sol
+217,8,Occhialineri
+217,9,Black Glasses
+218,1,くろおび
+218,3,검은띠
+218,5,Ceinture Noire
+218,6,Schwarzgurt
+218,7,Cinturón Negro
+218,8,Cinturanera
+218,9,Black Belt
+219,1,じしゃく
+219,3,자석
+219,5,Aimant
+219,6,Magnet
+219,7,Imán
+219,8,Calamita
+219,9,Magnet
+220,1,しんぴのしずく
+220,3,신비의물방울
+220,5,Eau Mystique
+220,6,Zauberwasser
+220,7,Agua Mística
+220,8,Acqua Magica
+220,9,Mystic Water
+221,1,するどいくちばし
+221,3,예리한부리
+221,5,Bec Pointu
+221,6,Hackattack
+221,7,Pico Afilado
+221,8,Beccaffilato
+221,9,Sharp Beak
+222,1,どくバリ
+222,3,독바늘
+222,5,Pic Venin
+222,6,Giftstich
+222,7,Flecha Venenosa
+222,8,Velenaculeo
+222,9,Poison Barb
+223,1,とけないこおり
+223,3,녹지않는얼음
+223,5,Glace Éternelle
+223,6,Ewiges Eis
+223,7,Antiderretir
+223,8,Gelomai
+223,9,Never-Melt Ice
+224,1,のろいのおふだ
+224,3,저주의부적
+224,5,Rune Sort
+224,6,Bannsticker
+224,7,Hechizo
+224,8,Spettrotarga
+224,9,Spell Tag
+225,1,まがったスプーン
+225,3,휘어진스푼
+225,5,Cuiller Tordue
+225,6,Krummlöffel
+225,7,Cuchara Torcida
+225,8,Cucchiaio Torto
+225,9,Twisted Spoon
+226,1,もくたん
+226,3,목탄
+226,5,Charbon
+226,6,Holzkohle
+226,7,Carbón
+226,8,Carbonella
+226,9,Charcoal
+227,1,りゅうのキバ
+227,3,용의이빨
+227,5,Croc Dragon
+227,6,Drachenzahn
+227,7,Colmillo Dragón
+227,8,Dentedidrago
+227,9,Dragon Fang
+228,1,シルクのスカーフ
+228,3,실크스카프
+228,5,Mouchoir Soie
+228,6,Seidenschal
+228,7,Pañuelo Seda
+228,8,Sciarpa Seta
+228,9,Silk Scarf
+229,1,アップグレード
+229,3,업그레이드
+229,5,Améliorator
+229,6,Up-Grade
+229,7,Mejora
+229,8,Upgrade
+229,9,Up-Grade
+230,1,かいがらのすず
+230,3,조개껍질방울
+230,5,Grelot Coque
+230,6,Seegesang
+230,7,Campana Concha
+230,8,Conchinella
+230,9,Shell Bell
+231,1,うしおのおこう
+231,3,바닷물향로
+231,5,Encens Mer
+231,6,Seerauch
+231,7,Incienso Marino
+231,8,Marearoma
+231,9,Sea Incense
+232,1,のんきのおこう
+232,3,무사태평향로
+232,5,Encens Doux
+232,6,Laxrauch
+232,7,Incienso Suave
+232,8,Distraroma
+232,9,Lax Incense
+233,1,ラッキーパンチ
+233,3,럭키펀치
+233,5,Poing Chance
+233,6,Lucky Punch
+233,7,Puño Suerte
+233,8,Fortunpugno
+233,9,Lucky Punch
+234,1,メタルパウダー
+234,3,금속파우더
+234,5,Poudre Métal
+234,6,Metallstaub
+234,7,Polvo Metálico
+234,8,Metalpolvere
+234,9,Metal Powder
+235,1,ふといホネ
+235,3,굵은뼈
+235,5,Masse Os
+235,6,Kampfknochen
+235,7,Hueso Grueso
+235,8,Ossospesso
+235,9,Thick Club
+236,1,ながねぎ
+236,3,대파
+236,5,Bâton
+236,6,Lauchstange
+236,7,Palo
+236,8,Gambo
+236,9,Stick
+237,1,あかいバンダナ
+237,3,빨강밴드
+237,5,Foulard Rouge
+237,6,Roter Schal
+237,7,Pañuelo Rojo
+237,8,Fascia Rossa
+237,9,Red Scarf
+238,1,あおいバンダナ
+238,3,파랑밴드
+238,5,Foulard Bleu
+238,6,Blauer Schal
+238,7,Pañuelo Azul
+238,8,Fascia Blu
+238,9,Blue Scarf
+239,1,ピンクのバンダナ
+239,3,분홍밴드
+239,5,Foulard Rose
+239,6,Rosa Schal
+239,7,Pañuelo Rosa
+239,8,Fascia Rosa
+239,9,Pink Scarf
+240,1,みどりのバンダナ
+240,3,초록밴드
+240,5,Foulard Vert
+240,6,Grüner Schal
+240,7,Pañuelo Verde
+240,8,Fascia Verde
+240,9,Green Scarf
+241,1,きいろのバンダナ
+241,3,노랑밴드
+241,5,Foulard Jaune
+241,6,Gelber Schal
+241,7,Pañuelo Amarillo
+241,8,Fascia Gialla
+241,9,Yellow Scarf
+242,1,こうかくレンズ
+242,3,광각렌즈
+242,5,Loupe
+242,6,Großlinse
+242,7,Lupa
+242,8,Grandelente
+242,9,Wide Lens
+243,1,ちからのハチマキ
+243,3,힘의머리띠
+243,5,Bandeau Muscle
+243,6,Muskelband
+243,7,Cinta Fuerte
+243,8,Muscolbanda
+243,9,Muscle Band
+244,1,ものしりメガネ
+244,3,박식안경
+244,5,Lunettes Sages
+244,6,Schlauglas
+244,7,Gafas Especiales
+244,8,Saviocchiali
+244,9,Wise Glasses
+245,1,たつじんのおび
+245,3,달인의띠
+245,5,Ceinture Pro
+245,6,Expertengurt
+245,7,Cinta Experto
+245,8,Abilcintura
+245,9,Expert Belt
+246,1,ひかりのねんど
+246,3,빛의점토
+246,5,Lumargile
+246,6,Lichtlehm
+246,7,Refleluz
+246,8,Creta Luce
+246,9,Light Clay
+247,1,いのちのたま
+247,3,생명의구슬
+247,5,Orbe Vie
+247,6,Leben-Orb
+247,7,Vidasfera
+247,8,Assorbisfera
+247,9,Life Orb
+248,1,パワフルハーブ
+248,3,파워풀허브
+248,5,Herbe Pouvoir
+248,6,Energiekraut
+248,7,Hierba Única
+248,8,Vigorerba
+248,9,Power Herb
+249,1,どくどくだま
+249,3,맹독구슬
+249,5,Orbe Toxique
+249,6,Toxik-Orb
+249,7,Toxisfera
+249,8,Tossicsfera
+249,9,Toxic Orb
+250,1,かえんだま
+250,3,화염구슬
+250,5,Orbe Flamme
+250,6,Heiß-Orb
+250,7,Llamasfera
+250,8,Fiammosfera
+250,9,Flame Orb
+251,1,スピードパウダー
+251,3,스피드파우더
+251,5,Poudre Vite
+251,6,Flottstaub
+251,7,Polvo Veloz
+251,8,Velopolvere
+251,9,Quick Powder
+252,1,きあいのタスキ
+252,3,기합의띠
+252,5,Ceinture Force
+252,6,Fokusgurt
+252,7,Banda Focus
+252,8,Focalnastro
+252,9,Focus Sash
+253,1,フォーカスレンズ
+253,3,포커스렌즈
+253,5,Lentille Zoom
+253,6,Zoomlinse
+253,7,Telescopio
+253,8,Zoomlente
+253,9,Zoom Lens
+254,1,メトロノーム
+254,3,메트로놈
+254,5,Métronome
+254,6,Metronom
+254,7,Metrónomo
+254,8,Plessimetro
+254,9,Metronome
+255,1,くろいてっきゅう
+255,3,검은철구
+255,5,Balle Fer
+255,6,Eisenkugel
+255,7,Bola Férrea
+255,8,Ferropalla
+255,9,Iron Ball
+256,1,こうこうのしっぽ
+256,3,느림보꼬리
+256,5,Ralentiqueue
+256,6,Schwerschwf.
+256,7,Cola Plúmbea
+256,8,Rallentocoda
+256,9,Lagging Tail
+257,1,あかいいと
+257,3,빨간실
+257,5,Nœud Destin
+257,6,Fatumknoten
+257,7,Lazo Destino
+257,8,Destincomune
+257,9,Destiny Knot
+258,1,くろいヘドロ
+258,3,검은진흙
+258,5,Boue Noire
+258,6,Giftschleim
+258,7,Lodo Negro
+258,8,Fangopece
+258,9,Black Sludge
+259,1,つめたいいわ
+259,3,차가운바위
+259,5,Roche Glace
+259,6,Eisbrocken
+259,7,Roca Helada
+259,8,Rocciafredda
+259,9,Icy Rock
+260,1,さらさらいわ
+260,3,보송보송바위
+260,5,Roche Lisse
+260,6,Glattbrocken
+260,7,Roca Suave
+260,8,Roccialiscia
+260,9,Smooth Rock
+261,1,あついいわ
+261,3,뜨거운바위
+261,5,Roche Chaude
+261,6,Heißbrocken
+261,7,Roca Calor
+261,8,Rocciacalda
+261,9,Heat Rock
+262,1,しめったいわ
+262,3,축축한바위
+262,5,Roche Humide
+262,6,Nassbrocken
+262,7,Roca Lluvia
+262,8,Rocciaumida
+262,9,Damp Rock
+263,1,ねばりのかぎづめ
+263,3,끈기갈고리손톱
+263,5,Accro Griffe
+263,6,Griffklaue
+263,7,Garra Garfio
+263,8,Presartigli
+263,9,Grip Claw
+264,1,こだわりスカーフ
+264,3,구애스카프
+264,5,Mouchoir Choix
+264,6,Wahlschal
+264,7,Pañuelo Elegido
+264,8,Stolascelta
+264,9,Choice Scarf
+265,1,くっつきバリ
+265,3,끈적끈적바늘
+265,5,Piquants
+265,6,Klettdorn
+265,7,Toxiestrella
+265,8,Vischiopunta
+265,9,Sticky Barb
+266,1,パワーリスト
+266,3,파워리스트
+266,5,Poignée Pouvoir
+266,6,Machtreif
+266,7,Brazal Recio
+266,8,Vigorcerchio
+266,9,Power Bracer
+267,1,パワーベルト
+267,3,파워벨트
+267,5,Ceinture Pouvoir
+267,6,Machtgurt
+267,7,Cinto Recio
+267,8,Vigorfascia
+267,9,Power Belt
+268,1,パワーレンズ
+268,3,파워렌즈
+268,5,Lentille Pouvoir
+268,6,Machtlinse
+268,7,Lente Recia
+268,8,Vigorlente
+268,9,Power Lens
+269,1,パワーバンド
+269,3,파워밴드
+269,5,Bandeau Pouvoir
+269,6,Machtband
+269,7,Banda Recia
+269,8,Vigorbanda
+269,9,Power Band
+270,1,パワーアンクル
+270,3,파워앵클릿
+270,5,Chaîne Pouvoir
+270,6,Machtkette
+270,7,Franja Recia
+270,8,Vigorgliera
+270,9,Power Anklet
+271,1,パワーウエイト
+271,3,파워웨이트
+271,5,Poids Pouvoir
+271,6,Machtgewicht
+271,7,Pesa Recia
+271,8,Vigorpeso
+271,9,Power Weight
+272,1,きれいなぬけがら
+272,3,아름다운허물
+272,5,Carapace Mue
+272,6,Wechselhülle
+272,7,Muda Concha
+272,8,Disfoguscio
+272,9,Shed Shell
+273,1,おおきなねっこ
+273,3,큰뿌리
+273,5,Grosse Racine
+273,6,Großwurzel
+273,7,Raíz Grande
+273,8,Granradice
+273,9,Big Root
+274,1,こだわりメガネ
+274,3,구애안경
+274,5,Lunettes Choix
+274,6,Wahlglas
+274,7,Gafas Elegid
+274,8,Lentiscelta
+274,9,Choice Specs
+275,1,ひのたまプレート
+275,3,불구슬플레이트
+275,5,Plaque Flamme
+275,6,Feuertafel
+275,7,Tabla Llama
+275,8,Lastrarogo
+275,9,Flame Plate
+276,1,しずくプレート
+276,3,물방울플레이트
+276,5,Plaque Hydro
+276,6,Wassertafel
+276,7,Tabla Linfa
+276,8,Lastraidro
+276,9,Splash Plate
+277,1,いかずちプレート
+277,3,우뢰플레이트
+277,5,Plaque Volt
+277,6,Blitztafel
+277,7,Tabla Trueno
+277,8,Lastrasaetta
+277,9,Zap Plate
+278,1,みどりのプレート
+278,3,초록플레이트
+278,5,Plaque Herbe
+278,6,Wiesentafel
+278,7,Tabla Pradal
+278,8,Lastraprato
+278,9,Meadow Plate
+279,1,つららのプレート
+279,3,고드름플레이트
+279,5,Plaque Glace
+279,6,Frosttafel
+279,7,Tabla Helada
+279,8,Lastragelo
+279,9,Icicle Plate
+280,1,こぶしのプレート
+280,3,주먹플레이트
+280,5,Plaque Poing
+280,6,Fausttafel
+280,7,Tabla Fuerte
+280,8,Lastrapugno
+280,9,Fist Plate
+281,1,もうどくプレート
+281,3,맹독플레이트
+281,5,Plaque Toxik
+281,6,Gifttafel
+281,7,Tabla Tóxica
+281,8,Lastrafiele
+281,9,Toxic Plate
+282,1,だいちのプレート
+282,3,대지플레이트
+282,5,Plaque Terre
+282,6,Erdtafel
+282,7,Tabla Terrax
+282,8,Lastrageo
+282,9,Earth Plate
+283,1,あおぞらプレート
+283,3,푸른하늘플레이트
+283,5,Plaque Ciel
+283,6,Wolkentafel
+283,7,Tabla Cielo
+283,8,Lastracielo
+283,9,Sky Plate
+284,1,ふしぎのプレート
+284,3,이상한플레이트
+284,5,Plaque Esprit
+284,6,Hirntafel
+284,7,Tabla Mental
+284,8,Lastramente
+284,9,Mind Plate
+285,1,たまむしプレート
+285,3,비단벌레플레이트
+285,5,Plaque Insecte
+285,6,Käfertafel
+285,7,Tabla Bicho
+285,8,Lastrabaco
+285,9,Insect Plate
+286,1,がんせきプレート
+286,3,암석플레이트
+286,5,Plaque Roc
+286,6,Steintafel
+286,7,Tabla Pétrea
+286,8,Lastrapietra
+286,9,Stone Plate
+287,1,もののけプレート
+287,3,원령플레이트
+287,5,Plaque Fantô
+287,6,Spuktafel
+287,7,Tabla Terror
+287,8,Lastratetra
+287,9,Spooky Plate
+288,1,りゅうのプレート
+288,3,용의플레이트
+288,5,Plaque Draco
+288,6,Dracotafel
+288,7,Tabla Draco
+288,8,Lastradrakon
+288,9,Draco Plate
+289,1,こわもてプレート
+289,3,공포플레이트
+289,5,Plaque Ombre
+289,6,Furchttafel
+289,7,Tabla Oscura
+289,8,Lastratimore
+289,9,Dread Plate
+290,1,こうてつプレート
+290,3,강철플레이트
+290,5,Plaque Fer
+290,6,Eisentafel
+290,7,Tabla Acero
+290,8,Lastraferro
+290,9,Iron Plate
+291,1,あやしいおこう
+291,3,괴상한향로
+291,5,Encens Bizarre
+291,6,Schrägrauch
+291,7,Incienso Raro
+291,8,Bizzoaroma
+291,9,Odd Incense
+292,1,がんせきおこう
+292,3,암석향로
+292,5,Encens Roc
+292,6,Steinrauch
+292,7,Incienso Roca
+292,8,Roccioaroma
+292,9,Rock Incense
+293,1,まんぷくおこう
+293,3,만복향로
+293,5,Encens Plein
+293,6,Lahmrauch
+293,7,Incienso Lento
+293,8,Gonfioaroma
+293,9,Full Incense
+294,1,さざなみのおこう
+294,3,잔물결향로
+294,5,Encens Vague
+294,6,Wellenrauch
+294,7,Incienso Aqua
+294,8,Ondaroma
+294,9,Wave Incense
+295,1,おはなのおこう
+295,3,꽃향로
+295,5,Encens Fleur
+295,6,Rosenrauch
+295,7,Incienso Floral
+295,8,Rosaroma
+295,9,Rose Incense
+296,1,こううんのおこう
+296,3,행운의향로
+296,5,Encens Veine
+296,6,Glücksrauch
+296,7,Incienso Duplo
+296,8,Fortunaroma
+296,9,Luck Incense
+297,1,きよめのおこう
+297,3,순결의향로
+297,5,Encens Pur
+297,6,Scheuchrauch
+297,7,Incienso Puro
+297,8,Puroaroma
+297,9,Pure Incense
+298,1,プロテクター
+298,3,프로텍터
+298,5,Protecteur
+298,6,Schützer
+298,7,Protector
+298,8,Copertura
+298,9,Protector
+299,1,エレキブースター
+299,3,에레키부스터
+299,5,Électriseur
+299,6,Stromisierer
+299,7,Electrizador
+299,8,Elettritore
+299,9,Electirizer
+300,1,マグマブースター
+300,3,마그마부스터
+300,5,Magmariseur
+300,6,Magmaisierer
+300,7,Magmatizador
+300,8,Magmatore
+300,9,Magmarizer
+301,1,あやしいパッチ
+301,3,괴상한패치
+301,5,CD Douteux
+301,6,Dubiosdisc
+301,7,Disco Extraño
+301,8,Dubbiodisco
+301,9,Dubious Disc
+302,1,れいかいのぬの
+302,3,영계의천
+302,5,Tissu Fauche
+302,6,Düsterumhang
+302,7,Tela Terrible
+302,8,Terrorpanno
+302,9,Reaper Cloth
+303,1,するどいツメ
+303,3,예리한손톱
+303,5,Griffe Rasoir
+303,6,Scharfklaue
+303,7,Garra Afilada
+303,8,Affilartigli
+303,9,Razor Claw
+304,1,するどいキバ
+304,3,예리한이빨
+304,5,Croc Rasoir
+304,6,Scharfzahn
+304,7,Colmillo Agudo
+304,8,Affilodente
+304,9,Razor Fang
+305,1,わざマシン０１
+305,3,기술머신01
+305,5,CT01
+305,6,TM01
+305,7,MT01
+305,8,MT01
+305,9,TM01
+306,1,わざマシン０２
+306,3,기술머신02
+306,5,CT02
+306,6,TM02
+306,7,MT02
+306,8,MT02
+306,9,TM02
+307,1,わざマシン０３
+307,3,기술머신03
+307,5,CT03
+307,6,TM03
+307,7,MT03
+307,8,MT03
+307,9,TM03
+308,1,わざマシン０４
+308,3,기술머신04
+308,5,CT04
+308,6,TM04
+308,7,MT04
+308,8,MT04
+308,9,TM04
+309,1,わざマシン０５
+309,3,기술머신05
+309,5,CT05
+309,6,TM05
+309,7,MT05
+309,8,MT05
+309,9,TM05
+310,1,わざマシン０６
+310,3,기술머신06
+310,5,CT06
+310,6,TM06
+310,7,MT06
+310,8,MT06
+310,9,TM06
+311,1,わざマシン０７
+311,3,기술머신07
+311,5,CT07
+311,6,TM07
+311,7,MT07
+311,8,MT07
+311,9,TM07
+312,1,わざマシン０８
+312,3,기술머신08
+312,5,CT08
+312,6,TM08
+312,7,MT08
+312,8,MT08
+312,9,TM08
+313,1,わざマシン０９
+313,3,기술머신09
+313,5,CT09
+313,6,TM09
+313,7,MT09
+313,8,MT09
+313,9,TM09
+314,1,わざマシン１０
+314,3,기술머신10
+314,5,CT10
+314,6,TM10
+314,7,MT10
+314,8,MT10
+314,9,TM10
+315,1,わざマシン１１
+315,3,기술머신11
+315,5,CT11
+315,6,TM11
+315,7,MT11
+315,8,MT11
+315,9,TM11
+316,1,わざマシン１２
+316,3,기술머신12
+316,5,CT12
+316,6,TM12
+316,7,MT12
+316,8,MT12
+316,9,TM12
+317,1,わざマシン１３
+317,3,기술머신13
+317,5,CT13
+317,6,TM13
+317,7,MT13
+317,8,MT13
+317,9,TM13
+318,1,わざマシン１４
+318,3,기술머신14
+318,5,CT14
+318,6,TM14
+318,7,MT14
+318,8,MT14
+318,9,TM14
+319,1,わざマシン１５
+319,3,기술머신15
+319,5,CT15
+319,6,TM15
+319,7,MT15
+319,8,MT15
+319,9,TM15
+320,1,わざマシン１６
+320,3,기술머신16
+320,5,CT16
+320,6,TM16
+320,7,MT16
+320,8,MT16
+320,9,TM16
+321,1,わざマシン１７
+321,3,기술머신17
+321,5,CT17
+321,6,TM17
+321,7,MT17
+321,8,MT17
+321,9,TM17
+322,1,わざマシン１８
+322,3,기술머신18
+322,5,CT18
+322,6,TM18
+322,7,MT18
+322,8,MT18
+322,9,TM18
+323,1,わざマシン１９
+323,3,기술머신19
+323,5,CT19
+323,6,TM19
+323,7,MT19
+323,8,MT19
+323,9,TM19
+324,1,わざマシン２０
+324,3,기술머신20
+324,5,CT20
+324,6,TM20
+324,7,MT20
+324,8,MT20
+324,9,TM20
+325,1,わざマシン２１
+325,3,기술머신21
+325,5,CT21
+325,6,TM21
+325,7,MT21
+325,8,MT21
+325,9,TM21
+326,1,わざマシン２２
+326,3,기술머신22
+326,5,CT22
+326,6,TM22
+326,7,MT22
+326,8,MT22
+326,9,TM22
+327,1,わざマシン２３
+327,3,기술머신23
+327,5,CT23
+327,6,TM23
+327,7,MT23
+327,8,MT23
+327,9,TM23
+328,1,わざマシン２４
+328,3,기술머신24
+328,5,CT24
+328,6,TM24
+328,7,MT24
+328,8,MT24
+328,9,TM24
+329,1,わざマシン２５
+329,3,기술머신25
+329,5,CT25
+329,6,TM25
+329,7,MT25
+329,8,MT25
+329,9,TM25
+330,1,わざマシン２６
+330,3,기술머신26
+330,5,CT26
+330,6,TM26
+330,7,MT26
+330,8,MT26
+330,9,TM26
+331,1,わざマシン２７
+331,3,기술머신27
+331,5,CT27
+331,6,TM27
+331,7,MT27
+331,8,MT27
+331,9,TM27
+332,1,わざマシン２８
+332,3,기술머신28
+332,5,CT28
+332,6,TM28
+332,7,MT28
+332,8,MT28
+332,9,TM28
+333,1,わざマシン２９
+333,3,기술머신29
+333,5,CT29
+333,6,TM29
+333,7,MT29
+333,8,MT29
+333,9,TM29
+334,1,わざマシン３０
+334,3,기술머신30
+334,5,CT30
+334,6,TM30
+334,7,MT30
+334,8,MT30
+334,9,TM30
+335,1,わざマシン３１
+335,3,기술머신31
+335,5,CT31
+335,6,TM31
+335,7,MT31
+335,8,MT31
+335,9,TM31
+336,1,わざマシン３２
+336,3,기술머신32
+336,5,CT32
+336,6,TM32
+336,7,MT32
+336,8,MT32
+336,9,TM32
+337,1,わざマシン３３
+337,3,기술머신33
+337,5,CT33
+337,6,TM33
+337,7,MT33
+337,8,MT33
+337,9,TM33
+338,1,わざマシン３４
+338,3,기술머신34
+338,5,CT34
+338,6,TM34
+338,7,MT34
+338,8,MT34
+338,9,TM34
+339,1,わざマシン３５
+339,3,기술머신35
+339,5,CT35
+339,6,TM35
+339,7,MT35
+339,8,MT35
+339,9,TM35
+340,1,わざマシン３６
+340,3,기술머신36
+340,5,CT36
+340,6,TM36
+340,7,MT36
+340,8,MT36
+340,9,TM36
+341,1,わざマシン３７
+341,3,기술머신37
+341,5,CT37
+341,6,TM37
+341,7,MT37
+341,8,MT37
+341,9,TM37
+342,1,わざマシン３８
+342,3,기술머신38
+342,5,CT38
+342,6,TM38
+342,7,MT38
+342,8,MT38
+342,9,TM38
+343,1,わざマシン３９
+343,3,기술머신39
+343,5,CT39
+343,6,TM39
+343,7,MT39
+343,8,MT39
+343,9,TM39
+344,1,わざマシン４０
+344,3,기술머신40
+344,5,CT40
+344,6,TM40
+344,7,MT40
+344,8,MT40
+344,9,TM40
+345,1,わざマシン４１
+345,3,기술머신41
+345,5,CT41
+345,6,TM41
+345,7,MT41
+345,8,MT41
+345,9,TM41
+346,1,わざマシン４２
+346,3,기술머신42
+346,5,CT42
+346,6,TM42
+346,7,MT42
+346,8,MT42
+346,9,TM42
+347,1,わざマシン４３
+347,3,기술머신43
+347,5,CT43
+347,6,TM43
+347,7,MT43
+347,8,MT43
+347,9,TM43
+348,1,わざマシン４４
+348,3,기술머신44
+348,5,CT44
+348,6,TM44
+348,7,MT44
+348,8,MT44
+348,9,TM44
+349,1,わざマシン４５
+349,3,기술머신45
+349,5,CT45
+349,6,TM45
+349,7,MT45
+349,8,MT45
+349,9,TM45
+350,1,わざマシン４６
+350,3,기술머신46
+350,5,CT46
+350,6,TM46
+350,7,MT46
+350,8,MT46
+350,9,TM46
+351,1,わざマシン４７
+351,3,기술머신47
+351,5,CT47
+351,6,TM47
+351,7,MT47
+351,8,MT47
+351,9,TM47
+352,1,わざマシン４８
+352,3,기술머신48
+352,5,CT48
+352,6,TM48
+352,7,MT48
+352,8,MT48
+352,9,TM48
+353,1,わざマシン４９
+353,3,기술머신49
+353,5,CT49
+353,6,TM49
+353,7,MT49
+353,8,MT49
+353,9,TM49
+354,1,わざマシン５０
+354,3,기술머신50
+354,5,CT50
+354,6,TM50
+354,7,MT50
+354,8,MT50
+354,9,TM50
+355,1,わざマシン５１
+355,3,기술머신51
+355,5,CT51
+355,6,TM51
+355,7,MT51
+355,8,MT51
+355,9,TM51
+356,1,わざマシン５２
+356,3,기술머신52
+356,5,CT52
+356,6,TM52
+356,7,MT52
+356,8,MT52
+356,9,TM52
+357,1,わざマシン５３
+357,3,기술머신53
+357,5,CT53
+357,6,TM53
+357,7,MT53
+357,8,MT53
+357,9,TM53
+358,1,わざマシン５４
+358,3,기술머신54
+358,5,CT54
+358,6,TM54
+358,7,MT54
+358,8,MT54
+358,9,TM54
+359,1,わざマシン５５
+359,3,기술머신55
+359,5,CT55
+359,6,TM55
+359,7,MT55
+359,8,MT55
+359,9,TM55
+360,1,わざマシン５６
+360,3,기술머신56
+360,5,CT56
+360,6,TM56
+360,7,MT56
+360,8,MT56
+360,9,TM56
+361,1,わざマシン５７
+361,3,기술머신57
+361,5,CT57
+361,6,TM57
+361,7,MT57
+361,8,MT57
+361,9,TM57
+362,1,わざマシン５８
+362,3,기술머신58
+362,5,CT58
+362,6,TM58
+362,7,MT58
+362,8,MT58
+362,9,TM58
+363,1,わざマシン５９
+363,3,기술머신59
+363,5,CT59
+363,6,TM59
+363,7,MT59
+363,8,MT59
+363,9,TM59
+364,1,わざマシン６０
+364,3,기술머신60
+364,5,CT60
+364,6,TM60
+364,7,MT60
+364,8,MT60
+364,9,TM60
+365,1,わざマシン６１
+365,3,기술머신61
+365,5,CT61
+365,6,TM61
+365,7,MT61
+365,8,MT61
+365,9,TM61
+366,1,わざマシン６２
+366,3,기술머신62
+366,5,CT62
+366,6,TM62
+366,7,MT62
+366,8,MT62
+366,9,TM62
+367,1,わざマシン６３
+367,3,기술머신63
+367,5,CT63
+367,6,TM63
+367,7,MT63
+367,8,MT63
+367,9,TM63
+368,1,わざマシン６４
+368,3,기술머신64
+368,5,CT64
+368,6,TM64
+368,7,MT64
+368,8,MT64
+368,9,TM64
+369,1,わざマシン６５
+369,3,기술머신65
+369,5,CT65
+369,6,TM65
+369,7,MT65
+369,8,MT65
+369,9,TM65
+370,1,わざマシン６６
+370,3,기술머신66
+370,5,CT66
+370,6,TM66
+370,7,MT66
+370,8,MT66
+370,9,TM66
+371,1,わざマシン６７
+371,3,기술머신67
+371,5,CT67
+371,6,TM67
+371,7,MT67
+371,8,MT67
+371,9,TM67
+372,1,わざマシン６８
+372,3,기술머신68
+372,5,CT68
+372,6,TM68
+372,7,MT68
+372,8,MT68
+372,9,TM68
+373,1,わざマシン６９
+373,3,기술머신69
+373,5,CT69
+373,6,TM69
+373,7,MT69
+373,8,MT69
+373,9,TM69
+374,1,わざマシン７０
+374,3,기술머신70
+374,5,CT70
+374,6,TM70
+374,7,MT70
+374,8,MT70
+374,9,TM70
+375,1,わざマシン７１
+375,3,기술머신71
+375,5,CT71
+375,6,TM71
+375,7,MT71
+375,8,MT71
+375,9,TM71
+376,1,わざマシン７２
+376,3,기술머신72
+376,5,CT72
+376,6,TM72
+376,7,MT72
+376,8,MT72
+376,9,TM72
+377,1,わざマシン７３
+377,3,기술머신73
+377,5,CT73
+377,6,TM73
+377,7,MT73
+377,8,MT73
+377,9,TM73
+378,1,わざマシン７４
+378,3,기술머신74
+378,5,CT74
+378,6,TM74
+378,7,MT74
+378,8,MT74
+378,9,TM74
+379,1,わざマシン７５
+379,3,기술머신75
+379,5,CT75
+379,6,TM75
+379,7,MT75
+379,8,MT75
+379,9,TM75
+380,1,わざマシン７６
+380,3,기술머신76
+380,5,CT76
+380,6,TM76
+380,7,MT76
+380,8,MT76
+380,9,TM76
+381,1,わざマシン７７
+381,3,기술머신77
+381,5,CT77
+381,6,TM77
+381,7,MT77
+381,8,MT77
+381,9,TM77
+382,1,わざマシン７８
+382,3,기술머신78
+382,5,CT78
+382,6,TM78
+382,7,MT78
+382,8,MT78
+382,9,TM78
+383,1,わざマシン７９
+383,3,기술머신79
+383,5,CT79
+383,6,TM79
+383,7,MT79
+383,8,MT79
+383,9,TM79
+384,1,わざマシン８０
+384,3,기술머신80
+384,5,CT80
+384,6,TM80
+384,7,MT80
+384,8,MT80
+384,9,TM80
+385,1,わざマシン８１
+385,3,기술머신81
+385,5,CT81
+385,6,TM81
+385,7,MT81
+385,8,MT81
+385,9,TM81
+386,1,わざマシン８２
+386,3,기술머신82
+386,5,CT82
+386,6,TM82
+386,7,MT82
+386,8,MT82
+386,9,TM82
+387,1,わざマシン８３
+387,3,기술머신83
+387,5,CT83
+387,6,TM83
+387,7,MT83
+387,8,MT83
+387,9,TM83
+388,1,わざマシン８４
+388,3,기술머신84
+388,5,CT84
+388,6,TM84
+388,7,MT84
+388,8,MT84
+388,9,TM84
+389,1,わざマシン８５
+389,3,기술머신85
+389,5,CT85
+389,6,TM85
+389,7,MT85
+389,8,MT85
+389,9,TM85
+390,1,わざマシン８６
+390,3,기술머신86
+390,5,CT86
+390,6,TM86
+390,7,MT86
+390,8,MT86
+390,9,TM86
+391,1,わざマシン８７
+391,3,기술머신87
+391,5,CT87
+391,6,TM87
+391,7,MT87
+391,8,MT87
+391,9,TM87
+392,1,わざマシン８８
+392,3,기술머신88
+392,5,CT88
+392,6,TM88
+392,7,MT88
+392,8,MT88
+392,9,TM88
+393,1,わざマシン８９
+393,3,기술머신89
+393,5,CT89
+393,6,TM89
+393,7,MT89
+393,8,MT89
+393,9,TM89
+394,1,わざマシン９０
+394,3,기술머신90
+394,5,CT90
+394,6,TM90
+394,7,MT90
+394,8,MT90
+394,9,TM90
+395,1,わざマシン９１
+395,3,기술머신91
+395,5,CT91
+395,6,TM91
+395,7,MT91
+395,8,MT91
+395,9,TM91
+396,1,わざマシン９２
+396,3,기술머신92
+396,5,CT92
+396,6,TM92
+396,7,MT92
+396,8,MT92
+396,9,TM92
+397,1,ひでんマシン０１
+397,3,비전머신01
+397,5,CS01
+397,6,VM01
+397,7,MO01
+397,8,MN01
+397,9,HM01
+398,1,ひでんマシン０２
+398,3,비전머신02
+398,5,CS02
+398,6,VM02
+398,7,MO02
+398,8,MN02
+398,9,HM02
+399,1,ひでんマシン０３
+399,3,비전머신03
+399,5,CS03
+399,6,VM03
+399,7,MO03
+399,8,MN03
+399,9,HM03
+400,1,ひでんマシン０４
+400,3,비전머신04
+400,5,CS04
+400,6,VM04
+400,7,MO04
+400,8,MN04
+400,9,HM04
+401,1,ひでんマシン０５
+401,3,비전머신05
+401,5,CS05
+401,6,VM05
+401,7,MO05
+401,8,MN05
+401,9,HM05
+402,1,ひでんマシン０６
+402,3,비전머신06
+402,5,CS06
+402,6,VM06
+402,7,MO06
+402,8,MN06
+402,9,HM06
+403,1,ひでんマシン０７
+403,5,CS07
+403,6,VM07
+403,7,MO07
+403,8,MN07
+403,9,HM07
+404,1,ひでんマシン０８
+404,5,CS08
+404,6,VM08
+404,7,MO08
+404,8,MN08
+404,9,HM08
+405,1,たんけんセット
+405,3,탐험세트
+405,5,Explorakit
+405,6,Forschersack
+405,7,Kit Explorador
+405,8,Esplorokit
+405,9,Explorer Kit
+406,1,たからぶくろ
+406,3,보물주머니
+406,5,Sac Butin
+406,6,Beutesack
+406,7,Saca Botín
+406,8,Bottinosacca
+406,9,Loot Sack
+407,1,ルールブック
+407,3,룰북
+407,5,Livre Règles
+407,6,Regelbuch
+407,7,Reglamento
+407,8,Libro Regole
+407,9,Rule Book
+408,1,ポケトレ
+408,3,포켓트레
+408,5,Poké Radar
+408,6,Pokéradar
+408,7,Pokéradar
+408,8,Poké Radar
+408,9,Poké Radar
+409,1,ポイントカード
+409,3,포인트카드
+409,5,Carte Points
+409,6,Punktekarte
+409,7,Tarjeta Puntos
+409,8,Scheda Punti
+409,9,Point Card
+410,1,ぼうけんノート
+410,3,모험노트
+410,5,Journal
+410,6,Tagebuch
+410,7,Diario
+410,8,Agenda
+410,9,Journal
+411,1,シールいれ
+411,3,실상자
+411,5,Boîte Sceaux
+411,6,Stick.Koffer
+411,7,Caja Sellos
+411,8,Portabolli
+411,9,Seal Case
+412,1,アクセサリーいれ
+412,3,액세서리상자
+412,5,Coffret Mode
+412,6,Modekoffer
+412,7,Caja Corazón
+412,8,Scatola Chic
+412,9,Fashion Case
+413,1,シールぶくろ
+413,3,실주머니
+413,5,Sac Sceaux
+413,6,Stickertüte
+413,7,Bolsa Sellos
+413,8,Bollosacca
+413,9,Seal Bag
+414,1,ともだちてちょう
+414,3,친구수첩
+414,5,Registre Ami
+414,6,Adressbuch
+414,7,Bloc amigos
+414,8,Blocco Amici
+414,9,Pal Pad
+415,1,はつでんしょキー
+415,3,발전소키
+415,5,Clé Centrale
+415,6,K-Schlüssel
+415,7,Llave Central
+415,8,Turbinchiave
+415,9,Works Key
+416,1,こだいのおまもり
+416,3,고대의부적
+416,5,Vieux Grigri
+416,6,Talisman
+416,7,Talismán
+416,8,Arcamuleto
+416,9,Old Charm
+417,1,ギンガだんのカギ
+417,3,갤럭시단의열쇠
+417,5,Clé Galaxie
+417,6,G-Schlüssel
+417,7,Llave Galaxia
+417,8,Galachiave
+417,9,Galactic Key
+418,1,あかいくさり
+418,3,빨강쇠사슬
+418,5,Chaîne Rouge
+418,6,Rote Kette
+418,7,Cadena Roja
+418,8,Rossocatena
+418,9,Red Chain
+419,1,タウンマップ
+419,3,타운맵
+419,5,Carte
+419,6,Karte
+419,7,Mapa
+419,8,Mappa Città
+419,9,Town Map
+420,1,バトルサーチャー
+420,3,배틀서처
+420,5,Cherche VS
+420,6,Kampffahnder
+420,7,Buscapelea
+420,8,Cercasfide
+420,9,Vs. Seeker
+421,1,コインケース
+421,3,동전케이스
+421,5,Boîte Jetons
+421,6,Münzkorb
+421,7,Monedero
+421,8,Salvadanaio
+421,9,Coin Case
+422,1,ボロのつりざお
+422,3,낡은낚싯대
+422,5,Canne
+422,6,Angel
+422,7,Caña Vieja
+422,8,Amo Vecchio
+422,9,Old Rod
+423,1,いいつりざお
+423,3,좋은낚싯대
+423,5,Super Canne
+423,6,Profiangel
+423,7,Caña Buena
+423,8,Amo Buono
+423,9,Good Rod
+424,1,すごいつりざお
+424,3,대단한낚싯대
+424,5,Méga Canne
+424,6,Superangel
+424,7,Supercaña
+424,8,Super Amo
+424,9,Super Rod
+425,1,コダックじょうろ
+425,3,고라파덕물뿌리개
+425,5,Kwakarrosoir
+425,6,Entonkanne
+425,7,Psydugadera
+425,8,Sprayduck
+425,9,Sprayduck
+426,1,ポフィンケース
+426,3,포핀케이스
+426,5,Boîte Poffin
+426,6,Knurspbox
+426,7,Pokochera
+426,8,Portapoffin
+426,9,Poffin Case
+427,1,じてんしゃ
+427,3,자전거
+427,5,Bicyclette
+427,6,Fahrrad
+427,7,Bici
+427,8,Bicicletta
+427,9,Bicycle
+428,1,ルームキー
+428,3,룸키
+428,5,Clé Chambre
+428,6,B-Schlüssel
+428,7,Llave Suite
+428,8,Chiave Suite
+428,9,Suite Key
+429,1,オーキドのてがみ
+429,3,오박사의편지
+429,5,Lettre Chen
+429,6,Eichs Brief
+429,7,Carta Prof. Oak
+429,8,Lettera Oak
+429,9,Oak's Letter
+430,1,みかづきのはね
+430,3,초승달날개
+430,5,Lun'Aile
+430,6,Lunarfeder
+430,7,Pluma Lunar
+430,8,Alalunare
+430,9,Lunar Wing
+431,1,メンバーズカード
+431,3,멤버스카드
+431,5,Carte Membre
+431,6,Mitgl.Karte
+431,7,Carné Socio
+431,8,Scheda Soci
+431,9,Member Card
+432,1,てんかいのふえ
+432,3,천계의피리
+432,5,Flûte Azur
+432,6,Azurflöte
+432,7,Flauta Azur
+432,8,Flauto Cielo
+432,9,Azure Flute
+433,1,ふねのチケット
+433,3,승선티켓
+433,5,Passe Bateau
+433,6,Bootsticket
+433,7,Ticket Barco
+433,8,Biglietto Nave
+433,9,S.S. Ticket
+434,1,コンテストパス
+434,3,콘테스트패스
+434,5,Passe Concours
+434,6,Wettb.-Karte
+434,7,Pase Concurso
+434,8,Tessera Gare
+434,9,Contest Pass
+435,1,かざんのおきいし
+435,3,화산의돌
+435,5,Pierre Magma
+435,6,Magmastein
+435,7,Piedra Magma
+435,8,Magmapietra
+435,9,Magma Stone
+436,1,おとどけもの
+436,3,전해줄물건
+436,5,Colis
+436,6,Paket
+436,7,Paquete
+436,8,Pacco
+436,9,Parcel
+437,1,ひきかえけん１
+437,3,교환권1
+437,5,Bon 1
+437,6,Kupon 1
+437,7,Cupón 1
+437,8,Coupon 1
+437,9,Coupon 1
+438,1,ひきかえけん２
+438,3,교환권2
+438,5,Bon 2
+438,6,Kupon 2
+438,7,Cupón 2
+438,8,Coupon 2
+438,9,Coupon 2
+439,1,ひきかえけん３
+439,3,교환권3
+439,5,Bon 3
+439,6,Kupon 3
+439,7,Cupón 3
+439,8,Coupon 3
+439,9,Coupon 3
+440,1,そうこのカギ
+440,3,창고열쇠
+440,5,Clé Stockage
+440,6,L-Schlüssel
+440,7,Llave Almacén
+440,8,Depochiave
+440,9,Storage Key
+441,1,ひでんのくすり
+441,3,비전신약
+441,5,Potion Secrète
+441,6,Geheimtrank
+441,7,Poción Secreta
+441,8,Pozione Segreta
+441,9,Secret Potion
+442,1,はっきんだま
+442,3,백금옥
+442,5,Orbe Platiné
+442,6,Platinum-Orb
+442,7,Griseosfera
+442,8,Grigiosfera
+442,9,Griseous Orb
+443,1,バトルレコーダー
+443,3,배틀레코더
+443,5,Magnéto VS
+443,6,Kampfkamera
+443,7,Cámara Lucha
+443,8,Registradati
+443,9,Vs. Recorder
+444,1,グラシデアのはな
+444,3,그라시데아꽃
+444,5,Gracidée
+444,6,Gracidea
+444,7,Gracídea
+444,8,Gracidea
+444,9,Gracidea
+445,1,ひみつのカギ
+445,3,비밀의열쇠
+445,5,Clé Secrète
+445,6,?-Öffner
+445,7,Llave Secreta
+445,8,Chiave Segreta
+445,9,Secret Key
+446,1,ぼんぐりケース
+446,3,규토리케이스
+446,5,Boîte Noigrume
+446,6,Aprikokobox
+446,7,Caja Bonguri
+446,8,Ghicobox
+446,9,Apricorn Box
+447,1,きのみプランター
+447,3,나무열매플랜터
+447,5,Plante-Baies
+447,6,Pflanzset
+447,7,Plantabayas
+447,8,Piantabacche
+447,9,Berry Pots
+448,1,ゼニガメじょうろ
+448,3,꼬부기물뿌리개
+448,5,Carapuce à O
+448,6,Schiggykanne
+448,7,Regadera
+448,8,Annaffiatoio
+448,9,Squirt Bottle
+449,1,ルアーボール
+449,3,루어볼
+449,5,Appât Ball
+449,6,Köderball
+449,7,Cebo Ball
+449,8,Esca Ball
+449,9,Lure Ball
+450,1,レベルボール
+450,3,레벨볼
+450,5,Niveau Ball
+450,6,Levelball
+450,7,Nivel Ball
+450,8,Level Ball
+450,9,Level Ball
+451,1,ムーンボール
+451,3,문볼
+451,5,Lune Ball
+451,6,Mondball
+451,7,Luna Ball
+451,8,Luna Ball
+451,9,Moon Ball
+452,1,ヘビーボール
+452,3,헤비볼
+452,5,Masse Ball
+452,6,Schwerball
+452,7,Peso Ball
+452,8,Peso Ball
+452,9,Heavy Ball
+453,1,スピードボール
+453,3,스피드볼
+453,5,Speed Ball
+453,6,Turboball
+453,7,Rapid Ball
+453,8,Rapid Ball
+453,9,Fast Ball
+454,1,フレンドボール
+454,3,프렌드볼
+454,5,Copain Ball
+454,6,Freundesball
+454,7,Amigo Ball
+454,8,Friend Ball
+454,9,Friend Ball
+455,1,ラブラブボール
+455,3,러브러브볼
+455,5,Love Ball
+455,6,Sympaball
+455,7,Amor Ball
+455,8,Love Ball
+455,9,Love Ball
+456,1,パークボール
+456,3,파크볼
+456,5,Parc Ball
+456,6,Parkball
+456,7,Parque Ball
+456,8,Parco Ball
+456,9,Park Ball
+457,1,コンペボール
+457,3,콤페볼
+457,5,Compét'Ball
+457,6,Turnierball
+457,7,Competi Ball
+457,8,Gara Ball
+457,9,Sport Ball
+458,1,あかぼんぐり
+458,3,빨간규토리
+458,5,Noigrume Rge
+458,6,Aprikoko Rot
+458,7,Bonguri Rojo
+458,8,Ghicocca Rossa
+458,9,Red Apricorn
+459,1,あおぼんぐり
+459,3,파란규토리
+459,5,Noigrume Blu
+459,6,Aprikoko Blu
+459,7,Bonguri Azul
+459,8,Ghicocca Blu
+459,9,Blue Apricorn
+460,1,きぼんぐり
+460,3,노랑규토리
+460,5,Noigrume Jne
+460,6,Aprikoko Glb
+460,7,Bonguri Amarillo
+460,8,Ghicocca Gialla
+460,9,Yellow Apricorn
+461,1,みどぼんぐり
+461,3,초록규토리
+461,5,Noigrume Ver
+461,6,Aprikoko Grn
+461,7,Bonguri Verde
+461,8,Ghicocca Verde
+461,9,Green Apricorn
+462,1,ももぼんぐり
+462,3,담홍규토리
+462,5,Noigrume Ros
+462,6,Aprikoko Pnk
+462,7,Bonguri Rosa
+462,8,Ghicocca Rosa
+462,9,Pink Apricorn
+463,1,しろぼんぐり
+463,3,하얀규토리
+463,5,Noigrume Blc
+463,6,Aprikoko Wss
+463,7,Bonguri Blanco
+463,8,Ghicocca Bianca
+463,9,White Apricorn
+464,1,くろぼんぐり
+464,3,검은규토리
+464,5,Noigrume Noi
+464,6,Aprikoko Swz
+464,7,Bonguri Negro
+464,8,Ghicocca Nera
+464,9,Black Apricorn
+465,1,ダウジングマシン
+465,3,다우징머신
+465,5,Cherch'Objet
+465,6,Itemradar
+465,7,Zahorí
+465,8,Ricerca Strum.
+465,9,Dowsing Machine
+466,1,いかりまんじゅう
+466,3,분노의호두과자
+466,5,Bonbon Rage
+466,6,Wutkeks
+466,7,Caramelo Furia
+466,8,Iramella
+466,9,Rage Candy Bar
+467,1,べにいろのたま
+467,3,주홍구슬
+467,5,Orbe Rouge
+467,6,Rote Kugel
+467,7,Esfera Roja
+467,8,Sfera Rossa
+467,9,Red Orb
+468,1,あいいろのたま
+468,3,쪽빛구슬
+468,5,Orbe Bleu
+468,6,Blaue Kugel
+468,7,Esfera Azul
+468,8,Sfera Blu
+468,9,Blue Orb
+469,1,もえぎいろのたま
+469,3,연둣빛구슬
+469,5,Orbe Vert
+469,6,Grüne Kugel
+469,7,Esfera Verde
+469,8,Sfera Verde
+469,9,Jade Orb
+470,1,なぞのすいしょう
+470,3,수수께끼의수정
+470,5,Mystécristal
+470,6,Mytokristall
+470,7,Misticristal
+470,8,Misticristal
+470,9,Enigma Stone
+471,1,アンノーンノート
+471,3,안농노트
+471,5,Carnet Zarbi
+471,6,Icognitoheft
+471,7,Bloc Unown
+471,8,UnownBloc
+471,9,Unown Report
+472,1,ブルーカード
+472,3,블루카드
+472,5,Carte Bleue
+472,6,Blaue Karte
+472,7,Tarjeta Azul
+472,8,Carta Blu
+472,9,Blue Card
+473,1,おいしいシッポ
+473,3,맛있는꼬리
+473,5,Queueramolos
+473,6,Flegmon-Rute
+473,7,Colaslowpoke
+473,8,Codaslowpoke
+473,9,Slowpoke Tail
+474,1,とうめいなスズ
+474,3,크리스탈방울
+474,5,Glas Transparent
+474,6,Klarglocke
+474,7,Campana Clara
+474,8,Campana Chiara
+474,9,Clear Bell
+475,1,カードキー
+475,3,카드키
+475,5,Carte Magnétique
+475,6,Türöffner
+475,7,Llave Magnética
+475,8,Apriporta
+475,9,Card Key
+476,1,ちかのかぎ
+476,3,지하의열쇠
+476,5,Clé Sous-Sol
+476,6,Kelleröffner
+476,7,Llave Sótano
+476,8,Chiave Sotterr.
+476,9,Basement Key
+477,1,あかいウロコ
+477,3,빨간비늘
+477,5,Écaillerouge
+477,6,Rote Haut
+477,7,Escama Roja
+477,8,Squama Rossa
+477,9,Red Scale
+478,1,おとしもの
+478,3,분실물
+478,5,Objet perdu
+478,6,Fundsache
+478,7,Objeto Perdido
+478,8,Strumento perso
+478,9,Lost Item
+479,1,リニアパス
+479,3,리니어패스
+479,5,Passe Train
+479,6,Fahrschein
+479,7,Magnetopase
+479,8,Superpass
+479,9,Pass
+480,1,きかいのぶひん
+480,3,기계부품
+480,5,Partie Machine
+480,6,Spule
+480,7,Maquinaria
+480,8,Pezzo macch.
+480,9,Machine Part
+481,1,ぎんいろのはね
+481,3,은빛날개
+481,5,Argent'Aile
+481,6,Silberflügel
+481,7,Ala Plateada
+481,8,Aladargento
+481,9,Silver Wing
+482,1,にじいろのはね
+482,3,무지갯빛날개
+482,5,Arcenci'Aile
+482,6,Buntschwinge
+482,7,Ala Arcoíris
+482,8,Ala d'Iride
+482,9,Rainbow Wing
+483,1,ふしぎなタマゴ
+483,3,이상한알
+483,5,Œuf Mystère
+483,6,Rätsel-Ei
+483,7,Huevo Misterioso
+483,8,Uovo Mistero
+483,9,Mystery Egg
+484,1,ＧＢプレイヤー
+484,3,GB플레이어
+484,5,Lecteur GB
+484,6,GB-Player
+484,7,Lector GB
+484,8,Lettore GB
+484,9,GB Sounds
+485,1,うみなりのスズ
+485,3,해명의방울
+485,5,Glas Tempête
+485,6,Gischtglocke
+485,7,Campana Oleaje
+485,8,Campana Onda
+485,9,Tidal Bell
+486,1,データカード０１
+486,3,데이터카드01
+486,5,Carte Mémo01
+486,6,Datenkarte01
+486,7,Tarjeta Datos 01
+486,8,Scheda Dati 01
+486,9,Data Card 01
+487,1,データカード０２
+487,3,데이터카드02
+487,5,Carte Mémo02
+487,6,Datenkarte02
+487,7,Tarjeta Datos 02
+487,8,Scheda Dati 02
+487,9,Data Card 02
+488,1,データカード０３
+488,3,데이터카드03
+488,5,Carte Mémo03
+488,6,Datenkarte03
+488,7,Tarjeta Datos 03
+488,8,Scheda Dati 03
+488,9,Data Card 03
+489,1,データカード０４
+489,3,데이터카드04
+489,5,Carte Mémo04
+489,6,Datenkarte04
+489,7,Tarjeta Datos 04
+489,8,Scheda Dati 04
+489,9,Data Card 04
+490,1,データカード０５
+490,3,데이터카드05
+490,5,Carte Mémo05
+490,6,Datenkarte05
+490,7,Tarjeta Datos 05
+490,8,Scheda Dati 05
+490,9,Data Card 05
+491,1,データカード０６
+491,3,데이터카드06
+491,5,Carte Mémo06
+491,6,Datenkarte06
+491,7,Tarjeta Datos 06
+491,8,Scheda Dati 06
+491,9,Data Card 06
+492,1,データカード０７
+492,3,데이터카드07
+492,5,Carte Mémo07
+492,6,Datenkarte07
+492,7,Tarjeta Datos 07
+492,8,Scheda Dati 07
+492,9,Data Card 07
+493,1,データカード０８
+493,3,데이터카드08
+493,5,Carte Mémo08
+493,6,Datenkarte08
+493,7,Tarjeta Datos 08
+493,8,Scheda Dati 08
+493,9,Data Card 08
+494,1,データカード０９
+494,3,데이터카드09
+494,5,Carte Mémo09
+494,6,Datenkarte09
+494,7,Tarjeta Datos 09
+494,8,Scheda Dati 09
+494,9,Data Card 09
+495,1,データカード１０
+495,3,데이터카드10
+495,5,Carte Mémo10
+495,6,Datenkarte10
+495,7,Tarjeta Datos 10
+495,8,Scheda Dati 10
+495,9,Data Card 10
+496,1,データカード１１
+496,3,데이터카드11
+496,5,Carte Mémo11
+496,6,Datenkarte11
+496,7,Tarjeta Datos 11
+496,8,Scheda Dati 11
+496,9,Data Card 11
+497,1,データカード１２
+497,3,데이터카드12
+497,5,Carte Mémo12
+497,6,Datenkarte12
+497,7,Tarjeta Datos 12
+497,8,Scheda Dati 12
+497,9,Data Card 12
+498,1,データカード１３
+498,3,데이터카드13
+498,5,Carte Mémo13
+498,6,Datenkarte13
+498,7,Tarjeta Datos 13
+498,8,Scheda Dati 13
+498,9,Data Card 13
+499,1,データカード１４
+499,3,데이터카드14
+499,5,Carte Mémo14
+499,6,Datenkarte14
+499,7,Tarjeta Datos 14
+499,8,Scheda Dati 14
+499,9,Data Card 14
+500,1,データカード１５
+500,3,데이터카드15
+500,5,Carte Mémo15
+500,6,Datenkarte15
+500,7,Tarjeta Datos 15
+500,8,Scheda Dati 15
+500,9,Data Card 15
+501,1,データカード１６
+501,3,데이터카드16
+501,5,Carte Mémo16
+501,6,Datenkarte16
+501,7,Tarjeta Datos 16
+501,8,Scheda Dati 16
+501,9,Data Card 16
+502,1,データカード１７
+502,3,데이터카드17
+502,5,Carte Mémo17
+502,6,Datenkarte17
+502,7,Tarjeta Datos 17
+502,8,Scheda Dati 17
+502,9,Data Card 17
+503,1,データカード１８
+503,3,데이터카드18
+503,5,Carte Mémo18
+503,6,Datenkarte18
+503,7,Tarjeta Datos 18
+503,8,Scheda Dati 18
+503,9,Data Card 18
+504,1,データカード１９
+504,3,데이터카드19
+504,5,Carte Mémo19
+504,6,Datenkarte19
+504,7,Tarjeta Datos 19
+504,8,Scheda Dati 19
+504,9,Data Card 19
+505,1,データカード２０
+505,3,데이터카드20
+505,5,Carte Mémo20
+505,6,Datenkarte20
+505,7,Tarjeta Datos 20
+505,8,Scheda Dati 20
+505,9,Data Card 20
+506,1,データカード２１
+506,3,데이터카드21
+506,5,Carte Mémo21
+506,6,Datenkarte21
+506,7,Tarjeta Datos 21
+506,8,Scheda Dati 21
+506,9,Data Card 21
+507,1,データカード２２
+507,3,데이터카드22
+507,5,Carte Mémo22
+507,6,Datenkarte22
+507,7,Tarjeta Datos 22
+507,8,Scheda Dati 22
+507,9,Data Card 22
+508,1,データカード２３
+508,3,데이터카드23
+508,5,Carte Mémo23
+508,6,Datenkarte23
+508,7,Tarjeta Datos 23
+508,8,Scheda Dati 23
+508,9,Data Card 23
+509,1,データカード２４
+509,3,데이터카드24
+509,5,Carte Mémo24
+509,6,Datenkarte24
+509,7,Tarjeta Datos 24
+509,8,Scheda Dati 24
+509,9,Data Card 24
+510,1,データカード２５
+510,3,데이터카드25
+510,5,Carte Mémo25
+510,6,Datenkarte25
+510,7,Tarjeta Datos 25
+510,8,Scheda Dati 25
+510,9,Data Card 25
+511,1,データカード２６
+511,3,데이터카드26
+511,5,Carte Mémo26
+511,6,Datenkarte26
+511,7,Tarjeta Datos 26
+511,8,Scheda Dati 26
+511,9,Data Card 26
+512,1,データカード２７
+512,3,데이터카드27
+512,5,Carte Mémo27
+512,6,Datenkarte27
+512,7,Tarjeta Datos 27
+512,8,Scheda Dati 27
+512,9,Data Card 27
+513,1,ロックカプセル
+513,3,록캡슐
+513,5,Poké Écrin
+513,6,Tresorkapsel
+513,7,Cápsula Candado
+513,8,Capsula Scrigno
+513,9,Lock Capsule
+514,1,フォトアルバム
+514,3,포토앨범
+514,5,Album Photo
+514,6,Fotoalbum
+514,7,Álbum
+514,8,Album
+514,9,Photo Album
+515,1,オレンジメール
+515,5,Lettre Oranj
+515,6,Zigzagbrief
+515,7,Car. Naranja
+515,8,Mess. Agrume
+515,9,Orange Mail
+516,1,ハーバーメール
+516,5,Lettre Port
+516,6,Hafenbrief
+516,7,Carta Puerto
+516,8,Mess. Porto
+516,9,Harbor Mail
+517,1,キラキラメール
+517,5,Lettre Brill
+517,6,Glitzerbrief
+517,7,Carta Brillo
+517,8,Mess. Luci
+517,9,Glitter Mail
+518,1,メカニカルメール
+518,5,Lettre Méca
+518,6,Eilbrief
+518,7,Carta Imán
+518,8,Mess. Tecno
+518,9,Mech Mail
+519,1,ウッディメール
+519,5,Lettre Bois
+519,6,Waldbrief
+519,7,Carta Madera
+519,8,Mess. Bosco
+519,9,Wood Mail
+520,1,クロスメール
+520,5,Lettre Vague
+520,6,Wellenbrief
+520,7,Carta Ola
+520,8,Mess. Onda
+520,9,Wave Mail
+521,1,トレジャーメール
+521,5,Lettre Bulle
+521,6,Perlenbrief
+521,7,Carta Imagen
+521,8,Mess. Perle
+521,9,Bead Mail
+522,1,シャドーメール
+522,5,Lettre Ombre
+522,6,Dunkelbrief
+522,7,Carta Sombra
+522,8,Mess. Ombra
+522,9,Shadow Mail
+523,1,トロピカルメール
+523,5,Lettre Tropi
+523,6,Tropenbrief
+523,7,Car. Tropic.
+523,8,Mess. Tropic
+523,9,Tropic Mail
+524,1,ドリームメール
+524,5,Lettre Songe
+524,6,Traumbrief
+524,7,Carta Sueño
+524,8,Mess. Sogno
+524,9,Dream Mail
+525,1,ミラクルメール
+525,5,Lettre Cool
+525,6,Edelbrief
+525,7,Carta Fab.
+525,8,Mess. Lusso
+525,9,Fab Mail
+526,1,レトロメール
+526,5,Lettre Retro
+526,6,Retrobrief
+526,7,Carta Retro.
+526,8,Mess. Rétro
+526,9,Retro Mail
+527,1,マッハじてんしゃ
+527,5,Vélo Course
+527,6,Eilrad
+527,7,Bici Carrera
+527,8,Bici Corsa
+527,9,Mach Bike
+528,1,ダートじてんしゃ
+528,5,Vélo Cross
+528,6,Kunstrad
+528,7,Bici Acrob.
+528,8,Bici Cross
+528,9,Acro Bike
+529,1,ホエルコじょうろ
+529,5,Seau Wailmer
+529,6,Wailmerkanne
+529,7,Cubo Wailmer
+529,8,Vaso Wailmer
+529,9,Wailmer Pail
+530,1,デボンのにもつ
+530,5,Pack Devon
+530,6,Devon-Waren
+530,7,Piezas Devon
+530,8,Merce Devon
+530,9,Devon Goods
+531,1,はいぶくろ
+531,5,Sac à Suie
+531,6,Aschetasche
+531,7,Saco Hollín
+531,8,Sacco Cenere
+531,9,Soot Sack
+532,1,ポロックケース
+532,5,Boîte Pokéblocs
+532,6,Pokériegelbox
+532,7,Tubo Pokécubos
+532,8,PortaPokémelle
+532,9,Pokéblock Case
+533,1,ダイゴへのてがみ
+533,5,Lettre
+533,6,Brief
+533,7,Carta
+533,8,Lettera
+533,9,Letter
+534,1,むげんのチケット
+534,5,Passe Éon
+534,6,Äon-Ticket
+534,7,Ticket Eón
+534,8,Bigl. Eone
+534,9,Eon Ticket
+535,1,たんちき
+535,5,Scanner
+535,6,Scanner
+535,7,Escáner
+535,8,Scanner
+535,9,Scanner
+536,1,ゴーゴーゴーグル
+536,5,Lunet. Sable
+536,6,Wüstenglas
+536,7,Gaf. Aislan.
+536,8,Occhialoni
+536,9,Go-Goggles
+537,1,いんせき
+537,5,Météorite
+537,6,Meteorit
+537,7,Meteorito
+537,8,Meteorite
+537,9,Meteorite
+538,1,１ごうしつのカギ
+538,5,Clé Salle 1
+538,6,K1-Schlüssel
+538,7,Ll. Cabina 1
+538,8,Chiave Cab.1
+538,9,Rm. 1 Key
+539,1,２ごうしつのカギ
+539,5,Clé Salle 2
+539,6,K2-Schlüssel
+539,7,Ll. Cabina 2
+539,8,Chiave Cab.2
+539,9,Rm. 2 Key
+540,1,４ごうしつのカギ
+540,5,Clé Salle 4
+540,6,K4-Schlüssel
+540,7,Ll. Cabina 4
+540,8,Chiave Cab.4
+540,9,Rm. 4 Key
+541,1,６ごうしつのカギ
+541,5,Clé Salle 6
+541,6,K6-Schlüssel
+541,7,Ll. Cabina 6
+541,8,Chiave Cab.6
+541,9,Rm. 6 Key
+542,1,デボンスコープ
+542,5,Devon Scope
+542,6,Devon-Scope
+542,7,Detec. Devon
+542,8,Devonscopio
+542,9,Devon Scope
+543,1,おとどけもの
+543,5,Colis Chen
+543,6,Eichs Paket
+543,7,Correo-Oak
+543,8,Pacco di Oak
+543,9,Oak's Parcel
+544,1,ポケモンのふえ
+544,3,포켓몬피리
+544,5,Pokéflûte
+544,6,Pokéflöte
+544,7,Poké Flauta
+544,8,Poké Flauto
+544,9,Poké Flute
+545,1,ひきかえけん
+545,5,Bon Commande
+545,6,Rad-Coupon
+545,7,Bono Bici
+545,8,Buono Bici
+545,9,Bike Voucher
+546,1,きんのいれば
+546,5,Dent d'Or
+546,6,Goldzähne
+546,7,Dientes Oro
+546,8,Denti d'Oro
+546,9,Gold Teeth
+547,1,エレベータのカギ
+547,5,Clé Asc.
+547,6,Liftöffner
+547,7,Ll. Ascensor
+547,8,Chiave Asc.
+547,9,Lift Key
+548,1,シルフスコープ
+548,5,Scope Sylphe
+548,6,Silph Scope
+548,7,Scope Silph
+548,8,Spettrosonda
+548,9,Silph Scope
+549,1,ボイスチェッカー
+549,5,Memorydex
+549,6,Ruhmesdatei
+549,7,Memorín
+549,8,PokéVIP
+549,9,Fame Checker
+550,1,わざマシンケース
+550,5,Boîte CT
+550,6,VM/TM-Box
+550,7,Tubo MT-MO
+550,8,Porta-MT
+550,9,TM Case
+551,1,きのみぶくろ
+551,5,Sac à Baies
+551,6,Beerentüte
+551,7,Saco Bayas
+551,8,Portabacche
+551,9,Berry Pouch
+552,1,おしえテレビ
+552,5,TV ABC
+552,6,Lehrkanal
+552,7,Poké Tele
+552,8,Pokétivù
+552,9,Teachy TV
+553,1,トライパス
+553,5,Tri-Passe
+553,6,Tri-Pass
+553,7,Tri-Ticket
+553,8,Tris Pass
+553,9,Tri-Pass
+554,1,レインボーパス
+554,5,Passe Prisme
+554,6,Bunt-Pass
+554,7,Iris-Ticket
+554,8,Sette Pass
+554,9,Rainbow Pass
+555,1,おちゃ
+555,5,Thé
+555,6,Tee
+555,7,Té
+555,8,Tè
+555,9,Tea
+556,1,しんぴのチケット
+556,5,Ticketmystik
+556,6,Geheimticket
+556,7,Misti-Ticket
+556,8,Bigl. Magico
+556,9,MysticTicket
+557,1,オーロラチケット
+557,5,Ticketaurora
+557,6,Auroraticket
+557,7,Ori-Ticket
+557,8,Bigl. Aurora
+557,9,AuroraTicket
+558,1,こないれ
+558,5,Pot Poudre
+558,6,Puderdöschen
+558,7,Bote Polvos
+558,8,Portafarina
+558,9,Powder Jar
+559,1,ルビー
+559,5,Rubis
+559,6,Rubin
+559,7,Rubí
+559,8,Rubino
+559,9,Ruby
+560,1,サファイア
+560,5,Saphir
+560,6,Saphir
+560,7,Zafiro
+560,8,Zaffiro
+560,9,Sapphire
+561,1,マグマのしるし
+561,5,Sceau Magma
+561,6,Magmaemblem
+561,7,Signo Magma
+561,8,Stemma Magma
+561,9,Magma Emblem
+562,1,ふるびたかいず
+562,5,Vieillecarte
+562,6,Alte Karte
+562,7,Mapa Viejo
+562,8,Mappa Stinta
+562,9,Old Sea Map
+563,1,アクアカセット
+563,3,아쿠아카세트
+563,5,Module Aqua
+563,6,Aquamodul
+563,7,HidroROM
+563,8,Idromodulo
+563,9,Douse Drive
+564,1,イナズマカセット
+564,3,번개카세트
+564,5,Module Choc
+564,6,Blitzmodul
+564,7,FulgoROM
+564,8,Voltmodulo
+564,9,Shock Drive
+565,1,ブレイズカセット
+565,3,블레이즈카세트
+565,5,Module Pyro
+565,6,Flammenmodul
+565,7,PiroROM
+565,8,Piromodulo
+565,9,Burn Drive
+566,1,フリーズカセット
+566,3,프리즈카세트
+566,5,Module Cryo
+566,6,Gefriermodul
+566,7,CrioROM
+566,8,Gelomodulo
+566,9,Chill Drive
+567,1,ハートスイーツ
+567,3,하트스위트
+567,5,Chococœur
+567,6,Herzkonfekt
+567,7,Corazón Dulce
+567,8,Dolcecuore
+567,9,Sweet Heart
+568,1,はじめてメール
+568,3,첫메일
+568,5,Lettre Salut
+568,6,Grußbrief
+568,7,Carta Inicial
+568,8,Messaggio Inizio
+568,9,Greet Mail
+569,1,だいすきメール
+569,3,애호메일
+569,5,Lettre Fan
+569,6,Faiblebrief
+569,7,Carta Favoritos
+569,8,Messaggio TVB
+569,9,Favored Mail
+570,1,おさそいメール
+570,3,권유메일
+570,5,Lettre Invit
+570,6,Einladebrief
+570,7,Carta Invitar
+570,8,Messaggio Invito
+570,9,RSVP Mail
+571,1,かんしゃメール
+571,3,감사메일
+571,5,Lettre Merci
+571,6,Dankesbrief
+571,7,Carta Gracias
+571,8,Messaggio Grazie
+571,9,Thanks Mail
+572,1,しつもんメール
+572,3,질문메일
+572,5,Lettre Demande
+572,6,Fragebrief
+572,7,Carta Pregunta
+572,8,Messaggio Chiedi
+572,9,Inquiry Mail
+573,1,おすすめメール
+573,3,추천메일
+573,5,Lettre Avis
+573,6,Insiderbrief
+573,7,Carta Gustos
+573,8,Mess. Sugg.
+573,9,Like Mail
+574,1,おかえしメール
+574,3,답장메일
+574,5,Lettre Réponse
+574,6,Rückbrief
+574,7,Carta Respuesta
+574,8,Mess. Risp.
+574,9,Reply Mail
+575,1,ブリッジメールＳ
+575,3,브리지메일S
+575,5,Lettre PontS
+575,6,Brückbrief H
+575,7,Carta Puente S
+575,8,Mess. Frec.
+575,9,Bridge Mail S
+576,1,ブリッジメールＨ
+576,3,브리지메일M
+576,5,Lettre PontY
+576,6,Brückbrief M
+576,7,Carta Puente F
+576,8,Mess. Libec.
+576,9,Bridge Mail D
+577,1,ブリッジメールＣ
+577,3,브리지메일C
+577,5,Lettre PontF
+577,6,Brückbrief Z
+577,7,Carta Puente A
+577,8,Mess. Prop.
+577,9,Bridge Mail T
+578,1,ブリッジメールＶ
+578,3,브리지메일V
+578,5,Lettre PontH
+578,6,Brückbrief D
+578,7,Carta Puente V
+578,8,Mess. Vill.
+578,9,Bridge Mail V
+579,1,ブリッジメールＷ
+579,3,브리지메일W
+579,5,Lettre PontI
+579,6,Brückbrief W
+579,7,Carta Puente P
+579,8,Mess. Merav.
+579,9,Bridge Mail M
+580,1,きれいなウロコ
+580,3,고운비늘
+580,5,Bel'Écaille
+580,6,Schönschuppe
+580,7,Escama Bella
+580,8,Squama Bella
+580,9,Prism Scale
+581,1,しんかのきせき
+581,3,진화의휘석
+581,5,Évoluroc
+581,6,Evolith
+581,7,Mineral Evol
+581,8,Evolcondensa
+581,9,Eviolite
+582,1,かるいし
+582,3,가벼운돌
+582,5,Pierrallégée
+582,6,Leichtstein
+582,7,Piedra Pómez
+582,8,Pietralieve
+582,9,Float Stone
+583,1,ゴツゴツメット
+583,3,울퉁불퉁멧
+583,5,Casque Brut
+583,6,Beulenhelm
+583,7,Casco Dentado
+583,8,Bitorzolelmo
+583,9,Rocky Helmet
+584,1,ふうせん
+584,3,풍선
+584,5,Ballon
+584,6,Luftballon
+584,7,Globo Helio
+584,8,Palloncino
+584,9,Air Balloon
+585,1,レッドカード
+585,3,레드카드
+585,5,Carton Rouge
+585,6,Rote Karte
+585,7,Tarjeta Roja
+585,8,Cartelrosso
+585,9,Red Card
+586,1,ねらいのまと
+586,3,겨냥표적
+586,5,Point de Mire
+586,6,Zielscheibe
+586,7,Blanco
+586,8,Facilsaglio
+586,9,Ring Target
+587,1,しめつけバンド
+587,3,조임밴드
+587,5,Bande Étreinte
+587,6,Klammerband
+587,7,Banda Atadura
+587,8,Legafascia
+587,9,Binding Band
+588,1,きゅうこん
+588,3,구근
+588,5,Bulbe
+588,6,Knolle
+588,7,Tubérculo
+588,8,Bulbo
+588,9,Absorb Bulb
+589,1,じゅうでんち
+589,3,충전지
+589,5,Pile
+589,6,Akku
+589,7,Pila
+589,8,Ricaripila
+589,9,Cell Battery
+590,1,だっしゅつボタン
+590,3,탈출버튼
+590,5,Bouton Fuite
+590,6,Fluchtknopf
+590,7,Botón Escape
+590,8,Pulsantefuga
+590,9,Eject Button
+591,1,ほのおのジュエル
+591,3,불꽃주얼
+591,5,Joyau Feu
+591,6,Feuerjuwel
+591,7,Gema Fuego
+591,8,Bijoufuoco
+591,9,Fire Gem
+592,1,みずのジュエル
+592,3,물주얼
+592,5,Joyau Eau
+592,6,Wasserjuwel
+592,7,Gema Agua
+592,8,Bijouacqua
+592,9,Water Gem
+593,1,でんきのジュエル
+593,3,전기주얼
+593,5,Joyau Électrik
+593,6,Elektrojuwel
+593,7,Gema Eléctrica
+593,8,Bijouelettro
+593,9,Electric Gem
+594,1,くさのジュエル
+594,3,풀주얼
+594,5,Joyau Plante
+594,6,Pflanzjuwel
+594,7,Gema Planta
+594,8,Bijouerba
+594,9,Grass Gem
+595,1,こおりのジュエル
+595,3,얼음주얼
+595,5,Joyau Glace
+595,6,Eisjuwel
+595,7,Gema Hielo
+595,8,Bijoughiaccio
+595,9,Ice Gem
+596,1,かくとうジュエル
+596,3,격투주얼
+596,5,Joyau Combat
+596,6,Kampfjuwel
+596,7,Gema Lucha
+596,8,Bijoulotta
+596,9,Fighting Gem
+597,1,どくのジュエル
+597,3,독주얼
+597,5,Joyau Poison
+597,6,Giftjuwel
+597,7,Gema Veneno
+597,8,Bijouveleno
+597,9,Poison Gem
+598,1,じめんのジュエル
+598,3,땅주얼
+598,5,Joyau Sol
+598,6,Bodenjuwel
+598,7,Gema Tierra
+598,8,Bijouterra
+598,9,Ground Gem
+599,1,ひこうのジュエル
+599,3,비행주얼
+599,5,Joyau Vol
+599,6,Flugjuwel
+599,7,Gema Voladora
+599,8,Bijouvolante
+599,9,Flying Gem
+600,1,エスパージュエル
+600,3,에스퍼주얼
+600,5,Joyau Psy
+600,6,Psychojuwel
+600,7,Gema Psíquica
+600,8,Bijoupsico
+600,9,Psychic Gem
+601,1,むしのジュエル
+601,3,벌레주얼
+601,5,Joyau Insecte
+601,6,Käferjuwel
+601,7,Gema Bicho
+601,8,Bijoucoleottero
+601,9,Bug Gem
+602,1,いわのジュエル
+602,3,바위주얼
+602,5,Joyau Roche
+602,6,Gesteinjuwel
+602,7,Gema Roca
+602,8,Bijouroccia
+602,9,Rock Gem
+603,1,ゴーストジュエル
+603,3,고스트주얼
+603,5,Joyau Spectre
+603,6,Geistjuwel
+603,7,Gema Fantasma
+603,8,Bijouspettro
+603,9,Ghost Gem
+604,1,あくのジュエル
+604,3,악주얼
+604,5,Joyau Ténèbres
+604,6,Unlichtjuwel
+604,7,Gema Siniestra
+604,8,Bijoubuio
+604,9,Dark Gem
+605,1,はがねのジュエル
+605,3,강철주얼
+605,5,Joyau Acier
+605,6,Stahljuwel
+605,7,Gema Acero
+605,8,Bijouacciaio
+605,9,Steel Gem
+606,1,たいりょくのハネ
+606,3,체력날개
+606,5,Aile Santé
+606,6,Heilfeder
+606,7,Pluma Vigor
+606,8,Piumsalute
+606,9,Health Wing
+607,1,きんりょくのハネ
+607,3,근력날개
+607,5,Aile Force
+607,6,Kraftfeder
+607,7,Pluma Músculo
+607,8,Piumpotenza
+607,9,Muscle Wing
+608,1,ていこうのハネ
+608,3,저항력날개
+608,5,Aile Armure
+608,6,Abwehrfeder
+608,7,Pluma Aguante
+608,8,Piumtutela
+608,9,Resist Wing
+609,1,ちりょくのハネ
+609,3,지력날개
+609,5,Aile Esprit
+609,6,Geniefeder
+609,7,Pluma Intelecto
+609,8,Piumingegno
+609,9,Genius Wing
+610,1,せいしんのハネ
+610,3,정신력날개
+610,5,Aile Mental
+610,6,Espritfeder
+610,7,Pluma Mente
+610,8,Piumintuito
+610,9,Clever Wing
+611,1,しゅんぱつのハネ
+611,3,순발력날개
+611,5,Aile Sprint
+611,6,Flinkfeder
+611,7,Pluma Ímpetu
+611,8,Piumreazione
+611,9,Swift Wing
+612,1,きれいなハネ
+612,3,고운날개
+612,5,Jolie Aile
+612,6,Prachtfeder
+612,7,Pluma Bella
+612,8,Piumabella
+612,9,Pretty Wing
+613,1,ふたのカセキ
+613,3,덮개화석
+613,5,Fossile Plaque
+613,6,Schildfossil
+613,7,Fósil Tapa
+613,8,Fossiltappo
+613,9,Cover Fossil
+614,1,はねのカセキ
+614,3,날개화석
+614,5,Fossile Plume
+614,6,Federfossil
+614,7,Fósil Pluma
+614,8,Fossilpiuma
+614,9,Plume Fossil
+615,1,リバティチケット
+615,3,리버티티켓
+615,5,Pass Liberté
+615,6,Gartenpass
+615,7,Tarjeta Libertad
+615,8,Liberticket
+615,9,Liberty Pass
+616,1,デルダマ
+616,3,딜구슬
+616,5,Offrisphère
+616,6,Transferorb
+616,7,Regalosfera
+616,8,Passabilia
+616,9,Pass Orb
+617,1,ドリームボール
+617,3,드림볼
+617,5,Rêve Ball
+617,6,Traumball
+617,7,Ensueño Ball
+617,8,Dream Ball
+617,9,Dream Ball
+618,1,ポケじゃらし
+618,3,포켓풀
+618,5,Poképlumet
+618,6,Pokéwedel
+618,7,Pokéseñuelo
+618,8,Pokégingillo
+618,9,Poké Toy
+619,1,グッズケース
+619,3,굿즈케이스
+619,5,Boîte Parure
+619,6,Deko-Box
+619,7,Neceser
+619,8,Portagadget
+619,9,Prop Case
+620,1,ドラゴンのホネ
+620,3,드래곤의뼈
+620,5,Crâne Dragon
+620,6,Drakoschädel
+620,7,Cráneo Dragón
+620,8,Teschio
+620,9,Dragon Skull
+621,1,かおるキノコ
+621,3,향기버섯
+621,5,Champi Suave
+621,6,Duftpilz
+621,7,Seta Aroma
+621,8,Profumfungo
+621,9,Balm Mushroom
+622,1,でかいきんのたま
+622,3,큰금구슬
+622,5,Maxi Pépite
+622,6,Riesennugget
+622,7,Maxipepita
+622,8,Granpepita
+622,9,Big Nugget
+623,1,おだんごしんじゅ
+623,3,경단진주
+623,5,Perle Triple
+623,6,Triperle
+623,7,Sarta Perlas
+623,8,Trittiperla
+623,9,Pearl String
+624,1,すいせいのかけら
+624,3,혜성조각
+624,5,Morceau Comète
+624,6,Kometstück
+624,7,Fragmento Cometa
+624,8,Pezzo Cometa
+624,9,Comet Shard
+625,1,こだいのどうか
+625,3,고대의동화
+625,5,Vieux Sou
+625,6,Alter Heller
+625,7,Real Cobre
+625,8,Soldantico
+625,9,Relic Copper
+626,1,こだいのぎんか
+626,3,고대의은화
+626,5,Vieil Écu
+626,6,Alter Taler
+626,7,Real Plata
+626,8,Ducatantico
+626,9,Relic Silver
+627,1,こだいのきんか
+627,3,고대의금화
+627,5,Vieux Ducat
+627,6,Alter Dukat
+627,7,Real Oro
+627,8,Doblonantico
+627,9,Relic Gold
+628,1,こだいのツボ
+628,3,고대의항아리
+628,5,Vieux Vase
+628,6,Alte Vase
+628,7,Ánfora
+628,8,Vasantico
+628,9,Relic Vase
+629,1,こだいのうでわ
+629,3,고대의팔찌
+629,5,Vieux Bijou
+629,6,Alter Reif
+629,7,Brazal
+629,8,Bracciantico
+629,9,Relic Band
+630,1,こだいのせきぞう
+630,3,고대의석상
+630,5,Vieux Santon
+630,6,Alte Statue
+630,7,Efigie Antigua
+630,8,Statuantica
+630,9,Relic Statue
+631,1,こだいのおうかん
+631,3,고대의왕관
+631,5,Vieux Tortil
+631,6,Alte Krone
+631,7,Corona Antigua
+631,8,Coronantica
+631,9,Relic Crown
+632,1,ヒウンアイス
+632,3,구름아이스
+632,5,Glace Volute
+632,6,Stratos-Eis
+632,7,Porcehelado
+632,8,Conostropoli
+632,9,Casteliacone
+633,1,クリティカット２
+633,3,크리티컬커터2
+633,5,Muscle 2
+633,6,Angriffplus2
+633,7,Directo 2
+633,8,Supercolpo 2
+633,9,Dire Hit 2
+634,1,スピーダー２
+634,3,스피드업2
+634,5,Vitesse 2
+634,6,X-Tempo2
+634,7,Velocidad X 2
+634,8,Velocità X-2
+634,9,X Speed 2
+635,1,ＳＰアップ２
+635,3,스페셜업2
+635,5,Atq. Spé. 2
+635,6,X-Spezial2
+635,7,Especial X 2
+635,8,Special X-2
+635,9,X Sp. Atk 2
+636,1,ＳＰガード２
+636,3,스페셜가드2
+636,5,Déf. Spé. 2
+636,6,X-Sp. Ver.2
+636,7,Def. Esp. X 2
+636,8,Dif. Spec. X-2
+636,9,X Sp. Def 2
+637,1,ディフェンダー２
+637,3,디펜드업2
+637,5,Défense 2
+637,6,X-Abwehr2
+637,7,Defensa X 2
+637,8,Difesa X-2
+637,9,X Defense 2
+638,1,プラスパワー２
+638,3,플러스파워2
+638,5,Attaque 2
+638,6,X-Angriff2
+638,7,Ataque X 2
+638,8,Attacco X-2
+638,9,X Attack 2
+639,1,ヨクアタール２
+639,3,잘-맞히기2
+639,5,Précision 2
+639,6,X-Treffer2
+639,7,Precisión X 2
+639,8,Precisione X-2
+639,9,X Accuracy 2
+640,1,スピーダー３
+640,3,스피드업3
+640,5,Vitesse 3
+640,6,X-Tempo3
+640,7,Velocidad X 3
+640,8,Velocità X-3
+640,9,X Speed 3
+641,1,ＳＰアップ３
+641,3,스페셜업3
+641,5,Atq. Spé. 3
+641,6,X-Spezial3
+641,7,Especial X 3
+641,8,Special X-3
+641,9,X Sp. Atk 3
+642,1,ＳＰガード３
+642,3,스페셜가드3
+642,5,Déf. Spé. 3
+642,6,X-Sp. Ver.3
+642,7,Def. Esp. X 3
+642,8,Dif. Spec. X-3
+642,9,X Sp. Def 3
+643,1,ディフェンダー３
+643,3,디펜드업3
+643,5,Défense 3
+643,6,X-Abwehr3
+643,7,Defensa X 3
+643,8,Difesa X-3
+643,9,X Defense 3
+644,1,プラスパワー３
+644,3,플러스파워3
+644,5,Attaque 3
+644,6,X-Angriff3
+644,7,Ataque X 3
+644,8,Attacco X-3
+644,9,X Attack 3
+645,1,ヨクアタール３
+645,3,잘-맞히기3
+645,5,Précision 3
+645,6,X-Treffer3
+645,7,Precisión X 3
+645,8,Precisione X-3
+645,9,X Accuracy 3
+646,1,スピーダー６
+646,3,스피드업6
+646,5,Vitesse 6
+646,6,X-Tempo6
+646,7,Velocidad X 6
+646,8,Velocità X-6
+646,9,X Speed 6
+647,1,ＳＰアップ６
+647,3,스페셜업6
+647,5,Atq. Spé. 6
+647,6,X-Spezial6
+647,7,Especial X 6
+647,8,Special X-6
+647,9,X Sp. Atk 6
+648,1,ＳＰガード６
+648,3,스페셜가드6
+648,5,Déf. Spé. 6
+648,6,X-Sp. Ver.6
+648,7,Def. Esp. X 6
+648,8,Dif. Spec. X-6
+648,9,X Sp. Def 6
+649,1,ディフェンダー６
+649,3,디펜드업6
+649,5,Défense 6
+649,6,X-Abwehr6
+649,7,Defensa X 6
+649,8,Difesa X-6
+649,9,X Defense 6
+650,1,プラスパワー６
+650,3,플러스파워6
+650,5,Attaque 6
+650,6,X-Angriff6
+650,7,Ataque X 6
+650,8,Attacco X-6
+650,9,X Attack 6
+651,1,ヨクアタール６
+651,3,잘-맞히기6
+651,5,Précision 6
+651,6,X-Treffer6
+651,7,Precisión X 6
+651,8,Precisione X-6
+651,9,X Accuracy 6
+652,1,スキルコール
+652,3,스킬콜
+652,5,Appel Talent
+652,6,Fäh.-Appell
+652,7,Habilitador
+652,8,Chiamabilità
+652,9,Ability Urge
+653,1,アイテムドロップ
+653,3,아이템드롭
+653,5,Jette Objet
+653,6,Itemabwurf
+653,7,Tiraobjeto
+653,8,Lascioggetto
+653,9,Item Drop
+654,1,アイテムコール
+654,3,아이템콜
+654,5,Appel Objet
+654,6,Itemappell
+654,7,Activaobjeto
+654,8,Chiamoggetto
+654,9,Item Urge
+655,1,フラットコール
+655,3,플랫콜
+655,5,Réamorçage
+655,6,Umkehrappell
+655,7,Quitaestado
+655,8,Ripristino
+655,9,Reset Urge
+656,1,クリティカット３
+656,3,크리티컬커터3
+656,5,Muscle 3
+656,6,Angriffplus3
+656,7,Directo 3
+656,8,Supercolpo 3
+656,9,Dire Hit 3
+657,1,ライトストーン
+657,3,라이트스톤
+657,5,Galet Blanc
+657,6,Lichtstein
+657,7,Orbe Claro
+657,8,Chiarolite
+657,9,Light Stone
+658,1,ダークストーン
+658,3,다크스톤
+658,5,Galet Noir
+658,6,Dunkelstein
+658,7,Orbe Oscuro
+658,8,Scurolite
+658,9,Dark Stone
+659,1,わざマシン９３
+659,3,기술머신93
+659,5,CT93
+659,6,TM93
+659,7,MT93
+659,8,MT93
+659,9,TM93
+660,1,わざマシン９４
+660,3,기술머신94
+660,5,CT94
+660,6,TM94
+660,7,MT94
+660,8,MT94
+660,9,TM94
+661,1,わざマシン９５
+661,3,기술머신95
+661,5,CT95
+661,6,TM95
+661,7,MT95
+661,8,MT95
+661,9,TM95
+662,1,ライブキャスター
+662,3,라이브캐스터
+662,5,Vokit
+662,6,Viso-Caster
+662,7,Videomisor
+662,8,Interpoké
+662,9,Xtransceiver
+663,1,ゴッドストーン
+663,9,god stone
+664,1,はいたつぶつ１
+664,3,배달물1
+664,5,Courrier 1
+664,6,Briefpost 1
+664,7,Envío 1
+664,8,Missiva 1
+664,9,Gram 1
+665,1,はいたつぶつ２
+665,3,배달물2
+665,5,Courrier 2
+665,6,Briefpost 2
+665,7,Envío 2
+665,8,Missiva 2
+665,9,Gram 2
+666,1,はいたつぶつ３
+666,3,배달물3
+666,5,Courrier 3
+666,6,Briefpost 3
+666,7,Envío 3
+666,8,Missiva 3
+666,9,Gram 3
+668,1,ドラゴンジュエル
+668,3,드래곤주얼
+668,5,Joyau Dragon
+668,6,Drakojuwel
+668,7,Gema Dragón
+668,8,Bijoudrago
+668,9,Dragon Gem
+669,1,ノーマルジュエル
+669,3,노말주얼
+669,5,Joyau Normal
+669,6,Normaljuwel
+669,7,Gema Normal
+669,8,Bijounormale
+669,9,Normal Gem
+670,1,メダルボックス
+670,3,메달박스
+670,5,Boîte Médailles
+670,6,Medaillenbox
+670,7,Caja Insignias
+670,8,Box Premi
+670,9,Medal Box
+671,1,いでんしのくさび
+671,3,유전자쐐기
+671,5,Pointeau ADN
+671,6,DNS-Keil
+671,7,Punta ADN
+671,8,Cuneo DNA
+671,9,DNA Splicers
+673,1,きょかしょう
+673,3,허가증
+673,5,Permis
+673,6,Genehmigung
+673,7,Pase
+673,8,Permesso
+673,9,Permit
+674,1,まるいおまもり
+674,3,둥근부적
+674,5,Charme Ovale
+674,6,Ovalpin
+674,7,Amuleto Oval
+674,8,Ovamuleto
+674,9,Oval Charm
+675,1,ひかるおまもり
+675,3,빛나는부적
+675,5,Charme Chroma
+675,6,Schillerpin
+675,7,Amuleto Iris
+675,8,Cromamuleto
+675,9,Shiny Charm
+676,1,プラズマカード
+676,3,플라스마카드
+676,5,Carte Plasma
+676,6,Plasmakarte
+676,7,Tarjeta Plasma
+676,8,Carta Plasma
+676,9,Plasma Card
+677,1,よごれたハンカチ
+677,3,더러운손수건
+677,5,Mouchoir Sale
+677,6,Schnäuztuch
+677,7,Pañuelo Sucio
+677,8,Pezza Sporca
+677,9,Grubby Hanky
+678,1,アクロママシーン
+678,3,아크로마머신
+678,5,Nikodule
+678,6,Achromat
+678,7,Acromáquina
+678,8,Acrocongegno
+678,9,Colress Machine
+679,1,わすれもの
+679,3,잊은물건
+679,5,Objet Trouvé
+679,6,Fundsache
+679,7,Objeto Perdido
+679,8,Oggetto perso
+679,9,Dropped Item
+681,1,うつしかがみ
+681,3,비추는거울
+681,5,Miroir Sacré
+681,6,Wahrspiegel
+681,7,Espejo Veraz
+681,8,Verispecchio
+681,9,Reveal Glass
+682,1,じゃくてんほけん
+682,3,약점보험
+682,5,Vulné-Assurance
+682,6,Schwächenschutz
+682,7,Seguro Debilidad
+682,8,Vulneropolizza
+682,9,Weakness Policy
+683,1,とつげきチョッキ
+683,3,돌격조끼
+683,5,Veste de Combat
+683,6,Offensivweste
+683,7,Chaleco Asalto
+683,8,Corpetto assalto
+683,9,Assault Vest
+684,1,せいれいプレート
+684,3,정령플레이트
+684,5,Plaque Pixie
+684,6,Feentafel
+684,7,Tabla Duende
+684,8,Lastraspiritello
+684,9,Pixie Plate
+685,1,とくせいカプセル
+685,3,특성캡슐
+685,5,Pilule Talent
+685,6,Fähigk.-Kapsel
+685,7,Cáps. Habilidad
+685,8,Capsula abilità
+685,9,Ability Capsule
+686,1,ホイップポップ
+686,3,휘핑팝
+686,5,Chantibonbon
+686,6,Sahnehäubchen
+686,7,Dulce de Nata
+686,8,Dolcespuma
+686,9,Whipped Dream
+687,1,においぶくろ
+687,3,향기주머니
+687,5,Sachet Senteur
+687,6,Duftbeutel
+687,7,Saquito Fragante
+687,8,Bustina aromi
+687,9,Sachet
+688,1,ひかりごけ
+688,3,빛이끼
+688,5,Lichen Lumineux
+688,6,Leuchtmoos
+688,7,Musgo Brillante
+688,8,Muschioluce
+688,9,Luminous Moss
+689,1,ゆきだま
+689,3,눈덩이
+689,5,Boule de Neige
+689,6,Schneeball
+689,7,Bola de Nieve
+689,8,Palla di neve
+689,9,Snowball
+690,1,ぼうじんゴーグル
+690,3,방진고글
+690,5,Lunettes Filtre
+690,6,Schutzbrille
+690,7,Gafa Protectora
+690,8,Visierantisabbia
+690,9,Safety Goggles
+691,1,たわわこやし
+691,3,주렁주렁비료
+691,5,Fertibondance
+691,6,Sprießmulch
+691,7,Abono Fértil
+691,8,Fertilflorido
+691,9,Rich Mulch
+692,1,びっくりこやし
+692,3,깜놀비료
+692,5,Fertistantané
+692,6,Wundermulch
+692,7,Abono Sorpresa
+692,8,Fertilsorpresa
+692,9,Surprise Mulch
+693,1,ぐんぐんこやし
+693,3,부쩍부쩍비료
+693,5,Fertibérance
+693,6,Wuchermulch
+693,7,Abono Fructífero
+693,8,Fertilcopioso
+693,9,Boost Mulch
+694,1,とんでもこやし
+694,3,기절초풍비료
+694,5,Fertiprodige
+694,6,Ultramulch
+694,7,Abono Insólito
+694,8,Fertilprodigio
+694,9,Amaze Mulch
+695,1,ゲンガナイト
+695,3,팬텀나이트
+695,5,Ectoplasmite
+695,6,Gengarnit
+695,7,Gengarita
+695,8,Gengarite
+695,9,Gengarite
+696,1,サーナイトナイト
+696,3,가디안나이트
+696,5,Gardevoirite
+696,6,Guardevoirnit
+696,7,Gardevoirita
+696,8,Gardevoirite
+696,9,Gardevoirite
+697,1,デンリュウナイト
+697,3,전룡나이트
+697,5,Pharampite
+697,6,Ampharosnit
+697,7,Ampharosita
+697,8,Ampharosite
+697,9,Ampharosite
+698,1,フシギバナイト
+698,3,이상해꽃나이트
+698,5,Florizarrite
+698,6,Bisaflornit
+698,7,Venusaurita
+698,8,Venusaurite
+698,9,Venusaurite
+699,1,リザードナイトＸ
+699,3,리자몽나이트X
+699,5,Dracaufite X
+699,6,Gluraknit X
+699,7,Charizardita X
+699,8,Charizardite X
+699,9,Charizardite X
+700,1,カメックスナイト
+700,3,거북왕나이트
+700,5,Tortankite
+700,6,Turtoknit
+700,7,Blastoisita
+700,8,Blastoisite
+700,9,Blastoisinite
+701,1,ミュウツナイトＸ
+701,3,뮤츠나이트X
+701,5,Mewtwoïte X
+701,6,Mewtunit X
+701,7,Mewtwoita X
+701,8,Mewtwoite X
+701,9,Mewtwonite X
+702,1,ミュウツナイトＹ
+702,3,뮤츠나이트Y
+702,5,Mewtwoïte Y
+702,6,Mewtunit Y
+702,7,Mewtwoita Y
+702,8,Mewtwoite Y
+702,9,Mewtwonite Y
+703,1,バシャーモナイト
+703,3,번치코나이트
+703,5,Braségalite
+703,6,Lohgocknit
+703,7,Blazikenita
+703,8,Blazikenite
+703,9,Blazikenite
+704,1,チャーレムナイト
+704,3,요가램나이트
+704,5,Charminite
+704,6,Meditalisnit
+704,7,Medichamita
+704,8,Medichamite
+704,9,Medichamite
+705,1,ヘルガナイト
+705,3,헬가나이트
+705,5,Démolossite
+705,6,Hundemonit
+705,7,Houndoomita
+705,8,Houndoomite
+705,9,Houndoominite
+706,1,ボスゴドラナイト
+706,3,보스로라나이트
+706,5,Galekingite
+706,6,Stollossnit
+706,7,Aggronita
+706,8,Aggronite
+706,9,Aggronite
+707,1,ジュペッタナイト
+707,3,다크펫나이트
+707,5,Branettite
+707,6,Banetteonit
+707,7,Banettita
+707,8,Banettite
+707,9,Banettite
+708,1,バンギラスナイト
+708,3,마기라스나이트
+708,5,Tyranocivite
+708,6,Despotarnit
+708,7,Tyranitarita
+708,8,Tyranitarite
+708,9,Tyranitarite
+709,1,ハッサムナイト
+709,3,핫삼나이트
+709,5,Cizayoxite
+709,6,Scheroxnit
+709,7,Scizorita
+709,8,Scizorite
+709,9,Scizorite
+710,1,カイロスナイト
+710,3,쁘사이저나이트
+710,5,Scarabruite
+710,6,Pinsirnit
+710,7,Pinsirita
+710,8,Pinsirite
+710,9,Pinsirite
+711,1,プテラナイト
+711,3,프테라나이트
+711,5,Ptéraïte
+711,6,Aerodactylonit
+711,7,Aerodactylita
+711,8,Aerodactylite
+711,9,Aerodactylite
+712,1,ルカリオナイト
+712,3,루카리오나이트
+712,5,Lucarite
+712,6,Lucarionit
+712,7,Lucarita
+712,8,Lucarite
+712,9,Lucarionite
+713,1,ユキノオナイト
+713,3,눈설왕나이트
+713,5,Blizzarite
+713,6,Rexblisarnit
+713,7,Abomasnowita
+713,8,Abomasnowite
+713,9,Abomasite
+714,1,ガルーラナイト
+714,3,캥카나이트
+714,5,Kangourexite
+714,6,Kangamanit
+714,7,Kangaskhanita
+714,8,Kangaskhanite
+714,9,Kangaskhanite
+715,1,ギャラドスナイト
+715,3,갸라도스나이트
+715,5,Léviatorite
+715,6,Garadosnit
+715,7,Gyaradosita
+715,8,Gyaradosite
+715,9,Gyaradosite
+716,1,アブソルナイト
+716,3,앱솔나이트
+716,5,Absolite
+716,6,Absolnit
+716,7,Absolita
+716,8,Absolite
+716,9,Absolite
+717,1,リザードナイトＹ
+717,3,리자몽나이트Y
+717,5,Dracaufite Y
+717,6,Gluraknit Y
+717,7,Charizardita Y
+717,8,Charizardite Y
+717,9,Charizardite Y
+718,1,フーディナイト
+718,3,후디나이트
+718,5,Alakazamite
+718,6,Simsalanit
+718,7,Alakazamita
+718,8,Alakazamite
+718,9,Alakazite
+719,1,ヘラクロスナイト
+719,3,헤라크로스나이트
+719,5,Scarhinoïte
+719,6,Skarabornit
+719,7,Heracrossita
+719,8,Heracrossite
+719,9,Heracronite
+720,1,クチートナイト
+720,3,입치트나이트
+720,5,Mysdibulite
+720,6,Flunkifernit
+720,7,Mawilita
+720,8,Mawilite
+720,9,Mawilite
+721,1,ライボルトナイト
+721,3,썬더볼트나이트
+721,5,Élecsprintite
+721,6,Voltensonit
+721,7,Manectricita
+721,8,Manectricite
+721,9,Manectite
+722,1,ガブリアスナイト
+722,3,한카리아스나이트
+722,5,Carchacrokite
+722,6,Knakracknit
+722,7,Garchompita
+722,8,Garchompite
+722,9,Garchompite
+723,1,ロゼルのみ
+723,3,로셀열매
+723,5,Baie Selro
+723,6,Hibisbeere
+723,7,Baya Hibis
+723,8,Baccarcadè
+723,9,Roseli Berry
+724,1,アッキのみ
+724,3,악키열매
+724,5,Baie Éka
+724,6,Akibeere
+724,7,Baya Biglia
+724,8,Baccalighia
+724,9,Kee Berry
+725,1,タラプのみ
+725,3,타라프열매
+725,5,Baie Rangma
+725,6,Tarabeere
+725,7,Baya Maranga
+725,8,Baccapane
+725,9,Maranga Berry
+726,1,バーゲンチケット
+726,3,바겐세일티켓
+726,5,Bon Réduction
+726,6,Rabattmarke
+726,7,Vale Descuento
+726,8,Buono sconto
+726,9,Discount Coupon
+727,1,ふしぎなおきもの
+727,3,이상한장식품
+727,5,Bibelot Bizarre
+727,6,Skurriloskulptur
+727,7,Estatuilla Rara
+727,8,Strano ninnolo
+727,9,Strange Souvenir
+728,1,ミアレガレット
+728,3,미르갈레트
+728,5,Galette Illumis
+728,6,Illumina-Galette
+728,7,Crêpe Luminalia
+728,8,Pan di Lumi
+728,9,Lumiose Galette
+729,1,アゴのカセキ
+729,3,턱화석
+729,5,Fossile Mâchoire
+729,6,Kieferfossil
+729,7,Fósil Mandíbula
+729,8,Fossilmascella
+729,9,Jaw Fossil
+730,1,ヒレのカセキ
+730,3,지느러미화석
+730,5,Fossile Nageoire
+730,6,Flossenfossil
+730,7,Fósil Aleta
+730,8,Fossilpinna
+730,9,Sail Fossil
+731,1,ようせいジュエル
+731,3,페어리주얼
+731,5,Joyau Fée
+731,6,Feenjuwel
+731,7,Gema Hada
+731,8,Bijoufolletto
+731,9,Fairy Gem
+732,1,たんけんこころえ
+732,3,탐험수칙
+732,5,ABC Aventure
+732,6,Abenteuerfibel
+732,7,Guía de Máximas
+732,8,Guida Avventura
+732,9,Adventure Rules
+733,1,エレベータのキー
+733,3,엘리베이터키
+733,5,Clé Ascenseur
+733,6,Liftschlüssel
+733,7,Llave Ascensor
+733,8,Chiave ascensore
+733,9,Elevator Key
+734,1,ホロキャスター
+734,3,홀로캐스터
+734,5,Holokit
+734,6,Holo-Log
+734,7,Holomisor
+734,8,Holovox
+734,9,Holo Caster
+735,1,カロスエンブレム
+735,3,칼로스엠블럼
+735,5,Insigne de Kalos
+735,6,Kalos-Emblem
+735,7,Emblema Kalos
+735,8,Emblema di Kalos
+735,9,Honor of Kalos
+736,1,すごそうないし
+736,3,대단할듯한돌
+736,5,Pierre Insolite
+736,6,Kurioser Stein
+736,7,Piedra Insólita
+736,8,Sasso suggestivo
+736,9,Intriguing Stone
+737,1,レンズケース
+737,3,렌즈케이스
+737,5,Boîte Lentilles
+737,6,Linsenetui
+737,7,Portalentillas
+737,8,Portalenti
+737,9,Lens Case
+738,1,ハンサムチケット
+738,3,핸섬티켓
+738,5,Ticket Beladonis
+738,6,LeBelle-Ticket
+738,7,Boleto Handsome
+738,8,Carta Bellocchio
+738,9,Looker Ticket
+739,1,メガリング
+739,3,메가링
+739,5,Méga-Anneau
+739,6,Mega-Ring
+739,7,Mega-Aro
+739,8,Megacerchio
+739,9,Mega Ring
+740,1,はつでんしょパス
+740,3,발전소패스
+740,5,Passe Centrale
+740,6,Kraftwerks-Pass
+740,7,Pase Central
+740,8,Pass Centrale
+740,9,Power Plant Pass
+741,1,はかせのてがみ
+741,3,박사의편지
+741,5,Lettre du Prof
+741,6,Brief vom Prof
+741,7,Carta Profesor
+741,8,Lettera del Prof
+741,9,Prof's Letter
+742,1,ローラースケート
+742,3,롤러스케이트
+742,5,Rollers
+742,6,Rollerskates
+742,7,Patines
+742,8,Pattini
+742,9,Roller Skates
+743,1,ハスボーじょうろ
+743,3,연꽃몬물뿌리개
+743,5,Nénurrosoir
+743,6,Loturzelkanne
+743,7,Lotadgadera
+743,8,Irrigalotad
+743,9,Sprinklotad
+744,1,ＴＭＶパス
+744,3,TMV패스
+744,5,Passe TMV
+744,6,TMV-Pass
+744,7,Abono del TMV
+744,8,Pass TMV
+744,9,TMV Pass
+745,1,わざマシン９６
+745,3,기술머신96
+745,5,CT96
+745,6,TM96
+745,7,MT96
+745,8,MT96
+745,9,TM96
+746,1,わざマシン９７
+746,3,기술머신97
+746,5,CT97
+746,6,TM97
+746,7,MT97
+746,8,MT97
+746,9,TM97
+747,1,わざマシン９８
+747,3,기술머신98
+747,5,CT98
+747,6,TM98
+747,7,MT98
+747,8,MT98
+747,9,TM98
+748,1,わざマシン９９
+748,3,기술머신99
+748,5,CT99
+748,6,TM99
+748,7,MT99
+748,8,MT99
+748,9,TM99
+749,1,わざマシン１００
+749,3,기술머신100
+749,5,CT100
+749,6,TM100
+749,7,MT100
+749,8,MT100
+749,9,TM100

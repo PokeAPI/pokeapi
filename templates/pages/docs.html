@@ -38,7 +38,7 @@
     </div><!-- /.header row -->
     <div class="row pad_top">
         <div class="col-md-3">
-            <div class="affix visible-md visible-lg" data-spy="affix" data-offset="200">
+            <div class="affix visible-md visible-lg" data-spy="affix" data-offset="200" style="position: fixed">
             <ul class="nav">
                 <li><a href="#info">Information</a></li>
                 <li><a href="#wrap">Wrappers</a></li>
@@ -80,6 +80,7 @@
               <li><b>Racket</b> - <a href="https://github.com/scottlindeman/racketmon">Racketmon</a> by Scott Lindeman.</li>
               <li><b>Java</b> - <a href="https://github.com/mickeyjk/PokeJava">PokeJava</a> by Mickeyjk.</li>
               <li><b>Ruby</b> - <a href='https://github.com/baweaver/pokegem'>Pokegem</a> by Brandon Weaver.</li>
+              <li><b>Node</b> - <a href='https://github.com/TheIronDeveloper/pokeapi-node-wrapper'>PokeApi Node Wrapper</a> by Tyler Stark.</li>
             </ul>
             <p>Written a wrapper? Let us know and we'll add it to the list here.</p>
             <div id="pokedex" style="padding-top:30px"></div>
@@ -434,30 +435,27 @@
             <p class="lead"> GET description/</p>
             <p class="lead"> GET description/ID/ </p>
             <h4>Example request</h4>
-            <pre>GET http://pokeapi.co/api/v1/description/1/</pre>
+            <pre>GET http://pokeapi.co/api/v1/description/2/</pre>
             <p>Result:</p>
             <pre class="pre-scrollable">
 {
-  "created": "2013-11-02T12:19:03.576753",
-  "description": "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
-  "games": [
-    {
-      "name": "Pokemon Blue",
-      "resource_uri": "/api/v1/game/2/"
+    created: '2013-12-24T17:14:38.281429',
+    description: 'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKMON.',
+    games: [{
+        name: 'red(JPN)',
+        resource_uri: '/api/v1/game/1/'
+    }, {
+        name: 'green(JPN)',
+        resource_uri: '/api/v1/game/2/'
+    }],
+    id: 2,
+    modified: '2014-01-18T14:29:53.118541',
+    name: 'Bulbasaur_gen_1',
+    pokemon: {
+        name: 'bulbasaur',
+        resource_uri: '/api/v1/pokemon/1/'
     },
-    {
-      "name": "Pokemon Red",
-      "resource_uri": "/api/v1/game/1/"
-    }
-  ],
-  "id": 1,
-  "modified": "2013-11-02T12:19:24.334212",
-  "name": "Bulbasaur_red_blue",
-  "pokemon": {
-    "name": "bulbasaur",
-    "resource_uri": "/api/v1/pokemon/1/"
-  },
-  "resource_uri": "/api/v1/description/1/"
+    resource_uri: '/api/v1/description/2/'
 }
             </pre>
             <p>Fields:</p>

@@ -10,8 +10,12 @@ from django.views.generic import TemplateView
 from django.contrib import admin
 admin.autodiscover()
 
+##################################
+#
+#   V1 API setup using Tastypie
+# 
+##################################
 
-# API v1
 from pokemon.api import (
     PokemonResource, TypeResource, AbilityResource, GameResource,
     SpriteResource, DescriptionResource, EggResource, MoveResource,
@@ -32,18 +36,51 @@ api_resources.register(MoveResource())
 api_resources.register(PokedexResource())
 
 
+#####################################
+#
+#   V2 API setup using Django Rest
+# 
+#####################################
+
+from rest_framework import routers
+from pokemon_v2.views import (
+    AbilityResource, TestResource
+)
+
+router = routers.DefaultRouter()
+
+router.register(r"ability", AbilityResource)
+router.register(r"test", TestResource)
+
+
+###########################
+#
+#   Gotta Get Em' All
+# 
+###########################
+
 urlpatterns = patterns(
+
     '',
+
     url(r'^$', 'config.views.home'),
+
     url(r'^docs/$',
         TemplateView.as_view(template_name='pages/docs.html'),
         name="documentation"),
+
     url(r'^about/$', 'config.views.about'),
+
     url(r'^admin/', include(admin.site.urls)),
+
     url(r'^api/', include(api_resources.urls)),
+
+    url(r'^api/v2/', include(router.urls)),
+
     url(r'^media/(?P<path>.*)',
         'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
+
     url(r'^static/(?P<path>.*)',
         'django.views.static.serve',
         {'document_root': settings.STATIC_ROOT}),

@@ -114,7 +114,7 @@ SECRET_KEY = os.environ.get(
 
 CUSTOM_APPS = (
     'tastypie',
-    # 'pokemon',
+    'pokemon',
     'pokemon_v2',
     'hits',
 )
@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'corsheaders',
-    'rest_framework'
+    'rest_framework', 
 ) + CUSTOM_APPS
 
 

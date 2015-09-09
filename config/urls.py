@@ -9,27 +9,20 @@ from django.views.generic import TemplateView
 from django.contrib import admin
 admin.autodiscover()
 
+
 ##################################
 #
 #   V1 API setup using Tastypie
 # 
 ##################################
 
+from tastypie.api import Api
+
 from pokemon.api import (
     PokemonResource, TypeResource, AbilityResource, GameResource,
     SpriteResource, DescriptionResource, EggResource, MoveResource,
     PokedexResource
 )
-
-from rest_framework import routers
-
-from pokemon_v2 import views
-
-router = routers.DefaultRouter()
-
-router.register(r"sprites", views.SpriteResource)
-
-from tastypie.api import Api
 
 api_resources = Api()
 api_resources.register(PokemonResource())
@@ -50,14 +43,16 @@ api_resources.register(PokedexResource())
 #####################################
 
 from rest_framework import routers
-from pokemon_v2.views import (
-    AbilityResource, SpriteResource
-)
+from pokemon_v2.views import *
 
 router = routers.DefaultRouter()
 
 router.register(r"ability", AbilityResource)
-router.register(r"sprite", SpriteResource)
+router.register(r"generation", GenerationResource)
+router.register(r"move", MoveResource)
+router.register(r"nature", NatureResource)
+router.register(r"pokemon", PokemonResource)
+router.register(r"type", TypeResource)
 
 
 ###########################

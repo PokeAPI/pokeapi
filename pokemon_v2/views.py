@@ -7,18 +7,32 @@ from .serializers import *
 import re
 
 
-class PokeapiCommonViewset(viewsets.ReadOnlyModelViewSet):
+###########################
+#  BEHAVOIR ABSTRACTIONS  #
+###########################
+
+class ListOrDetailSerialRelation():
     """
-    This will allow a resource to be looked up by name or id (pk in this case).
+    Mixin to allow association with separate serializers
+    for list or detail view.
     """
-    idPattern = re.compile("^[0-9]+$")
-    namePattern = re.compile("^[0-9A-Za-z\-]+$")
+
     list_serializer_class = None
 
     def get_serializer_class(self):
         if (self.action == 'list' and self.list_serializer_class != None):
             return self.list_serializer_class
         return self.serializer_class
+
+
+class NameOrIdRetrieval():
+    """
+    Mixin to allow retrieval of resources by 
+    pk (in this case ID) or by name
+    """
+
+    idPattern = re.compile("^[0-9]+$")
+    namePattern = re.compile("^[0-9A-Za-z\-]+$")
 
     def get_object(self):
         queryset = self.get_queryset()
@@ -37,6 +51,14 @@ class PokeapiCommonViewset(viewsets.ReadOnlyModelViewSet):
         return resp
 
 
+class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
+    pass
+
+
+##########
+#  APIS  #
+##########
+
 class AbilityResource(PokeapiCommonViewset):
     """
     Views for the Ability V2 Resource
@@ -52,6 +74,14 @@ class GenerationResource(PokeapiCommonViewset):
     """
     queryset = Generation.objects.all()
     serializer_class = GenerationSerializer
+
+
+class LanguageResource(PokeapiCommonViewset):
+    """
+    Views for the Generation V2 Resource
+    """
+    queryset = Language.objects.all()
+    serializer_class = LanguageSerializer
 
 
 class MoveResource(PokeapiCommonViewset):

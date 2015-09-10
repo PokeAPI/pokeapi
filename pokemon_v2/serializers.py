@@ -9,6 +9,12 @@ PokeAPI v2 serializers
 from .models import *
 
 
+class LanguageListSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Language
+
+
 class LanguageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -28,7 +34,7 @@ class AbilityDescriptionSerializer(serializers.ModelSerializer):
 class AbilityFlavorTextSerializer(serializers.ModelSerializer):
 
     text = serializers.CharField(source="flavor_text")
-    # language = LanguageSerializer(source="abilityflavortextlanguage")
+    language = LanguageListSerializer()
 
     class Meta:
         model = AbilityFlavorText
@@ -42,13 +48,13 @@ class AbilityNameSerializer(serializers.ModelSerializer):
         fields = ('name', 'language')
 
 
-class AbilityListSerializer(serializers.ModelSerializer):
+class AbilityListSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Ability
 
 
-class AbilitySerializer(serializers.ModelSerializer):
+class AbilitySerializer(serializers.HyperlinkedModelSerializer):
 
     descriptions = AbilityDescriptionSerializer(many=True, read_only=True, source="abilitydescription")
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")

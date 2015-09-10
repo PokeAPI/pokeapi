@@ -152,7 +152,7 @@ class HasItemPocket(models.Model):
 
 class HasLanguage(models.Model):
 
-  language = models.ForeignKey('Language', blank = True, null = True, related_name="%(class)slanguage")
+  language = models.ForeignKey('Language', blank = True, null = True, related_name="%(class)s_language")
 
   class Meta:
        abstract = True

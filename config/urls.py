@@ -49,6 +49,7 @@ router = routers.DefaultRouter()
 
 router.register(r"ability", AbilityResource)
 router.register(r"generation", GenerationResource)
+router.register(r"language", LanguageResource)
 router.register(r"move", MoveResource)
 router.register(r"nature", NatureResource)
 router.register(r"pokemon", PokemonResource)

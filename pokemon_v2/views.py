@@ -7,23 +7,28 @@ from .serializers import *
 import re
 
 
-class NameOrIdLookupMixin(viewsets.ReadOnlyModelViewSet):
+class PokeapiCommonViewset(viewsets.ReadOnlyModelViewSet):
     """
     This will allow a resource to be looked up by name or id (pk in this case).
     """
     idPattern = re.compile("^[0-9]+$")
     namePattern = re.compile("^[0-9A-Za-z\-]+$")
+    list_serializer_class = None
+
+    def get_serializer_class(self):
+        if (self.action == 'list' and self.list_serializer_class != None):
+            return self.list_serializer_class
+        return self.serializer_class
 
     def get_object(self):
-
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)
         lookup =  self.kwargs['pk']
 
-        if (self.idPattern.match(lookup)):
+        if self.idPattern.match(lookup):
             resp = get_object_or_404(queryset, pk=lookup)
 
-        elif (self.namePattern.match(lookup)):
+        elif self.namePattern.match(lookup):
             resp = get_object_or_404(queryset, name=lookup)
 
         else:
@@ -32,15 +37,16 @@ class NameOrIdLookupMixin(viewsets.ReadOnlyModelViewSet):
         return resp
 
 
-class AbilityResource(NameOrIdLookupMixin):
+class AbilityResource(PokeapiCommonViewset):
     """
     Views for the Ability V2 Resource
     """
     queryset = Ability.objects.all()
     serializer_class = AbilitySerializer
+    list_serializer_class = AbilityListSerializer
 
 
-class GenerationResource(NameOrIdLookupMixin):
+class GenerationResource(PokeapiCommonViewset):
     """
     Views for the Generation V2 Resource
     """
@@ -48,7 +54,7 @@ class GenerationResource(NameOrIdLookupMixin):
     serializer_class = GenerationSerializer
 
 
-class MoveResource(NameOrIdLookupMixin):
+class MoveResource(PokeapiCommonViewset):
     """
     Views for the Move V2 Resource
     """
@@ -56,7 +62,7 @@ class MoveResource(NameOrIdLookupMixin):
     serializer_class = MoveSerializer
 
 
-class NatureResource(NameOrIdLookupMixin):
+class NatureResource(PokeapiCommonViewset):
     """
     Views for the Nature V2 Resource
     """
@@ -64,7 +70,7 @@ class NatureResource(NameOrIdLookupMixin):
     serializer_class = NatureSerializer
 
 
-class PokemonResource(NameOrIdLookupMixin):
+class PokemonResource(PokeapiCommonViewset):
     """
     Views for the Pokemon V2 Resource
     """
@@ -72,7 +78,7 @@ class PokemonResource(NameOrIdLookupMixin):
     serializer_class = PokemonSerializer
 
 
-class TypeResource(NameOrIdLookupMixin):
+class TypeResource(PokeapiCommonViewset):
     """
     Views for the Type V2 Resource
     """

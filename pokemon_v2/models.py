@@ -8,7 +8,7 @@ from django.db import models
 
 class HasAbility(models.Model):
 
-  ability = models.ForeignKey('Ability', blank=True, null=True)
+  ability = models.ForeignKey('Ability', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -152,7 +152,7 @@ class HasItemPocket(models.Model):
 
 class HasLanguage(models.Model):
 
-  language = models.ForeignKey('Language', blank = True, null = True)
+  language = models.ForeignKey('Language', blank = True, null = True, related_name="%(class)slanguage")
 
   class Meta:
        abstract = True

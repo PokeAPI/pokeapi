@@ -9,13 +9,68 @@ PokeAPI v2 serializers
 from .models import *
 
 
-class AbilitySerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Ability resource
-    """
+class LanguageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Language
+
+#########################
+#  ABILITY SERIALIZERS  #
+#########################
+
+class AbilityDescriptionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = AbilityDescription
+        fields = ('effect', 'short_effect', 'language')
+
+
+class AbilityFlavorTextSerializer(serializers.ModelSerializer):
+
+    text = serializers.CharField(source="flavor_text")
+    # language = LanguageSerializer(source="abilityflavortextlanguage")
+
+    class Meta:
+        model = AbilityFlavorText
+        fields = ('text', 'language', 'version_group')
+
+
+class AbilityNameSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = AbilityName
+        fields = ('name', 'language')
+
+
+class AbilityListSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Ability
 
+
+class AbilitySerializer(serializers.ModelSerializer):
+
+    descriptions = AbilityDescriptionSerializer(many=True, read_only=True, source="abilitydescription")
+    flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
+    names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
+
+    class Meta:
+        model = Ability
+        fields = (
+            'id', 
+            'name',
+            'is_main_series', 
+            'generation',
+            'names',
+            'descriptions', 
+            'flavor_text_entries'
+        )
+
+
+
+#########################
+#  BERRY SERIALIZERS  #
+#########################
 
 class BerrySerializer(serializers.ModelSerializer):
     """

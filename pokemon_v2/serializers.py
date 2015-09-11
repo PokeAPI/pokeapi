@@ -9,22 +9,42 @@ PokeAPI v2 serializers
 from .models import *
 
 
-class LanguageListSerializer(serializers.HyperlinkedModelSerializer):
+##########################
+#  LANGUAGE SERIALIZERS  #
+##########################
+
+class LanguageNameSerializer(serializers.ModelSerializer):
+
+    local_language_url = serializers.HyperlinkedRelatedField(read_only='True', source="local_language_id", view_name='language-detail')
+
+    class Meta:
+        model = LanguageName
+        fields = ('name', 'local_language_url')
+
+
+class LanguageSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Language
+        fields = ('name', 'url')
 
 
-class LanguageSerializer(serializers.ModelSerializer):
+class LanguageDetailSerializer(serializers.ModelSerializer):
+
+    names = LanguageNameSerializer(many=True, read_only=True, source='languagename_language')
 
     class Meta:
         model = Language
+        fields = ('name', 'official', 'iso639', 'iso3166', 'id', 'names')
+
 
 #########################
 #  ABILITY SERIALIZERS  #
 #########################
 
 class AbilityDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
 
     class Meta:
         model = AbilityDescription
@@ -34,38 +54,62 @@ class AbilityDescriptionSerializer(serializers.ModelSerializer):
 class AbilityFlavorTextSerializer(serializers.ModelSerializer):
 
     text = serializers.CharField(source="flavor_text")
-    language = LanguageListSerializer()
+    language = LanguageSummarySerializer()
 
     class Meta:
         model = AbilityFlavorText
-        fields = ('text', 'language', 'version_group')
+        fields = ('text', 'version_group', 'language')
 
 
 class AbilityNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
 
     class Meta:
         model = AbilityName
         fields = ('name', 'language')
 
 
-class AbilityListSerializer(serializers.HyperlinkedModelSerializer):
+class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Ability
 
 
-class AbilitySerializer(serializers.HyperlinkedModelSerializer):
+class AbilityDetailSerializer(serializers.HyperlinkedModelSerializer):
 
     descriptions = AbilityDescriptionSerializer(many=True, read_only=True, source="abilitydescription")
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
     names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
+
+    # names = serializers.SerializerMethodField('get_names_by_language')
+    # descriptions = serializers.SerializerMethodField('get_descriptions_by_language')
+    # flavor_text_entries = serializers.SerializerMethodField('get_flavor_text_by_language')
+
+    # def get_names_by_language(self, obj):
+    #     language_filter = self.context['request'].query_params['language']
+    #     names = AbilityName.objects.filter(ability=obj, language=9)
+    #     serializer = AbilityNameSerializer(names, many=True, context=self.context)
+    #     return serializer.data
+
+    # def get_flavor_text_by_language(self, obj):
+    #     language_filter = self.context['request'].query_params['language']
+    #     flavor_text_entries = AbilityFlavorText.objects.filter(ability=obj, language=9)
+    #     serializer = AbilityFlavorTextSerializer(flavor_text_entries, many=True, context=self.context)
+    #     return serializer.data
+
+    # def get_descriptions_by_language(self, obj):
+    #     language_filter = self.context['request'].query_params['language']
+    #     descriptions = AbilityDescription.objects.filter(ability=obj, language=9)
+    #     serializer = AbilityDescriptionSerializer(descriptions, many=True, context=self.context)
+    #     return serializer.data
 
     class Meta:
         model = Ability
         fields = (
             'id', 
             'name',
-            'is_main_series', 
+            'is_main_series',
             'generation',
             'names',
             'descriptions', 

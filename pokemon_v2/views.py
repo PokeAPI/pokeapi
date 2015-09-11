@@ -60,58 +60,44 @@ class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewse
 ##########
 
 class AbilityResource(PokeapiCommonViewset):
-    """
-    Views for the Ability V2 Resource
-    """
+
     queryset = Ability.objects.all()
-    serializer_class = AbilitySerializer
-    list_serializer_class = AbilityListSerializer
+    serializer_class = AbilityDetailSerializer
+    list_serializer_class = AbilitySummarySerializer
 
 
 class GenerationResource(PokeapiCommonViewset):
-    """
-    Views for the Generation V2 Resource
-    """
+
     queryset = Generation.objects.all()
     serializer_class = GenerationSerializer
 
 
 class LanguageResource(PokeapiCommonViewset):
-    """
-    Views for the Generation V2 Resource
-    """
+
     queryset = Language.objects.all()
-    serializer_class = LanguageSerializer
+    serializer_class = LanguageDetailSerializer
 
 
 class MoveResource(PokeapiCommonViewset):
-    """
-    Views for the Move V2 Resource
-    """
+
     queryset = Move.objects.all()
     serializer_class = MoveSerializer
 
 
 class NatureResource(PokeapiCommonViewset):
-    """
-    Views for the Nature V2 Resource
-    """
+
     queryset = Nature.objects.all()
     serializer_class = NatureSerializer
 
 
 class PokemonResource(PokeapiCommonViewset):
-    """
-    Views for the Pokemon V2 Resource
-    """
+
     queryset = Pokemon.objects.all()
     serializer_class = PokemonSerializer
 
 
 class TypeResource(PokeapiCommonViewset):
-    """
-    Views for the Type V2 Resource
-    """
+
     queryset = Type.objects.all()
     serializer_class = TypeSerializer
 

@@ -69,8 +69,8 @@ class AbilityResource(PokeapiCommonViewset):
 class GenerationResource(PokeapiCommonViewset):
 
     queryset = Generation.objects.all()
-    serializer_class = GenerationSerializer
-
+    serializer_class = GenerationDetailSerializer
+    list_serializer_class = GenerationSummarySerializer
 
 class LanguageResource(PokeapiCommonViewset):
 
@@ -96,9 +96,29 @@ class PokemonResource(PokeapiCommonViewset):
     serializer_class = PokemonSerializer
 
 
+class RegionResource(PokeapiCommonViewset):
+
+    queryset = Region.objects.all()
+    serializer_class = RegionDetailSerializer
+    list_serializer_class = RegionSummarySerializer
+
+
 class TypeResource(PokeapiCommonViewset):
 
     queryset = Type.objects.all()
-    serializer_class = TypeSerializer
+    serializer_class = TypeDetailSerializer
+    list_serializer_class = TypeSummarySerializer
 
 
+class VersionResource(PokeapiCommonViewset):
+
+    queryset = Version.objects.all()
+    serializer_class = VersionDetailSerializer
+    list_serializer_class = VersionSummarySerializer
+
+
+class VersionGroupResource(PokeapiCommonViewset):
+
+    queryset = VersionGroup.objects.all()
+    serializer_class = VersionGroupDetailSerializer
+    list_serializer_class = VersionGroupSummarySerializer

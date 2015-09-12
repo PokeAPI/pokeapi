@@ -8,7 +8,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Zane Adickes', 'zaneadix@gmail.com'),
+    ('Paul Hallett', 'paulandrewhallett@gmail.com'),
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -109,8 +109,7 @@ CACHES = {
 
 SECRET_KEY = os.environ.get(
     'SECRET_KEY',
-    'ubx+22!jbo(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#'
-)
+    'ubx+22!jbo(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#')
 
 CUSTOM_APPS = (
     'tastypie',

@@ -53,7 +53,10 @@ router.register(r"language", LanguageResource)
 router.register(r"move", MoveResource)
 router.register(r"nature", NatureResource)
 router.register(r"pokemon", PokemonResource)
+router.register(r"region", RegionResource)
 router.register(r"type", TypeResource)
+router.register(r"version", VersionResource)
+router.register(r"version-group", VersionGroupResource)
 
 
 ###########################

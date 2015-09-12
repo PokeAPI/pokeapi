@@ -112,7 +112,7 @@ class HasGameIndex(models.Model):
 
 class HasGeneration(models.Model):
 
-  generation = models.ForeignKey('Generation', blank=True, null=True)
+  generation = models.ForeignKey('Generation', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -328,7 +328,7 @@ class HasPokemonSpecies(models.Model):
 
 class HasRegion(models.Model):
 
-  region = models.ForeignKey('Region', blank=True, null=True)
+  region = models.ForeignKey('Region', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -352,7 +352,7 @@ class HasStat(models.Model):
 
 class HasType(models.Model):
 
-  type = models.ForeignKey('Type', blank=True, null=True)
+  type = models.ForeignKey('Type', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -360,7 +360,7 @@ class HasType(models.Model):
 
 class HasVersion(models.Model):
 
-  version = models.ForeignKey('Version', blank=True, null=True)
+  version = models.ForeignKey('Version', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -368,7 +368,7 @@ class HasVersion(models.Model):
 
 class HasVersionGroup(models.Model):
 
-  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
+  version_group = models.ForeignKey('VersionGroup', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -513,9 +513,9 @@ class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
 
 class TypeEfficacy(models.Model):
 
-  damage_type_id = models.IntegerField()
+  damage_type_id = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
 
-  target_type_id = models.IntegerField()
+  target_type_id = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
 
   damage_factor = models.IntegerField()
 

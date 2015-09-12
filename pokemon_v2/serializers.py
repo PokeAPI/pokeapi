@@ -1,9 +1,10 @@
 
 from __future__ import unicode_literals
 from rest_framework import serializers
+from collections import OrderedDict
 
 """
-PokeAPI v2 serializers
+PokeAPI v2 serializers in order of dependency
 """
 
 from .models import *
@@ -38,6 +39,117 @@ class LanguageDetailSerializer(serializers.ModelSerializer):
         fields = ('name', 'official', 'iso639', 'iso3166', 'id', 'names')
 
 
+########################
+#  REGION SERIALIZERS  #
+########################
+
+class RegionNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = RegionName
+        fields = ('name', 'language')
+
+
+class RegionSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Region
+        fields = ('name', 'url')
+
+
+class RegionDetailSerializer(serializers.ModelSerializer):
+
+    names = RegionNameSerializer(many=True, read_only=True, source="regionname")
+
+    class Meta:
+        model = Region
+        fields = ('id', 'name', 'names')
+
+
+############################
+#  GENERATION SERIALIZERS  #
+############################
+
+class GenerationNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = GenerationName
+        fields = ('name', 'language')
+
+
+class GenerationSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Generation
+        fields = ('name', 'url')
+
+
+class GenerationDetailSerializer(serializers.ModelSerializer):
+
+    region = RegionSummarySerializer()
+    names = GenerationNameSerializer(many=True, read_only=True, source="generationname")
+
+    class Meta:
+        model = Generation
+        fields = ('id', 'name', 'region', 'names')
+
+
+#########################
+#  VERSION SERIALIZERS  #
+#########################
+
+class VersionNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = VersionName
+        fields = ('name', 'language')
+
+
+class VersionSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Version
+        fields = ('name', 'url')
+
+
+class VersionDetailSerializer(serializers.ModelSerializer):
+    """
+    Should have a link to Version Group info but the Circular
+    dependency and compilation order fight eachother and I'm
+    not sure how to add anything other than a hyperlink
+    """
+
+    names = VersionNameSerializer(many=True, read_only=True, source="versionname")
+    version_group_url = serializers.HyperlinkedRelatedField(read_only='True', source="version_group", view_name='versiongroup-detail')
+
+    class Meta:
+        model = Version
+        fields = ('id', 'name', 'names', 'version_group_url')
+
+
+class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = VersionGroup
+        fields = ('name', 'url')
+
+
+class VersionGroupDetailSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+    versions = VersionSummarySerializer(many=True, read_only=True, source="version")
+
+    class Meta:
+        model = VersionGroup
+        fields = ('id', 'name', 'order', 'generation', 'versions')
+
+
 #########################
 #  ABILITY SERIALIZERS  #
 #########################
@@ -55,6 +167,7 @@ class AbilityFlavorTextSerializer(serializers.ModelSerializer):
 
     text = serializers.CharField(source="flavor_text")
     language = LanguageSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
 
     class Meta:
         model = AbilityFlavorText
@@ -76,33 +189,12 @@ class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Ability
 
 
-class AbilityDetailSerializer(serializers.HyperlinkedModelSerializer):
+class AbilityDetailSerializer(serializers.ModelSerializer):
 
     descriptions = AbilityDescriptionSerializer(many=True, read_only=True, source="abilitydescription")
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
     names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
-
-    # names = serializers.SerializerMethodField('get_names_by_language')
-    # descriptions = serializers.SerializerMethodField('get_descriptions_by_language')
-    # flavor_text_entries = serializers.SerializerMethodField('get_flavor_text_by_language')
-
-    # def get_names_by_language(self, obj):
-    #     language_filter = self.context['request'].query_params['language']
-    #     names = AbilityName.objects.filter(ability=obj, language=9)
-    #     serializer = AbilityNameSerializer(names, many=True, context=self.context)
-    #     return serializer.data
-
-    # def get_flavor_text_by_language(self, obj):
-    #     language_filter = self.context['request'].query_params['language']
-    #     flavor_text_entries = AbilityFlavorText.objects.filter(ability=obj, language=9)
-    #     serializer = AbilityFlavorTextSerializer(flavor_text_entries, many=True, context=self.context)
-    #     return serializer.data
-
-    # def get_descriptions_by_language(self, obj):
-    #     language_filter = self.context['request'].query_params['language']
-    #     descriptions = AbilityDescription.objects.filter(ability=obj, language=9)
-    #     serializer = AbilityDescriptionSerializer(descriptions, many=True, context=self.context)
-    #     return serializer.data
+    generation = GenerationSummarySerializer()
 
     class Meta:
         model = Ability
@@ -115,6 +207,84 @@ class AbilityDetailSerializer(serializers.HyperlinkedModelSerializer):
             'descriptions', 
             'flavor_text_entries'
         )
+
+
+######################
+#  TYPE SERIALIZERS  #
+######################
+
+class TypeEfficacySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TypeEfficacy
+
+
+class TypeNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = TypeName
+        fields = ('name', 'language')
+
+
+class TypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Type
+        fields = ('name', 'url')
+
+
+class TypeDetailSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Type resource
+    """
+    generation = GenerationSummarySerializer()
+    names = AbilityNameSerializer(many=True, read_only=True, source="typename")
+    damage_relations = serializers.SerializerMethodField('get_type_relationships')
+
+    class Meta:
+        model = Type
+        fields = ('id', 'name', 'move_damage_class', 'generation', 'names', 'damage_relations')
+
+    def get_type_relationships(self, obj):
+
+        relations = OrderedDict()
+        relations['no_damage_to'] = []
+        relations['half_damage_to'] = []
+        relations['double_damage_to'] = []
+
+        relations['no_damage_from'] = []
+        relations['half_damage_from'] = []
+        relations['double_damage_from'] = []
+
+        # Damage To
+        results = TypeEfficacy.objects.filter(damage_type_id=obj)
+        serializer = TypeEfficacySerializer(results, many=True, context=self.context)
+
+        for relation in serializer.data:
+            type = Type.objects.get(id=relation['target_type_id'])
+            if relation['damage_factor'] == 200:
+                relations['double_damage_to'].append(TypeSummarySerializer(type, context=self.context).data)
+            elif relation['damage_factor'] == 50:
+                relations['half_damage_to'].append(TypeSummarySerializer(type, context=self.context).data)
+            elif relation['damage_factor'] == 0:
+                relations['no_damage_to'].append(TypeSummarySerializer(type, context=self.context).data)
+
+        # Damage From
+        results = TypeEfficacy.objects.filter(target_type_id=obj)
+        serializer = TypeEfficacySerializer(results, many=True, context=self.context)
+
+        for relation in serializer.data:
+            type = Type.objects.get(id=relation['damage_type_id'])
+            if relation['damage_factor'] == 200:
+                relations['double_damage_from'].append(TypeSummarySerializer(type, context=self.context).data)
+            elif relation['damage_factor'] == 50:
+                relations['half_damage_from'].append(TypeSummarySerializer(type, context=self.context).data)
+            elif relation['damage_factor'] == 0:
+                relations['no_damage_from'].append(TypeSummarySerializer(type, context=self.context).data)
+
+        return relations
 
 
 
@@ -162,14 +332,6 @@ class GenderSerializer(serializers.ModelSerializer):
         model = Gender
 
 
-class GenerationSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Ability resource
-    """
-    class Meta:
-        model = Generation
-
-
 class GrowthRateSerializer(serializers.ModelSerializer):
     """
     Serializer for the GrowthRate resource
@@ -184,14 +346,6 @@ class ItemSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Item
-
-
-class LanguageSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Language resource
-    """
-    class Meta:
-        model = Language
 
 
 class LocationSerializer(serializers.ModelSerializer):
@@ -232,27 +386,3 @@ class PokemonSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Pokemon
-
-
-class RegionSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Region resource
-    """
-    class Meta:
-        model = Region
-
-
-class TypeSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Type resource
-    """
-    class Meta:
-        model = Type
-
-
-class VersionSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Version resource
-    """
-    class Meta:
-        model = Version

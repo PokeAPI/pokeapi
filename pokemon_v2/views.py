@@ -90,10 +90,18 @@ class NatureResource(PokeapiCommonViewset):
     serializer_class = NatureSerializer
 
 
+class PokedexResource(PokeapiCommonViewset):
+
+    queryset = Pokedex.objects.all()
+    serializer_class = PokedexDetailSerializer
+    list_serializer_class = PokedexSummarySerializer
+
+
 class PokemonResource(PokeapiCommonViewset):
 
     queryset = Pokemon.objects.all()
-    serializer_class = PokemonSerializer
+    serializer_class = PokemonDetailSerializer
+    list_serializer_class =PokemonSummarySerializer
 
 
 class RegionResource(PokeapiCommonViewset):

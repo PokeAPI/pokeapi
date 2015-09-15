@@ -264,7 +264,7 @@ class HasPokeathlonStat(models.Model):
 
 class HasPokedex(models.Model):
 
-  pokedex = models.ForeignKey('Pokedex', blank=True, null=True)
+  pokedex = models.ForeignKey('Pokedex', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -320,7 +320,7 @@ class HasPokemonShape(models.Model):
 
 class HasPokemonSpecies(models.Model):
 
-  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True)
+  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -513,9 +513,9 @@ class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
 
 class TypeEfficacy(models.Model):
 
-  damage_type_id = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
+  damage_type = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
 
-  target_type_id = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
+  target_type = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
 
   damage_factor = models.IntegerField()
 

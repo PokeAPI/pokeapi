@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'pokeapi_co_db',
-        'USER': 'root',
+        'USER': 'zane',
         'PASSWORD': 'pokeapi',
         'HOST': 'localhost',
         'PORT': '',

@@ -259,11 +259,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         relations['double_damage_from'] = []
 
         # Damage To
-        results = TypeEfficacy.objects.filter(damage_type_id=obj)
+        results = TypeEfficacy.objects.filter(damage_type=obj)
         serializer = TypeEfficacySerializer(results, many=True, context=self.context)
 
         for relation in serializer.data:
-            type = Type.objects.get(id=relation['target_type_id'])
+            type = Type.objects.get(pk=relation['target_type'])
             if relation['damage_factor'] == 200:
                 relations['double_damage_to'].append(TypeSummarySerializer(type, context=self.context).data)
             elif relation['damage_factor'] == 50:
@@ -272,11 +272,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                 relations['no_damage_to'].append(TypeSummarySerializer(type, context=self.context).data)
 
         # Damage From
-        results = TypeEfficacy.objects.filter(target_type_id=obj)
+        results = TypeEfficacy.objects.filter(target_type=obj)
         serializer = TypeEfficacySerializer(results, many=True, context=self.context)
 
         for relation in serializer.data:
-            type = Type.objects.get(id=relation['damage_type_id'])
+            type = Type.objects.get(pk=relation['damage_type'])
             if relation['damage_factor'] == 200:
                 relations['double_damage_from'].append(TypeSummarySerializer(type, context=self.context).data)
             elif relation['damage_factor'] == 50:
@@ -289,8 +289,98 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
 
 #########################
-#  BERRY SERIALIZERS  #
+#  POKEMON SERIALIZERS  #
 #########################
+
+class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
+    
+    class Meta:
+        model = Pokemon
+        fields = ('name', 'url')
+
+
+class PokemonDetailSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Pokemon
+
+
+class PokemonDexNumberSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = PokemonDexNumber
+
+
+
+#########################
+#  POKEDEX SERIALIZERS  #
+#########################
+
+class PokedexDescriptionSerializer(serializers.HyperlinkedModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokedexDescription
+        fields = ('name', 'description', 'language')
+
+
+class PokedexSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Pokedex
+
+
+class PokedexDetailSerializer(serializers.ModelSerializer):
+    """
+    Name and descriptions for pokedex are stored in a 'prose'
+    table so this serializer wont act like the others. Need to build 
+    the return data manually.
+    """
+
+    region = RegionSummarySerializer()
+    names = serializers.SerializerMethodField('get_pokedex_names')
+    descriptions = serializers.SerializerMethodField('get_pokedex_descriptions')
+    # pokemon = PokemonDexNumberSerializer(many=True, read_only=True, source="pokedex")
+    pokemon = serializers.SerializerMethodField('get_pokedex_entries')
+
+    class Meta:
+        model = Pokedex
+        fields = ('id', 'name', 'is_main_series', 'region', 'names', 'descriptions', 'pokemon')
+
+    def get_pokedex_names(self, obj):
+
+        results = PokedexDescription.objects.filter(pokedex_id=obj)
+        serializer = PokedexDescriptionSerializer(results, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['description']
+
+        return data
+
+    def get_pokedex_descriptions(self, obj):
+
+        results = PokedexDescription.objects.filter(pokedex_id=obj)
+        serializer = PokedexDescriptionSerializer(results, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['name']
+
+        return data
+
+    def get_pokedex_entries(self, obj):
+
+        results = PokemonDexNumber.objects.filter(pokedex=obj)
+        serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
+        return serializer.data
+
+
+
+#######################
+#  BERRY SERIALIZERS  #
+#######################
 
 class BerrySerializer(serializers.ModelSerializer):
     """
@@ -370,19 +460,3 @@ class NatureSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Nature
-
-
-class PokedexSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Pokedex resource
-    """
-    class Meta:
-        model = Pokedex
-
-
-class PokemonSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Pokemon resource
-    """
-    class Meta:
-        model = Pokemon

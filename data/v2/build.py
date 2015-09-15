@@ -730,8 +730,8 @@ for index, info in enumerate(data):
   if index > 0:
 
     typeEfficacy = TypeEfficacy (
-        damage_type_id = Type.objects.get(pk = int(info[0])),
-        target_type_id = Type.objects.get(pk = int(info[1])),
+        damage_type = Type.objects.get(pk = int(info[0])),
+        target_type = Type.objects.get(pk = int(info[1])),
         damage_factor = int(info[2])
       )
     typeEfficacy.save()

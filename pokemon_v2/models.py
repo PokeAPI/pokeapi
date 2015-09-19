@@ -1314,7 +1314,7 @@ class PokemonShapeName(IsName):
 
   awesome_name = models.CharField(max_length = 30)
 
-  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True)
+  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True, related_name="pokemonshapename")
 
 
 class PokemonStat(HasPokemon, HasStat):

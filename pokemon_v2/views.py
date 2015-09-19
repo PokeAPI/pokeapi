@@ -72,6 +72,14 @@ class GenerationResource(PokeapiCommonViewset):
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
 
+
+class GrowthRateResource(PokeapiCommonViewset):
+
+    queryset = GrowthRate.objects.all()
+    serializer_class = GrowthRateDetailSerializer
+    list_serializer_class = GrowthRateSummarySerializer
+
+
 class LanguageResource(PokeapiCommonViewset):
 
     queryset = Language.objects.all()
@@ -81,7 +89,8 @@ class LanguageResource(PokeapiCommonViewset):
 class MoveResource(PokeapiCommonViewset):
 
     queryset = Move.objects.all()
-    serializer_class = MoveSerializer
+    serializer_class = MoveDetailSerializer
+    list_serializer_class = MoveSummarySerializer
 
 
 class NatureResource(PokeapiCommonViewset):
@@ -97,11 +106,25 @@ class PokedexResource(PokeapiCommonViewset):
     list_serializer_class = PokedexSummarySerializer
 
 
+class PokemonColorResource(PokeapiCommonViewset):
+
+    queryset = PokemonColor.objects.all()
+    serializer_class = PokemonColorDetailSerializer
+    list_serializer_class = PokemonColorSummarySerializer
+
+
+class PokemonShapeResource(PokeapiCommonViewset):
+
+    queryset = PokemonShape.objects.all()
+    serializer_class = PokemonShapeDetailSerializer
+    list_serializer_class = PokemonShapeSummarySerializer
+
+
 class PokemonResource(PokeapiCommonViewset):
 
-    queryset = Pokemon.objects.all()
-    serializer_class = PokemonDetailSerializer
-    list_serializer_class =PokemonSummarySerializer
+    queryset = PokemonSpecies.objects.all()
+    serializer_class = PokemonSpeciesDetailSerializer
+    list_serializer_class =PokemonSpeciesSummarySerializer
 
 
 class RegionResource(PokeapiCommonViewset):

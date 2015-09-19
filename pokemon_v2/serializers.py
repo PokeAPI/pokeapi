@@ -98,6 +98,35 @@ class GenerationDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'region', 'names')
 
 
+############################
+#  GENERATION SERIALIZERS  #
+############################
+
+class GrowthRateDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = GrowthRateDescription
+        fields = ('description', 'language')
+
+
+class GrowthRateSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = GrowthRate
+        fields = ('name', 'url')
+
+
+class GrowthRateDetailSerializer(serializers.ModelSerializer):
+
+    descriptions = GrowthRateDescriptionSerializer(many=True, read_only=True, source="growthratedescription")
+
+    class Meta:
+        model = GrowthRate
+        fields = ('id', 'name', 'formula', 'descriptions')
+
+
 #########################
 #  VERSION SERIALIZERS  #
 #########################
@@ -288,9 +317,112 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
 
 
+######################
+#  MOVE SERIALIZERS  #
+######################
+
+class MoveNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = AbilityName
+        fields = ('name', 'language')
+
+
+class MoveSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Move
+        fields = ('name', 'url')
+
+
+class MoveDetailSerializer(serializers.ModelSerializer):
+
+    names = MoveNameSerializer(many=True, read_only=True, source="movename")
+
+    class Meta:
+        model = Move
+        fields = ('id', 'name', 'names')
+
+
+
 #########################
 #  POKEMON SERIALIZERS  #
 #########################
+
+class PokemonColorNameSerializer(serializers.HyperlinkedModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonColorName
+        fields = ('name', 'language')
+
+
+class PokemonColorSummarySerializer(serializers.HyperlinkedModelSerializer):
+    
+    class Meta:
+        model = PokemonColor
+        fields = ('name', 'url')
+
+
+class PokemonColorDetailSerializer(serializers.ModelSerializer):
+
+    names = PokemonColorNameSerializer(many=True, read_only=True, source="pokemoncolorname")
+    
+    class Meta:
+        model = PokemonColor
+        fields = ('id', 'name', 'names')
+
+
+class PokemonShapeNameSerializer(serializers.HyperlinkedModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonShapeName
+        fields = ('name', 'awesome_name', 'language')
+
+
+class PokemonShapeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    
+    class Meta:
+        model = PokemonShape
+        fields = ('name', 'url')
+
+
+class PokemonShapeDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_shape_names')
+    awesome_names = serializers.SerializerMethodField('get_shape_awesome_names')
+    
+    class Meta:
+        model = PokemonShape
+        fields = ('id', 'name', 'names', 'awesome_names')
+
+    def get_shape_names(self, obj):
+
+        results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
+        serializer = PokemonShapeNameSerializer(results, many=True, context=self.context)
+        data  = serializer.data
+
+        for entry in data:
+            del entry['awesome_name']
+
+        return data
+
+    def get_shape_awesome_names(self, obj):
+
+        results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
+        serializer = PokemonShapeNameSerializer(results, many=True, context=self.context)
+        data = serializer.data
+
+        for entry in data:
+            del entry['name']
+
+        return data
+
 
 class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
     
@@ -305,10 +437,95 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         model = Pokemon
 
 
+class PokemonSpeciesNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonSpeciesName
+        fields = ('name', 'genus', 'language')
+
+
+class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta: 
+        model = PokemonSpecies
+        fields = ('name', 'url')
+
+
+class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_pokemon_names')
+    genera = serializers.SerializerMethodField('get_pokemon_genera')
+    generation = GenerationSummarySerializer()
+    growth_rate = GrowthRateSummarySerializer()
+    pokemon_color = PokemonColorSummarySerializer()
+    pokemon_shape = PokemonShapeSummarySerializer()
+    varieties = PokemonDetailSerializer(many=True, read_only=True, source="pokemon")
+    # types = TypeSummarySerializer(many=True, read_only=True, source="pokemonspecies")
+
+    class Meta: 
+        model = PokemonSpecies
+        fields = (
+            'id',
+            'name',
+            'order',
+            'gender_rate',
+            'capture_rate',
+            'base_happiness',
+            'is_baby',
+            'hatch_counter',
+            'has_gender_differences',
+            'forms_switchable',
+            'growth_rate',
+            'pokemon_color',
+            'pokemon_shape',
+            'evolves_from_species',
+            'evolution_chain',
+            'pokemon_habitat',
+            'generation',
+            # 'types',
+            'names',
+            'genera',
+            'varieties'
+        )
+
+    def get_pokemon_names(self, obj):
+
+        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
+        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['genus']
+
+        return data
+
+    def get_pokemon_genera(self, obj):
+
+        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
+        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
+        data = serializer.data
+        genera = []
+
+        for entry in data:
+            if entry['genus']:
+                del entry['name']
+                genera.append(entry)
+
+        return genera
+
+    # def get_pokemon_types()
+
+
 class PokemonDexNumberSerializer(serializers.ModelSerializer):
+
+    entry_number = serializers.IntegerField(source="pokedex_number")
+    pokemon = PokemonSpeciesSummarySerializer(source="pokemon_species")
     
     class Meta:
         model = PokemonDexNumber
+        fields = ('pokedex', 'entry_number', 'pokemon')
 
 
 
@@ -341,12 +558,11 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
     region = RegionSummarySerializer()
     names = serializers.SerializerMethodField('get_pokedex_names')
     descriptions = serializers.SerializerMethodField('get_pokedex_descriptions')
-    # pokemon = PokemonDexNumberSerializer(many=True, read_only=True, source="pokedex")
-    pokemon = serializers.SerializerMethodField('get_pokedex_entries')
+    pokemon_entries = serializers.SerializerMethodField('get_pokedex_entries')
 
     class Meta:
         model = Pokedex
-        fields = ('id', 'name', 'is_main_series', 'region', 'names', 'descriptions', 'pokemon')
+        fields = ('id', 'name', 'is_main_series', 'region', 'names', 'descriptions', 'pokemon_entries')
 
     def get_pokedex_names(self, obj):
 
@@ -363,7 +579,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
         results = PokedexDescription.objects.filter(pokedex_id=obj)
         serializer = PokedexDescriptionSerializer(results, many=True, context=self.context)
-        data  = serializer.data
+        data = serializer.data
 
         for name in data:
             del name['name']
@@ -372,10 +588,16 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
     def get_pokedex_entries(self, obj):
 
-        results = PokemonDexNumber.objects.filter(pokedex=obj)
-        serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
-        return serializer.data
+        print obj
 
+        results = PokemonDexNumber.objects.order_by('pokedex_number').filter(pokedex=obj)
+        serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
+        data = serializer.data
+
+        for entry in data:
+            del entry['pokedex']
+
+        return data
 
 
 #######################
@@ -444,14 +666,6 @@ class LocationSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Location
-        
-
-class MoveSerializer(serializers.ModelSerializer):
-    """
-    Serializer for the Move resource
-    """
-    class Meta:
-        model = Move
 
 
 class NatureSerializer(serializers.ModelSerializer):

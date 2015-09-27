@@ -93,6 +93,41 @@ class MoveResource(PokeapiCommonViewset):
     list_serializer_class = MoveSummarySerializer
 
 
+class MoveDamageClassResource(PokeapiCommonViewset):
+
+    queryset = MoveDamageClass.objects.all()
+    serializer_class = MoveDamageClassDetailSerializer
+    list_serializer_class = MoveDamageClassSummarySerializer
+
+
+class MoveMetaAilmentResource(PokeapiCommonViewset):
+
+    queryset = MoveMetaAilment.objects.all()
+    serializer_class = MoveMetaAilmentDetailSerializer
+    list_serializer_class = MoveMetaAilmentSummarySerializer
+
+
+class MoveMetaCategoryResource(PokeapiCommonViewset):
+
+    queryset = MoveMetaCategory.objects.all()
+    serializer_class = MoveMetaCategoryDetailSerializer
+    list_serializer_class = MoveMetaCategorySummarySerializer
+
+
+class MoveLearnMethodResource(PokeapiCommonViewset):
+
+    queryset = MoveLearnMethod.objects.all()
+    serializer_class = MoveLearnMethodDetailSerializer
+    list_serializer_class = MoveLearnMethodSummarySerializer
+
+
+class MoveTargetResource(PokeapiCommonViewset):
+
+    queryset = MoveTarget.objects.all()
+    serializer_class = MoveTargetDetailSerializer
+    list_serializer_class = MoveTargetSummarySerializer
+
+
 class NatureResource(PokeapiCommonViewset):
 
     queryset = Nature.objects.all()
@@ -122,9 +157,9 @@ class PokemonShapeResource(PokeapiCommonViewset):
 
 class PokemonResource(PokeapiCommonViewset):
 
-    queryset = PokemonSpecies.objects.all()
-    serializer_class = PokemonSpeciesDetailSerializer
-    list_serializer_class =PokemonSpeciesSummarySerializer
+    queryset = Pokemon.objects.all()
+    serializer_class = PokemonDetailSerializer
+    list_serializer_class =PokemonSummarySerializer
 
 
 class RegionResource(PokeapiCommonViewset):
@@ -132,6 +167,13 @@ class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
+
+
+class StatResource(PokeapiCommonViewset):
+
+    queryset = Stat.objects.all()
+    serializer_class = StatDetailSerializer
+    list_serializer_class = StatSummarySerializer
 
 
 class TypeResource(PokeapiCommonViewset):

@@ -6,7 +6,7 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    replaces = [(b'pokemon_v2', '0001_squashed_0006_auto_20150910_0357'), (b'pokemon_v2', '0002_auto_20150914_1324'), (b'pokemon_v2', '0003_auto_20150915_0055'), (b'pokemon_v2', '0004_auto_20150915_0448'), (b'pokemon_v2', '0005_auto_20150918_0502')]
+    # replaces = [(b'pokemon_v2', '0001_squashed_0005_auto_20150918_0502'), (b'pokemon_v2', '0002_auto_20150921_0054'), (b'pokemon_v2', '0003_auto_20150921_0437'), (b'pokemon_v2', '0004_auto_20150925_1521'), (b'pokemon_v2', '0005_auto_20150925_1527'), (b'pokemon_v2', '0006_auto_20150926_0832'), (b'pokemon_v2', '0007_auto_20150926_0850'), (b'pokemon_v2', '0008_auto_20150926_0855'), (b'pokemon_v2', '0009_auto_20150926_0858'), (b'pokemon_v2', '0010_auto_20150926_0900'), (b'pokemon_v2', '0011_auto_20150926_0905'), (b'pokemon_v2', '0012_auto_20150926_0907'), (b'pokemon_v2', '0013_auto_20150926_0913')]
 
     dependencies = [
     ]
@@ -132,18 +132,6 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=30)),
                 ('order', models.IntegerField()),
                 ('generation', models.ForeignKey(blank=True, to='pokemon_v2.Generation', null=True)),
-            ],
-            options={
-                'abstract': False,
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
-            name='VersionGroupPokemonMoveMethod',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('pokemon_move_method_id', models.IntegerField()),
-                ('version_group', models.ForeignKey(related_name='versiongrouppokemonmovemethod', blank=True, to='pokemon_v2.VersionGroup', null=True)),
             ],
             options={
                 'abstract': False,
@@ -366,7 +354,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('description', models.CharField(default='', max_length=1000)),
-                ('characteristic', models.ForeignKey(blank=True, to='pokemon_v2.Characteristic', null=True)),
+                ('characteristic', models.ForeignKey(related_name='characteristicdescription', blank=True, to='pokemon_v2.Characteristic', null=True)),
                 ('language', models.ForeignKey(related_name='characteristicdescription_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -390,7 +378,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('egg_group', models.ForeignKey(blank=True, to='pokemon_v2.EggGroup', null=True)),
+                ('egg_group', models.ForeignKey(related_name='egggroupname', blank=True, to='pokemon_v2.EggGroup', null=True)),
                 ('language', models.ForeignKey(related_name='egggroupname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -414,7 +402,7 @@ class Migration(migrations.Migration):
             name='GrowthRateDescription',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('growth_rate', models.ForeignKey(blank=True, to='pokemon_v2.GrowthRate', null=True)),
+                ('growth_rate', models.ForeignKey(related_name='growthratedescription', blank=True, to='pokemon_v2.GrowthRate', null=True)),
                 ('language', models.ForeignKey(related_name='growthratedescription_language', blank=True, to='pokemon_v2.Language', null=True)),
                 ('description', models.CharField(default='', max_length=1000)),
             ],
@@ -584,7 +572,7 @@ class Migration(migrations.Migration):
             name='MoveFlagMap',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('move', models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True)),
+                ('move', models.ForeignKey(related_name='moveflagmap', blank=True, to='pokemon_v2.Move', null=True)),
                 ('move_flag', models.ForeignKey(blank=True, to='pokemon_v2.MoveFlag', null=True)),
             ],
             options={
@@ -598,7 +586,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('flavor_text', models.CharField(max_length=500)),
                 ('language', models.ForeignKey(related_name='moveflavortext_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('move', models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True)),
+                ('move', models.ForeignKey(related_name='moveflavortext', blank=True, to='pokemon_v2.Move', null=True)),
                 ('version_group', models.ForeignKey(related_name='moveflavortext', blank=True, to='pokemon_v2.VersionGroup', null=True)),
             ],
             options={
@@ -679,7 +667,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('change', models.IntegerField()),
-                ('move', models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True)),
+                ('move', models.ForeignKey(related_name='movemetastatchange', blank=True, to='pokemon_v2.Move', null=True)),
                 ('stat', models.ForeignKey(blank=True, to='pokemon_v2.Stat', null=True)),
             ],
             options={
@@ -693,7 +681,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='movename_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('move', models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True)),
+                ('move', models.ForeignKey(related_name='movename', blank=True, to='pokemon_v2.Move', null=True)),
             ],
             options={
                 'abstract': False,
@@ -734,7 +722,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='movemeta',
             name='move',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True),
+            field=models.OneToOneField(related_name='movemeta', to='pokemon_v2.Move'),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -1261,7 +1249,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('evolution_trigger', models.ForeignKey(blank=True, to='pokemon_v2.EvolutionTrigger', null=True)),
+                ('evolution_trigger', models.ForeignKey(related_name='evolutiontriggername', blank=True, to='pokemon_v2.EvolutionTrigger', null=True)),
                 ('language', models.ForeignKey(related_name='evolutiontriggername_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -1275,7 +1263,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('level', models.IntegerField()),
                 ('experience', models.IntegerField()),
-                ('growth_rate', models.ForeignKey(blank=True, to='pokemon_v2.GrowthRate', null=True)),
+                ('growth_rate', models.ForeignKey(related_name='experience', blank=True, to='pokemon_v2.GrowthRate', null=True)),
             ],
             options={
                 'abstract': False,
@@ -1355,7 +1343,7 @@ class Migration(migrations.Migration):
                 ('is_hidden', models.BooleanField(default=False)),
                 ('slot', models.IntegerField()),
                 ('ability', models.ForeignKey(related_name='pokemonability', blank=True, to='pokemon_v2.Ability', null=True)),
-                ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('pokemon', models.ForeignKey(related_name='pokemonability', blank=True, to='pokemon_v2.Pokemon', null=True)),
             ],
             options={
                 'abstract': False,
@@ -1481,7 +1469,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('game_index', models.IntegerField()),
-                ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('pokemon', models.ForeignKey(related_name='pokemongameindex', blank=True, to='pokemon_v2.Pokemon', null=True)),
                 ('version', models.ForeignKey(related_name='pokemongameindex', blank=True, to='pokemon_v2.Version', null=True)),
             ],
             options={
@@ -1530,10 +1518,11 @@ class Migration(migrations.Migration):
             name='PokemonMove',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('order', models.IntegerField()),
+                ('order', models.IntegerField(null=True, blank=True)),
                 ('level', models.IntegerField()),
-                ('move', models.ForeignKey(blank=True, to='pokemon_v2.Move', null=True)),
-                ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('move', models.ForeignKey(related_name='pokemonmove', blank=True, to='pokemon_v2.Move', null=True)),
+                ('pokemon', models.ForeignKey(related_name='pokemonmove', blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('version_group', models.ForeignKey(related_name='pokemonmove', blank=True, to='pokemon_v2.VersionGroup', null=True)),
             ],
             options={
                 'abstract': False,
@@ -1541,7 +1530,7 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='PokemonMoveMethod',
+            name='MoveLearnMethod',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
@@ -1552,13 +1541,13 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='PokemonMoveMethodName',
+            name='MoveLearnMethodName',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('description', models.CharField(default='', max_length=1000)),
                 ('name', models.CharField(max_length=100)),
-                ('language', models.ForeignKey(related_name='pokemonmovemethodname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('pokemon_move_method', models.ForeignKey(blank=True, to='pokemon_v2.PokemonMoveMethod', null=True)),
+                ('language', models.ForeignKey(related_name='movelearnmethodname_language', blank=True, to='pokemon_v2.Language', null=True)),
+                ('move_learn_method', models.ForeignKey(blank=True, to='pokemon_v2.MoveLearnMethod', null=True)),
             ],
             options={
                 'abstract': False,
@@ -1663,7 +1652,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('base_stat', models.IntegerField()),
                 ('effort', models.IntegerField()),
-                ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('pokemon', models.ForeignKey(related_name='pokemonstat', blank=True, to='pokemon_v2.Pokemon', null=True)),
                 ('stat', models.ForeignKey(blank=True, to='pokemon_v2.Stat', null=True)),
             ],
             options={
@@ -1676,25 +1665,13 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('slot', models.IntegerField()),
-                ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
+                ('pokemon', models.ForeignKey(related_name='pokemontype', blank=True, to='pokemon_v2.Pokemon', null=True)),
                 ('type', models.ForeignKey(related_name='pokemontype', blank=True, to='pokemon_v2.Type', null=True)),
             ],
             options={
                 'abstract': False,
             },
             bases=(models.Model,),
-        ),
-        migrations.AddField(
-            model_name='pokemonmove',
-            name='pokemon_move_method',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.PokemonMoveMethod', null=True),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='pokemonmove',
-            name='version_group',
-            field=models.ForeignKey(related_name='pokemonmove', blank=True, to='pokemon_v2.VersionGroup', null=True),
-            preserve_default=True,
         ),
         migrations.AddField(
             model_name='pokemonevolution',
@@ -1705,7 +1682,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='pokemonevolution',
             name='gender',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.Gender', null=True),
+            field=models.ForeignKey(related_name='pokemonevolution', blank=True, to='pokemon_v2.Gender', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -1884,12 +1861,6 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.AlterField(
-            model_name='pokemonmove',
-            name='order',
-            field=models.IntegerField(null=True, blank=True),
-            preserve_default=True,
-        ),
-        migrations.AlterField(
             model_name='pokemonspecies',
             name='order',
             field=models.IntegerField(null=True, blank=True),
@@ -1944,7 +1915,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('item_category', models.ForeignKey(blank=True, to='pokemon_v2.ItemCategory', null=True)),
+                ('item_category', models.ForeignKey(related_name='itemcategoryname', blank=True, to='pokemon_v2.ItemCategory', null=True)),
                 ('language', models.ForeignKey(related_name='itemcategoryname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -1995,7 +1966,7 @@ class Migration(migrations.Migration):
             name='ItemFlagMap',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('item', models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True)),
+                ('item', models.ForeignKey(related_name='itemflagmap', blank=True, to='pokemon_v2.Item', null=True)),
                 ('item_flag', models.ForeignKey(blank=True, to='pokemon_v2.ItemFlag', null=True)),
             ],
             options={
@@ -2008,7 +1979,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('flavor_text', models.CharField(max_length=500)),
-                ('item', models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True)),
+                ('item', models.ForeignKey(related_name='itemflavortext', blank=True, to='pokemon_v2.Item', null=True)),
                 ('language', models.ForeignKey(related_name='itemflavortext_language', blank=True, to='pokemon_v2.Language', null=True)),
                 ('version_group', models.ForeignKey(related_name='itemflavortext', blank=True, to='pokemon_v2.VersionGroup', null=True)),
             ],
@@ -2031,7 +2002,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('effect', models.CharField(max_length=4000)),
-                ('item_fling_effect', models.ForeignKey(blank=True, to='pokemon_v2.ItemFlingEffect', null=True)),
+                ('item_fling_effect', models.ForeignKey(related_name='itemflingeffectdescription', blank=True, to='pokemon_v2.ItemFlingEffect', null=True)),
                 ('language', models.ForeignKey(related_name='itemflingeffectdescription_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2045,7 +2016,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('game_index', models.IntegerField()),
                 ('generation', models.ForeignKey(related_name='itemgameindex', blank=True, to='pokemon_v2.Generation', null=True)),
-                ('item', models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True)),
+                ('item', models.ForeignKey(related_name='itemgameindex', blank=True, to='pokemon_v2.Item', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2057,7 +2028,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('item', models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True)),
+                ('item', models.ForeignKey(related_name='itemname', blank=True, to='pokemon_v2.Item', null=True)),
                 ('language', models.ForeignKey(related_name='itemname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2081,7 +2052,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('item_pocket', models.ForeignKey(blank=True, to='pokemon_v2.ItemPocket', null=True)),
+                ('item_pocket', models.ForeignKey(related_name='itempocketname', blank=True, to='pokemon_v2.ItemPocket', null=True)),
                 ('language', models.ForeignKey(related_name='itempocketname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2092,19 +2063,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='itemcategory',
             name='item_pocket',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.ItemPocket', null=True),
+            field=models.ForeignKey(related_name='itemcategory', blank=True, to='pokemon_v2.ItemPocket', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='item',
             name='item_category',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.ItemCategory', null=True),
+            field=models.ForeignKey(related_name='item', blank=True, to='pokemon_v2.ItemCategory', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='item',
             name='item_fling_effect',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.ItemFlingEffect', null=True),
+            field=models.ForeignKey(related_name='item', blank=True, to='pokemon_v2.ItemFlingEffect', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -2116,7 +2087,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='machine',
             name='item',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True),
+            field=models.ForeignKey(related_name='machine', blank=True, to='pokemon_v2.Item', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -2134,7 +2105,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='pokemonitem',
             name='item',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True),
+            field=models.ForeignKey(related_name='pokemonitem', blank=True, to='pokemon_v2.Item', null=True),
             preserve_default=True,
         ),
         migrations.CreateModel(
@@ -2243,7 +2214,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('flavor', models.CharField(max_length=10)),
                 ('color', models.CharField(max_length=10)),
-                ('contest_type', models.ForeignKey(blank=True, to='pokemon_v2.ContestType', null=True)),
+                ('contest_type', models.ForeignKey(related_name='contesttypename', blank=True, to='pokemon_v2.ContestType', null=True)),
                 ('language', models.ForeignKey(related_name='contesttypename_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2254,7 +2225,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='berryflavor',
             name='contest_type',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.ContestType', null=True),
+            field=models.ForeignKey(related_name='berryflavor', blank=True, to='pokemon_v2.ContestType', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -2266,7 +2237,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='berry',
             name='item',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True),
+            field=models.ForeignKey(related_name='berry', blank=True, to='pokemon_v2.Item', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -2387,7 +2358,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='locationareaname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('location_area', models.ForeignKey(blank=True, to='pokemon_v2.LocationArea', null=True)),
+                ('location_area', models.ForeignKey(related_name='locationareaname', blank=True, to='pokemon_v2.LocationArea', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2400,7 +2371,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('game_index', models.IntegerField()),
                 ('generation', models.ForeignKey(related_name='locationgameindex', blank=True, to='pokemon_v2.Generation', null=True)),
-                ('location', models.ForeignKey(blank=True, to='pokemon_v2.Location', null=True)),
+                ('location', models.ForeignKey(related_name='locationgameindex', blank=True, to='pokemon_v2.Location', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2413,7 +2384,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='locationname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('location', models.ForeignKey(blank=True, to='pokemon_v2.Location', null=True)),
+                ('location', models.ForeignKey(related_name='locationname', blank=True, to='pokemon_v2.Location', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2451,7 +2422,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('encounter_condition', models.ForeignKey(blank=True, to='pokemon_v2.EncounterCondition', null=True)),
+                ('encounter_condition', models.ForeignKey(related_name='encounterconditionname', blank=True, to='pokemon_v2.EncounterCondition', null=True)),
                 ('language', models.ForeignKey(related_name='encounterconditionname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2513,7 +2484,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('encounter_method', models.ForeignKey(blank=True, to='pokemon_v2.EncounterMethod', null=True)),
+                ('encounter_method', models.ForeignKey(related_name='encountermethodname', blank=True, to='pokemon_v2.EncounterMethod', null=True)),
                 ('language', models.ForeignKey(related_name='encountermethodname_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2527,7 +2498,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('slot', models.IntegerField(null=True, blank=True)),
                 ('rarity', models.IntegerField()),
-                ('encounter_method', models.ForeignKey(blank=True, to='pokemon_v2.EncounterMethod', null=True)),
+                ('encounter_method', models.ForeignKey(related_name='encounterslot', blank=True, to='pokemon_v2.EncounterMethod', null=True)),
                 ('version_group', models.ForeignKey(related_name='encounterslot', blank=True, to='pokemon_v2.VersionGroup', null=True)),
             ],
             options={
@@ -2538,7 +2509,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='locationareaencounterrate',
             name='encounter_method',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.EncounterMethod', null=True),
+            field=models.ForeignKey(related_name='locationareaencounterrate', blank=True, to='pokemon_v2.EncounterMethod', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -2838,5 +2809,105 @@ class Migration(migrations.Migration):
             name='pokedex',
             field=models.ForeignKey(related_name='pokemondexnumber', blank=True, to='pokemon_v2.Pokedex', null=True),
             preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='encounter',
+            name='location_area',
+            field=models.ForeignKey(related_name='encounter', blank=True, to='pokemon_v2.LocationArea', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='encounter',
+            name='pokemon',
+            field=models.ForeignKey(related_name='encounter', blank=True, to='pokemon_v2.Pokemon', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='encounterconditionvalue',
+            name='encounter_condition',
+            field=models.ForeignKey(related_name='encounterconditionvalue', blank=True, to='pokemon_v2.EncounterCondition', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='locationarea',
+            name='location',
+            field=models.ForeignKey(related_name='locationarea', blank=True, to='pokemon_v2.Location', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='locationareaencounterrate',
+            name='location_area',
+            field=models.ForeignKey(related_name='locationareaencounterrate', blank=True, to='pokemon_v2.LocationArea', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='machine',
+            name='growth_rate',
+            field=models.ForeignKey(related_name='machine', blank=True, to='pokemon_v2.GrowthRate', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='movechange',
+            name='move',
+            field=models.ForeignKey(related_name='movechange', blank=True, to='pokemon_v2.Move', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='pokemonegggroup',
+            name='egg_group',
+            field=models.ForeignKey(related_name='pokemonegggroup', blank=True, to='pokemon_v2.EggGroup', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='pokemonevolution',
+            name='evolution_trigger',
+            field=models.ForeignKey(related_name='pokemonevolution', blank=True, to='pokemon_v2.EvolutionTrigger', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='pokemonform',
+            name='pokemon',
+            field=models.ForeignKey(related_name='pokemonform', blank=True, to='pokemon_v2.Pokemon', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='pokemonitem',
+            name='pokemon',
+            field=models.ForeignKey(related_name='pokemonitem', blank=True, to='pokemon_v2.Pokemon', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='pokemonspecies',
+            name='growth_rate',
+            field=models.ForeignKey(related_name='pokemonspecies', blank=True, to='pokemon_v2.GrowthRate', null=True),
+            preserve_default=True,
+        ),
+        migrations.RenameField(
+            model_name='pokemonform',
+            old_name='form_identifier',
+            new_name='form_name',
+        ),
+        migrations.RenameField(
+            model_name='pokemonform',
+            old_name='introduced_in_version_group',
+            new_name='version_group',
+        ),
+        migrations.AddField(
+            model_name='pokemonmove',
+            name='move_learn_method',
+            field=models.ForeignKey(blank=True, to='pokemon_v2.MoveLearnMethod', null=True),
+            preserve_default=True,
+        ),
+        migrations.CreateModel(
+            name='VersionGroupMoveLearnMethod',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('move_learn_method', models.ForeignKey(blank=True, to='pokemon_v2.MoveLearnMethod', null=True)),
+                ('version_group', models.ForeignKey(related_name='versiongroupmovelearnmethod', blank=True, to='pokemon_v2.VersionGroup', null=True)),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=(models.Model,),
         ),
     ]

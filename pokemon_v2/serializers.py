@@ -216,6 +216,7 @@ class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Ability
+        fields = ('name', 'url')
 
 
 class AbilityDetailSerializer(serializers.ModelSerializer):
@@ -236,6 +237,25 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             'descriptions', 
             'flavor_text_entries'
         )
+
+
+
+######################
+#  STAT SERIALIZERS  #
+######################
+
+class StatSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Stat
+        fields = ('name', 'url')
+
+
+class StatDetailSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Stat
+
 
 
 ######################
@@ -317,6 +337,166 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
 
 
+###################################
+#  MOVE DAMAGE CLASS SERIALIZERS  #
+###################################
+
+class MoveDamageClassDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = MoveDamageClassDescription
+        fields = ('name', 'description', 'language')
+
+
+class MoveDamageClassSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveDamageClass
+        fields = ('name', 'url')
+
+
+class MoveDamageClassDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_move_damage_class_names')
+    descriptions = serializers.SerializerMethodField('get_move_damage_class_descriptions')
+
+    class Meta:
+        model = MoveDamageClass
+        fields = ('id', 'name', 'names', 'descriptions')
+
+    def get_move_damage_class_names(self, obj):
+
+        move_methods = MoveDamageClassDescription.objects.filter(move_damage_class_id=obj)
+        serializer = MoveDamageClassDescriptionSerializer(move_methods, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['description']
+
+        return data
+
+    def get_move_damage_class_descriptions(self, obj):
+
+        move_methods = MoveDamageClassDescription.objects.filter(move_damage_class_id=obj)
+        serializer = MoveDamageClassDescriptionSerializer(move_methods, many=True, context=self.context)
+        data = serializer.data
+
+        for name in data:
+            del name['name']
+
+        return data
+
+
+
+###########################
+#  MOVE META SERIALIZERS  #
+###########################
+
+class MoveMetaAilmentSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveMetaAilment
+        fields = ('name', 'url')
+
+
+class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MoveMetaAilment
+
+
+class MoveMetaCategorySummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveMetaCategory
+        fields = ('name', 'url')
+
+
+class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MoveMetaCategory
+
+
+class MoveMetaSerializer(serializers.ModelSerializer):
+
+    ailment = MoveMetaAilmentSummarySerializer(source="move_meta_category")
+    category = MoveMetaCategorySummarySerializer(source="move_meta_category")
+
+    class Meta:
+        model = MoveMeta
+        fields = (
+            'ailment',
+            'category',
+            'min_hits',
+            'max_hits',
+            'min_turns',
+            'max_turns',
+            'drain',
+            'healing',
+            'crit_rate',
+            'ailment_chance',
+            'flinch_chance',
+            'stat_chance'
+        )
+
+
+
+#############################
+#  MOVE TARGET SERIALIZERS  #
+#############################
+
+class MoveTargetDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = MoveTargetDescription
+        fields = ('name', 'description', 'language')
+
+
+class MoveTargetSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveTarget
+        fields = ('name', 'url')
+
+
+class MoveTargetDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_move_target_names')
+    descriptions = serializers.SerializerMethodField('get_move_target_descriptions')
+
+    class Meta:
+        model = MoveTarget
+        fields = ('id', 'name', 'names', 'descriptions')
+
+    def get_move_target_names(self, obj):
+
+        move_methods = MoveTargetDescription.objects.filter(move_target_id=obj)
+        serializer = MoveTargetDescriptionSerializer(move_methods, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['description']
+
+        return data
+
+    def get_move_target_descriptions(self, obj):
+
+        move_methods = MoveTargetDescription.objects.filter(move_target_id=obj)
+        serializer = MoveTargetDescriptionSerializer(move_methods, many=True, context=self.context)
+        data = serializer.data
+
+        for name in data:
+            del name['name']
+
+        return data
+
+
+
 ######################
 #  MOVE SERIALIZERS  #
 ######################
@@ -339,17 +519,51 @@ class MoveSummarySerializer(serializers.HyperlinkedModelSerializer):
 
 class MoveDetailSerializer(serializers.ModelSerializer):
 
+    generation = GenerationSummarySerializer()
+    type = TypeSummarySerializer()
+    move_target = MoveTargetSummarySerializer()
+    damage_class = MoveDamageClassSummarySerializer(source="move_damage_class")
+    meta = MoveMetaSerializer(read_only=True, source="movemeta")
     names = MoveNameSerializer(many=True, read_only=True, source="movename")
+    effect_chance = serializers.IntegerField(source="move_effect_chance")
 
     class Meta:
         model = Move
-        fields = ('id', 'name', 'names')
+        fields = (
+            'id', 
+            'name',
+            'accuracy',
+            'damage_class',
+            'effect_chance',
+            'generation',
+            'meta',
+            'move_target',
+            'names',
+            'power', 
+            'pp', 
+            'priority',
+            'type',
+        )
 
 
 
-#########################
-#  POKEMON SERIALIZERS  #
-#########################
+#################################
+#  POKEMON ABILITY SERIALIZERS  #
+#################################
+
+class PokemonAbilitySerializer(serializers.ModelSerializer):
+
+    ability = AbilitySummarySerializer()
+    
+    class Meta:
+        model = PokemonAbility
+        fields = ('is_hidden', 'slot', 'ability')
+
+
+
+###############################
+#  POKEMON COLOR SERIALIZERS  #
+###############################
 
 class PokemonColorNameSerializer(serializers.HyperlinkedModelSerializer):
 
@@ -375,6 +589,83 @@ class PokemonColorDetailSerializer(serializers.ModelSerializer):
         model = PokemonColor
         fields = ('id', 'name', 'names')
 
+
+
+##############################
+#  POKEMON FORM SERIALIZERS  #
+##############################
+
+class PokemonFormSerializer(serializers.ModelSerializer):
+
+    version_group = VersionGroupSummarySerializer()
+    
+    class Meta:
+        model = PokemonForm
+        # fields = (
+        #     'form_name', 
+        #     'is_default',
+        #     'is_battle_only',
+        #     'is_mega',
+        #     'form_order',
+        #     'version_group'
+        # )
+
+
+
+##############################
+#  POKEMON MOVE SERIALIZERS  #
+##############################
+
+class MoveLearnMethodSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveLearnMethod
+        fields = ('name', 'url')
+
+
+class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = MoveLearnMethod
+
+    def get_move_method_names(self, obj):
+
+        move_methods = MoveLearnMethodName.objects.filter(pokemon_move_method_id=obj)
+        serializer = MoveLearnMethodNameSerializer(move_methods, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['description']
+
+        return data
+
+    def get_move_method_descriptions(self, obj):
+
+        move_methods = MoveLearnMethodName.objects.filter(pokemon_move_method_id=obj)
+        serializer = MoveLearnMethodNameSerializer(move_methods, many=True, context=self.context)
+        data = serializer.data
+
+        for name in data:
+            del name['name']
+
+        return data
+
+
+class PokemonMoveSerializer(serializers.ModelSerializer):
+
+    # move = MoveSummarySerializer()
+    # move_method = PokemonMoveMethodSummarySerializer(source="pokemon_move_method")
+    # version_group = VersionGroupSummarySerializer()
+    
+    class Meta:
+        model = PokemonMove
+        # fields = ('level', 'move_method', 'move', 'version_group')
+
+
+
+###############################
+#  POKEMON SHAPE SERIALIZERS  #
+###############################
 
 class PokemonShapeNameSerializer(serializers.HyperlinkedModelSerializer):
 
@@ -424,18 +715,10 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
         return data
 
 
-class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
-    class Meta:
-        model = Pokemon
-        fields = ('name', 'url')
 
-
-class PokemonDetailSerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model = Pokemon
-
+#################################
+#  POKEMON SPECIES SERIALIZERS  #
+#################################
 
 class PokemonSpeciesNameSerializer(serializers.ModelSerializer):
 
@@ -461,7 +744,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     growth_rate = GrowthRateSummarySerializer()
     pokemon_color = PokemonColorSummarySerializer()
     pokemon_shape = PokemonShapeSummarySerializer()
-    varieties = PokemonDetailSerializer(many=True, read_only=True, source="pokemon")
+    # varieties = PokemonDetailSerializer(many=True, read_only=True, source="pokemon")
     # types = TypeSummarySerializer(many=True, read_only=True, source="pokemonspecies")
 
     class Meta: 
@@ -487,7 +770,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             # 'types',
             'names',
             'genera',
-            'varieties'
+            # 'varieties'
         )
 
     def get_pokemon_names(self, obj):
@@ -516,6 +799,125 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
         return genera
 
     # def get_pokemon_types()
+
+
+
+##############################
+#  POKEMON STAT SERIALIZERS  #
+##############################
+
+class PokemonStatSerializer(serializers.ModelSerializer):
+
+    stat = StatSummarySerializer()
+
+    class Meta:
+        model = PokemonStat
+        """
+        Hiding Pokemon and ID fields
+        """
+        fields = ('base_stat', 'effort', 'stat')
+
+
+
+##############################
+#  POKEMON TYPE SERIALIZERS  #
+##############################
+
+class PokemonTypeSerializer(serializers.ModelSerializer):
+
+    type = TypeSummarySerializer()
+
+    class Meta:
+        model = PokemonType
+        """
+        Hiding Pokemon field
+        """
+        fields = ('slot', 'type')
+
+
+
+#########################
+#  POKEMON SERIALIZERS  #
+#########################
+
+class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
+    
+    class Meta:
+        model = Pokemon
+        fields = ('name', 'url')
+
+
+class PokemonDetailSerializer(serializers.ModelSerializer):
+    
+    abilities = PokemonAbilitySerializer(many=True, read_only=True, source="pokemonability")
+    # moves = PokemonMoveSerializer(many=True, read_only=True, source="pokemonmove")
+    moves = serializers.SerializerMethodField('get_pokemon_moves')
+    stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
+    types = PokemonTypeSerializer(many=True, read_only=True, source="pokemontype")
+    # forms = PokemonFormSerializer(many=True, read_only=True, source="pokemonform")
+
+    class Meta:
+        model = Pokemon
+        fields = (
+            'id', 
+            'order', 
+            'name', 
+            'is_default', 
+            'height', 
+            'weight', 
+            'base_experience', 
+            'abilities',
+            'moves',
+            'stats',
+            'types'
+            # 'forms',
+        )
+
+    def get_pokemon_moves(self, obj):
+        # Doin moves a little differently because pokemon
+        # move resources are a beast
+
+        # Get all possible Version Groups and Move Methods for later use
+        version_objects = VersionGroup.objects.all()
+        version_data = VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data
+        method_objects = MoveLearnMethod.objects.all()
+        method_data = MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data
+
+        # Get moves related to this pokemon and pull out unique Move IDs
+        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('move_id')
+        move_ids = pokemon_moves.values('move_id').distinct()
+        move_list = []
+
+        for id in move_ids:
+
+            pokemon_move_details = OrderedDict()
+
+            # Get each Unique Move by ID
+            move_object = Move.objects.get(pk=id['move_id'])
+            move_data = MoveSummarySerializer(move_object, context=self.context).data
+            pokemon_move_details['move'] = move_data
+
+            # Get Versions and Move Methods associated with each unique move
+            pokemon_move_objects = pokemon_moves.filter(move_id=id['move_id'])
+            serializer = PokemonMoveSerializer(pokemon_move_objects, many=True, context=self.context)
+            pokemon_move_details['version_details'] = []
+
+            for move in serializer.data:
+
+                version_detail = OrderedDict()
+
+                version_detail['level_learned_at'] = move['level']
+                version_detail['version_group'] = version_data[move['version_group'] - 1]
+                version_detail['move_learn_method'] = method_data[move['move_learn_method'] - 1]
+
+                pokemon_move_details['version_details'].append(version_detail)
+
+
+            move_list.append(pokemon_move_details)
+
+        return move_list
+
+
 
 
 class PokemonDexNumberSerializer(serializers.ModelSerializer):
@@ -558,11 +960,11 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
     region = RegionSummarySerializer()
     names = serializers.SerializerMethodField('get_pokedex_names')
     descriptions = serializers.SerializerMethodField('get_pokedex_descriptions')
-    pokemon_entries = serializers.SerializerMethodField('get_pokedex_entries')
+    # pokemon_entries = serializers.SerializerMethodField('get_pokedex_entries')
 
     class Meta:
         model = Pokedex
-        fields = ('id', 'name', 'is_main_series', 'region', 'names', 'descriptions', 'pokemon_entries')
+        fields = ('id', 'name', 'is_main_series', 'region', 'names', 'descriptions',)# 'pokemon_entries')
 
     def get_pokedex_names(self, obj):
 
@@ -587,8 +989,6 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
         return data
 
     def get_pokedex_entries(self, obj):
-
-        print obj
 
         results = PokemonDexNumber.objects.order_by('pokedex_number').filter(pokedex=obj)
         serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)

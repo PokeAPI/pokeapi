@@ -796,6 +796,33 @@ for index, info in enumerate(data):
       )
     model.save()
 
+clearTable(MoveLearnMethod)
+data = loadData('pokemon_move_methods.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = MoveLearnMethod (
+        id = int(info[0]),
+        name = info[1]
+      )
+    model.save()
+
+
+clearTable(MoveLearnMethodName)
+data = loadData('pokemon_move_method_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = MoveLearnMethodName (
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2],
+        description = info[3]
+      )
+    model.save()
+
 
 clearTable(MoveTarget)
 data = loadData('move_targets.csv')
@@ -1742,9 +1769,9 @@ for index, info in enumerate(data):
     model = PokemonForm (
         id = int(info[0]),
         name = info[1],
-        form_identifier = info[2],
+        form_name = info[2],
         pokemon = Pokemon.objects.get(pk = int(info[3])),
-        introduced_in_version_group = VersionGroup.objects.get(pk = int(info[4])),
+        version_group = VersionGroup.objects.get(pk = int(info[4])),
         is_default = bool(int(info[5])),
         is_battle_only = bool(int(info[6])),
         is_mega = bool(int(info[7])),
@@ -1840,34 +1867,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-clearTable(PokemonMoveMethod)
-data = loadData('pokemon_move_methods.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = PokemonMoveMethod (
-        id = int(info[0]),
-        name = info[1]
-      )
-    model.save()
-
-
-clearTable(PokemonMoveMethodName)
-data = loadData('pokemon_move_method_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = PokemonMoveMethodName (
-        pokemon_move_method = PokemonMoveMethod.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2],
-        description = info[3]
-      )
-    model.save()
-
-
 clearTable(PokemonMove)
 data = loadData('pokemon_moves.csv')
 
@@ -1878,7 +1877,7 @@ for index, info in enumerate(data):
         pokemon = Pokemon.objects.get(pk = int(info[0])),
         version_group = VersionGroup.objects.get(pk = int(info[1])),
         move = Move.objects.get(pk = int(info[2])),
-        pokemon_move_method = PokemonMoveMethod.objects.get(pk = int(info[3])),
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[3])),
         level = int(info[4]),
         order = int(info[5]) if info[5] != '' else None,
       )

@@ -1441,7 +1441,7 @@ class Migration(migrations.Migration):
                 ('is_default', models.BooleanField(default=False)),
                 ('is_battle_only', models.BooleanField(default=False)),
                 ('is_mega_form_order', models.BooleanField(default=False)),
-                ('introduces_in_version_group', models.ForeignKey(blank=True, to='pokemon_v2.VersionGroup', null=True)),
+                ('introduced_in_version_group', models.ForeignKey(blank=True, to='pokemon_v2.VersionGroup', null=True)),
                 ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
             ],
             options={
@@ -1864,11 +1864,6 @@ class Migration(migrations.Migration):
             name='form_order',
             field=models.IntegerField(null=True, blank=True),
             preserve_default=True,
-        ),
-        migrations.RenameField(
-            model_name='pokemonform',
-            old_name='introduces_in_version_group',
-            new_name='introduced_in_version_group',
         ),
         migrations.AlterField(
             model_name='language',

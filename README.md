@@ -47,7 +47,7 @@ $ make wipe_db
 To build out the data you'll need to jump into the Django shell
 
 ```
-$ python manage.py shell
+$ python manage.py shell --settings=config.local
 ```
 and run the build script with
 ```

@@ -42,9 +42,9 @@ MEDIA_ROOT = PROJECT_ROOT.child('media')
 
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = PROJECT_ROOT.child('static')
+STATIC_ROOT = PROJECT_ROOT.child('assets')
 
-STATIC_URL = '/static/'
+STATIC_URL = '/assets/'
 
 ALLOWED_HOSTS = ['localhost']
 

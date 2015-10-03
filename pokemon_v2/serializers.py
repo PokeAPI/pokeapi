@@ -9,7 +9,6 @@ PokeAPI v2 serializers in order of dependency
 
 from .models import *
 
-
 ##########################
 #  LANGUAGE SERIALIZERS  #
 ##########################
@@ -98,9 +97,16 @@ class GenerationDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'region', 'names')
 
 
-############################
-#  GENERATION SERIALIZERS  #
-############################
+#############################
+#  GROWTH RATE SERIALIZERS  #
+#############################
+
+class ExperienceSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Experience
+        fields = ('level', 'experience')
+
 
 class GrowthRateDescriptionSerializer(serializers.ModelSerializer):
 
@@ -121,10 +127,11 @@ class GrowthRateSummarySerializer(serializers.HyperlinkedModelSerializer):
 class GrowthRateDetailSerializer(serializers.ModelSerializer):
 
     descriptions = GrowthRateDescriptionSerializer(many=True, read_only=True, source="growthratedescription")
+    levels = ExperienceSerializer(many=True, read_only=True, source="experience")
 
     class Meta:
         model = GrowthRate
-        fields = ('id', 'name', 'formula', 'descriptions')
+        fields = ('id', 'name', 'formula', 'descriptions', 'levels')
 
 
 #########################
@@ -255,6 +262,301 @@ class StatDetailSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Stat
+
+
+
+#############################
+#  ITEM POCKET SERIALIZERS  #
+#############################
+
+class ItemPocketNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ItemName
+        fields = ('name', 'language')
+
+class ItemPocketSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ItemPocket
+        fields = ('name', 'url')
+
+
+class ItemPocketDetailSerializer(serializers.ModelSerializer):
+
+    names = ItemPocketNameSerializer(many=True, read_only=True, source="itempocketname")
+
+    class Meta:
+        model = ItemPocket
+        fields = ('id', 'name', 'names')
+
+
+
+###############################
+#  ITEM CATEGORY SERIALIZERS  #
+###############################
+
+class ItemCategoryNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ItemName
+        fields = ('name', 'language')
+
+
+class ItemCategorySummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ItemCategory
+        fields = ('name', 'url')
+
+
+class ItemCategoryDetailSerializer(serializers.ModelSerializer):
+
+    names = ItemCategoryNameSerializer(many=True, read_only=True, source="itemcategoryname")
+    pocket = ItemPocketSummarySerializer(source="item_pocket")
+
+    class Meta:
+        model = ItemCategory
+        fields = ('id', 'name', 'pocket', 'names')
+
+
+###########################
+#  ITEM FLAG SERIALIZERS  #
+###########################
+
+# Calling these Attributes instead of Flags cause I think that just makes more sense
+# Probably should change the names of the models as well. Work To Do.
+
+class ItemFlagDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ItemFlagDescription
+        fields = ('name', 'description', 'language')
+
+
+class ItemFlagSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ItemFlag
+        fields = ('name', 'url')
+
+
+class ItemFlagDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_flag_names')
+    descriptions = serializers.SerializerMethodField('get_flag_descriptions')
+
+    class Meta:
+        model = ItemFlag
+        fields = ('id', 'name', 'names', 'descriptions')
+
+    def get_flag_names(self, obj):
+
+        item_flag = ItemFlagDescription.objects.filter(item_flag_id=obj)
+        serializer = ItemFlagDescriptionSerializer(item_flag, many=True, context=self.context)
+        data  = serializer.data
+
+        print data
+
+        for flag in data:
+            del flag['description']
+
+        return data
+
+    def get_flag_descriptions(self, obj):
+
+        item_flag = ItemFlagDescription.objects.filter(item_flag_id=obj)
+        serializer = ItemFlagDescriptionSerializer(item_flag, many=True, context=self.context)
+        data = serializer.data
+
+        for flag in data:
+            del flag['name']
+
+        return data
+
+
+class ItemFlagMapSerializer(serializers.ModelSerializer):
+
+    attribute = ItemFlagSummarySerializer(source='item_flag')
+
+    class Meta:
+        model = ItemFlagMap
+        fields = ('attribute',)
+
+
+
+###########################
+#  ITEM FLAG SERIALIZERS  #
+###########################
+
+class ItemFlingEffectDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+    description = serializers.CharField(source="effect")
+
+    class Meta:
+        model = ItemFlingEffectDescription
+        fields = ('description', 'language')
+
+
+class ItemFlingEffectSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ItemFlingEffect
+        fields = ('name', 'url')
+
+
+class ItemFlingEffectDetailSerializer(serializers.ModelSerializer):
+
+    descriptions = ItemCategoryNameSerializer(many=True, read_only=True, source="itemflingeffectdescription")
+
+    class Meta:
+        model = ItemFlingEffect
+        fields = ('id', 'name', 'descriptions')
+
+
+
+#######################
+#  ITEM  SERIALIZERS  #
+#######################
+
+class ItemFlavorTextSerializer(serializers.ModelSerializer):
+
+    text = serializers.CharField(source="flavor_text")
+    language = LanguageSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = ItemFlavorText
+        fields = ('text', 'version_group', 'language')
+
+
+class ItemDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ItemDescription
+        fields = ('effect', 'short_effect', 'language')
+
+
+class ItemNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ItemName
+        fields = ('name', 'language')
+
+
+class ItemSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Item
+        fields = ('name', 'url')
+
+
+class ItemDetailSerializer(serializers.ModelSerializer):
+
+    names = ItemNameSerializer(many=True, read_only=True, source="itemname")
+    descriptions = ItemDescriptionSerializer(many=True, read_only=True, source="itemdescription")
+    flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
+    category = ItemCategorySummarySerializer(source="item_category")
+    attributes = ItemFlagMapSerializer(many=True, read_only=True, source="itemflagmap")
+    fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
+
+    class Meta:
+        model = Item
+        fields = (
+            'id',
+            'name',
+            'cost',
+            'fling_power',
+            'fling_effect',
+            'category',
+            'attributes',
+            'names',
+            'descriptions',
+            'flavor_text_entries'
+        )
+
+
+
+#######################
+#  BERRY SERIALIZERS  #
+#######################
+
+class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    # name = serializers.SerializerMethodField('get_berry_name')
+
+    class Meta:
+        model = Berry
+        fields = ('url',)
+
+    # def get_berry_name(self,obj):
+
+    #     item = Item.objects.filter(item_id=obj)
+    #     serializer = MoveDamageClassDescriptionSerializer(move_methods, many=True, context=self.context)
+    #     data  = serializer.data
+
+    #     return 'name'
+
+
+class BerryDetailSerializer(serializers.ModelSerializer):
+
+    item = ItemSummarySerializer()
+    name = serializers.SerializerMethodField('get_berry_name')
+
+    class Meta:
+        model = Berry
+
+    def get_berry_name(self,obj):
+
+        print self.fields['item'].fields['name']
+        # print self['item']
+
+        # item = Item.objects.filter(item_id=obj)
+        # serializer = MoveDamageClassDescriptionSerializer(move_methods, many=True, context=self.context)
+        # data  = serializer.data
+
+        return 'name'
+
+
+
+###########################
+#  EGG GROUP SERIALIZERS  #
+###########################
+
+class EggGroupNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = EggGroupName
+        fields = ('name', 'language')
+
+
+class EggGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EggGroup
+        fields = ('name', 'url')
+
+
+class EggGroupDetailSerializer(serializers.ModelSerializer):
+
+    names = EggGroupNameSerializer(many=True, read_only=True, source="egggroupname")
+
+    class Meta:
+        model = EggGroup
+        fields = ('id', 'name', 'names')
 
 
 
@@ -612,6 +914,35 @@ class PokemonFormSerializer(serializers.ModelSerializer):
 
 
 
+#################################
+#  POKEMON HABITAT SERIALIZERS  #
+#################################
+
+class PokemonHabitatNameSerializer(serializers.HyperlinkedModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonHabitatName
+        fields = ('name', 'language')
+
+
+class PokemonHabitatSummarySerializer(serializers.HyperlinkedModelSerializer):
+    
+    class Meta:
+        model = PokemonHabitat
+        fields = ('name', 'url')
+
+
+class PokemonHabitatDetailSerializer(serializers.ModelSerializer):
+
+    names = PokemonHabitatNameSerializer(many=True, read_only=True, source="pokemonhabitatname")
+    
+    class Meta:
+        model = PokemonHabitat
+        fields = ('id', 'name', 'names')
+
+
 ##############################
 #  POKEMON MOVE SERIALIZERS  #
 ##############################
@@ -716,92 +1047,6 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
 
 
 
-#################################
-#  POKEMON SPECIES SERIALIZERS  #
-#################################
-
-class PokemonSpeciesNameSerializer(serializers.ModelSerializer):
-
-    language = LanguageSummarySerializer()
-
-    class Meta:
-        model = PokemonSpeciesName
-        fields = ('name', 'genus', 'language')
-
-
-class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta: 
-        model = PokemonSpecies
-        fields = ('name', 'url')
-
-
-class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
-
-    names = serializers.SerializerMethodField('get_pokemon_names')
-    genera = serializers.SerializerMethodField('get_pokemon_genera')
-    generation = GenerationSummarySerializer()
-    growth_rate = GrowthRateSummarySerializer()
-    pokemon_color = PokemonColorSummarySerializer()
-    pokemon_shape = PokemonShapeSummarySerializer()
-    # varieties = PokemonDetailSerializer(many=True, read_only=True, source="pokemon")
-    # types = TypeSummarySerializer(many=True, read_only=True, source="pokemonspecies")
-
-    class Meta: 
-        model = PokemonSpecies
-        fields = (
-            'id',
-            'name',
-            'order',
-            'gender_rate',
-            'capture_rate',
-            'base_happiness',
-            'is_baby',
-            'hatch_counter',
-            'has_gender_differences',
-            'forms_switchable',
-            'growth_rate',
-            'pokemon_color',
-            'pokemon_shape',
-            'evolves_from_species',
-            'evolution_chain',
-            'pokemon_habitat',
-            'generation',
-            # 'types',
-            'names',
-            'genera',
-            # 'varieties'
-        )
-
-    def get_pokemon_names(self, obj):
-
-        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
-        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
-        data  = serializer.data
-
-        for name in data:
-            del name['genus']
-
-        return data
-
-    def get_pokemon_genera(self, obj):
-
-        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
-        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
-        data = serializer.data
-        genera = []
-
-        for entry in data:
-            if entry['genus']:
-                del entry['name']
-                genera.append(entry)
-
-        return genera
-
-    # def get_pokemon_types()
-
-
-
 ##############################
 #  POKEMON STAT SERIALIZERS  #
 ##############################
@@ -856,11 +1101,13 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     types = PokemonTypeSerializer(many=True, read_only=True, source="pokemontype")
     # forms = PokemonFormSerializer(many=True, read_only=True, source="pokemonform")
 
+
     class Meta:
         model = Pokemon
         fields = (
             'id', 
-            'order', 
+            'order',
+            'pokemon_species',
             'name', 
             'is_default', 
             'height', 
@@ -919,15 +1166,116 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
 
 
+#################################
+#  POKEMON SPECIES SERIALIZERS  #
+#################################
+
+class PokemonEvolutionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PokemonEvolution
+
+
+class PokemonSpeciesNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonSpeciesName
+        fields = ('name', 'genus', 'language')
+
+
+class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta: 
+        model = PokemonSpecies
+        fields = ('name', 'url')
+
+
+class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
+
+    names = serializers.SerializerMethodField('get_pokemon_names')
+    genera = serializers.SerializerMethodField('get_pokemon_genera')
+    generation = GenerationSummarySerializer()
+    growth_rate = GrowthRateSummarySerializer()
+    color = PokemonColorSummarySerializer(source="pokemon_color")
+    habitat = PokemonHabitatSummarySerializer(source="pokemon_habitat")
+    shape = PokemonShapeSummarySerializer(source="pokemon_shape")
+    evolves_from_species = PokemonSpeciesSummarySerializer()
+    varieties = PokemonSummarySerializer(many=True, read_only=True, source="pokemon")
+    evolution_chain = serializers.SerializerMethodField('get_evolutions')
+
+    class Meta: 
+        model = PokemonSpecies
+        fields = (
+            'id',
+            'name',
+            'order',
+            'gender_rate',
+            'capture_rate',
+            'base_happiness',
+            'is_baby',
+            'hatch_counter',
+            'has_gender_differences',
+            'forms_switchable',
+            'growth_rate',
+            'color',
+            'shape',
+            'evolves_from_species',
+            'evolution_chain',
+            'habitat',
+            'generation',
+            'names',
+            'genera',
+            'varieties'
+        )
+
+    def get_pokemon_names(self, obj):
+
+        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
+        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
+        data  = serializer.data
+
+        for name in data:
+            del name['genus']
+
+        return data
+
+    def get_pokemon_genera(self, obj):
+
+        results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
+        serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
+        data = serializer.data
+        genera = []
+
+        for entry in data:
+            if entry['genus']:
+                del entry['name']
+                genera.append(entry)
+
+        return genera
+
+    def get_evolutions(self, obj):
+
+        chain_id =  obj.evolution_chain.id
+
+        pokemon_objects = PokemonSpecies.objects.filter(evolution_chain_id=chain_id).order_by('order')
+        data = PokemonSpeciesSummarySerializer(pokemon_objects, many=True, context=self.context).data
+        print data
+
+        return data
+
+
+
 
 class PokemonDexNumberSerializer(serializers.ModelSerializer):
 
     entry_number = serializers.IntegerField(source="pokedex_number")
-    pokemon = PokemonSpeciesSummarySerializer(source="pokemon_species")
+    pokemon_species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     
     class Meta:
         model = PokemonDexNumber
-        fields = ('pokedex', 'entry_number', 'pokemon')
+        fields = ('pokedex', 'entry_number', 'pokemon_species')
 
 
 

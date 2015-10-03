@@ -584,7 +584,7 @@ class ItemCategoryName(IsName, HasItemCategory):
   pass
 
 
-class ItemFlingEffect(models.Model):
+class ItemFlingEffect(HasName):
   pass
 
 
@@ -1287,7 +1287,7 @@ class PokemonHabitat(HasName):
 
 class PokemonHabitatName(IsName):
 
-  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True)
+  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True, related_name="%(class)s")
 
 
 class PokemonItem(HasPokemon, HasVersion, HasItem):

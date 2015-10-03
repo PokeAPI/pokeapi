@@ -66,6 +66,20 @@ class AbilityResource(PokeapiCommonViewset):
     list_serializer_class = AbilitySummarySerializer
 
 
+class BerryResource(PokeapiCommonViewset):
+
+    queryset = Berry.objects.all()
+    serializer_class = BerryDetailSerializer
+    list_serializer_class = BerrySummarySerializer
+
+
+class EggGroupResource(PokeapiCommonViewset):
+
+    queryset = EggGroup.objects.all()
+    serializer_class = EggGroupDetailSerializer
+    list_serializer_class = EggGroupSummarySerializer
+
+
 class GenerationResource(PokeapiCommonViewset):
 
     queryset = Generation.objects.all()
@@ -78,6 +92,41 @@ class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
+
+
+class ItemResource(PokeapiCommonViewset):
+
+    queryset = Item.objects.all()
+    serializer_class = ItemDetailSerializer
+    list_serializer_class = ItemSummarySerializer
+
+
+class ItemCategoryResource(PokeapiCommonViewset):
+
+    queryset = ItemCategory.objects.all()
+    serializer_class = ItemCategoryDetailSerializer
+    list_serializer_class = ItemCategorySummarySerializer
+
+
+class ItemFlagResource(PokeapiCommonViewset):
+
+    queryset = ItemFlag.objects.all()
+    serializer_class = ItemFlagDetailSerializer
+    list_serializer_class = ItemFlagSummarySerializer
+
+
+class ItemFlingEffectResource(PokeapiCommonViewset):
+
+    queryset = ItemFlingEffect.objects.all()
+    serializer_class = ItemFlingEffectDetailSerializer
+    list_serializer_class = ItemFlingEffectSummarySerializer
+
+
+class ItemPocketResource(PokeapiCommonViewset):
+
+    queryset = ItemPocket.objects.all()
+    serializer_class = ItemPocketDetailSerializer
+    list_serializer_class = ItemPocketSummarySerializer
 
 
 class LanguageResource(PokeapiCommonViewset):
@@ -148,6 +197,13 @@ class PokemonColorResource(PokeapiCommonViewset):
     list_serializer_class = PokemonColorSummarySerializer
 
 
+class PokemonHabitatResource(PokeapiCommonViewset):
+
+    queryset = PokemonHabitat.objects.all()
+    serializer_class = PokemonHabitatDetailSerializer
+    list_serializer_class = PokemonHabitatSummarySerializer
+
+
 class PokemonShapeResource(PokeapiCommonViewset):
 
     queryset = PokemonShape.objects.all()
@@ -160,6 +216,13 @@ class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
     list_serializer_class =PokemonSummarySerializer
+
+
+class PokemonSpeciesResource(PokeapiCommonViewset):
+
+    queryset = PokemonSpecies.objects.all()
+    serializer_class = PokemonSpeciesDetailSerializer
+    list_serializer_class = PokemonSpeciesSummarySerializer
 
 
 class RegionResource(PokeapiCommonViewset):

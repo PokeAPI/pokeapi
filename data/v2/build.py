@@ -497,7 +497,8 @@ for index, info in enumerate(data):
   if index > 0:
 
     model = ItemFlingEffect (
-        id = int(info[0])
+        id = int(info[0]),
+        name = info[1]
       )
     model.save()
 

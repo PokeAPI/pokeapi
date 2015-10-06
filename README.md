@@ -42,14 +42,31 @@ If you ever need to wipe the database use this command:
 $ make wipe_db
 ```
 
+## V1 Database setup
+
+Start Django shell
+```
+$ python manage.py shell --settings=config.local
+```
+import build functions
+```
+$ from data.v1.build import *
+```
+run the functions in order to populate v1 tables
+```
+$ build_pokes()
+$ build_abilities()
+$ build moves()
+etc...
+```
+
 ## V2 Database setup
 
-To build out the data you'll need to jump into the Django shell
-
+Start Django shell
 ```
-$ python manage.py shell
+$ python manage.py shell --settings=config.local
 ```
-and run the build script with
+run the build script with
 ```
 $ execfile('data/v2/build.py')
 ```

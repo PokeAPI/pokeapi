@@ -19,7 +19,7 @@ BASE_URL = 'http://pokeapi.co'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['.pokeapi.co']
+ALLOWED_HOSTS = ['.pokeapi.co', 'localhost']
 
 TIME_ZONE = 'Europe/London'
 
@@ -45,8 +45,6 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = PROJECT_ROOT.child('assets')
 
 STATIC_URL = '/assets/'
-
-ALLOWED_HOSTS = ['localhost']
 
 STATICFILES_DIRS = (
     PROJECT_ROOT.child('assets'),

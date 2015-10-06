@@ -73,11 +73,32 @@ class BerryResource(PokeapiCommonViewset):
     list_serializer_class = BerrySummarySerializer
 
 
+class BerryFirmnessResource(PokeapiCommonViewset):
+
+    queryset = BerryFirmness.objects.all()
+    serializer_class = BerryFirmnessDetailSerializer
+    list_serializer_class = BerryFirmnessSummarySerializer
+
+
 class EggGroupResource(PokeapiCommonViewset):
 
     queryset = EggGroup.objects.all()
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
+
+
+class EvolutionChainResource(PokeapiCommonViewset):
+
+    queryset = EvolutionChain.objects.all()
+    serializer_class = EvolutionChainDetailSerializer
+    list_serializer_class = EvolutionChainSummarySerializer
+
+
+class EvolutionTriggerResource(PokeapiCommonViewset):
+
+    queryset = EvolutionTrigger.objects.all()
+    serializer_class = EvolutionTriggerDetailSerializer
+    list_serializer_class = EvolutionTriggerSummarySerializer
 
 
 class GenerationResource(PokeapiCommonViewset):
@@ -133,6 +154,14 @@ class LanguageResource(PokeapiCommonViewset):
 
     queryset = Language.objects.all()
     serializer_class = LanguageDetailSerializer
+    list_serializer_class = LanguageSummarySerializer
+
+
+class LocationResource(PokeapiCommonViewset):
+
+    queryset = Location.objects.all()
+    serializer_class = LocationDetailSerializer
+    list_serializer_class = LocationSummarySerializer
 
 
 class MoveResource(PokeapiCommonViewset):
@@ -180,7 +209,8 @@ class MoveTargetResource(PokeapiCommonViewset):
 class NatureResource(PokeapiCommonViewset):
 
     queryset = Nature.objects.all()
-    serializer_class = NatureSerializer
+    serializer_class = NatureDetailSerializer
+    list_serializer_class = NatureSummarySerializer
 
 
 class PokedexResource(PokeapiCommonViewset):
@@ -195,6 +225,13 @@ class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
+
+
+class PokemonFormResource(PokeapiCommonViewset):
+
+    queryset = PokemonForm.objects.all()
+    serializer_class = PokemonFormDetailSerializer
+    list_serializer_class = PokemonFormSummarySerializer
 
 
 class PokemonHabitatResource(PokeapiCommonViewset):
@@ -220,7 +257,7 @@ class PokemonResource(PokeapiCommonViewset):
 
 class PokemonSpeciesResource(PokeapiCommonViewset):
 
-    queryset = PokemonSpecies.objects.all()
+    queryset = PokemonSpecies.objects.all().order_by('id')
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 

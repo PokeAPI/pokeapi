@@ -1432,7 +1432,7 @@ for index, info in enumerate(data):
 
     model = EvolutionChain (
         id = int(info[0]),
-        baby_evolution_item = Item.objects.get(pk = int(info[1])) if info[1] != '' else None,
+        baby_trigger_item = Item.objects.get(pk = int(info[1])) if info[1] != '' else None,
       )
     model.save()
 

@@ -6,7 +6,7 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    # replaces = [(b'pokemon_v2', '0001_squashed_0005_auto_20150918_0502'), (b'pokemon_v2', '0002_auto_20150921_0054'), (b'pokemon_v2', '0003_auto_20150921_0437'), (b'pokemon_v2', '0004_auto_20150925_1521'), (b'pokemon_v2', '0005_auto_20150925_1527'), (b'pokemon_v2', '0006_auto_20150926_0832'), (b'pokemon_v2', '0007_auto_20150926_0850'), (b'pokemon_v2', '0008_auto_20150926_0855'), (b'pokemon_v2', '0009_auto_20150926_0858'), (b'pokemon_v2', '0010_auto_20150926_0900'), (b'pokemon_v2', '0011_auto_20150926_0905'), (b'pokemon_v2', '0012_auto_20150926_0907'), (b'pokemon_v2', '0013_auto_20150926_0913')]
+    # replaces = [(b'pokemon_v2', '0001_squashed_0013_auto_20150926_0913'), (b'pokemon_v2', '0002_itemflingeffect_name'), (b'pokemon_v2', '0003_auto_20150928_1710'), (b'pokemon_v2', '0004_auto_20151005_0138')]
 
     dependencies = [
     ]
@@ -1494,7 +1494,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='pokemonhabitatname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('pokemon_habitat', models.ForeignKey(blank=True, to='pokemon_v2.PokemonHabitat', null=True)),
+                ('pokemon_habitat', models.ForeignKey(related_name='pokemonhabitatname', blank=True, to='pokemon_v2.PokemonHabitat', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2080,7 +2080,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='evolutionchain',
-            name='baby_evolution_item',
+            name='baby_trigger_item',
             field=models.ForeignKey(blank=True, to='pokemon_v2.Item', null=True),
             preserve_default=True,
         ),
@@ -2909,5 +2909,11 @@ class Migration(migrations.Migration):
                 'abstract': False,
             },
             bases=(models.Model,),
+        ),
+        migrations.AddField(
+            model_name='itemflingeffect',
+            name='name',
+            field=models.CharField(default='name', max_length=100),
+            preserve_default=False,
         ),
     ]

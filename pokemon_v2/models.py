@@ -1110,7 +1110,7 @@ class SuperContestCombo(models.Model):
 
 class EvolutionChain(models.Model):
 
-  baby_evolution_item = models.ForeignKey(Item, blank=True, null=True)
+  baby_trigger_item = models.ForeignKey(Item, blank=True, null=True)
 
 
 class EvolutionTrigger(HasName):

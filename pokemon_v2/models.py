@@ -8,7 +8,7 @@ from django.db import models
 
 class HasAbility(models.Model):
 
-  ability = models.ForeignKey('Ability', blank=True, null=True)
+  ability = models.ForeignKey('Ability', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -16,7 +16,7 @@ class HasAbility(models.Model):
 
 class HasCharacteristic(models.Model):
 
-  characteristic = models.ForeignKey('Characteristic', blank=True, null=True)
+  characteristic = models.ForeignKey('Characteristic', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -24,7 +24,7 @@ class HasCharacteristic(models.Model):
 
 class HasContestType(models.Model):
 
-  contest_type = models.ForeignKey('ContestType', blank=True, null=True)
+  contest_type = models.ForeignKey('ContestType', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -40,7 +40,7 @@ class HasDescription(models.Model):
 
 class HasGender(models.Model):
 
-  gender = models.ForeignKey('Gender', blank=True, null=True)
+  gender = models.ForeignKey('Gender', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -56,7 +56,7 @@ class HasEffect(models.Model):
 
 class HasEggGroup(models.Model):
 
-  egg_group = models.ForeignKey('EggGroup', blank=True, null=True)
+  egg_group = models.ForeignKey('EggGroup', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -64,7 +64,7 @@ class HasEggGroup(models.Model):
 
 class HasEncounterMethod(models.Model):
 
-  encounter_method = models.ForeignKey('EncounterMethod', blank=True, null=True)
+  encounter_method = models.ForeignKey('EncounterMethod', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -72,7 +72,7 @@ class HasEncounterMethod(models.Model):
 
 class HasEncounterCondition(models.Model):
 
-  encounter_condition = models.ForeignKey('EncounterCondition', blank=True, null=True)
+  encounter_condition = models.ForeignKey('EncounterCondition', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -80,7 +80,7 @@ class HasEncounterCondition(models.Model):
 
 class HasEvolutionTrigger(models.Model):
 
-  evolution_trigger = models.ForeignKey('EvolutionTrigger', blank=True, null=True)
+  evolution_trigger = models.ForeignKey('EvolutionTrigger', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -96,7 +96,7 @@ class HasFlavorText(models.Model):
 
 class HasFlingEffect(models.Model):
 
-  item_fling_effect = models.ForeignKey('ItemFlingEffect', blank=True, null=True)
+  item_fling_effect = models.ForeignKey('ItemFlingEffect', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -112,7 +112,7 @@ class HasGameIndex(models.Model):
 
 class HasGeneration(models.Model):
 
-  generation = models.ForeignKey('Generation', blank=True, null=True)
+  generation = models.ForeignKey('Generation', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -120,7 +120,7 @@ class HasGeneration(models.Model):
 
 class HasGrowthRate(models.Model):
 
-  growth_rate = models.ForeignKey('GrowthRate', blank=True, null=True)
+  growth_rate = models.ForeignKey('GrowthRate', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -128,7 +128,7 @@ class HasGrowthRate(models.Model):
 
 class HasItem(models.Model):
 
-  item = models.ForeignKey('Item', blank=True, null=True)
+  item = models.ForeignKey('Item', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -136,7 +136,7 @@ class HasItem(models.Model):
 
 class HasItemCategory(models.Model):
 
-  item_category = models.ForeignKey('ItemCategory', blank=True, null=True)
+  item_category = models.ForeignKey('ItemCategory', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -144,7 +144,7 @@ class HasItemCategory(models.Model):
 
 class HasItemPocket(models.Model):
 
-  item_pocket = models.ForeignKey('ItemPocket', blank=True, null=True)
+  item_pocket = models.ForeignKey('ItemPocket', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -152,7 +152,7 @@ class HasItemPocket(models.Model):
 
 class HasLanguage(models.Model):
 
-  language = models.ForeignKey('Language', blank = True, null = True)
+  language = models.ForeignKey('Language', blank = True, null = True, related_name="%(class)s_language")
 
   class Meta:
        abstract = True
@@ -160,7 +160,7 @@ class HasLanguage(models.Model):
 
 class HasLocation(models.Model):
 
-  location = models.ForeignKey('Location', blank = True, null = True)
+  location = models.ForeignKey('Location', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -168,7 +168,7 @@ class HasLocation(models.Model):
 
 class HasLocationArea(models.Model):
 
-  location_area = models.ForeignKey('LocationArea', blank = True, null = True)
+  location_area = models.ForeignKey('LocationArea', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -192,7 +192,7 @@ class HasMetaCategory(models.Model):
 
 class HasMove(models.Model):
 
-  move = models.ForeignKey('Move', blank = True, null = True)
+  move = models.ForeignKey('Move', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -264,7 +264,7 @@ class HasPokeathlonStat(models.Model):
 
 class HasPokedex(models.Model):
 
-  pokedex = models.ForeignKey('Pokedex', blank=True, null=True)
+  pokedex = models.ForeignKey('Pokedex', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -272,7 +272,7 @@ class HasPokedex(models.Model):
 
 class HasPokemon(models.Model):
 
-  pokemon = models.ForeignKey('Pokemon', blank=True, null=True)
+  pokemon = models.ForeignKey('Pokemon', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -302,9 +302,10 @@ class HasPokemonHabitat(models.Model):
        abstract = True
 
 
-class HasPokemonMoveMethod(models.Model):
+#HasPokemonMoveMethod
+class HasMoveLearnMethod(models.Model):
 
-  pokemon_move_method = models.ForeignKey('PokemonMoveMethod', blank=True, null=True)
+  move_learn_method = models.ForeignKey('MoveLearnMethod', blank=True, null=True)
 
   class Meta:
        abstract = True
@@ -320,7 +321,7 @@ class HasPokemonShape(models.Model):
 
 class HasPokemonSpecies(models.Model):
 
-  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True)
+  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -328,7 +329,7 @@ class HasPokemonSpecies(models.Model):
 
 class HasRegion(models.Model):
 
-  region = models.ForeignKey('Region', blank=True, null=True)
+  region = models.ForeignKey('Region', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -352,7 +353,7 @@ class HasStat(models.Model):
 
 class HasType(models.Model):
 
-  type = models.ForeignKey('Type', blank=True, null=True)
+  type = models.ForeignKey('Type', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -360,7 +361,7 @@ class HasType(models.Model):
 
 class HasVersion(models.Model):
 
-  version = models.ForeignKey('Version', blank=True, null=True)
+  version = models.ForeignKey('Version', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -368,7 +369,7 @@ class HasVersion(models.Model):
 
 class HasVersionGroup(models.Model):
 
-  version_group = models.ForeignKey('VersionGroup', blank=True, null=True)
+  version_group = models.ForeignKey('VersionGroup', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -412,10 +413,9 @@ class VersionGroup(HasName, HasGeneration, HasOrder):
 class VersionGroupRegion(HasVersionGroup, HasRegion):
   pass
 
-
-class VersionGroupPokemonMoveMethod(HasVersionGroup):
-
-  pokemon_move_method_id = models.IntegerField()
+#VersionGroupPokemonMoveMethod
+class VersionGroupMoveLearnMethod(HasVersionGroup, HasMoveLearnMethod):
+  pass
 
 
 
@@ -513,9 +513,9 @@ class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
 
 class TypeEfficacy(models.Model):
 
-  damage_type_id = models.IntegerField()
+  damage_type = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
 
-  target_type_id = models.IntegerField()
+  target_type = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
 
   damage_factor = models.IntegerField()
 
@@ -584,7 +584,7 @@ class ItemCategoryName(IsName, HasItemCategory):
   pass
 
 
-class ItemFlingEffect(models.Model):
+class ItemFlingEffect(HasName):
   pass
 
 
@@ -964,7 +964,9 @@ class MoveTargetDescription(HasMoveTarget, IsDescription, HasName):
 #  MOVE META MODELS  #
 ######################
 
-class MoveMeta(HasMove, HasMetaAilment, HasMetaCategory):
+class MoveMeta(HasMetaAilment, HasMetaCategory):
+
+  move = models.OneToOneField(Move, blank = False, null = False, related_name="%(class)s")
 
   min_hits = models.IntegerField(blank = True, null = True)
 
@@ -1108,7 +1110,7 @@ class SuperContestCombo(models.Model):
 
 class EvolutionChain(models.Model):
 
-  baby_evolution_item = models.ForeignKey(Item, blank=True, null=True)
+  baby_trigger_item = models.ForeignKey(Item, blank=True, null=True)
 
 
 class EvolutionTrigger(HasName):
@@ -1253,9 +1255,9 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
 class PokemonForm(HasName, HasPokemon, HasOrder):
 
-  form_identifier = models.CharField(max_length = 30)
+  form_name = models.CharField(max_length = 30)
 
-  introduced_in_version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
+  version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
 
   is_default = models.BooleanField(default = False)
 
@@ -1285,7 +1287,7 @@ class PokemonHabitat(HasName):
 
 class PokemonHabitatName(IsName):
 
-  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True)
+  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True, related_name="%(class)s")
 
 
 class PokemonItem(HasPokemon, HasVersion, HasItem):
@@ -1293,15 +1295,16 @@ class PokemonItem(HasPokemon, HasVersion, HasItem):
   rarity = models.IntegerField()
 
 
-class PokemonMoveMethod(HasName):
+#PokemonMoveMethod
+class MoveLearnMethod(HasName):
+  pass
+
+#PokemonMoveMethodName
+class MoveLearnMethodName(IsName, HasMoveLearnMethod, HasDescription):
   pass
 
 
-class PokemonMoveMethodName(IsName, HasPokemonMoveMethod, HasDescription):
-  pass
-
-
-class PokemonMove(HasPokemon, HasPokemonMoveMethod, HasVersionGroup, HasMove, HasOrder):
+class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
 
   level = models.IntegerField()
 
@@ -1314,7 +1317,7 @@ class PokemonShapeName(IsName):
 
   awesome_name = models.CharField(max_length = 30)
 
-  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True)
+  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True, related_name="pokemonshapename")
 
 
 class PokemonStat(HasPokemon, HasStat):

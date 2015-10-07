@@ -58,7 +58,7 @@ for index, info in enumerate(data):
         iso639 = info[1],
         iso3166 = info[2],
         name = info[3],
-        official = bool(info[4]),
+        official = bool(int(info[4])),
         order = info[5],
       )
 
@@ -252,7 +252,7 @@ for index, info in enumerate(data):
         id = int(info[0]),
         move_damage_class = MoveDamageClass.objects.get(pk = int(info[1])) if info[1] != '' else None,
         name = info[2],
-        is_battle_only = bool(info[3]),
+        is_battle_only = bool(int(info[3])),
         game_index = int(info[4]) if info[4] else 0,
       )
     stat.save()
@@ -315,7 +315,7 @@ for index, info in enumerate(data):
         id = int(info[0]),
         name = info[1],
         generation = Generation.objects.get(pk = int(info[2])),
-        is_main_series = bool(info[3])
+        is_main_series = bool(int(info[3]))
       )
     ability.save()
 
@@ -497,7 +497,8 @@ for index, info in enumerate(data):
   if index > 0:
 
     model = ItemFlingEffect (
-        id = int(info[0])
+        id = int(info[0]),
+        name = info[1]
       )
     model.save()
 
@@ -730,8 +731,8 @@ for index, info in enumerate(data):
   if index > 0:
 
     typeEfficacy = TypeEfficacy (
-        damage_type_id = int(info[0]),
-        target_type_id = int(info[1]),
+        damage_type = Type.objects.get(pk = int(info[0])),
+        target_type = Type.objects.get(pk = int(info[1])),
         damage_factor = int(info[2])
       )
     typeEfficacy.save()
@@ -793,6 +794,33 @@ for index, info in enumerate(data):
         move_effect_change = MoveEffectChange.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
         effect = info[2]
+      )
+    model.save()
+
+clearTable(MoveLearnMethod)
+data = loadData('pokemon_move_methods.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = MoveLearnMethod (
+        id = int(info[0]),
+        name = info[1]
+      )
+    model.save()
+
+
+clearTable(MoveLearnMethodName)
+data = loadData('pokemon_move_method_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = MoveLearnMethodName (
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2],
+        description = info[3]
       )
     model.save()
 
@@ -1404,7 +1432,7 @@ for index, info in enumerate(data):
 
     model = EvolutionChain (
         id = int(info[0]),
-        baby_evolution_item = Item.objects.get(pk = int(info[1])) if info[1] != '' else None,
+        baby_trigger_item = Item.objects.get(pk = int(info[1])) if info[1] != '' else None,
       )
     model.save()
 
@@ -1451,7 +1479,7 @@ for index, info in enumerate(data):
         id = int(info[0]),
         region = Region.objects.get(pk = int(info[1])) if info[1] != '' else None,
         name = info[2],
-        is_main_series = bool(info[3])
+        is_main_series = bool(int(info[3]))
       )
     model.save()
 
@@ -1575,11 +1603,11 @@ for index, info in enumerate(data):
         gender_rate = int(info[8]),
         capture_rate = int(info[9]),
         base_happiness = int(info[10]),
-        is_baby = bool(info[11]),
+        is_baby = bool(int(info[11])),
         hatch_counter = int(info[12]),
-        has_gender_differences = bool(info[13]),
+        has_gender_differences = bool(int(info[13])),
         growth_rate = GrowthRate.objects.get(pk = int(info[14])),
-        forms_switchable = bool(info[15]),
+        forms_switchable = bool(int(info[15])),
         order = int(info[16])
       )
     model.save()
@@ -1655,7 +1683,7 @@ for index, info in enumerate(data):
         weight = int(info[4]),
         base_experience = int(info[5]),
         order = int(info[6]),
-        is_default = bool(info[7])
+        is_default = bool(int(info[7]))
       )
     model.save()
 
@@ -1669,7 +1697,7 @@ for index, info in enumerate(data):
     model = PokemonAbility (
         pokemon = Pokemon.objects.get(pk = int(info[0])),
         ability = Ability.objects.get(pk = int(info[1])),
-        is_hidden = bool(info[2]),
+        is_hidden = bool(int(info[2])),
         slot = int(info[3])
       )
     model.save()
@@ -1727,8 +1755,8 @@ for index, info in enumerate(data):
         party_species = PokemonSpecies.objects.get(pk = int(info[15])) if info[15] != '' else None,
         party_type = Type.objects.get(pk = int(info[16])) if info[16] != '' else None,
         trade_species = PokemonSpecies.objects.get(pk = int(info[17])) if info[17] != '' else None,
-        needs_overworld_rain = bool(info[18]),
-        turn_upside_down = bool(info[19])
+        needs_overworld_rain = bool(int(info[18])),
+        turn_upside_down = bool(int(info[19]))
       )
     model.save()
 
@@ -1742,12 +1770,12 @@ for index, info in enumerate(data):
     model = PokemonForm (
         id = int(info[0]),
         name = info[1],
-        form_identifier = info[2],
+        form_name = info[2],
         pokemon = Pokemon.objects.get(pk = int(info[3])),
-        introduced_in_version_group = VersionGroup.objects.get(pk = int(info[4])),
-        is_default = bool(info[5]),
-        is_battle_only = bool(info[6]),
-        is_mega = bool(info[7]),
+        version_group = VersionGroup.objects.get(pk = int(info[4])),
+        is_default = bool(int(info[5])),
+        is_battle_only = bool(int(info[6])),
+        is_mega = bool(int(info[7])),
         form_order = int(info[8]),
         order = int(info[9])
       )
@@ -1840,34 +1868,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-clearTable(PokemonMoveMethod)
-data = loadData('pokemon_move_methods.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = PokemonMoveMethod (
-        id = int(info[0]),
-        name = info[1]
-      )
-    model.save()
-
-
-clearTable(PokemonMoveMethodName)
-data = loadData('pokemon_move_method_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = PokemonMoveMethodName (
-        pokemon_move_method = PokemonMoveMethod.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2],
-        description = info[3]
-      )
-    model.save()
-
-
 clearTable(PokemonMove)
 data = loadData('pokemon_moves.csv')
 
@@ -1878,7 +1878,7 @@ for index, info in enumerate(data):
         pokemon = Pokemon.objects.get(pk = int(info[0])),
         version_group = VersionGroup.objects.get(pk = int(info[1])),
         move = Move.objects.get(pk = int(info[2])),
-        pokemon_move_method = PokemonMoveMethod.objects.get(pk = int(info[3])),
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[3])),
         level = int(info[4]),
         order = int(info[5]) if info[5] != '' else None,
       )
@@ -2109,7 +2109,7 @@ for index, info in enumerate(data):
         id = int(info[0]),
         encounter_condition = EncounterCondition.objects.get(pk = int(info[1])),
         name = info[2],
-        is_default = bool(info[3])
+        is_default = bool(int(info[3]))
       )
     model.save()
 

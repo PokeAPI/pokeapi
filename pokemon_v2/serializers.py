@@ -357,11 +357,11 @@ class VersionDetailSerializer(serializers.ModelSerializer):
     """
 
     names = VersionNameSerializer(many=True, read_only=True, source="versionname")
-    version_group_url = serializers.HyperlinkedRelatedField(read_only='True', source="version_group", view_name='versiongroup-detail')
+    version_group = VersionGroupSummarySerializer()
 
     class Meta:
         model = Version
-        fields = ('id', 'name', 'names', 'version_group_url')
+        fields = ('id', 'name', 'names', 'version_group')
 
 
 class VersionGroupDetailSerializer(serializers.ModelSerializer):
@@ -458,6 +458,8 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
 ######################
 
 class StatDetailSerializer(serializers.HyperlinkedModelSerializer):
+
+    move_damage_class = MoveDamageClassSummarySerializer()
 
     class Meta:
         model = Stat

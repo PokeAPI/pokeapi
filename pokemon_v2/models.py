@@ -401,9 +401,8 @@ class Version(HasName, HasVersionGroup):
   pass
 
 
-class VersionName(IsName):
-
-  version = models.ForeignKey('Version', blank=True, null=True)
+class VersionName(IsName, HasVersion):
+  pass
 
 
 class VersionGroup(HasName, HasGeneration, HasOrder):

@@ -1,5 +1,5 @@
 install:
-	pip install -r requirements.txt
+	pip install -r requirements.txt --upgrade
 
 setup:
 	python manage.py migrate --settings=config.local

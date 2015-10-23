@@ -10,22 +10,19 @@ from django.contrib import admin
 admin.autodiscover()
 
 
-# API v1
+##################################
+#
+#   V1 API setup using Tastypie
+# 
+##################################
+
+from tastypie.api import Api
+
 from pokemon.api import (
     PokemonResource, TypeResource, AbilityResource, GameResource,
     SpriteResource, DescriptionResource, EggResource, MoveResource,
     PokedexResource
 )
-
-from rest_framework import routers
-
-from pokemon_v2 import views
-
-router = routers.DefaultRouter()
-
-router.register(r"sprites", views.SpriteResource)
-
-from tastypie.api import Api
 
 api_resources = Api()
 api_resources.register(PokemonResource())
@@ -39,19 +36,81 @@ api_resources.register(MoveResource())
 api_resources.register(PokedexResource())
 
 
+#####################################
+#
+#   V2 API setup using Django Rest
+# 
+#####################################
+
+from rest_framework import routers
+from pokemon_v2.views import *
+
+router = routers.DefaultRouter()
+
+router.register(r"ability", AbilityResource)
+router.register(r"berry", BerryResource)
+router.register(r"berry-firmness", BerryFirmnessResource)
+router.register(r"egg-group", EggGroupResource)
+router.register(r"evolution-chain", EvolutionChainResource)
+router.register(r"evolution-trigger", EvolutionTriggerResource)
+router.register(r"generation", GenerationResource)
+router.register(r"growth-rate", GrowthRateResource)
+router.register(r"item", ItemResource)
+router.register(r"item-category", ItemCategoryResource)
+router.register(r"item-attribute", ItemFlagResource)
+router.register(r"item-fling-effect", ItemFlingEffectResource)
+router.register(r"item-pocket", ItemPocketResource)
+router.register(r"language", LanguageResource)
+router.register(r"location", LocationResource)
+router.register(r"move", MoveResource)
+router.register(r"move-ailment", MoveMetaAilmentResource)
+router.register(r"move-category", MoveMetaCategoryResource)
+router.register(r"move-damage-class", MoveDamageClassResource)
+router.register(r"move-learn-method", MoveLearnMethodResource)
+router.register(r"move-target", MoveTargetResource)
+router.register(r"nature", NatureResource)
+router.register(r"pokedex", PokedexResource)
+router.register(r"pokemon", PokemonResource)
+router.register(r"pokemon-habitat", PokemonHabitatResource)
+router.register(r"pokemon-shape", PokemonShapeResource)
+router.register(r"pokemon-species", PokemonSpeciesResource)
+router.register(r"pokemon-color", PokemonColorResource)
+router.register(r"pokemon-form", PokemonFormResource)
+router.register(r"region", RegionResource)
+router.register(r"stat", StatResource)
+router.register(r"type", TypeResource)
+router.register(r"version", VersionResource)
+router.register(r"version-group", VersionGroupResource)
+
+
+###########################
+#
+#   Gotta Get Em' All
+# 
+###########################
+
 urlpatterns = patterns(
+
     '',
+
     url(r'^$', 'config.views.home'),
+
     url(r'^docs/$',
         TemplateView.as_view(template_name='pages/docs.html'),
         name="documentation"),
+
     url(r'^about/$', 'config.views.about'),
+
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/v2/', include(router.urls)),
+
     url(r'^api/', include(api_resources.urls)),
+
+    url(r'^api/v2/', include(router.urls)),
+
     url(r'^media/(?P<path>.*)',
         'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),
+
     url(r'^static/(?P<path>.*)',
         'django.views.static.serve',
         {'document_root': settings.STATIC_ROOT}),

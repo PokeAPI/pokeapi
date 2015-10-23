@@ -42,6 +42,36 @@ If you ever need to wipe the database use this command:
 $ make wipe_db
 ```
 
+## V1 Database setup
+
+Start Django shell
+```
+$ python manage.py shell --settings=config.local
+```
+import build functions
+```
+$ from data.v1.build import *
+```
+run the functions in order to populate v1 tables
+```
+$ build_pokes()
+$ build_abilities()
+$ build moves()
+etc...
+```
+
+## V2 Database setup
+
+Start Django shell
+```
+$ python manage.py shell --settings=config.local
+```
+run the build script with
+```
+$ execfile('data/v2/build.py')
+```
+Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
+If you don't need all of the data just go into data/v2/build.py and comment out everything but what you need to build the tables you're looking for. This might be useful because some of the csv files are massive (pokemon_moves expecially) and it can take about 30 minutes to build everything.
 
 ## Contributing
 

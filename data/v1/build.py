@@ -20,11 +20,11 @@ So - if you want to see some of the worst code I've ever written, look below:
 
 import csv
 
-from pokemon_v1.models import *
+from pokemon.models import *
 
 
 def build_pokes():
-    file = open('data/pokemon.csv', 'rb')
+    file = open('data/v1/pokemon.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -50,7 +50,7 @@ def build_pokes():
 
 
 def build_abilities():
-    file = open('data/abilities.csv', 'rb')
+    file = open('data/v1/abilities.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -65,7 +65,7 @@ def build_abilities():
 
 
 def build_moves():
-    file = open('data/moves.csv', 'rb')
+    file = open('data/v1/moves.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -83,7 +83,7 @@ def build_moves():
 
 
 def build_ability_pokes():
-    file = open('data/ability_pokes.csv', 'rb')
+    file = open('data/v1/ability_pokes.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -98,7 +98,7 @@ def build_ability_pokes():
 
 
 def build_move_pokes():
-    file = open('data/poke_moves.csv', 'rb')
+    file = open('data/v1/poke_moves.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -122,7 +122,7 @@ def build_move_pokes():
 
 
 def build_egg_pokes():
-    file = open('data/pokes_eggs.csv', 'rb')
+    file = open('data/v1/pokes_eggs.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -133,11 +133,11 @@ def build_egg_pokes():
 
             poke.egg_group.add(egg)
             poke.save()
-            print 'added ' + egg.name + ' to ' + poke.name
+            # print 'added ' + egg.name + ' to ' + poke.name
 
 
 def build_type_pokes():
-    file = open('data/poke_types.csv', 'rb')
+    file = open('data/v1/poke_types.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -184,7 +184,7 @@ def build_poke_stats():
     """
     Get each Pokemon and build stats for it from two seperate files.
     """
-    file = open('data/pokemon.csv', 'rb')
+    file = open('data/v1/pokemon.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -199,7 +199,7 @@ def build_poke_stats():
                 p.save()
                 print 'built stats for %s' % p.name
 
-    file = open('data/pokemon_stats.csv')
+    file = open('data/v1/pokemon_stats.csv')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -229,7 +229,7 @@ def build_evolutions():
     Build all the evolution links
     """
 
-    file = open('data/evolutions.csv', 'rb')
+    file = open('data/v1/evolutions.csv', 'rb')
 
     rdr = csv.reader(file, delimiter=',')
 
@@ -285,15 +285,15 @@ def build_complex_evolutions():
     Build complex evolutions from a better list
     """
 
-    fspecies = open('data/species.csv', 'rb')
-    fevols = open('data/evolutions.csv', 'rb')
+    fspecies = open('data/v1/species.csv', 'rb')
+    fevols = open('data/v1/evolutions.csv', 'rb')
 
     method = [' ', 'level_up', 'trade', 'stone', 'other']
     c = 0
     for row in csv.reader(fspecies, delimiter=','):
         if row[0] != 'id' and row[3] != '':
             frm = Pokemon.objects.get(pkdx_id=int(row[3]))
-            fevols = open('data/evolutions.csv', 'rb')
+            fevols = open('data/v1/evolutions.csv', 'rb')
             for erow in csv.reader(fevols, delimiter=','):
                 if erow[0] != 'id':
                     to = Pokemon.objects.get(pkdx_id=int(erow[1]))
@@ -318,7 +318,7 @@ def build_pokedex_descriptions():
             14: '3', 15: '4', 16: '4', 17: '4', 18: '4', 19: '4', 20: '5',
             21: '5', 22: '5', 23: '6', 24: '6'}
 
-    descrips = open('data/pokedex_descriptions.csv', 'rb')
+    descrips = open('data/v1/pokedex_descriptions.csv', 'rb')
     c = 0
     for row in csv.reader(descrips, delimiter=','):
         if row[0] != 'species_id' and int(row[2]) == 9:

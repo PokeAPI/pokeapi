@@ -1,0 +1,9 @@
+item_flag_id,local_language_id,name,description
+1,9,Countable,Has a count in the bag
+2,9,Consumable,Consumed when used
+3,9,Usable_overworld,Usable outside battle
+4,9,Usable_in_battle,Usable in battle
+5,9,Holdable,Can be held by a Pokémon
+6,9,Holdable_passive,Works passively when held
+7,9,Holdable_active,Usable by a Pokémon when held
+8,9,Underground,Appears in Sinnoh Underground

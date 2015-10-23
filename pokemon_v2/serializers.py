@@ -78,10 +78,10 @@ class ItemCategorySummarySerializer(serializers.HyperlinkedModelSerializer):
         model = ItemCategory
         fields = ('name', 'url')
 
-class ItemFlagSummarySerializer(serializers.HyperlinkedModelSerializer):
+class ItemAttributeSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = ItemFlag
+        model = ItemAttribute
         fields = ('name', 'url')
 
 class ItemFlingEffectSummarySerializer(serializers.HyperlinkedModelSerializer):
@@ -110,19 +110,9 @@ class BerryFirmnessSummarySerializer(serializers.HyperlinkedModelSerializer):
         
 class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
 
-    name = serializers.SerializerMethodField('get_berry_name')
-
     class Meta:
         model = Berry
         fields = ('url', 'name')
-
-    def get_berry_name(self,obj):
-
-        item = Item.objects.get(id=obj.item.id)
-        serializer = ItemSummarySerializer(item, context=self.context)
-        name = serializer.data['name']
-
-        return name[:name.index('-')]
 
 class EggGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -512,74 +502,69 @@ class ItemCategoryDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'pocket', 'names')
 
 
-###########################
-#  ITEM FLAG SERIALIZERS  #
-###########################
+################################
+#  ITEM ATTRIBUTE SERIALIZERS  #
+################################
 
-# Calling these Attributes instead of Flags cause I think that just makes more sense
-# Probably should change the names of the models as well. Work To Do.
-
-class ItemFlagDescriptionSerializer(serializers.ModelSerializer):
+class ItemAttributeDescriptionSerializer(serializers.ModelSerializer):
 
     language = LanguageSummarySerializer()
 
     class Meta:
-        model = ItemFlagDescription
+        model = ItemAttributeDescription
         fields = ('name', 'description', 'language')
 
 
-class ItemFlagDetailSerializer(serializers.ModelSerializer):
+class ItemAttributeDetailSerializer(serializers.ModelSerializer):
 
-    names = serializers.SerializerMethodField('get_flag_names')
-    descriptions = serializers.SerializerMethodField('get_flag_descriptions')
+    names = serializers.SerializerMethodField('get_attribute_names')
+    descriptions = serializers.SerializerMethodField('get_attribute_descriptions')
 
     class Meta:
-        model = ItemFlag
+        model = ItemAttribute
         fields = ('id', 'name', 'names', 'descriptions')
 
-    def get_flag_names(self, obj):
+    def get_attribute_names(self, obj):
 
-        item_flag = ItemFlagDescription.objects.filter(item_flag_id=obj)
-        serializer = ItemFlagDescriptionSerializer(item_flag, many=True, context=self.context)
+        item_attribute = ItemAttributeDescription.objects.filter(item_attribute_id=obj)
+        serializer = ItemAttributeDescriptionSerializer(item_attribute, many=True, context=self.context)
         data  = serializer.data
 
-        print data
-
-        for flag in data:
-            del flag['description']
+        for attribute in data:
+            del attribute['description']
 
         return data
 
-    def get_flag_descriptions(self, obj):
+    def get_attribute_descriptions(self, obj):
 
-        item_flag = ItemFlagDescription.objects.filter(item_flag_id=obj)
-        serializer = ItemFlagDescriptionSerializer(item_flag, many=True, context=self.context)
+        item_attribute = ItemAttributeDescription.objects.filter(item_attribute_id=obj)
+        serializer = ItemAttributeDescriptionSerializer(item_attribute, many=True, context=self.context)
         data = serializer.data
 
-        for flag in data:
-            del flag['name']
+        for attribute in data:
+            del attribute['name']
 
         return data
 
 
-class ItemFlagMapSerializer(serializers.ModelSerializer):
+class ItemAttributeMapSerializer(serializers.ModelSerializer):
 
-    attribute = ItemFlagSummarySerializer(source='item_flag')
+    item = ItemSummarySerializer()
+    attribute = ItemAttributeSummarySerializer(source='item_attribute')
 
     class Meta:
-        model = ItemFlagMap
-        fields = ('attribute',)
+        model = ItemAttributeMap
+        fields = ('item', 'attribute',)
 
 
 
-###########################
-#  ITEM FLAG SERIALIZERS  #
-###########################
+###################################
+#  ITEM FLING EFFECT SERIALIZERS  #
+###################################
 
 class ItemFlingEffectDescriptionSerializer(serializers.ModelSerializer):
 
     language = LanguageSummarySerializer()
-    description = serializers.CharField(source="effect")
 
     class Meta:
         model = ItemFlingEffectDescription
@@ -588,7 +573,7 @@ class ItemFlingEffectDescriptionSerializer(serializers.ModelSerializer):
 
 class ItemFlingEffectDetailSerializer(serializers.ModelSerializer):
 
-    descriptions = ItemCategoryNameSerializer(many=True, read_only=True, source="itemflingeffectdescription")
+    descriptions = ItemFlingEffectDescriptionSerializer(many=True, read_only=True, source="itemflingeffectdescription")
 
     class Meta:
         model = ItemFlingEffect
@@ -635,7 +620,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     descriptions = ItemDescriptionSerializer(many=True, read_only=True, source="itemdescription")
     flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
     category = ItemCategorySummarySerializer(source="item_category")
-    attributes = ItemFlagMapSerializer(many=True, read_only=True, source="itemflagmap")
+    attributes = serializers.SerializerMethodField("get_item_attributes")
     fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
 
     class Meta:
@@ -652,6 +637,22 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'descriptions',
             'flavor_text_entries'
         )
+
+    def get_item_attributes(self, obj):
+
+        item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
+        serializer = ItemAttributeMapSerializer(item_attribute_maps, many=True, context=self.context)
+        data  = serializer.data
+
+        attributes = []
+
+        for map in data:
+            attribute = OrderedDict()
+            attribute['name'] = map['attribute']['name']
+            attribute['url'] = map['attribute']['url']
+            attributes.append(attribute)
+
+        return attributes
 
 
 
@@ -703,7 +704,6 @@ class BerryFirmnessDetailSerializer(serializers.ModelSerializer):
 class BerryDetailSerializer(serializers.ModelSerializer):
 
     item = ItemSummarySerializer()
-    name = serializers.SerializerMethodField('get_berry_name')
     nature = NatureSummarySerializer()
     nature_power = serializers.IntegerField(source='natural_gift_power')
     firmness = BerryFirmnessSummarySerializer(source="berry_firmness")
@@ -723,14 +723,6 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             'smoothness',
             'soil_dryness'
         )
-
-    def get_berry_name(self,obj):
-
-        item = Item.objects.get(id=obj.item.id)
-        serializer = ItemSummarySerializer(item, context=self.context)
-        name = serializer.data['name']
-
-        return name[:name.index('-')]
 
 
 
@@ -803,6 +795,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     """
     generation = GenerationSummarySerializer()
     names = AbilityNameSerializer(many=True, read_only=True, source="typename")
+    move_damage_class = MoveDamageClassSummarySerializer()
     damage_relations = serializers.SerializerMethodField('get_type_relationships')
 
     class Meta:

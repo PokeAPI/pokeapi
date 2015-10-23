@@ -587,7 +587,7 @@ class ItemFlingEffect(HasName):
   pass
 
 
-class ItemFlingEffectDescription(HasFlingEffect, HasLanguage, HasEffect):
+class ItemFlingEffectDescription(IsDescription, HasFlingEffect):
   pass
 
 
@@ -611,18 +611,18 @@ class ItemFlavorText(HasItem, HasVersionGroup, IsFlavorText):
   pass
 
 
-class ItemFlag(HasName):
+class ItemAttribute(HasName):
   pass
 
 
-class ItemFlagDescription(IsDescription, HasName):
+class ItemAttributeDescription(IsDescription, HasName):
 
-  item_flag = models.ForeignKey(ItemFlag, blank=True, null=True)
+  item_attribute = models.ForeignKey(ItemAttribute, blank=True, null=True)
 
 
-class ItemFlagMap(HasItem):
+class ItemAttributeMap(HasItem):
 
-  item_flag = models.ForeignKey(ItemFlag, blank=True, null=True)
+  item_attribute = models.ForeignKey(ItemAttribute, blank=True, null=True)
 
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
@@ -675,10 +675,10 @@ class BerryFirmness(HasName):
 
 class BerryFirmnessName(IsName):
 
-  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True)
+  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
 
-class Berry(HasItem, HasNature):
+class Berry(HasName, HasItem, HasNature):
 
   berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True)
 

@@ -134,6 +134,14 @@ class HasItem(models.Model):
        abstract = True
 
 
+class HasItemAttribute(models.Model):
+
+  item_attribute = models.ForeignKey('ItemAttribute', blank=True, null=True, related_name="%(class)s")
+
+  class Meta:
+       abstract = True
+
+
 class HasItemCategory(models.Model):
 
   item_category = models.ForeignKey('ItemCategory', blank=True, null=True, related_name="%(class)s")
@@ -176,7 +184,7 @@ class HasLocationArea(models.Model):
 
 class HasMetaAilment(models.Model):
 
-  move_meta_ailment = models.ForeignKey('MoveMetaAilment', blank = True, null = True)
+  move_meta_ailment = models.ForeignKey('MoveMetaAilment', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -184,7 +192,7 @@ class HasMetaAilment(models.Model):
 
 class HasMetaCategory(models.Model):
 
-  move_meta_category = models.ForeignKey('MoveMetaCategory', blank = True, null = True)
+  move_meta_category = models.ForeignKey('MoveMetaCategory', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -200,7 +208,7 @@ class HasMove(models.Model):
 
 class HasMoveDamageClass(models.Model):
 
-  move_damage_class = models.ForeignKey('MoveDamageClass', blank = True, null = True)
+  move_damage_class = models.ForeignKey('MoveDamageClass', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -214,9 +222,9 @@ class HasMoveEffect(models.Model):
        abstract = True
 
 
-class HasMoveFlag(models.Model):
+class HasMoveAttribute(models.Model):
 
-  move_flag = models.ForeignKey('MoveFlag', blank = True, null = True)
+  move_attribute = models.ForeignKey('MoveAttribute', blank = True, null = True)
 
   class Meta:
        abstract = True
@@ -224,7 +232,7 @@ class HasMoveFlag(models.Model):
 
 class HasMoveTarget(models.Model):
 
-  move_target = models.ForeignKey('MoveTarget', blank = True, null = True)
+  move_target = models.ForeignKey('MoveTarget', blank = True, null = True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -240,7 +248,7 @@ class HasName(models.Model):
 
 class HasNature(models.Model):
 
-  nature = models.ForeignKey('Nature', blank=True, null=True)
+  nature = models.ForeignKey('Nature', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -280,7 +288,7 @@ class HasPokemon(models.Model):
 
 class HasPokemonColor(models.Model):
 
-  pokemon_color = models.ForeignKey('PokemonColor', blank=True, null=True)
+  pokemon_color = models.ForeignKey('PokemonColor', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -288,7 +296,7 @@ class HasPokemonColor(models.Model):
 
 class HasPokemonForm(models.Model):
 
-  pokemon_form = models.ForeignKey('PokemonForm', blank=True, null=True)
+  pokemon_form = models.ForeignKey('PokemonForm', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -296,7 +304,7 @@ class HasPokemonForm(models.Model):
 
 class HasPokemonHabitat(models.Model):
 
-  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True)
+  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -305,7 +313,7 @@ class HasPokemonHabitat(models.Model):
 #HasPokemonMoveMethod
 class HasMoveLearnMethod(models.Model):
 
-  move_learn_method = models.ForeignKey('MoveLearnMethod', blank=True, null=True)
+  move_learn_method = models.ForeignKey('MoveLearnMethod', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -313,7 +321,7 @@ class HasMoveLearnMethod(models.Model):
 
 class HasPokemonShape(models.Model):
 
-  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True)
+  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True, )
 
   class Meta:
        abstract = True
@@ -345,7 +353,7 @@ class HasShortEffect(models.Model):
 
 class HasStat(models.Model):
 
-  stat = models.ForeignKey('Stat', blank=True, null=True)
+  stat = models.ForeignKey('Stat', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -433,7 +441,7 @@ class Language(HasName, HasOrder):
 
 class LanguageName(IsName):
 
-  local_language_id = models.IntegerField()
+  local_language = models.ForeignKey('Language', blank = True, null = True, related_name="locallanguage")
 
 
 
@@ -472,7 +480,7 @@ class Ability(HasName, HasGeneration):
   is_main_series = models.BooleanField(default = False)
 
 
-class AbilityDescription(HasLanguage, HasEffect, HasShortEffect, HasAbility):
+class AbilityEffectText(HasLanguage, HasEffect, HasShortEffect, HasAbility):
   pass
 
 
@@ -488,7 +496,7 @@ class AbilityChange(HasAbility):
   pass
 
 
-class AbilityChangeDescription(HasLanguage, HasEffect):
+class AbilityChangeEffectText(HasLanguage, HasEffect):
 
   ability_change = models.ForeignKey(AbilityChange, blank=True, null=True)
 
@@ -598,9 +606,8 @@ class Item(HasName, HasItemCategory, HasFlingEffect):
   fling_power = models.IntegerField(blank=True, null=True)
 
 
-class ItemDescription(HasLanguage, HasEffect, HasShortEffect):
-
-  item = models.ForeignKey(Item, blank=True, null=True)
+class ItemEffectText(HasItem, HasLanguage, HasEffect, HasShortEffect):
+  pass
 
 
 class ItemName(HasItem, IsName):
@@ -615,14 +622,16 @@ class ItemAttribute(HasName):
   pass
 
 
-class ItemAttributeDescription(IsDescription, HasName):
+class ItemAttributeName(IsName, HasItemAttribute):
+  pass
 
-  item_attribute = models.ForeignKey(ItemAttribute, blank=True, null=True)
+
+class ItemAttributeDescription(IsDescription, HasItemAttribute):
+  pass
 
 
-class ItemAttributeMap(HasItem):
-
-  item_attribute = models.ForeignKey(ItemAttribute, blank=True, null=True)
+class ItemAttributeMap(HasItem, HasItemAttribute):
+  pass
 
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
@@ -652,9 +661,14 @@ class ContestEffect(models.Model):
   jam = models.IntegerField()
 
 
-class ContestEffectDescription(HasLanguage, HasEffect, HasFlavorText):
+class ContestEffectEffectText(HasLanguage, HasEffect):
 
-  contest_effect = models.ForeignKey(ContestEffect, blank=True, null=True)
+  contest_effect = models.ForeignKey(ContestEffect, blank=True, null=True, related_name="%(class)s")
+
+
+class ContestEffectFlavorText(HasLanguage, HasFlavorText):
+
+  contest_effect = models.ForeignKey(ContestEffect, blank=True, null=True, related_name="%(class)s")
 
 
 class ContestCombo(models.Model):
@@ -723,13 +737,13 @@ class GrowthRateDescription(HasGrowthRate, IsDescription):
 
 class Nature(HasName):
 
-  decreased_stat_id = models.ForeignKey(Stat, blank = True, null = True, related_name = 'decreased')
+  decreased_stat = models.ForeignKey(Stat, blank = True, null = True, related_name = 'decreased')
 
-  increased_stat_id = models.ForeignKey(Stat, blank = True, null = True, related_name = 'increased')
+  increased_stat = models.ForeignKey(Stat, blank = True, null = True, related_name = 'increased')
 
-  hates_flavor_id = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'hates_flavor')
+  hates_flavor = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'hates_flavor')
 
-  likes_flavor_id = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'likes_flavor')
+  likes_flavor = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'likes_flavor')
 
   game_index = models.IntegerField()
 
@@ -887,8 +901,10 @@ class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
 class MoveDamageClass(HasName):
   pass
 
+class MoveDamageClassName(HasMoveDamageClass, IsName):
+  pass
 
-class MoveDamageClassDescription(HasMoveDamageClass, IsDescription, HasName):
+class MoveDamageClassDescription(HasMoveDamageClass, IsDescription):
   pass
 
 
@@ -915,7 +931,7 @@ class MoveEffect(models.Model):
   pass
 
 
-class MoveEffectDescription(HasLanguage, HasMoveEffect, HasEffect, HasShortEffect):
+class MoveEffectEffectText(HasLanguage, HasMoveEffect, HasEffect, HasShortEffect):
   pass
 
 
@@ -923,25 +939,29 @@ class MoveEffectChange(HasMoveEffect, HasVersionGroup):
   pass
 
 
-class MoveEffectChangeDescription(HasLanguage, HasEffect):
+class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 
   move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True)
 
 
 
-######################
-#  MOVE FLAG MODELS  #
-######################
+################################
+#  MOVE FLAG/ATTRIBUTE MODELS  #
+################################
 
-class MoveFlag(HasName):
+class MoveAttribute(HasName):
   pass
 
 
-class MoveFlagDescription(HasMoveFlag, HasName, IsDescription):
+class MoveAttributeName(HasMoveAttribute, IsName):
   pass
 
 
-class MoveFlagMap(HasMove, HasMoveFlag):
+class MoveAttributeDescription(HasMoveAttribute, IsDescription):
+  pass
+
+
+class MoveAttributeMap(HasMove, HasMoveAttribute):
   pass
 
 
@@ -954,7 +974,11 @@ class MoveTarget(HasName):
   pass
 
 
-class MoveTargetDescription(HasMoveTarget, IsDescription, HasName):
+class MoveTargetName(HasMoveTarget, IsName):
+  pass
+
+
+class MoveTargetDescription(HasMoveTarget, IsDescription):
   pass
 
 
@@ -1090,7 +1114,7 @@ class SuperContestEffect(models.Model):
   appeal = models.IntegerField()
 
 
-class SuperContestEffectDescription(IsFlavorText):
+class SuperContestEffectFlavorText(IsFlavorText):
 
   super_contest_effect = models.ForeignKey(SuperContestEffect, blank = True, null = True)
 
@@ -1130,7 +1154,11 @@ class Pokedex(HasName, HasRegion):
   is_main_series = models.BooleanField(default = False)
 
 
-class PokedexDescription(HasPokedex, HasName, IsDescription):
+class PokedexName(HasPokedex, IsName):
+  pass
+
+
+class PokedexDescription(HasPokedex, IsDescription):
   pass
 
 
@@ -1223,7 +1251,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
   min_level = models.IntegerField(blank=True, null=True)
 
-  location_id = models.IntegerField(blank=True, null=True) # need location tables
+  location = models.ForeignKey(Location, related_name="location", blank=True, null=True)
 
   held_item = models.ForeignKey(Item, blank=True, null=True, related_name='held_item')
 
@@ -1299,7 +1327,11 @@ class MoveLearnMethod(HasName):
   pass
 
 #PokemonMoveMethodName
-class MoveLearnMethodName(IsName, HasMoveLearnMethod, HasDescription):
+class MoveLearnMethodName(IsName, HasMoveLearnMethod):
+  pass
+
+
+class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
   pass
 
 

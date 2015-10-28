@@ -38,6 +38,9 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
+# Explicitly define test runner to avoid warning messages on test execution
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
 MEDIA_ROOT = PROJECT_ROOT.child('media')
 
 MEDIA_URL = '/media/'

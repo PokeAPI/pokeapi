@@ -129,11 +129,11 @@ class ItemCategoryResource(PokeapiCommonViewset):
     list_serializer_class = ItemCategorySummarySerializer
 
 
-class ItemFlagResource(PokeapiCommonViewset):
+class ItemAttributeResource(PokeapiCommonViewset):
 
-    queryset = ItemFlag.objects.all()
-    serializer_class = ItemFlagDetailSerializer
-    list_serializer_class = ItemFlagSummarySerializer
+    queryset = ItemAttribute.objects.all()
+    serializer_class = ItemAttributeDetailSerializer
+    list_serializer_class = ItemAttributeSummarySerializer
 
 
 class ItemFlingEffectResource(PokeapiCommonViewset):

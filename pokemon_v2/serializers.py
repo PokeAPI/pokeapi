@@ -9,6 +9,7 @@ PokeAPI v2 serializers in order of dependency
 
 from .models import *
 
+
 #########################
 #  SUMMARY SERIALIZERS  #
 #########################
@@ -18,17 +19,65 @@ from .models import *
 # Putting summary serializers up top so there are no conflicts
 # with reference accross models due to script running order
 
-class LanguageSummarySerializer(serializers.HyperlinkedModelSerializer):
+class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Language
+        model = Ability
         fields = ('name', 'url')
 
-class RegionSummarySerializer(serializers.HyperlinkedModelSerializer):
+class BerryFirmnessSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Region
+        model = BerryFirmness
         fields = ('name', 'url')
+        
+class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Berry
+        fields = ('url', 'name')
+
+class CharacteristicSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Characteristic
+        fields = ('url',)
+
+class EggGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EggGroup
+        fields = ('name', 'url')
+
+class EncounterSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Encounter
+        fields = ('url',)
+
+class EncounterMethodSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EncounterMethod
+        fields = ('name', 'url')
+
+class EncounterSlotSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EncounterSlot
+        fields = ('url',)
+
+class EvolutionTriggerSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EvolutionTrigger
+        fields = ('name', 'url')
+
+class EvolutionChainSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EvolutionChain
+        fields = ('url',)
 
 class GenerationSummarySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -40,30 +89,6 @@ class GrowthRateSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = GrowthRate
-        fields = ('name', 'url')
-
-class VersionSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Version
-        fields = ('name', 'url')
-
-class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = VersionGroup
-        fields = ('name', 'url')
-
-class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Ability
-        fields = ('name', 'url')
-
-class StatSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Stat
         fields = ('name', 'url')
 
 class ItemPocketSummarySerializer(serializers.HyperlinkedModelSerializer):
@@ -96,36 +121,24 @@ class ItemSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Item
         fields = ('name', 'url')
 
-class NatureSummarySerializer(serializers.HyperlinkedModelSerializer):
+class LanguageSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Nature
+        model = Language
         fields = ('name', 'url')
 
-class BerryFirmnessSummarySerializer(serializers.HyperlinkedModelSerializer):
+class LocationSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = BerryFirmness
+        model = Location
         fields = ('name', 'url')
-        
-class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
+
+class LocationAreaSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Berry
-        fields = ('url', 'name')
-
-class EggGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = EggGroup
+        model = LocationArea
         fields = ('name', 'url')
-        
-class TypeSummarySerializer(serializers.HyperlinkedModelSerializer):
 
-    class Meta:
-        model = Type
-        fields = ('name', 'url')
-        
 class MoveDamageClassSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -155,7 +168,25 @@ class MoveSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Move
         fields = ('name', 'url')
-        
+
+class MoveLearnMethodSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = MoveLearnMethod
+        fields = ('name', 'url')
+
+class NatureSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Nature
+        fields = ('name', 'url')
+
+class PokedexSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Pokedex
+        fields = ('name', 'url')
+
 class PokemonColorSummarySerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
@@ -168,12 +199,6 @@ class PokemonHabitatSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = PokemonHabitat
         fields = ('name', 'url')
 
-class MoveLearnMethodSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = MoveLearnMethod
-        fields = ('name', 'url')
-        
 class PokemonShapeSummarySerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
@@ -191,31 +216,6 @@ class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = PokemonSpecies
         fields = ('name', 'url')
-        
-class EvolutionTriggerSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = EvolutionTrigger
-        fields = ('name', 'url')
-
-class EvolutionChainSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = EvolutionChain
-        fields = ('url',)
-
-
-class PokedexSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Pokedex
-        fields = ('name', 'url')
-
-class LocationSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = Location
-        fields = ('name', 'url')
 
 class PokemonFormSummarySerializer(serializers.HyperlinkedModelSerializer):
     
@@ -223,28 +223,104 @@ class PokemonFormSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = PokemonForm
         fields = ('name', 'url')
 
-
-
-##########################
-#  LANGUAGE SERIALIZERS  #
-##########################
-
-class LanguageNameSerializer(serializers.ModelSerializer):
-
-    language = LanguageSummarySerializer(source="local_language")
+class RegionSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = LanguageName
+        model = Region
+        fields = ('name', 'url')
+
+class StatSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Stat
+        fields = ('name', 'url')
+
+class TypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Type
+        fields = ('name', 'url')
+
+class VersionSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Version
+        fields = ('name', 'url')
+
+class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = VersionGroup
+        fields = ('name', 'url')
+
+
+
+
+################################
+#  CHARACTERISTIC SERIALIZERS  #
+################################
+
+class CharacteristicDescriptionSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = CharacteristicDescription
+        fields = ('description', 'language')
+
+
+class CharacteristicDetailSerializer(serializers.ModelSerializer):
+
+    descriptions = CharacteristicDescriptionSerializer(many=True, read_only=True, source='characteristicdescription')
+    stat = StatSummarySerializer()
+
+    class Meta:
+        model = Characteristic
+        fields = ('id', 'stat', 'gene_mod_5', 'descriptions')
+
+
+###########################
+#  ENCOUNTER SERIALIZERS  #
+###########################
+
+class EncounterMethodNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = EncounterMethodName
         fields = ('name', 'language')
 
 
-class LanguageDetailSerializer(serializers.ModelSerializer):
+class EncounterMethodDetailSerializer(serializers.ModelSerializer):
 
-    names = LanguageNameSerializer(many=True, read_only=True, source='languagename_language')
+    names = EncounterMethodNameSerializer(many=True, read_only=True, source='encountermethodname')
 
     class Meta:
-        model = Language
-        fields = ('id', 'name', 'official', 'iso639', 'iso3166', 'names')
+        model = EncounterMethod
+        fields = ('id', 'name', 'order', 'names')
+
+
+class EncounterSlotDetailSerializer(serializers.ModelSerializer):
+
+    version_group = VersionGroupSummarySerializer()
+    encounter_method = EncounterMethodSummarySerializer()
+
+    class Meta:
+        model = EncounterSlot
+        fields = ('id', 'slot', 'rarity', 'encounter_method', 'version_group')
+
+
+class EncounterDetailSerializer(serializers.ModelSerializer):
+
+    # version = VersionSummarySerializer()
+    # location_area = EncounterMethodSummarySerializer()
+
+    class Meta:
+        model = Encounter
+        # fields = ('id', 'slot', 'rarity', 'encounter_method', 'version')
+
+
 
 
 
@@ -325,49 +401,51 @@ class GrowthRateDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'formula', 'descriptions', 'levels')
 
 
+##########################
+#  LANGUAGE SERIALIZERS  #
+##########################
 
-#########################
-#  VERSION SERIALIZERS  #
-#########################
+class LanguageNameSerializer(serializers.ModelSerializer):
 
-class VersionNameSerializer(serializers.ModelSerializer):
-
-    language = LanguageSummarySerializer()
+    language = LanguageSummarySerializer(source="local_language")
 
     class Meta:
-        model = VersionName
+        model = LanguageName
         fields = ('name', 'language')
 
 
-class VersionDetailSerializer(serializers.ModelSerializer):
-    """
-    Should have a link to Version Group info but the Circular
-    dependency and compilation order fight eachother and I'm
-    not sure how to add anything other than a hyperlink
-    """
+class LanguageDetailSerializer(serializers.ModelSerializer):
 
-    names = VersionNameSerializer(many=True, read_only=True, source="versionname")
-    version_group = VersionGroupSummarySerializer()
+    names = LanguageNameSerializer(many=True, read_only=True, source='languagename_language')
 
     class Meta:
-        model = Version
-        fields = ('id', 'name', 'names', 'version_group')
-
-
-class VersionGroupDetailSerializer(serializers.ModelSerializer):
-
-    generation = GenerationSummarySerializer()
-    versions = VersionSummarySerializer(many=True, read_only=True, source="version")
-
-    class Meta:
-        model = VersionGroup
-        fields = ('id', 'name', 'order', 'generation', 'versions')
+        model = Language
+        fields = ('id', 'name', 'official', 'iso639', 'iso3166', 'names')
 
 
 
 ##########################
 #  LOCATION SERIALIZERS  #
 ##########################
+
+class LocationAreaNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = LocationAreaName
+        fields = ('name', 'language')
+
+
+class LocationAreaDetailSerializer(serializers.ModelSerializer):
+
+    location = LocationSummarySerializer()
+    names = LocationAreaNameSerializer(many=True, read_only=True, source="locationname")
+
+    class Meta:
+        model = LocationArea
+        fields = ('id', 'name', 'game_index', 'location', 'names')
+
 
 class LocationNameSerializer(serializers.ModelSerializer):
 
@@ -381,11 +459,12 @@ class LocationNameSerializer(serializers.ModelSerializer):
 class LocationDetailSerializer(serializers.ModelSerializer):
 
     region = RegionSummarySerializer()
-    names = VersionNameSerializer(many=True, read_only=True, source="locationname")
+    names = LocationNameSerializer(many=True, read_only=True, source="locationname")
+    areas = LocationAreaSummarySerializer(many=True, read_only=True, source="locationarea")
 
     class Meta:
         model = Location
-        fields = ('id', 'name', 'region', 'names')
+        fields = ('id', 'name', 'region', 'names', 'areas')
 
 
 
@@ -1654,3 +1733,42 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
             del entry['pokedex']
 
         return data
+
+
+
+#########################
+#  VERSION SERIALIZERS  #
+#########################
+
+class VersionNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = VersionName
+        fields = ('name', 'language')
+
+
+class VersionDetailSerializer(serializers.ModelSerializer):
+    """
+    Should have a link to Version Group info but the Circular
+    dependency and compilation order fight eachother and I'm
+    not sure how to add anything other than a hyperlink
+    """
+
+    names = VersionNameSerializer(many=True, read_only=True, source="versionname")
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = Version
+        fields = ('id', 'name', 'names', 'version_group')
+
+
+class VersionGroupDetailSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+    versions = VersionSummarySerializer(many=True, read_only=True, source="version")
+
+    class Meta:
+        model = VersionGroup
+        fields = ('id', 'name', 'order', 'generation', 'versions')

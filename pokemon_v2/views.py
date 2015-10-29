@@ -80,11 +80,39 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     list_serializer_class = BerryFirmnessSummarySerializer
 
 
+class CharacteristicResource(PokeapiCommonViewset):
+
+    queryset = Characteristic.objects.all()
+    serializer_class = CharacteristicDetailSerializer
+    list_serializer_class = CharacteristicSummarySerializer
+
+
 class EggGroupResource(PokeapiCommonViewset):
 
     queryset = EggGroup.objects.all()
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
+
+
+class EncounterResource(PokeapiCommonViewset):
+
+    queryset = Encounter.objects.all()
+    serializer_class = EncounterDetailSerializer
+    list_serializer_class = EncounterSummarySerializer
+
+
+class EncounterMethodResource(PokeapiCommonViewset):
+
+    queryset = EncounterMethod.objects.all()
+    serializer_class = EncounterMethodDetailSerializer
+    list_serializer_class = EncounterMethodSummarySerializer
+
+
+class EncounterSlotResource(PokeapiCommonViewset):
+
+    queryset = EncounterSlot.objects.all()
+    serializer_class = EncounterSlotDetailSerializer
+    list_serializer_class = EncounterSlotSummarySerializer
 
 
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -162,6 +190,13 @@ class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
     serializer_class = LocationDetailSerializer
     list_serializer_class = LocationSummarySerializer
+
+
+class LocationAreaResource(PokeapiCommonViewset):
+
+    queryset = LocationArea.objects.all()
+    serializer_class = LocationAreaDetailSerializer
+    list_serializer_class = LocationAreaSummarySerializer
 
 
 class MoveResource(PokeapiCommonViewset):

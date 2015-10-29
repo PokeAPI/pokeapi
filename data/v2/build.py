@@ -1550,6 +1550,97 @@ for index, info in enumerate(data):
 
 
 
+##############
+#  LOCATION  #
+##############
+
+clearTable(Location)
+data = loadData('locations.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = Location (
+        id = int(info[0]),
+        region = Region.objects.get(pk = int(info[1])) if info[1] != '' else None,
+        name = info[2]
+      )
+    model.save()
+
+
+clearTable(LocationName)
+data = loadData('location_names.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationName (
+        location = Location.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2]
+      )
+    model.save()
+
+
+clearTable(LocationGameIndex)
+data = loadData('location_game_indices.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationGameIndex (
+        location = Location.objects.get(pk = int(info[0])),
+        generation = Generation.objects.get(pk = int(info[1])),
+        game_index = int(info[2])
+      )
+    model.save()
+
+
+clearTable(LocationArea)
+data = loadData('location_areas.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationArea (
+        id = int(info[0]),
+        location = Location.objects.get(pk = int(info[1])),
+        game_index = int(info[2]),
+        name = info[3]
+      )
+    model.save()
+
+
+clearTable(LocationAreaName)
+data = loadData('location_area_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationAreaName (
+        location_area = LocationArea.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2]
+      )
+    model.save()
+
+
+clearTable(LocationAreaEncounterRate)
+data = loadData('location_area_encounter_rates.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationAreaEncounterRate (
+        location_area = LocationArea.objects.get(pk = int(info[0])),
+        encounter_method = None,
+        version = Version.objects.get(pk = int(info[2])),
+        rate = int(info[3])
+      )
+    model.save()
+
+
+    
 #############
 #  POKEMON  #
 #############
@@ -1947,97 +2038,6 @@ for index, info in enumerate(data):
         pokemon = Pokemon.objects.get(pk = int(info[0])),
         type = Type.objects.get(pk = int(info[1])),
         slot = int(info[2])
-      )
-    model.save()
-
-
-
-##############
-# ENCOUNTER  #
-##############
-
-clearTable(Location)
-data = loadData('locations.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = Location (
-        id = int(info[0]),
-        region = Region.objects.get(pk = int(info[1])) if info[1] != '' else None,
-        name = info[2]
-      )
-    model.save()
-
-
-clearTable(LocationName)
-data = loadData('location_names.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationName (
-        location = Location.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2]
-      )
-    model.save()
-
-
-clearTable(LocationGameIndex)
-data = loadData('location_game_indices.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationGameIndex (
-        location = Location.objects.get(pk = int(info[0])),
-        generation = Generation.objects.get(pk = int(info[1])),
-        game_index = int(info[2])
-      )
-    model.save()
-
-
-clearTable(LocationArea)
-data = loadData('location_areas.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationArea (
-        id = int(info[0]),
-        location = Location.objects.get(pk = int(info[1])),
-        game_index = int(info[2]),
-        name = info[3]
-      )
-    model.save()
-
-
-clearTable(LocationAreaName)
-data = loadData('location_area_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationAreaName (
-        location_area = LocationArea.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2]
-      )
-    model.save()
-
-
-clearTable(LocationAreaEncounterRate)
-data = loadData('location_area_encounter_rates.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationAreaEncounterRate (
-        location_area = LocationArea.objects.get(pk = int(info[0])),
-        encounter_method = None,
-        version = Version.objects.get(pk = int(info[2])),
-        rate = int(info[3])
       )
     model.save()
 

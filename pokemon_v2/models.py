@@ -840,7 +840,7 @@ class EncounterConditionValue(HasEncounterCondition, HasName):
 
 class EncounterConditionValueName(IsName):
 
-  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True)
+  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True, related_name="%(class)s")
 
 
 class EncounterConditionValueMap(models.Model):
@@ -1116,7 +1116,7 @@ class SuperContestEffect(models.Model):
 
 class SuperContestEffectFlavorText(IsFlavorText):
 
-  super_contest_effect = models.ForeignKey(SuperContestEffect, blank = True, null = True)
+  super_contest_effect = models.ForeignKey(SuperContestEffect, blank = True, null = True, related_name="%(class)s")
 
 
 class SuperContestCombo(models.Model):

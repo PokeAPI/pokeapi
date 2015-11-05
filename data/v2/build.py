@@ -1626,21 +1626,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-clearTable(LocationAreaEncounterRate)
-data = loadData('location_area_encounter_rates.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationAreaEncounterRate (
-        location_area = LocationArea.objects.get(pk = int(info[0])),
-        encounter_method = None,
-        version = Version.objects.get(pk = int(info[2])),
-        rate = int(info[3])
-      )
-    model.save()
-
-
     
 #############
 #  POKEMON  #
@@ -2062,6 +2047,28 @@ for index, info in enumerate(data):
     model.save()
 
 
+# LocationAreaEncounterRate/EncounterMethod associations
+"""
+I tried handling this the same way Berry/Natures are handled
+but for some odd reason it resulted in a ton of db table issues.
+It was easy enough to move LocationAreaEncounterRates below
+Encounter population and for some reason things works now.
+"""
+clearTable(LocationAreaEncounterRate)
+data = loadData('location_area_encounter_rates.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationAreaEncounterRate (
+        location_area = LocationArea.objects.get(pk = int(info[0])),
+        encounter_method = EncounterMethod.objects.get(pk=info[1]),
+        version = Version.objects.get(pk = int(info[2])),
+        rate = int(info[3])
+      )
+    model.save()
+
+
 clearTable(EncounterMethodName)
 data = loadData('encounter_method_prose.csv')
 
@@ -2177,17 +2184,6 @@ for index, info in enumerate(data):
         encounter_condition_value = EncounterConditionValue.objects.get(pk = int(info[1]))
       )
     model.save()
-
-
-#Location/Encounter associations
-data = loadData('location_area_encounter_rates.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    laer = LocationAreaEncounterRate.objects.get(pk = int(info[0]))
-    laer.encounter_method = EncounterMethod.objects.get(pk = int(info[1]))
-    laer.save()
 
 
 

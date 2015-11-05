@@ -51,12 +51,12 @@ router.register(r"ability", AbilityResource)
 router.register(r"berry", BerryResource)
 router.register(r"berry-firmness", BerryFirmnessResource)
 router.register(r"characteristic", CharacteristicResource)
+router.register(r"contest-type", ContestTypeResource)
+router.register(r"contest-effect", ContestEffectResource)
 router.register(r"egg-group", EggGroupResource)
-
-router.register(r"encounter", EncounterResource) # ?
 router.register(r"encounter-method", EncounterMethodResource) # ?
-router.register(r"encounter-slot", EncounterSlotResource) # ?
-
+router.register(r"encounter-condition", EncounterConditionResource) # ?
+router.register(r"encounter-condition-value", EncounterConditionValueResource) # ?
 router.register(r"evolution-chain", EvolutionChainResource)
 router.register(r"evolution-trigger", EvolutionTriggerResource)
 router.register(r"generation", GenerationResource)
@@ -67,10 +67,8 @@ router.register(r"item-attribute", ItemAttributeResource)
 router.register(r"item-fling-effect", ItemFlingEffectResource)
 router.register(r"item-pocket", ItemPocketResource)
 router.register(r"language", LanguageResource)
-
 router.register(r"location", LocationResource)
 router.register(r"location-area", LocationAreaResource) # ?
-
 router.register(r"move", MoveResource)
 router.register(r"move-ailment", MoveMetaAilmentResource)
 router.register(r"move-category", MoveMetaCategoryResource)
@@ -87,6 +85,7 @@ router.register(r"pokemon-color", PokemonColorResource)
 router.register(r"pokemon-form", PokemonFormResource)
 router.register(r"region", RegionResource)
 router.register(r"stat", StatResource)
+router.register(r"super-contest-effect", SuperContestEffectResource)
 router.register(r"type", TypeResource)
 router.register(r"version", VersionResource)
 router.register(r"version-group", VersionGroupResource)

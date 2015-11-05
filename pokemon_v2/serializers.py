@@ -43,29 +43,41 @@ class CharacteristicSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Characteristic
         fields = ('url',)
 
+class ContestEffectSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ContestEffect
+        fields = ('url',)
+
+class ContestTypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = ContestType
+        fields = ('url', 'name')
+
 class EggGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = EggGroup
         fields = ('name', 'url')
 
-class EncounterSummarySerializer(serializers.HyperlinkedModelSerializer):
+class EncounterConditionSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = Encounter
-        fields = ('url',)
+        model = EncounterCondition
+        fields = ('name', 'url')
+
+class EncounterConditionValueSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = EncounterConditionValue
+        fields = ('name', 'url')
 
 class EncounterMethodSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = EncounterMethod
         fields = ('name', 'url')
-
-class EncounterSlotSummarySerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = EncounterSlot
-        fields = ('url',)
 
 class EvolutionTriggerSummarySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -235,6 +247,12 @@ class StatSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Stat
         fields = ('name', 'url')
 
+class SuperContestEffectSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = SuperContestEffect
+        fields = ('url',)
+
 class TypeSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -254,6 +272,35 @@ class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'url')
 
 
+#####################
+#  MAP SERIALIZERS  #
+#####################
+
+class ItemAttributeMapSerializer(serializers.ModelSerializer):
+
+    item = ItemSummarySerializer()
+    attribute = ItemAttributeSummarySerializer(source='item_attribute')
+
+    class Meta:
+        model = ItemAttributeMap
+        fields = ('item', 'attribute',)
+
+class VersionGroupRegionSerializer(serializers.ModelSerializer):
+
+    version_group = VersionGroupSummarySerializer()
+    region = RegionSummarySerializer()
+
+    class Meta:
+        model = ItemAttributeMap
+        fields = ('version_group', 'region',)
+
+class EncounterConditionValueMapSerializer(serializers.ModelSerializer):
+
+    condition_value = EncounterConditionValueSummarySerializer(source='encounter_condition_value')
+
+    class Meta:
+        model = EncounterConditionValueMap
+        fields = ('condition_value',)
 
 
 ################################
@@ -279,47 +326,92 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'stat', 'gene_mod_5', 'descriptions')
 
 
-###########################
-#  ENCOUNTER SERIALIZERS  #
-###########################
+#########################
+#  CONTEST SERIALIZERS  #
+#########################
 
-class EncounterMethodNameSerializer(serializers.ModelSerializer):
+class SuperContestEffectFlavorTextSerializer(serializers.ModelSerializer):
 
     language = LanguageSummarySerializer()
 
     class Meta:
-        model = EncounterMethodName
-        fields = ('name', 'language')
+        model = SuperContestEffectFlavorText
+        fields = ('flavor_text', 'language')
 
 
-class EncounterMethodDetailSerializer(serializers.ModelSerializer):
+class SuperContestEffectDetailSerializer(serializers.ModelSerializer):
 
-    names = EncounterMethodNameSerializer(many=True, read_only=True, source='encountermethodname')
-
-    class Meta:
-        model = EncounterMethod
-        fields = ('id', 'name', 'order', 'names')
-
-
-class EncounterSlotDetailSerializer(serializers.ModelSerializer):
-
-    version_group = VersionGroupSummarySerializer()
-    encounter_method = EncounterMethodSummarySerializer()
+    flavor_text_entries = SuperContestEffectFlavorTextSerializer(many=True, read_only=True, source='supercontesteffectflavortext')
 
     class Meta:
-        model = EncounterSlot
-        fields = ('id', 'slot', 'rarity', 'encounter_method', 'version_group')
+        model = SuperContestEffect
+        fields = ('id', 'appeal', 'flavor_text_entries')
 
 
-class EncounterDetailSerializer(serializers.ModelSerializer):
+class ContestEffectEffectTextSerializer(serializers.ModelSerializer):
 
-    # version = VersionSummarySerializer()
-    # location_area = EncounterMethodSummarySerializer()
+    language = LanguageSummarySerializer()
 
     class Meta:
-        model = Encounter
-        # fields = ('id', 'slot', 'rarity', 'encounter_method', 'version')
+        model = ContestEffectEffectText
+        fields = ('effect', 'language')
 
+
+class ContestEffectFlavorTextSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ContestEffectFlavorText
+        fields = ('flavor_text', 'language')
+
+
+class ContestEffectDetailSerializer(serializers.ModelSerializer):
+
+    effects = ContestEffectEffectTextSerializer(many=True, read_only=True, source='contesteffecteffecttext')
+    flavor_text_entries = ContestEffectFlavorTextSerializer(many=True, read_only=True, source='contesteffectflavortext')
+
+    class Meta:
+        model = ContestEffect
+        fields = ('id', 'appeal', 'jam', 'effects', 'flavor_text_entries')
+
+
+class ContestTypeNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = ContestTypeName
+        fields = ('name', 'flavor', 'color', 'language')
+
+
+class ContestTypeDetailSerializer(serializers.ModelSerializer):
+
+    names = ContestTypeNameSerializer(many=True, read_only=True, source='contesttypename')
+
+    class Meta:
+        model = ContestType
+        fields = ('id', 'name', 'names')
+
+
+class SuperContestComboSerializer(serializers.ModelSerializer):
+
+    first_move = MoveSummarySerializer()
+    second_move = MoveSummarySerializer()
+
+    class Meta:
+        model = SuperContestCombo
+        fields = ('first_move', 'second_move')
+
+
+class ContestComboSerializer(serializers.ModelSerializer):
+
+    first_move = MoveSummarySerializer()
+    second_move = MoveSummarySerializer()
+
+    class Meta:
+        model = ContestCombo
+        fields = ('first_move', 'second_move')
 
 
 
@@ -340,11 +432,23 @@ class RegionNameSerializer(serializers.ModelSerializer):
 class RegionDetailSerializer(serializers.ModelSerializer):
 
     names = RegionNameSerializer(many=True, read_only=True, source="regionname")
+    version_groups = serializers.SerializerMethodField('get_region_version_groups') 
 
     class Meta:
         model = Region
-        fields = ('id', 'name', 'names')
+        fields = ('id', 'name', 'names', 'version_groups')
 
+    def get_region_version_groups(self, obj):
+
+        vg_regions = VersionGroupRegion.objects.filter(region=obj)
+        print vg_regions
+        data = VersionGroupRegionSerializer(vg_regions, many=True, context=self.context).data
+        groups = []
+
+        for group in data:
+            groups.append(group['version_group'])
+
+        return groups
 
 
 ############################
@@ -424,9 +528,108 @@ class LanguageDetailSerializer(serializers.ModelSerializer):
 
 
 
-##########################
-#  LOCATION SERIALIZERS  #
-##########################
+########################################
+#  LOCATION AND ENCOUNTER SERIALIZERS  #
+########################################
+
+class EncounterConditionNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = EncounterConditionName
+        fields = ('name', 'language')
+
+
+class EncounterConditionDetailSerializer(serializers.ModelSerializer):
+
+    names = EncounterConditionNameSerializer(many=True, read_only=True, source='encounterconditionname')
+    values = EncounterConditionValueSummarySerializer(many=True, read_only=True, source='encounterconditionvalue')
+
+    class Meta:
+        model = EncounterCondition
+        fields = ('id', 'name', 'values', 'names')
+
+
+class EncounterConditionValueNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = EncounterConditionValueName
+        fields = ('name', 'language')
+
+
+class EncounterConditionValueDetailSerializer(serializers.ModelSerializer):
+
+    condition = EncounterConditionSummarySerializer(source='encounter_condition')
+    names = EncounterConditionValueNameSerializer(many=True, read_only=True, source='encounterconditionvaluename')
+
+    class Meta:
+        model = EncounterConditionValue
+        fields = ('id', 'name', 'condition', 'names')
+
+
+class EncounterMethodNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = EncounterMethodName
+        fields = ('name', 'language')
+
+
+class EncounterMethodDetailSerializer(serializers.ModelSerializer):
+
+    names = EncounterMethodNameSerializer(many=True, read_only=True, source='encountermethodname')
+
+    class Meta:
+        model = EncounterMethod
+        fields = ('id', 'name', 'order', 'names')
+
+
+class EncounterSlotSerializer(serializers.ModelSerializer):
+
+    encounter_method = EncounterMethodSummarySerializer()
+    chance = serializers.IntegerField(source='rarity')
+
+    class Meta:
+        model = EncounterSlot
+        fields = ('id', 'slot', 'chance', 'encounter_method', 'version_group')
+
+
+class EncounterDetailSerializer(serializers.ModelSerializer):
+
+    version = VersionSummarySerializer()
+    location_area = LocationAreaSummarySerializer()
+    pokemon = PokemonSummarySerializer()
+    condition_values = serializers.SerializerMethodField('get_encounter_conditions')
+
+    class Meta:
+        model = Encounter
+        fields = ('min_level', 'max_level', 'version', 'encounter_slot', 'pokemon', 'location_area', 'condition_values')
+
+    def get_encounter_conditions(self, obj):
+
+        condition_values = EncounterConditionValueMap.objects.filter(encounter=obj)
+        data = EncounterConditionValueMapSerializer(condition_values, many=True, context=self.context).data
+        values = []
+
+        for map in data:
+            values.append(map['condition_value'])
+
+        return values
+
+
+class LocationAreaEncounterRateSerializer(serializers.ModelSerializer):
+
+    encounter_method = EncounterMethodSummarySerializer()
+    version = VersionSummarySerializer()
+
+    class Meta:
+        model = LocationAreaEncounterRate
+        fields = ('rate', 'encounter_method', 'version')
+
 
 class LocationAreaNameSerializer(serializers.ModelSerializer):
 
@@ -440,11 +643,102 @@ class LocationAreaNameSerializer(serializers.ModelSerializer):
 class LocationAreaDetailSerializer(serializers.ModelSerializer):
 
     location = LocationSummarySerializer()
-    names = LocationAreaNameSerializer(many=True, read_only=True, source="locationname")
-
+    encounter_method_rates = serializers.SerializerMethodField('get_method_rates')
+    pokemon_encounters = serializers.SerializerMethodField('get_encounters')
+    
     class Meta:
         model = LocationArea
-        fields = ('id', 'name', 'game_index', 'location', 'names')
+        fields = ('id', 'name', 'game_index', 'location', 'encounter_method_rates', 'pokemon_encounters')
+
+    def get_method_rates (self, obj):
+
+        # Get encounters related to this area and pull out unique encounter methods
+        encounter_rates = LocationAreaEncounterRate.objects.filter(location_area=obj).order_by('encounter_method_id')
+        method_ids = encounter_rates.values('encounter_method_id').distinct()
+        encounter_rate_list = []
+
+        print method_ids
+
+        for id in method_ids:
+
+            encounter_rate_details = OrderedDict()
+
+            # Get each Unique Item by ID
+            encounter_method_object = EncounterMethod.objects.get(pk=id['encounter_method_id'])
+            encounter_method_data = EncounterMethodSummarySerializer(encounter_method_object, context=self.context).data
+            encounter_rate_details['encounter_method'] = encounter_method_data
+
+            # Get Versions associated with each unique item
+            area_encounter_objects = encounter_rates.filter(encounter_method_id=id['encounter_method_id'])
+            serializer = LocationAreaEncounterRateSerializer(area_encounter_objects, many=True, context=self.context)
+            encounter_rate_details['version_details'] = []
+
+            for area_encounter in serializer.data:
+
+                version_detail = OrderedDict()
+
+                version_detail['rate'] = area_encounter['rate']
+                version_detail['version'] = area_encounter['version']
+
+                encounter_rate_details['version_details'].append(version_detail)
+
+            encounter_rate_list.append(encounter_rate_details)
+
+        return encounter_rate_list
+
+
+    def get_encounters (self, obj):
+
+        # get versions for later use
+        version_objects = Version.objects.all()
+        version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
+
+        # all encounters associated with location area
+        all_encounters = Encounter.objects.filter(location_area=obj).order_by('pokemon')
+        encounters_list = []
+
+        # break encounters into pokemon groupings
+        for poke in all_encounters.values('pokemon').distinct():
+
+            pokemon_object = Pokemon.objects.get(pk=poke['pokemon'])
+
+            pokemon_detail = OrderedDict()
+            pokemon_detail['pokemon'] = PokemonSummarySerializer(pokemon_object, context=self.context).data
+            pokemon_detail['version_details'] = []
+
+            poke_encounters = all_encounters.filter(pokemon=poke['pokemon']).order_by('version')
+
+            # each pokemon has multiple versions it could be encountered in
+            for ver in poke_encounters.values('version').distinct():
+
+                version_detail = OrderedDict()
+                version_detail['version'] = version_data[ver['version'] - 1]
+                version_detail['max_chance'] = 0
+                version_detail['encounter_details'] = []
+
+                poke_data = EncounterDetailSerializer(poke_encounters.filter(version=ver['version']), many=True, context=self.context).data
+
+                # each version has multiple ways a pokemon can be encountered
+                for encounter in poke_data:
+
+                    slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
+                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
+                    del encounter['pokemon']
+                    del encounter['encounter_slot']
+                    del encounter['location_area']
+                    del encounter['version']
+                    encounter['chance'] = slot_data['chance']
+                    version_detail['max_chance'] += slot_data['chance']
+                    encounter['method'] = slot_data['encounter_method']
+
+                    version_detail['encounter_details'].append(encounter)
+
+                pokemon_detail['version_details'].append(version_detail)
+
+            encounters_list.append(pokemon_detail)
+
+        return encounters_list
+        
 
 
 class LocationNameSerializer(serializers.ModelSerializer):
@@ -622,16 +916,6 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = ItemAttribute
         fields = ('id', 'name', 'names', 'descriptions')
-
-
-class ItemAttributeMapSerializer(serializers.ModelSerializer):
-
-    item = ItemSummarySerializer()
-    attribute = ItemAttributeSummarySerializer(source='item_attribute')
-
-    class Meta:
-        model = ItemAttributeMap
-        fields = ('item', 'attribute',)
 
 
 
@@ -1076,6 +1360,8 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     meta = MoveMetaSerializer(read_only=True, source="movemeta")
     names = MoveNameSerializer(many=True, read_only=True, source="movename")
     effect_chance = serializers.IntegerField(source="move_effect_chance")
+    contest_combo_detail = serializers.SerializerMethodField('get_contest_combos')
+    # super_contest_combo_detail = serializers.SerializerMethodField('get_super_contest_combos')
 
     class Meta:
         model = Move
@@ -1093,7 +1379,70 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'pp', 
             'priority',
             'type',
+            'contest_combo_detail',
+            # 'super_contest_combo_detail'
         )
+
+    def get_contest_combos(self, obj):
+
+        normal_before_objects = ContestCombo.objects.filter(first_move=obj)
+        normal_before_data = ContestComboSerializer(normal_before_objects, many=True, context=self.context).data
+        normal_after_objects = ContestCombo.objects.filter(second_move=obj)
+        normal_after_data = ContestComboSerializer(normal_after_objects, many=True, context=self.context).data
+
+        super_before_objects = SuperContestCombo.objects.filter(first_move=obj)
+        super_before_data = SuperContestComboSerializer(super_before_objects, many=True, context=self.context).data
+        super_after_objects = SuperContestCombo.objects.filter(second_move=obj)
+        super_after_data = SuperContestComboSerializer(super_after_objects, many=True, context=self.context).data
+
+        details = OrderedDict()
+        details['normal'] = OrderedDict()
+        details['normal']['use_before'] = None
+        details['normal']['use_after'] = None
+        details['super'] = OrderedDict()
+        details['super']['use_before'] = None
+        details['super']['use_after'] = None
+
+        for combo in normal_before_data:
+            if details['normal']['use_before'] == None:
+                details['normal']['use_before'] = []
+            details['normal']['use_before'].append(combo['second_move'])
+
+        for combo in normal_after_data:
+            if details['normal']['use_after'] == None:
+                details['normal']['use_after'] = []
+            details['normal']['use_after'].append(combo['first_move'])
+
+        for combo in super_before_data:
+            if details['super']['use_before'] == None:
+                details['super']['use_before'] = []
+            details['super']['use_before'].append(combo['second_move'])
+
+        for combo in super_after_data:
+            if details['super']['use_after'] == None:
+                details['super']['use_after'] = []
+            details['super']['use_after'].append(combo['first_move'])
+
+        return details
+
+    # def get_super_contest_combos(self, obj):
+
+    #     before_objects = SuperContestCombo.objects.filter(first_move=obj)
+    #     before_data = SuperContestComboSerializer(before_objects, many=True, context=self.context).data
+    #     after_objects = SuperContestCombo.objects.filter(second_move=obj)
+    #     after_data = SuperContestComboSerializer(after_objects, many=True, context=self.context).data
+
+    #     details = OrderedDict()
+    #     details['use_before'] = []
+    #     details['use_after'] = []
+
+    #     for combo in before_data:
+    #         details['use_before'].append(combo['second_move'])
+
+    #     for combo in after_data:
+    #         details['use_after'].append(combo['first_move'])
+
+    #     return details
 
 
 
@@ -1274,7 +1623,7 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
 
 class PokemonItemSerializer(serializers.ModelSerializer):
 
-    # version = VersionSummarySerializer()
+    version = VersionSummarySerializer()
     item = ItemSummarySerializer()
 
     class Meta:
@@ -1327,6 +1676,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     types = PokemonTypeSerializer(many=True, read_only=True, source="pokemontype")
     forms = PokemonFormSummarySerializer(many=True, read_only=True, source="pokemonform")
     held_items = serializers.SerializerMethodField('get_pokemon_held_items')
+    # location_area_encounters = serializers.SerializerMethodField('get_encounters')
+    location_areas = serializers.SerializerMethodField('get_areas')
 
     class Meta:
         model = Pokemon
@@ -1344,7 +1695,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             'types',
             'forms',
             'held_items',
-            'moves'
+            'moves',
+            'location_areas'
         )
 
     def get_pokemon_moves(self, obj):
@@ -1395,8 +1747,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         # Doin held_items pretty much like moves
 
         # Get all possible Version Groups and Move Methods for later use
-        version_objects = Version.objects.all()
-        version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
+        # version_objects = Version.objects.all()
+        # version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
 
         # Get items related to this pokemon and pull out unique Move IDs
         pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by('item_id')
@@ -1422,13 +1774,77 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail = OrderedDict()
 
                 version_detail['rarity'] = item['rarity']
-                version_detail['version'] = version_data[item['version'] - 1]
+                version_detail['version'] = item['version']
 
                 pokemon_item_details['version_details'].append(version_detail)
 
             item_list.append(pokemon_item_details)
 
         return item_list
+
+
+    def get_areas(self, obj):
+
+        encounter_objects = Encounter.objects.filter(pokemon_id=obj.id)
+        areas = []
+
+        for encounter in encounter_objects:
+            areas.append(LocationAreaSummarySerializer(encounter.location_area, context=self.context).data)
+
+        return areas
+
+
+    # def get_encounters(self, obj):
+
+    #     # get versions for later use
+    #     version_objects = Version.objects.all()
+    #     version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
+
+    #     # all encounters associated with location area
+    #     all_encounters = Encounter.objects.filter(pokemon=obj).order_by('location_area')
+    #     encounters_list = []
+
+    #     # break encounters into pokemon groupings
+    #     for area in all_encounters.values('location_area').distinct():
+
+    #         location_area_object = LocationArea.objects.get(pk=area['location_area'])
+
+    #         location_area_detail = OrderedDict()
+    #         location_area_detail['location_area'] = LocationAreaSummarySerializer(location_area_object, context=self.context).data
+    #         location_area_detail['version_details'] = []
+
+    #         area_encounters = all_encounters.filter(location_area=area['location_area']).order_by('version')
+
+    #         # each pokemon has multiple versions it could be encountered in
+    #         for ver in area_encounters.values('version').distinct():
+
+    #             version_detail = OrderedDict()
+    #             version_detail['version'] = version_data[ver['version'] - 1]
+    #             version_detail['max_chance'] = 0
+    #             version_detail['encounter_details'] = []
+
+    #             area_data = EncounterDetailSerializer(area_encounters.filter(version=ver['version']), many=True, context=self.context).data
+
+    #             # each version has multiple ways a pokemon can be encountered
+    #             for encounter in area_data:
+
+    #                 slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
+    #                 slot_data = EncounterSlotSerializer(slot, context=self.context).data
+    #                 del encounter['pokemon']
+    #                 del encounter['encounter_slot']
+    #                 del encounter['location_area']
+    #                 del encounter['version']
+    #                 encounter['chance'] = slot_data['chance']
+    #                 version_detail['max_chance'] += slot_data['chance']
+    #                 encounter['method'] = slot_data['encounter_method']
+
+    #                 version_detail['encounter_details'].append(encounter)
+
+    #             location_area_detail['version_details'].append(version_detail)
+
+    #         encounters_list.append(location_area_detail)
+
+    #     return encounters_list
 
 
 
@@ -1768,7 +2184,19 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
     generation = GenerationSummarySerializer()
     versions = VersionSummarySerializer(many=True, read_only=True, source="version")
+    regions = serializers.SerializerMethodField('get_version_group_regions')
 
     class Meta:
         model = VersionGroup
-        fields = ('id', 'name', 'order', 'generation', 'versions')
+        fields = ('id', 'name', 'order', 'generation', 'versions', 'regions')
+
+    def get_version_group_regions(self, obj):
+
+        vg_regions = VersionGroupRegion.objects.filter(version_group=obj)
+        data = VersionGroupRegionSerializer(vg_regions, many=True, context=self.context).data
+        regions = []
+
+        for region in data:
+            regions.append(region['region'])
+
+        return regions

@@ -87,6 +87,20 @@ class CharacteristicResource(PokeapiCommonViewset):
     list_serializer_class = CharacteristicSummarySerializer
 
 
+class ContestEffectResource(PokeapiCommonViewset):
+
+    queryset = ContestEffect.objects.all()
+    serializer_class = ContestEffectDetailSerializer
+    list_serializer_class = ContestEffectSummarySerializer
+
+
+class ContestTypeResource(PokeapiCommonViewset):
+
+    queryset = ContestType.objects.all()
+    serializer_class = ContestTypeDetailSerializer
+    list_serializer_class = ContestTypeSummarySerializer
+
+
 class EggGroupResource(PokeapiCommonViewset):
 
     queryset = EggGroup.objects.all()
@@ -94,11 +108,18 @@ class EggGroupResource(PokeapiCommonViewset):
     list_serializer_class = EggGroupSummarySerializer
 
 
-class EncounterResource(PokeapiCommonViewset):
+class EncounterConditionResource(PokeapiCommonViewset):
 
-    queryset = Encounter.objects.all()
-    serializer_class = EncounterDetailSerializer
-    list_serializer_class = EncounterSummarySerializer
+    queryset = EncounterCondition.objects.all()
+    serializer_class = EncounterConditionDetailSerializer
+    list_serializer_class = EncounterConditionSummarySerializer
+
+
+class EncounterConditionValueResource(PokeapiCommonViewset):
+
+    queryset = EncounterConditionValue.objects.all()
+    serializer_class = EncounterConditionValueDetailSerializer
+    list_serializer_class = EncounterConditionValueSummarySerializer
 
 
 class EncounterMethodResource(PokeapiCommonViewset):
@@ -106,13 +127,6 @@ class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
-
-
-class EncounterSlotResource(PokeapiCommonViewset):
-
-    queryset = EncounterSlot.objects.all()
-    serializer_class = EncounterSlotDetailSerializer
-    list_serializer_class = EncounterSlotSummarySerializer
 
 
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -309,6 +323,13 @@ class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
+
+
+class SuperContestEffectResource(PokeapiCommonViewset):
+
+    queryset = SuperContestEffect.objects.all()
+    serializer_class = SuperContestEffectDetailSerializer
+    list_serializer_class = SuperContestEffectSummarySerializer
 
 
 class TypeResource(PokeapiCommonViewset):

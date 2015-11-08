@@ -6,7 +6,7 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    # replaces = [(b'pokemon_v2', '0001_squashed_0004_auto_20151005_0138'), (b'pokemon_v2', '0002_auto_20151016_0523'), (b'pokemon_v2', '0003_auto_20151022_1725'), (b'pokemon_v2', '0004_auto_20151022_1729'), (b'pokemon_v2', '0005_auto_20151022_1917'), (b'pokemon_v2', '0006_auto_20151023_0135'), (b'pokemon_v2', '0007_berry_name'), (b'pokemon_v2', '0008_auto_20151023_1735'), (b'pokemon_v2', '0009_auto_20151023_2134'), (b'pokemon_v2', '0010_auto_20151024_0252'), (b'pokemon_v2', '0011_auto_20151024_0322'), (b'pokemon_v2', '0012_auto_20151024_0340'), (b'pokemon_v2', '0013_auto_20151024_0345'), (b'pokemon_v2', '0014_auto_20151024_0350'), (b'pokemon_v2', '0015_auto_20151024_0434'), (b'pokemon_v2', '0016_auto_20151024_1942'), (b'pokemon_v2', '0017_auto_20151024_2015'), (b'pokemon_v2', '0018_auto_20151024_2021'), (b'pokemon_v2', '0019_auto_20151024_2030'), (b'pokemon_v2', '0020_auto_20151024_2200'), (b'pokemon_v2', '0021_auto_20151025_1634'), (b'pokemon_v2', '0022_auto_20151025_1725'), (b'pokemon_v2', '0023_auto_20151025_1910'), (b'pokemon_v2', '0024_auto_20151027_0023')]
+    replaces = [(b'pokemon_v2', '0001_squashed_0024_auto_20151027_0023'), (b'pokemon_v2', '0002_auto_20151102_2124'), (b'pokemon_v2', '0003_auto_20151105_0309'), (b'pokemon_v2', '0004_auto_20151105_1947'), (b'pokemon_v2', '0005_auto_20151105_1949'), (b'pokemon_v2', '0006_auto_20151106_1654'), (b'pokemon_v2', '0007_auto_20151106_2319'), (b'pokemon_v2', '0008_auto_20151107_0323'), (b'pokemon_v2', '0009_auto_20151107_1516'), (b'pokemon_v2', '0010_auto_20151108_0208'), (b'pokemon_v2', '0011_auto_20151108_0352')]
 
     dependencies = [
     ]
@@ -245,7 +245,6 @@ class Migration(migrations.Migration):
             name='NatureBattleStylePreference',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('move_battle_style_id', models.IntegerField()),
                 ('low_hp_preference', models.IntegerField()),
                 ('high_hp_preference', models.IntegerField()),
                 ('nature', models.ForeignKey(related_name='naturebattlestylepreference', blank=True, to='pokemon_v2.Nature', null=True)),
@@ -434,7 +433,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='movebattlestylename_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('move_battle_style', models.ForeignKey(blank=True, to='pokemon_v2.MoveBattleStyle', null=True)),
+                ('move_battle_style', models.ForeignKey(related_name='movebattlestylename', blank=True, to='pokemon_v2.MoveBattleStyle', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2311,7 +2310,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
-                ('encounter_condition_value', models.ForeignKey(blank=True, to='pokemon_v2.EncounterConditionValue', null=True)),
+                ('encounter_condition_value', models.ForeignKey(related_name='encounterconditionvaluename', blank=True, to='pokemon_v2.EncounterConditionValue', null=True)),
                 ('language', models.ForeignKey(related_name='encounterconditionvaluename_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2399,7 +2398,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='palparkareaname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('pal_park_area', models.ForeignKey(blank=True, to='pokemon_v2.PalParkArea', null=True)),
+                ('pal_park_area', models.ForeignKey(related_name='palparkareaname', blank=True, to='pokemon_v2.PalParkArea', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2423,7 +2422,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('name', models.CharField(max_length=100)),
                 ('language', models.ForeignKey(related_name='pokeathlonstatname_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('pokeathlon_stat', models.ForeignKey(blank=True, to='pokemon_v2.PokeathlonStat', null=True)),
+                ('pokeathlon_stat', models.ForeignKey(related_name='pokeathlonstatname', blank=True, to='pokemon_v2.PokeathlonStat', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2466,7 +2465,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='naturepokeathlonstat',
             name='pokeathlon_stat',
-            field=models.ForeignKey(blank=True, to='pokemon_v2.PokeathlonStat', null=True),
+            field=models.ForeignKey(related_name='naturepokeathlonstat', blank=True, to='pokemon_v2.PokeathlonStat', null=True),
             preserve_default=True,
         ),
         migrations.AlterField(
@@ -2894,7 +2893,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('effect', models.CharField(max_length=4000)),
-                ('ability_change', models.ForeignKey(blank=True, to='pokemon_v2.AbilityChange', null=True)),
+                ('ability_change', models.ForeignKey(related_name='abilitychangeeffecttext', blank=True, to='pokemon_v2.AbilityChange', null=True)),
                 ('language', models.ForeignKey(related_name='abilitychangeeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
             options={
@@ -2949,7 +2948,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('effect', models.CharField(max_length=4000)),
                 ('language', models.ForeignKey(related_name='moveeffectchangeeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('move_effect_change', models.ForeignKey(blank=True, to='pokemon_v2.MoveEffectChange', null=True)),
+                ('move_effect_change', models.ForeignKey(related_name='moveeffectchangeeffecttext', blank=True, to='pokemon_v2.MoveEffectChange', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2976,7 +2975,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('flavor_text', models.CharField(max_length=500)),
                 ('language', models.ForeignKey(related_name='supercontesteffectflavortext_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('super_contest_effect', models.ForeignKey(blank=True, to='pokemon_v2.SuperContestEffect', null=True)),
+                ('super_contest_effect', models.ForeignKey(related_name='supercontesteffectflavortext', blank=True, to='pokemon_v2.SuperContestEffect', null=True)),
             ],
             options={
                 'abstract': False,
@@ -3034,6 +3033,24 @@ class Migration(migrations.Migration):
             model_name='pokemonspecies',
             name='pokemon_shape',
             field=models.ForeignKey(blank=True, to='pokemon_v2.PokemonShape', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='berryflavor',
+            name='berry',
+            field=models.ForeignKey(related_name='berryflavor', blank=True, to='pokemon_v2.Berry', null=True),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='naturebattlestylepreference',
+            name='move_battle_style',
+            field=models.ForeignKey(related_name='naturebattlestylepreference', blank=True, to='pokemon_v2.MoveBattleStyle', null=True),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='abilitychange',
+            name='version_group',
+            field=models.ForeignKey(related_name='abilitychange', blank=True, to='pokemon_v2.VersionGroup', null=True),
             preserve_default=True,
         ),
     ]

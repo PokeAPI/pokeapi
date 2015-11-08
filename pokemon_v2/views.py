@@ -66,6 +66,13 @@ class AbilityResource(PokeapiCommonViewset):
     list_serializer_class = AbilitySummarySerializer
 
 
+class AbilityChangeResource(PokeapiCommonViewset):
+
+    queryset = AbilityChange.objects.all()
+    serializer_class = AbilityChangeSerializer
+    list_serializer_class = AbilityChangeSerializer
+
+
 class BerryResource(PokeapiCommonViewset):
 
     queryset = Berry.objects.all()
@@ -150,6 +157,13 @@ class GenerationResource(PokeapiCommonViewset):
     list_serializer_class = GenerationSummarySerializer
 
 
+class GenderResource(PokeapiCommonViewset):
+
+    queryset = Gender.objects.all()
+    serializer_class = GenderDetailSerializer
+    list_serializer_class = GenderSummarySerializer
+
+
 class GrowthRateResource(PokeapiCommonViewset):
 
     queryset = GrowthRate.objects.all()
@@ -213,6 +227,13 @@ class LocationAreaResource(PokeapiCommonViewset):
     list_serializer_class = LocationAreaSummarySerializer
 
 
+# class MachineResource(PokeapiCommonViewset):
+
+#     queryset = Machine.objects.all()
+#     serializer_class = MachineDetailSerializer
+#     list_serializer_class = MachineSummarySerializer
+
+
 class MoveResource(PokeapiCommonViewset):
 
     queryset = Move.objects.all()
@@ -232,6 +253,13 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
     queryset = MoveMetaAilment.objects.all()
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
+
+
+class MoveBattleStyleResource(PokeapiCommonViewset):
+
+    queryset = MoveBattleStyle.objects.all()
+    serializer_class = MoveBattleStyleDetailSerializer
+    list_serializer_class = MoveBattleStyleSummarySerializer
 
 
 class MoveMetaCategoryResource(PokeapiCommonViewset):
@@ -260,6 +288,20 @@ class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
+
+
+class PalParkAreaResource(PokeapiCommonViewset):
+
+    queryset = PalParkArea.objects.all()
+    serializer_class = PalParkAreaDetailSerializer
+    list_serializer_class = PalParkAreaSummarySerializer
+
+
+class PokeathlonStatResource(PokeapiCommonViewset):
+
+    queryset = PokeathlonStat.objects.all()
+    serializer_class = PokeathlonStatDetailSerializer
+    list_serializer_class = PokeathlonStatSummarySerializer
 
 
 class PokedexResource(PokeapiCommonViewset):

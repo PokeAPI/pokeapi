@@ -264,7 +264,7 @@ class HasOrder(models.Model):
 
 class HasPokeathlonStat(models.Model):
 
-  pokeathlon_stat = models.ForeignKey('PokeathlonStat', blank=True, null=True)
+  pokeathlon_stat = models.ForeignKey('PokeathlonStat', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -492,13 +492,13 @@ class AbilityName(IsName, HasAbility):
   pass
 
 
-class AbilityChange(HasAbility):
+class AbilityChange(HasAbility, HasVersionGroup):
   pass
 
 
 class AbilityChangeEffectText(HasLanguage, HasEffect):
 
-  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True)
+  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True, related_name="%(class)s")
 
 
 
@@ -711,7 +711,7 @@ class Berry(HasName, HasItem, HasNature):
 
 class BerryFlavor(HasContestType):
 
-  berry = models.ForeignKey(Berry, blank=True, null=True)
+  berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s")
 
   flavor = models.IntegerField()
 
@@ -759,7 +759,7 @@ class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
 
 class NatureBattleStylePreference(HasNature):
 
-  move_battle_style_id = models.IntegerField()
+  move_battle_style = models.ForeignKey('MoveBattleStyle', blank = True, null = True, related_name="%(class)s")
 
   low_hp_preference = models.IntegerField()
 
@@ -919,7 +919,7 @@ class MoveBattleStyle(HasName):
 
 class MoveBattleStyleName(IsName):
 
-  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True)
+  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True, related_name="%(class)s")
 
 
 
@@ -941,7 +941,7 @@ class MoveEffectChange(HasMoveEffect, HasVersionGroup):
 
 class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 
-  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True)
+  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True, related_name="%(class)s")
 
 
 
@@ -1092,7 +1092,7 @@ class PalParkArea(HasName):
 
 class PalParkAreaName(IsName):
 
-  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True)
+  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True, related_name="%(class)s")
 
 
 class PalPark(HasPokemonSpecies):

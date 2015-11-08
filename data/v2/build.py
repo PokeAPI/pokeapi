@@ -308,10 +308,9 @@ for index, info in enumerate(data):
 
 
 
-
-###############
-#  ABILITIES  #
-###############
+# ###############
+# #  ABILITIES  #
+# ###############
 
 clearTable(Ability)
 data = loadData('abilities.csv')
@@ -342,6 +341,20 @@ for index, info in enumerate(data):
     abilityName.save()
 
 
+clearTable(AbilityChange)
+data = loadData('ability_changelog.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    abilityName = AbilityChange (
+        id = int(info[0]),
+        ability = Ability.objects.get(pk = int(info[1])),
+        version_group = VersionGroup.objects.get(pk = int(info[2]))
+      )
+    abilityName.save()
+
+
 clearTable(AbilityEffectText)
 data = loadData('ability_prose.csv')
 
@@ -355,6 +368,20 @@ for index, info in enumerate(data):
         effect = info[3]
       )
     abilityDesc.save()
+
+
+clearTable(AbilityChangeEffectText)
+data = loadData('ability_changelog_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    abilityChangeEffectText = AbilityChangeEffectText (
+        ability_change = AbilityChange.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        effect = info[2]
+      )
+    abilityChangeEffectText.save()
 
 
 clearTable(AbilityFlavorText)
@@ -762,7 +789,7 @@ for index, info in enumerate(data):
   if index > 0:
 
     model = MoveEffectEffectText (
-        move_effect = MoveEffect.objects.get(pk = int(info[1])),
+        move_effect = MoveEffect.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
         short_effect = info[2],
         effect = info[3]
@@ -797,6 +824,7 @@ for index, info in enumerate(data):
       )
     model.save()
 
+
 clearTable(MoveLearnMethod)
 data = loadData('pokemon_move_methods.csv')
 
@@ -808,6 +836,19 @@ for index, info in enumerate(data):
         name = info[1]
       )
     model.save()
+
+
+clearTable(VersionGroupMoveLearnMethod)
+data = loadData('version_group_pokemon_move_methods.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    versionGroupMoveLearnMethod = VersionGroupMoveLearnMethod (
+        version_group = VersionGroup.objects.get(pk = int(info[0])),
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[1])),
+      )
+    versionGroupMoveLearnMethod.save()
 
 
 clearTable(MoveLearnMethodName)
@@ -1385,7 +1426,7 @@ for index, info in enumerate(data):
 
     model = NatureBattleStylePreference (
         nature = Nature.objects.get(pk = int(info[0])),
-        move_battle_style_id = int(info[1]),
+        move_battle_style = MoveBattleStyle.objects.get(pk = int(info[1])),
         low_hp_preference = info[2],
         high_hp_preference = info[3]
       )
@@ -1601,15 +1642,15 @@ data = loadData('location_areas.csv')
 for index, info in enumerate(data):
   if index > 0:
 
-  	location = Location.objects.get(pk = int(info[1]))
+    location = Location.objects.get(pk = int(info[1]))
 
-	model = LocationArea (
-		id = int(info[0]),
-		location = location,
-		game_index = int(info[2]),
-		name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area') 
-	)
-	model.save()
+    model = LocationArea (
+      id = int(info[0]),
+      location = location,
+      game_index = int(info[2]),
+      name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area') 
+    )
+    model.save()
 
 
 clearTable(LocationAreaName)
@@ -2227,6 +2268,7 @@ for index, info in enumerate(data):
     model = PalPark (
         pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
         pal_park_area = PalParkArea.objects.get(pk = int(info[1])),
-        rate = int(info[2])
+        base_score = int(info[2]),
+        rate = int(info[3])
       )
     model.save()

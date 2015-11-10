@@ -709,11 +709,29 @@ class Berry(HasName, HasItem, HasNature):
   smoothness = models.IntegerField()
 
 
-class BerryFlavor(HasContestType):
+"""
+Berry Flavors are a bit of a hack because their relationship
+in terms of flavors to contest types is really awkward the
+way it was handled in the veekun data set. Berry Flavor here 
+does not match the csv table. Berry Flavor Map 
+is a table fabricated just to suit this project.
+"""
+class BerryFlavor(HasName, HasContestType):
+  pass
+
+
+class BerryFlavorName(IsName):
+
+  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+
+
+class BerryFlavorMap(models.Model):
 
   berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s")
 
-  flavor = models.IntegerField()
+  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+
+  potency = models.IntegerField()
 
 
 

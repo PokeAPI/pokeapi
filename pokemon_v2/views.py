@@ -86,6 +86,12 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
 
+class BerryFlavorResource(PokeapiCommonViewset):
+
+    queryset = BerryFlavor.objects.all()
+    serializer_class = BerryFlavorDetailSerializer
+    list_serializer_class = BerryFlavorSummarySerializer
+
 
 class CharacteristicResource(PokeapiCommonViewset):
 

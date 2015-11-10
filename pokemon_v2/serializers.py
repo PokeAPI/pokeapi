@@ -30,6 +30,12 @@ class BerryFirmnessSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BerryFirmness
         fields = ('name', 'url')
+
+class BerryFlavorSummarySerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = BerryFlavor
+        fields = ('name', 'url')
         
 class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -305,6 +311,15 @@ class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
 #####################
 #  MAP SERIALIZERS  #
 #####################
+
+class BerryFlavorMapSerializer(serializers.ModelSerializer):
+
+    berry = BerrySummarySerializer()
+    berry_flavor = BerryFlavorSummarySerializer()
+
+    class Meta:
+        model = BerryFlavorMap
+        fields = ('berry', 'berry_flavor', 'potency')
 
 class ItemAttributeMapSerializer(serializers.ModelSerializer):
 
@@ -1178,13 +1193,23 @@ class BerryFirmnessDetailSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'names')
 
 
-class BerryFlavorSerializer(serializers.ModelSerializer):
+class BerryFlavorNameSerializer(serializers.ModelSerializer):
 
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = BerryFlavorName
+        fields = ('name', 'language')
+
+
+class BerryFlavorDetailSerializer(serializers.ModelSerializer):
+
+    names = BerryFlavorNameSerializer(many=True, read_only=True, source="berryflavorname")
     contest_type = ContestTypeSummarySerializer()
 
     class Meta:
         model = BerryFlavor
-        fields = ('flavor', 'contest_type')
+        fields = ('id', 'name', 'contest_type', 'names')
 
 
 class BerryDetailSerializer(serializers.ModelSerializer):
@@ -1193,8 +1218,7 @@ class BerryDetailSerializer(serializers.ModelSerializer):
     nature = NatureSummarySerializer()
     nature_power = serializers.IntegerField(source='natural_gift_power')
     firmness = BerryFirmnessSummarySerializer(source="berry_firmness")
-    # flavors = BerryFlavorSerializer(many=True, read_only=True, source="berryflavor")
-    flavors = serializers.SerializerMethodField('get_flavor_strengths')
+    flavors = serializers.SerializerMethodField('get_berry_flavors')
 
     class Meta:
         model = Berry
@@ -1213,32 +1237,16 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             'flavors'
         )
 
-    def get_flavor_strengths(self, obj):
+    def get_berry_flavors(self, obj):
 
-        """
-        I'm not super proud of how this is being done but the data for berry
-        flavors and how they map to contest types is very wonky in my opinion.
-        Something worth suggesting a change for in veekun's data set.
-        Shoot me.
-        """
+        flavor_map_objects = BerryFlavorMap.objects.filter(berry=obj)
+        flavor_maps = BerryFlavorMapSerializer(flavor_map_objects, many=True, context=self.context).data
+        flavors = []
 
-        flavor_objects = BerryFlavor.objects.filter(berry=obj)
+        for map in flavor_maps:
+            del map['berry']
+            flavors.append(map)
 
-        flavors = OrderedDict()
-
-        for flavor_obj in flavor_objects:
-
-            contest_type_obj = ContestType.objects.get(pk=flavor_obj.contest_type.id)
-            contest_type = ContestTypeDetailSerializer(contest_type_obj, context=self.context).data
-            flavor =  BerryFlavorSerializer(flavor_obj, context=self.context).data
-
-            for contest_type_name in contest_type['names']:
-                if contest_type_name['language']['name'] == 'en':
-
-                    dict = flavors[contest_type['names'][0]['flavor'].lower()] = OrderedDict()
-                    dict['strength'] = flavor['flavor']
-                    dict['contest_type'] = flavor['contest_type']
-            
         return flavors
 
 

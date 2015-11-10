@@ -1225,19 +1225,41 @@ class BerryDetailSerializer(serializers.ModelSerializer):
         flavor_objects = BerryFlavor.objects.filter(berry=obj)
 
         flavors = OrderedDict()
+        flavors['spicy'] = OrderedDict()
+        flavors['dry'] = OrderedDict()
+        flavors['sweet'] = OrderedDict()
+        flavors['bitter'] = OrderedDict()
+        flavors['sour'] = OrderedDict()
 
         for flavor_obj in flavor_objects:
 
             contest_type_obj = ContestType.objects.get(pk=flavor_obj.contest_type.id)
             contest_type = ContestTypeDetailSerializer(contest_type_obj, context=self.context).data
             flavor =  BerryFlavorSerializer(flavor_obj, context=self.context).data
+            name = contest_type['name']
 
-            for contest_type_name in contest_type['names']:
-                if contest_type_name['language']['name'] == 'en':
+            if name == 'cool':
+                flavors['spicy']['strength'] = flavor['flavor']
+                flavors['spicy']['contest_type'] = flavor['contest_type']
+            elif name == 'beauty':
+                flavors['dry']['strength'] = flavor['flavor']
+                flavors['dry']['contest_type'] = flavor['contest_type']
+            elif name == 'cute':
+                flavors['sweet']['strength'] = flavor['flavor']
+                flavors['sweet']['contest_type'] = flavor['contest_type']
+            elif name == 'smart':
+                flavors['bitter']['strength'] = flavor['flavor']
+                flavors['bitter']['contest_type'] = flavor['contest_type']
+            elif name == 'tough':
+                flavors['sour']['strength'] = flavor['flavor']
+                flavors['sour']['contest_type'] = flavor['contest_type']
 
-                    dict = flavors[contest_type['names'][0]['flavor'].lower()] = OrderedDict()
-                    dict['strength'] = flavor['flavor']
-                    dict['contest_type'] = flavor['contest_type']
+            # for contest_type_name in contest_type['names']:
+            #     if contest_type_name['language']['name'] == 'en':
+
+            #         dict = flavors[contest_type['names'][0]['flavor'].lower()] = OrderedDict()
+            #         dict['strength'] = flavor['flavor']
+            #         dict['contest_type'] = flavor['contest_type']
             
         return flavors
 

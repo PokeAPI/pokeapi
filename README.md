@@ -110,6 +110,20 @@ Heres a list of the data building functions
 - build_pal_parks()
 
 
+## Docker
+
+The application can be built and run as a Docker container for easy deployments
+
+From the root directory of the cloned repo
+```
+docker build -t pokeapi .
+```
+
+Run the container on host port 8000
+```
+docker run -d -p 8000:8000 pokeapi
+```
+
 ## Contributing
 
 All contributions are welcome: bug fixes, data contributions, recommendations.

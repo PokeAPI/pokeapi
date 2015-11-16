@@ -2662,13 +2662,16 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                 
                 entry = OrderedDict()
 
-                evolution_object = PokemonEvolution.objects.get(evolved_species=species['id'])
-                evolution_data = PokemonEvolutionSerializer(evolution_object, context=self.context).data
-
-                print evolution_data
+                many=False
+                try:
+                   evolution_object = PokemonEvolution.objects.get(evolved_species=species['id'])
+                except PokemonEvolution.MultipleObjectsReturned:
+                   evolution_object = PokemonEvolution.objects.filter(evolved_species=species['id'])
+                   many=True
+                
+                evolution_data = PokemonEvolutionSerializer(evolution_object, many=many, context=self.context).data
 
                 current_evolutions.append(entry)
-
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]

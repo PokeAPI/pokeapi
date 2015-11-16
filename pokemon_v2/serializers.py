@@ -330,6 +330,24 @@ class ItemAttributeMapSerializer(serializers.ModelSerializer):
         model = ItemAttributeMap
         fields = ('item', 'attribute',)
 
+class MoveMetaStatChangeSerializer(serializers.ModelSerializer):
+
+    stat = StatSummarySerializer()
+    move = MoveSummarySerializer()
+
+    class Meta:
+        model = MoveMetaStatChange
+        fields = ('change', 'move', 'stat')
+
+class NaturePokeathlonStatSerializer(serializers.ModelSerializer):
+
+    pokeathlon_stat = PokeathlonStatSummarySerializer()
+    nature = NatureSummarySerializer()
+
+    class Meta:
+        model = NaturePokeathlonStat
+        fields = ( 'max_change', 'nature', 'pokeathlon_stat')
+
 class PokemonAbilitySerializer(serializers.ModelSerializer):
 
     pokemon = PokemonSummarySerializer()
@@ -437,10 +455,11 @@ class SuperContestEffectFlavorTextSerializer(serializers.ModelSerializer):
 class SuperContestEffectDetailSerializer(serializers.ModelSerializer):
 
     flavor_text_entries = SuperContestEffectFlavorTextSerializer(many=True, read_only=True, source='supercontesteffectflavortext')
+    moves = MoveSummarySerializer(many=True, read_only=True, source='move')
 
     class Meta:
         model = SuperContestEffect
-        fields = ('id', 'appeal', 'flavor_text_entries')
+        fields = ('id', 'appeal', 'flavor_text_entries', 'moves')
 
 
 class ContestEffectEffectTextSerializer(serializers.ModelSerializer):
@@ -1029,11 +1048,37 @@ class StatDetailSerializer(serializers.ModelSerializer):
 
     names = StatNameSerializer(many=True, read_only=True, source="statname")
     move_damage_class = MoveDamageClassSummarySerializer()
+    characteristics = CharacteristicSummarySerializer(many=True, read_only=True, source="characteristic")
+    affecting_moves = serializers.SerializerMethodField('get_moves_that_affect')
+    affecting_natures = serializers.SerializerMethodField('get_natures_that_affect')
 
     class Meta:
         model = Stat
-        fields = ('id', 'name', 'game_index', 'is_battle_only', 'move_damage_class', 'names')
+        fields = ('id', 'name', 'game_index', 'is_battle_only', 'affecting_moves', 'affecting_natures', 'characteristics', 'move_damage_class', 'names')
 
+    def get_moves_that_affect(self, obj):
+
+        stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
+        stat_changes = MoveMetaStatChangeSerializer(stat_change_objects, many=True, context=self.context).data
+        changes = OrderedDict([('increase', []),('decrease', [])])
+
+        for change in stat_changes:
+            del change['stat']
+            if change['change'] > 0:
+                changes['increase'].append(change)
+            else:
+                changes['decrease'].append(change)
+
+        return changes
+
+    def get_natures_that_affect(self, obj):
+
+        increase_objects = Nature.objects.filter(increased_stat=obj)
+        increases = NatureSummarySerializer(increase_objects, many=True, context=self.context).data
+        decrease_objects = Nature.objects.filter(decreased_stat=obj)
+        decreases = NatureSummarySerializer(decrease_objects, many=True, context=self.context).data
+
+        return OrderedDict([('increase', increases),('decrease', decreases)])
 
 
 #############################
@@ -1296,14 +1341,6 @@ class NatureBattleStylePreferenceSerializer(serializers.ModelSerializer):
         fields = ( 'low_hp_preference', 'high_hp_preference', 'move_battle_style',)
 
 
-class NaturePokeathlonStatSerializer(serializers.ModelSerializer):
-
-    pokeathlon_stat = PokeathlonStatSummarySerializer()
-
-    class Meta:
-        model = NaturePokeathlonStat
-        fields = ( 'max_change', 'pokeathlon_stat',)
-
 
 class NatureNameSerializer(serializers.ModelSerializer):
 
@@ -1324,13 +1361,22 @@ class NatureDetailSerializer(serializers.ModelSerializer):
     likes_flavor = BerryFlavorSummarySerializer()
     hates_flavor = BerryFlavorSummarySerializer()
     berries = BerrySummarySerializer(many=True, read_only=True, source="berry")
-    pokeathlon_stat_changes = NaturePokeathlonStatSerializer(many=True, read_only=True, source="naturepokeathlonstat")
+    pokeathlon_stat_changes = serializers.SerializerMethodField('get_pokeathlon_stats')
     move_battle_style_preferences = NatureBattleStylePreferenceSerializer(many=True, read_only=True, source="naturebattlestylepreference")
 
     class Meta:
         model = Nature
         fields = ('id', 'name', 'decreased_stat', 'increased_stat', 'likes_flavor', 'hates_flavor', 'berries', 'pokeathlon_stat_changes', 'move_battle_style_preferences', 'names')
 
+    def get_pokeathlon_stats(self, obj):
+
+        pokeathlon_stat_objects = NaturePokeathlonStat.objects.filter(nature=obj)
+        pokeathlon_stats = NaturePokeathlonStatSerializer(pokeathlon_stat_objects, many=True, context=self.context).data
+
+        for stat in pokeathlon_stats:
+            del stat['nature']
+
+        return pokeathlon_stats
 
 
 #######################
@@ -1496,10 +1542,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     move_damage_class = MoveDamageClassSummarySerializer()
     damage_relations = serializers.SerializerMethodField('get_type_relationships')
     pokemon = serializers.SerializerMethodField('get_type_pokemon')
+    moves = MoveSummarySerializer(many=True, read_only=True, source="move")
 
     class Meta:
         model = Type
-        fields = ('id', 'name', 'move_damage_class', 'generation', 'names', 'game_indices', 'damage_relations')
+        fields = ('id', 'name', 'damage_relations', 'game_indices', 'generation', 'move_damage_class', 'names',  'pokemon', 'moves')
 
     def get_type_relationships(self, obj):
 
@@ -1691,15 +1738,6 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
         return moves
 
 
-class MoveMetaStatChangeSerializer(serializers.ModelSerializer):
-
-    stat = StatSummarySerializer()
-
-    class Meta:
-        model = MoveMetaStatChange
-        fields = ('change', 'stat')
-
-
 class MoveMetaSerializer(serializers.ModelSerializer):
 
     ailment = MoveMetaAilmentSummarySerializer(source="move_meta_ailment")
@@ -1831,7 +1869,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     effect_entries = serializers.SerializerMethodField('get_effect_text')
     effect_chance = serializers.IntegerField(source="move_effect_chance")
     contest_combos = serializers.SerializerMethodField('get_combos')
-    stat_changes = MoveMetaStatChangeSerializer(many=True, read_only=True, source="movemetastatchange")
+    stat_changes = serializers.SerializerMethodField('get_move_stat_change')
     super_contest_effect = SuperContestEffectSummarySerializer()
     past_values = MoveChangeSerializer(many=True, read_only=True, source="movechange")
     effect_change = serializers.SerializerMethodField('get_effect_change_text')
@@ -1922,6 +1960,16 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         data = MoveEffectChangeSerializer(effect_changes, many=True, context=self.context).data
 
         return data
+
+    def get_move_stat_change(self, obj):
+
+        stat_change_objects = MoveMetaStatChange.objects.filter(move=obj)
+        stat_changes = MoveMetaStatChangeSerializer(stat_change_objects, many=True, context=self.context).data
+
+        for change in stat_changes:
+            del change['move']
+            
+        return stat_changes
 
 
 ##########################
@@ -2662,10 +2710,26 @@ class PokeathlonStatNameSerializer(serializers.HyperlinkedModelSerializer):
 class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
 
     names = PokeathlonStatNameSerializer(many=True, read_only=True, source="pokeathlonstatname")
+    affecting_natures = serializers.SerializerMethodField('get_natures_that_affect')
 
     class Meta:
         model = PokeathlonStat
-        fields = ('id', 'name', 'names')
+        fields = ('id', 'name', 'affecting_natures', 'names')
+
+    def get_natures_that_affect(self, obj):
+
+        stat_change_objects = NaturePokeathlonStat.objects.filter(pokeathlon_stat=obj)
+        stat_changes = NaturePokeathlonStatSerializer(stat_change_objects, many=True, context=self.context).data
+        changes = OrderedDict([('increase', []),('decrease', [])])
+
+        for change in stat_changes:
+            del change['pokeathlon_stat']
+            if change['max_change'] > 0:
+                changes['increase'].append(change)
+            else:
+                changes['decrease'].append(change)
+
+        return changes
 
 
 

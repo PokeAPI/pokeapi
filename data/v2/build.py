@@ -538,16 +538,16 @@ for index, info in enumerate(data):
     model.save()
 
 
-clearTable(ItemFlingEffectDescription)
+clearTable(ItemFlingEffectEffectText)
 data = loadData('item_fling_effect_prose.csv')
 
 for index, info in enumerate(data):
   if index > 0:
 
-    model = ItemFlingEffectDescription (
+    model = ItemFlingEffectEffectText (
         item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
-        description = info[2]
+        effect = info[2]
       )
     model.save()
 
@@ -766,6 +766,102 @@ for index, info in enumerate(data):
 
 
 
+#############
+#  CONTEST  #
+#############
+
+clearTable(ContestType)
+data = loadData('contest_types.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestType (
+        id = int(info[0]),
+        name = info[1]
+      )
+    model.save()
+
+
+clearTable(ContestTypeName)
+data = loadData('contest_type_names.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestTypeName (
+        contest_type = ContestType.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2],
+        flavor = info[3],
+        color = info[4]
+      )
+    model.save()
+
+
+clearTable(ContestEffect)
+data = loadData('contest_effects.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestEffect (
+        id = int(info[0]),
+        appeal = int(info[1]),
+        jam = int(info[2])
+      )
+    model.save()
+
+
+clearTable(ContestEffectEffectText)
+data = loadData('contest_effect_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestEffectEffectText (
+        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        effect = info[3]
+      )
+    model.save()
+
+    model = ContestEffectFlavorText (
+        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        flavor_text = info[2]
+      )
+    model.save()
+
+
+clearTable(SuperContestEffect)
+data = loadData('super_contest_effects.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = SuperContestEffect (
+        id = int(info[0]),
+        appeal = int(info[1])
+      )
+    model.save()
+
+
+clearTable(SuperContestEffectFlavorText)
+data = loadData('super_contest_effect_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = SuperContestEffectFlavorText (
+        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        flavor_text = info[2]
+      )
+    model.save()
+
+
+
 ###########
 #  MOVES  #
 ###########
@@ -934,11 +1030,11 @@ for index, info in enumerate(data):
 
         move_effect_chance = int(info[11]) if info[11] != '' else None,
 
-        contest_type_id = int(info[12]) if info[12] != '' else None,
+        contest_type = ContestType.objects.get(pk = int(info[12])) if info[12] != '' else None,
 
-        contest_effect_id = int(info[13]) if info[13] != '' else None,
+        contest_effect = ContestEffect.objects.get(pk = int(info[13])) if info[13] != '' else None,
 
-        super_contest_effect_id = int(info[14]) if info[14] != '' else None
+        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[14])) if info[14] != '' else None
       )
     model.save()
 
@@ -1164,75 +1260,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-
-#############
-#  CONTEST  #
-#############
-
-clearTable(ContestType)
-data = loadData('contest_types.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestType (
-        id = int(info[0]),
-        name = info[1]
-      )
-    model.save()
-
-
-clearTable(ContestTypeName)
-data = loadData('contest_type_names.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestTypeName (
-        contest_type = ContestType.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2],
-        flavor = info[3],
-        color = info[4]
-      )
-    model.save()
-
-
-clearTable(ContestEffect)
-data = loadData('contest_effects.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestEffect (
-        id = int(info[0]),
-        appeal = int(info[1]),
-        jam = int(info[2])
-      )
-    model.save()
-
-
-clearTable(ContestEffectEffectText)
-data = loadData('contest_effect_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestEffectEffectText (
-        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        effect = info[3]
-      )
-    model.save()
-
-    model = ContestEffectFlavorText (
-        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        flavor_text = info[2]
-      )
-    model.save()
-
-
 clearTable(ContestCombo)
 data = loadData('contest_combos.csv')
 
@@ -1245,34 +1272,7 @@ for index, info in enumerate(data):
       )
     model.save()
 
-
-clearTable(SuperContestEffect)
-data = loadData('super_contest_effects.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = SuperContestEffect (
-        id = int(info[0]),
-        appeal = int(info[1])
-      )
-    model.save()
-
-
-clearTable(SuperContestEffectFlavorText)
-data = loadData('super_contest_effect_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = SuperContestEffectFlavorText (
-        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        flavor_text = info[2]
-      )
-    model.save()
-
-
+    
 clearTable(SuperContestCombo)
 data = loadData('super_contest_combos.csv')
 
@@ -1343,18 +1343,51 @@ for index, info in enumerate(data):
 
 
 clearTable(BerryFlavor)
-data = loadData('berry_flavors.csv')
+data = loadData('contest_types.csv') #this is not an error
 
 for index, info in enumerate(data):
   if index > 0:
 
+    # get the english name for this contest type
+    contest_type_name = ContestTypeName.objects.get(contest_type_id=int(info[0]), language_id=9)
+
     model = BerryFlavor (
-        berry = Berry.objects.get(pk = int(info[0])),
-        contest_type = ContestType.objects.get(pk = int(info[1])),
-        flavor = int(info[2])
+
+        id = int(info[0]),
+        name = contest_type_name.flavor.lower(),
+        contest_type = ContestType.objects.get(pk = int(info[0]))
       )
     model.save()
 
+
+clearTable(BerryFlavorName)
+data = loadData('contest_type_names.csv') #this is not an error
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = BerryFlavorName (
+
+        berry_flavor = BerryFlavor.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[3]
+      )
+    model.save()
+
+
+clearTable(BerryFlavorMap)
+data = loadData('berry_flavors.csv') #this is not an error
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = BerryFlavorMap (
+
+        berry = Berry.objects.get(pk = int(info[0])),
+        berry_flavor = BerryFlavor.objects.get(pk = int(info[1])),
+        potency = int(info[2])
+      )
+    model.save()
 
 
 ############
@@ -1367,13 +1400,26 @@ data = loadData('natures.csv')
 for index, info in enumerate(data):
   if index > 0:
 
+    decreased_stat = None
+    increased_stat = None
+    hates_flavor = None
+    likes_flavor = None
+
+    if (info[2] != info[3]):
+      decreased_stat = Stat.objects.get(pk = int(info[2]))
+      increased_stat = Stat.objects.get(pk = int(info[3]))
+
+    if (info[4] != info[5]):
+      hates_flavor = BerryFlavor.objects.get(pk = int(info[4]))
+      likes_flavor = BerryFlavor.objects.get(pk = int(info[5]))
+
     nature = Nature (
         id = int(info[0]),
         name = info[1],
-        decreased_stat = Stat.objects.get(pk = int(info[2])),
-        increased_stat = Stat.objects.get(pk = int(info[3])),
-        hates_flavor = BerryFlavor.objects.get(pk = int(info[4])),
-        likes_flavor = BerryFlavor.objects.get(pk = int(info[5])),
+        decreased_stat = decreased_stat,
+        increased_stat = increased_stat,
+        hates_flavor = hates_flavor,
+        likes_flavor = likes_flavor,
         game_index = info[6]
       )
     nature.save()

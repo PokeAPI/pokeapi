@@ -6,7 +6,7 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    #replaces = [(b'pokemon_v2', '0001_squashed_0011_auto_20151108_0352'), (b'pokemon_v2', '0002_auto_20151110_1756'), (b'pokemon_v2', '0003_berryflavormap'), (b'pokemon_v2', '0004_auto_20151111_0531'), (b'pokemon_v2', '0005_auto_20151111_0541'), (b'pokemon_v2', '0006_auto_20151111_2216'), (b'pokemon_v2', '0007_auto_20151113_1414'), (b'pokemon_v2', '0008_auto_20151114_0241'), (b'pokemon_v2', '0009_auto_20151114_0433'), (b'pokemon_v2', '0010_auto_20151116_0219'), (b'pokemon_v2', '0011_auto_20151116_0230'), (b'pokemon_v2', '0012_auto_20151116_0317')]
+    # replaces = [(b'pokemon_v2', '0001_squashed_0012_auto_20151116_0317'), (b'pokemon_v2', '0002_auto_20151119_0338'), (b'pokemon_v2', '0003_auto_20151119_1409')]
 
     dependencies = [
     ]
@@ -3080,7 +3080,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('item_fling_effect', models.ForeignKey(related_name='itemflingeffecteffecttext', blank=True, to='pokemon_v2.ItemFlingEffect', null=True)),
                 ('language', models.ForeignKey(related_name='itemflingeffecteffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('effect', models.CharField(default='string', max_length=4000)),
+                ('effect', models.CharField(max_length=4000)),
             ],
             options={
                 'abstract': False,
@@ -3145,6 +3145,22 @@ class Migration(migrations.Migration):
             model_name='generation',
             name='region',
             field=models.OneToOneField(related_name='generation', null=True, blank=True, to='pokemon_v2.Region'),
+            preserve_default=True,
+        ),
+        migrations.RemoveField(
+            model_name='berry',
+            name='nature',
+        ),
+        migrations.AddField(
+            model_name='berry',
+            name='natural_gift_type',
+            field=models.ForeignKey(related_name='berry', blank=True, to='pokemon_v2.Type', null=True),
+            preserve_default=True,
+        ),
+        migrations.AlterField(
+            model_name='itemflingeffect',
+            name='name',
+            field=models.CharField(max_length=100),
             preserve_default=True,
         ),
     ]

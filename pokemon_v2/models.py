@@ -707,11 +707,13 @@ class BerryFirmnessName(IsName):
   berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
 
-class Berry(HasName, HasItem, HasNature):
+class Berry(HasName, HasItem):
 
   berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
   natural_gift_power = models.IntegerField()
+
+  natural_gift_type = models.ForeignKey(Type, blank=True, null=True, related_name="%(class)s")
 
   size = models.IntegerField()
 

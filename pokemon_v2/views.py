@@ -66,13 +66,6 @@ class AbilityResource(PokeapiCommonViewset):
     list_serializer_class = AbilitySummarySerializer
 
 
-class AbilityChangeResource(PokeapiCommonViewset):
-
-    queryset = AbilityChange.objects.all()
-    serializer_class = AbilityChangeSerializer
-    list_serializer_class = AbilityChangeSerializer
-
-
 class BerryResource(PokeapiCommonViewset):
 
     queryset = Berry.objects.all()

@@ -41,7 +41,7 @@ class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Berry
-        fields = ('url', 'name')
+        fields = ('name', 'url')
 
 class CharacteristicSummarySerializer(serializers.HyperlinkedModelSerializer):
 
@@ -319,7 +319,7 @@ class BerryFlavorMapSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BerryFlavorMap
-        fields = ('berry', 'flavor', 'potency')
+        fields = ('potency', 'berry', 'flavor')
 
 class ItemAttributeMapSerializer(serializers.ModelSerializer):
 
@@ -356,6 +356,15 @@ class PokemonAbilitySerializer(serializers.ModelSerializer):
     class Meta:
         model = PokemonAbility
         fields = ('is_hidden', 'slot', 'ability', 'pokemon')
+
+class PokemonDexEntrySerializer(serializers.ModelSerializer):
+
+    entry_number = serializers.IntegerField(source="pokedex_number")
+    pokedex = PokedexSummarySerializer()
+    
+    class Meta:
+        model = PokemonDexNumber
+        fields = ('entry_number', 'pokedex')
 
 class PokemonTypeSerializer(serializers.ModelSerializer):
 
@@ -559,7 +568,6 @@ class RegionDetailSerializer(serializers.ModelSerializer):
     def get_region_version_groups(self, obj):
 
         vg_regions = VersionGroupRegion.objects.filter(region=obj)
-        print vg_regions
         data = VersionGroupRegionSerializer(vg_regions, many=True, context=self.context).data
         groups = []
 
@@ -584,7 +592,7 @@ class GenerationNameSerializer(serializers.ModelSerializer):
 
 class GenerationDetailSerializer(serializers.ModelSerializer):
 
-    main_region = RegionSummarySerializer()
+    main_region = RegionSummarySerializer(source='region')
     names = GenerationNameSerializer(many=True, read_only=True, source="generationname")
     abilities = AbilitySummarySerializer(many=True, read_only=True, source="ability")
     moves = MoveSummarySerializer(many=True, read_only=True, source="move")
@@ -613,6 +621,8 @@ class GenderDetailSerializer(serializers.ModelSerializer):
 
     def get_species(self, obj):
 
+        species_objects = []
+
         if obj.name == 'female':
             species_objects = PokemonSpecies.objects.filter(gender_rate__gt=0)
         elif obj.name == 'male':
@@ -636,10 +646,8 @@ class GenderDetailSerializer(serializers.ModelSerializer):
         species_list = []
 
         for evo in evo_objects:
-            print evo.evolved_species
             species = PokemonSpeciesSummarySerializer(evo.evolved_species, context=self.context).data
             species_list.append(species)
-            print species_list
 
         return species_list
 
@@ -669,10 +677,11 @@ class GrowthRateDetailSerializer(serializers.ModelSerializer):
 
     descriptions = GrowthRateDescriptionSerializer(many=True, read_only=True, source="growthratedescription")
     levels = ExperienceSerializer(many=True, read_only=True, source="experience")
+    pokemon_species = PokemonSpeciesSummarySerializer(many=True, read_only=True, source="pokemonspecies")
 
     class Meta:
         model = GrowthRate
-        fields = ('id', 'name', 'formula', 'descriptions', 'levels')
+        fields = ('id', 'name', 'formula', 'descriptions', 'levels', 'pokemon_species')
 
 
 ##########################
@@ -827,8 +836,6 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
         encounter_rates = LocationAreaEncounterRate.objects.filter(location_area=obj).order_by('encounter_method_id')
         method_ids = encounter_rates.values('encounter_method_id').distinct()
         encounter_rate_list = []
-
-        print method_ids
 
         for id in method_ids:
 
@@ -1101,7 +1108,7 @@ class ItemPocketDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ItemPocket
-        fields = ('id', 'name', 'categories', 'items', 'names')
+        fields = ('id', 'name', 'categories', 'categories', 'names')
 
 
 
@@ -1251,7 +1258,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     attributes = serializers.SerializerMethodField("get_item_attributes")
     fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
     held_by_pokemon = serializers.SerializerMethodField(source='get_held_by_pokemon')
-    baby_trigger_for_evolution_chain = serializers.SerializerMethodField(source='get_baby_trigger_for_evolution_chain')
+    baby_trigger_for = serializers.SerializerMethodField(source='get_baby_trigger_for')
 
     class Meta:
         model = Item
@@ -1268,7 +1275,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'game_indices',
             'names',
             'held_by_pokemon',
-            'baby_trigger_for_evolution_chain'
+            'baby_trigger_for'
         )
 
     def get_item_attributes(self, obj):
@@ -1317,7 +1324,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
-    def get_baby_trigger_for_evolution_chain(self, obj):
+    def get_baby_trigger_for(self, obj):
 
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)
@@ -1352,8 +1359,6 @@ class NatureNameSerializer(serializers.ModelSerializer):
 
 
 class NatureDetailSerializer(serializers.ModelSerializer):
-
-    # NEED FLAVORS
 
     names = NatureNameSerializer(many=True, read_only=True, source="naturename")
     decreased_stat = StatSummarySerializer()
@@ -1399,7 +1404,7 @@ class BerryFirmnessDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BerryFirmness
-        fields = ('id', 'name', 'names', 'berries')
+        fields = ('id', 'name', 'berries', 'names')
 
 
 class BerryFlavorNameSerializer(serializers.ModelSerializer):
@@ -1415,17 +1420,27 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
 
     names = BerryFlavorNameSerializer(many=True, read_only=True, source="berryflavorname")
     contest_type = ContestTypeSummarySerializer()
+    berries = serializers.SerializerMethodField('get_berries_with_flavor')
 
     class Meta:
         model = BerryFlavor
-        fields = ('id', 'name', 'contest_type', 'names')
+        fields = ('id', 'name', 'berries', 'contest_type', 'names')
+
+    def get_berries_with_flavor(self, obj):
+
+        flavor_map_objects = BerryFlavorMap.objects.filter(berry_flavor=obj, potency__gt=0).order_by('potency')
+        flavor_maps = BerryFlavorMapSerializer(flavor_map_objects, many=True, context=self.context).data
+
+        for map in flavor_maps:
+            del map['flavor']
+
+        return flavor_maps
 
 
 class BerryDetailSerializer(serializers.ModelSerializer):
 
     item = ItemSummarySerializer()
-    nature = NatureSummarySerializer()
-    nature_power = serializers.IntegerField(source='natural_gift_power')
+    natural_gift_type = TypeSummarySerializer()
     firmness = BerryFirmnessSummarySerializer(source="berry_firmness")
     flavors = serializers.SerializerMethodField('get_berry_flavors')
 
@@ -1436,14 +1451,14 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             'name',
             'growth_time',
             'max_harvest',
-            'nature_power',
+            'natural_gift_power',
             'size',
             'smoothness',
             'soil_dryness',
             'firmness',
             'flavors',
             'item',
-            'nature',
+            'natural_gift_type',
         )
 
     def get_berry_flavors(self, obj):
@@ -1872,7 +1887,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     stat_changes = serializers.SerializerMethodField('get_move_stat_change')
     super_contest_effect = SuperContestEffectSummarySerializer()
     past_values = MoveChangeSerializer(many=True, read_only=True, source="movechange")
-    effect_change = serializers.SerializerMethodField('get_effect_change_text')
+    effect_changes = serializers.SerializerMethodField('get_effect_change_text')
 
     class Meta:
         model = Move
@@ -1880,6 +1895,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'id', 
             'name',
             'accuracy',
+            'effect_chance',
             'pp', 
             'priority',
             'power',
@@ -1888,8 +1904,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'contest_effect',
             'damage_class',
             'effect_entries',
-            'effect_chance',
-            'effect_change',
+            'effect_changes',
             'generation',
             'meta',
             'names',
@@ -1955,7 +1970,6 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
     def get_effect_change_text(self, obj):
 
-        print obj.move_effect.id
         effect_changes = MoveEffectChange.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectChangeSerializer(effect_changes, many=True, context=self.context).data
 
@@ -2227,35 +2241,31 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     types = serializers.SerializerMethodField('get_pokemon_types')
     forms = PokemonFormSummarySerializer(many=True, read_only=True, source="pokemonform")
     held_items = serializers.SerializerMethodField('get_pokemon_held_items')
-    # location_area_encounters = serializers.SerializerMethodField('get_encounters')
-    location_areas = serializers.SerializerMethodField('get_areas')
+    location_area_encounters = serializers.SerializerMethodField('get_encounters')
 
     class Meta:
         model = Pokemon
         fields = (
             'id',
-            'name', 
-            'order',
-            'is_default', 
-            'height', 
-            'weight', 
+            'name',
             'base_experience',
-            'species',
+            'height',
+            'is_default', 
+            'order',
+            'weight',
             'abilities',
+            'forms',
+            'game_indices',
+            'held_items',
+            'location_area_encounters',
+            'moves',
+            'species',
             'stats',
             'types',
-            'forms',
-            'held_items',
-            'moves',
-            'game_indices',
-            'location_areas'
         )
 
     def get_pokemon_moves(self, obj):
-        # Doin moves a little differently because pokemon
-        # move resources are a beast
 
-        # Get all possible Version Groups and Move Methods for later use
         version_objects = VersionGroup.objects.all()
         version_data = VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data
         method_objects = MoveLearnMethod.objects.all()
@@ -2341,16 +2351,6 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return abilities
 
-    def get_areas(self, obj):
-
-        encounter_objects = Encounter.objects.filter(pokemon_id=obj.id)
-        areas = []
-
-        for encounter in encounter_objects:
-            areas.append(LocationAreaSummarySerializer(encounter.location_area, context=self.context).data)
-
-        return areas
-
     def get_pokemon_types(self, obj):
 
         poke_type_objects = PokemonType.objects.filter(pokemon=obj)
@@ -2362,57 +2362,57 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         return poke_types
 
 
-    # def get_encounters(self, obj):
+    def get_encounters(self, obj):
 
-    #     # get versions for later use
-    #     version_objects = Version.objects.all()
-    #     version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
+        # get versions for later use
+        version_objects = Version.objects.all()
+        version_data = VersionSummarySerializer(version_objects, many=True, context=self.context).data
 
-    #     # all encounters associated with location area
-    #     all_encounters = Encounter.objects.filter(pokemon=obj).order_by('location_area')
-    #     encounters_list = []
+        # all encounters associated with location area
+        all_encounters = Encounter.objects.filter(pokemon=obj).order_by('location_area')
+        encounters_list = []
 
-    #     # break encounters into pokemon groupings
-    #     for area in all_encounters.values('location_area').distinct():
+        # break encounters into pokemon groupings
+        for area in all_encounters.values('location_area').distinct():
 
-    #         location_area_object = LocationArea.objects.get(pk=area['location_area'])
+            location_area_object = LocationArea.objects.get(pk=area['location_area'])
 
-    #         location_area_detail = OrderedDict()
-    #         location_area_detail['location_area'] = LocationAreaSummarySerializer(location_area_object, context=self.context).data
-    #         location_area_detail['version_details'] = []
+            location_area_detail = OrderedDict()
+            location_area_detail['location_area'] = LocationAreaSummarySerializer(location_area_object, context=self.context).data
+            location_area_detail['version_details'] = []
 
-    #         area_encounters = all_encounters.filter(location_area=area['location_area']).order_by('version')
+            area_encounters = all_encounters.filter(location_area=area['location_area']).order_by('version')
 
-    #         # each pokemon has multiple versions it could be encountered in
-    #         for ver in area_encounters.values('version').distinct():
+            # each pokemon has multiple versions it could be encountered in
+            for ver in area_encounters.values('version').distinct():
 
-    #             version_detail = OrderedDict()
-    #             version_detail['version'] = version_data[ver['version'] - 1]
-    #             version_detail['max_chance'] = 0
-    #             version_detail['encounter_details'] = []
+                version_detail = OrderedDict()
+                version_detail['max_chance'] = 0
+                version_detail['encounter_details'] = []
+                version_detail['version'] = version_data[ver['version'] - 1]
 
-    #             area_data = EncounterDetailSerializer(area_encounters.filter(version=ver['version']), many=True, context=self.context).data
+                area_data = EncounterDetailSerializer(area_encounters.filter(version=ver['version']), many=True, context=self.context).data
 
-    #             # each version has multiple ways a pokemon can be encountered
-    #             for encounter in area_data:
+                # each version has multiple ways a pokemon can be encountered
+                for encounter in area_data:
 
-    #                 slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
-    #                 slot_data = EncounterSlotSerializer(slot, context=self.context).data
-    #                 del encounter['pokemon']
-    #                 del encounter['encounter_slot']
-    #                 del encounter['location_area']
-    #                 del encounter['version']
-    #                 encounter['chance'] = slot_data['chance']
-    #                 version_detail['max_chance'] += slot_data['chance']
-    #                 encounter['method'] = slot_data['encounter_method']
+                    slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
+                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
+                    del encounter['pokemon']
+                    del encounter['encounter_slot']
+                    del encounter['location_area']
+                    del encounter['version']
+                    encounter['chance'] = slot_data['chance']
+                    version_detail['max_chance'] += slot_data['chance']
+                    encounter['method'] = slot_data['encounter_method']
 
-    #                 version_detail['encounter_details'].append(encounter)
+                    version_detail['encounter_details'].append(encounter)
 
-    #             location_area_detail['version_details'].append(version_detail)
+                location_area_detail['version_details'].append(version_detail)
 
-    #         encounters_list.append(location_area_detail)
+            encounters_list.append(location_area_detail)
 
-    #     return encounters_list
+        return encounters_list
 
 
 
@@ -2432,20 +2432,22 @@ class EvolutionTriggerNameSerializer(serializers.HyperlinkedModelSerializer):
 class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
 
     names = EvolutionTriggerNameSerializer(many=True, read_only=True, source="evolutiontriggername")
+    pokemon_species = serializers.SerializerMethodField('get_species')
 
     class Meta:
         model = EvolutionTrigger
-        fields = ('id', 'name', 'names')
+        fields = ('id', 'name', 'names', 'pokemon_species')
 
+    def get_species(self, obj):
 
-class PokemonDexEntrySerializer(serializers.ModelSerializer):
+        evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj);
+        species_list = []
 
-    entry_number = serializers.IntegerField(source="pokedex_number")
-    pokedex = PokedexSummarySerializer()
-    
-    class Meta:
-        model = PokemonDexNumber
-        fields = ('entry_number', 'pokedex')
+        for evo in evo_objects:
+            species = PokemonSpeciesSummarySerializer(evo.evolved_species, context=self.context).data
+            species_list.append(species)
+
+        return species_list
 
 
 class PokemonSpeciesDescriptionSerializer(serializers.ModelSerializer):
@@ -2492,7 +2494,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     varieties = PokemonSummarySerializer(many=True, read_only=True, source="pokemon")
     varieties = serializers.SerializerMethodField('get_pokemon_varieties')
     evolution_chain = EvolutionChainSummarySerializer()
-    pal_park_encounter = serializers.SerializerMethodField('get_encounters')
+    pal_park_encounters = serializers.SerializerMethodField('get_encounters')
 
     class Meta: 
         model = PokemonSpecies
@@ -2517,7 +2519,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             'habitat',
             'generation',
             'names',
-            'pal_park_encounter',
+            'pal_park_encounters',
             'form_descriptions',
             'genera',
             'varieties'
@@ -2577,7 +2579,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
     def get_encounters(self, obj):
 
-        pal_park_objects = PalPark.objects.filter(pal_park_area=obj)
+        pal_park_objects = PalPark.objects.filter(pokemon_species=obj)
         parks = PalParkSerializer(pal_park_objects, many=True, context=self.context).data
         encounters = []
 

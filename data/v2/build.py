@@ -1332,7 +1332,7 @@ for index, info in enumerate(data):
         name = item.name[:item.name.index('-')],
         berry_firmness = BerryFirmness.objects.get(pk = int(info[2])),
         natural_gift_power = int(info[3]),
-        nature = None,
+        natural_gift_type = Type.objects.get(pk = int(info[4])),
         size = int(info[5]),
         max_harvest = int(info[6]),
         growth_time = int(info[7]),
@@ -1423,17 +1423,6 @@ for index, info in enumerate(data):
         game_index = info[6]
       )
     nature.save()
-
-
-#Berry/Nature associations
-data = loadData('berries.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    berry = Berry.objects.get(pk = int(info[0]))
-    berry.nature = Nature.objects.get(pk = int(info[4]))
-    berry.save()
 
 
 clearTable(NatureName)

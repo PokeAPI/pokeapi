@@ -6,8 +6,6 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    # replaces = [(b'pokemon_v2', '0001_squashed_0012_auto_20151116_0317'), (b'pokemon_v2', '0002_auto_20151119_0338'), (b'pokemon_v2', '0003_auto_20151119_1409')]
-
     dependencies = [
     ]
 
@@ -283,13 +281,13 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='nature',
-            name='decreased_stat_id',
+            name='decreased_stat',
             field=models.ForeignKey(related_name='decreased', blank=True, to='pokemon_v2.Stat', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='nature',
-            name='increased_stat_id',
+            name='increased_stat',
             field=models.ForeignKey(related_name='increased', blank=True, to='pokemon_v2.Stat', null=True),
             preserve_default=True,
         ),
@@ -1333,7 +1331,7 @@ class Migration(migrations.Migration):
                 ('is_default', models.BooleanField(default=False)),
                 ('is_battle_only', models.BooleanField(default=False)),
                 ('is_mega_form_order', models.BooleanField(default=False)),
-                ('introduced_in_version_group', models.ForeignKey(blank=True, to='pokemon_v2.VersionGroup', null=True)),
+                ('version_group', models.ForeignKey(blank=True, to='pokemon_v2.VersionGroup', null=True)),
                 ('pokemon', models.ForeignKey(blank=True, to='pokemon_v2.Pokemon', null=True)),
             ],
             options={
@@ -2002,7 +2000,6 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('flavor', models.IntegerField()),
-                ('berry', models.ForeignKey(blank=True, to='pokemon_v2.Berry', null=True)),
             ],
             options={
                 'abstract': False,
@@ -2073,12 +2070,6 @@ class Migration(migrations.Migration):
             model_name='berry',
             name='item',
             field=models.ForeignKey(related_name='berry', blank=True, to='pokemon_v2.Item', null=True),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='berry',
-            name='nature',
-            field=models.ForeignKey(related_name='berry', blank=True, to='pokemon_v2.Nature', null=True),
             preserve_default=True,
         ),
         migrations.RenameField(
@@ -2677,11 +2668,6 @@ class Migration(migrations.Migration):
             old_name='form_identifier',
             new_name='form_name',
         ),
-        migrations.RenameField(
-            model_name='pokemonform',
-            old_name='introduced_in_version_group',
-            new_name='version_group',
-        ),
         migrations.AddField(
             model_name='pokemonmove',
             name='move_learn_method',
@@ -2983,16 +2969,6 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(related_name='characteristic', blank=True, to='pokemon_v2.Stat', null=True),
             preserve_default=True,
         ),
-        migrations.RenameField(
-            model_name='nature',
-            old_name='decreased_stat_id',
-            new_name='decreased_stat',
-        ),
-        migrations.RenameField(
-            model_name='nature',
-            old_name='increased_stat_id',
-            new_name='increased_stat',
-        ),
         migrations.AlterField(
             model_name='pokemonspecies',
             name='pokemon_color',
@@ -3015,12 +2991,6 @@ class Migration(migrations.Migration):
             model_name='pokemonspecies',
             name='pokemon_shape',
             field=models.ForeignKey(blank=True, to='pokemon_v2.PokemonShape', null=True),
-            preserve_default=True,
-        ),
-        migrations.AlterField(
-            model_name='berryflavor',
-            name='berry',
-            field=models.ForeignKey(related_name='berryflavor', blank=True, to='pokemon_v2.Berry', null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -3047,10 +3017,6 @@ class Migration(migrations.Migration):
                 'abstract': False,
             },
             bases=(models.Model,),
-        ),
-        migrations.RemoveField(
-            model_name='berryflavor',
-            name='berry',
         ),
         migrations.RemoveField(
             model_name='berryflavor',
@@ -3146,10 +3112,6 @@ class Migration(migrations.Migration):
             name='region',
             field=models.OneToOneField(related_name='generation', null=True, blank=True, to='pokemon_v2.Region'),
             preserve_default=True,
-        ),
-        migrations.RemoveField(
-            model_name='berry',
-            name='nature',
         ),
         migrations.AddField(
             model_name='berry',

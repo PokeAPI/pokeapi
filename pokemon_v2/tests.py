@@ -2364,7 +2364,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['effect_entries'][0]['language']['name'], ability_effect_text.language.name)
         self.assertEqual(response.data['effect_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, ability_effect_text.language.pk))
         # flavor text params
-        self.assertEqual(response.data['flavor_text_entries'][0]['text'], ability_flavor_text.flavor_text)
+        self.assertEqual(response.data['flavor_text_entries'][0]['flavor_text'], ability_flavor_text.flavor_text)
         self.assertEqual(response.data['flavor_text_entries'][0]['version_group']['name'], ability_flavor_text.version_group.name)
         self.assertEqual(response.data['flavor_text_entries'][0]['language']['name'], ability_flavor_text.language.name)
         self.assertEqual(response.data['flavor_text_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, ability_flavor_text.language.pk))
@@ -2372,11 +2372,11 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['generation']['name'], ability.generation.name)
         self.assertEqual(response.data['generation']['url'], '{}{}/generation/{}/'.format(test_host, api_v2, ability.generation.pk))
         # change params
-        self.assertEqual(response.data['changes'][0]['version_group']['name'], ability_change.version_group.name)
-        self.assertEqual(response.data['changes'][0]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, ability_change.version_group.pk))
-        self.assertEqual(response.data['changes'][0]['effect_entries'][0]['effect'], ability_change_effect_text.effect)
-        self.assertEqual(response.data['changes'][0]['effect_entries'][0]['language']['name'], ability_change_effect_text.language.name)
-        self.assertEqual(response.data['changes'][0]['effect_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, ability_change_effect_text.language.pk))
+        self.assertEqual(response.data['effect_changes'][0]['version_group']['name'], ability_change.version_group.name)
+        self.assertEqual(response.data['effect_changes'][0]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, ability_change.version_group.pk))
+        self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['effect'], ability_change_effect_text.effect)
+        self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['language']['name'], ability_change_effect_text.language.name)
+        self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, ability_change_effect_text.language.pk))
         # pokemon params
         self.assertEqual(response.data['pokemon'][0]['is_hidden'], pokemon_ability.is_hidden)
         self.assertEqual(response.data['pokemon'][0]['slot'], pokemon_ability.slot)

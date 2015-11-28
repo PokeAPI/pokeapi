@@ -964,13 +964,13 @@ class AbilityEffectTextSerializer(serializers.ModelSerializer):
 
 class AbilityFlavorTextSerializer(serializers.ModelSerializer):
 
-    text = serializers.CharField(source="flavor_text")
+    flavor_text = serializers.CharField()
     language = LanguageSummarySerializer()
     version_group = VersionGroupSummarySerializer()
 
     class Meta:
         model = AbilityFlavorText
-        fields = ('text', 'version_group', 'language')
+        fields = ('flavor_text', 'language', 'version_group')
 
 
 class AbilityChangeEffectTextSerializer(serializers.ModelSerializer):
@@ -1005,9 +1005,10 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
 
     effect_entries = AbilityEffectTextSerializer(many=True, read_only=True, source="abilityeffecttext")
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
+    # flavor_text_entries = serializers.SerializerMethodField('get_flavor_text')
     names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
     generation = GenerationSummarySerializer()
-    changes = AbilityChangeSerializer(many=True, read_only=True, source="abilitychange")
+    effect_changes = AbilityChangeSerializer(many=True, read_only=True, source="abilitychange")
     pokemon = serializers.SerializerMethodField('get_ability_pokemon')
 
     class Meta:
@@ -1018,10 +1019,10 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             'is_main_series',
             'generation',
             'names',
-            'effect_entries', 
+            'effect_entries',
+            'effect_changes',
             'flavor_text_entries',
             'pokemon',
-            'changes'
         )
 
     def get_ability_pokemon(self, obj):
@@ -1035,6 +1036,28 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             pokemon.append(poke)
 
         return pokemon
+
+    # def get_flavor_text(self, obj):
+
+    #     version_objects = VersionGroup.objects.all()
+    #     version_data = VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data
+
+    #     flavor_texts = AbilityFlavorText.objects.filter(ability=obj)
+    #     group_ids = flavor_texts.values('flavor').distinct()
+    #     entries = []
+
+    #     for group_id in group_ids:
+    #         id = group_id['version_group']
+    #         texts = flavor_texts.filter(version_group=id)
+
+    #         detail = OrderedDict()
+    #         detail['version_group'] = version_data[id-1]
+    #         detail['entries'] = AbilityFlavorTextSerializer(texts, many=True, context=self.context).data
+    #         entries.append(detail)
+
+    #     return entries
+
+
 
 
 
@@ -2677,7 +2700,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]
-            if evolution_data: entry['evolution_details'] = evolution_data
+            entry['evolution_details'] = evolution_data or None
             entry['evolves_to'] = []
 
             # Keep track of previous entries for complex chaining

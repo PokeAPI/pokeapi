@@ -1,39 +1,39 @@
 # Pokeapi V2 API Reference
 
-## APIs and Responses
+
 
 ### Abilities
 ---
-```
-api/v2/ability/{id or name}
-```
+GET `api/v2/ability/{id or name}`
+
+Abilities provide passive effects for pokemon in battle or overworld. Pokemon can have only one ability at a time.
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id                  | The identifier for this ability resource | integer
-name                | The name for this ability resource | string
-is_main_series      | Whether or not this ability originated in the main series of the video games | boolean
-generation          | The generation this ability originated in | APIResource
-names               | The name of this ability listed in different languages | [Name]
-effect_entries      | The effect of this ability listed in different languages | [VerboseEffect]
-effect_changes      | A list of changes in the effect of this ability across version groups | [AbilityEffectChange]
-flavor_text_entries | The flavor text of this ability listed in different languages | [VersionSpecificFlavorText] TODO
-pokemon             | A list of pokemon this ability might belong to | [AbilityPokemonMap]
+id                  | The identifier for this ability resource                                                                                                 | integer
+name                | The name for this ability resource                                                                                                       | string
+is_main_series      | Whether or not this ability originated in the main series of the video games                                                             | boolean
+generation          | The generation this ability originated in                                                                                                | APIResource
+names               | The name of this ability listed in different languages                                                                                   | [[Name](#name)]
+effect_entries      | The effect of this ability listed in different languages                                                                                 | [VerboseEffect]
+effect_changes      | Some abilities effects have changed across different version groups of the games. This is a list of those changes in different languages | [[AbilityEffectChange](#abilityeffectchange)]
+flavor_text_entries | The flavor text of this ability listed in different languages                                                                            | [VersionSpecificFlavorText] TODO
+pokemon             | A list of pokemon that could potentially have this ability                                                                               | [AbilityPokemonMap]
 
 #### AbilityEffectChange
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-effect_entries | The previous effect of this ability listed in different languages | [Effect]
+effect_entries | The previous effect of this ability listed in different languages         | [Effect]
 version_group  | The version group in which the previous effect of this ability originated | APIReference
 
 #### AbilityPokemonMap
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-is_hidden | Whether or not this a hidden ability for the referenced pokemon | boolean
+is_hidden | Whether or not this a hidden ability for the referenced pokemon                                                                                          | boolean
 slot      | Pokemon have 3 ability 'slots' which hold references to possible abilities they could have. This is the slot of this ability for the referenced pokemon. | integer
-pokemon   | The pokemon this ability could belong to | APIReference
+pokemon   | The pokemon this ability could belong to                                                                                                                 | APIReference
 
 
 

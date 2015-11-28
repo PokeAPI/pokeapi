@@ -13,21 +13,21 @@ Name | Description | Data Type
 id                  | The identifier for this ability resource                                                                                                 | integer
 name                | The name for this ability resource                                                                                                       | string
 is_main_series      | Whether or not this ability originated in the main series of the video games                                                             | boolean
-generation          | The generation this ability originated in                                                                                                | APIResource
+generation          | The generation this ability originated in                                                                                                | [APIResource](#apiresource)([Generation](#generation))
 names               | The name of this ability listed in different languages                                                                                   | [[Name](#name)]
-effect_entries      | The effect of this ability listed in different languages                                                                                 | [VerboseEffect]
+effect_entries      | The effect of this ability listed in different languages                                                                                 | [[VerboseEffect](#verboseeffect)]
 effect_changes      | Some abilities effects have changed across different version groups of the games. This is a list of those changes in different languages | [[AbilityEffectChange](#abilityeffectchange)]
 flavor_text_entries | The flavor text of this ability listed in different languages                                                                            | [VersionSpecificFlavorText] TODO
-pokemon             | A list of pokemon that could potentially have this ability                                                                               | [AbilityPokemonMap]
+pokemon             | A list of pokemon that could potentially have this ability                                                                               | [[AbilityPokemonMap](#abilitypokemonmap)]
 
-#### AbilityEffectChange
+##### AbilityEffectChange
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 effect_entries | The previous effect of this ability listed in different languages         | [Effect]
 version_group  | The version group in which the previous effect of this ability originated | APIReference
 
-#### AbilityPokemonMap
+##### AbilityPokemonMap
 
 Name | Description | Data Type
 ---- | ----------- | ---------

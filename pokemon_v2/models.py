@@ -30,6 +30,22 @@ class HasContestType(models.Model):
        abstract = True
 
 
+class HasContestEffect(models.Model):
+
+  contest_effect = models.ForeignKey('ContestEffect', blank=True, null=True, related_name="%(class)s")
+
+  class Meta:
+       abstract = True
+
+
+class HasSuperContestEffect(models.Model):
+
+  super_contest_effect = models.ForeignKey('SuperContestEffect', blank = True, null = True, related_name="%(class)s")
+
+  class Meta:
+       abstract = True
+
+
 class HasDescription(models.Model):
 
   description = models.CharField(max_length=1000, default='')
@@ -264,7 +280,7 @@ class HasOrder(models.Model):
 
 class HasPokeathlonStat(models.Model):
 
-  pokeathlon_stat = models.ForeignKey('PokeathlonStat', blank=True, null=True)
+  pokeathlon_stat = models.ForeignKey('PokeathlonStat', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -321,7 +337,7 @@ class HasMoveLearnMethod(models.Model):
 
 class HasPokemonShape(models.Model):
 
-  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True, )
+  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True, related_name="%(class)s")
 
   class Meta:
        abstract = True
@@ -449,8 +465,9 @@ class LanguageName(IsName):
 #  GENERATION MODELS  #
 #######################
 
-class Generation(HasName, HasRegion):
-  pass
+class Generation(HasName):
+
+  region = models.OneToOneField('Region', blank=True, null=True, related_name="%(class)s")
 
 
 class GenerationName(IsName, HasGeneration):
@@ -492,13 +509,13 @@ class AbilityName(IsName, HasAbility):
   pass
 
 
-class AbilityChange(HasAbility):
+class AbilityChange(HasAbility, HasVersionGroup):
   pass
 
 
 class AbilityChangeEffectText(HasLanguage, HasEffect):
 
-  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True)
+  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True, related_name="%(class)s")
 
 
 
@@ -595,7 +612,7 @@ class ItemFlingEffect(HasName):
   pass
 
 
-class ItemFlingEffectDescription(IsDescription, HasFlingEffect):
+class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
   pass
 
 
@@ -661,14 +678,12 @@ class ContestEffect(models.Model):
   jam = models.IntegerField()
 
 
-class ContestEffectEffectText(HasLanguage, HasEffect):
+class ContestEffectEffectText(HasLanguage, HasEffect, HasContestEffect):
+  pass
 
-  contest_effect = models.ForeignKey(ContestEffect, blank=True, null=True, related_name="%(class)s")
 
-
-class ContestEffectFlavorText(HasLanguage, HasFlavorText):
-
-  contest_effect = models.ForeignKey(ContestEffect, blank=True, null=True, related_name="%(class)s")
+class ContestEffectFlavorText(HasLanguage, HasFlavorText, HasContestEffect):
+  pass
 
 
 class ContestCombo(models.Model):
@@ -692,11 +707,13 @@ class BerryFirmnessName(IsName):
   berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
 
-class Berry(HasName, HasItem, HasNature):
+class Berry(HasName, HasItem):
 
-  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True)
+  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
   natural_gift_power = models.IntegerField()
+
+  natural_gift_type = models.ForeignKey(Type, blank=True, null=True, related_name="%(class)s")
 
   size = models.IntegerField()
 
@@ -709,11 +726,30 @@ class Berry(HasName, HasItem, HasNature):
   smoothness = models.IntegerField()
 
 
-class BerryFlavor(HasContestType):
+"""
+Berry Flavors are a bit of a hack because their relationship
+in terms of flavors to contest types is really awkward the
+way it was handled in the veekun data set. Berry Flavor here 
+does not match the csv table. Berry Flavor Map 
+is a table fabricated just to suit this project.
+"""
+class BerryFlavor(HasName):
+  
+  contest_type = models.OneToOneField('ContestType', blank=True, null=True, related_name="%(class)s")
 
-  berry = models.ForeignKey(Berry, blank=True, null=True)
 
-  flavor = models.IntegerField()
+class BerryFlavorName(IsName):
+
+  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+
+
+class BerryFlavorMap(models.Model):
+
+  berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s")
+
+  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+
+  potency = models.IntegerField()
 
 
 
@@ -759,7 +795,7 @@ class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
 
 class NatureBattleStylePreference(HasNature):
 
-  move_battle_style_id = models.IntegerField()
+  move_battle_style = models.ForeignKey('MoveBattleStyle', blank = True, null = True, related_name="%(class)s")
 
   low_hp_preference = models.IntegerField()
 
@@ -840,7 +876,7 @@ class EncounterConditionValue(HasEncounterCondition, HasName):
 
 class EncounterConditionValueName(IsName):
 
-  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True)
+  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True, related_name="%(class)s")
 
 
 class EncounterConditionValueMap(models.Model):
@@ -855,7 +891,7 @@ class EncounterConditionValueMap(models.Model):
 #  MOVE MODELS  #
 #################
 
-class Move(HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect, HasMoveTarget):
+class Move(HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect, HasMoveTarget, HasContestType, HasContestEffect, HasSuperContestEffect):
 
   power = models.IntegerField(blank = True, null = True)
 
@@ -867,11 +903,6 @@ class Move(HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect, H
 
   move_effect_chance = models.IntegerField(blank = True, null = True)
 
-  contest_type_id = models.IntegerField(blank = True, null = True)
-
-  contest_effect_id = models.IntegerField(blank = True, null = True)
-
-  super_contest_effect_id = models.IntegerField(blank = True, null = True)
 
 
 class MoveName(HasMove, IsName):
@@ -919,7 +950,7 @@ class MoveBattleStyle(HasName):
 
 class MoveBattleStyleName(IsName):
 
-  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True)
+  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True, related_name="%(class)s")
 
 
 
@@ -941,7 +972,7 @@ class MoveEffectChange(HasMoveEffect, HasVersionGroup):
 
 class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 
-  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True)
+  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True, related_name="%(class)s")
 
 
 
@@ -1092,12 +1123,12 @@ class PalParkArea(HasName):
 
 class PalParkAreaName(IsName):
 
-  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True)
+  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True, related_name="%(class)s")
 
 
 class PalPark(HasPokemonSpecies):
 
-  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True)
+  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True, related_name="%(class)s")
 
   base_score = models.IntegerField(blank = True, null = True)
 
@@ -1114,9 +1145,8 @@ class SuperContestEffect(models.Model):
   appeal = models.IntegerField()
 
 
-class SuperContestEffectFlavorText(IsFlavorText):
-
-  super_contest_effect = models.ForeignKey(SuperContestEffect, blank = True, null = True)
+class SuperContestEffectFlavorText(IsFlavorText, HasSuperContestEffect):
+  pass
 
 
 class SuperContestCombo(models.Model):
@@ -1178,7 +1208,7 @@ class PokemonSpecies(HasName, HasGeneration, HasPokemonColor,
 
   evolution_chain = models.ForeignKey(EvolutionChain, blank=True, null=True)
 
-  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True)
+  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True, related_name="%(class)s")
 
   gender_rate = models.IntegerField()
 

@@ -308,10 +308,9 @@ for index, info in enumerate(data):
 
 
 
-
-###############
-#  ABILITIES  #
-###############
+# ###############
+# #  ABILITIES  #
+# ###############
 
 clearTable(Ability)
 data = loadData('abilities.csv')
@@ -342,6 +341,20 @@ for index, info in enumerate(data):
     abilityName.save()
 
 
+clearTable(AbilityChange)
+data = loadData('ability_changelog.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    abilityName = AbilityChange (
+        id = int(info[0]),
+        ability = Ability.objects.get(pk = int(info[1])),
+        version_group = VersionGroup.objects.get(pk = int(info[2]))
+      )
+    abilityName.save()
+
+
 clearTable(AbilityEffectText)
 data = loadData('ability_prose.csv')
 
@@ -355,6 +368,20 @@ for index, info in enumerate(data):
         effect = info[3]
       )
     abilityDesc.save()
+
+
+clearTable(AbilityChangeEffectText)
+data = loadData('ability_changelog_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    abilityChangeEffectText = AbilityChangeEffectText (
+        ability_change = AbilityChange.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        effect = info[2]
+      )
+    abilityChangeEffectText.save()
 
 
 clearTable(AbilityFlavorText)
@@ -511,16 +538,16 @@ for index, info in enumerate(data):
     model.save()
 
 
-clearTable(ItemFlingEffectDescription)
+clearTable(ItemFlingEffectEffectText)
 data = loadData('item_fling_effect_prose.csv')
 
 for index, info in enumerate(data):
   if index > 0:
 
-    model = ItemFlingEffectDescription (
+    model = ItemFlingEffectEffectText (
         item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
-        description = info[2]
+        effect = info[2]
       )
     model.save()
 
@@ -739,6 +766,102 @@ for index, info in enumerate(data):
 
 
 
+#############
+#  CONTEST  #
+#############
+
+clearTable(ContestType)
+data = loadData('contest_types.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestType (
+        id = int(info[0]),
+        name = info[1]
+      )
+    model.save()
+
+
+clearTable(ContestTypeName)
+data = loadData('contest_type_names.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestTypeName (
+        contest_type = ContestType.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[2],
+        flavor = info[3],
+        color = info[4]
+      )
+    model.save()
+
+
+clearTable(ContestEffect)
+data = loadData('contest_effects.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestEffect (
+        id = int(info[0]),
+        appeal = int(info[1]),
+        jam = int(info[2])
+      )
+    model.save()
+
+
+clearTable(ContestEffectEffectText)
+data = loadData('contest_effect_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = ContestEffectEffectText (
+        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        effect = info[3]
+      )
+    model.save()
+
+    model = ContestEffectFlavorText (
+        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        flavor_text = info[2]
+      )
+    model.save()
+
+
+clearTable(SuperContestEffect)
+data = loadData('super_contest_effects.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = SuperContestEffect (
+        id = int(info[0]),
+        appeal = int(info[1])
+      )
+    model.save()
+
+
+clearTable(SuperContestEffectFlavorText)
+data = loadData('super_contest_effect_prose.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = SuperContestEffectFlavorText (
+        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        flavor_text = info[2]
+      )
+    model.save()
+
+
+
 ###########
 #  MOVES  #
 ###########
@@ -762,7 +885,7 @@ for index, info in enumerate(data):
   if index > 0:
 
     model = MoveEffectEffectText (
-        move_effect = MoveEffect.objects.get(pk = int(info[1])),
+        move_effect = MoveEffect.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
         short_effect = info[2],
         effect = info[3]
@@ -797,6 +920,7 @@ for index, info in enumerate(data):
       )
     model.save()
 
+
 clearTable(MoveLearnMethod)
 data = loadData('pokemon_move_methods.csv')
 
@@ -808,6 +932,19 @@ for index, info in enumerate(data):
         name = info[1]
       )
     model.save()
+
+
+clearTable(VersionGroupMoveLearnMethod)
+data = loadData('version_group_pokemon_move_methods.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    versionGroupMoveLearnMethod = VersionGroupMoveLearnMethod (
+        version_group = VersionGroup.objects.get(pk = int(info[0])),
+        move_learn_method = MoveLearnMethod.objects.get(pk = int(info[1])),
+      )
+    versionGroupMoveLearnMethod.save()
 
 
 clearTable(MoveLearnMethodName)
@@ -893,11 +1030,11 @@ for index, info in enumerate(data):
 
         move_effect_chance = int(info[11]) if info[11] != '' else None,
 
-        contest_type_id = int(info[12]) if info[12] != '' else None,
+        contest_type = ContestType.objects.get(pk = int(info[12])) if info[12] != '' else None,
 
-        contest_effect_id = int(info[13]) if info[13] != '' else None,
+        contest_effect = ContestEffect.objects.get(pk = int(info[13])) if info[13] != '' else None,
 
-        super_contest_effect_id = int(info[14]) if info[14] != '' else None
+        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[14])) if info[14] != '' else None
       )
     model.save()
 
@@ -1123,75 +1260,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-
-#############
-#  CONTEST  #
-#############
-
-clearTable(ContestType)
-data = loadData('contest_types.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestType (
-        id = int(info[0]),
-        name = info[1]
-      )
-    model.save()
-
-
-clearTable(ContestTypeName)
-data = loadData('contest_type_names.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestTypeName (
-        contest_type = ContestType.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        name = info[2],
-        flavor = info[3],
-        color = info[4]
-      )
-    model.save()
-
-
-clearTable(ContestEffect)
-data = loadData('contest_effects.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestEffect (
-        id = int(info[0]),
-        appeal = int(info[1]),
-        jam = int(info[2])
-      )
-    model.save()
-
-
-clearTable(ContestEffectEffectText)
-data = loadData('contest_effect_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = ContestEffectEffectText (
-        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        effect = info[3]
-      )
-    model.save()
-
-    model = ContestEffectFlavorText (
-        contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        flavor_text = info[2]
-      )
-    model.save()
-
-
 clearTable(ContestCombo)
 data = loadData('contest_combos.csv')
 
@@ -1204,34 +1272,7 @@ for index, info in enumerate(data):
       )
     model.save()
 
-
-clearTable(SuperContestEffect)
-data = loadData('super_contest_effects.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = SuperContestEffect (
-        id = int(info[0]),
-        appeal = int(info[1])
-      )
-    model.save()
-
-
-clearTable(SuperContestEffectFlavorText)
-data = loadData('super_contest_effect_prose.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = SuperContestEffectFlavorText (
-        super_contest_effect = SuperContestEffect.objects.get(pk = int(info[0])),
-        language = Language.objects.get(pk = int(info[1])),
-        flavor_text = info[2]
-      )
-    model.save()
-
-
+    
 clearTable(SuperContestCombo)
 data = loadData('super_contest_combos.csv')
 
@@ -1283,15 +1324,15 @@ data = loadData('berries.csv')
 for index, info in enumerate(data):
   if index > 0:
 
-    name = getattr(Item.objects.get(pk = int(info[1])), 'name')
+    item = Item.objects.get(pk = int(info[1]))
 
     model = Berry (
         id = int(info[0]),
-        item = Item.objects.get(pk = int(info[1])),
-        name = name[:name.index('-')],
+        item = item,
+        name = item.name[:item.name.index('-')],
         berry_firmness = BerryFirmness.objects.get(pk = int(info[2])),
         natural_gift_power = int(info[3]),
-        nature = None,
+        natural_gift_type = Type.objects.get(pk = int(info[4])),
         size = int(info[5]),
         max_harvest = int(info[6]),
         growth_time = int(info[7]),
@@ -1302,18 +1343,51 @@ for index, info in enumerate(data):
 
 
 clearTable(BerryFlavor)
-data = loadData('berry_flavors.csv')
+data = loadData('contest_types.csv') #this is not an error
 
 for index, info in enumerate(data):
   if index > 0:
 
+    # get the english name for this contest type
+    contest_type_name = ContestTypeName.objects.get(contest_type_id=int(info[0]), language_id=9)
+
     model = BerryFlavor (
-        berry = Berry.objects.get(pk = int(info[0])),
-        contest_type = ContestType.objects.get(pk = int(info[1])),
-        flavor = int(info[2])
+
+        id = int(info[0]),
+        name = contest_type_name.flavor.lower(),
+        contest_type = ContestType.objects.get(pk = int(info[0]))
       )
     model.save()
 
+
+clearTable(BerryFlavorName)
+data = loadData('contest_type_names.csv') #this is not an error
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = BerryFlavorName (
+
+        berry_flavor = BerryFlavor.objects.get(pk = int(info[0])),
+        language = Language.objects.get(pk = int(info[1])),
+        name = info[3]
+      )
+    model.save()
+
+
+clearTable(BerryFlavorMap)
+data = loadData('berry_flavors.csv') #this is not an error
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = BerryFlavorMap (
+
+        berry = Berry.objects.get(pk = int(info[0])),
+        berry_flavor = BerryFlavor.objects.get(pk = int(info[1])),
+        potency = int(info[2])
+      )
+    model.save()
 
 
 ############
@@ -1326,27 +1400,29 @@ data = loadData('natures.csv')
 for index, info in enumerate(data):
   if index > 0:
 
+    decreased_stat = None
+    increased_stat = None
+    hates_flavor = None
+    likes_flavor = None
+
+    if (info[2] != info[3]):
+      decreased_stat = Stat.objects.get(pk = int(info[2]))
+      increased_stat = Stat.objects.get(pk = int(info[3]))
+
+    if (info[4] != info[5]):
+      hates_flavor = BerryFlavor.objects.get(pk = int(info[4]))
+      likes_flavor = BerryFlavor.objects.get(pk = int(info[5]))
+
     nature = Nature (
         id = int(info[0]),
         name = info[1],
-        decreased_stat = Stat.objects.get(pk = int(info[2])),
-        increased_stat = Stat.objects.get(pk = int(info[3])),
-        hates_flavor = BerryFlavor.objects.get(pk = int(info[4])),
-        likes_flavor = BerryFlavor.objects.get(pk = int(info[5])),
+        decreased_stat = decreased_stat,
+        increased_stat = increased_stat,
+        hates_flavor = hates_flavor,
+        likes_flavor = likes_flavor,
         game_index = info[6]
       )
     nature.save()
-
-
-#Berry/Nature associations
-data = loadData('berries.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    berry = Berry.objects.get(pk = int(info[0]))
-    berry.nature = Nature.objects.get(pk = int(info[4]))
-    berry.save()
 
 
 clearTable(NatureName)
@@ -1385,7 +1461,7 @@ for index, info in enumerate(data):
 
     model = NatureBattleStylePreference (
         nature = Nature.objects.get(pk = int(info[0])),
-        move_battle_style_id = int(info[1]),
+        move_battle_style = MoveBattleStyle.objects.get(pk = int(info[1])),
         low_hp_preference = info[2],
         high_hp_preference = info[3]
       )
@@ -1549,7 +1625,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-
 ##############
 #  LOCATION  #
 ##############
@@ -1602,12 +1677,14 @@ data = loadData('location_areas.csv')
 for index, info in enumerate(data):
   if index > 0:
 
+    location = Location.objects.get(pk = int(info[1]))
+
     model = LocationArea (
-        id = int(info[0]),
-        location = Location.objects.get(pk = int(info[1])),
-        game_index = int(info[2]),
-        name = info[3]
-      )
+      id = int(info[0]),
+      location = location,
+      game_index = int(info[2]),
+      name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area') 
+    )
     model.save()
 
 
@@ -1621,21 +1698,6 @@ for index, info in enumerate(data):
         location_area = LocationArea.objects.get(pk = int(info[0])),
         language = Language.objects.get(pk = int(info[1])),
         name = info[2]
-      )
-    model.save()
-
-
-clearTable(LocationAreaEncounterRate)
-data = loadData('location_area_encounter_rates.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    model = LocationAreaEncounterRate (
-        location_area = LocationArea.objects.get(pk = int(info[0])),
-        encounter_method = None,
-        version = Version.objects.get(pk = int(info[2])),
-        rate = int(info[3])
       )
     model.save()
 
@@ -2061,6 +2123,28 @@ for index, info in enumerate(data):
     model.save()
 
 
+# LocationAreaEncounterRate/EncounterMethod associations
+"""
+I tried handling this the same way Berry/Natures are handled
+but for some odd reason it resulted in a ton of db table issues.
+It was easy enough to move LocationAreaEncounterRates below
+Encounter population and for some reason things works now.
+"""
+clearTable(LocationAreaEncounterRate)
+data = loadData('location_area_encounter_rates.csv')
+
+for index, info in enumerate(data):
+  if index > 0:
+
+    model = LocationAreaEncounterRate (
+        location_area = LocationArea.objects.get(pk = int(info[0])),
+        encounter_method = EncounterMethod.objects.get(pk=info[1]),
+        version = Version.objects.get(pk = int(info[2])),
+        rate = int(info[3])
+      )
+    model.save()
+
+
 clearTable(EncounterMethodName)
 data = loadData('encounter_method_prose.csv')
 
@@ -2178,17 +2262,6 @@ for index, info in enumerate(data):
     model.save()
 
 
-#Location/Encounter associations
-data = loadData('location_area_encounter_rates.csv')
-
-for index, info in enumerate(data):
-  if index > 0:
-
-    laer = LocationAreaEncounterRate.objects.get(pk = int(info[0]))
-    laer.encounter_method = EncounterMethod.objects.get(pk = int(info[1]))
-    laer.save()
-
-
 
 ##############
 #  PAL PARK  #
@@ -2230,6 +2303,7 @@ for index, info in enumerate(data):
     model = PalPark (
         pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
         pal_park_area = PalParkArea.objects.get(pk = int(info[1])),
-        rate = int(info[2])
+        base_score = int(info[2]),
+        rate = int(info[3])
       )
     model.save()

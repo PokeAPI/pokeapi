@@ -1,54 +1,75 @@
 # Pokeapi V2 API Reference
 
-### API Endpoints
-#####[Abilities](#abilities)
-#####[Berries](#berries)
-#####[[Berry Firmnesses](#berryfirmnesses)
-#####[[Berry Flavors](#berryflavors)
-#####[[Characteristics](#characteristics)
-#####[[Contest Types](#contesttypes)
-#####[[Contest Effects](#contesteffects)
-#####[[Egg Groups](#egggroups)
-#####[[Encounter Methods](#encountermethods)
-#####[[Encounter Conditions](#encounterconditions)
-#####[[Encounter Condition Values](#encounterconditionvalues)
-#####[[Evolution Chains](#evolutionchains)
-#####[[Evolution Triggers](#evolutiontriggers)
-#####[[Generation](#generations)
-#####[[Genders](#genders)
-#####[[Growth Rates](#abilities)
-#####[[Items](#items)
-#####[[Item Categories](#itemcategories)
-#####[[Item Attributes](#itemattributes)
-#####[[Item Fling Effects](#itemflingeffects)
-#####[[Item Pockets](#itempockets)
-#####[[Languages](#languages)
-#####[[Locations](#locations)
-#####[[Location Areas](#location areas)
-#####[[Moves](#moves)
-#####[[Move Ailments](#moveailments)
-#####[[Move Battle Styles](#movebattlestyles)
-#####[[Move Categories](#movecategories)
-#####[[Move Damage Classes](#movedamageclasses)
-#####[[Move Learn Methods](#movelearnmethods)
-#####[[Move Targets](#movetargets)
-#####[[Natures](#natures)
-#####[[Pal Park Areas](#palparkareas)
-#####[[Pokedexes](#pokedexes)
-#####[[Pokemon](#pokemon)
-#####[[Pokemon Colors](#pokemoncolors)
-#####[[Pokemon Forms](#pokemonforms)
-#####[[Pokemon Habitats](#pokemonhabitats)
-#####[[Pokemon Shapes](#pokemonshapes)
-#####[[Pokemon Species](#pokemonspecies)
-#####[[Pokeathlon Stats](#pokeathlonstats)
-#####[[Regions](#region)
-#####[[Stats](#stats)
-#####[[Super Contest Effects](#supercontesteffects)
-#####[[Types](#types)
-#####[[Versions](#versions)
-#####[[VersionGroups](#versiongroups)
+<table>
+  <tbody>
+    <tr>
+      <th colspan="3">API Endpoints</th>
+    </tr>
+    <tr>
+      <td>
+		<ul>
+			<li><a href="#abilities">Abilities</a></li>
+			<li><a href="#berries">Berries</a></li>
+			<li><a href="#berryfirmnesses">Berry Firmnesses</a></li>
+			<li><a href="#berryflavors">Berry Flavors</a></li>
+			<li><a href="#characteristics">Characteristics</a></li>
+			<li><a href="#contesttypes">Contest Types</a></li>
+			<li><a href="#contesteffects">Contest Effects</a></li>
+			<li><a href="#egggroups">Egg Groups</a></li>
+			<li><a href="#encountermethods">Encounter Methods</a></li>
+			<li><a href="#encounterconditions">Encounter Conditions</a></li>
+			<li><a href="#encounterconditionvalues">Encounter Condition Values</a></li>
+			<li><a href="#evolutionchains">Evolution Chains</a></li>
+			<li><a href="#evolutiontriggers">Evolution Triggers</a></li>
+			<li><a href="#generations">Generations</a></li>
+			<li><a href="#genders">Genders</a></li>
+			<li><a href="#growthrates">Growth Rates</a></li>
+		</ul>
+      </td>
+      <td>
+		<ul>
+			<li><a href="#items">Items</a></li>
+			<li><a href="#itemcategories">Item Categories</a></li>
+			<li><a href="#itemattributes">Item Attributes</a></li>
+			<li><a href="#itemflingeffects">Item Fling Effects</a></li>
+			<li><a href="#itempockets">Item Pockets</a></li>
+			<li><a href="#languages">Languages</a></li>
+			<li><a href="#locations">Locations</a></li>
+			<li><a href="#locationareas">Location Areas</a></li>
+			<li><a href="#moves">Moves</a></li>
+			<li><a href="#moveailments">Move Ailments</a></li>
+			<li><a href="#movebattlestyles">Move Battle Styles</a></li>
+			<li><a href="#movecategories">Move Categories</a></li>
+			<li><a href="#movedamageclasses">Move Damage Classes</a></li>
+			<li><a href="#movelearnmethods">Move Learn Methods</a></li>
+			<li><a href="#movetargets">Move Targets</a></li>
+			<li><a href="#natures">Natures</a></li>
+		</ul>
+      </td>
+      <td>
+		<ul>
+			<li><a href="#palparkareas">Pal Park Areas</a></li>
+			<li><a href="#pokedexes">Pokedexes</a></li>
+			<li><a href="#pokemon">Pokemon</a></li>
+			<li><a href="#pokemoncolors">Pokemon Colors</a></li>
+			<li><a href="#pokemonforms">Pokemon Forms</a></li>
+			<li><a href="#pokemonhabitats">Pokemon Habitats</a></li>
+			<li><a href="#pokemonshapes">Pokemon Shapes</a></li>
+			<li><a href="#pokemonspecies">Pokemon Species</a></li>
+			<li><a href="#pokeathlonstats">Pokeathlon Stats</a></li>
+			<li><a href="#regions">Regions</a></li>
+			<li><a href="#stats">Stats</a></li>
+			<li><a href="#supercontesttypes">Super Contest Types</a></li>
+			<li><a href="#types">Types</a></li>
+			<li><a href="#version">Versions</a></li>
+			<li><a href="#versiongroups">Version Groups</a></li>
+		</ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+#### API Endpoints
 
 
 

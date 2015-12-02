@@ -89,7 +89,7 @@ TEMPLATE_DIRS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pokeapi_test',
+        'NAME': 'pokeapi_co_db',
         'USER': 'root',
         'PASSWORD': 'pokeapi',
         'HOST': 'localhost',

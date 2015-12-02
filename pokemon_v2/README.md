@@ -1,12 +1,74 @@
 # Pokeapi V2 API Reference
 
-
-
 ## Abilities
 ```
 api/v2/ability/{id or name}
 ```
 Abilities provide passive effects for pokemon in battle or overworld. Pokemon can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.
+
+###### example response
+```json
+{
+	"id": 1,
+	"name": "stench",
+	"is_main_series": true,
+	"generation": {
+		"name": "generation-iii",
+		"url": "http://localhost:8000/api/v2/generation/3/"
+	},
+	"names": [{
+		"name": "Stench",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"effect_entries": [{
+		"effect": "This PokÃ©mon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this PokÃ©mon is first in the party.",
+		"short_effect": "Has a 10% chance of making target PokÃ©mon [flinch]{mechanic:flinch} with each hit.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"effect_changes": [{
+		"version_group": {
+			"name": "black-white",
+			"url": "http://localhost:8000/api/v2/version-group/11/"
+		},
+		"effect_entries": [{
+			"effect": "Has no effect in battle.",
+			"language": {
+				"name": "en",
+				"url": "http://localhost:8000/api/v2/language/9/"
+			}
+		}]
+	}],
+	"flavor_text_entries": [{
+		"flavor_text": "è‡­ãã¦ã€€ç›¸æ‰‹ãŒ\nã²ã‚‹ã‚€ã€€ã“ã¨ãŒã‚ã‚‹ã€‚",
+		"language": {
+			"name": "ja-kanji",
+			"url": "http://localhost:8000/api/v2/language/11/"
+		},
+		"version_group": {
+			"name": "x-y",
+			"url": "http://localhost:8000/api/v2/version-group/15/"
+		}
+	}],
+	"pokemon": [{
+		"is_hidden": true,
+		"slot": 3,
+		"pokemon": {
+			"name": "gloom",
+			"url": "http://localhost:8000/api/v2/pokemon/44/"
+		}
+	}]
+}
+```
+
+###### response models
+
+#### Ability
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -25,7 +87,7 @@ pokemon             | A list of pokemon that could potentially have this ability
 Name | Description | Data Type
 ---- | ----------- | ---------
 effect_entries | The previous effect of this ability listed in different languages         | [Effect]
-version_group  | The version group in which the previous effect of this ability originated | [APIResource](#apiresource) ([VersionGroup](#versiongroup))
+version_group  | The version group in which the previous effect of this ability originated | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
 
 #### AbilityPokemonMap
 
@@ -206,7 +268,7 @@ api/v2/evolution-chain/{id}
 Name | Description | Data Type
 ---- | ----------- | ---------
 id                | The identifier for this evolution chain resource                                                                                                                   | integer
-baby_trigger_item | The item that a pokemon would be holding when mating that would trigger the egg hatching a baby pokemon rather than a basic pokemon                                | [APIReference](#apireference)
+baby_trigger_item | The item that a pokemon would be holding when mating that would trigger the egg hatching a baby pokemon rather than a basic pokemon                                | [APIReference](#apireference) ([Item](#items))
 chain             | The base chain link object. Each link contains evolution details for a pokemon in the chain. Each link references the next pokemon in the natural evolution order. | [ChainLink](#chainlink)
 
 #### Chain Link
@@ -214,28 +276,28 @@ chain             | The base chain link object. Each link contains evolution det
 Name | Description | Data Type
 ---- | ----------- | ---------
 is_baby           | Whether or not this link is for a baby pokemon. This would only ever be true on the base link. | boolean
-species           | The pokemon species at this point in the evolution chain                                       | [APIReference](#apireference)
-evolution_details | All details regarding the specific details of the referenced pokemon species evolution         | [APIReference](#apireference) ([EvolutionDetail](#evolutiondetail))
+species           | The pokemon species at this point in the evolution chain                                       | [APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))
+evolution_details | All details regarding the specific details of the referenced pokemon species evolution         | [EvolutionDetail](#evolutiondetail)
 evolves_to        | A List of chain objects.                                                                       | [ChainLink](#chainlink)
 
 #### Evolution Detail
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-item                    | The item required to cause evolution this into pokemon species                                                                                                              | [APIReference](#apireference) ([Item](#item))
-trigger                 | The type of event that triggers evolution into this pokemon species                                                                                                         | [APIReference](#apireference) ([EvolutionTrigger](#evolutiontrigger))
-gender                  | The gender the evolving pokemon species must be in order to evolve into this pokemon species                                                                                | [APIReference](#apireference) ([Gender](#gender))
-held_item               | The item the evolving pokemon species must be holding during the evolution trigger event to evolve into this pokemon species                                                | [APIReference](#apireference) ([Item](#item))
-known_move              | The move that must be known by the evolving pokemon species during the evolution trigger event in order to evolve into this pokemon species                                 | [APIReference](#apireference) ([Move](#move))
-known_move_type         | The evolving pokemon species must know a move with this type during the evolution trigger event in order to evolve into this pokemon species                                | [APIReference](#apireference) ([Type](#type))
-location                | The location the evolution must be triggered at.                                                            | [APIReference](#apireference) ([Location](#location))
-min_level               | The minimum required level of the evolving pokemon species to evolve into this pokemon species                                                                                  | integer
-min_hapiness            | The minimum required level of happiness the evolving pokemon species to evolve into this pokemon species                                                                   | integer
-min_beauty              | The minimum required level of beauty the evolving pokemon species to evolve into this pokemon species                                                                      | integer
-min_affection           | The minimum required level of affection the evolving pokemon species to evolve into this pokemon species                                                                   | integer
+item                    | The item required to cause evolution this into pokemon species                                                                                                              | [APIReference](#apireference) ([Item](#items))
+trigger                 | The type of event that triggers evolution into this pokemon species                                                                                                         | [APIReference](#apireference) ([EvolutionTrigger](#evolutiontriggers))
+gender                  | The gender the evolving pokemon species must be in order to evolve into this pokemon species                                                                                | [APIReference](#apireference) ([Gender](#genders))
+held_item               | The item the evolving pokemon species must be holding during the evolution trigger event to evolve into this pokemon species                                                | [APIReference](#apireference) ([Item](#items))
+known_move              | The move that must be known by the evolving pokemon species during the evolution trigger event in order to evolve into this pokemon species                                 | [APIReference](#apireference) ([Move](#moves))
+known_move_type         | The evolving pokemon species must know a move with this type during the evolution trigger event in order to evolve into this pokemon species                                | [APIReference](#apireference) ([Type](#types))
+location                | The location the evolution must be triggered at.                                                                                                                            | [APIReference](#apireference) ([Location](#location))
+min_level               | The minimum required level of the evolving pokemon species to evolve into this pokemon species                                                                              | integer
+min_hapiness            | The minimum required level of happiness the evolving pokemon species to evolve into this pokemon species                                                                    | integer
+min_beauty              | The minimum required level of beauty the evolving pokemon species to evolve into this pokemon species                                                                       | integer
+min_affection           | The minimum required level of affection the evolving pokemon species to evolve into this pokemon species                                                                    | integer
 needs_overworld_rain    | Whether or not it must be raining in the overworld to cause evolution this pokemon species                                                                                  | boolean
 party_species           | The pokemon species that must be in the players party in order for the evolving pokemon species to evolve into this pokemon species                                         | [APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))
-party_type              | The player must have a pokemon of this type in their party during the evolution trigger event in order for the evolving pokemon species to evolve into this pokemon species | [APIReference](#apireference) ([Type](#type))
+party_type              | The player must have a pokemon of this type in their party during the evolution trigger event in order for the evolving pokemon species to evolve into this pokemon species | [APIReference](#apireference) ([Type](#types))
 relative_physical_stats | The required relation between the Pokémon's Attack and Defense stats. 1 means Attack > Defense. 0 means Attack = Defense. -1 means Attack < Defense.                        | integer
 time_of_day             | The required time of day. Day or night.                                                                                                                                     | string
 trade_species           | Pokemon species for which this one must be traded.                                                                                                                          | [APIReference](#apireference) ([Pokemon Species](#pokemonspecies))
@@ -264,13 +326,13 @@ Name | Description | Data Type
 ---- | ----------- | ---------
 id              | The identifier for this generation resource                       | integer
 name            | The name for this generation resource                             | string
-abilities       | A list of abilities that were introduced in this generation       | [[APIReference](#apireference) ([Ability](#ability))]
+abilities       | A list of abilities that were introduced in this generation       | [[APIReference](#apireference) ([Ability](#abilities))]
 names           | The name of this generation listed in different languages         | [[Name](#resourcename)]
-main_region     | The main region travelled in this generation                      | [APIReference](#apireference) ([Region](#region))
-moves           | A list of moves that were introduced in this generation           | [[APIReference](#apireference) ([Move](#move))]
+main_region     | The main region travelled in this generation                      | [APIReference](#apireference) ([Region](#regions))
+moves           | A list of moves that were introduced in this generation           | [[APIReference](#apireference) ([Move](#moves))]
 pokemon_species | A list of pokemon species that were introduced in this generation | [[APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))]
-types           | A list of types that were introduced in this generation           | [[APIReference](#apireference) ([Type](#type))]
-version_groups  | A list of version groups that were introduced in this generation  | [[APIReference](#apireference) ([VersionGroup](#versiongroup))]
+types           | A list of types that were introduced in this generation           | [[APIReference](#apireference) ([Type](#types))]
+version_groups  | A list of version groups that were introduced in this generation  | [[APIReference](#apireference) ([VersionGroup](#versiongroups))]
 
 
 ## Gender
@@ -328,14 +390,14 @@ name                | The name for this item resource                           
 cost                | The price of this item in stores                                     | integer
 fling_power         | The power of the move Fling when used with this item.                | integer
 fling_effect        | The effect of the move Fling when used with this item                | [ItemFlingEffect](#itemflingeffect)
-attributes          | A list of attributes this item has                                   | [[APIReference](#apireference) ([ItemAttribute](#itemattribute))]
+attributes          | A list of attributes this item has                                   | [[APIReference](#apireference) ([ItemAttribute](#itemattributes))]
 category            | The category of items this item falls into                           | [ItemCategory](#itemcategory)
 effect_entries      | The effect of this ability listed in different languages             | [[VerboseEffect](#verboseeffect)]
 flavor_text_entries | The flavor text of this ability listed in different languages        | [VersionSpecificFlavorText] TODO
 game_indices        | A list of game indices relevent to this item by generation           | [[GenerationGameIndex](#generationgameindex)]
 names               | The name of this item listed in different languages                  | [[Name](#resourcename)]
 held_by_pokemon     | A list of pokemon that might be found in the wild holding this item  | [[APIReference](#apireference) ([Pokemon](#pokemon))]
-baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [[APIReference](#apireference) ([Evolution Chain](#evolutionchain))]
+baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [[APIReference](#apireference) ([Evolution Chain](#evolutionchains))]
 
 
 ## Item Fling Effects
@@ -362,7 +424,7 @@ id     | The identifier for this item category resource               | integer
 name   | The name for this item category resource                     | string
 items  | A list of items that fall into this category                 | [[Item](#item)]
 names  | The name of this item category listed in different languages | [[Name](#resourcename)]
-pocket | The pocket items in this category would be put in            | [[APIReference](#apireference) ([ItemPocket](#itempocket))]
+pocket | The pocket items in this category would be put in            | [[APIReference](#apireference) ([ItemPocket](#itempockets))]
 
 
 ## Item Pockets
@@ -400,12 +462,12 @@ api/v2/location/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id       | The identifier for this location resource                                                  | integer
-name     | The name for this location resource                                                        | string
-region     | The region this location can be found in                      | [APIReference](#apireference) ([Region](#regions))
-names    | The name of this language listed in different languages                                       | [[Name](#resourcename)]
-game_indices        | A list of game indices relevent to this location by generation           | [[GenerationGameIndex](#generationgameindex)]
-areas | Areas that can be found within this location | [APIReference](#apireference) ([LocationArea](#locationareas))
+id           | The identifier for this location resource                      | integer
+name         | The name for this location resource                            | string
+region       | The region this location can be found in                       | [APIReference](#apireference) ([Region](#regions))
+names        | The name of this language listed in different languages        | [[Name](#resourcename)]
+game_indices | A list of game indices relevent to this location by generation | [[GenerationGameIndex](#generationgameindex)]
+areas        | Areas that can be found within this location                   | [APIReference](#apireference) ([LocationArea](#locationareas))
 
 
 ## Location Areas
@@ -486,7 +548,7 @@ use_after  | A list of moves to use after this move  | [[APIReference](#apirefer
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-ailment        | The status ailment this move inflicts on its target                                                    | [APIReference](#apireference) [MoveAilment](#contestcombodetail)
+ailment        | The status ailment this move inflicts on its target                                                    | [APIReference](#apireference) ([MoveAilment](#moveailments))
 category       | The category of move this move falls under, e.g. damage or ailment                                     | [APIReference](#apireference) ([Move](#moves))
 min_hits       | The minimum number of times this move hits. Null if it always only hits once.                          | integer
 max_hits       | The maximum number of times this move hits. Null if it always only hits once.                          | integer
@@ -516,7 +578,7 @@ power          | The base power of this move with a value of 0 if it does not ha
 pp             | Power points. The number of times this move can be used                        | integer
 effect_entries | The effect of this move listed in different languages                          | [[VerboseEffect](#verboseeffect)]
 type           | The elemental type of this move                                                | [Type](#types)
-version group  | The version group in which these move stat values were in effect               | [Type](#types)
+version group  | The version group in which these move stat values were in effect               | [APIReference](#apireference) [VersionGroup](#versiongroups)
 
 
 ## Move Ailments
@@ -582,7 +644,7 @@ id             | The identifier for this move learn method resource             
 name           | The name for this move learn method resource                            | string
 descriptions   | The description of this move learn method listed in different languages | [[Description](#description)]
 names          | The name of this move learn method listed in different languages        | [[Name](#resourcename)]
-version_groups | A list of version groups where moves can be learned through this method | [[APIReference](#apireference) ([VersionGroup](#versiongroup))]
+version_groups | A list of version groups where moves can be learned through this method | [[APIReference](#apireference) ([VersionGroup](#versiongroups))]
 
 
 ## Move Target
@@ -642,9 +704,9 @@ Name | Description | Data Type
 id                 | The identifier for this pal park area resource                        | integer
 name               | The name for this pal park area resource                              | string
 names              | The name of this pal park area listed in different languages          | [[Name](#resourcename)]
-pokemon_encounters | A list of pokemon encountered in thi pal park area along with details | [PalParkEncounter](#palparkencounter)
+pokemon_encounters | A list of pokemon encountered in thi pal park area along with details | [PalParkEncounterSpecies](#palparkencounterspecies)
 
-#### PalParkEncounter
+#### PalParkEncounterSpecies
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -660,8 +722,339 @@ api/v2/pokedex/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id   | The identifier for this pokedex resource | integer
-name | The name for this pokedex resource       | string
+id              | The identifier for this pokedex resource                                     | integer
+name            | The name for this pokedex resource                                           | string
+is_main_series  | Whether or not this pokedex originated in the main series of the video games | boolean
+descriptions    | The description of this pokedex listed in different languages                | [[Description](#description)]
+names           | The name of this pokedex listed in different languages                       | [[Name](#resourcename)]
+pokemon_entries | A list of pokemon catalogued in this pokedex and their indexes               | [[PokemonEntry](#pokemonentry)]
+region          | The region this pokedex catalogues pokemon for                               | [APIReference](#apireference) ([Region](#regions))
+version_groups  | A list of version groups this pokedex is relevent to                         | [APIReference](#apireference) ([VersionGroup](#versiongroups))
+
+#### PalParkEncounter
+
+Name | Description | Data Type
+---- | ----------- | ---------
+entry_number    | The index of this pokemon species entry within the pokedex | integer
+pokemon_species | The pokemon species being encountered                      | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
+
+
+## Pokemon
+```
+api/v2/pokemon/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                       | The identifier for this pokemon resource                         | integer
+name                     | The name for this pokemon resource                               | string
+base_experience          | The base experience gained for defeating this pokemon            | integer
+height                   | The height of this pokemon                                       | integer
+is_default               | Set for exactly one pokemon used as the default for each species | boolean
+order                    | TODO                                                             | integer
+weight                   | The weight of this pokemon                                       | integer
+abilities                | A list of abilities this pokemon could potentially have          | [[PokemonAbility](#pokemonability)]
+forms                    | A list of forms this pokemon can take on                         | [[APIResource](#apiresource) ([PokemonForm](#pokemonforms))]
+game_indices             | A list of game indices relevent to pokemon item by generation    | [[VersionGameIndex](#versiongameindex)]
+held_items               | A list of items this pokemon may be holding when encountered     | [[APIResource](#apiresource) ([Item](#items))]
+location_area_encounters |
+moves                    |
+species                  | The species this pokemon belongs to                              | [PokemonSpecies](#pokemonspecies))
+stats                    | A list of base stat values for this pokemon                      | [[APIResource](#apiresource) ([Stat](#stats))]
+types                    | A list of details showing types this pokemon has                 | [([PokemonType](#pokemontype))]
+
+#### PokemonAbility
+
+Name | Description | Data Type
+---- | ----------- | ---------
+is_hidden | Whether or not this is a hidden ability                | boolean
+slot      | The slot this ability occupies in this pokemon species | integer
+ability   | The ability the pokemon may have                       | [APIResource](#apiresource) ([Ability](#abilities))
+
+#### PokemonType
+
+Name | Description | Data Type
+---- | ----------- | ---------
+slot | The order the pokemons types are listed in | integer
+type | The type the referenced pokemon has        | string
+
+## Pokemon Colors
+```
+api/v2/pokemon-color/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id              | The identifier for this pokemon color resource               | integer
+name            | The name for this pokemon color resource                     | string
+names           | The name of this pokemon color listed in different languages | [[Name](#resourcename)]
+pokemon_species | A list of the pokemon species that have this color           | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+
+
+## Pokemon Forms
+```
+api/v2/pokemon-form/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id             | The identifier for this pokemon color resource                                                                                                            | integer
+name           | The name for this pokemon color resource                                                                                                                  | string
+order          | The order in which forms should be sorted within all forms.  Multiple forms may have equal order, in which case they should fall back on sorting by name. | integer
+form_order     | The order in which forms should be sorted within a species' forms                                                                                         | integer
+is_default     | True for exactly one form used as the default for each pokemon                                                                                            | boolean
+is_battle_only | Whether or not this form can only happen during battle                                                                                                    | boolean
+is_mega        | Whether or not this form requires mega evolution                                                                                                          | boolean
+form_name      | The name of this form                                                                                                                                     | string
+pokemon        | The pokemon that can take on this form                                                                                                                    | [APIResource](#apiresource) ([Pokemon](#pokemon))
+version_group  | The version group this pokemon form was introduced in                                                                                                     | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
+
+
+## Pokemon Habitats
+```
+api/v2/pokemon-habitat/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id              | The identifier for this pokemon habitat resource                | integer
+name            | The name for this pokemon habitat resource                      | string
+names           | The name of this pokemon habitat listed in different languages  | [[Name](#resourcename)]
+pokemon_species | A list of the pokemon species that can be found in this habitat | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+
+
+## Pokemon Shapes
+```
+api/v2/pokemon-shape/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id              | The identifier for this pokemon shape resource                            | integer
+name            | The name for this pokemon shape resource                                  | string
+awesome_names   | The "scientific" name of this pokemon shape listed in different languages | [[AwesomeName](#awesomename)]
+names           | The name of this pokemon shape listed in different languages              | [[Name](#resourcename)]
+pokemon_species | A list of the pokemon species that have this shape                        | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+
+#### AwesomeName
+
+Name | Description | Data Type
+---- | ----------- | ---------
+awesome_name | The localized "scientific" name for an api resource in a specific language | string
+language     | The language this "scientific" name is in                                  | [APIResource](#apiresource) ([Language](#languages))
+
+
+## Pokemon Species
+```
+api/v2/pokemon-species/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                     | The identifier for this pokemon species resource                                                                                                   | integer
+name                   | The name for this pokemon species resource                                                                                                         | string
+order                  | The order in which species should be sorted.  Based on National Dex order, except families are grouped together and sorted by stage.               | integer
+gender_rate            | The chance of this Pokémon being female, in eighths; or -1 for genderless                                                                          | integer
+capture_rate           | The base capture rate; up to 255. The higher the number, the easier the catch.                                                                     | integer
+base_happiness         | The happiness when caught by a normal pokeball; up to 255. The higher the number, the happier the pokemon.                                         | integer
+is_baby                | Whether or not this is a baby pokemon                                                                                                              | boolean
+hatch_counter          | Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer
+has_gender_differences | Whether or not this pokemon can have different genders                                                                                             | boolean
+forms_switchable       | Whether or not this pokemon has multiple forms and can switch between them                                                                         | boolean
+growth_rate            | The rate at which this pokemon species gains levels                                                                                                | [APIResource](#apiresource) ([GrowthRate](#growthrates))
+pokedex_numbers        | A list of pokedexes and the indexes reserved within them for this pokemon species                                                                  | [PokemonSpeciesDexEntry](#pokemonspeciesdexentry)
+egg_groups             | A list of egg groups this pokemon species is a member of                                                                                           | [[APIResource](#apiresource) ([EggGroup](#egggroups))]
+color                  | The color of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonColor](#pokemoncolors))]
+shape                  | The shape of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonShape](#pokemonshapes))]
+evolves_from_species   | The pokemon species that evolves into this pokemon_species                                                                                         | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
+evolution_chain        | The evolution chain this pokemon species is a member of                                                                                            | [APIResource](#apiresource) ([EvolutionChain](#evolutionchains))
+habitat                | The habitat this pokemon species can be encountered in                                                                                             | [APIResource](#apiresource) ([PokemonHabitat](#pokemonhabitats))
+generation             | The generation this pokemon species was introduced in                                                                                              | [APIResource](#apiresource) ([Generation](#generations))
+names                  | The name of this pokemon species listed in different languages                                                                                     | [[Name](#resourcename)]
+pal_park_encounters    | A list of encounters that can be had with this pokemon species in pal park                                                                         | [[PalParkEncounterArea](#palparkencounterarea)]
+form_descriptions      | TODO
+genera                 | The genus of this pokemon species listed in multiple languages                                                                                     | [Genus](#genus)
+varieties              | A list of the pokemon that exist within this pokemon species                                                                                       | [[APIResource](#apiresource) ([Pokemon](#pokemon))]
+
+#### Genus
+
+Name | Description | Data Type
+---- | ----------- | ---------
+genus    | The localized genus for the referenced pokemon species | string
+language | The language this genus is in                          | [APIResource](#apiresource) ([Language](#languages))
+
+####PokemonSpeciesDexEntry
+
+Name | Description | Data Type
+---- | ----------- | ---------
+entry_number | The index number within the pokedex                       | integer
+name         | The pokdex the referenced pokemon species can be found in | [APIResource](#apiresource) ([Pokedex](#pokedexes))
+
+####PalParkEncounterArea
+
+Name | Description | Data Type
+---- | ----------- | ---------
+base_score | The base score given to the player when the referenced pokemon is caught during a pal park run | integer
+rate       | The base rate for encountering the referenced pokemon in this pal park area                    | integer
+area       | The pal park area where this encounter happens                                                 | [APIResource](#apiresource) ([PalParkArea](#palparkareas))
+
+
+## Pokeathlon Stat
+```
+api/v2/pokeathlon-stat/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                | The identifier for this pokeathlon stat resource                    | integer
+name              | The name for this pokeathlon stat resource                          | string
+names             | The name of this pokeathlon stat listed in different languages      | [[Name](#resourcename)]
+affecting_natures | A detail of natures which affect this pokeathlon stat positively or negatively | [NaturePokeathlonStatAffectSets](#naturepokeathlonstataffectsets)
+
+#### NaturePokeathlonStatAffectSets
+
+Name | Description | Data Type
+---- | ----------- | ---------
+increase | A list of natures and how they change the referenced pokeathlon stat | [NaturePokeathlonStatAffect](#naturepokeathlonstataffect)
+decrease | A list of natures and how they change the referenced pokeathlon stat | [NaturePokeathlonStatAffect](#naturepokeathlonstataffect)
+
+####NaturePokeathlonStatAffect
+
+Name | Description | Data Type
+---- | ----------- | ---------
+max_change | The maximum amount of change to the referenced pokeathlon stat | integer
+nature     | The nature causing the change                                  | [APIResource](#apiresource) ([Nature](#natures))
+
+
+## Region
+```
+api/v2/region/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id              | The identifier for this region resource                   | integer
+name            | The name for this region resource                         | string
+locations       | A list of locations that can be found in this region      | [APIResource](#apiresource) ([Location](#locations))
+main_generation | The generation this region was introduced in              | [APIResource](#apiresource) ([Generation](#generations))
+names           | The name of this region listed in different languages     | [[Name](#resourcename)]
+pokedexes       | A list of pokedexes that catalogue pokemon in this region | [APIResource](#apiresource) ([Pokedex](#pokedexes))
+version_groups  | A list of version groups where this region can be visited | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
+
+
+## Stats
+```
+api/v2/stat/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                | The identifier for this stat resource                                                       | integer
+name              | The name for this stat resource                                                             | string
+game_index        | ID the games use for this stat                                                              | integer
+is_battle_only    | Whether this stat only exists within a battle                                               | boolean
+affecting_moves   | A detail of moves which affect this stat positively or negatively                           | [MoveStatAffectSets](#movestataffectsets)
+affecting_natures | A detail of natures which affect this stat positively or negatively                         | [NatureStatAffectSets](#naturestataffectsets)
+characteristics   | A list of characteristics that are set on a pokemon when its highest base stat is this stat | [[APIResource](#apiresource) ([Characteristic](#characteristics))]
+move_damage_class | The class of damage this stat is directly related to                                        | [APIResource](#apiresource) ([MoveDamageClass](#movedamageclasses))
+names             | The name of this region listed in different languages                                       | [[Name](#resourcename)]
+
+#### MoveStatAffectSets
+
+Name | Description | Data Type
+---- | ----------- | ---------
+increase | A list of moves and how they change the referenced stat | [MoveStatAffect](#movestataffect)
+decrease | A list of moves and how they change the referenced stat | [MoveStatAffect](#movestataffect)
+
+#### MoveStatAffect
+
+Name | Description | Data Type
+---- | ----------- | ---------
+max_change | The maximum amount of change to the referenced stat | integer
+move       | The move causing the change                         | [APIResource](#apiresource) ([Move](#moves))
+
+#### NatureStatAffectSets
+
+Name | Description | Data Type
+---- | ----------- | ---------
+increase | A list of natures and how they change the referenced stat | [NatureStatAffect](#naturestataffect)
+decrease | A list of nature sand how they change the referenced stat | [NatureStatAffect](#naturestataffect)
+
+#### NatureStatAffect
+
+Name | Description | Data Type
+---- | ----------- | ---------
+max_change | The maximum amount of change to the referenced stat | integer
+nature     | The nature causing the change                       | [APIResource](#apiresource) ([Nature](#natures))
+
+
+## Super Contest Effects
+```
+api/v2/super-contest-effect/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                  | The identifier for this super contest effect resource                      | integer
+appeal              | The level of appeal this super contest effect has                          | string
+flavor_text_entries | The flavor text of this super contest effect listed in different languages | [[FlavorText](#flavortext)]
+moves               | A list of moves that have the effect when used in super contests           | [[APIResource](#apiresource) ([Move](#moves))]
+
+
+## Types
+```
+api/v2/types/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                | The identifier for this type resource                      | integer
+name              | The name for this type resource                            | string
+damage_relations  |
+game_indices      | A list of game indices relevent to this item by generation | [[GenerationGameIndex](#generationgameindex)]
+generation        | The generation this type was introduced in                 | [APIResource](#apiresource) ([Generation](#generations)
+move_damage_class | The class of damage inflicted by this type                 | [APIResource](#apiresource) ([MoveDamageClass](#movedamageclasses))
+names             | The name of this type listed in different languages        | [[Name](#resourcename)]
+pokemon           | A list of details of pokemon that have this type           | [TypePokemon](#typepokemon)
+moves             | A list of moves that have this type                        | [[APIResource](#apiresource) ([Move](#moves))]
+
+#### TypePokemon
+
+Name | Description | Data Type
+---- | ----------- | ---------
+slot    | The order the pokemons types are listed in | integer
+pokemon | The pokemon that has the referenced type   | [APIResource](#apiresource) ([Pokemon](#pokemon)
+
+
+## Versions
+```
+api/v2/version/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id            | The identifier for this version resource               | integer
+name          | The name for this version resource                     | string
+names         | The name of this version listed in different languages | [[Name](#resourcename)]
+version_group | The version group this version belongs to              | [[APIResource](#apiresource) ([VersionGroup](#versiongroups))]
+
+
+## Version Groups
+```
+api/v2/version-group/{id or name}
+```
+
+Name | Description | Data Type
+---- | ----------- | ---------
+id                 | The identifier for this version group resource                                              | integer
+name               | The name for this version group resource                                                    | string
+order              | Order for sorting. Almost by date of release, except similar versions are grouped together. | integer
+generation         | The generation this version was introduced in                                               | [[APIResource](#apiresource) ([Generation](#generations))]
+move_learn_methods | A list of methods in which pokemon can learn moves in this version group                    | [[APIResource](#apiresource) ([MoveLearnMethod](#mofelearnmethods))]
+names              | The name of this version group listed in different languages                                | [[Name](#resourcename)]
+pokedexes          | A list of pokedexes introduces in this version group                                        | [[APIResource](#apiresource) ([Pokedex](#pokedexes))]
+regions            | A list of regions that can be visited in this version group                                 | [[APIResource](#apiresource) ([Region](#regions))]
+versions           | The versions this version group owns                                                        | [[APIResource](#apiresource) ([Version](#versions))]
 
 
 

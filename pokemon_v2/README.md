@@ -10,75 +10,71 @@
 		<ul>
 			<li><a href="#abilities">Abilities</a></li>
 			<li><a href="#berries">Berries</a></li>
-			<li><a href="#berryfirmnesses">Berry Firmnesses</a></li>
-			<li><a href="#berryflavors">Berry Flavors</a></li>
+			<li><a href="#berry-firmnesses">Berry Firmnesses</a></li>
+			<li><a href="#berry-flavors">Berry Flavors</a></li>
 			<li><a href="#characteristics">Characteristics</a></li>
-			<li><a href="#contesttypes">Contest Types</a></li>
-			<li><a href="#contesteffects">Contest Effects</a></li>
-			<li><a href="#egggroups">Egg Groups</a></li>
-			<li><a href="#encountermethods">Encounter Methods</a></li>
-			<li><a href="#encounterconditions">Encounter Conditions</a></li>
-			<li><a href="#encounterconditionvalues">Encounter Condition Values</a></li>
-			<li><a href="#evolutionchains">Evolution Chains</a></li>
-			<li><a href="#evolutiontriggers">Evolution Triggers</a></li>
+			<li><a href="#contest-types">Contest Types</a></li>
+			<li><a href="#contest-effects">Contest Effects</a></li>
+			<li><a href="#egg-groups">Egg Groups</a></li>
+			<li><a href="#encounter-methods">Encounter Methods</a></li>
+			<li><a href="#encounter-conditions">Encounter Conditions</a></li>
+			<li><a href="#encounter-condition-values">Encounter Condition Values</a></li>
+			<li><a href="#evolution-chains">Evolution Chains</a></li>
+			<li><a href="#evolution-triggers">Evolution Triggers</a></li>
 			<li><a href="#generations">Generations</a></li>
 			<li><a href="#genders">Genders</a></li>
-			<li><a href="#growthrates">Growth Rates</a></li>
+			<li><a href="#growth-rates">Growth Rates</a></li>
 		</ul>
       </td>
       <td>
 		<ul>
 			<li><a href="#items">Items</a></li>
-			<li><a href="#itemcategories">Item Categories</a></li>
-			<li><a href="#itemattributes">Item Attributes</a></li>
-			<li><a href="#itemflingeffects">Item Fling Effects</a></li>
-			<li><a href="#itempockets">Item Pockets</a></li>
+			<li><a href="#item-categories">Item Categories</a></li>
+			<li><a href="#item-attributes">Item Attributes</a></li>
+			<li><a href="#item-fling-effects">Item Fling Effects</a></li>
+			<li><a href="#item-pockets">Item Pockets</a></li>
 			<li><a href="#languages">Languages</a></li>
 			<li><a href="#locations">Locations</a></li>
-			<li><a href="#locationareas">Location Areas</a></li>
+			<li><a href="#location-areas">Location Areas</a></li>
 			<li><a href="#moves">Moves</a></li>
-			<li><a href="#moveailments">Move Ailments</a></li>
-			<li><a href="#movebattlestyles">Move Battle Styles</a></li>
-			<li><a href="#movecategories">Move Categories</a></li>
-			<li><a href="#movedamageclasses">Move Damage Classes</a></li>
-			<li><a href="#movelearnmethods">Move Learn Methods</a></li>
-			<li><a href="#movetargets">Move Targets</a></li>
+			<li><a href="#move-ailments">Move Ailments</a></li>
+			<li><a href="#move-battle-styles">Move Battle Styles</a></li>
+			<li><a href="#move-categories">Move Categories</a></li>
+			<li><a href="#move-damage-classes">Move Damage Classes</a></li>
+			<li><a href="#move-learn-methods">Move Learn Methods</a></li>
+			<li><a href="#move-targets">Move Targets</a></li>
 			<li><a href="#natures">Natures</a></li>
 		</ul>
       </td>
       <td>
 		<ul>
-			<li><a href="#palparkareas">Pal Park Areas</a></li>
+			<li><a href="#pal-park-areas">Pal Park Areas</a></li>
 			<li><a href="#pokedexes">Pokedexes</a></li>
 			<li><a href="#pokemon">Pokemon</a></li>
-			<li><a href="#pokemoncolors">Pokemon Colors</a></li>
-			<li><a href="#pokemonforms">Pokemon Forms</a></li>
-			<li><a href="#pokemonhabitats">Pokemon Habitats</a></li>
-			<li><a href="#pokemonshapes">Pokemon Shapes</a></li>
-			<li><a href="#pokemonspecies">Pokemon Species</a></li>
-			<li><a href="#pokeathlonstats">Pokeathlon Stats</a></li>
+			<li><a href="#pokemon-colors">Pokemon Colors</a></li>
+			<li><a href="#pokemon-forms">Pokemon Forms</a></li>
+			<li><a href="#pokemon-habitats">Pokemon Habitats</a></li>
+			<li><a href="#pokemon-shapes">Pokemon Shapes</a></li>
+			<li><a href="#pokemon-species">Pokemon Species</a></li>
+			<li><a href="#pokeathlon-stats">Pokeathlon Stats</a></li>
 			<li><a href="#regions">Regions</a></li>
 			<li><a href="#stats">Stats</a></li>
-			<li><a href="#supercontesttypes">Super Contest Types</a></li>
+			<li><a href="#super-contest-types">Super Contest Types</a></li>
 			<li><a href="#types">Types</a></li>
 			<li><a href="#version">Versions</a></li>
-			<li><a href="#versiongroups">Version Groups</a></li>
+			<li><a href="#version-groups">Version Groups</a></li>
 		</ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-#### API Endpoints
-
-
-
 
 ## Abilities
 ```
 api/v2/ability/{id or name}
 ```
-Abilities provide passive effects for pokemon in battle or overworld. Pokemon can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.
+Abilities provide passive effects for pokemon in battle or in the overworld. Pokemon have mutiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.
 
 ###### example response
 ```json
@@ -146,24 +142,32 @@ Abilities provide passive effects for pokemon in battle or overworld. Pokemon ca
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id                  | The identifier for this ability resource                                             | integer
-name                | The name for this ability resource                                                   | string
-is_main_series      | Whether or not this ability originated in the main series of the video games         | boolean
-generation          | The generation this ability originated in                                            | [APIResource](#apiresource) ([Generation](#generations))
-names               | The name of this ability listed in different languages                               | [[Name](#resourcename)]
-effect_entries      | The effect of this ability listed in different languages                             | [[VerboseEffect](#verboseeffect)]
-effect_changes      | The list of previous effects this ability has had across version groups of the games | [[AbilityEffectChange](#abilityeffectchange)]
-flavor_text_entries | The flavor text of this ability listed in different languages                        | [VersionSpecificFlavorText] TODO
-pokemon             | A list of pokemon that could potentially have this ability                           | [[AbilityPokemonMap](#abilitypokemonmap)]
+id                  | The identifier for this ability resource                                     | integer
+name                | The name for this ability resource                                           | string
+is_main_series      | Whether or not this ability originated in the main series of the video games | boolean
+generation          | The generation this ability originated in                                    | [APIResource](#apiresource) ([Generation](#generations))
+names               | The name of this ability listed in different languages                       | [[Name](#resourcename)]
+effect_entries      | The effect of this ability listed in different languages                     | [[VerboseEffect](#verboseeffect)]
+effect_changes      | The list of previous effects this ability has had across version groups      | [[AbilityEffectChange](#abilityeffectchange)]
+flavor_text_entries | The flavor text of this ability listed in different languages                | [VersionSpecificFlavorText] TODO
+pokemon             | A list of pokemon that could potentially have this ability                   | [[AbilityPokemon](#abilitypokemon)]
 
 #### AbilityEffectChange
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-effect_entries | The previous effect of this ability listed in different languages         | [Effect]
+effect_entries | The previous effect of this ability listed in different languages         | [Effect](#effect)
 version_group  | The version group in which the previous effect of this ability originated | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
 
-#### AbilityPokemonMap
+#### AbilityFlavorText 
+
+Name | Description | Data Type
+---- | ----------- | ---------
+flavor_text   | The localized name for an api resource in a specific language | string
+language      | The language this name is in                                  | [APIResource](#apiresource) ([Language](#languages))
+version_group | The version group that uses this flavor text                  | [APIResource](#apiresource) ([VersionGroup](#version-groups))
+
+#### AbilityPokemon
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -172,42 +176,104 @@ slot      | Pokemon have 3 ability 'slots' which hold references to possible abi
 pokemon   | The pokemon this ability could belong to                                                                                                                 | [APIResource](#apiresource) ([Pokemon](#pokemon))
 
 
-
 ## Berries
 ```
 api/v2/berry/{id or name}
 ```
 Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by pokemon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.
 
+###### example response
+
+```json
+{
+	"id": 1,
+	"name": "cheri",
+	"growth_time": 3,
+	"max_harvest": 5,
+	"natural_gift_power": 60,
+	"size": 20,
+	"smoothness": 25,
+	"soil_dryness": 15,
+	"firmness": {
+		"name": "soft",
+		"url": "http://localhost:8000/api/v2/berry-firmness/2/"
+	},
+	"flavors": [{
+		"potency": 10,
+		"flavor": {
+			"name": "spicy",
+			"url": "http://localhost:8000/api/v2/berry-flavor/1/"
+		}
+	}],
+	"item": {
+		"name": "cheri-berry",
+		"url": "http://localhost:8000/api/v2/item/126/"
+	},
+	"natural_gift_type": {
+		"name": "fire",
+		"url": "http://localhost:8000/api/v2/type/10/"
+	}
+}
+
+```
+
+###### response models
+
+#### Berry
+
 Name | Description | Data Type
 ---- | ----------- | ---------
-id                 | The identifier for this berry resource                                                                                | integer
-name               | The name for this berry resource                                                                                      | string
-growth_time        | TODO                                                                                                                  | integer
-max_harvest        | TODO                                                                                                                  | integer
-natural_gift_power | The strength of this powers natural gift                                                                              | integer
-size               | The size of this berry                                                                                                | integer
-smoothness         | The smoothness rating of this berry                                                                                   | integer
-soil_dryness       | TODO                                                                                                                  | integer
-firmness           | The firmness of this berry                                                                                            | [APIResource](#apiresource) ([BerryFirmness](#berryfirmnesses))
-flavors            | A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry | [[BerryFlavorMap](#berryflavormap)]
-item               | Berries are actually items. This is a reference to the item specific data for this berry.                             | [APIResource](#apiresource) ([Item](#items))
-natural_gift_type  | A reference to the elemental type of a this berry TODO                                                                | [APIResource](#apiresource) ([Type](#types))
+id                 | The identifier for this berry resource                                                                                             | integer
+name               | The name for this berry resource                                                                                                   | string
+growth_time        | Time it takes the tree to grow one stage, in hours.  Berry trees go through four of these growth stages before they can be picked. | integer
+max_harvest        | The maximum number of these berries that can grow on one tree in Generation IV                                                     | integer
+natural_gift_power | The power of the move "Natural Gift" when used with this Berry                                                                     | integer
+size               | The size of this Berry, in millimeters                                                                                             | integer
+smoothness         | The smoothness of this Berry, used in making Pokéblocks or Poffins                                                                 | integer
+soil_dryness       | The speed at which this Berry dries out the soil as it grows.  A higher rate means the soil dries more quickly.                    | integer
+firmness           | The firmness of this berry, used in making Pokéblocks or Poffins                                                                   | [APIResource](#apiresource) ([BerryFirmness](#berry-firmnesses))
+flavors            | A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry              | [[BerryFlavorMap](#berryflavormap)]
+item               | Berries are actually items. This is a reference to the item specific data for this berry.                                          | [APIResource](#apiresource) ([Item](#items))
+natural_gift_type  | The Type the move "Natural Gift" has when used with this Berry                                                                     | [APIResource](#apiresource) ([Type](#types))
 
 #### BerryFlavorMap
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 potency | How powerful the referenced flavor is for this berry | integer
-flavor  | The referenced berry flavor                          | [APIResource](#apiresource) ([BerryFlavor](#berryflavors))
-
+flavor  | The referenced berry flavor                          | [APIResource](#apiresource) ([BerryFlavor](#berry-flavors))
 
 
 ## Berry Firmnesses
 ```
 api/v2/berry-firmness/{id or name}
 ```
-TODO. Absolutely no idea what firmness does for a berry. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.
+Berry firmness is a fairly extraneous attribute that effects the outcome of Pokéblocks or Poffins. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.
+
+###### example response
+
+```json
+{
+	"id": 1,
+	"name": "very-soft",
+	"berries": [{
+		"name": "pecha",
+		"url": "http://localhost:8000/api/v2/berry/3/"
+	}],
+	"names": [{
+		"name": "Very Soft",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
+
+```
+
+###### response models
+
+#### BerryFirmness
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -222,30 +288,79 @@ names   | The name of this berry firmness listed in different languages | [[Name
 ```
 api/v2/berry-flavor/{id or name}
 ```
+
 Flavors determine whether a pokemon will benefit or suffer from eating a berry based on their [nature](#natures). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.
+
+###### example response
+
+```json
+{
+	"id": 1,
+	"name": "spicy",
+	"berries": [{
+		"potency": 10,
+		"berry": {
+			"name": "rowap",
+			"url": "http://localhost:8000/api/v2/berry/64/"
+		}
+	}],
+	"contest_type": {
+		"name": "cool",
+		"url": "http://localhost:8000/api/v2/contest-type/1/"
+	},
+	"names": [{
+		"name": "Spicy",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
+
+```
+
+###### response models
+
+#### BerryFlavor
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 id           | The identifier for this berry flavor resource               | integer
 name         | The name for this berry flavor resource                     | string
-berries      | A list of the berries with this flavor                      | [[APIResource](#apiresource) ([Berry](#berries))]
-contest_type | TODO                                                        | [APIResource](#apiresource) ([ContestType](#contesttypes))
+berries      | A list of the berries with this flavor                      | [[FlavorBerryMap](#flavorberrymap)]
+contest_type | The contest type that correlates with this berry flavor     | [APIResource](#apiresource) ([ContestType](#contest-types))
 names        | The name of this berry flavor listed in different languages | [[Name](#resourcename)]
- 
+
+#### FlavorBerryMap
+
+Name | Description | Data Type
+---- | ----------- | ---------
+potency | How powerful the referenced flavor is for this berry | integer
+berry   | The berry with the referenced flavor                 | [APIResource](#apiresource) ([Berry](#berry))
 
 
 ## Characteristics
 ```
 api/v2/characteristic/{id}
 ```
-Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.
+Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Characteristic
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id              | The identifier for this characteristic resource                                                                                      | integer
-gene_modulo     | The remainder of the highest stat divided by 5 TODO                                                                                  | integer
-possible_values | The possible values of the highest stat that would result in a pokemon recieving this characteristic when divided by the gene modulo | [integer]
-descriptions    | The descriptions of this characteristic listed in different languages                                                                | [[Description](#description)]
+id              | The identifier for this characteristic resource                                                                        | integer
+gene_modulo     | The remainder of the highest stat/IV divided by 5                                                                      | integer
+possible_values | The possible values of the highest stat that would result in a pokemon recieving this characteristic when divided by 5 | [integer]
+descriptions    | The descriptions of this characteristic listed in different languages                                                  | [[Description](#description)]
 
 
 
@@ -253,12 +368,39 @@ descriptions    | The descriptions of this characteristic listed in different la
 ```
 api/v2/contest-type/{id or name}
 ```
+Contest types are categories judges used to weigh a pokemons condition in pokemon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.
+
+###### example response
+
+```json
+{
+	"id": 1,
+	"name": "cool",
+	"berry_flavor": {
+		"name": "spicy",
+		"url": "http://localhost:8000/api/v2/berry-flavor/1/"
+	},
+	"names": [{
+		"name": "Cool",
+		"color": "Red",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
+
+```
+
+###### response models
+
+#### ContestType
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 id           | The identifier for this contest type resource               | integer
 name         | The name for this contest type resource                     | string
-berry_flavor | TODO                                                        | [APIResource](#apiresource) ([BerryFlavor](#berryflavors))
+berry_flavor | The berry flavor that correlates with this contest type     | [APIResource](#apiresource) ([BerryFlavor](#berry-flavors))
 names        | The name of this contest type listed in different languages | [[Name](#resourcename)]
 
 
@@ -267,12 +409,42 @@ names        | The name of this contest type listed in different languages | [[N
 ```
 api/v2/contest-effect/{id or name}
 ```
+Contest effects refer to the effects of moves when used in contests.
+
+###### example response
+
+```json
+{
+	"id": 1,
+	"appeal": 4,
+	"jam": 0,
+	"effect_entries": [{
+		"effect": "Gives a high number of appeal points wth no other effects.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"flavor_text_entries": [{
+		"flavor_text": "A highly appealing move.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
+
+```
+
+###### response models
+
+#### ContestEffect
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 id                  | The identifier for this contest type resource                        | integer
-appeal              | The level of appeal this effect has TODO                             | string
-jam                 | TODO                                                                 | integer
+appeal              | The base number of hearts the user of this move gets                 | string
+jam                 | The base number of hearts the user's opponent loses                  | integer
 effect_entries      | The result of this contest effect listed in different languages      | [[Effect](#effect)]
 flavor_text_entries | The flavor text of this contest effect listed in different languages | [[FlavorText](#flavortext)]
 
@@ -282,13 +454,39 @@ flavor_text_entries | The flavor text of this contest effect listed in different
 ```
 api/v2/egg-group/{id or name}
 ```
+Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.
+
+###### example response
+
+```json
+{
+	"id": 1,
+	"name": "monster",
+	"names": [{
+		"name": "ã‹ã„ã˜ã‚…ã†",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}],
+	"pokemon_species": [{
+		"name": "bulbasaur",
+		"url": "http://localhost:8000/api/v2/pokemon-species/1/"
+	}]
+}
+
+```
+
+###### response models
+
+#### EggGroup
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id              | The identifier for this egg group resource                              | integer
-name            | The name for this egg group resource                                    | string
-names           | The name of this egg group listed in different languages                | [[Name](#resourcename)]
-pokemon_species | A list of all pokemon species that are categorized under this egg group | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
+id              | The identifier for this egg group resource                       | integer
+name            | The name for this egg group resource                             | string
+names           | The name of this egg group listed in different languages         | [[Name](#resourcename)]
+pokemon_species | A list of all pokemon species that are members of this egg group | [APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))
 
 
 
@@ -296,6 +494,16 @@ pokemon_species | A list of all pokemon species that are categorized under this 
 ```
 api/v2/encounter-method/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Encounter Method
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -311,6 +519,16 @@ names | The name of this encounter method listed in different languages         
 api/v2/encounter-condition/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Encounter Condition
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id     | The identifier for this encounter condition resource            | integer
@@ -325,6 +543,16 @@ values | A list of possible values for this encounter condition          | [[API
 api/v2/encounter-condition-value/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Encounter Condition Value
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id        | The identifier for this encounter condition value resource      | integer
@@ -338,6 +566,16 @@ names     | The name of this encounter method listed in different languages | [[
 ```
 api/v2/evolution-chain/{id}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Evolution Chain
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -383,6 +621,16 @@ turn_upside_down        | Whether or not the 3DS needs to be turned upside-down 
 api/v2/evolution-trigger/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Evolution Trigger
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id              | The identifier for this evolution trigger resource                | integer
@@ -395,6 +643,16 @@ pokemon_species | A list of pokemon species that result from this evolution trig
 ```
 api/v2/generation/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Generation
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -413,6 +671,16 @@ version_groups  | A list of version groups that were introduced in this generati
 ```
 api/v2/gender/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Gender
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -434,6 +702,16 @@ pokemon_species | A pokemon species that can be the referenced gender           
 ```
 api/v2/growth-rate/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Growth Rate
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -457,6 +735,16 @@ experience | The amount of experience required to reach the referenced level | i
 api/v2/item/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Item
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id                  | The identifier for this item resource                                | integer
@@ -479,6 +767,16 @@ baby_trigger_for    | An evolution chain this item requires to produce a bay dur
 api/v2/item-fling-effect/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Item Fling Effect
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id             | The identifier for this fling effect resource                 | integer
@@ -491,6 +789,16 @@ items          | A list of items that have this fling effect                   |
 ```
 api/v2/item-category/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Item Category
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -506,6 +814,16 @@ pocket | The pocket items in this category would be put in            | [[APIRef
 api/v2/item-pocket/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Item Pocket
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id         | The identifier for this item pocket resource                    | integer
@@ -518,6 +836,16 @@ names      | The name of this item category listed in different languages    | [
 ```
 api/v2/language/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Language
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -534,6 +862,16 @@ names    | The name of this language listed in different languages              
 api/v2/location/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Location
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id           | The identifier for this location resource                      | integer
@@ -548,6 +886,16 @@ areas        | Areas that can be found within this location                   | 
 ```
 api/v2/location-area/{id}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Location Area
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -579,6 +927,16 @@ encounter_details | A list of encounters and their specifics | [[Encounter](#enc
 ```
 api/v2/move/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -660,6 +1018,16 @@ version group  | The version group in which these move stat values were in effec
 api/v2/move-ailment/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Ailment
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id    | The identifier for this move ailment resource               | integer
@@ -668,10 +1036,20 @@ moves | A list of moves that cause this ailment                     | [[APIRefer
 names | The name of this move ailment listed in different languages | [[Name](#resourcename)]
 
 
-## Move Battle Style
+## Move Battle Styles
 ```
 api/v2/move-battle-style/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Battle Style
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -680,10 +1058,20 @@ name  | The name for this move battle style resource                     | strin
 names | The name of this move battle style listed in different languages | [[Name](#resourcename)]
 
 
-## Move Category
+## Move Categories
 ```
 api/v2/move-category/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Category
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -693,10 +1081,20 @@ moves        | A list of moves that fall into this category                     
 descriptions | The description of this move ailment listed in different languages | [[Description](#description)]
 
 
-## Move Damage Class
+## Move Damage Classes
 ```
 api/v2/move-damage-class/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Damage Class
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -707,10 +1105,20 @@ moves        | A list of moves that fall into this damage class                 
 names        | The name of this move damage class listed in different languages        | [[Name](#resourcename)]
 
 
-## Move Learn Mathod
+## Move Learn Methods
 ```
 api/v2/move-learn-method/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Learn Method
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -721,10 +1129,20 @@ names          | The name of this move learn method listed in different language
 version_groups | A list of version groups where moves can be learned through this method | [[APIReference](#apireference) ([VersionGroup](#versiongroups))]
 
 
-## Move Target
+## Move Targets
 ```
 api/v2/move-target/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Move Target
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -735,10 +1153,20 @@ moves        | A list of moves that that are directed at this target            
 names        | The name of this move target listed in different languages        | [[Name](#resourcename)]
 
 
-## Nature
+## Natures
 ```
 api/v2/nature/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Nature
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -768,10 +1196,20 @@ high_hp_preference | Chance of using the move, in percent, if HP is over one hal
 move_battle_style  | The move battle style                                         | [APIReference](#apireference) ([MoveBattleStyle](#movebattlestyles))
 
 
-## PalParkArea
+## Pal Park Areas
 ```
 api/v2/pal-park-area/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PalParkArea
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -789,10 +1227,20 @@ rate            | The base rate for encountering this pokemon in this pal park a
 pokemon_species | The pokemon species being encountered                                                | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
 
 
-## Pokedex
+## Pokedexes
 ```
 api/v2/pokedex/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Pokedex
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -817,6 +1265,16 @@ pokemon_species | The pokemon species being encountered                      | [
 ```
 api/v2/pokemon/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Pokemon
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -857,6 +1315,16 @@ type | The type the referenced pokemon has        | string
 api/v2/pokemon-color/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokemonColor
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id              | The identifier for this pokemon color resource               | integer
@@ -869,6 +1337,16 @@ pokemon_species | A list of the pokemon species that have this color           |
 ```
 api/v2/pokemon-form/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokemonForm
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -889,6 +1367,16 @@ version_group  | The version group this pokemon form was introduced in          
 api/v2/pokemon-habitat/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokemonHabitat
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id              | The identifier for this pokemon habitat resource                | integer
@@ -901,6 +1389,16 @@ pokemon_species | A list of the pokemon species that can be found in this habita
 ```
 api/v2/pokemon-shape/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokemonShape
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -922,6 +1420,16 @@ language     | The language this "scientific" name is in                        
 ```
 api/v2/pokemon-species/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokemonSpecies
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -957,14 +1465,14 @@ Name | Description | Data Type
 genus    | The localized genus for the referenced pokemon species | string
 language | The language this genus is in                          | [APIResource](#apiresource) ([Language](#languages))
 
-####PokemonSpeciesDexEntry
+#### PokemonSpeciesDexEntry
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 entry_number | The index number within the pokedex                       | integer
 name         | The pokdex the referenced pokemon species can be found in | [APIResource](#apiresource) ([Pokedex](#pokedexes))
 
-####PalParkEncounterArea
+#### PalParkEncounterArea
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -973,10 +1481,20 @@ rate       | The base rate for encountering the referenced pokemon in this pal p
 area       | The pal park area where this encounter happens                                                 | [APIResource](#apiresource) ([PalParkArea](#palparkareas))
 
 
-## Pokeathlon Stat
+## Pokeathlon Stats
 ```
 api/v2/pokeathlon-stat/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### PokeathlonStat
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -992,7 +1510,7 @@ Name | Description | Data Type
 increase | A list of natures and how they change the referenced pokeathlon stat | [NaturePokeathlonStatAffect](#naturepokeathlonstataffect)
 decrease | A list of natures and how they change the referenced pokeathlon stat | [NaturePokeathlonStatAffect](#naturepokeathlonstataffect)
 
-####NaturePokeathlonStatAffect
+#### NaturePokeathlonStatAffect
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1000,10 +1518,20 @@ max_change | The maximum amount of change to the referenced pokeathlon stat | in
 nature     | The nature causing the change                                  | [APIResource](#apiresource) ([Nature](#natures))
 
 
-## Region
+## Regions
 ```
 api/v2/region/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Region
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1020,6 +1548,16 @@ version_groups  | A list of version groups where this region can be visited | [A
 ```
 api/v2/stat/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Stat
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1067,6 +1605,16 @@ nature     | The nature causing the change                       | [APIResource]
 api/v2/super-contest-effect/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### SuperContestEffect
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id                  | The identifier for this super contest effect resource                      | integer
@@ -1079,6 +1627,16 @@ moves               | A list of moves that have the effect when used in super co
 ```
 api/v2/types/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Type
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1105,6 +1663,16 @@ pokemon | The pokemon that has the referenced type   | [APIResource](#apiresourc
 api/v2/version/{id or name}
 ```
 
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### Version
+
 Name | Description | Data Type
 ---- | ----------- | ---------
 id            | The identifier for this version resource               | integer
@@ -1117,6 +1685,16 @@ version_group | The version group this version belongs to              | [[APIRe
 ```
 api/v2/version-group/{id or name}
 ```
+
+###### example response
+
+```json
+
+```
+
+###### response models
+
+#### VersionGroup
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1208,14 +1786,6 @@ Name       | Description                                         | Data Type
 ----       | -----------                                         | ---------
 game_index | The internal id of an api resource within game data | integer
 version    | The version relevent to this game index             | [APIResource](#apiresource) ([Version](#version))
-
-
-#### VersionSpecificFlavorText TODO
-
-Name | Description | Data Type
----- | ----------- | ---------
-flavor_text | The localized name for an api resource in a specific language | string
-language    | The language this name is in                                  | [APIResource](#apiresource) ([Language](#language))
 
 
 

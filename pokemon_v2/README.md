@@ -494,10 +494,23 @@ pokemon_species | A list of all pokemon species that are members of this egg gro
 ```
 api/v2/encounter-method/{id or name}
 ```
+Methods by which the player might can encounter pokemon in the wild, e.g., walking in tall grass. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Wild_Pokémon) for greater detail.
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "walk",
+	"order": 1,
+	"names": [{
+		"name": "Walking in tall grass or a cave",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 
 ```
 
@@ -507,10 +520,10 @@ api/v2/encounter-method/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id    | The identifier for this encounter method resource                         | integer
-name  | The name for this encounter method resource                               | string
-order | The order index of this encounter method within the main game series data | integer
-names | The name of this encounter method listed in different languages           | [[Name](#resourcename)]
+id    | The identifier for this encounter method resource               | integer
+name  | The name for this encounter method resource                     | string
+order | A good value for sorting                                        | integer
+names | The name of this encounter method listed in different languages | [[Name](#resourcename)]
 
 
 
@@ -518,10 +531,29 @@ names | The name of this encounter method listed in different languages         
 ```
 api/v2/encounter-condition/{id or name}
 ```
+Conditions which affect what pokemon might appear in the wild, e.g., day or night.
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "swarm",
+	"values": [{
+		"name": "swarm-yes",
+		"url": "http://localhost:8000/api/v2/encounter-condition-value/1/"
+	}, {
+		"name": "swarm-no",
+		"url": "http://localhost:8000/api/v2/encounter-condition-value/2/"
+	}],
+	"names": [{
+		"name": "Schwarm",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}]
+}
 
 ```
 
@@ -534,18 +566,34 @@ Name | Description | Data Type
 id     | The identifier for this encounter condition resource            | integer
 name   | The name for this encounter condition resource                  | string
 names  | The name of this encounter method listed in different languages | [[Name](#resourcename)]
-values | A list of possible values for this encounter condition          | [[APIReference](#apireference) ([EncounterConditionValue](#encounterconditionvalue))]
+values | A list of possible values for this encounter condition          | [[APIReference](#apireference) ([EncounterConditionValue](#encounter-condition-values))]
 
 
 
-## Encounter Condition Values TODO
+## Encounter Condition Values
 ```
 api/v2/encounter-condition-value/{id or name}
 ```
+Encounter condition values are the various states that an encounter condition can have, i.e., Time of day can be either day or night.
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "swarm-yes",
+	"condition": {
+		"name": "swarm",
+		"url": "http://localhost:8000/api/v2/encounter-condition/1/"
+	},
+	"names": [{
+		"name": "WÃ¤hrend eines Schwarms",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}]
+}
 
 ```
 
@@ -555,10 +603,10 @@ api/v2/encounter-condition-value/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id        | The identifier for this encounter condition value resource      | integer
-name      | The name for this encounter condition value resource            | string
-condition | The condition this encounter condition value pertains to        | [[APIReference](#apireference)]
-names     | The name of this encounter method listed in different languages | [[Name](#resourcename)]
+id        | The identifier for this encounter condition value resource               | integer
+name      | The name for this encounter condition value resource                     | string
+condition | The condition this encounter condition value pertains to                 | [[APIReference](#apireference) ([EncounterCondition](#encounter-conditions))]
+names     | The name of this encounter condition value listed in different languages | [[Name](#resourcename)]
 
 
 
@@ -566,16 +614,59 @@ names     | The name of this encounter method listed in different languages | [[
 ```
 api/v2/evolution-chain/{id}
 ```
+Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as pokemon they can evolve into up through the hierarchy.
 
 ###### example response
 
 ```json
-
+{
+	"id": 7,
+	"baby_trigger_item": null,
+	"chain": {
+		"is_baby": false,
+		"species": {
+			"name": "rattata",
+			"url": "http://localhost:8000/api/v2/pokemon-species/19/"
+		},
+		"evolution_details": null,
+		"evolves_to": [{
+			"is_baby": false,
+			"species": {
+				"name": "raticate",
+				"url": "http://localhost:8000/api/v2/pokemon-species/20/"
+			},
+			"evolution_details": {
+				"item": null,
+				"trigger": {
+					"name": "level-up",
+					"url": "http://localhost:8000/api/v2/evolution-trigger/1/"
+				},
+				"gender": null,
+				"held_item": null,
+				"known_move": null,
+				"known_move_type": null,
+				"location": null,
+				"min_level": 20,
+				"min_happiness": null,
+				"min_beauty": null,
+				"min_affection": null,
+				"needs_overworld_rain": false,
+				"party_species": null,
+				"party_type": null,
+				"relative_physical_stats": null,
+				"time_of_day": "",
+				"trade_species": null,
+				"turn_upside_down": false
+			},
+			"evolves_to": []
+		}]
+	}
+}
 ```
 
 ###### response models
 
-#### Evolution Chain
+#### EvolutionChain
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -588,7 +679,7 @@ chain             | The base chain link object. Each link contains evolution det
 Name | Description | Data Type
 ---- | ----------- | ---------
 is_baby           | Whether or not this link is for a baby pokemon. This would only ever be true on the base link. | boolean
-species           | The pokemon species at this point in the evolution chain                                       | [APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))
+species           | The pokemon species at this point in the evolution chain                                       | [APIReference](#apireference) ([PokemonSpecies](#pokemon-species))
 evolution_details | All details regarding the specific details of the referenced pokemon species evolution         | [EvolutionDetail](#evolutiondetail)
 evolves_to        | A List of chain objects.                                                                       | [ChainLink](#chainlink)
 
@@ -597,22 +688,22 @@ evolves_to        | A List of chain objects.                                    
 Name | Description | Data Type
 ---- | ----------- | ---------
 item                    | The item required to cause evolution this into pokemon species                                                                                                              | [APIReference](#apireference) ([Item](#items))
-trigger                 | The type of event that triggers evolution into this pokemon species                                                                                                         | [APIReference](#apireference) ([EvolutionTrigger](#evolutiontriggers))
+trigger                 | The type of event that triggers evolution into this pokemon species                                                                                                         | [APIReference](#apireference) ([EvolutionTrigger](#evolution-triggers))
 gender                  | The gender the evolving pokemon species must be in order to evolve into this pokemon species                                                                                | [APIReference](#apireference) ([Gender](#genders))
 held_item               | The item the evolving pokemon species must be holding during the evolution trigger event to evolve into this pokemon species                                                | [APIReference](#apireference) ([Item](#items))
 known_move              | The move that must be known by the evolving pokemon species during the evolution trigger event in order to evolve into this pokemon species                                 | [APIReference](#apireference) ([Move](#moves))
 known_move_type         | The evolving pokemon species must know a move with this type during the evolution trigger event in order to evolve into this pokemon species                                | [APIReference](#apireference) ([Type](#types))
-location                | The location the evolution must be triggered at.                                                                                                                            | [APIReference](#apireference) ([Location](#location))
+location                | The location the evolution must be triggered at.                                                                                                                            | [APIReference](#apireference) ([Location](#locations))
 min_level               | The minimum required level of the evolving pokemon species to evolve into this pokemon species                                                                              | integer
 min_hapiness            | The minimum required level of happiness the evolving pokemon species to evolve into this pokemon species                                                                    | integer
 min_beauty              | The minimum required level of beauty the evolving pokemon species to evolve into this pokemon species                                                                       | integer
 min_affection           | The minimum required level of affection the evolving pokemon species to evolve into this pokemon species                                                                    | integer
 needs_overworld_rain    | Whether or not it must be raining in the overworld to cause evolution this pokemon species                                                                                  | boolean
-party_species           | The pokemon species that must be in the players party in order for the evolving pokemon species to evolve into this pokemon species                                         | [APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))
+party_species           | The pokemon species that must be in the players party in order for the evolving pokemon species to evolve into this pokemon species                                         | [APIReference](#apireference) ([PokemonSpecies](#pokemon-species))
 party_type              | The player must have a pokemon of this type in their party during the evolution trigger event in order for the evolving pokemon species to evolve into this pokemon species | [APIReference](#apireference) ([Type](#types))
 relative_physical_stats | The required relation between the Pokémon's Attack and Defense stats. 1 means Attack > Defense. 0 means Attack = Defense. -1 means Attack < Defense.                        | integer
 time_of_day             | The required time of day. Day or night.                                                                                                                                     | string
-trade_species           | Pokemon species for which this one must be traded.                                                                                                                          | [APIReference](#apireference) ([Pokemon Species](#pokemonspecies))
+trade_species           | Pokemon species for which this one must be traded.                                                                                                                          | [APIReference](#apireference) ([Pokemon Species](#pokemon-species))
 turn_upside_down        | Whether or not the 3DS needs to be turned upside-down as this Pokémon levels up.                                                                                            | boolean
 
 
@@ -620,23 +711,39 @@ turn_upside_down        | Whether or not the 3DS needs to be turned upside-down 
 ```
 api/v2/evolution-trigger/{id or name}
 ```
+Evolution triggers are the events and conditions that cause a pokemon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "level-up",
+	"names": [{
+		"name": "Level up",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"pokemon_species": [{
+		"name": "ivysaur",
+		"url": "http://localhost:8000/api/v2/pokemon-species/2/"
+	}]
+}
 
 ```
 
 ###### response models
 
-#### Evolution Trigger
+#### EvolutionTrigger
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 id              | The identifier for this evolution trigger resource                | integer
 name            | The name for this evolution trigger resource                      | string
 names           | The name of this evolution trigger listed in different languages  | [[Name](#resourcename)]
-pokemon_species | A list of pokemon species that result from this evolution trigger | [[APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of pokemon species that result from this evolution trigger | [[APIReference](#apireference) ([PokemonSpecies](#pokemon-species))]
 
 
 ## Generations

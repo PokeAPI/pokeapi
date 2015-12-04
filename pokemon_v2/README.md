@@ -149,7 +149,7 @@ generation          | The generation this ability originated in                 
 names               | The name of this ability listed in different languages                       | [[Name](#resourcename)]
 effect_entries      | The effect of this ability listed in different languages                     | [[VerboseEffect](#verboseeffect)]
 effect_changes      | The list of previous effects this ability has had across version groups      | [[AbilityEffectChange](#abilityeffectchange)]
-flavor_text_entries | The flavor text of this ability listed in different languages                | [VersionSpecificFlavorText] TODO
+flavor_text_entries | The flavor text of this ability listed in different languages                | [[VersionGroupFlavorText](#versiongroupflavortext)]
 pokemon             | A list of pokemon that could potentially have this ability                   | [[AbilityPokemon](#abilitypokemon)]
 
 #### AbilityEffectChange
@@ -348,6 +348,22 @@ Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"gene_modulo": 0,
+	"possible_values": [0, 5, 10, 15, 20, 25, 30],
+	"highest_stat": {
+		"name": "hp",
+		"url": "http://localhost:8000/api/v2/stat/1/"
+	},
+	"descriptions": [{
+		"description": "Loves to eat",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 
 ```
 
@@ -516,7 +532,7 @@ Methods by which the player might can encounter pokemon in the wild, e.g., walki
 
 ###### response models
 
-#### Encounter Method
+#### EncounterMethod
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -559,7 +575,7 @@ Conditions which affect what pokemon might appear in the wild, e.g., day or nigh
 
 ###### response models
 
-#### Encounter Condition
+#### EncounterCondition
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -599,7 +615,7 @@ Encounter condition values are the various states that an encounter condition ca
 
 ###### response models
 
-#### Encounter Condition Value
+#### EncounterConditionValue
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -750,10 +766,43 @@ pokemon_species | A list of pokemon species that result from this evolution trig
 ```
 api/v2/generation/{id or name}
 ```
+A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "generation-i",
+	"abilities": [],
+	"main_region": {
+		"name": "kanto",
+		"url": "http://localhost:8000/api/v2/region/1/"
+	},
+	"moves": [{
+		"name": "pound",
+		"url": "http://localhost:8000/api/v2/move/1/"
+	}],
+	"names": [{
+		"name": "Generation I",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"pokemon_species": [{
+		"name": "bulbasaur",
+		"url": "http://localhost:8000/api/v2/pokemon-species/1/"
+	}],
+	"types": [{
+		"name": "normal",
+		"url": "http://localhost:8000/api/v2/type/1/"
+	}],
+	"version_groups": [{
+		"name": "red-blue",
+		"url": "http://localhost:8000/api/v2/version-group/1/"
+	}]
+}
 
 ```
 
@@ -769,19 +818,35 @@ abilities       | A list of abilities that were introduced in this generation   
 names           | The name of this generation listed in different languages         | [[Name](#resourcename)]
 main_region     | The main region travelled in this generation                      | [APIReference](#apireference) ([Region](#regions))
 moves           | A list of moves that were introduced in this generation           | [[APIReference](#apireference) ([Move](#moves))]
-pokemon_species | A list of pokemon species that were introduced in this generation | [[APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of pokemon species that were introduced in this generation | [[APIReference](#apireference) ([PokemonSpecies](#pokemon-species))]
 types           | A list of types that were introduced in this generation           | [[APIReference](#apireference) ([Type](#types))]
-version_groups  | A list of version groups that were introduced in this generation  | [[APIReference](#apireference) ([VersionGroup](#versiongroups))]
+version_groups  | A list of version groups that were introduced in this generation  | [[APIReference](#apireference) ([VersionGroup](#version-groups))]
 
 
-## Gender
+## Genders
 ```
 api/v2/gender/{id or name}
 ```
+Genders were introduced in Generation II for the purposes of breeding pokemon but can also rsult in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail. 
 
 ###### example response
 
 ```json
+{
+	"id": 1,
+	"name": "female",
+	"pokemon_species_details": [{
+		"rate": 1,
+		"pokemon_species": {
+			"name": "bulbasaur",
+			"url": "http://localhost:8000/api/v2/pokemon-species/1/"
+		}
+	}],
+	"required_for_evolution": [{
+		"name": "wormadam",
+		"url": "http://localhost:8000/api/v2/pokemon-species/413/"
+	}]
+}
 
 ```
 
@@ -793,27 +858,47 @@ Name | Description | Data Type
 ---- | ----------- | ---------
 id                      | The identifier for this gender resource                                                        | integer
 name                    | The name for this gender resource                                                              | string
-pokemon_species_details | A list of pokemon species that can be this gender and how likely it is that they will be       | [([PokemonSpeciesGenderChance](#pokemonspeciesgendermap)]
-required_for_evolution  | A list of pokemon species that required this gender in order for a pokemon to evolve into them | [[APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species_details | A list of pokemon species that can be this gender and how likely it is that they will be       | [([PokemonSpeciesGender](#pokemonspeciesgender)]
+required_for_evolution  | A list of pokemon species that required this gender in order for a pokemon to evolve into them | [[APIReference](#apireference) ([PokemonSpecies](#pokemon-species))]
 
 
-#### PokemonSpeciesGenderChance
+#### PokemonSpeciesGender
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 rate            | The chance of this Pokémon being female, in eighths; or -1 for genderless | integer
-pokemon_species | A pokemon species that can be the referenced gender                       | [APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))
+pokemon_species | A pokemon species that can be the referenced gender                       | [APIReference](#apireference) ([PokemonSpecies](#pokemon-species))
 
 
 ## Growth Rates
 ```
 api/v2/growth-rate/{id or name}
 ```
+Growth rates are the speed with which pokemon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail. 
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "slow",
+	"formula": "\\frac{5x^3}{4}",
+	"descriptions": [{
+		"description": "langsam",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"levels": [{
+		"level": 100,
+		"experience": 1250000
+	}],
+	"pokemon_species": [{
+		"name": "growlithe",
+		"url": "http://localhost:8000/api/v2/pokemon-species/58/"
+	}]
+}
 ```
 
 ###### response models
@@ -827,7 +912,7 @@ name            | The name for this gender resource                             
 formula         | The formula used to calculate the rate at which the pokemon species gains level               | string
 descriptions    | The descriptions of this characteristic listed in different languages                         | [[Description](#description)]
 levels          | A list of levels and the amount of experienced needed to atain them based on this growth rate | [[GrowthRateExperienceLevel](#growthrateexperiencelevel)]
-pokemon_species | A list of pokemon species that gain levels at this growth rate                                | [[APIReference](#apireference) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of pokemon species that gain levels at this growth rate                                | [[APIReference](#apireference) ([PokemonSpecies](#pokemon-species))]
 
 #### GrowthRateExperienceLevel
 
@@ -841,11 +926,78 @@ experience | The amount of experience required to reach the referenced level | i
 ```
 api/v2/item/{id or name}
 ```
+An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "master-ball",
+	"cost": 0,
+	"fling_power": 10,
+	"fling_effect": {
+		"name":"flinch",
+		"url":"http://localhost:8000/api/v2/item-fling-effect/7/"
+	},
+	"attributes": [{
+		"name": "holdable",
+		"url": "http://localhost:8000/api/v2/item-attribute/5/"
+	}],
+	"category": {
+		"name": "standard-balls",
+		"url": "http://localhost:8000/api/v2/item-category/34/"
+	},
+	"effect_entries": [{
+		"effect": "Used in battle\n:   [Catches]{mechanic:catch} a wild PokÃ©mon without fail.\n\n    If used in a trainer battle, nothing happens and the ball is lost.",
+		"short_effect": "Catches a wild PokÃ©mon every time.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"flavor_text_entries": [{
+		"text": "é‡Žç”Ÿã®ã€€ãƒã‚±ãƒ¢ãƒ³ã‚’ã€€å¿…ãš\næ•ã¾ãˆã‚‹ã“ã¨ãŒã€€ã§ãã‚‹\næœ€é«˜ã€€æ€§èƒ½ã®ã€€ãƒœãƒ¼ãƒ«ã€‚",
+		"version_group": {
+			"name": "x-y",
+			"url": "http://localhost:8000/api/v2/version-group/15/"
+		},
+		"language": {
+			"name": "ja-kanji",
+			"url": "http://localhost:8000/api/v2/language/11/"
+		}
+	}],
+	"game_indices": [{
+		"game_index": 1,
+		"generation": {
+			"name": "generation-vi",
+			"url": "http://localhost:8000/api/v2/generation/6/"
+		}
+	}],
+	"names": [{
+		"name": "Master Ball",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"held_by_pokemon": [{
+		"pokemon": {
+			"name": "chansey",
+			"url": "http://localhost:8000/api/v2/pokemon/113/"
+		},
+		"version_details": [{
+			"rarity": 50,
+			"version": {
+				"name": "soulsilver",
+				"url": "http://localhost:8000/api/v2/version/16/"
+			}
+		}]
+	}],
+	"baby_trigger_for": {
+		"url":"http://localhost:8000/api/v2/evolution-chain/1/"
+	}
+}
 ```
 
 ###### response models
@@ -858,26 +1010,41 @@ id                  | The identifier for this item resource                     
 name                | The name for this item resource                                      | string
 cost                | The price of this item in stores                                     | integer
 fling_power         | The power of the move Fling when used with this item.                | integer
-fling_effect        | The effect of the move Fling when used with this item                | [ItemFlingEffect](#itemflingeffect)
-attributes          | A list of attributes this item has                                   | [[APIReference](#apireference) ([ItemAttribute](#itemattributes))]
-category            | The category of items this item falls into                           | [ItemCategory](#itemcategory)
+fling_effect        | The effect of the move Fling when used with this item                | [ItemFlingEffect](#item-fling-effects)
+attributes          | A list of attributes this item has                                   | [[APIReference](#apireference) ([ItemAttribute](#item-attributes))]
+category            | The category of items this item falls into                           | [ItemCategory](#item-categories)
 effect_entries      | The effect of this ability listed in different languages             | [[VerboseEffect](#verboseeffect)]
-flavor_text_entries | The flavor text of this ability listed in different languages        | [VersionSpecificFlavorText] TODO
+flavor_text_entries | The flavor text of this ability listed in different languages        | [[VersionGroupFlavorText](#versiongroupflavortext)]
 game_indices        | A list of game indices relevent to this item by generation           | [[GenerationGameIndex](#generationgameindex)]
 names               | The name of this item listed in different languages                  | [[Name](#resourcename)]
 held_by_pokemon     | A list of pokemon that might be found in the wild holding this item  | [[APIReference](#apireference) ([Pokemon](#pokemon))]
-baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [[APIReference](#apireference) ([Evolution Chain](#evolutionchains))]
+baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [[APIReference](#apireference) ([EvolutionChain](#evolution-chains))]
 
 
 ## Item Fling Effects
 ```
 api/v2/item-fling-effect/{id or name}
 ```
+The various effects of the move "Fling" when used with different items.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "badly-poison",
+	"effect_entries": [{
+		"effect": "Badly poisons the target.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"items": [{
+		"name": "toxic-orb",
+		"url": "http://localhost:8000/api/v2/item/249/"
+	}]
+}
 ```
 
 ###### response models
@@ -889,18 +1056,37 @@ Name | Description | Data Type
 id             | The identifier for this fling effect resource                 | integer
 name           | The name for this fling effect resource                       | string
 effect_entries | The result of this fling effect listed in different languages | [[Effect](#effect)]
-items          | A list of items that have this fling effect                   | [[Item](#item)]
+items          | A list of items that have this fling effect                   | [[APIReference](#apireference) [Item](#items)]
 
 
 ## Item Categories
 ```
 api/v2/item-category/{id or name}
 ```
+Item categories determine where items will be placed in the players bag.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "stat-boosts",
+	"items": [{
+		"name": "guard-spec",
+		"url": "http://localhost:8000/api/v2/item/55/"
+	}],
+	"names": [{
+		"name": "Stat boosts",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"pocket": {
+		"name": "battle",
+		"url": "http://localhost:8000/api/v2/item-pocket/7/"
+	}
+}
 ```
 
 ###### response models
@@ -911,20 +1097,35 @@ Name | Description | Data Type
 ---- | ----------- | ---------
 id     | The identifier for this item category resource               | integer
 name   | The name for this item category resource                     | string
-items  | A list of items that fall into this category                 | [[Item](#item)]
+items  | A list of items that are a part of this category             | [[Item](#items)]
 names  | The name of this item category listed in different languages | [[Name](#resourcename)]
-pocket | The pocket items in this category would be put in            | [[APIReference](#apireference) ([ItemPocket](#itempockets))]
+pocket | The pocket items in this category would be put in            | [[APIReference](#apireference) ([ItemPocket](#item-pockets))]
 
 
 ## Item Pockets
 ```
 api/v2/item-pocket/{id or name}
 ```
+Pockets within the players bag used for storing items by category.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "misc",
+	"categories": [{
+		"name": "collectibles",
+		"url": "http://localhost:8000/api/v2/item-category/9/"
+	}],
+	"names": [{
+		"name": "Items",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -935,19 +1136,33 @@ Name | Description | Data Type
 ---- | ----------- | ---------
 id         | The identifier for this item pocket resource                    | integer
 name       | The name for this item pocket resource                          | string
-categories | A list of item categories that are relevent to this item pocket | [[ItemCategory](#itemcategory)]
-names      | The name of this item category listed in different languages    | [[Name](#resourcename)]
+categories | A list of item categories that are relevent to this item pocket | [[ItemCategory](#item-categories)]
+names      | The name of this item pocket listed in different languages      | [[Name](#resourcename)]
 
 
 ## Languages
 ```
 api/v2/language/{id or name}
 ```
+Languages for translations of api resource information.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "ja",
+	"official": true,
+	"iso639": "ja",
+	"iso3166": "jp",
+	"names": [{
+		"name": "Japanese",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -956,8 +1171,8 @@ api/v2/language/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id       | The identifier for this item pocket resource                                                  | integer
-name     | The name for this item pocket resource                                                        | string
+id       | The identifier for this language resource                                                     | integer
+name     | The name for this language resource                                                           | string
 official | Whether or not the games are published in this language                                       | boolean
 is639    | The two-letter code of the country where this language is spoken. Note that it is not unique. | string
 iso3166  | The two-letter code of the language. Note that it is not unique.                              | string
@@ -968,11 +1183,37 @@ names    | The name of this language listed in different languages              
 ```
 api/v2/location/{id or name}
 ```
+Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "canalave-city",
+	"region": {
+		"name": "sinnoh",
+		"url": "http://localhost:8000/api/v2/region/4/"
+	},
+	"names": [{
+		"name": "Canalave City",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"game_indices": [{
+		"game_index": 7,
+		"generation": {
+			"name": "generation-iv",
+			"url": "http://localhost:8000/api/v2/generation/4/"
+		}
+	}],
+	"areas": [{
+		"name": "canalave-city-area",
+		"url": "http://localhost:8000/api/v2/location-area/1/"
+	}]
+}
 ```
 
 ###### response models
@@ -986,23 +1227,75 @@ name         | The name for this location resource                            | 
 region       | The region this location can be found in                       | [APIReference](#apireference) ([Region](#regions))
 names        | The name of this language listed in different languages        | [[Name](#resourcename)]
 game_indices | A list of game indices relevent to this location by generation | [[GenerationGameIndex](#generationgameindex)]
-areas        | Areas that can be found within this location                   | [APIReference](#apireference) ([LocationArea](#locationareas))
+areas        | Areas that can be found within this location                   | [APIReference](#apireference) ([LocationArea](#location-areas))
 
 
 ## Location Areas
 ```
 api/v2/location-area/{id}
 ```
+Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible pokemon encounters.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "canalave-city-area",
+	"game_index": 1,
+	"encounter_method_rates": [{
+		"encounter_method": {
+			"name": "old-rod",
+			"url": "http://localhost:8000/api/v2/encounter-method/2/"
+		},
+		"version_details": [{
+			"rate": 25,
+			"version": {
+				"name": "platinum",
+				"url": "http://localhost:8000/api/v2/version/14/"
+			}
+		}]
+	}],
+	"location": {
+		"name": "canalave-city",
+		"url": "http://localhost:8000/api/v2/location/1/"
+	},
+	"names": [{
+		"name": "",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"pokemon_encounters": [{
+		"pokemon": {
+			"name": "tentacool",
+			"url": "http://localhost:8000/api/v2/pokemon/72/"
+		},
+		"version_details": [{
+			"version": {
+				"name": "diamond",
+				"url": "http://localhost:8000/api/v2/version/12/"
+			},
+			"max_chance": 60,
+			"encounter_details": [{
+				"min_level": 20,
+				"max_level": 30,
+				"condition_values": [],
+				"chance": 60,
+				"method": {
+					"name": "surf",
+					"url": "http://localhost:8000/api/v2/encounter-method/5/"
+				}
+			}]
+		}]
+	}]
+}
 ```
 
 ###### response models
 
-#### Location Area
+#### LocationArea
 
 Name | Description | Data Type
 ---- | ----------- | ---------
@@ -1018,27 +1311,111 @@ pokemon_encounters     | A list of pokemon that can be encountered in this area 
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-pokemon | The pokemon being encountered | [APIReference](#apireference) ([Pokemon](#pokemon))
-version_group_details | A list of version groups and encounters with the referenced pokemon that might happen | [[VersionGroupEncounterDetail](#versiongroupencounterdetail)]
-
-#### VersionGroupEncounterDetail
-
-Name | Description | Data Type
----- | ----------- | ---------
-version | The game version this encounter happens in | [APIReference](#apireference) ([Version](#versions))
-max_chance | The total percentage of all encounter potential | integer
-encounter_details | A list of encounters and their specifics | [[Encounter](#encounters)]
+pokemon         | The pokemon being encountered                                                                    | [APIReference](#apireference) ([Pokemon](#pokemon))
+version_details | A list of versions and encounters with pokemon that might happen in the referenced location area | [[VersionEncounterDetail](#versionencounterdetail)]
 
 
 ## Moves
 ```
 api/v2/move/{id or name}
 ```
+Moves are the skills of pokemon in battle.  In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "pound",
+	"accuracy": 100,
+	"effect_chance": null,
+	"pp": 35,
+	"priority": 0,
+	"power": 40,
+	"contest_combos": {
+		"normal": {
+			"use_before": [{
+				"name": "double-slap",
+				"url": "http://localhost:8000/api/v2/move/3/"
+			}, {
+				"name": "headbutt",
+				"url": "http://localhost:8000/api/v2/move/29/"
+			}, {
+				"name": "feint-attack",
+				"url": "http://localhost:8000/api/v2/move/185/"
+			}],
+			"use_after": null
+		},
+		"super": {
+			"use_before": null,
+			"use_after": null
+		}
+	},
+	"contest_type": {
+		"name": "tough",
+		"url": "http://localhost:8000/api/v2/contest-type/5/"
+	},
+	"contest_effect": {
+		"url": "http://localhost:8000/api/v2/contest-effect/1/"
+	},
+	"damage_class": {
+		"name": "physical",
+		"url": "http://localhost:8000/api/v2/move-damage-class/2/"
+	},
+	"effect_entries": [{
+		"effect": "Inflicts [regular damage]{mechanic:regular-damage}.",
+		"short_effect": "Inflicts regular damage with no additional effect.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"effect_changes": [],
+	"generation": {
+		"name": "generation-i",
+		"url": "http://localhost:8000/api/v2/generation/1/"
+	},
+	"meta": {
+		"ailment": {
+			"name": "none",
+			"url": "http://localhost:8000/api/v2/move-ailment/0/"
+		},
+		"category": {
+			"name": "damage",
+			"url": "http://localhost:8000/api/v2/move-category/0/"
+		},
+		"min_hits": null,
+		"max_hits": null,
+		"min_turns": null,
+		"max_turns": null,
+		"drain": 0,
+		"healing": 0,
+		"crit_rate": 0,
+		"ailment_chance": 0,
+		"flinch_chance": 0,
+		"stat_chance": 0
+	},
+	"names": [{
+		"name": "Pound",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"past_values": [],
+	"stat_changes": [],
+	"super_contest_effect": {
+		"url": "http://localhost:8000/api/v2/super-contest-effect/5/"
+	},
+	"target": {
+		"name": "selected-pokemon",
+		"url": "http://localhost:8000/api/v2/move-target/10/"
+	},
+	"type": {
+		"name": "normal",
+		"url": "http://localhost:8000/api/v2/type/1/"
+	}
+}
 ```
 
 ###### response models
@@ -1047,10 +1424,10 @@ api/v2/move/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id             | The identifier for this location resource                                                                                                                                 | integer
-name           | The name for this location resource                                                                                                                                       | string
+id             | The identifier for this move resource                                                                                                                                     | integer
+name           | The name for this move resource                                                                                                                                           | string
 accuracy       | The percent value of how likely this move is to be successful                                                                                                             | integer
-effect_chance  | The percent value of how likely it is this moves effect will take effect                                                                                                  | integer
+effect_chance  | The percent value of how likely it is this moves effect will happen                                                                                                       | integer
 pp             | Power points. The number of times this move can be used                                                                                                                   | integer
 priority       | A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail. | integer
 power          | The base power of this move with a value of 0 if it does not have a base power                                                                                            | integer
@@ -1062,7 +1439,7 @@ effect_entries | The effect of this move listed in different languages          
 effect_changes | The list of previous effects this move has had across version groups of the games                                                                                         | [[AbilityEffectChange](#abilityeffectchange)]
 generation     | The generation in which this move was introduced                                                                                                                          | [APIReference](#apireference) ([Generation](#generations))
 meta           | Meta data about this move                                                                                                                                                 | [MoveMetaData](#movemetadata)
-names          | The name of this location area listed in different languages                                                                                                              | [[Name](#resourcename)]
+names          | The name of this move listed in different languages                                                                                                                       | [[Name](#resourcename)]
 past_values    | A list of move resource value changes across ersion groups of the game                                                                                                    | [PastMoveStatValues](#pastmovestatvalues)
 stat_changes   | A list of stats this moves effects and how much it effects them                                                                                                           | [[MoveStatChange](#movestatchange)]
 contest_effect | The effect the move has when used in a super contest                                                                                                                      | [APIReference](#apireference) ([ContestEffect](#contesteffects))
@@ -1124,11 +1501,26 @@ version group  | The version group in which these move stat values were in effec
 ```
 api/v2/move-ailment/{id or name}
 ```
+Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/http://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "paralysis",
+	"moves": [{
+		"name": "thunder-punch",
+		"url": "http://localhost:8000/api/v2/move/9/"
+	}],
+	"names": [{
+		"name": "Paralysis",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1147,11 +1539,22 @@ names | The name of this move ailment listed in different languages | [[Name](#r
 ```
 api/v2/move-battle-style/{id or name}
 ```
+Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "attack",
+	"names": [{
+		"name": "Attack",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1169,11 +1572,26 @@ names | The name of this move battle style listed in different languages | [[Nam
 ```
 api/v2/move-category/{id or name}
 ```
+Very general categories that loosely group move effects.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "ailment",
+	"descriptions": [{
+		"description": "No damage; inflicts status ailment",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"moves": [{
+		"name": "sing",
+		"url": "http://localhost:8000/api/v2/move/47/"
+	}]
+}
 ```
 
 ###### response models
@@ -1192,11 +1610,26 @@ descriptions | The description of this move ailment listed in different language
 ```
 api/v2/move-damage-class/{id or name}
 ```
+Damage classes moves can have, e.g. physical, special, or non-damaging.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "status",
+	"descriptions": [{
+		"description": "ãƒ€ãƒ¡ãƒ¼ã‚¸ãªã„",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}],
+	"moves": [{
+		"name": "swords-dance",
+		"url": "http://localhost:8000/api/v2/move/14/"
+	}]
+}
 ```
 
 ###### response models
@@ -1216,11 +1649,33 @@ names        | The name of this move damage class listed in different languages 
 ```
 api/v2/move-learn-method/{id or name}
 ```
+Methods by which pokemon can learn moves.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "level-up",
+	"names": [{
+		"name": "Level up",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"descriptions": [{
+		"description": "Wird gelernt, wenn ein PokÃ©mon ein bestimmtes Level erreicht.",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"version_groups": [{
+		"name": "red-blue",
+		"url": "http://localhost:8000/api/v2/version-group/1/"
+	}]
+}
 ```
 
 ###### response models
@@ -1233,18 +1688,40 @@ id             | The identifier for this move learn method resource             
 name           | The name for this move learn method resource                            | string
 descriptions   | The description of this move learn method listed in different languages | [[Description](#description)]
 names          | The name of this move learn method listed in different languages        | [[Name](#resourcename)]
-version_groups | A list of version groups where moves can be learned through this method | [[APIReference](#apireference) ([VersionGroup](#versiongroups))]
+version_groups | A list of version groups where moves can be learned through this method | [[APIReference](#apireference) ([VersionGroup](#version-groups))]
 
 
 ## Move Targets
 ```
 api/v2/move-target/{id or name}
 ```
+Targets moves can be directed at during battle. Targets can be pokemon, environments or even other moves.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "specific-move",
+	"descriptions": [{
+		"description": "Eine spezifische FÃ¤higkeit.  Wie diese FÃ¤higkeit genutzt wird hÃ¤ngt von den genutzten FÃ¤higkeiten ab.",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"moves": [{
+		"name": "counter",
+		"url": "http://localhost:8000/api/v2/move/68/"
+	}],
+	"names": [{
+		"name": "Spezifische FÃ¤higkeit",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1264,11 +1741,53 @@ names        | The name of this move target listed in different languages       
 ```
 api/v2/nature/{id or name}
 ```
+Natures influence how a pokemon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 2,
+	"name": "bold",
+	"decreased_stat": {
+		"name": "attack",
+		"url": "http://localhost:8000/api/v2/stat/2/"
+	},
+	"increased_stat": {
+		"name": "defense",
+		"url": "http://localhost:8000/api/v2/stat/3/"
+	},
+	"likes_flavor": {
+		"name": "sour",
+		"url": "http://localhost:8000/api/v2/berry-flavor/5/"
+	},
+	"hates_flavor": {
+		"name": "spicy",
+		"url": "http://localhost:8000/api/v2/berry-flavor/1/"
+	},
+	"pokeathlon_stat_changes": [{
+		"max_change": -2,
+		"pokeathlon_stat": {
+			"name": "speed",
+			"url": "http://localhost:8000/api/v2/pokeathlon-stat/1/"
+		}
+	}],
+	"move_battle_style_preferences": [{
+		"low_hp_preference": 32,
+		"high_hp_preference": 30,
+		"move_battle_style": {
+			"name": "attack",
+			"url": "http://localhost:8000/api/v2/move-battle-style/1/"
+		}
+	}],
+	"names": [{
+		"name": "ãšã¶ã¨ã„",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1281,8 +1800,8 @@ id                            | The identifier for this nature resource         
 name                          | The name for this nature resource                                                                                     | string
 decreased_stat                | The stat decreased by 10% in pokemon with this nature                                                                 | [APIReference](#apireference) ([Stat](#stats)
 increased_stat                | The stat increased by 10% in pokemon with this nature                                                                 | [APIReference](#apireference) ([Stat](#stats)
-hates_flavor                  | The flavor hated by pokemon with this nature                                                                          | [APIReference](#apireference) ([BerryFlavor](#berryflavors)
-likes_flavor                  | The flavor liked by pokemon with this nature                                                                          | [APIReference](#apireference) ([BerryFlavor](#berryflavors)
+hates_flavor                  | The flavor hated by pokemon with this nature                                                                          | [APIReference](#apireference) ([BerryFlavor](#berry-flavors)
+likes_flavor                  | The flavor liked by pokemon with this nature                                                                          | [APIReference](#apireference) ([BerryFlavor](#berry-flavors)
 pokeathlon_stat_changes       | A list of pokeathlon stats this nature effects and how much it effects them                                           | [[NatureStatChange](#naturestatchange)]
 move_battle_style_preferences | A list of battle styles and how likely a pokemon with this nature is to use them in the Battle Palace or Battle Tent. | [[MoveBattleStylePreference](#movebattlestylepreference)]
 names                         | The name of this nature listed in different languages                                                                 | [[Name](#resourcename)]
@@ -1311,7 +1830,25 @@ api/v2/pal-park-area/{id or name}
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "forest",
+	"names": [{
+		"name": "Forest",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"pokemon_encounters": [{
+		"base_score": 30,
+		"rate": 50,
+		"pokemon_species": {
+			"name": "caterpie",
+			"url": "http://localhost:8000/api/v2/pokemon-species/10/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1338,11 +1875,45 @@ pokemon_species | The pokemon species being encountered                         
 ```
 api/v2/pokedex/{id or name}
 ```
+A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 2,
+	"name": "kanto",
+	"is_main_series": true,
+	"descriptions": [{
+		"description": "Rot/Blau/Gelb Kanto Dex",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"names": [{
+		"name": "Kanto",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"pokemon_entries": [{
+		"entry_number": 1,
+		"pokemon_species": {
+			"name": "bulbasaur",
+			"url": "http://localhost:8000/api/v2/pokemon-species/1/"
+		}
+	}],
+	"region": {
+		"name": "kanto",
+		"url": "http://localhost:8000/api/v2/region/1/"
+	},
+	"version_groups": [{
+		"name": "red-blue",
+		"url": "http://localhost:8000/api/v2/version-group/1/"
+	}]
+}
 ```
 
 ###### response models
@@ -1358,25 +1929,128 @@ descriptions    | The description of this pokedex listed in different languages 
 names           | The name of this pokedex listed in different languages                       | [[Name](#resourcename)]
 pokemon_entries | A list of pokemon catalogued in this pokedex and their indexes               | [[PokemonEntry](#pokemonentry)]
 region          | The region this pokedex catalogues pokemon for                               | [APIReference](#apireference) ([Region](#regions))
-version_groups  | A list of version groups this pokedex is relevent to                         | [APIReference](#apireference) ([VersionGroup](#versiongroups))
+version_groups  | A list of version groups this pokedex is relevent to                         | [APIReference](#apireference) ([VersionGroup](#version-groups))
 
 #### PalParkEncounter
 
 Name | Description | Data Type
 ---- | ----------- | ---------
 entry_number    | The index of this pokemon species entry within the pokedex | integer
-pokemon_species | The pokemon species being encountered                      | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
+pokemon_species | The pokemon species being encountered                      | [APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))
 
 
 ## Pokemon
 ```
 api/v2/pokemon/{id or name}
 ```
+Pokemon are the creatures that inhabit the world of the pokemon games. They can be caught using pokeball's and trained by battling with other pokemon. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokémon_(species)) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 12,
+	"name": "butterfree",
+	"base_experience": 178,
+	"height": 11,
+	"is_default": true,
+	"order": 16,
+	"weight": 320,
+	"abilities": [{
+		"is_hidden": true,
+		"slot": 3,
+		"ability": {
+			"name": "tinted-lens",
+			"url": "http://localhost:8000/api/v2/ability/110/"
+		}
+	}],
+	"forms": [{
+		"name": "butterfree",
+		"url": "http://localhost:8000/api/v2/pokemon-form/12/"
+	}],
+	"game_indices": [{
+		"game_index": 12,
+		"version": {
+			"name": "white-2",
+			"url": "http://localhost:8000/api/v2/version/22/"
+		}
+	}],
+	"held_items": [{
+		"item": {
+			"name": "silver-powder",
+			"url": "http://localhost:8000/api/v2/item/199/"
+		},
+		"version_details": [{
+			"rarity": 5,
+			"version": {
+				"name": "y",
+				"url": "http://localhost:8000/api/v2/version/24/"
+			}
+		}]
+	}],
+	"location_area_encounters": [{
+		"location_area": {
+			"name": "kanto-route-2-south-towards-viridian-city",
+			"url": "http://localhost:8000/api/v2/location-area/296/"
+		},
+		"version_details": [{
+			"max_chance": 10,
+			"encounter_details": [{
+				"min_level": 7,
+				"max_level": 7,
+				"condition_values": [{
+					"name": "time-morning",
+					"url": "http://localhost:8000/api/v2/encounter-condition-value/3/"
+				}],
+				"chance": 5,
+				"method": {
+					"name": "walk",
+					"url": "http://localhost:8000/api/v2/encounter-method/1/"
+				}
+			}],
+			"version": {
+				"name": "heartgold",
+				"url": "http://localhost:8000/api/v2/version/15/"
+			}
+		}]
+	}],
+	"moves": [{
+		"move": {
+			"name": "flash",
+			"url": "http://localhost:8000/api/v2/move/148/"
+		},
+		"version_group_details": [{
+			"level_learned_at": 0,
+			"version_group": {
+				"name": "x-y",
+				"url": "http://localhost:8000/api/v2/version-group/15/"
+			},
+			"move_learn_method": {
+				"name": "machine",
+				"url": "http://localhost:8000/api/v2/move-learn-method/4/"
+			}
+		}]
+	}],
+	"species": {
+		"name": "butterfree",
+		"url": "http://localhost:8000/api/v2/pokemon-species/12/"
+	},
+	"stats": [{
+		"base_stat": 70,
+		"effort": 0,
+		"stat": {
+			"name": "speed",
+			"url": "http://localhost:8000/api/v2/stat/6/"
+		}
+	}],
+	"types": [{
+		"slot": 2,
+		"type": {
+			"name": "flying",
+			"url": "http://localhost:8000/api/v2/type/3/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1385,22 +2059,22 @@ api/v2/pokemon/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id                       | The identifier for this pokemon resource                         | integer
-name                     | The name for this pokemon resource                               | string
-base_experience          | The base experience gained for defeating this pokemon            | integer
-height                   | The height of this pokemon                                       | integer
-is_default               | Set for exactly one pokemon used as the default for each species | boolean
-order                    | TODO                                                             | integer
-weight                   | The weight of this pokemon                                       | integer
-abilities                | A list of abilities this pokemon could potentially have          | [[PokemonAbility](#pokemonability)]
-forms                    | A list of forms this pokemon can take on                         | [[APIResource](#apiresource) ([PokemonForm](#pokemonforms))]
-game_indices             | A list of game indices relevent to pokemon item by generation    | [[VersionGameIndex](#versiongameindex)]
-held_items               | A list of items this pokemon may be holding when encountered     | [[APIResource](#apiresource) ([Item](#items))]
-location_area_encounters |
-moves                    |
-species                  | The species this pokemon belongs to                              | [PokemonSpecies](#pokemonspecies))
-stats                    | A list of base stat values for this pokemon                      | [[APIResource](#apiresource) ([Stat](#stats))]
-types                    | A list of details showing types this pokemon has                 | [([PokemonType](#pokemontype))]
+id                       | The identifier for this pokemon resource                                                         | integer
+name                     | The name for this pokemon resource                                                               | string
+base_experience          | The base experience gained for defeating this pokemon                                            | integer
+height                   | The height of this pokemon                                                                       | integer
+is_default               | Set for exactly one pokemon used as the default for each species                                 | boolean
+order                    | Order for sorting. Almost national order, except families are grouped together.                  | integer
+weight                   | The weight of this pokemon                                                                       | integer
+abilities                | A list of abilities this pokemon could potentially have                                          | [[PokemonAbility](#pokemonability)]
+forms                    | A list of forms this pokemon can take on                                                         | [[APIResource](#apiresource) ([PokemonForm](#pokemon-forms))]
+game_indices             | A list of game indices relevent to pokemon item by generation                                    | [[VersionGameIndex](#versiongameindex)]
+held_items               | A list of items this pokemon may be holding when encountered                                     | [[APIResource](#apiresource) ([Item](#items))]
+location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions | 
+moves                    | A list of moves along with learn methods and level details pertaining to specific version groups
+species                  | The species this pokemon belongs to                                                              | [PokemonSpecies](#pokemonspecies))
+stats                    | A list of base stat values for this pokemon                                                      | [[APIResource](#apiresource) ([Stat](#stats))]
+types                    | A list of details showing types this pokemon has                                                 | [[PokemonType](#pokemontype)]
 
 #### PokemonAbility
 
@@ -1417,15 +2091,38 @@ Name | Description | Data Type
 slot | The order the pokemons types are listed in | integer
 type | The type the referenced pokemon has        | string
 
+#### LocationAreaEncounter
+
+Name | Description | Data Type
+---- | ----------- | ---------
+location_area   | The location area the referenced pokemon can be encountered in                  | [APIReference](#apireference) ([Pokemon](#pokemon))
+version_details | A list of versions and encounters with the referenced pokemon that might happen | [[VersionEncounterDetail](#versionencounterdetail)]
+
+
 ## Pokemon Colors
 ```
 api/v2/pokemon-color/{id or name}
 ```
+Colors used for sorting pokemon in a pokedex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "black",
+	"names": [{
+		"name": "é»’ã„",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}],
+	"pokemon_species": [{
+		"name": "snorlax",
+		"url": "http://localhost:8000/api/v2/pokemon-species/143/"
+	}]
+}
 ```
 
 ###### response models
@@ -1437,18 +2134,36 @@ Name | Description | Data Type
 id              | The identifier for this pokemon color resource               | integer
 name            | The name for this pokemon color resource                     | string
 names           | The name of this pokemon color listed in different languages | [[Name](#resourcename)]
-pokemon_species | A list of the pokemon species that have this color           | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of the pokemon species that have this color           | [[APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))]
 
 
 ## Pokemon Forms
 ```
 api/v2/pokemon-form/{id or name}
 ```
+Some pokemon have the ability to take on different forms. At times, these differences are purely cosmetic and have no bearing on the difference in the Pokémon's stats from another; however, several Pokémon differ in stats (other than HP), type, and Ability depending on their form.
 
 ###### example response
 
 ```json
-
+{
+	"id": 413,
+	"name": "wormadam-plant",
+	"order": 503,
+	"form_order": 1,
+	"is_default": true,
+	"is_battle_only": false,
+	"is_mega": false,
+	"form_name": "plant",
+	"pokemon": {
+		"name": "wormadam-plant",
+		"url": "http://localhost:8000/api/v2/pokemon/413/"
+	},
+	"version_group": {
+		"name": "diamond-pearl",
+		"url": "http://localhost:8000/api/v2/version-group/8/"
+	}
+}
 ```
 
 ###### response models
@@ -1466,13 +2181,14 @@ is_battle_only | Whether or not this form can only happen during battle         
 is_mega        | Whether or not this form requires mega evolution                                                                                                          | boolean
 form_name      | The name of this form                                                                                                                                     | string
 pokemon        | The pokemon that can take on this form                                                                                                                    | [APIResource](#apiresource) ([Pokemon](#pokemon))
-version_group  | The version group this pokemon form was introduced in                                                                                                     | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
+version_group  | The version group this pokemon form was introduced in                                                                                                     | [APIResource](#apiresource) ([VersionGroup](#version-groups))
 
 
 ## Pokemon Habitats
 ```
 api/v2/pokemon-habitat/{id or name}
 ```
+Habitats are generally different terrain pokemon can be found in but can also be areas designated for rare or legendary pokemon.
 
 ###### example response
 
@@ -1489,13 +2205,14 @@ Name | Description | Data Type
 id              | The identifier for this pokemon habitat resource                | integer
 name            | The name for this pokemon habitat resource                      | string
 names           | The name of this pokemon habitat listed in different languages  | [[Name](#resourcename)]
-pokemon_species | A list of the pokemon species that can be found in this habitat | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of the pokemon species that can be found in this habitat | [[APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))]
 
 
 ## Pokemon Shapes
 ```
 api/v2/pokemon-shape/{id or name}
 ```
+Shapes used for sorting pokemon in a pokedex. 
 
 ###### example response
 
@@ -1513,7 +2230,7 @@ id              | The identifier for this pokemon shape resource                
 name            | The name for this pokemon shape resource                                  | string
 awesome_names   | The "scientific" name of this pokemon shape listed in different languages | [[AwesomeName](#awesomename)]
 names           | The name of this pokemon shape listed in different languages              | [[Name](#resourcename)]
-pokemon_species | A list of the pokemon species that have this shape                        | [[APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))]
+pokemon_species | A list of the pokemon species that have this shape                        | [[APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))]
 
 #### AwesomeName
 
@@ -1527,11 +2244,86 @@ language     | The language this "scientific" name is in                        
 ```
 api/v2/pokemon-species/{id or name}
 ```
+A Pokemon Species forms the basis for at least one pokemon. Attributes of a Pokemon species are shared across all varieties of pokemon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.  
 
 ###### example response
 
 ```json
-
+{
+	"id": 413,
+	"name": "wormadam",
+	"order": 441,
+	"gender_rate": 8,
+	"capture_rate": 45,
+	"base_happiness": 70,
+	"is_baby": false,
+	"hatch_counter": 15,
+	"has_gender_differences": false,
+	"forms_switchable": false,
+	"growth_rate": {
+		"name": "medium",
+		"url": "http://localhost:8000/api/v2/growth-rate/2/"
+	},
+	"pokedex_numbers": [{
+		"entry_number": 45,
+		"pokedex": {
+			"name": "kalos-central",
+			"url": "http://localhost:8000/api/v2/pokedex/12/"
+		}
+	}],
+	"egg_groups": [{
+		"name": "bug",
+		"url": "http://localhost:8000/api/v2/egg-group/3/"
+	}],
+	"color": {
+		"name": "gray",
+		"url": "http://localhost:8000/api/v2/pokemon-color/4/"
+	},
+	"shape": {
+		"name": "squiggle",
+		"url": "http://localhost:8000/api/v2/pokemon-shape/2/"
+	},
+	"evolves_from_species": {
+		"name": "burmy",
+		"url": "http://localhost:8000/api/v2/pokemon-species/412/"
+	},
+	"evolution_chain": {
+		"url": "http://localhost:8000/api/v2/evolution-chain/213/"
+	},
+	"habitat": null,
+	"generation": {
+		"name": "generation-iv",
+		"url": "http://localhost:8000/api/v2/generation/4/"
+	},
+	"names": [{
+		"name": "Wormadam",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"form_descriptions": [{
+		"description": "Forms have different stats and movepools.  During evolution, Burmy's current cloak becomes Wormadam's form, and can no longer be changed.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"genera": [{
+		"genus": "Bagworm",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"varieties": [{
+		"is_default": true,
+		"pokemon": {
+			"name": "wormadam-plant",
+			"url": "http://localhost:8000/api/v2/pokemon/413/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1550,18 +2342,18 @@ is_baby                | Whether or not this is a baby pokemon                  
 hatch_counter          | Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer
 has_gender_differences | Whether or not this pokemon can have different genders                                                                                             | boolean
 forms_switchable       | Whether or not this pokemon has multiple forms and can switch between them                                                                         | boolean
-growth_rate            | The rate at which this pokemon species gains levels                                                                                                | [APIResource](#apiresource) ([GrowthRate](#growthrates))
+growth_rate            | The rate at which this pokemon species gains levels                                                                                                | [APIResource](#apiresource) ([GrowthRate](#growth-rates))
 pokedex_numbers        | A list of pokedexes and the indexes reserved within them for this pokemon species                                                                  | [PokemonSpeciesDexEntry](#pokemonspeciesdexentry)
-egg_groups             | A list of egg groups this pokemon species is a member of                                                                                           | [[APIResource](#apiresource) ([EggGroup](#egggroups))]
-color                  | The color of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonColor](#pokemoncolors))]
-shape                  | The shape of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonShape](#pokemonshapes))]
-evolves_from_species   | The pokemon species that evolves into this pokemon_species                                                                                         | [APIResource](#apiresource) ([PokemonSpecies](#pokemonspecies))
-evolution_chain        | The evolution chain this pokemon species is a member of                                                                                            | [APIResource](#apiresource) ([EvolutionChain](#evolutionchains))
-habitat                | The habitat this pokemon species can be encountered in                                                                                             | [APIResource](#apiresource) ([PokemonHabitat](#pokemonhabitats))
+egg_groups             | A list of egg groups this pokemon species is a member of                                                                                           | [[APIResource](#apiresource) ([EggGroup](#egg-groups))]
+color                  | The color of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonColor](#pokemon-colors))]
+shape                  | The shape of this pokemon for gimmicky pokedex search                                                                                              | [[APIResource](#apiresource) ([PokemonShape](#pokemon-shapes))]
+evolves_from_species   | The pokemon species that evolves into this pokemon_species                                                                                         | [APIResource](#apiresource) ([PokemonSpecies](#pokemon-species))
+evolution_chain        | The evolution chain this pokemon species is a member of                                                                                            | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains))
+habitat                | The habitat this pokemon species can be encountered in                                                                                             | [APIResource](#apiresource) ([PokemonHabitat](#pokemon-habitats))
 generation             | The generation this pokemon species was introduced in                                                                                              | [APIResource](#apiresource) ([Generation](#generations))
 names                  | The name of this pokemon species listed in different languages                                                                                     | [[Name](#resourcename)]
 pal_park_encounters    | A list of encounters that can be had with this pokemon species in pal park                                                                         | [[PalParkEncounterArea](#palparkencounterarea)]
-form_descriptions      | TODO
+form_descriptions      | Descriptions of different forms pokemon take on within the pokemon species		                                                                    | [Description](#description)
 genera                 | The genus of this pokemon species listed in multiple languages                                                                                     | [Genus](#genus)
 varieties              | A list of the pokemon that exist within this pokemon species                                                                                       | [[APIResource](#apiresource) ([Pokemon](#pokemon))]
 
@@ -1592,11 +2384,38 @@ area       | The pal park area where this encounter happens                     
 ```
 api/v2/pokeathlon-stat/{id or name}
 ```
+Pokeathlon Stats are different attributes of a pokemons performance in pokeathlons. In Pokeathlons, competitions happen on different courses; one for each of the different pokeathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokéathlon) for greater detail.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "speed",
+	"affecting_natures": {
+		"increase": [{
+			"max_change": 2,
+			"nature": {
+				"name": "timid",
+				"url": "http://localhost:8000/api/v2/nature/5/"
+			}
+		}],
+		"decrease": [{
+			"max_change": -1,
+			"nature": {
+				"name": "hardy",
+				"url": "http://localhost:8000/api/v2/nature/1/"
+			}
+		}]
+	},
+	"names": [{
+		"name": "Speed",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1629,11 +2448,38 @@ nature     | The nature causing the change                                  | [A
 ```
 api/v2/region/{id or name}
 ```
+A region is an organized area of the pokemon world. Most often, the main difference between regions is the species of pokemon that can be encountered within them.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "kanto",
+	"locations": [{
+		"name": "celadon-city",
+		"url": "http://localhost:8000/api/v2/location/67/"
+	}],
+	"main_generation": {
+		"name": "generation-i",
+		"url": "http://localhost:8000/api/v2/generation/1/"
+	},
+	"names": [{
+		"name": "Kanto",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"pokedexes": [{
+		"name": "kanto",
+		"url": "http://localhost:8000/api/v2/pokedex/2/"
+	}],
+	"version_groups": [{
+		"name": "red-blue",
+		"url": "http://localhost:8000/api/v2/version-group/1/"
+	}]
+}
 ```
 
 ###### response models
@@ -1648,18 +2494,64 @@ locations       | A list of locations that can be found in this region      | [A
 main_generation | The generation this region was introduced in              | [APIResource](#apiresource) ([Generation](#generations))
 names           | The name of this region listed in different languages     | [[Name](#resourcename)]
 pokedexes       | A list of pokedexes that catalogue pokemon in this region | [APIResource](#apiresource) ([Pokedex](#pokedexes))
-version_groups  | A list of version groups where this region can be visited | [APIResource](#apiresource) ([VersionGroup](#versiongroups))
+version_groups  | A list of version groups where this region can be visited | [APIResource](#apiresource) ([VersionGroup](#version-groups))
 
 
 ## Stats
 ```
 api/v2/stat/{id or name}
 ```
+Stats determine certain aspects of battles. Each pokemon has a value for each stat which grows as they gain levels and can be altered momenarily by effects in battles.
 
 ###### example response
 
 ```json
-
+{
+	"id": 2,
+	"name": "attack",
+	"game_index": 2,
+	"is_battle_only": false,
+	"affecting_moves": {
+		"increase": [{
+			"change": 2,
+			"move": {
+				"name": "swords-dance",
+				"url": "http://localhost:8000/api/v2/move/14/"
+			}
+		}],
+		"decrease": [{
+			"change": -1,
+			"move": {
+				"name": "growl",
+				"url": "http://localhost:8000/api/v2/move/45/"
+			}
+		}]
+	},
+	"affecting_natures": {
+		"increase": [{
+			"name": "lonely",
+			"url": "http://localhost:8000/api/v2/nature/6/"
+		}],
+		"decrease": [{
+			"name": "bold",
+			"url": "http://localhost:8000/api/v2/nature/2/"
+		}]
+	},
+	"characteristics": [{
+		"url": "http://localhost:8000/api/v2/characteristic/2/"
+	}],
+	"move_damage_class": {
+		"name": "physical",
+		"url": "http://localhost:8000/api/v2/move-damage-class/2/"
+	},
+	"names": [{
+		"name": "ã“ã†ã’ã",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}]
+}
 ```
 
 ###### response models
@@ -1675,7 +2567,7 @@ is_battle_only    | Whether this stat only exists within a battle               
 affecting_moves   | A detail of moves which affect this stat positively or negatively                           | [MoveStatAffectSets](#movestataffectsets)
 affecting_natures | A detail of natures which affect this stat positively or negatively                         | [NatureStatAffectSets](#naturestataffectsets)
 characteristics   | A list of characteristics that are set on a pokemon when its highest base stat is this stat | [[APIResource](#apiresource) ([Characteristic](#characteristics))]
-move_damage_class | The class of damage this stat is directly related to                                        | [APIResource](#apiresource) ([MoveDamageClass](#movedamageclasses))
+move_damage_class | The class of damage this stat is directly related to                                        | [APIResource](#apiresource) ([MoveDamageClass](#move-damage-classes))
 names             | The name of this region listed in different languages                                       | [[Name](#resourcename)]
 
 #### MoveStatAffectSets
@@ -1711,11 +2603,26 @@ nature     | The nature causing the change                       | [APIResource]
 ```
 api/v2/super-contest-effect/{id or name}
 ```
+Super contest effects refer to the effects of moves when used in super contests.
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"appeal": 2,
+	"flavor_text_entries": [{
+		"flavor_text": "Enables the user to perform first in the next turn.",
+		"language": {
+			"name": "en",
+			"url": "http://localhost:8000/api/v2/language/9/"
+		}
+	}],
+	"moves": [{
+		"name": "agility",
+		"url": "http://localhost:8000/api/v2/move/97/"
+	}]
+}
 ```
 
 ###### response models
@@ -1734,11 +2641,74 @@ moves               | A list of moves that have the effect when used in super co
 ```
 api/v2/types/{id or name}
 ```
+Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.
 
 ###### example response
 
 ```json
-
+{
+	"id": 5,
+	"name": "ground",
+	"damage_relations": {
+		"no_damage_to": [{
+			"name": "flying",
+			"url": "http://localhost:8000/api/v2/type/3/"
+		}],
+		"half_damage_to": [{
+			"name": "bug",
+			"url": "http://localhost:8000/api/v2/type/7/"
+		}],
+		"double_damage_to": [{
+			"name": "poison",
+			"url": "http://localhost:8000/api/v2/type/4/"
+		}],
+		"no_damage_from": [{
+			"name": "electric",
+			"url": "http://localhost:8000/api/v2/type/13/"
+		}],
+		"half_damage_from": [{
+			"name": "poison",
+			"url": "http://localhost:8000/api/v2/type/4/"
+		}],
+		"double_damage_from": [{
+			"name": "water",
+			"url": "http://localhost:8000/api/v2/type/11/"
+		}]
+	},
+	"game_indices": [{
+		"game_index": 4,
+		"generation": {
+			"name": "generation-i",
+			"url": "http://localhost:8000/api/v2/generation/1/"
+		}
+	}],
+	"generation": {
+		"name": "generation-i",
+		"url": "http://localhost:8000/api/v2/generation/1/"
+	},
+	"move_damage_class": {
+		"name": "physical",
+		"url": "http://localhost:8000/api/v2/move-damage-class/2/"
+	},
+	"names": [{
+		"name": "ã˜ã‚ã‚“",
+		"language": {
+			"name": "ja",
+			"url": "http://localhost:8000/api/v2/language/1/"
+		}
+	}],
+	"pokemon": [{
+		"slot": 1,
+		"pokemon": {
+			"name": "sandshrew",
+			"url": "http://localhost:8000/api/v2/pokemon/27/"
+		}
+	}],
+	"moves": [{
+		"name": "sand-attack",
+		"url": "http://localhost:8000/api/v2/move/28/"
+	}]
+}
 ```
 
 ###### response models
@@ -1747,15 +2717,15 @@ api/v2/types/{id or name}
 
 Name | Description | Data Type
 ---- | ----------- | ---------
-id                | The identifier for this type resource                      | integer
-name              | The name for this type resource                            | string
-damage_relations  |
-game_indices      | A list of game indices relevent to this item by generation | [[GenerationGameIndex](#generationgameindex)]
-generation        | The generation this type was introduced in                 | [APIResource](#apiresource) ([Generation](#generations)
-move_damage_class | The class of damage inflicted by this type                 | [APIResource](#apiresource) ([MoveDamageClass](#movedamageclasses))
-names             | The name of this type listed in different languages        | [[Name](#resourcename)]
-pokemon           | A list of details of pokemon that have this type           | [TypePokemon](#typepokemon)
-moves             | A list of moves that have this type                        | [[APIResource](#apiresource) ([Move](#moves))]
+id                | The identifier for this type resource                               | integer
+name              | The name for this type resource                                     | string
+damage_relations  | A detail of how effective this type is toward others and vice versa | [TypeRelations](#typerelations)
+game_indices      | A list of game indices relevent to this item by generation          | [[GenerationGameIndex](#generationgameindex)]
+generation        | The generation this type was introduced in                          | [APIResource](#apiresource) ([Generation](#generations)
+move_damage_class | The class of damage inflicted by this type                          | [APIResource](#apiresource) ([MoveDamageClass](#move-damage-classes))
+names             | The name of this type listed in different languages                 | [[Name](#resourcename)]
+pokemon           | A list of details of pokemon that have this type                    | [TypePokemon](#typepokemon)
+moves             | A list of moves that have this type                                 | [[APIResource](#apiresource) ([Move](#moves))]
 
 #### TypePokemon
 
@@ -1764,16 +2734,42 @@ Name | Description | Data Type
 slot    | The order the pokemons types are listed in | integer
 pokemon | The pokemon that has the referenced type   | [APIResource](#apiresource) ([Pokemon](#pokemon)
 
+#### TypeRelations
+
+Name | Description | Data Type
+---- | ----------- | ---------
+no_damage_to       | A list of types this type has no effect on                    | [[APIResource](#apiresource) ([Type](#types))]
+half_damage_to     | A list of types this type is not very effect against          | [[APIResource](#apiresource) ([Type](#types))]
+double_damage_to   | A list of types this type is very effect against              | [[APIResource](#apiresource) ([Type](#types))]
+no_damage_from     | A list of types that have no effect on this type              | [[APIResource](#apiresource) ([Type](#types))]
+half_damage_from   | A list of types that are not very effective against this type | [[APIResource](#apiresource) ([Type](#types))]
+double_damage_from | A list of types that are very effective against this type     | [[APIResource](#apiresource) ([Type](#types))]
 
 ## Versions
 ```
 api/v2/version/{id or name}
 ```
+Versions of the games, e.g., Red, Blue or Yellow. 
 
 ###### example response
 
 ```json
 
+{
+	"id": 1,
+	"name": "red",
+	"names": [{
+		"name": "Rot",
+		"language": {
+			"name": "de",
+			"url": "http://localhost:8000/api/v2/language/6/"
+		}
+	}],
+	"version_group": {
+		"name": "red-blue",
+		"url": "http://localhost:8000/api/v2/version-group/1/"
+	}
+}
 ```
 
 ###### response models
@@ -1785,18 +2781,43 @@ Name | Description | Data Type
 id            | The identifier for this version resource               | integer
 name          | The name for this version resource                     | string
 names         | The name of this version listed in different languages | [[Name](#resourcename)]
-version_group | The version group this version belongs to              | [[APIResource](#apiresource) ([VersionGroup](#versiongroups))]
+version_group | The version group this version belongs to              | [[APIResource](#apiresource) ([VersionGroup](#version-groups))]
 
 
 ## Version Groups
 ```
 api/v2/version-group/{id or name}
 ```
+Version groups categorize highly similar versions of the games. 
 
 ###### example response
 
 ```json
-
+{
+	"id": 1,
+	"name": "red-blue",
+	"order": 1,
+	"generation": {
+		"name": "generation-i",
+		"url": "http://localhost:8000/api/v2/generation/1/"
+	},
+	"move_learn_methods": [{
+		"name": "level-up",
+		"url": "http://localhost:8000/api/v2/move-learn-method/1/"
+	}],
+	"pokedexes": [{
+		"name": "kanto",
+		"url": "http://localhost:8000/api/v2/pokedex/2/"
+	}],
+	"regions": [{
+		"name": "kanto",
+		"url": "http://localhost:8000/api/v2/region/1/"
+	}],
+	"versions": [{
+		"name": "red",
+		"url": "http://localhost:8000/api/v2/version/1/"
+	}]
+}
 ```
 
 ###### response models
@@ -1809,7 +2830,7 @@ id                 | The identifier for this version group resource             
 name               | The name for this version group resource                                                    | string
 order              | Order for sorting. Almost by date of release, except similar versions are grouped together. | integer
 generation         | The generation this version was introduced in                                               | [[APIResource](#apiresource) ([Generation](#generations))]
-move_learn_methods | A list of methods in which pokemon can learn moves in this version group                    | [[APIResource](#apiresource) ([MoveLearnMethod](#mofelearnmethods))]
+move_learn_methods | A list of methods in which pokemon can learn moves in this version group                    | [[APIResource](#apiresource) ([MoveLearnMethod](#move-learn-methods))]
 names              | The name of this version group listed in different languages                                | [[Name](#resourcename)]
 pokedexes          | A list of pokedexes introduces in this version group                                        | [[APIResource](#apiresource) ([Pokedex](#pokedexes))]
 regions            | A list of regions that can be visited in this version group                                 | [[APIResource](#apiresource) ([Region](#regions))]
@@ -1849,9 +2870,9 @@ Name | Description | Data Type
 ---- | ----------- | ---------
 min_level        | The lowest level the pokemon could be encountered at                          | integer
 max_level        | The highest level the pokemon could be encountered at                         | integer
-condition_values | A list of condition values that must be in effect for this encounter to occur | [[APIResource](#apiresource) ([EncounterConditionValue](#encounterconditionvalue))]
+condition_values | A list of condition values that must be in effect for this encounter to occur | [[APIResource](#apiresource) ([EncounterConditionValue](#encounter-condition-value))]
 chance           | percent chance that this encounter will occur                                 | integer
-method           | The method by which this encounter happens                                    | [APIResource](#apiresource) ([EncounterMethod](#encountermethod))
+method           | The method by which this encounter happens                                    | [APIResource](#apiresource) ([EncounterMethod](#encounter-method))
 
 
 #### FlavorText
@@ -1887,13 +2908,30 @@ short_effect | The localized effect text in brief                               
 language     | The language this effect is in                                       | [APIResource](#apiresource) ([Language](#language))
 
 
+#### VersionEncounterDetail
+
+Name | Description | Data Type
+---- | ----------- | ---------
+version           | The game version this encounter happens in      | [APIReference](#apireference) ([Version](#versions))
+max_chance        | The total percentage of all encounter potential | integer
+encounter_details | A list of encounters and their specifics        | [[Encounter](#encounters)]
+
+
 #### VersionGameIndex
 
-Name       | Description                                         | Data Type
-----       | -----------                                         | ---------
+Name | Description | Data Type
+---- | ----------- | ---------
 game_index | The internal id of an api resource within game data | integer
 version    | The version relevent to this game index             | [APIResource](#apiresource) ([Version](#version))
 
+
+#### VersionGroupFlavorText
+
+Name | Description | Data Type
+---- | ----------- | ---------
+text          | The localized name for an api resource in a specific language | string
+language      | The language this name is in                                  | [APIResource](#apiresource) ([Language](#language))
+version_group | The version group which uses this flavor text                 | [APIResource](#apiresource) ([VersionGroup](#version-groups))
 
 
 

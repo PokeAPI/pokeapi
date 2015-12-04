@@ -1005,7 +1005,6 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
 
     effect_entries = AbilityEffectTextSerializer(many=True, read_only=True, source="abilityeffecttext")
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
-    # flavor_text_entries = serializers.SerializerMethodField('get_flavor_text')
     names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
     generation = GenerationSummarySerializer()
     effect_changes = AbilityChangeSerializer(many=True, read_only=True, source="abilitychange")
@@ -1036,27 +1035,6 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             pokemon.append(poke)
 
         return pokemon
-
-    # def get_flavor_text(self, obj):
-
-    #     version_objects = VersionGroup.objects.all()
-    #     version_data = VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data
-
-    #     flavor_texts = AbilityFlavorText.objects.filter(ability=obj)
-    #     group_ids = flavor_texts.values('flavor').distinct()
-    #     entries = []
-
-    #     for group_id in group_ids:
-    #         id = group_id['version_group']
-    #         texts = flavor_texts.filter(version_group=id)
-
-    #         detail = OrderedDict()
-    #         detail['version_group'] = version_data[id-1]
-    #         detail['entries'] = AbilityFlavorTextSerializer(texts, many=True, context=self.context).data
-    #         entries.append(detail)
-
-    #     return entries
-
 
 
 

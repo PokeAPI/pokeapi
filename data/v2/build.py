@@ -51,7 +51,7 @@ def clear_table(model):
     else:
         db_cursor.execute("SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
-def prozess_csv(file_name, data_to_models):
+def process_csv(file_name, data_to_models):
     daten = load_data(file_name)
     next(daten, None)  #  skip header
     for data in daten:
@@ -61,7 +61,7 @@ def prozess_csv(file_name, data_to_models):
 def build_generic(model_classes, file_name, data_to_models):
     for model_class in model_classes:
         clear_table(model_class)
-    prozess_csv(file_name, data_to_models)
+    process_csv(file_name, data_to_models)
 
 ##############
 #  LANGUAGE  #

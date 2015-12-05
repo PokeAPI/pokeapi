@@ -68,10 +68,11 @@ $ python manage.py shell --settings=config.local
 ```
 run the build script with
 ```
-$ execfile('data/v2/build.py')
+$ import data.v2.build
+$ data.v2.build.build_all()
 ```
 Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
-If you don't need all of the data just go into data/v2/build.py and comment out everything but what you need to build the tables you're looking for. This might be useful because some of the csv files are massive (pokemon_moves expecially) and it can take about 30 minutes to build everything.
+If you don't need all of the data just run the functions of the modelgroups you want. For now there are only functions for groups of models if you want to build only some models you have to comment out everything you don't want in the functions you want to run. This might be useful because some of the csv files are massive (pokemon_moves expecially) and it can take about 30 minutes to build everything.
 
 ## Contributing
 

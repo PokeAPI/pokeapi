@@ -2045,20 +2045,6 @@ def build_pokemons():
             model.save()
 
 
-    clear_table(PokemonGameIndex)
-    data = load_data('pokemon_game_indices.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = PokemonGameIndex (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                version = Version.objects.get(pk = int(info[1])),
-                game_index = int(info[2])
-            )
-            model.save()
-
-
     clear_table(PokemonHabitatName)
     data = load_data('pokemon_habitat_names.csv')
 

@@ -4,8 +4,8 @@
 #
 #  and run the build script with
 #
-#     $ from data.v2.build import *
-#     $ build_all
+#     $ from data.v2.build import build_all
+#     $ build_all()
 #
 #  Each time the build script is run it will iterate over each table in the database,
 #  wipe it and rewrite each row using the data found in data/v2/csv.

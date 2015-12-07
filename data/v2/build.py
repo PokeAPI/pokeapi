@@ -4,14 +4,14 @@
 #
 #  and run the build script with
 #
-#     $ execfile('data/v2/build.py')
+#     $ from data.v2.build import *
+#     $ build_all
 #
 #  Each time the build script is run it will iterate over each table in the database,
 #  wipe it and rewrite each row using the data found in data/v2/csv.
 #  If you don't need all of the data just go into data/v2/build.py and
-#  comment out everything but what you need to build the tables you're looking for.
-#  This might be useful because some of the csv files are massive
-#  (pokemon_moves expecially) and it can take about 30 minutes to build everything.
+#  just call one of the build functions found in this script
+
 
 # support python3
 from __future__ import print_function

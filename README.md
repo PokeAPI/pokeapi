@@ -59,6 +59,29 @@ $ build_abilities()
 $ build moves()
 etc...
 ```
+
+
+## V2 Database setup
+
+Start Django shell
+```
+$ python manage.py shell --settings=config.local
+```
+
+run the build script with
+```
+$ from data.v2.build import build_all
+$ build_all()
+```
+Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
+When building against sqlite we've heard it can take a ridiculously long time to finish building out the database. In this case you can set up just the portions of the db that you need.
+```
+$ from data.v2.build import *
+$ build_languages()
+$ build_abilities()
+...
+```
+
 Heres a list of the data building functions
 - build_languages()
 - build_regions()
@@ -86,29 +109,6 @@ Heres a list of the data building functions
 - build_encounters()
 - build_pal_parks()
 
-
-## V2 Database setup
-
-Start Django shell
-```
-$ python manage.py shell --settings=config.local
-```
-
-run the build script with
-```
-$ from data.v2.build import *
-$ build_all()
-```
-Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
-When building against sqlite we've heard it can take a ridiculously long time to finish building out the database. In this case you can set up just the portions of the db that you need.
-```
-$ from data.v2.build import *
-$ build_languages()
-$ build_abilities()
-...
-```
-
-Here
 
 ## Contributing
 

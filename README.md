@@ -59,6 +59,33 @@ $ build_abilities()
 $ build moves()
 etc...
 ```
+Heres a list of the data building functions
+- build_languages()
+- build_regions()
+- build_generations()
+- build_versions()
+- build_stats()
+- build_damage_classes()
+- build_abilities()
+- build_characteristics()
+- build_egg_groups()
+- build_growth_rates()
+- build_items()
+- build_types()
+- build_contests()
+- build_moves()
+- build_berries()
+- build_natures()
+- build_genders()
+- build_experiences()
+- build_machines()
+- build_evolutions()
+- build_pokedexes()
+- build_locations()
+- build_pokemons()
+- build_encounters()
+- build_pal_parks()
+
 
 ## V2 Database setup
 
@@ -66,13 +93,22 @@ Start Django shell
 ```
 $ python manage.py shell --settings=config.local
 ```
+
 run the build script with
 ```
-$ import data.v2.build
-$ data.v2.build.build_all()
+$ from data.v2.build import *
+$ build_all()
 ```
 Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
-If you don't need all of the data just run the functions of the modelgroups you want. For now there are only functions for groups of models if you want to build only some models you have to comment out everything you don't want in the functions you want to run. This might be useful because some of the csv files are massive (pokemon_moves expecially) and it can take about 30 minutes to build everything.
+When building against sqlite we've heard it can take a ridiculously long time to finish building out the database. In this case you can set up just the portions of the db that you need.
+```
+$ from data.v2.build import *
+$ build_languages()
+$ build_abilities()
+...
+```
+
+Here
 
 ## Contributing
 

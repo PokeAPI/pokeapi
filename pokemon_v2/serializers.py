@@ -964,13 +964,13 @@ class AbilityEffectTextSerializer(serializers.ModelSerializer):
 
 class AbilityFlavorTextSerializer(serializers.ModelSerializer):
 
-    text = serializers.CharField(source="flavor_text")
+    flavor_text = serializers.CharField()
     language = LanguageSummarySerializer()
     version_group = VersionGroupSummarySerializer()
 
     class Meta:
         model = AbilityFlavorText
-        fields = ('text', 'version_group', 'language')
+        fields = ('flavor_text', 'language', 'version_group')
 
 
 class AbilityChangeEffectTextSerializer(serializers.ModelSerializer):
@@ -1007,7 +1007,7 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
     flavor_text_entries = AbilityFlavorTextSerializer(many=True, read_only=True, source="abilityflavortext")
     names = AbilityNameSerializer(many=True, read_only=True, source="abilityname")
     generation = GenerationSummarySerializer()
-    changes = AbilityChangeSerializer(many=True, read_only=True, source="abilitychange")
+    effect_changes = AbilityChangeSerializer(many=True, read_only=True, source="abilitychange")
     pokemon = serializers.SerializerMethodField('get_ability_pokemon')
 
     class Meta:
@@ -1018,10 +1018,10 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             'is_main_series',
             'generation',
             'names',
-            'effect_entries', 
+            'effect_entries',
+            'effect_changes',
             'flavor_text_entries',
             'pokemon',
-            'changes'
         )
 
     def get_ability_pokemon(self, obj):
@@ -1035,6 +1035,7 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             pokemon.append(poke)
 
         return pokemon
+
 
 
 
@@ -2677,7 +2678,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]
-            if evolution_data: entry['evolution_details'] = evolution_data
+            entry['evolution_details'] = evolution_data or None
             entry['evolves_to'] = []
 
             # Keep track of previous entries for complex chaining

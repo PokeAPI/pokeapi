@@ -60,18 +60,55 @@ $ build moves()
 etc...
 ```
 
+
 ## V2 Database setup
 
 Start Django shell
 ```
 $ python manage.py shell --settings=config.local
 ```
+
 run the build script with
 ```
-$ execfile('data/v2/build.py')
+$ from data.v2.build import build_all
+$ build_all()
 ```
 Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
-If you don't need all of the data just go into data/v2/build.py and comment out everything but what you need to build the tables you're looking for. This might be useful because some of the csv files are massive (pokemon_moves expecially) and it can take about 30 minutes to build everything.
+When building against sqlite we've heard it can take a ridiculously long time to finish building out the database. In this case you can set up just the portions of the db that you need.
+```
+$ from data.v2.build import *
+$ build_languages()
+$ build_abilities()
+...
+```
+
+Heres a list of the data building functions
+- build_languages()
+- build_regions()
+- build_generations()
+- build_versions()
+- build_stats()
+- build_damage_classes()
+- build_abilities()
+- build_characteristics()
+- build_egg_groups()
+- build_growth_rates()
+- build_items()
+- build_types()
+- build_contests()
+- build_moves()
+- build_berries()
+- build_natures()
+- build_genders()
+- build_experiences()
+- build_machines()
+- build_evolutions()
+- build_pokedexes()
+- build_locations()
+- build_pokemons()
+- build_encounters()
+- build_pal_parks()
+
 
 ## Contributing
 

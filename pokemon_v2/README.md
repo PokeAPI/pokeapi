@@ -91,7 +91,7 @@ Name | Description | Data Type
 count    | The total number of resources abailable from this api | integer
 next     | The url for the next 'page' in the list               | string
 previous | The url for the previous page in the list             | boolean
-results  | I list of non-named api resources                     | [APIResource](#apiresource)
+results  | I list of non-named api resources                     | [[APIResource](#apiresource)]
 
 
 ###### example response for named resources
@@ -114,7 +114,7 @@ Name | Description | Data Type
 count    | The total number of resources abailable from this api | integer
 next     | The url for the next 'page' in the list               | string
 previous | The url for the previous page in the list             | boolean
-results  | I list of named api resources                         | [NamedAPIResource](#namedapiresource)
+results  | I list of named api resources                         | [[NamedAPIResource](#namedapiresource)]
 
 
 

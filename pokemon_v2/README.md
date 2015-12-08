@@ -71,7 +71,6 @@
 
 ## Resource Lists
 Calling any api endpoint without a resource id or name will return a paginated list of available resources for that api. By default, a list 'page' will contain up to 20 resources. If you would like to change this just add a 'limit' query param, e.g. `limit=60`.
-<<<<<<< HEAD
 
 ###### example response for non-named resources
 ```json

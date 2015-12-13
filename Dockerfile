@@ -13,7 +13,7 @@ WORKDIR /root/
 
 # Build the application
 RUN make install
-RUN make setup
+RUN python manage.py migrate --settings=config.local
 
 # Build the v2 database
 RUN printf "execfile('data/v2/build.py')" | python manage.py shell --settings=config.local

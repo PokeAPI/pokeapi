@@ -64,7 +64,7 @@ class HasGender(models.Model):
 
 class HasEffect(models.Model):
 
-  effect = models.CharField(max_length=4000)
+  effect = models.CharField(max_length=6000)
 
   class Meta:
     abstract = True

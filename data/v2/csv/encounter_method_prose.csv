@@ -25,3 +25,11 @@ encounter_method_id,local_language_id,name
 12,9,Fishing in dark spots
 13,6,An dunklen stellen surfen
 13,9,Surfing in dark spots
+14,6,In gelben Blumenfeldern laufen
+14,9,Walking in yellow flowers
+15,6,In violetten Blumenfeldern laufen
+15,9,Walking in purple flowers
+16,6,In roten Blumenfeldern laufen
+16,9,Walking in red flowers
+17,6,Auf unwegsamen Gelände laufen
+17,9,Walking on rough terrain

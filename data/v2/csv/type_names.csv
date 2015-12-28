@@ -132,5 +132,7 @@ type_id,local_language_id,name
 10001,8,???
 10001,9,???
 10002,1,ダーク
+10002,5,Obscur
+10002,6,Crypto
 10002,8,Ombra
 10002,9,Shadow

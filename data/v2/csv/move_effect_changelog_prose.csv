@@ -26,3 +26,4 @@ move_effect_changelog_id,local_language_id,effect
 25,9,Lasts either two or three turns.
 26,9,"If the target is not under the effect of []{move:detect} or []{move:protect}, this move will fail."
 27,9,The user receieves 1/2 of the damage dealt in recoil.
+28,9,The barriers are destroyed even if this move has [no effect]{mechanic:no-effect}.

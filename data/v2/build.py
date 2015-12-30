@@ -19,6 +19,7 @@ from __future__ import print_function
 import csv
 import os
 import os.path
+import re
 from django.db import migrations, connection
 from pokemon_v2.models import *
 
@@ -26,9 +27,12 @@ from pokemon_v2.models import *
 # why this way? how about use `__file__`
 DATA_LOCATION = 'data/v2/csv/'
 DATA_LOCATION2 = os.path.join(os.path.dirname(__file__), 'csv')
+GROUP_RGX = r"\[(.*?)\]\{(.*?)\}"
+SUB_RGX = r"\[.*?\]\{.*?\}"
 
 db_cursor = connection.cursor()
 DB_VENDOR = connection.vendor
+
 
 def with_iter(context, iterable=None):
     if iterable is None:
@@ -37,9 +41,11 @@ def with_iter(context, iterable=None):
         for value in iterable:
             yield value
 
+
 def load_data(fileName):
     # with_iter closes the file when it has finished
     return csv.reader(with_iter(open(DATA_LOCATION + fileName, 'rt')), delimiter=',')
+
 
 def clear_table(model):
     table_name = model._meta.db_table
@@ -51,6 +57,7 @@ def clear_table(model):
     else:
         db_cursor.execute("SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
+
 def process_csv(file_name, data_to_models):
     daten = load_data(file_name)
     next(daten, None)  #  skip header
@@ -58,10 +65,34 @@ def process_csv(file_name, data_to_models):
         for model in data_to_models(data):
             model.save()
 
+
 def build_generic(model_classes, file_name, data_to_models):
     for model_class in model_classes:
         clear_table(model_class)
     process_csv(file_name, data_to_models)
+
+
+def scrubStr(str):
+    """
+    The purpose of this function is to scrub the weird template mark-up out of strings 
+    that Veekun is using for their pokedex.
+    Example:
+        []{move:dragon-tail} will effect the opponents [HP]{mechanic:hp}.
+    Becomes:
+        dragon tail will effect the opponents HP.
+
+    If you find this results in weird strings please take a stab at improving or re-writing.
+    """
+    groups = re.findall(GROUP_RGX, str)
+    for group in groups:
+        if group[0]:
+            sub = group[0]
+        else:
+            sub = group[1].split(":")[1]
+            sub = sub.replace("-", " ")
+        str = re.sub(SUB_RGX, sub, str, 1)
+    return str
+
 
 ##############
 #  LANGUAGE  #
@@ -386,8 +417,8 @@ def build_abilities():
             abilityDesc = AbilityEffectText (
                 ability = Ability.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                short_effect = info[2],
-                effect = info[3]
+                short_effect = scrubStr(info[2]),
+                effect = scrubStr(info[3])
             )
             abilityDesc.save()
 
@@ -401,7 +432,7 @@ def build_abilities():
             abilityChangeEffectText = AbilityChangeEffectText (
                 ability_change = AbilityChange.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                effect = info[2]
+                effect = scrubStr(info[2])
             )
             abilityChangeEffectText.save()
 
@@ -576,7 +607,7 @@ def build_items():
             model = ItemFlingEffectEffectText (
                 item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                effect = info[2]
+                effect = scrubStr(info[2])
             )
             model.save()
 
@@ -649,8 +680,8 @@ def build_items():
             model = ItemEffectText (
                 item = Item.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                short_effect = info[2],
-                effect = info[3]
+                short_effect = scrubStr(info[2]),
+                effect = scrubStr(info[3])
             )
             model.save()
 
@@ -913,8 +944,8 @@ def build_moves():
             model = MoveEffectEffectText (
                 move_effect = MoveEffect.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                short_effect = info[2],
-                effect = info[3]
+                short_effect = scrubStr(info[2]),
+                effect = scrubStr(info[3])
             )
             model.save()
 
@@ -942,7 +973,7 @@ def build_moves():
             model = MoveEffectChangeEffectText (
                 move_effect_change = MoveEffectChange.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                effect = info[2]
+                effect = scrubStr(info[2])
             )
             model.save()
 
@@ -1189,7 +1220,7 @@ def build_moves():
             description_model = MoveAttributeDescription (
                 move_attribute = MoveAttribute.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                description = info[3]
+                description = scrubStr(info[3])
             )
             description_model.save()
 
@@ -1869,7 +1900,7 @@ def build_pokemons():
             model = PokemonSpeciesDescription (
                 pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
-                description = info[2]
+                description = scrubStr(info[2])
             )
             model.save()
 

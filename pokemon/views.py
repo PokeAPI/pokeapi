@@ -58,7 +58,7 @@ def about(request):
     average_day = int(round(total_views / ResourceView.objects.count()))
 
     return render_to_response(
-        'pages/about.html',
+        'about-v1.html',
         {
             'total': total_views,
             'average_day': average_day,
@@ -76,7 +76,7 @@ def home(request):
         total_views = int(round(total_views, -2))
 
     return render_to_response(
-        'pages/home.html',
+        'home-v1.html',
         {
             'total_views': total_views,
         },

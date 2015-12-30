@@ -4,7 +4,7 @@ import os
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -50,7 +50,10 @@ STATIC_ROOT = PROJECT_ROOT.child('assets')
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
+    
     PROJECT_ROOT.child('assets'),
+    # '/pokemon/assets/',
+    # '/pokemon_v2/assets/'
 )
 
 STATICFILES_FINDERS = (
@@ -83,7 +86,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT.child('templates'),
-
+    PROJECT_ROOT + 'pokemon/templates'
 )
 
 DATABASES = {

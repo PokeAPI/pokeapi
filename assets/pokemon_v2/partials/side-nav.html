@@ -1,0 +1,20 @@
+
+<ul>
+	
+	<li ng-repeat="parent in nav">
+
+		<a href="#">{{parent.anchorText}}</a>
+		
+		<ul ng-if="parent.children != null">
+			
+			<li ng-repeat="child in parent.children">
+
+				<a href="#">{{child.anchorText}}</a>
+
+			</li>
+
+		</ul>
+
+	</li>
+
+</ul>

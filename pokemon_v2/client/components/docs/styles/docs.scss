@@ -1,0 +1,49 @@
+
+#docs {
+
+	padding-top: 40px;
+
+	table {
+
+    	width: 100%;
+    	margin-bottom: 20px;
+
+    	th, td {
+		    border: solid 1px #CCC;
+		    padding: 10px;
+		}
+	}
+
+	section {
+
+		margin-bottom: 60px;
+	}
+
+	h2 {
+		font-weight: 900;
+	}
+
+	.request {
+
+		font-size: 1.4em;
+		font-weight: 300;
+	}
+
+	.response-tag, .models-tag {
+	
+		font-style: italic;
+		margin-bottom: 3px;
+		font-weight: 300;
+
+		&:before {
+			
+			display: inline-block;
+			content: "example response";
+		}
+	}
+
+	.models-tag {
+
+		&:before { content: "response models"; }
+	}
+}

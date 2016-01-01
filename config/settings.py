@@ -50,10 +50,8 @@ STATIC_ROOT = PROJECT_ROOT.child('assets')
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
-    
-    PROJECT_ROOT.child('assets'),
     # '/pokemon/assets/',
-    # '/pokemon_v2/assets/'
+    # 'pokemon_v2/assets/',
 )
 
 STATICFILES_FINDERS = (

@@ -1,0 +1,41 @@
+
+@import 'colors';
+
+#home {
+
+	.title {
+		font-weight: 900;
+	}
+
+	.v {
+		font-size: .5em;
+		font-weight: 300;
+	}
+
+	.try {
+		font-weight: 600;
+	}
+
+	.request {
+
+		width: 100%;
+		margin-bottom: 30px;
+
+		.endpoint {
+
+			button {
+
+				border-right-style: none;
+			}
+		}
+	}
+
+	.json-body {
+
+		border: 1px solid $test-gray;
+		padding: 20px;
+		min-height: 360px;
+		max-height: 360px;
+		overflow: scroll;
+	}
+}

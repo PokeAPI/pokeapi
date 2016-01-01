@@ -6,6 +6,8 @@ var gulp 		= require('gulp'),
 	concat      = require('gulp-concat'),
 	flatten     = require('gulp-flatten'),
 	browserSync = require('browser-sync').create(),
+	sass        = require('gulp-sass'),
+	nano        = require('gulp-cssnano'),
 	uglify      = require('gulp-uglify');
 
 var client = {
@@ -24,13 +26,27 @@ var client = {
 		'pokemon_v2/client/components/**/scripts/*-directive.js',
 		'pokemon_v2/client/components/**/scripts/*-controller.js'	
 	],
+
+	styles   : {
+		
+		src: [
+			'pokemon_v2/client/components/core/styles/core.scss',
+			'pokemon_v2/client/components/core/styles/!(core).scss',
+			'pokemon_v2/client/components/!(core)/styles/*.scss'
+		],
+
+		includes: [
+			'pokemon_v2/client/components/core/styles'
+		]
+	}
 }
 
 var out = {
 
-	scripts: 'assets/js',
-
-	partials: 'pokemon_v2/templates/partials'
+	all: 'assets/pokemon_v2/**/*.*',
+	scripts: 'assets/pokemon_v2/js',
+	styles: 'assets/pokemon_v2/css',
+	partials: 'assets/pokemon_v2/partials'
 }
 
 
@@ -54,9 +70,23 @@ gulp.task('scripts', function () {
 });
 
 
+gulp.task('styles', function () {
+
+	return gulp.src(client.styles.src)
+		.pipe(plumber())
+		.pipe(sass({
+			outputStyle: 'expanded',
+			includePaths: client.styles.includes
+		}))
+		.pipe(nano())
+		.pipe(concat('app.min.css'))
+		.pipe(gulp.dest(out.styles))
+});
+
+
 gulp.task('watch', function () {
 
-	// gulp.watch(client.styles.src, ['styles']);
+	gulp.watch(client.styles.src, ['styles']);
 	gulp.watch(client.html.partials, ['html']);
 	gulp.watch(client.scripts, ['scripts']);
 });
@@ -67,7 +97,7 @@ gulp.task('sync', function () {
     browserSync.init({
 
 		port       : 3000,
-		// files      : server.all,
+		files      : out.all,
 		logLevel   : 'info', // info, debug, warn ,silent
 		// middleware : [fallback],
 		proxy      : 'localhost:8000'
@@ -75,5 +105,5 @@ gulp.task('sync', function () {
 });
 
 
-gulp.task('default', ['html', 'scripts']);
+gulp.task('default', ['html', 'scripts', 'styles']);
 gulp.task('start', ['default', 'watch', 'sync']);

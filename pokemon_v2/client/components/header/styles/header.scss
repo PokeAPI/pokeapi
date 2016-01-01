@@ -1,0 +1,38 @@
+
+@import 'colors';
+
+header {
+
+	background-color: $test-gray;
+
+	.title {
+
+		font-size: 2em;
+		padding-top: 6px;
+		display: inline-block;
+		font-weight: 900;
+	}
+
+	.pokenav {
+
+		float: right;
+		padding: 16px 0;
+		margin: 0;
+
+		li {
+
+			display: inline-block;
+			margin-left: 30px;
+			font-size: 1.1em;
+
+			a {
+
+				cursor: pointer;
+				color: $black;
+				font-weight: 600;
+
+				&:hover { text-decoration: none }
+			}
+		}
+	}
+}

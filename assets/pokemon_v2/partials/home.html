@@ -1,0 +1,61 @@
+
+<section id="home">
+	
+	<div class="container">
+	
+		<div class="hero standard-pad">
+			
+			<h1 class="title">Pokéapi <span class="v">v2</span> </h1>
+			<h3>The Pokémon RESTful API</h3>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-xs-12 col-md-10 center-block">
+
+				<h2 class="try text-center">Try it out!</h2>
+
+				<label class="sr-only" for="apiRequest">API Request</label>
+				<div class="input-group request">
+
+					<div class="input-group-addon">http://pokeapi.co/api/v2/</div>
+
+					<span class="input-group-btn endpoint" ng-class="{ open: dropdownExpanded }" ng-click="toggleDropdown()">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{dropdownExpanded}}">
+							{{endpointOptions[endpointIndex]}} <span class="caret">
+						</button>
+						<ul class="dropdown-menu">
+							<li ng-repeat="endpoint in endpointOptions">
+								<a href="#" ng-click="setEndpoint($index)">{{endpoint}}</a>
+							</li>
+						</ul>
+					</span>
+
+					<input type="text" class="form-control" id="apiRequest" ng-model="resourceID">
+
+					<span class="input-group-btn">
+						<button class="btn btn-primary" ng-click="getResource()">submit</button>
+					</span>
+
+				</div>
+
+				<div class="json-body">
+					
+					<!-- <h3 class="text-center" ng-if="loading">Loading...</h3> -->
+
+					<h3 class="text-center" ng-if="loading">Loading</h3>
+
+					<json-formatter json="resource" open="1" ng-if="!loading"></json-formatter>
+
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+	</div>
+
+</section>
+

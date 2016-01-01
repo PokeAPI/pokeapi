@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-regular.eot');
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-regular.eot?#iefix') format('embedded-opentype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-regular.woff2') format('woff2'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-regular.woff') format('woff'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-regular.ttf')  format('truetype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-regular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-light.eot');
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-light.eot?#iefix') format('embedded-opentype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-light.woff2') format('woff2'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-light.woff') format('woff'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-light.ttf')  format('truetype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-light.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 900;
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-black.eot');
+  src: url('/static/pokemon_v2/fonts/lato-regular/lato-black.eot?#iefix') format('embedded-opentype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-black.woff2') format('woff2'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-black.woff') format('woff'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-black.ttf')  format('truetype'),
+       url('/static/pokemon_v2/fonts/lato-regular/lato-black.svg#svgFontName') format('svg');
+}

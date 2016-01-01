@@ -1,0 +1,237 @@
+
+<section id="docs" class="standard-pad">
+
+	<div class="container">
+
+		<div class="row">
+			
+			<div class="col-md-2">
+				
+				<div side-nav></div>
+
+			</div>
+
+			<div class="col-md-10">
+
+
+
+				<!-- Resource Lists -->
+
+				<section>
+					
+					<h2 side-nav-parent>Resource Lists</h2>
+
+					<p>Calling any api endpoint without a resource id or name will return a paginated list of available resources for that api. By default, a list 'page' will contain up to 20 resources. If you would like to change this just add a 'limit' query param, e.g. limit=60.</p>			
+					
+					<p class="request">GET api/v2/{endpoint}</p>
+
+					<p class="response-tag"> (non-named resources)</p>
+					
+					<pre class="scroll">
+{
+    "count": 365,
+    "next": "http://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20",
+    "previous": null,
+    "results": [{
+        "url": "http://pokeapi.co/api/v2/evolution-chain/1/"
+    }]
+}
+					</pre>
+					
+					<p class="models-tag"></p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Data Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>count</td>
+								<td>The total number of resources abailable from this api</td>
+								<td>integer</td>
+							</tr>
+							<tr>
+								<td>next</td>
+								<td>The url for the next 'page' in the list</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>previous</td>
+								<td>The url for the previous page in the list</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>id</td>
+								<td>I list of non-named api resources</td>
+								<td>[<a href="#apiresource">APIResource</a>]</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="response-tag"> (named resources)</p>
+
+					<pre class="scroll">
+ {
+    "count": 248,
+    "next": "http://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+    "previous": null,
+    "results": [{
+        "name": "stench",
+        "url": "http://pokeapi.co/api/v2/ability/1/"
+    }]
+}
+					</pre>
+
+					<p class="models-tag"></p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Data Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>count</td>
+								<td>The total number of resources abailable from this api</td>
+								<td>integer</td>
+							</tr>
+							<tr>
+								<td>next</td>
+								<td>The url for the next 'page' in the list</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>previous</td>
+								<td>The url for the previous page in the list</td>
+								<td>string</td>
+							</tr>
+							<tr>
+								<td>id</td>
+								<td>I list of non-named api resources</td>
+								<td>[<a href="#namedapiresource">NamedAPIResource</a>]</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</section>
+
+
+
+				<!-- Abilities -->
+
+				<section>
+					
+					<h2 side-nav-parent>Abilities</h2>
+
+					<p>Abilities provide passive effects for pokemon in battle or in the overworld. Pokemon have mutiple possible abilities but can have only one ability at a time. Check out Bulbapedia for greater detail.</p>
+
+					<p class="request">GET api/v2/ability/{id or name}</p>
+
+					<p class="response-tag"></p>
+
+					<pre class="scroll">
+{
+    "id": 1,
+    "name": "stench",
+    "is_main_series": true,
+    "generation": {
+        "name": "generation-iii",
+        "url": "http://pokeapi.co/api/v2/generation/3/"
+    },
+    "names": [{
+        "name": "Stench",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "effect_entries": [{
+        "effect": "This PokÃ©mon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this PokÃ©mon is first in the party.",
+        "short_effect": "Has a 10% chance of making target PokÃ©mon [flinch]{mechanic:flinch} with each hit.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "effect_changes": [{
+        "version_group": {
+            "name": "black-white",
+            "url": "http://pokeapi.co/api/v2/version-group/11/"
+        },
+        "effect_entries": [{
+            "effect": "Has no effect in battle.",
+            "language": {
+                "name": "en",
+                "url": "http://pokeapi.co/api/v2/language/9/"
+            }
+        }]
+    }],
+    "flavor_text_entries": [{
+        "flavor_text": "è‡­ã��ã�¦ã€€ç›¸æ‰‹ã�Œ\nã�²ã‚‹ã‚€ã€€ã�“ã�¨ã�Œã�‚ã‚‹ã€‚",
+        "language": {
+            "name": "ja-kanji",
+            "url": "http://pokeapi.co/api/v2/language/11/"
+        },
+        "version_group": {
+            "name": "x-y",
+            "url": "http://pokeapi.co/api/v2/version-group/15/"
+        }
+    }],
+    "pokemon": [{
+        "is_hidden": true,
+        "slot": 3,
+        "pokemon": {
+            "name": "gloom",
+            "url": "http://pokeapi.co/api/v2/pokemon/44/"
+        }
+    }]
+}
+					</pre>
+
+					<p class="models-tag"></p>
+
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Data Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>id</td>
+								<td>The identifier for this ability resource</td>
+								<td>integer</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</section>
+
+
+
+
+
+				<h2 side-nav-parent>Items</h2>
+
+				<p>An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.</p>
+			
+				<h2 side-nav-child>Item Categories</h2>
+
+				<p>Item categories determine where items will be placed in the players bag.</p>
+
+			</div>
+
+		</div>
+
+	</div>
+	
+</div>

@@ -1,0 +1,27 @@
+
+
+<section id="contributors">
+	
+	<div class="container">
+	
+		<div class="hero standard-pad">
+			
+			<h1>Contributors</h1>
+
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-xs-6 col-sm-4 col-md-3 contributor" ng-repeat="contributor in contributors">
+				
+				<img class="avatar" src="{{contributor.avatar_url}}" alt="{{contributor.login}}">	
+				
+				<h4><a href="{{contributor.html_url}}">{{contributor.login}}</a></h4>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>

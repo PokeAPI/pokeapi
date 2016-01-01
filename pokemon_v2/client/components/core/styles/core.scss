@@ -1,0 +1,51 @@
+
+@import 'colors';
+
+body {
+
+    font-family: 'Lato', Sans-Serif;
+    color: $black;
+    padding-top: 53px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+    margin-top: 0;
+}
+
+ul {
+
+	list-style: none;
+	
+	li {
+		
+		padding: 0;
+	}
+}
+
+pre.scroll {
+
+    max-height: 360px;
+    overflow: scroll;
+}
+
+.standard-pad {
+
+    padding-top: 40px;
+}
+
+.hero {
+  
+    text-align: center;
+}
+
+.center-block {
+
+    float: none;
+    margin: 0 auto;
+}
+
+.input-group-addon, .btn {
+
+    border-radius: 0;
+}

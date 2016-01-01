@@ -9,7 +9,7 @@ angular.module('pokeapi-header')
 
 			restrict: 'A',
 
-			templateUrl: 'static/views/header.html',
+			templateUrl: 'static/pokemon_v2/partials/header.html',
 
 			replace: true
 		};

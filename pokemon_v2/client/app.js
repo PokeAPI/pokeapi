@@ -4,7 +4,12 @@
     'use strict';
 
     angular.module('pokeapi_v2', [
-    	'pokeapi-header'
+        'pokeapi-core',
+    	'pokeapi-header',
+        'pokeapi-home',
+        'pokeapi-about',
+        'pokeapi-docs',
+        'pokeapi-contributors'
     ])
 
     .config(['$locationProvider', '$httpProvider',

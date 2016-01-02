@@ -8,11 +8,10 @@ from django.contrib import admin
 from pokemon import urls as pokemon_urls
 from pokemon_v2 import urls as pokemon_v2_urls
 
-urlpatterns = [
-    
-    url(r'^', include(pokemon_urls)),
+# need to make sure v2 urls resolve last so angular routes have control
+v2 = [ url(r'^', include(pokemon_v2_urls)) ]
 
-    url(r'^', include(pokemon_v2_urls)),
+urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
 
@@ -24,4 +23,6 @@ urlpatterns = [
         'django.views.static.serve',
         {'document_root': settings.STATIC_ROOT}),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^', include(pokemon_urls)),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + v2

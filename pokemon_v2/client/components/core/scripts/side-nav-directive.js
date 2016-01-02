@@ -1,4 +1,6 @@
 
+'use strict';
+
 angular.module('pokeapi-core')
 
 	.directive('sideNav', ['$window', function ($window) {
@@ -11,23 +13,31 @@ angular.module('pokeapi-core')
 
 			replace: true,
 
-			link: function (scope, element, attrs) {
+			link: function (scope) {
+
+				function calculate () {
+
+					console.log('scroll');
+				}
+
+				function getAnchorText (el) {
+
+					return el.getAttribute('side-nav-title') || el.textContent;
+				}
 
 				scope.nav = [];
 				var parent = null;
 				var anchors = angular.element(document.querySelectorAll('[side-nav-parent], [side-nav-child]'));
 
-				for (i = 0; i < anchors.length; i++) {
+				for (var i = 0; i < anchors.length; i++) {
 
-					anchor = anchors[i];
-
-					console.log(anchor);
+					var anchor = anchors[i];
 
 					if (anchor.hasAttribute('side-nav-parent')) {
 
 						parent = {};
 						parent.anchorText = getAnchorText(anchor);
-						parent.children = []
+						parent.children = [];
 						scope.nav.push(parent);
 
 					} else {
@@ -40,20 +50,8 @@ angular.module('pokeapi-core')
 					}
 				}
 
-				console.log(scope.nav);
-
-				function getAnchorText (el) {
-
-					return el.getAttribute('side-nav-title') || anchor.textContent;
-				}
-
 				angular.element($window).bind('scroll', calculate);
-
-				function calculate () {
-
-					console.log('scroll');
-				}
 			}
-		}
+		};
 
 	}]);

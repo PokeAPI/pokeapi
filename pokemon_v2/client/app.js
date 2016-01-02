@@ -12,14 +12,21 @@
         'pokeapi-contributors'
     ])
 
-    .config(['$locationProvider', '$httpProvider',
+    .config(['$locationProvider', '$stateProvider',
 
-        function ($locationProvider, $httpProvider) {
+        function ($locationProvider, $stateProvider) {
 
             $locationProvider.html5Mode(true);
 
-            $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-            $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+            // Allow navigation to V1. Leaves the single page app.
+            $stateProvider.state('v1', {
+
+                url         : 'v1/',
+                controller  : function () {
+
+                    window.location.reload(true);
+                }
+            });
         }
     ]);
 

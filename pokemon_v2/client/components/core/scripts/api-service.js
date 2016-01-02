@@ -7,12 +7,7 @@ angular.module('pokeapi-core')
 
         function ($http) {
 
-        	var BASE_URL = "api/v2/";
-            var ID = '/{id}';
-
-            // var ABILITY = BASE_URL + "ability";
-            // var ABILITY_DETAIL = ABILITY + ID
-
+        	var BASE_URL = 'api/v2/';
             var service = {};
 
         	service.getResource = function (endpoint, id) {
@@ -24,7 +19,7 @@ angular.module('pokeapi-core')
                     });
 
                 return cb;
-        	}
+        	};
 
         	return service;
         }

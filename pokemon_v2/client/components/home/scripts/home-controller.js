@@ -44,7 +44,7 @@ angular.module('pokeapi-home')
 						if (response.status === 200) {
 
 							$scope.resource = response.data;
-							intercept();
+							// intercept();
 
 						} else {
 
@@ -53,17 +53,17 @@ angular.module('pokeapi-home')
 
 						$scope.loading = false;
 					}
-				)
+				);
 			};
 
 			$scope.getResource();
 
-			function intercept () {
+			// function intercept () {
 
-				var links = document.querySelector('.json-body a');
+			// 	var links = document.querySelector('.json-body a');
 
 
-			}
+			// }
 		}
 
 	]);

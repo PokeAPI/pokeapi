@@ -12,7 +12,7 @@ angular.module('pokeapi-contributors')
 
 			Repo.getContributors().then( function (response) {
 
-				if (response.status == 200) {
+				if (response.status === 200) {
 
 					$scope.contributors = response.data;
 					console.log(response);

@@ -34,8 +34,10 @@ api_resources.register(MoveResource())
 api_resources.register(PokedexResource())
 
 urlpatterns = [
+    
+    # url(r'^v1$', 'pokemon.views.home'),
 
-    url(r'^v1/$', 'pokemon.views.home'),
+    url(r'^v1/?$', 'pokemon.views.home'),
 
     url(r'^v1/docs/$', 
         TemplateView.as_view(template_name='docs-v1.html'),

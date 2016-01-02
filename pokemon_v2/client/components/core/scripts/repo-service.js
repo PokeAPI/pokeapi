@@ -7,8 +7,8 @@ angular.module('pokeapi-core')
 
         function ($http) {
 
-        	var BASE_URL = "http://api.github.com/repos/phalt/pokeapi/"
-            var CONTRIBUTORS_PATH = BASE_URL + "contributors";
+        	var BASE_URL = 'http://api.github.com/repos/phalt/pokeapi/';
+            var CONTRIBUTORS_PATH = BASE_URL + 'contributors';
 
             var service = {};
 
@@ -21,7 +21,7 @@ angular.module('pokeapi-core')
                     });
 
                 return cb;
-        	}
+        	};
 
         	return service;
         }

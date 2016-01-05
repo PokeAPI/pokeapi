@@ -1,5 +1,5 @@
 
-@import 'colors';
+@import 'vars';
 
 #home {
 
@@ -12,8 +12,30 @@
 		font-weight: 300;
 	}
 
+	.hero {
+		
+		margin-bottom: 40px;
+		background-color: $dark-teal;
+
+	// 	&:after {
+			
+	// 		display: block;
+	// 		position: absolute;
+	// 		content: " ";
+	// 		width: 0; 
+	// 		height: 0px; 
+	// 		border-left: 30px solid transparent;
+	// 		border-right: 30px solid transparent;
+	// 		border-top: 30px solid $dark-teal;
+	// 		margin: 40px auto 0;
+	// 		left: 50%;
+	// 	}
+	}
+
 	.try {
+		
 		font-weight: 600;
+		margin-bottom: 40px;
 	}
 
 	.request {

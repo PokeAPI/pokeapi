@@ -37,6 +37,7 @@ angular.module('pokeapi-core')
 
 						parent = {};
 						parent.anchorText = getAnchorText(anchor);
+						parent.el = anchor;
 						parent.children = [];
 						scope.nav.push(parent);
 
@@ -44,14 +45,23 @@ angular.module('pokeapi-core')
 
 						parent.children.push({
 
-							anchorText: getAnchorText(anchor)
+							anchorText: getAnchorText(anchor),
+							el: anchor
 						});
 
 					}
 				}
 
 				angular.element($window).bind('scroll', calculate);
-			}
+			},
+
+			controller: ['$scope', function ($scope) {
+
+				$scope.anchorize = function (str) {
+
+					return str.replace(' ', '').toLowerCase();
+				};
+			}]
 		};
 
 	}]);

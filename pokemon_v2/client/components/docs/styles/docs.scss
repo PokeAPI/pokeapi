@@ -1,4 +1,6 @@
 
+@import 'vars';
+
 #docs {
 
 	padding-top: 40px;
@@ -6,44 +8,95 @@
 	table {
 
     	width: 100%;
-    	margin-bottom: 20px;
 
-    	th, td {
-		    border: solid 1px #CCC;
-		    padding: 10px;
+    	th, tr {
+
+    		&:first-child, &:last-child {
+
+    			width: 140px;
+    		}
+    	}
+	}
+
+	div[markdown] {
+
+		p, pre, table {
+			margin-bottom: 30px;
 		}
-	}
 
-	section {
+		h1, pre {
+    		
+    		&:first-of-type { display: none; }
+		}
 
-		margin-bottom: 60px;
-	}
+		h2, h4 {
 
-	h2 {
-		font-weight: 900;
-	}
+			font-weight: 900;
+			margin-top: -40px;
+			padding-top: 40px;
 
-	.request {
+			&:after {
 
-		font-size: 1.4em;
-		font-weight: 300;
-	}
+				font-size: 14px;
+				font-style: italic;
+				font-weight: 500;
+				display: inline-block;
+				content: "\00a0 endpoint";
+				color: $really-dark-teal;
+			}
+		}
 
-	.response-tag, .models-tag {
-	
-		font-style: italic;
-		margin-bottom: 3px;
-		font-weight: 300;
+		h3 { 
+			font-weight: 300; 
+			color: $really-dark-teal;
+		}
 
-		&:before {
+		h4 {
 			
-			display: inline-block;
-			content: "example response";
+			font-weight: 500;
+
+			&:after {
+
+				content: "\00a0 model";
+			}
 		}
-	}
 
-	.models-tag {
+		h6 { display: none; }	
 
-		&:before { content: "response models"; }
+		pre {
+
+			position: relative;
+
+			&:before {
+
+				font-size: 12px;
+				font-style: italic;
+				font-weight: 300;
+				display: inline-block;
+				content: "example response";
+				position: absolute;
+				top: 5px;
+				right: 10px;
+				color: $really-dark-teal;
+			}
+		}
+
+		// .request {
+
+		// 	font-size: 1.4em;
+		// 	font-weight: 300;
+		// }
+
+		// .model-title {
+			
+		// 	&:after {
+
+		// 		font-size: 14px;
+		// 		font-style: italic;
+		// 		font-weight: 300;
+		// 		display: inline-block;
+		// 		content: "\00a0model";
+		// 	}
+		// }
 	}
 }

@@ -11,7 +11,13 @@ angular.module('pokeapi-header')
 
 			templateUrl: 'static/pokemon_v2/partials/header.html',
 
-			replace: true
+			replace: true,
+
+			controller: ['$rootScope','$scope', '$state', function ($rootScope, $scope, $state) {
+
+				$rootScope.$state = $state;
+				$scope.active = 0;
+			}]
 		};
 		
 	});

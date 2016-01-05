@@ -3,6 +3,9 @@
 
 	'use strict';
 
-	angular.module('pokeapi-core', ['ui.router', 'jsonFormatter']);
+	angular.module('pokeapi-core', [
+		'ui.router', 
+		'jsonFormatter'
+	])
 
 })();

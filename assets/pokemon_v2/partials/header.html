@@ -1,17 +1,38 @@
 
-<header class="navbar-fixed-top">
+<div class="web-nav">
 
-	<div class="container">
-		
-		<span class="title">Pokéapi</span>
+	<h1>Pokéapi</h1>
+
+	<ul>
+		<li ui-sref-active="active"><a ui-sref="home">Try It</a></li>
+		<li ui-sref-active="active"><a ui-sref="about">About</a></li>
+		<li ui-sref-active="active">
+
+			<a ui-sref="docs">Documentation</a>
+
+			<ul ng-if="$state.includes('docs')">
+				<li>Resource Lists</li>
+				<li>Abilities</li>
+				<li>Berries</li>
+				<li>Characteristics</li>
+				<li>Contests</li>
+				<li>Egg Groups</li>
+				<li>Encounters</li>
+				<li>Evolutions</li>
+				<li>Generations</li>
+				<li>Genders</li>
+				<li>Growth Rates</li>
+				<li></li>
+			</ul>
+
+		</li>
+		<li ui-sref-active="active"><a ui-sref="contributors">Contributors</a></li>
+	</ul>
 	
-		<ul class="pokenav">
-			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="about">About</a></li>
-			<li><a ui-sref="docs">Documentation</a></li>
-			<li><a ui-sref="contributors">Contributors</a></li>
-		</ul>
-		
+	<div class="v1">
+
+		<a ui-sref="v1">V1</a>
+
 	</div>
 
-</header>
+</div>

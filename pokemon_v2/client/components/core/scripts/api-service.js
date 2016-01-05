@@ -12,6 +12,11 @@ angular.module('pokeapi-core')
 
         	service.getResource = function (endpoint, id) {
 
+                if (id) {
+
+                    id = id + '/';
+                }
+
         		var cb = $http
                     .get(BASE_URL + endpoint + id)
                     .then(function (response) {

@@ -1,15 +1,25 @@
 
-@import 'colors';
+@import 'vars';
+
+html {
+    height: 100%;
+    position: relative;
+}
 
 body {
-
+    
+    height: 100%;
     font-family: 'Lato', Sans-Serif;
     color: $black;
-    padding-top: 53px;
+    // position: relative;
+    // margin-top: 53px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  
+
+    // makes sure anchors stay below the header when traveled to
+    // margin-top: -$header-height;
+    // padding-top: $header-height;  
     margin-top: 0;
 }
 
@@ -23,10 +33,33 @@ ul {
 	}
 }
 
-pre.scroll {
+a {
+    color: #0288D1;
+}
+
+pre {
 
     max-height: 360px;
     overflow: scroll;
+    border-color: $border-grey;
+}
+
+th, td {
+
+    border: solid 1px $border-grey;
+    padding: 10px;
+}
+
+code {
+
+    background-color: $really-light-teal;
+    color: $really-dark-teal;
+}
+
+.content {
+    
+    float: right;
+    width: 80%;
 }
 
 .standard-pad {
@@ -38,6 +71,12 @@ pre.scroll {
   
     text-align: center;
     padding-bottom: 40px;
+
+    h1 {
+
+        font-weight: 900;
+    }
+    // color: #FFF;
 }
 
 .center-block {

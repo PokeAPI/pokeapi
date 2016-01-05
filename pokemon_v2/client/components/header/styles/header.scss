@@ -1,9 +1,11 @@
 
-@import 'colors';
+@import 'vars';
 
 header {
 
-	background-color: $test-gray;
+	background-color: $dark-teal;
+	height: $header-height;
+	color: #FFF;
 
 	.title {
 
@@ -33,6 +35,71 @@ header {
 
 				&:hover { text-decoration: none }
 			}
+		}
+	}
+}
+
+.web-nav {
+	
+	background-color: $black;
+
+	width: 20%;
+	float: left;
+	position: fixed;
+	left: 0;
+	height: 100%;
+	z-index: 20;
+	padding-top: 40px;
+	color: #FFF;
+	// box-shadow: 2px 0px #004D40 1;
+
+	h1 {
+		text-align: center;
+		margin-bottom: 10px;
+		font-weight: 900;
+	}
+
+	ul {
+
+		padding: 0;
+		font-size: 1.2em;
+		text-align: center;
+		margin: 0 auto;
+
+		li {
+
+			a {
+
+				color: #FFF;
+				text-decoration: none;
+				padding: 6px 0;
+				display: block;
+			}
+
+			ul {
+				background-color: #009688;
+				font-size: .9em;
+				padding: 10px;
+			}
+
+			&.active {
+
+				background-color: #00796B;
+			}
+		}
+	}
+
+	.v1 {
+
+		position: absolute;
+		bottom: 20px;
+		// margin: 0 auto;
+		left: 10%;
+		margin-left: -1%;
+
+		a {
+			margin: 0 auto;
+
 		}
 	}
 }

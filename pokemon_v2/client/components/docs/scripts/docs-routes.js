@@ -10,7 +10,7 @@
 		$stateProvider.state('docs', {
 
 			url         : '/documentation',
-			templateUrl : 'static/pokemon_v2/partials/docs.html',
+			templateUrl : 'static/pokemon_v2/partials/docs2.html',
 			controller 	: 'DocsController'
 		});
 

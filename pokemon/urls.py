@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
+
 
 from django.contrib import admin
 admin.autodiscover()
@@ -34,17 +34,6 @@ api_resources.register(MoveResource())
 api_resources.register(PokedexResource())
 
 urlpatterns = [
-    
-    # url(r'^v1$', 'pokemon.views.home'),
-
-    url(r'^v1/?$', 'pokemon.views.home'),
-
-    url(r'^v1/docs/$', 
-        TemplateView.as_view(template_name='docs-v1.html'),
-        name="documentation"
-    ),
-
-    url(r'^v1/about/$', 'pokemon.views.about'),
 
     url(r'^api/', include(api_resources.urls)),
 ]

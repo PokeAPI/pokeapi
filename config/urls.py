@@ -26,13 +26,13 @@ urlpatterns = [
 
     url(r'^$', 'config.views.home'),
 
-    url(r'^docs/$', 
-        TemplateView.as_view(template_name='docs.html'),
+    url(r'^docsv1/$', 
+        TemplateView.as_view(template_name='docsv1.html'),
         name="documentation"
     ),
 
-    url(r'^docs2/$', 
-        TemplateView.as_view(template_name='docs2.html'),
+    url(r'^docsv2/$', 
+        TemplateView.as_view(template_name='docsv2.html'),
         name="documentation_v2"
     ),
 

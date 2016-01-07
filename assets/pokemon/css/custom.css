@@ -8,28 +8,6 @@
        url('/static/pokemon/fonts/lato-regular/lato-regular.svg#svgFontName') format('svg');
 }
 
-@font-face {
-  font-family: 'Lato';
-  font-weight: 300;
-  src: url('/static/pokemon/fonts/lato-regular/lato-light.eot');
-  src: url('/static/pokemon/fonts/lato-regular/lato-light.eot?#iefix') format('embedded-opentype'),
-       url('/static/pokemon/fonts/lato-regular/lato-light.woff2') format('woff2'),
-       url('/static/pokemon/fonts/lato-regular/lato-light.woff') format('woff'),
-       url('/static/pokemon/fonts/lato-regular/lato-light.ttf')  format('truetype'),
-       url('/static/pokemon/fonts/lato-regular/lato-light.svg#svgFontName') format('svg');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-weight: 900;
-  src: url('/static/pokemon/fonts/lato-regular/lato-black.eot');
-  src: url('/static/pokemon/fonts/lato-regular/lato-black.eot?#iefix') format('embedded-opentype'),
-       url('/static/pokemon/fonts/lato-regular/lato-black.woff2') format('woff2'),
-       url('/static/pokemon/fonts/lato-regular/lato-black.woff') format('woff'),
-       url('/static/pokemon/fonts/lato-regular/lato-black.ttf')  format('truetype'),
-       url('/static/pokemon/fonts/lato-regular/lato-black.svg#svgFontName') format('svg');
-}
-
 html { padding-top: 50px; }
 
 body, h1, h2, h3, h4, h5, h6, p { 
@@ -48,7 +26,7 @@ h2 { margin-bottom: 10px; }
 
 a { color: #1b95e0; }
 
-p, pre, table {
+p, pre, table, ul {
 
     margin-bottom: 30px;
 }
@@ -62,7 +40,6 @@ hr {
     border-width: 1px;
     border-color: #CCC;
     margin: 8px 0;
-    /*height: 1px;*/
 }
 
 .center-block {
@@ -259,7 +236,20 @@ pre {
 *   DOCS
 */
 
-#docs h1:first-of-type, #docs table:first-of-type  {
+#docs .header {
+
+    padding-top: 80px;
+}
+
+#docs .nav-group.stick {
+    
+    position: fixed;
+    top: 65px;
+}
+
+
+/*#docs table:first-of-type*/
+#docs h1#pokeapi-v2-api-reference  {
     
     display: none;
 }
@@ -289,8 +279,8 @@ pre {
 
 #docs h2, #docs h4, #docs #resourcename {
 
-    margin-top: -50px;
-    padding-top: 50px;
+    margin-top: -65px;
+    padding-top: 65px;
 }
 
 #docs h3 {
@@ -303,14 +293,25 @@ pre {
     display: none;
 }
 
-#docs ul {
+#docs .side-nav ul {
     
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#docs ul.version-select li {
+#docs .side-nav hr {
+    
+    width: 50%;
+}
+
+#docs .side-nav ul.version-select {
+
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#docs .side-nav ul.version-select li {
     
     display: inline-block;
     float: left;
@@ -329,6 +330,13 @@ pre {
 #docs ul.version-select li a {
     
     color: #FFF;
+}
+
+#docs pre {
+
+  min-height: 280px;
+  max-height: 280px;
+  overflow: scroll;
 }
 
 #docs pre:before {

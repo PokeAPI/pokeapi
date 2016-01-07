@@ -21,7 +21,7 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Home</a></li>
             <li class="active"><a href="#">About</a></li>
-            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/docsv2/">Documentation</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -44,7 +44,7 @@
                 </p>
                 <div class="well">
                     <p>
-                        This website provides a RESTful API interface to <b>{{ site_data.total_items|intcomma }}</b> objects
+                        This website provides a RESTful API interface to <b>{{ site_data.total_resources|intcomma }}</b> highly detailed objects built from <b>{{ site_data.total_lines|intcomma }}</b> lines of data 
                         related to <a href="https://en.wikipedia.org/wiki/Pokemon">Pokémon</a>. We specifically cover the video game franchise, though we'd like to cover the card game too. Using this website you can consume information on Pokémon, their moves, abilities, types, egg groups and much much more.
                     </p>
                 </div>
@@ -92,22 +92,22 @@
                 </p>
                 <div class="well">
                     <p>
-                        I'm glad you asked because we've got an impressive amount of data!
+                        We're glad you asked because we've got an impressive amount of data!
                     </p>
                     <p>
                         We currently have <b>{{ site_data.total_items|intcomma }}</b> individual items in our database:
                     </p>
                     <ul>
-                        <li>{{ site_data.pokemon }} Pokémon</li>
                         <li>{{ site_data.moves }} Moves</li>
-                        <li>{{site_data.move_pokes|intcomma }} Pokémon<->move links</li>
                         <li>{{ site_data.abilities }} Abilities</li>
                         <li>{{ site_data.types }} Types</li>
                         <li>{{ site_data.egg_groups }} Egg groups</li>
-                        <li>{{ site_data.descriptions }} Descriptions</li>
-                        <li>{{ site_data.sprites }} Sprites</li>
-                        <li>{{ site_data.games }} Games</li>
+                        <li>{{ site_data.versions }} Versions </li>
+                        <li>{{ site_data.items }} Items</li>
+                        <li>{{ site_data.pokedexes }} Pokedexes</li>
+                        <li>{{ site_data.pokemon }} Pokémon (includes various forms)</li>
                     </ul>
+                    <p>And that's just scratching the surface!</p>
                     <p class="lead">The server has processed <b>{{ total|intcomma }}</b> api calls at an average of <b>{{ average_day|intcomma }}</b> calls per day.</p>
                 </div>
                 <p class="lead">
@@ -115,7 +115,7 @@
                 </p>
                 <div class="well">
                     <p>
-                        I know! Feel free to contribute to open issues on <a href="https://github.com/phalt/pokeapi/">GitHub</a>.
+                        We know! Feel free to contribute to open issues on <a href="https://github.com/phalt/pokeapi/">GitHub</a>. 
                     </p>
                 </div>
                 <p class="lead">
@@ -124,21 +124,26 @@
                 <div class="well">
                     <p>
                         Pokémon V1 was created by <a href="">Paul Hallett</a> as a weekend project but it quickly became more than a weekend's
-                        worth of work. In December of 2014 Paul went open source with the project to begin work on V2. 
-                        Enter <a href="">Zane Adickes</a>. Zane thought the original project was a fantastic idea and wanted to help it grow.
-                        With direction from Paul, Zane created the V2 api using an exact mirror of <a href="">Veekun's</a> data 
-                        from their <a href="">pokedex</a> project. That's not to say there hasn't been any help from others. Don't shy away
-                        from jumping in and helping the project in any way you can!
-                        <br>
-                        Contributors:
+                        worth of work. In <a href="http://phalt.co/if-you-have-data-they-will-consume-it/" target="none">December of 2014</a> Paul deprecated V1 in favor of working on V2. 
+                        This is where <a href="http://github.com/zaneadix">Zane Adickes</a> jumped in. Zane thought the original project was a fantastic idea and wanted to help it grow.
+                        With direction from Paul, Zane created the V2 api using an exact mirror of <a href="">Veekun's</a> data related to the main series of games.
                     </p>
                     <p>
-                        I gathered the information on this site from various resources:
+                        This is not to say there hasn't been any help from others. Don't shy away from jumping in and helping the project in any way you can. We're sure there are plenty of ways we can improve the api that haven't been thought of yet!
+                        <br><br>
+                        Contributors:
+                    </p>
+                </div>
+                <p class="lead">
+                    Whered you get all of this data?
+                </p>
+                <div class="well">
+                    <p>
+                        We gathered the information on this site from various resources:
                     </p>
                     <ul>
-                        <li><a href="https://github.com/veekun">Veekun</a> had a huge bunch of CSV's that
-                            I used to build most of the data on the site.</li>
-                        <li><a href="http://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a> has a tonne of extra information that proved useful when designing the data model.</li>
+                        <li><a href="https://github.com/veekun" target="none">Veekun</a> has a fantastic <a href="http://veekun.com/dex" target="none">Pokedex</a> which is also an open source <a href="https://github.com/veekun/pokedex" target="none">project</a> containing a ton of csv data. We used this to flesh out the database that powers Pokeapi.</li>
+                        <li><a href="http://bulbapedia.bulbagarden.net/wiki/Main_Page" target="none">Bulbapedia</a> has a tonne of extra information that proved useful when designing models and documenting resources.</li>
                     </ul>
                     <p>
                         I'd also like to thank:
@@ -152,12 +157,11 @@
                 </p>
                 <div class="well">
                     <p>
-                        The website framework is <a href="http://djangoproject.com">Django</a>,
-                        a super awesome framework built around <a hre="http://python.org">Python</a>.<br />
-                        We use a <a href="www.postgresql.org">Postgres</a> database to store all our data.<br />
-                        We use <a href="http://django-tastypie.readthedocs.org/en/latest/">Django-tastypie</a> to expose our data through a RESTful API.<br />
-                        We're hosted on <a href="https://www.digitalocean.com/?refcode=eab2fea41bc6
-    ">DigitalOcean</a> servers, click the link to help keep the site running!.
+                        The website framework is <a href="http://djangoproject.com" target="none">Django</a>,
+                        a super awesome framework built around <a hre="http://python.org" target="none">Python</a>.<br />
+                        We use a <a href="www.postgresql.org" target="none">Postgres</a> database to store all our data.<br />
+                        We use <a href="http://www.django-rest-framework.org/" target="none">Django REST Framework</a> to expose our data through a RESTful API.<br />
+                        We're hosted on <a href="https://www.digitalocean.com/?refcode=eab2fea41bc6" target="none">DigitalOcean</a> servers, click the link to help keep the site running!.
                     </p>
                 </div>
             </div>

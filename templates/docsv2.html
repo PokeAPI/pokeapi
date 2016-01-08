@@ -1,132 +1,125 @@
-{% extends "base.html" %}
+{% extends "base_docs.html" %}
 {% load markdown_deux_tags %}
 
-{% block mainbody %}
+{% block docstitle %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-brand">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
-        <div class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li class="active"><a href="#">Documentation</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+    <h1>Pokeapi V2 Documentation</h1>
 
-<section id="docs">
+{% endblock %}
 
-    <div class="header">
-        
-        <h1>Pokeapi V2 Documentation</h1>
+{% block docsversionstate %}
+    
+    <li><a href="/docsv1/">V1</a></li>
+    <li class="active"><a href="#">V2</a></li>
 
-    </div>
+{% endblock %}
 
-    <div class="container">
+{% block docsnav %}
 
-        <div class="row pad_top">
+    <ul class="doc-select">
+        <li><a href="#info">Information</a></li>
+        <li><a href="#wrap">Wrappers</a></li>  
 
-            <div class="side-nav col-md-2">
-                
-                <div class="nav-group">
+        <hr>
 
-                    <ul class="version-select">
+        <li><a href="#resource-lists">Resource Lists</a></li>
 
-                        <li><a href="/docsv1/">V1</a></li>
-                        <li class="active"><a href="#">V2</a></li>
+        <hr>
 
-                    </ul>
+        <li class="parent"><a href="#berries">Berries</a>
+            <ul>
+                <li><a href="#berry-firmnesses">Berry Firmnesses</a></li>
+                <li><a href="#berry-flavors">Berry Flavors</a></li>
+            </ul>
+        </li>
+        <li class="parent">Contests
+            <ul>
+                <li><a href="#contest-types">Contest Types</a></li>
+                <li><a href="#contest-effects">Contest Effects</a></li>
+                <li><a href="#super-contest-effects">Super Contest Effects</a></li>
+            </ul>
+        </li>
+        <li class="parent">Encounters
+            <ul>
+                <li><a href="#encounter-methods">Encounter Methods</a></li>
+                <li><a href="#encounter-conditions">Encounter Conditions</a></li>
+                <li><a href="#encounter-condition-values">Encounter Condition Values</a></li>
+            </ul>
+        </li>
+        <li class="parent">Evolution
+            <ul>
+                <li><a href="#evolution-chains">Evolution Chains</a></li>
+                <li><a href="#evolution-triggers">Evolution Triggers</a></li>
+            </ul>
+        </li>
+        <li class="parent">Games
+            <ul>
+                <li><a href="#generations">Generations</a></li>
+                <li><a href="#regions">Regions</a></li>
+                <li><a href="#versions">Versions</a></li>
+                <li><a href="#version-groups">Version Groups</a></li>
+            </ul>
+        </li>
+        <li class="parent"><a href="#items">Items</a>
+            <ul>
+                <li><a href="#item-categories">Item Categories</a></li>
+                <li><a href="#item-attributes">Item Attributes</a></li>
+                <li><a href="#item-fling-effects">Item Fling Effects</a></li>
+                <li><a href="#item-pockets">Item Pockets</a></li>
+            </ul>
+        </li>
+        <li class="parent"><a href="#languages">Language</a></li>
+        <li class="parent"><a href="#locations">Locations</a></li>
+        <li class="parent"><a href="#moves">Moves</a></li>
+        <li class="parent"><a href="#pokedexes">Pokedexes</a></li>
+        <li class="parent"><a href="#pokemon">Pokemon</a></li>
 
-                    <ul class="hidden-sm">
+        <hr>
 
-                        <li><a href="">Information</a></li>
-                        <li><a href="">Wrappers</a></li>  
+        <li><a href="#common-models">Common Models</a></li>
+    </ul>
 
-                        <hr>
+{% endblock %}
 
-                        <li><a href="">Resource Lists</a></li>
+{% block docswrappers %}
 
-                        <hr>
+    <p class="lead">V2 Doesn't have any wrappers yet! Building something using the API? Help us out! Build a wrapper!</p>
 
-                        <li><a href="">Berries</a></li>
-                        <li>Contests</li>
-                        <li>Encounters</li>
-                        <li>Evolution</li>
-                        <li>Games</li>
-                        <li><a href="">Items</a></li>
-                        <li><a href="#languages">Language</a></li>
-                        <li><a href="">Locations</a></li>
-                        <li><a href="">Moves</a></li>
-                        <li><a href="#pokedexes">Pokedexes</a></li>
-                        <li><a href="">Pokemon</a></li>
+{% endblock docswrappers %}
 
-                        <hr>
+{% block docsbody %}
 
-                        <li><a href="#common-models">Common Models</a></li>
+    <h2 id="wrap">Wrappers</h2>
 
-                    </ul>
-                    
-                </div>
-                
-             
-            </div>
+    <p class="lead">V2 Doesn't have any wrappers yet!</p>
 
-            <div class="col-md-10">
-                    
-                {% markdown %}
+    <p>Building something using the API? Help us out! Build a wrapper and let us know. We'll post it right here.</p>
 
-                   {% include "docsv2.md" %}
+    {% markdown %}
 
-                {% endmarkdown %}
+       {% include "docsv2.md" %}
 
-            </div>
+    {% endmarkdown %}
 
-        </div>
+    <script>
 
-    </div>
+        $('.doc-select .parent').hover(
 
-</section>
+            //mouse in
+            function (el) { $(el.target).addClass('open'); },
 
-<script>
+            //mouse out
+            function (el) { $(el.target).removeClass('open'); console.log('out', el) }
+        )
 
-    var sticky = $('.nav-group');
-    var offset = sticky.offset();
-    var sideNav = $('.side-nav');
-    var doc = $(document);
+         $('.doc-select .parent').mouseover(function(){
+            $(this).find('ul').show();                
+         });
 
-    function checkSticky () {
+         $('.doc-select .parent').mouseout(function(){
+            $(this).find('ul').hide();                   
+         });
 
-        if (doc.scrollTop() >= (offset.top - 65)) {
-
-            sticky.addClass('stick');
-            sticky.css({ width: sideNav.width() });
-
-        } else {
-
-            sticky.removeClass('stick');
-            sticky.css({ width: '' });
-        }
-    }
-
-    doc.scroll(function () {
-
-        checkSticky();
-    });
-
-    checkSticky();
-
-</script>
+    </script>
 
 {% endblock %}

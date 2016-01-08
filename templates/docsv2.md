@@ -1,7 +1,7 @@
 
 # Pokeapi V2 API Reference
 
-<table>
+<table class="hide">
   <tbody>
     <tr>
       <th colspan="3">API Endpoints</th>

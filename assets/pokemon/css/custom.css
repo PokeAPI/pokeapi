@@ -74,17 +74,6 @@ hr {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-header {
-
-    width: 300px;
-}
-
-.navbar-count {
-
-    color: #FFF;
-    width: 100px;
-}
-
 .navbar-collapse {
     padding: 0;
 }
@@ -101,6 +90,7 @@ hr {
 }
 
 .navbar-brand {
+    /*float: left;*/
     width: 100px;
 }
 
@@ -236,17 +226,15 @@ pre {
 *   DOCS
 */
 
+#docs .hide {
+
+    display: none;
+}
+
 #docs .header {
 
     padding-top: 80px;
 }
-
-#docs .nav-group.stick {
-    
-    position: fixed;
-    top: 65px;
-}
-
 
 /*#docs table:first-of-type*/
 #docs h1#pokeapi-v2-api-reference  {
@@ -300,36 +288,67 @@ pre {
     padding: 0;
 }
 
+#docs .side-nav ul li {
+    
+    /*margin-bottom: 3px;*/
+}
+
+#docs .side-nav ul li ul {
+    
+    margin-left: 10px;
+}
+
+#docs .side-nav .doc-select li ul {
+    
+    display: none;
+}
+
+#docs .side-nav .doc-select li.open ul {
+    
+    display: block;
+}
+
 #docs .side-nav hr {
     
     width: 50%;
 }
 
-#docs .side-nav ul.version-select {
+#docs .nav-group { position: relative; z-index: 20;}
 
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+#docs .nav-group.stick {
+    
+    position: fixed;
+    z-index: 20;
+    top: 65px;
 }
 
-#docs .side-nav ul.version-select li {
+#docs .side-nav .version-select li {
     
+    width: 50%;
     display: inline-block;
     float: left;
-    padding: 13px;
     background-color: #EF5350;
-    width: 50%;
     text-align: center;
     margin-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 
+                        0px -15px 0 0 #FFF;
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 
+                0px -15px 0 0 #FFF;
 }
 
-#docs ul.version-select li.active {
+#docs .version-select li a {
+    
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px;
+    width: 100%;
+    color: #FFF;
+}
+
+#docs .version-select li.active {
     
     background-color: #C62828;
-}
-
-#docs ul.version-select li a {
-    
-    color: #FFF;
 }
 
 #docs pre {

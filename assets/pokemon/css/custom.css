@@ -39,7 +39,7 @@ pre {
 hr { 
     border-width: 1px;
     border-color: #CCC;
-    margin: 8px 0;
+    margin: 3px 0;
 }
 
 .center-block {
@@ -51,16 +51,19 @@ hr {
     text-align: center;
     height: 200px;
     background-color: #263238;
+    width: 100%;
+    color: #FFF;
 }
 
-.header, 
 .header h1,
 .header h2, 
 .header h3, 
 .header h4,
 .header h5 {
-
+    
     color: #FFF;
+    text-align: center;
+    margin: 0 10%;
 }
 
 .footer {
@@ -197,7 +200,6 @@ pre {
 #home .header h4 .count {
 
     font-weight: 900;
-    /*color: #EF5350;*/
 }
 
 #home .btn-primary {
@@ -218,7 +220,15 @@ pre {
 
 #about .header {
 
-    padding-top: 80px;
+    padding-top: 65px;
+}
+
+@media (min-width: 628px) {
+    
+    #about .header {
+
+        padding-top: 80px;
+    }
 }
 
 
@@ -233,10 +243,17 @@ pre {
 
 #docs .header {
 
-    padding-top: 80px;
+    padding-top: 65px;
 }
 
-/*#docs table:first-of-type*/
+@media (min-width: 516px) {
+    
+    #docs .header {
+
+        padding-top: 80px;
+    }
+}
+
 #docs h1#pokeapi-v2-api-reference  {
     
     display: none;
@@ -265,10 +282,16 @@ pre {
     padding: 8px;
 }
 
-#docs h2, #docs h4, #docs #resourcename {
+#docs h1, #docs h2, #docs h4, #docs #resourcename {
 
     margin-top: -65px;
     padding-top: 65px;
+}
+
+#docs .docs-body h1 {
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid #CCC;
 }
 
 #docs h3 {
@@ -288,14 +311,23 @@ pre {
     padding: 0;
 }
 
-#docs .side-nav ul li {
-    
-    /*margin-bottom: 3px;*/
-}
-
 #docs .side-nav ul li ul {
     
     margin-left: 10px;
+}
+
+#docs .side-nav .doc-select li a {
+    
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#docs .side-nav .doc-select li.active > a {
+    
+    border-left: 2px solid #1b95e0;
+    padding-left: 8px;
 }
 
 #docs .side-nav .doc-select li ul {
@@ -303,7 +335,7 @@ pre {
     display: none;
 }
 
-#docs .side-nav .doc-select li.open ul {
+#docs .side-nav .doc-select li.active ul {
     
     display: block;
 }
@@ -313,7 +345,11 @@ pre {
     width: 50%;
 }
 
-#docs .nav-group { position: relative; z-index: 20;}
+#docs .nav-group { 
+
+    position: relative; 
+    z-index: 20;
+}
 
 #docs .nav-group.stick {
     

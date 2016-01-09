@@ -238,14 +238,6 @@ def _total_site_data():
     return data
 
 
-@login_required
-def moderate(request):
-
-    return render_to_response(
-        'pages/moderate.html',
-        {}, context_instance=RequestContext(request))
-
-
 def about(request):
 
     site_data = _total_site_data()
@@ -257,7 +249,7 @@ def about(request):
     average_day = int(round(total_views / ResourceView.objects.count()))
 
     return render_to_response(
-        'about.html',
+        'pages/about.html',
         {
             'total': total_views,
             'total_v1': total_v1_views,
@@ -277,16 +269,9 @@ def home(request):
         total_views = int(round(total_views, -2))
 
     return render_to_response(
-        'home.html',
+        'pages/home.html',
         {
             'total_views': total_views,
         },
         context_instance=RequestContext(request)
     )
-
-
-def twilio(request):
-
-    return render_to_response(
-        'pages/twilio.html',
-        {}, context_instance=RequestContext(request))

@@ -1,0 +1,149 @@
+{% extends "base_docs.html" %}
+{% load markdown_deux_tags %}
+
+{% block docstitle %}
+
+    <h1>Pokeapi V2 Documentation</h1>
+
+{% endblock %}
+
+{% block docsversionstate %}
+    
+    <li><a href="/docsv1/">V1</a></li>
+    <li class="active"><a href="#">V2</a></li>
+
+{% endblock %}
+
+{% block docsnav %}
+
+    <ul>
+        <li><a href="#info">Information</a></li>
+        <li><a href="#wrap">Wrappers</a></li>  
+
+        <hr>
+
+        <li><a href="#resource-lists">Resource Lists</a></li>
+
+        <hr>
+
+        <li class="parent"><a href="#berries-section">Berries</a>
+            <ul>
+                <li><a href="#berries">Berries</a></li>
+                <li><a href="#berry-firmnesses">Berry Firmnesses</a></li>
+                <li><a href="#berry-flavors">Berry Flavors</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#contests-section">Contests</a>
+            <ul>
+                <li><a href="#contest-types">Contest Types</a></li>
+                <li><a href="#contest-effects">Contest Effects</a></li>
+                <li><a href="#super-contest-effects">Super Contest Effects</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#encounters-section">Encounters</a>
+            <ul>
+                <li><a href="#encounter-methods">Encounter Methods</a></li>
+                <li><a href="#encounter-conditions">Encounter Conditions</a></li>
+                <li><a href="#encounter-condition-values">Encounter Condition Values</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#evolution-section">Evolution</a>
+            <ul>
+                <li><a href="#evolution-chains">Evolution Chains</a></li>
+                <li><a href="#evolution-triggers">Evolution Triggers</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#games-section">Games</a>
+            <ul>
+                <li><a href="#generations">Generations</a></li>
+                <li><a href="#pokedexes">Pokedexes</a></li>
+                <li><a href="#versions">Versions</a></li>
+                <li><a href="#version-groups">Version Groups</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#items-section">Items</a>
+            <ul>
+                <li><a href="#items">Items</a></li>
+                <li><a href="#item-attributes">Item Attributes</a></li>
+                <li><a href="#item-categories">Item Categories</a></li>
+                <li><a href="#item-fling-effects">Item Fling Effects</a></li>
+                <li><a href="#item-pockets">Item Pockets</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#moves-section">Moves</a>
+            <ul>
+                <li><a href="#moves">Moves</a></li>
+                <li><a href="#move-ailments">Move Ailments</a></li>
+                <li><a href="#move-battle-styles">Move Battle Styles</a></li>
+                <li><a href="#move-categories">Move Categories</a></li>
+                <li><a href="#move-damage-classes">Move Damage Classes</a></li>
+                <li><a href="#move-learn-methods">Move Learn Methods</a></li>
+                <li><a href="#move-targets">Move Targets</a></li>
+            </ul>
+        </li>
+        
+        <li class="parent"><a href="#locations-section">Locations</a>
+            <ul>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#location-areas">Location Areas</a></li>
+                <li><a href="#pal-park-areas">Pal Park Areas</a></li>
+                <li><a href="#regions">Regions</a></li>
+            </ul>
+        </li>
+        
+        
+        <li class="parent"><a href="#pokemon-section">Pokemon</a>
+            <ul>
+                <li><a href="#abilities">Abilities</a></li>
+                <li><a href="#characteristics">Characteristics</a></li>
+                <li><a href="#egg-groups">Egg Groups</a></li>
+                <li><a href="#genders">Genders</a></li>
+                <li><a href="#growth-rates">Growth Rates</a></li>
+                <li><a href="#natures">Natures</a></li>
+                <li><a href="#pokeathlon-stats">Pokeathlon Stats</a></li>
+                <li><a href="#pokemon">Pokemon</a></li>
+                <li><a href="#pokemon-colors">Pokemon Colors</a></li>
+                <li><a href="#pokemon-forms">Pokemon Forms</a></li>
+                <li><a href="#pokemon-habitats">Pokemon Habitats</a></li>
+                <li><a href="#pokemon-shapes">Pokemon Shapes</a></li>
+                <li><a href="#pokemon-species">Pokemon Species</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#types">Types</a></li>
+            </ul>
+        </li>
+
+        <li class="parent"><a href="#utility-section">Utility</a>
+            <ul>
+                <li><a href="#languages">Languages</a></li>
+            </ul>
+        </li>
+
+        <hr>
+
+        <li><a href="#common-models">Common Models</a></li>
+    </ul>
+
+{% endblock %}
+
+
+{% block docsbody %}
+
+    <h2 id="wrap">Wrappers</h2>
+
+    <p class="lead">V2 Doesn't have any wrappers yet!</p>
+
+    <p>Building something using the API? Help us out! Build a wrapper and let us know. We'll post it right here.</p>
+
+    {% markdown %}
+
+       {% include "pages/docsv2.md" %}
+
+    {% endmarkdown %}
+
+{% endblock %}

@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li class="active"><a href="#">Documentation</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <section id="docs">
+
+        <div class="header">
+        
+            {% block docstitle %}
+
+            {% endblock docstitle %}
+
+        </div>
+
+        <div class="container">
+
+            <div class="row pad_top">
+
+                <div class="col-sm-3 side-nav">
+                    
+                    <div class="nav-group">
+
+                        <ul class="version-select">
+
+                            {% block docsversionstate %}
+
+                            {% endblock docsversionstate %}
+
+                        </ul>
+
+                        <div class="doc-select hidden-xs">
+
+                            {% block docsnav %}
+
+                            {% endblock docsnav %}
+
+                        </div>
+
+                    </div>
+                    
+                 
+                </div>
+
+                <div class="col-sm-9 docs-body">
+
+                    <h2 id="info">Information</h2>
+
+                    <p class="lead">Please take note when using this API:</p>
+
+                    <ul>
+                        <li>This is a <b>consumption-only</b> API - only the HTTP GET method is available on resources.</li>
+                        <li><b>No authentication</b> is required to access this API. All resources are fully open and available.</li>
+                            <ul>
+                                <li>There is, however, a daily rate limit of 300 requests <b>per resource</b> per IP address. So a single IP address can call the <i>bulbasaur</i> resource 300 times a day. Not 300 requests across the entire dataset! This is to stop our database from falling over under heavy load.</li>
+                            </ul>
+                        <li>If you are going to be regularly using the API, I recommend caching data on your service.</li>
+                        <ul>
+                            <li>Luckily, we provide <b>modified/created datetime stamps</b> on every single resource so you can check for updates (and thus make your caching efficient).</li>
+                        </ul>
+                    </ul>
+                    
+                    {% block docsbody %}
+
+                    {% endblock docsbody %}
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <script>
+
+        var sticky = $('.nav-group');
+        var docSelect = $('.doc-select');
+        var offset = sticky.offset();
+        var sideNav = $('.side-nav');
+        var navParents = $('.doc-select').children('ul').children('li');
+        var doc = $(document);
+        var win = $(window);
+
+        function navOps () {
+
+            //check sticky
+            if (doc.scrollTop() >= (offset.top - 65)) {
+
+                console.log(window.innerHeight - offset.top);
+
+                sticky.addClass('stick');
+                sticky.css({ 
+                    width: sideNav.width() + 'px',
+                });
+
+            } else {
+
+                sticky.removeClass('stick');
+                sticky.css({ width: '' });
+            }
+
+            navParents.removeClass('active');
+            var parent;
+            var target;
+            var activeParent = $(navParents[0]);
+            var scrollTop = win.scrollTop();
+
+            for (var i = 0; i < navParents.length; i++) {
+
+                parent = $(navParents[i]);
+
+                target = $(parent.find('a').attr('href'));
+
+                if (scrollTop >= target.offset().top) {
+                    activeParent = parent;
+                } else {
+                    break;
+                }
+            }
+
+            activeParent.addClass('active');
+
+            var children = activeParent.find('li');
+            var child;
+            var activeChild;
+
+            children.removeClass('active');
+
+            for (i = 0; i < children.length; i++) {
+
+                child = $(children[i]);
+                target = $(child.find('a').attr('href'));
+
+                if (scrollTop >= target.offset().top) {
+                    activeChild = child;
+                } else {
+                    break;
+                }
+            }
+
+            if (activeChild) {
+
+                activeChild.addClass('active');
+            }
+        }
+
+        doc.scroll(function () {
+
+            navOps();
+        });
+
+        win.resize(function () {
+
+            navOps();
+        });
+
+        navOps();
+
+    </script>
+
+{% endblock %}

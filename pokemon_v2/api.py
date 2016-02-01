@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 from .models import *
 from .serializers import *
 import re
+from hits.models import ResourceView
 
 
 ###########################
@@ -50,8 +51,14 @@ class NameOrIdRetrieval():
         
         return resp
 
+class IncrementingReadOnlyModelViewSet(viewsets.ReadOnlyModelViewSet):
 
-class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
+    def retrieve(self, request, *args, **kwargs):
+        ResourceView.objects.increment_view_count(version=2)
+        return super(IncrementingReadOnlyModelViewSet, self).retrieve(self, request, *args, **kwargs)
+
+
+class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, IncrementingReadOnlyModelViewSet):
     pass
 
 
@@ -219,18 +226,11 @@ class LocationResource(PokeapiCommonViewset):
     list_serializer_class = LocationSummarySerializer
 
 
-class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
+class LocationAreaResource(ListOrDetailSerialRelation, IncrementingReadOnlyModelViewSet):
 
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer
-
-
-# class MachineResource(PokeapiCommonViewset):
-
-#     queryset = Machine.objects.all()
-#     serializer_class = MachineDetailSerializer
-#     list_serializer_class = MachineSummarySerializer
 
 
 class MoveResource(PokeapiCommonViewset):

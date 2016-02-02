@@ -5,4 +5,3 @@
 *.DS_STORE
 db.*
 venv*
-node_modules

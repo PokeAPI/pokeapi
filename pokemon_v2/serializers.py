@@ -2273,7 +2273,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         method_data = MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data
 
         # Get moves related to this pokemon and pull out unique Move IDs
-        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('move_id')
+        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('level')
         move_ids = pokemon_moves.values('move_id').distinct()
         move_list = []
 

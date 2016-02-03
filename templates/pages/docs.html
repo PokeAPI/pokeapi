@@ -1,0 +1,540 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-brand">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li class="active"><a href="#">Documentation</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container bs-docs">
+
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+      <div class="header col-md-8">
+        <h1>Pokéapi Documentation</h1>
+      </div>
+      <div class="col-md-2">
+        </div>
+    </div><!-- /.header row -->
+    <div class="row pad_top">
+        <div class="col-md-3">
+            <div class="affix visible-md visible-lg" data-spy="affix" data-offset="200" style="position: fixed">
+            <ul class="nav">
+                <li><a href="#info">Information</a></li>
+                <li><a href="#wrap">Wrappers</a></li>
+                <li><a href="#pokedex">Pokedex</a></li>
+                <li><a href="#pokemon">Pokemon</a></li>
+                <li><a href="#types">Types</a></li>
+                <li><a href="#moves">Moves</a></li>
+                <li><a href="#abilities">Abilities</a></li>
+                <li><a href="#eggs">Egg groups</a></li>
+                <li><a href="#description">Descriptions</a></li>
+                <li><a href="#sprites">Sprites</a></li>
+                <li><a href="#game">Games</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+          <div id="info" style="padding-top:30px"></div>
+          <hr>
+            <h1>Information</h1>
+            <p class="lead">Please take note when using this API:</p>
+            <ul>
+              <li>This is a <b>consumption-only</b> API - only the HTTP GET method is available on resources.</li>
+              <li><b>No authentication</b> is required to access this API. All resources are fully open and available.</li>
+                <ul>
+                  <li>There is, however, a daily rate limit of 300 requests <b>per resource</b> per IP address. So a single IP address can call the <i>bulbasaur</i> resource 300 times a day. Not 300 requests across the entire dataset! This is to stop our database from falling over under heavy load.</li>
+                </ul>
+              <li>If you are going to be regularly using the API, I recommend caching data on your service.</li>
+                <ul>
+                  <li>Luckily, we provide <b>modified/created datetime stamps</b> on every single resource so you can check for updates (and thus make your caching efficient).</li>
+                </ul>
+            </ul>
+          <div id="wrap" style="padding-top:30px"></div>
+          <hr>
+            <h1>Wrappers</h1>
+            <p class="lead">Wrappers for these languages have been made:</p>
+            <ul>
+              <li><b>Python</b> - <a href="http://github.com/phalt/pykemon">Pykemon</a> by Paul Hallett.</li>
+              <li><b>.NET</b> - <a href="https://github.com/PoroCYon/PokeApi.NET">PokeAPI.NET</a> by PoroCYon.</li>
+              <li><b>Racket</b> - <a href="https://github.com/scottlindeman/racketmon">Racketmon</a> by Scott Lindeman.</li>
+              <li><b>Java</b> - <a href="https://github.com/mickeyjk/PokeJava">PokeJava</a> by Mickeyjk.</li>
+              <li><b>Ruby</b> - <a href='https://github.com/baweaver/pokegem'>Pokegem</a> by Brandon Weaver.</li>
+              <li><b>Node</b> - <a href='https://github.com/TheIronDeveloper/pokeapi-node-wrapper'>PokeApi Node Wrapper</a> by Tyler Stark.</li>
+            </ul>
+            <p>Written a wrapper? Let us know and we'll add it to the list here.</p>
+            <div id="pokedex" style="padding-top:30px"></div>
+          <hr>
+            <h1>Pokedex</h1>
+            <p>A Pokedex returns the names and resource_uri for all pokemon</p>
+            <p class="lead"> GET pokedex/1/</p>
+            <p>Note: This is a special resource call. Always call <b>/api/v1/pokedex/1/</b>.</p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/pokedex/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-09T15:14:48.957604",
+  "modified": "2013-11-09T15:14:48.957565",
+  "name": "national",
+  "pokemon": [
+    {
+      "name": "pidgeotto",
+      "resource_uri": "api/v1/pokemon/17/"
+    },
+    ...
+    ]
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the pokedex name e.g. <i>National</i>.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>pokemon</b> - a big list of pokemon within this pokedex.</li>
+            </ul>
+          <div id="pokemon" style="padding-top:30px"></div>
+          <hr>
+            <h1>Pokemon</h1>
+            <p>A Pokemon resource represent a single Pokémon</p>
+            <p class="lead"> GET pokemon/</p>
+            <p class="lead"> GET pokemon/ID/ </p>
+            <p>Note: the ID for Pokémon is special. Use the <b>National pokédex</b> number as the ID to return the desired resource.</p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/pokemon/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "abilities": [
+    {
+      "name": "overgrow",
+      "resource_uri": "/api/v1/ability/1/"
+    },
+    {
+      "name": "chlorophyll",
+      "resource_uri": "/api/v1/ability/2/"
+    }
+  ],
+  "attack": 49,
+  "catch_rate": 45,
+  "created": "2013-11-02T12:08:25.745455",
+  "defense": 49,
+  "egg_cycles": 21,
+  "egg_groups": [
+    {
+      "name": "Monster",
+      "resource_uri": "/api/v1/egg/1/"
+    },
+    {
+      "name": "Grass",
+      "resource_uri": "/api/v1/egg/8/"
+    }
+  ],
+  "ev_yield": "1 Sp Atk",
+  "evolutions": {
+    "level": 16,
+    "method": "level up",
+    "resource_uri": "/api/v1/pokemon/2/",
+    "to": "Ivysaur"
+  },
+  "exp": 64,
+  "growth_rate": "ms",
+  "happiness": 70,
+  "height": "2'4",
+  "hp": 45,
+  "male_female_ratio": "87.5/12.5",
+  "modified": "2013-11-02T13:28:04.914889",
+  "moves": [
+    {
+      "learn_type": "other",
+      "name": "Tackle",
+      "resource_uri": "/api/v1/move/1/"
+    },
+    {
+      "learn_type": "other",
+      "name": "Growl",
+      "resource_uri": "/api/v1/move/2/"
+    },
+    {
+      "learn_type": "level up",
+      "level": 10,
+      "name": "Vine whip",
+      "resource_uri": "/api/v1/move/3/"
+    }
+  ],
+  "name": "Bulbasaur",
+  "national_id": 1,
+  "resource_uri": "/api/v1/pokemon/4/",
+  "sp_atk": 65,
+  "sp_def": 65,
+  "species": "seed pokemon",
+  "speed": 45,
+  "total": 318,
+  "types": [
+    {
+      "name": "grass",
+      "resource_uri": "/api/v1/type/5/"
+    },
+    {
+      "name": "poison",
+      "resource_uri": "/api/v1/type/8/"
+    }
+  ],
+  "weight": "15.2lbs"
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Bulbasaur</i>.</li>
+              <li><b>national_id</b> - the id of the resource, this is the <b>National pokedex</b> number of the pokemon.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>abilities</b> - the abilities this pokemon can have.</li>
+              <li><b>egg_groups</b> - the egg groups this pokemon is in.</li>
+              <li><b>evolutions</b> - the evolutions this pokemon can evolve into.</li>
+              <li><b>descriptions</b> - the pokedex descriptions this pokemon has.</li>
+              <li><b>moves</b> - the moves this pokemon can learn.</li>
+              <li><b>types</b> - the types this pokemon is.</li>
+              <li><b>catch_rate</b> - this pokemon's catch rate.</li>
+              <li><b>species</b></li>
+              <li><b>hp</b></li>
+              <li><b>attack</b></li>
+              <li><b>defense</b></li>
+              <li><b>sp_atk</b></li>
+              <li><b>sp_def</b></li>
+              <li><b>speed</b></li>
+              <li><b>total</b> - the total of the above attributes.</li>
+              <li><b>egg_cycles</b> - number of egg cycles needed.</li>
+              <li><b>ev_yield</b> - the ev yield for this pokemon.</li>
+              <li><b>exp</b> - the exp yield from this pokemon.</li>
+              <li><b>growth_rate</b> - the growth rate of this pokemon.</li>
+              <li><b>height</b></li>
+              <li><b>weight</b></li>
+              <li><b>happiness</b> - base happiness for this pokemon.</li>
+              <li><b>male_femal_ratio</b> - in the format M / F</li>
+            </ul>
+          <hr>
+            <div id="types" style="padding-top:30px"></div>
+            <h1>Type</h1>
+            <p>A Type resource represent a single Pokémon type</p>
+            <p class="lead"> GET type/</p>
+            <p class="lead"> GET type/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/type/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-02T12:09:07.305733",
+  "id": 3,
+  "ineffective": [
+    {
+      "name": "fire",
+      "resource_uri": "/api/v1/type/2/"
+    },
+    {
+      "name": "ice",
+      "resource_uri": "/api/v1/type/6/"
+    },
+    {
+      "name": "steel",
+      "resource_uri": "/api/v1/type/17/"
+    },
+    {
+      "name": "water",
+      "resource_uri": "/api/v1/type/3/"
+    }
+  ],
+  "modified": "2013-11-02T13:14:44.369331",
+  "name": "Water",
+  "no_effect": [],
+  "resistance": [
+    {
+      "name": "fire",
+      "resource_uri": "/api/v1/type/2/"
+    },
+    {
+      "name": "ice",
+      "resource_uri": "/api/v1/type/6/"
+    },
+    {
+      "name": "steel",
+      "resource_uri": "/api/v1/type/17/"
+    },
+    {
+      "name": "water",
+      "resource_uri": "/api/v1/type/3/"
+    }
+  ],
+  "resource_uri": "/api/v1/type/3/",
+  "super_effective": [
+    {
+      "name": "fire",
+      "resource_uri": "/api/v1/type/2/"
+    },
+    {
+      "name": "ground",
+      "resource_uri": "/api/v1/type/9/"
+    },
+    {
+      "name": "rock",
+      "resource_uri": "/api/v1/type/13/"
+    }
+  ],
+  "weakness": [
+    {
+      "name": "electric",
+      "resource_uri": "/api/v1/type/4/"
+    },
+    {
+      "name": "grass",
+      "resource_uri": "/api/v1/type/5/"
+    }
+  ]
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Water</i>.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>ineffective</b> - the types this type is ineffective against.</li>
+              <li><b>no_effect</b> - the types this type has no effect against.</li>
+              <li><b>resistance</b> - the types this type is resistant to.</li>
+              <li><b>super_effective</b> - the types this type is super effective against.</li>
+              <li><b>weakness</b> - the types this type is weak to.</li>
+            </ul>
+          <hr>
+            <div id="moves" style="padding-top:30px"></div>
+            <h1>Move</h1>
+            <p>A Move resource represent a single move</p>
+            <p class="lead"> GET move/</p>
+            <p class="lead"> GET move/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/move/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "accuracy": 100,
+  "category": "physical",
+  "created": "2013-11-02T12:37:05.266762",
+  "description": "A physical attack in which the user charges and slams into the target with its whole body.",
+  "id": 1,
+  "modified": "2013-11-03T11:51:57.009696",
+  "name": "Tackle",
+  "power": 50,
+  "pp": 35,
+  "resource_uri": "/api/v1/move/1/"
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Water</i>.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>description</b> - a description of the move.</li>
+              <li><b>power</b> - the power of the move.</li>
+              <li><b>accuracy</b> - the accuracy of the move.</li>
+              <li><b>category</b> - the category of the move.</li>
+              <li><b>pp</b> - the pp points of the move.</li>
+            </ul>
+          <hr>
+          <div id="abilities" style="padding-top:30px"></div>
+            <h1>Ability</h1>
+            <p>An Ability resource represent a single Pokémon ability</p>
+            <p class="lead"> GET ability/</p>
+            <p class="lead"> GET ability/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/ability/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-02T12:21:28.166682",
+  "description": "When a Pokmon with Overgrow uses a Grass-type move, the power will increase by 1.5x if the user has less than or equal to 1/3 of its maximum HP remaining.",
+  "id": 1,
+  "modified": "2013-11-02T13:27:06.591413",
+  "name": "Overgrow",
+  "resource_uri": "/api/v1/ability/1/"
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Overgrow</i>.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>description</b> - the description of this ability</li>
+            </ul>
+          <hr>
+          <div id="eggs" style="padding-top:30px"></div>
+            <h1>Egg group</h1>
+            <p>An Egg group resource represent a single Pokémon egg group</p>
+            <p class="lead"> GET egg/</p>
+            <p class="lead"> GET egg/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/egg/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-02T12:24:55.532023",
+  "id": 1,
+  "modified": "2013-11-02T12:24:55.531989",
+  "name": "Monster",
+  "pokemon": [
+    {
+      "name": "Ivysaur",
+      "resource_uri": "/api/v1/pokemon/2/"
+    },
+    {
+      "name": "Bulbasaur",
+      "resource_uri": "/api/v1/pokemon/1/"
+    }
+  ],
+  "resource_uri": "/api/v1/egg/1/"
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Monster</i>.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>pokemon</b> - a list of all the pokemon in that egg group.</li>
+            </ul>
+          <hr>
+          <div id="description" style="padding-top:30px"></div>
+            <h1>Description</h1>
+            <p>A Description resource represent a single Pokémon pokédex description</p>
+            <p class="lead"> GET description/</p>
+            <p class="lead"> GET description/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/description/2/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+    created: '2013-12-24T17:14:38.281429',
+    description: 'A strange seed was planted on its back at birth. The plant sprouts and grows with this POKMON.',
+    games: [{
+        name: 'red(JPN)',
+        resource_uri: '/api/v1/game/1/'
+    }, {
+        name: 'green(JPN)',
+        resource_uri: '/api/v1/game/2/'
+    }],
+    id: 2,
+    modified: '2014-01-18T14:29:53.118541',
+    name: 'Bulbasaur_gen_1',
+    pokemon: {
+        name: 'bulbasaur',
+        resource_uri: '/api/v1/pokemon/1/'
+    },
+    resource_uri: '/api/v1/description/2/'
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>games</b> - a list of games this description is in.</li>
+              <li><b>pokemon</b> - the pokemon this sprite is for.</li>
+            </ul>
+          <hr>
+          <div id="sprites" style="padding-top:30px"></div>
+            <h1>Sprite</h1>
+            <p>A Sprite resource represent a single Pokémon Sprite</p>
+            <p class="lead"> GET sprite/</p>
+            <p class="lead"> GET sprite/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/sprite/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-02T12:34:19.113143",
+  "id": 1,
+  "image": "/media/img/1383395659.12.png",
+  "modified": "2013-11-02T12:34:19.113053",
+  "name": "Bulbasaur_blue_red",
+  "pokemon": {
+    "name": "bulbasaur",
+    "resource_uri": "/api/v1/pokemon/1/"
+  },
+  "resource_uri": "/api/v1/sprite/1/"
+}
+            </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>pokemon</b> - the pokemon this sprite is for.</li>
+              <li><b>image</b> - the uri for the sprite image</li>
+            </ul>
+          <hr>
+          <div id="game" style="padding-top:30px"></div>
+            <h1>Game</h1>
+            <p>A Game resource represent a single Pokémon game</p>
+            <p class="lead"> GET game/</p>
+            <p class="lead"> GET game/ID/ </p>
+            <h4>Example request</h4>
+            <pre>GET http://pokeapi.co/api/v1/game/1/</pre>
+            <p>Result:</p>
+            <pre class="pre-scrollable">
+{
+  "created": "2013-11-02T12:11:41.755402",
+  "generation": 1,
+  "id": 1,
+  "modified": "2013-11-02T12:12:47.378286",
+  "name": "Pokemon red (JPN)",
+  "release_year": 1996,
+  "resource_uri": "/api/v1/game/1/"
+}
+             </pre>
+            <p>Fields:</p>
+            <ul>
+              <li><b>name</b> - the resource name e.g. <i>Pokemon red</i>.</li>
+              <li><b>id</b> - the id of the resource.</li>
+              <li><b>resource_uri</b> - the uri of this resource.</li>
+              <li><b>created</b> - the creation date of the resource.</li>
+              <li><b>modified</b> - the last time this resource was modified.</li>
+              <li><b>release_year</b> - the year the game was released</li>
+              <li><b>generation</b> - the generation this game belongs to.</li>
+            </ul>
+
+        </div>
+    </div><!--row-->
+
+    </div><!-- /.container -->
+
+{% endblock %}

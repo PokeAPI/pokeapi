@@ -1806,16 +1806,10 @@ class APIData():
         return pokemon_item
 
     @classmethod
-    def setup_pokemon_move_data(self, pokemon, level=0, order=1):
-
-        move = self.setup_move_data(
-            name='mv for pkmn')
+    def setup_pokemon_move_data(self, pokemon, move, version_group, level=0, order=1):
 
         move_learn_method = self.setup_move_learn_method_data(
             name='mv lrn mthd for pkmn')
-
-        version_group = self.setup_version_group_data(
-            name='ver grp for pkmn')
 
         pokemon_move = PokemonMove.objects.create (
             pokemon = pokemon,
@@ -3535,8 +3529,14 @@ class APITests(APIData, APITestCase):
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
-        pokemon_move = self.setup_pokemon_move_data(pokemon=pokemon)
         pokemon_game_index = self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
+        # To test issue #85, we will create one move that has multiple learn levels in different
+        # version groups.  Later, we'll assert that we only got one move record back.
+        pokemon_move = self.setup_move_data(name='mv for pkmn')
+        pokemon_moves = []
+        for move in range(0,4):
+            version_group = self.setup_version_group_data(name='ver grp '+str(move)+' for pkmn')
+            pokemon_moves.append(self.setup_pokemon_move_data(pokemon=pokemon,move=pokemon_move,version_group=version_group,level=move))
         
         encounter_method = self.setup_encounter_method_data(name='encntr mthd for lctn area')
         location_area1 = self.setup_location_area_data(name='lctn1 area for base pkmn')
@@ -3581,13 +3581,18 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['held_items'][0]['version_details'][0]['version']['name'], pokemon_item.version.name)
         self.assertEqual(response.data['held_items'][0]['version_details'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_item.version.pk))
         # move params
-        self.assertEqual(response.data['moves'][0]['move']['name'], pokemon_move.move.name)
-        self.assertEqual(response.data['moves'][0]['move']['url'], '{}{}/move/{}/'.format(test_host, api_v2, pokemon_move.move.pk))
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['level_learned_at'], pokemon_move.level)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['version_group']['name'], pokemon_move.version_group.name)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, pokemon_move.version_group.pk))
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['move_learn_method']['name'], pokemon_move.move_learn_method.name)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['move_learn_method']['url'], '{}{}/move-learn-method/{}/'.format(test_host, api_v2, pokemon_move.move_learn_method.pk))
+        #  Make sure that we only got one move back, but that we got all of the distinct version group
+        #  and learn level values. (See issue #85)
+        self.assertEqual(len(response.data['moves']),1)
+        self.assertEqual(response.data['moves'][0]['move']['name'], pokemon_moves[0].move.name)
+        self.assertEqual(response.data['moves'][0]['move']['url'], '{}{}/move/{}/'.format(test_host, api_v2, pokemon_moves[0].move.pk))
+        self.assertEqual(len(response.data['moves'][0]['version_group_details']),len(pokemon_moves));
+        for version_group in range(0,len(pokemon_moves)):
+            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['level_learned_at'], pokemon_moves[version_group].level)
+            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['version_group']['name'], pokemon_moves[version_group].version_group.name)
+            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, pokemon_moves[version_group].version_group.pk))
+            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['move_learn_method']['name'], pokemon_moves[version_group].move_learn_method.name)
+            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['move_learn_method']['url'], '{}{}/move-learn-method/{}/'.format(test_host, api_v2, pokemon_moves[version_group].move_learn_method.pk))
         # game indices params
         self.assertEqual(response.data['game_indices'][0]['game_index'], pokemon_game_index.game_index)
         self.assertEqual(response.data['game_indices'][0]['version']['name'], pokemon_game_index.version.name)

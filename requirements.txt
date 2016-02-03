@@ -8,10 +8,8 @@ django-cors-headers==1.0.0
 django-discover-runner==0.4
 django-imagekit==3.2.4
 django-tastypie==0.12.1
-django-markdown-deux==1.0.5
 djangorestframework>=3.0.0
 gunicorn==0.17.0
-markdown2==2.3.0
 mimeparse==0.1.3
 pilkit==1.1.12
 psycopg2==2.5.4

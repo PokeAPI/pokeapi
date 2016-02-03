@@ -5,273 +5,221 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <div class="navbar-brand">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokeapi.co" data-text="Pokéapi - the Pokémon RESTful API " data-via="phalt_" data-related="phalt_">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
         </div>
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="/about/">About</a></li>
-            <li><a href="/docsv2/">Documentation</a></li>
+            <li><a href="/docs/">Documentation</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-<section id="home">
-
-    <div class="header">
-        <h1>Pokéapi</h1>
-        <h2>The RESTful Pokémon API</h2>
-        <h4>Over <span class="count">{{ total_views|intcomma }}</span> API calls received!</h4>
-    </div>
-
     <div class="container">
         {% if update %}
-        <div class="row" style="padding-top:80px;text-align:center;">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-            <div class="alert alert-success">{{update.content|safe}}</div>
-            </div>
-            <div class="col-md-2">
-            </div>
-        </div><!-- /.header row -->
-        {% endif %}
-    </div>
-
-    <div class="cta">
-        <p>Finally; all the Pokémon data you'll ever need, in one place,<br /> and easily accessible through a modern RESTful API.</p>
-        <p>Whats new in V2? Check out the <a href="/docsv2/">docs</a>!</p>
-    </div>
-        
-    
-    <div class="container">
-        
-
-        <div class="row">
-
-            <div class="col-md-10 center-block">
-
-                <div class="center">
-                    <h1>
-                        Try it now!
-                    </h1>
-                    <div class="input-group pad_top">
-                        <span class="input-group-addon url">http://pokeapi.co/api/v2/</span>
-                        <input id="interactive" type="text" class="form-control" placeholder="pokemon/1/">
-                        <span class="input-group-btn"><button onClick="interactive_call();return false;" class="btn btn-primary">submit</button></span>
-                    </div>
+            <div class="row" style="padding-top:80px;text-align:center;">
+                <div class="col-md-2">
                 </div>
-
-                <small>Need a hint? try <a href="#" onClick="update('pokemon/1/');return false;"><i>pokemon/1/</i></a> or <a href="#" onClick="update('type/3/');return false;"><i>type/3/</i></a> or <a href="#" onClick="update('ability/4/');return false;"><i>ability/4/</i></a></small>
-                <p class="lead pad_top">Resource for <span id="interactive_name">Bulbasaur</span></p>
-
-                <pre id="interactive_output" class="pre-scrollable">
+                <div class="col-md-8">
+                    <div class="alert alert-success">{{update.content|safe}}</div>
+                </div>
+              <div class="col-md-2">
+              </div>
+            </div><!-- /.header row -->
+        {% endif %}
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+      <div class="{% if not update %}header{% endif %} col-md-8">
+        <h1>Pokéapi - The Pokémon RESTful API</h1>
+        <p class="lead center">Finally; all the Pokémon data you'll ever need, in one place,<br /> and easily accessible through a modern RESTful API.</p>
+        <p class="center">Over <b>{{ total_views|intcomma }}</b> API calls received!</p>
+      </div>
+      <div class="col-md-2">
+        </div>
+    </div><!-- /.header row -->
+    <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <div class="center">
+        <h1>
+            Try it now!
+        </h1>
+            <div class="input-group pad_top">
+              <span class="input-group-addon">http://pokeapi.co/api/v1/</span>
+              <input id="interactive" type="text" class="form-control" placeholder="pokemon/1/">
+              <span class="input-group-btn"><button onClick="interactive_call();return false;" class="btn btn-primary">submit</button></span>
+            </div>
+        </div>
+        <small>Need a hint? try <a href="#" onClick="update('pokemon/1/');return false;"><i>pokemon/1/</i></a> or <a href="#" onClick="update('type/3/');return false;"><i>type/3/</i></a> or <a href="#" onClick="update('ability/4/');return false;"><i>ability/4/</i></a></small>
+        <p class="lead pad_top">Resource for <span id="interactive_name">Bulbasaur</span></p>
+        <div class="well">
+        <pre id="interactive_output" class="pre-scrollable">
 {
-    "id": 1,
-    "name": "bulbasaur",
-    "base_experience": 64,
-    "height": 7,
-    "is_default": true,
-    "order": 1,
-    "weight": 69,
     "abilities": [
         {
-            "is_hidden": true,
-            "slot": 3,
-            "ability": {
-                "name": "chlorophyll",
-                "url": "http://localhost:8000/api/v2/ability/34/"
-            }
-        }
-    ],
-    "forms": [
+            "name": "overgrow",
+            "resource_uri": "/api/v1/ability/1/"
+        },
         {
-            "name": "bulbasaur",
-            "url": "http://localhost:8000/api/v2/pokemon-form/1/"
+            "name": "chlorophyll",
+            "resource_uri": "/api/v1/ability/2/"
         }
     ],
-    "game_indices": [
+    "attack": 49,
+    "catch_rate": 45,
+    "created": "2013-11-02T12:08:25.745455",
+    "defense": 49,
+    "egg_cycles": 21,
+    "egg_groups": [
         {
-            "game_index": 1,
-            "version": {
-                "name": "white-2",
-                "url": "http://localhost:8000/api/v2/version/22/"
-            }
+            "name": "Monster",
+            "resource_uri": "/api/v1/egg/1/"
+        },
+        {
+            "name": "Grass",
+            "resource_uri": "/api/v1/egg/8/"
         }
     ],
-    "held_items": [],
-    "location_area_encounters": [],
+    "ev_yield": "1 Sp Atk",
+    "evolutions": {
+        "level": 16,
+        "method": "level up",
+        "resource_uri": "/api/v1/pokemon/2/",
+        "to": "Ivysaur"
+    },
+    "exp": 64,
+    "growth_rate": "ms",
+    "happiness": 70,
+    "height": "2'4",
+    "hp": 45,
+    "male_female_ratio": "87.5/12.5",
+    "modified": "2013-11-02T13:28:04.914889",
     "moves": [
         {
-            "move": {
-                "name": "captivate",
-                "url": "http://localhost:8000/api/v2/move/445/"
-            },
-            "version_group_details": [
-                {
-                    "level_learned_at": 0,
-                    "version_group": {
-                        "name": "heartgold-soulsilver",
-                        "url": "http://localhost:8000/api/v2/version-group/10/"
-                    },
-                    "move_learn_method": {
-                        "name": "machine",
-                        "url": "http://localhost:8000/api/v2/move-learn-method/4/"
-                    }
-                },
-                {
-                    "level_learned_at": 0,
-                    "version_group": {
-                        "name": "platinum",
-                        "url": "http://localhost:8000/api/v2/version-group/9/"
-                    },
-                    "move_learn_method": {
-                        "name": "machine",
-                        "url": "http://localhost:8000/api/v2/move-learn-method/4/"
-                    }
-                },
-                {
-                    "level_learned_at": 0,
-                    "version_group": {
-                        "name": "diamond-pearl",
-                        "url": "http://localhost:8000/api/v2/version-group/8/"
-                    },
-                    "move_learn_method": {
-                        "name": "machine",
-                        "url": "http://localhost:8000/api/v2/move-learn-method/4/"
-                    }
-                }
-            ]
-        }
-    ],
-    "species": {
-        "name": "bulbasaur",
-        "url": "http://localhost:8000/api/v2/pokemon-species/1/"
-    },
-    "stats": [
+            "learn_type": "other",
+            "name": "Tackle",
+            "resource_uri": "/api/v1/move/1/"
+        },
         {
-            "base_stat": 45,
-            "effort": 0,
-            "stat": {
-                "name": "speed",
-                "url": "http://localhost:8000/api/v2/stat/6/"
-            }
+            "learn_type": "other",
+            "name": "Growl",
+            "resource_uri": "/api/v1/move/2/"
+        },
+        {
+            "learn_type": "level up",
+            "level": 10,
+            "name": "Vine whip",
+            "resource_uri": "/api/v1/move/3/"
         }
     ],
+    "name": "Bulbasaur",
+    "national_id": 1,
+    "resource_uri": "/api/v1/pokemon/4/",
+    "sp_atk": 65,
+    "sp_def": 65,
+    "species": "seed pokemon",
+    "speed": 45,
+    "total": 318,
     "types": [
         {
-            "slot": 2,
-            "type": {
-                "name": "poison",
-                "url": "http://localhost:8000/api/v2/type/4/"
-            }
+            "name": "grass",
+            "resource_uri": "/api/v1/type/5/"
+        },
+        {
+            "name": "poison",
+            "resource_uri": "/api/v1/type/8/"
         }
-    ]
+    ],
+    "weight": "15.2lbs"
 }
-                </pre>
-
+    </pre>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+    </div><!--interactive row-->
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-3">
+            <p class="lead center">
+                What is this?
+            </p>
+            <div class="well">
+            <p>
+                This is a full RESTful API linked to an extensive database
+                detailing everything about the Pokémon main game series.</p><p>
+                We've covered Pokémon, types, abilities, moves, egg groups and more.
+            </p>
             </div>
-
-        </div><!--interactive row-->
-
-
-        <div class="row">
-
-            <div class="col-md-10 center-block">
-                
-                <div class="row">
-                    
-                    <div class="col-md-4">
-                        <p class="lead center">
-                            What is this?
-                        </p>
-                        <div class="well">
-                            <p>
-                                This is a full RESTful API linked to an extensive database
-                                detailing everything about the Pokémon main game series.
-                            </p>
-                            <p>
-                                We've covered everything from Pokémon, Berry Flavors.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <p class="lead center">
-                            Where do I start?
-                        </p>
-                        <div class="well">
-                            <p>
-                                We have awesome <a href="/docsv2/">documentation</a> on
-                                how to use this API. It takes minutes to get started.
-                            </p>
-                            <p>
-                                This API will always be publicly available and will
-                                never require any extensive setup process to consume.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <p class="lead center">
-                            I want to help.
-                        </p>
-                        <div class="well">
-                            <p>Amazing!</p>
-                            <p>Head over to <a href="https://github.com/phalt/pokeapi">GitHub</a> and read some of the issues and feature requests. If you can contribute then go ahead and start making pull requests :)</p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <div class="col-md-4">
+            <p class="lead center">
+                How can I start using the API?
+            </p>
+            <div class="well">
+                <p>
+                    We have awesome <a href="/docs/">documentation</a> on
+                    how to use this API. It takes minutes to get started.
+                </p>
+                <p>
+                    This API will always be publicly available and will
+                    never require any extensive setup process to consume.
+                </p>
             </div>
-        </div><!-- end bottom -->
-    </div><!-- /.container -->
-
-</section>
-
-<script>
-
-    function update (call) {
-
+        </div>
+        <div class="col-md-3">
+            <p class="lead center">
+                I want to help.
+            </p>
+            <div class="well">
+                <p>Amazing!</p>
+                <p>Head over to <a href="https://github.com/phalt/pokeapi">GitHub</a> and read some of the issues and feature requests. If you can contribute then go ahead and start making pull requests :)</p>
+            </div>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div><!-- end bottom -->
+    <script>
+    function update(call){
         jQuery('#interactive').val(call);
         interactive_call();
     }
-
-    function interactive_call() {
-
-        var content = jQuery('#interactive').val() || 'pokemon/1/';;
-
-        var call_url = 'api/v2/' + content;
-
+    function interactive_call(){
+        var content = jQuery('#interactive').val()
+        if(content == ''){
+            content = 'pokemon/1/';
+        }
+        var call_url = 'api/v1/' + content;
         jQuery.ajax({
-
-            dataType: 'json',
-            url: call_url,
-            context: document.body
-
-        }).complete( function(data) {
-
-            if(data['status'] == 200){
-
-                var d = jQuery.parseJSON(data['responseText']);
-                jQuery('#interactive_name').html(d['name']);
-                jQuery('#interactive_output').text(JSON.stringify(d, null, '\t'));
-
-            } else if (data['status'] == 404) {
-
-                jQuery('#interactive_output').text(data['status'] + ' ' + data['statusText']);
-            }
-        });
+      dataType: 'json',
+      url: call_url,
+      context: document.body
+    }).complete(function(data) {
+        if(data['status'] == 200){
+            var d = jQuery.parseJSON(data['responseText']);
+            jQuery('#interactive_name').html(d['name']);
+            jQuery('#interactive_output').text(JSON.stringify(d, null, '\t'));
+        }
+        else if (data['status'] == 404) {
+            jQuery('#interactive_output').text(data['status'] + ' ' + data['statusText']);
+        }
+    });
     }
+    </script>
 
-</script>
+    </div><!-- /.container -->
 
 {% endblock %}

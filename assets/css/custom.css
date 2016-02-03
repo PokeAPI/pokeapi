@@ -1,0 +1,56 @@
+.header {
+    text-align: center;
+    padding-top:120px;
+}
+
+.footer {
+    padding:30px;
+}
+
+.navbar {
+    background: #c0392b;
+}
+
+.center {
+    text-align: center;
+}
+
+.pad_top {
+    padding-top: 15px;
+}
+
+.twitter-tweet {
+   margin: 0 auto !important;
+   padding-top: 12px !important;
+   padding-bottom: 12px !important;
+}
+
+.twitter-share-button {
+  float: left !important;
+  width: 85px !important;
+}
+
+.fb-like {
+  float: left!important;
+}
+
+.navbar-brand {
+    width:100px;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background: #c0392b!important;
+}
+
+hr {
+    border-top: 1px solid #95a5a6;
+    border-bottom: 1px solid #2c3e50;
+}
+
+hr .light {
+    border-top: 1px solid #ecf0f1;
+    border-bottom: 1px solid #bdc3c7;
+}

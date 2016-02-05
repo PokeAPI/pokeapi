@@ -3588,11 +3588,13 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['moves'][0]['move']['url'], '{}{}/move/{}/'.format(test_host, api_v2, pokemon_moves[0].move.pk))
         self.assertEqual(len(response.data['moves'][0]['version_group_details']),len(pokemon_moves));
         for version_group in range(0,len(pokemon_moves)):
-            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['level_learned_at'], pokemon_moves[version_group].level)
-            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['version_group']['name'], pokemon_moves[version_group].version_group.name)
-            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, pokemon_moves[version_group].version_group.pk))
-            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['move_learn_method']['name'], pokemon_moves[version_group].move_learn_method.name)
-            self.assertEqual(response.data['moves'][0]['version_group_details'][version_group]['move_learn_method']['url'], '{}{}/move-learn-method/{}/'.format(test_host, api_v2, pokemon_moves[version_group].move_learn_method.pk))
+            expected = pokemon_move[version_group]
+            actual = response.data['moves'][0]['version_group_details'][version_group]
+            self.assertEqual(actual['level_learned_at'], expected.level)
+            self.assertEqual(actual['version_group']['name'], expected.version_group.name)
+            self.assertEqual(actual['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, expected.version_group.pk))
+            self.assertEqual(actual['move_learn_method']['name'], expected.move_learn_method.name)
+            self.assertEqual(actual['move_learn_method']['url'], '{}{}/move-learn-method/{}/'.format(test_host, api_v2, expected.move_learn_method.pk))
         # game indices params
         self.assertEqual(response.data['game_indices'][0]['game_index'], pokemon_game_index.game_index)
         self.assertEqual(response.data['game_indices'][0]['version']['name'], pokemon_game_index.version.name)

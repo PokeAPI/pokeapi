@@ -4,7 +4,7 @@ import os
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -50,7 +50,8 @@ STATIC_ROOT = PROJECT_ROOT.child('assets')
 STATIC_URL = '/assets/'
 
 STATICFILES_DIRS = (
-    PROJECT_ROOT.child('assets'),
+    # '/pokemon/assets/',
+    # 'pokemon_v2/assets/',
 )
 
 STATICFILES_FINDERS = (
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT.child('templates'),
-
+    # PROJECT_ROOT + 'pokemon/templates'
 )
 
 DATABASES = {
@@ -128,7 +129,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
     'corsheaders',
-    'rest_framework', 
+    'rest_framework',
+    'markdown_deux'
 ) + CUSTOM_APPS
 
 
@@ -154,5 +156,19 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 
+    'PAGE_SIZE': 20,
+
     'PAGINATE_BY': 20,
+}
+
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": {
+            "code-friendly": None,
+            "tables": None,
+            "fenced-code-blocks": None,
+            "header-ids": None
+        },
+        "safe_mode": False,
+    },
 }

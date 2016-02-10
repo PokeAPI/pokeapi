@@ -1391,3 +1391,15 @@ class PokemonStat(HasPokemon, HasStat):
 class PokemonType(HasPokemon, HasType):
 
   slot = models.IntegerField()
+
+
+class PokemonImageSet(HasPokemon):
+
+  front_default = models.CharField(max_length=200, blank=True, null=True)
+  front_female = models.CharField(max_length=200, blank=True, null=True)
+  front_shiny = models.CharField(max_length=200, blank=True, null=True)
+  front_shiny_female = models.CharField(max_length=200, blank=True, null=True)
+  back_default = models.CharField(max_length=200, blank=True, null=True)
+  back_female = models.CharField(max_length=200, blank=True, null=True)
+  back_shiny = models.CharField(max_length=200, blank=True, null=True)
+  back_shiny_female = models.CharField(max_length=200, blank=True, null=True)

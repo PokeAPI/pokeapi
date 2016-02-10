@@ -154,5 +154,5 @@ REST_FRAMEWORK = {
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 
-    'PAGE_SIZE': 20,
+    'PAGINATE_BY': 20,
 }

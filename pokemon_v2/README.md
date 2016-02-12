@@ -2232,7 +2232,7 @@ Pokeathlon Stats are different attributes of a pokemons performance in pokeathlo
 
 
 ## Pokemon
-Pokemon are the creatures that inhabit the world of the pokemon games. They can be caught using pokeball's and trained by battling with other pokemon. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokémon_(species)) for greater detail.
+Pokemon are the creatures that inhabit the world of the pokemon games. They can be caught using pokeballs and trained by battling with other pokemon. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokémon_(species)) for greater detail.
 
 ### GET api/v2/pokemon/{id or name}
 
@@ -2362,8 +2362,8 @@ Pokemon are the creatures that inhabit the world of the pokemon games. They can 
 | game_indices             | A list of game indices relevent to pokemon item by generation                                    | list [VersionGameIndex](#versiongameindex) |
 | held_items               | A list of items this pokemon may be holding when encountered                                     | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
 | location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions | list [LocationAreaEncounter](#locationareaencounter) |
-| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | [NamedAPIResource](#namedapiresource) (Move](#moves)) |
-| species                  | The species this pokemon belongs to                                                              | [NamedAPIResource](#namedapiresource) (PokemonSpecies](#pokemon-species)) |
+| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
+| species                  | The species this pokemon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
 | stats                    | A list of base stat values for this pokemon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
 | types                    | A list of details showing types this pokemon has                                                 | list [PokemonType](#pokemontype) |
 

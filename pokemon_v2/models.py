@@ -1402,3 +1402,8 @@ class PokemonImageSet(HasPokemon):
   back_female = models.CharField(max_length=200, blank=True, null=True)
   back_shiny = models.CharField(max_length=200, blank=True, null=True)
   back_shiny_female = models.CharField(max_length=200, blank=True, null=True)
+
+
+class PokemonSprites(HasPokemon):
+
+  sprites = models.CharField(max_length=500)

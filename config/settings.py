@@ -84,7 +84,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT.child('templates'),
-    # PROJECT_ROOT + 'pokemon/templates'
 )
 
 DATABASES = {

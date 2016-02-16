@@ -654,6 +654,11 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
   pass
 
 
+class ItemSprites(HasItem):
+
+  sprites = models.CharField(max_length=500)
+
+
 
 ####################
 #  CONTEST MODELS  #
@@ -1333,6 +1338,11 @@ class PokemonFormName(HasPokemonForm, IsName):
   pokemon_name = models.CharField(max_length = 30)
 
 
+class PokemonFormSprites(HasPokemonForm):
+
+  sprites = models.CharField(max_length=500)
+
+
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
   pass
 
@@ -1390,18 +1400,6 @@ class PokemonStat(HasPokemon, HasStat):
 class PokemonType(HasPokemon, HasType):
 
   slot = models.IntegerField()
-
-
-class PokemonImageSet(HasPokemon):
-
-  front_default = models.CharField(max_length=200, blank=True, null=True)
-  front_female = models.CharField(max_length=200, blank=True, null=True)
-  front_shiny = models.CharField(max_length=200, blank=True, null=True)
-  front_shiny_female = models.CharField(max_length=200, blank=True, null=True)
-  back_default = models.CharField(max_length=200, blank=True, null=True)
-  back_female = models.CharField(max_length=200, blank=True, null=True)
-  back_shiny = models.CharField(max_length=200, blank=True, null=True)
-  back_shiny_female = models.CharField(max_length=200, blank=True, null=True)
 
 
 class PokemonSprites(HasPokemon):

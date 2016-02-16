@@ -598,7 +598,7 @@ Evolution chains are essentially family trees. They start with the lowest stage 
 | is_baby           | Whether or not this link is for a baby pokemon. This would only ever be true on the base link. | boolean |
 | species           | The pokemon species at this point in the evolution chain                                       | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
 | evolution_details | All details regarding the specific details of the referenced pokemon species evolution         | [EvolutionDetail](#evolutiondetail) |
-| evolves_to        | A List of chain objects.                                                                       | [ChainLink](#chainlink) |
+| evolves_to        | A List of chain objects.                                                                       | list [ChainLink](#chainlink) |
 
 #### EvolutionDetail
 
@@ -783,7 +783,7 @@ A Pokédex is a handheld electronic encyclopedia device; one which is capable of
 | names           | The name of this pokedex listed in different languages                       | list [Name](#resourcename) |
 | pokemon_entries | A list of pokemon catalogued in this pokedex and their indexes               | list [PokemonEntry](#pokemonentry) |
 | region          | The region this pokedex catalogues pokemon for                               | [NamedAPIResource](#namedapiresource) ([Region](#regions)) |
-| version_groups  | A list of version groups this pokedex is relevent to                         | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| version_groups  | A list of version groups this pokedex is relevent to                         | list [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 #### PokemonEntry
 
@@ -1066,7 +1066,7 @@ Item categories determine where items will be placed in the players bag.
 | ---- | ----------- | --------- |
 | id     | The identifier for this item category resource               | integer |
 | name   | The name for this item category resource                     | string |
-| items  | A list of items that are a part of this category             | list [Item](#items) |
+| items  | A list of items that are a part of this category             | list [NamedAPIResource](#namedapiresource)([Item](#items)) |
 | names  | The name of this item category listed in different languages | list [Name](#resourcename) |
 | pocket | The pocket items in this category would be put in            | list [NamedAPIResource](#namedapiresource) ([ItemPocket](#item-pockets)) |
 
@@ -1793,11 +1793,11 @@ A region is an organized area of the pokemon world. Most often, the main differe
 | ---- | ----------- | --------- |
 | id              | The identifier for this region resource                   | integer |
 | name            | The name for this region resource                         | string |
-| locations       | A list of locations that can be found in this region      | [NamedAPIResource](#namedapiresource) ([Location](#locations)) |
+| locations       | A list of locations that can be found in this region      | list [NamedAPIResource](#namedapiresource) ([Location](#locations)) |
 | main_generation | The generation this region was introduced in              | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
 | names           | The name of this region listed in different languages     | list [Name](#resourcename) |
-| pokedexes       | A list of pokedexes that catalogue pokemon in this region | [NamedAPIResource](#namedapiresource) ([Pokedex](#pokedexes)) |
-| version_groups  | A list of version groups where this region can be visited | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| pokedexes       | A list of pokedexes that catalogue pokemon in this region | list [NamedAPIResource](#namedapiresource) ([Pokedex](#pokedexes)) |
+| version_groups  | A list of version groups where this region can be visited | list [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 
 <h1 id="pokemon-section">Pokemon</h1>
@@ -1983,7 +1983,7 @@ Egg Groups are categories which determine which Pokémon are able to interbreed.
 | id              | The identifier for this egg group resource                       | integer |
 | name            | The name for this egg group resource                             | string |
 | names           | The name of this egg group listed in different languages         | list [Name](#resourcename) |
-| pokemon_species | A list of all pokemon species that are members of this egg group | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
+| pokemon_species | A list of all pokemon species that are members of this egg group | list [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
 
 
 ## Genders
@@ -2362,7 +2362,7 @@ Pokemon are the creatures that inhabit the world of the pokemon games. They can 
 | game_indices             | A list of game indices relevent to pokemon item by generation                                    | list [VersionGameIndex](#versiongameindex) |
 | held_items               | A list of items this pokemon may be holding when encountered                                     | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
 | location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions | list [LocationAreaEncounter](#locationareaencounter) |
-| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | [NamedAPIResource](#namedapiresource) (Move](#moves)) |
+| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | list [NamedAPIResource](#namedapiresource) (Move](#moves)) |
 | species                  | The species this pokemon belongs to                                                              | [NamedAPIResource](#namedapiresource) (PokemonSpecies](#pokemon-species)) |
 | stats                    | A list of base stat values for this pokemon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
 | types                    | A list of details showing types this pokemon has                                                 | list [PokemonType](#pokemontype) |
@@ -2900,7 +2900,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 | generation        | The generation this type was introduced in                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
 | move_damage_class | The class of damage inflicted by this type                          | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | names             | The name of this type listed in different languages                 | list [Name](#resourcename) |
-| pokemon           | A list of details of pokemon that have this type                    | [TypePokemon](#typepokemon) |
+| pokemon           | A list of details of pokemon that have this type                    | list [TypePokemon](#typepokemon) |
 | moves             | A list of moves that have this type                                 | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 
 #### TypePokemon
@@ -2957,7 +2957,7 @@ Languages for translations of api resource information.
 | id       | The identifier for this language resource                                                     | integer |
 | name     | The name for this language resource                                                           | string |
 | official | Whether or not the games are published in this language                                       | boolean |
-| is639    | The two-letter code of the country where this language is spoken. Note that it is not unique. | string |
+| iso639    | The two-letter code of the country where this language is spoken. Note that it is not unique. | string |
 | iso3166  | The two-letter code of the language. Note that it is not unique.                              | string |
 | names    | The name of this language listed in different languages                                       | list [Name](#resourcename) |
 

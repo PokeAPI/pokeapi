@@ -1066,7 +1066,7 @@ Item categories determine where items will be placed in the players bag.
 | ---- | ----------- | --------- |
 | id     | The identifier for this item category resource               | integer |
 | name   | The name for this item category resource                     | string |
-| items  | A list of items that are a part of this category             | list [Item](#items) |
+| items  | A list of items that are a part of this category             | list [NamedAPIResource](#namedapiresource)([Item](#items)) |
 | names  | The name of this item category listed in different languages | list [Name](#resourcename) |
 | pocket | The pocket items in this category would be put in            | list [NamedAPIResource](#namedapiresource) ([ItemPocket](#item-pockets)) |
 

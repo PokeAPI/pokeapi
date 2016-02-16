@@ -2963,7 +2963,7 @@ Languages for translations of api resource information.
 
 
 
-## Common ModeRls
+## Common Models
 
 #### APIResource
 

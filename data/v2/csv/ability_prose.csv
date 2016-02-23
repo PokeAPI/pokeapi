@@ -567,3 +567,6 @@ The type change takes place just before the move is used."
 186,9,Strengthens []{type:dark} moves to 1.33× their power for all friendly and opposing Pokémon.,Strengthens []{type:dark} moves for all friendly and opposing Pokémon.
 187,9,Strengthens []{type:fairy} moves to 1.33× their power for all friendly and opposing Pokémon.,Strengthens []{type:fairy} moves for all friendly and opposing Pokémon.
 188,9,Makes []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types.,"While this Pokémon is on the field, []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types to 2/3 their power, rather than strengthening them."
+189,9,,
+190,9,,
+191,9,,

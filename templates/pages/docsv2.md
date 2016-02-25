@@ -2684,6 +2684,18 @@ A Pokemon Species forms the basis for at least one pokemon. Attributes of a Poke
 			"url": "http://pokeapi.co/api/v2/language/9/"
 		}
 	}],
+	"flavor_text_entries": [
+    {
+        "flavor_text": "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs.",
+        "language": {
+            "name": "en",
+            "url": "http://localhost:8000/api/v2/language/9/"
+        },
+        "version": {
+            "name": "red",
+            "url": "http://localhost:8000/api/v2/version/1/"
+        }
+    }],
 	"form_descriptions": [{
 		"description": "Forms have different stats and movepools.  During evolution, Burmy's current cloak becomes Wormadam's form, and can no longer be changed.",
 		"language": {
@@ -2735,7 +2747,8 @@ A Pokemon Species forms the basis for at least one pokemon. Attributes of a Poke
 | generation             | The generation this pokemon species was introduced in                                                                                              | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
 | names                  | The name of this pokemon species listed in different languages                                                                                     | list [Name](#resourcename) |
 | pal_park_encounters    | A list of encounters that can be had with this pokemon species in pal park                                                                         | list [PalParkEncounterArea](#palparkencounterarea) |
-| form_descriptions      | Descriptions of different forms pokemon take on within the pokemon species		                                                                    | list [Description](#description) |
+| flavor_text_entries    | The flavor text of this flavor text listed in different languages																				  | list [PokemonSpeciesFlavorText](#pokemonspeciesflavortext) |
+| form_descriptions      | Descriptions of different forms pokemon take on within the pokemon species		                                                                  | list [Description](#description) |
 | genera                 | The genus of this pokemon species listed in multiple languages                                                                                     | [Genus](#genus) |
 | varieties              | A list of the pokemon that exist within this pokemon species                                                                                       | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
 
@@ -2761,6 +2774,13 @@ A Pokemon Species forms the basis for at least one pokemon. Attributes of a Poke
 | rate       | The base rate for encountering the referenced pokemon in this pal park area                    | integer |
 | area       | The pal park area where this encounter happens                                                 | [NamedAPIResource](#namedapiresource) ([PalParkArea](#pal-park-areas)) |
 
+#### PokemonSpeciesFlavorText
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| flavor_text | The localized flavor text for an api resource in a specific language | string |
+| language    | The language this name is in                                  		 | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
+| version     | The version this flavor text entry is used in 						 | [NamedAPIResource](#namedapiresource) ([Version](#versions)) |
 
 ## Stats
 Stats determine certain aspects of battles. Each pokemon has a value for each stat which grows as they gain levels and can be altered momenarily by effects in battles.
@@ -3054,8 +3074,8 @@ Languages for translations of api resource information.
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| flavor_text | The localized name for an api resource in a specific language | string |
-| language    | The language this name is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
+| flavor_text | The localized flavor text for an api resource in a specific language | string |
+| language    | The language this name is in                                  		 | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
 
 
 #### GenerationGameIndex

@@ -2338,8 +2338,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         method_objects = MoveLearnMethod.objects.all()
         method_data = MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data
 
-        # Get moves related to this pokemon and pull out unique Move IDs
-        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('level')
+        # Get moves related to this pokemon and pull out unique Move IDs.  Note that it's important to order
+        # by the same column we're using to determine if the entries are unique.  Otherwise distinct() will
+        # return apparent duplicates.
+        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('move_id')
         move_ids = pokemon_moves.values('move_id').distinct()
         move_list = []
 
@@ -2526,6 +2528,17 @@ class PokemonSpeciesDescriptionSerializer(serializers.ModelSerializer):
         fields = ('description', 'language')
 
 
+class PokemonSpeciesFlavorTextSerializer(serializers.ModelSerializer):
+
+    flavor_text = serializers.CharField()
+    language = LanguageSummarySerializer()
+    version = VersionSummarySerializer()
+
+    class Meta:
+        model = PokemonSpeciesFlavorText
+        fields = ('flavor_text', 'language', 'version')
+
+
 class PokemonSpeciesNameSerializer(serializers.ModelSerializer):
 
     language = LanguageSummarySerializer()
@@ -2551,6 +2564,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     form_descriptions = PokemonSpeciesDescriptionSerializer(many=True, read_only=True, source="pokemonspeciesdescription")
     pokedex_numbers = PokemonDexEntrySerializer(many=True, read_only=True, source="pokemondexnumber")
     egg_groups = serializers.SerializerMethodField('get_pokemon_egg_groups')
+    flavor_text_entries = PokemonSpeciesFlavorTextSerializer(many=True, read_only=True, source="pokemonspeciesflavortext")
     genera = serializers.SerializerMethodField('get_pokemon_genera')
     generation = GenerationSummarySerializer()
     growth_rate = GrowthRateSummarySerializer()
@@ -2558,7 +2572,6 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     habitat = PokemonHabitatSummarySerializer(source="pokemon_habitat")
     shape = PokemonShapeSummarySerializer(source="pokemon_shape")
     evolves_from_species = PokemonSpeciesSummarySerializer()
-    varieties = PokemonSummarySerializer(many=True, read_only=True, source="pokemon")
     varieties = serializers.SerializerMethodField('get_pokemon_varieties')
     evolution_chain = EvolutionChainSummarySerializer()
     pal_park_encounters = serializers.SerializerMethodField('get_encounters')
@@ -2588,6 +2601,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             'names',
             'pal_park_encounters',
             'form_descriptions',
+            'flavor_text_entries',
             'genera',
             'varieties'
         )

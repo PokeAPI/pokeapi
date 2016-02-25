@@ -1623,6 +1623,25 @@ class APIData():
         return pokemon_species_form_description
 
     @classmethod
+    def setup_pokemon_species_flavor_text_data(self, pokemon_species, flavor_text='pkmn spcs flvr txt'):
+
+        version = self.setup_version_data(
+            name='ver for '+flavor_text)
+
+        language = self.setup_language_data(
+            name='lang for '+flavor_text)
+
+        pokemon_species_flavor_text = PokemonSpeciesFlavorText.objects.create (
+            pokemon_species = pokemon_species,
+            version = version,
+            language = language,
+            flavor_text = flavor_text
+        )
+        pokemon_species_flavor_text.save()
+
+        return pokemon_species_flavor_text
+
+    @classmethod
     def setup_pokemon_species_data(self, generation=None, evolves_from_species=None, evolution_chain=None, growth_rate=None, pokemon_color=None, pokemon_habitat=None, pokemon_shape=None, name='pkm spcs', gender_rate=50, capture_rate=20, base_happiness=20, is_baby=False, hatch_counter=10, has_gender_differences=True, forms_switchable=False, order=1):
 
         generation = generation or self.setup_generation_data(
@@ -1849,16 +1868,10 @@ class APIData():
         return pokemon_item
 
     @classmethod
-    def setup_pokemon_move_data(self, pokemon, level=0, order=1):
-
-        move = self.setup_move_data(
-            name='mv for pkmn')
+    def setup_pokemon_move_data(self, pokemon, move, version_group, level=0, order=1):
 
         move_learn_method = self.setup_move_learn_method_data(
             name='mv lrn mthd for pkmn')
-
-        version_group = self.setup_version_group_data(
-            name='ver grp for pkmn')
 
         pokemon_move = PokemonMove.objects.create (
             pokemon = pokemon,
@@ -3529,6 +3542,7 @@ class APITests(APIData, APITestCase):
         pokemon_species = self.setup_pokemon_species_data(evolves_from_species=evolves_from_species, name='base pkmn spcs')
         pokemon_species_name = self.setup_pokemon_species_name_data(pokemon_species, name='base pkmn shp name')
         pokemon_species_form_description = self.setup_pokemon_species_form_description_data(pokemon_species, description='frm dscr for pkmn spcs')
+        pokemon_species_flavor_text = self.setup_pokemon_species_flavor_text_data(pokemon_species, flavor_text='flvr txt for pkmn spcs')
         pokedex = self.setup_pokedex_data(name='pkdx for pkmn spcs')
         
         pal_park = self.setup_pal_park_data(pokemon_species=pokemon_species)
@@ -3597,6 +3611,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['form_descriptions'][0]['description'], pokemon_species_form_description.description)
         self.assertEqual(response.data['form_descriptions'][0]['language']['name'], pokemon_species_form_description.language.name)
         self.assertEqual(response.data['form_descriptions'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, pokemon_species_form_description.language.pk))
+        # flavor text params
+        self.assertEqual(response.data['flavor_text_entries'][0]['flavor_text'], pokemon_species_flavor_text.flavor_text)
+        self.assertEqual(response.data['flavor_text_entries'][0]['language']['name'], pokemon_species_flavor_text.language.name)
+        self.assertEqual(response.data['flavor_text_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, pokemon_species_flavor_text.language.pk))
+        self.assertEqual(response.data['flavor_text_entries'][0]['version']['name'], pokemon_species_flavor_text.version.name)
+        self.assertEqual(response.data['flavor_text_entries'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_species_flavor_text.version.pk))
         # pal park params
         self.assertEqual(response.data['pal_park_encounters'][0]['base_score'], pal_park.base_score)
         self.assertEqual(response.data['pal_park_encounters'][0]['rate'], pal_park.rate)
@@ -3613,9 +3633,22 @@ class APITests(APIData, APITestCase):
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
-        pokemon_move = self.setup_pokemon_move_data(pokemon=pokemon)
         pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
         pokemon_game_index = self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
+        # To test issue #85, we will create one move that has multiple
+        # learn levels in different version groups.  Later, we'll
+        # assert that we only got one move record back.
+        pokemon_move = self.setup_move_data(name='mv for pkmn')
+        pokemon_moves = []
+        for move in range(0,4):
+            version_group = self.setup_version_group_data(
+                name='ver grp '+str(move)+' for pkmn')
+            new_move = self.setup_pokemon_move_data(
+                    pokemon=pokemon,
+                    move=pokemon_move,
+                    version_group=version_group,
+                    level=move)
+            pokemon_moves.append(new_move)
         
         encounter_method = self.setup_encounter_method_data(name='encntr mthd for lctn area')
         location_area1 = self.setup_location_area_data(name='lctn1 area for base pkmn')
@@ -3661,14 +3694,56 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['held_items'][0]['version_details'][0]['rarity'], pokemon_item.rarity)
         self.assertEqual(response.data['held_items'][0]['version_details'][0]['version']['name'], pokemon_item.version.name)
         self.assertEqual(response.data['held_items'][0]['version_details'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_item.version.pk))
-        # move params
-        self.assertEqual(response.data['moves'][0]['move']['name'], pokemon_move.move.name)
-        self.assertEqual(response.data['moves'][0]['move']['url'], '{}{}/move/{}/'.format(test_host, api_v2, pokemon_move.move.pk))
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['level_learned_at'], pokemon_move.level)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['version_group']['name'], pokemon_move.version_group.name)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, pokemon_move.version_group.pk))
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['move_learn_method']['name'], pokemon_move.move_learn_method.name)
-        self.assertEqual(response.data['moves'][0]['version_group_details'][0]['move_learn_method']['url'], '{}{}/move-learn-method/{}/'.format(test_host, api_v2, pokemon_move.move_learn_method.pk))
+        # move params -- Make sure that we only got one move back,
+        # but that we got all of the distinct version group and learn
+        # level values. (See issue #85)
+        # Number of Moves
+        expected = 1
+        actual = len(response.data['moves'])
+        self.assertEqual(expected, actual)
+        # Move name
+        expected = pokemon_moves[0].move.name
+        actual = response.data['moves'][0]['move']['name']
+        self.assertEqual(expected, actual)
+        # Move URL
+        expected = '{}{}/move/{}/'.format(
+            test_host,
+            api_v2,
+            pokemon_moves[0].move.pk)
+        actual = response.data['moves'][0]['move']['url']
+        self.assertEqual(expected, actual)
+        # Numbver of version groups
+        expected = len(pokemon_moves)
+        actual = len(response.data['moves'][0]['version_group_details'])
+        self.assertEqual(expected, actual)
+        for i in range(0,len(pokemon_moves)):
+            version = response.data['moves'][0]['version_group_details'][i]
+            # Learn Level
+            expected = pokemon_moves[i].level
+            actual = version['level_learned_at']
+            self.assertEqual(expected ,actual)
+            # Version Group Name
+            expected = pokemon_moves[i].version_group.name
+            actual = version['version_group']['name']
+            self.assertEqual(expected, actual)
+            # Version Group URL
+            expected = '{}{}/version-group/{}/'.format(
+                test_host,
+                api_v2,
+                pokemon_moves[i].version_group.pk)
+            actual = version['version_group']['url']
+            self.assertEqual(expected, actual)
+            # Learn Method Name
+            expected = pokemon_moves[i].move_learn_method.name
+            actual = version['move_learn_method']['name']
+            self.assertEqual(expected, actual)
+            # Learn Method URL
+            expected = '{}{}/move-learn-method/{}/'.format(
+                test_host,
+                api_v2,
+                pokemon_moves[i].move_learn_method.pk)
+            actual = version['move_learn_method']['url']
+            self.assertEqual(expected, actual)
         # game indices params
         self.assertEqual(response.data['game_indices'][0]['game_index'], pokemon_game_index.game_index)
         self.assertEqual(response.data['game_indices'][0]['version']['name'], pokemon_game_index.version.name)

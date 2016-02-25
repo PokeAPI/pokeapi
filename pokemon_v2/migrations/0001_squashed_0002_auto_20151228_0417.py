@@ -6,6 +6,8 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
+    replaces = [(b'pokemon_v2', '0001_squashed_0003_auto_20151119_1409'), (b'pokemon_v2', '0002_auto_20151228_0417')]
+
     dependencies = [
     ]
 
@@ -2860,7 +2862,7 @@ class Migration(migrations.Migration):
             name='AbilityChangeEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('ability_change', models.ForeignKey(related_name='abilitychangeeffecttext', blank=True, to='pokemon_v2.AbilityChange', null=True)),
                 ('language', models.ForeignKey(related_name='abilitychangeeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
@@ -2873,7 +2875,7 @@ class Migration(migrations.Migration):
             name='AbilityEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('short_effect', models.CharField(max_length=300)),
                 ('ability', models.ForeignKey(related_name='abilityeffecttext', blank=True, to='pokemon_v2.Ability', null=True)),
                 ('language', models.ForeignKey(related_name='abilityeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
@@ -2887,7 +2889,7 @@ class Migration(migrations.Migration):
             name='ItemEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('short_effect', models.CharField(max_length=300)),
                 ('item', models.ForeignKey(related_name='itemeffecttext', blank=True, to='pokemon_v2.Item', null=True)),
                 ('language', models.ForeignKey(related_name='itemeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
@@ -2901,7 +2903,7 @@ class Migration(migrations.Migration):
             name='ContestEffectEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('contest_effect', models.ForeignKey(related_name='contesteffecteffecttext', blank=True, to='pokemon_v2.ContestEffect', null=True)),
                 ('language', models.ForeignKey(related_name='contesteffecteffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
             ],
@@ -2914,7 +2916,7 @@ class Migration(migrations.Migration):
             name='MoveEffectChangeEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('language', models.ForeignKey(related_name='moveeffectchangeeffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
                 ('move_effect_change', models.ForeignKey(related_name='moveeffectchangeeffecttext', blank=True, to='pokemon_v2.MoveEffectChange', null=True)),
             ],
@@ -2927,7 +2929,7 @@ class Migration(migrations.Migration):
             name='MoveEffectEffectText',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
                 ('short_effect', models.CharField(max_length=300)),
                 ('language', models.ForeignKey(related_name='moveeffecteffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
                 ('move_effect', models.ForeignKey(blank=True, to='pokemon_v2.MoveEffect', null=True)),
@@ -3046,7 +3048,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('item_fling_effect', models.ForeignKey(related_name='itemflingeffecteffecttext', blank=True, to='pokemon_v2.ItemFlingEffect', null=True)),
                 ('language', models.ForeignKey(related_name='itemflingeffecteffecttext_language', blank=True, to='pokemon_v2.Language', null=True)),
-                ('effect', models.CharField(max_length=4000)),
+                ('effect', models.CharField(max_length=6000)),
             ],
             options={
                 'abstract': False,

@@ -2338,8 +2338,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         method_objects = MoveLearnMethod.objects.all()
         method_data = MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data
 
-        # Get moves related to this pokemon and pull out unique Move IDs
-        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('level')
+        # Get moves related to this pokemon and pull out unique Move IDs.  Note that it's important to order
+        # by the same column we're using to determine if the entries are unique.  Otherwise distinct() will
+        # return apparent duplicates.
+        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('move_id')
         move_ids = pokemon_moves.values('move_id').distinct()
         move_list = []
 

@@ -1623,6 +1623,25 @@ class APIData():
         return pokemon_species_form_description
 
     @classmethod
+    def setup_pokemon_species_flavor_text_data(self, pokemon_species, flavor_text='pkmn spcs flvr txt'):
+
+        version = self.setup_version_data(
+            name='ver for '+flavor_text)
+
+        language = self.setup_language_data(
+            name='lang for '+flavor_text)
+
+        pokemon_species_flavor_text = PokemonSpeciesFlavorText.objects.create (
+            pokemon_species = pokemon_species,
+            version = version,
+            language = language,
+            flavor_text = flavor_text
+        )
+        pokemon_species_flavor_text.save()
+
+        return pokemon_species_flavor_text
+
+    @classmethod
     def setup_pokemon_species_data(self, generation=None, evolves_from_species=None, evolution_chain=None, growth_rate=None, pokemon_color=None, pokemon_habitat=None, pokemon_shape=None, name='pkm spcs', gender_rate=50, capture_rate=20, base_happiness=20, is_baby=False, hatch_counter=10, has_gender_differences=True, forms_switchable=False, order=1):
 
         generation = generation or self.setup_generation_data(
@@ -3523,6 +3542,7 @@ class APITests(APIData, APITestCase):
         pokemon_species = self.setup_pokemon_species_data(evolves_from_species=evolves_from_species, name='base pkmn spcs')
         pokemon_species_name = self.setup_pokemon_species_name_data(pokemon_species, name='base pkmn shp name')
         pokemon_species_form_description = self.setup_pokemon_species_form_description_data(pokemon_species, description='frm dscr for pkmn spcs')
+        pokemon_species_flavor_text = self.setup_pokemon_species_flavor_text_data(pokemon_species, flavor_text='flvr txt for pkmn spcs')
         pokedex = self.setup_pokedex_data(name='pkdx for pkmn spcs')
         
         pal_park = self.setup_pal_park_data(pokemon_species=pokemon_species)
@@ -3591,6 +3611,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['form_descriptions'][0]['description'], pokemon_species_form_description.description)
         self.assertEqual(response.data['form_descriptions'][0]['language']['name'], pokemon_species_form_description.language.name)
         self.assertEqual(response.data['form_descriptions'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, pokemon_species_form_description.language.pk))
+        # flavor text params
+        self.assertEqual(response.data['flavor_text_entries'][0]['flavor_text'], pokemon_species_flavor_text.flavor_text)
+        self.assertEqual(response.data['flavor_text_entries'][0]['language']['name'], pokemon_species_flavor_text.language.name)
+        self.assertEqual(response.data['flavor_text_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, pokemon_species_flavor_text.language.pk))
+        self.assertEqual(response.data['flavor_text_entries'][0]['version']['name'], pokemon_species_flavor_text.version.name)
+        self.assertEqual(response.data['flavor_text_entries'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_species_flavor_text.version.pk))
         # pal park params
         self.assertEqual(response.data['pal_park_encounters'][0]['base_score'], pal_park.base_score)
         self.assertEqual(response.data['pal_park_encounters'][0]['rate'], pal_park.rate)

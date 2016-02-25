@@ -1315,6 +1315,27 @@ ability_id,local_language_id,name
 188,7,Rompeaura
 188,8,Frangiaura
 188,9,Aura Break
+189,1,はじまりのうみ
+189,3,시작의바다
+189,5,Mer Primaire
+189,6,Urmeer
+189,7,Mar del Albor
+189,8,Mare Primordiale
+189,9,Primordial Sea
+190,1,おわりのだいち
+190,3,끝의대지
+190,5,Terre Finale
+190,6,Endland
+190,7,Tierra del Ocaso
+190,8,Terra Estrema
+190,9,Desolate Land
+191,1,デルタストリーム
+191,3,델타스트림
+191,5,Souffle Delta
+191,6,Delta-Wind
+191,7,Ráfaga Delta
+191,8,Flusso Delta
+191,9,Delta Stream
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

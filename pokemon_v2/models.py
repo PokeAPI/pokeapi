@@ -654,6 +654,11 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
   pass
 
 
+class ItemSprites(HasItem):
+
+  sprites = models.CharField(max_length=500)
+
+
 
 ####################
 #  CONTEST MODELS  #
@@ -1333,6 +1338,11 @@ class PokemonFormName(HasPokemonForm, IsName):
   pokemon_name = models.CharField(max_length = 30)
 
 
+class PokemonFormSprites(HasPokemonForm):
+
+  sprites = models.CharField(max_length=500)
+
+
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
   pass
 
@@ -1390,3 +1400,8 @@ class PokemonStat(HasPokemon, HasStat):
 class PokemonType(HasPokemon, HasType):
 
   slot = models.IntegerField()
+
+
+class PokemonSprites(HasPokemon):
+
+  sprites = models.CharField(max_length=500)

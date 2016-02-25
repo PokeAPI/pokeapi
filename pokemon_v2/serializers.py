@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from rest_framework import serializers
 from collections import OrderedDict
+import json
 
 """
 PokeAPI v2 serializers in order of dependency
@@ -1249,6 +1250,13 @@ class ItemNameSerializer(serializers.ModelSerializer):
         fields = ('name', 'language')
 
 
+class ItemSpritesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ItemSprites
+        fields = ('sprites',)
+
+
 class ItemDetailSerializer(serializers.ModelSerializer):
 
     names = ItemNameSerializer(many=True, read_only=True, source="itemname")
@@ -1260,6 +1268,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
     held_by_pokemon = serializers.SerializerMethodField(source='get_held_by_pokemon')
     baby_trigger_for = serializers.SerializerMethodField(source='get_baby_trigger_for')
+    sprites = serializers.SerializerMethodField('get_item_sprites')
 
     class Meta:
         model = Item
@@ -1276,8 +1285,22 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'game_indices',
             'names',
             'held_by_pokemon',
+            'sprites',
             'baby_trigger_for'
         )
+
+    def get_item_sprites(self, obj):
+
+        sprites_object = ItemSprites.objects.get(item_id=obj)
+        sprites_data = ItemSpritesSerializer(sprites_object, context=self.context).data
+        sprites_data = json.loads(sprites_data['sprites'])
+        host = self.context['request'].META['HTTP_HOST']
+
+        for key, val in sprites_data.iteritems():
+            if sprites_data[key]:
+                sprites_data[key] = 'http://' + host + sprites_data[key] 
+
+        return sprites_data
 
     def get_item_attributes(self, obj):
 
@@ -2060,15 +2083,36 @@ class PokemonColorDetailSerializer(serializers.ModelSerializer):
 #  POKEMON FORM SERIALIZERS  #
 ##############################
 
+class PokemonFormSpritesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PokemonFormSprites
+        fields = ('sprites',)
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
+    sprites = serializers.SerializerMethodField('get_pokemon_form_sprites')
     
     class Meta:
         model = PokemonForm
-        fields = ('id', 'name', 'order', 'form_order', 'is_default', 'is_battle_only', 'is_mega', 'form_name', 'pokemon', 'version_group')
+        fields = ('id', 'name', 'order', 'form_order', 'is_default', 'is_battle_only', 'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group')
 
+    def get_pokemon_form_sprites(self, obj):
+
+        sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
+        sprites_data = PokemonFormSpritesSerializer(sprites_object, context=self.context).data
+        sprites_data = json.loads(sprites_data['sprites'])
+
+        host = self.context['request'].META['HTTP_HOST']
+
+        for key, val in sprites_data.iteritems():
+            if sprites_data[key]:
+                sprites_data[key] = 'http://' + host + sprites_data[key] 
+
+        return sprites_data
 
 
 #################################
@@ -2232,6 +2276,12 @@ class PokemonGameIndexSerializer(serializers.ModelSerializer):
         model = PokemonGameIndex
         fields = ('game_index', 'version')
 
+class PokemonSpritesSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PokemonSprites
+        fields = ('sprites',)
+
 class PokemonDetailSerializer(serializers.ModelSerializer):
     
     abilities = serializers.SerializerMethodField('get_pokemon_abilities')
@@ -2243,6 +2293,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     forms = PokemonFormSummarySerializer(many=True, read_only=True, source="pokemonform")
     held_items = serializers.SerializerMethodField('get_pokemon_held_items')
     location_area_encounters = serializers.SerializerMethodField('get_encounters')
+    sprites = serializers.SerializerMethodField('get_pokemon_sprites')
 
     class Meta:
         model = Pokemon
@@ -2261,9 +2312,24 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             'location_area_encounters',
             'moves',
             'species',
+            'sprites',
             'stats',
             'types',
         )
+
+    def get_pokemon_sprites(self, obj):
+
+        sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
+        sprites_data = PokemonSpritesSerializer(sprites_object, context=self.context).data
+        sprites_data = json.loads(sprites_data['sprites'])
+        host = self.context['request'].META['HTTP_HOST']
+
+        for key, val in sprites_data.iteritems():
+            if sprites_data[key]:
+                sprites_data[key] = 'http://' + host + sprites_data[key] 
+
+        return sprites_data
+        
 
     def get_pokemon_moves(self, obj):
 

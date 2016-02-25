@@ -20,6 +20,7 @@ import csv
 import os
 import os.path
 import re
+import json
 from django.db import migrations, connection
 from pokemon_v2.models import *
 
@@ -32,6 +33,18 @@ SUB_RGX = r"\[.*?\]\{.*?\}"
 
 db_cursor = connection.cursor()
 DB_VENDOR = connection.vendor
+
+
+imageDir = os.getcwd() + '/data/v2/sprites/'
+resourceImages = []
+for root, dirs, files in os.walk(imageDir):
+    for file in files:
+        resourceImages.append(os.path.join(root.replace(imageDir, ""), file));
+
+
+mediaDir = '/media/sprites/{0}'
+def filePathOrNone(fileName):
+    return mediaDir.format(fileName) if fileName in resourceImages else None
 
 
 def with_iter(context, iterable=None):
@@ -553,9 +566,9 @@ def build_growth_rates():
             model.save()
 
 
-###########
-#  ITEMS  #
-###########
+# ###########
+# #  ITEMS  #
+# ###########
 
 def build_items():
     clear_table(ItemPocket)
@@ -641,6 +654,7 @@ def build_items():
 
 
     clear_table(Item)
+    clear_table(ItemSprites)
     data = load_data('items.csv')
 
     for index, info in enumerate(data):
@@ -655,6 +669,28 @@ def build_items():
                 item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[5])) if info[5] != '' else None
             )
             model.save()
+
+            if re.search(r"^data-card", info[1]):
+                fileName = 'data-card.png'
+            elif re.search(r"^tm[0-9]", info[1]):
+                fileName = 'tm-normal.png'
+            elif re.search(r"^hm[0-9]", info[1]):
+                fileName = 'hm-normal.png'
+            else:
+                fileName = '%s.png' % info[1]
+
+            itemSprites = 'items/{0}';
+
+            sprites = {
+                'default': filePathOrNone(itemSprites.format(fileName)),
+            }
+
+            imageModel = ItemSprites (
+                id = index,
+                item = Item.objects.get(pk=int(info[0])),
+                sprites = json.dumps(sprites)
+            )   
+            imageModel.save()
 
 
     clear_table(ItemName)
@@ -1768,6 +1804,7 @@ def build_locations():
 #############
 
 def build_pokemons():
+
     clear_table(PokemonColor)
     data = load_data('pokemon_colors.csv')
 
@@ -1921,6 +1958,7 @@ def build_pokemons():
 
 
     clear_table(Pokemon)
+    clear_table(PokemonSprites)
     data = load_data('pokemon.csv')
 
     for index, info in enumerate(data):
@@ -1938,6 +1976,26 @@ def build_pokemons():
             )
             model.save()
 
+            fileName = '%s.png' % info[0]
+            pokeSprites = 'pokemon/{0}';
+
+            sprites = {
+                'front_default'      : filePathOrNone(pokeSprites.format(fileName)),
+                'front_female'       : filePathOrNone(pokeSprites.format('female/'+fileName)),
+                'front_shiny'        : filePathOrNone(pokeSprites.format('shiny/'+fileName)),
+                'front_shiny_female' : filePathOrNone(pokeSprites.format('shiny/female/'+fileName)),
+                'back_default'       : filePathOrNone(pokeSprites.format('back/'+fileName)),
+                'back_female'        : filePathOrNone(pokeSprites.format('back/female/'+fileName)),
+                'back_shiny'         : filePathOrNone(pokeSprites.format('back/shiny/'+fileName)),
+                'back_shiny_female'  : filePathOrNone(pokeSprites.format('back/shiny/female/'+fileName)),
+            }
+
+            imageModel = PokemonSprites (
+                id = index,
+                pokemon = Pokemon.objects.get(pk=int(info[0])),
+                sprites = json.dumps(sprites)
+            )   
+            imageModel.save()
 
     clear_table(PokemonAbility)
     data = load_data('pokemon_abilities.csv')
@@ -2013,16 +2071,19 @@ def build_pokemons():
 
 
     clear_table(PokemonForm)
+    clear_table(PokemonFormSprites)
     data = load_data('pokemon_forms.csv')
 
     for index, info in enumerate(data):
         if index > 0:
 
+            pokemon = Pokemon.objects.get(pk = int(info[3]))
+
             model = PokemonForm (
                 id = int(info[0]),
                 name = info[1],
                 form_name = info[2],
-                pokemon = Pokemon.objects.get(pk = int(info[3])),
+                pokemon = pokemon,
                 version_group = VersionGroup.objects.get(pk = int(info[4])),
                 is_default = bool(int(info[5])),
                 is_battle_only = bool(int(info[6])),
@@ -2031,6 +2092,30 @@ def build_pokemons():
                 order = int(info[9])
             )
             model.save()
+
+            if info[2]:
+                if re.search(r"^mega", info[2]):
+                    fileName = '%s.png' % info[3]
+                else:
+                    fileName = '%s-%s.png' % (getattr(pokemon, 'pokemon_species_id'), info[2])
+            else:
+                fileName = '%s.png' % getattr(pokemon, 'pokemon_species_id')
+
+            pokeSprites = 'pokemon/{0}'
+
+            sprites = {
+                'front_default'      : filePathOrNone(pokeSprites.format(fileName)),
+                'front_shiny'        : filePathOrNone(pokeSprites.format('shiny/'+fileName)),
+                'back_default'       : filePathOrNone(pokeSprites.format('back/'+fileName)),
+                'back_shiny'         : filePathOrNone(pokeSprites.format('back/shiny/'+fileName)),
+            }
+
+            imageModel = PokemonFormSprites (
+                id = index,
+                pokemon_form = PokemonForm.objects.get(pk=int(info[0])),
+                sprites = json.dumps(sprites)
+            )   
+            imageModel.save()
 
 
     clear_table(PokemonFormName)

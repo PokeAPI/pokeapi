@@ -84,7 +84,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 TEMPLATE_DIRS = (
     PROJECT_ROOT.child('templates'),
-    # PROJECT_ROOT + 'pokemon/templates'
 )
 
 DATABASES = {
@@ -157,6 +156,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
 
     'PAGE_SIZE': 20,
+
+    'PAGINATE_BY': 20,
 }
 
 MARKDOWN_DEUX_STYLES = {

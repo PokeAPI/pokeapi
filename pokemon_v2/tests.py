@@ -5,8 +5,10 @@ from rest_framework.test import APITestCase
 from rest_framework.test import APIClient
 from rest_framework.reverse import reverse
 from pokemon_v2.models import *
+import json
 
 test_host = 'http://testserver'
+media_sprites = '/media/sprites/{}'
 api_v2 = '/api/v2'
 
 
@@ -416,6 +418,23 @@ class APIData():
         item_category_name.save()
 
         return item_category_name
+
+    @classmethod
+    def setup_item_sprites_data(self, item, default=True):
+
+        sprite_path = '/media/sprites/items/%s.png'
+
+        sprites = {
+            'default': sprite_path % item.id if default else None,
+        }
+
+        item_sprites = ItemSprites.objects.create (
+            item = item,
+            sprites = json.dumps(sprites)
+        )
+        item_sprites.save()
+
+        return item_sprites
 
     @classmethod
     def setup_item_data(self, item_category=None, item_fling_effect=None, name='itm', cost=100, fling_power=100):
@@ -1717,6 +1736,30 @@ class APIData():
         return pokemon_game_index
 
     @classmethod
+    def setup_pokemon_form_sprites_data(
+            self, pokemon_form, 
+            front_default=True, front_shiny=False,
+            back_default=False, back_shiny=False):
+
+        sprite_path = '/media/sprites/pokemon/%s.png'
+
+        sprites = {
+            'front_default'      : sprite_path % pokemon_form.id if front_default else None,
+            'front_shiny'        : sprite_path % pokemon_form.id if front_shiny else None,
+            'back_default'       : sprite_path % pokemon_form.id if back_default else None,
+            'back_shiny'         : sprite_path % pokemon_form.id if back_shiny else None,
+        }
+
+        pokemon_form_sprites = PokemonFormSprites.objects.create (
+            pokemon_form = pokemon_form,
+            sprites = json.dumps(sprites)
+        )
+        pokemon_form_sprites.save()
+
+        return pokemon_form_sprites
+
+
+    @classmethod
     def setup_pokemon_form_data(self, pokemon, name='pkmn nrml frm', form_name='nrml', order=1, is_default=True, is_battle_only=True, form_order=1, is_mega=False):
 
         version_group = self.setup_version_group_data(
@@ -1822,6 +1865,35 @@ class APIData():
         pokemon_move.save()
 
         return pokemon_move
+
+    @classmethod
+    def setup_pokemon_sprites_data(
+            self, pokemon, front_default=True,
+            front_female=False, front_shiny=False,
+            front_shiny_female=False, back_default=False,
+            back_female=False, back_shiny=False,
+            back_shiny_female=False):
+
+        sprite_path = '/media/sprites/pokemon/%s.png'
+
+        sprites = {
+            'front_default'      : sprite_path % pokemon.id if front_default else None,
+            'front_female'       : sprite_path % pokemon.id if front_female else None,
+            'front_shiny'        : sprite_path % pokemon.id if front_shiny else None,
+            'front_shiny_female' : sprite_path % pokemon.id if front_shiny_female else None,
+            'back_default'       : sprite_path % pokemon.id if back_default else None,
+            'back_female'        : sprite_path % pokemon.id if back_female else None,
+            'back_shiny'         : sprite_path % pokemon.id if back_shiny else None,
+            'back_shiny_female'  : sprite_path % pokemon.id if back_shiny_female else None,
+        }
+
+        pokemon_sprites = PokemonSprites.objects.create (
+            pokemon = pokemon,
+            sprites = json.dumps(sprites)
+        )
+        pokemon_sprites.save()
+
+        return pokemon_sprites
 
 
     """
@@ -2482,6 +2554,7 @@ class APITests(APIData, APITestCase):
         item_effect_text = self.setup_item_effect_text_data(item, effect='base nrml efct', short_effect='base shrt efct')
         item_attribute = self.setup_item_attribute_data()
         item_game_index = self.setup_item_game_index_data(item, game_index=10)
+        item_sprites = self.setup_item_sprites_data(item)
         pokemon = self.setup_pokemon_data(name='pkmn for base itm')
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon, item=item)
         evolution_chain = self.setup_evolution_chain_data(baby_trigger_item=item)
@@ -2493,7 +2566,9 @@ class APITests(APIData, APITestCase):
           )
         item_attribute_map.save()
 
-        response = self.client.get('{}/item/{}/'.format(api_v2, item.pk))
+        sprites_data = json.loads(item_sprites.sprites)
+
+        response = self.client.get('{}/item/{}/'.format(api_v2, item.pk), HTTP_HOST='testserver')
         
         # base params
         self.assertEqual(response.data['id'], item.pk)
@@ -2536,7 +2611,9 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['held_by_pokemon'][0]['version_details'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_item.version.pk))
         # baby trigger params
         self.assertEqual(response.data['baby_trigger_for']['url'], '{}{}/evolution-chain/{}/'.format(test_host, api_v2, evolution_chain.pk))
-        
+        # sprites
+        self.assertEqual(response.data['sprites']['default'], '{}{}'.format(test_host, sprites_data['default']))
+
 
     """
     Berry Tests
@@ -3455,9 +3532,10 @@ class APITests(APIData, APITestCase):
         egg_group = self.setup_egg_group_data(name='egg grp for pkmn spcs')
         self.setup_pokemon_egg_group_data(pokemon_species=pokemon_species, egg_group=egg_group)
 
-        pokemon = self.setup_pokemon_data ( pokemon_species=pokemon_species, name = 'pkm for base pkmn spcs')
+        pokemon = self.setup_pokemon_data (pokemon_species=pokemon_species, name = 'pkm for base pkmn spcs')
+        pokemon_sprites = self.setup_pokemon_sprites_data(pokemon)
 
-        response = self.client.get('{}/pokemon-species/{}/'.format(api_v2, pokemon_species.pk))
+        response = self.client.get('{}/pokemon-species/{}/'.format(api_v2, pokemon_species.pk), HTTP_HOST='testserver')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -3529,6 +3607,7 @@ class APITests(APIData, APITestCase):
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
+        pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
         pokemon_game_index = self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
         # To test issue #85, we will create one move that has multiple
         # learn levels in different version groups.  Later, we'll
@@ -3552,7 +3631,9 @@ class APITests(APIData, APITestCase):
         location_area2 = self.setup_location_area_data(name='lctn2 area for base pkmn')
         encounter_slot2 = self.setup_encounter_slot_data(encounter_method, slot=2, rarity=40)
         encounter2 = self.setup_encounter_data(location_area=location_area2, pokemon=pokemon, encounter_slot=encounter_slot2, min_level=32, max_level=36)
-        response = self.client.get('{}/pokemon/{}/'.format(api_v2, pokemon.pk))
+        response = self.client.get('{}/pokemon/{}/'.format(api_v2, pokemon.pk), HTTP_HOST='testserver')
+
+        sprites_data = json.loads(pokemon_sprites.sprites)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -3662,15 +3743,21 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['location_area_encounters'][1]['version_details'][0]['encounter_details'][0]['chance'], encounter_slot2.rarity)
         self.assertEqual(response.data['location_area_encounters'][1]['version_details'][0]['encounter_details'][0]['method']['name'], encounter_method.name)
         self.assertEqual(response.data['location_area_encounters'][1]['version_details'][0]['encounter_details'][0]['method']['url'], '{}{}/encounter-method/{}/'.format(test_host, api_v2, encounter_method.pk))
-
+        # sprite params
+        self.assertEqual(response.data['sprites']['front_default'], '{}{}'.format(test_host, sprites_data['front_default']))
+        self.assertEqual(response.data['sprites']['back_default'], None)
+        
 
     def test_pokemon_form_api(self):
 
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)
         pokemon_form = self.setup_pokemon_form_data(pokemon=pokemon, name='pkm form for base pkmn')
+        pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
 
-        response = self.client.get('{}/pokemon-form/{}/'.format(api_v2, pokemon_form.pk))
+        sprites_data = json.loads(pokemon_form_sprites.sprites)
+
+        response = self.client.get('{}/pokemon-form/{}/'.format(api_v2, pokemon_form.pk), HTTP_HOST='testserver')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -3689,7 +3776,9 @@ class APITests(APIData, APITestCase):
         # version group params
         self.assertEqual(response.data['version_group']['name'], pokemon_form.version_group.name)
         self.assertEqual(response.data['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, pokemon_form.version_group.pk))
-        
+        # sprite params
+        self.assertEqual(response.data['sprites']['front_default'], '{}{}'.format(test_host, sprites_data['front_default']))
+        self.assertEqual(response.data['sprites']['back_default'], None)
 
 
     """

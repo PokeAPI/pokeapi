@@ -944,6 +944,9 @@ An item is an object in the games which the player can pick up, keep in their ba
 			"url": "http://pokeapi.co/api/v2/language/9/"
 		}
 	}],
+	sprites: {
+		"default": "http://localhost:8000/media/sprites/items/master-ball.png"
+	},
 	"held_by_pokemon": [{
 		"pokemon": {
 			"name": "chansey",
@@ -980,8 +983,15 @@ An item is an object in the games which the player can pick up, keep in their ba
 | flavor_text_entries | The flavor text of this ability listed in different languages        | list [VersionGroupFlavorText](#versiongroupflavortext) |
 | game_indices        | A list of game indices relevent to this item by generation           | list [GenerationGameIndex](#generationgameindex) |
 | names               | The name of this item listed in different languages                  | list [Name](#resourcename) |
+| sprites        	  | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites) |
 | held_by_pokemon     | A list of pokemon that might be found in the wild holding this item  | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
 | baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | list [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
+
+#### Item Sprites
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| default | The default depiction of this item  | string |
 
 
 ## Item Attributes
@@ -2326,6 +2336,16 @@ Pokemon are the creatures that inhabit the world of the pokemon games. They can 
 		"name": "butterfree",
 		"url": "http://pokeapi.co/api/v2/pokemon-species/12/"
 	},
+	sprites: {
+		"back_female": "http://localhost:8000/media/sprites/pokemon/back/female/12.png",
+		"back_shiny_female": "http://localhost:8000/media/sprites/pokemon/back/shiny/female/12.png",
+		"back_default": "http://localhost:8000/media/sprites/pokemon/back/12.png",
+		"front_female": "http://localhost:8000/media/sprites/pokemon/female/12.png",
+		"front_shiny_female": "http://localhost:8000/media/sprites/pokemon/shiny/female/12.png",
+		"back_shiny": "http://localhost:8000/media/sprites/pokemon/back/shiny/12.png",
+		"front_default": "http://localhost:8000/media/sprites/pokemon/12.png",
+		"front_shiny": "http://localhost:8000/media/sprites/pokemon/shiny/12.png"
+	},
 	"stats": [{
 		"base_stat": 70,
 		"effort": 0,
@@ -2361,9 +2381,10 @@ Pokemon are the creatures that inhabit the world of the pokemon games. They can 
 | forms                    | A list of forms this pokemon can take on                                                         | list [NamedAPIResource](#namedapiresource) ([PokemonForm](#pokemon-forms)) |
 | game_indices             | A list of game indices relevent to pokemon item by generation                                    | list [VersionGameIndex](#versiongameindex) |
 | held_items               | A list of items this pokemon may be holding when encountered                                     | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
-| location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions | list [LocationAreaEncounter](#locationareaencounter) |
-| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | [NamedAPIResource](#namedapiresource) (Move](#moves)) |
-| species                  | The species this pokemon belongs to                                                              | [NamedAPIResource](#namedapiresource) (PokemonSpecies](#pokemon-species)) |
+| location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions 			  | list [LocationAreaEncounter](#locationareaencounter) |
+| moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
+| sprites                  | A set of sprites used to depict this pokemon in the game                                         | [PokemonSprites](#pokemonsprites) |
+| species                  | The species this pokemon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
 | stats                    | A list of base stat values for this pokemon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
 | types                    | A list of details showing types this pokemon has                                                 | list [PokemonType](#pokemontype) |
 
@@ -2381,6 +2402,20 @@ Pokemon are the creatures that inhabit the world of the pokemon games. They can 
 | ---- | ----------- | --------- |
 | slot | The order the pokemons types are listed in | integer |
 | type | The type the referenced pokemon has        | string |
+
+#### PokemonSprites
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| front_default | The default depiction of this pokemon from the front in battle | string |
+| front_shiny | The shiny depiction of this pokemon from the front in battle | string |
+| front_female | The female depiction of this pokemon from the front in battle | string |
+| front_shiny_female | The shiny female depiction of this pokemon from the front in battle | string |
+| back_default | The default depiction of this pokemon from the back in battle | string |
+| back_shiny | The shiny depiction of this pokemon from the back in battle | string |
+| back_female | The female depiction of this pokemon from the back in battle | string |
+| back_shiny_female | The shiny female depiction of this pokemon from the back in battle | string |
+
 
 #### LocationAreaEncounter
 
@@ -2448,6 +2483,12 @@ Some pokemon have the ability to take on different forms. At times, these differ
 		"name": "wormadam-plant",
 		"url": "http://pokeapi.co/api/v2/pokemon/413/"
 	},
+	sprites: {
+		"back_default": "http://localhost:8000/media/sprites/pokemon/back/413.png",
+		"back_shiny": "http://localhost:8000/media/sprites/pokemon/back/shiny/413.png",
+		"front_default": "http://localhost:8000/media/sprites/pokemon/413.png",
+		"front_shiny": "http://localhost:8000/media/sprites/pokemon/shiny/413.png"
+	},
 	"version_group": {
 		"name": "diamond-pearl",
 		"url": "http://pokeapi.co/api/v2/version-group/8/"
@@ -2470,7 +2511,17 @@ Some pokemon have the ability to take on different forms. At times, these differ
 | is_mega        | Whether or not this form requires mega evolution                                                                                                          | boolean |
 | form_name      | The name of this form                                                                                                                                     | string |
 | pokemon        | The pokemon that can take on this form                                                                                                                    | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
+| sprites        | A set of sprites used to depict this pokemon form in the game                                         													 | [PokemonFormSprites](#pokemonformsprites) |
 | version_group  | The version group this pokemon form was introduced in                                                                                                     | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+
+#### PokemonFormSprites
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| front_default | The default depiction of this pokemon form from the front in battle | string |
+| front_shiny | The shiny depiction of this pokemon form from the front in battle | string |
+| back_default | The default depiction of this pokemon form from the back in battle | string |
+| back_shiny | The shiny depiction of this pokemon form from the back in battle | string |
 
 
 ## Pokemon Habitats

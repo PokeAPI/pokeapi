@@ -97,7 +97,7 @@ Calling any API endpoint without a resource ID or name will return a paginated l
 | previous | The url for the previous page in the list             | boolean |
 | results  | I list of unnamed API resources                       | list [APIResource](#apiresource) |
 
-###### Rxample response for named resources
+###### Example response for named resources
 
 ```json
 {

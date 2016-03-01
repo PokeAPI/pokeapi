@@ -702,7 +702,7 @@ A generation is a grouping of the Pokémon games that separates them based on th
 | types           | A list of types that were introduced in this generation           | list [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 | version_groups  | A list of version groups that were introduced in this generation  | list [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
-## Pokédexes
+## Pokedexes
 A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.
 
 ### GET api/v2/pokedex/{id or name}
@@ -916,7 +916,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 			"url": "http://pokeapi.co/api/v2/language/9/"
 		}
 	}],
-	sprites: {
+	"sprites": {
 		"default": "http://localhost:8000/media/sprites/items/master-ball.png"
 	},
 	"held_by_pokemon": [{

@@ -2296,7 +2296,7 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 		"name": "butterfree",
 		"url": "http://pokeapi.co/api/v2/pokemon-species/12/"
 	},
-	sprites: {
+	"sprites": {
 		"back_female": "http://localhost:8000/media/sprites/pokemon/back/female/12.png",
 		"back_shiny_female": "http://localhost:8000/media/sprites/pokemon/back/shiny/female/12.png",
 		"back_default": "http://localhost:8000/media/sprites/pokemon/back/12.png",
@@ -2440,7 +2440,7 @@ Some Pokémon have the ability to take on different forms. At times, these diffe
 		"name": "wormadam-plant",
 		"url": "http://pokeapi.co/api/v2/pokemon/413/"
 	},
-	sprites: {
+	"sprites": {
 		"back_default": "http://localhost:8000/media/sprites/pokemon/back/413.png",
 		"back_shiny": "http://localhost:8000/media/sprites/pokemon/back/shiny/413.png",
 		"front_default": "http://localhost:8000/media/sprites/pokemon/413.png",

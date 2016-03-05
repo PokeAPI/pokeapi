@@ -8,7 +8,7 @@
 #     $ build_all()
 #
 #  Each time the build script is run it will iterate over each table in the database,
-#  wipe it and rewrite each row using the data found in data/v2/csv.
+#  wipe it and rewrite each r§ow using the data found in data/v2/csv.
 #  If you don't need all of the data just go into data/v2/build.py and
 #  just call one of the build functions found in this script
 
@@ -21,8 +21,8 @@ import os
 import os.path
 import re
 import json
-from django.db import migrations, connection
-from pokemon_v2.models import *
+from django.db import connection
+from pokemon_v2.models import *  # NOQA
 
 
 # why this way? how about use `__file__`
@@ -39,10 +39,12 @@ imageDir = os.getcwd() + '/data/v2/sprites/'
 resourceImages = []
 for root, dirs, files in os.walk(imageDir):
     for file in files:
-        resourceImages.append(os.path.join(root.replace(imageDir, ""), file));
+        resourceImages.append(os.path.join(root.replace(imageDir, ""), file))
 
 
 mediaDir = '/media/sprites/{0}'
+
+
 def filePathOrNone(fileName):
     return mediaDir.format(fileName) if fileName in resourceImages else None
 
@@ -66,14 +68,15 @@ def clear_table(model):
     print('building ' + table_name)
     # Reset DB auto increments to start at 1
     if DB_VENDOR == 'sqlite':
-        db_cursor.execute("DELETE FROM sqlite_sequence WHERE name = " + "'" + table_name + "'" )
+        db_cursor.execute("DELETE FROM sqlite_sequence WHERE name = " + "'" + table_name + "'")
     else:
-        db_cursor.execute("SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
+        db_cursor.execute(
+            "SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
 
 def process_csv(file_name, data_to_models):
     daten = load_data(file_name)
-    next(daten, None)  #  skip header
+    next(daten, None)  # skip header
     for data in daten:
         for model in data_to_models(data):
             model.save()
@@ -87,7 +90,7 @@ def build_generic(model_classes, file_name, data_to_models):
 
 def scrubStr(str):
     """
-    The purpose of this function is to scrub the weird template mark-up out of strings 
+    The purpose of this function is to scrub the weird template mark-up out of strings
     that Veekun is using for their pokedex.
     Example:
         []{move:dragon-tail} will effect the opponents [HP]{mechanic:hp}.
@@ -113,15 +116,16 @@ def scrubStr(str):
 
 def _build_languages():
     def data_to_language(info):
-        yield Language (
-            id = int(info[0]),
-            iso639 = info[1],
-            iso3166 = info[2],
-            name = info[3],
-            official = bool(int(info[4])),
-            order = info[5],
+        yield Language(
+            id=int(info[0]),
+            iso639=info[1],
+            iso3166=info[2],
+            name=info[3],
+            official=bool(int(info[4])),
+            order=info[5],
         )
     build_generic((Language,), 'languages.csv', data_to_language)
+
 
 def build_languages():
     _build_languages()
@@ -132,19 +136,18 @@ def build_languages():
     for index, info in enumerate(data):
         if index > 0:
 
-            languageName = LanguageName (
-                language = Language.objects.get(pk = int(info[0])),
-                local_language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
+            languageName = LanguageName(
+                language=Language.objects.get(pk=int(info[0])),
+                local_language=Language.objects.get(pk=int(info[1])),
+                nam=info[2]
             )
 
             languageName.save()
 
-
-
 ############
 #  REGION  #
 ############
+
 
 def build_regions():
     clear_table(Region)
@@ -153,12 +156,11 @@ def build_regions():
     for index, info in enumerate(data):
         if index > 0:
 
-            model = Region (
-                id = int(info[0]),
-                name = info[1]
+            model = Region(
+                id=int(info[0]),
+                name=info[1]
             )
             model.save()
-
 
     clear_table(RegionName)
     data = load_data('region_names.csv')
@@ -689,7 +691,7 @@ def build_items():
                 id = index,
                 item = Item.objects.get(pk=int(info[0])),
                 sprites = json.dumps(sprites)
-            )   
+            )
             imageModel.save()
 
 
@@ -1489,20 +1491,20 @@ def build_natures():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             decreased_stat = None
             increased_stat = None
             hates_flavor = None
             likes_flavor = None
-    
+
             if (info[2] != info[3]):
                 decreased_stat = Stat.objects.get(pk = int(info[2]))
                 increased_stat = Stat.objects.get(pk = int(info[3]))
-    
+
             if (info[4] != info[5]):
                 hates_flavor = BerryFlavor.objects.get(pk = int(info[4]))
                 likes_flavor = BerryFlavor.objects.get(pk = int(info[5]))
-    
+
             nature = Nature (
                 id = int(info[0]),
                 name = info[1],
@@ -1520,7 +1522,7 @@ def build_natures():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             natureName = NatureName (
                 nature = Nature.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
@@ -1534,7 +1536,7 @@ def build_natures():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             naturePokeathlonStat = NaturePokeathlonStat (
                 nature = Nature.objects.get(pk = int(info[0])),
                 pokeathlon_stat = PokeathlonStat.objects.get(pk = int(info[1])),
@@ -1548,7 +1550,7 @@ def build_natures():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             model = NatureBattleStylePreference (
                 nature = Nature.objects.get(pk = int(info[0])),
                 move_battle_style = MoveBattleStyle.objects.get(pk = int(info[1])),
@@ -1730,7 +1732,7 @@ def build_locations():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             model = Location (
                 id = int(info[0]),
                 region = Region.objects.get(pk = int(info[1])) if info[1] != '' else None,
@@ -1744,7 +1746,7 @@ def build_locations():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             model = LocationName (
                 location = Location.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
@@ -1758,7 +1760,7 @@ def build_locations():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             model = LocationGameIndex (
                 location = Location.objects.get(pk = int(info[0])),
                 generation = Generation.objects.get(pk = int(info[1])),
@@ -1772,14 +1774,14 @@ def build_locations():
 
     for index, info in enumerate(data):
         if index > 0:
-  
+
             location = Location.objects.get(pk = int(info[1]))
-    
+
             model = LocationArea (
               id = int(info[0]),
               location = location,
               game_index = int(info[2]),
-              name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area') 
+              name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area')
             )
             model.save()
 
@@ -1798,7 +1800,7 @@ def build_locations():
         model.save()
 
 
-    
+
 #############
 #  POKEMON  #
 #############
@@ -1994,7 +1996,7 @@ def build_pokemons():
                 id = index,
                 pokemon = Pokemon.objects.get(pk=int(info[0])),
                 sprites = json.dumps(sprites)
-            )   
+            )
             imageModel.save()
 
     clear_table(PokemonAbility)
@@ -2114,7 +2116,7 @@ def build_pokemons():
                 id = index,
                 pokemon_form = PokemonForm.objects.get(pk=int(info[0])),
                 sprites = json.dumps(sprites)
-            )   
+            )
             imageModel.save()
 
 

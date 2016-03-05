@@ -1,16 +1,17 @@
 from __future__ import unicode_literals
 from django.test import TestCase
-from pokemon_v2.models import *
+from pokemon_v2.models import *  # NOQA
+
 
 class AbilityTestCase(TestCase):
 
-  def setUp(self):
-    Ability.objects.create(
-      name = "Smell",
-      generation_id = 3,
-      is_main_series = true
-    )
+    def setUp(self):
+        Ability.objects.create(
+          name="Smell",
+          generation_id=3,
+          is_main_series=True
+        )
 
-  def fields_are_valid(self):
-    smell = Ability.objects.get(name="Smell")
-    self.assertEqual(smell.generation_id, 3)
+    def fields_are_valid(self):
+        smell = Ability.objects.get(name="Smell")
+        self.assertEqual(smell.generation_id, 3)

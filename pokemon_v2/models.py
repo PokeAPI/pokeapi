@@ -5,415 +5,443 @@ from django.db import models
 #  ABSTRACT MODELS  #
 #####################
 
+
 class HasAbility(models.Model):
 
-  ability = models.ForeignKey('Ability', blank=True, null=True, related_name="%(class)s")
+    ability = models.ForeignKey('Ability', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasCharacteristic(models.Model):
 
-  characteristic = models.ForeignKey('Characteristic', blank=True, null=True, related_name="%(class)s")
+    characteristic = models.ForeignKey(
+        'Characteristic', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasContestType(models.Model):
 
-  contest_type = models.ForeignKey('ContestType', blank=True, null=True, related_name="%(class)s")
+    contest_type = models.ForeignKey(
+        'ContestType', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasContestEffect(models.Model):
 
-  contest_effect = models.ForeignKey('ContestEffect', blank=True, null=True, related_name="%(class)s")
+    contest_effect = models.ForeignKey(
+        'ContestEffect', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasSuperContestEffect(models.Model):
 
-  super_contest_effect = models.ForeignKey('SuperContestEffect', blank = True, null = True, related_name="%(class)s")
+    super_contest_effect = models.ForeignKey(
+        'SuperContestEffect', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasDescription(models.Model):
 
-  description = models.CharField(max_length=1000, default='')
+    description = models.CharField(max_length=1000, default='')
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasGender(models.Model):
 
-  gender = models.ForeignKey('Gender', blank=True, null=True, related_name="%(class)s")
+    gender = models.ForeignKey(
+        'Gender', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasEffect(models.Model):
 
-  effect = models.CharField(max_length=6000)
+    effect = models.CharField(max_length=6000)
 
-  class Meta:
-    abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasEggGroup(models.Model):
 
-  egg_group = models.ForeignKey('EggGroup', blank=True, null=True, related_name="%(class)s")
+    egg_group = models.ForeignKey(
+        'EggGroup', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasEncounterMethod(models.Model):
 
-  encounter_method = models.ForeignKey('EncounterMethod', blank=True, null=True, related_name="%(class)s")
+    encounter_method = models.ForeignKey(
+        'EncounterMethod', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasEncounterCondition(models.Model):
 
-  encounter_condition = models.ForeignKey('EncounterCondition', blank=True, null=True, related_name="%(class)s")
+    encounter_condition = models.ForeignKey(
+        'EncounterCondition', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasEvolutionTrigger(models.Model):
 
-  evolution_trigger = models.ForeignKey('EvolutionTrigger', blank=True, null=True, related_name="%(class)s")
+    evolution_trigger = models.ForeignKey(
+        'EvolutionTrigger', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasFlavorText(models.Model):
 
-  flavor_text = models.CharField(max_length=500)
+    flavor_text = models.CharField(max_length=500)
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasFlingEffect(models.Model):
 
-  item_fling_effect = models.ForeignKey('ItemFlingEffect', blank=True, null=True, related_name="%(class)s")
+    item_fling_effect = models.ForeignKey(
+        'ItemFlingEffect', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasGameIndex(models.Model):
 
-  game_index = models.IntegerField()
+    game_index = models.IntegerField()
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasGeneration(models.Model):
 
-  generation = models.ForeignKey('Generation', blank=True, null=True, related_name="%(class)s")
+    generation = models.ForeignKey('Generation', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasGrowthRate(models.Model):
 
-  growth_rate = models.ForeignKey('GrowthRate', blank=True, null=True, related_name="%(class)s")
+    growth_rate = models.ForeignKey('GrowthRate', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasItem(models.Model):
 
-  item = models.ForeignKey('Item', blank=True, null=True, related_name="%(class)s")
+    item = models.ForeignKey('Item', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasItemAttribute(models.Model):
 
-  item_attribute = models.ForeignKey('ItemAttribute', blank=True, null=True, related_name="%(class)s")
+    item_attribute = models.ForeignKey(
+        'ItemAttribute', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasItemCategory(models.Model):
 
-  item_category = models.ForeignKey('ItemCategory', blank=True, null=True, related_name="%(class)s")
+    item_category = models.ForeignKey(
+        'ItemCategory', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasItemPocket(models.Model):
 
-  item_pocket = models.ForeignKey('ItemPocket', blank=True, null=True, related_name="%(class)s")
+    item_pocket = models.ForeignKey(
+        'ItemPocket', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasLanguage(models.Model):
 
-  language = models.ForeignKey('Language', blank = True, null = True, related_name="%(class)s_language")
+    language = models.ForeignKey(
+        'Language', blank=True, null=True, related_name="%(class)s_language")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasLocation(models.Model):
 
-  location = models.ForeignKey('Location', blank = True, null = True, related_name="%(class)s")
+    location = models.ForeignKey('Location', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasLocationArea(models.Model):
 
-  location_area = models.ForeignKey('LocationArea', blank = True, null = True, related_name="%(class)s")
+    location_area = models.ForeignKey(
+        'LocationArea', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMetaAilment(models.Model):
 
-  move_meta_ailment = models.ForeignKey('MoveMetaAilment', blank = True, null = True, related_name="%(class)s")
+    move_meta_ailment = models.ForeignKey(
+        'MoveMetaAilment', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMetaCategory(models.Model):
 
-  move_meta_category = models.ForeignKey('MoveMetaCategory', blank = True, null = True, related_name="%(class)s")
+    move_meta_category = models.ForeignKey(
+        'MoveMetaCategory', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMove(models.Model):
 
-  move = models.ForeignKey('Move', blank = True, null = True, related_name="%(class)s")
+    move = models.ForeignKey('Move', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMoveDamageClass(models.Model):
 
-  move_damage_class = models.ForeignKey('MoveDamageClass', blank = True, null = True, related_name="%(class)s")
+    move_damage_class = models.ForeignKey(
+        'MoveDamageClass', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMoveEffect(models.Model):
 
-  move_effect = models.ForeignKey('MoveEffect', blank = True, null = True)
+    move_effect = models.ForeignKey('MoveEffect', blank=True, null=True)
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMoveAttribute(models.Model):
 
-  move_attribute = models.ForeignKey('MoveAttribute', blank = True, null = True)
+    move_attribute = models.ForeignKey('MoveAttribute', blank=True, null=True)
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasMoveTarget(models.Model):
 
-  move_target = models.ForeignKey('MoveTarget', blank = True, null = True, related_name="%(class)s")
+    move_target = models.ForeignKey(
+        'MoveTarget', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasName(models.Model):
 
-  name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasNature(models.Model):
 
-  nature = models.ForeignKey('Nature', blank=True, null=True, related_name="%(class)s")
+    nature = models.ForeignKey('Nature', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasOrder(models.Model):
 
-  order = models.IntegerField(blank=True, null=True)
+    order = models.IntegerField(blank=True, null=True)
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokeathlonStat(models.Model):
 
-  pokeathlon_stat = models.ForeignKey('PokeathlonStat', blank=True, null=True, related_name="%(class)s")
+    pokeathlon_stat = models.ForeignKey(
+        'PokeathlonStat', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokedex(models.Model):
 
-  pokedex = models.ForeignKey('Pokedex', blank=True, null=True, related_name="%(class)s")
+    pokedex = models.ForeignKey('Pokedex', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemon(models.Model):
 
-  pokemon = models.ForeignKey('Pokemon', blank=True, null=True, related_name="%(class)s")
+    pokemon = models.ForeignKey('Pokemon', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemonColor(models.Model):
 
-  pokemon_color = models.ForeignKey('PokemonColor', blank=True, null=True, related_name="%(class)s")
+    pokemon_color = models.ForeignKey(
+        'PokemonColor', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemonForm(models.Model):
 
-  pokemon_form = models.ForeignKey('PokemonForm', blank=True, null=True, related_name="%(class)s")
+    pokemon_form = models.ForeignKey(
+        'PokemonForm', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemonHabitat(models.Model):
 
-  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True, related_name="%(class)s")
+    pokemon_habitat = models.ForeignKey(
+        'PokemonHabitat', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
-#HasPokemonMoveMethod
+# HasPokemonMoveMethod
 class HasMoveLearnMethod(models.Model):
 
-  move_learn_method = models.ForeignKey('MoveLearnMethod', blank=True, null=True, related_name="%(class)s")
+    move_learn_method = models.ForeignKey(
+        'MoveLearnMethod', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemonShape(models.Model):
 
-  pokemon_shape = models.ForeignKey('PokemonShape', blank=True, null=True, related_name="%(class)s")
+    pokemon_shape = models.ForeignKey(
+        'PokemonShape', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasPokemonSpecies(models.Model):
 
-  pokemon_species = models.ForeignKey('PokemonSpecies', blank=True, null=True, related_name="%(class)s")
+    pokemon_species = models.ForeignKey(
+        'PokemonSpecies', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasRegion(models.Model):
 
-  region = models.ForeignKey('Region', blank=True, null=True, related_name="%(class)s")
+    region = models.ForeignKey('Region', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasShortEffect(models.Model):
 
-  short_effect = models.CharField(max_length=300)
+    short_effect = models.CharField(max_length=300)
 
-  class Meta:
-    abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasStat(models.Model):
 
-  stat = models.ForeignKey('Stat', blank=True, null=True, related_name="%(class)s")
+    stat = models.ForeignKey('Stat', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasType(models.Model):
 
-  type = models.ForeignKey('Type', blank=True, null=True, related_name="%(class)s")
+    type = models.ForeignKey('Type', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasVersion(models.Model):
 
-  version = models.ForeignKey('Version', blank=True, null=True, related_name="%(class)s")
+    version = models.ForeignKey('Version', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class HasVersionGroup(models.Model):
 
-  version_group = models.ForeignKey('VersionGroup', blank=True, null=True, related_name="%(class)s")
+    version_group = models.ForeignKey(
+        'VersionGroup', blank=True, null=True, related_name="%(class)s")
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class IsDescription(HasLanguage, HasDescription):
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class IsName(HasLanguage, HasName):
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 class IsFlavorText(HasLanguage, HasFlavorText):
 
-  class Meta:
-       abstract = True
+    class Meta:
+        abstract = True
 
 
 ####################
@@ -421,24 +449,24 @@ class IsFlavorText(HasLanguage, HasFlavorText):
 ####################
 
 class Version(HasName, HasVersionGroup):
-  pass
+    pass
 
 
 class VersionName(IsName, HasVersion):
-  pass
+    pass
 
 
 class VersionGroup(HasName, HasGeneration, HasOrder):
-  pass
+    pass
 
 
 class VersionGroupRegion(HasVersionGroup, HasRegion):
-  pass
+    pass
 
-#VersionGroupPokemonMoveMethod
+
+# VersionGroupPokemonMoveMethod
 class VersionGroupMoveLearnMethod(HasVersionGroup, HasMoveLearnMethod):
-  pass
-
+    pass
 
 
 #####################
@@ -447,17 +475,17 @@ class VersionGroupMoveLearnMethod(HasVersionGroup, HasMoveLearnMethod):
 
 class Language(HasName, HasOrder):
 
-  iso639 = models.CharField(max_length=2)
+    iso639 = models.CharField(max_length=2)
 
-  iso3166 = models.CharField(max_length=2)
+    iso3166 = models.CharField(max_length=2)
 
-  official = models.BooleanField(default = False)
+    official = models.BooleanField(default=False)
 
 
 class LanguageName(IsName):
 
-  local_language = models.ForeignKey('Language', blank = True, null = True, related_name="locallanguage")
-
+    local_language = models.ForeignKey(
+        'Language', blank=True, null=True, related_name="locallanguage")
 
 
 #######################
@@ -466,12 +494,11 @@ class LanguageName(IsName):
 
 class Generation(HasName):
 
-  region = models.OneToOneField('Region', blank=True, null=True, related_name="%(class)s")
+    region = models.OneToOneField('Region', blank=True, null=True, related_name="%(class)s")
 
 
 class GenerationName(IsName, HasGeneration):
-  pass
-
+    pass
 
 
 ###################
@@ -479,12 +506,11 @@ class GenerationName(IsName, HasGeneration):
 ###################
 
 class Region(HasName):
-  pass
+    pass
 
 
 class RegionName(IsName, HasRegion):
-  pass
-
+    pass
 
 
 ####################
@@ -493,29 +519,29 @@ class RegionName(IsName, HasRegion):
 
 class Ability(HasName, HasGeneration):
 
-  is_main_series = models.BooleanField(default = False)
+    is_main_series = models.BooleanField(default=False)
 
 
 class AbilityEffectText(HasLanguage, HasEffect, HasShortEffect, HasAbility):
-  pass
+    pass
 
 
 class AbilityFlavorText(IsFlavorText, HasAbility, HasVersionGroup):
-  pass
+    pass
 
 
 class AbilityName(IsName, HasAbility):
-  pass
+    pass
 
 
 class AbilityChange(HasAbility, HasVersionGroup):
-  pass
+    pass
 
 
 class AbilityChangeEffectText(HasLanguage, HasEffect):
 
-  ability_change = models.ForeignKey(AbilityChange, blank=True, null=True, related_name="%(class)s")
-
+    ability_change = models.ForeignKey(
+        AbilityChange, blank=True, null=True, related_name="%(class)s")
 
 
 #################
@@ -523,25 +549,24 @@ class AbilityChangeEffectText(HasLanguage, HasEffect):
 #################
 
 class Type(HasName, HasGeneration, HasMoveDamageClass):
-  pass
+    pass
 
 
 class TypeName(IsName, HasType):
-  pass
+    pass
 
 
 class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
-  pass
+    pass
 
 
 class TypeEfficacy(models.Model):
 
-  damage_type = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
+    damage_type = models.ForeignKey('Type', blank=True, null=True, related_name="damage_type")
 
-  target_type = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
+    target_type = models.ForeignKey('Type', blank=True, null=True, related_name="target_type")
 
-  damage_factor = models.IntegerField()
-
+    damage_factor = models.IntegerField()
 
 
 #################
@@ -550,14 +575,13 @@ class TypeEfficacy(models.Model):
 
 class Stat(HasName, HasMoveDamageClass):
 
-  is_battle_only = models.BooleanField(default = False)
+    is_battle_only = models.BooleanField(default=False)
 
-  game_index = models.IntegerField()
+    game_index = models.IntegerField()
 
 
 class StatName(IsName, HasStat):
-  pass
-
+    pass
 
 
 ###########################
@@ -566,12 +590,11 @@ class StatName(IsName, HasStat):
 
 class Characteristic(HasStat):
 
-  gene_mod_5 = models.IntegerField()
+    gene_mod_5 = models.IntegerField()
 
 
 class CharacteristicDescription(HasCharacteristic, IsDescription):
-  pass
-
+    pass
 
 
 ######################
@@ -579,12 +602,11 @@ class CharacteristicDescription(HasCharacteristic, IsDescription):
 ######################
 
 class EggGroup(HasName):
-  pass
+    pass
 
 
 class EggGroupName(IsName, HasEggGroup):
-  pass
-
+    pass
 
 
 #################
@@ -592,72 +614,71 @@ class EggGroupName(IsName, HasEggGroup):
 #################
 
 class ItemPocket(HasName):
-  pass
+    pass
 
 
 class ItemPocketName(IsName, HasItemPocket):
-  pass
+    pass
 
 
 class ItemCategory(HasName, HasItemPocket):
-  pass
+    pass
 
 
 class ItemCategoryName(IsName, HasItemCategory):
-  pass
+    pass
 
 
 class ItemFlingEffect(HasName):
-  pass
+    pass
 
 
 class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
-  pass
+    pass
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
 
-  cost = models.IntegerField(blank=True, null=True)
+    cost = models.IntegerField(blank=True, null=True)
 
-  fling_power = models.IntegerField(blank=True, null=True)
+    fling_power = models.IntegerField(blank=True, null=True)
 
 
 class ItemEffectText(HasItem, HasLanguage, HasEffect, HasShortEffect):
-  pass
+    pass
 
 
 class ItemName(HasItem, IsName):
-  pass
+    pass
 
 
 class ItemFlavorText(HasItem, HasVersionGroup, IsFlavorText):
-  pass
+    pass
 
 
 class ItemAttribute(HasName):
-  pass
+    pass
 
 
 class ItemAttributeName(IsName, HasItemAttribute):
-  pass
+    pass
 
 
 class ItemAttributeDescription(IsDescription, HasItemAttribute):
-  pass
+    pass
 
 
 class ItemAttributeMap(HasItem, HasItemAttribute):
-  pass
+    pass
 
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
-  pass
+    pass
 
 
 class ItemSprites(HasItem):
 
-  sprites = models.CharField(max_length=500)
-
+    sprites = models.CharField(max_length=500)
 
 
 ####################
@@ -665,29 +686,29 @@ class ItemSprites(HasItem):
 ####################
 
 class ContestType(HasName):
-  pass
+    pass
 
 
 class ContestTypeName(HasContestType, IsName):
 
-  flavor = models.CharField(max_length = 10)
+    flavor = models.CharField(max_length=10)
 
-  color = models.CharField(max_length = 10)
+    color = models.CharField(max_length=10)
 
 
 class ContestEffect(models.Model):
 
-  appeal = models.IntegerField()
+    appeal = models.IntegerField()
 
-  jam = models.IntegerField()
+    jam = models.IntegerField()
 
 
 class ContestEffectEffectText(HasLanguage, HasEffect, HasContestEffect):
-  pass
+    pass
 
 
 class ContestEffectFlavorText(HasLanguage, HasFlavorText, HasContestEffect):
-  pass
+    pass
 
 
 class ContestCombo(models.Model):
@@ -697,64 +718,67 @@ class ContestCombo(models.Model):
     second_move = models.ForeignKey('Move', blank=True, null=True, related_name='second_move')
 
 
-
 ##################
 #  BERRY MODELS  #
 ##################
 
 class BerryFirmness(HasName):
-  pass
+    pass
 
 
 class BerryFirmnessName(IsName):
 
-  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
+    berry_firmness = models.ForeignKey(
+        BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
 
 class Berry(HasName, HasItem):
 
-  berry_firmness = models.ForeignKey(BerryFirmness, blank=True, null=True, related_name="%(class)s")
+    berry_firmness = models.ForeignKey(
+        BerryFirmness, blank=True, null=True, related_name="%(class)s")
 
-  natural_gift_power = models.IntegerField()
+    natural_gift_power = models.IntegerField()
 
-  natural_gift_type = models.ForeignKey(Type, blank=True, null=True, related_name="%(class)s")
+    natural_gift_type = models.ForeignKey(Type, blank=True, null=True, related_name="%(class)s")
 
-  size = models.IntegerField()
+    size = models.IntegerField()
 
-  max_harvest = models.IntegerField()
+    max_harvest = models.IntegerField()
 
-  growth_time = models.IntegerField()
+    growth_time = models.IntegerField()
 
-  soil_dryness = models.IntegerField()
+    soil_dryness = models.IntegerField()
 
-  smoothness = models.IntegerField()
+    smoothness = models.IntegerField()
 
 
 """
 Berry Flavors are a bit of a hack because their relationship
 in terms of flavors to contest types is really awkward the
-way it was handled in the veekun data set. Berry Flavor here 
-does not match the csv table. Berry Flavor Map 
+way it was handled in the veekun data set. Berry Flavor here
+does not match the csv table. Berry Flavor Map
 is a table fabricated just to suit this project.
 """
+
+
 class BerryFlavor(HasName):
-  
-  contest_type = models.OneToOneField('ContestType', blank=True, null=True, related_name="%(class)s")
+
+    contest_type = models.OneToOneField(
+        'ContestType', blank=True, null=True, related_name="%(class)s")
 
 
 class BerryFlavorName(IsName):
 
-  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+    berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
 
 
 class BerryFlavorMap(models.Model):
 
-  berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s")
+    berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s")
 
-  berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
+    berry_flavor = models.ForeignKey(BerryFlavor, blank=True, null=True, related_name="%(class)s")
 
-  potency = models.IntegerField()
-
+    potency = models.IntegerField()
 
 
 ########################
@@ -763,12 +787,11 @@ class BerryFlavorMap(models.Model):
 
 class GrowthRate(HasName):
 
-  formula = models.CharField(max_length = 500)
+    formula = models.CharField(max_length=500)
 
 
 class GrowthRateDescription(HasGrowthRate, IsDescription):
-  pass
-
+    pass
 
 
 ###################
@@ -777,34 +800,36 @@ class GrowthRateDescription(HasGrowthRate, IsDescription):
 
 class Nature(HasName):
 
-  decreased_stat = models.ForeignKey(Stat, blank = True, null = True, related_name = 'decreased')
+    decreased_stat = models.ForeignKey(Stat, blank=True, null=True, related_name='decreased')
 
-  increased_stat = models.ForeignKey(Stat, blank = True, null = True, related_name = 'increased')
+    increased_stat = models.ForeignKey(Stat, blank=True, null=True, related_name='increased')
 
-  hates_flavor = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'hates_flavor')
+    hates_flavor = models.ForeignKey(
+        BerryFlavor, blank=True, null=True, related_name='hates_flavor')
 
-  likes_flavor = models.ForeignKey(BerryFlavor, blank = True, null = True, related_name = 'likes_flavor')
+    likes_flavor = models.ForeignKey(
+        BerryFlavor, blank=True, null=True, related_name='likes_flavor')
 
-  game_index = models.IntegerField()
+    game_index = models.IntegerField()
 
 
 class NatureName(IsName, HasNature):
-  pass
+    pass
 
 
 class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
 
-  max_change = models.IntegerField()
+    max_change = models.IntegerField()
 
 
 class NatureBattleStylePreference(HasNature):
 
-  move_battle_style = models.ForeignKey('MoveBattleStyle', blank = True, null = True, related_name="%(class)s")
+    move_battle_style = models.ForeignKey(
+        'MoveBattleStyle', blank=True, null=True, related_name="%(class)s")
 
-  low_hp_preference = models.IntegerField()
+    low_hp_preference = models.IntegerField()
 
-  high_hp_preference = models.IntegerField()
-
+    high_hp_preference = models.IntegerField()
 
 
 #####################
@@ -812,29 +837,28 @@ class NatureBattleStylePreference(HasNature):
 #####################
 
 class Location(HasRegion, HasName):
-  pass
+    pass
 
 
 class LocationName(HasLocation, IsName):
-  pass
+    pass
 
 
 class LocationGameIndex(HasLocation, HasGeneration, HasGameIndex):
-  pass
+    pass
 
 
 class LocationArea(HasLocation, HasGameIndex, HasName):
-  pass
+    pass
 
 
 class LocationAreaName(IsName, HasLocationArea):
-  pass
+    pass
 
 
 class LocationAreaEncounterRate(HasEncounterMethod, HasLocationArea, HasVersion):
 
-  rate = models.IntegerField()
-
+    rate = models.IntegerField()
 
 
 ######################
@@ -842,91 +866,91 @@ class LocationAreaEncounterRate(HasEncounterMethod, HasLocationArea, HasVersion)
 ######################
 
 class EncounterMethod(HasName, HasOrder):
-  pass
+    pass
 
 
 class EncounterMethodName(HasEncounterMethod, IsName):
-  pass
+    pass
 
 
 class EncounterSlot(HasVersionGroup, HasEncounterMethod):
 
-  slot = models.IntegerField(blank = True, null = True)
+    slot = models.IntegerField(blank=True, null=True)
 
-  rarity = models.IntegerField()
+    rarity = models.IntegerField()
 
 
 class Encounter(HasVersion, HasLocationArea, HasPokemon):
 
-  encounter_slot = models.ForeignKey(EncounterSlot, blank = True, null = True)
+    encounter_slot = models.ForeignKey(EncounterSlot, blank=True, null=True)
 
-  min_level = models.IntegerField()
+    min_level = models.IntegerField()
 
-  max_level = models.IntegerField()
+    max_level = models.IntegerField()
 
 
 class EncounterCondition(HasName):
-  pass
+    pass
 
 
 class EncounterConditionName(HasEncounterCondition, IsName):
-  pass
+    pass
 
 
 class EncounterConditionValue(HasEncounterCondition, HasName):
 
-  is_default = models.BooleanField(default = False)
+    is_default = models.BooleanField(default=False)
 
 
 class EncounterConditionValueName(IsName):
 
-  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True, related_name="%(class)s")
+    encounter_condition_value = models.ForeignKey(
+        EncounterConditionValue, blank=True, null=True, related_name="%(class)s")
 
 
 class EncounterConditionValueMap(models.Model):
 
-  encounter = models.ForeignKey(Encounter, blank = True, null = True)
+    encounter = models.ForeignKey(Encounter, blank=True, null=True)
 
-  encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank = True, null = True)
-
+    encounter_condition_value = models.ForeignKey(EncounterConditionValue, blank=True, null=True)
 
 
 #################
 #  MOVE MODELS  #
 #################
 
-class Move(HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect, HasMoveTarget, HasContestType, HasContestEffect, HasSuperContestEffect):
+class Move(
+        HasName, HasGeneration, HasType, HasMoveDamageClass, HasMoveEffect,
+        HasMoveTarget, HasContestType, HasContestEffect, HasSuperContestEffect):
 
-  power = models.IntegerField(blank = True, null = True)
+    power = models.IntegerField(blank=True, null=True)
 
-  pp = models.IntegerField(blank = True, null = True)
+    pp = models.IntegerField(blank=True, null=True)
 
-  accuracy = models.IntegerField(blank = True, null = True)
+    accuracy = models.IntegerField(blank=True, null=True)
 
-  priority = models.IntegerField(blank = True, null = True)
+    priority = models.IntegerField(blank=True, null=True)
 
-  move_effect_chance = models.IntegerField(blank = True, null = True)
-
+    move_effect_chance = models.IntegerField(blank=True, null=True)
 
 
 class MoveName(HasMove, IsName):
-  pass
+    pass
 
 
 class MoveFlavorText(HasMove, HasVersionGroup, IsFlavorText):
-  pass
+    pass
 
 
 class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
 
-  power = models.IntegerField(blank = True, null = True)
+    power = models.IntegerField(blank=True, null=True)
 
-  pp = models.IntegerField(blank = True, null = True)
+    pp = models.IntegerField(blank=True, null=True)
 
-  accuracy = models.IntegerField(blank = True, null = True)
+    accuracy = models.IntegerField(blank=True, null=True)
 
-  move_effect_chance = models.IntegerField(blank = True, null = True)
-
+    move_effect_chance = models.IntegerField(blank=True, null=True)
 
 
 ##############################
@@ -934,14 +958,15 @@ class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
 ##############################
 
 class MoveDamageClass(HasName):
-  pass
+    pass
+
 
 class MoveDamageClassName(HasMoveDamageClass, IsName):
-  pass
+    pass
+
 
 class MoveDamageClassDescription(HasMoveDamageClass, IsDescription):
-  pass
-
+    pass
 
 
 ##############################
@@ -949,13 +974,13 @@ class MoveDamageClassDescription(HasMoveDamageClass, IsDescription):
 ##############################
 
 class MoveBattleStyle(HasName):
-  pass
+    pass
 
 
 class MoveBattleStyleName(IsName):
 
-  move_battle_style = models.ForeignKey(MoveBattleStyle, blank = True, null = True, related_name="%(class)s")
-
+    move_battle_style = models.ForeignKey(
+        MoveBattleStyle, blank=True, null=True, related_name="%(class)s")
 
 
 ########################
@@ -963,21 +988,21 @@ class MoveBattleStyleName(IsName):
 ########################
 
 class MoveEffect(models.Model):
-  pass
+    pass
 
 
 class MoveEffectEffectText(HasLanguage, HasMoveEffect, HasEffect, HasShortEffect):
-  pass
+    pass
 
 
 class MoveEffectChange(HasMoveEffect, HasVersionGroup):
-  pass
+    pass
 
 
 class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 
-  move_effect_change = models.ForeignKey('MoveEffectChange', blank = True, null = True, related_name="%(class)s")
-
+    move_effect_change = models.ForeignKey(
+        'MoveEffectChange', blank=True, null=True, related_name="%(class)s")
 
 
 ################################
@@ -985,20 +1010,19 @@ class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 ################################
 
 class MoveAttribute(HasName):
-  pass
+    pass
 
 
 class MoveAttributeName(HasMoveAttribute, IsName):
-  pass
+    pass
 
 
 class MoveAttributeDescription(HasMoveAttribute, IsDescription):
-  pass
+    pass
 
 
 class MoveAttributeMap(HasMove, HasMoveAttribute):
-  pass
-
+    pass
 
 
 ########################
@@ -1006,16 +1030,15 @@ class MoveAttributeMap(HasMove, HasMoveAttribute):
 ########################
 
 class MoveTarget(HasName):
-  pass
+    pass
 
 
 class MoveTargetName(HasMoveTarget, IsName):
-  pass
+    pass
 
 
 class MoveTargetDescription(HasMoveTarget, IsDescription):
-  pass
-
+    pass
 
 
 ######################
@@ -1024,49 +1047,48 @@ class MoveTargetDescription(HasMoveTarget, IsDescription):
 
 class MoveMeta(HasMetaAilment, HasMetaCategory):
 
-  move = models.OneToOneField(Move, blank = False, null = False, related_name="%(class)s")
+    move = models.OneToOneField(Move, blank=False, null=False, related_name="%(class)s")
 
-  min_hits = models.IntegerField(blank = True, null = True)
+    min_hits = models.IntegerField(blank=True, null=True)
 
-  max_hits = models.IntegerField(blank = True, null = True)
+    max_hits = models.IntegerField(blank=True, null=True)
 
-  min_turns = models.IntegerField(blank = True, null = True)
+    min_turns = models.IntegerField(blank=True, null=True)
 
-  max_turns = models.IntegerField(blank = True, null = True)
+    max_turns = models.IntegerField(blank=True, null=True)
 
-  drain = models.IntegerField(blank = True, null = True)
+    drain = models.IntegerField(blank=True, null=True)
 
-  healing = models.IntegerField(blank = True, null = True)
+    healing = models.IntegerField(blank=True, null=True)
 
-  crit_rate = models.IntegerField(blank = True, null = True)
+    crit_rate = models.IntegerField(blank=True, null=True)
 
-  ailment_chance = models.IntegerField(blank = True, null = True)
+    ailment_chance = models.IntegerField(blank=True, null=True)
 
-  flinch_chance = models.IntegerField(blank = True, null = True)
+    flinch_chance = models.IntegerField(blank=True, null=True)
 
-  stat_chance = models.IntegerField(blank = True, null = True)
+    stat_chance = models.IntegerField(blank=True, null=True)
 
 
 class MoveMetaAilment(HasName):
-  pass
+    pass
 
 
 class MoveMetaAilmentName(HasMetaAilment, IsName):
-  pass
+    pass
 
 
 class MoveMetaCategory(HasName):
-  pass
+    pass
 
 
 class MoveMetaCategoryDescription(HasMetaCategory, IsDescription):
-  pass
+    pass
 
 
 class MoveMetaStatChange(HasMove, HasStat):
 
-  change = models.IntegerField()
-
+    change = models.IntegerField()
 
 
 #######################
@@ -1075,10 +1097,9 @@ class MoveMetaStatChange(HasMove, HasStat):
 
 class Experience(HasGrowthRate):
 
-  level = models.IntegerField()
+    level = models.IntegerField()
 
-  experience = models.IntegerField()
-
+    experience = models.IntegerField()
 
 
 ###################
@@ -1086,8 +1107,7 @@ class Experience(HasGrowthRate):
 ###################
 
 class Gender(HasName):
-  pass
-
+    pass
 
 
 ####################
@@ -1096,12 +1116,11 @@ class Gender(HasName):
 
 class Machine(HasGrowthRate, HasItem):
 
-  machine_number = models.IntegerField()
+    machine_number = models.IntegerField()
 
-  version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
+    version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
 
-  move = models.ForeignKey(Move, blank=True, null=True)
-
+    move = models.ForeignKey(Move, blank=True, null=True)
 
 
 #######################
@@ -1109,12 +1128,11 @@ class Machine(HasGrowthRate, HasItem):
 #######################
 
 class PokeathlonStat(HasName):
-  pass
+    pass
 
 
 class PokeathlonStatName(IsName, HasPokeathlonStat):
-  pass
-
+    pass
 
 
 #####################
@@ -1122,22 +1140,23 @@ class PokeathlonStatName(IsName, HasPokeathlonStat):
 #####################
 
 class PalParkArea(HasName):
-  pass
+    pass
 
 
 class PalParkAreaName(IsName):
 
-  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True, related_name="%(class)s")
+    pal_park_area = models.ForeignKey(
+        PalParkArea, blank=True, null=True, related_name="%(class)s")
 
 
 class PalPark(HasPokemonSpecies):
 
-  pal_park_area = models.ForeignKey(PalParkArea, blank = True, null = True, related_name="%(class)s")
+    pal_park_area = models.ForeignKey(
+        PalParkArea, blank=True, null=True, related_name="%(class)s")
 
-  base_score = models.IntegerField(blank = True, null = True)
+    base_score = models.IntegerField(blank=True, null=True)
 
-  rate = models.IntegerField()
-
+    rate = models.IntegerField()
 
 
 ##########################
@@ -1146,19 +1165,18 @@ class PalPark(HasPokemonSpecies):
 
 class SuperContestEffect(models.Model):
 
-  appeal = models.IntegerField()
+    appeal = models.IntegerField()
 
 
 class SuperContestEffectFlavorText(IsFlavorText, HasSuperContestEffect):
-  pass
+    pass
 
 
 class SuperContestCombo(models.Model):
 
-  first_move = models.ForeignKey(Move, blank = True, null = True, related_name = 'first')
+    first_move = models.ForeignKey(Move, blank=True, null=True, related_name='first')
 
-  second_move = models.ForeignKey(Move, blank = True, null = True, related_name = 'second')
-
+    second_move = models.ForeignKey(Move, blank=True, null=True, related_name='second')
 
 
 ######################
@@ -1167,16 +1185,15 @@ class SuperContestCombo(models.Model):
 
 class EvolutionChain(models.Model):
 
-  baby_trigger_item = models.ForeignKey(Item, blank=True, null=True)
+    baby_trigger_item = models.ForeignKey(Item, blank=True, null=True)
 
 
 class EvolutionTrigger(HasName):
-  pass
+    pass
 
 
 class EvolutionTriggerName(HasEvolutionTrigger, IsName):
-  pass
-
+    pass
 
 
 ####################
@@ -1185,20 +1202,19 @@ class EvolutionTriggerName(HasEvolutionTrigger, IsName):
 
 class Pokedex(HasName, HasRegion):
 
-  is_main_series = models.BooleanField(default = False)
+    is_main_series = models.BooleanField(default=False)
 
 
 class PokedexName(HasPokedex, IsName):
-  pass
+    pass
 
 
 class PokedexDescription(HasPokedex, IsDescription):
-  pass
+    pass
 
 
 class PokedexVersionGroup(HasPokedex, HasVersionGroup):
-  pass
-
+    pass
 
 
 ####################
@@ -1208,200 +1224,207 @@ class PokedexVersionGroup(HasPokedex, HasVersionGroup):
 class PokemonSpecies(HasName, HasGeneration, HasPokemonColor,
                      HasPokemonShape, HasGrowthRate, HasOrder):
 
-  evolves_from_species = models.ForeignKey('self', blank=True, null=True)
+    evolves_from_species = models.ForeignKey('self', blank=True, null=True)
 
-  evolution_chain = models.ForeignKey(EvolutionChain, blank=True, null=True)
+    evolution_chain = models.ForeignKey(EvolutionChain, blank=True, null=True)
 
-  pokemon_habitat = models.ForeignKey('PokemonHabitat', blank=True, null=True, related_name="%(class)s")
+    pokemon_habitat = models.ForeignKey(
+        'PokemonHabitat', blank=True, null=True, related_name="%(class)s")
 
-  gender_rate = models.IntegerField()
+    gender_rate = models.IntegerField()
 
-  capture_rate = models.IntegerField()
+    capture_rate = models.IntegerField()
 
-  base_happiness = models.IntegerField()
+    base_happiness = models.IntegerField()
 
-  is_baby = models.BooleanField(default = False)
+    is_baby = models.BooleanField(default=False)
 
-  hatch_counter = models.IntegerField()
+    hatch_counter = models.IntegerField()
 
-  has_gender_differences = models.BooleanField(default = False)
+    has_gender_differences = models.BooleanField(default=False)
 
-  forms_switchable = models.BooleanField(default = False)
+    forms_switchable = models.BooleanField(default=False)
 
 
 class PokemonSpeciesName(IsName, HasPokemonSpecies):
 
-  genus = models.CharField(max_length = 30)
+    genus = models.CharField(max_length=30)
 
 
 class PokemonSpeciesDescription(HasPokemonSpecies, IsDescription):
-  pass
+    pass
 
 
 class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
-  pass
+    pass
 
 
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
 
-  height = models.IntegerField()
+    height = models.IntegerField()
 
-  weight = models.IntegerField()
+    weight = models.IntegerField()
 
-  base_experience = models.IntegerField()
+    base_experience = models.IntegerField()
 
-  is_default = models.BooleanField(default = False)
+    is_default = models.BooleanField(default=False)
 
 
 class PokemonAbility(HasPokemon, HasAbility):
 
-  is_hidden = models.BooleanField(default = False)
+    is_hidden = models.BooleanField(default=False)
 
-  slot = models.IntegerField()
+    slot = models.IntegerField()
 
 
 class PokemonColor(HasName):
-  pass
+    pass
 
 
 class PokemonColorName(HasPokemonColor, IsName):
-  pass
+    pass
 
 
 class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
 
-  pokedex_number = models.IntegerField()
+    pokedex_number = models.IntegerField()
 
 
 class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
-  pass
+    pass
 
 
 class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
-  evolution_item = models.ForeignKey(Item, blank=True, null=True, related_name='evolution_item')
+    evolution_item = models.ForeignKey(Item, blank=True, null=True, related_name='evolution_item')
 
-  evolved_species = models.ForeignKey(PokemonSpecies, related_name="evolved_species", blank=True, null=True)
+    evolved_species = models.ForeignKey(
+        PokemonSpecies, related_name="evolved_species", blank=True, null=True)
 
-  min_level = models.IntegerField(blank=True, null=True)
+    min_level = models.IntegerField(blank=True, null=True)
 
-  location = models.ForeignKey(Location, related_name="location", blank=True, null=True)
+    location = models.ForeignKey(Location, related_name="location", blank=True, null=True)
 
-  held_item = models.ForeignKey(Item, blank=True, null=True, related_name='held_item')
+    held_item = models.ForeignKey(Item, blank=True, null=True, related_name='held_item')
 
-  time_of_day = models.CharField(max_length = 10, blank=True, null=True)
+    time_of_day = models.CharField(max_length=10, blank=True, null=True)
 
-  known_move = models.ForeignKey(Move, blank=True, null=True)
+    known_move = models.ForeignKey(Move, blank=True, null=True)
 
-  known_move_type = models.ForeignKey(Type, related_name="known_move", blank=True, null=True)
+    known_move_type = models.ForeignKey(Type, related_name="known_move", blank=True, null=True)
 
-  min_happiness = models.IntegerField(blank=True, null=True)
+    min_happiness = models.IntegerField(blank=True, null=True)
 
-  min_beauty = models.IntegerField(blank=True, null=True)
+    min_beauty = models.IntegerField(blank=True, null=True)
 
-  min_affection = models.IntegerField(blank=True, null=True)
+    min_affection = models.IntegerField(blank=True, null=True)
 
-  relative_physical_stats = models.IntegerField(blank=True, null=True)
+    relative_physical_stats = models.IntegerField(blank=True, null=True)
 
-  party_species = models.ForeignKey(PokemonSpecies, related_name="party_species", blank=True, null=True)
+    party_species = models.ForeignKey(
+        PokemonSpecies, related_name="party_species", blank=True, null=True)
 
-  party_type = models.ForeignKey(Type, related_name="party_type", blank=True, null=True)
+    party_type = models.ForeignKey(Type, related_name="party_type", blank=True, null=True)
 
-  trade_species = models.ForeignKey(PokemonSpecies, related_name="trade_species", blank=True, null=True)
+    trade_species = models.ForeignKey(
+        PokemonSpecies, related_name="trade_species", blank=True, null=True)
 
-  needs_overworld_rain = models.BooleanField(default = False)
+    needs_overworld_rain = models.BooleanField(default=False)
 
-  turn_upside_down = models.BooleanField(default = False)
+    turn_upside_down = models.BooleanField(default=False)
 
 
 class PokemonForm(HasName, HasPokemon, HasOrder):
 
-  form_name = models.CharField(max_length = 30)
+    form_name = models.CharField(max_length=30)
 
-  version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
+    version_group = models.ForeignKey(VersionGroup, blank=True, null=True)
 
-  is_default = models.BooleanField(default = False)
+    is_default = models.BooleanField(default=False)
 
-  is_battle_only = models.BooleanField(default = False)
+    is_battle_only = models.BooleanField(default=False)
 
-  is_mega = models.BooleanField(default = False)
+    is_mega = models.BooleanField(default=False)
 
-  form_order = models.IntegerField(blank=True, null=True)
+    form_order = models.IntegerField(blank=True, null=True)
 
 
 class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
-  pass
+    pass
 
 
 class PokemonFormName(HasPokemonForm, IsName):
 
-  pokemon_name = models.CharField(max_length = 30)
+    pokemon_name = models.CharField(max_length=30)
 
 
 class PokemonFormSprites(HasPokemonForm):
 
-  sprites = models.CharField(max_length=500)
+    sprites = models.CharField(max_length=500)
 
 
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
-  pass
+    pass
 
 
 class PokemonHabitat(HasName):
-  pass
+    pass
 
 
 class PokemonHabitatName(IsName):
 
-  pokemon_habitat = models.ForeignKey(PokemonHabitat, blank=True, null=True, related_name="%(class)s")
+    pokemon_habitat = models.ForeignKey(
+        PokemonHabitat, blank=True, null=True, related_name="%(class)s")
 
 
 class PokemonItem(HasPokemon, HasVersion, HasItem):
 
-  rarity = models.IntegerField()
+    rarity = models.IntegerField()
 
 
-#PokemonMoveMethod
+# PokemonMoveMethod
 class MoveLearnMethod(HasName):
-  pass
+    pass
 
-#PokemonMoveMethodName
+
+# PokemonMoveMethodName
 class MoveLearnMethodName(IsName, HasMoveLearnMethod):
-  pass
+    pass
 
 
 class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
-  pass
+    pass
 
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
 
-  level = models.IntegerField()
+    level = models.IntegerField()
 
 
 class PokemonShape(HasName):
-  pass
+    pass
 
 
 class PokemonShapeName(IsName):
 
-  awesome_name = models.CharField(max_length = 30)
+    awesome_name = models.CharField(max_length=30)
 
-  pokemon_shape = models.ForeignKey(PokemonShape, blank=True, null=True, related_name="pokemonshapename")
+    pokemon_shape = models.ForeignKey(
+        PokemonShape, blank=True, null=True, related_name="pokemonshapename")
 
 
 class PokemonStat(HasPokemon, HasStat):
 
-  base_stat = models.IntegerField()
+    base_stat = models.IntegerField()
 
-  effort = models.IntegerField()
+    effort = models.IntegerField()
 
 
 class PokemonType(HasPokemon, HasType):
 
-  slot = models.IntegerField()
+    slot = models.IntegerField()
 
 
 class PokemonSprites(HasPokemon):
 
-  sprites = models.CharField(max_length=500)
+    sprites = models.CharField(max_length=500)

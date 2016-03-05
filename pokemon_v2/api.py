@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
-from .models import *
-from .serializers import *
+from .models import *  # NOQA
+from .serializers import *  # NOQA
 import re
 from hits.models import ResourceView
 
@@ -21,14 +21,14 @@ class ListOrDetailSerialRelation():
     list_serializer_class = None
 
     def get_serializer_class(self):
-        if (self.action == 'list' and self.list_serializer_class != None):
+        if (self.action == 'list' and self.list_serializer_class is not None):
             return self.list_serializer_class
         return self.serializer_class
 
 
 class NameOrIdRetrieval():
     """
-    Mixin to allow retrieval of resources by 
+    Mixin to allow retrieval of resources by
     pk (in this case ID) or by name
     """
 
@@ -38,7 +38,7 @@ class NameOrIdRetrieval():
     def get_object(self):
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)
-        lookup =  self.kwargs['pk']
+        lookup = self.kwargs['pk']
 
         if self.idPattern.match(lookup):
             resp = get_object_or_404(queryset, pk=lookup)
@@ -48,17 +48,20 @@ class NameOrIdRetrieval():
 
         else:
             resp = get_object_or_404(queryset, pk="")
-        
+
         return resp
+
 
 class IncrementingReadOnlyModelViewSet(viewsets.ReadOnlyModelViewSet):
 
     def retrieve(self, request, *args, **kwargs):
         ResourceView.objects.increment_view_count(version=2)
-        return super(IncrementingReadOnlyModelViewSet, self).retrieve(self, request, *args, **kwargs)
+        return super(
+            IncrementingReadOnlyModelViewSet, self).retrieve(self, request, *args, **kwargs)
 
 
-class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, IncrementingReadOnlyModelViewSet):
+class PokeapiCommonViewset(ListOrDetailSerialRelation,
+                           NameOrIdRetrieval, IncrementingReadOnlyModelViewSet):
     pass
 
 
@@ -85,6 +88,7 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
+
 
 class BerryFlavorResource(PokeapiCommonViewset):
 
@@ -342,7 +346,7 @@ class PokemonResource(PokeapiCommonViewset):
 
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
-    list_serializer_class =PokemonSummarySerializer
+    list_serializer_class = PokemonSummarySerializer
 
 
 class PokemonSpeciesResource(PokeapiCommonViewset):

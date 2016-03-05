@@ -1,5 +1,5 @@
 # Docker settings
-from .settings import *
+from .settings import *  # NOQA
 
 DATABASES = {
         'default': {

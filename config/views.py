@@ -3,14 +3,8 @@
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth.decorators import login_required
 
-# from pokemon.models import (
-#     Pokemon, Sprite, Move, Description, Game,
-#     EggGroup, Type, Ability, MovePokemon
-# )
-
-from pokemon_v2.models import *
+from pokemon_v2.models import *  # NOQA
 
 from hits.models import ResourceView
 
@@ -23,22 +17,8 @@ def _total_site_data():
     Using count() is drastically cheaper than len(objects.all())
     """
 
-    # v1
-    # data = dict(
-    #     pokemon=Pokemon.objects.count(),
-    #     sprites=Sprite.objects.count(),
-    #     moves=Move.objects.count(),
-    #     descriptions=Description.objects.count(),
-    #     games=Game.objects.count(),
-    #     egg_groups=EggGroup.objects.count(),
-    #     types=Type.objects.count(),
-    #     abilities=Ability.objects.count(),
-    #     move_pokes=MovePokemon.objects.count()
-    # )
-    
-
     # v2 Sorry for the brute force. Theres probably a better way to do this.
-    data = dict (
+    data = dict(
         abilities=Ability.objects.count(),
         abilitie_names=AbilityName.objects.count(),
         abilitie_effect_texts=AbilityEffectText.objects.count(),
@@ -176,61 +156,60 @@ def _total_site_data():
         version_groups=VersionGroup.objects.count(),
         version_group_move_learn_methods=VersionGroupMoveLearnMethod.objects.count(),
         version_group_regions=VersionGroupRegion.objects.count(),
-    ) 
+    )
 
     lines = 0
     for i in data.iteritems():
         lines += i[1]
 
     resources = 0
-    resources += data['abilities'];
-    resources += data['berries'];
-    resources += data['berry_flavors'];
-    resources += data['berry_firmnesses'];
-    resources += data['characteristics'];
-    resources += data['contest_types'];
-    resources += data['contest_effects'];
-    resources += data['egg_groups'];
-    resources += data['encounter_methods'];
-    resources += data['encounter_conditions'];
-    resources += data['encounter_condition_values'];
-    resources += data['evolution_chains'];
-    resources += data['evolution_triggers'];
-    resources += data['generations'];
-    resources += data['genders'];
-    resources += data['growth_rates'];
-    resources += data['items'];
-    resources += data['item_attributes'];
-    resources += data['item_categories'];
-    resources += data['item_fling_effects'];
-    resources += data['item_pockets'];
-    resources += data['languages'];
-    resources += data['locations'];
-    resources += data['location_areas'];
-    resources += data['moves'];
-    resources += data['move_ailments'];
-    resources += data['move_categories'];
-    resources += data['move_battle_styles'];
-    resources += data['move_damage_classes'];
-    resources += data['move_learn_methods'];
-    resources += data['move_targets'];
-    resources += data['natures'];
-    resources += data['pal_park_areas'];
-    resources += data['pokedexes'];
-    resources += data['pokemon'];
-    resources += data['pokemon_colors'];
-    resources += data['pokemon_forms'];
-    resources += data['pokemon_habitats'];
-    resources += data['pokemon_shapes'];
-    resources += data['pokemon_species'];
-    resources += data['pokeathlon_stats'];
-    resources += data['regions'];
-    resources += data['stats'];
-    resources += data['super_contest_effects'];
-    resources += data['types'];
-    resources += data['versions'];
-    resources += data['version_groups'];
-
+    resources += data['abilities']
+    resources += data['berries']
+    resources += data['berry_flavors']
+    resources += data['berry_firmnesses']
+    resources += data['characteristics']
+    resources += data['contest_types']
+    resources += data['contest_effects']
+    resources += data['egg_groups']
+    resources += data['encounter_methods']
+    resources += data['encounter_conditions']
+    resources += data['encounter_condition_values']
+    resources += data['evolution_chains']
+    resources += data['evolution_triggers']
+    resources += data['generations']
+    resources += data['genders']
+    resources += data['growth_rates']
+    resources += data['items']
+    resources += data['item_attributes']
+    resources += data['item_categories']
+    resources += data['item_fling_effects']
+    resources += data['item_pockets']
+    resources += data['languages']
+    resources += data['locations']
+    resources += data['location_areas']
+    resources += data['moves']
+    resources += data['move_ailment']
+    resources += data['move_categories']
+    resources += data['move_battle_styles']
+    resources += data['move_damage_classes']
+    resources += data['move_learn_methods']
+    resources += data['move_targets']
+    resources += data['natures']
+    resources += data['pal_park_areas']
+    resources += data['pokedexes']
+    resources += data['pokemon']
+    resources += data['pokemon_colors']
+    resources += data['pokemon_forms']
+    resources += data['pokemon_habitats']
+    resources += data['pokemon_shapes']
+    resources += data['pokemon_species']
+    resources += data['pokeathlon_stats']
+    resources += data['regions']
+    resources += data['stats']
+    resources += data['super_contest_effects']
+    resources += data['types']
+    resources += data['versions']
+    resources += data['version_groups']
 
     data['total_lines'] = lines
     data['total_resources'] = resources

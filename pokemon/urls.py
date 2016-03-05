@@ -2,17 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.conf.urls import patterns, include, url
-
-
-from django.contrib import admin
-admin.autodiscover()
-
-##################################
-#
-#   V1 API setup using Tastypie
-# 
-##################################
+from django.conf.urls import include, url
 
 from tastypie.api import Api
 
@@ -21,6 +11,16 @@ from pokemon.api import (
     SpriteResource, DescriptionResource, EggResource, MoveResource,
     PokedexResource
 )
+
+
+from django.contrib import admin
+admin.autodiscover()
+
+##################################
+#
+#   V1 API setup using Tastypie
+#
+##################################
 
 api_resources = Api()
 api_resources.register(PokemonResource())

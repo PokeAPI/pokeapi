@@ -8,7 +8,7 @@
 #     $ build_all()
 #
 #  Each time the build script is run it will iterate over each table in the database,
-#  wipe it and rewrite each r§ow using the data found in data/v2/csv.
+#  wipe it and rewrite each row using the data found in data/v2/csv.
 #  If you don't need all of the data just go into data/v2/build.py and
 #  just call one of the build functions found in this script
 
@@ -139,7 +139,7 @@ def build_languages():
             languageName = LanguageName(
                 language=Language.objects.get(pk=int(info[0])),
                 local_language=Language.objects.get(pk=int(info[1])),
-                nam=info[2]
+                name=info[2]
             )
 
             languageName.save()

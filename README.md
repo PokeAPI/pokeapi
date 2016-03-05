@@ -13,7 +13,7 @@ http://pokeapi.co
 
 Quite a lot of data is missing from the V1 API.
 
-**As of January 2015, no new data will be added to the v1 API, you will have to use the V2 API instead. This is part of an ongoing deprecation of the v1 API.**
+**As of January 2015, no new data will be added to the v1 API, you will have to use the V2 API instead.**
 
 See [This blog post for more information](http://phalt.co/if-you-have-data-they-will-consume-it).
 

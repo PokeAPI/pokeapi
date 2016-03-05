@@ -37,7 +37,7 @@ class BerryFlavorSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BerryFlavor
         fields = ('name', 'url')
-        
+
 class BerrySummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -181,7 +181,7 @@ class MoveDamageClassSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = MoveDamageClass
         fields = ('name', 'url')
-        
+
 class MoveMetaAilmentSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -193,13 +193,13 @@ class MoveMetaCategorySummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = MoveMetaCategory
         fields = ('name', 'url')
-        
+
 class MoveTargetSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = MoveTarget
         fields = ('name', 'url')
-        
+
 class MoveSummarySerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
@@ -237,37 +237,37 @@ class PokedexSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'url')
 
 class PokemonColorSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
+
     class Meta:
         model = PokemonColor
         fields = ('name', 'url')
-        
+
 class PokemonHabitatSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
+
     class Meta:
         model = PokemonHabitat
         fields = ('name', 'url')
 
 class PokemonShapeSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
+
     class Meta:
         model = PokemonShape
         fields = ('name', 'url')
-        
+
 class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
+
     class Meta:
         model = Pokemon
         fields = ('name', 'url')
-        
+
 class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
 
-    class Meta: 
+    class Meta:
         model = PokemonSpecies
         fields = ('name', 'url')
 
 class PokemonFormSummarySerializer(serializers.HyperlinkedModelSerializer):
-    
+
     class Meta:
         model = PokemonForm
         fields = ('name', 'url')
@@ -353,7 +353,7 @@ class PokemonAbilitySerializer(serializers.ModelSerializer):
 
     pokemon = PokemonSummarySerializer()
     ability = AbilitySummarySerializer()
-    
+
     class Meta:
         model = PokemonAbility
         fields = ('is_hidden', 'slot', 'ability', 'pokemon')
@@ -362,7 +362,7 @@ class PokemonDexEntrySerializer(serializers.ModelSerializer):
 
     entry_number = serializers.IntegerField(source="pokedex_number")
     pokedex = PokedexSummarySerializer()
-    
+
     class Meta:
         model = PokemonDexNumber
         fields = ('entry_number', 'pokedex')
@@ -826,7 +826,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
     encounter_method_rates = serializers.SerializerMethodField('get_method_rates')
     pokemon_encounters = serializers.SerializerMethodField('get_encounters')
     names = LocationAreaNameSerializer(many=True, read_only=True, source='locationareaname')
-    
+
     class Meta:
         model = LocationArea
         fields = ('id', 'name', 'game_index', 'encounter_method_rates', 'location', 'names', 'pokemon_encounters')
@@ -889,7 +889,6 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
 
             # each pokemon has multiple versions it could be encountered in
             for ver in poke_encounters.values('version').distinct():
-
                 version_detail = OrderedDict()
                 version_detail['version'] = version_data[ver['version'] - 1]
                 version_detail['max_chance'] = 0
@@ -917,7 +916,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             encounters_list.append(pokemon_detail)
 
         return encounters_list
-        
+
 
 class LocationGameIndexSerializer(serializers.ModelSerializer):
 
@@ -1014,7 +1013,7 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ability
         fields = (
-            'id', 
+            'id',
             'name',
             'is_main_series',
             'generation',
@@ -1298,7 +1297,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key] 
+                sprites_data[key] = 'http://' + host + sprites_data[key]
 
         return sprites_data
 
@@ -1647,7 +1646,7 @@ class MachineDetailSerializer(serializers.ModelSerializer):
     item = ItemSummarySerializer()
     version_group = VersionSummarySerializer()
     move = MoveSummarySerializer()
-    
+
     class Meta:
         model = Machine
         fields = ('id', 'item', 'version_group', 'move')
@@ -1670,7 +1669,7 @@ class MoveBattleStyleNameSerializer(serializers.ModelSerializer):
 class MoveBattleStyleDetailSerializer(serializers.ModelSerializer):
 
     names = MoveBattleStyleNameSerializer(many=True, read_only=True, source="movebattlestylename")
-    
+
     class Meta:
         model = MoveBattleStyle
         fields = ('id', 'name', 'names')
@@ -1798,7 +1797,7 @@ class MoveMetaSerializer(serializers.ModelSerializer):
             'flinch_chance',
             'stat_chance'
         )
- 
+
 
 
 #############################
@@ -1872,7 +1871,7 @@ class MoveEffectEffectTextSerializer(serializers.ModelSerializer):
     language = LanguageSummarySerializer()
 
     class Meta:
-        model = MoveEffectEffectText 
+        model = MoveEffectEffectText
         fields = ('effect', 'short_effect', 'language')
 
 
@@ -1881,7 +1880,7 @@ class MoveEffectChangeEffectTextSerializer(serializers.ModelSerializer):
     language = LanguageSummarySerializer()
 
     class Meta:
-        model = MoveEffectChangeEffectText 
+        model = MoveEffectChangeEffectText
         fields = ('effect', 'language')
 
 
@@ -1916,11 +1915,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Move
         fields = (
-            'id', 
+            'id',
             'name',
             'accuracy',
             'effect_chance',
-            'pp', 
+            'pp',
             'priority',
             'power',
             'contest_combos',
@@ -2006,7 +2005,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         for change in stat_changes:
             del change['move']
-            
+
         return stat_changes
 
 
@@ -2018,7 +2017,7 @@ class PalParkSerializer(serializers.ModelSerializer):
 
     area = PalParkAreaSummarySerializer(read_only=True, source="pal_park_area")
     pokemon_species = PokemonSpeciesSummarySerializer()
-    
+
     class Meta:
         model = PalPark
         fields = ('base_score', 'rate', 'area', 'pokemon_species')
@@ -2037,7 +2036,7 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
 
     names = PalParkAreaNameSerializer(many=True, read_only=True, source="palparkareaname")
     pokemon_encounters = serializers.SerializerMethodField('get_encounters')
-    
+
     class Meta:
         model = PalParkArea
         fields = ('id', 'name', 'names', 'pokemon_encounters')
@@ -2072,7 +2071,7 @@ class PokemonColorDetailSerializer(serializers.ModelSerializer):
 
     names = PokemonColorNameSerializer(many=True, read_only=True, source="pokemoncolorname")
     pokemon_species = PokemonSpeciesSummarySerializer(many=True, read_only=True, source="pokemonspecies")
-    
+
     class Meta:
         model = PokemonColor
         fields = ('id', 'name', 'names', 'pokemon_species')
@@ -2095,7 +2094,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
     sprites = serializers.SerializerMethodField('get_pokemon_form_sprites')
-    
+
     class Meta:
         model = PokemonForm
         fields = ('id', 'name', 'order', 'form_order', 'is_default', 'is_battle_only', 'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group')
@@ -2110,7 +2109,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key] 
+                sprites_data[key] = 'http://' + host + sprites_data[key]
 
         return sprites_data
 
@@ -2132,7 +2131,7 @@ class PokemonHabitatDetailSerializer(serializers.ModelSerializer):
 
     names = PokemonHabitatNameSerializer(many=True, read_only=True, source="pokemonhabitatname")
     pokemon_species = PokemonSpeciesSummarySerializer(many=True, read_only=True, source='pokemonspecies')
-    
+
     class Meta:
         model = PokemonHabitat
         fields = ('id', 'name', 'names', 'pokemon_species')
@@ -2183,7 +2182,7 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
 
 
 class PokemonMoveSerializer(serializers.ModelSerializer):
-    
+
     class Meta:
         model = PokemonMove
 
@@ -2207,7 +2206,7 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
     names = serializers.SerializerMethodField('get_shape_names')
     awesome_names = serializers.SerializerMethodField('get_shape_awesome_names')
     pokemon_species = PokemonSpeciesSummarySerializer(many=True, read_only=True, source='pokemonspecies')
-    
+
     class Meta:
         model = PokemonShape
         fields = ('id', 'name', 'awesome_names', 'names', 'pokemon_species')
@@ -2283,7 +2282,7 @@ class PokemonSpritesSerializer(serializers.ModelSerializer):
         fields = ('sprites',)
 
 class PokemonDetailSerializer(serializers.ModelSerializer):
-    
+
     abilities = serializers.SerializerMethodField('get_pokemon_abilities')
     game_indices = PokemonGameIndexSerializer(many=True, read_only=True, source="pokemongameindex")
     moves = serializers.SerializerMethodField('get_pokemon_moves')
@@ -2302,7 +2301,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             'name',
             'base_experience',
             'height',
-            'is_default', 
+            'is_default',
             'order',
             'weight',
             'abilities',
@@ -2326,10 +2325,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key] 
+                sprites_data[key] = 'http://' + host + sprites_data[key]
 
         return sprites_data
-        
+
 
     def get_pokemon_moves(self, obj):
 
@@ -2553,7 +2552,7 @@ class PokemonSpeciesEvolutionSerializer(serializers.ModelSerializer):
     This is here purely to help build pokemon evolution chains
     """
 
-    class Meta: 
+    class Meta:
         model = PokemonSpecies
         fields = ('name', 'id', 'evolves_from_species', 'is_baby')
 
@@ -2576,7 +2575,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     evolution_chain = EvolutionChainSummarySerializer()
     pal_park_encounters = serializers.SerializerMethodField('get_encounters')
 
-    class Meta: 
+    class Meta:
         model = PokemonSpecies
         fields = (
             'id',
@@ -2740,9 +2739,10 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
             if species['evolves_from_species']:
 
                 # In case this pokemon is one of multiple evolutions a pokemon can make
-                if previous_species['id'] == species['evolves_from_species']:
-                    current_evolutions = previous_entry['evolves_to']
-                
+                if previous_species:
+                    if previous_species['id'] == species['evolves_from_species']:
+                        current_evolutions = previous_entry['evolves_to']
+
                 entry = OrderedDict()
 
                 many=False
@@ -2751,7 +2751,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                 except PokemonEvolution.MultipleObjectsReturned:
                    evolution_object = PokemonEvolution.objects.filter(evolved_species=species['id'])
                    many=True
-                
+
                 evolution_data = PokemonEvolutionSerializer(evolution_object, many=many, context=self.context).data
 
                 current_evolutions.append(entry)
@@ -2773,7 +2773,7 @@ class PokemonDexNumberSerializer(serializers.ModelSerializer):
 
     entry_number = serializers.IntegerField(source="pokedex_number")
     pokemon_species = PokemonSpeciesSummarySerializer()
-    
+
     class Meta:
         model = PokemonDexNumber
         fields = ('pokedex', 'entry_number', 'pokemon_species')

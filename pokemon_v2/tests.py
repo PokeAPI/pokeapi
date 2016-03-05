@@ -1409,7 +1409,7 @@ class APIData():
 
     @classmethod
     def setup_nature_data(self, decreased_stat=None, increased_stat=None, likes_flavor=None, hates_flavor=None, name='ntr', game_index=1):
-        
+
         nature = Nature.objects.create (
             name = name,
             decreased_stat = decreased_stat,
@@ -1439,7 +1439,7 @@ class APIData():
 
     @classmethod
     def setup_nature_pokeathlon_stat_data(self, nature=None, pokeathlon_stat=None, max_change=1):
-        
+
         nature_pokeathlon_stat = NaturePokeathlonStat.objects.create (
             nature = nature,
             pokeathlon_stat = pokeathlon_stat,
@@ -1451,7 +1451,7 @@ class APIData():
 
     @classmethod
     def setup_nature_battle_style_preference_data(self, nature=None, move_battle_style=None, low_hp_preference=10, high_hp_preference=20):
-        
+
         nature_battle_style_preference = NatureBattleStylePreference.objects.create (
             nature = nature,
             move_battle_style = move_battle_style,
@@ -1462,7 +1462,7 @@ class APIData():
 
         return nature_battle_style_preference
 
-        
+
 
     """
     Pokedex Data
@@ -1719,7 +1719,7 @@ class APIData():
         pokemon_egg_group.save()
 
         return pokemon_egg_group
- 
+
     @classmethod
     def setup_pokemon_data(self, pokemon_species=None, name='pkmn', height=100, weight=100, base_experience=0, order=1, is_default=False):
 
@@ -1756,7 +1756,7 @@ class APIData():
 
     @classmethod
     def setup_pokemon_form_sprites_data(
-            self, pokemon_form, 
+            self, pokemon_form,
             front_default=True, front_shiny=False,
             back_default=False, back_shiny=False):
 
@@ -2191,7 +2191,7 @@ class APIData():
 
 
 
-""" 
+"""
 Tests
 """
 
@@ -2221,7 +2221,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['pokemon_species_details'][0]['pokemon_species']['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
         self.assertEqual(response.data['required_for_evolution'][0]['name'], evolved_species.name)
         self.assertEqual(response.data['required_for_evolution'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, evolved_species.pk))
-        
+
 
     """
     Language Tests
@@ -2285,8 +2285,8 @@ class APITests(APIData, APITestCase):
         # version group params
         self.assertEqual(response.data['version_groups'][0]['name'], version_group.name)
         self.assertEqual(response.data['version_groups'][0]['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, version_group.pk))
-        
-        
+
+
 
     """
     Generation Tests
@@ -2387,7 +2387,7 @@ class APITests(APIData, APITestCase):
         # pokedex group
         self.assertEqual(response.data['pokedexes'][0]['name'], pokedex.name)
         self.assertEqual(response.data['pokedexes'][0]['url'], '{}{}/pokedex/{}/'.format(test_host, api_v2, pokedex.pk))
-        
+
 
 
     """
@@ -2414,7 +2414,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['names'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, egg_group_name.language.pk))
         # species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
-        self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))    
+        self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
 
 
 
@@ -2434,7 +2434,7 @@ class APITests(APIData, APITestCase):
         pokemon_ability = self.setup_pokemon_ability_data(ability=ability, pokemon=pokemon)
 
         response = self.client.get('{}/ability/{}/'.format(api_v2, ability.pk))
-        
+
         # base params
         self.assertEqual(response.data['id'], ability.pk)
         self.assertEqual(response.data['name'], ability.name)
@@ -2467,7 +2467,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['pokemon'][0]['slot'], pokemon_ability.slot)
         self.assertEqual(response.data['pokemon'][0]['pokemon']['name'], pokemon.name)
         self.assertEqual(response.data['pokemon'][0]['pokemon']['url'], '{}{}/pokemon/{}/'.format(test_host, api_v2, pokemon.pk))
-        
+
 
 
     """
@@ -2588,7 +2588,7 @@ class APITests(APIData, APITestCase):
         sprites_data = json.loads(item_sprites.sprites)
 
         response = self.client.get('{}/item/{}/'.format(api_v2, item.pk), HTTP_HOST='testserver')
-        
+
         # base params
         self.assertEqual(response.data['id'], item.pk)
         self.assertEqual(response.data['name'], item.name)
@@ -2690,7 +2690,7 @@ class APITests(APIData, APITestCase):
         berry = self.setup_berry_data(name='base bry', natural_gift_type=type)
         berry_flavor = self.setup_berry_flavor_data(name='bry flvr for base bry')
         berry_flavor_map = self.setup_berry_flavor_map_data(berry=berry, berry_flavor=berry_flavor)
-        
+
         response = self.client.get('{}/berry/{}/'.format(api_v2, berry.pk))
 
         # base params
@@ -2715,7 +2715,7 @@ class APITests(APIData, APITestCase):
         # natural gift type
         self.assertEqual(response.data['natural_gift_type']['name'], type.name)
         self.assertEqual(response.data['natural_gift_type']['url'], '{}{}/type/{}/'.format(test_host, api_v2, type.pk))
-        
+
 
 
     """
@@ -2753,7 +2753,7 @@ class APITests(APIData, APITestCase):
         # species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
 
     """
@@ -2894,7 +2894,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['flavor_text_entries'][0]['flavor_text'], contest_effect_flavor_text.flavor_text)
         self.assertEqual(response.data['flavor_text_entries'][0]['language']['name'], contest_effect_flavor_text.language.name)
         self.assertEqual(response.data['flavor_text_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, contest_effect_flavor_text.language.pk))
-        
+
 
     def test_super_contest_effect_api(self):
 
@@ -2916,8 +2916,8 @@ class APITests(APIData, APITestCase):
         # move params
         self.assertEqual(response.data['moves'][0]['name'], move.name)
         self.assertEqual(response.data['moves'][0]['url'], '{}{}/move/{}/'.format(test_host, api_v2, move.pk))
-        
-         
+
+
 
     """
     Type Tests
@@ -3060,7 +3060,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['pokemon_entries'][0]['entry_number'], dex_entry.pokedex_number)
         self.assertEqual(response.data['pokemon_entries'][0]['pokemon_species']['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_entries'][0]['pokemon_species']['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
     """
     Move Tests
@@ -3315,8 +3315,8 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['effect'], move_effect_change_effect_text.effect)
         self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['language']['name'], move_effect_change_effect_text.language.name)
         self.assertEqual(response.data['effect_changes'][0]['effect_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, move_effect_change_effect_text.language.pk))
-        
-        
+
+
 
     """
     Stat Tests
@@ -3364,7 +3364,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['affecting_moves']['decrease'][0]['move']['url'], '{}{}/move/{}/'.format(test_host, api_v2, decrease_move.pk))
         # characteristics params
         self.assertEqual(response.data['characteristics'][0]['url'], '{}{}/characteristic/{}/'.format(test_host, api_v2, characteristic.pk))
-        
+
 
     def test_pokeathlon_stat_api(self):
 
@@ -3382,7 +3382,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['names'][0]['name'], pokeathlon_stat_name.name)
         self.assertEqual(response.data['names'][0]['language']['name'], pokeathlon_stat_name.language.name)
         self.assertEqual(response.data['names'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, pokeathlon_stat_name.language.pk))
-        
+
 
     """
     Characteristic Tests
@@ -3422,7 +3422,7 @@ class APITests(APIData, APITestCase):
         increased_stat = self.setup_stat_data(name='ncrs stt for base ntr')
         nature = self.setup_nature_data(name='base ntr', hates_flavor=hates_flavor, likes_flavor=likes_flavor, decreased_stat=decreased_stat, increased_stat=increased_stat)
         nature_name = self.setup_nature_name_data(nature, name='base ntr name')
-        
+
         pokeathlon_stat = self.setup_pokeathlon_stat_data(name='pkeathln stt for ntr stt')
         nature_pokeathlon_stat = self.setup_nature_pokeathlon_stat_data(nature=nature, pokeathlon_stat=pokeathlon_stat, max_change=1)
 
@@ -3486,7 +3486,7 @@ class APITests(APIData, APITestCase):
         # species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
     def test_pokemon_color_api(self):
 
@@ -3508,7 +3508,7 @@ class APITests(APIData, APITestCase):
         # species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
     def test_pokemon_shape_api(self):
 
@@ -3534,7 +3534,7 @@ class APITests(APIData, APITestCase):
         # species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
     def test_pokemon_species_api(self):
 
@@ -3544,11 +3544,11 @@ class APITests(APIData, APITestCase):
         pokemon_species_form_description = self.setup_pokemon_species_form_description_data(pokemon_species, description='frm dscr for pkmn spcs')
         pokemon_species_flavor_text = self.setup_pokemon_species_flavor_text_data(pokemon_species, flavor_text='flvr txt for pkmn spcs')
         pokedex = self.setup_pokedex_data(name='pkdx for pkmn spcs')
-        
+
         pal_park = self.setup_pal_park_data(pokemon_species=pokemon_species)
 
         dex_number = self.setup_pokemon_dex_entry_data(pokemon_species=pokemon_species, pokedex=pokedex, entry_number=44)
-        
+
         egg_group = self.setup_egg_group_data(name='egg grp for pkmn spcs')
         self.setup_pokemon_egg_group_data(pokemon_species=pokemon_species, egg_group=egg_group)
 
@@ -3622,7 +3622,7 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['pal_park_encounters'][0]['rate'], pal_park.rate)
         self.assertEqual(response.data['pal_park_encounters'][0]['area']['name'], pal_park.pal_park_area.name)
         self.assertEqual(response.data['pal_park_encounters'][0]['area']['url'], '{}{}/pal-park-area/{}/'.format(test_host, api_v2, pal_park.pal_park_area.pk))
-        
+
 
     def test_pokemon_api(self):
 
@@ -3649,7 +3649,7 @@ class APITests(APIData, APITestCase):
                     version_group=version_group,
                     level=move)
             pokemon_moves.append(new_move)
-        
+
         encounter_method = self.setup_encounter_method_data(name='encntr mthd for lctn area')
         location_area1 = self.setup_location_area_data(name='lctn1 area for base pkmn')
         encounter_slot1 = self.setup_encounter_slot_data(encounter_method, slot=1, rarity=30)
@@ -3747,10 +3747,10 @@ class APITests(APIData, APITestCase):
         # game indices params
         self.assertEqual(response.data['game_indices'][0]['game_index'], pokemon_game_index.game_index)
         self.assertEqual(response.data['game_indices'][0]['version']['name'], pokemon_game_index.version.name)
-        self.assertEqual(response.data['game_indices'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_game_index.version.pk))    
+        self.assertEqual(response.data['game_indices'][0]['version']['url'], '{}{}/version/{}/'.format(test_host, api_v2, pokemon_game_index.version.pk))
         # form params
         self.assertEqual(response.data['forms'][0]['name'], pokemon_form.name)
-        self.assertEqual(response.data['forms'][0]['url'], '{}{}/pokemon-form/{}/'.format(test_host, api_v2, pokemon_form.pk))    
+        self.assertEqual(response.data['forms'][0]['url'], '{}{}/pokemon-form/{}/'.format(test_host, api_v2, pokemon_form.pk))
         # encounter params
         self.assertEqual(response.data['location_area_encounters'][0]['location_area']['name'], location_area1.name)
         self.assertEqual(response.data['location_area_encounters'][0]['location_area']['url'], '{}{}/location-area/{}/'.format(test_host, api_v2, location_area1.pk))
@@ -3772,7 +3772,7 @@ class APITests(APIData, APITestCase):
         # sprite params
         self.assertEqual(response.data['sprites']['front_default'], '{}{}'.format(test_host, sprites_data['front_default']))
         self.assertEqual(response.data['sprites']['back_default'], None)
-        
+
 
     def test_pokemon_form_api(self):
 
@@ -3832,7 +3832,7 @@ class APITests(APIData, APITestCase):
         # pokemon species params
         self.assertEqual(response.data['pokemon_species'][0]['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_species'][0]['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-        
+
 
 
     def test_evolution_chain_api(self):
@@ -3950,7 +3950,7 @@ class APITests(APIData, APITestCase):
         # condition params
         self.assertEqual(response.data['condition']['name'], encounter_condition.name)
         self.assertEqual(response.data['condition']['url'], '{}{}/encounter-condition/{}/'.format(test_host, api_v2, encounter_condition.pk))
-        
+
 
     def test_encounter_condition_api(self):
 
@@ -3972,7 +3972,7 @@ class APITests(APIData, APITestCase):
         # value params
         self.assertEqual(response.data['values'][0]['name'], encounter_condition_value.name)
         self.assertEqual(response.data['values'][0]['url'], '{}{}/encounter-condition-value/{}/'.format(test_host, api_v2, encounter_condition_value.pk))
-        
+
 
     """
     Pal Park Tests
@@ -4001,5 +4001,3 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data['pokemon_encounters'][0]['rate'], pal_park.rate)
         self.assertEqual(response.data['pokemon_encounters'][0]['pokemon_species']['name'], pokemon_species.name)
         self.assertEqual(response.data['pokemon_encounters'][0]['pokemon_species']['url'], '{}{}/pokemon-species/{}/'.format(test_host, api_v2, pokemon_species.pk))
-
-

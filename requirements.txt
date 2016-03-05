@@ -1,13 +1,12 @@
-Django==1.7.1
+Django==1.8.10
 Pillow==2.6.1
-South==1.0
 Unipath==1.0
 coverage==3.6
 django-appconf==0.6
 django-cors-headers==1.0.0
 django-discover-runner==0.4
 django-imagekit==3.2.4
-django-tastypie==0.12.1
+django-tastypie==0.13.3
 django-markdown-deux==1.0.5
 djangorestframework>=3.1.0
 gunicorn==0.17.0

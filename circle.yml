@@ -1,0 +1,7 @@
+dependencies:
+  pre:
+    - pip install -r requirements.txt
+
+test:
+  override:
+    - make test

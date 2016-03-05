@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
+from django.conf.urls import include, url
 
 #####################################
 #
 #   V2 API setup using Django Rest
-# 
+#
 #####################################
 
 from rest_framework import routers
-from pokemon_v2.api import *
+from pokemon_v2.api import *  # NOQA
 
 router = routers.DefaultRouter()
 
@@ -67,15 +66,9 @@ router.register(r"version-group", VersionGroupResource)
 ###########################
 #
 #   Gotta Get Em' All
-# 
+#
 ###########################
 
 urlpatterns = [
-	
-	url(r'^api/v2/', include(router.urls)),
-
-	# url(r'^.*$', 
- #        TemplateView.as_view(template_name='home.html'),
- #        name="home"
- #    )
+    url(r'^api/v2/', include(router.urls)),
 ]

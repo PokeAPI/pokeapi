@@ -1,6 +1,12 @@
 install:
 	pip install -r requirements.txt
 
+dev-install:
+	pip install -r test-requirements.txt
+
+lint:
+	flake8 .
+
 setup:
 	python manage.py migrate --settings=config.local
 	python manage.py loaddata dev-data.json --settings=config.local

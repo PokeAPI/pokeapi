@@ -188,7 +188,7 @@ def _total_site_data():
     resources += data['locations']
     resources += data['location_areas']
     resources += data['moves']
-    resources += data['move_ailment']
+    resources += data['move_ailments']
     resources += data['move_categories']
     resources += data['move_battle_styles']
     resources += data['move_damage_classes']

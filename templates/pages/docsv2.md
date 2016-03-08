@@ -15,7 +15,7 @@
 					<li><a href="#berry-flavors">Berry Flavors</a></li>
 					<li><a href="#characteristics">Characteristics</a></li>
 					<li><a href="#contest-types">Contest Types</a></li>
-					<li><a href="#contest-effects">Contest Effects</a></li>
+					<li><a href="#contest-effects">Contest Effects</a></li>ba
 					<li><a href="#egg-groups">Egg Groups</a></li>
 					<li><a href="#encounter-methods">Encounter Methods</a></li>
 					<li><a href="#encounter-conditions">Encounter Conditions</a></li>
@@ -957,7 +957,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 | names               | The name of this item listed in different languages                  | list [Name](#resourcename) |
 | sprites        	    | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites) |
 | held_by_pokemon     | A list of Pokémon that might be found in the wild holding this item  | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
-| baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | list [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
+| baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
 
 #### Item Sprites
 

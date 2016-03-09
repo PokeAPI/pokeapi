@@ -15,7 +15,7 @@
 					<li><a href="#berry-flavors">Berry Flavors</a></li>
 					<li><a href="#characteristics">Characteristics</a></li>
 					<li><a href="#contest-types">Contest Types</a></li>
-					<li><a href="#contest-effects">Contest Effects</a></li>ba
+					<li><a href="#contest-effects">Contest Effects</a></li>
 					<li><a href="#egg-groups">Egg Groups</a></li>
 					<li><a href="#encounter-methods">Encounter Methods</a></li>
 					<li><a href="#encounter-conditions">Encounter Conditions</a></li>

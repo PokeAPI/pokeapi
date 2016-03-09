@@ -30,9 +30,7 @@ def _total_site_data():
 
     data = {
         'total_resources': 0,
-        'total_lines': 0,
-        'total_resources_v1': 0,
-        'total_lines_v1': 0
+        'total_lines': 0
     }
 
     # v2 objects count
@@ -49,13 +47,13 @@ def _total_site_data():
     # v1 objects count
     for name, obj in inspect.getmembers(models_v1):
         if inspect.isclass(obj) and hasattr(obj, 'objects'):
-            data['total_resources_v1'] += obj.objects.count()
+            data['total_resources'] += obj.objects.count()
 
     # v1 line count
     for file_name in os.listdir('data/v1'):
         if file_name.endswith('.csv'):
             file_read = open('data/v1/' + file_name)
-            data['total_lines_v1'] += sum(1 for row in file_read)
+            data['total_lines'] += sum(1 for row in file_read)
 
     return data
 

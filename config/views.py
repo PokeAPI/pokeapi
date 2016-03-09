@@ -1,7 +1,6 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 import inspect
-import os
 import re
 
 from django.shortcuts import render_to_response
@@ -39,23 +38,10 @@ def _total_site_data():
             data[convert(name)] = obj.objects.count()
             data['total_resources'] += obj.objects.count()
 
-    # v2 line count
-    for file_name in os.listdir('data/v2/csv'):
-        file_read = open('data/v2/csv/' + file_name)
-        data['total_lines'] += sum(1 for row in file_read)
-        file_read.close()
-
     # v1 objects count
     for name, obj in inspect.getmembers(models_v1):
         if inspect.isclass(obj) and hasattr(obj, 'objects'):
             data['total_resources'] += obj.objects.count()
-
-    # v1 line count
-    for file_name in os.listdir('data/v1'):
-        if file_name.endswith('.csv'):
-            file_read = open('data/v1/' + file_name)
-            data['total_lines'] += sum(1 for row in file_read)
-            file_read.close()
 
     return data
 

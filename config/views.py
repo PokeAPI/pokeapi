@@ -1,22 +1,21 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
-import inspect, re
+import inspect
+import os
+import re
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.contrib.auth.decorators import login_required
-
-# from pokemon.models import (
-#     Pokemon, Sprite, Move, Description, Game,
-#     EggGroup, Type, Ability, MovePokemon
-# )
-
-from pokemon_v2.models import *
-import pokemon_v2.models as models
 
 from hits.models import ResourceView
+from pokemon import models as models_v1
+from pokemon_v2 import models
 
 
+
+# converts CapitalCase to snake_case, for dictionary keys
+# makes keys singular, not plural i.e. type, not types, but I
+# think it's worth it for consistency and DRYness
 def convert(name):
     s1 = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', name)
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', s1).lower()
@@ -30,36 +29,35 @@ def _total_site_data():
     Using count() is drastically cheaper than len(objects.all())
     """
 
-    # v1
-    # data = dict(
-    #     pokemon=Pokemon.objects.count(),
-    #     sprites=Sprite.objects.count(),
-    #     moves=Move.objects.count(),
-    #     descriptions=Description.objects.count(),
-    #     games=Game.objects.count(),
-    #     egg_groups=EggGroup.objects.count(),
-    #     types=Type.objects.count(),
-    #     abilities=Ability.objects.count(),
-    #     move_pokes=MovePokemon.objects.count()
-    # )
+    data = {
+        'total_resources': 0,
+        'total_lines': 0,
+        'total_resources_v1': 0,
+        'total_lines_v1': 0
+    }
 
-    data = {}
-    resource_count = 0
-
+    # v2 objects count
     for name, obj in inspect.getmembers(models):
-        if inspect.isclass(obj):
-            try :
-                data[convert(name)] = obj.objects.count()
-                resource_count += obj.objects.count()
-            except(AttributeError):
-                pass
+        if inspect.isclass(obj) and hasattr(obj, 'objects'):
+            data[convert(name)] = obj.objects.count()
+            data['total_resources'] += obj.objects.count()
 
-    print resource_count
+    # v2 line count
+    for file_name in os.listdir('data/v2/csv'):
+        file_read = open('data/v2/csv/' + file_name)
+        data['total_lines'] += sum(1 for row in file_read)
 
-    data['total_lines'] = 0
-    data['total_resources'] = resource_count
+    # v1 objects count
+    for name, obj in inspect.getmembers(models_v1):
+        if inspect.isclass(obj) and hasattr(obj, 'objects'):
+            data['total_resources_v1'] += obj.objects.count()
 
-    print type(data)
+    # v1 line count
+    for file_name in os.listdir('data/v1'):
+        if file_name.endswith('.csv'):
+            file_read = open('data/v1/' + file_name)
+            data['total_lines_v1'] += sum(1 for row in file_read)
+
     return data
 
 

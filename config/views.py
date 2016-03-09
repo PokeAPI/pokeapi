@@ -43,6 +43,7 @@ def _total_site_data():
     for file_name in os.listdir('data/v2/csv'):
         file_read = open('data/v2/csv/' + file_name)
         data['total_lines'] += sum(1 for row in file_read)
+        file_read.close()
 
     # v1 objects count
     for name, obj in inspect.getmembers(models_v1):
@@ -54,6 +55,7 @@ def _total_site_data():
         if file_name.endswith('.csv'):
             file_read = open('data/v1/' + file_name)
             data['total_lines'] += sum(1 for row in file_read)
+            file_read.close()
 
     return data
 

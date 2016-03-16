@@ -1537,7 +1537,7 @@ Targets moves can be directed at during battle. Targets can be Pokémon, environ
 ## Locations
 Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.
 
-### GET api/v2/location/{id or name}
+### GET api/v2/location/{id}
 
 ###### Example response
 
@@ -1586,7 +1586,7 @@ Locations that can be visited within the games. Locations make up sizable portio
 ## Location Areas
 Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.
 
-### GET api/v2/location-area/{id or name}
+### GET api/v2/location-area/{id}
 
 ###### Example response
 

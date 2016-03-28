@@ -957,7 +957,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 | names               | The name of this item listed in different languages                  | list [Name](#resourcename) |
 | sprites        	    | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites) |
 | held_by_pokemon     | A list of Pokémon that might be found in the wild holding this item  | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
-| baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | list [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
+| baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
 
 #### Item Sprites
 
@@ -1239,7 +1239,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | pp             | Power points. The number of times this move can be used                                                                                                                   | integer |
 | priority       | A value between -8 and 8. Sets the order in which moves are executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority) for greater detail. | integer |
 | power          | The base power of this move with a value of 0 if it does not have a base power                                                                                            | integer |
-| contest_combos | A detail of normal and super contest combos that require this move                                                                                                        | list [ContestComboSets](#contestcombosets) |
+| contest_combos | A detail of normal and super contest combos that require this move                                                                                                        | [ContestComboSets](#contestcombosets) |
 | contest_type   | The type of appeal this move gives a Pokémon when used in a contest                                                                                                       | [NamedAPIResource](#namedapiresource) ([ContestType](#contest-types)) |
 | contest_effect | The effect the move has when used in a contest                                                                                                                            | [NamedAPIResource](#namedapiresource) ([ContestEffect](#contest-effects)) |
 | damage_class   | The type of damage the move inflicts on the target, e.g. physical                                                                                                         | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
@@ -1250,7 +1250,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | names          | The name of this move listed in different languages                                                                                                                       | list [Name](#resourcename) |
 | past_values    | A list of move resource value changes across ersion groups of the game                                                                                                    | list [PastMoveStatValues](#pastmovestatvalues) |
 | stat_changes   | A list of stats this moves effects and how much it effects them                                                                                                           | list [MoveStatChange](#movestatchange) |
-| contest_effect | The effect the move has when used in a super contest                                                                                                                      | [NamedAPIResource](#namedapiresource) ([ContestEffect](#contest-effects)) |
+| super_contest_effect | The effect the move has when used in a super contest                                                                                                                      | [APIResource](#apiresource) ([SuperContestEffect](#super-contest-effects)) |
 | target         | The type of target that will recieve the effects of the attack                                                                                                            | [NamedAPIResource](#namedapiresource) ([MoveTarget](#move-targets)) |
 | type           | The elemental type of this move                                                                                                                                           | [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 
@@ -1537,7 +1537,7 @@ Targets moves can be directed at during battle. Targets can be Pokémon, environ
 ## Locations
 Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.
 
-### GET api/v2/location/{id or name}
+### GET api/v2/location/{id}
 
 ###### Example response
 
@@ -1586,7 +1586,7 @@ Locations that can be visited within the games. Locations make up sizable portio
 ## Location Areas
 Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.
 
-### GET api/v2/location-area/{id or name}
+### GET api/v2/location-area/{id}
 
 ###### Example response
 

@@ -980,10 +980,22 @@ An item is an object in the games which the player can pick up, keep in their ba
 | flavor_text_entries | The flavor text of this ability listed in different languages        | list [VersionGroupFlavorText](#versiongroupflavortext) |
 | game_indices        | A list of game indices relevent to this item by generation           | list [GenerationGameIndex](#generationgameindex) |
 | names               | The name of this item listed in different languages                  | list [Name](#resourcename) |
-| held_by_pokemon     | A list of pokémon that might be found in the wild holding this item  | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
+| held_by_pokemon     | A list of pokémon that might be found in the wild holding this item  | list [HeldByPokemon](#heldbypokemon) |
 | baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | list [APIResource](#apiresource) ([EvolutionChain](#evolution-chains)) |
 
+#### HeldByPokemon
 
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| pokemon | The pokemon who might be holding the item | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
+| version_details | Details on chance of the pokemon having the item based on version | list [VersionDetails](#helditemversiondetails) |
+
+#### HeldItemVersionDetails
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| rarity | The chance of the pokemon holding the item | integer |
+| version | The version the rarity applies | [NamedAPIResource](#namedapiresource) ([Version](#version)) |
 ## Item Attributes
 Item attributes define particular aspects of items, e.g. "usable in battle" or "consumable".
 
@@ -1568,7 +1580,7 @@ Targets moves can be directed at during battle. Targets can be pokémon, environ
 ## Locations
 Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.
 
-### GET api/v2/location/{id or name}
+### GET api/v2/location/{id}
 
 ###### example response
 
@@ -1618,7 +1630,7 @@ Locations that can be visited within the games. Locations make up sizable portio
 ## Location Areas
 Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible pokemon encounters.
 
-### GET api/v2/location-area/{id or name}
+### GET api/v2/location-area/{id}
 
 ###### example response
 

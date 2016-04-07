@@ -3,6 +3,7 @@ Pillow==2.6.1
 Unipath==1.0
 coverage==3.6
 django-appconf==0.6
+dj-stripe==0.3.5
 django-cors-headers==1.0.0
 django-discover-runner==0.4
 django-imagekit==3.2.4

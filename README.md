@@ -9,12 +9,12 @@ LICENSE: BSD
 http://pokeapi.co
 
 ## Join Us On Slack!
-Have a question or just wasnt to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creatinga new issue.
+Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to eachother :)
+
 [Sign up easily](https://pokeapi-slack-invite.herokuapp.com/)!
 
-Qnce you've signed up
-[PokeAPI on Slack](https://pokeapi.slack.com)
+Qnce you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
 
 
 ## DEPRECATION

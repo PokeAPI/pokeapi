@@ -45,7 +45,7 @@
                 </p>
                 <div class="well">
                     <p>
-                        This website provides a RESTful API interface to <b>{{ site_data.total_resources|intcomma }}</b> highly detailed objects built from <b>{{ site_data.total_lines|intcomma }}</b> lines of data 
+                        This website provides a RESTful API interface to <b>{{ site_data.total_resources|intcomma }}</b> highly detailed objects built from nearly <b>1,000,000</b> lines of data 
                         related to <a href="https://en.wikipedia.org/wiki/Pokemon">Pokémon</a>. We specifically cover the video game franchise, though we'd like to cover the card game too. Using this website you can consume information on Pokémon, their moves, abilities, types, egg groups and much much more.
                     </p>
                 </div>
@@ -57,7 +57,7 @@
                         This is probably worth clearing up very quickly for those who don't know.<br />
                         An API (Application Programming Interface) is a set of interfaces (in this case, url links)
                         that are publicly available, that allow developers to interact with an application.<br />
-                        In this instance; the application is a database of <b>{{ site_data.total_items|intcomma }}</b> pokemon-related objects.
+                        In this instance; the application is a database of <b>{{ site_data.total_resources|intcomma }}</b> pokemon-related objects.
                     </p>
                 </div>
                 <p class="lead">
@@ -96,16 +96,21 @@
                         We're glad you asked because we've got an impressive amount of data!
                     </p>
                     <p>
-                        We currently have <b>{{ site_data.total_items|intcomma }}</b> individual items in our database:
+                        We currently have <b>{{ site_data.total_resources|intcomma }}</b> individual items in our database:
                     </p>
                     <ul>
-                        <li>{{ site_data.moves }} Moves</li>
-                        <li>{{ site_data.abilities }} Abilities</li>
-                        <li>{{ site_data.types }} Types</li>
-                        <li>{{ site_data.egg_groups }} Egg groups</li>
-                        <li>{{ site_data.versions }} Versions </li>
-                        <li>{{ site_data.items }} Items</li>
-                        <li>{{ site_data.pokedexes }} Pokedexes</li>
+                        <li>{{ site_data.move }} Moves</li>
+                        <li>{{ site_data.ability }} Abilities</li>
+                        <li>{{ site_data.type }} Types</li>
+                        <li>{{ site_data.egg_group }} Egg groups</li>
+                        <li>{{ site_data.version }} Versions </li>
+                        <li>{{ site_data.item }} Items</li>
+                        <li>{{ site_data.location }} Locations</li>
+                        <li>{{ site_data.evolution_chain }} Evolutions</li>
+                        <li>{{ site_data.encounter|intcomma }} Encounters</li>
+                        <li>{{ site_data.language }} Languages</li>
+                        <li>{{ site_data.berry }} Berries</li>
+                        <li>{{ site_data.pokedex }} Pokedexes</li>
                         <li>{{ site_data.pokemon }} Pokémon (includes various forms)</li>
                     </ul>
                     <p>And that's just scratching the surface!</p>

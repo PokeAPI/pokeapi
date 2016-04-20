@@ -265,8 +265,8 @@ def build_move_descriptions():
     """
 
     for m in Move.objects.all():
-        f_moves = open('data/moves.csv', 'rb')
-        f_descrips = open('data/move_effects.csv', 'rb')
+        f_moves = open('data/v1/moves.csv', 'rb')
+        f_descrips = open('data/v1/move_effects.csv', 'rb')
         for row in csv.reader(f_moves, delimiter=','):
             if str(row[1]) == m.name:
                 for drow in csv.reader(f_descrips, delimiter=','):

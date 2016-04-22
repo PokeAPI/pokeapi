@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 
@@ -283,7 +283,7 @@ def stripe_donation(request):
                 description='PokeAPI donation'
             )
         except:
-            pass
+            return redirect('/')
 
         return redirect('/')
     return redirect('/')

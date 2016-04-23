@@ -2,11 +2,13 @@
 from __future__ import unicode_literals
 
 from django.conf import settings
-from django.conf.urls import url, include
+from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
+
 from pokemon import urls as pokemon_urls
+
 from pokemon_v2 import urls as pokemon_v2_urls
 
 # need to make sure v2 urls resolve last so angular routes have control
@@ -15,7 +17,7 @@ from pokemon_v2 import urls as pokemon_v2_urls
 urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r"^stripe/donation", "config.views.stripe_donation"),
     url(r'^media/(?P<path>.*)',
         'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}),

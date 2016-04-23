@@ -51,10 +51,10 @@
         <p>Finally; all the Pokémon data you'll ever need, in one place,<br /> and easily accessible through a modern RESTful API.</p>
         <p>Whats new in V2? Check out the <a href="/docsv2/">docs</a>!</p>
     </div>
-        
-    
+
+
     <div class="container">
-        
+
 
         <div class="row">
 
@@ -187,9 +187,9 @@
         <div class="row">
 
             <div class="col-md-10 center-block">
-                
+
                 <div class="row">
-                    
+
                     <div class="col-md-4">
                         <p class="lead center">
                             What is this?
@@ -223,12 +223,23 @@
 
                     <div class="col-md-4">
                         <p class="lead center">
-                            I want to help.
+                            Keep PokéAPI Running
                         </p>
                         <div class="well">
-                            <p>Amazing!</p>
-                            <p>Head over to <a href="https://github.com/phalt/pokeapi">GitHub</a> and read some of the issues and feature requests. If you can contribute then go ahead and start making pull requests :)</p>
-                        </div>
+                            <p>PokéAPI costs around $50 a month to run. We want to keep this free and scalable for as long as possible!
+                            </p>
+                            <p><b>If you use PokéAPI for teaching or for building apps, consider donating today!</b></p>
+                            <form action="/stripe/donation" method="POST">
+                              <script
+                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="{{stripe_key}}"
+                                data-image="http://i.imgur.com/Jya9cm0.png"
+                                data-name="pokeapi.co"
+                                data-description="Donate and keep pokeapi alive!"
+                                data-amount="1000"
+                                data-panel-label="Donate">
+                              </script>
+                            </form></p></div>
                     </div>
                 </div>
             </div>

@@ -144,6 +144,8 @@ CORS_ALLOW_METHODS = (
     'GET'
 )
 
+CORS_URLS_REGEX = r'^/api/.*$'
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',

@@ -144,6 +144,8 @@ CORS_ALLOW_METHODS = (
     'GET'
 )
 
+CORS_URLS_REGEX = r'^/api/.*$'
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
@@ -170,3 +172,21 @@ MARKDOWN_DEUX_STYLES = {
         "safe_mode": False,
     },
 }
+
+# Stripe
+
+STRIPE_TEST_SECRET_KEY = os.environ.get('STRIPE_TEST_SECRET_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY', '')
+STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY', '')
+
+if DEBUG:
+    STRIPE_KEYS = {
+        "secret": STRIPE_TEST_SECRET_KEY,
+        "publishable": STRIPE_TEST_PUBLISHABLE_KEY
+    }
+else:
+    STRIPE_KEYS = {
+        "secret": STRIPE_SECRET_KEY,
+        "publishable": STRIPE_PUBLISHABLE_KEY
+    }

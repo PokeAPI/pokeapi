@@ -1,12 +1,16 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-from django.shortcuts import render_to_response
+from django.conf import settings
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-
-from pokemon_v2.models import *  # NOQA
+from django.views.decorators.csrf import csrf_exempt
 
 from hits.models import ResourceView
+
+import stripe
+
+from pokemon_v2.models import *  # NOQA
 
 
 def _total_site_data():
@@ -244,13 +248,42 @@ def home(request):
 
     total_views = ResourceView.objects.total_count()
 
-    if total_views > 100:
-        total_views = int(round(total_views, -2))
+    total_views = int(round(total_views, -2))
+
+    stripe_key = settings.STRIPE_KEYS['publishable']
 
     return render_to_response(
         'pages/home.html',
         {
             'total_views': total_views,
+            'stripe_key': stripe_key
         },
         context_instance=RequestContext(request)
     )
+
+
+@csrf_exempt
+def stripe_donation(request):
+    if request.method == 'POST':
+        # Amount in cents
+        amount = 1000
+
+        stripe.api_key = settings.STRIPE_KEYS['secret']
+
+        customer = stripe.Customer.create(
+            email=request.POST.get('stripeEmail', ''),
+            card=request.POST.get('stripeToken', '')
+        )
+
+        try:
+            stripe.Charge.create(
+                customer=customer.id,
+                amount=amount,
+                currency='usd',
+                description='PokeAPI donation'
+            )
+        except:
+            return redirect('/')
+
+        return redirect('/')
+    return redirect('/')

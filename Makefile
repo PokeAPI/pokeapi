@@ -20,5 +20,8 @@ serve:
 test:
 	python manage.py test --settings=config.local
 
+shell:
+	python manage.py shell --settings=config.local
+
 clean:
 	rm -rf *.pyc

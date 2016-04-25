@@ -1639,7 +1639,7 @@ def build_all():
 
 #Courtesy of nimjae
 def dump_one():
-    with open('dev-data.json', 'w+') as out:
+    with open('dev-data.json', 'w') as out:
         out.write(serializers.serialize('json',
             itertools.chain.from_iterable(model.objects.all()
                 for model in get_models(get_app('pokemon_v2')))))
@@ -1650,7 +1650,7 @@ def dump_all():
         file_name = 'pokemon_v2/fixtures/{}.json'.format(model.__name__)
         #using 'with' will close the file even if there
         #is an exception (/pokeapi/pull/162)
-        with open(file_name, 'w+') as out:
+        with open(file_name, 'w') as out:
             out.write(data)
             out.close()
 

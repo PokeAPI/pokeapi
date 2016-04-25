@@ -1,1 +1,0 @@
-[{"fields": {"name": "attack"}, "model": "pokemon_v2.movebattlestyle", "pk": 1}, {"fields": {"name": "defense"}, "model": "pokemon_v2.movebattlestyle", "pk": 2}, {"fields": {"name": "support"}, "model": "pokemon_v2.movebattlestyle", "pk": 3}]

@@ -1,1 +1,0 @@
-[{"fields": {"name": "forest"}, "model": "pokemon_v2.palparkarea", "pk": 1}, {"fields": {"name": "field"}, "model": "pokemon_v2.palparkarea", "pk": 2}, {"fields": {"name": "mountain"}, "model": "pokemon_v2.palparkarea", "pk": 3}, {"fields": {"name": "pond"}, "model": "pokemon_v2.palparkarea", "pk": 4}, {"fields": {"name": "sea"}, "model": "pokemon_v2.palparkarea", "pk": 5}]

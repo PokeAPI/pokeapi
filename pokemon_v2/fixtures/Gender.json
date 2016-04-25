@@ -1,0 +1,1 @@
+[{"fields": {"name": "female"}, "model": "pokemon_v2.gender", "pk": 1}, {"fields": {"name": "male"}, "model": "pokemon_v2.gender", "pk": 2}, {"fields": {"name": "genderless"}, "model": "pokemon_v2.gender", "pk": 3}]

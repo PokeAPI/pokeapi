@@ -1,0 +1,1 @@
+[{"fields": {"name": "level-up"}, "model": "pokemon_v2.evolutiontrigger", "pk": 1}, {"fields": {"name": "trade"}, "model": "pokemon_v2.evolutiontrigger", "pk": 2}, {"fields": {"name": "use-item"}, "model": "pokemon_v2.evolutiontrigger", "pk": 3}, {"fields": {"name": "shed"}, "model": "pokemon_v2.evolutiontrigger", "pk": 4}]

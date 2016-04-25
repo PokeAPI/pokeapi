@@ -1,0 +1,1 @@
+[{"fields": {"name": "status"}, "model": "pokemon_v2.movedamageclass", "pk": 1}, {"fields": {"name": "physical"}, "model": "pokemon_v2.movedamageclass", "pk": 2}, {"fields": {"name": "special"}, "model": "pokemon_v2.movedamageclass", "pk": 3}]

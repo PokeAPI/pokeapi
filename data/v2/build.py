@@ -23,7 +23,9 @@ import re
 import json
 from django.db import connection
 from pokemon_v2.models import *  # NOQA
-
+from django.db.models import get_app, get_models    # MJH 4.24.2016
+from django.core import serializers                 # MJH 4.24.2016
+import itertools
 
 # why this way? how about use `__file__`
 DATA_LOCATION = 'data/v2/csv/'
@@ -1634,6 +1636,23 @@ def build_all():
     build_pokemons()
     build_encounters()
     build_pal_parks()
+
+#Courtesy of nimjae
+def dump_one():
+    with open('dev-data.json', 'w+') as out:
+        out.write(serializers.serialize('json',
+            itertools.chain.from_iterable(model.objects.all()
+                for model in get_models(get_app('pokemon_v2')))))
+def dump_all():
+    app = get_app('pokemon_v2')
+    for model in get_models(app):
+        data = serializers.serialize("json", model.objects.all())
+        file_name = 'pokemon_v2/fixtures/{}.json'.format(model.__name__)
+        #using 'with' will close the file even if there
+        #is an exception (/pokeapi/pull/162)
+        with open(file_name, 'w+') as out:
+            out.write(data)
+            out.close()
 
 if __name__ == '__main__':
     build_all()

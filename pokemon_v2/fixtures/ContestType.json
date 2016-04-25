@@ -1,0 +1,1 @@
+[{"fields": {"name": "cool"}, "model": "pokemon_v2.contesttype", "pk": 1}, {"fields": {"name": "beauty"}, "model": "pokemon_v2.contesttype", "pk": 2}, {"fields": {"name": "cute"}, "model": "pokemon_v2.contesttype", "pk": 3}, {"fields": {"name": "smart"}, "model": "pokemon_v2.contesttype", "pk": 4}, {"fields": {"name": "tough"}, "model": "pokemon_v2.contesttype", "pk": 5}]

@@ -71,9 +71,11 @@ etc...
 
 ## V2 Database setup
 
+*only necessary if json files in pokemon_v2/fixtures/ are out dated or missing. Database is setup in the local developer environment.
+
 Start Django shell
 ```
-$ python manage.py shell --settings=config.local
+$ make shell
 ```
 
 run the build script with
@@ -117,6 +119,10 @@ Heres a list of the data building functions
 - build_encounters()
 - build_pal_parks()
 
+Once built, you can create/update all json files for faster database setups
+```
+$ dump_all()
+```
 
 ## Docker
 

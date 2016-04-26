@@ -1,24 +1,27 @@
 install:
-	pip install -r requirements.txt
+    pip install -r requirements.txt
 
 dev-install:
-	pip install -r test-requirements.txt
+    pip install -r test-requirements.txt
 
 lint:
-	flake8 .
+    flake8 .
 
 setup:
-	python manage.py migrate --settings=config.local
-	python manage.py loaddata dev-data.json --settings=config.local
+    python manage.py migrate --settings=config.local
+#   python manage.py loaddata dev-data.json --settings=config.local
 
 wipe_db:
-	rm -rf db.sqlite3
+    rm -rf db.sqlite3
 
 serve:
-	python manage.py runserver --settings=config.local
+    python manage.py runserver --settings=config.local
 
 test:
-	python manage.py test --settings=config.local
+    python manage.py test --settings=config.local
+
+shell:
+    python manage.py shell --settings=config.local
 
 clean:
-	rm -rf *.pyc
+    rm -rf *.pyc

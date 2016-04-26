@@ -16,6 +16,12 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 
 Qnce you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
 
+## Donations
+
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the server up. We get over 2 million requests a month and it's quite costly!
+
+See [the bottom of the home page](https://pokeapi.co) to donate.
+
 
 ## DEPRECATION
 

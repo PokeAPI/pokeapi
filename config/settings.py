@@ -100,10 +100,13 @@ DATABASES = {
 }
 
 CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'TIMEOUT': 30
-    },
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
 }
 
 SECRET_KEY = os.environ.get(
@@ -127,7 +130,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'corsheaders',
     'rest_framework',
-    'markdown_deux'
+    'markdown_deux',
+    'cachalot'
 ) + CUSTOM_APPS
 
 

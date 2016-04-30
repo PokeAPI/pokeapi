@@ -1,0 +1,14 @@
+.git
+.gitignore
+CONTRIBUTORS.txt
+LICENSE.rst
+README.md
+
+*.pyc
+*media/*
+*static/*
+*build/*
+*.DS_STORE
+db.*
+venv*
+node_modules

@@ -14,22 +14,13 @@ class ViewManager(models.Manager):
 
         view.count = view.count + 1
 
-        print view
-
         view.save()
 
     def total_count(self, version=0):
 
-        if version:
-            objects = ResourceView.objects.filter(version=version)
-        else:
-            objects = ResourceView.objects.all()
+        all_hits = ResourceView.objects.all().values_list('count', flat=True)
 
-        t = 0
-        for v in objects:
-            t += v.count
-
-        return t
+        return sum(all_hits)
 
 
 class ResourceView(models.Model):

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
+from django.core.cache import cache
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
@@ -13,9 +14,15 @@ import stripe
 
 def about(request):
 
-    total_views = ResourceView.objects.total_count()
+    total_views = cache.get('total_views')
+    if total_views:
+        total_views = ResourceView.objects.total_count()
+        cache.set('total_views', total_views)
 
-    average_day = int(round(total_views / ResourceView.objects.count()))
+    average_day = cache.get('average_day')
+    if average_day:
+        average_day = int(round(total_views / ResourceView.objects.count()))
+        cache.set('average_day')
 
     return render_to_response(
         'pages/about.html',
@@ -29,9 +36,11 @@ def about(request):
 
 def home(request):
 
-    total_views = ResourceView.objects.total_count()
-
-    total_views = int(round(total_views, -2))
+    total_views = cache.get('total_views')
+    if total_views:
+        total_views = ResourceView.objects.total_count()
+        total_views = int(round(total_views, -2))
+        cache.set('total_views', total_views)
 
     stripe_key = settings.STRIPE_KEYS['publishable']
 

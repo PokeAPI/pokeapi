@@ -145,10 +145,10 @@ CORS_URLS_REGEX = r'^/api/.*$'
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
+        'drf_ujson.renderers.UJSONRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
+        'drf_ujson.renderers.UJSONRenderer',
     ),
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',

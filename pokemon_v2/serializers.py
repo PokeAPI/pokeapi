@@ -2974,7 +2974,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
     def get_pokedex_entries(self, obj):
 
-        results = PokemonDexNumber.objects.order_by('pokedex_number').filter(pokedex=obj)
+        results = PokemonDexNumber.objects.filter(pokedex=obj).order_by('pokedex_number')
         serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
         data = serializer.data
 

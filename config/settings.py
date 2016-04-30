@@ -95,6 +95,7 @@ DATABASES = {
         'PASSWORD': 'pokeapi',
         'HOST': 'localhost',
         'PORT': '',
+        'CONN_MAX_AGE': 30
     }
 }
 
@@ -103,10 +104,6 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
         'TIMEOUT': 30
     },
-    'resources': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'TIMEOUT': 360
-    }
 }
 
 SECRET_KEY = os.environ.get(
@@ -148,10 +145,10 @@ CORS_URLS_REGEX = r'^/api/.*$'
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
+        'drf_ujson.renderers.UJSONRenderer',
     ),
     'DEFAULT_PARSER_CLASSES': (
-        'rest_framework.parsers.JSONParser',
+        'drf_ujson.renderers.UJSONRenderer',
     ),
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',

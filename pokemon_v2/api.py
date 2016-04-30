@@ -9,7 +9,7 @@ from hits.models import ResourceView
 
 
 ###########################
-#  BEHAVOIR ABSTRACTIONS  #
+#  BEHAVIOR ABSTRACTIONS  #
 ###########################
 
 class ListOrDetailSerialRelation():

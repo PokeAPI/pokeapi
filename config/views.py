@@ -15,12 +15,12 @@ import stripe
 def about(request):
 
     total_views = cache.get('total_views')
-    if total_views:
+    if not total_views:
         total_views = ResourceView.objects.total_count()
         cache.set('total_views', total_views)
 
     average_day = cache.get('average_day')
-    if average_day:
+    if not average_day:
         average_day = int(round(total_views / ResourceView.objects.count()))
         cache.set('average_day')
 
@@ -37,7 +37,7 @@ def about(request):
 def home(request):
 
     total_views = cache.get('total_views')
-    if total_views:
+    if not total_views:
         total_views = ResourceView.objects.total_count()
         total_views = int(round(total_views, -2))
         cache.set('total_views', total_views)

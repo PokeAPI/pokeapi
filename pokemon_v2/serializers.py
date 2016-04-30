@@ -2852,6 +2852,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
         for index, species in enumerate(ref_data):
 
+            entry = OrderedDict()
+
             # If evolves from something
             if species['evolves_from_species']:
 
@@ -2860,24 +2862,16 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                     if previous_species['id'] == species['evolves_from_species']:
                         current_evolutions = previous_entry['evolves_to']
 
-                entry = OrderedDict()
-
-                many = False
-                try:
-                    evolution_object = PokemonEvolution.objects.get(evolved_species=species['id'])
-                except PokemonEvolution.MultipleObjectsReturned:
-                    evolution_object = PokemonEvolution.objects.filter(
-                        evolved_species=species['id'])
-                    many = True
+                evolution_object = PokemonEvolution.objects.filter(evolved_species=species['id'])
 
                 evolution_data = PokemonEvolutionSerializer(
-                    evolution_object, many=many, context=self.context).data
+                    evolution_object, many=True, context=self.context).data
 
                 current_evolutions.append(entry)
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]
-            entry['evolution_details'] = evolution_data or None
+            entry['evolution_details'] = evolution_data
             entry['evolves_to'] = []
 
             # Keep track of previous entries for complex chaining

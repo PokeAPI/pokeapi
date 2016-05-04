@@ -1,0 +1,43 @@
+version: '2'
+services:
+  cache:
+    image: redis:alpine
+    volumes:
+      - redis_data:/data
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 'pokemon'
+      POSTGRES_USER: 'ash'
+      POSTGRES_DB: 'pokeapi'
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Resources/docker/app/Dockerfile
+    volumes:
+      - /code
+    links:
+      - db
+      - cache
+
+  web:
+    build: 
+      context: ./Resources
+      dockerfile: ./docker/web/Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes_from:
+      - app:ro
+    links:
+      - app
+
+volumes:
+  pg_data:
+    external: true
+  redis_data:
+    external: true

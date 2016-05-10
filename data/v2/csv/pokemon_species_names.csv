@@ -101,7 +101,7 @@ pokemon_species_id,local_language_id,name,genus
 12,1,バタフリー,ちょうちょ
 12,2,Butterfree,
 12,3,버터플,나비
-12,4,巴大蝴,
+12,4,巴大蝶,
 12,5,Papilusion,Papillon
 12,6,Smettbo,Falter
 12,7,Butterfree,Mariposa
@@ -119,7 +119,7 @@ pokemon_species_id,local_language_id,name,genus
 14,1,コクーン,さなぎ
 14,2,Cocoon,
 14,3,딱충이,번데기
-14,4,鐵殼昆,
+14,4,鐵殼蛹,
 14,5,Coconfort,Cocon
 14,6,Kokuna,Kokon
 14,7,Kakuna,Capullo
@@ -155,7 +155,7 @@ pokemon_species_id,local_language_id,name,genus
 18,1,ピジョット,とり
 18,2,Pigeot,
 18,3,피죤투,새
-18,4,比鵰,
+18,4,大比鳥,
 18,5,Roucarnage,Oiseau
 18,6,Tauboss,Vogel
 18,7,Pidgeot,Pájaro
@@ -434,7 +434,7 @@ pokemon_species_id,local_language_id,name,genus
 49,1,モルフォン,どくが
 49,2,Morphon,
 49,3,도나리,독나방
-49,4,末入蛾,
+49,4,摩魯蛾,
 49,5,Aéromite,Papipoison
 49,6,Omot,Giftmotte
 49,7,Venomoth,Polilla Ven.
@@ -542,7 +542,7 @@ pokemon_species_id,local_language_id,name,genus
 61,1,ニョロゾ,おたま
 61,2,Nyorozo,
 61,3,슈륙챙이,올챙이
-61,4,蚊香蛙,
+61,4,蚊香君,
 61,5,Têtarte,Têtard
 61,6,Quaputzi,Kaulquappe
 61,7,Poliwhirl,Renacuajo
@@ -551,7 +551,7 @@ pokemon_species_id,local_language_id,name,genus
 62,1,ニョロボン,おたま
 62,2,Nyorobon,
 62,3,강챙이,올챙이
-62,4,快泳蛙,
+62,4,蚊香泳士,
 62,5,Tartard,Têtard
 62,6,Quappo,Kaulquappe
 62,7,Poliwrath,Renacuajo
@@ -713,7 +713,7 @@ pokemon_species_id,local_language_id,name,genus
 80,1,ヤドラン,やどかり
 80,2,Yadoran,
 80,3,야도란,기생
-80,4,呆河馬,
+80,4,呆殼獸,
 80,5,Flagadoss,Symbiose
 80,6,Lahmus,Symbiose
 80,7,Slowbro,Ermitaño
@@ -812,7 +812,7 @@ pokemon_species_id,local_language_id,name,genus
 91,1,パルシェン,２まいがい
 91,2,Parshen,
 91,3,파르셀,두조개
-91,4,鐵甲貝,
+91,4,刺甲貝,
 91,5,Crustabri,Bivalve
 91,6,Austos,Muschel
 91,7,Cloyster,Bivalvo
@@ -857,7 +857,7 @@ pokemon_species_id,local_language_id,name,genus
 96,1,スリープ,さいみん
 96,2,Sleep,
 96,3,슬리프,최면
-96,4,素利普,
+96,4,催眠貘,
 96,5,Soporifik,Hypnose
 96,6,Traumato,Hypnose
 96,7,Drowzee,Hipnosis
@@ -866,7 +866,7 @@ pokemon_species_id,local_language_id,name,genus
 97,1,スリーパー,さいみん
 97,2,Sleeper,
 97,3,슬리퍼,최면
-97,4,素利拍,
+97,4,引夢貘人,
 97,5,Hypnomade,Hypnose
 97,6,Hypno,Hypnose
 97,7,Hypno,Hipnosis
@@ -893,7 +893,7 @@ pokemon_species_id,local_language_id,name,genus
 100,1,ビリリダマ,ボール
 100,2,Biriridama,
 100,3,찌리리공,볼
-100,4,雷電球,
+100,4,霹靂電球,
 100,5,Voltorbe,Balle
 100,6,Voltobal,Ball
 100,7,Voltorb,Bola
@@ -902,7 +902,7 @@ pokemon_species_id,local_language_id,name,genus
 101,1,マルマイン,ボール
 101,2,Marumine,
 101,3,붐볼,볼
-101,4,頑皮彈,
+101,4,頑皮雷彈,
 101,5,Électrode,Balle
 101,6,Lektrobal,Ball
 101,7,Electrode,Bola
@@ -929,7 +929,7 @@ pokemon_species_id,local_language_id,name,genus
 104,1,カラカラ,こどく
 104,2,Karakara,
 104,3,탕구리,고독
-104,4,可拉可拉,
+104,4,卡拉卡拉,
 104,5,Osselait,Solitaire
 104,6,Tragosso,Einsam
 104,7,Cubone,Solitario
@@ -947,7 +947,7 @@ pokemon_species_id,local_language_id,name,genus
 106,1,サワムラー,キック
 106,2,Sawamular,
 106,3,시라소몬,킥
-106,4,沙瓦郎,
+106,4,飛腿郎,
 106,5,Kicklee,Latteur
 106,6,Kicklee,Kicker
 106,7,Hitmonlee,Patada
@@ -956,7 +956,7 @@ pokemon_species_id,local_language_id,name,genus
 107,1,エビワラー,パンチ
 107,2,Ebiwalar,
 107,3,홍수몬,펀치
-107,4,艾比郎,
+107,4,快拳郎,
 107,5,Tygnon,Puncheur
 107,6,Nockchan,Puncher
 107,7,Hitmonchan,Puñetazo
@@ -992,7 +992,7 @@ pokemon_species_id,local_language_id,name,genus
 111,1,サイホーン,とげとげ
 111,2,Sihorn,
 111,3,뿔카노,뿔
-111,4,鐵甲犀牛,
+111,4,獨角犀牛,
 111,5,Rhinocorne,Piquant
 111,6,Rihorn,Stachler
 111,7,Rhyhorn,Clavos
@@ -1001,7 +1001,7 @@ pokemon_species_id,local_language_id,name,genus
 112,1,サイドン,ドリル
 112,2,Sidon,
 112,3,코뿌리,드릴
-112,4,鐵甲暴龍,
+112,4,獨角犀獸,
 112,5,Rhinoféros,Perceur
 112,6,Rizeros,Bohrer
 112,7,Rhydon,Taladro
@@ -1028,7 +1028,7 @@ pokemon_species_id,local_language_id,name,genus
 115,1,ガルーラ,おやこ
 115,2,Garura,
 115,3,캥카,가족
-115,4,袋龍,
+115,4,袋獸,
 115,5,Kangourex,Maternel
 115,6,Kangama,Muttertier
 115,7,Kangaskhan,Padres
@@ -1091,7 +1091,7 @@ pokemon_species_id,local_language_id,name,genus
 122,1,バリヤード,バリアー
 122,2,Barrierd,
 122,3,마임맨,배리어
-122,4,吸盤魔偶,
+122,4,魔牆人偶,
 122,5,M. Mime,Bloqueur
 122,6,Pantimos,Sperre
 122,7,Mr. Mime,Barrera
@@ -1127,7 +1127,7 @@ pokemon_species_id,local_language_id,name,genus
 126,1,ブーバー,ひふき
 126,2,Boober,
 126,3,마그마,불뿜기
-126,4,鴨嘴火龍,
+126,4,鴨嘴火獸,
 126,5,Magmar,Crache-Feu
 126,6,Magmar,Brenner
 126,7,Magmar,Escupefuego
@@ -1136,7 +1136,7 @@ pokemon_species_id,local_language_id,name,genus
 127,1,カイロス,くわがた
 127,2,Kailios,
 127,3,쁘사이저,뿔집게
-127,4,大甲,
+127,4,凱羅斯,
 127,5,Scarabrute,Scarabée
 127,6,Pinsir,Kneifkäfer
 127,7,Pinsir,Escarabajo
@@ -1172,7 +1172,7 @@ pokemon_species_id,local_language_id,name,genus
 131,1,ラプラス,のりもの
 131,2,Laplace,
 131,3,라프라스,탈것
-131,4,乘龍,
+131,4,拉普拉斯,
 131,5,Lokhlass,Transport
 131,6,Lapras,Transport
 131,7,Lapras,Transporte
@@ -1199,7 +1199,7 @@ pokemon_species_id,local_language_id,name,genus
 134,1,シャワーズ,あわはき
 134,2,Showers,
 134,3,샤미드,거품뿜기
-134,4,水精靈,
+134,4,水伊布,
 134,5,Aquali,Bulleur
 134,6,Aquana,Blubblase
 134,7,Vaporeon,Burbuja
@@ -1208,7 +1208,7 @@ pokemon_species_id,local_language_id,name,genus
 135,1,サンダース,かみなり
 135,2,Thunders,
 135,3,쥬피썬더,번개
-135,4,雷精靈,
+135,4,雷伊布,
 135,5,Voltali,Orage
 135,6,Blitza,Blitz
 135,7,Jolteon,Relámpago
@@ -1217,7 +1217,7 @@ pokemon_species_id,local_language_id,name,genus
 136,1,ブースター,ほのお
 136,2,Booster,
 136,3,부스터,불꽃
-136,4,火精靈,
+136,4,火伊布,
 136,5,Pyroli,Flamme
 136,6,Flamara,Feuer
 136,7,Flareon,Llama
@@ -1226,7 +1226,7 @@ pokemon_species_id,local_language_id,name,genus
 137,1,ポリゴン,バーチャル
 137,2,Porygon,
 137,3,폴리곤,가상
-137,4,3D龍,
+137,4,多邊獸,
 137,5,Porygon,Virtuel
 137,6,Porygon,Virtuell
 137,7,Porygon,Virtual

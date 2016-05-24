@@ -4411,11 +4411,11 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             basic_data['species']['url'],
             '{}{}/pokemon-species/{}/'.format(test_host, api_v2, basic.pk))
-        self.assertEqual(basic_data['evolution_details']['min_level'], basic_evolution.min_level)
+        self.assertEqual(basic_data['evolution_details'][0]['min_level'], basic_evolution.min_level)
         self.assertEqual(
-            basic_data['evolution_details']['location']['name'], basic_location.name)
+            basic_data['evolution_details'][0]['location']['name'], basic_location.name)
         self.assertEqual(
-            basic_data['evolution_details']['location']['url'],
+            basic_data['evolution_details'][0]['location']['url'],
             '{}{}/location/{}/'.format(test_host, api_v2, basic_location.pk))
         # stage one params
         self.assertEqual(stage_one_data['is_baby'], stage_one.is_baby)
@@ -4424,11 +4424,11 @@ class APITests(APIData, APITestCase):
             stage_one_data['species']['url'],
             '{}{}/pokemon-species/{}/'.format(test_host, api_v2, stage_one.pk))
         self.assertEqual(
-            stage_one_data['evolution_details']['min_level'], stage_one_evolution.min_level)
+            stage_one_data['evolution_details'][0]['min_level'], stage_one_evolution.min_level)
         self.assertEqual(
-            stage_one_data['evolution_details']['held_item']['name'], stage_one_held_item.name)
+            stage_one_data['evolution_details'][0]['held_item']['name'], stage_one_held_item.name)
         self.assertEqual(
-            stage_one_data['evolution_details']['held_item']['url'],
+            stage_one_data['evolution_details'][0]['held_item']['url'],
             '{}{}/item/{}/'.format(test_host, api_v2, stage_one_held_item.pk))
         # stage two first params
         self.assertEqual(stage_two_first_data['is_baby'], stage_two_first.is_baby)
@@ -4437,13 +4437,13 @@ class APITests(APIData, APITestCase):
             stage_two_first_data['species']['url'],
             '{}{}/pokemon-species/{}/'.format(test_host, api_v2, stage_two_first.pk))
         self.assertEqual(
-            stage_two_first_data['evolution_details']['min_level'],
+            stage_two_first_data['evolution_details'][0]['min_level'],
             stage_two_first_evolution.min_level)
         self.assertEqual(
-            stage_two_first_data['evolution_details']['known_move']['name'],
+            stage_two_first_data['evolution_details'][0]['known_move']['name'],
             stage_two_first_known_move.name)
         self.assertEqual(
-            stage_two_first_data['evolution_details']['known_move']['url'],
+            stage_two_first_data['evolution_details'][0]['known_move']['url'],
             '{}{}/move/{}/'.format(test_host, api_v2, stage_two_first_known_move.pk))
         # stage two second params
         self.assertEqual(stage_two_second_data['is_baby'], stage_two_second.is_baby)
@@ -4452,13 +4452,13 @@ class APITests(APIData, APITestCase):
             stage_two_second_data['species']['url'],
             '{}{}/pokemon-species/{}/'.format(test_host, api_v2, stage_two_second.pk))
         self.assertEqual(
-            stage_two_second_data['evolution_details']['min_level'],
+            stage_two_second_data['evolution_details'][0]['min_level'],
             stage_two_second_evolution.min_level)
         self.assertEqual(
-            stage_two_second_data['evolution_details']['party_type']['name'],
+            stage_two_second_data['evolution_details'][0]['party_type']['name'],
             stage_two_second_party_type.name)
         self.assertEqual(
-            stage_two_second_data['evolution_details']['party_type']['url'],
+            stage_two_second_data['evolution_details'][0]['party_type']['url'],
             '{}{}/type/{}/'.format(test_host, api_v2, stage_two_second_party_type.pk))
 
     # Encounter Tests

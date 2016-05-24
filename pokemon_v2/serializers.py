@@ -2872,7 +2872,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]
-            entry['evolution_details'] = evolution_data or None
+            entry['evolution_details'] = evolution_data or []
             entry['evolves_to'] = []
 
             # Keep track of previous entries for complex chaining

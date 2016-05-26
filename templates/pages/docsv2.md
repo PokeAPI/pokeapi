@@ -917,7 +917,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 		}
 	}],
 	"sprites": {
-		"default": "http://localhost:8000/media/sprites/items/master-ball.png"
+		"default": "http://pokeapi.co/media/sprites/items/master-ball.png"
 	},
 	"held_by_pokemon": [{
 		"pokemon": {
@@ -2297,14 +2297,14 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 		"url": "http://pokeapi.co/api/v2/pokemon-species/12/"
 	},
 	"sprites": {
-		"back_female": "http://localhost:8000/media/sprites/pokemon/back/female/12.png",
-		"back_shiny_female": "http://localhost:8000/media/sprites/pokemon/back/shiny/female/12.png",
-		"back_default": "http://localhost:8000/media/sprites/pokemon/back/12.png",
-		"front_female": "http://localhost:8000/media/sprites/pokemon/female/12.png",
-		"front_shiny_female": "http://localhost:8000/media/sprites/pokemon/shiny/female/12.png",
-		"back_shiny": "http://localhost:8000/media/sprites/pokemon/back/shiny/12.png",
-		"front_default": "http://localhost:8000/media/sprites/pokemon/12.png",
-		"front_shiny": "http://localhost:8000/media/sprites/pokemon/shiny/12.png"
+		"back_female": "http://pokeapi.co/media/sprites/pokemon/back/female/12.png",
+		"back_shiny_female": "http://pokeapi.co/media/sprites/pokemon/back/shiny/female/12.png",
+		"back_default": "http://pokeapi.co/media/sprites/pokemon/back/12.png",
+		"front_female": "http://pokeapi.co/media/sprites/pokemon/female/12.png",
+		"front_shiny_female": "http://pokeapi.co/media/sprites/pokemon/shiny/female/12.png",
+		"back_shiny": "http://pokeapi.co/media/sprites/pokemon/back/shiny/12.png",
+		"front_default": "http://pokeapi.co/media/sprites/pokemon/12.png",
+		"front_shiny": "http://pokeapi.co/media/sprites/pokemon/shiny/12.png"
 	},
 	"stats": [{
 		"base_stat": 70,
@@ -2441,10 +2441,10 @@ Some Pokémon have the ability to take on different forms. At times, these diffe
 		"url": "http://pokeapi.co/api/v2/pokemon/413/"
 	},
 	"sprites": {
-		"back_default": "http://localhost:8000/media/sprites/pokemon/back/413.png",
-		"back_shiny": "http://localhost:8000/media/sprites/pokemon/back/shiny/413.png",
-		"front_default": "http://localhost:8000/media/sprites/pokemon/413.png",
-		"front_shiny": "http://localhost:8000/media/sprites/pokemon/shiny/413.png"
+		"back_default": "http://pokeapi.co/media/sprites/pokemon/back/413.png",
+		"back_shiny": "http://pokeapi.co/media/sprites/pokemon/back/shiny/413.png",
+		"front_default": "http://pokeapi.co/media/sprites/pokemon/413.png",
+		"front_shiny": "http://pokeapi.co/media/sprites/pokemon/shiny/413.png"
 	},
 	"version_group": {
 		"name": "diamond-pearl",
@@ -2643,11 +2643,11 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
         "flavor_text": "When the bulb on\nits back grows\nlarge, it appears\fto lose the\nability to stand\non its hind legs.",
         "language": {
             "name": "en",
-            "url": "http://localhost:8000/api/v2/language/9/"
+            "url": "http://pokeapi.co/api/v2/language/9/"
         },
         "version": {
             "name": "red",
-            "url": "http://localhost:8000/api/v2/version/1/"
+            "url": "http://pokeapi.co/api/v2/version/1/"
         }
     }],
 	"form_descriptions": [{

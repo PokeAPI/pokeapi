@@ -4089,12 +4089,12 @@ class APITests(APIData, APITestCase):
         encounter_method = self.setup_encounter_method_data(name='encntr mthd for lctn area')
         location_area1 = self.setup_location_area_data(name='lctn1 area for base pkmn')
         encounter_slot1 = self.setup_encounter_slot_data(encounter_method, slot=1, rarity=30)
-        encounter1 = self.setup_encounter_data(
+        self.setup_encounter_data(
             location_area=location_area1, pokemon=pokemon,
             encounter_slot=encounter_slot1, min_level=30, max_level=35)
         location_area2 = self.setup_location_area_data(name='lctn2 area for base pkmn')
         encounter_slot2 = self.setup_encounter_slot_data(encounter_method, slot=2, rarity=40)
-        encounter2 = self.setup_encounter_data(
+        self.setup_encounter_data(
             location_area=location_area2, pokemon=pokemon,
             encounter_slot=encounter_slot2, min_level=32, max_level=36)
         response = self.client.get(

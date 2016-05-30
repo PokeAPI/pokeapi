@@ -2741,7 +2741,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     party_species = PokemonSpeciesSummarySerializer()
     party_type = TypeSummarySerializer()
     trade_species = PokemonSpeciesSummarySerializer()
-    location = serializers.SerializerMethodField()
+    location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
 
     class Meta:

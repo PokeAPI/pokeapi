@@ -4216,61 +4216,6 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data['forms'][0]['url'],
             '{}{}/pokemon-form/{}/'.format(test_host, api_v2, pokemon_form.pk))
-        # encounter params
-        self.assertEqual(
-            response.data['location_area_encounters'][0]['location_area']['name'],
-            location_area1.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][0]['location_area']['url'],
-            '{}{}/location-area/{}/'.format(test_host, api_v2, location_area1.pk))
-        self.assertEqual(
-            response.data['location_area_encounters'][0]['version_details'][0]['max_chance'],
-            encounter_slot1.rarity)
-        self.assertEqual(
-            response.data['location_area_encounters'][0]['version_details'][0]['version']['name'],
-            encounter1.version.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][0]['version_details'][0]['version']['url'],
-            '{}{}/version/{}/'.format(test_host, api_v2, encounter1.version.pk))
-        self.assertEqual(
-            response.data['location_area_encounters'][0].get(
-                'version_details')[0]['encounter_details'][0]['chance'],
-            encounter_slot1.rarity)
-        self.assertEqual(
-            response.data['location_area_encounters'][0].get(
-                'version_details')[0]['encounter_details'][0]['method']['name'],
-            encounter_method.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][0].get(
-                'version_details')[0]['encounter_details'][0]['method']['url'],
-            '{}{}/encounter-method/{}/'.format(test_host, api_v2, encounter_method.pk))
-
-        self.assertEqual(
-            response.data['location_area_encounters'][1]['location_area']['name'],
-            location_area2.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][1]['location_area']['url'],
-            '{}{}/location-area/{}/'.format(test_host, api_v2, location_area2.pk))
-        self.assertEqual(
-            response.data['location_area_encounters'][1]['version_details'][0]['max_chance'],
-            encounter_slot2.rarity)
-        self.assertEqual(
-            response.data['location_area_encounters'][1]['version_details'][0]['version']['name'],
-            encounter2.version.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][1]['version_details'][0]['version']['url'],
-            '{}{}/version/{}/'.format(test_host, api_v2, encounter2.version.pk))
-        self.assertEqual(
-            response.data['location_area_encounters'][1].get(
-                'version_details')[0]['encounter_details'][0]['chance'], encounter_slot2.rarity)
-        self.assertEqual(
-            response.data['location_area_encounters'][1].get(
-                'version_details')[0]['encounter_details'][0]['method']['name'],
-            encounter_method.name)
-        self.assertEqual(
-            response.data['location_area_encounters'][1].get(
-                'version_details')[0]['encounter_details'][0]['method']['url'],
-            '{}{}/encounter-method/{}/'.format(test_host, api_v2, encounter_method.pk))
         # sprite params
         self.assertEqual(
             response.data['sprites']['front_default'],

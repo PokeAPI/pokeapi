@@ -1,6 +1,8 @@
 
 from __future__ import unicode_literals
-from rest_framework import viewsets
+from rest_framework import status, viewsets
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from .models import *  # NOQA
 from .serializers import *  # NOQA
@@ -396,3 +398,78 @@ class VersionGroupResource(PokeapiCommonViewset):
     queryset = VersionGroup.objects.all()
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
+
+
+class PokemonEncounterView(APIView):
+    """
+    Handles Pokemon Encounters as a sub-resource.
+    """
+
+    def get(self, request, pokemon_id):
+
+        self.context = dict(request=request)
+
+        try:
+            pokemon = Pokemon.objects.get(pk=pokemon_id)
+        except Pokemon.DoesNotExist:
+            # No pokemon exists!
+            return Response({}, status=status.HTTP_404_NOT_FOUND)
+
+        # get versions for later use
+        version_objects = Version.objects.all()
+        version_data = VersionSummarySerializer(
+            version_objects, many=True, context=self.context).data
+
+        # all encounters associated with location area
+        all_encounters = Encounter.objects.filter(
+            pokemon=pokemon).order_by(
+                'location_area').values_list('location_area', flat=True)[:200]
+        encounters_list = []
+
+        # break encounters into pokemon groupings
+        location_area_objects = LocationArea.objects.filter(pk__in=all_encounters)
+
+        for area in all_encounters:
+
+            location_area_detail = OrderedDict()
+            location_area_detail['location_area'] = LocationAreaSummarySerializer(
+                location_area_objects.get(pk=area), context=self.context).data
+            location_area_detail['version_details'] = []
+
+            area_encounters = Encounter.objects.filter(
+                pk__in=all_encounters,
+                location_area=location_area_objects.get(pk=area)
+                ).order_by('version').distinct()
+
+            # each pokemon has multiple versions it could be encountered in
+            for ver in area_encounters:
+
+                version_detail = OrderedDict()
+                version_detail['max_chance'] = 0
+                version_detail['encounter_details'] = []
+                version_detail['version'] = version_data[ver.version.id - 1]
+
+                area_data = EncounterDetailSerializer(
+                    area_encounters.filter(version=ver),
+                    many=True, context=self.context).data
+
+                # each version has multiple ways a pokemon can be encountered
+                for encounter in area_data:
+
+                    slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
+                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
+                    del encounter['pokemon']
+                    del encounter['encounter_slot']
+                    del encounter['location_area']
+                    del encounter['version']
+                    encounter['chance'] = slot_data['chance']
+                    version_detail['max_chance'] += slot_data['chance']
+                    encounter['method'] = slot_data['encounter_method']
+
+                    version_detail['encounter_details'].append(encounter)
+
+                location_area_detail['version_details'].append(version_detail)
+
+            encounters_list.append(location_area_detail)
+
+        return Response(encounters_list)

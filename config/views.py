@@ -22,7 +22,7 @@ def about(request):
     average_day = cache.get('average_day')
     if not average_day:
         average_day = int(round(total_views / ResourceView.objects.count()))
-        cache.set('average_day')
+        cache.set('average_day', average_day)
 
     return render_to_response(
         'pages/about.html',

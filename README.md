@@ -142,7 +142,7 @@ docker run -d -p 8000:8000 pokeapi
 
 All contributions are welcome: bug fixes, data contributions, recommendations.
 
-Please see the [issues on GitHub](https://github.com/phalt/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
+Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 
 To contribute to this repository:
 

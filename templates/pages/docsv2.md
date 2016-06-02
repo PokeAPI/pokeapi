@@ -2415,11 +2415,11 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 
 #### PokemonStat
 
-| Name      | Description                                   | Data Type                                             |
-|:----------|:----------------------------------------------|:------------------------------------------------------|
-| stat      | The stat the Pokémon has                      | [NamedAPIResource](#namedapiresource) ([Stat](#stat)) |
-| effort    | The effort points the Pokémon has in the stat | integer                                               |
-| base_stat | The base value of the stst                    | integer                                               |
+| Name      | Description                                        | Data Type                                             |
+|:----------|:---------------------------------------------------|:------------------------------------------------------|
+| stat      | The stat the Pokémon has                           | [NamedAPIResource](#namedapiresource) ([Stat](#stat)) |
+| effort    | The effort points (EV) the Pokémon has in the stat | integer                                               |
+| base_stat | The base value of the stst                         | integer                                               |
 
 #### PokemonSprites
 

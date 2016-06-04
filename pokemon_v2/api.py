@@ -35,7 +35,7 @@ class NameOrIdRetrieval():
     """
 
     idPattern = re.compile("^-?[0-9]+$")
-    namePattern = re.compile("^[0-9A-Za-z\-]+$")
+    namePattern = re.compile("^[0-9A-Za-z\-\+]+$")
 
     def get_object(self):
         queryset = self.get_queryset()

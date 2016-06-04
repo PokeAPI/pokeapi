@@ -4,6 +4,7 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
+from django.http import Http404
 from .models import *  # NOQA
 from .serializers import *  # NOQA
 import re
@@ -35,7 +36,7 @@ class NameOrIdRetrieval():
     """
 
     idPattern = re.compile("^-?[0-9]+$")
-    namePattern = re.compile("^[0-9A-Za-z\-]+$")
+    namePattern = re.compile("^[0-9A-Za-z\-\+]+$")
 
     def get_object(self):
         queryset = self.get_queryset()
@@ -49,7 +50,7 @@ class NameOrIdRetrieval():
             resp = get_object_or_404(queryset, name=lookup)
 
         else:
-            resp = get_object_or_404(queryset, pk="")
+            raise Http404
 
         return resp
 

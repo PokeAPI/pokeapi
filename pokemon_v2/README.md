@@ -92,7 +92,7 @@ Calling any api endpoint without a resource id or name will return a paginated l
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| count    | The total number of resources abailable from this api | integer |
+| count    | The total number of resources available from this api | integer |
 | next     | The url for the next 'page' in the list               | string  |
 | previous | The url for the previous page in the list             | boolean |
 | results  | The list of non-named api resources                     | list [APIResource](#apiresource) |
@@ -116,7 +116,7 @@ Calling any api endpoint without a resource id or name will return a paginated l
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| count    | The total number of resources abailable from this api | integer |
+| count    | The total number of resources available from this api | integer |
 | next     | The url for the next 'page' in the list               | string  |
 | previous | The url for the previous page in the list             | boolean |
 | results  | The list of named api resources                    	   | list [NamedAPIResource](#namedapiresource) |

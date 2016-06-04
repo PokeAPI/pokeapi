@@ -22,3 +22,6 @@ test:
 
 clean:
 	rm -rf *.pyc
+
+migrate:
+	python manage.py migrate --settings=config.local

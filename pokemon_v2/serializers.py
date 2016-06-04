@@ -1,5 +1,6 @@
 
 from __future__ import unicode_literals
+from django.core.urlresolvers import reverse
 from rest_framework import serializers
 from collections import OrderedDict
 import json
@@ -2538,60 +2539,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
     def get_encounters(self, obj):
 
-        # get versions for later use
-        version_objects = Version.objects.all()
-        version_data = VersionSummarySerializer(
-            version_objects, many=True, context=self.context).data
-
-        # all encounters associated with location area
-        all_encounters = Encounter.objects.filter(pokemon=obj).order_by('location_area')
-        encounters_list = []
-
-        # break encounters into pokemon groupings
-        for area in all_encounters.values('location_area').distinct():
-
-            location_area_object = LocationArea.objects.get(pk=area['location_area'])
-
-            location_area_detail = OrderedDict()
-            location_area_detail['location_area'] = LocationAreaSummarySerializer(
-                location_area_object, context=self.context).data
-            location_area_detail['version_details'] = []
-
-            area_encounters = all_encounters.filter(
-                location_area=area['location_area']).order_by('version')
-
-            # each pokemon has multiple versions it could be encountered in
-            for ver in area_encounters.values('version').distinct():
-
-                version_detail = OrderedDict()
-                version_detail['max_chance'] = 0
-                version_detail['encounter_details'] = []
-                version_detail['version'] = version_data[ver['version'] - 1]
-
-                area_data = EncounterDetailSerializer(
-                    area_encounters.filter(version=ver['version']),
-                    many=True, context=self.context).data
-
-                # each version has multiple ways a pokemon can be encountered
-                for encounter in area_data:
-
-                    slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
-                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
-                    del encounter['pokemon']
-                    del encounter['encounter_slot']
-                    del encounter['location_area']
-                    del encounter['version']
-                    encounter['chance'] = slot_data['chance']
-                    version_detail['max_chance'] += slot_data['chance']
-                    encounter['method'] = slot_data['encounter_method']
-
-                    version_detail['encounter_details'].append(encounter)
-
-                location_area_detail['version_details'].append(version_detail)
-
-            encounters_list.append(location_area_detail)
-
-        return encounters_list
+        return reverse('pokemon_encounters', kwargs={'pokemon_id': obj.pk})
 
 
 #################################
@@ -2862,22 +2810,17 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
                 entry = OrderedDict()
 
-                many = False
-                try:
-                    evolution_object = PokemonEvolution.objects.get(evolved_species=species['id'])
-                except PokemonEvolution.MultipleObjectsReturned:
-                    evolution_object = PokemonEvolution.objects.filter(
-                        evolved_species=species['id'])
-                    many = True
+                evolution_object = PokemonEvolution.objects.filter(
+                    evolved_species=species['id'])
 
                 evolution_data = PokemonEvolutionSerializer(
-                    evolution_object, many=many, context=self.context).data
+                    evolution_object, many=True, context=self.context).data
 
                 current_evolutions.append(entry)
 
             entry['is_baby'] = species['is_baby']
             entry['species'] = summary_data[index]
-            entry['evolution_details'] = evolution_data or None
+            entry['evolution_details'] = evolution_data or []
             entry['evolves_to'] = []
 
             # Keep track of previous entries for complex chaining
@@ -2974,7 +2917,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
     def get_pokedex_entries(self, obj):
 
-        results = PokemonDexNumber.objects.order_by('pokedex_number').filter(pokedex=obj)
+        results = PokemonDexNumber.objects.filter(pokedex=obj).order_by('pokedex_number')
         serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
         data = serializer.data
 

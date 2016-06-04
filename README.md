@@ -16,6 +16,12 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 
 Qnce you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
 
+## Donations
+
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the server up. We get over 2 million requests a month and it's quite costly!
+
+See [the bottom of the home page](https://pokeapi.co) to donate.
+
 
 ## DEPRECATION
 
@@ -136,7 +142,7 @@ docker run -d -p 8000:8000 pokeapi
 
 All contributions are welcome: bug fixes, data contributions, recommendations.
 
-Please see the [issues on GitHub](https://github.com/phalt/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
+Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 
 To contribute to this repository:
 

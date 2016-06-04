@@ -3,7 +3,7 @@ from django.db import models
 from datetime import date
 
 
-class ViewManager(models.Manager):
+class ResourceViewManager(models.Manager):
 
     def increment_view_count(self, version):
 
@@ -14,30 +14,21 @@ class ViewManager(models.Manager):
 
         view.count = view.count + 1
 
-        print view
-
         view.save()
 
     def total_count(self, version=0):
 
-        if version:
-            objects = ResourceView.objects.filter(version=version)
-        else:
-            objects = ResourceView.objects.all()
+        all_hits = ResourceView.objects.all().values_list('count', flat=True)
 
-        t = 0
-        for v in objects:
-            t += v.count
-
-        return t
+        return sum(all_hits)
 
 
 class ResourceView(models.Model):
 
-    objects = ViewManager()
+    objects = ResourceViewManager()
 
     def __unicode__(self):
-        return str(self.date) + ' - ' + str(self.count)
+        return '{} - {}'.format(str(self.date), str(self.count))
 
     count = models.IntegerField(max_length=1000, default=0)
     version = models.IntegerField(max_length=1, default=1)

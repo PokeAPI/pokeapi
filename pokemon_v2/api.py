@@ -1,6 +1,6 @@
 
 from __future__ import unicode_literals
-from rest_framework import status, viewsets
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
@@ -444,8 +444,11 @@ class PokemonEncounterView(APIView):
 
                 version = version_objects.get(pk=version_id)
 
-                version_encounters = area_encounters.filter(version_id=version_id).order_by('encounter_slot_id')
-                encounters_data = EncounterDetailSerializer(version_encounters, many=True, context=self.context).data
+                version_encounters = area_encounters \
+                    .filter(version_id=version_id) \
+                    .order_by('encounter_slot_id')
+                encounters_data = EncounterDetailSerializer(
+                    version_encounters, many=True, context=self.context).data
 
                 max_chance = 0
                 encounter_details_list = []
@@ -471,7 +474,8 @@ class PokemonEncounterView(APIView):
                 })
 
             encounters_list.append({
-                'location_area': LocationAreaSummarySerializer(location_area, context=self.context).data,
+                'location_area': LocationAreaSummarySerializer(
+                    location_area, context=self.context).data,
                 'version_details': version_details_list
             })
 

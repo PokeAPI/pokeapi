@@ -1356,7 +1356,8 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     names = ItemNameSerializer(many=True, read_only=True, source="itemname")
     game_indices = ItemGameIndexSerializer(many=True, read_only=True, source="itemgameindex")
     effect_entries = ItemEffectTextSerializer(many=True, read_only=True, source="itemeffecttext")
-    flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
+    flavor_text_entries = ItemFlavorTextSerializer(
+        many=True, read_only=True, source="itemflavortext")
     category = ItemCategorySummarySerializer(source="item_category")
     attributes = serializers.SerializerMethodField("get_item_attributes")
     fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")

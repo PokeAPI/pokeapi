@@ -656,6 +656,10 @@ class ItemFlavorText(HasItem, HasVersionGroup, IsFlavorText):
     pass
 
 
+class ItemTaughtMove(HasItem, HasVersionGroup, HasMove):
+    pass
+
+
 class ItemAttribute(HasName):
     pass
 

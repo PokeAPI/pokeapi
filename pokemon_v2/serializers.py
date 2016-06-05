@@ -1296,6 +1296,16 @@ class ItemFlingEffectDetailSerializer(serializers.ModelSerializer):
 #######################
 #  ITEM  SERIALIZERS  #
 #######################
+class ItemTeachesMovesSerializer(serializers.ModelSerializer):
+
+    move = MoveSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = ItemTaughtMove
+        fields = ('move', 'version_group')
+
+
 class ItemFlavorTextSerializer(serializers.ModelSerializer):
 
     text = serializers.CharField(source="flavor_text")
@@ -1346,14 +1356,14 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     names = ItemNameSerializer(many=True, read_only=True, source="itemname")
     game_indices = ItemGameIndexSerializer(many=True, read_only=True, source="itemgameindex")
     effect_entries = ItemEffectTextSerializer(many=True, read_only=True, source="itemeffecttext")
-    flavor_text_entries = ItemFlavorTextSerializer(
-        many=True, read_only=True, source="itemflavortext")
+    flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
     category = ItemCategorySummarySerializer(source="item_category")
     attributes = serializers.SerializerMethodField("get_item_attributes")
     fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
     held_by_pokemon = serializers.SerializerMethodField(source='get_held_by_pokemon')
     baby_trigger_for = serializers.SerializerMethodField(source='get_baby_trigger_for')
     sprites = serializers.SerializerMethodField('get_item_sprites')
+    teaches_moves = ItemTeachesMovesSerializer(many=True, read_only=True, source="machine")
 
     class Meta:
         model = Item
@@ -1371,7 +1381,8 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'names',
             'held_by_pokemon',
             'sprites',
-            'baby_trigger_for'
+            'baby_trigger_for',
+            'teaches_moves'
         )
 
     def get_item_sprites(self, obj):

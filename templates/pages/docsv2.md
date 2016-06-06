@@ -24,7 +24,7 @@
 					<li><a href="#evolution-triggers">Evolution Triggers</a></li>
 					<li><a href="#generations">Generations</a></li>
 					<li><a href="#genders">Genders</a></li>
-				    <li><a href="#growth-rates">Growth Rates</a></li>
+					<li><a href="#growth-rates">Growth Rates</a></li>
 				</ul>
       </td>
       <td>
@@ -1156,7 +1156,7 @@ Machines are the representation of items that teach moves to Pokémon. They vary
 
 ```json
 {
-    "id": 1,`
+    "id": 1,
     "item": {
         "name": "tm01",
         "url": "http://localhost:8000/api/v2/item/305/"

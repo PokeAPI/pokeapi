@@ -965,7 +965,6 @@ An item is an object in the games which the player can pick up, keep in their ba
 | sprites             | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites)                                                   |
 | held_by_pokemon     | A list of Pokémon that might be found in the wild holding this item  | list [ItemHolderPokemon](#itemholderpokemon)                                   |
 | baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains))              |
-| teaches_moves       | A list of the moves taught by this item                              | list [ItemTaughtMove](#itemtaughtmove)                                         |
 
 #### ItemSprites
 
@@ -986,13 +985,6 @@ An item is an object in the games which the player can pick up, keep in their ba
 |:--------|:-------------------------------------------------------|:------------------------------------------------------------|
 | rarity  | How often this Pokémon holds this item in this version | string                                                      |
 | version | The version that this item is held in by the Pokémon   | [NamedAPIResource](#namedapiresource) ([Version](#version)) |
-
-#### ItemTaughtMove
-
-| Name          | Description                       | Data Type                                                             |
-|:--------------|:----------------------------------|:----------------------------------------------------------------------|
-| move          | The move that is taught           | [NamedAPIResource](#namedapiresource) ([Move](#move))                 |
-| version_group | The version the move is taught in | [NamedAPIResource](#namedapiresource) ([VersionGroup](#versiongroup)) |
 
 ## Item Attributes
 Item attributes define particular aspects of items, e.g. "usable in battle" or "consumable".

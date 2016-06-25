@@ -2567,8 +2567,8 @@ Some Pokémon have the ability to take on different forms. At times, these diffe
 | pokemon        | The Pokémon that can take on this form                                                                                                                   | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon))             |
 | sprites        | A set of sprites used to depict this Pokémon form in the game                                                                                            | [PokemonFormSprites](#pokemonformsprites)                               |
 | version_group  | The version group this Pokémon form was introduced in                                                                                                    | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
-| names          | The full Pokémon names of this Pokémon form                                                                                                              | list [Name](#name)                                                      |
-| form_names     | The form names of this Pokémon form                                                                                                                      | list [Name](#name)                                                      |
+| names          | The form specific full name of this Pokémon form, or empty if the form does not have a specific name                                                     | list [Name](#name)                                                      |
+| form_names     | The form specific form name of this Pokémon form, or empty if the form does not have a specific name                                                     | list [Name](#name)                                                      |
 
 #### PokemonFormSprites
 

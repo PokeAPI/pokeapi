@@ -24,7 +24,7 @@
 					<li><a href="#evolution-triggers">Evolution Triggers</a></li>
 					<li><a href="#generations">Generations</a></li>
 					<li><a href="#genders">Genders</a></li>
-				  <li><a href="#growth-rates">Growth Rates</a></li>
+					<li><a href="#growth-rates">Growth Rates</a></li>
 				</ul>
       </td>
       <td>
@@ -37,6 +37,7 @@
 					<li><a href="#languages">Languages</a></li>
 					<li><a href="#locations">Locations</a></li>
 					<li><a href="#location-areas">Location Areas</a></li>
+					<li><a href="#machines">Machines</a></li>
 					<li><a href="#moves">Moves</a></li>
 					<li><a href="#move-ailments">Move Ailments</a></li>
 					<li><a href="#move-battle-styles">Move Battle Styles</a></li>
@@ -44,11 +45,11 @@
 					<li><a href="#move-damage-classes">Move Damage Classes</a></li>
 					<li><a href="#move-learn-methods">Move Learn Methods</a></li>
 					<li><a href="#move-targets">Move Targets</a></li>
-					<li><a href="#natures">Natures</a></li>
 				</ul>
       </td>
       <td>
 				<ul>
+					<li><a href="#natures">Natures</a></li>
 					<li><a href="#pal-park-areas">Pal Park Areas</a></li>
 					<li><a href="#pokedexes">Pokédexes</a></li>
 					<li><a href="#pokemon">Pokémon</a></li>
@@ -965,6 +966,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 | sprites             | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites)                                                   |
 | held_by_pokemon     | A list of Pokémon that might be found in the wild holding this item  | list [ItemHolderPokemon](#itemholderpokemon)                                   |
 | baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains))              |
+| machines            | A list of the machines related to this item                          | list [MachineVersionDetail](#machineversiondetail)                     |
 
 #### ItemSprites
 
@@ -1143,6 +1145,42 @@ Pockets within the players bag used for storing items by category.
 | categories | A list of item categories that are relevant to this item pocket | list [NamedAPIResource](#namedapiresource) ([ItemCategory](#item-categories)) |
 | names      | The name of this item pocket listed in different languages      | list [Name](#resourcename)                                                    |
 
+<h1 id="machines-section">Machines</h1>
+
+## Machines
+Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.
+
+### GET api/v2/machine/{id}
+
+###### Example response
+
+```json
+{
+    "id": 1,
+    "item": {
+        "name": "tm01",
+        "url": "http://localhost:8000/api/v2/item/305/"
+    },
+    "move": {
+        "name": "mega-punch",
+        "url": "http://localhost:8000/api/v2/move/5/"
+    },
+    "version_group": {
+        "name": "red-blue",
+        "url": "http://localhost:8000/api/v2/version/1/"
+    }
+}
+```
+
+###### Response models
+
+| Name          | Description                                        | Data Type                                                               |
+|:--------------|:---------------------------------------------------|:------------------------------------------------------------------------|
+| id            | The identifier for this machine resource           | integer                                                                 |
+| item          | The TM or HM item that corresponds to this machine | [NamedAPIResource](#namedapiresource) ([Item](#items))                  |
+| move          | The move that is taught by this machine            | [NamedAPIResource](#namedapiresource) ([Move](#moves))                  |
+| version_group | The version group that this machine applies to     | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+
 <h1 id="moves-section">Moves</h1>
 
 ## Moves
@@ -1267,6 +1305,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | effect_entries       | The effect of this move listed in different languages                                                                                                                     | list [VerboseEffect](#verboseeffect)                                            |
 | effect_changes       | The list of previous effects this move has had across version groups of the games                                                                                         | list [AbilityEffectChange](#abilityeffectchange)                                |
 | generation           | The generation in which this move was introduced                                                                                                                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
+| machines             | A list of the machines that teach this move                                                                                                                               | list [MachineVersionDetail](#machineversiondetail)                              |
 | meta                 | Metadata about this move                                                                                                                                                  | [MoveMetaData](#movemetadata)                                                   |
 | names                | The name of this move listed in different languages                                                                                                                       | list [Name](#resourcename)                                                      |
 | past_values          | A list of move resource value changes across version groups of the game                                                                                                   | list [PastMoveStatValues](#pastmovestatvalues)                                  |
@@ -3078,6 +3117,13 @@ Languages for translations of API resource information.
 |:-----------|:----------------------------------------------------|:-------------------------------------------------------------------|
 | game_index | The internal id of an API resource within game data | integer                                                            |
 | generation | The generation relevent to this game index          | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
+
+#### MachineVersionDetail
+
+| Name          | Description                                    | Data Type                                                   |
+|:--------------|:-----------------------------------------------|:------------------------------------------------------------|
+| machine       | The machine that teaches a move from an item   | [APIResource](#apiresource) ([Machine](#machines))           |
+| version_group | The version group of this specific machine     | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 #### <a id="resourcename"></a>Name
 

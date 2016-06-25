@@ -240,6 +240,13 @@ class LocationAreaResource(ListOrDetailSerialRelation, IncrementingReadOnlyModel
     list_serializer_class = LocationAreaSummarySerializer
 
 
+class MachineResource(PokeapiCommonViewset):
+
+    queryset = Machine.objects.all()
+    serializer_class = MachineDetailSerializer
+    list_serializer_class = MachineSummarySerializer
+
+
 class MoveResource(PokeapiCommonViewset):
 
     queryset = Move.objects.all()

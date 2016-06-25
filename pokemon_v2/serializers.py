@@ -2233,18 +2233,55 @@ class PokemonFormSpritesSerializer(serializers.ModelSerializer):
         fields = ('sprites',)
 
 
+class PokemonFormNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonFormName
+        fields = ('name', 'pokemon_name', 'language')
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
     sprites = serializers.SerializerMethodField('get_pokemon_form_sprites')
+    form_names = serializers.SerializerMethodField('get_pokemon_form_names')
+    names = serializers.SerializerMethodField('get_pokemon_form_pokemon_names')
 
     class Meta:
         model = PokemonForm
         fields = (
             'id', 'name', 'order', 'form_order', 'is_default', 'is_battle_only',
-            'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group'
+            'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group',
+            'form_names', 'names'
         )
+
+    def get_pokemon_form_names(self, obj):
+
+        form_results = PokemonFormName.objects.filter(pokemon_form=obj, name__regex=".+")
+        form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
+
+        data = form_serializer.data
+
+        for name in data:
+            del name['pokemon_name']
+
+        return data
+
+    def get_pokemon_form_pokemon_names(self, obj):
+
+        form_results = PokemonFormName.objects.filter(pokemon_form=obj, pokemon_name__regex=".+")
+        form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
+
+        data = form_serializer.data
+
+        for name in data:
+            name['name'] = name['pokemon_name']
+            del name['pokemon_name']
+
+        return data
 
     def get_pokemon_form_sprites(self, obj):
 

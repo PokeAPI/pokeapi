@@ -21,7 +21,7 @@ test:
 	python manage.py test --settings=config.local
 
 clean:
-	rm -rf *.pyc
+	find . -type f -name '*.pyc' -delete
 
 migrate:
 	python manage.py migrate --settings=config.local

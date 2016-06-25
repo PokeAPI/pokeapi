@@ -1373,7 +1373,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'held_by_pokemon',
             'sprites',
             'baby_trigger_for',
-            'machines'
+            'machines',
         )
 
     def get_item_machines(self, obj):
@@ -2055,7 +2055,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'super_contest_effect',
             'target',
             'type',
-            'machines'
+            'machines',
         )
 
     def get_move_machines(self, obj):

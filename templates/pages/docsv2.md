@@ -1281,7 +1281,20 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 	"type": {
 		"name": "normal",
 		"url": "http://pokeapi.co/api/v2/type/1/"
-	}
+	},
+  "flavor_text_entries": [
+		{
+			"flavor_text": "Pounds with fore­\nlegs or tail.",
+			"language": {
+				"url": "http://localhost:8000/api/v2/language/9/",
+				"name": "en"
+			},
+			"version_group": {
+				"url": "http://localhost:8000/api/v2/version-group/3/",
+				"name": "gold-silver"
+			}
+		},
+  }]
 }
 ```
 

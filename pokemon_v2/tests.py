@@ -1123,10 +1123,10 @@ class APIData():
             name='lang for '+flavor_text)
 
         move_flavor_text = MoveFlavorText.objects.create(
-            move = move,
-            version_group = version_group,
-            language = language,
-            flavor_text = flavor_text
+            move=move,
+            version_group=version_group,
+            language=language,
+            flavor_text=flavor_text
         )
         move_flavor_text.save()
 
@@ -3651,12 +3651,20 @@ class APITests(APIData, APITestCase):
             '{}{}/language/{}/'.format(
                 test_host, api_v2, move_effect_change_effect_text.language.pk))
         # flavor text params
-        self.assertEqual(response.data['flavor_text_entries'][0]['flavor_text'], move_flavor_text.flavor_text)
-        self.assertEqual(response.data['flavor_text_entries'][0]['language']['name'], move_flavor_text.language.name)
-        self.assertEqual(response.data['flavor_text_entries'][0]['language']['url'], '{}{}/language/{}/'.format(test_host, api_v2, move_flavor_text.language.pk))
-        self.assertEqual(response.data['flavor_text_entries'][0]['version_group']['name'], move_flavor_text.version_group.name)
-        self.assertEqual(response.data['flavor_text_entries'][0]['version_group']['url'], '{}{}/version-group/{}/'.format(test_host, api_v2, move_flavor_text.version_group.pk))
-
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['flavor_text'], move_flavor_text.flavor_text)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['language']['name'],
+            move_flavor_text.language.name)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['language']['url'],
+            '{}{}/language/{}/'.format(test_host, api_v2, move_flavor_text.language.pk))
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['version_group']['name'],
+            move_flavor_text.version_group.name)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['version_group']['url'],
+            '{}{}/version-group/{}/'.format(test_host, api_v2, move_flavor_text.version_group.pk))
 
     # Stat Tests
     def test_stat_api(self):

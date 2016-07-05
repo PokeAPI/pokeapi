@@ -2012,6 +2012,17 @@ class MoveEffectChangeSerializer(serializers.ModelSerializer):
         fields = ('version_group', 'effect_entries')
 
 
+class MoveFlavorTextSerializer(serializers.ModelSerializer):
+
+    flavor_text = serializers.CharField()
+    language = LanguageSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = MoveFlavorText
+        fields = ('flavor_text', 'language', 'version_group')
+
+
 class MoveDetailSerializer(serializers.ModelSerializer):
 
     generation = GenerationSummarySerializer()
@@ -2030,6 +2041,8 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     past_values = MoveChangeSerializer(many=True, read_only=True, source="movechange")
     effect_changes = serializers.SerializerMethodField('get_effect_change_text')
     machines = serializers.SerializerMethodField('get_move_machines')
+    flavor_text_entries = MoveFlavorTextSerializer(
+        many=True, read_only=True, source="moveflavortext")
 
     class Meta:
         model = Move
@@ -2056,6 +2069,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'target',
             'type',
             'machines',
+            'flavor_text_entries',
         )
 
     def get_move_machines(self, obj):

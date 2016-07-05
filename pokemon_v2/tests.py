@@ -1115,6 +1115,24 @@ class APIData():
         return super_contest_combo
 
     @classmethod
+    def setup_move_flavor_text_data(self, move, flavor_text='move flvr txt'):
+        version_group = self.setup_version_group_data(
+            name='ver grp for '+flavor_text)
+
+        language = self.setup_language_data(
+            name='lang for '+flavor_text)
+
+        move_flavor_text = MoveFlavorText.objects.create(
+            move=move,
+            version_group=version_group,
+            language=language,
+            flavor_text=flavor_text
+        )
+        move_flavor_text.save()
+
+        return move_flavor_text
+
+    @classmethod
     def setup_move_data(self, contest_type=None, contest_effect=None, super_contest_effect=None,
                         generation=None, move_damage_class=None, move_effect=None,
                         move_target=None, type=None, name='mv', power=20, pp=20,
@@ -3488,6 +3506,7 @@ class APITests(APIData, APITestCase):
         self.setup_contest_combo_data(before_move, move)
         self.setup_super_contest_combo_data(move, after_move)
         self.setup_super_contest_combo_data(before_move, move)
+        move_flavor_text = self.setup_move_flavor_text_data(move, flavor_text='flvr text for move')
 
         response = self.client.get('{}/move/{}/'.format(api_v2, move.pk))
 
@@ -3631,6 +3650,21 @@ class APITests(APIData, APITestCase):
             response.data['effect_changes'][0]['effect_entries'][0]['language']['url'],
             '{}{}/language/{}/'.format(
                 test_host, api_v2, move_effect_change_effect_text.language.pk))
+        # flavor text params
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['flavor_text'], move_flavor_text.flavor_text)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['language']['name'],
+            move_flavor_text.language.name)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['language']['url'],
+            '{}{}/language/{}/'.format(test_host, api_v2, move_flavor_text.language.pk))
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['version_group']['name'],
+            move_flavor_text.version_group.name)
+        self.assertEqual(
+            response.data['flavor_text_entries'][0]['version_group']['url'],
+            '{}{}/version-group/{}/'.format(test_host, api_v2, move_flavor_text.version_group.pk))
 
     # Stat Tests
     def test_stat_api(self):

@@ -1281,7 +1281,20 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 	"type": {
 		"name": "normal",
 		"url": "http://pokeapi.co/api/v2/type/1/"
-	}
+	},
+  "flavor_text_entries": [
+		{
+			"flavor_text": "Pounds with fore­\nlegs or tail.",
+			"language": {
+				"url": "http://localhost:8000/api/v2/language/9/",
+				"name": "en"
+			},
+			"version_group": {
+				"url": "http://localhost:8000/api/v2/version-group/3/",
+				"name": "gold-silver"
+			}
+		},
+  }]
 }
 ```
 
@@ -1304,6 +1317,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | damage_class         | The type of damage the move inflicts on the target, e.g. physical                                                                                                         | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | effect_entries       | The effect of this move listed in different languages                                                                                                                     | list [VerboseEffect](#verboseeffect)                                            |
 | effect_changes       | The list of previous effects this move has had across version groups of the games                                                                                         | list [AbilityEffectChange](#abilityeffectchange)                                |
+| flavor_text_entries  | The flavor text of this move listed in different languages                                                                                                                | [Move](#moveflavortext)                                                         |
 | generation           | The generation in which this move was introduced                                                                                                                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
 | machines             | A list of the machines that teach this move                                                                                                                               | list [MachineVersionDetail](#machineversiondetail)                              |
 | meta                 | Metadata about this move                                                                                                                                                  | [MoveMetaData](#movemetadata)                                                   |
@@ -1327,6 +1341,14 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 |:-----------|:----------------------------------------|:------------------------------------------------------------|
 | use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | use_after  | A list of moves to use after this move  | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
+
+#### MoveFlavorText
+
+| Name          | Description                                                          | Data Type                                                               |
+|:--------------|:---------------------------------------------------------------------|:------------------------------------------------------------------------|
+| flavor_text   | The localized flavor text for an api resource in a specific language | string                                                                  |
+| language      | The language this name is in                                  		   | [NamedAPIResource](#namedapiresource) ([Language](#languages))          |
+| version_group | The version group that uses this flavor text                         | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 #### MoveMetaData
 
@@ -2677,7 +2699,7 @@ Shapes used for sorting Pokémon in a Pokédex.
 | language     | The language this "scientific" name is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
 
 ## Pokémon Species
-A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.  
+A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
 
 ### GET api/v2/pokemon-species/{id or name}
 

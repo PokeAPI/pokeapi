@@ -160,6 +160,12 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
 
     'PAGINATE_BY': 20,
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100000/day'
+    }
 }
 
 MARKDOWN_DEUX_STYLES = {

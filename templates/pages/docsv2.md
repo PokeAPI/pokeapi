@@ -2825,7 +2825,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | flavor_text_entries    | A list of flavor text entries for this Pokémon species                                                                                             | list [FlavorText](#flavortext)                                              | 
 | form_descriptions      | Descriptions of different forms Pokémon take on within the Pokémon species                                                                         | list [Description](#description)                                            |
 | genera                 | The genus of this Pokémon species listed in multiple languages                                                                                     | list [Genus](#genus)                                                        |
-| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety]                                                |
+| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety](#pokemonspeciesvariety)                        |
 
 #### Genus
 

@@ -2005,7 +2005,7 @@ Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon
 | id              | The identifier for this characteristic resource                                                                        | integer                            |
 | gene_modulo     | The remainder of the highest stat/IV divided by 5                                                                      | integer                            |
 | possible_values | The possible values of the highest stat that would result in a Pokémon recieving this characteristic when divided by 5 | list integer                       |
-| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list ([Description](#description)) |
+| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list [Description](#description)   |
 
 ## Egg Groups
 Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.

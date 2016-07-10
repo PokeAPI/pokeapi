@@ -1384,7 +1384,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | pp             | Power points. The number of times this move can be used                        | integer                                                                 |
 | effect_entries | The effect of this move listed in different languages                          | list [VerboseEffect](#verboseeffect)                                    |
 | type           | The elemental type of this move                                                | [NamedAPIResource](#namedapiresource) ([Type](#types))                  |
-| version group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| version_group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 ## Move Ailments
 Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/http://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.

@@ -2849,7 +2849,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | rate       | The base rate for encountering the referenced Pokémon in this pal park area                    | integer                                                                |
 | area       | The pal park area where this encounter happens                                                 | [NamedAPIResource](#namedapiresource) ([PalParkArea](#pal-park-areas)) |
 
-#### PokemonSpeciesDexEntry
+#### PokemonSpeciesVariety
 
 | Name       | Description                                 | Data Type                                                   |
 |:-----------|:--------------------------------------------|:------------------------------------------------------------|

@@ -2472,7 +2472,7 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 |:------------------|:-----------------------------------------------|:------------------------------------------------------------------------------|
 | move_learn_method | The method by which the move is learned        | [NamedAPIResource](#namedapiresource) ([MoveLearnMethod](#move-learn-method)) |
 | version_group     | The version group in which the move is learned | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-group))        |
-| level_learned_at  | The minimum level to learn the move            | string                                                                        |
+| level_learned_at  | The minimum level to learn the move            | integer                                                                       |
 
 #### PokemonStat
 

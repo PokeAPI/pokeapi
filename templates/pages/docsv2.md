@@ -2440,10 +2440,10 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 
 #### PokemonType
 
-| Name | Description                                 | Data Type |
-|:-----|:--------------------------------------------|:----------|
-| slot | The order the Pokémon's types are listed in | integer   |
-| type | The type the referenced Pokémon has         | string    |
+| Name | Description                                 | Data Type                                             |
+|:-----|:--------------------------------------------|:------------------------------------------------------|
+| slot | The order the Pokémon's types are listed in | integer                                               |
+| type | The type the referenced Pokémon has         | [NamedAPIResource](#namedapiresource) ([Type](#type)) |
 
 #### PokemonHeldItem
 

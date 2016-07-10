@@ -2423,7 +2423,7 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 | forms                    | A list of forms this Pokémon can take on                                                         | list [NamedAPIResource](#namedapiresource) ([PokemonForm](#pokemon-forms)) |
 | game_indices             | A list of game indices relevent to Pokémon item by generation                                    | list [VersionGameIndex](#versiongameindex)                                 |
 | held_items               | A list of items this Pokémon may be holding when encountered                                     | list [PokemonHeldItem](#pokemonhelditem)                                   |
-| location_area_encounters | A link to a list of location areas as well as encounter details pertaining to specific versions  | string (URL to list [LocationAreaEncounter](#locationareaencounter))       |
+| location_area_encounters | A link to a list of location areas as well as encounter details pertaining to specific versions  | list [LocationAreaEncounter](#locationareaencounter)                       |
 | moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | list [PokemonMove](#pokemonmove)                                           |
 | sprites                  | A set of sprites used to depict this Pokémon in the game                                         | [PokemonSprites](#pokemonsprites)                                          |
 | species                  | The species this Pokémon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |

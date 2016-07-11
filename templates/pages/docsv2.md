@@ -3035,7 +3035,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 | generation        | The generation this type was introduced in                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
 | move_damage_class | The class of damage inflicted by this type                          | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | names             | The name of this type listed in different languages                 | list [Name](#resourcename)                                                      |
-| pokemon           | A list of details of Pokémon that have this type                    | [TypePokemon](#typepokemon)                                                     |
+| pokemon           | A list of details of Pokémon that have this type                    | list [TypePokemon](#typepokemon)                                                |
 | moves             | A list of moves that have this type                                 | list [NamedAPIResource](#namedapiresource) ([Move](#moves))                     |
 
 #### TypePokemon

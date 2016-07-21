@@ -10,7 +10,7 @@
 
 html { padding-top: 50px; }
 
-body, h1, h2, h3, h4, h5, h6, p { 
+body, h1, h2, h3, h4, h5, h6, p {
 
     font-family: 'Lato', sans-serif;
     color: #263238;
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2 { font-weight: 900; }
 
-h2 { margin-bottom: 10px; } 
+h2 { margin-bottom: 10px; }
 
 a { color: #1b95e0; }
 
@@ -36,7 +36,7 @@ pre {
     position: relative;
 }
 
-hr { 
+hr {
     border-width: 1px;
     border-color: #CCC;
     margin: 3px 0;
@@ -56,11 +56,11 @@ hr {
 }
 
 .header h1,
-.header h2, 
-.header h3, 
+.header h2,
+.header h3,
 .header h4,
 .header h5 {
-    
+
     color: #FFF;
     text-align: center;
     margin: 0 10%;
@@ -82,11 +82,11 @@ hr {
 }
 
 .navbar-inverse .navbar-nav li a {
-    
+
     color: #FFF;
 }
 
-.navbar-inverse .navbar-nav .active a, 
+.navbar-inverse .navbar-nav .active a,
 .navbar-inverse .navbar-nav .active a:hover,
 .navbar-inverse .navbar-nav .active a:focus {
     background-color: #C62828!important;
@@ -119,6 +119,14 @@ pre {
 
 .pad_top {
     padding-top: 15px;
+}
+
+.pad_bot {
+    padding-bottom: 15px;
+}
+
+.do_image {
+    width: 300px;
 }
 
 .twitter-tweet {
@@ -224,7 +232,7 @@ pre {
 }
 
 @media (min-width: 628px) {
-    
+
     #about .header {
 
         padding-top: 80px;
@@ -247,7 +255,7 @@ pre {
 }
 
 @media (min-width: 516px) {
-    
+
     #docs .header {
 
         padding-top: 80px;
@@ -255,7 +263,7 @@ pre {
 }
 
 #docs h1#pokeapi-v2-api-reference  {
-    
+
     display: none;
 }
 
@@ -266,13 +274,13 @@ pre {
 
 #docs table th:first-child,
 #docs table tr:first-child {
-    
+
     width: 140px;
 }
 
 #docs table th:last-child,
 #docs table tr:last-child {
-    
+
     width: 180px;
 }
 
@@ -300,24 +308,24 @@ pre {
 }
 
 #docs h6 {
-    
+
     display: none;
 }
 
 #docs .side-nav ul {
-    
+
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 #docs .side-nav ul li ul {
-    
+
     margin-left: 10px;
 }
 
 #docs .side-nav .doc-select li a {
-    
+
     padding-left: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -325,56 +333,56 @@ pre {
 }
 
 #docs .side-nav .doc-select li.active > a {
-    
+
     border-left: 2px solid #1b95e0;
     padding-left: 8px;
 }
 
 #docs .side-nav .doc-select li ul {
-    
+
     display: none;
 }
 
 #docs .side-nav .doc-select li.active ul {
-    
+
     display: block;
 }
 
 #docs .side-nav hr {
-    
+
     width: 50%;
 }
 
-#docs .nav-group { 
+#docs .nav-group {
 
-    position: relative; 
+    position: relative;
     z-index: 20;
 }
 
 #docs .nav-group.stick {
-    
+
     position: fixed;
     z-index: 20;
     top: 65px;
 }
 
 #docs .side-nav .version-select li {
-    
+
     width: 50%;
     display: inline-block;
     float: left;
     background-color: #EF5350;
     text-align: center;
     margin-bottom: 15px;
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2),
                         0px -15px 0 0 #FFF;
 
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2),
                 0px -15px 0 0 #FFF;
 }
 
 #docs .version-select li a {
-    
+
     display: inline-block;
     text-decoration: none;
     padding: 13px;
@@ -383,7 +391,7 @@ pre {
 }
 
 #docs .version-select li.active {
-    
+
     background-color: #C62828;
 }
 

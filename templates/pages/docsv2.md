@@ -1384,7 +1384,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | pp             | Power points. The number of times this move can be used                        | integer                                                                 |
 | effect_entries | The effect of this move listed in different languages                          | list [VerboseEffect](#verboseeffect)                                    |
 | type           | The elemental type of this move                                                | [NamedAPIResource](#namedapiresource) ([Type](#types))                  |
-| version group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| version_group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 ## Move Ailments
 Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/http://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.
@@ -2005,7 +2005,7 @@ Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon
 | id              | The identifier for this characteristic resource                                                                        | integer                            |
 | gene_modulo     | The remainder of the highest stat/IV divided by 5                                                                      | integer                            |
 | possible_values | The possible values of the highest stat that would result in a Pokémon recieving this characteristic when divided by 5 | list integer                       |
-| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list ([Description](#description)) |
+| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list [Description](#description)   |
 
 ## Egg Groups
 Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.
@@ -2440,10 +2440,10 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 
 #### PokemonType
 
-| Name | Description                                 | Data Type |
-|:-----|:--------------------------------------------|:----------|
-| slot | The order the Pokémon's types are listed in | integer   |
-| type | The type the referenced Pokémon has         | string    |
+| Name | Description                                 | Data Type                                             |
+|:-----|:--------------------------------------------|:------------------------------------------------------|
+| slot | The order the Pokémon's types are listed in | integer                                               |
+| type | The type the referenced Pokémon has         | [NamedAPIResource](#namedapiresource) ([Type](#type)) |
 
 #### PokemonHeldItem
 
@@ -2472,7 +2472,7 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 |:------------------|:-----------------------------------------------|:------------------------------------------------------------------------------|
 | move_learn_method | The method by which the move is learned        | [NamedAPIResource](#namedapiresource) ([MoveLearnMethod](#move-learn-method)) |
 | version_group     | The version group in which the move is learned | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-group))        |
-| level_learned_at  | The minimum level to learn the move            | string                                                                        |
+| level_learned_at  | The minimum level to learn the move            | integer                                                                       |
 
 #### PokemonStat
 
@@ -2809,7 +2809,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | base_happiness         | The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.                                         | integer                                                                     |
 | is_baby                | Whether or not this is a baby Pokémon                                                                                                              | boolean                                                                     |
 | hatch_counter          | Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer                                                                     |
-| has_gender_differences | Whether or not this Pokémon can have different genders                                                                                             | boolean                                                                     |
+| has_gender_differences | Whether or not this Pokémon has visual gender differences                                                                                     | boolean                                                                     |
 | forms_switchable       | Whether or not this Pokémon has multiple forms and can switch between them                                                                         | boolean                                                                     |
 | growth_rate            | The rate at which this Pokémon species gains levels                                                                                                | [NamedAPIResource](#namedapiresource) ([GrowthRate](#growth-rates))         |
 | pokedex_numbers        | A list of Pokedexes and the indexes reserved within them for this Pokémon species                                                                  | list [PokemonSpeciesDexEntry](#pokemonspeciesdexentry)                      |
@@ -2825,7 +2825,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | flavor_text_entries    | A list of flavor text entries for this Pokémon species                                                                                             | list [FlavorText](#flavortext)                                              | 
 | form_descriptions      | Descriptions of different forms Pokémon take on within the Pokémon species                                                                         | list [Description](#description)                                            |
 | genera                 | The genus of this Pokémon species listed in multiple languages                                                                                     | list [Genus](#genus)                                                        |
-| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety]                                                |
+| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety](#pokemonspeciesvariety)                        |
 
 #### Genus
 
@@ -2849,7 +2849,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | rate       | The base rate for encountering the referenced Pokémon in this pal park area                    | integer                                                                |
 | area       | The pal park area where this encounter happens                                                 | [NamedAPIResource](#namedapiresource) ([PalParkArea](#pal-park-areas)) |
 
-#### PokemonSpeciesDexEntry
+#### PokemonSpeciesVariety
 
 | Name       | Description                                 | Data Type                                                   |
 |:-----------|:--------------------------------------------|:------------------------------------------------------------|
@@ -3035,7 +3035,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 | generation        | The generation this type was introduced in                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
 | move_damage_class | The class of damage inflicted by this type                          | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | names             | The name of this type listed in different languages                 | list [Name](#resourcename)                                                      |
-| pokemon           | A list of details of Pokémon that have this type                    | [TypePokemon](#typepokemon)                                                     |
+| pokemon           | A list of details of Pokémon that have this type                    | list [TypePokemon](#typepokemon)                                                |
 | moves             | A list of moves that have this type                                 | list [NamedAPIResource](#namedapiresource) ([Move](#moves))                     |
 
 #### TypePokemon

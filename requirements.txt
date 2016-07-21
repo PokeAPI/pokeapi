@@ -11,7 +11,7 @@ django-redis==4.4.0
 django-cachalot==1.2.1
 django-tastypie==0.12.1
 django-markdown-deux==1.0.5
-djangorestframework>=3.1.0
+djangorestframework==3.1.0
 drf-ujson==1.2.0
 gunicorn==0.17.0
 markdown2==2.3.0

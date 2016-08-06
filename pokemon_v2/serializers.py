@@ -1354,6 +1354,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     held_by_pokemon = serializers.SerializerMethodField(source='get_held_by_pokemon')
     baby_trigger_for = serializers.SerializerMethodField(source='get_baby_trigger_for')
     sprites = serializers.SerializerMethodField('get_item_sprites')
+    machines = serializers.SerializerMethodField('get_item_machines')
 
     class Meta:
         model = Item
@@ -1371,8 +1372,30 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             'names',
             'held_by_pokemon',
             'sprites',
-            'baby_trigger_for'
+            'baby_trigger_for',
+            'machines',
         )
+
+    def get_item_machines(self, obj):
+
+        machine_objects = Machine.objects.filter(item=obj)
+
+        machines = []
+
+        for machine_object in machine_objects:
+
+            machine_data = MachineSummarySerializer(
+                machine_object, context=self.context).data
+
+            version_group_data = VersionGroupSummarySerializer(
+                machine_object.version_group, context=self.context).data
+
+            machines.append({
+                'machine': machine_data,
+                'version_group': version_group_data
+            })
+
+        return machines
 
     def get_item_sprites(self, obj):
 
@@ -1743,7 +1766,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 class MachineDetailSerializer(serializers.ModelSerializer):
 
     item = ItemSummarySerializer()
-    version_group = VersionSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
     move = MoveSummarySerializer()
 
     class Meta:
@@ -1989,6 +2012,17 @@ class MoveEffectChangeSerializer(serializers.ModelSerializer):
         fields = ('version_group', 'effect_entries')
 
 
+class MoveFlavorTextSerializer(serializers.ModelSerializer):
+
+    flavor_text = serializers.CharField()
+    language = LanguageSummarySerializer()
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = MoveFlavorText
+        fields = ('flavor_text', 'language', 'version_group')
+
+
 class MoveDetailSerializer(serializers.ModelSerializer):
 
     generation = GenerationSummarySerializer()
@@ -2006,6 +2040,9 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     super_contest_effect = SuperContestEffectSummarySerializer()
     past_values = MoveChangeSerializer(many=True, read_only=True, source="movechange")
     effect_changes = serializers.SerializerMethodField('get_effect_change_text')
+    machines = serializers.SerializerMethodField('get_move_machines')
+    flavor_text_entries = MoveFlavorTextSerializer(
+        many=True, read_only=True, source="moveflavortext")
 
     class Meta:
         model = Move
@@ -2030,8 +2067,30 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             'stat_changes',
             'super_contest_effect',
             'target',
-            'type'
+            'type',
+            'machines',
+            'flavor_text_entries',
         )
+
+    def get_move_machines(self, obj):
+
+        machine_objects = Machine.objects.filter(move=obj)
+
+        machines = []
+
+        for machine_object in machine_objects:
+            machine_data = MachineSummarySerializer(
+                machine_object, context=self.context).data
+
+            version_group_data = VersionGroupSummarySerializer(
+                machine_object.version_group, context=self.context).data
+
+            machines.append({
+                'machine': machine_data,
+                'version_group': version_group_data
+            })
+
+        return machines
 
     def get_combos(self, obj):
 
@@ -2188,18 +2247,55 @@ class PokemonFormSpritesSerializer(serializers.ModelSerializer):
         fields = ('sprites',)
 
 
+class PokemonFormNameSerializer(serializers.ModelSerializer):
+
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = PokemonFormName
+        fields = ('name', 'pokemon_name', 'language')
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
     sprites = serializers.SerializerMethodField('get_pokemon_form_sprites')
+    form_names = serializers.SerializerMethodField('get_pokemon_form_names')
+    names = serializers.SerializerMethodField('get_pokemon_form_pokemon_names')
 
     class Meta:
         model = PokemonForm
         fields = (
             'id', 'name', 'order', 'form_order', 'is_default', 'is_battle_only',
-            'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group'
+            'is_mega', 'form_name', 'pokemon', 'sprites', 'version_group',
+            'form_names', 'names'
         )
+
+    def get_pokemon_form_names(self, obj):
+
+        form_results = PokemonFormName.objects.filter(pokemon_form=obj, name__regex=".+")
+        form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
+
+        data = form_serializer.data
+
+        for name in data:
+            del name['pokemon_name']
+
+        return data
+
+    def get_pokemon_form_pokemon_names(self, obj):
+
+        form_results = PokemonFormName.objects.filter(pokemon_form=obj, pokemon_name__regex=".+")
+        form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
+
+        data = form_serializer.data
+
+        for name in data:
+            name['name'] = name['pokemon_name']
+            del name['pokemon_name']
+
+        return data
 
     def get_pokemon_form_sprites(self, obj):
 

@@ -24,7 +24,7 @@
 					<li><a href="#evolution-triggers">Evolution Triggers</a></li>
 					<li><a href="#generations">Generations</a></li>
 					<li><a href="#genders">Genders</a></li>
-				  <li><a href="#growth-rates">Growth Rates</a></li>
+					<li><a href="#growth-rates">Growth Rates</a></li>
 				</ul>
       </td>
       <td>
@@ -37,6 +37,7 @@
 					<li><a href="#languages">Languages</a></li>
 					<li><a href="#locations">Locations</a></li>
 					<li><a href="#location-areas">Location Areas</a></li>
+					<li><a href="#machines">Machines</a></li>
 					<li><a href="#moves">Moves</a></li>
 					<li><a href="#move-ailments">Move Ailments</a></li>
 					<li><a href="#move-battle-styles">Move Battle Styles</a></li>
@@ -44,11 +45,11 @@
 					<li><a href="#move-damage-classes">Move Damage Classes</a></li>
 					<li><a href="#move-learn-methods">Move Learn Methods</a></li>
 					<li><a href="#move-targets">Move Targets</a></li>
-					<li><a href="#natures">Natures</a></li>
 				</ul>
       </td>
       <td>
 				<ul>
+					<li><a href="#natures">Natures</a></li>
 					<li><a href="#pal-park-areas">Pal Park Areas</a></li>
 					<li><a href="#pokedexes">Pokédexes</a></li>
 					<li><a href="#pokemon">Pokémon</a></li>
@@ -965,6 +966,7 @@ An item is an object in the games which the player can pick up, keep in their ba
 | sprites             | A set of sprites used to depict this item in the game                | [ItemSprites](#item-sprites)                                                   |
 | held_by_pokemon     | A list of Pokémon that might be found in the wild holding this item  | list [ItemHolderPokemon](#itemholderpokemon)                                   |
 | baby_trigger_for    | An evolution chain this item requires to produce a bay during mating | [APIResource](#apiresource) ([EvolutionChain](#evolution-chains))              |
+| machines            | A list of the machines related to this item                          | list [MachineVersionDetail](#machineversiondetail)                     |
 
 #### ItemSprites
 
@@ -1143,6 +1145,42 @@ Pockets within the players bag used for storing items by category.
 | categories | A list of item categories that are relevant to this item pocket | list [NamedAPIResource](#namedapiresource) ([ItemCategory](#item-categories)) |
 | names      | The name of this item pocket listed in different languages      | list [Name](#resourcename)                                                    |
 
+<h1 id="machines-section">Machines</h1>
+
+## Machines
+Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.
+
+### GET api/v2/machine/{id}
+
+###### Example response
+
+```json
+{
+    "id": 1,
+    "item": {
+        "name": "tm01",
+        "url": "http://localhost:8000/api/v2/item/305/"
+    },
+    "move": {
+        "name": "mega-punch",
+        "url": "http://localhost:8000/api/v2/move/5/"
+    },
+    "version_group": {
+        "name": "red-blue",
+        "url": "http://localhost:8000/api/v2/version/1/"
+    }
+}
+```
+
+###### Response models
+
+| Name          | Description                                        | Data Type                                                               |
+|:--------------|:---------------------------------------------------|:------------------------------------------------------------------------|
+| id            | The identifier for this machine resource           | integer                                                                 |
+| item          | The TM or HM item that corresponds to this machine | [NamedAPIResource](#namedapiresource) ([Item](#items))                  |
+| move          | The move that is taught by this machine            | [NamedAPIResource](#namedapiresource) ([Move](#moves))                  |
+| version_group | The version group that this machine applies to     | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+
 <h1 id="moves-section">Moves</h1>
 
 ## Moves
@@ -1243,7 +1281,20 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 	"type": {
 		"name": "normal",
 		"url": "http://pokeapi.co/api/v2/type/1/"
-	}
+	},
+  "flavor_text_entries": [
+		{
+			"flavor_text": "Pounds with fore­\nlegs or tail.",
+			"language": {
+				"url": "http://localhost:8000/api/v2/language/9/",
+				"name": "en"
+			},
+			"version_group": {
+				"url": "http://localhost:8000/api/v2/version-group/3/",
+				"name": "gold-silver"
+			}
+		},
+  }]
 }
 ```
 
@@ -1266,7 +1317,9 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | damage_class         | The type of damage the move inflicts on the target, e.g. physical                                                                                                         | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | effect_entries       | The effect of this move listed in different languages                                                                                                                     | list [VerboseEffect](#verboseeffect)                                            |
 | effect_changes       | The list of previous effects this move has had across version groups of the games                                                                                         | list [AbilityEffectChange](#abilityeffectchange)                                |
+| flavor_text_entries  | The flavor text of this move listed in different languages                                                                                                                | [Move](#moveflavortext)                                                         |
 | generation           | The generation in which this move was introduced                                                                                                                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
+| machines             | A list of the machines that teach this move                                                                                                                               | list [MachineVersionDetail](#machineversiondetail)                              |
 | meta                 | Metadata about this move                                                                                                                                                  | [MoveMetaData](#movemetadata)                                                   |
 | names                | The name of this move listed in different languages                                                                                                                       | list [Name](#resourcename)                                                      |
 | past_values          | A list of move resource value changes across version groups of the game                                                                                                   | list [PastMoveStatValues](#pastmovestatvalues)                                  |
@@ -1288,6 +1341,14 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 |:-----------|:----------------------------------------|:------------------------------------------------------------|
 | use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | use_after  | A list of moves to use after this move  | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
+
+#### MoveFlavorText
+
+| Name          | Description                                                          | Data Type                                                               |
+|:--------------|:---------------------------------------------------------------------|:------------------------------------------------------------------------|
+| flavor_text   | The localized flavor text for an api resource in a specific language | string                                                                  |
+| language      | The language this name is in                                  		   | [NamedAPIResource](#namedapiresource) ([Language](#languages))          |
+| version_group | The version group that uses this flavor text                         | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 #### MoveMetaData
 
@@ -1323,7 +1384,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | pp             | Power points. The number of times this move can be used                        | integer                                                                 |
 | effect_entries | The effect of this move listed in different languages                          | list [VerboseEffect](#verboseeffect)                                    |
 | type           | The elemental type of this move                                                | [NamedAPIResource](#namedapiresource) ([Type](#types))                  |
-| version group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| version_group  | The version group in which these move stat values were in effect               | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 ## Move Ailments
 Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/http://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.
@@ -1944,7 +2005,7 @@ Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon
 | id              | The identifier for this characteristic resource                                                                        | integer                            |
 | gene_modulo     | The remainder of the highest stat/IV divided by 5                                                                      | integer                            |
 | possible_values | The possible values of the highest stat that would result in a Pokémon recieving this characteristic when divided by 5 | list integer                       |
-| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list ([Description](#description)) |
+| descriptions    | The descriptions of this characteristic listed in different languages                                                  | list [Description](#description)   |
 
 ## Egg Groups
 Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.
@@ -2379,10 +2440,10 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 
 #### PokemonType
 
-| Name | Description                                 | Data Type |
-|:-----|:--------------------------------------------|:----------|
-| slot | The order the Pokémon's types are listed in | integer   |
-| type | The type the referenced Pokémon has         | string    |
+| Name | Description                                 | Data Type                                             |
+|:-----|:--------------------------------------------|:------------------------------------------------------|
+| slot | The order the Pokémon's types are listed in | integer                                               |
+| type | The type the referenced Pokémon has         | [NamedAPIResource](#namedapiresource) ([Type](#type)) |
 
 #### PokemonHeldItem
 
@@ -2411,7 +2472,7 @@ Pokémon are the creatures that inhabit the world of the Pokémon games. They ca
 |:------------------|:-----------------------------------------------|:------------------------------------------------------------------------------|
 | move_learn_method | The method by which the move is learned        | [NamedAPIResource](#namedapiresource) ([MoveLearnMethod](#move-learn-method)) |
 | version_group     | The version group in which the move is learned | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-group))        |
-| level_learned_at  | The minimum level to learn the move            | string                                                                        |
+| level_learned_at  | The minimum level to learn the move            | integer                                                                       |
 
 #### PokemonStat
 
@@ -2528,6 +2589,8 @@ Some Pokémon have the ability to take on different forms. At times, these diffe
 | pokemon        | The Pokémon that can take on this form                                                                                                                   | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon))             |
 | sprites        | A set of sprites used to depict this Pokémon form in the game                                                                                            | [PokemonFormSprites](#pokemonformsprites)                               |
 | version_group  | The version group this Pokémon form was introduced in                                                                                                    | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| names          | The form specific full name of this Pokémon form, or empty if the form does not have a specific name                                                     | list [Name](#name)                                                      |
+| form_names     | The form specific form name of this Pokémon form, or empty if the form does not have a specific name                                                     | list [Name](#name)                                                      |
 
 #### PokemonFormSprites
 
@@ -2636,7 +2699,7 @@ Shapes used for sorting Pokémon in a Pokédex.
 | language     | The language this "scientific" name is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
 
 ## Pokémon Species
-A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.  
+A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
 
 ### GET api/v2/pokemon-species/{id or name}
 
@@ -2746,7 +2809,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | base_happiness         | The happiness when caught by a normal Pokéball; up to 255. The higher the number, the happier the Pokémon.                                         | integer                                                                     |
 | is_baby                | Whether or not this is a baby Pokémon                                                                                                              | boolean                                                                     |
 | hatch_counter          | Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's | integer                                                                     |
-| has_gender_differences | Whether or not this Pokémon can have different genders                                                                                             | boolean                                                                     |
+| has_gender_differences | Whether or not this Pokémon has visual gender differences                                                                                     | boolean                                                                     |
 | forms_switchable       | Whether or not this Pokémon has multiple forms and can switch between them                                                                         | boolean                                                                     |
 | growth_rate            | The rate at which this Pokémon species gains levels                                                                                                | [NamedAPIResource](#namedapiresource) ([GrowthRate](#growth-rates))         |
 | pokedex_numbers        | A list of Pokedexes and the indexes reserved within them for this Pokémon species                                                                  | list [PokemonSpeciesDexEntry](#pokemonspeciesdexentry)                      |
@@ -2759,9 +2822,10 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | generation             | The generation this Pokémon species was introduced in                                                                                              | [NamedAPIResource](#namedapiresource) ([Generation](#generations))          |
 | names                  | The name of this Pokémon species listed in different languages                                                                                     | list [Name](#resourcename)                                                  |
 | pal_park_encounters    | A list of encounters that can be had with this Pokémon species in pal park                                                                         | list [PalParkEncounterArea](#palparkencounterarea)                          |
+| flavor_text_entries    | A list of flavor text entries for this Pokémon species                                                                                             | list [FlavorText](#flavortext)                                              | 
 | form_descriptions      | Descriptions of different forms Pokémon take on within the Pokémon species                                                                         | list [Description](#description)                                            |
 | genera                 | The genus of this Pokémon species listed in multiple languages                                                                                     | list [Genus](#genus)                                                        |
-| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety]                                                |
+| varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety](#pokemonspeciesvariety)                        |
 
 #### Genus
 
@@ -2785,7 +2849,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | rate       | The base rate for encountering the referenced Pokémon in this pal park area                    | integer                                                                |
 | area       | The pal park area where this encounter happens                                                 | [NamedAPIResource](#namedapiresource) ([PalParkArea](#pal-park-areas)) |
 
-#### PokemonSpeciesDexEntry
+#### PokemonSpeciesVariety
 
 | Name       | Description                                 | Data Type                                                   |
 |:-----------|:--------------------------------------------|:------------------------------------------------------------|
@@ -2971,7 +3035,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 | generation        | The generation this type was introduced in                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
 | move_damage_class | The class of damage inflicted by this type                          | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | names             | The name of this type listed in different languages                 | list [Name](#resourcename)                                                      |
-| pokemon           | A list of details of Pokémon that have this type                    | [TypePokemon](#typepokemon)                                                     |
+| pokemon           | A list of details of Pokémon that have this type                    | list [TypePokemon](#typepokemon)                                                |
 | moves             | A list of moves that have this type                                 | list [NamedAPIResource](#namedapiresource) ([Move](#moves))                     |
 
 #### TypePokemon
@@ -3076,6 +3140,13 @@ Languages for translations of API resource information.
 |:-----------|:----------------------------------------------------|:-------------------------------------------------------------------|
 | game_index | The internal id of an API resource within game data | integer                                                            |
 | generation | The generation relevent to this game index          | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
+
+#### MachineVersionDetail
+
+| Name          | Description                                    | Data Type                                                   |
+|:--------------|:-----------------------------------------------|:------------------------------------------------------------|
+| machine       | The machine that teaches a move from an item   | [APIResource](#apiresource) ([Machine](#machines))           |
+| version_group | The version group of this specific machine     | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
 
 #### <a id="resourcename"></a>Name
 

@@ -5,7 +5,7 @@ from pokemon_v2.models import *  # NOQA
 import json
 
 test_host = 'http://testserver'
-media_sprites = '/media/sprites/{}'
+media_host = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/'
 api_v2 = '/api/v2'
 
 
@@ -2716,7 +2716,7 @@ class APITests(APIData, APITestCase):
         # sprites
         self.assertEqual(
             response.data['sprites']['default'],
-            '{}{}'.format(test_host, sprites_data['default']))
+            '{}{}'.format(media_host, sprites_data['default'].replace('/media/', '')))
 
     # Berry Tests
     def test_berry_firmness_api(self):
@@ -4253,7 +4253,7 @@ class APITests(APIData, APITestCase):
         # sprite params
         self.assertEqual(
             response.data['sprites']['front_default'],
-            '{}{}'.format(test_host, sprites_data['front_default']))
+            '{}{}'.format(media_host, sprites_data['front_default'].replace('/media/', '')))
         self.assertEqual(response.data['sprites']['back_default'], None)
 
     def test_pokemon_form_api(self):
@@ -4292,7 +4292,7 @@ class APITests(APIData, APITestCase):
         # sprite params
         self.assertEqual(
             response.data['sprites']['front_default'],
-            '{}{}'.format(test_host, sprites_data['front_default']))
+            '{}{}'.format(media_host, sprites_data['front_default'].replace('/media/', '')))
         self.assertEqual(response.data['sprites']['back_default'], None)
 
     # Evolution test

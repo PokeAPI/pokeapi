@@ -8,6 +8,10 @@ LICENSE: BSD
 
 http://pokeapi.co
 
+## Fair use policy
+
+PokéAPI is open and free to use. However, we will ban IP addresses that abuse this privilege. This API is used primarily for educational purposes, and we do not want people inhibiting the education of others. See the fair use guide on the docs for more information.
+
 ## Join Us On Slack!
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to eachother :)

@@ -28,7 +28,7 @@
     <section id="docs">
 
         <div class="header">
-        
+
             {% block docstitle %}
 
             {% endblock docstitle %}
@@ -40,7 +40,7 @@
             <div class="row pad_top">
 
                 <div class="col-sm-3 side-nav">
-                    
+
                     <div class="nav-group">
 
                         <ul class="version-select">
@@ -60,8 +60,8 @@
                         </div>
 
                     </div>
-                    
-                 
+
+
                 </div>
 
                 <div class="col-sm-9 docs-body">
@@ -82,11 +82,22 @@
                         </ul>
                     </ul>
 
+                    <h2 id="fairuse">Fair Use Policy</h2>
+                    <p>PokéAPI is free and open to use. It is also very popular. Because of this, we ask <b>every developer</b> to abide by our fair use policy. People not complying with the fair use policy will have their IP address permenantly banned.</p>
+                    <p>PokéAPI is primarily an educational tool, and we will not tolerate denial of service attacks preventing people from learning.</p>
+                    <p>Rules:</p>
+                        <ul>
+                            <li>Locally cache resources and images when ever you request them.</li>
+                            <li>Do not spam the entire service to scrape all the data at once - use the paginated pages.</li>
+                            <li>Use the correct user-agent header in API requests.</li>
+                            <li>Be nice and friendly to your fellow PokéAPI developer.</li>
+                        </ul>
+
                     <h2 id="slack">Slack</h2>
                     <p>Have questions? Ideas? Notice something amiss here in the docs? Hit us up on Slack. Sign up <a href="https://pokeapi-slack-invite.herokuapp.com/">right here.</a> then visit our <a href="https://pokeapi.slack.com">slack team</a>.
                     We'ed encourage you to come here before opening a ticket on github so we can keep our issues nice and organized. Theres also a solid group of people using the api
                     who may already have answers or plans from experience.</p>
-                    
+
                     {% block docsbody %}
 
                     {% endblock docsbody %}
@@ -96,7 +107,7 @@
             </div>
 
         </div>
-        
+
     </section>
 
     <script>
@@ -117,7 +128,7 @@
                 console.log(window.innerHeight - offset.top);
 
                 sticky.addClass('stick');
-                sticky.css({ 
+                sticky.css({
                     width: sideNav.width() + 'px',
                 });
 

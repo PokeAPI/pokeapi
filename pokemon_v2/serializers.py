@@ -1402,11 +1402,11 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         sprites_data = ItemSpritesSerializer(sprites_object, context=self.context).data
         sprites_data = json.loads(sprites_data['sprites'])
-        host = self.context['request'].META['HTTP_HOST']
+        host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key]
+                sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
         return sprites_data
 
@@ -2303,11 +2303,11 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
         sprites_data = PokemonFormSpritesSerializer(sprites_object, context=self.context).data
         sprites_data = json.loads(sprites_data['sprites'])
 
-        host = self.context['request'].META['HTTP_HOST']
+        host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key]
+                sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
         return sprites_data
 
@@ -2519,11 +2519,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         sprites_data = PokemonSpritesSerializer(sprites_object, context=self.context).data
         sprites_data = json.loads(sprites_data['sprites'])
-        host = self.context['request'].META['HTTP_HOST']
+        host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
         for key, val in sprites_data.iteritems():
             if sprites_data[key]:
-                sprites_data[key] = 'http://' + host + sprites_data[key]
+                sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
         return sprites_data
 

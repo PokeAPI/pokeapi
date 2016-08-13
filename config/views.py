@@ -7,6 +7,7 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 
+from alerts.models import Alert
 from hits.models import ResourceView
 
 import stripe
@@ -24,11 +25,19 @@ def about(request):
         average_day = int(round(total_views / ResourceView.objects.count()))
         cache.set('average_day', average_day)
 
+    alert = cache.get('alert')
+    if not alert:
+        active_alerts = Alert.objects.filter(active=True)
+        if active_alerts:
+            cache.set('alert', active_alerts.first())
+        alert = active_alerts.first()
+
     return render_to_response(
         'pages/about.html',
         {
             'total': total_views,
             'average_day': average_day,
+            'alert': alert
         },
         context_instance=RequestContext(request)
     )
@@ -44,11 +53,19 @@ def home(request):
 
     stripe_key = settings.STRIPE_KEYS['publishable']
 
+    alert = cache.get('alert')
+    if not alert:
+        active_alerts = Alert.objects.filter(active=True)
+        if active_alerts:
+            cache.set('alert', active_alerts.first())
+        alert = active_alerts.first()
+
     return render_to_response(
         'pages/home.html',
         {
             'total_views': total_views,
-            'stripe_key': stripe_key
+            'stripe_key': stripe_key,
+            'alert': alert
         },
         context_instance=RequestContext(request)
     )

@@ -118,6 +118,7 @@ CUSTOM_APPS = (
     'pokemon',
     'pokemon_v2',
     'hits',
+    'alerts',
 )
 
 INSTALLED_APPS = (

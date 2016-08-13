@@ -33,19 +33,19 @@
         <h4>Over <span class="count">{{ total_views|intcomma }}</span> API calls received!</h4>
     </div>
 
+    {% if alert %}
     <div class="container">
-        {% if update %}
-        <div class="row" style="padding-top:80px;text-align:center;">
+        <div class="row" style="padding-top:20px;text-align:center;">
             <div class="col-md-2">
             </div>
             <div class="col-md-8">
-            <div class="alert alert-success">{{update.content|safe}}</div>
+            <div class="alert alert-danger" role="alert">{{ alert.message|safe }}</div>
             </div>
             <div class="col-md-2">
             </div>
-        </div><!-- /.header row -->
-        {% endif %}
+        </div>
     </div>
+    {% endif %}
 
     <div class="cta">
         <p>Finally; all the Pokémon data you'll ever need, in one place,<br /> and easily accessible through a modern RESTful API.</p>

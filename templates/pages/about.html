@@ -33,6 +33,19 @@
         <h1>The RESTful Pokémon Data API</h1>
 
     </div>
+    {% if alert %}
+    <div class="container">
+        <div class="row" style="padding-top:20px;text-align:center;">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+            <div class="alert alert-danger" role="alert">{{ alert.message|safe }}</div>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
     <div class="container">
 

@@ -1,4 +1,4 @@
-Django==1.7.1
+Django==1.8.14
 Pillow==2.6.1
 Unipath==1.0
 coverage==3.6
@@ -9,7 +9,7 @@ django-discover-runner==0.4
 django-imagekit==3.2.4
 django-redis==4.4.0
 django-cachalot==1.2.1
-django-tastypie==0.12.1
+django-tastypie==0.13.0
 django-markdown-deux==1.0.5
 djangorestframework==3.1.0
 drf-ujson==1.2.0

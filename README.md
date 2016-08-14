@@ -18,7 +18,7 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 
 [Sign up easily](https://pokeapi-slack-invite.herokuapp.com/)!
 
-Qnce you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
+Once you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
 
 ## Donations
 

@@ -1174,6 +1174,8 @@ Machines are the representation of items that teach moves to Pokémon. They vary
 
 ###### Response models
 
+#### Machine
+
 | Name          | Description                                        | Data Type                                                               |
 |:--------------|:---------------------------------------------------|:------------------------------------------------------------------------|
 | id            | The identifier for this machine resource           | integer                                                                 |
@@ -1317,7 +1319,7 @@ Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move 
 | damage_class         | The type of damage the move inflicts on the target, e.g. physical                                                                                                         | [NamedAPIResource](#namedapiresource) ([MoveDamageClass](#move-damage-classes)) |
 | effect_entries       | The effect of this move listed in different languages                                                                                                                     | list [VerboseEffect](#verboseeffect)                                            |
 | effect_changes       | The list of previous effects this move has had across version groups of the games                                                                                         | list [AbilityEffectChange](#abilityeffectchange)                                |
-| flavor_text_entries  | The flavor text of this move listed in different languages                                                                                                                | [Move](#moveflavortext)                                                         |
+| flavor_text_entries  | The flavor text of this move listed in different languages                                                                                                                | list [MoveFlavorText](#moveflavortext)                                                         |
 | generation           | The generation in which this move was introduced                                                                                                                          | [NamedAPIResource](#namedapiresource) ([Generation](#generations))              |
 | machines             | A list of the machines that teach this move                                                                                                                               | list [MachineVersionDetail](#machineversiondetail)                              |
 | meta                 | Metadata about this move                                                                                                                                                  | [MoveMetaData](#movemetadata)                                                   |

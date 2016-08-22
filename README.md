@@ -1,12 +1,12 @@
 # PokeAPI
 
+A RESTful API for Pokémon
 
-A RESTful API for Pokemon
-
-
-LICENSE: BSD
+LICENSE: [BSD](https://github.com/PokeAPI/pokeapi/blob/master/LICENSE.rst)
 
 http://pokeapi.co
+
+[![ghit.me](https://ghit.me/badge.svg?repo=PokeAPI/pokeapi)](https://ghit.me/repo/PokeAPI/pokeapi)
 
 ## Fair use policy
 
@@ -35,7 +35,7 @@ Quite a lot of data is missing from the V1 API.
 
 See [This blog post for more information](http://phalt.co/if-you-have-data-they-will-consume-it).
 
-## Setup
+## Setup [![pyVersion27](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/download/releases/2.7/) 
 
 - Download this source code into a working directory.
 

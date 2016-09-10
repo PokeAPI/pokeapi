@@ -180,7 +180,7 @@ Berries are small fruits that can provide HP and status condition restoration, s
 | firmness           | The firmness of this berry, used in making Pokéblocks or Poffins                                                                  | [NamedAPIResource](#namedapiresource) ([BerryFirmness](#berry-firmnesses)) |
 | flavors            | A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry             | list [BerryFlavorMap](#berryflavormap)                                     |
 | item               | Berries are actually items. This is a reference to the item specific data for this berry.                                         | [NamedAPIResource](#namedapiresource) ([Item](#items))                     |
-| natural_gift_type  | The type inherited byy "Natural Gift" when used with this Berry                                                                    | [NamedAPIResource](#namedapiresource) ([Type](#types))                     |
+| natural_gift_type  | The type inherited by "Natural Gift" when used with this Berry                                                                    | [NamedAPIResource](#namedapiresource) ([Type](#types))                     |
 
 #### BerryFlavorMap
 

@@ -180,7 +180,7 @@ Berries are small fruits that can provide HP and status condition restoration, s
 | firmness           | The firmness of this berry, used in making Pokéblocks or Poffins                                                                  | [NamedAPIResource](#namedapiresource) ([BerryFirmness](#berry-firmnesses)) |
 | flavors            | A list of references to each flavor a berry can have and the potency of each of those flavors in regard to this berry             | list [BerryFlavorMap](#berryflavormap)                                     |
 | item               | Berries are actually items. This is a reference to the item specific data for this berry.                                         | [NamedAPIResource](#namedapiresource) ([Item](#items))                     |
-| natural_gift_type  | The Type the move "Natural Gift" has when used with this Berry                                                                    | [NamedAPIResource](#namedapiresource) ([Type](#types))                     |
+| natural_gift_type  | The type inherited byy "Natural Gift" when used with this Berry                                                                    | [NamedAPIResource](#namedapiresource) ([Type](#types))                     |
 
 #### BerryFlavorMap
 
@@ -2822,7 +2822,7 @@ A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Po
 | generation             | The generation this Pokémon species was introduced in                                                                                              | [NamedAPIResource](#namedapiresource) ([Generation](#generations))          |
 | names                  | The name of this Pokémon species listed in different languages                                                                                     | list [Name](#resourcename)                                                  |
 | pal_park_encounters    | A list of encounters that can be had with this Pokémon species in pal park                                                                         | list [PalParkEncounterArea](#palparkencounterarea)                          |
-| flavor_text_entries    | A list of flavor text entries for this Pokémon species                                                                                             | list [FlavorText](#flavortext)                                              | 
+| flavor_text_entries    | A list of flavor text entries for this Pokémon species                                                                                             | list [FlavorText](#flavortext)                                              |
 | form_descriptions      | Descriptions of different forms Pokémon take on within the Pokémon species                                                                         | list [Description](#description)                                            |
 | genera                 | The genus of this Pokémon species listed in multiple languages                                                                                     | list [Genus](#genus)                                                        |
 | varieties              | A list of the Pokémon that exist within this Pokémon species                                                                                       | list [PokemonSpeciesVariety](#pokemonspeciesvariety)                        |

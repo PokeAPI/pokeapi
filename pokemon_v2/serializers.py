@@ -2290,21 +2290,7 @@ class PokemonMoveSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PokemonMove
-        fields = (
-            'id',
-            'name',
-            'accuracy',
-            'effect_chance',
-            'pp',
-            'priority',
-            'power',
-            'contest_combos',
-            'contest_type'
-            'contest_effect',
-            'damage_class',
-            'effect_entries',
-            'effect_changes'
-        )
+        fields = '__all__'
 
 
 ###############################

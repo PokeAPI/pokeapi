@@ -1,6 +1,6 @@
 
 from __future__ import unicode_literals
-from django.core.urlresolvers import reverse
+from rest_framework.reverse import reverse
 from rest_framework import serializers
 from collections import OrderedDict
 import json
@@ -2539,7 +2539,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
     def get_encounters(self, obj):
 
-        return reverse('pokemon_encounters', kwargs={'pokemon_id': obj.pk})
+        return reverse('pokemon_encounters', kwargs={'pokemon_id': obj.pk}, request=self.context['request'])
 
 
 #################################

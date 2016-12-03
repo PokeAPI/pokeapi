@@ -23,6 +23,8 @@ import re
 import json
 from django.db import connection
 from pokemon_v2.models import *  # NOQA
+from django.db.models import get_app, get_models
+from django.core import serializers
 
 
 # why this way? how about use `__file__`
@@ -2471,6 +2473,15 @@ def build_all():
     build_pokemons()
     build_encounters()
     build_pal_parks()
+
+def dump_all():
+    app = get_app('pokemon_v2')
+    for model in get_models(app):
+        data = serializers.serialize("json", model.objects.all())
+        file_name = os.getcwd() + "/pokemon_v2/fixtures/" + str(model).split("'")[1].split(".")[2] + ".json"
+        out = open(file_name, "w")
+        out.write(data)
+        out.close()
 
 if __name__ == '__main__':
     build_all()

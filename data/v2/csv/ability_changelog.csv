@@ -1,4 +1,4 @@
-id,ability_id,changed_in_version_group_id
+ability_changelog_id,ability_id,ability_changed_in_version_group_id
 1,1,11
 2,5,11
 3,9,6

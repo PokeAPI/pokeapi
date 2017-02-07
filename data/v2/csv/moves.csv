@@ -1,4 +1,4 @@
-id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_class_id,effect_id,effect_chance,contest_type_id,contest_effect_id,super_contest_effect_id
+move_id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_class_id,effect_id,effect_chance,contest_type_id,contest_effect_id,super_contest_effect_id
 1,pound,1,1,40,35,100,0,10,2,1,,5,1,5
 2,karate-chop,1,2,50,25,100,0,10,2,44,,5,2,5
 3,double-slap,1,1,15,10,85,0,10,2,30,,5,10,7

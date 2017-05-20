@@ -1678,7 +1678,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         model = Type
         fields = (
             'id', 'name', 'damage_relations', 'game_indices', 'generation',
-            'move_damage_class', 'names',  'pokemon', 'moves'
+            'move_damage_class', 'names', 'pokemon', 'moves'
         )
 
     def get_type_relationships(self, obj):
@@ -2540,8 +2540,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     def get_encounters(self, obj):
 
         return reverse('pokemon_encounters',
-            kwargs={'pokemon_id': obj.pk},
-            request=self.context['request'])
+                       kwargs={'pokemon_id': obj.pk},
+                       request=self.context['request'])
 
 
 #################################

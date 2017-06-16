@@ -1,28 +1,30 @@
 # Contribute
 
-## Introduction
+All contributions are welcome: bug fixes, data contributions, recommendations.
 
-First, thank you for considering contributing to OpenCollective! It's people like you that make OpenCollective such a great community.
+Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 
-We welcome any type of contribution, not only code. You can help with 
-- **QA**: file bug reports, the more details you can give the better (e.g. screenshots with the console open)
-- **Marketing**: writing blog posts, howto's, printing stickers, ...
-- **Community**: presenting the project at meetups, organizing a dedicated meetup for the local community, ...
-- **Code**: take a look at the [open issues](issues). Even if you can't write code, commenting on them, showing that you care about a given issue matters. It helps us triage them.
-- **Money**: we welcome financial contributions in full transparency on our [open collective](https://opencollective.com/pokeapi).
+To contribute to this repository:
 
-## Your First Contribution
+- [Fork the project to your own GitHub profile](https://help.github.com/articles/fork-a-repo/)
 
-Working on your first Pull Request? You can learn how from this *free* series, [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
+- Download the project using git clone:
+```
+git clone git@github.com:<YOUR_USERNAME>/pokeapi.git
+```
+- Create a new branch with a descriptive name:
+```
+git checkout -b my_new_branch
+```
+- Write some code, fix something, and add a test to prove that it works. **No pull request will be accepted without tests passing, or without new tests if new features are added.**
 
-## Submitting code
+- Commit your code and push it to GitHub
 
-Any code change should be submitted as a pull request. The description should explain what the code does and give steps to execute it. The pull request should also contain tests.
+- [Open a new pull request](https://help.github.com/articles/creating-a-pull-request/) and describe the changes you have made.
 
-## Code review process
+- We'll accept your changes after review.
 
-The bigger the pull request, the longer it will take to review and merge. Try to break down large pull requests in smaller chunks that are easier to review and merge.
-It is also always helpful to have some context for your pull request. What was the purpose? Why does it matter to you?
+Simple!
 
 ## Financial contributions
 

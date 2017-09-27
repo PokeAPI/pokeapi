@@ -6,7 +6,7 @@ LICENSE: [BSD](https://github.com/PokeAPI/pokeapi/blob/master/LICENSE.rst)
 
 http://pokeapi.co
 
-[![ghit.me](https://ghit.me/badge.svg?repo=PokeAPI/pokeapi)](https://ghit.me/repo/PokeAPI/pokeapi)
+[![Backers on Open Collective](https://opencollective.com/pokeapi/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/pokeapi/sponsors/badge.svg)](#sponsors) [![ghit.me](https://ghit.me/badge.svg?repo=PokeAPI/pokeapi)](https://ghit.me/repo/PokeAPI/pokeapi)
 
 ## Fair use policy
 
@@ -24,7 +24,28 @@ Once you've signed up visit [PokeAPI on Slack](https://pokeapi.slack.com)
 
 Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the server up. We get over 2 million requests a month and it's quite costly!
 
-See [the bottom of the home page](https://pokeapi.co) to donate.
+Thank you to all our backers! [[Become a backer](https://opencollective.com/pokeapi#backer)]
+
+<a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Ask your company to also support this open source project by [becoming a sponsor](https://opencollective.com/pokeapi#sponsor).
+
+<a href="https://opencollective.com/pokeapi/sponsor/0/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/1/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/2/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/3/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/4/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/5/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/6/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/7/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/8/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/pokeapi/sponsor/9/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/9/avatar.svg"></a>
+
+
+
 
 
 ## DEPRECATION
@@ -179,6 +200,9 @@ build_all()
 For the moment, this setup doesn't allow you to use the ```scale``` command.
 
 ## Contributing
+
+This project exists thanks to all the people who contribute. [[Contribute]](blob/master/CONTRIBUTING.md).
+<a href="graphs/contributors"><img src="https://opencollective.com/pokeapi/contributors.svg?width=890" /></a>
 
 All contributions are welcome: bug fixes, data contributions, recommendations.
 

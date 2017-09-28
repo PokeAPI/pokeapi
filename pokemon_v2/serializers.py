@@ -1661,10 +1661,12 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
 ######################
 #  TYPE SERIALIZERS  #
 ######################
+# https://stackoverflow.com/a/45987450/3482533
 class TypeEfficacySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TypeEfficacy
+        fields = '__all__'
 
 
 class TypeGameIndexSerializer(serializers.ModelSerializer):
@@ -2381,11 +2383,12 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
 
         return groups
 
-
+# https://stackoverflow.com/a/45987450/3482533
 class PokemonMoveSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PokemonMove
+        fields = '__all__'
 
 
 ###############################

@@ -1,0 +1,1185 @@
+language_id,table,id,column,source_crc,string
+10,Ability,1,name,7482ade0,Smrad
+10,Ability,1,short_effect,9301d482,Má šanci nepřítele [zastrašit]{mechanic:flinch} během útočení.
+10,Ability,2,name,56942be0,Mrholení
+10,Ability,2,short_effect,0d8facc9,"Přivolá [déšť]{mechanic:rain}, který trvá až po ukončení zápasu."
+10,Ability,3,name,dbbf77d4,Zrychlení
+10,Ability,3,short_effect,56aba85b,Zvýší [Rychlost]{mechanic:speed} o jeden [stupeň]{mechanic:stat-modifier} po každém kole.
+10,Ability,4,name,8598e4a6,Bojové brnění
+10,Ability,5,name,1456165e,Robustnost
+10,Ability,6,name,fc71d5b7,Vlhkost
+10,Ability,7,name,79e4c1ea,Pružnost
+10,Ability,8,name,68fb38e0,Pískový plášť
+10,Ability,9,name,876c2d13,Statika
+10,Ability,10,name,25d248bb,Nabíjení
+10,Ability,11,name,c9b017e7,Pohlcení vody
+10,Ability,12,name,fe728b73,Nevšímavost
+10,Ability,13,name,330485e9,Sedmé nebe
+10,Ability,14,name,44379432,Složené oči
+10,Ability,15,name,1b22e630,Nespavost
+10,Ability,16,name,60f49ede,Změna barvy
+10,Ability,17,name,c2bc5d44,Imunita
+10,Ability,18,name,f776dc6c,Náhlý požár
+10,Ability,19,name,2ba46975,Štítový ptrach
+10,Ability,20,name,eec44109,Vlastní tempo
+10,Ability,21,name,54175f22,Přísavky
+10,Ability,22,name,882269a8,Zastrašení
+10,Ability,23,name,e34db84d,Znamení temna
+10,Ability,24,name,d17927e6,Drsná kůže
+10,Ability,25,name,721a5247,Zázračný štít
+10,Ability,26,name,50042f90,Levitace
+10,Ability,27,name,9740ab47,Výtrusy
+10,Ability,28,name,db646315,Synchronizace
+10,Ability,29,name,446fb7b5,Průsvitnost
+10,Ability,30,name,f042aa53,Přírodní lék
+10,Ability,31,name,12f136d7,Hromosvod
+10,Ability,32,name,ff40d1b0,Ušlechtilost
+10,Ability,33,name,5ce14a2f,Hbitá plavba
+10,Ability,33,short_effect,21665f64,Během [deště]{mechanic:rain} zdvojnásobuje [Rychlost]{mechanic:speed}.
+10,Ability,34,name,06f85388,Chlorofyl
+10,Ability,34,short_effect,ae2ff9cc,Během [slunečného počasí]{mechanic:strong-sunlight} zdvojnásobuje [Rychlost]{mechanic:speed}.
+10,Ability,35,name,c6497d6e,Osvětlení
+10,Ability,36,name,f09afaa5,Kopírování
+10,Ability,37,name,7cb6bfd7,Obrovská síla
+10,Ability,38,name,05f68593,Jedovatý roh
+10,Ability,39,name,1c7e0068,Soustředění
+10,Ability,40,name,a93bb7cf,Lávové brnění
+10,Ability,41,name,d5a4bb6e,Vodní rouška
+10,Ability,42,name,299a7bfe,Magnetismus
+10,Ability,43,name,a3f44988,Hluchota
+10,Ability,44,name,5ff669f9,Dešťová miska
+10,Ability,45,name,fdc4b2e5,Proud písku
+10,Ability,46,name,a6d9c231,Tlak
+10,Ability,47,name,4bbe3ccb,Tlustý tuk
+10,Ability,48,name,be432c28,Ranní ptáče
+10,Ability,49,name,ff7f2a5c,Ohnivé tělo
+10,Ability,50,name,18674783,Útěk
+10,Ability,51,name,a3268228,Bystré oko
+10,Ability,52,name,a07aeadd,Hyperřezač
+10,Ability,53,name,46323ccb,Sbírání
+10,Ability,54,name,1c2d5a58,Ulejvání
+10,Ability,55,name,bd19389f,Čilost
+10,Ability,56,name,5cd5f1a2,Roztomilost
+10,Ability,57,name,30c04fcf,Plus
+10,Ability,58,name,f9629873,Minus
+10,Ability,59,name,d3ea1a12,Předpověď
+10,Ability,60,name,213ca9bb,Ulepené ruce
+10,Ability,61,name,a6fdcb25,Svlékání kůže
+10,Ability,62,name,f7e28957,Kuráž
+10,Ability,63,name,0d52a696,Zázračná šupina
+10,Ability,64,name,bd31f6bf,Hnusný sliz
+10,Ability,65,name,1c8c270c,Přerůstání
+10,Ability,66,name,34fc1133,Žár
+10,Ability,67,name,137a8e2a,Záplava
+10,Ability,68,name,28667da5,Rojení
+10,Ability,69,name,8c4fcf12,Kamenná hlava
+10,Ability,70,name,9b951bc3,Vyprahlost
+10,Ability,71,name,32b58a36,Past
+10,Ability,72,name,fe8d56b9,Neposednost
+10,Ability,73,name,b06fc24d,Bílý kouř
+10,Ability,74,name,7c944184,Ryzí síla
+10,Ability,75,name,2a253a10,Lasturoštít
+10,Ability,76,name,1fe97cce,Vzdušný zámek
+10,AbilityChangelog,1,effect,a881640e,Nemá žádný účinek při zápasu.
+10,AbilityChangelog,2,effect,757e1dd8,"Funguje jen proti útokům, které vždy omráčí na jeden úder. (Ne proti těm, které jsou prostě příliš silné.)"
+10,AbilityChangelog,3,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,4,effect,8742fa05,"Neabsorbuje nezraňující [elektrické]{type:electric} útoky, např. []{move:thunder-wave}."
+10,AbilityChangelog,7,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,8,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,10,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,13,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,16,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,19,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,20,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,22,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,24,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,25,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,26,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,28,effect,a881640e,Nemá žádný účinek při zápasu.
+10,AbilityChangelog,29,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,30,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,31,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,33,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,35,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,36,effect,46cb479e,Nemá žádný účinek v poli.
+10,AbilityChangelog,37,effect,46cb479e,Nemá žádný účinek v poli.
+10,BerryFirmness,2,name,dfb88a49,Měkká
+10,BerryFirmness,3,name,6127b0ec,Tvrdá
+10,ContestType,1,flavor,f2a1e3c9,Ostrá
+10,ContestType,2,flavor,bc022ee2,Suchá
+10,ContestType,2,name,11aabd4e,Krása
+10,ContestType,5,name,531bc7f2,Síla
+10,EggGroup,1,name,ebe3ff68,pozemní
+10,EggGroup,8,name,9b103d6c,antropoidní
+10,EggGroup,10,name,d22690e3,minerály
+10,EggGroup,11,name,a950b4e7,beztvární
+10,EggGroup,13,name,e8d9b1aa,Ditto
+10,EggGroup,15,name,b3d9eb9d,nekřižitelní
+10,EncounterCondition,1,name,28667da5,Rojení
+10,EncounterCondition,2,name,218ba19e,Denní doba
+10,EncounterCondition,3,name,006244fe,PokéRadar
+10,EncounterCondition,5,name,2187340b,Rádio
+10,EncounterConditionValue,1,name,c62f244f,Během rojení
+10,EncounterConditionValue,2,name,28be2d2f,Ne během rojení
+10,EncounterConditionValue,3,name,95bf5e60,Ráno
+10,EncounterConditionValue,4,name,d4461d1a,Ve dne
+10,EncounterConditionValue,5,name,4866149e,V noci
+10,EncounterConditionValue,6,name,7d81d602,Pomocí PokéRadaru
+10,EncounterConditionValue,7,name,61a0eb90,Bez PokéRadaru
+10,EncounterConditionValue,14,name,994320ec,Vypnuté rádio
+10,EncounterConditionValue,15,name,0e34be45,Hoennské rádio
+10,EncounterConditionValue,16,name,d07cd16a,Sinnohské rádio
+10,Generation,1,name,bbda05fc,I. generace
+10,Generation,2,name,69b2728b,II. generace
+10,Generation,3,name,a701fe63,III. generace
+10,Generation,4,name,e4ba7f7e,IV. generace
+10,Generation,5,name,36d20809,V. generace
+10,GrowthRate,1,name,350771dd,pomalá
+10,GrowthRate,2,name,c67345b7,průměrná
+10,GrowthRate,3,name,256649c4,rychlá
+10,GrowthRate,4,name,d69aac12,celkem pomalá
+10,Item,1,effect,04883b3a,"Během zápasu: Chytí jednoho Pokémona, bez možnosti neúspěchu. Má stupeň chytitelnosti 255."
+10,Item,305,name,93f16fb3,TM01
+10,Item,306,name,0af83e09,TM02
+10,Item,307,name,7dff0e9f,TM03
+10,Item,308,name,e39b9b3c,TM04
+10,Item,309,name,949cabaa,TM05
+10,Item,310,name,0d95fa10,TM06
+10,Item,311,name,7a92ca86,TM07
+10,Item,312,name,ea2dd717,TM08
+10,Item,313,name,9d2ae781,TM09
+10,Item,314,name,fded6e64,TM10
+10,Item,315,name,8aea5ef2,TM11
+10,Item,316,name,13e30f48,TM12
+10,Item,317,name,64e43fde,TM13
+10,Item,318,name,fa80aa7d,TM14
+10,Item,319,name,8d879aeb,TM15
+10,Item,320,name,148ecb51,TM16
+10,Item,321,name,6389fbc7,TM17
+10,Item,322,name,f336e656,TM18
+10,Item,323,name,8431d6c0,TM19
+10,Item,324,name,d6c03da7,TM20
+10,Item,325,name,a1c70d31,TM21
+10,Item,326,name,38ce5c8b,TM22
+10,Item,327,name,4fc96c1d,TM23
+10,Item,328,name,d1adf9be,TM24
+10,Item,329,name,a6aac928,TM25
+10,Item,330,name,3fa39892,TM26
+10,Item,331,name,48a4a804,TM27
+10,Item,332,name,d81bb595,TM28
+10,Item,333,name,af1c8503,TM29
+10,Item,334,name,cfdb0ce6,TM30
+10,Item,335,name,b8dc3c70,TM31
+10,Item,336,name,21d56dca,TM32
+10,Item,337,name,56d25d5c,TM33
+10,Item,338,name,c8b6c8ff,TM34
+10,Item,339,name,bfb1f869,TM35
+10,Item,340,name,26b8a9d3,TM36
+10,Item,341,name,51bf9945,TM37
+10,Item,342,name,c10084d4,TM38
+10,Item,343,name,b607b442,TM39
+10,Item,344,name,809a9a21,TM40
+10,Item,345,name,f79daab7,TM41
+10,Item,346,name,6e94fb0d,TM42
+10,Item,347,name,1993cb9b,TM43
+10,Item,348,name,87f75e38,TM44
+10,Item,349,name,f0f06eae,TM45
+10,Item,350,name,69f93f14,TM46
+10,Item,351,name,1efe0f82,TM47
+10,Item,352,name,8e411213,TM48
+10,Item,353,name,f9462285,TM49
+10,Item,354,name,9981ab60,TM50
+10,Item,355,name,ee869bf6,TM51
+10,Item,356,name,778fca4c,TM52
+10,Item,357,name,0088fada,TM53
+10,Item,358,name,9eec6f79,TM54
+10,Item,359,name,e9eb5fef,TM55
+10,Item,360,name,70e20e55,TM56
+10,Item,361,name,07e53ec3,TM57
+10,Item,362,name,975a2352,TM58
+10,Item,363,name,e05d13c4,TM59
+10,Item,364,name,b2acf8a3,TM60
+10,Item,365,name,c5abc835,TM61
+10,Item,366,name,5ca2998f,TM62
+10,Item,367,name,2ba5a919,TM63
+10,Item,368,name,b5c13cba,TM64
+10,Item,369,name,c2c60c2c,TM65
+10,Item,370,name,5bcf5d96,TM66
+10,Item,371,name,2cc86d00,TM67
+10,Item,372,name,bc777091,TM68
+10,Item,373,name,cb704007,TM69
+10,Item,374,name,abb7c9e2,TM70
+10,Item,375,name,dcb0f974,TM71
+10,Item,376,name,45b9a8ce,TM72
+10,Item,377,name,32be9858,TM73
+10,Item,378,name,acda0dfb,TM74
+10,Item,379,name,dbdd3d6d,TM75
+10,Item,380,name,42d46cd7,TM76
+10,Item,381,name,35d35c41,TM77
+10,Item,382,name,a56c41d0,TM78
+10,Item,383,name,d26b7146,TM79
+10,Item,384,name,2c2fd52d,TM80
+10,Item,385,name,5b28e5bb,TM81
+10,Item,386,name,c221b401,TM82
+10,Item,387,name,b5268497,TM83
+10,Item,388,name,2b421134,TM84
+10,Item,389,name,5c4521a2,TM85
+10,Item,390,name,c54c7018,TM86
+10,Item,391,name,b24b408e,TM87
+10,Item,392,name,22f45d1f,TM88
+10,Item,393,name,55f36d89,TM89
+10,Item,394,name,3534e46c,TM90
+10,Item,395,name,4233d4fa,TM91
+10,Item,396,name,db3a8540,TM92
+10,Item,397,name,893e8794,HM01
+10,Item,398,name,1037d62e,HM02
+10,Item,399,name,6730e6b8,HM03
+10,Item,400,name,f954731b,HM04
+10,Item,401,name,8e53438d,HM05
+10,Item,402,name,175a1237,HM06
+10,Item,403,name,605d22a1,HM07
+10,Item,404,name,f0e23f30,HM08
+10,Item,659,name,ac3db5d6,TM93
+10,Item,660,name,32592075,TM94
+10,Item,661,name,455e10e3,TM95
+10,ItemCategory,4,name,18991a24,Zbytek
+10,ItemCategory,5,name,36935179,V nouzi
+10,ItemCategory,7,name,4ff9613b,Typová protekce
+10,ItemCategory,8,name,04301177,Jen k pečení
+10,ItemCategory,9,name,a928473b,Zběratelské
+10,ItemCategory,11,name,6b737987,Do jeskyní
+10,ItemCategory,16,name,2c64e8d9,Trénink
+10,ItemCategory,17,name,e06adc96,Desky
+10,ItemCategory,18,name,6865b70c,Druhové
+10,ItemCategory,20,name,dced68a2,Eventové
+10,ItemCategory,21,name,f1ceb6d3,Herní
+10,ItemCategory,22,name,62cf09e3,Příběhové
+10,ItemCategory,23,name,93804dcf,Nepoužité
+10,ItemCategory,24,name,060076c9,Kořist
+10,ItemCategory,26,name,609c84ea,Vitamíny
+10,ItemCategory,27,name,08bd2eb2,Léčící
+10,ItemCategory,28,name,bebd2483,Léčící PP
+10,ItemCategory,29,name,293d7798,Oživující
+10,ItemCategory,32,name,76d4d801,Hnojivo
+10,ItemCategory,42,name,f663e557,Drahokamy
+10,ItemFlag,1,name,b4787086,Počítatelný
+10,ItemFlag,2,description,5159dc6d,Spotřebuje se po použití
+10,ItemFlag,2,name,0b28f345,Spotřebující se
+10,ItemFlag,3,description,84964751,Použitelný mimo souboj
+10,ItemFlag,4,description,2d26fde6,Použitelný v souboji
+10,ItemFlag,5,description,24c931a8,Může být držen pokémonem
+10,ItemFlag,5,name,cd791ac5,Držitelný
+10,ItemFlag,6,description,725033e7,Funguje pasivně při držení
+10,ItemFlag,7,description,93e707b2,Použitelný pokémonem při držení
+10,ItemFlag,8,description,073d76cb,Nachází se v Sinnohském podzemí
+10,ItemFlag,8,name,590e69f7,Podzemí
+10,ItemFlingEffect,1,effect,343663e5,Těžce otráví protivníka.
+10,ItemPocket,1,name,20dfc649,Předměty
+10,ItemPocket,2,name,a14048db,Medicína
+10,ItemPocket,3,name,2c755235,Poké Bally
+10,ItemPocket,4,name,d9119462,TMka a HMka
+10,ItemPocket,5,name,c265b1b4,Bobule
+10,ItemPocket,6,name,f1140376,Dopisy
+10,Language,1,name,f3e12338,Japonština
+10,Language,3,name,96f9ccf5,Korejština
+10,Language,4,name,34251e88,Čínština
+10,Language,5,name,a8d9cb68,Francouzština
+10,Language,6,name,a5984597,Němčina
+10,Language,7,name,fba5cca8,Španělština
+10,Language,8,name,98045053,Italština
+10,Language,9,name,e33e3b9c,Angličtina
+10,Location,61,name,b3e82591,Námořní cesta 220
+10,Location,62,name,2ae1742b,Námořní cesta 223
+10,Location,63,name,5a8b80a4,Námořní cesta 226
+10,Location,64,name,aaf314d0,Námořní cesta 230
+10,Location,98,name,3dca45a5,Námořní cesta 19
+10,Location,100,name,6f3baec2,Námořní cesta 20
+10,Location,101,name,183c9e54,Námořní cesta 21
+10,Location,121,name,39610944,Námořní cesta 40
+10,Location,122,name,4e6639d2,Námořní cesta 41
+10,LocationArea,14,name,f430ffe2,chumelenice
+10,LocationArea,15,name,3d22a718,vánice
+10,LocationArea,24,name,7763497b,Oblast 1
+10,LocationArea,25,name,ee6a18c1,Oblast 2
+10,LocationArea,26,name,996d2857,Oblast 3
+10,LocationArea,27,name,0709bdf4,Oblast 4
+10,LocationArea,28,name,700e8d62,Oblast 5
+10,LocationArea,29,name,e907dcd8,Oblast 6
+10,LocationArea,52,name,bafef2b4,uvnitř
+10,LocationArea,58,name,87da6189,vchod
+10,LocationArea,59,name,bafef2b4,uvnitř
+10,LocationArea,61,name,e41d1a62,1. sloup
+10,LocationArea,62,name,7d144bd8,2. sloup
+10,LocationArea,63,name,0a137b4e,3. sloup
+10,LocationArea,126,name,87da6189,vchod
+10,LocationArea,135,name,9cc24903,před zásahem týmu Galactic
+10,LocationArea,136,name,476b4de4,po zásahu týmu Galactic
+10,LocationArea,144,name,aa83e7d8,"jižně, směrem k Jubilife"
+10,LocationArea,145,name,eadc8cd2,"severně, směrem k Floaromě"
+10,LocationArea,146,name,238dc7a5,"jižně, směrem k Floaromě"
+10,LocationArea,147,name,3a9d6056,"východně, směrem k Eterně"
+10,LocationArea,157,name,286b8f9b,"jižně, směrem k Solaceonu"
+10,LocationArea,158,name,58f024e4,"západně, směrem k Celesticu"
+10,LocationArea,159,name,9beaff3a,"západně, směrem k Eterně"
+10,LocationArea,160,name,f1082fed,"východně, směrem k Celesticu"
+10,LocationArea,161,name,f28baead,"severně, směrem k Hearthome"
+10,LocationArea,162,name,ae4fd824,"východně, směrem k Pastorii"
+10,LocationArea,193,name,7a57c43a,Venku
+10,LocationArea,194,name,96b7553b,Vnitřek A
+10,LocationArea,195,name,0fbe0481,Vnitřek B
+10,LocationArea,196,name,78b93417,Vnitřek C
+10,LocationArea,197,name,e6dda1b4,Vnitřek D
+10,LocationArea,229,name,4695d28d,prázdné patro X
+10,LocationArea,231,name,3192e21b,prázdné patro Y
+10,LocationArea,238,name,98efa44b,Spodní jeskyně
+10,LocationArea,239,name,3ae88ad0,Vrchní jeskyně
+10,LocationArea,253,name,8f00d6f7,vstup do Violetu
+10,LocationArea,254,name,74f25a17,vstup do Blackthornu 
+10,LocationArea,266,name,10891a9e,vchod do jeskyně
+10,LocationArea,267,name,4b800254,v jeskyni
+10,LocationArea,269,name,b5eafda6,venku
+10,LocationArea,271,name,842256b1,podél jeskyně
+10,LocationArea,273,name,1ed91fca,vrcholek
+10,LocationArea,296,name,3762f01a,"jižně, směrem k Viridianu"
+10,LocationArea,320,name,28233684,"severně, směrem k Pewteru"
+10,LocationArea,345,name,9e801acf,uprostřed
+10,LocationArea,349,name,3e9db05c,Přístav S.S. Anne
+10,LocationArea,374,name,b5eafda6,venku
+10,LocationArea,377,name,87da6189,vchod
+10,LocationArea,490,name,bafef2b4,uvnitř
+10,LocationArea,496,name,87da6189,vchod
+10,Move,1,name,7eef9650,Facka
+10,Move,2,name,9e0525b5,Karatistický úder
+10,Move,3,name,95eacd2f,Dvojitá facka
+10,Move,4,name,056f009c,Opakovaný úder
+10,Move,5,name,457b6309,Megarána
+10,Move,6,name,0b4d71d4,Výplata
+10,Move,7,name,9bbb70b6,Ohnivý úder
+10,Move,8,name,3f7cc89f,Ledový úder
+10,Move,9,name,cab90d03,Blesková rána
+10,Move,10,name,5ff863eb,Škrábnutí
+10,Move,11,name,827bd4bf,Svěrák
+10,Move,12,name,a7c35413,Klepetí gilotina
+10,Move,13,name,724bbda2,Ostrý vítr
+10,Move,14,name,88b5f9fa,Tanec mečů
+10,Move,15,name,88bdd21d,Sek
+10,Move,16,name,26c78a33,Vzdušný vír
+10,Move,17,name,676c1557,Křídlový útok
+10,Move,18,name,f77d374d,Odfouknutí
+10,Move,19,name,6bc7c553,Let
+10,Move,20,name,e6fe5c6d,Omotání
+10,Move,21,name,f6d40a17,Náraz
+10,Move,22,name,9eb01dc6,Úponkový bič
+10,Move,23,name,9e119d06,Dupnutí
+10,Move,24,name,4f4d9d7b,Dvojitý kop
+10,Move,25,name,82047096,Megakop
+10,Move,26,name,f624a204,Kop z výskoku
+10,Move,27,name,468bc5a5,Kop s otočkou
+10,Move,28,name,2b3a4002,Písečný útok
+10,Move,29,name,36e0f4e5,Náraz hlavou
+10,Move,30,name,02c7ff53,Rohový útok
+10,Move,31,name,1643fd46,Zuřivý útok
+10,Move,32,name,7962aadd,Vrtání rohem
+10,Move,33,name,1b0e78ef,Nárazový útok
+10,Move,34,name,5a2343c8,Zavalení
+10,Move,35,name,0c087fe3,Ovinutí
+10,Move,36,name,5836ed1a,Sejmutí
+10,Move,37,name,40c7dd91,Zuřivost
+10,Move,38,name,dc0e55a9,Dvojí ostří
+10,Move,39,name,810b41b3,Vrtění ocasem
+10,Move,40,name,41f06e03,Jedovaté žihadlo
+10,Move,41,name,a596d6cd,Dvojehla
+10,Move,42,name,2d55e587,Jehlostřela
+10,Move,43,name,181bbea0,Lstivý pohled
+10,Move,44,name,21d49620,Kousnutí
+10,Move,45,name,8a36550c,Zavrčení
+10,Move,46,name,c126dede,Řev
+10,Move,47,name,97523d2d,Zpěv
+10,Move,48,name,c753f6d3,Ultrazvuk
+10,Move,49,name,2d0dc99b,Zvuková vlna
+10,Move,50,name,80f874cd,Zákaz
+10,Move,51,name,b69de092,Kyselina
+10,Move,52,name,72af9f46,Popálení
+10,Move,53,name,1eafab30,Plamenomet
+10,Move,54,name,5c463043,Mlha
+10,Move,55,name,02d2b4dd,Vodní dělo
+10,Move,56,name,3cb366ab,Vodní pumpa
+10,Move,57,name,131e0af2,Surfování
+10,Move,58,name,40b23f44,Ledový paprsek
+10,Move,59,name,c454c54e,Vánice
+10,Move,60,name,571bba58,Psychický paprsek
+10,Move,61,name,53162a19,Bublinomet
+10,Move,62,name,f2c58cdc,Polární záře
+10,Move,63,name,f0f6f5ce,Hyperpaprsek
+10,Move,64,name,30e559c1,Klovnutí
+10,Move,65,name,866adf06,Nebozezobák
+10,Move,66,name,94585923,Znehybnění
+10,Move,67,name,2eab899d,Nízký kop
+10,Move,68,name,0e9fade4,Odvetný úder
+10,Move,69,name,25f454b4,Seismický vrh
+10,Move,70,name,2fcf838e,Síla
+10,Move,71,name,1280c428,Vstřebání
+10,Move,72,name,551c6070,Megavysátí
+10,Move,73,name,b33a8203,Pijavičné semínko
+10,Move,74,name,1a4ce4c0,Růst
+10,Move,75,name,95dfe9bb,Listová břitva
+10,Move,76,name,98554cb5,Sluneční paprsek
+10,Move,77,name,ba4737d8,Jedovatý pyl
+10,Move,78,name,53a57da7,Omračující pyl
+10,Move,79,name,207275ff,Uspávací pyl
+10,Move,80,name,c1eb97d1,Tanec listů
+10,Move,81,name,4140a02f,Lepivé vlákno
+10,Move,82,name,df28c1ca,Dračí hněv
+10,Move,83,name,f556f1f1,Ohnivý vír
+10,Move,84,name,b7a1c31c,Bleskový šok
+10,Move,85,name,f6d30876,Bleskový útok
+10,Move,86,name,7b0857ed,Blesková vlna
+10,Move,87,name,adc59c6c,Blesk
+10,Move,88,name,45b85329,Hod kamenem
+10,Move,89,name,a863c1ea,Zemětřesení
+10,Move,90,name,205f70da,Puklina v zemi
+10,Move,91,name,ef3bd81b,Hrabavý útok
+10,Move,92,name,5292a0a7,Toxický útok
+10,Move,93,name,4a28e9d1,Zmatení
+10,Move,94,name,c81ee961,Psychika
+10,Move,95,name,834b9610,Hypnóza
+10,Move,96,name,d2b08c9e,Meditace
+10,Move,97,name,aabf4613,Hbitost
+10,Move,98,name,a8f0b0b9,Hbitý útok
+10,Move,99,name,1e31d195,Hněv
+10,Move,100,name,21f1f4db,Teleportace
+10,Move,101,name,12b1fa46,Noční stín
+10,Move,102,name,00e46b13,Napodobení
+10,Move,103,name,cd7e3dfb,Zaskřípání
+10,Move,104,name,9578e461,Zdvojení
+10,Move,105,name,3a35c8d1,Obnovení
+10,Move,106,name,caf3af09,Zatvrzení
+10,Move,107,name,090aa1af,Zmenšení
+10,Move,108,name,1035d176,Kouřová clona
+10,Move,109,name,7ee5dcb5,Matoucí paprsek
+10,Move,110,name,4ca83dc8,Schování
+10,Move,111,name,a0b162fb,Schoulení
+10,Move,112,name,2ef3c334,Bariéra
+10,Move,113,name,3f20cb45,Světelná zeď
+10,Move,114,name,def90a72,Opar
+10,Move,115,name,4139f7d5,Zrcadlová zeď
+10,Move,116,name,2b5efd83,Soustředění
+10,Move,117,name,6b168471,Výzva
+10,Move,119,name,ff144f98,Zrcadlový útok
+10,Move,120,name,736ed3b7,Sebezničení
+10,Move,121,name,9f077858,Vaječná puma
+10,Move,122,name,23304882,Oblíznutí
+10,Move,123,name,8940a4b0,Smog
+10,Move,124,name,63411a53,Bahno
+10,Move,125,name,644f433d,Kostěný kyj
+10,Move,126,name,f915a562,Výbuch ohně
+10,Move,127,name,f563415a,Vodopád
+10,Move,128,name,61c258fe,Sevření
+10,Move,129,name,6cb05388,Hvězdičky
+10,Move,130,name,46bde1fa,Úder lebkou
+10,Move,131,name,9621c0f2,Ostnové dělo
+10,Move,132,name,cd38825a,Škrcení
+10,Move,133,name,39bd2403,Amnézie
+10,Move,134,name,f5e54813,Kineze
+10,Move,135,name,3738b8ef,Na měkko
+10,Move,136,name,39531aa6,Vysoký kop
+10,Move,137,name,34c5144b,Hadí pohled
+10,Move,138,name,fe22cad8,Požírač snů
+10,Move,139,name,74cdebd5,Jedovatý plyn
+10,Move,140,name,910575c9,Bombardování
+10,Move,141,name,ee705ffb,Vysátí
+10,Move,142,name,eb7c0105,Polibek
+10,Move,143,name,e29370cd,Nebeský útok
+10,Move,144,name,f543030e,Transformace
+10,Move,145,name,ec8cf4c1,Bublinky
+10,Move,146,name,2da708a7,Zmatený úder
+10,Move,147,name,b1f4e024,Výtrus
+10,Move,148,name,6e0f7007,Záblesk
+10,Move,149,name,3c8db98d,Psy-vlna
+10,Move,150,name,bd9411c6,Šplouchnutí
+10,Move,151,name,f829493c,Rozpuštění
+10,Move,152,name,270de9fa,Krabí kladivo
+10,Move,153,name,f366e3bf,Exploze
+10,Move,154,name,e55c5dd3,Zuřivé řezání
+10,Move,155,name,a3c3bf3e,Kostmerang
+10,Move,156,name,5d268eee,Odpočinek
+10,Move,157,name,78c4fc7c,Pád skály
+10,Move,158,name,1fd03f94,Hypertesák
+10,Move,159,name,e8e32c64,Nabroušení
+10,Move,160,name,f2cc2494,Konverze
+10,Move,161,name,7c97aeb5,Trojitý útok
+10,Move,162,name,26aab69f,Supertesák
+10,Move,163,name,c60f68f5,Šmik
+10,Move,164,name,80ae5069,Zástupce
+10,Move,165,name,ce8dbf62,Zoufalý útok
+10,Move,166,name,87838b15,Náčrt
+10,Move,167,name,4781d4db,Trojitý kop
+10,Move,168,name,0e7eeada,Zloděj
+10,Move,169,name,588b6055,Pavučina
+10,Move,170,name,2e452afc,Čtení mysli
+10,Move,171,name,3991ce92,Noční můra
+10,Move,172,name,2646b72a,Ohnivý kruh
+10,Move,173,name,0132c088,Chrápání
+10,Move,174,name,eb2f86f6,Prokletí
+10,Move,175,name,d94f4ec5,Škubání
+10,Move,177,name,bdd38329,Vzdušný výbuch
+10,Move,178,name,0fd1e10a,Chmýří
+10,Move,179,name,886597fa,Zvrat
+10,Move,180,name,e3233b10,Zlá vůle
+10,Move,181,name,1ae60675,Prašan
+10,Move,182,name,50c8c9de,Protekce
+10,Move,183,name,0945792c,Hbitá pěst
+10,Move,184,name,da7ff133,Děsivý škleb
+10,Move,185,name,9a8bc753,Matný útok
+10,Move,186,name,f391734f,Sladký polibek
+10,Move,187,name,6bc7786a,Břišní buben
+10,Move,188,name,79050c5f,Bahenní puma
+10,Move,189,name,7748e8f2,Plesknutí blátem
+10,Move,190,name,4dd92763,Chobozuka
+10,Move,191,name,11201819,Střepiny
+10,Move,192,name,9908380e,Výbojové dělo
+10,Move,193,name,2e0c2866,Vidění
+10,Move,194,name,e3f4dc3e,Pouto osudu
+10,Move,195,name,7f7b0539,Píseň zániku
+10,Move,196,name,a43f0706,Severák
+10,Move,197,name,c720a2a5,Detekce
+10,Move,198,name,2992a5a0,Příval kostí
+10,Move,199,name,38aeca45,Zaměření
+10,Move,200,name,e7d5a124,Rozzuření
+10,Move,201,name,ced59494,Písečná bouře
+10,Move,202,name,a40a03ad,Giga-vysátí
+10,Move,203,name,0efab71c,Výdrž
+10,Move,204,name,40fcadee,Šarm
+10,Move,205,name,bb1dfc13,Valivý útok
+10,Move,206,name,f14fbe09,Falešný sek
+10,Move,207,name,70ccd23d,Naparování
+10,Move,208,name,7b0ae38c,Doušek mléka
+10,Move,209,name,5cd2e029,Jiskra
+10,Move,210,name,4e371b20,Zuřivé nože
+10,Move,211,name,dae09f3a,Ocelové křídlo
+10,Move,212,name,256dfc7e,Zlý pohled
+10,Move,213,name,726aec2a,Zalíbení
+10,Move,214,name,9eca6d4c,Řeč ze sna
+10,Move,215,name,7a332cbf,Léčivý zvonek
+10,Move,216,name,a0323a39,Opětování
+10,Move,217,name,3201978b,Dárek
+10,Move,218,name,2e86dd50,Frustrace
+10,Move,219,name,68f8cadf,Ochrana
+10,Move,220,name,b411b0cf,Půlená bolest
+10,Move,221,name,6de736ec,Posvátný oheň
+10,Move,222,name,b776ffa2,Magnituda
+10,Move,223,name,b94bee5b,Výbušný úder
+10,Move,224,name,b58d0ed2,Megaroh
+10,Move,225,name,b6ce4c28,Dračí dech
+10,Move,226,name,db006c42,Štafeta
+10,Move,227,name,829ca903,Přídavek
+10,Move,228,name,aea3d916,Pronásledování
+10,Move,229,name,66d505a7,Kolotoč
+10,Move,230,name,bb101823,Sladká vůně
+10,Move,231,name,09cd8e42,Železný ocas
+10,Move,232,name,5ffd637d,Kovový dráp
+10,Move,233,name,64ba0144,Osudný vrh
+10,Move,234,name,7ccbd159,Ranní slunce
+10,Move,235,name,dbcd8615,Syntéza
+10,Move,236,name,2227bb25,Měsíční svit
+10,Move,237,name,57e79e96,Skrytá síla
+10,Move,238,name,ad6b7c53,Křížový úder
+10,Move,239,name,44007a93,Tornádo
+10,Move,240,name,195a078c,Tanec v dešti
+10,Move,241,name,d64d3499,Slunečný den
+10,Move,242,name,a80d0d44,Křupnutí
+10,Move,243,name,70f89ccf,Zrcadlo
+10,Move,244,name,4e2df6ac,Nápsych
+10,Move,245,name,94954074,Extrémní rychlost
+10,Move,246,name,67f9074b,Prastará síla
+10,Move,247,name,080e63e3,Koule stínů
+10,Move,248,name,d076fd92,Budoucnost
+10,Move,249,name,b559328a,Drcení kamenů
+10,Move,250,name,79e7ca35,Vodní vír
+10,Move,251,name,f94ad23c,Zbití
+10,Move,252,name,4a2409a3,Předstírání
+10,Move,253,name,540376d4,Hluk
+10,Move,254,name,4019109c,Zásobení
+10,Move,255,name,5b889daf,Vyplivnutí
+10,Move,256,name,211da6d8,Spolknutí
+10,Move,257,name,3c89e147,Tepelná vlna
+10,Move,258,name,c6caf344,Kroupy
+10,Move,259,name,1b00c9e3,Trápení
+10,Move,260,name,70f77654,Lichotka
+10,Move,261,name,061d0658,Bludička
+10,Move,262,name,59c4c7f2,Odkaz
+10,Move,263,name,905ed4a1,Vzteklý útok
+10,Move,264,name,05e678e9,Mířená rána
+10,Move,265,name,a8e2c148,Smradlavá sůl
+10,Move,266,name,dca2af42,Za mnou
+10,Move,267,name,ea756121,Přírodní síla
+10,Move,268,name,52c7a102,Nabití
+10,Move,269,name,760757c7,Navádění
+10,Move,270,name,3148b453,Pomocná ruka
+10,Move,271,name,1931861a,Trik
+10,Move,272,name,b977f6ad,Vžití do role
+10,Move,273,name,77e3dbf7,Přání
+10,Move,274,name,a64282b8,Asistence
+10,Move,275,name,c3057f12,Zakořenění
+10,Move,276,name,55017b02,Supersíla
+10,Move,277,name,a9d317e8,Magický plášť
+10,Move,278,name,07bb9f87,Recyklace
+10,Move,279,name,5e5825ca,Odplata
+10,Move,280,name,3c39412a,Rozbití cihly
+10,Move,281,name,14209d4d,Zívnutí
+10,Move,282,name,2e5151d6,Vyražení
+10,Move,283,name,92e972d5,Úsilí
+10,Move,284,name,36a1520c,Erupce
+10,Move,285,name,f63fc223,Výměna
+10,Move,286,name,6957c053,Uvěznění
+10,Move,287,name,af3c9967,Osvěžení
+10,Move,288,name,24d6733d,Zášť
+10,Move,289,name,c0019332,Šlohnutí
+10,Move,290,name,dedfa6a1,Tajemná síla
+10,Move,291,name,3689ab7e,Potopení
+10,Move,292,name,36df489c,Úder paží
+10,Move,293,name,891357d0,Kamufláž
+10,Move,294,name,1e258cd5,Ocasní světélko
+10,Move,295,name,b14b4fea,Očistná záře
+10,Move,296,name,7fc6d972,Mlhová koule
+10,Move,297,name,95a04262,Tanec peří
+10,Move,298,name,04528f16,Bláznivé tóny
+10,Move,299,name,9190fcd1,Žárový kop
+10,Move,300,name,48573501,Blátivá hra
+10,Move,301,name,8512d943,Ledová koule
+10,Move,302,name,437b24e3,Trnitá ruka
+10,Move,303,name,2b53cd9f,Zalenošení
+10,Move,304,name,f9bbce08,hlaszvuk
+10,Move,305,name,b0c9fbbf,Jedovatý tesák
+10,Move,306,name,2eefb319,Drtivá tlapa
+10,Move,307,name,8705aa3d,Ohnivý výšleh
+10,Move,308,name,f4bbd4d7,Hydrodělo
+10,Move,309,name,e9144b5c,Meteorána
+10,Move,310,name,0dc0cb27,Vyděšení
+10,Move,311,name,2930d1fa,Koule počasí
+10,Move,312,name,c44bb7b5,Aromaterapie
+10,Move,313,name,34eea430,Falešné slzy
+10,Move,314,name,ea20f3ae,Sek vzduchem
+10,Move,315,name,5a0cfe9b,Přehřátí
+10,Move,316,name,d40901cc,Pachová stopa
+10,Move,317,name,dec148da,Kamenná past
+10,Move,318,name,89990b84,Stříbrný vítr
+10,Move,319,name,444c20f6,Kovový zvuk
+10,Move,320,name,04a144bf,Travní hvizd
+10,Move,321,name,2b7e332e,Polechtání
+10,Move,322,name,9169a89e,Kosmická síla
+10,Move,323,name,1f1f4f3b,Vodotrysk
+10,Move,324,name,f998029d,Signální záře
+10,Move,325,name,e92777cd,Temná pěst
+10,Move,326,name,0728175d,Mimosmyslové vnímání
+10,Move,327,name,eeb18e93,Nebeský úder
+10,Move,328,name,4cb19dbe,Písečné peklo
+10,Move,329,name,d901c2f6,Totální mráz
+10,Move,330,name,b199893c,Kalná voda
+10,Move,331,name,85dd08ef,Semenomet
+10,Move,332,name,4955fc11,Vzdušné eso
+10,Move,333,name,962eacd6,Rampouchové kopí
+10,Move,334,name,b41ed436,Zaželezení
+10,Move,335,name,42dab826,Zablokování
+10,Move,336,name,1815e191,Zavytí
+10,Move,337,name,9ab6b4ad,Dračí Spár
+10,Move,338,name,4e8662b2,Šílená kytka
+10,Move,339,name,0a7653df,Nadmutí
+10,Move,340,name,8590f16f,Odražení
+10,Move,341,name,113f6d08,Bahnomet
+10,Move,342,name,924a2be4,Jedovatý ocas
+10,Move,343,name,a5aa0cf4,Chamtivost
+10,Move,344,name,2c5cf47c,Voltonáraz
+10,Move,345,name,0d036196,Magický list
+10,Move,346,name,505ed9fc,Vodní hra
+10,Move,347,name,bb330d7f,Klidná mysl
+10,Move,348,name,a4ec4e8e,Ostrý list
+10,Move,349,name,229f871e,Dračí tanec
+10,Move,350,name,4464b792,SuprŠutr
+10,Move,351,name,1d079fd8,Šoková vlna
+10,Move,352,name,51cdfcf4,Vodní puls
+10,Move,353,name,f13587c6,Vůle osudu
+10,Move,354,name,6707c6e7,Psyzvýšení
+10,Move,355,name,f7459fee,Hřadování
+10,Move,356,name,95a01c3b,Gravitace
+10,Move,357,name,184157d1,Zázračné oko
+10,Move,358,name,f0742df8,Facka na probuzení
+10,Move,359,name,a03b4194,Kladivová pěst
+10,Move,360,name,59359b2b,Gyrokáča
+10,Move,361,name,7ef1b8c0,Léčivé přání
+10,Move,362,name,a487b772,Slaná voda
+10,Move,363,name,2e0290b7,Dar přírody
+10,Move,364,name,f6795e66,Lest
+10,Move,365,name,494b5a62,Vyklovnutí
+10,Move,366,name,eaf92a38,Vítr v zádech
+10,Move,367,name,c6283124,Akupresura
+10,Move,368,name,c1fc43c2,Ocelový výbuch
+10,Move,369,name,d5b41909,Otočka
+10,Move,370,name,e3add733,Boj na blízko
+10,Move,371,name,c55976a3,Vyrovnání účtů
+10,Move,372,name,ba99ab0d,Ujištění
+10,Move,373,name,ff9910f8,Embargo
+10,Move,374,name,0fcf5032,Hod
+10,Move,375,name,9468daca,Psychopřesun
+10,Move,376,name,de70ddf2,Trumf
+10,Move,377,name,ab102770,Blokace léčení
+10,Move,378,name,c7593fe8,Vyždímání
+10,Move,379,name,9c5486c5,Trik síly
+10,Move,380,name,9fa8deb3,Žaludeční šťáva
+10,Move,381,name,35444a34,Popěvek pro štěstí
+10,Move,382,name,9c0a586f,Nejdřív já
+10,Move,383,name,9fd79876,Opičení
+10,Move,384,name,85912d0d,Výměna síly
+10,Move,385,name,b42f0419,Výměna obrany
+10,Move,386,name,345745e1,Co proto
+10,Move,387,name,c78d7093,Záloha
+10,Move,388,name,86070cf4,Semínko starostí
+10,Move,389,name,94f1d282,Podpásovka
+10,Move,390,name,a3e1100f,Toxické ostny
+10,Move,391,name,ea321f7e,Výměna srdcí
+10,Move,392,name,fd891bc7,Vodní kruh
+10,Move,393,name,22295f5b,Magnetický zdvih
+10,Move,394,name,0aa8742d,Plamenný nálet
+10,Move,395,name,4674b767,Použití Síly
+10,Move,396,name,821f89e7,Kulová aura
+10,Move,397,name,2a0a21c4,Broušení kamene
+10,Move,398,name,16a55874,Jedové bodnutí
+10,Move,399,name,435ec34c,Temný puls
+10,Move,400,name,e6e1953a,Rozpárání
+10,Move,401,name,0e625aec,Vodní ocas
+10,Move,402,name,bf8ecffd,Semínková puma
+10,Move,403,name,9c32e3a6,Vzdušný sek
+10,Move,404,name,36dca5a6,X-Šmik
+10,Move,405,name,62ddc6c0,Zabzučení
+10,Move,406,name,21c2b0ab,Dračí puls
+10,Move,407,name,9418618e,Dračí zteč
+10,Move,408,name,911a9250,Síla drahokamu
+10,Move,409,name,8c313a9c,Vysávací úder
+10,Move,410,name,d47efaf7,Vlna vzduchoprázdna
+10,Move,411,name,6748ad3d,Usměrnění Síly
+10,Move,412,name,ad8e5b9b,Míč energie
+10,Move,413,name,8c5c7e4d,Nálet
+10,Move,414,name,176ec13b,Síla Země
+10,Move,415,name,b12f455f,Zamíchání
+10,Move,416,name,209f837c,Meganáraz
+10,Move,417,name,c038246f,Intrika
+10,Move,418,name,f5f6706f,Výstřelový úder
+10,Move,419,name,b2eecc41,Lavina
+10,Move,420,name,8b9c150b,Střechýle
+10,Move,421,name,87a12074,Stínový dráp
+10,Move,422,name,ffb89e62,Hromový tesák
+10,Move,423,name,af94f51e,Ledový tesák
+10,Move,424,name,b9e8b178,Ohnivý tesák
+10,Move,425,name,8ef5015a,Plížení stínem
+10,Move,426,name,3a379ca4,Blátivá puma
+10,Move,427,name,b2fa0477,Psychosek
+10,Move,428,name,9207d394,Zenová hlavička
+10,Move,429,name,bb2df05b,Zrcadlová střela
+10,Move,430,name,39bcb95e,Světelné dělo
+10,Move,431,name,57824514,Horolezectví
+10,Move,432,name,1a403aa4,Odmlžení
+10,Move,433,name,a8c1b9db,Komnata triků
+10,Move,434,name,67784081,Dračí meteor
+10,Move,435,name,93fa3214,Vybití
+10,Move,436,name,9a146d39,Výbuch lávy
+10,Move,437,name,741c9f23,Listová bouře
+10,Move,438,name,d550d41f,Šleh bičem
+10,Move,439,name,4ff3d24e,Kamenné dělo
+10,Move,440,name,d1dcfa83,Křížový jed
+10,Move,441,name,ea40fa28,Zásah sajrajtem
+10,Move,442,name,d209cc83,Železná hlava
+10,Move,443,name,3c98de0a,Magnetická puma
+10,Move,444,name,a32c50e2,Kamenné ostří
+10,Move,445,name,846476fb,Okouzlení
+10,Move,446,name,0e271d4e,Zákeřný kámen
+10,Move,447,name,775e5e5f,Uzel z trávy
+10,Move,448,name,b95e1be5,Žvanění
+10,Move,449,name,f01ecdc8,Rozsudek
+10,Move,450,name,646abcaf,Hmyzí kousanec
+10,Move,451,name,a47d9474,Paprsek náboje
+10,Move,452,name,6ab3d1bd,Dřevěné kladivo
+10,Move,453,name,a76a89e5,Proud vody
+10,Move,454,name,08e15d74,Příkaz k útoku
+10,Move,455,name,ecc0548e,Příkaz k obraně
+10,Move,456,name,dd2223ca,Příkaz vyléčit
+10,Move,457,name,a496dea1,Drcení hlavou
+10,Move,458,name,1c906270,Dvojitá rána
+10,Move,459,name,fdcf9161,Řev času
+10,Move,460,name,57f2ff21,Trhlina prostoru
+10,Move,461,name,4ca66f49,Měsíční tanec
+10,Move,462,name,e188b59f,Drtivý stisk
+10,Move,463,name,e7909976,Bouře lávy
+10,Move,464,name,f23e5ed3,Temná prázdnota
+10,Move,465,name,8884982f,Semínková světlice
+10,Move,466,name,40a07971,Zlověstný vítr
+10,Move,467,name,52ae84bd,Potopení do stínů
+10,MoveDamageClass,1,description,9625b27f,Nezraňuje
+10,MoveDamageClass,1,name,650d6c1e,nezraňující
+10,MoveDamageClass,2,description,becfcf89,"Fyzické zranění, řídí se Útokem a Obranou"
+10,MoveDamageClass,2,name,d7293008,fyzické
+10,MoveDamageClass,3,name,4c6b3fe3,speciální
+10,MoveEffect,1,short_effect,23235a1b,"Normálně zraňuje, bez vedlejších účinků."
+10,MoveEffect,2,effect,7d461b9f,[Uspí]{mechanic:sleep} protivníka.
+10,MoveEffect,2,short_effect,fab4aadd,Uspí protivníka.
+10,MoveEffect,3,short_effect,18144c52,Má $effect_chance% šanci otrávit protivníka.
+10,MoveEffect,4,short_effect,fb3bd06d,Vyléčí uživatele o polovinu způsobeného zranění.
+10,MoveEffect,6,short_effect,f946e377,Má $effect_chance% šanci zmrazit protivníka.
+10,MoveEffect,7,short_effect,1c05fdea,Má $effect_chance% šanci paralyzovat protivníka.
+10,MoveEffect,9,short_effect,1ae7a8fa,Funguje jen na spící protivníky. Vyléčí uživatele o polovinu způsobeného zranění.
+10,MoveEffect,11,short_effect,2c4fbe05,Zvýší uživatelův Útok o jeden stupeň.
+10,MoveEffect,12,short_effect,ed733b1a,Zvýší uživatelovu Obranu o jeden stupeň.
+10,MoveEffect,14,short_effect,f78303d0,Zvýší uživatelův Speciální útok o jeden stupeň.
+10,MoveEffect,17,short_effect,7f8c2786,Zvýší uživatelovu Mrštnost o jeden stupeň.
+10,MoveEffect,18,short_effect,6a2ed6eb,Vždy se trefí.
+10,MoveEffect,19,short_effect,70f0f273,Sníží protivníkův Útok o jeden stupeň.
+10,MoveEffect,20,short_effect,5449505f,Sníží protivníkovu Obranu o jeden stupeň.
+10,MoveEffect,21,short_effect,3007bcd6,Sníží protivníkovu Rychlost o jeden stupeň.
+10,MoveEffect,24,short_effect,2b318251,Sníží protivníkovu Přesnost o jeden stupeň.
+10,MoveEffect,25,short_effect,c6b64cc3,Sníží protivníkovu Mrštnost o jeden stupeň.
+10,MoveEffect,28,short_effect,e014580f,"Zaútočí každé kolo, 2-3×; poté zmate uživatele."
+10,MoveEffect,29,short_effect,4ff5bbff,Okamžitě ukončí zápas s divokým pokémonem. Trenéry donutí vyměnit pokémona.
+10,MoveEffect,30,short_effect,e5e4180d,Zaútočí 2-5× za sebou.
+10,MoveEffect,32,short_effect,b2aff3a6,"Má $effect_chance% šanci, že se protivník zalekne."
+10,MoveEffect,34,effect,cc5f917e,[Těžce otráví]{mechanic:bad-poison} protivníka.
+10,MoveEffect,34,short_effect,385d3c02,Vážně otráví protivníka; jed ubere každé kolo více zranění.
+10,MoveEffect,35,short_effect,9c649109,Rozsype peníze v hodnotě 5× úrovně uživatele.
+10,MoveEffect,36,short_effect,0feee880,Na pět kol sníží zranění ze speciálních útoků o 50%.
+10,MoveEffect,38,short_effect,ccec7cfa,"Uživatel na dvě kola usne, čímž se úplně vyléčí."
+10,MoveEffect,39,short_effect,f5e02086,Vyřadí protivníka na jeden zásah.
+10,MoveEffect,40,short_effect,99da8cca,"První kolo se nabíjí, zaútočí až v druhém."
+10,MoveEffect,44,short_effect,3f03a70f,Má vysokou šanci na kritický zásah.
+10,MoveEffect,49,short_effect,ff46b231,Zraní uživatele za 1/4 způsobeného zranění.
+10,MoveEffect,51,short_effect,b2c51959,Zvýší uživatelův Útok o dva stupně.
+10,MoveEffect,52,short_effect,3f0c2829,Zvýší uživatelovu Obranu o dva stupně.
+10,MoveEffect,53,short_effect,f1bc9e43,Zvýší uživateli Rychlost o dvě úrovně.
+10,MoveEffect,54,short_effect,44a7f3bf,Zvýší uživatelův Speciální útok o dva stupně.
+10,MoveEffect,55,short_effect,76930d8e,Zvýší uživatelovu Speciální obranu o dva stupně.
+10,MoveEffect,59,short_effect,0bff721c,Sníží protivníkův Útok o dva stupně.
+10,MoveEffect,60,short_effect,3903a75d,Sníží protivníkovu Obranu o dva stupně.
+10,MoveEffect,61,short_effect,ad03d235,Sníží protivníkovi Obranu o dva stupně.
+10,MoveEffect,63,short_effect,5ec14f8a,Sníží protivníkovu Speciální obranu o dva stupně.
+10,MoveEffect,66,short_effect,a2bdb301,Na pět kol sníží zranění z fyzických útoků o 50%.
+10,MoveEffect,67,effect,22a71d53,[Otráví]{mechanic:poison} protivníka.
+10,MoveEffect,67,short_effect,7b481e44,Otráví protivníka.
+10,MoveEffect,69,short_effect,c981b610,Má $effect_chance% šanci snížit protivníkův Útok o jeden stupeň.
+10,MoveEffect,70,short_effect,804b11f9,Má $effect_chance% šanci snížit protivníkovu Obranu o jeden stupeň.
+10,MoveEffect,71,short_effect,2797d6a0,Má $effect_chance% šanci snížit protivníkovu Rychlost o jeden stupeň.
+10,MoveEffect,72,short_effect,3be14593,Má $effect_chance% šanci snížit protivníkův Speciální útok o jeden stupeň.
+10,MoveEffect,73,short_effect,f408a390,Má $effect_chance% šanci snížit protivníkovu Speciální obranu o jeden stupeň.
+10,MoveEffect,74,short_effect,145086cd,Má $effect_chance% šanci snížit protivníkovu Přesnost o jeden stupeň.
+10,MoveEffect,77,short_effect,11cd0067,Má $effect_chance% šanci zmást protivníka.
+10,MoveEffect,79,short_effect,6a2ed6eb,Vždy se trefí.
+10,MoveEffect,80,short_effect,05acc33b,"Převede 1/4 uživatelova HP do figurky, která ho chrání před dalším zraněním a změnami stavu, dokud se nerozbije."
+10,MoveEffect,81,short_effect,d1a68b36,Uživatel se vzdá následujícího kola; musí dobít energii.
+10,MoveEffect,82,short_effect,6639923c,"Pokud je uživatel po použití tohoto útoku zasažen, zvýší se mu Útok o jeden stupeň."
+10,MoveEffect,83,short_effect,8792f265,Zkopíruje posledně použitý protivníkův útok.
+10,MoveEffect,85,short_effect,e7aee025,"Zasadí do protivníka semínka, která mu každé kolo ubírají HP a léčí uživatele."
+10,MoveEffect,88,effect,aca65f16,"Udělí zranění v HP rovné uživatelovi úrovni. Typové imunity platí, ale ostatní efekty typů jsou ignorovány."
+10,MoveEffect,88,short_effect,ed35d2b8,Udělí zranění v HP rovné uživatelovi úrovni.
+10,MoveEffect,90,short_effect,09ad6a50,"Způsobí dvakrát více fyzického zranění, než kolik utržil uživatel když byl naposledy zasažen."
+10,MoveEffect,93,short_effect,3eed658f,"Má $effect_chance% šanci, že se protivník zalekne. Povede se pouze při spánku."
+10,MoveEffect,98,short_effect,41aba78d,Použije náhodný z uživatelových ostatních útoků. Povede se pouze ze spánku.
+10,MoveEffect,101,short_effect,6e3a19b0,Sníží PP protivníkova posledně použitého útoku o 4.
+10,MoveEffect,104,short_effect,23235a1b,"Normálně zraňuje, bez vedlejších účinků."
+10,MoveEffect,106,short_effect,e90bc79a,Vezme protivníkovi drženou věc.
+10,MoveEffect,107,short_effect,97bb1dd8,Zabrání protivníkovi opustit zápas.
+10,MoveEffect,109,short_effect,c627085a,Zvýší uživatelovu Mrštnost obranu o dva stupně.
+10,MoveEffect,110,short_effect,1da483ee,"Duchové obětují 1/2 max. HP na kletbu, která protivníka zraňuje každé kolo. Ostatním sníží Rychlost a zvýší Útok a Obranu."
+10,MoveEffect,112,short_effect,eaa0480b,Znemožní jakémukoli útoku trefit toto kolo uživatele.
+10,MoveEffect,116,short_effect,c2ade64e,Na pět kol způsobí písečnou bouři.
+10,MoveEffect,117,short_effect,9ff7f774,Uživateli toto kolo zůstane aspoň 1 HP.
+10,MoveEffect,118,short_effect,a3c01065,"Kdy je tento útok používán stále dokola, jeho síla se prvních 5 kol vždy zdvojnásobí."
+10,MoveEffect,119,short_effect,f15db692,"Zvýší protivníkův Útok o dva stupně, a zmate ho."
+10,MoveEffect,120,short_effect,17cb9c2a,"Kdy je tento útok používán stále dokola, jeho síla se prvních 5 kol vždy zdvojnásobí; poté zůstane 32× silnější."
+10,MoveEffect,121,short_effect,da8705cb,Protivník se zamiluje do uživatele. Poté má 50% šanci na něj nezaútočit.
+10,MoveEffect,122,short_effect,275cec8d,"Tím silnější, čím je uživatel ochočenější. Maximální síla je 102."
+10,MoveEffect,124,short_effect,95b64a67,"Tím silnější, čím je uživatel méně ochočený. Maximální síla je 102."
+10,MoveEffect,125,short_effect,91592e71,Po pět kol chrání pokémony uživatelově straně proti změnám stavu a zmatení.
+10,MoveEffect,133,short_effect,01e6d666,Uzdraví uživatele za 1/2 max. HP. Ovlivněno počasím.
+10,MoveEffect,136,short_effect,fa633b41,Síla a typ závisí na uživatelových genech. Síla může být od 30 do 70.
+10,MoveEffect,137,short_effect,55fadb74,Na pět kol způsobí déšť.
+10,MoveEffect,138,short_effect,7b756cbf,"Na pět kol způsobí, že slunce svítí jasněji než normálně."
+10,MoveEffect,141,short_effect,9c8a69f4,Má $effect_chance% šanci uživateli zvýšit všechny staty o jeden stupeň.
+10,MoveEffect,145,short_effect,39dc96ff,"Způsobí dvakrát více speciálního zranění, než kolik utržil uživatel když byl naposledy zasažen."
+10,MoveEffect,146,short_effect,580a3c8d,Zvýší uživateli Obranu o jeden stupeň. Zaútočí až v následujícím kole.
+10,MoveEffect,147,short_effect,b2aff3a6,"Má $effect_chance% šanci, že se protivník zalekne."
+10,MoveEffect,148,short_effect,f6e65697,Normálně zraňuje; zasáhne i pokémony pod zemí.
+10,MoveEffect,151,short_effect,b2aff3a6,"Má $effect_chance% šanci, že se protivník zalekne."
+10,MoveEffect,152,short_effect,99da8cca,"První kolo se nabíjí, zaútočí až v druhém."
+10,MoveEffect,153,short_effect,1c05fdea,Má $effect_chance% šanci paralyzovat protivníka.
+10,MoveEffect,157,short_effect,d1880f6b,Zvýší uživatelovu Obranu o jeden stupeň.
+10,MoveEffect,160,short_effect,2b0a50fb,Používá se po několik kol stále dokola. Mezitím pokémoni nemohou usnout.
+10,MoveEffect,165,short_effect,4ca65a6a,Na pět kol přivolá padající kroupy.
+10,MoveEffect,169,short_effect,788358b7,Sníží protivníkův Útok a Speciální útok o dva stupně. Uživatel omdlí.
+10,MoveEffect,170,short_effect,c746c692,"Při popálení, paralýze nebo otravě má dvojnásobnou sílu."
+10,MoveEffect,171,short_effect,1fd4b377,"Pokud uživatel před zaútočením utrží zranění, tento útok se nepovede."
+10,MoveEffect,174,short_effect,fb2ab93c,Použije útok závislý na okolním prostředí.
+10,MoveEffect,175,short_effect,3112b936,Zvýší uživatelovu Speciální obranu o jeden stupeň. Jeho Elektrické útoky mají v příštím kole dvojnásobnou sílu.
+10,MoveEffect,182,short_effect,6e143ad1,Nedovolí uživateli opustit zápas a léčí ho za 1/16 max. HP za kolo.
+10,MoveEffect,183,short_effect,c386d647,Po zranění sníží uživateli Útok a Obranu o jeden stupeň.
+10,MoveEffect,186,short_effect,e9a22d99,"Způsobí dvojnásobné zranění, pokud uživatel už byl toto kolo zraněn."
+10,MoveEffect,187,short_effect,291b2bc1,Zruší Reflect a Light Screen.
+10,MoveEffect,189,short_effect,4f944a38,Přinutí protivníka pustit drženou věc.
+10,MoveEffect,190,short_effect,a4a2f496,"Sníží protivníkovo HP na tolik, kolik má uživatel."
+10,MoveEffect,197,short_effect,3d4689ff,Silnější proti těžším protivníkům. Maximální síla je 120.
+10,MoveEffect,198,short_effect,fd661e71,"Má $effect_chance% šanci způsobit změnu stavu. Jakou, to závisí na okolním prostředí."
+10,MoveEffect,205,short_effect,f665d3c3,Po zranění protivníka sníží uživatelův Speciální útok o dva stupně.
+10,MoveEffect,206,short_effect,8e074ef2,Sníží protivníkův Útok a Obranu o jeden stupeň.
+10,MoveEffect,207,short_effect,9e392cc6,Zvýší uživatelovu Obranu a Speciální obranu o jeden stupeň.
+10,MoveEffect,209,short_effect,72b98318,Zvýší uživatelův Útok a Obranu o jeden stupeň.
+10,MoveEffect,212,short_effect,e93c08b4,Zvýší uživatelův Speciální útok a Speciální obranu o jeden stupeň.
+10,MoveEffect,213,short_effect,0a2514af,Zvýší uživatelů Útok a Rychlost o jeden stupeň.
+10,MoveEffect,219,short_effect,15640b6e,Sníží uživatelovu Rychlost o jeden stupeň.
+10,MoveEffect,223,short_effect,08e89282,Síla a typ závisí na drženém ovoci.
+10,MoveEffect,231,short_effect,f7776d92,"Má dvojnásobnou sílu, pokud protivník už toto kolo útočil."
+10,MoveEffect,234,short_effect,05a5ddf4,Hodí na protivníka drženou věc; síla závisí na druhu věci.
+10,MoveEffect,248,short_effect,12e97061,Změní protivníkovu schopnost na Insomnii.
+10,MoveEffect,257,short_effect,2a86100e,"Uživatel se zahrabe pod zem, kde se vyhýbá všem útokům. V následujícím kole zaútočí."
+10,MoveEffect,258,short_effect,3182f96f,Normálně zraňuje. Zasáhne i protivníky pod vodou.
+10,MoveEffect,261,short_effect,f946e377,Má $effect_chance% šanci zmrazit protivníka.
+10,MoveEffect,262,short_effect,ac2b7cc9,Po 2-5 kol nedovolí protivníkovi opustit zápas a uděluje mu zranění ve výši 1/16 max. HP za kolo.
+10,MoveEffect,266,short_effect,5e85548e,"Sníží protivníkův Speciální útok o dva stupně, pokud je opačného pohlaví."
+10,MoveEffect,267,short_effect,44faf89c,"Zraňuje protivníkovy pokémony, když jsou vysláni do zápasu."
+10,MoveEffect,278,short_effect,c3afa6b1,Zvýší uživatelův Útok a Přesnost o jeden stupeň.
+10,MoveEffect,284,short_effect,a1f99f7d,"Způsobí dvojnásobné zranění, pokud je protivník otávený."
+10,MoveEffect,285,short_effect,ef1aa29f,Zvýší uživatelovu Rychlost o dva stupně a sníží mu hmotnost na polovinu.
+10,MoveEffect,288,short_effect,1d348764,Zruší imunitu na Zemní typ.
+10,MoveEffect,291,short_effect,b069d54b,"Zvýší uživatelův Speciální útok, Speciální obranu a Rychlost po jednom stupni."
+10,MoveEffect,296,short_effect,0f5ce718,Nomálně zraňuje. Zvýší uživatelovu Rychlost o jeden stupeň.
+10,MoveEffect,297,short_effect,5ec14f8a,Sníží protivníkovu Speciální obranu o dva stupně.
+10,MoveEffect,302,short_effect,d6a8e3c0,"Má dvojnásobnou sílu, pokud se použije vícekrát v jednom kole."
+10,MoveEffect,303,short_effect,e1e28672,"Síla se zvýší o 100% za každé po sobě jdoucí použití pokémonem na uživatelově straně, až do max. síly 200."
+10,MoveEffect,304,short_effect,ae5be1c7,Ignoruje změny protivníkových statů.
+10,MoveEffect,309,short_effect,4d7c9079,"Zvýší uživatelův Útok, Obranu a Rychlost o dva stupně. Sníží mu Obranu a Speciální obranu o jeden stupeň."
+10,MoveEffect,313,short_effect,e56cd2f8,Zvýší uživateli Útok o jednu a Rychlost o dvě úrovně.
+10,MoveEffect,314,short_effect,5e96b48c,Ukončí zápas s divokým pokémonem. Trenéry donutí vyměnit pokémona.
+10,MoveEffect,315,short_effect,1eceb266,Zničí protivníkovi držené ovoce.
+10,MoveEffect,317,short_effect,d0038269,Zvýší uživatelův Útok a Speciální útok o jeden stupeň.
+10,MoveEffect,322,short_effect,900868ea,Zvýší uživatelův Speciální útok o tři stupně.
+10,MoveEffect,323,short_effect,2de9c9c3,"Zvýší uživatelův Útok, Obranu a Přesnost útok po jednom stupni."
+10,MoveEffect,328,short_effect,450f77e5,Zvýší uživatelův Útok a Speciální útok o jeden stupeň.
+10,MoveEffect,329,short_effect,a6123581,Zvýší uživatelovu Obranu o tři stupně.
+10,MoveEffect,331,short_effect,ad03d235,Sníží protivníkovi Obranu o dva stupně.
+10,MoveEffect,332,short_effect,b167b80e,"První kolo se nabíjí, zaútočí až ve druhém. Má $effect_chance% šanci paralyzovat protivníka."
+10,MoveEffect,338,short_effect,11cd0067,Má $effect_chance% šanci zmást protivníka.
+10,MoveEffect,10004,short_effect,c028872e,Sníží protivníkovu Mrštnost o dva stupně.
+10,MoveEffect,10006,short_effect,b2988a39,Na pět kol zatemní oblohu.
+10,MoveFlag,1,description,66523335,Uživatel se dotkne cíle.  Toto zaktivuje některé schopnosti (např. []{ability:static}) a věci (např. []{item:sticky-barb}).
+10,MoveFlag,1,name,e34fed78,Způsobí dotek
+10,MoveFlag,2,description,d88ae74f,"Tento útok má nabíjecí kolo, které lze přeskočit pomocí []{item:power-herb}."
+10,MoveFlag,2,name,877244e9,Má nabíjecí kolo
+10,MoveFlag,3,description,6cea8671,"Kolo po použití tohoto útoku přeskočí Pokémon svůj tah, aby se mohl dobít."
+10,MoveFlag,3,name,80fd2238,Má dobíjecí kolo
+10,MoveFlag,4,description,102038da,"Tento útok nebude fungovat, použil-li cíl toto kolo []{move:detect} či [protect]{move:protect}."
+10,MoveFlag,4,name,d249c071,Blokované Detectem a Protectem
+10,MoveFlag,5,name,b343310a,Odrazitelný
+10,MoveFlag,6,description,6d5f5422,"Tento útok bude ukraden, pokud jiný Pokémon toto kolo použil []{move:snatch}"
+10,MoveFlag,6,name,3a15243a,Ukradnutelný
+10,MoveFlag,7,description,25e3b9d0,Pokémon co je cílem tohoto útoku ho může zkopírovat pomocí []{move:mirror-move}
+10,MoveFlag,7,name,c4e8a756,Kopírovatelný Mirror Movem
+10,MoveFlag,8,name,ae7d93f1,Úderový
+10,MoveFlag,9,description,b34264c8,Pokémoni s []{ability:soundproof} jsou proti tomuto útoku odolní.
+10,MoveFlag,9,name,752347d8,Zvukový
+10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při [zvýšené gravitaci]{move:gravity} 
+10,MoveFlag,10,name,05543fc0,Nepoužitelný s Gravitací
+10,MoveFlag,11,description,e68d87da,Tento útok může zmražený pokémon použít k rozmrznutí.
+10,MoveFlag,11,name,a2a771b1,Rozmrazí při použití
+10,MoveFlag,13,description,5660882a,Tento útok bude blokován pomocí []{move:heal-block}.
+10,MoveFlag,13,name,eb08469e,Léčí
+10,MoveMetaAilment,1,name,5134bb3b,Paralýza
+10,MoveMetaAilment,2,name,cef2eda8,Spánek
+10,MoveMetaAilment,6,name,4a28e9d1,Zmatení
+10,MoveTarget,2,description,5a29a4b3,"Druhý Pokémon na bojišti, vybraný trenérem.
+
+Ukradené útoky použijí stejný cíl."
+10,MoveTarget,2,name,af998c39,Vybraný Pokémon
+10,MoveTarget,3,description,0418c304,Spolubojovník uživatele (je-li nějaký).
+10,MoveTarget,3,name,a3b03f33,Spolubojovník
+10,MoveTarget,4,description,7e0bf1a7,"Uživatelova strana bojiště.
+
+Působí na uživatele i jeho spolubojovníky (jsou-li nějací)"
+10,MoveTarget,4,name,e51eed6c,Strana uživatele
+10,MoveTarget,5,description,ca1b5030,"Buď uživatel nebo jeho spolubojovník, podle trenéra."
+10,MoveTarget,5,name,70336963,Uživatel nebo spolubojovník
+10,MoveTarget,6,description,b91b49aa,"Opačná strana bojiště.
+
+Působí na protivníky."
+10,MoveTarget,6,name,bf5689eb,Strana protivnika
+10,MoveTarget,7,description,d3e0a613,Působí na uživatele.
+10,MoveTarget,7,name,2da17977,Uživatel
+10,MoveTarget,8,description,8f851c2f,"Jeden protivník, vybraný náhodně."
+10,MoveTarget,8,name,968b2389,Náhodný protivník
+10,MoveTarget,9,description,fd9e4869,"Každý pokémon na poli, kromě uživatele."
+10,MoveTarget,9,name,c1561b96,Všichni ostatní pokémoni
+10,MoveTarget,10,description,2f56ae25,"Jeden pokémon na poli kromě uživatele, vybraný trenérem. "
+10,MoveTarget,10,name,af998c39,Vybraný Pokémon
+10,MoveTarget,11,description,1abe543e,Všichni protivníci.
+10,MoveTarget,11,name,87082e08,Všichni protivníci
+10,PokeathlonStat,2,name,6a4b2ea4,Síla
+10,PokeathlonStat,4,name,f431f5e8,Výdrž
+10,PokeathlonStat,5,name,0781a928,Skoky
+10,Pokedex,1,description,12ca8f74,Celostvětový pokédex
+10,Pokedex,1,name,698b64e6,Světové
+10,Pokedex,2,description,9591a8ac,Pokédex z Kanta v Red/Blue/Yellow
+10,Pokedex,2,name,be8c2832,Kanto
+10,Pokedex,3,description,bf2d2b3e,Gold/Silver/Crystal Johto dex – ve hrách zvaný „New“
+10,Pokedex,3,name,9f1e2d3d,Původní Johto
+10,Pokedex,4,description,a7653f5d,Ruby/Sapphire/Emerald Hoennský dex
+10,Pokedex,4,name,d28c007d,Hoennský
+10,Pokedex,5,description,dadaadab,Diamond/Pearl Sinnohský dex
+10,Pokedex,6,description,f3d57c4c,Platinum Sinnohský dex—rozšířená verze dexu z Diamond a Pearl
+10,Pokedex,7,description,56afcca4,HeartGold/SoulSilver Johto dex – dex z Gold/Silver/Crystal rozšířený o nové vývoje
+10,Pokedex,8,description,79a9ade7,Black/White Unovský dex
+10,PokemonSpecies,1,flavor_summary,fe4d8c9a,"Od narození má na zádech divné semínko, které roste a vyvíjí se společně s ním. Uvnitř má zásobu živin, kterou využívají zejména malí Bulbasauři. I později ale může celé dny nejíst.
+
+Bulbasauři rádi odpočívají na sluníčku. Semínko na zádech jim tak roste rychleji."
+10,PokemonSpecies,1,genus,e4b54c38,Semínkový
+10,PokemonSpecies,2,genus,e4b54c38,Semínkový
+10,PokemonSpecies,3,genus,e4b54c38,Semínkový
+10,PokemonSpecies,4,genus,473b2152,Ještěrkovitý
+10,PokemonSpecies,5,genus,c4ff3365,Plamenný
+10,PokemonSpecies,6,genus,c4ff3365,Plamenný
+10,PokemonSpecies,7,genus,a662e558,Malý želví
+10,PokemonSpecies,8,genus,71b19d1a,Želví
+10,PokemonSpecies,9,genus,4a927f13,Korýší
+10,PokemonSpecies,10,genus,1a1f628b,Červí
+10,PokemonSpecies,11,genus,011bd63a,Kuklový
+10,PokemonSpecies,12,genus,4666d1bf,Motýlí
+10,PokemonSpecies,14,genus,011bd63a,Kuklový
+10,PokemonSpecies,66,genus,55017b02,Supersilný
+10,PokemonSpecies,67,genus,55017b02,Supersilný
+10,PokemonSpecies,68,genus,55017b02,Supersilný
+10,PokemonSpecies,88,genus,63411a53,Kalový
+10,PokemonSpecies,89,genus,63411a53,Kalový
+10,PokemonSpecies,96,genus,834b9610,Hypnotický
+10,PokemonSpecies,97,genus,834b9610,Hypnotický
+10,PokemonSpecies,111,genus,11201819,Střepinový
+10,PokemonSpecies,120,genus,a62f8434,Hvězdicovitý
+10,PokemonSpecies,121,genus,abfc4744,Záhadný
+10,PokemonSpecies,122,genus,2ef3c334,Bariérový
+10,PokemonSpecies,132,genus,f543030e,Transformační
+10,PokemonSpecies,136,genus,c4ff3365,Plamenný
+10,PokemonSpecies,140,genus,4a927f13,Korýší
+10,PokemonSpecies,141,genus,4a927f13,Korýší
+10,PokemonSpecies,146,genus,c4ff3365,Plamenný
+10,PokemonSpecies,173,genus,a62f8434,Hvězdicovitý
+10,PokemonSpecies,191,genus,e4b54c38,Semínkový
+10,PokemonSpecies,197,genus,2227bb25,Měsíční
+10,PokemonSpecies,200,genus,cd7e3dfb,Skřípavý
+10,PokemonSpecies,243,genus,adc59c6c,Bleskový
+10,PokemonSpecies,261,genus,21d49620,Kousavý
+10,PokemonSpecies,262,genus,21d49620,Kousavý
+10,PokemonSpecies,265,genus,1a1f628b,Červí
+10,PokemonSpecies,266,genus,011bd63a,Kuklový
+10,PokemonSpecies,267,genus,4666d1bf,Motýlí
+10,PokemonSpecies,268,genus,011bd63a,Kuklový
+10,PokemonSpecies,277,genus,211da6d8,Polykací
+10,PokemonSpecies,307,genus,d2b08c9e,Meditační
+10,PokemonSpecies,308,genus,d2b08c9e,Meditační
+10,PokemonSpecies,323,genus,36a1520c,Erupční
+10,PokemonSpecies,325,genus,8590f16f,Skákavý
+10,PokemonSpecies,392,genus,c4ff3365,Plamenný
+10,PokemonSpecies,403,genus,6e0f7007,Jiskrový
+10,PokemonSpecies,404,genus,5cd2e029,Jiskrový
+10,PokemonSpecies,466,genus,f6d30876,Bleskový
+10,PokemonSpecies,523,genus,f6d30876,Bleskový
+10,PokemonSpecies,613,genus,eda9f31f,Studený
+10,PokemonSpecies,614,genus,93e0b150,Mrazící
+10,PokemonSpecies,615,genus,22733a94,Krystalizující
+10,PokemonSpecies,618,genus,1ebdd00d,Pasťový
+10,PokemonColor,4,name,25cd90d8,Šedá
+10,PokemonHabitat,1,name,057f6d41,jeskyně
+10,PokemonHabitat,2,name,a85d53b4,lesy
+10,PokemonHabitat,3,name,a73fc6cb,lučiny
+10,PokemonHabitat,4,name,9da2093c,hory
+10,PokemonHabitat,5,name,89b698bf,vzácní
+10,PokemonHabitat,6,name,788350a9,vysočiny
+10,PokemonHabitat,7,name,8bc9c137,moře
+10,PokemonHabitat,8,name,ab99f942,města
+10,PokemonHabitat,9,name,af51cb0b,břehy
+10,PokemonMoveMethod,1,description,9d07ab12,Učení dosažením určité úrovně.
+10,PokemonMoveMethod,1,name,05c78fbc,Úrovní
+10,PokemonMoveMethod,2,description,a99cfa70,Dědí se od otce.
+10,PokemonMoveMethod,2,name,707a9fa2,Vajíčkový
+10,PokemonMoveMethod,3,description,e59d4a92,Učené nějakou postavou ve hře.
+10,PokemonMoveMethod,3,name,58c6694c,Od učitele
+10,PokemonMoveMethod,4,description,32164359,Učené použitím TM nebo HM
+10,PokemonMoveMethod,4,name,dab8e618,Přístrojem
+10,PokemonMoveMethod,5,name,769d65a7,Stadium: Surfující Pikachu
+10,PokemonMoveMethod,6,description,12c34e57,"Objeví se u Pichu, jehož matka držela Light Ball. Otec nesmí být Ditto."
+10,PokemonMoveMethod,6,name,7e51f60b,Light Ball
+10,PokemonMoveMethod,7,description,77946fe2,"Objeví se u „Shadow“ pokémona, jak se mu otevírá srdce."
+10,PokemonMoveMethod,7,name,4e0ea86f,Colosseum: Purifikace
+10,PokemonMoveMethod,8,description,58d903a1,U ukradených „Shadow“ pokémonů
+10,PokemonMoveMethod,8,name,d29fac50,XD: Stínový útok
+10,PokemonMoveMethod,9,description,77946fe2,"Objeví se u „Shadow“ pokémona, jak se mu otevírá srdce."
+10,PokemonMoveMethod,9,name,a5376e0d,XD: Purifikace
+10,PokemonMoveMethod,10,description,5a7a0b0c,"Objeví se u Rotoma, když se změní do určité formy.  Zmizí, když se Rotom změní do jiné formy, pokud se tento útok dá naučit jen změnou formy."
+10,PokemonMoveMethod,10,name,2e006dfd,Forma Rotoma
+10,PokemonShape,1,awesome_name,befc3d91,Kulatý
+10,PokemonShape,2,awesome_name,b781c35b,Hadovitý
+10,PokemonShape,2,name,24a0dafe,Hadovitý
+10,PokemonShape,3,awesome_name,c46df7d0,Rybí
+10,PokemonShape,4,awesome_name,e921524f,Dvouruký
+10,PokemonShape,4,name,4cc66916,Dvouruký
+10,PokemonShape,5,awesome_name,e6f03e37,Kaňka
+10,PokemonShape,5,name,104d0af2,Kaňka
+10,PokemonShape,6,awesome_name,5a8a075f,Vzpřímený
+10,PokemonShape,6,name,954b96a6,Vzpřímený
+10,PokemonShape,7,awesome_name,886af1cb,Dvounohý
+10,PokemonShape,7,name,5d2aecb4,Dvounohý
+10,PokemonShape,8,awesome_name,e67a6180,Čtyřnohý
+10,PokemonShape,8,name,00636580,Čtyřnohý
+10,PokemonShape,9,awesome_name,81cc98f6,Ptačí
+10,PokemonShape,9,name,abc66783,Ptačí
+10,PokemonShape,10,awesome_name,a23803dc,Ochapadlený
+10,PokemonShape,10,name,070c5954,Ochapadlený
+10,PokemonShape,11,awesome_name,9400d894,Složený
+10,PokemonShape,11,name,23d1cc96,Složený
+10,PokemonShape,12,awesome_name,15e2493f,Antropomorfní
+10,PokemonShape,12,name,57a0c246,Antropomorfní
+10,PokemonShape,13,awesome_name,77d644c2,Motýlovitý
+10,PokemonShape,13,name,1745681c,Motýlovitý
+10,PokemonShape,14,awesome_name,1b9162a7,Obrněný
+10,PokemonShape,14,name,7ee6d1f8,Obrněný
+10,Region,5,name,ed733435,Unovský
+10,Stat,1,name,12128606,HP
+10,Stat,2,name,406c280d,Útočný
+10,Stat,3,name,1418cce9,Obranný
+10,Stat,6,name,cee7d1f2,Rychlost
+10,Type,1,name,26296dd2,Normální
+10,Type,2,name,a3be6bed,Bojovný
+10,Type,3,name,4d987ff5,Létající
+10,Type,4,name,fed81c7f,Jedovatý
+10,Type,5,name,a053865e,Zemní
+10,Type,6,name,977b149c,Kamenný
+10,Type,7,name,0dc1f9f4,Hmyzí
+10,Type,8,name,c292bfa5,Duší
+10,Type,9,name,4f5ece97,Ocelový
+10,Type,10,name,f8eca6f1,Ohnivý
+10,Type,11,name,3af23bde,Vodní
+10,Type,12,name,69ccb0f7,Travní
+10,Type,13,name,1d4ecdfc,Elektrický
+10,Type,14,name,c81ee961,Psychický
+10,Type,15,name,f302c2ee,Ledový
+10,Type,16,name,20742c82,Dračí
+10,Type,17,name,bb4e12c5,Temný
+10,Type,10001,name,3ece7cbe,???
+10,Type,10002,name,72da871b,Stínový
+10,Version,1,name,c22c196f,Červená
+10,Version,2,name,3e04658a,Modrá
+10,Version,3,name,d7a8e9a9,Žlutá
+10,Version,4,name,e79bb26f,Zlatá
+10,Version,5,name,28f71d6d,Stříbrná
+10,Version,6,name,48372685,Krystalová
+10,Version,7,name,6c687233,Rubínová
+10,Version,8,name,f8ff20f3,Safírová
+10,Version,9,name,655329f3,Smaragdová
+10,Version,10,name,27cbb54c,OhnňoČervená
+10,Version,11,name,62b1d74c,ListoZelená
+10,Version,12,name,9de7ced0,Diamantová
+10,Version,13,name,e2d1a8f7,Perlová
+10,Version,14,name,d6c45e3b,Platinová
+10,Version,15,name,baeedb89,SrdcoZlatá
+10,Version,17,name,4844952c,Černá
+10,Version,18,name,830ee2a0,Bílá

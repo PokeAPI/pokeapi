@@ -1168,6 +1168,11 @@ def build_moves():
 
     for index, info in enumerate(data):
         if index > 0:
+            _move_effect = None
+            try:
+                _move_effect = MoveEffect.objects.get(pk = int(info[6])) if info[6] != '' else None
+            except:
+                pass
 
             model = MoveChange (
                 move = Move.objects.get(pk = int(info[0])),
@@ -1181,7 +1186,7 @@ def build_moves():
 
                 accuracy = int(info[5]) if info[5] != '' else None,
 
-                move_effect = MoveEffect.objects.get(pk = int(info[6])) if info[6] != '' else None,
+                move_effect =  _move_effect,
 
                 move_effect_chance = int(info[7]) if info[7] != '' else None
             )

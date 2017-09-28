@@ -2383,6 +2383,7 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
 
         return groups
 
+
 # https://stackoverflow.com/a/45987450/3482533
 class PokemonMoveSerializer(serializers.ModelSerializer):
 

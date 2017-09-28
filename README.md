@@ -10,7 +10,7 @@ http://pokeapi.co
 
 ## Fair use policy
 
-PokéAPI is open and free to use. However, we will ban IP addresses that abuse this privilege. This API is used primarily for educational purposes, and we do not want people inhibiting the education of others. See the fair use guide on the docs for more information.
+PokéAPI is open and free to use. However, we will ban IP addresses that abuse this privilege. This API is used primarily for educational purposes, and we do not want people inhibiting the education of others. See the fair use guide on the docs for more information. Moreover, we strongly suggest to cache request made, see the [Wrapper section](#official-wrappers) below.
 
 ## Join Us On Slack!
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
@@ -44,9 +44,13 @@ Ask your company to also support this open source project by [becoming a sponsor
 <a href="https://opencollective.com/pokeapi/sponsor/8/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/pokeapi/sponsor/9/website" target="_blank"><img src="https://opencollective.com/pokeapi/sponsor/9/avatar.svg"></a>
 
+## Official Wrappers
 
-
-
+* Node server-side [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_
+* Browser client-side [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_
+* Java/Kotlin [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin)
+* Python [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
+* Python V1 APIs [PokeAPI/pykemon](https://github.com/PokeAPI/pykemon)
 
 ## DEPRECATION
 

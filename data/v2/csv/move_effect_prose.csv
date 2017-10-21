@@ -97,6 +97,7 @@ This move cannot be copied by []{move:mirror-move}, nor forced by []{move:encore
 59,9,Lowers the target's Attack by two stages.,Lowers the target's [Attack]{mechanic:attack} by two [stages]{mechanic:stage}.
 60,9,Lowers the target's Defense by two stages.,Lowers the target's [Defense]{mechanic:defense} by two [stages]{mechanic:stage}.
 61,9,Lowers the target's Speed by two stages.,Lowers the target's [Speed]{mechanic:speed} by two [stages]{mechanic:stage}.
+62,9,Lowers the target's Special Attack by two stages.,Lowers the target's Special Attack by two stages.
 63,9,Lowers the target's Special Defense by two stages.,Lowers the target's [Special Defense]{mechanic:special-defense} by two [stages]{mechanic:stage}.
 66,9,Reduces damage from physical attacks by half.,"Erects a barrier around the user's side of the field that reduces damage from [physical]{mechanic:physical} attacks by half for five turns.  In double battles, the reduction is 1/3.  [Critical hit]{mechanic:critical-hit}s are not affected by the barrier.
 
@@ -111,6 +112,7 @@ If the user is holding []{item:light-clay}, the barrier lasts for eight turns.
 72,9,Has a $effect_chance% chance to lower the target's Special Attack by one stage.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to lower the target's [Special Attack]{mechanic:special-attack} by one [stage]{mechanic:stage}.
 73,9,Has a $effect_chance% chance to lower the target's Special Defense by one stage.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to lower the target's [Special Defense]{mechanic:special-defense} by one [stage]{mechanic:stage}.
 74,9,Has a $effect_chance% chance to lower the target's accuracy by one stage.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to lower the target's [accuracy]{mechanic:accuracy} by one [stage]{mechanic:stage}.
+75,9,XXX new effect for mystical-fire,XXX new effect for mystical-fire
 76,9,User charges for one turn before attacking.  Has a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage]{mechanic:regular-damage}.  User charges for one turn before attacking.  [Critical hit chance]{mechanic:critical-hit-chance} is one level higher than normal.  Has a $effect_chance% chance to make the target [flinch]{mechanic:flinch}.
 
 This move cannot be selected by []{move:sleep-talk}."
@@ -992,72 +994,125 @@ If the user is a []{pokemon:meloetta}, it will toggle between Aria and Pirouette
 331,9,Lowers the target's Speed by one stage.,Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the target's [Speed]{mechanic:speed} by one [stage]{mechanic:stage}.
 332,9,Requires a turn to charge before attacking.  Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [paralyze]{mechanic:paralysis} the target.  User charges for one turn before attacking.
 333,9,Requires a turn to charge before attacking.  Has a $effect_chance% chance to [burn]{mechanic:burn} the target.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [burn]{mechanic:burn} the target.  User charges for one turn before attacking.
-335,9,"Lowers the user's Defense, Special Defense, and Speed by one stage each.","Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the user's [Defense]{mechanic:defense}, [Special Defense]{mechanic:special-defense}, and [Speed]{mechanic:speed} by one [stage]{mechanic:stage} each."
-336,9,"With [Fusion Bolt]{move:fusion-bolt}, inflicts double damage.","Inflicts [regular damage]{mechanic:regular-damage}.  If a friendly Pokémon used []{move:fusion-bolt} earlier this turn, this move has double power."
-337,9,"With [Fusion Flare]{move:fusion-flare}, inflicts double damage.","Inflicts [regular damage]{mechanic:regular-damage}.  If a friendly Pokémon used []{move:fusion-flare} earlier this turn, this move has double power."
-338,9,Has a $effect_chance% chance to confuse the target.,"Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [confuse]{mechanic:confuse} the target.
+334,9,Has a $effect_chance% chance to confuse the target.,"Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [confuse]{mechanic:confuse} the target.
 
 This move can hit Pokémon under the effect of []{move:bounce}, []{move:fly}, or []{move:sky-drop}.
 
 During []{move:rain-dance}, this move has 100% accuracy.  During []{move:sunny-day}, this move has 50% accuracy."
-339,9,Deals both []{type:fighting} and []{type:flying}-type damage.,"Inflicts regular damage.  For the purposes of type effectiveness, this move is both []{type:fighting}- and []{type:flying}-type: its final effectiveness is determined by multiplying the effectiveness of each type against each of the target's types.
+335,9,"Lowers the user's Defense, Special Defense, and Speed by one stage each.","Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the user's [Defense]{mechanic:defense}, [Special Defense]{mechanic:special-defense}, and [Speed]{mechanic:speed} by one [stage]{mechanic:stage} each."
+336,9,"With [Fusion Bolt]{move:fusion-bolt}, inflicts double damage.","Inflicts [regular damage]{mechanic:regular-damage}.  If a friendly Pokémon used []{move:fusion-bolt} earlier this turn, this move has double power."
+337,9,"With [Fusion Flare]{move:fusion-flare}, inflicts double damage.","Inflicts [regular damage]{mechanic:regular-damage}.  If a friendly Pokémon used []{move:fusion-flare} earlier this turn, this move has double power."
+338,9,Deals both []{type:fighting} and []{type:flying}-type damage.,"Inflicts regular damage.  For the purposes of type effectiveness, this move is both []{type:fighting}- and []{type:flying}-type: its final effectiveness is determined by multiplying the effectiveness of each type against each of the target's types.
 
 For all other purposes, this move is pure Fighting-type.  If this move's type is changed, its Fighting typing is overwritten, and its secondary type remains Flying.
 
 If the target has used []{move:minimize} since entering battle, this move has double power and will never miss."
-340,9,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.
-341,9,Can only be used after the user has eaten a berry.,"Inflicts regular damage.  Can only be used if the user has eaten a berry since the beginning of the battle.
+339,9,Can only be used after the user has eaten a berry.,"Inflicts regular damage.  Can only be used if the user has eaten a berry since the beginning of the battle.
 
 After the user eats a berry, it may use this move any number of times until the end of the battle, even if it switches out.  Eating a held berry, eating a berry via []{move:bug-bite} or []{move:pluck}, or being the target of a [Flung]{move:fling} berry will enable this move.  Feeding a Pokémon a berry from the bag or using []{move:natural-gift} will not.
 
 If the trainer chooses this move when it cannot be used, the choice is rejected outright and the trainer must choose another move."
-342,9,Raises the Attack and Special Attack of all []{type:grass} Pokémon in battle.,Raises the Attack and Special Attack of all []{type:grass} Pokémon in battle.
-343,9,"Covers the opposing field, lowering opponents' Speed by one stage upon switching in.","Shoots a web over the opponents' side of the field, which lowers the Speed of any opposing Pokémon that enters the field by one stage.
+340,9,Raises the Attack and Special Attack of all []{type:grass} Pokémon in battle.,Raises the Attack and Special Attack of all []{type:grass} Pokémon in battle.
+341,9,"Covers the opposing field, lowering opponents' Speed by one stage upon switching in.","Shoots a web over the opponents' side of the field, which lowers the Speed of any opposing Pokémon that enters the field by one stage.
 
 Pokémon in the air, such as []{type:flying}-types and those with []{ability:levitate}, are unaffected.  []{move:rapid-spin} removes Sticky Web from the user's side of the field; []{move:defog} removes it from both sides."
-344,9,Raises the user's Attack by two stages if it KOs the target.,Inflicts regular damage.  Raises the user's Attack by two stages if it KOs the target.
-345,9,Adds []{type:ghost} to the target's types.,Adds []{type:ghost} to the target's types.
-346,9,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's Attack and Special Attack by one stage.
-347,9,Changes all []{type:normal} moves to []{type:electric} moves for the rest of the turn.,Changes all Pokémon's []{type:normal} moves to []{type:electric} moves for the rest of the turn.
-348,9,Heals the user for half the total damage dealt to all targets.,Heals the user for half the total damage dealt to all targets.
-349,9,Adds []{type:grass} to the target's types.,Adds []{type:grass} to the target's types.
-350,9,Super-effective against []{type:water}.,"Deals regular damage.  This move is super-effective against the []{type:water} type.
-
-The target's other type will affect damage as usual.  If this move's type is changed, it remains super-effective against Water regardless of its type."
-351,9,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.
-352,9,Inverts the target's stat modifiers.,Inverts the target's stat modifiers.
-353,9,Drains 75% of the damage inflicted to heal the user.,Deals regular damage.  Drains 75% of the damage inflicted to heal the user.
-354,9,Protects all friendly Pokémon from non-damaging moves.,"Protects all friendly Pokémon from non-damaging moves for the rest of the turn.
+342,9,Raises the user's Attack by two stages if it KOs the target.,Inflicts regular damage.  Raises the user's Attack by two stages if it KOs the target.
+343,9,Adds []{type:ghost} to the target's types.,Adds []{type:ghost} to the target's types.
+344,9,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's Attack and Special Attack by one stage.
+345,9,Changes all []{type:normal} moves to []{type:electric} moves for the rest of the turn.,Changes all Pokémon's []{type:normal} moves to []{type:electric} moves for the rest of the turn.
+346,9,Heals the user for half the total damage dealt to all targets.,Heals the user for half the total damage dealt to all targets.
+347,9,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.
+348,9,Inverts the target's stat modifiers.,Inverts the target's stat modifiers.
+349,9,Drains 75% of the damage inflicted to heal the user.,Deals regular damage.  Drains 75% of the damage inflicted to heal the user.
+350,9,Protects all friendly Pokémon from non-damaging moves.,"Protects all friendly Pokémon from non-damaging moves for the rest of the turn.
 
 Unlike other blocking moves, this move may be used consecutively without its chance of success falling."
-355,9,Raises the Defense of all []{type:grass} Pokémon in battle.,Raises the Defense of all []{type:grass} Pokémon in battle.
-356,9,"For five turns, heals all Pokémon on the ground for 1/16 max HP each turn and strengthens their []{type:grass} moves to 1.5× their power.","For five turns, heals all Pokémon on the ground for 1/16 their max HP each turn and strengthens their []{type:grass} moves to 1.5× their power.
+351,9,Raises the Defense of all []{type:grass} Pokémon in battle.,Raises the Defense of all []{type:grass} Pokémon in battle.
+352,9,"For five turns, heals all Pokémon on the ground for 1/16 max HP each turn and strengthens their []{type:grass} moves to 1.5× their power.","For five turns, heals all Pokémon on the ground for 1/16 their max HP each turn and strengthens their []{type:grass} moves to 1.5× their power.
 
 Changes []{move:nature-power} to []{move:energy-ball}."
-357,9,"For five turns, protects all Pokémon on the ground from major status ailments and confusion, and halves the power of incoming []{type:dragon} moves.","For five turns, protects all Pokémon on the ground from major status ailments and confusion and weakens []{type:dragon} moves used against them to 0.5× their power.
+353,9,"For five turns, protects all Pokémon on the ground from major status ailments and confusion, and halves the power of incoming []{type:dragon} moves.","For five turns, protects all Pokémon on the ground from major status ailments and confusion and weakens []{type:dragon} moves used against them to 0.5× their power.
 
 Changes []{move:nature-power} to []{move:moonblast}."
-358,9,Changes the target's move's type to []{type:electric} if it hasn't moved yet this turn.,Changes the target's move's type to []{type:electric} if it hasn't moved yet this turn.
-359,9,Prevents all Pokémon from fleeing or switching out during the next turn.,Prevents all Pokémon from fleeing or switching out during the next turn.
-360,9,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.
-361,9,Lowers the target's Special Attack by one stage.,Lowers the target's Special Attack by one stage.
+354,9,Changes the target's move's type to []{type:electric} if it hasn't moved yet this turn.,Changes the target's move's type to []{type:electric} if it hasn't moved yet this turn.
+355,9,Prevents all Pokémon from fleeing or switching out during the next turn.,Prevents all Pokémon from fleeing or switching out during the next turn.
+356,9,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.
+357,9,Lowers the target's Attack by one stage.,Lowers the target's [Attack]{mechanic:attack} by one [stage]{mechanic:stage}.
+358,9,Lowers the target's Special Attack by one stage.,Lowers the target's Special Attack by one stage.
+359,9,Has a $effect_chance% chance to raise the user's Defense by two stages for each target hit.,Inflicts regular damage.  Has a $effect_chance% chance to raise the user's Defense by two stages for each target hit.
+360,9,Ignores and destroys protection effects.,Inflicts [regular damage]{mechanic:regular-damage}.  Bypasses and removes any protection effect on the target.
+361,9,Hits 2–5 times.,Inflicts regular damage.  Hits 2–5 times.
 362,9,Blocks damaging attacks and damages attacking Pokémon for 1/8 their max HP.,Blocks damaging attacks and damages attacking Pokémon for 1/8 their max HP.
 363,9,Raises a selected ally's Special Defense by one stage.,Raises a selected ally's Special Defense by one stage.
 364,9,"Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned.","Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned."
-365,9,"Explodes if the target uses a []{type:fire} move this turn, damaging it for 1/4 its max HP and preventing the move.","Explodes if the target uses a []{type:fire} move this turn, damaging it for 1/4 its max HP and preventing the move."
+365,9,Lowers the target's Attack by one stage.,Lowers the target's Attack by one stage.
 366,9,"Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages.","Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages."
 367,9,Raises the Defense and Special Defense of all friendly Pokémon with []{ability:plus} or []{ability:minus} by one stage.,Raises the Defense and Special Defense of all friendly Pokémon with []{ability:plus} or []{ability:minus} by one stage.
-368,9,"For five turns, prevents all Pokémon on the ground from sleeping and strengthens their []{type:electric} moves to 1.5× their power.","For five turns, prevents all Pokémon on the ground from sleeping and strengthens their []{type:electric} moves to 1.5× their power.
-
-Changes []{move:nature-power} to []{move:thunderbolt}."
-369,9,Lowers the target's Special Attack by two stages.,Lowers the target's Special Attack by two stages.
-370,9,Doubles prize money.,"Doubles prize money.
+368,9,Doubles prize money.,"Doubles prize money.
 
 Stacks with a held item.  Only works once per battle."
+369,9,"For five turns, prevents all Pokémon on the ground from sleeping and strengthens their []{type:electric} moves to 1.5× their power.","For five turns, prevents all Pokémon on the ground from sleeping and strengthens their []{type:electric} moves to 1.5× their power.
+
+Changes []{move:nature-power} to []{move:thunderbolt}."
+370,9,Does nothing.,Does nothing.
+371,9,Does nothing.,Does nothing.
+372,9,Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [paralyze]{mechanic:paralysis} the target.
+373,9,"Grounds the target, and hits even Flying-type or levitating Pokémon.",Inflicts regular damage.  Grounds the target until it leaves battle.  Ignores levitation effects and the immunity of []{type:flying}-type Pokémon.
+374,9,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.  
+375,9,Raises the user's Attack by one stage after inflicting damage.,Inflicts regular damage.  Raises the user's Attack by one stage.
+376,9,Adds []{type:grass} to the target's types.,Adds []{type:grass} to the target's types.
+377,9,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.
+378,9,"Explodes if the target uses a []{type:fire} move this turn, damaging it for 1/4 its max HP and preventing the move.","Explodes if the target uses a []{type:fire} move this turn, damaging it for 1/4 its max HP and preventing the move."
+379,9,Inflicts regular damage.,Inflicts [regular damage]{mechanic:regular-damage}.
+380,9,Super-effective against []{type:water}.,"Inflicts [regular damage]{mechanic:regular-damage}.  This move is super-effective against the []{type:water} type.
+
+The target's other type will affect damage as usual.  If this move's type is changed, it remains super-effective against Water regardless of its type."
+381,9,Never misses.,Inflicts [regular damage]{mechanic:regular-damage}.  Ignores [accuracy]{mechanic:accuracy} and [evasion]{mechanic:evasion}.
+382,9,"Heals the user for ½ its max HP, or ⅔ during a sandstorm.","Heals the user for ½ its max HP.  During a []{move:sandstorm}, the healing is increased to ⅔."
+383,9,Can only be used as the first move after the user enters battle.,Inflicts regular damage. Can only be used on the user's first turn after entering the field.
+384,9,Grants the user protection for the rest of the turn and poisons any Pokémon that tries to use a contact move on it.,"Grants the user protection for the rest of the turn.  If a Pokémon attempts to use a move that makes contact with the user, that Pokémon will be poisoned.  This move's chance of success halves every time it's used consecutively with any other protection move."
+385,9,Traps the target.,Inflicts regular damage.  Traps the target.
+386,9,Cures the target of burns.,"Inflicts regular damage.  If the target has a burn and takes damage from this move, its burn is healed."
+387,9,"Heals the target for ½ its max HP, or ⅔ on Grassy Terrain.","Heals the target for ½ its max HP.  If []{move:grassy-terrain} is in effect, heals for ⅔ instead."
+388,9,Heals the user by the target's current Attack stat and lowers the target's Attack by one stage.,"Lowers the target's Attack by one stage.  Heals the user by the target's current Attack, including modifiers, but not including this move's Attack-lowering effect.
+
+If the target's Attack is already at -6, this move will fail.  In any other situation that would prevent a stat modification, the healing will still succeed."
+389,9,Forces the target's opponents to aim at the target for the rest of the turn.,"For the duration of the turn, if the target is also a valid target for a move used by one of its opponents, that move will target it instead."
+390,9,Poisons the target and lowers its Speed by one stage.,Poisons the target and lowers its Speed by one stage.
+391,9,Guarantees a critical hit with the user's next move.,The user's next move will result in a [critical hit]{mechanic:critical-hit}.
+392,9,Raises the Attack and Special Attack of all friendly Pokémon with []{ability:plus} or []{ability:minus} by one stage.,Raises the Attack and Special Attack of all friendly Pokémon with []{ability:plus} or []{ability:minus} by one stage.
+393,9,Prevents the target from using sound-based moves for two turns.,"Inflicts [regular damage]{mechanic:regular-damage}.  Silences the target for two turns, preventing it from using any sound-based moves."
+394,9,"Damages opponents, but heals allies for 50% of their max HP.","If the target is an opponent, inflicts [regular damage]{mechanic:regular-damage}.  If the target is an ally, heals the target for 50% of its max HP."
+395,9,Protects Pokémon on the ground from priority moves and increases the power of their  Psychic moves by 50%.,"Changes the terrain to Psychic Terrain for 5 turns.  Overrides []{move:electric-terrain}, []{move:grassy-terrain}, and []{move:misty-terrain}.
+
+All Pokémon on the ground are immune to moves with priority greater than 0.  (Moves that target the field rather than individual Pokémon, such as []{move:spikes}, are not affected.)  Additionally, when a Pokémon on the ground uses a []{type:psychic}-type move, that move's power is increased to 1.5×.
+
+If a Pokémon is holding a Terrain Extender when creating Psychic Terrain (by any means), the effect lasts for 8 turns instead of 5."
+396,9,Lowers the target's Attack by one stage after inflicting damage.,Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the target's [Attack]{mechanic:attack} by one [stage]{mechanic:stage}.
+397,9,Lowers the target's Defense by one stage after inflicting damage.,Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the target's [Defense]{mechanic:defense} by one [stage]{mechanic:stage}.
+398,9,Removes the user's []{type:fire} type after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}.  Removes the user's []{type:fire} type after damage calculation.  If the user is not []{type:fire}-type, this move will fail."
+399,9,Exchanges the user's Speed with the target's.,Exchanges the original [Speed]{mechanic:speed} stats of the user and target.
+400,9,Cures the target of a major status ailment and heals the user for 50% of its max HP.,"Cures the target of its major status ailment and heals the user for 50% of its max HP.  If the target has no major status ailment, this move will fail."
+401,9,Has the same type as the user.,"Inflicts [regular damage]{mechanic:regular-damage}.  This move's type matches the user's first type, if any; otherwise, it's typeless."
+402,9,Nullifies the target's ability if it moves earlier.,"Inflicts [regular damage]{mechanic:regular-damage}.  If the target has already moved this turn, its ability is nullified."
+403,9,Forces the target to repeat its last used move.,"The target immediately uses its most recently-used move.  This is independent of the target's normal action for the turn (i.e., it may end up moving twice), but otherwise functions as usual, including deduction of PP.  This effect works for disabled moves and ignores []{move:torment}."
+404,9,Inflicts a burn on any Pokémon that makes contact before the attack.,"Begins charging at the start of the turn, then attacks as normal.  Any Pokémon that makes contact with the user while charging is [burned]{mechanic:burns}.  The charging is not affected by accuracy, sleep, paralysis, or any other effect that would interfere with a move."
+405,9,Lowers the user's Defense by one stage after inflicting damage.,Inflicts [regular damage]{mechanic:regular-damage}.  Lowers the user's [Defense]{mechanic:defense} by one [stage]{mechanic:stage}.
+406,9,Inflicts regular damage with no additional effect.,Inflicts [regular damage]{mechanic:regular-damage}.
+407,9,"Reduces damage five turns, but must be used during hail.","Places the Aurora Veil effect on the user's side of the field for the next 5 turns.  If the weather is not []{move:hail}, or the weather is disabled by the effects of []{ability:cloud-nine} or []{ability:air-lock}, this move will fail.
+
+Any [regular damage]{mechanic:regular-damage} dealt to an affected Pokémon is reduced by ½.  (If there are multiple Pokémon on the affected field, the reduction is ⅓.)"
+408,9,Only inflicts damage if the user was hit by a physical move this turn.,"Inflicts [regular damage]{mechanic:regular-damage}.  If the user was not yet hit by an opponent's physical move this turn, this move will fail."
+409,9,Has double power if the user's last move failed.,"Inflicts [regular damage]{mechanic:regular-damage}.  Power is doubled if the user's last move failed for any reason (i.e., produced the message ""But it failed!"") or was ineffective due to types."
+410,9,"Steals the target's stat increases, then inflicts damage.","Steals the target's stat increases, then inflicts [regular damage]{mechanic:regular-damage}.  Will not steal stat increases that would put any of the user's stats at more than +6; any excess is left on the target.  Stolen increases are affected by abilities as normal."
+411,9,Cannot be disrupted by abilities.,"Inflicts [regular damage]{mechanic:regular-damage}.  Other Pokémon's abilities cannot activate in response to this move.  In particular, it hits through []{ability:disguise}"
+412,9,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's [Attack]{mechanic:attack} and [Special Attack]{mechanic:special-attack} by one stage each.
+413,9,Damages the target for 75% of its remaining HP.,Inflicts direct damage equal to ¾ of the target's remaining HP.
+414,9,Raises all of the user's stats by two stages.,"Raises the user's [Attack]{mechanic:attack}, [Defense]{mechanic:defense}, [Special Attack]{mechanic:special-attack}, [Special Defense]{mechanic:special-defense}, and [Speed]{mechanic:speed} by two [stages]{mechanic:stage} each."
+415,9,Changes the terrain to Psychic Terrain after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) changes the terrain to []{move:psychic-terrain}."
 10001,9,Has an increased chance for a critical hit in Hyper Mode.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move while in [hyper mode]{mechanic:hyper-mode}.
 10002,9,User receives 1/2 its HP in recoil.,Inflicts [regular damage]{mechanic:regular-damage}.  User takes 1/2 of its current [HP]{mechanic:hp} in recoil.
 10003,9,Halves HP of all Pokémon on the field.  Must recharge,"Halves [HP]{mechanic:hp} of all Pokémon on the field.  User loses its next turn to ""recharge"", and cannot attack or [switch]{mechanic:switch} out during that turn."
 10004,9,Lowers the target's evasion by two stages.,Lowers the target's [evasion]{mechanic:evasion} by two [stages]{mechanic:stage}.
 10005,9,"Removes [Light Screen]{move:light-screen}, [Reflect]{move:reflect}, and [Safeguard]{move:safeguard}.","Removes the effects of []{move:light-screen}, []{move:reflect}, and []{move:safeguard}."
 10006,9,Changes the weather to Shadow Sky for five turns.,Changes the weather to Shadow Sky for five turns.  Pokémon other than []{type:shadow} Pokémon take 1/16 their max [HP]{mechanic:hp} at the end of every turn.  This move is typeless for the purposes of []{move:weather-ball}.
-10007,9,Unknown.,"This move has a unique effect, but it is unreleased, so the specific effect is unknown."

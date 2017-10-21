@@ -14,6 +14,9 @@ from pokemon_v2 import urls as pokemon_v2_urls
 # need to make sure v2 urls resolve last so angular routes have control
 # v2 = [ url(r'^', include(pokemon_v2_urls)) ]
 
+# Update to Django 1.11 requires below to be implemented
+# https://stackoverflow.com/questions/38744285/django-urls-error-view-must-be-a-callable-or-a-list-tuple-in-the-case-of-includ
+
 urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),

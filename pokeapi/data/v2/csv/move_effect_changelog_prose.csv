@@ -1,0 +1,29 @@
+move_effect_changelog_id,local_language_id,effect
+1,9,"Halves the target's [Defense]{mechanic:defense} for damage calculation, which is similar to doubling the attack's [power]{mechanic:power}."
+2,9,Hits Pokémon under the effects of []{move:dig} and []{move:fly}.
+3,9,Does nothing in trainer battles.
+4,9,Works while asleep through []{move:sleep-talk} if not at full health.
+5,9,"If this move misses, the user takes 1 point of damage in recoil."
+6,9,"If this move misses, the user takes half of the damage it would have inflicted in recoil."
+7,9,"Locks the user into this move.  Due to a bug, if this move misses, its [accuracy]{mechanic:accuracy} drops to 1/256 as long as the user is still locked in."
+8,9,Can call any move except for []{move:struggle} and itself.
+9,9,Does not interact with []{move:stomp}.
+10,9,Raises [evasion]{mechanic:evasion} by one stage.
+11,9,Does not raise [Defense]{mechanic:defense}.
+12,9,Does not hit Pokémon under the effects of []{move:dig}.
+13,9,Does not hit Pokémon under the effects of []{move:fly}.
+14,9,Does not interact with []{move:minimize}.
+15,9,Does not hit Pokémon under the effects of []{move:fly}.
+16,9,Determines damage using each participant's base [Attack]{mechanic:attack} and the opponent's base [Defense]{mechanic:defense} in place of calculated stats.
+17,9,"[]{move:swift} can hit the user while in the air, and no other moves can.  Due to a bug, if the user fails to carry out the move's second turn, e.g. due to [paralysis]{mechanic:paralysis}, it remains in the air until it switches out or uses Fly again successfully.  It can act as if it were on the ground in the meantime, but moves still miss it."
+18,9,Does not raise [Defense]{mechanic:defense} or [Special Defense]{mechanic:special-defense}.
+19,9,Does not raise the user's [Special Defense]{mechanic:special-defense}.
+20,9,Heals replacement Pokémon by half of their max HP.
+21,9,Inflicts []{type:normal}-type damage.
+22,9,"[]{move:swift} can hit the user while underground, and no other moves can.  Due to a bug, if the user fails to carry out the move's second turn, e.g. due to [paralysis]{mechanic:paralysis}, it remains underground until it switches out or uses Dig again successfully.  It can act as if it were aboveground in the meantime, but moves still miss it."
+23,9,Does not interact with []{move:hail}.
+24,9,Ignores []{ability:wonder-guard}.
+25,9,Lasts either two or three turns.
+26,9,"If the target is not under the effect of []{move:detect} or []{move:protect}, this move will fail."
+27,9,The user receieves 1/2 of the damage dealt in recoil.
+28,9,The barriers are destroyed even if this move has [no effect]{mechanic:no-effect}.

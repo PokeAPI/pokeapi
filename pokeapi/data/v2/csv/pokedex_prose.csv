@@ -1,0 +1,43 @@
+pokedex_id,local_language_id,name,description
+1,5,National,Pokédex National complet
+1,6,National,Komplette Nationale Dex
+1,9,National,Entire National dex
+2,5,Kanto,Pokédex régional de Kanto dans Rouge/Bleu/Jaune
+2,6,Kanto,Rot/Blau/Gelb Kanto Dex
+2,9,Kanto,Red/Blue/Yellow Kanto dex
+3,5,Johto initial,"Pokédex régional de Johto dans Or/Argent/Cristal, appellé ""Nouveau"" Pokédex dans le jeu"
+3,6,Original Johto,"Gold/Silber/Kristall Johto Dex — Auch der ""Neue"" Pokédex im Spiel genannt"
+3,9,Original Johto,"Gold/Silver/Crystal Johto dex—called the ""New"" Pokédex in-game"
+4,5,Hoenn initial,Pokédex régional d'Hoenn dans Rubis/Saphir/Émeraude
+4,6,Original Hoenn,Rubin/Saphir/Smaragd Hoenn Dex
+4,9,Original Hoenn,Ruby/Sapphire/Emerald Hoenn dex
+5,5,Sinnoh initial,Pokédex régional de Sinnoh dans Diamant/Perle
+5,6,Original Sinnoh,Diamant/Perl Sinnoh Dex
+5,9,Original Sinnoh,Diamond/Pearl Sinnoh dex
+6,5,Sinnoh étendu,Pokédex régional de Sinnoh dans Platine
+6,6,Erweitertes Sinnoh,Platin Sinnoh Dex — eine erweiterte Version von Diamant und Perl
+6,9,Extended Sinnoh,Platinum Sinnoh dex—an extended version of Diamond and Pearl's
+7,5,Johto amélioré,"Pokédex régional de Johto dans Or HeartGold/Argent SoulSilver, mis à jour pour la 4ème génération"
+7,6,Aktualisiertes Johto,HeartGold/SoulSilver Johto Dex — Dex aus Gold/Silber/Kristall um Fähigkeiten basierende Entwicklungen aus Generation IV erweitert
+7,9,Updated Johto,"HeartGold/SoulSilver Johto dex—Gold/Silver/Crystal's, extended to add move-based Generation IV evolutions"
+8,5,Unys initial,Pokédex régional d'Unys dans Noir/Blanc
+8,6,Original Einall,Schwarz/Weiß Einall Dex
+8,9,Original Unova,Black/White Unova dex
+9,5,Unys amélioré,Pokédex régional d'Unys dans Noir 2/Blanc 2
+9,6,Aktualisiertes Einall,Schwarz 2/Weiß 2 Einall Dex
+9,9,Updated Unova,Black 2/White 2 Unova dex
+11,5,Galerie,Ordre de la Galerie dans Pokémon Conquest
+11,6,Gallerie,Pokémon Conquest Galerie Reihenfolge
+11,9,Gallery,Pokémon Conquest gallery order
+12,5,Kalos : Centre,
+12,6,Kalos-Zentral,
+12,9,Central Kalos,
+13,5,Kalos : Côtes,
+13,6,Kalos-Küste,
+13,9,Coastal Kalos,
+14,5,Kalos : Monts,
+14,6,Kalos-Gebirge,
+14,9,Mountain Kalos,
+15,5,Hoenn amélioré,"Pokédex régional d'Hoenn dans Rubis Oméga/Saphir Alpha, mis à jour pour les nouvelles évolutions"
+15,6,Neue Hoenn,Omega Rubin/Alpha Saphir Hoenn Dex — Dex aus Rubin/Saphir/Smaragd um Neue Entwicklungen erweitert
+15,9,New Hoenn,"Omega Ruby/Alpha Sapphire Hoenn Dex—Ruby/Sapphire/Emerald's, updated to add new evolutions"

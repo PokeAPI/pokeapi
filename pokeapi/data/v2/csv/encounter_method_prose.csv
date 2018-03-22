@@ -1,0 +1,35 @@
+encounter_method_id,local_language_id,name
+1,6,Im hohen Gras oder in einer Höhle laufen
+1,9,Walking in tall grass or a cave
+2,6,Mit einer normalen Angel angeln
+2,9,Fishing with an Old Rod
+3,6,Mit einer Profiangel angeln
+3,9,Fishing with a Good Rod
+4,6,Mit einer Superangel angeln
+4,9,Fishing with a Super Rod
+5,6,Surfen
+5,9,Surfing
+6,6,Steine zertrümmern
+6,9,Smashing rocks
+7,6,Bäumen Kopfnüsse geben
+7,9,Headbutting trees
+8,6,Im dunklen Gras laufen
+8,9,Walking in dark grass
+9,6,Im raschelndem Gras laufen
+9,9,Walking in rustling grass
+10,6,In Staubwolken laufen
+10,9,Walking in dust clouds
+11,6,Im Schatten einer Brücke laufen
+11,9,Walking in bridge shadows
+12,6,An dunklen stellen angeln
+12,9,Fishing in dark spots
+13,6,An dunklen stellen surfen
+13,9,Surfing in dark spots
+14,6,In gelben Blumenfeldern laufen
+14,9,Walking in yellow flowers
+15,6,In violetten Blumenfeldern laufen
+15,9,Walking in purple flowers
+16,6,In roten Blumenfeldern laufen
+16,9,Walking in red flowers
+17,6,Auf unwegsamen Gelände laufen
+17,9,Walking on rough terrain

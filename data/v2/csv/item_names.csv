@@ -8440,3 +8440,873 @@ item_id,local_language_id,name
 918,9,Fairy Memory
 918,11,フェアリーメモリ
 918,12,妖精存储碟
+919,1,じてんしゃ
+919,3,자전거
+919,4,自行車
+919,5,Bicyclette
+919,6,Fahrrad
+919,7,Bici
+919,8,Bicicletta
+919,9,Bike
+919,11,じてんしゃ
+919,12,自行车
+920,1,そうこのカギ
+920,3,창고열쇠
+920,4,倉庫鑰匙
+920,5,Clé Stockage
+920,6,Lagerschlüssel
+920,7,Llave Almacén
+920,8,Depochiave
+920,9,Storage Key
+920,11,そうこのカギ
+920,12,仓库钥匙
+921,1,ちかのかぎ
+921,3,지하의열쇠
+921,4,地下鑰匙
+921,5,Clé Sous-Sol
+921,6,Kelleröffner
+921,7,Llave Sótano
+921,8,Chiave sotterr.
+921,9,Basement Key
+921,11,ちかのかぎ
+921,12,地下钥匙
+922,1,ライブキャスター
+922,3,라이브캐스터
+922,4,即時通訊器
+922,5,Vokit
+922,6,Viso-Caster
+922,7,Videomisor
+922,8,Interpoké
+922,9,Xtransceiver
+922,11,ライブキャスター
+922,12,即时通讯器
+923,1,ライブキャスター
+923,3,라이브캐스터
+923,4,即時通訊器
+923,5,Vokit
+923,6,Viso-Caster
+923,7,Videomisor
+923,8,Interpoké
+923,9,Xtransceiver
+923,11,ライブキャスター
+923,12,即时通讯器
+924,1,いでんしのくさび
+924,3,유전자쐐기
+924,4,基因之楔
+924,5,Pointeau ADN
+924,6,DNS-Keil
+924,7,Punta ADN
+924,8,Cuneo DNA
+924,9,DNA Splicers
+924,11,いでんしのくさび
+924,12,基因之楔
+925,1,いでんしのくさび
+925,3,유전자쐐기
+925,4,基因之楔
+925,5,Pointeau ADN
+925,6,DNS-Keil
+925,7,Punta ADN
+925,8,Cuneo DNA
+925,9,DNA Splicers
+925,11,いでんしのくさび
+925,12,基因之楔
+926,1,わすれもの
+926,3,잊은물건
+926,4,遺忘物
+926,5,Objet Trouvé
+926,6,Fundsache
+926,7,Objeto Perdido
+926,8,Oggetto perso
+926,9,Dropped Item
+926,11,わすれもの
+926,12,遗忘物
+927,1,わすれもの
+927,3,잊은물건
+927,4,遺忘物
+927,5,Objet Trouvé
+927,6,Fundsache
+927,7,Objeto Perdido
+927,8,Oggetto perso
+927,9,Dropped Item
+927,11,わすれもの
+927,12,遗忘物
+928,1,ホロキャスター
+928,3,홀로캐스터
+928,4,全像投影通訊器
+928,5,Holokit
+928,6,Holo-Log
+928,7,Holomisor
+928,8,Holovox
+928,9,Holo Caster
+928,11,ホロキャスター
+928,12,全息影像通讯器
+929,1,じてんしゃ
+929,3,자전거
+929,4,自行車
+929,5,Bicyclette
+929,6,Fahrrad
+929,7,Bici
+929,8,Bicicletta
+929,9,Bike
+929,11,じてんしゃ
+929,12,自行车
+930,1,ホロキャスター
+930,3,홀로캐스터
+930,4,全像投影通訊器
+930,5,Holokit
+930,6,Holo-Log
+930,7,Holomisor
+930,8,Holovox
+930,9,Holo Caster
+930,11,ホロキャスター
+930,12,全息影像通讯器
+931,1,ちかのカギ
+931,3,지하열쇠
+931,4,地下鑰匙
+931,5,Clé Sous-Sol
+931,6,Kelleröffner
+931,7,Llave del Sótano
+931,8,Chiave sotterr.
+931,9,Basement Key
+931,11,ちかのカギ
+931,12,地下钥匙
+932,1,そうこのカギ
+932,3,창고열쇠
+932,4,倉庫鑰匙
+932,5,Clé Stockage
+932,6,Lagerschlüssel
+932,7,Llave Almacén
+932,8,Chiave magazzino
+932,9,Storage Key
+932,11,そうこのカギ
+932,12,仓库钥匙
+933,1,ふねのチケット
+933,3,승선티켓
+933,4,船票
+933,5,Passe Bateau
+933,6,Bootsticket
+933,7,Ticket Barco
+933,8,Biglietto Nave
+933,9,S.S. Ticket
+933,11,ふねのチケット
+933,12,船票
+934,1,ライブドレス
+934,3,라이브드레스
+934,4,演出禮裙
+934,5,Robe Live
+934,6,Live-Kleid
+934,7,Vestido de Gala
+934,8,Vestito Live
+934,9,Contest Costume
+934,11,ライブドレス
+934,12,演出礼裙
+935,1,いんせき
+935,3,운석
+935,4,隕石
+935,5,Météorite
+935,6,Meteorit
+935,7,Meteorito
+935,8,Meteorite
+935,9,Meteorite
+935,11,いんせき
+935,12,陨石
+936,1,いんせき
+936,3,운석
+936,4,隕石
+936,5,Météorite
+936,6,Meteorit
+936,7,Meteorito
+936,8,Meteorite
+936,9,Meteorite
+936,11,いんせき
+936,12,陨石
+937,1,いんせき
+937,3,운석
+937,4,隕石
+937,5,Météorite
+937,6,Meteorit
+937,7,Meteorito
+937,8,Meteorite
+937,9,Meteorite
+937,11,いんせき
+937,12,陨石
+938,1,ノーマルＺ
+938,3,노말Z
+938,4,一般Ｚ
+938,5,Normazélite
+938,6,Normium Z
+938,7,Normastal Z
+938,8,Normium Z
+938,9,Normalium Z
+938,11,ノーマルＺ
+938,12,一般Ｚ
+939,1,ホノオＺ
+939,3,불꽃Z
+939,4,火Ｚ
+939,5,Pyrozélite
+939,6,Pyrium Z
+939,7,Pirostal Z
+939,8,Pirium Z
+939,9,Firium Z
+939,11,ホノオＺ
+939,12,火Ｚ
+940,1,ミズＺ
+940,3,물Z
+940,4,水Ｚ
+940,5,Aquazélite
+940,6,Aquium Z
+940,7,Hidrostal Z
+940,8,Idrium Z
+940,9,Waterium Z
+940,11,ミズＺ
+940,12,水Ｚ
+941,1,デンキＺ
+941,3,전기Z
+941,4,電Ｚ
+941,5,Voltazélite
+941,6,Voltium Z
+941,7,Electrostal Z
+941,8,Electrium Z
+941,9,Electrium Z
+941,11,デンキＺ
+941,12,电Ｚ
+942,1,クサＺ
+942,3,풀Z
+942,4,草Ｚ
+942,5,Florazélite
+942,6,Botanium Z
+942,7,Fitostal Z
+942,8,Herbium Z
+942,9,Grassium Z
+942,11,クサＺ
+942,12,草Ｚ
+943,1,コオリＺ
+943,3,얼음Z
+943,4,冰Ｚ
+943,5,Cryozélite
+943,6,Glacium Z
+943,7,Criostal Z
+943,8,Glacium Z
+943,9,Icium Z
+943,11,コオリＺ
+943,12,冰Ｚ
+944,1,カクトウＺ
+944,3,격투Z
+944,4,格鬥Ｚ
+944,5,Combazélite
+944,6,Battalium Z
+944,7,Lizastal Z
+944,8,Luctium Z
+944,9,Fightinium Z
+944,11,カクトウＺ
+944,12,格斗Ｚ
+945,1,ドクＺ
+945,3,독Z
+945,4,毒Ｚ
+945,5,Toxizélite
+945,6,Toxium Z
+945,7,Toxistal Z
+945,8,Venenium Z
+945,9,Poisonium Z
+945,11,ドクＺ
+945,12,毒Ｚ
+946,1,ジメンＺ
+946,3,땅Z
+946,4,地面Ｚ
+946,5,Terrazélite
+946,6,Terrium Z
+946,7,Geostal Z
+946,8,Terrium Z
+946,9,Groundium Z
+946,11,ジメンＺ
+946,12,地面Ｚ
+947,1,ヒコウＺ
+947,3,비행Z
+947,4,飛行Ｚ
+947,5,Aérozélite
+947,6,Aerium Z
+947,7,Aerostal Z
+947,8,Volantium Z
+947,9,Flyinium Z
+947,11,ヒコウＺ
+947,12,飞行Ｚ
+948,1,エスパーＺ
+948,3,에스퍼Z
+948,4,超能力Ｚ
+948,5,Psychézélite
+948,6,Psium Z
+948,7,Psicostal Z
+948,8,Psichium Z
+948,9,Psychium Z
+948,11,エスパーＺ
+948,12,超能力Ｚ
+949,1,ムシＺ
+949,3,벌레Z
+949,4,蟲Ｚ
+949,5,Insectozélite
+949,6,Insectium Z
+949,7,Insectostal Z
+949,8,Insectium Z
+949,9,Buginium Z
+949,11,ムシＺ
+949,12,虫Ｚ
+950,1,イワＺ
+950,3,바위Z
+950,4,岩石Ｚ
+950,5,Rocazélite
+950,6,Petrium Z
+950,7,Litostal Z
+950,8,Petrium Z
+950,9,Rockium Z
+950,11,イワＺ
+950,12,岩石Ｚ
+951,1,ゴーストＺ
+951,3,고스트Z
+951,4,幽靈Ｚ
+951,5,Spectrozélite
+951,6,Phantomium Z
+951,7,Espectrostal Z
+951,8,Spectrium Z
+951,9,Ghostium Z
+951,11,ゴーストＺ
+951,12,幽灵Ｚ
+952,1,ドラゴンＺ
+952,3,드래곤Z
+952,4,龍Ｚ
+952,5,Dracozélite
+952,6,Dracium Z
+952,7,Dracostal Z
+952,8,Draconium Z
+952,9,Dragonium Z
+952,11,ドラゴンＺ
+952,12,龙Ｚ
+953,1,アクＺ
+953,3,악Z
+953,4,惡Ｚ
+953,5,Ténébrozélite
+953,6,Noctium Z
+953,7,Nictostal Z
+953,8,Obscurium Z
+953,9,Darkinium Z
+953,11,アクＺ
+953,12,恶Ｚ
+954,1,ハガネＺ
+954,3,강철Z
+954,4,鋼Ｚ
+954,5,Métallozélite
+954,6,Metallium Z
+954,7,Metalostal Z
+954,8,Metallium Z
+954,9,Steelium Z
+954,11,ハガネＺ
+954,12,钢Ｚ
+955,1,フェアリーＺ
+955,3,페어리Z
+955,4,妖精Ｚ
+955,5,Nymphézélite
+955,6,Sylphium Z
+955,7,Feeristal Z
+955,8,Follectium Z
+955,9,Fairium Z
+955,11,フェアリーＺ
+955,12,妖精Ｚ
+956,1,ピカチュウＺ
+956,3,피카츄Z
+956,4,皮卡丘Ｚ
+956,5,Pikazélite
+956,6,Pikachium Z
+956,7,Pikastal Z
+956,8,Pikacium Z
+956,9,Pikanium Z
+956,11,ピカチュウＺ
+956,12,皮卡丘Ｚ
+957,1,ジュナイパーＺ
+957,3,모크나이퍼Z
+957,4,狙射樹梟Ｚ
+957,5,Archézélite
+957,6,Silvarronium Z
+957,7,Dueyestal Z
+957,8,Deciduenium Z
+957,9,Decidium Z
+957,11,ジュナイパーＺ
+957,12,狙射树枭Ｚ
+958,1,ガオガエンＺ
+958,3,어흥염Z
+958,4,熾焰咆哮虎Ｚ
+958,5,Félinozélite
+958,6,Fuegronium Z
+958,7,Incinostal Z
+958,8,Incineronium Z
+958,9,Incinium Z
+958,11,ガオガエンＺ
+958,12,炽焰咆哮虎Ｚ
+959,1,アシレーヌＺ
+959,3,누리레느Z
+959,4,西獅海壬Ｚ
+959,5,Oratozélite
+959,6,Primarenium Z
+959,7,Primastal Z
+959,8,Primarinium Z
+959,9,Primarium Z
+959,11,アシレーヌＺ
+959,12,西狮海壬Ｚ
+960,1,カプＺ
+960,3,카푸Z
+960,4,卡璞Ｚ
+960,5,Tokozélite
+960,6,Kapium Z
+960,7,Tapistal Z
+960,8,Tapium Z
+960,9,Tapunium Z
+960,11,カプＺ
+960,12,卡璞Ｚ
+961,1,マーシャドーＺ
+961,3,마샤도Z
+961,4,瑪夏多Ｚ
+961,5,Marshadozélite
+961,6,Marshadownium Z
+961,7,Marshastal Z
+961,8,Marshadium Z
+961,9,Marshadium Z
+961,11,マーシャドーＺ
+961,12,玛夏多Ｚ
+962,1,アロライＺ
+962,3,알로라이Z
+962,4,阿羅雷Ｚ
+962,5,Aloraïzélite
+962,6,A-Raichunium Z
+962,7,Alo-Raistal Z
+962,8,Aloraicium Z
+962,9,Aloraichium Z
+962,11,アロライＺ
+962,12,阿罗雷Ｚ
+963,1,カビゴンＺ
+963,3,잠만보Z
+963,4,卡比獸Ｚ
+963,5,Ronflézélite
+963,6,Relaxonium Z
+963,7,Snorlastal Z
+963,8,Snorlactium Z
+963,9,Snorlium Z
+963,11,カビゴンＺ
+963,12,卡比兽Ｚ
+964,1,イーブイＺ
+964,3,이브이Z
+964,4,伊布Ｚ
+964,5,Évolizélite
+964,6,Evolium Z
+964,7,Eeveestal Z
+964,8,Eevium Z
+964,9,Eevium Z
+964,11,イーブイＺ
+964,12,伊布Ｚ
+965,1,ミュウＺ
+965,3,뮤Z
+965,4,夢幻Ｚ
+965,5,Mewzélite
+965,6,Mewnium Z
+965,7,Mewstal Z
+965,8,Mewnium Z
+965,9,Mewnium Z
+965,11,ミュウＺ
+965,12,梦幻Ｚ
+966,1,サトピカＺ
+966,3,지우피카Z
+966,4,智皮卡Ｚ
+966,5,Pikachazélite
+966,6,Ash-Pikachium Z
+966,7,Ash-Pikastal Z
+966,8,Ashpikacium Z
+966,9,Pikashunium Z
+966,11,サトピカＺ
+966,12,智皮卡Ｚ
+967,1,ソルガレオＺ
+967,3,솔가레오Z
+967,4,索爾迦雷歐Ｚ
+967,5,Solgazélite
+967,6,Solgalium Z
+967,7,Solgaleostal Z
+967,8,Solgaleium Z
+967,9,Solganium Z
+967,11,ソルガレオＺ
+967,12,索尔迦雷欧Ｚ
+968,1,ルナアーラＺ
+968,3,루나아라Z
+968,4,露奈雅拉Ｚ
+968,5,Lunazélite
+968,6,Lunalium Z
+968,7,Lunalastal Z
+968,8,Lunalium Z
+968,9,Lunalium Z
+968,11,ルナアーラＺ
+968,12,露奈雅拉Ｚ
+969,1,ウルトラネクロＺ
+969,3,울트라네크로Z
+969,4,究極奈克洛Ｚ
+969,5,Ultranécrozélite
+969,6,Ultranecronium Z
+969,7,Ultranecrostal Z
+969,8,Ultranecrozium Z
+969,9,Ultranecrozium Z
+969,11,ウルトラネクロＺ
+969,12,究极奈克洛Ｚ
+970,1,ミミッキュＺ
+970,3,따라큐Z
+970,4,謎擬ＱＺ
+970,5,Mimiquizélite
+970,6,Mimigmium Z
+970,7,Mimikyustal Z
+970,8,Mimikyum Z
+970,9,Mimikium Z
+970,11,ミミッキュＺ
+970,12,谜拟ＱＺ
+971,1,ルガルガンＺ
+971,3,루가루암Z
+971,4,鬃岩狼人Ｚ
+971,5,Lougarozélite
+971,6,Wolwerockium Z
+971,7,Lycanrostal Z
+971,8,Lycanrochium Z
+971,9,Lycanium Z
+971,11,ルガルガンＺ
+971,12,鬃岩狼人Ｚ
+972,1,ジャラランガＺ
+972,3,짜랑고우거Z
+972,4,杖尾鱗甲龍Ｚ
+972,5,Ékaïzélite
+972,6,Grandirasium Z
+972,7,Kommostal Z
+972,8,Kommonium Z
+972,9,Kommonium Z
+972,11,ジャラランガＺ
+972,12,杖尾鳞甲龙Ｚ
+973,1,ソルガレオＺ
+973,3,솔가레오Z
+973,4,索爾迦雷歐Ｚ
+973,5,Solgazélite
+973,6,Solgalium Z
+973,7,Solgaleostal Z
+973,8,Solgaleium Z
+973,9,Solganium Z
+973,11,ソルガレオＺ
+973,12,索尔迦雷欧Ｚ
+974,1,ルナアーラＺ
+974,3,루나아라Z
+974,4,露奈雅拉Ｚ
+974,5,Lunazélite
+974,6,Lunalium Z
+974,7,Lunalastal Z
+974,8,Lunalium Z
+974,9,Lunalium Z
+974,11,ルナアーラＺ
+974,12,露奈雅拉Ｚ
+975,1,ウルトラネクロＺ
+975,3,울트라네크로Z
+975,4,究極奈克洛Ｚ
+975,5,Ultranécrozélite
+975,6,Ultranecronium Z
+975,7,Ultranecrostal Z
+975,8,Ultranecrozium Z
+975,9,Ultranecrozium Z
+975,11,ウルトラネクロＺ
+975,12,究极奈克洛Ｚ
+976,1,ミミッキュＺ
+976,3,따라큐Z
+976,4,謎擬ＱＺ
+976,5,Mimiquizélite
+976,6,Mimigmium Z
+976,7,Mimikyustal Z
+976,8,Mimikyum Z
+976,9,Mimikium Z
+976,11,ミミッキュＺ
+976,12,谜拟ＱＺ
+977,1,ルガルガンＺ
+977,3,루가루암Z
+977,4,鬃岩狼人Ｚ
+977,5,Lougarozélite
+977,6,Wolwerockium Z
+977,7,Lycanrostal Z
+977,8,Lycanrochium Z
+977,9,Lycanium Z
+977,11,ルガルガンＺ
+977,12,鬃岩狼人Ｚ
+978,1,ジャラランガＺ
+978,3,짜랑고우거Z
+978,4,杖尾鱗甲龍Ｚ
+978,5,Ékaïzélite
+978,6,Grandirasium Z
+978,7,Kommostal Z
+978,8,Kommonium Z
+978,9,Kommonium Z
+978,11,ジャラランガＺ
+978,12,杖尾鳞甲龙Ｚ
+979,1,Ｚパワーリング
+979,3,Z파워링
+979,4,Ｚ強力手環
+979,5,Super Bracelet Z
+979,6,Z-Kraftring
+979,7,Superpulsera Z
+979,8,Supercerchio Z
+979,9,Z-Power Ring
+979,11,Ｚパワーリング
+979,12,Ｚ强力手环
+980,1,ももいろはなびら
+980,3,담홍꽃잎
+980,4,粉紅花瓣
+980,5,Pétale Rose
+980,6,Rosa Blatt
+980,7,Pétalo Rosa
+980,8,Petalo rosa
+980,9,Pink Petal
+980,11,ももいろはなびら
+980,12,粉红花瓣
+981,1,だいだいはなびら
+981,3,주황꽃잎
+981,4,橙色花瓣
+981,5,Pétale Orange
+981,6,Oranges Blatt
+981,7,Pétalo Naranja
+981,8,Petalo arancione
+981,9,Orange Petal
+981,11,だいだいはなびら
+981,12,橙色花瓣
+982,1,あおのはなびら
+982,3,파랑꽃잎
+982,4,藍色花瓣
+982,5,Pétale Bleu
+982,6,Blaues Blatt
+982,7,Pétalo Azul
+982,8,Petalo azzurro
+982,9,Blue Petal
+982,11,あおのはなびら
+982,12,蓝色花瓣
+983,1,あかのはなびら
+983,3,빨강꽃잎
+983,4,紅色花瓣
+983,5,Pétale Rouge
+983,6,Rotes Blatt
+983,7,Pétalo Rojo
+983,8,Petalo rosso
+983,9,Red Petal
+983,11,あかのはなびら
+983,12,红色花瓣
+984,1,みどりのはなびら
+984,3,초록꽃잎
+984,4,綠色花瓣
+984,5,Pétale Vert
+984,6,Grünes Blatt
+984,7,Pétalo Verde
+984,8,Petalo verde
+984,9,Green Petal
+984,11,みどりのはなびら
+984,12,绿色花瓣
+985,1,きいろのはなびら
+985,3,노랑꽃잎
+985,4,黃色花瓣
+985,5,Pétale Jaune
+985,6,Gelbes Blatt
+985,7,Pétalo Amarillo
+985,8,Petalo giallo
+985,9,Yellow Petal
+985,11,きいろのはなびら
+985,12,黄色花瓣
+986,1,むらさきはなびら
+986,3,보라꽃잎
+986,4,紫色花瓣
+986,5,Pétale Violet
+986,6,Violettes Blatt
+986,7,Pétalo Violeta
+986,8,Petalo violetto
+986,9,Purple Petal
+986,11,むらさきはなびら
+986,12,紫色花瓣
+987,1,にじいろのはな
+987,3,무지개꽃
+987,4,虹色之花
+987,5,Fleur 7 Couleurs
+987,6,Regenbogenblüte
+987,7,Flor Irisada
+987,8,Fiore arcobaleno
+987,9,Rainbow Flower
+987,11,にじいろのはな
+987,12,虹色之花
+988,1,だいだいバッジ
+988,3,주황배지
+988,4,橘色徽章
+988,5,Fulguro-Badge
+988,6,Gewitterorden
+988,7,Medalla Fulgor
+988,8,Medaglia Tonante
+988,9,Surge Badge
+988,11,だいだいバッジ
+988,12,桔色徽章
+989,1,ネクロプラスソル
+989,3,네크로플러스솔
+989,4,奈克洛索爾合體器
+989,5,Necrosol
+989,6,Necrosol
+989,7,Necrosol
+989,8,Necrosolix
+989,9,N-Solarizer
+989,11,ネクロプラスソル
+989,12,奈克洛索尔合体器
+990,1,ネクロプラスルナ
+990,3,네크로플러스루나
+990,4,奈克洛露奈合體器
+990,5,Necroluna
+990,6,Necrolun
+990,7,Necroluna
+990,8,Necrolunix
+990,9,N-Lunarizer
+990,11,ネクロプラスルナ
+990,12,奈克洛露奈合体器
+991,1,ネクロプラスソル
+991,3,네크로플러스솔
+991,4,奈克洛索爾合體器
+991,5,Necrosol
+991,6,Necrosol
+991,7,Necrosol
+991,8,Necrosolix
+991,9,N-Solarizer
+991,11,ネクロプラスソル
+991,12,奈克洛索尔合体器
+992,1,ネクロプラスルナ
+992,3,네크로플러스루나
+992,4,奈克洛露奈合體器
+992,5,Necroluna
+992,6,Necrolun
+992,7,Necroluna
+992,8,Necrolunix
+992,9,N-Lunarizer
+992,11,ネクロプラスルナ
+992,12,奈克洛露奈合体器
+993,1,イリマのノーマルＺ
+993,3,일리마의 노말Z
+993,4,伊利馬的一般Ｚ
+993,5,Cristal Z Althéo
+993,6,Elimas Normium Z
+993,7,Cristal Z (Liam)
+993,8,Normium Z Liam
+993,9,Ilima’s Normalium Z
+993,11,イリマのノーマルＺ
+993,12,伊利马的一般Ｚ
+994,1,のこされたボール
+994,3,남겨진 볼
+994,4,留下的精靈球
+994,5,Poké Ball donnée
+994,6,Nachlassball
+994,7,Poké Ball Ajena
+994,8,Poké Ball altrui
+994,9,Left Poké Ball
+994,11,のこされたボール
+994,12,留下的精灵球
+995,1,タマゴふかポン
+995,3,알부화캡슐토이
+995,4,孵蛋碰碰
+995,5,Moti-Couveuse
+995,6,Brutbon
+995,7,Cupón Eclosión
+995,8,Cova’n’roll
+995,9,Roto Hatch
+995,11,タマゴふかポン
+995,12,孵蛋碰碰
+996,1,やすうりポン
+996,3,할인캡슐토이
+996,4,優惠碰碰
+996,5,Moti-Promo
+996,6,Schnäppchenbon
+996,7,Cupón Rebaja
+996,8,Sconto’n’roll
+996,9,Roto Bargain
+996,11,やすうりポン
+996,12,优惠碰碰
+997,1,おこづかいポン
+997,3,용돈캡슐토이
+997,4,零用錢碰碰
+997,5,Moti-Magot
+997,6,Preisgeldbon
+997,7,Cupón Botín
+997,8,Soldi’n’roll
+997,9,Roto Prize Money
+997,11,おこづかいポン
+997,12,零花钱碰碰
+998,1,けいけんポン
+998,3,경험캡슐토이
+998,4,經驗碰碰
+998,5,Moti-Exp
+998,6,EP-Bon
+998,7,Cupón Exp
+998,8,Esp’n’roll
+998,9,Roto Exp. Points
+998,11,けいけんポン
+998,12,经验碰碰
+999,1,なつきポン
+999,3,친밀도캡슐토이
+999,4,親密碰碰
+999,5,Moti-Cœur
+999,6,Freundschaftsbon
+999,7,Cupón Amistad
+999,8,Affetto’n’roll
+999,9,Roto Friendship
+999,11,なつきポン
+999,12,亲密碰碰
+1000,1,みっけポン
+1000,3,발견캡슐토이
+1000,4,相遇碰碰
+1000,5,Moti-Appât
+1000,6,Lockbon
+1000,7,Cupón Reclamo
+1000,8,Incontra’n’roll
+1000,9,Roto Encounter
+1000,11,みっけポン
+1000,12,相遇碰碰
+1001,1,かくれポン
+1001,3,숨기캡슐토이
+1001,4,隱身碰碰
+1001,5,Moti-Camouflage
+1001,6,Schutzbon
+1001,7,Cupón Sigilo
+1001,8,Repelle’n’roll
+1001,9,Roto Stealth
+1001,11,かくれポン
+1001,12,隐身碰碰
+1002,1,ＨＰかいふくポン
+1002,3,HP회복캡슐토이
+1002,4,ＨＰ回復碰碰
+1002,5,Moti-Récup’ PV
+1002,6,KP-Bon
+1002,7,Cupón PS
+1002,8,PS’n’roll
+1002,9,Roto HP Restore
+1002,11,ＨＰかいふくポン
+1002,12,ＨＰ回复碰碰
+1003,1,ＰＰかいふくポン
+1003,3,PP회복캡슐토이
+1003,4,ＰＰ回復碰碰
+1003,5,Moti-Récup’ PP
+1003,6,AP-Bon
+1003,7,Cupón PP
+1003,8,PP’n’roll
+1003,9,Roto PP Restore
+1003,11,ＰＰかいふくポン
+1003,12,ＰＰ回复碰碰
+1004,1,おうえんポン
+1004,3,응원캡슐토이
+1004,4,加油碰碰
+1004,5,Moti-Soutien
+1004,6,Statuswertebon
+1004,7,Cupón Refuerzo
+1004,8,Stat’n’roll
+1004,9,Roto Boost
+1004,11,おうえんポン
+1004,12,加油碰碰
+1005,1,つかまえポン
+1005,3,잡기캡슐토이
+1005,4,捕捉碰碰
+1005,5,Moti-Capture
+1005,6,Fangbon
+1005,7,Cupón Captura
+1005,8,Acchiappa’n’roll
+1005,9,Roto Catch
+1005,11,つかまえポン
+1005,12,捕捉碰碰

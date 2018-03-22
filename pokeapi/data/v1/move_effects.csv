@@ -1,0 +1,1046 @@
+move_effect_id,local_language_id,short_effect,effect
+1,9,Inflicts regular damage with no additional effect.,Inflicts [regular damage].
+2,9,Puts the target to sleep.,Puts the target to [sleep].
+3,9,Has a $effect_chance% chance to [poison] the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [poison] the target.
+4,9,Drains half the damage inflicted to heal the user.,Inflicts [regular damage].  [Drains] half the damage inflicted to heal the user.
+5,9,Has a $effect_chance% chance to [burn] the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [burn] the target.
+6,9,Has a $effect_chance% chance to [freeze] the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [freeze] the target.
+7,9,Has a $effect_chance% chance to [paralyze] the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [paralyze] the target.
+8,9,User faints.,"User [faint], even if the attack [fail] or [miss].  Inflicts [regular damage]."
+9,9,Only works on sleeping Pokémon.  Drains half the damage inflicted to heal the user.,[Fails] if not used on a [sleep] Pokémon.  Inflicts [regular damage].  [Drains] half the damage inflicted to heal the user.
+10,9,Uses the target's last used move.,"Uses the last move targeted at the user by a Pokémon still on the [field].  A move counts as targeting the user even if it hit multiple Pokémon, as long as the user was one of them; however, moves targeting the [field] itself do not count.  If the user has not been targeted by an appropriate move since entering the [field], or if no Pokémon that targeted the user remains on the [field], this move will [fail].
+
+Moves that [fail], [miss], had [no effect], or were [block] are still copied.
+
+Assist moves, time-delayed moves, “meta” moves that operate on other moves/Pokémon/abilities, and some other special moves cannot be copied and are ignored; if the last move to hit the user was such a move, the previous move will be used instead.  The full list of ignored moves is: acupressure, assist, chatter, copycat, counter, curse, doom-desire, feint, focus-punch, future-sight, helping-hand, magic-coat, me-first, metronome, mimic, mirror-coat, mirror-move, nature-power, perish-song, psych-up, role-play, sketch, sleep-talk, snatch, spit-up, struggle, and transform.
+
+This move cannot be selected by assist, metronome, or sleep-talk, nor forced by encore."
+11,9,Raises the user's Attack by one stage.,Raises the user's [Attack] by one [stage].
+12,9,Raises the user's Defense by one stage.,Raises the user's [Defense] by one [stage].
+14,9,Raises the user's Special Attack by one stage.,Raises the user's [Special Attack] by one [stage].
+17,9,Raises the user's evasion by one stage.,Raises the user's [evasion] by one [stage].
+18,9,Never misses.,Inflicts [regular damage].  Ignores [accuracy] and [evasion] modifiers.
+19,9,Lowers the target's Attack by one stage.,Lowers the target's [Attack] by one [stage].
+20,9,Lowers the target's Defense by one stage.,Lowers the target's [Defense] by one [stage].
+21,9,Lowers the target's Speed by one stage.,Lowers the target's [Speed] by one [stage].
+24,9,Lowers the target's accuracy by one stage.,Lowers the target's [accuracy] by one [stage].
+25,9,Lowers the target's evasion by one stage.,Lowers the target's [evasion] by one [stage].
+26,9,"Resets all Pokémon's stats, accuracy, and evasion.","Removes [stat], [accuracy], and [evasion] modifiers from every Pokémon on the [field].
+
+This does not count as a stat reduction for the purposes of clear-body or white-smoke."
+27,9,"User waits for two turns, then hits back for twice the damage it took.","User waits for two turns.  On the second turn, the user inflicts twice the damage it accumulated on the last Pokémon to hit it.  Damage inflicted is [typeless].
+
+This move cannot be selected by sleep-talk."
+28,9,"Hits every turn for 2-3 turns, then confuses the user.","Inflicts [regular damage].  User is forced to attack with this move for 2–3 turns,selected at random.  After the last hit, the user becomes [confused].
+
+safeguard does not protect against the [confusion] from this move."
+29,9,Immediately ends wild battles.  Forces trainers to switch Pokémon.,"[Switch] the target out for another of its trainer's Pokémon selected at random.  Wild battles end immediately.
+
+Doesn't affect Pokémon with suction-cups or under the effect of ingrain."
+30,9,Hits 2-5 times in one turn.,"Inflicts [regular damage].  Hits 2–5 times in one turn.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use."
+31,9,User's type changes to the type of one of its moves at random.,"User's [type] changes to the [type] of one of its moves, selected at random.  hidden-power and weather-ball are treated as normal.  Only moves with a different [type] are eligible, and curse is never eligible.  If the user has no suitable moves, this move will [fail]."
+32,9,Has a $effect_chance% chance to make the target flinch.,Inflicts [regular damage].  Has a $effect_chance% chance to make the target flinch.
+33,9,Heals the user by half its max HP.,Heals the user for half its max [HP].
+34,9,"Badly poisons the target, inflicting more damage every turn.",[Badly poisons] the target.  Never misses when used by a poison-type Pokémon.
+35,9,Scatters money on the ground worth five times the user's level.,"Inflicts [regular damage].  After the battle ends, the winner receives five times the user's level in extra money for each time this move was used."
+36,9,Reduces damage from special attacks by 50% for five turns.,"Erects a barrier around the user's side of the field that reduces damage from [special] attacks by half for five turns.  In double battles, the reduction is 1/3.  [Critical hit] are not affected by the barrier.
+
+If the user is holding light-clay, the barrier lasts for eight turns.
+
+brick-break or defog used by an opponent will destroy the barrier."
+37,9,"Has a $effect_chance% chance to [burn], [freeze], or [paralyze] the target.","Inflicts [regular damage].  Has a $effect_chance% chance to [burn], [freeze], or [paralyze] the target.  One of these effects is selected at random; they do not each have independent chances to occur."
+38,9,"User sleeps for two turns, completely healing itself.","User falls to [sleep] and immediately regains all its [HP].  If the user has another [major status effect]-effect, [sleep] will replace it.  The user will always wake up after two turns, or one turn with early-bird.
+
+This move [fail] if the Pokémon cannot fall asleep due to uproar, insomnia, or vital-spirit.  It also fails if the Pokémon is at full health or is already asleep."
+39,9,Causes a one-hit KO.,"Inflicts damage equal to the target's max [HP].  Ignores [accuracy] and [evasion] modifiers.  This move's [accuracy] is 30% plus 1% for each level the user is higher than the target.  If the user is a lower level than the target, this move will [fail].
+
+Because this move inflicts a specific and finite amount of damage, endure still prevents the target from fainting.
+
+The effects of lock-on, mind-reader, and no-guard still apply, as long as the user is equal or higher level than the target.  However, they will not give this move a chance to break through detect or protect."
+40,9,Requires a turn to charge before attacking.,"Inflicts [regular damage].  User's [critical hit] rate is one level higher when using this move.  User charges for one turn before attacking.
+
+This move cannot be selected by sleep-talk."
+41,9,Inflicts damage equal to half the target's HP.,Inflicts [typeless] damage equal to half the target's remaining [HP].
+42,9,Inflicts 40 points of damage.,Inflicts exactly 40 damage.
+43,9,Prevents the target from fleeing and inflicts damage for 2-5 turns.,"Inflicts [regular damage].  For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the [field], this effect ends.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.
+
+rapid-spin cancels this effect."
+44,9,Has an increased chance for a critical hit.,Inflicts [regular damage].  User's [critical hit] rate is one level higher when using this move.
+45,9,Hits twice in one turn.,Inflicts [regular damage].  Hits twice in one turn.
+46,9,"If the user misses, it takes half the damage it would have inflicted in recoil.","Inflicts [regular damage].  If this move misses, is blocked by protect or detect, or has no effect, the user takes half the damage it would have inflicted in recoil.  This recoil damage will not exceed half the user's max HP.
+
+This move cannot be used while gravity is in effect."
+47,9,Protects the user's stats from being changed by enemy moves.,"Pokémon on the user's side of the [field] are immune to stat-lowering effects for five turns.
+
+guard-swap, heart-swap, and power-swap may still be used.
+
+defog used by an opponent will end this effect."
+48,9,Increases the user's chance to score a critical hit.,"User's [critical hit] rate is two levels higher until it leaves the field.  If the user has already used focus-energy since entering the field, this move will [fail].
+
+This effect is passed on by baton-pass."
+49,9,User receives 1/4 the damage it inflicts in recoil.,Inflicts [regular damage].  User takes 1/4 the damage it inflicts in recoil.
+50,9,Confuses the target.,[Confuse] the target.
+51,9,Raises the user's Attack by two stages.,Raises the user's [Attack] by two [stages].
+52,9,Raises the user's Defense by two stages.,Raises the user's [Defense] by two [stages].
+53,9,Raises the user's Speed by two stages.,Raises the user's [Speed] by two [stages].
+54,9,Raises the user's Special Attack by two stages.,Raises the user's [Special Attack] by two [stages].
+55,9,Raises the user's Special Defense by two stages.,Raises the user's [Special Defense] by two [stages].
+58,9,User becomes a copy of the target until it leaves battle.,"User copies the target's species, weight, type, [ability], [calculated stats] (except [HP]), and moves.  Copied moves will all have 5 [PP] remaining.  [IV] are copied for the purposes of hidden-power, but stats are not recalculated.
+
+choice-band, choice-scarf, and choice-specs stay in effect, and the user must select a new move.
+
+This move cannot be copied by mirror-move, nor forced by encore."
+59,9,Lowers the target's Attack by two stages.,Lowers the target's [Attack] by two [stages].
+60,9,Lowers the target's Defense by two stages.,Lowers the target's [Defense] by two [stages].
+61,9,Lowers the target's Speed by two stages.,Lowers the target's [Speed] by two [stages].
+63,9,Lowers the target's Special Defense by two stages.,Lowers the target's [Special Defense] by two [stages].
+66,9,Reduces damage from physical attacks by half.,"Erects a barrier around the user's side of the field that reduces damage from [physical] attacks by half for five turns.  In double battles, the reduction is 1/3.  [Critical hit] are not affected by the barrier.
+
+If the user is holding light-clay, the barrier lasts for eight turns.
+
+brick-break or defog used by an opponent will destroy the barrier."
+67,9,Poisons the target.,[Poisons] the target.
+68,9,Paralyzes the target.,[Paralyzes] the target.
+69,9,Has a $effect_chance% chance to lower the target's Attack by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Attack] by one [stage].
+70,9,Has a $effect_chance% chance to lower the target's Defense by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Defense] by one [stage].
+71,9,Has a $effect_chance% chance to lower the target's Speed by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Speed] by one [stage].
+72,9,Has a $effect_chance% chance to lower the target's Special Attack by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Special Attack] by one [stage].
+73,9,Has a $effect_chance% chance to lower the target's Special Defense by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Special Defense] by one [stage].
+74,9,Has a $effect_chance% chance to lower the target's accuracy by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [accuracy] by one [stage].
+76,9,User charges for one turn before attacking.  Has a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage].  User charges for one turn before attacking.  [Critical hit chance]-chance is one level higher than normal.  Has a $effect_chance% chance to make the target [flinch].
+
+This move cannot be selected by sleep-talk."
+77,9,Has a $effect_chance% chance to confuse the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [confuse] the target.
+78,9,Hits twice in the same turn.  Has a $effect_chance% chance to poison the target.,Inflicts [regular damage].  Hits twice in the same turn.  Has a $effect_chance% chance to [poison] the target.
+79,9,Never misses.,Inflicts [regular damage].  Ignores [accuracy] and [evasion] modifiers.
+80,9,"Transfers 1/4 of the user's max HP into a doll, protecting the user from further damage or status changes until it breaks.","Transfers 1/4 the user's max [HP] into a doll that absorbs damage and causes most negative move effects to [fail].  If the user leaves the [field], the doll will vanish.  If the user cannot pay the [HP] cost, this move will fail.
+
+The doll takes damage as normal, using the user's stats and types, and will break when its [HP] reaches zero.  Self-inflicted damage from [confusion] or recoil is not absorbed.  Healing effects from opponents ignore the doll and heal the user as normal.  Moves that work based on the user's [HP] still do so; the doll's [HP] does not influence any move.
+
+The doll will block [major status effect]-effects, [confusion], and [flinch].  The effects of smelling-salts and wake-up-slap do not trigger against a doll, even if the Pokémon behind the doll has the appropriate [major status effect]-effect.  Multi-turn trapping moves like wrap will hit the doll for their [regular damage], but the multi-turn trapping and damage effects will not activate.
+
+Moves blocked or damage absorbed by the doll do not count as hitting the user or inflicting damage for any effects that respond to such, e.g., avalanche, counter, or a rowap-berry.  magic-coat still works as normal, even against moves the doll would block.  Opposing Pokémon that damage the doll with a leech move like absorb are healed as normal.
+
+It will also block acupressure, block, the curse effect of curse, dream-eater, embargo, flatter, gastro-acid, grudge, heal-block, leech-seed, lock-on, mean-look, mimic, mind-reader, nightmare, pain-split, psycho-shift, spider-web, sketch, swagger, switcheroo, trick, worry-seed, and yawn.  A Pokémon affected by yawn before summoning the doll will still fall to [sleep].
+
+The doll blocks intimidate, but all other abilities act as though the doll did not exist.  If the user has an ability that absorbs moves of a certain type for [HP] (such as volt-absorb absorbing thunder-wave), such moves will not be blocked.
+
+life-orb and berries that cause [confusion] still work as normal, but their respective [HP] loss and [confusion] are absorbed/blocked by the doll.
+
+The user is still vulnerable to damage inflicted when entering or leaving the [field], such as by pursuit or spikes; however, the doll will block the [poison] effect of toxic-spikes.
+
+The doll is passed on by baton-pass.  It keeps its existing [HP], but uses the replacement Pokémon's stats and types for damage calculation.
+
+All other effects work as normal."
+81,9,User foregoes its next turn to recharge.,"Inflicts [regular damage].  User loses its next turn to ""recharge"", and cannot attack or [switch] out during that turn."
+82,9,"If the user is hit after using this move, its Attack rises by one stage.","Inflicts [regular damage].  Every time the user is hit after it uses this move but before its next action, its [Attack] raises by one [stage]."
+83,9,Copies the target's last used move.,"This move is replaced by the target's last successfully used move, and its PP changes to 5.  If the target hasn't used a move since entering the field, if it tried to use a move this turn and [failed], or if the user already knows the targeted move, this move will fail.  This effect vanishes when the user leaves the field.
+
+If chatter, metronome, mimic, sketch, or struggle is selected, this move will [fail].
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome, nor forced by encore."
+84,9,Randomly selects and uses any move in the game.,"Selects any move at random and uses it.  Moves the user already knows are not eligible.  Assist, meta, protection, and reflection moves are also not eligible; specifically, assist, chatter, copycat, counter, covet, destiny-bond, detect, endure, feint, focus-punch, follow-me, helping-hand, me-first, metronome, mimic, mirror-coat, mirror-move, protect, quick-guard, sketch, sleep-talk, snatch, struggle, switcheroo, thief, trick, and wide-guard will not be selected by this move.
+
+This move cannot be copied by mimic or mirror-move, nor selected by assist, metronome, or sleep-talk."
+85,9,"Seeds the target, stealing HP from it every turn.","Plants a seed on the target that [drains] 1/8 of its max [HP] at the end of every turn and heals the user for the amount taken.  Has no effect on grass Pokémon.  The seed remains until the target leaves the field.
+
+The user takes damage instead of being healed if the target has liquid-ooze.
+
+rapid-spin will remove this effect.
+
+This effect is passed on by baton-pass."
+86,9,Does nothing.,"Does nothing.
+
+This move cannot be used while gravity is in effect."
+87,9,Disables the target's last used move for 1-8 turns.,"Disables the target's last used move, preventing its use for 4–7 turns, selected at random, or until the target leaves the [field].  If the target hasn't used a move since entering the [field], if it tried to use a move this turn and [failed],  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail."
+88,9,Inflicts damage equal to the user's level.,"Inflicts damage equal to the user's level.  Type immunity applies, but other type effects are ignored."
+89,9,Inflicts damage between 50% and 150% of the user's level.,"Inflicts [typeless] damage between 50% and 150% of the user's level, selected at random in increments of 10%."
+90,9,Inflicts twice the damage the user received from the last physical hit it took.,"Targets the last opposing Pokémon to hit the user with a [physical] move this turn.  Inflicts twice the damage that move did to the user.  If there is no eligible target, this move will [fail].  Type immunity applies, but other type effects are ignored.
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome."
+91,9,Forces the target to repeat its last used move every turn for 2 to 6 turns.,"The next 4–8 times (selected at random) the target attempts to move, it is forced to repeat its last used move.  If the selected move allows the trainer to select a target, an opponent will be selected at random each turn.  If the target is prevented from using the selected move by some other effect, struggle will be used instead.  This effect ends if the selected move runs out of [PP].
+
+If the target hasn't used a move since entering the [field], if it tried to use a move this turn and [failed], if it does not know the selected move, or if the selected move has 0 [PP] remaining, this move will fail.  If the target's last used move was encore, mimic, mirror-move, sketch, struggle, or transform, this move will fail."
+92,9,Sets the user's and targets's HP to the average of their current HP.,"Changes the user's and target's remaining [HP] to the average of their current remaining [HP].  Ignores [accuracy] and [evasion] modifiers.  This effect does not count as inflicting damage for other moves and effects that respond to damage taken.
+
+This effect [fail] against a substitute."
+93,9,Has a $effect_chance% chance to make the target flinch.  Only works if the user is sleeping.,Only usable if the user is [sleep].  Inflicts [regular damage].  Has a $effect_chance% chance to make the target flinch.
+94,9,Changes the user's type to a random type either resistant or immune to the last move used against it.,"Changes the user's type to a type either resistant or immune to the last damaging move that hit it.  The new type is selected at random and cannot be a type the user already is.  If there is no eligible new type, this move will [fail]."
+95,9,Ensures that the user's next move will hit the target.,"If the user targets the same target again before the end of the next turn, the move it uses is guaranteed to hit.  This move itself also ignores [accuracy] and [evasion] modifiers.
+
+One-hit KO moves are also guaranteed to hit, as long as the user is equal or higher level than the target.  This effect also allows the user to hit Pokémon that are off the field due to moves such as dig or fly.
+
+If the target uses detect or protect while under the effect of this move, the user is not guaranteed to hit, but has a (100 - accuracy)% chance to break through the protection.
+
+This effect is passed on by baton-pass."
+96,9,Permanently becomes the target's last used move.,"Permanently replaces itself with the target's last used move.  If that move is chatter or struggle, this move will [fail].
+
+This move cannot be copied by mimic or mirror-move, nor selected by assist or metronome, nor forced by encore."
+98,9,Randomly uses one of the user's other three moves.  Only works if the user is sleeping.,"Only usable if the user is [sleep].  Randomly selects and uses one of the user's other three moves.  Use of the selected move requires and costs 0 [PP].
+
+This move will not select assist, bide, bounce, chatter, copycat, dig, dive, fly, focus-punch, me-first, metronome, mirror-move, shadow-force, skull-bash, sky-attack, sky-drop, sleep-talk, solar-beam, razor-wind, or uproar.
+
+If the selected move requires a recharge turn—i.e., one of blast-burn, frenzy-plant, giga-impact, hydro-cannon, hyper-beam, roar-of-time, or rock-wrecker—and the user is still [sleep] next turn, then it's forced to use this move again and pay another [PP] for the recharge turn.
+
+This move cannot be copied by mirror-move, nor selected by assist, metronome, or sleep-talk."
+99,9,"If the user faints this turn, the target automatically will, too.","If the user [faints] before its next move, the Pokémon that [faint] it will automatically [faint].  End-of-turn damage is ignored.
+
+This move cannot be selected by assist or metronome."
+100,9,"Inflicts more damage when the user has less HP remaining, with a maximum of 200 power.","Inflicts [regular damage].  Power varies inversely with the user's proportional remaining [HP].
+
+64 * current HP / max HP | Power
+-----------------------: | ----:
+ 0– 1                    |  200
+ 2– 5                    |  150
+ 6–12                    |  100
+13–21                    |   80
+22–42                    |   40
+43–64                    |   20
+"
+101,9,Lowers the PP of the target's last used move by 4.,"Lowers the PP of the target's last used move by 4.  If the target hasn't used a move since entering the [field], if it tried to use a move this turn and [failed], or if its last used move has 0 PP remaining, this move will fail."
+102,9,Cannot lower the target's HP below 1.,Inflicts [regular damage].  Will not reduce the target's [HP] below 1.
+103,9,Cures the entire party of major status effects.,Removes [major status effects]-effects and [confusion] from every Pokémon in the user's party.
+104,9,Inflicts regular damage with no additional effect.,Inflicts [regular damage].
+105,9,"Hits three times, increasing power by 100% with each successful hit.","Inflicts [regular damage].  Hits three times in the same turn.  The second hit has double power, and the third hit has triple power.  Each hit has a separate [accuracy] check, and this move stops if a hit misses.
+
+skill-link does not apply."
+106,9,Takes the target's item.,"Inflicts [regular damage].  If the target is holding an item and the user is not, the user will permanently take the item.  Damage is still inflicted if an item cannot be taken.
+
+Pokémon with sticky-hold or multitype are immune to the item theft effect.
+
+The target cannot recover its item with recycle.
+
+This move cannot be selected by assist or metronome."
+107,9,Prevents the target from leaving battle.,"The target cannot [switch out] normally.  Ignores [accuracy] and [evasion] modifiers.  This effect ends when the user leaves the [field].
+
+The target may still escape by using baton-pass, u-turn, or a shed-shell.
+
+Both the user and the target pass on this effect with baton-pass."
+108,9,Target loses 1/4 its max HP every turn as long as it's asleep.,"Only works on [sleep] Pokémon.  Gives the target a nightmare, damaging it for 1/4 its max [HP] every turn.  If the target wakes up or leaves the [field], this effect ends."
+109,9,Raises the user's evasion by two stages.,"Raises the user's [evasion] by two [stages].
+
+stomp and steamroller have double power against Pokémon that have used this move since entering the [field]."
+110,9,Ghosts pay half their max HP to hurt the target every turn.  Others decrease Speed but raise Attack and Defense.,"If the user is a ghost: user pays half its max [HP] to place a curse on the target, damaging it for 1/4 its max [HP] every turn.
+Otherwise: Lowers the user's [Speed] by one [stage], and raises its [Attack] and [Defense] by one [stage] each.
+
+The curse effect is passed on by baton-pass.
+
+This move cannot be copied by mirror-move."
+112,9,Prevents any moves from hitting the user this turn.,"No moves will hit the user for the remainder of this turn.  If the user is last to act this turn, this move will [fail].
+
+If the user successfully used detect, endure, protect, quick-guard, or wide-guard on the last turn, this move has a 50% chance to [fail].
+
+lock-on, mind-reader, and no-guard provide a (100 – accuracy)% chance for moves to break through this move.  This does not apply to one-hit KO moves (fissure, guillotine, horn-drill, and sheer-cold); those are always blocked by this move.
+
+thunder during rain-dance and blizzard during hail have a 30% chance to break through this move.
+
+The following effects are not prevented by this move:
+
+* acupressure from an ally
+* curse's curse effect
+* Delayed damage from doom-desire and future-sight; however, these moves will be prevented if they are used this turn
+* feint, which will also end this move's protection after it hits
+* imprison
+* perish-song
+* shadow-force
+* Moves that merely copy the user, such as transform or psych-up
+
+This move cannot be selected by assist or metronome."
+113,9,"Scatters Spikes, hurting opposing Pokémon that switch in.","Scatters spikes around the opposing [field], which damage opposing Pokémon that enter the [field] for 1/8 of their max [HP].  Pokémon immune to ground moves are immune to this damage, except during gravity.  Up to three layers of spikes may be laid down, adding 1/16 to the damage done: two layers of spikes damage for 3/16 max [HP], and three layers damage for 1/4 max [HP].
+
+wonder-guard does not block damage from this effect.
+
+rapid-spin removes this effect from its user's side of the [field].  defog removes this effect from its target's side of the [field]."
+114,9,"Forces the target to have no Evade, and allows it to be hit by Normal and Fighting moves even if it's a Ghost.",Resets the target's [evasion] to normal and prevents any further boosting until the target leaves the [field].  A ghost under this effect takes normal damage from normal and fighting moves.  This move itself ignores [accuracy] and [evasion] modifiers.
+115,9,User and target both faint after three turns.,"Every Pokémon is given a counter that starts at 3 and decreases by 1 at the end of every turn, including this one.  When a Pokémon's counter reaches zero, that Pokémon [faint].  A Pokémon that leaves the [field] will lose its counter; its replacement does not inherit the effect, and other Pokémon's counters remain.
+
+This effect is passed on by baton-pass.
+
+This move cannot be copied by mirror-move."
+116,9,Changes the weather to a sandstorm for five turns.,"Changes the weather to a sandstorm for five turns.  Pokémon that are not ground, rock, or steel take 1/16 their max [HP] at the end of every turn.  Every rock Pokémon's original [Special Defense] is raised by 50% for the duration of this effect.
+
+solar-beam's power is halved.
+
+moonlight, morning-sun, and synthesis only heal 1/4 the user's max [HP]."
+117,9,Prevents the user's HP from lowering below 1 this turn.,"The user's [HP] cannot be lowered below 1 by any means for the remainder of this turn.
+
+If the user successfully used detect, endure, protect, quick-guard, or wide-guard on the last turn, this move has a 50% chance to [fail].
+
+This move cannot be selected by assist or metronome."
+118,9,"Power doubles every turn this move is used in succession after the first, resetting after five turns.","Inflicts [regular damage].  User is forced to use this move for five turns.  Power doubles every time this move is used in succession to a maximum of 16x, and resets to normal after the lock-in ends.  If this move misses or becomes unusable, the lock-in ends.
+
+If the user has used defense-curl since entering the field, this move has double power."
+119,9,Raises the target's Attack by two stages and confuses the target.,"Raises the target's [Attack] by two [stages], then [confuses] it.  If the target's [Attack] cannot be [raised] by two [stages], the [confusion] is not applied."
+120,9,"Power doubles every turn this move is used in succession after the first, maxing out after five turns.","Inflicts [regular damage].  Power doubles after every time this move is used, whether consecutively or not, maxing out at 16x.  If this move misses or the user leaves the [field], power resets."
+121,9,"Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user.","Causes the target to fall in love with the user, giving it a 50% chance to do nothing each turn.  If the user and target are the same gender, or either is genderless, this move will [fail].  If either Pokémon leaves the [field], this effect ends."
+122,9,"Power increases with happiness, up to a maximum of 102.","Inflicts [regular damage].  Power increases with [happiness], given by `happiness * 2 / 5`, to a maximum of 102.  Power bottoms out at 1."
+123,9,Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP.,"Randomly uses one of the following effects.
+
+Effect                                             | Chance
+-------------------------------------------------- | -----:
+Inflicts [regular damage] with 40 power  |    40%
+Inflicts [regular damage] with 80 power  |    30%
+Inflicts [regular damage] with 120 power |    10%
+Heals the target for 1/4 its max [HP]    |    20%
+
+On average, this move inflicts [regular damage] with 52 power and heals the target for 1/20 its max [HP]."
+124,9,"Power increases as happiness decreases, up to a maximum of 102.","Inflicts [regular damage].  Power increases inversely with [happiness], given by `(255 - happiness) * 2 / 5`, to a maximum of 102.  Power bottoms out at 1."
+125,9,Protects the user's field from major status ailments and confusion for five turns.,"Protects Pokémon on the user's side of the [field] from [major status] effects and [confusion] for five turns.  Does not cancel existing ailments.  This effect remains even if the user leaves the [field].
+
+If yawn is used while this move is in effect, it will immediately [fail].
+
+defog used by an opponent will end this effect.
+
+This effect does not prevent the [confusion] caused by outrage, petal-dance, or thrash."
+126,9,Has a $effect_chance% chance to [burn] the target.  Lets frozen Pokémon thaw themselves.,"Inflicts [regular damage].  Has a $effect_chance% chance to [burn] the target.  [Frozen] Pokémon may use this move, in which case they will thaw."
+127,9,Power varies randomly from 10 to 150.,"Inflicts [regular damage].  Power is selected at random between 10 and 150, with an average of 71:
+
+Magnitude | Power | Chance
+--------: | ----: | -----:
+        4 |    10 |     5%
+        5 |    30 |    10%
+        6 |    50 |    20%
+        7 |    70 |    30%
+        8 |    90 |    20%
+        9 |   110 |    10%
+       10 |   150 |     5%
+
+This move has double power against Pokémon currently underground due to dig."
+128,9,Allows the trainer to switch out the user and pass effects along to its replacement.,"User [switches out], and the trainer selects a replacement Pokémon from the party.  [Stat] changes, [confusion], and persistent move effects are passed along to the replacement Pokémon.
+
+The following move effects are passed:
+
+* aqua-ring
+* both the user's and target's effect of block, mean-look, and spider-web
+* the curse effect of curse
+* embargo
+* focus-energy or an activated lansat-berry
+* gastro-acid
+* ingrain
+* being sapped by leech-seed
+* being targeted by lock-on or mind-reader
+* magnet-rise
+* perish-song's counter
+* power-trick
+* substitute; the doll's HP is unchanged
+
+The replacement Pokémon does not trigger effects that respond to Pokémon switching in."
+129,9,"Has double power against, and can hit, Pokémon attempting to switch out.","Inflicts [regular damage].  If the target attempts to [switch out] this turn before the user acts, this move hits the target before it leaves and has double power.
+
+This effect can still hit a Pokémon that [switches out] when it has a substitute up or when an ally has used follow-me."
+130,9,"Frees the user from binding moves, removes Leech Seed, and blows away Spikes.","Inflicts [regular damage].  Removes leech-seed from the user, frees the user from bind, clamp, fire-spin, magma-storm, sand-tomb, whirlpool, and wrap, and clears spikes, stealth-rock, and toxic-spikes from the user's side of the [field].  If this move misses or has [no effect], its effect doesn't activate."
+131,9,Inflicts 20 points of damage.,Inflicts exactly 20 damage.
+133,9,Heals the user by half its max HP.  Affected by weather.,"Heals the user for half its max [HP].
+
+During sunny-day, the healing is increased to 2/3 max [HP].
+
+During hail, rain-dance, or sandstorm, the healing is decreased to 1/4 max [HP]."
+136,9,Power and type depend upon user's IVs.  Power can range from 30 to 70.,"Inflicts [regular damage].  Power and type are determined by the user's [IV].
+
+Power is given by `x * 40 / 63 + 30`.  `x` is obtained by arranging bit 1 from the [IV] for each of [Special Defense], [Special Attack], [Speed], [Defense], [Attack], and [HP] in that order.  (Bit 1 is 1 if the [IV] is of the form `4n + 2` or `4n + 3`.  `x` is then 64 * [Special Defense] [IV] bit 1, plus 32 * [Special Attack] [IV] bit 1, etc.)
+
+Power is always between 30 and 70, inclusive.  Average power is 49.5.
+
+Type is given by `y * 15 / 63`, where `y` is similar to `x` above, except constructed from bit 0.  (Bit 0 is 1 if the [IV] is odd.)  The result is looked up in the following table.
+
+Value | Type
+----: | --------
+    0 | fighting
+    1 | flying
+    2 | poison
+    3 | ground
+    4 | rock
+    5 | bug
+    6 | ghost
+    7 | steel
+    8 | fire
+    9 | water
+   10 | grass
+   11 | electric
+   12 | psychic
+   13 | ice
+   14 | dragon
+   15 | dark
+
+This move thus cannot be normal.  Most other types have an equal 1/16 chance to be selected, given random [IV].  However, due to the flooring used here, bug, fighting, and grass appear 5/64 of the time, and dark only 1/64 of the time."
+137,9,Changes the weather to rain for five turns.,"Changes the weather to rain for five turns, during which water moves inflict 50% extra damage, and fire moves inflict half damage.
+
+If the user is holding damp-rock, this effect lasts for eight turns.
+
+thunder has 100% accuracy.  If the target has used detect or protect, thunder has a (100 - accuracy)% chance to break through the protection.
+
+solar-beam has half power.
+
+moonlight, morning-sun, and synthesis heal only 1/4 of the user's max [HP].
+
+Pokémon with swift-swim have doubled original [Speed].
+
+Pokémon with forecast become water.
+
+Pokémon with dry-skin heal 1/8 max [HP], Pokémon with hydration are cured of [major status effects]-effects, and Pokémon with rain-dish heal 1/16 max [HP] at the end of each turn."
+138,9,Changes the weather to sunny for five turns.,"Changes the weather to sunshine for five turns, during which fire moves inflict 50% extra damage, and water moves inflict half damage.
+
+If the user is holding heat-rock, this effect lasts for eight turns.
+
+Pokémon cannot become [frozen].
+
+thunder has 50% accuracy.
+
+solar-beam skips its charge turn.
+
+moonlight, morning-sun, and synthesis heal 2/3 of the user's max [HP].
+
+Pokémon with chlorophyll have doubled original [Speed].
+
+Pokémon with forecast become fire.
+
+Pokémon with leaf-guard are not affected by [major status effects]-effects.
+
+Pokémon with flower-gift change form; every Pokémon on their side of the [field] have their original [Attack] and [Special Attack] increased by 50%.
+
+Pokémon with dry-skin lose 1/8 max [HP] at the end of each turn.
+
+Pokémon with solar-power have their original [Special Attack] raised by 50% but lose 1/8 their max [HP] at the end of each turn."
+139,9,Has a $effect_chance% chance to raise the user's Defense by one stage.,Inflicts [regular damage]. Has a $effect_chance% chance to raise the user's [Defense] one [stage].
+140,9,Has a $effect_chance% chance to raise the user's Attack by one stage.,Inflicts [regular damage]. Has a $effect_chance% chance to raise the user's [Attack] one [stage].
+141,9,Has a $effect_chance% chance to raise all of the user's stats by one stage.,Inflicts [regular damage]. Has a $effect_chance% chance to raise all of the user's stats one [stage].
+143,9,User pays half its max HP to max out its Attack.,"User pays half its max [HP] to raise its [Attack] to +6 [stages].  If the user cannot pay the [HP] cost, this move will [fail]."
+144,9,Discards the user's stat changes and copies the target's.,"Discards the user's [stat changes] and copies the target's.
+
+This move cannot be copied by mirror-move."
+145,9,Inflicts twice the damage the user received from the last special hit it took.,"Targets the last opposing Pokémon to hit the user with a [special] move this turn.  Inflicts twice the damage that move did to the user.  If there is no eligible target, this move will [fail].  Type immunity applies, but other type effects are ignored.
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome."
+146,9,Raises the user's Defense by one stage.  User charges for one turn before attacking.,"Inflicts [regular damage].  Raises the user's [Defense] by one [stage].  User then charges for one turn before attacking.
+
+This move cannot be selected by sleep-talk."
+147,9,Has a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage].  Has a $effect_chance% chance to make each target [flinch].
+
+If the target is under the effect of bounce, fly, or sky-drop, this move will hit with double power."
+148,9,Inflicts regular damage and can hit Dig users.,"Inflicts [regular damage].
+
+If the target is in the first turn of dig, this move will hit with double power."
+149,9,Hits the target two turns later.,"Inflicts [typeless] [regular damage] at the end of the third turn, starting with this one.  This move cannot score a [critical hit].  If the target [switches out], its replacement will be hit instead.  Damage is calculated at the time this move is used; [stat changes] and [switching out] during the delay won't change the damage inflicted.  No move with this effect can be used against the same target again until after the end of the third turn.
+
+This effect breaks through wonder-guard.
+
+If the target is protected by protect or detect on the turn this move is used, this move will [fail].  However, the damage on the third turn will break through protection.
+
+The damage is applied at the end of the turn, so it ignores endure and focus-sash.
+
+This move cannot be copied by mirror-move."
+150,9,Inflicts regular damage and can hit Pokémon in the air.,"Inflicts [regular damage].
+
+If the target is under the effect of bounce, fly, or sky-drop, this move will hit with double power."
+151,9,Has a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage].  Has a $effect_chance% chance to make the target [flinch].
+
+Power is doubled against Pokémon that have used minimize since entering the [field]."
+152,9,Requires a turn to charge before attacking.,"Inflicts [regular damage].  User charges for one turn before attacking.
+
+During sunny-day, the charge turn is skipped.
+
+During hail, rain-dance, or sandstorm, power is halved.
+
+This move cannot be selected by sleep-talk."
+153,9,Has a $effect_chance% chance to paralyze the target.,"Inflicts [regular damage].  Has a $effect_chance% chance to [paralyze] the target.
+
+During rain-dance, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect.
+
+During sunny-day, this move has 50% accuracy."
+154,9,Immediately ends wild battles.  No effect otherwise.,Does nothing.  Wild battles end immediately.
+155,9,Hits once for every conscious Pokémon the trainer has.,"Inflicts [typeless] [regular damage].  Every Pokémon in the user's party, excepting those that have fainted or have a [major status effect]-effect, attacks the target.  Calculated stats are ignored; the base stats for the target and assorted attackers are used instead.  The random factor in the damage formula is not used.  dark Pokémon still get [STAB].
+
+This effect breaks through wonder-guard."
+156,9,"User flies high into the air, dodging all attacks, and hits next turn.","Inflicts [regular damage].  User flies high into the air for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, gust, hurricane, sky-uppercut, smack-down, thunder, twister, and whirlwind still hit the user normally.  gust and twister also have double power against the user.
+
+The damage from hail and sandstorm still applies during the immune turn.
+
+The user may be hit during its immune turn if under the effect of lock-on, mind-reader, or no-guard.
+
+This move cannot be used while gravity is in effect.
+
+This move cannot be selected by sleep-talk."
+157,9,Raises user's Defense by one stage.,"Raises user's [Defense] by one [stage].
+
+After this move is used, the power of ice-ball and rollout are doubled until the user leaves the [field]."
+159,9,Can only be used as the first move after the user enters battle.  Causes the target to flinch.,Inflicts [regular damage].  Causes the target to flinch.  Can only be used on the user's first turn after entering the [field].
+160,9,Forced to use this move for several turns.  Pokémon cannot fall asleep in that time.,"Inflicts [regular damage].  User is forced to use this move for 2–5 turns, selected at random.  All Pokémon on the [field] wake up, and none can fall to [sleep] until the lock-in ends.
+
+Pokémon cannot use rest during this effect.
+
+This move cannot be selected by sleep-talk."
+161,9,Stores energy up to three times for use with Spit Up and Swallow.,"Raises the user's [Defense] and [Special Defense] by one [stage] each.  Stores energy for use with spit-up and swallow.  Up to three levels of energy can be stored, and all are lost if the user leaves the [field].  Energy is still stored even if the stat boosts cannot be applied.
+
+If the user uses baton-pass, the stat boosts are passed as normal, but the stored energy is not."
+162,9,Power is 100 times the amount of energy Stockpiled.,"Inflicts [regular damage].  Power is equal to 100 times the amount of energy stored by stockpile.  Ignores the random factor in the damage formula.  Stored energy is consumed, and the user's [Defense] and [Special Defense] are reset to what they would be if stockpile had not been used.  If the user has no energy stored, this move will [fail].
+
+This move cannot be copied by mirror-move."
+163,9,"Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles.","Heals the user depending on the amount of energy stored by stockpile: 1/4 its max [HP] after one use, 1/2 its max [HP] after two uses, or fully after three uses.  Stored energy is consumed, and the user's [Defense] and [Special Defense] are reset to what they would be if stockpile had not been used.  If the user has no energy stored, this move will [fail]."
+165,9,Changes the weather to a hailstorm for five turns.,"Changes the weather to hail for five turns, during which non-ice Pokémon are damaged for 1/16 their max [HP] at the end of every turn.
+
+If the user is holding icy-rock, this effect lasts for eight turns.
+
+blizzard has 100% accuracy.  If the target has used detect or protect, blizzard has a (100 - accuracy)% chance to break through the protection.
+
+moonlight, morning-sun, and synthesis heal only 1/4 of the user's max [HP].
+
+Pokémon with snow-cloak are exempt from this effect's damage."
+166,9,Prevents the target from using the same move twice in a row.,"Prevents the target from attempting to use the same move twice in a row.  When the target leaves the [field], this effect ends.
+
+If the target is forced to attempt a repeated move due to choice-band, choice-scarf, choice-specs, disable, encore, taunt, only having [PP] remaining for one move, or any other effect, the target will use struggle instead.  The target is then free to use the forced move next turn, as it didn't use that move this turn."
+167,9,Raises the target's Special Attack by one stage and confuses the target.,"Raises the target's [Special Attack] by one [stage], then [confuses] it."
+168,9,Burns the target.,[Burns] the target.
+169,9,Lowers the target's Attack and Special Attack by two stages.  User faints.,Lowers the target's [Attack] and [Special Attack] by two [stages].  User faints.
+170,9,"Power doubles if user is burned, paralyzed, or poisoned.","Inflicts [regular damage].  If the user is [burned], [paralyzed], or [poisoned], this move has double power."
+171,9,"If the user takes damage before attacking, the attack is canceled.","Inflicts [regular damage].  If the user takes damage this turn before hitting, this move will [fail].
+
+This move cannot be copied by mirror-move, nor selected by assist, metronome, or sleep-talk."
+172,9,"If the target is paralyzed, inflicts double damage and cures the paralysis.","Inflicts [regular damage].  If the target is [paralyzed], this move has double power, and the target is cured of its [paralysis]."
+173,9,Redirects the target's single-target effects to the user for this turn.,"Until the end of this turn, any moves that opposing Pokémon target solely at the user's ally will instead target the user.  If both Pokémon on the same side of the [field] use this move on the same turn, the Pokémon that uses it last will become the target.
+
+This effect takes priority over lightningrod and storm-drain.
+
+If the user's ally [switches out], opposing Pokémon may still hit it with pursuit.
+
+This move cannot be selected by assist or metronome."
+174,9,Uses a move which depends upon the terrain.,"Uses another move chosen according to the terrain.
+
+Terrain                   | Selected move
+------------------------- | ------------------
+Building                  | tri-attack
+Cave                      | rock-slide
+Deep water                | hydro-pump
+Desert                    | earthquake
+Grass                     | seed-bomb
+Mountain                  | rock-slide
+Road                      | earthquake
+Shallow water             | hydro-pump
+Snow                      | blizzard
+Tall grass                | seed-bomb
+electric-terrain | thunderbolt
+grassy-terrain   | energy-ball
+misty-terrain    | moonblast
+
+In Pokémon Battle Revolution:
+
+Terrain        | Selected move
+-------------- | ------------------
+Courtyard      | tri-attack
+Crystal        | rock-slide
+Gateway        | hydro-pump
+Magma          | rock-slide
+Main Street    | tri-attack
+Neon           | tri-attack
+Stargazer      | rock-slide
+Sunny Park     | seed-bomb
+Sunset         | earthquake
+Waterfall      | seed-bomb
+
+This move cannot be copied by mirror-move."
+175,9,Raises the user's Special Defense by one stage.  User's Electric moves have doubled power next turn.,"Raises the user's [Special Defense] by one [stage].  If the user uses an electric move next turn, its power will be doubled."
+176,9,"For the next few turns, the target can only use damaging moves.","Target is forced to only use damaging moves for the next 3–5 turns, selected at random.  Moves that select other moves not known in advance do not count as damaging.
+
+assist, copycat, me-first, metronome, mirror-move, and sleep-talk do not directly inflict damage and thus may not be used.
+
+bide, counter, endeavor, metal-burst, and mirror-coat are allowed."
+177,9,Ally's next move inflicts half more damage.,"Boosts the power of the target's moves by 50% until the end of this turn.
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome."
+178,9,User and target swap items.,"User and target permanently swap [held item].  Works even if one of the Pokémon isn't holding anything.  If either Pokémon is holding mail, this move will [fail].
+
+If either Pokémon has multitype or sticky-hold, this move will [fail].
+
+If this move results in a Pokémon obtaining choice-band, choice-scarf, or choice-specs, and that Pokémon was the latter of the pair to move this turn, then the move it used this turn becomes its chosen forced move.  This applies even if both Pokémon had a choice item before this move was used.  If the first of the two Pokémon gains a choice item, it may select whatever choice move it wishes next turn.
+
+Neither the user nor the target can recover its item with recycle.
+
+This move cannot be selected by assist or metronome."
+179,9,Copies the target's ability.,"User's ability is replaced with the target's until the user leaves the [field].  Ignores [accuracy] and [evasion] modifiers.
+
+If the target has flower-gift, forecast, illusion, imposter, multitype, stance-change, trace, wonder-guard, or zen-mode, this move will [fail].
+
+This move cannot be copied by mirror-move."
+180,9,User will recover half its max HP at the end of the next turn.,"At the end of the next turn, user will be healed for half its max [HP].  If the user is [switched out], its replacement will be healed instead for half of the user's max HP.  If the user [faint] or is forcefully switched by roar or whirlwind, this effect will not activate."
+181,9,Randomly selects and uses one of the trainer's other Pokémon's moves.,"Uses a move from another Pokémon in the user's party, both selected at random.  Moves from fainted Pokémon can be used.  If there are no eligible Pokémon or moves, this move will [fail].
+
+This move will not select assist, chatter, circle-throw, copycat, counter, covet, destiny-bond, detect, dig, dive, dragon-tail, endure, feint, fly focus-punch, follow-me, helping-hand, me-first, metronome, mimic, mirror-coat, mirror-move, phantom-force protect, quick-guard, roar shadow-force, sketch, sleep-talk, snatch, struggle, switcheroo, thief, trick, whirlwind, or wide-guard.
+
+This move cannot be copied by mirror-move, nor selected by metronome or sleep-talk."
+182,9,Prevents the user from leaving battle.  User regains 1/16 of its max HP every turn.,"Prevents the user from [switching out].  User regains 1/16 of its max [HP] at the end of every turn.  If the user was immune to ground attacks, it will now take normal damage from them.
+
+roar and whirlwind will not affect the user.  The user cannot use magnet-rise.
+
+The user may still use u-turn to leave the [field].
+
+This effect can be passed with baton-pass."
+183,9,Lowers the user's Attack and Defense by one stage after inflicting damage.,"Inflicts [regular damage], then lowers the user's [Attack] and [Defense] by one [stage] each."
+184,9,Reflects back the first effect move used on the user this turn.,"The first non-damaging move targeting the user this turn that inflicts [major status effect]-effects, [stat change], or [trap] effects will be reflected at its user.
+
+defog, memento, and teeter-dance are not reflected.
+
+attract, flatter, gastro-acid, leech-seed, swagger, worry-seed, and yawn are reflected.
+
+This move cannot be copied by mirror-move."
+185,9,User recovers the item it last used up.,"User recovers the last item consumed by the user or a Pokémon in its position on the [field].  The item must be used again before it can be recovered by this move again.  If the user is holding an item, this move [fail].
+
+Items taken or given away by covet, knock-off, switcheroo, thief, or trick may not be recovered."
+186,9,Inflicts double damage if the user takes damage before attacking this turn.,"Inflicts [regular damage].  If the target damaged the user this turn and was the last to do so, this move has double power.
+
+pain-split does not count as damaging the user."
+187,9,Destroys Reflect and Light Screen.,"Destroys any light-screen or reflect on the target's side of the [field], then inflicts [regular damage].  The barriers are destroyed even if this move has [no effect]."
+188,9,Target sleeps at the end of the next turn.,"Puts the target to [sleep] at the end of the next turn.  Ignores [accuracy] and [evasion] modifiers.  If the target leaves the [field], this effect is canceled.  If the target has a status effect when this move is used, this move will [fail].
+
+If the target is protected by safeguard when this move is used, this move will [fail].
+
+insomnia and vital-spirit prevent the [sleep] if the target has either at the end of the next turn, but will not cause this move to [fail] on use."
+189,9,Target drops its held item.,"Inflicts [regular damage].  Target loses its [held item].
+
+Neither the user nor the target can recover its item with recycle.
+
+If the target has multitype or sticky-hold, it will take damage but not lose its item."
+190,9,Lowers the target's HP to equal the user's.,"Inflicts exactly enough damage to lower the target's [HP] to equal the user's.  If the target's HP is not higher than the user's, this move has no effect.  Type immunity applies, but other type effects are ignored.  This effect counts as damage for moves that respond to damage."
+191,9,"Inflicts more damage when the user has more HP remaining, with a maximum of 150 power.","Inflicts [regular damage].  Power increases with the user's remaining [HP] and is given by `150 * HP / max HP`, to a maximum of 150 when the user has full HP."
+192,9,User and target swap abilities.,"User and target switch abilities.  Ignores [accuracy] and [evasion] modifiers.
+
+If either Pokémon has multitype or wonder-guard, this move will [fail]."
+193,9,Prevents the target from using any moves that the user also knows.,"Prevents any Pokémon on the opposing side of the [field] from using any move the user knows until the user leaves the [field].  This effect is live; if the user obtains new moves while on the [field], these moves become restricted.  If no opposing Pokémon knows any of the user's moves when this move is used, this move will [fail]."
+194,9,"Cleanses the user of a burn, paralysis, or poison.","Removes a [burn], [paralysis], or [poison] from the user."
+195,9,"If the user faints this turn, the PP of the move that fainted it drops to 0.","If the user [faint] before it next acts, the move that fainted it will have its [PP] dropped to 0.  End-of-turn damage does not trigger this effect."
+196,9,"Steals the target's move, if it's self-targeted.","The next time a Pokémon uses a beneficial move on itself or itself and its ally this turn, the user of this move will steal the move and use it itself.  Moves which may be stolen by this move are identified by the ""snatchable"" flag.
+
+If two Pokémon use this move on the same turn, the faster Pokémon will steal the first beneficial move, and the slower Pokémon will then steal it again—thus, only the slowest Pokémon using this move ultimately gains a stolen move's effect.
+
+If the user steals psych-up, it will target the Pokémon that used psych-up.  If the user was the original target of psych-up, and the Pokémon that originally used it's affected by pressure, it will only lose 1 [PP].
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome."
+197,9,"Inflicts more damage to heavier targets, with a maximum of 120 power.","Inflicts [regular damage].  Power increases with the target's weight in kilograms, to a maximum of 120.
+
+Target's weight | Power
+--------------- | ----:
+Up to 10kg      |    20
+Up to 25kg      |    40
+Up to 50kg      |    60
+Up to 100kg     |    80
+Up to 200kg     |   100
+Above 200kg     |   120
+"
+198,9,Has a $effect_chance% chance to inflict a status effect which depends upon the terrain.,"Inflicts [regular damage].  Has a $effect_chance% chance to inflict an effect chosen according to the terrain.
+
+Terrain        | Effect
+-------------- | -------------------------------------------------------------
+Building       | [Paralyze] target
+Cave           | Makes target [flinch]
+Deep water     | Lowers target's [Attack] by one [stage]
+Desert         | Lowers target's [accuracy] by one [stage]
+Grass          | Puts target to [sleep]
+Mountain       | Makes target [flinch]
+Road           | Lowers target's [accuracy] by one [stage]
+Shallow water  | Lowers target's [Attack] by one [stage]
+Snow           | [Freezes] target
+Tall grass     | Puts target to [sleep]
+
+In Pokémon Battle Revolution:
+
+Terrain        | Effect
+-------------- | -------------------------------------------------------------
+Courtyard      | [Paralyze] target
+Crystal        | Makes target [flinch]
+Gateway        | Lowers target's [Attack] by one [stage]
+Magma          | Makes target [flinch]
+Main Street    | [Paralyze] target
+Neon           | [Paralyze] target
+Stargazer      | Makes target [flinch]
+Sunny Park     | Puts target to [sleep]
+Sunset         | Lowers target's [accuracy] by one [stage]
+Waterfall      | Puts target to [sleep]
+"
+199,9,User receives 1/3 the damage inflicted in recoil.,Inflicts [regular damage].  User takes 1/3 the damage it inflicts in recoil.
+200,9,Confuses the target.,[Confuse] all targets.
+201,9,Has an increased chance for a critical hit and a $effect_chance% chance to [burn] the target.,Inflicts [regular damage].  User's [critical hit] rate is one level higher when using this move. Has a $effect_chance% chance to [burn] the target.
+202,9,Halves all Electric-type damage.,"electric moves inflict half damage, regardless of target.  If the user leaves the [field], this effect ends."
+203,9,Has a $effect_chance% chance to badly poison the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [badly poison] the target.
+204,9,"If there be weather, this move has doubled power and the weather's type.","Inflicts [regular damage].  If a weather move is active, this move has double power, and its type becomes the type of the weather move.  shadow-sky is typeless for the purposes of this move."
+205,9,Lowers the user's Special Attack by two stages after inflicting damage.,"Inflicts [regular damage], then lowers the user's [Special Attack] by two [stages]."
+206,9,Lowers the target's Attack and Defense by one stage.,Lowers the target's [Attack] and [Defense] by one [stage].
+207,9,Raises the user's Defense and Special Defense by one stage.,Raises the user's [Defense] and [Special Defense] by one [stage].
+208,9,Inflicts regular damage and can hit Bounce and Fly users.,"Inflicts [regular damage].
+
+This move can hit Pokémon under the effect of bounce, fly, or sky-drop."
+209,9,Raises the user's Attack and Defense by one stage.,Raises the user's [Attack] and [Defense] by one [stage] each.
+210,9,Has an increased chance for a critical hit and a $effect_chance% chance to poison the target.,Inflicts [regular damage].  User's [critical hit] rate is one level higher when using this move. Has a $effect_chance% chance to [poison] the target.
+211,9,Halves all Fire-type damage.,"fire moves inflict half damage, regardless of target.  If the user leaves the [field], this effect ends."
+212,9,Raises the user's Special Attack and Special Defense by one stage.,Raises the user's [Special Attack] and [Special Defense] by one [stage] each.
+213,9,Raises the user's Attack and Speed by one stage.,Raises the user's [Attack] and [Speed] by one [stage] each.
+214,9,User's type changes to match the terrain.,"User's type changes according to the terrain.
+
+Terrain        | New type
+-------------- | --------------
+Building       | normal
+Cave           | rock
+Desert         | ground
+Grass          | grass
+Mountain       | rock
+Ocean          | water
+Pond           | water
+Road           | ground
+Snow           | ice
+Tall grass     | grass
+
+In Pokémon Battle Revolution:
+
+Terrain        | New type
+-------------- | --------------
+Courtyard      | normal
+Crystal        | rock
+Gateway        | water
+Magma          | rock
+Main Street    | normal
+Neon           | normal
+Stargazer      | rock
+Sunny Park     | grass
+Sunset         | ground
+Waterfall      | grass
+"
+215,9,Heals the user by half its max HP.,"Heals the user for half its max [HP].  If the user is flying, its flying type is ignored until the end of this turn."
+216,9,Disables moves and immunities that involve flying or levitating for five turns.,"For five turns (including this one), all immunities to ground moves are disabled.  For the duration of this effect, the [evasion] of every Pokémon on the field is lowered by two [stages].  Cancels the effects of bounce, fly, and sky-drop.
+
+Specifically, flying Pokémon and those with levitate or that have used magnet-rise are no longer immune to ground attacks, arena-trap, spikes, or toxic-spikes.
+
+bounce, fly, sky-drop, high-jump-kick, jump-kick, and splash cannot be used while this move is in effect.
+
+*Bug*: If this move is used during a double or triple battle while Pokémon are under the effect of sky-drop, Sky Drop's effect is not correctly canceled on its target, and it remains high in the air indefinitely.  As Sky Drop prevents the target from acting, the only way to subsequently remove it from the field is to faint it."
+217,9,"Forces the target to have no evasion, and allows it to be hit by Psychic moves even if it's Dark.",Resets the target's [evasion] to normal and prevents any further boosting until the target leaves the [field].  A dark Pokémon under this effect takes normal damage from psychic moves.  This move itself ignores [accuracy] and [evasion] modifiers.
+218,9,"If the target is asleep, has double power and wakes it up.","Inflicts [regular damage].  If the target is [sleep], this move has double power, and the target wakes up."
+219,9,Lowers user's Speed by one stage.,"Inflicts [regular damage], then lowers the user's [Speed] by one [stage]."
+220,9,"Power raises when the user has lower Speed, up to a maximum of 150.","Inflicts [regular damage].  Power increases with the target's current [Speed] compared to the user, given by `1 + 25 * target Speed / user Speed`, capped at 150."
+221,9,User faints.  Its replacement has its HP fully restored and any major status effect removed.,"User faints.  Its replacement's [HP] is fully restored, and any [major status effect]-effect is removed.  If the replacement Pokémon is immediately fainted by a switch-in effect, the next replacement is healed by this move instead."
+222,9,Has double power against Pokémon that have less than half their max HP remaining.,"Inflicts [regular damage].  If the target has less than half its max [HP] remaining, this move has double power."
+223,9,Power and type depend on the held berry.,"Inflicts [regular damage].  Power and type are determined by the user's held berry.  The berry is consumed.  If the user is not holding a berry, this move will [fail]."
+224,9,Hits through Protect and Detect.,"Inflicts [regular damage].  Removes the effects of detect or protect from the target before hitting.
+
+This move cannot be copied by mirror-move, nor selected by assist or metronome."
+225,9,"If target has a berry, inflicts double damage and uses the berry.","Inflicts [regular damage].  If the target is holding a berry, this move has double power, and the user takes the berry and uses it immediately.
+
+If the target is holding a jaboca-berry or rowap-berry, the berry is still removed, but has no effect.
+
+If this move is [super effective] and the target is holding a berry that can reduce this move's damage, it will do so, and will not be stolen."
+226,9,"For three turns, friendly Pokémon have doubled Speed.","For the next three turns, all Pokémon on the user's side of the [field] have their original [Speed] doubled.  This effect remains if the user leaves the [field]."
+227,9,Raises one of a friendly Pokémon's stats at random by two stages.,"Raises one of the target's stats by two [stages].  The raised stat is chosen at random from any stats that can be raised by two stages.  If no stat is eligible, this move will [fail].
+
+If the target has a substitute, this move will have no effect, even if the user is the target.
+
+This move cannot be copied by mirror-move."
+228,9,Strikes back at the last Pokémon to hit the user this turn with 1.5× the damage.,"Targets the last opposing Pokémon to hit the user with a damaging move this turn.  Inflicts 1.5× the damage that move did to the user.  If there is no eligible target, this move will [fail].  Type immunity applies, but other type effects are ignored."
+229,9,User must switch out after attacking.,"Inflicts [regular damage], then the user immediately [switches out], and the trainer selects a replacement Pokémon from the party.  If the target [faint] from this attack, the user's trainer selects the new Pokémon to send out first.  If the user is the last Pokémon in its party that can battle, it will not [switch out].
+
+The user may be hit by pursuit when it [switches out], if it has been targeted and pursuit has not yet been used.
+
+This move may be used even if the user is under the effect of ingrain.  ingrain's effect will end."
+230,9,Lowers the user's Defense and Special Defense by one stage after inflicting damage.,"Inflicts [regular damage], then lowers the user's [Defense] and [Special Defense] by one [stage] each."
+231,9,Power is doubled if the target has already moved this turn.,"Inflicts [regular damage].  If the target uses a move or [switches out] this turn before this move is used, this move has double power."
+232,9,Power is doubled if the target has already received damage this turn.,"Inflicts [regular damage].  If the target takes damage this turn for any reason before this move is used, this move has double power."
+233,9,Target cannot use held items.,"Target cannot use its held item for five turns.  If the target leaves the [field], this effect ends.
+
+If a Pokémon under this effect uses bug-bite or pluck on a Pokémon holding a berry, the berry is destroyed but not used.  If a Pokémon under this effect uses fling, it will [fail].
+
+This effect is passed by baton-pass."
+234,9,Throws held item at the target; power depends on the item.,"Inflicts [regular damage].  Power and type are determined by the user's [held item].  The item is consumed.  If the user is not holding an item, or its item has no set type and power, this move will [fail].
+
+This move ignores sticky-hold.
+
+If the user is under the effect of embargo, this move will [fail]."
+235,9,Transfers the user's major status effect to the target.,"If the user has a [major status effect]-effect and the target does not, the user's status is transferred to the target."
+236,9,"Power increases when this move has less PP, up to a maximum of 200.","Inflicts [regular damage].  Power is determined by the [PP] remaining for this move, after its [PP] cost is deducted.  Ignores [accuracy] and [evasion] modifiers.
+
+PP remaining | Power
+------------ | ----:
+4 or more    |    40
+3            |    50
+2            |    60
+1            |    80
+0            |   200
+
+If this move is activated by another move, the activating move's [PP] is used to calculate power."
+237,9,Prevents target from restoring its HP for five turns.,"For the next five turns, the target may not use any moves that only restore [HP], and move effects that heal the target are disabled.  Moves that steal [HP] may still be used, but will only inflict damage and not heal the target."
+238,9,"Power increases against targets with more HP remaining, up to a maximum of 121 power.","Inflicts [regular damage].  Power directly relates to the target's relative remaining [HP], given by `1 + 120 * current HP / max HP`, to a maximum of 121."
+239,9,User swaps Attack and Defense.,"The user's original [Attack] and [Defense] are swapped.
+
+This effect is passed on by baton-pass."
+240,9,Nullifies target's ability until it leaves battle.,"The target's ability is disabled as long as it remains on the [field].
+
+This effect is passed on by baton-pass."
+241,9,Prevents the target from scoring critical hits for five turns.,"For five turns, opposing Pokémon cannot score [critical hits]."
+242,9,"Uses the target's move against it before it attacks, with power increased by half.","If the target has selected a damaging move this turn, the user will copy that move and use it against the target, with a 50% increase in power.
+
+If the target moves before the user, this move will [fail].
+
+This move cannot be copied by mirror-move, nor selected by assist, metronome, or sleep-talk."
+243,9,Uses the target's last used move.,"Uses the last move that was used successfully by any Pokémon, including the user.
+
+This move cannot copy itself, nor roar nor whirlwind.
+
+This move cannot be copied by mirror-move, nor selected by assist, metronome, or sleep-talk."
+244,9,User swaps Attack and Special Attack changes with the target.,User swaps its [Attack] and [Special Attack] [stat modifiers] modifiers with the target.
+245,9,User swaps Defense and Special Defense changes with the target.,User swaps its [Defense] and [Special Defense] modifiers with the target.
+246,9,"Power increases against targets with more raised stats, up to a maximum of 200.","Inflicts [regular damage].  Power starts at 60 and is increased by 20 for every [stage] any of the target's stats has been raised, capping at 200.  [Accuracy] and [evasion] modifiers do not increase this move's power."
+247,9,Can only be used after all of the user's other moves have been used.,"Inflicts [regular damage].  This move can only be used if each of the user's other moves has been used at least once since the user entered the [field].  If this is the user's only move, this move will [fail]."
+248,9,Changes the target's ability to Insomnia.,"Changes the target's ability to insomnia.
+
+If the target's ability is truant or multitype, this move will [fail]."
+249,9,Only works if the target is about to use a damaging move.,"Inflicts [regular damage].  If the target has not selected a damaging move this turn, or if the target has already acted this turn, this move will [fail].
+
+This move is not affected by iron-fist."
+250,9,"Scatters poisoned spikes, poisoning opposing Pokémon that switch in.","Scatters poisoned spikes around the opposing [field], which [poison] opposing Pokémon that enter the [field].  A second layer of these spikes may be laid down, in which case Pokémon will be [badly poison] instead.  Pokémon immune to either ground moves or being [poison] are immune to this effect.  Pokémon otherwise immune to ground moves are affected during gravity.
+
+If a poison Pokémon not immune to ground moves enters a [field] covered with poisoned spikes, the spikes are removed.
+
+rapid-spin will remove this effect from its user's side of the [field].  defog will remove this effect from its target's side of the [field].
+
+This move does not trigger synchronize, unless the Pokémon with synchronize was forced to enter the [field] by another effect such as roar.
+
+Pokémon entering the [field] due to baton-pass are not affected by this effect."
+251,9,User and target swap stat changes.,User swaps its [stat modifiers] with the target.
+252,9,Restores 1/16 of the user's max HP each turn.,"Restores 1/16 of the user's max [HP] at the end of each turn.  If the user leaves the [field], this effect ends.
+
+This effect is passed on by baton-pass."
+253,9,User is immune to Ground moves and effects for five turns.,"For five turns, the user is immune to ground moves.
+
+If the user is under the effect of ingrain or has levitate, this move will [fail].
+
+This effect is temporarily disabled by and cannot be used during gravity.
+
+This effect is passed on by baton-pass."
+254,9,User takes 1/3 the damage inflicted in recoil.  Has a $effect_chance% chance to [burn] the target.,"Inflicts [regular damage].  User takes 1/3 the damage it inflicts in recoil.  Has a $effect_chance% chance to [burn] the target.  [Frozen] Pokémon may use this move, in which case they will thaw."
+255,9,User takes 1/4 its max HP in recoil.,"Inflicts [typeless] [regular damage].  User takes 1/4 its max [HP] in recoil.  Ignores [accuracy] and [evasion] modifiers.
+
+This move is used automatically when a Pokémon cannot use any other move legally, e.g., due to having no [PP] remaining or being under the effect of both encore and torment at the same time.
+
+This move's recoil is not treated as recoil for the purposes of anything that affects recoil, such as the ability rock-head.  It also is not prevented by magic-guard.
+
+This move cannot be copied by mimic, mirror-move, or sketch, nor selected by assist or metronome, nor forced by encore."
+256,9,"User dives underwater, dodging all attacks, and hits next turn.","Inflicts [regular damage].  User dives underwater for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, surf, and whirlpool still hit the user normally, and their power is doubled if appropriate.
+
+The user may be hit during its immune turn if under the effect of lock-on, mind-reader, or no-guard.
+
+This move cannot be selected by sleep-talk."
+257,9,"User digs underground, dodging all attacks, and hits next turn.","Inflicts [regular damage].  User digs underground for one turn, becoming immune to attack, and hits on the second turn.
+
+During the immune turn, earthquake, fissure, and magnitude still hit the user normally, and their power is doubled if appropriate.
+
+The user may be hit during its immune turn if under the effect of lock-on, mind-reader, or no-guard.
+
+This move cannot be selected by sleep-talk."
+258,9,Inflicts regular damage and can hit Dive users.,"Inflicts [regular damage].
+
+If the target is in the first turn of dive, this move will hit with double power."
+259,9,Lowers the target's evasion by one stage.  Removes field effects from the enemy field.,"Lowers the target's [evasion] by one [stage].  Clears away fog.  Removes the effects of mist, light-screen, reflect, safeguard, spikes, stealth-rock, and toxic-spikes from the target's side of the [field].
+
+If the target is protected by mist, it will prevent the [evasion] change, then be removed by this move."
+260,9,"For five turns, slower Pokémon will act before faster Pokémon.","For five turns (including this one), slower Pokémon will act before faster Pokémon.  Move priority is not affected.  Using this move when its effect is already active will end the effect.
+
+Pokémon holding full-incense, lagging-tail, or quick-claw and Pokémon with stall ignore this effect."
+261,9,Has a $effect_chance% chance to freeze the target.,"Inflicts [regular damage].  Has a $effect_chance% chance to [freeze] the target.
+
+During hail, this move has 100% accuracy.  It also has a (100 - accuracy)% chance to break through the protection of protect and detect."
+262,9,Prevents the target from leaving battle and inflicts 1/16 its max HP in damage for 2-5 turns.,"Inflicts [regular damage].  For the next 2–5 turns, the target cannot leave the field and is damaged for 1/16 its max HP at the end of each turn.  The user continues to use other moves during this time.  If the user leaves the [field], this effect ends.
+
+Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 times.  Averages to 3 hits per use.
+
+If the target is in the first turn of dive, this move will hit with double power."
+263,9,User takes 1/3 the damage inflicted in recoil.  Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage].  User takes 1/3 the damage it inflicts in recoil.  Has a $effect_chance% chance to [paralyze] the target.
+264,9,"User bounces high into the air, dodging all attacks, and hits next turn.","Inflicts [regular damage].  User bounces high into the air for one turn, becoming immune to attack, and hits on the second turn.  Has a $effect_chance% chance to [paralyze] the target.
+
+During the immune turn, gust, hurricane, sky-uppercut, smack-down, thunder, and twister still hit the user normally.  gust and twister also have double power against the user.
+
+The damage from hail and sandstorm still applies during the immune turn.
+
+The user may be hit during its immune turn if under the effect of lock-on, mind-reader, or no-guard.
+
+This move cannot be used while gravity is in effect.
+
+This move cannot be selected by sleep-talk."
+266,9,Lowers the target's Special Attack by two stages if it's the opposite gender.,"Lowers the target's [Special Attack] by two [stages].  If the user and target are the same gender, or either is genderless, this move will [fail]."
+267,9,Causes damage when opposing Pokémon switch in.,"Spreads sharp rocks around the opposing [field], damaging any Pokémon that enters the [field] for 1/8 its max [HP].  This damage is affected by the entering Pokémon's susceptibility to rock moves.
+
+rapid-spin removes this effect from its user's side of the [field]."
+268,9,Has a higher chance to confuse the target when the recorded sound is louder.,"Inflicts [regular damage].  Has either a 1%, 11%, or 31% chance to [confuse] the target, based on the volume of the recording made for this move; louder recordings increase the chance of [confusion].  If the user is not a chatot, this move will not cause [confusion].
+
+This move cannot be copied by mimic, mirror-move, or sketch, nor selected by assist, metronome, or sleep-talk."
+269,9,"If the user is holding a appropriate plate or drive, the damage inflicted will match it.","Inflicts [regular damage].  If the user is holding a plate or a drive, this move's type is the type corresponding to that item.
+
+Note: This effect is technically shared by both techno-blast and judgment; however, Techno Blast is only affected by drives, and Judgment is only affected by plates."
+270,9,User receives 1/2 the damage inflicted in recoil.,Inflicts [regular damage].  User takes 1/2 the damage it inflicts in recoil.
+271,9,"User faints, and its replacement is fully healed.","User [faint].  Its replacement's [HP] and [PP] are fully restored, and any [major status effect]-effect is removed."
+272,9,Has a $effect_chance% chance to lower the target's Special Defense by two stages.,Inflicts [regular damage].  Has a $effect_chance% chance to lower the target's [Special Defense] by two [stages].
+273,9,"User vanishes, dodging all attacks, and hits next turn.  Hits through Protect and Detect.","Inflicts [regular damage].  User vanishes for one turn, becoming immune to attack, and hits on the second turn.
+
+This move ignores the effects of detect and protect.
+
+This move cannot be selected by sleep-talk."
+274,9,Has a $effect_chance% chance to [burn] the target and a $effect_chance% chance to make the target flinch.,Inflicts [regular damage].  Has a $effect_chance% chance to [burn] the target and a separate $effect_chance% chance to make the target [flinch].
+275,9,Has a $effect_chance% chance to freeze the target and a $effect_chance% chance to make the target flinch.,Inflicts [regular damage].  Has a $effect_chance% chance to [freeze] the target and a separate $effect_chance% chance to make the target [flinch].
+276,9,Has a $effect_chance% chance to paralyze the target and a $effect_chance% chance to make the target flinch.,Inflicts [regular damage].  Has a $effect_chance% chance to [paralyze] the target and a separate $effect_chance% chance to make the target [flinch].
+277,9,Has a $effect_chance% chance to raise the user's Special Attack by one stage.,Inflicts [regular damage].  Has a $effect_chance% chance to raise the user's [Special Attack] by one [stage].
+278,9,Raises the user's Attack and accuracy by one stage.,Raises the user's [Attack] and [accuracy] by one [stage].
+279,9,Prevents any multi-target moves from hitting friendly Pokémon this turn.,"Moves with multiple targets will not hit friendly Pokémon for the remainder of this turn.  If the user is last to act this turn, this move will [fail].
+
+This move cannot be selected by assist or metronome."
+280,9,Averages Defense and Special Defense with the target.,Averages the user's unmodified [Defense] with the target's unmodified Defense; the value becomes the unmodified Defense for both Pokémon. Unmodified [Special Defense] is averaged the same way.
+281,9,Averages Attack and Special Attack with the target.,"Averages the user's unmodified [Attack] with the target's unmodified Attack; the value becomes the unmodified Attack for both Pokémon. Unmodified [Special Attack] is averaged the same way.
+
+This effect applies before any other persistent changes to unmodified Attack or Special Attack, such as flower-gift during sunny-day."
+282,9,All Pokémon's Defense and Special Defense are swapped for 5 turns.,"For five turns (including this one), every Pokémon's [Defense] and [Special Defense] are swapped."
+283,9,"Inflicts damage based on the target's Defense, not Special Defense.","Inflicts [regular damage].  Damage calculation always uses the target's [Defense], regardless of this move's damage class."
+284,9,Inflicts double damage if the target is Poisoned.,"Inflicts [regular damage].  If the target is [poisoned], this move has double power."
+285,9,Raises the user's Speed by two stages and halves the user's weight.,Raises the user's [Speed] by two [stages].  Halves the user's weight; this effect does not stack.
+286,9,Moves have 100% accuracy against the target for three turns.,"For three turns (including this one), moves used against the target have 100% [accuracy], but the target is immune to ground damage.  Accuracy of one-hit KO moves is exempt from this effect.
+
+This effect is removed by gravity.  If Gravity is already in effect, this move will [fail]."
+287,9,Negates held items for five turns.,"For five turns (including this one), passive effects of held items are ignored, and Pokémon will not use their held items."
+288,9,Removes any immunity to Ground damage.,"Inflicts [regular damage].  Removes the target's [immunity] to ground-type damage.  This effect removes any existing Ground immunity due to levitate, magnet-rise, or telekinesis, and causes the target's flying type to be ignored when it takes Ground damage.
+
+If the target isn't immune to Ground damage, this move will [fail].
+
+This move can hit Pokémon under the effect of bounce, fly, or sky-drop, and ends the effect of Bounce or Fly."
+289,9,Always scores a critical hit.,Inflicts [regular damage].  Always scores a [critical hit].
+290,9,Deals splash damage to Pokémon next to the target.,"Inflicts [regular damage].  If this move successfully hits the target, any Pokémon adjacent to the target are damaged for 1/16 their max [HP]."
+291,9,"Raises the user's Special Attack, Special Defense, and Speed by one stage each.","Raises the user's [Special Attack], [Special Defense], and [Speed] by one [stage] each."
+292,9,"Power is higher when the user weighs more than the target, up to a maximum of 120.","Inflicts [regular damage].  The greater the user's weight compared to the target's, the higher power this move has, to a maximum of 120.
+
+User's weight                    | Power
+-------------------------------- | ----:
+Up to 2× the target's weight     |    40
+Up to 3× the target's weight     |    60
+Up to 4× the target's weight     |    80
+Up to 5× the target's weight     |   100
+More than 5× the target's weight |   120
+"
+293,9,Hits any Pokémon that shares a type with the user.,Inflicts [regular damage].  Only Pokémon that share a type with the user will take damage from this move.
+294,9,"Power is higher when the user has greater Speed than the target, up to a maximum of 150.","Inflicts [regular damage].  The greater the user's [Speed] compared to the target's, the higher power this move has, to a maximum of 150.
+
+User's Speed                     | Power
+-------------------------------- | ----:
+Up to 2× the target's Speed      |    60
+Up to 3× the target's Speed      |    80
+Up to 4× the target's Speed      |   120
+More than 4× the target's Speed  |   150
+"
+295,9,Changes the target's type to Water.,"Changes the target to pure water-type until it leaves the field.  If the target has multitype, this move will [fail]."
+296,9,Inflicts regular damage.  Raises the user's Speed by one stage.,Inflicts [regular damage].  Raises the user's [Speed] by one [stage].
+297,9,Lowers the target's Special Defense by two stages.,Inflicts [regular damage].  Lowers the target's [Special Defense] by two [stages].
+298,9,Calculates damage with the target's attacking stat.,Inflicts [regular damage].  Damage is calculated using the target's attacking stat rather than the user's.
+299,9,Changes the target's ability to Simple.,Changes the target's ability to simple.
+300,9,Copies the user's ability onto the target.,Changes the target's ability to match the user's.  This effect ends when the target leaves battle.
+301,9,Makes the target act next this turn.,"The target will act next this turn, regardless of [Speed] or move priority.
+If the target has already acted this turn, this move will [fail]."
+302,9,Has double power if it's used more than once per turn.,"Inflicts [regular damage].  If round has already been used this turn, this move's power is doubled.  After this move is used, any other Pokémon using it this turn will immediately do so (in the order they would otherwise act), regardless of [Speed] or priority.  Pokémon using other moves will then continue to act as usual."
+303,9,"Power increases by 100% for each consecutive use by any friendly Pokémon, to a maximum of 200.","Inflicts [regular damage].  If any friendly Pokémon used this move earlier this turn or on the previous turn, that use's power is added to this move's power, to a maximum of 200."
+304,9,Ignores the target's stat modifiers.,"Inflicts [regular damage].  Damage calculation ignores the target's [stat modifiers], including [evasion]."
+305,9,Removes all of the target's stat modifiers.,Inflicts [regular damage].  All of the target's [stat modifiers] are reset to zero.
+306,9,"Power is higher the more the user's stats have been raised, to a maximum of 31×.","Inflicts [regular damage].  Power is increased by 100% its original value for every [stage] any of the user's stats have been raised.  [Accuracy], [evasion], and lowered stats do not affect this move's power.  For a Pokémon with all five stats modified to +6, this move's power is 31×."
+307,9,Prevents any priority moves from hitting friendly Pokémon this turn.,"Moves with priority greater than 0 will not hit friendly Pokémon for the remainder of this turn.  If the user is last to act this turn, this move will [fail].
+
+This move cannot be selected by assist or metronome."
+308,9,User switches places with the friendly Pokémon opposite it.,"User switches position on the field with the friendly Pokémon opposite it.  If the user is in the middle position in a triple battle, or there are no other friendly Pokémon, this move will [fail]."
+309,9,"Raises user's Attack, Special Attack, and Speed by two stages.  Lower user's Defense and Special Defense by one stage.","Raises the user's [Attack], [Special Attack], and [Speed] by two [stages] each.  Lowers the user's [Defense] and [Special Defense] by one stage each."
+310,9,Heals the target for half its max HP.,Heals the target for half its max [HP].
+311,9,Has double power if the target has a major status ailment.,"Inflicts [regular damage].  If the target has a [major status ailment]-ailment, this move has double power."
+312,9,"Carries the target high into the air, dodging all attacks against either, and drops it next turn.","Inflicts [regular damage].  User carries the target high into the air for one turn, during which no moves will hit either Pokémon and neither can act.  On the following turn, the user drops the target, inflicting damage and ending the effect.
+
+If the target is flying-type, this move will function as normal but inflict no damage.
+
+gust, hurricane, sky-uppercut, smack-down, thunder, twister, and whirlwind can hit both the user and the target during this effect.  gust and twister will additionally have double power.
+
+The damage from hail and sandstorm still applies during this effect.
+
+Either Pokémon may be hit during this effect if also under the effect of lock-on, mind-reader, or no-guard.
+
+This move cannot be used while gravity is in effect.
+
+This move cannot be selected by sleep-talk.
+
+*Bug*: If gravity is used during a double or triple battle while this move is in effect, this move is not correctly canceled on the target, and it remains high in the air indefinitely.  As this move prevents the target from acting, the only way to subsequently remove it from the field is to faint it."
+313,9,Raises the user's Attack by one stage and its Speed by two stages.,Raises the user's [Attack] by one [stage] and its [Speed] by two stages.
+314,9,Ends wild battles.  Forces trainers to switch Pokémon.,"Inflicts [regular damage], then [switches] the target out for another of its trainer's Pokémon, selected at random.
+
+If the target is under the effect of ingrain or suction-cups, or it has a substitute, or its Trainer has no more usable Pokémon, it will not be switched out.  If the target is a wild Pokémon, the battle ends instead."
+315,9,Destroys the target's held berry.,"Inflicts [regular damage].  If the target is [holding] a [berry], it's destroyed and cannot be used in response to this move."
+316,9,Makes the target act last this turn.,"Forces the target to act last this turn, regardless of [Speed] or move [priority].  If the target has already acted this turn, this move will [fail]."
+317,9,Raises the user's Attack and Special Attack by one stage.,"Raises the user's [Attack] and [Special Attack] by one [stage] each.  During sunny-day, raises both stats by two stages."
+318,9,Has double power if the user has no held item.,"Inflicts [regular damage].  If the user has no [held item], this move has double power."
+319,9,User becomes the target's type.,User's type changes to match the target's.
+320,9,Has double power if a friendly Pokémon fainted last turn.,"Inflicts [regular damage].  If a friendly Pokémon fainted on the previous turn, this move has double power."
+321,9,Inflicts damage equal to the user's remaining HP.  User faints.,Inflicts damage equal to the user's remaining [HP].  User faints.
+322,9,Raises the user's Special Attack by three stages.,Raises the user's [Special Attack] by three [stages].
+323,9,"Raises the user's Attack, Defense, and accuracy by one stage each.","Raises the user's [Attack], [Defense], and [accuracy] by one [stage] each."
+324,9,Gives the user's held item to the target.,"Transfers the user's [held item] to the target.  If the user has no held item, or the target already has a held item, this move will [fail]."
+325,9,"With [Grass Pledge], halves opposing Pokémon's Speed for four turns.","Inflicts [regular damage].  If a friendly Pokémon used grass-pledge earlier this turn, all opposing Pokémon have halved [Speed] for four turns (including this one)."
+326,9,"With [Water Pledge], doubles the effect chance of friendly Pokémon's moves for four turns.","Inflicts [regular damage].  If a friendly Pokémon used water-pledge earlier this turn, moves used by any friendly Pokémon have doubled effect chance for four turns (including this one)."
+327,9,"With [Fire Pledge], damages opposing Pokémon for 1/8 their max HP every turn for four turns.","Inflicts [regular damage].  If a friendly Pokémon used fire-pledge earlier this turn, all opposing Pokémon will take 1/8 their max [HP] in damage at the end of every turn for four turns (including this one)."
+328,9,Raises the user's Attack and Special Attack by one stage each.,Raises the user's [Attack] and [Special Attack] by one [stage] each.
+329,9,Raises the user's Defense by three stages.,Raises the user's [Defense] by three [stages].
+330,9,Has a $effect_chance% chance to put the target to sleep.,"Inflicts [regular damage].  Has a $effect_chance% chance to put the target to [sleep].
+If the user is a meloetta, it will toggle between Aria and Pirouette Forme."
+331,9,Lowers the target's Speed by one stage.,Inflicts [regular damage].  Lowers the target's [Speed] by one [stage].
+332,9,Requires a turn to charge before attacking.  Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [paralyze] the target.  User charges for one turn before attacking.
+333,9,Requires a turn to charge before attacking.  Has a $effect_chance% chance to [burn] the target.,Inflicts [regular damage].  Has a $effect_chance% chance to [burn] the target.  User charges for one turn before attacking.
+335,9,"Lowers the user's Defense, Special Defense, and Speed by one stage each.","Inflicts [regular damage].  Lowers the user's [Defense], [Special Defense], and [Speed] by one [stage] each."
+336,9,"With [Fusion Bolt], inflicts double damage.","Inflicts [regular damage].  If a friendly Pokémon used fusion-bolt earlier this turn, this move has double power."
+337,9,"With [Fusion Flare], inflicts double damage.","Inflicts [regular damage].  If a friendly Pokémon used fusion-flare earlier this turn, this move has double power."
+338,9,Has a $effect_chance% chance to confuse the target.,"Inflicts [regular damage].  Has a $effect_chance% chance to [confuse] the target.
+
+This move can hit Pokémon under the effect of bounce, fly, or sky-drop.
+
+During rain-dance, this move has 100% accuracy.  During sunny-day, this move has 50% accuracy."
+339,9,Deals both fighting and flying-type damage.,Deals both fighting and flying-type damage.
+340,9,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.
+341,9,Uses up the user's berry.  Fails if it is not holding one.,Uses up the user's berry.  Fails if it is not holding one.
+342,9,Raises the Attack and Special Attack of all grass Pokémon in battle.,Raises the Attack and Special Attack of all grass Pokémon in battle
+343,9,Lowers opponents' Speed by one stage when they enter battle.,Lowers opponents' Speed by one stage when they enter battle.
+344,9,Raises the user's Attack by two stages if it KOs the target.,Raises the user's Attack by two stages if it KOs the target.
+345,9,Adds ghost to the target's types.,Adds ghost to the target's types.
+346,9,Lowers the target's Attack and Special Attack by one stage.,Lowers the target's Attack and Special Attack by one stage.
+347,9,Changes normal moves to electric moves.,Changes normal moves to electric moves.
+348,9,Heals the user for half the total damage dealt to all targets.,Heals the user for half the total damage dealt to all targets.
+349,9,Adds grass to the target's types.,Adds grass to the target's types.
+350,9,Super-effective against water-types.,Super-effective against water-types.
+351,9,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.,Lowers all targets' Attack and Special Attack by one stage.  Makes the user switch out.
+352,9,Inverts the target's stat modifiers.,Inverts the target's stat modifiers.
+353,9,Drains 75% of the damage inflicted to heal the user.,Drains 75% of the damage inflicted to heal the user.
+354,9,Protects all friendly Pokémon from non-damaging moves.,Protects all friendly Pokémon from non-damaging moves.
+355,9,Raises the Defense of all grass Pokémon in battle,Raises the Defense of all grass Pokémon in battle.
+356,9,"For five turns, heals all Pokémon on the ground for 1/16 their max HP each turn and strengthens their grass moves to 1.5× their power.","For five turns, heals all Pokémon on the ground for 1/16 their max HP each turn and strengthens their grass moves to 1.5× their power.
+
+Changes nature-power to energy-ball."
+357,9,"For five turns, protects all Pokémon on the ground from major status ailments and confusion and weakens their dragon moves to 0.5× their power.","For five turns, protects all Pokémon on the ground from major status ailments and confusion and weakens their dragon moves to 0.5× their power.
+
+Changes nature-power to moonblast."
+358,9,Changes the target's move's type to electric if it hasn't moved yet this turn.,Changes the target's move's type to electric if it hasn't moved yet this turn.
+359,9,Prevents all Pokémon from fleeing or switching out during the next turn.,Prevents all Pokémon from fleeing or switching out during the next turn.
+360,9,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.,Blocks damaging attacks and lowers attacking Pokémon's Attack by two stages on contact.  Switches Aegislash to Shield Forme.
+361,9,Lowers the target's Special Attack by one stage.,Lowers the target's Special Attack by one stage.
+362,9,Blocks damaging attacks and damages attacking Pokémon for 1/8 their max HP.,Blocks damaging attacks and damages attacking Pokémon for 1/8 their max HP.
+363,9,Raises a selected ally's Special Defense by one stage.,Raises a selected ally's Special Defense by one stage.
+364,9,"Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned.","Lowers the target's Attack, Special Attack, and Speed by one stage if it is poisoned."
+365,9,Damages the target if it uses a fire move.,Damages the target if it uses a fire move.
+366,9,"Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages.","Takes one turn to charge, then raises the user's Special Attack, Special Defense, and Speed by two stages."
+367,9,Raises Defense and Special Defense by one stage for friendly Pokémon with with plus or minus.,Raises Defense and Special Defense by one stage for friendly Pokémon with with plus or minus.
+368,9,"For five turns, prevents Pokémon on the ground from sleeping and strengthens their electric moves to 1.5× their power.","For five turns, prevents Pokémon on the ground from sleeping and strengthens their electric moves to 1.5× their power.
+
+Changes nature-power to thunderbolt."
+369,9,Lowers the target's Special Attack by two stages.,Lowers the target's Special Attack by two stages.
+370,9,Doubles prize money.,Doubles prize money.  Stacks with a held item.  Only works once per battle..
+10001,9,Has an increased chance for a critical hit in Hyper Mode.,Inflicts [regular damage].  User's [critical hit] rate is one level higher when using this move while in [hyper mode].
+10002,9,User receives 1/2 its HP in recoil.,Inflicts [regular damage].  User takes 1/2 of its current [HP] in recoil.
+10003,9,Halves HP of all Pokémon on the field.  Must recharge,"Halves [HP] of all Pokémon on the field.  User loses its next turn to ""recharge"", and cannot attack or [switch] out during that turn."
+10004,9,Lowers the target's evasion by two stages.,Lowers the target's [evasion] by two [stages].
+10005,9,"Removes [Light Screen], [Reflect], and [Safeguard].","Removes the effects of light-screen, reflect, and safeguard."
+10006,9,Changes the weather to Shadow Sky for five turns.,Changes the weather to Shadow Sky for five turns.  Pokémon other than shadow Pokémon take 1/16 their max [HP] at the end of every turn.  This move is typeless for the purposes of weather-ball.

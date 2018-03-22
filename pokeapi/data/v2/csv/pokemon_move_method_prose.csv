@@ -1,0 +1,22 @@
+pokemon_move_method_id,local_language_id,name,description
+1,6,Level up,"Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht."
+1,7,Nivel,Se aprende cuando un pokemon alcanza un cierto nivel.
+1,9,Level up,Learned when a Pokémon reaches a certain level.
+2,6,Ei,"Erscheint bei einem frisch geschlüpften Pokémon, wenn der Vater die selbe Fähigkeit hatte."
+2,7,Huevo,"Aparece en un Pokémon recién nacido, si el padre tuvo el mismo movimiento."
+2,9,Egg,"Appears on a newly-hatched Pokémon, if the father had the same move."
+3,6,Tutor,Kann jederzeit von einem NPC erlernt werden.
+3,7,Tutor, Puede ser enseñado en cualquier momento por un NPC.
+3,9,Tutor,Can be taught at any time by an NPC.
+4,6,Maschine,Kann jederzeit durch das benutzen eines TM oder VM erlernt werden.
+4,7,Máquina,Se puede enseñar en cualquier momento usando una MT o MO.
+4,9,Machine,Can be taught at any time by using a TM or HM.
+5,6,Stadium: Surfendes Pikachu,"Wird gelernt, wenn ein Pikachu dabei hilft den Premium-Cup in der Kategorie Meisterball ohne unterbrechung zu besiegen.  Es muss in jedem Kampf teilnehmen."
+5,9,Stadium: Surfing Pikachu,"Learned when a non-rental Pikachu helps beat Prime Cup Master Ball R-2.  It must participate in every battle, and you must win with no continues."
+6,6,Volttackle Pichu,Erscheint bei einem Pichu dessen Mutter einen Kugelblitz trug.  Der Vater darf nicht Ditto sein.
+6,9,Volt Tackle Pichu,Appears on a Pichu whose mother was holding a Light Ball.  The father cannot be Ditto.
+7,9,Colosseum: Purification,Appears on a Shadow Pokémon as it becomes increasingly purified.
+8,9,XD: Shadow,Appears on a Snatched Shadow Pokémon.
+9,9,XD: Purification,Appears on a Shadow Pokémon as it becomes increasingly purified.
+10,6,Rotom Formen,"Erscheint, wenn Rotom seine Form wechselt.  Verschwindet wenn Rotom eine andere Form an nimmt. Diese Fähigkeit kann nur durch wechseln der Form erlernt werden."
+10,9,Form Change,Appears when Rotom or Cosplay Pikachu changes form.  Disappears if the Pokémon becomes another form and this move can only be learned by form change.

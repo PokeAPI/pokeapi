@@ -1,0 +1,29 @@
+move_target_id,local_language_id,name,description
+1,6,Spezifische Fähigkeit,Eine spezifische Fähigkeit.  Wie diese Fähigkeit genutzt wird hängt von den genutzten Fähigkeiten ab.
+1,9,Specific move,One specific move.  How this move is chosen depends upon on the move being used.
+2,6,Ausgewähltes Pokémon,Ein anderes vom Trainer ausgewähltes Pokémon auf dem Feld.  Gestohlene Fähigkeiten nutzen das selbe Ziel.
+2,9,Selected Pokémon,"One other Pokémon on the field, selected by the trainer.  Stolen moves reuse the same target."
+3,6,Partner,Die Partner des Anwenders (wenn vorhanden).
+3,9,Ally,The user's ally (if any).
+4,6,Seite des Anwenders,Die Seite des Anwenders auf dem Feld.  Betrifft den Anwender und seine Partner (wenn vorhanden).
+4,9,User's field,The user's side of the field.  Affects the user and its ally (if any).
+5,6,Anwender oder Partner,Entweder der Anwender oder seine Partner. Der Trainer kann es aussuchen.
+5,9,User or ally,"Either the user or its ally, selected by the trainer."
+6,6,Gegnerisches Feld,Die andere Seite des Feldes.  Betrifft gegnerische Pokémon.
+6,9,Opponent's field,The opposing side of the field.  Affects opposing Pokémon.
+7,6,Anwender,Der Anwender.
+7,9,User,The user.
+8,6,Zufälliger Gegner,Ein zufälliges gegnerische Pokémon.
+8,9,Random opponent,"One opposing Pokémon, selected at random."
+9,6,Alle anderen Pokémon,Jedes andere Pokémon auf dem Feld.
+9,9,All other Pokémon,Every other Pokémon on the field.
+10,6,Ausgewähltes Pokémon,"Ein anderes Pokémon auf dem Feld, welches vom Trainer ausgewählt wird."
+10,9,Selected Pokémon,"One other Pokémon on the field, selected by the trainer."
+11,6,Alle Gegner,Alle gegnerischen Pokémon.
+11,9,All opponents,All opposing Pokémon.
+12,6,Komplette Feld,Das komplette Feld.  Betrifft alle Pokémon.
+12,9,Entire field,The entire field.  Affects all Pokémon.
+13,6,Anwender und Partner,Der Anwender und seine Partner.
+13,9,User and allies,The user and its allies.
+14,6,Jedes Pokémon,Jedes Pokémon auf dem Feld.
+14,9,All Pokémon,Every Pokémon on the field.

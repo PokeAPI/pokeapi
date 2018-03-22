@@ -1,0 +1,42 @@
+move_meta_ailment_id,local_language_id,name
+-1,5,????
+-1,9,????
+0,5,Aucun
+0,9,none
+1,5,Paralysie
+1,9,Paralysis
+2,5,Sommeil
+2,9,Sleep
+3,5,Gel
+3,9,Freeze
+4,5,Brûlure
+4,9,Burn
+5,5,Empoisonnement
+5,9,Poison
+6,5,Confusion
+6,9,Confusion
+7,5,Attraction
+7,9,Infatuation
+8,5,Piège
+8,9,Trap
+9,5,Cauchemar
+9,9,Nightmare
+12,5,Tourmente
+12,9,Torment
+13,5,Entrave
+13,9,Disable
+14,5,Bâillement
+14,9,Yawn
+15,5,Anti-Soin
+15,9,Heal Block
+17,5,Aucune immunité aux types
+17,9,No type immunity
+18,5,Vampigraine
+18,9,Leech Seed
+19,5,Embargo
+19,9,Embargo
+20,5,Requiem
+20,9,Perish Song
+21,5,Racines
+21,9,Ingrain
+24,9,Silence

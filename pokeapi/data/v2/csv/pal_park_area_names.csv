@@ -1,0 +1,11 @@
+pal_park_area_id,local_language_id,name
+1,5,Forêt
+1,9,Forest
+2,5,Plaine
+2,9,Field
+3,5,Montagne
+3,9,Mountain
+4,5,Étang
+4,9,Pond
+5,5,Mer
+5,9,Sea

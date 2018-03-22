@@ -1,0 +1,13 @@
+id,iso639,iso3166,identifier,official,order
+1,ja,jp,ja-Hrkt,1,1
+2,ja,jp,roomaji,1,3
+3,ko,kr,ko,1,4
+4,zh,cn,zh-Hant,1,5
+5,fr,fr,fr,1,8
+6,de,de,de,1,9
+7,es,es,es,1,10
+8,it,it,it,1,11
+9,en,us,en,1,7
+10,cs,cz,cs,0,12
+11,ja,jp,ja,1,2
+12,zh,cn,zh-Hans,1,6

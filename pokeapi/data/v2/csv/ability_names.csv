@@ -1,0 +1,2381 @@
+ability_id,local_language_id,name
+1,1,あくしゅう
+1,3,악취
+1,4,惡臭
+1,5,Puanteur
+1,6,Duftnote
+1,7,Hedor
+1,8,Tanfo
+1,9,Stench
+1,11,あくしゅう
+1,12,恶臭
+2,1,あめふらし
+2,3,잔비
+2,4,降雨
+2,5,Crachin
+2,6,Niesel
+2,7,Llovizna
+2,8,Piovischio
+2,9,Drizzle
+2,11,あめふらし
+2,12,降雨
+3,1,かそく
+3,3,가속
+3,4,加速
+3,5,Turbo
+3,6,Temposchub
+3,7,Impulso
+3,8,Acceleratore
+3,9,Speed Boost
+3,11,かそく
+3,12,加速
+4,1,カブトアーマー
+4,3,전투무장
+4,4,戰鬥盔甲
+4,5,Armurbaston
+4,6,Kampfpanzer
+4,7,Armadura Batalla
+4,8,Lottascudo
+4,9,Battle Armor
+4,11,カブトアーマー
+4,12,战斗盔甲
+5,1,がんじょう
+5,3,옹골참
+5,4,結實
+5,5,Fermeté
+5,6,Robustheit
+5,7,Robustez
+5,8,Vigore
+5,9,Sturdy
+5,11,がんじょう
+5,12,结实
+6,1,しめりけ
+6,3,습기
+6,4,濕氣
+6,5,Moiteur
+6,6,Feuchtigkeit
+6,7,Humedad
+6,8,Umidità
+6,9,Damp
+6,11,しめりけ
+6,12,湿气
+7,1,じゅうなん
+7,3,유연
+7,4,柔軟
+7,5,Échauffement
+7,6,Flexibilität
+7,7,Flexibilidad
+7,8,Scioltezza
+7,9,Limber
+7,11,じゅうなん
+7,12,柔软
+8,1,すながくれ
+8,3,모래숨기
+8,4,沙隱
+8,5,Voile Sable
+8,6,Sandschleier
+8,7,Velo Arena
+8,8,Sabbiavelo
+8,9,Sand Veil
+8,11,すながくれ
+8,12,沙隐
+9,1,せいでんき
+9,3,정전기
+9,4,靜電
+9,5,Statik
+9,6,Statik
+9,7,Elec. Estática
+9,8,Statico
+9,9,Static
+9,11,せいでんき
+9,12,静电
+10,1,ちくでん
+10,3,축전
+10,4,蓄電
+10,5,Absorb Volt
+10,6,Voltabsorber
+10,7,Absorbe Elec
+10,8,Assorbivolt
+10,9,Volt Absorb
+10,11,ちくでん
+10,12,蓄电
+11,1,ちょすい
+11,3,저수
+11,4,儲水
+11,5,Absorb Eau
+11,6,H2O-Absorber
+11,7,Absorbe Agua
+11,8,Assorbacqua
+11,9,Water Absorb
+11,11,ちょすい
+11,12,储水
+12,1,どんかん
+12,3,둔감
+12,4,遲鈍
+12,5,Benêt
+12,6,Dösigkeit
+12,7,Despiste
+12,8,Indifferenza
+12,9,Oblivious
+12,11,どんかん
+12,12,迟钝
+13,1,ノーてんき
+13,3,날씨부정
+13,4,無關天氣
+13,5,Ciel Gris
+13,6,Wolke Sieben
+13,7,Aclimatación
+13,8,Antimeteo
+13,9,Cloud Nine
+13,11,ノーてんき
+13,12,无关天气
+14,1,ふくがん
+14,3,복안
+14,4,複眼
+14,5,Œil Composé
+14,6,Facettenauge
+14,7,Ojo Compuesto
+14,8,Insettocchi
+14,9,Compound Eyes
+14,11,ふくがん
+14,12,复眼
+15,1,ふみん
+15,3,불면
+15,4,不眠
+15,5,Insomnia
+15,6,Insomnia
+15,7,Insomnio
+15,8,Insonnia
+15,9,Insomnia
+15,11,ふみん
+15,12,不眠
+16,1,へんしょく
+16,3,변색
+16,4,變色
+16,5,Déguisement
+16,6,Farbwechsel
+16,7,Cambio Color
+16,8,Cambiacolore
+16,9,Color Change
+16,11,へんしょく
+16,12,变色
+17,1,めんえき
+17,3,면역
+17,4,免疫
+17,5,Vaccin
+17,6,Immunität
+17,7,Inmunidad
+17,8,Immunità
+17,9,Immunity
+17,11,めんえき
+17,12,免疫
+18,1,もらいび
+18,3,타오르는불꽃
+18,4,引火
+18,5,Torche
+18,6,Feuerfänger
+18,7,Absorbe Fuego
+18,8,Fuocardore
+18,9,Flash Fire
+18,11,もらいび
+18,12,引火
+19,1,りんぷん
+19,3,인분
+19,4,鱗粉
+19,5,Écran Poudre
+19,6,Puderabwehr
+19,7,Polvo Escudo
+19,8,Polvoscudo
+19,9,Shield Dust
+19,11,りんぷん
+19,12,鳞粉
+20,1,マイペース
+20,3,마이페이스
+20,4,我行我素
+20,5,Tempo Perso
+20,6,Tempomacher
+20,7,Ritmo Propio
+20,8,Mente Locale
+20,9,Own Tempo
+20,11,マイペース
+20,12,我行我素
+21,1,きゅうばん
+21,3,흡반
+21,4,吸盤
+21,5,Ventouse
+21,6,Saugnapf
+21,7,Ventosas
+21,8,Ventose
+21,9,Suction Cups
+21,11,きゅうばん
+21,12,吸盘
+22,1,いかく
+22,3,위협
+22,4,威嚇
+22,5,Intimidation
+22,6,Bedroher
+22,7,Intimidación
+22,8,Prepotenza
+22,9,Intimidate
+22,11,いかく
+22,12,威吓
+23,1,かげふみ
+23,3,그림자밟기
+23,4,踩影
+23,5,Marque Ombre
+23,6,Wegsperre
+23,7,Sombra Trampa
+23,8,Pedinombra
+23,9,Shadow Tag
+23,11,かげふみ
+23,12,踩影
+24,1,さめはだ
+24,3,까칠한피부
+24,4,粗糙皮膚
+24,5,Peau Dure
+24,6,Rauhaut
+24,7,Piel Tosca
+24,8,Cartavetro
+24,9,Rough Skin
+24,11,さめはだ
+24,12,粗糙皮肤
+25,1,ふしぎなまもり
+25,3,불가사의부적
+25,4,神奇守護
+25,5,Garde Mystik
+25,6,Wunderwache
+25,7,Superguarda
+25,8,Magidifesa
+25,9,Wonder Guard
+25,11,ふしぎなまもり
+25,12,神奇守护
+26,1,ふゆう
+26,3,부유
+26,4,飄浮
+26,5,Lévitation
+26,6,Schwebe
+26,7,Levitación
+26,8,Levitazione
+26,9,Levitate
+26,11,ふゆう
+26,12,飘浮
+27,1,ほうし
+27,3,포자
+27,4,孢子
+27,5,Pose Spore
+27,6,Sporenwirt
+27,7,Efecto Espora
+27,8,Spargispora
+27,9,Effect Spore
+27,11,ほうし
+27,12,孢子
+28,1,シンクロ
+28,3,싱크로
+28,4,同步
+28,5,Synchro
+28,6,Synchro
+28,7,Sincronía
+28,8,Sincronismo
+28,9,Synchronize
+28,11,シンクロ
+28,12,同步
+29,1,クリアボディ
+29,3,클리어바디
+29,4,恆淨之軀
+29,5,Corps Sain
+29,6,Neutraltorso
+29,7,Cuerpo Puro
+29,8,Corpochiaro
+29,9,Clear Body
+29,11,クリアボディ
+29,12,恒净之躯
+30,1,しぜんかいふく
+30,3,자연회복
+30,4,自然回復
+30,5,Médic Nature
+30,6,Innere Kraft
+30,7,Cura Natural
+30,8,Alternacura
+30,9,Natural Cure
+30,11,しぜんかいふく
+30,12,自然回复
+31,1,ひらいしん
+31,3,피뢰침
+31,4,避雷針
+31,5,Paratonnerre
+31,6,Blitzfänger
+31,7,Pararrayos
+31,8,Parafulmine
+31,9,Lightning Rod
+31,11,ひらいしん
+31,12,避雷针
+32,1,てんのめぐみ
+32,3,하늘의은총
+32,4,天恩
+32,5,Sérénité
+32,6,Edelmut
+32,7,Dicha
+32,8,Leggiadro
+32,9,Serene Grace
+32,11,てんのめぐみ
+32,12,天恩
+33,1,すいすい
+33,3,쓱쓱
+33,4,悠游自如
+33,5,Glissade
+33,6,Wassertempo
+33,7,Nado Rápido
+33,8,Nuotovelox
+33,9,Swift Swim
+33,11,すいすい
+33,12,悠游自如
+34,1,ようりょくそ
+34,3,엽록소
+34,4,葉綠素
+34,5,Chlorophylle
+34,6,Chlorophyll
+34,7,Clorofila
+34,8,Clorofilla
+34,9,Chlorophyll
+34,11,ようりょくそ
+34,12,叶绿素
+35,1,はっこう
+35,3,발광
+35,4,發光
+35,5,Lumiattirance
+35,6,Erleuchtung
+35,7,Iluminación
+35,8,Risplendi
+35,9,Illuminate
+35,11,はっこう
+35,12,发光
+36,1,トレース
+36,3,트레이스
+36,4,複製
+36,5,Calque
+36,6,Fährte
+36,7,Rastro
+36,8,Traccia
+36,9,Trace
+36,11,トレース
+36,12,复制
+37,1,ちからもち
+37,3,천하장사
+37,4,大力士
+37,5,Coloforce
+37,6,Kraftkoloss
+37,7,Potencia
+37,8,Macroforza
+37,9,Huge Power
+37,11,ちからもち
+37,12,大力士
+38,1,どくのトゲ
+38,3,독가시
+38,4,毒刺
+38,5,Point Poison
+38,6,Giftdorn
+38,7,Punto Tóxico
+38,8,Velenopunto
+38,9,Poison Point
+38,11,どくのトゲ
+38,12,毒刺
+39,1,せいしんりょく
+39,3,정신력
+39,4,精神力
+39,5,Attention
+39,6,Konzentrator
+39,7,Foco Interno
+39,8,Forza Interiore
+39,9,Inner Focus
+39,11,せいしんりょく
+39,12,精神力
+40,1,マグマのよろい
+40,3,마그마의무장
+40,4,熔岩鎧甲
+40,5,Armumagma
+40,6,Magmapanzer
+40,7,Escudo Magma
+40,8,Magmascudo
+40,9,Magma Armor
+40,11,マグマのよろい
+40,12,熔岩铠甲
+41,1,みずのベール
+41,3,수의베일
+41,4,水幕
+41,5,Ignifu-Voile
+41,6,Aquahülle
+41,7,Velo Agua
+41,8,Idrovelo
+41,9,Water Veil
+41,11,みずのベール
+41,12,水幕
+42,1,じりょく
+42,3,자력
+42,4,磁力
+42,5,Magnépiège
+42,6,Magnetfalle
+42,7,Imán
+42,8,Magnetismo
+42,9,Magnet Pull
+42,11,じりょく
+42,12,磁力
+43,1,ぼうおん
+43,3,방음
+43,4,隔音
+43,5,Anti-Bruit
+43,6,Lärmschutz
+43,7,Insonorizar
+43,8,Antisuono
+43,9,Soundproof
+43,11,ぼうおん
+43,12,隔音
+44,1,あめうけざら
+44,3,젖은접시
+44,4,雨盤
+44,5,Cuvette
+44,6,Regengenuss
+44,7,Cura Lluvia
+44,8,Copripioggia
+44,9,Rain Dish
+44,11,あめうけざら
+44,12,雨盘
+45,1,すなおこし
+45,3,모래날림
+45,4,揚沙
+45,5,Sable Volant
+45,6,Sandsturm
+45,7,Chorro Arena
+45,8,Sabbiafiume
+45,9,Sand Stream
+45,11,すなおこし
+45,12,扬沙
+46,1,プレッシャー
+46,3,프레셔
+46,4,壓迫感
+46,5,Pression
+46,6,Erzwinger
+46,7,Presión
+46,8,Pressione
+46,9,Pressure
+46,11,プレッシャー
+46,12,压迫感
+47,1,あついしぼう
+47,3,두꺼운지방
+47,4,厚脂肪
+47,5,Isograisse
+47,6,Speckschicht
+47,7,Sebo
+47,8,Grassospesso
+47,9,Thick Fat
+47,11,あついしぼう
+47,12,厚脂肪
+48,1,はやおき
+48,3,일찍기상
+48,4,早起
+48,5,Matinal
+48,6,Frühwecker
+48,7,Madrugar
+48,8,Sveglialampo
+48,9,Early Bird
+48,11,はやおき
+48,12,早起
+49,1,ほのおのからだ
+49,3,불꽃몸
+49,4,火焰之軀
+49,5,Corps Ardent
+49,6,Flammkörper
+49,7,Cuerpo Llama
+49,8,Corpodifuoco
+49,9,Flame Body
+49,11,ほのおのからだ
+49,12,火焰之躯
+50,1,にげあし
+50,3,도주
+50,4,逃跑
+50,5,Fuite
+50,6,Angsthase
+50,7,Fuga
+50,8,Fugafacile
+50,9,Run Away
+50,11,にげあし
+50,12,逃跑
+51,1,するどいめ
+51,3,날카로운눈
+51,4,銳利目光
+51,5,Regard Vif
+51,6,Adlerauge
+51,7,Vista Lince
+51,8,Sguardofermo
+51,9,Keen Eye
+51,11,するどいめ
+51,12,锐利目光
+52,1,かいりきバサミ
+52,3,괴력집게
+52,4,怪力鉗
+52,5,Hyper Cutter
+52,6,Scherenmacht
+52,7,Corte Fuerte
+52,8,Ipertaglio
+52,9,Hyper Cutter
+52,11,かいりきバサミ
+52,12,怪力钳
+53,1,ものひろい
+53,3,픽업
+53,4,撿拾
+53,5,Ramassage
+53,6,Mitnahme
+53,7,Recogida
+53,8,Raccolta
+53,9,Pickup
+53,11,ものひろい
+53,12,捡拾
+54,1,なまけ
+54,3,게으름
+54,4,懶惰
+54,5,Absentéisme
+54,6,Schnarchnase
+54,7,Ausente
+54,8,Pigrone
+54,9,Truant
+54,11,なまけ
+54,12,懒惰
+55,1,はりきり
+55,3,의욕
+55,4,活力
+55,5,Agitation
+55,6,Übereifer
+55,7,Entusiasmo
+55,8,Tuttafretta
+55,9,Hustle
+55,11,はりきり
+55,12,活力
+56,1,メロメロボディ
+56,3,헤롱헤롱바디
+56,4,迷人之軀
+56,5,Joli Sourire
+56,6,Charmebolzen
+56,7,Gran Encanto
+56,8,Incantevole
+56,9,Cute Charm
+56,11,メロメロボディ
+56,12,迷人之躯
+57,1,プラス
+57,3,플러스
+57,4,正電
+57,5,Plus
+57,6,Plus
+57,7,Más
+57,8,Più
+57,9,Plus
+57,11,プラス
+57,12,正电
+58,1,マイナス
+58,3,마이너스
+58,4,負電
+58,5,Minus
+58,6,Minus
+58,7,Menos
+58,8,Meno
+58,9,Minus
+58,11,マイナス
+58,12,负电
+59,1,てんきや
+59,3,기분파
+59,4,陰晴不定
+59,5,Météo
+59,6,Prognose
+59,7,Predicción
+59,8,Previsioni
+59,9,Forecast
+59,11,てんきや
+59,12,阴晴不定
+60,1,ねんちゃく
+60,3,점착
+60,4,黏著
+60,5,Glue
+60,6,Wertehalter
+60,7,Viscosidad
+60,8,Antifurto
+60,9,Sticky Hold
+60,11,ねんちゃく
+60,12,黏着
+61,1,だっぴ
+61,3,탈피
+61,4,蛻皮
+61,5,Mue
+61,6,Expidermis
+61,7,Mudar
+61,8,Muta
+61,9,Shed Skin
+61,11,だっぴ
+61,12,蜕皮
+62,1,こんじょう
+62,3,근성
+62,4,毅力
+62,5,Cran
+62,6,Adrenalin
+62,7,Agallas
+62,8,Dentistretti
+62,9,Guts
+62,11,こんじょう
+62,12,毅力
+63,1,ふしぎなうろこ
+63,3,이상한비늘
+63,4,神奇鱗片
+63,5,Écaille Spéciale
+63,6,Notschutz
+63,7,Escama Especial
+63,8,Pelledura
+63,9,Marvel Scale
+63,11,ふしぎなうろこ
+63,12,神奇鳞片
+64,1,ヘドロえき
+64,3,해감액
+64,4,污泥漿
+64,5,Suintement
+64,6,Kloakensoße
+64,7,Lodo Líquido
+64,8,Melma
+64,9,Liquid Ooze
+64,11,ヘドロえき
+64,12,污泥浆
+65,1,しんりょく
+65,3,심록
+65,4,茂盛
+65,5,Engrais
+65,6,Notdünger
+65,7,Espesura
+65,8,Erbaiuto
+65,9,Overgrow
+65,11,しんりょく
+65,12,茂盛
+66,1,もうか
+66,3,맹화
+66,4,猛火
+66,5,Brasier
+66,6,Großbrand
+66,7,Mar Llamas
+66,8,Aiutofuoco
+66,9,Blaze
+66,11,もうか
+66,12,猛火
+67,1,げきりゅう
+67,3,급류
+67,4,激流
+67,5,Torrent
+67,6,Sturzbach
+67,7,Torrente
+67,8,Acquaiuto
+67,9,Torrent
+67,11,げきりゅう
+67,12,激流
+68,1,むしのしらせ
+68,3,벌레의알림
+68,4,蟲之預感
+68,5,Essaim
+68,6,Hexaplaga
+68,7,Enjambre
+68,8,Aiutinsetto
+68,9,Swarm
+68,11,むしのしらせ
+68,12,虫之预感
+69,1,いしあたま
+69,3,돌머리
+69,4,堅硬腦袋
+69,5,Tête de Roc
+69,6,Steinhaupt
+69,7,Cabeza Roca
+69,8,Testadura
+69,9,Rock Head
+69,11,いしあたま
+69,12,坚硬脑袋
+70,1,ひでり
+70,3,가뭄
+70,4,日照
+70,5,Sécheresse
+70,6,Dürre
+70,7,Sequía
+70,8,Siccità
+70,9,Drought
+70,11,ひでり
+70,12,日照
+71,1,ありじごく
+71,3,개미지옥
+71,4,沙穴
+71,5,Piège Sable
+71,6,Ausweglos
+71,7,Trampa Arena
+71,8,Trappoarena
+71,9,Arena Trap
+71,11,ありじごく
+71,12,沙穴
+72,1,やるき
+72,3,의기양양
+72,4,幹勁
+72,5,Esprit Vital
+72,6,Munterkeit
+72,7,Espíritu Vital
+72,8,Spiritovivo
+72,9,Vital Spirit
+72,11,やるき
+72,12,干劲
+73,1,しろいけむり
+73,3,하얀연기
+73,4,白色煙霧
+73,5,Écran Fumée
+73,6,Pulverrauch
+73,7,Humo Blanco
+73,8,Fumochiaro
+73,9,White Smoke
+73,11,しろいけむり
+73,12,白色烟雾
+74,1,ヨガパワー
+74,3,순수한힘
+74,4,瑜伽之力
+74,5,Force Pure
+74,6,Mentalkraft
+74,7,Energía Pura
+74,8,Forzapura
+74,9,Pure Power
+74,11,ヨガパワー
+74,12,瑜伽之力
+75,1,シェルアーマー
+75,3,조가비갑옷
+75,4,硬殼盔甲
+75,5,Coque Armure
+75,6,Panzerhaut
+75,7,Caparazón
+75,8,Guscioscudo
+75,9,Shell Armor
+75,11,シェルアーマー
+75,12,硬壳盔甲
+76,1,エアロック
+76,3,에어록
+76,4,氣閘
+76,5,Air Lock
+76,6,Klimaschutz
+76,7,Bucle Aire
+76,8,Riparo
+76,9,Air Lock
+76,11,エアロック
+76,12,气闸
+77,1,ちどりあし
+77,3,갈지자걸음
+77,4,蹣跚
+77,5,Pieds Confus
+77,6,Fußangel
+77,7,Tumbos
+77,8,Intricopiedi
+77,9,Tangled Feet
+77,11,ちどりあし
+77,12,蹒跚
+78,1,でんきエンジン
+78,3,전기엔진
+78,4,電氣引擎
+78,5,Motorisé
+78,6,Starthilfe
+78,7,Electromotor
+78,8,Elettrorapid
+78,9,Motor Drive
+78,11,でんきエンジン
+78,12,电气引擎
+79,1,とうそうしん
+79,3,투쟁심
+79,4,鬥爭心
+79,5,Rivalité
+79,6,Rivalität
+79,7,Rivalidad
+79,8,Antagonismo
+79,9,Rivalry
+79,11,とうそうしん
+79,12,斗争心
+80,1,ふくつのこころ
+80,3,불굴의마음
+80,4,不屈之心
+80,5,Impassible
+80,6,Felsenfest
+80,7,Impasible
+80,8,Cuordeciso
+80,9,Steadfast
+80,11,ふくつのこころ
+80,12,不屈之心
+81,1,ゆきがくれ
+81,3,눈숨기
+81,4,雪隱
+81,5,Rideau Neige
+81,6,Schneemantel
+81,7,Manto Níveo
+81,8,Mantelneve
+81,9,Snow Cloak
+81,11,ゆきがくれ
+81,12,雪隐
+82,1,くいしんぼう
+82,3,먹보
+82,4,貪吃鬼
+82,5,Gloutonnerie
+82,6,Völlerei
+82,7,Gula
+82,8,Voracità
+82,9,Gluttony
+82,11,くいしんぼう
+82,12,贪吃鬼
+83,1,いかりのつぼ
+83,3,분노의경혈
+83,4,憤怒穴位
+83,5,Colérique
+83,6,Kurzschluss
+83,7,Irascible
+83,8,Grancollera
+83,9,Anger Point
+83,11,いかりのつぼ
+83,12,愤怒穴位
+84,1,かるわざ
+84,3,곡예
+84,4,輕裝
+84,5,Délestage
+84,6,Entlastung
+84,7,Liviano
+84,8,Agiltecnica
+84,9,Unburden
+84,11,かるわざ
+84,12,轻装
+85,1,たいねつ
+85,3,내열
+85,4,耐熱
+85,5,Ignifugé
+85,6,Hitzeschutz
+85,7,Ignífugo
+85,8,Antifuoco
+85,9,Heatproof
+85,11,たいねつ
+85,12,耐热
+86,1,たんじゅん
+86,3,단순
+86,4,單純
+86,5,Simple
+86,6,Wankelmut
+86,7,Simple
+86,8,Disinvoltura
+86,9,Simple
+86,11,たんじゅん
+86,12,单纯
+87,1,かんそうはだ
+87,3,건조피부
+87,4,乾燥皮膚
+87,5,Peau Sèche
+87,6,Trockenheit
+87,7,Piel Seca
+87,8,Pellearsa
+87,9,Dry Skin
+87,11,かんそうはだ
+87,12,干燥皮肤
+88,1,ダウンロード
+88,3,다운로드
+88,4,下載
+88,5,Télécharge
+88,6,Download
+88,7,Descarga
+88,8,Download
+88,9,Download
+88,11,ダウンロード
+88,12,下载
+89,1,てつのこぶし
+89,3,철주먹
+89,4,鐵拳
+89,5,Poing de Fer
+89,6,Eisenfaust
+89,7,Puño Férreo
+89,8,Ferropugno
+89,9,Iron Fist
+89,11,てつのこぶし
+89,12,铁拳
+90,1,ポイズンヒール
+90,3,포이즌힐
+90,4,毒療
+90,5,Soin Poison
+90,6,Aufheber
+90,7,Antídoto
+90,8,Velencura
+90,9,Poison Heal
+90,11,ポイズンヒール
+90,12,毒疗
+91,1,てきおうりょく
+91,3,적응력
+91,4,適應力
+91,5,Adaptabilité
+91,6,Anpassung
+91,7,Adaptable
+91,8,Adattabilità
+91,9,Adaptability
+91,11,てきおうりょく
+91,12,适应力
+92,1,スキルリンク
+92,3,스킬링크
+92,4,連續攻擊
+92,5,Multi-Coups
+92,6,Wertelink
+92,7,Encadenado
+92,8,Abillegame
+92,9,Skill Link
+92,11,スキルリンク
+92,12,连续攻击
+93,1,うるおいボディ
+93,3,촉촉바디
+93,4,濕潤之軀
+93,5,Hydratation
+93,6,Hydration
+93,7,Hidratación
+93,8,Idratazione
+93,9,Hydration
+93,11,うるおいボディ
+93,12,湿润之躯
+94,1,サンパワー
+94,3,선파워
+94,4,太陽之力
+94,5,Force Soleil
+94,6,Solarkraft
+94,7,Poder Solar
+94,8,Solarpotere
+94,9,Solar Power
+94,11,サンパワー
+94,12,太阳之力
+95,1,はやあし
+95,3,속보
+95,4,飛毛腿
+95,5,Pied Véloce
+95,6,Rasanz
+95,7,Pies Rápidos
+95,8,Piedisvelti
+95,9,Quick Feet
+95,11,はやあし
+95,12,飞毛腿
+96,1,ノーマルスキン
+96,3,노말스킨
+96,4,一般皮膚
+96,5,Normalise
+96,6,Regulierung
+96,7,Normalidad
+96,8,Normalità
+96,9,Normalize
+96,11,ノーマルスキン
+96,12,一般皮肤
+97,1,スナイパー
+97,3,스나이퍼
+97,4,狙擊手
+97,5,Sniper
+97,6,Superschütze
+97,7,Francotirador
+97,8,Cecchino
+97,9,Sniper
+97,11,スナイパー
+97,12,狙击手
+98,1,マジックガード
+98,3,매직가드
+98,4,魔法防守
+98,5,Garde Magik
+98,6,Magieschild
+98,7,Muro Mágico
+98,8,Magicscudo
+98,9,Magic Guard
+98,11,マジックガード
+98,12,魔法防守
+99,1,ノーガード
+99,3,노가드
+99,4,無防守
+99,5,Annule Garde
+99,6,Schildlos
+99,7,Indefenso
+99,8,Nullodifesa
+99,9,No Guard
+99,11,ノーガード
+99,12,无防守
+100,1,あとだし
+100,3,시간벌기
+100,4,慢出
+100,5,Frein
+100,6,Zeitspiel
+100,7,Rezagado
+100,8,Rallentatore
+100,9,Stall
+100,11,あとだし
+100,12,慢出
+101,1,テクニシャン
+101,3,테크니션
+101,4,技術高手
+101,5,Technicien
+101,6,Techniker
+101,7,Experto
+101,8,Tecnico
+101,9,Technician
+101,11,テクニシャン
+101,12,技术高手
+102,1,リーフガード
+102,3,리프가드
+102,4,葉子防守
+102,5,Feuille Garde
+102,6,Floraschild
+102,7,Defensa Hoja
+102,8,Fogliamanto
+102,9,Leaf Guard
+102,11,リーフガード
+102,12,叶子防守
+103,1,ぶきよう
+103,3,서투름
+103,4,笨拙
+103,5,Maladresse
+103,6,Tollpatsch
+103,7,Zoquete
+103,8,Impaccio
+103,9,Klutz
+103,11,ぶきよう
+103,12,笨拙
+104,1,かたやぶり
+104,3,틀깨기
+104,4,破格
+104,5,Brise Moule
+104,6,Überbrückung
+104,7,Rompemoldes
+104,8,Rompiforma
+104,9,Mold Breaker
+104,11,かたやぶり
+104,12,破格
+105,1,きょううん
+105,3,대운
+105,4,超幸運
+105,5,Chanceux
+105,6,Glückspilz
+105,7,Afortunado
+105,8,Supersorte
+105,9,Super Luck
+105,11,きょううん
+105,12,超幸运
+106,1,ゆうばく
+106,3,유폭
+106,4,引爆
+106,5,Boom Final
+106,6,Finalschlag
+106,7,Resquicio
+106,8,Scoppio
+106,9,Aftermath
+106,11,ゆうばく
+106,12,引爆
+107,1,きけんよち
+107,3,위험예지
+107,4,危險預知
+107,5,Anticipation
+107,6,Vorahnung
+107,7,Anticipación
+107,8,Presagio
+107,9,Anticipation
+107,11,きけんよち
+107,12,危险预知
+108,1,よちむ
+108,3,예지몽
+108,4,預知夢
+108,5,Prédiction
+108,6,Vorwarnung
+108,7,Alerta
+108,8,Premonizione
+108,9,Forewarn
+108,11,よちむ
+108,12,预知梦
+109,1,てんねん
+109,3,천진
+109,4,純樸
+109,5,Inconscient
+109,6,Unkenntnis
+109,7,Ignorante
+109,8,Imprudenza
+109,9,Unaware
+109,11,てんねん
+109,12,纯朴
+110,1,いろめがね
+110,3,색안경
+110,4,有色眼鏡
+110,5,Lentiteintée
+110,6,Aufwertung
+110,7,Cromolente
+110,8,Lentifumé
+110,9,Tinted Lens
+110,11,いろめがね
+110,12,有色眼镜
+111,1,フィルター
+111,3,필터
+111,4,過濾
+111,5,Filtre
+111,6,Filter
+111,7,Filtro
+111,8,Filtro
+111,9,Filter
+111,11,フィルター
+111,12,过滤
+112,1,スロースタート
+112,3,슬로스타트
+112,4,慢啟動
+112,5,Début Calme
+112,6,Saumselig
+112,7,Inicio Lento
+112,8,Lentoinizio
+112,9,Slow Start
+112,11,スロースタート
+112,12,慢启动
+113,1,きもったま
+113,3,배짱
+113,4,膽量
+113,5,Querelleur
+113,6,Rauflust
+113,7,Intrépido
+113,8,Nervisaldi
+113,9,Scrappy
+113,11,きもったま
+113,12,胆量
+114,1,よびみず
+114,3,마중물
+114,4,引水
+114,5,Lavabo
+114,6,Sturmsog
+114,7,Colector
+114,8,Acquascolo
+114,9,Storm Drain
+114,11,よびみず
+114,12,引水
+115,1,アイスボディ
+115,3,아이스바디
+115,4,冰凍之軀
+115,5,Corps Gel
+115,6,Eishaut
+115,7,Gélido
+115,8,Corpogelo
+115,9,Ice Body
+115,11,アイスボディ
+115,12,冰冻之躯
+116,1,ハードロック
+116,3,하드록
+116,4,堅硬岩石
+116,5,Solide Roc
+116,6,Felskern
+116,7,Roca Sólida
+116,8,Solidroccia
+116,9,Solid Rock
+116,11,ハードロック
+116,12,坚硬岩石
+117,1,ゆきふらし
+117,3,눈퍼뜨리기
+117,4,降雪
+117,5,Alerte Neige
+117,6,Hagelalarm
+117,7,Nevada
+117,8,Scendineve
+117,9,Snow Warning
+117,11,ゆきふらし
+117,12,降雪
+118,1,みつあつめ
+118,3,꿀모으기
+118,4,採蜜
+118,5,Cherche Miel
+118,6,Honigmaul
+118,7,Recogemiel
+118,8,Mielincetta
+118,9,Honey Gather
+118,11,みつあつめ
+118,12,采蜜
+119,1,おみとおし
+119,3,통찰
+119,4,察覺
+119,5,Fouille
+119,6,Schnüffler
+119,7,Cacheo
+119,8,Indagine
+119,9,Frisk
+119,11,おみとおし
+119,12,察觉
+120,1,すてみ
+120,3,이판사판
+120,4,捨身
+120,5,Téméraire
+120,6,Achtlos
+120,7,Audaz
+120,8,Temerarietà
+120,9,Reckless
+120,11,すてみ
+120,12,舍身
+121,1,マルチタイプ
+121,3,멀티타입
+121,4,多屬性
+121,5,Multi-Type
+121,6,Variabilität
+121,7,Multitipo
+121,8,Multitipo
+121,9,Multitype
+121,11,マルチタイプ
+121,12,多属性
+122,1,フラワーギフト
+122,3,플라워기프트
+122,4,花之禮
+122,5,Don Floral
+122,6,Pflanzengabe
+122,7,Don Floral
+122,8,Regalfiore
+122,9,Flower Gift
+122,11,フラワーギフト
+122,12,花之礼
+123,1,ナイトメア
+123,3,나이트메어
+123,4,夢魘
+123,5,Mauvais Rêve
+123,6,Alptraum
+123,7,Mal Sueño
+123,8,Sogniamari
+123,9,Bad Dreams
+123,11,ナイトメア
+123,12,梦魇
+124,1,わるいてぐせ
+124,3,나쁜손버릇
+124,4,順手牽羊
+124,5,Pickpocket
+124,6,Langfinger
+124,7,Hurto
+124,8,Arraffalesto
+124,9,Pickpocket
+124,11,わるいてぐせ
+124,12,顺手牵羊
+125,1,ちからずく
+125,3,우격다짐
+125,4,強行
+125,5,Sans Limite
+125,6,Rohe Gewalt
+125,7,Potencia Bruta
+125,8,Forzabruta
+125,9,Sheer Force
+125,11,ちからずく
+125,12,强行
+126,1,あまのじゃく
+126,3,심술꾸러기
+126,4,唱反調
+126,5,Contestation
+126,6,Umkehrung
+126,7,Respondón
+126,8,Inversione
+126,9,Contrary
+126,11,あまのじゃく
+126,12,唱反调
+127,1,きんちょうかん
+127,3,긴장감
+127,4,緊張感
+127,5,Tension
+127,6,Anspannung
+127,7,Nerviosismo
+127,8,Agitazione
+127,9,Unnerve
+127,11,きんちょうかん
+127,12,紧张感
+128,1,まけんき
+128,3,오기
+128,4,不服輸
+128,5,Acharné
+128,6,Siegeswille
+128,7,Competitivo
+128,8,Agonismo
+128,9,Defiant
+128,11,まけんき
+128,12,不服输
+129,1,よわき
+129,3,무기력
+129,4,軟弱
+129,5,Défaitiste
+129,6,Schwächling
+129,7,Flaqueza
+129,8,Sconforto
+129,9,Defeatist
+129,11,よわき
+129,12,软弱
+130,1,のろわれボディ
+130,3,저주받은바디
+130,4,詛咒之軀
+130,5,Corps Maudit
+130,6,Tastfluch
+130,7,Cuerpo Maldito
+130,8,Corpofunesto
+130,9,Cursed Body
+130,11,のろわれボディ
+130,12,诅咒之躯
+131,1,いやしのこころ
+131,3,치유의마음
+131,4,治癒之心
+131,5,Cœur Soin
+131,6,Heilherz
+131,7,Alma Cura
+131,8,Curacuore
+131,9,Healer
+131,11,いやしのこころ
+131,12,治愈之心
+132,1,フレンドガード
+132,3,프렌드가드
+132,4,友情防守
+132,5,Garde Amie
+132,6,Freundeshut
+132,7,Compiescolta
+132,8,Amicoscudo
+132,9,Friend Guard
+132,11,フレンドガード
+132,12,友情防守
+133,1,くだけるよろい
+133,3,깨어진갑옷
+133,4,碎裂鎧甲
+133,5,Armurouillée
+133,6,Bruchrüstung
+133,7,Armadura Frágil
+133,8,Sottilguscio
+133,9,Weak Armor
+133,11,くだけるよろい
+133,12,碎裂铠甲
+134,1,ヘヴィメタル
+134,3,헤비메탈
+134,4,重金屬
+134,5,Heavy Metal
+134,6,Schwermetall
+134,7,Metal Pesado
+134,8,Metalpesante
+134,9,Heavy Metal
+134,11,ヘヴィメタル
+134,12,重金属
+135,1,ライトメタル
+135,3,라이트메탈
+135,4,輕金屬
+135,5,Light Metal
+135,6,Leichtmetall
+135,7,Metal Liviano
+135,8,Metalleggero
+135,9,Light Metal
+135,11,ライトメタル
+135,12,轻金属
+136,1,マルチスケイル
+136,3,멀티스케일
+136,4,多重鱗片
+136,5,Multiécaille
+136,6,Multischuppe
+136,7,Compensación
+136,8,Multisquame
+136,9,Multiscale
+136,11,マルチスケイル
+136,12,多重鳞片
+137,1,どくぼうそう
+137,3,독폭주
+137,4,中毒激升
+137,5,Rage Poison
+137,6,Giftwahn
+137,7,Ímpetu Tóxico
+137,8,Velenimpeto
+137,9,Toxic Boost
+137,11,どくぼうそう
+137,12,中毒激升
+138,1,ねつぼうそう
+138,3,열폭주
+138,4,受熱激升
+138,5,Rage Brûlure
+138,6,Hitzewahn
+138,7,Ímpetu Ardiente
+138,8,Bruciaimpeto
+138,9,Flare Boost
+138,11,ねつぼうそう
+138,12,受热激升
+139,1,しゅうかく
+139,3,수확
+139,4,收穫
+139,5,Récolte
+139,6,Reiche Ernte
+139,7,Cosecha
+139,8,Coglibacche
+139,9,Harvest
+139,11,しゅうかく
+139,12,收获
+140,1,テレパシー
+140,3,텔레파시
+140,4,心靈感應
+140,5,Télépathe
+140,6,Telepathie
+140,7,Telepatía
+140,8,Telepatia
+140,9,Telepathy
+140,11,テレパシー
+140,12,心灵感应
+141,1,ムラっけ
+141,3,변덕쟁이
+141,4,心情不定
+141,5,Lunatique
+141,6,Gefühlswippe
+141,7,Veleta
+141,8,Altalena
+141,9,Moody
+141,11,ムラっけ
+141,12,心情不定
+142,1,ぼうじん
+142,3,방진
+142,4,防塵
+142,5,Envelocape
+142,6,Wetterfest
+142,7,Funda
+142,8,Copricapo
+142,9,Overcoat
+142,11,ぼうじん
+142,12,防尘
+143,1,どくしゅ
+143,3,독수
+143,4,毒手
+143,5,Toxitouche
+143,6,Giftgriff
+143,7,Toque Tóxico
+143,8,Velentocco
+143,9,Poison Touch
+143,11,どくしゅ
+143,12,毒手
+144,1,さいせいりょく
+144,3,재생력
+144,4,再生力
+144,5,Régé-Force
+144,6,Belebekraft
+144,7,Regeneración
+144,8,Rigenergia
+144,9,Regenerator
+144,11,さいせいりょく
+144,12,再生力
+145,1,はとむね
+145,3,부풀린가슴
+145,4,健壯胸肌
+145,5,Cœur de Coq
+145,6,Brustbieter
+145,7,Sacapecho
+145,8,Pettinfuori
+145,9,Big Pecks
+145,11,はとむね
+145,12,健壮胸肌
+146,1,すなかき
+146,3,모래헤치기
+146,4,撥沙
+146,5,Baigne Sable
+146,6,Sandscharrer
+146,7,Ímpetu Arena
+146,8,Remasabbia
+146,9,Sand Rush
+146,11,すなかき
+146,12,拨沙
+147,1,ミラクルスキン
+147,3,미라클스킨
+147,4,奇跡皮膚
+147,5,Peau Miracle
+147,6,Wunderhaut
+147,7,Piel Milagro
+147,8,Splendicute
+147,9,Wonder Skin
+147,11,ミラクルスキン
+147,12,奇迹皮肤
+148,1,アナライズ
+148,3,애널라이즈
+148,4,分析
+148,5,Analyste
+148,6,Analyse
+148,7,Cálculo Final
+148,8,Ponderazione
+148,9,Analytic
+148,11,アナライズ
+148,12,分析
+149,1,イリュージョン
+149,3,일루전
+149,4,幻覺
+149,5,Illusion
+149,6,Trugbild
+149,7,Ilusión
+149,8,Illusione
+149,9,Illusion
+149,11,イリュージョン
+149,12,幻觉
+150,1,かわりもの
+150,3,괴짜
+150,4,變身者
+150,5,Imposteur
+150,6,Doppelgänger
+150,7,Impostor
+150,8,Sosia
+150,9,Imposter
+150,11,かわりもの
+150,12,变身者
+151,1,すりぬけ
+151,3,틈새포착
+151,4,穿透
+151,5,Infiltration
+151,6,Schwebedurch
+151,7,Allanamiento
+151,8,Intrapasso
+151,9,Infiltrator
+151,11,すりぬけ
+151,12,穿透
+152,1,ミイラ
+152,3,미라
+152,4,木乃伊
+152,5,Momie
+152,6,Mumie
+152,7,Momia
+152,8,Mummia
+152,9,Mummy
+152,11,ミイラ
+152,12,木乃伊
+153,1,じしんかじょう
+153,3,자기과신
+153,4,自信過度
+153,5,Impudence
+153,6,Hochmut
+153,7,Autoestima
+153,8,Arroganza
+153,9,Moxie
+153,11,じしんかじょう
+153,12,自信过度
+154,1,せいぎのこころ
+154,3,정의의마음
+154,4,正義之心
+154,5,Cœur Noble
+154,6,Redlichkeit
+154,7,Justiciero
+154,8,Giustizia
+154,9,Justified
+154,11,せいぎのこころ
+154,12,正义之心
+155,1,びびり
+155,3,주눅
+155,4,膽怯
+155,5,Phobique
+155,6,Hasenfuß
+155,7,Cobardía
+155,8,Paura
+155,9,Rattled
+155,11,びびり
+155,12,胆怯
+156,1,マジックミラー
+156,3,매직미러
+156,4,魔法鏡
+156,5,Miroir Magik
+156,6,Magiespiegel
+156,7,Espejo Mágico
+156,8,Magispecchio
+156,9,Magic Bounce
+156,11,マジックミラー
+156,12,魔法镜
+157,1,そうしょく
+157,3,초식
+157,4,食草
+157,5,Herbivore
+157,6,Vegetarier
+157,7,Herbívoro
+157,8,Mangiaerba
+157,9,Sap Sipper
+157,11,そうしょく
+157,12,食草
+158,1,いたずらごころ
+158,3,짓궂은마음
+158,4,惡作劇之心
+158,5,Farceur
+158,6,Strolch
+158,7,Bromista
+158,8,Burla
+158,9,Prankster
+158,11,いたずらごころ
+158,12,恶作剧之心
+159,1,すなのちから
+159,3,모래의힘
+159,4,沙之力
+159,5,Force Sable
+159,6,Sandgewalt
+159,7,Poder Arena
+159,8,Silicoforza
+159,9,Sand Force
+159,11,すなのちから
+159,12,沙之力
+160,1,てつのトゲ
+160,3,철가시
+160,4,鐵刺
+160,5,Épine de Fer
+160,6,Eisenstachel
+160,7,Punta Acero
+160,8,Spineferrate
+160,9,Iron Barbs
+160,11,てつのトゲ
+160,12,铁刺
+161,1,ダルマモード
+161,3,달마모드
+161,4,達摩模式
+161,5,Mode Transe
+161,6,Trance-Modus
+161,7,Modo Daruma
+161,8,Stato Zen
+161,9,Zen Mode
+161,11,ダルマモード
+161,12,达摩模式
+162,1,しょうりのほし
+162,3,승리의별
+162,4,勝利之星
+162,5,Victorieux
+162,6,Triumphstern
+162,7,Tinovictoria
+162,8,Vittorstella
+162,9,Victory Star
+162,11,しょうりのほし
+162,12,胜利之星
+163,1,ターボブレイズ
+163,3,터보블레이즈
+163,4,渦輪火焰
+163,5,TurboBrasier
+163,6,Turbobrand
+163,7,Turbollama
+163,8,Piroturbina
+163,9,Turboblaze
+163,11,ターボブレイズ
+163,12,涡轮火焰
+164,1,テラボルテージ
+164,3,테라볼티지
+164,4,兆級電壓
+164,5,Téra-Voltage
+164,6,Teravolt
+164,7,Terravoltaje
+164,8,Teravolt
+164,9,Teravolt
+164,11,テラボルテージ
+164,12,兆级电压
+165,1,アロマベール
+165,3,아로마베일
+165,4,芳香幕
+165,5,Aroma-Voile
+165,6,Dufthülle
+165,7,Velo Aroma
+165,8,Aromavelo
+165,9,Aroma Veil
+165,11,アロマベール
+165,12,芳香幕
+166,1,フラワーベール
+166,3,플라워베일
+166,4,花幕
+166,5,Flora-Voile
+166,6,Blütenhülle
+166,7,Velo Flor
+166,8,Fiorvelo
+166,9,Flower Veil
+166,11,フラワーベール
+166,12,花幕
+167,1,ほおぶくろ
+167,3,볼주머니
+167,4,頰囊
+167,5,Bajoues
+167,6,Backentaschen
+167,7,Carrillo
+167,8,Guancegonfie
+167,9,Cheek Pouch
+167,11,ほおぶくろ
+167,12,颊囊
+168,1,へんげんじざい
+168,3,변환자재
+168,4,變幻自如
+168,5,Protéen
+168,6,Wandlungskunst
+168,7,Mutatipo
+168,8,Mutatipo
+168,9,Protean
+168,11,へんげんじざい
+168,12,变幻自如
+169,1,ファーコート
+169,3,퍼코트
+169,4,毛皮大衣
+169,5,Toison Épaisse
+169,6,Fellkleid
+169,7,Pelaje Recio
+169,8,Foltopelo
+169,9,Fur Coat
+169,11,ファーコート
+169,12,毛皮大衣
+170,1,マジシャン
+170,3,매지션
+170,4,魔術師
+170,5,Magicien
+170,6,Zauberer
+170,7,Prestidigitador
+170,8,Prestigiatore
+170,9,Magician
+170,11,マジシャン
+170,12,魔术师
+171,1,ぼうだん
+171,3,방탄
+171,4,防彈
+171,5,Pare-Balles
+171,6,Kugelsicher
+171,7,Antibalas
+171,8,Antiproiettile
+171,9,Bulletproof
+171,11,ぼうだん
+171,12,防弹
+172,1,かちき
+172,3,승기
+172,4,好勝
+172,5,Battant
+172,6,Unbeugsamkeit
+172,7,Tenacidad
+172,8,Tenacia
+172,9,Competitive
+172,11,かちき
+172,12,好胜
+173,1,がんじょうあご
+173,3,옹골찬턱
+173,4,強壯之顎
+173,5,Prognathe
+173,6,Titankiefer
+173,7,Mandíbula Fuerte
+173,8,Ferromascella
+173,9,Strong Jaw
+173,11,がんじょうあご
+173,12,强壮之颚
+174,1,フリーズスキン
+174,3,프리즈스킨
+174,4,冰凍皮膚
+174,5,Peau Gelée
+174,6,Frostschicht
+174,7,Piel Helada
+174,8,Pellegelo
+174,9,Refrigerate
+174,11,フリーズスキン
+174,12,冰冻皮肤
+175,1,スイートベール
+175,3,스위트베일
+175,4,甜幕
+175,5,Gluco-Voile
+175,6,Zuckerhülle
+175,7,Velo Dulce
+175,8,Dolcevelo
+175,9,Sweet Veil
+175,11,スイートベール
+175,12,甜幕
+176,1,バトルスイッチ
+176,3,배틀스위치
+176,4,戰鬥切換
+176,5,Déclic Tactique
+176,6,Taktikwechsel
+176,7,Cambio Táctico
+176,8,Accendilotta
+176,9,Stance Change
+176,11,バトルスイッチ
+176,12,战斗切换
+177,1,はやてのつばさ
+177,3,질풍날개
+177,4,疾風之翼
+177,5,Ailes Bourrasque
+177,6,Orkanschwingen
+177,7,Alas Vendaval
+177,8,Aliraffica
+177,9,Gale Wings
+177,11,はやてのつばさ
+177,12,疾风之翼
+178,1,メガランチャー
+178,3,메가런처
+178,4,超級發射器
+178,5,Méga Blaster
+178,6,Megawumme
+178,7,Megadisparador
+178,8,Megalancio
+178,9,Mega Launcher
+178,11,メガランチャー
+178,12,超级发射器
+179,1,くさのけがわ
+179,3,풀모피
+179,4,草之毛皮
+179,5,Toison Herbue
+179,6,Pflanzenpelz
+179,7,Manto Frondoso
+179,8,Peloderba
+179,9,Grass Pelt
+179,11,くさのけがわ
+179,12,草之毛皮
+180,1,きょうせい
+180,3,공생
+180,4,共生
+180,5,Symbiose
+180,6,Nutznießer
+180,7,Simbiosis
+180,8,Simbiosi
+180,9,Symbiosis
+180,11,きょうせい
+180,12,共生
+181,1,かたいツメ
+181,3,단단한발톱
+181,4,硬爪
+181,5,Griffe Dure
+181,6,Krallenwucht
+181,7,Garra Dura
+181,8,Unghiedure
+181,9,Tough Claws
+181,11,かたいツメ
+181,12,硬爪
+182,1,フェアリースキン
+182,3,페어리스킨
+182,4,妖精皮膚
+182,5,Peau Féérique
+182,6,Feenschicht
+182,7,Piel Feérica
+182,8,Pellefolletto
+182,9,Pixilate
+182,11,フェアリースキン
+182,12,妖精皮肤
+183,1,ぬめぬめ
+183,3,미끈미끈
+183,4,黏滑
+183,5,Poisseux
+183,6,Viskosität
+183,7,Baba
+183,8,Viscosità
+183,9,Gooey
+183,11,ぬめぬめ
+183,12,黏滑
+184,1,スカイスキン
+184,3,스카이스킨
+184,4,飛行皮膚
+184,5,Peau Céleste
+184,6,Zenithaut
+184,7,Piel Celeste
+184,8,Pellecielo
+184,9,Aerilate
+184,11,スカイスキン
+184,12,飞行皮肤
+185,1,おやこあい
+185,3,부자유친
+185,4,親子愛
+185,5,Amour Filial
+185,6,Familienbande
+185,7,Amor Filial
+185,8,Amorefiliale
+185,9,Parental Bond
+185,11,おやこあい
+185,12,亲子爱
+186,1,ダークオーラ
+186,3,다크오라
+186,4,暗黑氣場
+186,5,Aura Ténébreuse
+186,6,Dunkelaura
+186,7,Aura Oscura
+186,8,Auratetra
+186,9,Dark Aura
+186,11,ダークオーラ
+186,12,暗黑气场
+187,1,フェアリーオーラ
+187,3,페어리오라
+187,4,妖精氣場
+187,5,Aura Féérique
+187,6,Feenaura
+187,7,Aura Feérica
+187,8,Aurafolletto
+187,9,Fairy Aura
+187,11,フェアリーオーラ
+187,12,妖精气场
+188,1,オーラブレイク
+188,3,오라브레이크
+188,4,氣場破壞
+188,5,Aura Inversée
+188,6,Aura-Umkehr
+188,7,Rompeaura
+188,8,Frangiaura
+188,9,Aura Break
+188,11,オーラブレイク
+188,12,气场破坏
+189,1,はじまりのうみ
+189,3,시작의바다
+189,4,始源之海
+189,5,Mer Primaire
+189,6,Urmeer
+189,7,Mar del Albor
+189,8,Mare Primordiale
+189,9,Primordial Sea
+189,11,はじまりのうみ
+189,12,始源之海
+190,1,おわりのだいち
+190,3,끝의대지
+190,4,終結之地
+190,5,Terre Finale
+190,6,Endland
+190,7,Tierra del Ocaso
+190,8,Terra Estrema
+190,9,Desolate Land
+190,11,おわりのだいち
+190,12,终结之地
+191,1,デルタストリーム
+191,3,델타스트림
+191,4,德爾塔氣流
+191,5,Souffle Delta
+191,6,Delta-Wind
+191,7,Ráfaga Delta
+191,8,Flusso Delta
+191,9,Delta Stream
+191,11,デルタストリーム
+191,12,德尔塔气流
+192,1,じきゅうりょく
+192,3,지구력
+192,4,持久力
+192,5,Endurance
+192,6,Zähigkeit
+192,7,Firmeza
+192,8,Sopportazione
+192,9,Stamina
+192,11,じきゅうりょく
+192,12,持久力
+193,1,にげごし
+193,3,도망태세
+193,4,躍躍欲逃
+193,5,Escampette
+193,6,Reißaus
+193,7,Huida
+193,8,Fuggifuggi
+193,9,Wimp Out
+193,11,にげごし
+193,12,跃跃欲逃
+194,1,ききかいひ
+194,3,위기회피
+194,4,危險迴避
+194,5,Repli Tactique
+194,6,Rückzug
+194,7,Retirada
+194,8,Passoindietro
+194,9,Emergency Exit
+194,11,ききかいひ
+194,12,危险回避
+195,1,みずがため
+195,3,꾸덕꾸덕굳기
+195,4,遇水凝固
+195,5,Sable Humide
+195,6,Verklumpen
+195,7,Hidrorrefuerzo
+195,8,Idrorinforzo
+195,9,Water Compaction
+195,11,みずがため
+195,12,遇水凝固
+196,1,ひとでなし
+196,3,무도한행동
+196,4,不仁不義
+196,5,Cruauté
+196,6,Quälerei
+196,7,Ensañamiento
+196,8,Spietatezza
+196,9,Merciless
+196,11,ひとでなし
+196,12,不仁不义
+197,1,リミットシールド
+197,3,리밋실드
+197,4,界限盾殼
+197,5,Bouclier-Carcan
+197,6,Limitschild
+197,7,Escudo Limitado
+197,8,Scudosoglia
+197,9,Shields Down
+197,11,リミットシールド
+197,12,界限盾壳
+198,1,はりこみ
+198,3,잠복
+198,4,監視
+198,5,Filature
+198,6,Beschattung
+198,7,Vigilante
+198,8,Sorveglianza
+198,9,Stakeout
+198,11,はりこみ
+198,12,蹲守
+199,1,すいほう
+199,3,수포
+199,4,水泡
+199,5,Aquabulle
+199,6,Wasserblase
+199,7,Pompa
+199,8,Bolladacqua
+199,9,Water Bubble
+199,11,すいほう
+199,12,水泡
+200,1,はがねつかい
+200,3,강철술사
+200,4,鋼能力者
+200,5,Expert Acier
+200,6,Stahlprofi
+200,7,Acero Templado
+200,8,Tempracciaio
+200,9,Steelworker
+200,11,はがねつかい
+200,12,钢能力者
+201,1,ぎゃくじょう
+201,3,발끈
+201,4,怒火沖天
+201,5,Dracolère
+201,6,Wutausbruch
+201,7,Cólera
+201,8,Furore
+201,9,Berserk
+201,11,ぎゃくじょう
+201,12,怒火冲天
+202,1,ゆきかき
+202,3,눈치우기
+202,4,撥雪
+202,5,Chasse-Neige
+202,6,Schneescharrer
+202,7,Quitanieves
+202,8,Spalaneve
+202,9,Slush Rush
+202,11,ゆきかき
+202,12,拨雪
+203,1,えんかく
+203,3,원격
+203,4,遠隔
+203,5,Longue Portée
+203,6,Langstrecke
+203,7,Remoto
+203,8,Distacco
+203,9,Long Reach
+203,11,えんかく
+203,12,远隔
+204,1,うるおいボイス
+204,3,촉촉보이스
+204,4,濕潤之聲
+204,5,Hydrata-Son
+204,6,Plätscherstimme
+204,7,Voz Fluida
+204,8,Idrovoce
+204,9,Liquid Voice
+204,11,うるおいボイス
+204,12,湿润之声
+205,1,ヒーリングシフト
+205,3,힐링시프트
+205,4,先行治療
+205,5,Prioguérison
+205,6,Heilwandel
+205,7,Primer Auxilio
+205,8,Primacura
+205,9,Triage
+205,11,ヒーリングシフト
+205,12,先行治疗
+206,1,エレキスキン
+206,3,일렉트릭스킨
+206,4,電氣皮膚
+206,5,Peau Électrique
+206,6,Elektrohaut
+206,7,Piel Eléctrica
+206,8,Pellelettro
+206,9,Galvanize
+206,11,エレキスキン
+206,12,电气皮肤
+207,1,サーフテール
+207,3,서핑테일
+207,4,衝浪之尾
+207,5,Surf Caudal
+207,6,Surf-Schweif
+207,7,Cola Surf
+207,8,Codasurf
+207,9,Surge Surfer
+207,11,サーフテール
+207,12,冲浪之尾
+208,1,ぎょぐん
+208,3,어군
+208,4,魚群
+208,5,Banc
+208,6,Fischschwarm
+208,7,Banco
+208,8,Banco
+208,9,Schooling
+208,11,ぎょぐん
+208,12,鱼群
+209,1,ばけのかわ
+209,3,탈
+209,4,畫皮
+209,5,Fantômasque
+209,6,Kostümspuk
+209,7,Disfraz
+209,8,Fantasmanto
+209,9,Disguise
+209,11,ばけのかわ
+209,12,画皮
+210,1,きずなへんげ
+210,3,유대변화
+210,4,牽絆變身
+210,5,Synergie
+210,6,Freundschaftsakt
+210,7,Fuerte Afecto
+210,8,Morfosintonia
+210,9,Battle Bond
+210,11,きずなへんげ
+210,12,牵绊变身
+211,1,スワームチェンジ
+211,3,스웜체인지
+211,4,群聚變形
+211,5,Rassemblement
+211,6,Scharwandel
+211,7,Agrupamiento
+211,8,Sciamefusione
+211,9,Power Construct
+211,11,スワームチェンジ
+211,12,群聚变形
+212,1,ふしょく
+212,3,부식
+212,4,腐蝕
+212,5,Corrosion
+212,6,Korrosion
+212,7,Corrosión
+212,8,Corrosione
+212,9,Corrosion
+212,11,ふしょく
+212,12,腐蚀
+213,1,ぜったいねむり
+213,3,절대안깸
+213,4,絕對睡眠
+213,5,Hypersommeil
+213,6,Dauerschlaf
+213,7,Letargo Perenne
+213,8,Sonno Assoluto
+213,9,Comatose
+213,11,ぜったいねむり
+213,12,绝对睡眠
+214,1,じょおうのいげん
+214,3,여왕의위엄
+214,4,女王的威嚴
+214,5,Prestance Royale
+214,6,Majestät
+214,7,Regia Presencia
+214,8,Regalità
+214,9,Queenly Majesty
+214,11,じょおうのいげん
+214,12,女王的威严
+215,1,とびだすなかみ
+215,3,내용물분출
+215,4,飛出的內在物
+215,5,Expuls’Organes
+215,6,Magenkrempler
+215,7,Revés
+215,8,Espellinterno
+215,9,Innards Out
+215,11,とびだすなかみ
+215,12,飞出的内在物
+216,1,おどりこ
+216,3,무희
+216,4,舞者
+216,5,Danseuse
+216,6,Tänzer
+216,7,Pareja de Baile
+216,8,Sincrodanza
+216,9,Dancer
+216,11,おどりこ
+216,12,舞者
+217,1,バッテリー
+217,3,배터리
+217,4,蓄電池
+217,5,Batterie
+217,6,Batterie
+217,7,Batería
+217,8,Batteria
+217,9,Battery
+217,11,バッテリー
+217,12,蓄电池
+218,1,もふもふ
+218,3,복슬복슬
+218,4,毛茸茸
+218,5,Boule de Poils
+218,6,Flauschigkeit
+218,7,Peluche
+218,8,Morbidone
+218,9,Fluffy
+218,11,もふもふ
+218,12,毛茸茸
+219,1,ビビッドボディ
+219,3,비비드바디
+219,4,鮮艷之軀
+219,5,Corps Coloré
+219,6,Buntkörper
+219,7,Cuerpo Vívido
+219,8,Corposgargiante
+219,9,Dazzling
+219,11,ビビッドボディ
+219,12,鲜艳之躯
+220,1,ソウルハート
+220,3,소울하트
+220,4,魂心
+220,5,Animacœur
+220,6,Seelenherz
+220,7,Coránima
+220,8,Cuoreanima
+220,9,Soul-Heart
+220,11,ソウルハート
+220,12,魂心
+221,1,カーリーヘアー
+221,3,컬리헤어
+221,4,捲髮
+221,5,Mèche Rebelle
+221,6,Lockenkopf
+221,7,Rizos Rebeldes
+221,8,Boccolidoro
+221,9,Tangling Hair
+221,11,カーリーヘアー
+221,12,卷发
+222,1,レシーバー
+222,3,리시버
+222,4,接球手
+222,5,Receveur
+222,6,Receiver
+222,7,Receptor
+222,8,Ricezione
+222,9,Receiver
+222,11,レシーバー
+222,12,接球手
+223,1,かがくのちから
+223,3,과학의힘
+223,4,化學之力
+223,5,Osmose
+223,6,Chemiekraft
+223,7,Reacción Química
+223,8,Forza Chimica
+223,9,Power of Alchemy
+223,11,かがくのちから
+223,12,化学之力
+224,1,ビーストブースト
+224,3,비스트부스트
+224,4,異獸提升
+224,5,Boost Chimère
+224,6,Bestien-Boost
+224,7,Ultraimpulso
+224,8,Ultraboost
+224,9,Beast Boost
+224,11,ビーストブースト
+224,12,异兽提升
+225,1,ＡＲシステム
+225,3,AR시스템
+225,4,ＡＲ系統
+225,5,Système Alpha
+225,6,Alpha-System
+225,7,Sistema Alfa
+225,8,Sistema Primevo
+225,9,RKS System
+225,11,ＡＲシステム
+225,12,ＡＲ系统
+226,1,エレキメイカー
+226,3,일렉트릭메이커
+226,4,電氣製造者
+226,5,Créa-Élec
+226,6,Elektro-Erzeuger
+226,7,Electrogénesis
+226,8,Elettrogenesi
+226,9,Electric Surge
+226,11,エレキメイカー
+226,12,电气制造者
+227,1,サイコメイカー
+227,3,사이코메이커
+227,4,精神製造者
+227,5,Créa-Psy
+227,6,Psycho-Erzeuger
+227,7,Psicogénesis
+227,8,Psicogenesi
+227,9,Psychic Surge
+227,11,サイコメイカー
+227,12,精神制造者
+228,1,ミストメイカー
+228,3,미스트메이커
+228,4,薄霧製造者
+228,5,Créa-Brume
+228,6,Nebel-Erzeuger
+228,7,Nebulogénesis
+228,8,Nebbiogenesi
+228,9,Misty Surge
+228,11,ミストメイカー
+228,12,薄雾制造者
+229,1,グラスメイカー
+229,3,그래스메이커
+229,4,青草製造者
+229,5,Créa-Herbe
+229,6,Gras-Erzeuger
+229,7,Herbogénesis
+229,8,Erbogenesi
+229,9,Grassy Surge
+229,11,グラスメイカー
+229,12,青草制造者
+230,1,メタルプロテクト
+230,3,메탈프로텍트
+230,4,金屬防護
+230,5,Métallo-Garde
+230,6,Metallprotektor
+230,7,Guardia Metálica
+230,8,Metalprotezione
+230,9,Full Metal Body
+230,11,メタルプロテクト
+230,12,金属防护
+231,1,ファントムガード
+231,3,스펙터가드
+231,4,幻影防守
+231,5,Spectro-Bouclier
+231,6,Phantomschutz
+231,7,Guardia Espectro
+231,8,Spettroguardia
+231,9,Shadow Shield
+231,11,ファントムガード
+231,12,幻影防守
+232,1,プリズムアーマー
+232,3,프리즘아머
+232,4,稜鏡裝甲
+232,5,Prisme-Armure
+232,6,Prismarüstung
+232,7,Armadura Prisma
+232,8,Scudoprisma
+232,9,Prism Armor
+232,11,プリズムアーマー
+232,12,棱镜装甲
+10001,9,Mountaineer
+10002,9,Wave Rider
+10003,9,Skater
+10004,9,Thrust
+10005,9,Perception
+10006,9,Parry
+10007,9,Instinct
+10008,9,Dodge
+10009,9,Jagged Edge
+10010,9,Frostbite
+10011,9,Tenacity
+10012,9,Pride
+10013,9,Deep Sleep
+10014,9,Power Nap
+10015,9,Spirit
+10016,9,Warm Blanket
+10017,9,Gulp
+10018,9,Herbivore
+10019,9,Sandpit
+10020,9,Hot Blooded
+10021,9,Medic
+10022,9,Life Force
+10023,9,Lunchbox
+10024,9,Nurse
+10025,9,Melee
+10026,9,Sponge
+10027,9,Bodyguard
+10028,9,Hero
+10029,9,Last Bastion
+10030,9,Stealth
+10031,9,Vanguard
+10032,9,Nomad
+10033,9,Sequence
+10034,9,Grass Cloak
+10035,9,Celebrate
+10036,9,Lullaby
+10037,9,Calming
+10038,9,Daze
+10039,9,Frighten
+10040,9,Interference
+10041,9,Mood Maker
+10042,9,Confidence
+10043,9,Fortune
+10044,9,Bonanza
+10045,9,Explode
+10046,9,Omnipotent
+10047,9,Share
+10048,9,Black Hole
+10049,9,Shadow Dash
+10050,9,Sprint
+10051,9,Disgust
+10052,9,High-rise
+10053,9,Climber
+10054,9,Flame Boost
+10055,9,Aqua Boost
+10056,9,Run Up
+10057,9,Conqueror
+10058,9,Shackle
+10059,9,Decoy
+10060,9,Shield

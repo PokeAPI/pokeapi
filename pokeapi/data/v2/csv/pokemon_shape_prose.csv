@@ -1,0 +1,29 @@
+pokemon_shape_id,local_language_id,name,awesome_name,description
+1,5,Balle,Pomacé,Pokémon constitués uniquement d'une tête
+1,9,Ball,Pomaceous,Pokémon consisting of only a head
+2,5,Sinueux,Caudal,Pokémon avec un corps serpentin
+2,9,Squiggle,Caudal,Pokémon with serpentine bodies
+3,5,Poisson,Ichtyque,Pokémon disposant de nageoires
+3,9,Fish,Ichthyic,Pokémon with fins
+4,5,Bras,Brachial,Pokémon constitués d'une tête et de bras
+4,9,Arms,Brachial,Pokémon consisting of a head and arms
+5,5,Goutte,Alvin,Pokémon constitués d'une tête et d'un corps
+5,9,Blob,Alvine,Pokémon consisting of a head and a base
+6,5,Droit,Sciurine,Pokémon bipèdes disposant d'une queue
+6,9,Upright,Sciurine,"Pokémon with a bipedal, tailed form"
+7,5,Jambes,Crural,Pokémon constitués d'une tête et de jambes
+7,9,Legs,Crural,Pokémon consisting of a head and legs
+8,5,Quadrupède,Mensal,Pokémon quadrupèdes
+8,9,Quadruped,Mensal,Pokémon with a quadruped body
+9,5,Ailes,Alaire,Pokémon avec une seule paire d'aile
+9,9,Wings,Alar,Pokémon with a single pair of wings
+10,5,Tentacules,Ciliaire,Pokémon avec des tentacules ou possédant de multiples pattes
+10,9,Tentacles,Cilial,Pokémon with tentacles or a multiped body
+11,5,Têtes,Polycéphale,Pokémon avec un corps multiple
+11,9,Heads,Polycephalic,Pokémon consisting of multiple bodies
+12,5,Humanoïde,Anthropomorphique,Pokémon bipèdes sans queue
+12,9,Humanoid,Anthropomorphic,"Pokémon with a bipedal, tailless form"
+13,5,Ailes d'insecte,Lépidoptère,Pokémon avec deux paires d'ailes
+13,9,Bug wings,Lepidopterous,Pokémon with two or more pairs of wings
+14,5,Armure,Chitineux,Pokémon avec un corps insectoïde
+14,9,Armor,Chitinous,Pokémon with an insectoid body

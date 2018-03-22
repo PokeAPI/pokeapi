@@ -1,0 +1,7299 @@
+move_id,local_language_id,name
+1,1,はたく
+1,3,막치기
+1,4,拍擊
+1,5,Écras’Face
+1,6,Pfund
+1,7,Destructor
+1,8,Botta
+1,9,Pound
+1,11,はたく
+1,12,拍击
+2,1,からてチョップ
+2,3,태권당수
+2,4,空手劈
+2,5,Poing-Karaté
+2,6,Karateschlag
+2,7,Golpe Kárate
+2,8,Colpokarate
+2,9,Karate Chop
+2,11,からてチョップ
+2,12,空手劈
+3,1,おうふくビンタ
+3,3,연속뺨치기
+3,4,連環巴掌
+3,5,Torgnoles
+3,6,Duplexhieb
+3,7,Doble Bofetón
+3,8,Doppiasberla
+3,9,Double Slap
+3,11,おうふくビンタ
+3,12,连环巴掌
+4,1,れんぞくパンチ
+4,3,연속펀치
+4,4,連續拳
+4,5,Poing Comète
+4,6,Kometenhieb
+4,7,Puño Cometa
+4,8,Cometapugno
+4,9,Comet Punch
+4,11,れんぞくパンチ
+4,12,连续拳
+5,1,メガトンパンチ
+5,3,메가톤펀치
+5,4,百萬噸重拳
+5,5,Ultimapoing
+5,6,Megahieb
+5,7,Megapuño
+5,8,Megapugno
+5,9,Mega Punch
+5,11,メガトンパンチ
+5,12,百万吨重拳
+6,1,ネコにこばん
+6,3,고양이돈받기
+6,4,聚寶功
+6,5,Jackpot
+6,6,Zahltag
+6,7,Día de Pago
+6,8,Giornopaga
+6,9,Pay Day
+6,11,ネコにこばん
+6,12,聚宝功
+7,1,ほのおのパンチ
+7,3,불꽃펀치
+7,4,火焰拳
+7,5,Poing de Feu
+7,6,Feuerschlag
+7,7,Puño Fuego
+7,8,Fuocopugno
+7,9,Fire Punch
+7,11,ほのおのパンチ
+7,12,火焰拳
+8,1,れいとうパンチ
+8,3,냉동펀치
+8,4,冰凍拳
+8,5,Poing-Glace
+8,6,Eishieb
+8,7,Puño Hielo
+8,8,Gelopugno
+8,9,Ice Punch
+8,11,れいとうパンチ
+8,12,冰冻拳
+9,1,かみなりパンチ
+9,3,번개펀치
+9,4,雷電拳
+9,5,Poing-Éclair
+9,6,Donnerschlag
+9,7,Puño Trueno
+9,8,Tuonopugno
+9,9,Thunder Punch
+9,11,かみなりパンチ
+9,12,雷电拳
+10,1,ひっかく
+10,3,할퀴기
+10,4,抓
+10,5,Griffe
+10,6,Kratzer
+10,7,Arañazo
+10,8,Graffio
+10,9,Scratch
+10,11,ひっかく
+10,12,抓
+11,1,はさむ
+11,3,찝기
+11,4,夾住
+11,5,Force Poigne
+11,6,Klammer
+11,7,Agarre
+11,8,Presa
+11,9,Vice Grip
+11,11,はさむ
+11,12,夹住
+12,1,ハサミギロチン
+12,3,가위자르기
+12,4,斷頭鉗
+12,5,Guillotine
+12,6,Guillotine
+12,7,Guillotina
+12,8,Ghigliottina
+12,9,Guillotine
+12,11,ハサミギロチン
+12,12,断头钳
+13,1,かまいたち
+13,3,칼바람
+13,4,旋風刀
+13,5,Coupe-Vent
+13,6,Klingensturm
+13,7,Viento Cortante
+13,8,Ventagliente
+13,9,Razor Wind
+13,11,かまいたち
+13,12,旋风刀
+14,1,つるぎのまい
+14,3,칼춤
+14,4,劍舞
+14,5,Danse-Lames
+14,6,Schwerttanz
+14,7,Danza Espada
+14,8,Danzaspada
+14,9,Swords Dance
+14,11,つるぎのまい
+14,12,剑舞
+15,1,いあいぎり
+15,3,풀베기
+15,4,居合斬
+15,5,Coupe
+15,6,Zerschneider
+15,7,Corte
+15,8,Taglio
+15,9,Cut
+15,11,いあいぎり
+15,12,居合斩
+16,1,かぜおこし
+16,3,바람일으키기
+16,4,起風
+16,5,Tornade
+16,6,Windstoß
+16,7,Tornado
+16,8,Raffica
+16,9,Gust
+16,11,かぜおこし
+16,12,起风
+17,1,つばさでうつ
+17,3,날개치기
+17,4,翅膀攻擊
+17,5,Cru-Aile
+17,6,Flügelschlag
+17,7,Ataque Ala
+17,8,Attacco d’Ala
+17,9,Wing Attack
+17,11,つばさでうつ
+17,12,翅膀攻击
+18,1,ふきとばし
+18,3,날려버리기
+18,4,吹飛
+18,5,Cyclone
+18,6,Wirbelwind
+18,7,Remolino
+18,8,Turbine
+18,9,Whirlwind
+18,11,ふきとばし
+18,12,吹飞
+19,1,そらをとぶ
+19,3,공중날기
+19,4,飛翔
+19,5,Vol
+19,6,Fliegen
+19,7,Vuelo
+19,8,Volo
+19,9,Fly
+19,11,そらをとぶ
+19,12,飞翔
+20,1,しめつける
+20,3,조이기
+20,4,綁緊
+20,5,Étreinte
+20,6,Klammergriff
+20,7,Atadura
+20,8,Legatutto
+20,9,Bind
+20,11,しめつける
+20,12,绑紧
+21,1,たたきつける
+21,3,힘껏치기
+21,4,摔打
+21,5,Souplesse
+21,6,Slam
+21,7,Atizar
+21,8,Schianto
+21,9,Slam
+21,11,たたきつける
+21,12,摔打
+22,1,つるのムチ
+22,3,덩굴채찍
+22,4,藤鞭
+22,5,Fouet Lianes
+22,6,Rankenhieb
+22,7,Látigo Cepa
+22,8,Frustata
+22,9,Vine Whip
+22,11,つるのムチ
+22,12,藤鞭
+23,1,ふみつけ
+23,3,짓밟기
+23,4,踩踏
+23,5,Écrasement
+23,6,Stampfer
+23,7,Pisotón
+23,8,Pestone
+23,9,Stomp
+23,11,ふみつけ
+23,12,踩踏
+24,1,にどげり
+24,3,두번치기
+24,4,二連踢
+24,5,Double Pied
+24,6,Doppelkick
+24,7,Doble Patada
+24,8,Doppiocalcio
+24,9,Double Kick
+24,11,にどげり
+24,12,二连踢
+25,1,メガトンキック
+25,3,메가톤킥
+25,4,百萬噸重踢
+25,5,Ultimawashi
+25,6,Megakick
+25,7,Megapatada
+25,8,Megacalcio
+25,9,Mega Kick
+25,11,メガトンキック
+25,12,百万吨重踢
+26,1,とびげり
+26,3,점프킥
+26,4,飛踢
+26,5,Pied Sauté
+26,6,Sprungkick
+26,7,Patada Salto
+26,8,Calciosalto
+26,9,Jump Kick
+26,11,とびげり
+26,12,飞踢
+27,1,まわしげり
+27,3,돌려차기
+27,4,迴旋踢
+27,5,Mawashi Geri
+27,6,Fegekick
+27,7,Patada Giro
+27,8,Calciorullo
+27,9,Rolling Kick
+27,11,まわしげり
+27,12,回旋踢
+28,1,すなかけ
+28,3,모래뿌리기
+28,4,潑沙
+28,5,Jet de Sable
+28,6,Sandwirbel
+28,7,Ataque Arena
+28,8,Turbosabbia
+28,9,Sand Attack
+28,11,すなかけ
+28,12,泼沙
+29,1,ずつき
+29,3,박치기
+29,4,頭錘
+29,5,Coup d’Boule
+29,6,Kopfnuss
+29,7,Golpe Cabeza
+29,8,Bottintesta
+29,9,Headbutt
+29,11,ずつき
+29,12,头锤
+30,1,つのでつく
+30,3,뿔찌르기
+30,4,角撞
+30,5,Koud’Korne
+30,6,Hornattacke
+30,7,Cornada
+30,8,Incornata
+30,9,Horn Attack
+30,11,つのでつく
+30,12,角撞
+31,1,みだれづき
+31,3,마구찌르기
+31,4,亂擊
+31,5,Furie
+31,6,Furienschlag
+31,7,Ataque Furia
+31,8,Furia
+31,9,Fury Attack
+31,11,みだれづき
+31,12,乱击
+32,1,つのドリル
+32,3,뿔드릴
+32,4,角鑽
+32,5,Empal’Korne
+32,6,Hornbohrer
+32,7,Perforador
+32,8,Perforcorno
+32,9,Horn Drill
+32,11,つのドリル
+32,12,角钻
+33,1,たいあたり
+33,3,몸통박치기
+33,4,撞擊
+33,5,Charge
+33,6,Tackle
+33,7,Placaje
+33,8,Azione
+33,9,Tackle
+33,11,たいあたり
+33,12,撞击
+34,1,のしかかり
+34,3,누르기
+34,4,泰山壓頂
+34,5,Plaquage
+34,6,Bodyslam
+34,7,Golpe Cuerpo
+34,8,Corposcontro
+34,9,Body Slam
+34,11,のしかかり
+34,12,泰山压顶
+35,1,まきつく
+35,3,김밥말이
+35,4,緊束
+35,5,Ligotage
+35,6,Wickel
+35,7,Constricción
+35,8,Avvolgibotta
+35,9,Wrap
+35,11,まきつく
+35,12,紧束
+36,1,とっしん
+36,3,돌진
+36,4,猛撞
+36,5,Bélier
+36,6,Bodycheck
+36,7,Derribo
+36,8,Riduttore
+36,9,Take Down
+36,11,とっしん
+36,12,猛撞
+37,1,あばれる
+37,3,난동부리기
+37,4,大鬧一番
+37,5,Mania
+37,6,Fuchtler
+37,7,Golpe
+37,8,Colpo
+37,9,Thrash
+37,11,あばれる
+37,12,大闹一番
+38,1,すてみタックル
+38,3,이판사판태클
+38,4,捨身衝撞
+38,5,Damoclès
+38,6,Risikotackle
+38,7,Doble Filo
+38,8,Sdoppiatore
+38,9,Double-Edge
+38,11,すてみタックル
+38,12,舍身冲撞
+39,1,しっぽをふる
+39,3,꼬리흔들기
+39,4,搖尾巴
+39,5,Mimi-Queue
+39,6,Rutenschlag
+39,7,Látigo
+39,8,Colpocoda
+39,9,Tail Whip
+39,11,しっぽをふる
+39,12,摇尾巴
+40,1,どくばり
+40,3,독침
+40,4,毒針
+40,5,Dard-Venin
+40,6,Giftstachel
+40,7,Picotazo Ven
+40,8,Velenospina
+40,9,Poison Sting
+40,11,どくばり
+40,12,毒针
+41,1,ダブルニードル
+41,3,더블니들
+41,4,雙針
+41,5,Double-Dard
+41,6,Duonadel
+41,7,Doble Ataque
+41,8,Doppio Ago
+41,9,Twineedle
+41,11,ダブルニードル
+41,12,双针
+42,1,ミサイルばり
+42,3,바늘미사일
+42,4,飛彈針
+42,5,Dard-Nuée
+42,6,Nadelrakete
+42,7,Pin Misil
+42,8,Missilspillo
+42,9,Pin Missile
+42,11,ミサイルばり
+42,12,飞弹针
+43,1,にらみつける
+43,3,째려보기
+43,4,瞪眼
+43,5,Groz’Yeux
+43,6,Silberblick
+43,7,Malicioso
+43,8,Fulmisguardo
+43,9,Leer
+43,11,にらみつける
+43,12,瞪眼
+44,1,かみつく
+44,3,물기
+44,4,咬住
+44,5,Morsure
+44,6,Biss
+44,7,Mordisco
+44,8,Morso
+44,9,Bite
+44,11,かみつく
+44,12,咬住
+45,1,なきごえ
+45,3,울음소리
+45,4,叫聲
+45,5,Rugissement
+45,6,Heuler
+45,7,Gruñido
+45,8,Ruggito
+45,9,Growl
+45,11,なきごえ
+45,12,叫声
+46,1,ほえる
+46,3,울부짖기
+46,4,吼叫
+46,5,Hurlement
+46,6,Brüller
+46,7,Rugido
+46,8,Boato
+46,9,Roar
+46,11,ほえる
+46,12,吼叫
+47,1,うたう
+47,3,노래하기
+47,4,唱歌
+47,5,Berceuse
+47,6,Gesang
+47,7,Canto
+47,8,Canto
+47,9,Sing
+47,11,うたう
+47,12,唱歌
+48,1,ちょうおんぱ
+48,3,초음파
+48,4,超音波
+48,5,Ultrason
+48,6,Superschall
+48,7,Supersónico
+48,8,Supersuono
+48,9,Supersonic
+48,11,ちょうおんぱ
+48,12,超音波
+49,1,ソニックブーム
+49,3,소닉붐
+49,4,音爆
+49,5,Sonicboom
+49,6,Ultraschall
+49,7,Bomba Sónica
+49,8,Sonicboom
+49,9,Sonic Boom
+49,11,ソニックブーム
+49,12,音爆
+50,1,かなしばり
+50,3,사슬묶기
+50,4,定身法
+50,5,Entrave
+50,6,Aussetzer
+50,7,Anulación
+50,8,Inibitore
+50,9,Disable
+50,11,かなしばり
+50,12,定身法
+51,1,ようかいえき
+51,3,용해액
+51,4,溶解液
+51,5,Acide
+51,6,Säure
+51,7,Ácido
+51,8,Acido
+51,9,Acid
+51,11,ようかいえき
+51,12,溶解液
+52,1,ひのこ
+52,3,불꽃세례
+52,4,火花
+52,5,Flammèche
+52,6,Glut
+52,7,Ascuas
+52,8,Braciere
+52,9,Ember
+52,11,ひのこ
+52,12,火花
+53,1,かえんほうしゃ
+53,3,화염방사
+53,4,噴射火焰
+53,5,Lance-Flammes
+53,6,Flammenwurf
+53,7,Lanzallamas
+53,8,Lanciafiamme
+53,9,Flamethrower
+53,11,かえんほうしゃ
+53,12,喷射火焰
+54,1,しろいきり
+54,3,흰안개
+54,4,白霧
+54,5,Brume
+54,6,Weißnebel
+54,7,Neblina
+54,8,Nebbia
+54,9,Mist
+54,11,しろいきり
+54,12,白雾
+55,1,みずでっぽう
+55,3,물대포
+55,4,水槍
+55,5,Pistolet à O
+55,6,Aquaknarre
+55,7,Pistola Agua
+55,8,Pistolacqua
+55,9,Water Gun
+55,11,みずでっぽう
+55,12,水枪
+56,1,ハイドロポンプ
+56,3,하이드로펌프
+56,4,水炮
+56,5,Hydrocanon
+56,6,Hydropumpe
+56,7,Hidrobomba
+56,8,Idropompa
+56,9,Hydro Pump
+56,11,ハイドロポンプ
+56,12,水炮
+57,1,なみのり
+57,3,파도타기
+57,4,衝浪
+57,5,Surf
+57,6,Surfer
+57,7,Surf
+57,8,Surf
+57,9,Surf
+57,11,なみのり
+57,12,冲浪
+58,1,れいとうビーム
+58,3,냉동빔
+58,4,冰凍光束
+58,5,Laser Glace
+58,6,Eisstrahl
+58,7,Rayo Hielo
+58,8,Geloraggio
+58,9,Ice Beam
+58,11,れいとうビーム
+58,12,冰冻光束
+59,1,ふぶき
+59,3,눈보라
+59,4,暴風雪
+59,5,Blizzard
+59,6,Blizzard
+59,7,Ventisca
+59,8,Bora
+59,9,Blizzard
+59,11,ふぶき
+59,12,暴风雪
+60,1,サイケこうせん
+60,3,환상빔
+60,4,幻象光線
+60,5,Rafale Psy
+60,6,Psystrahl
+60,7,Psicorrayo
+60,8,Psicoraggio
+60,9,Psybeam
+60,11,サイケこうせん
+60,12,幻象光线
+61,1,バブルこうせん
+61,3,거품광선
+61,4,泡沫光線
+61,5,Bulles d’O
+61,6,Blubbstrahl
+61,7,Rayo Burbuja
+61,8,Bollaraggio
+61,9,Bubble Beam
+61,11,バブルこうせん
+61,12,泡沫光线
+62,1,オーロラビーム
+62,3,오로라빔
+62,4,極光束
+62,5,Onde Boréale
+62,6,Aurorastrahl
+62,7,Rayo Aurora
+62,8,Raggiaurora
+62,9,Aurora Beam
+62,11,オーロラビーム
+62,12,极光束
+63,1,はかいこうせん
+63,3,파괴광선
+63,4,破壞光線
+63,5,Ultralaser
+63,6,Hyperstrahl
+63,7,Hiperrayo
+63,8,Iper Raggio
+63,9,Hyper Beam
+63,11,はかいこうせん
+63,12,破坏光线
+64,1,つつく
+64,3,쪼기
+64,4,啄
+64,5,Picpic
+64,6,Schnabel
+64,7,Picotazo
+64,8,Beccata
+64,9,Peck
+64,11,つつく
+64,12,啄
+65,1,ドリルくちばし
+65,3,회전부리
+65,4,啄鑽
+65,5,Bec Vrille
+65,6,Bohrschnabel
+65,7,Pico Taladro
+65,8,Perforbecco
+65,9,Drill Peck
+65,11,ドリルくちばし
+65,12,啄钻
+66,1,じごくぐるま
+66,3,지옥의바퀴
+66,4,地獄翻滾
+66,5,Sacrifice
+66,6,Überroller
+66,7,Sumisión
+66,8,Sottomissione
+66,9,Submission
+66,11,じごくぐるま
+66,12,地狱翻滚
+67,1,けたぐり
+67,3,안다리걸기
+67,4,踢倒
+67,5,Balayage
+67,6,Fußkick
+67,7,Patada Baja
+67,8,Colpo Basso
+67,9,Low Kick
+67,11,けたぐり
+67,12,踢倒
+68,1,カウンター
+68,3,카운터
+68,4,雙倍奉還
+68,5,Riposte
+68,6,Konter
+68,7,Contraataque
+68,8,Contrattacco
+68,9,Counter
+68,11,カウンター
+68,12,双倍奉还
+69,1,ちきゅうなげ
+69,3,지구던지기
+69,4,地球上投
+69,5,Frappe Atlas
+69,6,Geowurf
+69,7,Mov. Sísmico
+69,8,Movim. Sismico
+69,9,Seismic Toss
+69,11,ちきゅうなげ
+69,12,地球上投
+70,1,かいりき
+70,3,괴력
+70,4,怪力
+70,5,Force
+70,6,Stärke
+70,7,Fuerza
+70,8,Forza
+70,9,Strength
+70,11,かいりき
+70,12,怪力
+71,1,すいとる
+71,3,흡수
+71,4,吸取
+71,5,Vol-Vie
+71,6,Absorber
+71,7,Absorber
+71,8,Assorbimento
+71,9,Absorb
+71,11,すいとる
+71,12,吸取
+72,1,メガドレイン
+72,3,메가드레인
+72,4,超級吸取
+72,5,Méga-Sangsue
+72,6,Megasauger
+72,7,Megaagotar
+72,8,Megassorbimento
+72,9,Mega Drain
+72,11,メガドレイン
+72,12,超级吸取
+73,1,やどりぎのタネ
+73,3,씨뿌리기
+73,4,寄生種子
+73,5,Vampigraine
+73,6,Egelsamen
+73,7,Drenadoras
+73,8,Parassiseme
+73,9,Leech Seed
+73,11,やどりぎのタネ
+73,12,寄生种子
+74,1,せいちょう
+74,3,성장
+74,4,生長
+74,5,Croissance
+74,6,Wachstum
+74,7,Desarrollo
+74,8,Crescita
+74,9,Growth
+74,11,せいちょう
+74,12,生长
+75,1,はっぱカッター
+75,3,잎날가르기
+75,4,飛葉快刀
+75,5,Tranch’Herbe
+75,6,Rasierblatt
+75,7,Hoja Afilada
+75,8,Foglielama
+75,9,Razor Leaf
+75,11,はっぱカッター
+75,12,飞叶快刀
+76,1,ソーラービーム
+76,3,솔라빔
+76,4,日光束
+76,5,Lance-Soleil
+76,6,Solarstrahl
+76,7,Rayo Solar
+76,8,Solarraggio
+76,9,Solar Beam
+76,11,ソーラービーム
+76,12,日光束
+77,1,どくのこな
+77,3,독가루
+77,4,毒粉
+77,5,Poudre Toxik
+77,6,Giftpuder
+77,7,Polvo Veneno
+77,8,Velenpolvere
+77,9,Poison Powder
+77,11,どくのこな
+77,12,毒粉
+78,1,しびれごな
+78,3,저리가루
+78,4,麻痺粉
+78,5,Para-Spore
+78,6,Stachelspore
+78,7,Paralizador
+78,8,Paralizzante
+78,9,Stun Spore
+78,11,しびれごな
+78,12,麻痹粉
+79,1,ねむりごな
+79,3,수면가루
+79,4,催眠粉
+79,5,Poudre Dodo
+79,6,Schlafpuder
+79,7,Somnífero
+79,8,Sonnifero
+79,9,Sleep Powder
+79,11,ねむりごな
+79,12,催眠粉
+80,1,はなびらのまい
+80,3,꽃잎댄스
+80,4,花瓣舞
+80,5,Danse-Fleur
+80,6,Blättertanz
+80,7,Danza Pétalo
+80,8,Petalodanza
+80,9,Petal Dance
+80,11,はなびらのまい
+80,12,花瓣舞
+81,1,いとをはく
+81,3,실뿜기
+81,4,吐絲
+81,5,Sécrétion
+81,6,Fadenschuss
+81,7,Disparo Demora
+81,8,Millebave
+81,9,String Shot
+81,11,いとをはく
+81,12,吐丝
+82,1,りゅうのいかり
+82,3,용의분노
+82,4,龍之怒
+82,5,Draco-Rage
+82,6,Drachenwut
+82,7,Furia Dragón
+82,8,Ira di Drago
+82,9,Dragon Rage
+82,11,りゅうのいかり
+82,12,龙之怒
+83,1,ほのおのうず
+83,3,회오리불꽃
+83,4,火焰旋渦
+83,5,Danse Flamme
+83,6,Feuerwirbel
+83,7,Giro Fuego
+83,8,Turbofuoco
+83,9,Fire Spin
+83,11,ほのおのうず
+83,12,火焰旋涡
+84,1,でんきショック
+84,3,전기쇼크
+84,4,電擊
+84,5,Éclair
+84,6,Donnerschock
+84,7,Impactrueno
+84,8,Tuonoshock
+84,9,Thunder Shock
+84,11,でんきショック
+84,12,电击
+85,1,１０まんボルト
+85,3,10만볼트
+85,4,十萬伏特
+85,5,Tonnerre
+85,6,Donnerblitz
+85,7,Rayo
+85,8,Fulmine
+85,9,Thunderbolt
+85,11,１０まんボルト
+85,12,十万伏特
+86,1,でんじは
+86,3,전기자석파
+86,4,電磁波
+86,5,Cage-Éclair
+86,6,Donnerwelle
+86,7,Onda Trueno
+86,8,Tuononda
+86,9,Thunder Wave
+86,11,でんじは
+86,12,电磁波
+87,1,かみなり
+87,3,번개
+87,4,打雷
+87,5,Fatal-Foudre
+87,6,Donner
+87,7,Trueno
+87,8,Tuono
+87,9,Thunder
+87,11,かみなり
+87,12,打雷
+88,1,いわおとし
+88,3,돌떨구기
+88,4,落石
+88,5,Jet-Pierres
+88,6,Steinwurf
+88,7,Lanzarrocas
+88,8,Sassata
+88,9,Rock Throw
+88,11,いわおとし
+88,12,落石
+89,1,じしん
+89,3,지진
+89,4,地震
+89,5,Séisme
+89,6,Erdbeben
+89,7,Terremoto
+89,8,Terremoto
+89,9,Earthquake
+89,11,じしん
+89,12,地震
+90,1,じわれ
+90,3,땅가르기
+90,4,地裂
+90,5,Abîme
+90,6,Geofissur
+90,7,Fisura
+90,8,Abisso
+90,9,Fissure
+90,11,じわれ
+90,12,地裂
+91,1,あなをほる
+91,3,구멍파기
+91,4,挖洞
+91,5,Tunnel
+91,6,Schaufler
+91,7,Excavar
+91,8,Fossa
+91,9,Dig
+91,11,あなをほる
+91,12,挖洞
+92,1,どくどく
+92,3,맹독
+92,4,劇毒
+92,5,Toxik
+92,6,Toxin
+92,7,Tóxico
+92,8,Tossina
+92,9,Toxic
+92,11,どくどく
+92,12,剧毒
+93,1,ねんりき
+93,3,염동력
+93,4,念力
+93,5,Choc Mental
+93,6,Konfusion
+93,7,Confusión
+93,8,Confusione
+93,9,Confusion
+93,11,ねんりき
+93,12,念力
+94,1,サイコキネシス
+94,3,사이코키네시스
+94,4,精神強念
+94,5,Psyko
+94,6,Psychokinese
+94,7,Psíquico
+94,8,Psichico
+94,9,Psychic
+94,11,サイコキネシス
+94,12,精神强念
+95,1,さいみんじゅつ
+95,3,최면술
+95,4,催眠術
+95,5,Hypnose
+95,6,Hypnose
+95,7,Hipnosis
+95,8,Ipnosi
+95,9,Hypnosis
+95,11,さいみんじゅつ
+95,12,催眠术
+96,1,ヨガのポーズ
+96,3,요가포즈
+96,4,瑜伽姿勢
+96,5,Yoga
+96,6,Meditation
+96,7,Meditación
+96,8,Meditazione
+96,9,Meditate
+96,11,ヨガのポーズ
+96,12,瑜伽姿势
+97,1,こうそくいどう
+97,3,고속이동
+97,4,高速移動
+97,5,Hâte
+97,6,Agilität
+97,7,Agilidad
+97,8,Agilità
+97,9,Agility
+97,11,こうそくいどう
+97,12,高速移动
+98,1,でんこうせっか
+98,3,전광석화
+98,4,電光一閃
+98,5,Vive-Attaque
+98,6,Ruckzuckhieb
+98,7,Ataque Rápido
+98,8,Attacco Rapido
+98,9,Quick Attack
+98,11,でんこうせっか
+98,12,电光一闪
+99,1,いかり
+99,3,분노
+99,4,憤怒
+99,5,Frénésie
+99,6,Raserei
+99,7,Furia
+99,8,Ira
+99,9,Rage
+99,11,いかり
+99,12,愤怒
+100,1,テレポート
+100,3,순간이동
+100,4,瞬間移動
+100,5,Téléport
+100,6,Teleport
+100,7,Teletransporte
+100,8,Teletrasporto
+100,9,Teleport
+100,11,テレポート
+100,12,瞬间移动
+101,1,ナイトヘッド
+101,3,나이트헤드
+101,4,黑夜魔影
+101,5,Ombre Nocturne
+101,6,Nachtnebel
+101,7,Tinieblas
+101,8,Ombra Notturna
+101,9,Night Shade
+101,11,ナイトヘッド
+101,12,黑夜魔影
+102,1,ものまね
+102,3,흉내내기
+102,4,模仿
+102,5,Copie
+102,6,Mimikry
+102,7,Mimético
+102,8,Mimica
+102,9,Mimic
+102,11,ものまね
+102,12,模仿
+103,1,いやなおと
+103,3,싫은소리
+103,4,刺耳聲
+103,5,Grincement
+103,6,Kreideschrei
+103,7,Chirrido
+103,8,Stridio
+103,9,Screech
+103,11,いやなおと
+103,12,刺耳声
+104,1,かげぶんしん
+104,3,그림자분신
+104,4,影子分身
+104,5,Reflet
+104,6,Doppelteam
+104,7,Doble Equipo
+104,8,Doppioteam
+104,9,Double Team
+104,11,かげぶんしん
+104,12,影子分身
+105,1,じこさいせい
+105,3,HP회복
+105,4,自我再生
+105,5,Soin
+105,6,Genesung
+105,7,Recuperación
+105,8,Ripresa
+105,9,Recover
+105,11,じこさいせい
+105,12,自我再生
+106,1,かたくなる
+106,3,단단해지기
+106,4,變硬
+106,5,Armure
+106,6,Härtner
+106,7,Fortaleza
+106,8,Rafforzatore
+106,9,Harden
+106,11,かたくなる
+106,12,变硬
+107,1,ちいさくなる
+107,3,작아지기
+107,4,變小
+107,5,Lilliput
+107,6,Komprimator
+107,7,Reducción
+107,8,Minimizzato
+107,9,Minimize
+107,11,ちいさくなる
+107,12,变小
+108,1,えんまく
+108,3,연막
+108,4,煙幕
+108,5,Brouillard
+108,6,Rauchwolke
+108,7,Pantalla de Humo
+108,8,Muro di Fumo
+108,9,Smokescreen
+108,11,えんまく
+108,12,烟幕
+109,1,あやしいひかり
+109,3,이상한빛
+109,4,奇異之光
+109,5,Onde Folie
+109,6,Konfustrahl
+109,7,Rayo Confuso
+109,8,Stordiraggio
+109,9,Confuse Ray
+109,11,あやしいひかり
+109,12,奇异之光
+110,1,からにこもる
+110,3,껍질에숨기
+110,4,縮入殼中
+110,5,Repli
+110,6,Panzerschutz
+110,7,Refugio
+110,8,Ritirata
+110,9,Withdraw
+110,11,からにこもる
+110,12,缩入壳中
+111,1,まるくなる
+111,3,웅크리기
+111,4,變圓
+111,5,Boul’Armure
+111,6,Einigler
+111,7,Rizo Defensa
+111,8,Ricciolscudo
+111,9,Defense Curl
+111,11,まるくなる
+111,12,变圆
+112,1,バリアー
+112,3,배리어
+112,4,屏障
+112,5,Bouclier
+112,6,Barriere
+112,7,Barrera
+112,8,Barriera
+112,9,Barrier
+112,11,バリアー
+112,12,屏障
+113,1,ひかりのかべ
+113,3,빛의장막
+113,4,光牆
+113,5,Mur Lumière
+113,6,Lichtschild
+113,7,Pantalla de Luz
+113,8,Schermoluce
+113,9,Light Screen
+113,11,ひかりのかべ
+113,12,光墙
+114,1,くろいきり
+114,3,흑안개
+114,4,黑霧
+114,5,Buée Noire
+114,6,Dunkelnebel
+114,7,Niebla
+114,8,Nube
+114,9,Haze
+114,11,くろいきり
+114,12,黑雾
+115,1,リフレクター
+115,3,리플렉터
+115,4,反射壁
+115,5,Protection
+115,6,Reflektor
+115,7,Reflejo
+115,8,Riflesso
+115,9,Reflect
+115,11,リフレクター
+115,12,反射壁
+116,1,きあいだめ
+116,3,기충전
+116,4,聚氣
+116,5,Puissance
+116,6,Energiefokus
+116,7,Foco Energía
+116,8,Focalenergia
+116,9,Focus Energy
+116,11,きあいだめ
+116,12,聚气
+117,1,がまん
+117,3,참기
+117,4,忍耐
+117,5,Patience
+117,6,Geduld
+117,7,Venganza
+117,8,Pazienza
+117,9,Bide
+117,11,がまん
+117,12,忍耐
+118,1,ゆびをふる
+118,3,손가락흔들기
+118,4,揮指
+118,5,Métronome
+118,6,Metronom
+118,7,Metrónomo
+118,8,Metronomo
+118,9,Metronome
+118,11,ゆびをふる
+118,12,挥指
+119,1,オウムがえし
+119,3,따라하기
+119,4,鸚鵡學舌
+119,5,Mimique
+119,6,Spiegeltrick
+119,7,Mov. Espejo
+119,8,Speculmossa
+119,9,Mirror Move
+119,11,オウムがえし
+119,12,鹦鹉学舌
+120,1,じばく
+120,3,자폭
+120,4,自爆
+120,5,Destruction
+120,6,Finale
+120,7,Autodestrucción
+120,8,Autodistruzione
+120,9,Self-Destruct
+120,11,じばく
+120,12,自爆
+121,1,タマゴばくだん
+121,3,알폭탄
+121,4,炸蛋
+121,5,Bomb’Œuf
+121,6,Eierbombe
+121,7,Bomba Huevo
+121,8,Uovobomba
+121,9,Egg Bomb
+121,11,タマゴばくだん
+121,12,炸蛋
+122,1,したでなめる
+122,3,핥기
+122,4,舌舔
+122,5,Léchouille
+122,6,Schlecker
+122,7,Lengüetazo
+122,8,Leccata
+122,9,Lick
+122,11,したでなめる
+122,12,舌舔
+123,1,スモッグ
+123,3,스모그
+123,4,濁霧
+123,5,Purédpois
+123,6,Smog
+123,7,Polución
+123,8,Smog
+123,9,Smog
+123,11,スモッグ
+123,12,浊雾
+124,1,ヘドロこうげき
+124,3,오물공격
+124,4,污泥攻擊
+124,5,Détritus
+124,6,Schlammbad
+124,7,Residuos
+124,8,Fango
+124,9,Sludge
+124,11,ヘドロこうげき
+124,12,污泥攻击
+125,1,ホネこんぼう
+125,3,뼈다귀치기
+125,4,骨棒
+125,5,Massd’Os
+125,6,Knochenkeule
+125,7,Hueso Palo
+125,8,Ossoclava
+125,9,Bone Club
+125,11,ホネこんぼう
+125,12,骨棒
+126,1,だいもんじ
+126,3,불대문자
+126,4,大字爆炎
+126,5,Déflagration
+126,6,Feuersturm
+126,7,Llamarada
+126,8,Fuocobomba
+126,9,Fire Blast
+126,11,だいもんじ
+126,12,大字爆炎
+127,1,たきのぼり
+127,3,폭포오르기
+127,4,攀瀑
+127,5,Cascade
+127,6,Kaskade
+127,7,Cascada
+127,8,Cascata
+127,9,Waterfall
+127,11,たきのぼり
+127,12,攀瀑
+128,1,からではさむ
+128,3,껍질끼우기
+128,4,貝殼夾擊
+128,5,Claquoir
+128,6,Schnapper
+128,7,Tenaza
+128,8,Tenaglia
+128,9,Clamp
+128,11,からではさむ
+128,12,贝壳夹击
+129,1,スピードスター
+129,3,스피드스타
+129,4,高速星星
+129,5,Météores
+129,6,Sternschauer
+129,7,Rapidez
+129,8,Comete
+129,9,Swift
+129,11,スピードスター
+129,12,高速星星
+130,1,ロケットずつき
+130,3,로케트박치기
+130,4,火箭頭錘
+130,5,Coud’Krâne
+130,6,Schädelwumme
+130,7,Cabezazo
+130,8,Capocciata
+130,9,Skull Bash
+130,11,ロケットずつき
+130,12,火箭头锤
+131,1,とげキャノン
+131,3,가시대포
+131,4,尖刺加農炮
+131,5,Picanon
+131,6,Dornkanone
+131,7,Clavo Cañón
+131,8,Sparalance
+131,9,Spike Cannon
+131,11,とげキャノン
+131,12,尖刺加农炮
+132,1,からみつく
+132,3,휘감기
+132,4,纏繞
+132,5,Constriction
+132,6,Umklammerung
+132,7,Restricción
+132,8,Limitazione
+132,9,Constrict
+132,11,からみつく
+132,12,缠绕
+133,1,ドわすれ
+133,3,망각술
+133,4,瞬間失憶
+133,5,Amnésie
+133,6,Amnesie
+133,7,Amnesia
+133,8,Amnesia
+133,9,Amnesia
+133,11,ドわすれ
+133,12,瞬间失忆
+134,1,スプーンまげ
+134,3,숟가락휘기
+134,4,折彎湯匙
+134,5,Télékinésie
+134,6,Psykraft
+134,7,Kinético
+134,8,Cinèsi
+134,9,Kinesis
+134,11,スプーンまげ
+134,12,折弯汤匙
+135,1,タマゴうみ
+135,3,알낳기
+135,4,生蛋
+135,5,E-Coque
+135,6,Weichei
+135,7,Amortiguador
+135,8,Covauova
+135,9,Soft-Boiled
+135,11,タマゴうみ
+135,12,生蛋
+136,1,とびひざげり
+136,3,무릎차기
+136,4,飛膝踢
+136,5,Pied Voltige
+136,6,Turmkick
+136,7,Pat. Salto Alta
+136,8,Calcinvolo
+136,9,High Jump Kick
+136,11,とびひざげり
+136,12,飞膝踢
+137,1,へびにらみ
+137,3,뱀눈초리
+137,4,大蛇瞪眼
+137,5,Regard Médusant
+137,6,Giftblick
+137,7,Deslumbrar
+137,8,Sguardo Feroce
+137,9,Glare
+137,11,へびにらみ
+137,12,大蛇瞪眼
+138,1,ゆめくい
+138,3,꿈먹기
+138,4,食夢
+138,5,Dévorêve
+138,6,Traumfresser
+138,7,Come Sueños
+138,8,Mangiasogni
+138,9,Dream Eater
+138,11,ゆめくい
+138,12,食梦
+139,1,どくガス
+139,3,독가스
+139,4,毒瓦斯
+139,5,Gaz Toxik
+139,6,Giftwolke
+139,7,Gas Venenoso
+139,8,Velenogas
+139,9,Poison Gas
+139,11,どくガス
+139,12,毒瓦斯
+140,1,たまなげ
+140,3,구슬던지기
+140,4,投球
+140,5,Pilonnage
+140,6,Stakkato
+140,7,Presa
+140,8,Attacco Pioggia
+140,9,Barrage
+140,11,たまなげ
+140,12,投球
+141,1,きゅうけつ
+141,3,흡혈
+141,4,吸血
+141,5,Vampirisme
+141,6,Blutsauger
+141,7,Chupavidas
+141,8,Sanguisuga
+141,9,Leech Life
+141,11,きゅうけつ
+141,12,吸血
+142,1,あくまのキッス
+142,3,악마의키스
+142,4,惡魔之吻
+142,5,Grobisou
+142,6,Todeskuss
+142,7,Beso Amoroso
+142,8,Demonbacio
+142,9,Lovely Kiss
+142,11,あくまのキッス
+142,12,恶魔之吻
+143,1,ゴッドバード
+143,3,불새
+143,4,神鳥猛擊
+143,5,Piqué
+143,6,Himmelsfeger
+143,7,Ataque Aéreo
+143,8,Aeroattacco
+143,9,Sky Attack
+143,11,ゴッドバード
+143,12,神鸟猛击
+144,1,へんしん
+144,3,변신
+144,4,變身
+144,5,Morphing
+144,6,Wandler
+144,7,Transformación
+144,8,Trasformazione
+144,9,Transform
+144,11,へんしん
+144,12,变身
+145,1,あわ
+145,3,거품
+145,4,泡沫
+145,5,Écume
+145,6,Blubber
+145,7,Burbuja
+145,8,Bolla
+145,9,Bubble
+145,11,あわ
+145,12,泡沫
+146,1,ピヨピヨパンチ
+146,3,잼잼펀치
+146,4,迷昏拳
+146,5,Uppercut
+146,6,Irrschlag
+146,7,Puño Mareo
+146,8,Stordipugno
+146,9,Dizzy Punch
+146,11,ピヨピヨパンチ
+146,12,迷昏拳
+147,1,キノコのほうし
+147,3,버섯포자
+147,4,蘑菇孢子
+147,5,Spore
+147,6,Pilzspore
+147,7,Espora
+147,8,Spora
+147,9,Spore
+147,11,キノコのほうし
+147,12,蘑菇孢子
+148,1,フラッシュ
+148,3,플래시
+148,4,閃光
+148,5,Flash
+148,6,Blitz
+148,7,Destello
+148,8,Flash
+148,9,Flash
+148,11,フラッシュ
+148,12,闪光
+149,1,サイコウェーブ
+149,3,사이코웨이브
+149,4,精神波
+149,5,Vague Psy
+149,6,Psywelle
+149,7,Psicoonda
+149,8,Psiconda
+149,9,Psywave
+149,11,サイコウェーブ
+149,12,精神波
+150,1,はねる
+150,3,튀어오르기
+150,4,躍起
+150,5,Trempette
+150,6,Platscher
+150,7,Salpicadura
+150,8,Splash
+150,9,Splash
+150,11,はねる
+150,12,跃起
+151,1,とける
+151,3,녹기
+151,4,溶化
+151,5,Acidarmure
+151,6,Säurepanzer
+151,7,Armadura Ácida
+151,8,Scudo Acido
+151,9,Acid Armor
+151,11,とける
+151,12,溶化
+152,1,クラブハンマー
+152,3,찝게햄머
+152,4,蟹鉗錘
+152,5,Pince-Masse
+152,6,Krabbhammer
+152,7,Martillazo
+152,8,Martellata
+152,9,Crabhammer
+152,11,クラブハンマー
+152,12,蟹钳锤
+153,1,だいばくはつ
+153,3,대폭발
+153,4,大爆炸
+153,5,Explosion
+153,6,Explosion
+153,7,Explosión
+153,8,Esplosione
+153,9,Explosion
+153,11,だいばくはつ
+153,12,大爆炸
+154,1,みだれひっかき
+154,3,마구할퀴기
+154,4,亂抓
+154,5,Combo-Griffe
+154,6,Kratzfurie
+154,7,Golpes Furia
+154,8,Sfuriate
+154,9,Fury Swipes
+154,11,みだれひっかき
+154,12,乱抓
+155,1,ホネブーメラン
+155,3,뼈다귀부메랑
+155,4,骨頭回力鏢
+155,5,Osmerang
+155,6,Knochmerang
+155,7,Huesomerang
+155,8,Ossomerang
+155,9,Bonemerang
+155,11,ホネブーメラン
+155,12,骨头回力镖
+156,1,ねむる
+156,3,잠자기
+156,4,睡覺
+156,5,Repos
+156,6,Erholung
+156,7,Descanso
+156,8,Riposo
+156,9,Rest
+156,11,ねむる
+156,12,睡觉
+157,1,いわなだれ
+157,3,스톤샤워
+157,4,岩崩
+157,5,Éboulement
+157,6,Steinhagel
+157,7,Avalancha
+157,8,Frana
+157,9,Rock Slide
+157,11,いわなだれ
+157,12,岩崩
+158,1,ひっさつまえば
+158,3,필살앞니
+158,4,必殺門牙
+158,5,Croc de Mort
+158,6,Hyperzahn
+158,7,Hipercolmillo
+158,8,Iperzanna
+158,9,Hyper Fang
+158,11,ひっさつまえば
+158,12,必杀门牙
+159,1,かくばる
+159,3,각지기
+159,4,稜角化
+159,5,Affûtage
+159,6,Schärfer
+159,7,Afilar
+159,8,Affilatore
+159,9,Sharpen
+159,11,かくばる
+159,12,棱角化
+160,1,テクスチャー
+160,3,텍스처
+160,4,紋理
+160,5,Conversion
+160,6,Umwandlung
+160,7,Conversión
+160,8,Conversione
+160,9,Conversion
+160,11,テクスチャー
+160,12,纹理
+161,1,トライアタック
+161,3,트라이어택
+161,4,三重攻擊
+161,5,Triplattaque
+161,6,Triplette
+161,7,Triataque
+161,8,Tripletta
+161,9,Tri Attack
+161,11,トライアタック
+161,12,三重攻击
+162,1,いかりのまえば
+162,3,분노의앞니
+162,4,憤怒門牙
+162,5,Croc Fatal
+162,6,Superzahn
+162,7,Superdiente
+162,8,Superzanna
+162,9,Super Fang
+162,11,いかりのまえば
+162,12,愤怒门牙
+163,1,きりさく
+163,3,베어가르기
+163,4,劈開
+163,5,Tranche
+163,6,Schlitzer
+163,7,Cuchillada
+163,8,Lacerazione
+163,9,Slash
+163,11,きりさく
+163,12,劈开
+164,1,みがわり
+164,3,대타출동
+164,4,替身
+164,5,Clonage
+164,6,Delegator
+164,7,Sustituto
+164,8,Sostituto
+164,9,Substitute
+164,11,みがわり
+164,12,替身
+165,1,わるあがき
+165,3,발버둥
+165,4,掙扎
+165,5,Lutte
+165,6,Verzweifler
+165,7,Forcejeo
+165,8,Scontro
+165,9,Struggle
+165,11,わるあがき
+165,12,挣扎
+166,1,スケッチ
+166,3,스케치
+166,4,寫生
+166,5,Gribouille
+166,6,Nachahmer
+166,7,Esquema
+166,8,Schizzo
+166,9,Sketch
+166,11,スケッチ
+166,12,写生
+167,1,トリプルキック
+167,3,트리플킥
+167,4,三連踢
+167,5,Triple Pied
+167,6,Dreifachkick
+167,7,Triple Patada
+167,8,Triplocalcio
+167,9,Triple Kick
+167,11,トリプルキック
+167,12,三连踢
+168,1,どろぼう
+168,3,도둑질
+168,4,小偷
+168,5,Larcin
+168,6,Raub
+168,7,Ladrón
+168,8,Furto
+168,9,Thief
+168,11,どろぼう
+168,12,小偷
+169,1,クモのす
+169,3,거미집
+169,4,蛛網
+169,5,Toile
+169,6,Spinnennetz
+169,7,Telaraña
+169,8,Ragnatela
+169,9,Spider Web
+169,11,クモのす
+169,12,蛛网
+170,1,こころのめ
+170,3,마음의눈
+170,4,心之眼
+170,5,Lire-Esprit
+170,6,Willensleser
+170,7,Telépata
+170,8,Leggimente
+170,9,Mind Reader
+170,11,こころのめ
+170,12,心之眼
+171,1,あくむ
+171,3,악몽
+171,4,惡夢
+171,5,Cauchemar
+171,6,Nachtmahr
+171,7,Pesadilla
+171,8,Incubo
+171,9,Nightmare
+171,11,あくむ
+171,12,恶梦
+172,1,かえんぐるま
+172,3,화염자동차
+172,4,火焰輪
+172,5,Roue de Feu
+172,6,Flammenrad
+172,7,Rueda Fuego
+172,8,Ruotafuoco
+172,9,Flame Wheel
+172,11,かえんぐるま
+172,12,火焰轮
+173,1,いびき
+173,3,코골기
+173,4,打鼾
+173,5,Ronflement
+173,6,Schnarcher
+173,7,Ronquido
+173,8,Russare
+173,9,Snore
+173,11,いびき
+173,12,打鼾
+174,1,のろい
+174,3,저주
+174,4,詛咒
+174,5,Malédiction
+174,6,Fluch
+174,7,Maldición
+174,8,Maledizione
+174,9,Curse
+174,11,のろい
+174,12,诅咒
+175,1,じたばた
+175,3,바둥바둥
+175,4,抓狂
+175,5,Fléau
+175,6,Dreschflegel
+175,7,Azote
+175,8,Flagello
+175,9,Flail
+175,11,じたばた
+175,12,抓狂
+176,1,テクスチャー２
+176,3,텍스처2
+176,4,紋理２
+176,5,Conversion 2
+176,6,Umwandlung2
+176,7,Conversión2
+176,8,Conversione2
+176,9,Conversion 2
+176,11,テクスチャー２
+176,12,纹理２
+177,1,エアロブラスト
+177,3,에어로블라스트
+177,4,氣旋攻擊
+177,5,Aéroblast
+177,6,Luftstoß
+177,7,Aerochorro
+177,8,Aerocolpo
+177,9,Aeroblast
+177,11,エアロブラスト
+177,12,气旋攻击
+178,1,わたほうし
+178,3,목화포자
+178,4,棉孢子
+178,5,Spore Coton
+178,6,Baumwollsaat
+178,7,Esporagodón
+178,8,Cottonspora
+178,9,Cotton Spore
+178,11,わたほうし
+178,12,棉孢子
+179,1,きしかいせい
+179,3,기사회생
+179,4,起死回生
+179,5,Contre
+179,6,Gegenschlag
+179,7,Inversión
+179,8,Contropiede
+179,9,Reversal
+179,11,きしかいせい
+179,12,起死回生
+180,1,うらみ
+180,3,원한
+180,4,怨恨
+180,5,Dépit
+180,6,Groll
+180,7,Rencor
+180,8,Dispetto
+180,9,Spite
+180,11,うらみ
+180,12,怨恨
+181,1,こなゆき
+181,3,눈싸라기
+181,4,細雪
+181,5,Poudreuse
+181,6,Pulverschnee
+181,7,Nieve Polvo
+181,8,Polneve
+181,9,Powder Snow
+181,11,こなゆき
+181,12,细雪
+182,1,まもる
+182,3,방어
+182,4,守住
+182,5,Abri
+182,6,Schutzschild
+182,7,Protección
+182,8,Protezione
+182,9,Protect
+182,11,まもる
+182,12,守住
+183,1,マッハパンチ
+183,3,마하펀치
+183,4,音速拳
+183,5,Mach Punch
+183,6,Tempohieb
+183,7,Ultrapuño
+183,8,Pugnorapido
+183,9,Mach Punch
+183,11,マッハパンチ
+183,12,音速拳
+184,1,こわいかお
+184,3,겁나는얼굴
+184,4,鬼面
+184,5,Grimace
+184,6,Grimasse
+184,7,Cara Susto
+184,8,Visotruce
+184,9,Scary Face
+184,11,こわいかお
+184,12,鬼面
+185,1,だましうち
+185,3,속여때리기
+185,4,出奇一擊
+185,5,Feinte
+185,6,Finte
+185,7,Finta
+185,8,Finta
+185,9,Feint Attack
+185,11,だましうち
+185,12,出奇一击
+186,1,てんしのキッス
+186,3,천사의키스
+186,4,天使之吻
+186,5,Doux Baiser
+186,6,Bitterkuss
+186,7,Beso Dulce
+186,8,Dolcebacio
+186,9,Sweet Kiss
+186,11,てんしのキッス
+186,12,天使之吻
+187,1,はらだいこ
+187,3,배북
+187,4,腹鼓
+187,5,Cognobidon
+187,6,Bauchtrommel
+187,7,Tambor
+187,8,Panciamburo
+187,9,Belly Drum
+187,11,はらだいこ
+187,12,腹鼓
+188,1,ヘドロばくだん
+188,3,오물폭탄
+188,4,污泥炸彈
+188,5,Bomb-Beurk
+188,6,Matschbombe
+188,7,Bomba Lodo
+188,8,Fangobomba
+188,9,Sludge Bomb
+188,11,ヘドロばくだん
+188,12,污泥炸弹
+189,1,どろかけ
+189,3,진흙뿌리기
+189,4,擲泥
+189,5,Coud’Boue
+189,6,Lehmschelle
+189,7,Bofetón Lodo
+189,8,Fangosberla
+189,9,Mud-Slap
+189,11,どろかけ
+189,12,掷泥
+190,1,オクタンほう
+190,3,대포무노포
+190,4,章魚桶炮
+190,5,Octazooka
+190,6,Octazooka
+190,7,Pulpocañón
+190,8,Octazooka
+190,9,Octazooka
+190,11,オクタンほう
+190,12,章鱼桶炮
+191,1,まきびし
+191,3,압정뿌리기
+191,4,撒菱
+191,5,Picots
+191,6,Stachler
+191,7,Púas
+191,8,Punte
+191,9,Spikes
+191,11,まきびし
+191,12,撒菱
+192,1,でんじほう
+192,3,전자포
+192,4,電磁炮
+192,5,Élecanon
+192,6,Blitzkanone
+192,7,Electrocañón
+192,8,Falcecannone
+192,9,Zap Cannon
+192,11,でんじほう
+192,12,电磁炮
+193,1,みやぶる
+193,3,꿰뚫어보기
+193,4,識破
+193,5,Clairvoyance
+193,6,Gesichte
+193,7,Profecía
+193,8,Preveggenza
+193,9,Foresight
+193,11,みやぶる
+193,12,识破
+194,1,みちづれ
+194,3,길동무
+194,4,同命
+194,5,Prélèvem. Destin
+194,6,Abgangsbund
+194,7,Mismo Destino
+194,8,Destinobbligato
+194,9,Destiny Bond
+194,11,みちづれ
+194,12,同命
+195,1,ほろびのうた
+195,3,멸망의노래
+195,4,滅亡之歌
+195,5,Requiem
+195,6,Abgesang
+195,7,Canto Mortal
+195,8,Ultimocanto
+195,9,Perish Song
+195,11,ほろびのうた
+195,12,灭亡之歌
+196,1,こごえるかぜ
+196,3,얼다바람
+196,4,冰凍之風
+196,5,Vent Glace
+196,6,Eissturm
+196,7,Viento Hielo
+196,8,Ventogelato
+196,9,Icy Wind
+196,11,こごえるかぜ
+196,12,冰冻之风
+197,1,みきり
+197,3,판별
+197,4,看穿
+197,5,Détection
+197,6,Scanner
+197,7,Detección
+197,8,Individua
+197,9,Detect
+197,11,みきり
+197,12,看穿
+198,1,ボーンラッシュ
+198,3,본러쉬
+198,4,骨棒亂打
+198,5,Charge-Os
+198,6,Knochenhatz
+198,7,Ataque Óseo
+198,8,Ossoraffica
+198,9,Bone Rush
+198,11,ボーンラッシュ
+198,12,骨棒乱打
+199,1,ロックオン
+199,3,록온
+199,4,鎖定
+199,5,Verrouillage
+199,6,Zielschuss
+199,7,Fijar Blanco
+199,8,Localizza
+199,9,Lock-On
+199,11,ロックオン
+199,12,锁定
+200,1,げきりん
+200,3,역린
+200,4,逆鱗
+200,5,Colère
+200,6,Wutanfall
+200,7,Enfado
+200,8,Oltraggio
+200,9,Outrage
+200,11,げきりん
+200,12,逆鳞
+201,1,すなあらし
+201,3,모래바람
+201,4,沙暴
+201,5,Tempête de Sable
+201,6,Sandsturm
+201,7,Tormenta Arena
+201,8,Terrempesta
+201,9,Sandstorm
+201,11,すなあらし
+201,12,沙暴
+202,1,ギガドレイン
+202,3,기가드레인
+202,4,終極吸取
+202,5,Giga-Sangsue
+202,6,Gigasauger
+202,7,Gigadrenado
+202,8,Gigassorbimento
+202,9,Giga Drain
+202,11,ギガドレイン
+202,12,终极吸取
+203,1,こらえる
+203,3,버티기
+203,4,挺住
+203,5,Ténacité
+203,6,Ausdauer
+203,7,Aguante
+203,8,Resistenza
+203,9,Endure
+203,11,こらえる
+203,12,挺住
+204,1,あまえる
+204,3,애교부리기
+204,4,撒嬌
+204,5,Charme
+204,6,Charme
+204,7,Encanto
+204,8,Fascino
+204,9,Charm
+204,11,あまえる
+204,12,撒娇
+205,1,ころがる
+205,3,구르기
+205,4,滾動
+205,5,Roulade
+205,6,Walzer
+205,7,Desenrollar
+205,8,Rotolamento
+205,9,Rollout
+205,11,ころがる
+205,12,滚动
+206,1,みねうち
+206,3,칼등치기
+206,4,點到為止
+206,5,Faux-Chage
+206,6,Trugschlag
+206,7,Falsotortazo
+206,8,Falsofinale
+206,9,False Swipe
+206,11,みねうち
+206,12,点到为止
+207,1,いばる
+207,3,뽐내기
+207,4,虛張聲勢
+207,5,Vantardise
+207,6,Angeberei
+207,7,Contoneo
+207,8,Bullo
+207,9,Swagger
+207,11,いばる
+207,12,虚张声势
+208,1,ミルクのみ
+208,3,우유마시기
+208,4,喝牛奶
+208,5,Lait à Boire
+208,6,Milchgetränk
+208,7,Batido
+208,8,Buonlatte
+208,9,Milk Drink
+208,11,ミルクのみ
+208,12,喝牛奶
+209,1,スパーク
+209,3,스파크
+209,4,電光
+209,5,Étincelle
+209,6,Funkensprung
+209,7,Chispa
+209,8,Scintilla
+209,9,Spark
+209,11,スパーク
+209,12,电光
+210,1,れんぞくぎり
+210,3,연속자르기
+210,4,連斬
+210,5,Taillade
+210,6,Zornklinge
+210,7,Corte Furia
+210,8,Tagliofuria
+210,9,Fury Cutter
+210,11,れんぞくぎり
+210,12,连斩
+211,1,はがねのつばさ
+211,3,강철날개
+211,4,鋼翼
+211,5,Aile d’Acier
+211,6,Stahlflügel
+211,7,Ala de Acero
+211,8,Alacciaio
+211,9,Steel Wing
+211,11,はがねのつばさ
+211,12,钢翼
+212,1,くろいまなざし
+212,3,검은눈빛
+212,4,黑色目光
+212,5,Regard Noir
+212,6,Horrorblick
+212,7,Mal de Ojo
+212,8,Malosguardo
+212,9,Mean Look
+212,11,くろいまなざし
+212,12,黑色目光
+213,1,メロメロ
+213,3,헤롱헤롱
+213,4,迷人
+213,5,Attraction
+213,6,Anziehung
+213,7,Atracción
+213,8,Attrazione
+213,9,Attract
+213,11,メロメロ
+213,12,迷人
+214,1,ねごと
+214,3,잠꼬대
+214,4,夢話
+214,5,Blabla Dodo
+214,6,Schlafrede
+214,7,Sonámbulo
+214,8,Sonnolalia
+214,9,Sleep Talk
+214,11,ねごと
+214,12,梦话
+215,1,いやしのすず
+215,3,치료방울
+215,4,治癒鈴聲
+215,5,Glas de Soin
+215,6,Vitalglocke
+215,7,Campana Cura
+215,8,Rintoccasana
+215,9,Heal Bell
+215,11,いやしのすず
+215,12,治愈铃声
+216,1,おんがえし
+216,3,은혜갚기
+216,4,報恩
+216,5,Retour
+216,6,Rückkehr
+216,7,Retribución
+216,8,Ritorno
+216,9,Return
+216,11,おんがえし
+216,12,报恩
+217,1,プレゼント
+217,3,프레젠트
+217,4,禮物
+217,5,Cadeau
+217,6,Geschenk
+217,7,Presente
+217,8,Regalino
+217,9,Present
+217,11,プレゼント
+217,12,礼物
+218,1,やつあたり
+218,3,화풀이
+218,4,遷怒
+218,5,Frustration
+218,6,Frustration
+218,7,Frustración
+218,8,Frustrazione
+218,9,Frustration
+218,11,やつあたり
+218,12,迁怒
+219,1,しんぴのまもり
+219,3,신비의부적
+219,4,神秘守護
+219,5,Rune Protect
+219,6,Bodyguard
+219,7,Velo Sagrado
+219,8,Salvaguardia
+219,9,Safeguard
+219,11,しんぴのまもり
+219,12,神秘守护
+220,1,いたみわけ
+220,3,아픔나누기
+220,4,分擔痛楚
+220,5,Balance
+220,6,Leidteiler
+220,7,Divide Dolor
+220,8,Malcomune
+220,9,Pain Split
+220,11,いたみわけ
+220,12,分担痛楚
+221,1,せいなるほのお
+221,3,성스러운불꽃
+221,4,神聖之火
+221,5,Feu Sacré
+221,6,Läuterfeuer
+221,7,Fuego Sagrado
+221,8,Magifuoco
+221,9,Sacred Fire
+221,11,せいなるほのお
+221,12,神圣之火
+222,1,マグニチュード
+222,3,매그니튜드
+222,4,震級
+222,5,Ampleur
+222,6,Intensität
+222,7,Magnitud
+222,8,Magnitudo
+222,9,Magnitude
+222,11,マグニチュード
+222,12,震级
+223,1,ばくれつパンチ
+223,3,폭발펀치
+223,4,爆裂拳
+223,5,Dynamopoing
+223,6,Wuchtschlag
+223,7,Puño Dinámico
+223,8,Dinamipugno
+223,9,Dynamic Punch
+223,11,ばくれつパンチ
+223,12,爆裂拳
+224,1,メガホーン
+224,3,메가폰
+224,4,超級角擊
+224,5,Mégacorne
+224,6,Vielender
+224,7,Megacuerno
+224,8,Megacorno
+224,9,Megahorn
+224,11,メガホーン
+224,12,超级角击
+225,1,りゅうのいぶき
+225,3,용의숨결
+225,4,龍息
+225,5,Dracosouffle
+225,6,Feuerodem
+225,7,Dragoaliento
+225,8,Dragospiro
+225,9,Dragon Breath
+225,11,りゅうのいぶき
+225,12,龙息
+226,1,バトンタッチ
+226,3,바톤터치
+226,4,接棒
+226,5,Relais
+226,6,Stafette
+226,7,Relevo
+226,8,Staffetta
+226,9,Baton Pass
+226,11,バトンタッチ
+226,12,接棒
+227,1,アンコール
+227,3,앵콜
+227,4,再來一次
+227,5,Encore
+227,6,Zugabe
+227,7,Otra Vez
+227,8,Ripeti
+227,9,Encore
+227,11,アンコール
+227,12,再来一次
+228,1,おいうち
+228,3,따라가때리기
+228,4,追打
+228,5,Poursuite
+228,6,Verfolgung
+228,7,Persecución
+228,8,Inseguimento
+228,9,Pursuit
+228,11,おいうち
+228,12,追打
+229,1,こうそくスピン
+229,3,고속스핀
+229,4,高速旋轉
+229,5,Tour Rapide
+229,6,Turbodreher
+229,7,Giro Rápido
+229,8,Rapigiro
+229,9,Rapid Spin
+229,11,こうそくスピン
+229,12,高速旋转
+230,1,あまいかおり
+230,3,달콤한향기
+230,4,甜甜香氣
+230,5,Doux Parfum
+230,6,Lockduft
+230,7,Dulce Aroma
+230,8,Profumino
+230,9,Sweet Scent
+230,11,あまいかおり
+230,12,甜甜香气
+231,1,アイアンテール
+231,3,아이언테일
+231,4,鐵尾
+231,5,Queue de Fer
+231,6,Eisenschweif
+231,7,Cola Férrea
+231,8,Codacciaio
+231,9,Iron Tail
+231,11,アイアンテール
+231,12,铁尾
+232,1,メタルクロー
+232,3,메탈크로우
+232,4,金屬爪
+232,5,Griffe Acier
+232,6,Metallklaue
+232,7,Garra Metal
+232,8,Ferrartigli
+232,9,Metal Claw
+232,11,メタルクロー
+232,12,金属爪
+233,1,あてみなげ
+233,3,받아던지기
+233,4,借力摔
+233,5,Corps Perdu
+233,6,Überwurf
+233,7,Tiro Vital
+233,8,Vitaltiro
+233,9,Vital Throw
+233,11,あてみなげ
+233,12,借力摔
+234,1,あさのひざし
+234,3,아침햇살
+234,4,晨光
+234,5,Aurore
+234,6,Morgengrauen
+234,7,Sol Matinal
+234,8,Mattindoro
+234,9,Morning Sun
+234,11,あさのひざし
+234,12,晨光
+235,1,こうごうせい
+235,3,광합성
+235,4,光合作用
+235,5,Synthèse
+235,6,Synthese
+235,7,Síntesis
+235,8,Sintesi
+235,9,Synthesis
+235,11,こうごうせい
+235,12,光合作用
+236,1,つきのひかり
+236,3,달의불빛
+236,4,月光
+236,5,Rayon Lune
+236,6,Mondschein
+236,7,Luz Lunar
+236,8,Lucelunare
+236,9,Moonlight
+236,11,つきのひかり
+236,12,月光
+237,1,めざめるパワー
+237,3,잠재파워
+237,4,覺醒力量
+237,5,Puissance Cachée
+237,6,Kraftreserve
+237,7,Poder Oculto
+237,8,Introforza
+237,9,Hidden Power
+237,11,めざめるパワー
+237,12,觉醒力量
+238,1,クロスチョップ
+238,3,크로스촙
+238,4,十字劈
+238,5,Coup-Croix
+238,6,Kreuzhieb
+238,7,Tajo Cruzado
+238,8,Incrocolpo
+238,9,Cross Chop
+238,11,クロスチョップ
+238,12,十字劈
+239,1,たつまき
+239,3,회오리
+239,4,龍捲風
+239,5,Ouragan
+239,6,Windhose
+239,7,Ciclón
+239,8,Tornado
+239,9,Twister
+239,11,たつまき
+239,12,龙卷风
+240,1,あまごい
+240,3,비바라기
+240,4,求雨
+240,5,Danse Pluie
+240,6,Regentanz
+240,7,Danza Lluvia
+240,8,Pioggiadanza
+240,9,Rain Dance
+240,11,あまごい
+240,12,求雨
+241,1,にほんばれ
+241,3,쾌청
+241,4,大晴天
+241,5,Zénith
+241,6,Sonnentag
+241,7,Día Soleado
+241,8,Giornodisole
+241,9,Sunny Day
+241,11,にほんばれ
+241,12,大晴天
+242,1,かみくだく
+242,3,깨물어부수기
+242,4,咬碎
+242,5,Mâchouille
+242,6,Knirscher
+242,7,Triturar
+242,8,Sgranocchio
+242,9,Crunch
+242,11,かみくだく
+242,12,咬碎
+243,1,ミラーコート
+243,3,미러코트
+243,4,鏡面反射
+243,5,Voile Miroir
+243,6,Spiegelcape
+243,7,Manto Espejo
+243,8,Specchiovelo
+243,9,Mirror Coat
+243,11,ミラーコート
+243,12,镜面反射
+244,1,じこあんじ
+244,3,자기암시
+244,4,自我暗示
+244,5,Boost
+244,6,Psycho-Plus
+244,7,Más Psique
+244,8,Psicamisù
+244,9,Psych Up
+244,11,じこあんじ
+244,12,自我暗示
+245,1,しんそく
+245,3,신속
+245,4,神速
+245,5,Vitesse Extrême
+245,6,Turbotempo
+245,7,Veloc. Extrema
+245,8,Extrarapido
+245,9,Extreme Speed
+245,11,しんそく
+245,12,神速
+246,1,げんしのちから
+246,3,원시의힘
+246,4,原始之力
+246,5,Pouvoir Antique
+246,6,Antik-Kraft
+246,7,Poder Pasado
+246,8,Forzantica
+246,9,Ancient Power
+246,11,げんしのちから
+246,12,原始之力
+247,1,シャドーボール
+247,3,섀도볼
+247,4,暗影球
+247,5,Ball’Ombre
+247,6,Spukball
+247,7,Bola Sombra
+247,8,Palla Ombra
+247,9,Shadow Ball
+247,11,シャドーボール
+247,12,暗影球
+248,1,みらいよち
+248,3,미래예지
+248,4,預知未來
+248,5,Prescience
+248,6,Seher
+248,7,Premonición
+248,8,Divinazione
+248,9,Future Sight
+248,11,みらいよち
+248,12,预知未来
+249,1,いわくだき
+249,3,바위깨기
+249,4,碎岩
+249,5,Éclate-Roc
+249,6,Zertrümmerer
+249,7,Golpe Roca
+249,8,Spaccaroccia
+249,9,Rock Smash
+249,11,いわくだき
+249,12,碎岩
+250,1,うずしお
+250,3,바다회오리
+250,4,潮旋
+250,5,Siphon
+250,6,Whirlpool
+250,7,Torbellino
+250,8,Mulinello
+250,9,Whirlpool
+250,11,うずしお
+250,12,潮旋
+251,1,ふくろだたき
+251,3,집단구타
+251,4,圍攻
+251,5,Baston
+251,6,Prügler
+251,7,Paliza
+251,8,Picchiaduro
+251,9,Beat Up
+251,11,ふくろだたき
+251,12,围攻
+252,1,ねこだまし
+252,3,속이다
+252,4,擊掌奇襲
+252,5,Bluff
+252,6,Mogelhieb
+252,7,Sorpresa
+252,8,Bruciapelo
+252,9,Fake Out
+252,11,ねこだまし
+252,12,击掌奇袭
+253,1,さわぐ
+253,3,소란피기
+253,4,吵鬧
+253,5,Brouhaha
+253,6,Aufruhr
+253,7,Alboroto
+253,8,Baraonda
+253,9,Uproar
+253,11,さわぐ
+253,12,吵闹
+254,1,たくわえる
+254,3,비축하기
+254,4,蓄力
+254,5,Stockage
+254,6,Horter
+254,7,Reserva
+254,8,Accumulo
+254,9,Stockpile
+254,11,たくわえる
+254,12,蓄力
+255,1,はきだす
+255,3,토해내기
+255,4,噴出
+255,5,Relâche
+255,6,Entfessler
+255,7,Escupir
+255,8,Sfoghenergia
+255,9,Spit Up
+255,11,はきだす
+255,12,喷出
+256,1,のみこむ
+256,3,꿀꺽
+256,4,吞下
+256,5,Avale
+256,6,Verzehrer
+256,7,Tragar
+256,8,Introenergia
+256,9,Swallow
+256,11,のみこむ
+256,12,吞下
+257,1,ねっぷう
+257,3,열풍
+257,4,熱風
+257,5,Canicule
+257,6,Hitzewelle
+257,7,Onda Ígnea
+257,8,Ondacalda
+257,9,Heat Wave
+257,11,ねっぷう
+257,12,热风
+258,1,あられ
+258,3,싸라기눈
+258,4,冰雹
+258,5,Grêle
+258,6,Hagelsturm
+258,7,Granizo
+258,8,Grandine
+258,9,Hail
+258,11,あられ
+258,12,冰雹
+259,1,いちゃもん
+259,3,트집
+259,4,無理取鬧
+259,5,Tourmente
+259,6,Folterknecht
+259,7,Tormento
+259,8,Attaccalite
+259,9,Torment
+259,11,いちゃもん
+259,12,无理取闹
+260,1,おだてる
+260,3,부추기기
+260,4,吹捧
+260,5,Flatterie
+260,6,Schmeichler
+260,7,Camelo
+260,8,Adulazione
+260,9,Flatter
+260,11,おだてる
+260,12,吹捧
+261,1,おにび
+261,3,도깨비불
+261,4,鬼火
+261,5,Feu Follet
+261,6,Irrlicht
+261,7,Fuego Fatuo
+261,8,Fuocofatuo
+261,9,Will-O-Wisp
+261,11,おにび
+261,12,鬼火
+262,1,おきみやげ
+262,3,추억의선물
+262,4,臨別禮物
+262,5,Souvenir
+262,6,Memento-Mori
+262,7,Legado
+262,8,Memento
+262,9,Memento
+262,11,おきみやげ
+262,12,临别礼物
+263,1,からげんき
+263,3,객기
+263,4,硬撐
+263,5,Façade
+263,6,Fassade
+263,7,Imagen
+263,8,Facciata
+263,9,Facade
+263,11,からげんき
+263,12,硬撑
+264,1,きあいパンチ
+264,3,힘껏펀치
+264,4,真氣拳
+264,5,Mitra-Poing
+264,6,Power-Punch
+264,7,Puño Certero
+264,8,Centripugno
+264,9,Focus Punch
+264,11,きあいパンチ
+264,12,真气拳
+265,1,きつけ
+265,3,정신차리기
+265,4,清醒
+265,5,Stimulant
+265,6,Riechsalz
+265,7,Estímulo
+265,8,Maniereforti
+265,9,Smelling Salts
+265,11,きつけ
+265,12,清醒
+266,1,このゆびとまれ
+266,3,날따름
+266,4,看我嘛
+266,5,Par Ici
+266,6,Spotlight
+266,7,Señuelo
+266,8,Sonoqui
+266,9,Follow Me
+266,11,このゆびとまれ
+266,12,看我嘛
+267,1,しぜんのちから
+267,3,자연의힘
+267,4,自然之力
+267,5,Force-Nature
+267,6,Natur-Kraft
+267,7,Adaptación
+267,8,Naturforza
+267,9,Nature Power
+267,11,しぜんのちから
+267,12,自然之力
+268,1,じゅうでん
+268,3,충전
+268,4,充電
+268,5,Chargeur
+268,6,Ladevorgang
+268,7,Carga
+268,8,Sottocarica
+268,9,Charge
+268,11,じゅうでん
+268,12,充电
+269,1,ちょうはつ
+269,3,도발
+269,4,挑釁
+269,5,Provoc
+269,6,Verhöhner
+269,7,Mofa
+269,8,Provocazione
+269,9,Taunt
+269,11,ちょうはつ
+269,12,挑衅
+270,1,てだすけ
+270,3,도우미
+270,4,幫助
+270,5,Coup d’Main
+270,6,Rechte Hand
+270,7,Refuerzo
+270,8,Altruismo
+270,9,Helping Hand
+270,11,てだすけ
+270,12,帮助
+271,1,トリック
+271,3,트릭
+271,4,戲法
+271,5,Tourmagik
+271,6,Trickbetrug
+271,7,Truco
+271,8,Raggiro
+271,9,Trick
+271,11,トリック
+271,12,戏法
+272,1,なりきり
+272,3,역할
+272,4,扮演
+272,5,Imitation
+272,6,Rollentausch
+272,7,Imitación
+272,8,Giocodiruolo
+272,9,Role Play
+272,11,なりきり
+272,12,扮演
+273,1,ねがいごと
+273,3,희망사항
+273,4,祈願
+273,5,Vœu
+273,6,Wunschtraum
+273,7,Deseo
+273,8,Desiderio
+273,9,Wish
+273,11,ねがいごと
+273,12,祈愿
+274,1,ねこのて
+274,3,조수
+274,4,借助
+274,5,Assistance
+274,6,Zuschuss
+274,7,Ayuda
+274,8,Assistente
+274,9,Assist
+274,11,ねこのて
+274,12,借助
+275,1,ねをはる
+275,3,뿌리박기
+275,4,扎根
+275,5,Racines
+275,6,Verwurzler
+275,7,Arraigo
+275,8,Radicamento
+275,9,Ingrain
+275,11,ねをはる
+275,12,扎根
+276,1,ばかぢから
+276,3,엄청난힘
+276,4,蠻力
+276,5,Surpuissance
+276,6,Kraftkoloss
+276,7,Fuerza Bruta
+276,8,Troppoforte
+276,9,Superpower
+276,11,ばかぢから
+276,12,蛮力
+277,1,マジックコート
+277,3,매직코트
+277,4,魔法反射
+277,5,Reflet Magik
+277,6,Magiemantel
+277,7,Capa Mágica
+277,8,Magivelo
+277,9,Magic Coat
+277,11,マジックコート
+277,12,魔法反射
+278,1,リサイクル
+278,3,리사이클
+278,4,回收利用
+278,5,Recyclage
+278,6,Aufbereitung
+278,7,Reciclaje
+278,8,Riciclo
+278,9,Recycle
+278,11,リサイクル
+278,12,回收利用
+279,1,リベンジ
+279,3,리벤지
+279,4,報復
+279,5,Vendetta
+279,6,Vergeltung
+279,7,Desquite
+279,8,Vendetta
+279,9,Revenge
+279,11,リベンジ
+279,12,报复
+280,1,かわらわり
+280,3,깨트리다
+280,4,劈瓦
+280,5,Casse-Brique
+280,6,Durchbruch
+280,7,Demolición
+280,8,Breccia
+280,9,Brick Break
+280,11,かわらわり
+280,12,劈瓦
+281,1,あくび
+281,3,하품
+281,4,哈欠
+281,5,Bâillement
+281,6,Gähner
+281,7,Bostezo
+281,8,Sbadiglio
+281,9,Yawn
+281,11,あくび
+281,12,哈欠
+282,1,はたきおとす
+282,3,탁쳐서떨구기
+282,4,拍落
+282,5,Sabotage
+282,6,Abschlag
+282,7,Desarme
+282,8,Privazione
+282,9,Knock Off
+282,11,はたきおとす
+282,12,拍落
+283,1,がむしゃら
+283,3,죽기살기
+283,4,蠻幹
+283,5,Effort
+283,6,Notsituation
+283,7,Esfuerzo
+283,8,Rimonta
+283,9,Endeavor
+283,11,がむしゃら
+283,12,蛮干
+284,1,ふんか
+284,3,분화
+284,4,噴火
+284,5,Éruption
+284,6,Eruption
+284,7,Estallido
+284,8,Eruzione
+284,9,Eruption
+284,11,ふんか
+284,12,喷火
+285,1,スキルスワップ
+285,3,스킬스웹
+285,4,特性互換
+285,5,Échange
+285,6,Wertewechsel
+285,7,Intercambio
+285,8,Baratto
+285,9,Skill Swap
+285,11,スキルスワップ
+285,12,特性互换
+286,1,ふういん
+286,3,봉인
+286,4,封印
+286,5,Possessif
+286,6,Begrenzer
+286,7,Cerca
+286,8,Esclusiva
+286,9,Imprison
+286,11,ふういん
+286,12,封印
+287,1,リフレッシュ
+287,3,리프레쉬
+287,4,煥然一新
+287,5,Régénération
+287,6,Heilung
+287,7,Alivio
+287,8,Rinfrescata
+287,9,Refresh
+287,11,リフレッシュ
+287,12,焕然一新
+288,1,おんねん
+288,3,원념
+288,4,怨念
+288,5,Rancune
+288,6,Nachspiel
+288,7,Rabia
+288,8,Rancore
+288,9,Grudge
+288,11,おんねん
+288,12,怨念
+289,1,よこどり
+289,3,가로챔
+289,4,搶奪
+289,5,Saisie
+289,6,Übernahme
+289,7,Robo
+289,8,Scippo
+289,9,Snatch
+289,11,よこどり
+289,12,抢夺
+290,1,ひみつのちから
+290,3,비밀의힘
+290,4,秘密之力
+290,5,Force Cachée
+290,6,Geheimpower
+290,7,Daño Secreto
+290,8,Forzasegreta
+290,9,Secret Power
+290,11,ひみつのちから
+290,12,秘密之力
+291,1,ダイビング
+291,3,다이빙
+291,4,潛水
+291,5,Plongée
+291,6,Taucher
+291,7,Buceo
+291,8,Sub
+291,9,Dive
+291,11,ダイビング
+291,12,潜水
+292,1,つっぱり
+292,3,손바닥치기
+292,4,猛推
+292,5,Cogne
+292,6,Armstoß
+292,7,Empujón
+292,8,Sberletese
+292,9,Arm Thrust
+292,11,つっぱり
+292,12,猛推
+293,1,ほごしょく
+293,3,보호색
+293,4,保護色
+293,5,Camouflage
+293,6,Tarnung
+293,7,Camuflaje
+293,8,Camuffamento
+293,9,Camouflage
+293,11,ほごしょく
+293,12,保护色
+294,1,ほたるび
+294,3,반딧불
+294,4,螢火
+294,5,Lumiqueue
+294,6,Schweifglanz
+294,7,Ráfaga
+294,8,Codadiluce
+294,9,Tail Glow
+294,11,ほたるび
+294,12,萤火
+295,1,ラスターパージ
+295,3,라스트버지
+295,4,潔淨光芒
+295,5,Lumi-Éclat
+295,6,Scheinwerfer
+295,7,Resplandor
+295,8,Abbagliante
+295,9,Luster Purge
+295,11,ラスターパージ
+295,12,洁净光芒
+296,1,ミストボール
+296,3,미스트볼
+296,4,薄霧球
+296,5,Ball’Brume
+296,6,Nebelball
+296,7,Bola Neblina
+296,8,Foschisfera
+296,9,Mist Ball
+296,11,ミストボール
+296,12,薄雾球
+297,1,フェザーダンス
+297,3,깃털댄스
+297,4,羽毛舞
+297,5,Danse-Plume
+297,6,Daunenreigen
+297,7,Danza Pluma
+297,8,Danzadipiume
+297,9,Feather Dance
+297,11,フェザーダンス
+297,12,羽毛舞
+298,1,フラフラダンス
+298,3,흔들흔들댄스
+298,4,搖晃舞
+298,5,Danse-Folle
+298,6,Taumeltanz
+298,7,Danza Caos
+298,8,Strampadanza
+298,9,Teeter Dance
+298,11,フラフラダンス
+298,12,摇晃舞
+299,1,ブレイズキック
+299,3,브레이즈킥
+299,4,火焰踢
+299,5,Pied Brûleur
+299,6,Feuerfeger
+299,7,Patada Ígnea
+299,8,Calciardente
+299,9,Blaze Kick
+299,11,ブレイズキック
+299,12,火焰踢
+300,1,どろあそび
+300,3,흙놀이
+300,4,玩泥巴
+300,5,Lance-Boue
+300,6,Lehmsuhler
+300,7,Chapoteo Lodo
+300,8,Fangata
+300,9,Mud Sport
+300,11,どろあそび
+300,12,玩泥巴
+301,1,アイスボール
+301,3,아이스볼
+301,4,冰球
+301,5,Ball’Glace
+301,6,Frostbeule
+301,7,Bola Hielo
+301,8,Palla Gelo
+301,9,Ice Ball
+301,11,アイスボール
+301,12,冰球
+302,1,ニードルアーム
+302,3,바늘팔
+302,4,尖刺臂
+302,5,Poing Dard
+302,6,Nietenranke
+302,7,Brazo Pincho
+302,8,Pugnospine
+302,9,Needle Arm
+302,11,ニードルアーム
+302,12,尖刺臂
+303,1,なまける
+303,3,태만함
+303,4,偷懶
+303,5,Paresse
+303,6,Tagedieb
+303,7,Relajo
+303,8,Pigro
+303,9,Slack Off
+303,11,なまける
+303,12,偷懒
+304,1,ハイパーボイス
+304,3,하이퍼보이스
+304,4,巨聲
+304,5,Mégaphone
+304,6,Schallwelle
+304,7,Vozarrón
+304,8,Granvoce
+304,9,Hyper Voice
+304,11,ハイパーボイス
+304,12,巨声
+305,1,どくどくのキバ
+305,3,독엄니
+305,4,劇毒牙
+305,5,Crochet Venin
+305,6,Giftzahn
+305,7,Colmillo Ven
+305,8,Velenodenti
+305,9,Poison Fang
+305,11,どくどくのキバ
+305,12,剧毒牙
+306,1,ブレイククロー
+306,3,브레이크크루
+306,4,撕裂爪
+306,5,Éclate Griffe
+306,6,Zermalmklaue
+306,7,Garra Brutal
+306,8,Tritartigli
+306,9,Crush Claw
+306,11,ブレイククロー
+306,12,撕裂爪
+307,1,ブラストバーン
+307,3,블러스트번
+307,4,爆炸烈焰
+307,5,Rafale Feu
+307,6,Lohekanonade
+307,7,Anillo Ígneo
+307,8,Incendio
+307,9,Blast Burn
+307,11,ブラストバーン
+307,12,爆炸烈焰
+308,1,ハイドロカノン
+308,3,하이드로캐논
+308,4,加農水炮
+308,5,Hydroblast
+308,6,Aquahaubitze
+308,7,Hidrocañón
+308,8,Idrocannone
+308,9,Hydro Cannon
+308,11,ハイドロカノン
+308,12,加农水炮
+309,1,コメットパンチ
+309,3,코멧펀치
+309,4,彗星拳
+309,5,Poing Météore
+309,6,Sternenhieb
+309,7,Puño Meteoro
+309,8,Meteorpugno
+309,9,Meteor Mash
+309,11,コメットパンチ
+309,12,彗星拳
+310,1,おどろかす
+310,3,놀래키기
+310,4,驚嚇
+310,5,Étonnement
+310,6,Erstauner
+310,7,Impresionar
+310,8,Sgomento
+310,9,Astonish
+310,11,おどろかす
+310,12,惊吓
+311,1,ウェザーボール
+311,3,웨더볼
+311,4,氣象球
+311,5,Ball’Météo
+311,6,Meteorologe
+311,7,Meteorobola
+311,8,Palla Clima
+311,9,Weather Ball
+311,11,ウェザーボール
+311,12,气象球
+312,1,アロマセラピー
+312,3,아로마테라피
+312,4,芳香治療
+312,5,Aromathérapie
+312,6,Aromakur
+312,7,Aromaterapia
+312,8,Aromaterapia
+312,9,Aromatherapy
+312,11,アロマセラピー
+312,12,芳香治疗
+313,1,うそなき
+313,3,거짓울음
+313,4,假哭
+313,5,Croco Larme
+313,6,Trugträne
+313,7,Llanto Falso
+313,8,Falselacrime
+313,9,Fake Tears
+313,11,うそなき
+313,12,假哭
+314,1,エアカッター
+314,3,에어컷터
+314,4,空氣利刃
+314,5,Tranch’Air
+314,6,Windschnitt
+314,7,Aire Afilado
+314,8,Aerasoio
+314,9,Air Cutter
+314,11,エアカッター
+314,12,空气利刃
+315,1,オーバーヒート
+315,3,오버히트
+315,4,過熱
+315,5,Surchauffe
+315,6,Hitzekoller
+315,7,Sofoco
+315,8,Vampata
+315,9,Overheat
+315,11,オーバーヒート
+315,12,过热
+316,1,かぎわける
+316,3,냄새구별
+316,4,氣味偵測
+316,5,Flair
+316,6,Schnüffler
+316,7,Rastreo
+316,8,Segugio
+316,9,Odor Sleuth
+316,11,かぎわける
+316,12,气味侦测
+317,1,がんせきふうじ
+317,3,암석봉인
+317,4,岩石封鎖
+317,5,Tomberoche
+317,6,Felsgrab
+317,7,Tumba Rocas
+317,8,Rocciotomba
+317,9,Rock Tomb
+317,11,がんせきふうじ
+317,12,岩石封锁
+318,1,ぎんいろのかぜ
+318,3,은빛바람
+318,4,銀色旋風
+318,5,Vent Argenté
+318,6,Silberhauch
+318,7,Viento Plata
+318,8,Ventargenteo
+318,9,Silver Wind
+318,11,ぎんいろのかぜ
+318,12,银色旋风
+319,1,きんぞくおん
+319,3,금속음
+319,4,金屬音
+319,5,Strido-Son
+319,6,Metallsound
+319,7,Eco Metálico
+319,8,Ferrostrido
+319,9,Metal Sound
+319,11,きんぞくおん
+319,12,金属音
+320,1,くさぶえ
+320,3,풀피리
+320,4,草笛
+320,5,Siffl’Herbe
+320,6,Grasflöte
+320,7,Silbato
+320,8,Meloderba
+320,9,Grass Whistle
+320,11,くさぶえ
+320,12,草笛
+321,1,くすぐる
+321,3,간지르기
+321,4,搔癢
+321,5,Chatouille
+321,6,Spaßkanone
+321,7,Cosquillas
+321,8,Solletico
+321,9,Tickle
+321,11,くすぐる
+321,12,挠痒
+322,1,コスモパワー
+322,3,코스믹파워
+322,4,宇宙力量
+322,5,Force Cosmik
+322,6,Kosmik-Kraft
+322,7,Masa Cósmica
+322,8,Cosmoforza
+322,9,Cosmic Power
+322,11,コスモパワー
+322,12,宇宙力量
+323,1,しおふき
+323,3,해수스파우팅
+323,4,噴水
+323,5,Giclédo
+323,6,Fontränen
+323,7,Salpicar
+323,8,Zampillo
+323,9,Water Spout
+323,11,しおふき
+323,12,喷水
+324,1,シグナルビーム
+324,3,시그널빔
+324,4,信號光束
+324,5,Rayon Signal
+324,6,Ampelleuchte
+324,7,Doble Rayo
+324,8,Segnoraggio
+324,9,Signal Beam
+324,11,シグナルビーム
+324,12,信号光束
+325,1,シャドーパンチ
+325,3,섀도펀치
+325,4,暗影拳
+325,5,Poing Ombre
+325,6,Finsterfaust
+325,7,Puño Sombra
+325,8,Pugnodombra
+325,9,Shadow Punch
+325,11,シャドーパンチ
+325,12,暗影拳
+326,1,じんつうりき
+326,3,신통력
+326,4,神通力
+326,5,Extrasenseur
+326,6,Sondersensor
+326,7,Paranormal
+326,8,Extrasenso
+326,9,Extrasensory
+326,11,じんつうりき
+326,12,神通力
+327,1,スカイアッパー
+327,3,스카이업퍼
+327,4,衝天拳
+327,5,Stratopercut
+327,6,Himmelhieb
+327,7,Gancho Alto
+327,8,Stramontante
+327,9,Sky Uppercut
+327,11,スカイアッパー
+327,12,冲天拳
+328,1,すなじごく
+328,3,모래지옥
+328,4,流沙地獄
+328,5,Tourbi-Sable
+328,6,Sandgrab
+328,7,Bucle Arena
+328,8,Sabbiotomba
+328,9,Sand Tomb
+328,11,すなじごく
+328,12,流沙地狱
+329,1,ぜったいれいど
+329,3,절대영도
+329,4,絕對零度
+329,5,Glaciation
+329,6,Eiseskälte
+329,7,Frío Polar
+329,8,Purogelo
+329,9,Sheer Cold
+329,11,ぜったいれいど
+329,12,绝对零度
+330,1,だくりゅう
+330,3,탁류
+330,4,濁流
+330,5,Ocroupi
+330,6,Lehmbrühe
+330,7,Agua Lodosa
+330,8,Fanghiglia
+330,9,Muddy Water
+330,11,だくりゅう
+330,12,浊流
+331,1,タネマシンガン
+331,3,기관총
+331,4,種子機關槍
+331,5,Balle Graine
+331,6,Kugelsaat
+331,7,Recurrente
+331,8,Semitraglia
+331,9,Bullet Seed
+331,11,タネマシンガン
+331,12,种子机关枪
+332,1,つばめがえし
+332,3,제비반환
+332,4,燕返
+332,5,Aéropique
+332,6,Aero-Ass
+332,7,Golpe Aéreo
+332,8,Aeroassalto
+332,9,Aerial Ace
+332,11,つばめがえし
+332,12,燕返
+333,1,つららばり
+333,3,고드름침
+333,4,冰錐
+333,5,Stalagtite
+333,6,Eisspeer
+333,7,Carámbano
+333,8,Gelolancia
+333,9,Icicle Spear
+333,11,つららばり
+333,12,冰锥
+334,1,てっぺき
+334,3,철벽
+334,4,鐵壁
+334,5,Mur de Fer
+334,6,Eisenabwehr
+334,7,Defensa Férrea
+334,8,Ferroscudo
+334,9,Iron Defense
+334,11,てっぺき
+334,12,铁壁
+335,1,とおせんぼう
+335,3,블록
+335,4,擋路
+335,5,Barrage
+335,6,Rückentzug
+335,7,Bloqueo
+335,8,Blocco
+335,9,Block
+335,11,とおせんぼう
+335,12,挡路
+336,1,とおぼえ
+336,3,멀리짖음
+336,4,長嚎
+336,5,Grondement
+336,6,Jauler
+336,7,Aullido
+336,8,Gridodilotta
+336,9,Howl
+336,11,とおぼえ
+336,12,长嚎
+337,1,ドラゴンクロー
+337,3,드래곤크루
+337,4,龍爪
+337,5,Dracogriffe
+337,6,Drachenklaue
+337,7,Garra Dragón
+337,8,Dragartigli
+337,9,Dragon Claw
+337,11,ドラゴンクロー
+337,12,龙爪
+338,1,ハードプラント
+338,3,하드플랜트
+338,4,瘋狂植物
+338,5,Végé-Attak
+338,6,Flora-Statue
+338,7,Planta Feroz
+338,8,Radicalbero
+338,9,Frenzy Plant
+338,11,ハードプラント
+338,12,疯狂植物
+339,1,ビルドアップ
+339,3,벌크업
+339,4,健美
+339,5,Gonflette
+339,6,Protzer
+339,7,Corpulencia
+339,8,Granfisico
+339,9,Bulk Up
+339,11,ビルドアップ
+339,12,健美
+340,1,とびはねる
+340,3,뛰어오르다
+340,4,彈跳
+340,5,Rebond
+340,6,Sprungfeder
+340,7,Bote
+340,8,Rimbalzo
+340,9,Bounce
+340,11,とびはねる
+340,12,弹跳
+341,1,マッドショット
+341,3,머드숏
+341,4,泥巴射擊
+341,5,Tir de Boue
+341,6,Lehmschuss
+341,7,Disparo Lodo
+341,8,Colpodifango
+341,9,Mud Shot
+341,11,マッドショット
+341,12,泥巴射击
+342,1,ポイズンテール
+342,3,포이즌테일
+342,4,毒尾
+342,5,Queue-Poison
+342,6,Giftschweif
+342,7,Cola Veneno
+342,8,Velenocoda
+342,9,Poison Tail
+342,11,ポイズンテール
+342,12,毒尾
+343,1,ほしがる
+343,3,탐내다
+343,4,渴望
+343,5,Implore
+343,6,Bezirzer
+343,7,Antojo
+343,8,Supplica
+343,9,Covet
+343,11,ほしがる
+343,12,渴望
+344,1,ボルテッカー
+344,3,볼트태클
+344,4,伏特攻擊
+344,5,Électacle
+344,6,Volttackle
+344,7,Placaje Eléc
+344,8,Locomovolt
+344,9,Volt Tackle
+344,11,ボルテッカー
+344,12,伏特攻击
+345,1,マジカルリーフ
+345,3,메지컬리프
+345,4,魔法葉
+345,5,Feuille Magik
+345,6,Zauberblatt
+345,7,Hoja Mágica
+345,8,Fogliamagica
+345,9,Magical Leaf
+345,11,マジカルリーフ
+345,12,魔法叶
+346,1,みずあそび
+346,3,물놀이
+346,4,玩水
+346,5,Tourniquet
+346,6,Nassmacher
+346,7,Hidrochorro
+346,8,Docciascudo
+346,9,Water Sport
+346,11,みずあそび
+346,12,玩水
+347,1,めいそう
+347,3,명상
+347,4,冥想
+347,5,Plénitude
+347,6,Gedankengut
+347,7,Paz Mental
+347,8,Calmamente
+347,9,Calm Mind
+347,11,めいそう
+347,12,冥想
+348,1,リーフブレード
+348,3,리프블레이드
+348,4,葉刃
+348,5,Lame-Feuille
+348,6,Laubklinge
+348,7,Hoja Aguda
+348,8,Fendifoglia
+348,9,Leaf Blade
+348,11,リーフブレード
+348,12,叶刃
+349,1,りゅうのまい
+349,3,용의춤
+349,4,龍之舞
+349,5,Danse Draco
+349,6,Drachentanz
+349,7,Danza Dragón
+349,8,Dragodanza
+349,9,Dragon Dance
+349,11,りゅうのまい
+349,12,龙之舞
+350,1,ロックブラスト
+350,3,락블레스트
+350,4,岩石爆擊
+350,5,Boule Roc
+350,6,Felswurf
+350,7,Pedrada
+350,8,Cadutamassi
+350,9,Rock Blast
+350,11,ロックブラスト
+350,12,岩石爆击
+351,1,でんげきは
+351,3,전격파
+351,4,電擊波
+351,5,Onde de Choc
+351,6,Schockwelle
+351,7,Onda Voltio
+351,8,Ondashock
+351,9,Shock Wave
+351,11,でんげきは
+351,12,电击波
+352,1,みずのはどう
+352,3,물의파동
+352,4,水之波動
+352,5,Vibraqua
+352,6,Aquawelle
+352,7,Hidropulso
+352,8,Idropulsar
+352,9,Water Pulse
+352,11,みずのはどう
+352,12,水之波动
+353,1,はめつのねがい
+353,3,파멸의소원
+353,4,破滅之願
+353,5,Carnareket
+353,6,Kismetwunsch
+353,7,Deseo Oculto
+353,8,Obbliderio
+353,9,Doom Desire
+353,11,はめつのねがい
+353,12,破灭之愿
+354,1,サイコブースト
+354,3,사이코부스트
+354,4,精神突進
+354,5,Psycho Boost
+354,6,Psyschub
+354,7,Psicoataque
+354,8,Psicoslancio
+354,9,Psycho Boost
+354,11,サイコブースト
+354,12,精神突进
+355,1,はねやすめ
+355,3,날개쉬기
+355,4,羽棲
+355,5,Atterrissage
+355,6,Ruheort
+355,7,Respiro
+355,8,Trespolo
+355,9,Roost
+355,11,はねやすめ
+355,12,羽栖
+356,1,じゅうりょく
+356,3,중력
+356,4,重力
+356,5,Gravité
+356,6,Erdanziehung
+356,7,Gravedad
+356,8,Gravità
+356,9,Gravity
+356,11,じゅうりょく
+356,12,重力
+357,1,ミラクルアイ
+357,3,미라클아이
+357,4,奇跡之眼
+357,5,Œil Miracle
+357,6,Wunderauge
+357,7,Gran Ojo
+357,8,Miracolvista
+357,9,Miracle Eye
+357,11,ミラクルアイ
+357,12,奇迹之眼
+358,1,めざましビンタ
+358,3,잠깨움뺨치기
+358,4,喚醒巴掌
+358,5,Réveil Forcé
+358,6,Weckruf
+358,7,Espabila
+358,8,Svegliopacca
+358,9,Wake-Up Slap
+358,11,めざましビンタ
+358,12,唤醒巴掌
+359,1,アームハンマー
+359,3,암해머
+359,4,臂錘
+359,5,Marto-Poing
+359,6,Hammerarm
+359,7,Machada
+359,8,Martelpugno
+359,9,Hammer Arm
+359,11,アームハンマー
+359,12,臂锤
+360,1,ジャイロボール
+360,3,자이로볼
+360,4,陀螺球
+360,5,Gyroballe
+360,6,Gyroball
+360,7,Giro Bola
+360,8,Vortexpalla
+360,9,Gyro Ball
+360,11,ジャイロボール
+360,12,陀螺球
+361,1,いやしのねがい
+361,3,치유소원
+361,4,治癒之願
+361,5,Vœu Soin
+361,6,Heilopfer
+361,7,Deseo Cura
+361,8,Curardore
+361,9,Healing Wish
+361,11,いやしのねがい
+361,12,治愈之愿
+362,1,しおみず
+362,3,소금물
+362,4,鹽水
+362,5,Saumure
+362,6,Lake
+362,7,Salmuera
+362,8,Acquadisale
+362,9,Brine
+362,11,しおみず
+362,12,盐水
+363,1,しぜんのめぐみ
+363,3,자연의은혜
+363,4,自然之恩
+363,5,Don Naturel
+363,6,Beerenkräfte
+363,7,Don Natural
+363,8,Dononaturale
+363,9,Natural Gift
+363,11,しぜんのめぐみ
+363,12,自然之恩
+364,1,フェイント
+364,3,페인트
+364,4,佯攻
+364,5,Ruse
+364,6,Offenlegung
+364,7,Amago
+364,8,Fintoattacco
+364,9,Feint
+364,11,フェイント
+364,12,佯攻
+365,1,ついばむ
+365,3,쪼아대기
+365,4,啄食
+365,5,Picore
+365,6,Pflücker
+365,7,Picoteo
+365,8,Spennata
+365,9,Pluck
+365,11,ついばむ
+365,12,啄食
+366,1,おいかぜ
+366,3,순풍
+366,4,順風
+366,5,Vent Arrière
+366,6,Rückenwind
+366,7,Viento Afín
+366,8,Ventoincoda
+366,9,Tailwind
+366,11,おいかぜ
+366,12,顺风
+367,1,つぼをつく
+367,3,경혈찌르기
+367,4,點穴
+367,5,Acupression
+367,6,Akupressur
+367,7,Acupresión
+367,8,Acupressione
+367,9,Acupressure
+367,11,つぼをつく
+367,12,点穴
+368,1,メタルバースト
+368,3,메탈버스트
+368,4,金屬爆炸
+368,5,Fulmifer
+368,6,Metallstoß
+368,7,Represión Metal
+368,8,Metalscoppio
+368,9,Metal Burst
+368,11,メタルバースト
+368,12,金属爆炸
+369,1,とんぼがえり
+369,3,유턴
+369,4,急速折返
+369,5,Demi-Tour
+369,6,Kehrtwende
+369,7,Ida y Vuelta
+369,8,Retromarcia
+369,9,U-turn
+369,11,とんぼがえり
+369,12,急速折返
+370,1,インファイト
+370,3,인파이트
+370,4,近身戰
+370,5,Close Combat
+370,6,Nahkampf
+370,7,A Bocajarro
+370,8,Zuffa
+370,9,Close Combat
+370,11,インファイト
+370,12,近身战
+371,1,しっぺがえし
+371,3,보복
+371,4,以牙還牙
+371,5,Représailles
+371,6,Gegenstoß
+371,7,Vendetta
+371,8,Rivincita
+371,9,Payback
+371,11,しっぺがえし
+371,12,以牙还牙
+372,1,ダメおし
+372,3,승부굳히기
+372,4,惡意追擊
+372,5,Assurance
+372,6,Gewissheit
+372,7,Buena Baza
+372,8,Garanzia
+372,9,Assurance
+372,11,ダメおし
+372,12,恶意追击
+373,1,さしおさえ
+373,3,금제
+373,4,查封
+373,5,Embargo
+373,6,Itemsperre
+373,7,Embargo
+373,8,Divieto
+373,9,Embargo
+373,11,さしおさえ
+373,12,查封
+374,1,なげつける
+374,3,내던지기
+374,4,投擲
+374,5,Dégommage
+374,6,Schleuder
+374,7,Lanzamiento
+374,8,Lancio
+374,9,Fling
+374,11,なげつける
+374,12,投掷
+375,1,サイコシフト
+375,3,사이코시프트
+375,4,精神轉移
+375,5,Échange Psy
+375,6,Psybann
+375,7,Psicocambio
+375,8,Psicotrasfer
+375,9,Psycho Shift
+375,11,サイコシフト
+375,12,精神转移
+376,1,きりふだ
+376,3,마지막수단
+376,4,王牌
+376,5,Atout
+376,6,Trumpfkarte
+376,7,As Oculto
+376,8,Asso
+376,9,Trump Card
+376,11,きりふだ
+376,12,王牌
+377,1,かいふくふうじ
+377,3,회복봉인
+377,4,回復封鎖
+377,5,Anti-Soin
+377,6,Heilblockade
+377,7,Anticura
+377,8,Anticura
+377,9,Heal Block
+377,11,かいふくふうじ
+377,12,回复封锁
+378,1,しぼりとる
+378,3,쥐어짜기
+378,4,絞緊
+378,5,Essorage
+378,6,Auswringen
+378,7,Estrujón
+378,8,Strizzata
+378,9,Wring Out
+378,11,しぼりとる
+378,12,绞紧
+379,1,パワートリック
+379,3,파워트릭
+379,4,力量戲法
+379,5,Astuce Force
+379,6,Krafttrick
+379,7,Truco Fuerza
+379,8,Ingannoforza
+379,9,Power Trick
+379,11,パワートリック
+379,12,力量戏法
+380,1,いえき
+380,3,위액
+380,4,胃液
+380,5,Suc Digestif
+380,6,Magensäfte
+380,7,Bilis
+380,8,Gastroacido
+380,9,Gastro Acid
+380,11,いえき
+380,12,胃液
+381,1,おまじない
+381,3,주술
+381,4,幸運咒語
+381,5,Air Veinard
+381,6,Beschwörung
+381,7,Conjuro
+381,8,Fortuncanto
+381,9,Lucky Chant
+381,11,おまじない
+381,12,幸运咒语
+382,1,さきどり
+382,3,선취
+382,4,搶先一步
+382,5,Moi d’Abord
+382,6,Egotrip
+382,7,Yo Primero
+382,8,Precedenza
+382,9,Me First
+382,11,さきどり
+382,12,抢先一步
+383,1,まねっこ
+383,3,흉내쟁이
+383,4,仿效
+383,5,Photocopie
+383,6,Imitator
+383,7,Copión
+383,8,Copione
+383,9,Copycat
+383,11,まねっこ
+383,12,仿效
+384,1,パワースワップ
+384,3,파워스웹
+384,4,力量互換
+384,5,Permuforce
+384,6,Krafttausch
+384,7,Cambia Fuerza
+384,8,Barattoforza
+384,9,Power Swap
+384,11,パワースワップ
+384,12,力量互换
+385,1,ガードスワップ
+385,3,가드스웹
+385,4,防守互換
+385,5,Permugarde
+385,6,Schutztausch
+385,7,Cambia Defensa
+385,8,Barattoscudo
+385,9,Guard Swap
+385,11,ガードスワップ
+385,12,防守互换
+386,1,おしおき
+386,3,혼내기
+386,4,懲罰
+386,5,Punition
+386,6,Strafattacke
+386,7,Castigo
+386,8,Punizione
+386,9,Punishment
+386,11,おしおき
+386,12,惩罚
+387,1,とっておき
+387,3,뒀다쓰기
+387,4,珍藏
+387,5,Dernier Recours
+387,6,Zuflucht
+387,7,Última Baza
+387,8,Ultimascelta
+387,9,Last Resort
+387,11,とっておき
+387,12,珍藏
+388,1,なやみのタネ
+388,3,고민씨
+388,4,煩惱種子
+388,5,Soucigraine
+388,6,Sorgensamen
+388,7,Abatidoras
+388,8,Affannoseme
+388,9,Worry Seed
+388,11,なやみのタネ
+388,12,烦恼种子
+389,1,ふいうち
+389,3,기습
+389,4,突襲
+389,5,Coup Bas
+389,6,Tiefschlag
+389,7,Golpe Bajo
+389,8,Sbigoattacco
+389,9,Sucker Punch
+389,11,ふいうち
+389,12,突袭
+390,1,どくびし
+390,3,독압정
+390,4,毒菱
+390,5,Pics Toxik
+390,6,Giftspitzen
+390,7,Púas Tóxicas
+390,8,Fielepunte
+390,9,Toxic Spikes
+390,11,どくびし
+390,12,毒菱
+391,1,ハートスワップ
+391,3,하트스웹
+391,4,心靈互換
+391,5,Permucœur
+391,6,Statustausch
+391,7,Cambia Almas
+391,8,Cuorbaratto
+391,9,Heart Swap
+391,11,ハートスワップ
+391,12,心灵互换
+392,1,アクアリング
+392,3,아쿠아링
+392,4,水流環
+392,5,Anneau Hydro
+392,6,Wasserring
+392,7,Acua Aro
+392,8,Acquanello
+392,9,Aqua Ring
+392,11,アクアリング
+392,12,水流环
+393,1,でんじふゆう
+393,3,전자부유
+393,4,電磁飄浮
+393,5,Vol Magnétik
+393,6,Magnetflug
+393,7,Levitón
+393,8,Magnetascesa
+393,9,Magnet Rise
+393,11,でんじふゆう
+393,12,电磁飘浮
+394,1,フレアドライブ
+394,3,플레어드라이브
+394,4,閃焰衝鋒
+394,5,Boutefeu
+394,6,Flammenblitz
+394,7,Envite Ígneo
+394,8,Fuococarica
+394,9,Flare Blitz
+394,11,フレアドライブ
+394,12,闪焰冲锋
+395,1,はっけい
+395,3,발경
+395,4,發勁
+395,5,Forte-Paume
+395,6,Kraftwelle
+395,7,Palmeo
+395,8,Palmoforza
+395,9,Force Palm
+395,11,はっけい
+395,12,发劲
+396,1,はどうだん
+396,3,파동탄
+396,4,波導彈
+396,5,Aurasphère
+396,6,Aurasphäre
+396,7,Esfera Aural
+396,8,Forzasfera
+396,9,Aura Sphere
+396,11,はどうだん
+396,12,波导弹
+397,1,ロックカット
+397,3,록커트
+397,4,岩石打磨
+397,5,Poliroche
+397,6,Steinpolitur
+397,7,Pulimento
+397,8,Lucidatura
+397,9,Rock Polish
+397,11,ロックカット
+397,12,岩石打磨
+398,1,どくづき
+398,3,독찌르기
+398,4,毒擊
+398,5,Direct Toxik
+398,6,Gifthieb
+398,7,Puya Nociva
+398,8,Velenpuntura
+398,9,Poison Jab
+398,11,どくづき
+398,12,毒击
+399,1,あくのはどう
+399,3,악의파동
+399,4,惡之波動
+399,5,Vibrobscur
+399,6,Finsteraura
+399,7,Pulso Umbrío
+399,8,Neropulsar
+399,9,Dark Pulse
+399,11,あくのはどう
+399,12,恶之波动
+400,1,つじぎり
+400,3,깜짝베기
+400,4,暗襲要害
+400,5,Tranche-Nuit
+400,6,Nachthieb
+400,7,Tajo Umbrío
+400,8,Nottesferza
+400,9,Night Slash
+400,11,つじぎり
+400,12,暗袭要害
+401,1,アクアテール
+401,3,아쿠아테일
+401,4,水流尾
+401,5,Hydroqueue
+401,6,Nassschweif
+401,7,Acua Cola
+401,8,Idrondata
+401,9,Aqua Tail
+401,11,アクアテール
+401,12,水流尾
+402,1,タネばくだん
+402,3,씨폭탄
+402,4,種子炸彈
+402,5,Canon Graine
+402,6,Samenbomben
+402,7,Bomba Germen
+402,8,Semebomba
+402,9,Seed Bomb
+402,11,タネばくだん
+402,12,种子炸弹
+403,1,エアスラッシュ
+403,3,에어슬래시
+403,4,空氣斬
+403,5,Lame d’Air
+403,6,Luftschnitt
+403,7,Tajo Aéreo
+403,8,Eterelama
+403,9,Air Slash
+403,11,エアスラッシュ
+403,12,空气斩
+404,1,シザークロス
+404,3,시저크로스
+404,4,十字剪
+404,5,Plaie-Croix
+404,6,Kreuzschere
+404,7,Tijera X
+404,8,Forbice X
+404,9,X-Scissor
+404,11,シザークロス
+404,12,十字剪
+405,1,むしのさざめき
+405,3,벌레의야단법석
+405,4,蟲鳴
+405,5,Bourdon
+405,6,Käfergebrumm
+405,7,Zumbido
+405,8,Ronzio
+405,9,Bug Buzz
+405,11,むしのさざめき
+405,12,虫鸣
+406,1,りゅうのはどう
+406,3,용의파동
+406,4,龍之波動
+406,5,Dracochoc
+406,6,Drachenpuls
+406,7,Pulso Dragón
+406,8,Dragopulsar
+406,9,Dragon Pulse
+406,11,りゅうのはどう
+406,12,龙之波动
+407,1,ドラゴンダイブ
+407,3,드래곤다이브
+407,4,龍之俯衝
+407,5,Dracocharge
+407,6,Drachenstoß
+407,7,Carga Dragón
+407,8,Dragofuria
+407,9,Dragon Rush
+407,11,ドラゴンダイブ
+407,12,龙之俯冲
+408,1,パワージェム
+408,3,파워젬
+408,4,力量寶石
+408,5,Rayon Gemme
+408,6,Juwelenkraft
+408,7,Joya de Luz
+408,8,Gemmoforza
+408,9,Power Gem
+408,11,パワージェム
+408,12,力量宝石
+409,1,ドレインパンチ
+409,3,드레인펀치
+409,4,吸取拳
+409,5,Vampipoing
+409,6,Ableithieb
+409,7,Puño Drenaje
+409,8,Assorbipugno
+409,9,Drain Punch
+409,11,ドレインパンチ
+409,12,吸取拳
+410,1,しんくうは
+410,3,진공파
+410,4,真空波
+410,5,Onde Vide
+410,6,Vakuumwelle
+410,7,Onda Vacío
+410,8,Vuotonda
+410,9,Vacuum Wave
+410,11,しんくうは
+410,12,真空波
+411,1,きあいだま
+411,3,기합구슬
+411,4,真氣彈
+411,5,Exploforce
+411,6,Fokusstoß
+411,7,Onda Certera
+411,8,Focalcolpo
+411,9,Focus Blast
+411,11,きあいだま
+411,12,真气弹
+412,1,エナジーボール
+412,3,에너지볼
+412,4,能量球
+412,5,Éco-Sphère
+412,6,Energieball
+412,7,Energibola
+412,8,Energipalla
+412,9,Energy Ball
+412,11,エナジーボール
+412,12,能量球
+413,1,ブレイブバード
+413,3,브레이브버드
+413,4,勇鳥猛攻
+413,5,Rapace
+413,6,Sturzflug
+413,7,Pájaro Osado
+413,8,Baldeali
+413,9,Brave Bird
+413,11,ブレイブバード
+413,12,勇鸟猛攻
+414,1,だいちのちから
+414,3,대지의힘
+414,4,大地之力
+414,5,Telluriforce
+414,6,Erdkräfte
+414,7,Tierra Viva
+414,8,Geoforza
+414,9,Earth Power
+414,11,だいちのちから
+414,12,大地之力
+415,1,すりかえ
+415,3,바꿔치기
+415,4,掉包
+415,5,Passe-Passe
+415,6,Wechseldich
+415,7,Trapicheo
+415,8,Rapidscambio
+415,9,Switcheroo
+415,11,すりかえ
+415,12,掉包
+416,1,ギガインパクト
+416,3,기가임팩트
+416,4,終極衝擊
+416,5,Giga Impact
+416,6,Gigastoß
+416,7,Giga Impacto
+416,8,Gigaimpatto
+416,9,Giga Impact
+416,11,ギガインパクト
+416,12,终极冲击
+417,1,わるだくみ
+417,3,나쁜음모
+417,4,詭計
+417,5,Machination
+417,6,Ränkeschmied
+417,7,Maquinación
+417,8,Congiura
+417,9,Nasty Plot
+417,11,わるだくみ
+417,12,诡计
+418,1,バレットパンチ
+418,3,불릿펀치
+418,4,子彈拳
+418,5,Pisto-Poing
+418,6,Patronenhieb
+418,7,Puño Bala
+418,8,Pugnoscarica
+418,9,Bullet Punch
+418,11,バレットパンチ
+418,12,子弹拳
+419,1,ゆきなだれ
+419,3,눈사태
+419,4,雪崩
+419,5,Avalanche
+419,6,Lawine
+419,7,Alud
+419,8,Slavina
+419,9,Avalanche
+419,11,ゆきなだれ
+419,12,雪崩
+420,1,こおりのつぶて
+420,3,얼음뭉치
+420,4,冰礫
+420,5,Éclats Glace
+420,6,Eissplitter
+420,7,Canto Helado
+420,8,Geloscheggia
+420,9,Ice Shard
+420,11,こおりのつぶて
+420,12,冰砾
+421,1,シャドークロー
+421,3,섀도크루
+421,4,暗影爪
+421,5,Griffe Ombre
+421,6,Dunkelklaue
+421,7,Garra Umbría
+421,8,Ombrartigli
+421,9,Shadow Claw
+421,11,シャドークロー
+421,12,暗影爪
+422,1,かみなりのキバ
+422,3,번개엄니
+422,4,雷電牙
+422,5,Crocs Éclair
+422,6,Donnerzahn
+422,7,Colmillo Rayo
+422,8,Fulmindenti
+422,9,Thunder Fang
+422,11,かみなりのキバ
+422,12,雷电牙
+423,1,こおりのキバ
+423,3,얼음엄니
+423,4,冰凍牙
+423,5,Crocs Givre
+423,6,Eiszahn
+423,7,Colmillo Hielo
+423,8,Gelodenti
+423,9,Ice Fang
+423,11,こおりのキバ
+423,12,冰冻牙
+424,1,ほのおのキバ
+424,3,불꽃엄니
+424,4,火焰牙
+424,5,Crocs Feu
+424,6,Feuerzahn
+424,7,Colmillo Ígneo
+424,8,Rogodenti
+424,9,Fire Fang
+424,11,ほのおのキバ
+424,12,火焰牙
+425,1,かげうち
+425,3,야습
+425,4,影子偷襲
+425,5,Ombre Portée
+425,6,Schattenstoß
+425,7,Sombra Vil
+425,8,Furtivombra
+425,9,Shadow Sneak
+425,11,かげうち
+425,12,影子偷袭
+426,1,どろばくだん
+426,3,진흙폭탄
+426,4,泥巴炸彈
+426,5,Boue-Bombe
+426,6,Schlammbombe
+426,7,Bomba Fango
+426,8,Pantanobomba
+426,9,Mud Bomb
+426,11,どろばくだん
+426,12,泥巴炸弹
+427,1,サイコカッター
+427,3,사이코커터
+427,4,精神利刃
+427,5,Coupe Psycho
+427,6,Psychoklinge
+427,7,Psicocorte
+427,8,Psicotaglio
+427,9,Psycho Cut
+427,11,サイコカッター
+427,12,精神利刃
+428,1,しねんのずつき
+428,3,사념의박치기
+428,4,意念頭錘
+428,5,Psykoud’Boul
+428,6,Zen-Kopfstoß
+428,7,Cabezazo Zen
+428,8,Cozzata Zen
+428,9,Zen Headbutt
+428,11,しねんのずつき
+428,12,意念头锤
+429,1,ミラーショット
+429,3,미러숏
+429,4,鏡光射擊
+429,5,Miroi-Tir
+429,6,Spiegelsalve
+429,7,Disparo Espejo
+429,8,Cristalcolpo
+429,9,Mirror Shot
+429,11,ミラーショット
+429,12,镜光射击
+430,1,ラスターカノン
+430,3,러스터캐논
+430,4,加農光炮
+430,5,Luminocanon
+430,6,Lichtkanone
+430,7,Foco Resplandor
+430,8,Cannonflash
+430,9,Flash Cannon
+430,11,ラスターカノン
+430,12,加农光炮
+431,1,ロッククライム
+431,3,락클라임
+431,4,攀岩
+431,5,Escalade
+431,6,Kraxler
+431,7,Treparrocas
+431,8,Scalaroccia
+431,9,Rock Climb
+431,11,ロッククライム
+431,12,攀岩
+432,1,きりばらい
+432,3,안개제거
+432,4,清除濃霧
+432,5,Anti-Brume
+432,6,Auflockern
+432,7,Despejar
+432,8,Scacciabruma
+432,9,Defog
+432,11,きりばらい
+432,12,清除浓雾
+433,1,トリックルーム
+433,3,트릭룸
+433,4,戲法空間
+433,5,Distorsion
+433,6,Bizarroraum
+433,7,Espacio Raro
+433,8,Distortozona
+433,9,Trick Room
+433,11,トリックルーム
+433,12,戏法空间
+434,1,りゅうせいぐん
+434,3,용성군
+434,4,流星群
+434,5,Draco Météore
+434,6,Draco Meteor
+434,7,Cometa Draco
+434,8,Dragobolide
+434,9,Draco Meteor
+434,11,りゅうせいぐん
+434,12,流星群
+435,1,ほうでん
+435,3,방전
+435,4,放電
+435,5,Coup d’Jus
+435,6,Ladungsstoß
+435,7,Chispazo
+435,8,Scarica
+435,9,Discharge
+435,11,ほうでん
+435,12,放电
+436,1,ふんえん
+436,3,분연
+436,4,噴煙
+436,5,Ébullilave
+436,6,Flammensturm
+436,7,Humareda
+436,8,Lavasbuffo
+436,9,Lava Plume
+436,11,ふんえん
+436,12,喷烟
+437,1,リーフストーム
+437,3,리프스톰
+437,4,飛葉風暴
+437,5,Tempête Verte
+437,6,Blättersturm
+437,7,Lluevehojas
+437,8,Verdebufera
+437,9,Leaf Storm
+437,11,リーフストーム
+437,12,飞叶风暴
+438,1,パワーウィップ
+438,3,파워휩
+438,4,強力鞭打
+438,5,Mégafouet
+438,6,Blattgeißel
+438,7,Latigazo
+438,8,Vigorcolpo
+438,9,Power Whip
+438,11,パワーウィップ
+438,12,强力鞭打
+439,1,がんせきほう
+439,3,암석포
+439,4,岩石炮
+439,5,Roc-Boulet
+439,6,Felswerfer
+439,7,Romperrocas
+439,8,Devastomasso
+439,9,Rock Wrecker
+439,11,がんせきほう
+439,12,岩石炮
+440,1,クロスポイズン
+440,3,크로스포이즌
+440,4,十字毒刃
+440,5,Poison-Croix
+440,6,Giftstreich
+440,7,Veneno X
+440,8,Velenocroce
+440,9,Cross Poison
+440,11,クロスポイズン
+440,12,十字毒刃
+441,1,ダストシュート
+441,3,더스트슈트
+441,4,垃圾射擊
+441,5,Détricanon
+441,6,Mülltreffer
+441,7,Lanza Mugre
+441,8,Sporcolancio
+441,9,Gunk Shot
+441,11,ダストシュート
+441,12,垃圾射击
+442,1,アイアンヘッド
+442,3,아이언헤드
+442,4,鐵頭
+442,5,Tête de Fer
+442,6,Eisenschädel
+442,7,Cabeza de Hierro
+442,8,Metaltestata
+442,9,Iron Head
+442,11,アイアンヘッド
+442,12,铁头
+443,1,マグネットボム
+443,3,마그넷봄
+443,4,磁鐵炸彈
+443,5,Bombaimant
+443,6,Magnetbombe
+443,7,Bomba Imán
+443,8,Bombagnete
+443,9,Magnet Bomb
+443,11,マグネットボム
+443,12,磁铁炸弹
+444,1,ストーンエッジ
+444,3,스톤에지
+444,4,尖石攻擊
+444,5,Lame de Roc
+444,6,Steinkante
+444,7,Roca Afilada
+444,8,Pietrataglio
+444,9,Stone Edge
+444,11,ストーンエッジ
+444,12,尖石攻击
+445,1,ゆうわく
+445,3,유혹
+445,4,誘惑
+445,5,Séduction
+445,6,Liebreiz
+445,7,Seducción
+445,8,Incanto
+445,9,Captivate
+445,11,ゆうわく
+445,12,诱惑
+446,1,ステルスロック
+446,3,스텔스록
+446,4,隱形岩
+446,5,Piège de Roc
+446,6,Tarnsteine
+446,7,Trampa Rocas
+446,8,Levitoroccia
+446,9,Stealth Rock
+446,11,ステルスロック
+446,12,隐形岩
+447,1,くさむすび
+447,3,풀묶기
+447,4,打草結
+447,5,Nœud Herbe
+447,6,Strauchler
+447,7,Hierba Lazo
+447,8,Laccioerboso
+447,9,Grass Knot
+447,11,くさむすび
+447,12,打草结
+448,1,おしゃべり
+448,3,수다
+448,4,喋喋不休
+448,5,Babil
+448,6,Geschwätz
+448,7,Cháchara
+448,8,Schiamazzo
+448,9,Chatter
+448,11,おしゃべり
+448,12,喋喋不休
+449,1,さばきのつぶて
+449,3,심판의뭉치
+449,4,制裁光礫
+449,5,Jugement
+449,6,Urteilskraft
+449,7,Sentencia
+449,8,Giudizio
+449,9,Judgment
+449,11,さばきのつぶて
+449,12,制裁光砾
+450,1,むしくい
+450,3,벌레먹음
+450,4,蟲咬
+450,5,Piqûre
+450,6,Käferbiss
+450,7,Picadura
+450,8,Coleomorso
+450,9,Bug Bite
+450,11,むしくい
+450,12,虫咬
+451,1,チャージビーム
+451,3,차지빔
+451,4,充電光束
+451,5,Rayon Chargé
+451,6,Ladestrahl
+451,7,Rayo Carga
+451,8,Raggioscossa
+451,9,Charge Beam
+451,11,チャージビーム
+451,12,充电光束
+452,1,ウッドハンマー
+452,3,우드해머
+452,4,木槌
+452,5,Martobois
+452,6,Holzhammer
+452,7,Mazazo
+452,8,Mazzuolegno
+452,9,Wood Hammer
+452,11,ウッドハンマー
+452,12,木槌
+453,1,アクアジェット
+453,3,아쿠아제트
+453,4,水流噴射
+453,5,Aqua-Jet
+453,6,Wasserdüse
+453,7,Acua Jet
+453,8,Acquagetto
+453,9,Aqua Jet
+453,11,アクアジェット
+453,12,水流喷射
+454,1,こうげきしれい
+454,3,공격지령
+454,4,攻擊指令
+454,5,Appel Attaque
+454,6,Schlagbefehl
+454,7,Al Ataque
+454,8,Comandourto
+454,9,Attack Order
+454,11,こうげきしれい
+454,12,攻击指令
+455,1,ぼうぎょしれい
+455,3,방어지령
+455,4,防禦指令
+455,5,Appel Défense
+455,6,Blockbefehl
+455,7,A Defender
+455,8,Comandoscudo
+455,9,Defend Order
+455,11,ぼうぎょしれい
+455,12,防御指令
+456,1,かいふくしれい
+456,3,회복지령
+456,4,回復指令
+456,5,Appel Soins
+456,6,Heilbefehl
+456,7,Auxilio
+456,8,Comandocura
+456,9,Heal Order
+456,11,かいふくしれい
+456,12,回复指令
+457,1,もろはのずつき
+457,3,양날박치기
+457,4,雙刃頭錘
+457,5,Fracass’Tête
+457,6,Kopfstoß
+457,7,Testarazo
+457,8,Zuccata
+457,9,Head Smash
+457,11,もろはのずつき
+457,12,双刃头锤
+458,1,ダブルアタック
+458,3,더블어택
+458,4,二連擊
+458,5,Coup Double
+458,6,Doppelschlag
+458,7,Doble Golpe
+458,8,Doppiosmash
+458,9,Double Hit
+458,11,ダブルアタック
+458,12,二连击
+459,1,ときのほうこう
+459,3,시간의포효
+459,4,時光咆哮
+459,5,Hurle-Temps
+459,6,Zeitenlärm
+459,7,Distorsión
+459,8,Fragortempo
+459,9,Roar of Time
+459,11,ときのほうこう
+459,12,时光咆哮
+460,1,あくうせつだん
+460,3,공간절단
+460,4,亞空裂斬
+460,5,Spatio-Rift
+460,6,Raumschlag
+460,7,Corte Vacío
+460,8,Fendispazio
+460,9,Spacial Rend
+460,11,あくうせつだん
+460,12,亚空裂斩
+461,1,みかづきのまい
+461,3,초승달춤
+461,4,新月舞
+461,5,Danse-Lune
+461,6,Lunartanz
+461,7,Danza Lunar
+461,8,Lunardanza
+461,9,Lunar Dance
+461,11,みかづきのまい
+461,12,新月舞
+462,1,にぎりつぶす
+462,3,묵사발
+462,4,捏碎
+462,5,Presse
+462,6,Quetschgriff
+462,7,Agarrón
+462,8,Sbriciolmano
+462,9,Crush Grip
+462,11,にぎりつぶす
+462,12,捏碎
+463,1,マグマストーム
+463,3,마그마스톰
+463,4,熔岩風暴
+463,5,Vortex Magma
+463,6,Lavasturm
+463,7,Lluvia Ígnea
+463,8,Magmaclisma
+463,9,Magma Storm
+463,11,マグマストーム
+463,12,熔岩风暴
+464,1,ダークホール
+464,3,다크홀
+464,4,暗黑洞
+464,5,Trou Noir
+464,6,Schlummerort
+464,7,Brecha Negra
+464,8,Vuototetro
+464,9,Dark Void
+464,11,ダークホール
+464,12,暗黑洞
+465,1,シードフレア
+465,3,시드플레어
+465,4,種子閃光
+465,5,Fulmigraine
+465,6,Schocksamen
+465,7,Fogonazo
+465,8,Infuriaseme
+465,9,Seed Flare
+465,11,シードフレア
+465,12,种子闪光
+466,1,あやしいかぜ
+466,3,괴상한바람
+466,4,奇異之風
+466,5,Vent Mauvais
+466,6,Unheilböen
+466,7,Viento Aciago
+466,8,Funestovento
+466,9,Ominous Wind
+466,11,あやしいかぜ
+466,12,奇异之风
+467,1,シャドーダイブ
+467,3,섀도다이브
+467,4,暗影潛襲
+467,5,Revenant
+467,6,Schemenkraft
+467,7,Golpe Umbrío
+467,8,Oscurotuffo
+467,9,Shadow Force
+467,11,シャドーダイブ
+467,12,暗影潜袭
+468,1,つめとぎ
+468,3,손톱갈기
+468,4,磨爪
+468,5,Aiguisage
+468,6,Klauenwetzer
+468,7,Afilagarras
+468,8,Unghiaguzze
+468,9,Hone Claws
+468,11,つめとぎ
+468,12,磨爪
+469,1,ワイドガード
+469,3,와이드가드
+469,4,廣域防守
+469,5,Garde Large
+469,6,Rundumschutz
+469,7,Vastaguardia
+469,8,Bodyguard
+469,9,Wide Guard
+469,11,ワイドガード
+469,12,广域防守
+470,1,ガードシェア
+470,3,가드셰어
+470,4,防守平分
+470,5,Partage Garde
+470,6,Schutzteiler
+470,7,Isoguardia
+470,8,Paridifesa
+470,9,Guard Split
+470,11,ガードシェア
+470,12,防守平分
+471,1,パワーシェア
+471,3,파워셰어
+471,4,力量平分
+471,5,Partage Force
+471,6,Kraftteiler
+471,7,Isofuerza
+471,8,Pariattacco
+471,9,Power Split
+471,11,パワーシェア
+471,12,力量平分
+472,1,ワンダールーム
+472,3,원더룸
+472,4,奇妙空間
+472,5,Zone Étrange
+472,6,Wunderraum
+472,7,Zona Extraña
+472,8,Mirabilzona
+472,9,Wonder Room
+472,11,ワンダールーム
+472,12,奇妙空间
+473,1,サイコショック
+473,3,사이코쇼크
+473,4,精神衝擊
+473,5,Choc Psy
+473,6,Psychoschock
+473,7,Psicocarga
+473,8,Psicoshock
+473,9,Psyshock
+473,11,サイコショック
+473,12,精神冲击
+474,1,ベノムショック
+474,3,베놈쇼크
+474,4,毒液衝擊
+474,5,Choc Venin
+474,6,Giftschock
+474,7,Carga Tóxica
+474,8,Velenoshock
+474,9,Venoshock
+474,11,ベノムショック
+474,12,毒液冲击
+475,1,ボディパージ
+475,3,바디퍼지
+475,4,身體輕量化
+475,5,Allègement
+475,6,Autotomie
+475,7,Aligerar
+475,8,Sganciapesi
+475,9,Autotomize
+475,11,ボディパージ
+475,12,身体轻量化
+476,1,いかりのこな
+476,3,분노가루
+476,4,憤怒粉
+476,5,Poudre Fureur
+476,6,Wutpulver
+476,7,Polvo Ira
+476,8,Polverabbia
+476,9,Rage Powder
+476,11,いかりのこな
+476,12,愤怒粉
+477,1,テレキネシス
+477,3,텔레키네시스
+477,4,意念移物
+477,5,Lévikinésie
+477,6,Telekinese
+477,7,Telequinesis
+477,8,Telecinesi
+477,9,Telekinesis
+477,11,テレキネシス
+477,12,意念移物
+478,1,マジックルーム
+478,3,매직룸
+478,4,魔法空間
+478,5,Zone Magique
+478,6,Magieraum
+478,7,Zona Mágica
+478,8,Magicozona
+478,9,Magic Room
+478,11,マジックルーム
+478,12,魔法空间
+479,1,うちおとす
+479,3,떨어뜨리기
+479,4,擊落
+479,5,Anti-Air
+479,6,Katapult
+479,7,Antiaéreo
+479,8,Abbattimento
+479,9,Smack Down
+479,11,うちおとす
+479,12,击落
+480,1,やまあらし
+480,3,업어후리기
+480,4,山嵐摔
+480,5,Yama Arashi
+480,6,Bergsturm
+480,7,Llave Corsé
+480,8,Tempestretta
+480,9,Storm Throw
+480,11,やまあらし
+480,12,山岚摔
+481,1,はじけるほのお
+481,3,불꽃튀기기
+481,4,烈焰濺射
+481,5,Rebondifeu
+481,6,Funkenflug
+481,7,Pirotecnia
+481,8,Pirolancio
+481,9,Flame Burst
+481,11,はじけるほのお
+481,12,烈焰溅射
+482,1,ヘドロウェーブ
+482,3,오물웨이브
+482,4,污泥波
+482,5,Cradovague
+482,6,Schlammwoge
+482,7,Onda Tóxica
+482,8,Fangonda
+482,9,Sludge Wave
+482,11,ヘドロウェーブ
+482,12,污泥波
+483,1,ちょうのまい
+483,3,나비춤
+483,4,蝶舞
+483,5,Papillodanse
+483,6,Falterreigen
+483,7,Danza Aleteo
+483,8,Eledanza
+483,9,Quiver Dance
+483,11,ちょうのまい
+483,12,蝶舞
+484,1,ヘビーボンバー
+484,3,헤비봄버
+484,4,重磅衝撞
+484,5,Tacle Lourd
+484,6,Rammboss
+484,7,Cuerpo Pesado
+484,8,Pesobomba
+484,9,Heavy Slam
+484,11,ヘビーボンバー
+484,12,重磅冲撞
+485,1,シンクロノイズ
+485,3,싱크로노이즈
+485,4,同步干擾
+485,5,Synchropeine
+485,6,Synchrolärm
+485,7,Sincrorruido
+485,8,Sincrumore
+485,9,Synchronoise
+485,11,シンクロノイズ
+485,12,同步干扰
+486,1,エレキボール
+486,3,일렉트릭볼
+486,4,電球
+486,5,Boule Élek
+486,6,Elektroball
+486,7,Bola Voltio
+486,8,Energisfera
+486,9,Electro Ball
+486,11,エレキボール
+486,12,电球
+487,1,みずびたし
+487,3,물붓기
+487,4,浸水
+487,5,Détrempage
+487,6,Überflutung
+487,7,Anegar
+487,8,Inondazione
+487,9,Soak
+487,11,みずびたし
+487,12,浸水
+488,1,ニトロチャージ
+488,3,니트로차지
+488,4,蓄能焰襲
+488,5,Nitrocharge
+488,6,Nitroladung
+488,7,Nitrocarga
+488,8,Nitrocarica
+488,9,Flame Charge
+488,11,ニトロチャージ
+488,12,蓄能焰袭
+489,1,とぐろをまく
+489,3,똬리틀기
+489,4,盤蜷
+489,5,Enroulement
+489,6,Einrollen
+489,7,Enrosque
+489,8,Arrotola
+489,9,Coil
+489,11,とぐろをまく
+489,12,盘蜷
+490,1,ローキック
+490,3,로킥
+490,4,下盤踢
+490,5,Balayette
+490,6,Fußtritt
+490,7,Puntapié
+490,8,Calciobasso
+490,9,Low Sweep
+490,11,ローキック
+490,12,下盘踢
+491,1,アシッドボム
+491,3,애시드봄
+491,4,酸液炸彈
+491,5,Bombe Acide
+491,6,Säurespeier
+491,7,Bomba Ácida
+491,8,Acidobomba
+491,9,Acid Spray
+491,11,アシッドボム
+491,12,酸液炸弹
+492,1,イカサマ
+492,3,속임수
+492,4,欺詐
+492,5,Tricherie
+492,6,Schmarotzer
+492,7,Juego Sucio
+492,8,Ripicca
+492,9,Foul Play
+492,11,イカサマ
+492,12,欺诈
+493,1,シンプルビーム
+493,3,심플빔
+493,4,單純光束
+493,5,Rayon Simple
+493,6,Wankelstrahl
+493,7,Onda Simple
+493,8,Ondisinvolta
+493,9,Simple Beam
+493,11,シンプルビーム
+493,12,单纯光束
+494,1,なかまづくり
+494,3,동료만들기
+494,4,找夥伴
+494,5,Ten-danse
+494,6,Zwango
+494,7,Danza Amiga
+494,8,Saltamicizia
+494,9,Entrainment
+494,11,なかまづくり
+494,12,找伙伴
+495,1,おさきにどうぞ
+495,3,당신먼저
+495,4,您先請
+495,5,Après Vous
+495,6,Galanterie
+495,7,Cede Paso
+495,8,Cortesia
+495,9,After You
+495,11,おさきにどうぞ
+495,12,您先请
+496,1,りんしょう
+496,3,돌림노래
+496,4,輪唱
+496,5,Chant Canon
+496,6,Kanon
+496,7,Canon
+496,8,Coro
+496,9,Round
+496,11,りんしょう
+496,12,轮唱
+497,1,エコーボイス
+497,3,에코보이스
+497,4,回聲
+497,5,Écho
+497,6,Widerhall
+497,7,Eco Voz
+497,8,Echeggiavoce
+497,9,Echoed Voice
+497,11,エコーボイス
+497,12,回声
+498,1,なしくずし
+498,3,야금야금
+498,4,逐步擊破
+498,5,Attrition
+498,6,Zermürben
+498,7,Guardia Baja
+498,8,Insidia
+498,9,Chip Away
+498,11,なしくずし
+498,12,逐步击破
+499,1,クリアスモッグ
+499,3,클리어스모그
+499,4,清除之煙
+499,5,Bain de Smog
+499,6,Klärsmog
+499,7,Niebla Clara
+499,8,Pulifumo
+499,9,Clear Smog
+499,11,クリアスモッグ
+499,12,清除之烟
+500,1,アシストパワー
+500,3,어시스트파워
+500,4,輔助力量
+500,5,Force Ajoutée
+500,6,Kraftvorrat
+500,7,Poder Reserva
+500,8,Veicolaforza
+500,9,Stored Power
+500,11,アシストパワー
+500,12,辅助力量
+501,1,ファストガード
+501,3,퍼스트가드
+501,4,快速防守
+501,5,Prévention
+501,6,Rapidschutz
+501,7,Anticipo
+501,8,Anticipo
+501,9,Quick Guard
+501,11,ファストガード
+501,12,快速防守
+502,1,サイドチェンジ
+502,3,사이드체인지
+502,4,交換場地
+502,5,Interversion
+502,6,Seitentausch
+502,7,Cambio Banda
+502,8,Cambiaposto
+502,9,Ally Switch
+502,11,サイドチェンジ
+502,12,交换场地
+503,1,ねっとう
+503,3,열탕
+503,4,熱水
+503,5,Ébullition
+503,6,Siedewasser
+503,7,Escaldar
+503,8,Idrovampata
+503,9,Scald
+503,11,ねっとう
+503,12,热水
+504,1,からをやぶる
+504,3,껍질깨기
+504,4,破殼
+504,5,Exuviation
+504,6,Hausbruch
+504,7,Rompecoraza
+504,8,Gettaguscio
+504,9,Shell Smash
+504,11,からをやぶる
+504,12,破壳
+505,1,いやしのはどう
+505,3,치유파동
+505,4,治癒波動
+505,5,Vibra Soin
+505,6,Heilwoge
+505,7,Pulso Cura
+505,8,Ondasana
+505,9,Heal Pulse
+505,11,いやしのはどう
+505,12,治愈波动
+506,1,たたりめ
+506,3,병상첨병
+506,4,禍不單行
+506,5,Châtiment
+506,6,Bürde
+506,7,Infortunio
+506,8,Sciagura
+506,9,Hex
+506,11,たたりめ
+506,12,祸不单行
+507,1,フリーフォール
+507,3,프리폴
+507,4,自由落體
+507,5,Chute Libre
+507,6,Freier Fall
+507,7,Caída Libre
+507,8,Cadutalibera
+507,9,Sky Drop
+507,11,フリーフォール
+507,12,自由落体
+508,1,ギアチェンジ
+508,3,기어체인지
+508,4,換檔
+508,5,Chgt Vitesse
+508,6,Gangwechsel
+508,7,Cambio de Marcha
+508,8,Cambiomarcia
+508,9,Shift Gear
+508,11,ギアチェンジ
+508,12,换挡
+509,1,ともえなげ
+509,3,배대뒤치기
+509,4,巴投
+509,5,Projection
+509,6,Überkopfwurf
+509,7,Llave Giro
+509,8,Ribaltiro
+509,9,Circle Throw
+509,11,ともえなげ
+509,12,巴投
+510,1,やきつくす
+510,3,불태우기
+510,4,燒盡
+510,5,Calcination
+510,6,Einäschern
+510,7,Calcinación
+510,8,Bruciatutto
+510,9,Incinerate
+510,11,やきつくす
+510,12,烧尽
+511,1,さきおくり
+511,3,순서미루기
+511,4,延後
+511,5,À la Queue
+511,6,Verzögerung
+511,7,Último Lugar
+511,8,Spintone
+511,9,Quash
+511,11,さきおくり
+511,12,延后
+512,1,アクロバット
+512,3,애크러뱃
+512,4,雜技
+512,5,Acrobatie
+512,6,Akrobatik
+512,7,Acróbata
+512,8,Acrobazia
+512,9,Acrobatics
+512,11,アクロバット
+512,12,杂技
+513,1,ミラータイプ
+513,3,미러타입
+513,4,鏡面屬性
+513,5,Copie Type
+513,6,Typenspiegel
+513,7,Clonatipo
+513,8,Riflettipo
+513,9,Reflect Type
+513,11,ミラータイプ
+513,12,镜面属性
+514,1,かたきうち
+514,3,원수갚기
+514,4,報仇
+514,5,Vengeance
+514,6,Heimzahlung
+514,7,Represalia
+514,8,Nemesi
+514,9,Retaliate
+514,11,かたきうち
+514,12,报仇
+515,1,いのちがけ
+515,3,목숨걸기
+515,4,搏命
+515,5,Tout ou Rien
+515,6,Wagemut
+515,7,Sacrificio
+515,8,Azzardo
+515,9,Final Gambit
+515,11,いのちがけ
+515,12,搏命
+516,1,ギフトパス
+516,3,기프트패스
+516,4,傳遞禮物
+516,5,Passe-Cadeau
+516,6,Offerte
+516,7,Ofrenda
+516,8,Cediregalo
+516,9,Bestow
+516,11,ギフトパス
+516,12,传递礼物
+517,1,れんごく
+517,3,연옥
+517,4,煉獄
+517,5,Feu d’Enfer
+517,6,Inferno
+517,7,Infierno
+517,8,Marchiatura
+517,9,Inferno
+517,11,れんごく
+517,12,炼狱
+518,1,みずのちかい
+518,3,물의맹세
+518,4,水之誓約
+518,5,Aire d’Eau
+518,6,Wassersäulen
+518,7,Voto Agua
+518,8,Acquapatto
+518,9,Water Pledge
+518,11,みずのちかい
+518,12,水之誓约
+519,1,ほのおのちかい
+519,3,불꽃의맹세
+519,4,火之誓約
+519,5,Aire de Feu
+519,6,Feuersäulen
+519,7,Voto Fuego
+519,8,Fiammapatto
+519,9,Fire Pledge
+519,11,ほのおのちかい
+519,12,火之誓约
+520,1,くさのちかい
+520,3,풀의맹세
+520,4,草之誓約
+520,5,Aire d’Herbe
+520,6,Pflanzensäulen
+520,7,Voto Planta
+520,8,Erbapatto
+520,9,Grass Pledge
+520,11,くさのちかい
+520,12,草之誓约
+521,1,ボルトチェンジ
+521,3,볼트체인지
+521,4,伏特替換
+521,5,Change Éclair
+521,6,Voltwechsel
+521,7,Voltiocambio
+521,8,Invertivolt
+521,9,Volt Switch
+521,11,ボルトチェンジ
+521,12,伏特替换
+522,1,むしのていこう
+522,3,벌레의저항
+522,4,蟲之抵抗
+522,5,Survinsecte
+522,6,Käfertrutz
+522,7,Estoicismo
+522,8,Entomoblocco
+522,9,Struggle Bug
+522,11,むしのていこう
+522,12,虫之抵抗
+523,1,じならし
+523,3,땅고르기
+523,4,重踏
+523,5,Piétisol
+523,6,Dampfwalze
+523,7,Terratemblor
+523,8,Battiterra
+523,9,Bulldoze
+523,11,じならし
+523,12,重踏
+524,1,こおりのいぶき
+524,3,얼음숨결
+524,4,冰息
+524,5,Souffle Glacé
+524,6,Eisesodem
+524,7,Vaho Gélido
+524,8,Alitogelido
+524,9,Frost Breath
+524,11,こおりのいぶき
+524,12,冰息
+525,1,ドラゴンテール
+525,3,드래곤테일
+525,4,龍尾
+525,5,Draco-Queue
+525,6,Drachenrute
+525,7,Cola Dragón
+525,8,Codadrago
+525,9,Dragon Tail
+525,11,ドラゴンテール
+525,12,龙尾
+526,1,ふるいたてる
+526,3,분발
+526,4,自我激勵
+526,5,Rengorgement
+526,6,Kraftschub
+526,7,Avivar
+526,8,Cuordileone
+526,9,Work Up
+526,11,ふるいたてる
+526,12,自我激励
+527,1,エレキネット
+527,3,일렉트릭네트
+527,4,電網
+527,5,Toile Élek
+527,6,Elektronetz
+527,7,Electrotela
+527,8,Elettrotela
+527,9,Electroweb
+527,11,エレキネット
+527,12,电网
+528,1,ワイルドボルト
+528,3,와일드볼트
+528,4,瘋狂伏特
+528,5,Éclair Fou
+528,6,Stromstoß
+528,7,Voltio Cruel
+528,8,Sprizzalampo
+528,9,Wild Charge
+528,11,ワイルドボルト
+528,12,疯狂伏特
+529,1,ドリルライナー
+529,3,드릴라이너
+529,4,直衝鑽
+529,5,Tunnelier
+529,6,Schlagbohrer
+529,7,Taladradora
+529,8,Giravvita
+529,9,Drill Run
+529,11,ドリルライナー
+529,12,直冲钻
+530,1,ダブルチョップ
+530,3,더블촙
+530,4,二連劈
+530,5,Double Baffe
+530,6,Doppelhieb
+530,7,Golpe Bis
+530,8,Doppiocolpo
+530,9,Dual Chop
+530,11,ダブルチョップ
+530,12,二连劈
+531,1,ハートスタンプ
+531,3,하트스탬프
+531,4,愛心印章
+531,5,Crève-Cœur
+531,6,Herzstempel
+531,7,Arrumaco
+531,8,Cuorestampo
+531,9,Heart Stamp
+531,11,ハートスタンプ
+531,12,爱心印章
+532,1,ウッドホーン
+532,3,우드호른
+532,4,木角
+532,5,Encornebois
+532,6,Holzgeweih
+532,7,Asta Drenaje
+532,8,Legnicorno
+532,9,Horn Leech
+532,11,ウッドホーン
+532,12,木角
+533,1,せいなるつるぎ
+533,3,성스러운칼
+533,4,聖劍
+533,5,Lame Sainte
+533,6,Sanctoklinge
+533,7,Espada Santa
+533,8,Spadasolenne
+533,9,Sacred Sword
+533,11,せいなるつるぎ
+533,12,圣剑
+534,1,シェルブレード
+534,3,셸블레이드
+534,4,貝殼刃
+534,5,Coquilame
+534,6,Kalkklinge
+534,7,Concha Filo
+534,8,Conchilama
+534,9,Razor Shell
+534,11,シェルブレード
+534,12,贝壳刃
+535,1,ヒートスタンプ
+535,3,히트스탬프
+535,4,高溫重壓
+535,5,Tacle Feu
+535,6,Brandstempel
+535,7,Golpe Calor
+535,8,Marchiafuoco
+535,9,Heat Crash
+535,11,ヒートスタンプ
+535,12,高温重压
+536,1,グラスミキサー
+536,3,그래스믹서
+536,4,青草攪拌器
+536,5,Phytomixeur
+536,6,Grasmixer
+536,7,Ciclón de Hojas
+536,8,Vorticerba
+536,9,Leaf Tornado
+536,11,グラスミキサー
+536,12,青草搅拌器
+537,1,ハードローラー
+537,3,하드롤러
+537,4,瘋狂滾壓
+537,5,Bulldoboule
+537,6,Quetschwalze
+537,7,Rodillo de Púas
+537,8,Rulloduro
+537,9,Steamroller
+537,11,ハードローラー
+537,12,疯狂滚压
+538,1,コットンガード
+538,3,코튼가드
+538,4,棉花防守
+538,5,Cotogarde
+538,6,Watteschild
+538,7,Rizo Algodón
+538,8,Cotonscudo
+538,9,Cotton Guard
+538,11,コットンガード
+538,12,棉花防守
+539,1,ナイトバースト
+539,3,나이트버스트
+539,4,暗黑爆破
+539,5,Explonuit
+539,6,Nachtflut
+539,7,Pulso Noche
+539,8,Urtoscuro
+539,9,Night Daze
+539,11,ナイトバースト
+539,12,暗黑爆破
+540,1,サイコブレイク
+540,3,사이코브레이크
+540,4,精神擊破
+540,5,Frappe Psy
+540,6,Psychostoß
+540,7,Onda Mental
+540,8,Psicobotta
+540,9,Psystrike
+540,11,サイコブレイク
+540,12,精神击破
+541,1,スイープビンタ
+541,3,스위프뺨치기
+541,4,掃尾拍打
+541,5,Plumo-Queue
+541,6,Kehrschelle
+541,7,Plumerazo
+541,8,Spazzasberla
+541,9,Tail Slap
+541,11,スイープビンタ
+541,12,扫尾拍打
+542,1,ぼうふう
+542,3,폭풍
+542,4,暴風
+542,5,Vent Violent
+542,6,Orkan
+542,7,Vendaval
+542,8,Tifone
+542,9,Hurricane
+542,11,ぼうふう
+542,12,暴风
+543,1,アフロブレイク
+543,3,아프로브레이크
+543,4,爆炸頭突擊
+543,5,Peignée
+543,6,Steinschädel
+543,7,Ariete
+543,8,Ricciolata
+543,9,Head Charge
+543,11,アフロブレイク
+543,12,爆炸头突击
+544,1,ギアソーサー
+544,3,기어소서
+544,4,齒輪飛盤
+544,5,Lancécrou
+544,6,Klikkdiskus
+544,7,Rueda Doble
+544,8,Ingracolpo
+544,9,Gear Grind
+544,11,ギアソーサー
+544,12,齿轮飞盘
+545,1,かえんだん
+545,3,화염탄
+545,4,火焰彈
+545,5,Incendie
+545,6,Flammenball
+545,7,Bomba Ígnea
+545,8,Sparafuoco
+545,9,Searing Shot
+545,11,かえんだん
+545,12,火焰弹
+546,1,テクノバスター
+546,3,테크노버스터
+546,4,高科技光炮
+546,5,Techno-Buster
+546,6,Techblaster
+546,7,Tecno Shock
+546,8,Tecnobotto
+546,9,Techno Blast
+546,11,テクノバスター
+546,12,高科技光炮
+547,1,いにしえのうた
+547,3,옛노래
+547,4,古老之歌
+547,5,Chant Antique
+547,6,Urgesang
+547,7,Canto Arcaico
+547,8,Cantoantico
+547,9,Relic Song
+547,11,いにしえのうた
+547,12,古老之歌
+548,1,しんぴのつるぎ
+548,3,신비의칼
+548,4,神秘之劍
+548,5,Lame Ointe
+548,6,Mystoschwert
+548,7,Sable Místico
+548,8,Spadamistica
+548,9,Secret Sword
+548,11,しんぴのつるぎ
+548,12,神秘之剑
+549,1,こごえるせかい
+549,3,얼다세계
+549,4,冰封世界
+549,5,Ère Glaciaire
+549,6,Eiszeit
+549,7,Mundo Gélido
+549,8,Gelamondo
+549,9,Glaciate
+549,11,こごえるせかい
+549,12,冰封世界
+550,1,らいげき
+550,3,뇌격
+550,4,雷擊
+550,5,Charge Foudre
+550,6,Blitzschlag
+550,7,Ataque Fulgor
+550,8,Lucesiluro
+550,9,Bolt Strike
+550,11,らいげき
+550,12,雷击
+551,1,あおいほのお
+551,3,푸른불꽃
+551,4,青焰
+551,5,Flamme Bleue
+551,6,Blauflammen
+551,7,Llama Azul
+551,8,Fuocoblu
+551,9,Blue Flare
+551,11,あおいほのお
+551,12,青焰
+552,1,ほのおのまい
+552,3,불꽃춤
+552,4,火之舞
+552,5,Danse du Feu
+552,6,Feuerreigen
+552,7,Danza Llama
+552,8,Voldifuoco
+552,9,Fiery Dance
+552,11,ほのおのまい
+552,12,火之舞
+553,1,フリーズボルト
+553,3,프리즈볼트
+553,4,冰凍伏特
+553,5,Éclair Gelé
+553,6,Frostvolt
+553,7,Rayo Gélido
+553,8,Elettrogelo
+553,9,Freeze Shock
+553,11,フリーズボルト
+553,12,冰冻伏特
+554,1,コールドフレア
+554,3,콜드플레어
+554,4,極寒冷焰
+554,5,Feu Glacé
+554,6,Frosthauch
+554,7,Llama Gélida
+554,8,Vampagelida
+554,9,Ice Burn
+554,11,コールドフレア
+554,12,极寒冷焰
+555,1,バークアウト
+555,3,바크아웃
+555,4,大聲咆哮
+555,5,Aboiement
+555,6,Standpauke
+555,7,Alarido
+555,8,Urlorabbia
+555,9,Snarl
+555,11,バークアウト
+555,12,大声咆哮
+556,1,つららおとし
+556,3,고드름떨구기
+556,4,冰柱墜擊
+556,5,Chute Glace
+556,6,Eiszapfhagel
+556,7,Chuzos
+556,8,Scagliagelo
+556,9,Icicle Crash
+556,11,つららおとし
+556,12,冰柱坠击
+557,1,Ｖジェネレート
+557,3,V제너레이트
+557,4,Ｖ熱焰
+557,5,Coup Victoire
+557,6,V-Generator
+557,7,V de Fuego
+557,8,Generatore V
+557,9,V-create
+557,11,Ｖジェネレート
+557,12,Ｖ热焰
+558,1,クロスフレイム
+558,3,크로스플레임
+558,4,交錯火焰
+558,5,Flamme Croix
+558,6,Kreuzflamme
+558,7,Llama Fusión
+558,8,Incrofiamma
+558,9,Fusion Flare
+558,11,クロスフレイム
+558,12,交错火焰
+559,1,クロスサンダー
+559,3,크로스썬더
+559,4,交錯閃電
+559,5,Éclair Croix
+559,6,Kreuzdonner
+559,7,Rayo Fusión
+559,8,Incrotuono
+559,9,Fusion Bolt
+559,11,クロスサンダー
+559,12,交错闪电
+560,1,フライングプレス
+560,3,플라잉프레스
+560,4,飛身重壓
+560,5,Flying Press
+560,6,Flying Press
+560,7,Plancha Voladora
+560,8,Schiacciatuffo
+560,9,Flying Press
+560,11,フライングプレス
+560,12,飞身重压
+561,1,たたみがえし
+561,3,마룻바닥세워막기
+561,4,掀榻榻米
+561,5,Tatamigaeshi
+561,6,Tatami-Schild
+561,7,Escudo Tatami
+561,8,Ribaltappeto
+561,9,Mat Block
+561,11,たたみがえし
+561,12,掀榻榻米
+562,1,ゲップ
+562,3,트림
+562,4,打嗝
+562,5,Éructation
+562,6,Rülpser
+562,7,Eructo
+562,8,Rutto
+562,9,Belch
+562,11,ゲップ
+562,12,打嗝
+563,1,たがやす
+563,3,일구기
+563,4,耕地
+563,5,Fertilisation
+563,6,Pflüger
+563,7,Fertilizante
+563,8,Aracampo
+563,9,Rototiller
+563,11,たがやす
+563,12,耕地
+564,1,ねばねばネット
+564,3,끈적끈적네트
+564,4,黏黏網
+564,5,Toile Gluante
+564,6,Klebenetz
+564,7,Red Viscosa
+564,8,Rete Vischiosa
+564,9,Sticky Web
+564,11,ねばねばネット
+564,12,黏黏网
+565,1,とどめばり
+565,3,마지막일침
+565,4,致命針刺
+565,5,Dard Mortel
+565,6,Stachelfinale
+565,7,Aguijón Letal
+565,8,Pungiglione
+565,9,Fell Stinger
+565,11,とどめばり
+565,12,致命针刺
+566,1,ゴーストダイブ
+566,3,고스트다이브
+566,4,潛靈奇襲
+566,5,Hantise
+566,6,Phantomkraft
+566,7,Golpe Fantasma
+566,8,Spettrotuffo
+566,9,Phantom Force
+566,11,ゴーストダイブ
+566,12,潜灵奇袭
+567,1,ハロウィン
+567,3,핼러윈
+567,4,萬聖夜
+567,5,Halloween
+567,6,Halloween
+567,7,Halloween
+567,8,Halloween
+567,9,Trick-or-Treat
+567,11,ハロウィン
+567,12,万圣夜
+568,1,おたけび
+568,3,부르짖기
+568,4,戰吼
+568,5,Râle Mâle
+568,6,Kampfgebrüll
+568,7,Rugido de Guerra
+568,8,Urlo
+568,9,Noble Roar
+568,11,おたけび
+568,12,战吼
+569,1,プラズマシャワー
+569,3,플라스마샤워
+569,4,等離子浴
+569,5,DélugePlasmique
+569,6,Plasmaschauer
+569,7,Cortina Plasma
+569,8,Pioggiaplasma
+569,9,Ion Deluge
+569,11,プラズマシャワー
+569,12,等离子浴
+570,1,パラボラチャージ
+570,3,파라볼라차지
+570,4,拋物面充電
+570,5,Parabocharge
+570,6,Parabolladung
+570,7,Carga Parábola
+570,8,Caricaparabola
+570,9,Parabolic Charge
+570,11,パラボラチャージ
+570,12,抛物面充电
+571,1,もりののろい
+571,3,숲의저주
+571,4,森林詛咒
+571,5,Maléfice Sylvain
+571,6,Waldesfluch
+571,7,Condena Silvana
+571,8,Boscomalocchio
+571,9,Forest’s Curse
+571,11,もりののろい
+571,12,森林诅咒
+572,1,はなふぶき
+572,3,꽃보라
+572,4,落英繽紛
+572,5,Tempête Florale
+572,6,Blütenwirbel
+572,7,Tormenta Floral
+572,8,Fiortempesta
+572,9,Petal Blizzard
+572,11,はなふぶき
+572,12,落英缤纷
+573,1,フリーズドライ
+573,3,프리즈드라이
+573,4,冷凍乾燥
+573,5,Lyophilisation
+573,6,Gefriertrockner
+573,7,Liofilización
+573,8,Liofilizzazione
+573,9,Freeze-Dry
+573,11,フリーズドライ
+573,12,冷冻干燥
+574,1,チャームボイス
+574,3,차밍보이스
+574,4,魅惑之聲
+574,5,Voix Enjôleuse
+574,6,Säuselstimme
+574,7,Voz Cautivadora
+574,8,Incantavoce
+574,9,Disarming Voice
+574,11,チャームボイス
+574,12,魅惑之声
+575,1,すてゼリフ
+575,3,막말내뱉기
+575,4,拋下狠話
+575,5,Dernier Mot
+575,6,Abgangstirade
+575,7,Última Palabra
+575,8,Monito
+575,9,Parting Shot
+575,11,すてゼリフ
+575,12,抛下狠话
+576,1,ひっくりかえす
+576,3,뒤집어엎기
+576,4,顛倒
+576,5,Renversement
+576,6,Invertigo
+576,7,Reversión
+576,8,Sottosopra
+576,9,Topsy-Turvy
+576,11,ひっくりかえす
+576,12,颠倒
+577,1,ドレインキッス
+577,3,드레인키스
+577,4,吸取之吻
+577,5,Vampibaiser
+577,6,Diebeskuss
+577,7,Beso Drenaje
+577,8,Assorbibacio
+577,9,Draining Kiss
+577,11,ドレインキッス
+577,12,吸取之吻
+578,1,トリックガード
+578,3,트릭가드
+578,4,戲法防守
+578,5,Vigilance
+578,6,Trickschutz
+578,7,Truco Defensa
+578,8,Truccodifesa
+578,9,Crafty Shield
+578,11,トリックガード
+578,12,戏法防守
+579,1,フラワーガード
+579,3,플라워가드
+579,4,鮮花防守
+579,5,Garde Florale
+579,6,Floraschutz
+579,7,Defensa Floral
+579,8,Fiordifesa
+579,9,Flower Shield
+579,11,フラワーガード
+579,12,鲜花防守
+580,1,グラスフィールド
+580,3,그래스필드
+580,4,青草場地
+580,5,Champ Herbu
+580,6,Grasfeld
+580,7,Campo de Hierba
+580,8,Campo Erboso
+580,9,Grassy Terrain
+580,11,グラスフィールド
+580,12,青草场地
+581,1,ミストフィールド
+581,3,미스트필드
+581,4,薄霧場地
+581,5,Champ Brumeux
+581,6,Nebelfeld
+581,7,Campo de Niebla
+581,8,Campo Nebbioso
+581,9,Misty Terrain
+581,11,ミストフィールド
+581,12,薄雾场地
+582,1,そうでん
+582,3,송전
+582,4,輸電
+582,5,Électrisation
+582,6,Elektrifizierung
+582,7,Electrificación
+582,8,Elettrocontagio
+582,9,Electrify
+582,11,そうでん
+582,12,输电
+583,1,じゃれつく
+583,3,치근거리기
+583,4,嬉鬧
+583,5,Câlinerie
+583,6,Knuddler
+583,7,Carantoña
+583,8,Carineria
+583,9,Play Rough
+583,11,じゃれつく
+583,12,嬉闹
+584,1,ようせいのかぜ
+584,3,요정의바람
+584,4,妖精之風
+584,5,Vent Féérique
+584,6,Feenbrise
+584,7,Viento Feérico
+584,8,Vento di Fata
+584,9,Fairy Wind
+584,11,ようせいのかぜ
+584,12,妖精之风
+585,1,ムーンフォース
+585,3,문포스
+585,4,月亮之力
+585,5,Pouvoir Lunaire
+585,6,Mondgewalt
+585,7,Fuerza Lunar
+585,8,Forza Lunare
+585,9,Moonblast
+585,11,ムーンフォース
+585,12,月亮之力
+586,1,ばくおんぱ
+586,3,폭음파
+586,4,爆音波
+586,5,Bang Sonique
+586,6,Überschallknall
+586,7,Estruendo
+586,8,Ondaboato
+586,9,Boomburst
+586,11,ばくおんぱ
+586,12,爆音波
+587,1,フェアリーロック
+587,3,페어리록
+587,4,妖精之鎖
+587,5,Verrou Enchanté
+587,6,Feenschloss
+587,7,Cerrojo Feérico
+587,8,Blocco Fatato
+587,9,Fairy Lock
+587,11,フェアリーロック
+587,12,妖精之锁
+588,1,キングシールド
+588,3,킹실드
+588,4,王者盾牌
+588,5,Bouclier Royal
+588,6,Königsschild
+588,7,Escudo Real
+588,8,Scudo Reale
+588,9,King’s Shield
+588,11,キングシールド
+588,12,王者盾牌
+589,1,なかよくする
+589,3,친해지기
+589,4,和睦相處
+589,5,Camaraderie
+589,6,Kameradschaft
+589,7,Camaradería
+589,8,Simpatia
+589,9,Play Nice
+589,11,なかよくする
+589,12,和睦相处
+590,1,ないしょばなし
+590,3,비밀이야기
+590,4,密語
+590,5,Confidence
+590,6,Vertrauenssache
+590,7,Confidencia
+590,8,Confidenza
+590,9,Confide
+590,11,ないしょばなし
+590,12,密语
+591,1,ダイヤストーム
+591,3,다이아스톰
+591,4,鑽石風暴
+591,5,Orage Adamantin
+591,6,Diamantsturm
+591,7,Torm. Diamantes
+591,8,Diamantempesta
+591,9,Diamond Storm
+591,11,ダイヤストーム
+591,12,钻石风暴
+592,1,スチームバースト
+592,3,스팀버스트
+592,4,蒸汽爆炸
+592,5,Jet de Vapeur
+592,6,Dampfschwall
+592,7,Chorro de Vapor
+592,8,Vaporscoppio
+592,9,Steam Eruption
+592,11,スチームバースト
+592,12,蒸汽爆炸
+593,1,いじげんホール
+593,3,다른차원홀
+593,4,異次元洞
+593,5,TrouDimensionnel
+593,6,Dimensionsloch
+593,7,Paso Dimensional
+593,8,Forodimensionale
+593,9,Hyperspace Hole
+593,11,いじげんホール
+593,12,异次元洞
+594,1,みずしゅりけん
+594,3,물수리검
+594,4,飛水手裡劍
+594,5,Sheauriken
+594,6,Wasser-Shuriken
+594,7,Shuriken de Agua
+594,8,Acqualame
+594,9,Water Shuriken
+594,11,みずしゅりけん
+594,12,飞水手里剑
+595,1,マジカルフレイム
+595,3,매지컬플레임
+595,4,魔法火焰
+595,5,Feu Ensorcelé
+595,6,Magieflamme
+595,7,Llama Embrujada
+595,8,Magifiamma
+595,9,Mystical Fire
+595,11,マジカルフレイム
+595,12,魔法火焰
+596,1,ニードルガード
+596,3,니들가드
+596,4,尖刺防守
+596,5,Pico-Défense
+596,6,Schutzstacheln
+596,7,Barrera Espinosa
+596,8,Agodifesa
+596,9,Spiky Shield
+596,11,ニードルガード
+596,12,尖刺防守
+597,1,アロマミスト
+597,3,아로마미스트
+597,4,芳香薄霧
+597,5,Brume Capiteuse
+597,6,Duftwolke
+597,7,Niebla Aromática
+597,8,Nebularoma
+597,9,Aromatic Mist
+597,11,アロマミスト
+597,12,芳香薄雾
+598,1,かいでんぱ
+598,3,괴전파
+598,4,怪異電波
+598,5,Ondes Étranges
+598,6,Mystowellen
+598,7,Onda Anómala
+598,8,Elettromistero
+598,9,Eerie Impulse
+598,11,かいでんぱ
+598,12,怪异电波
+599,1,ベノムトラップ
+599,3,베놈트랩
+599,4,毒液陷阱
+599,5,Piège de Venin
+599,6,Giftfalle
+599,7,Trampa Venenosa
+599,8,Velenotrappola
+599,9,Venom Drench
+599,11,ベノムトラップ
+599,12,毒液陷阱
+600,1,ふんじん
+600,3,분진
+600,4,粉塵
+600,5,Nuée de Poudre
+600,6,Pulverschleuder
+600,7,Polvo Explosivo
+600,8,Pulviscoppio
+600,9,Powder
+600,11,ふんじん
+600,12,粉尘
+601,1,ジオコントロール
+601,3,지오컨트롤
+601,4,大地掌控
+601,5,Géo-Contrôle
+601,6,Geokontrolle
+601,7,Geocontrol
+601,8,Geocontrollo
+601,9,Geomancy
+601,11,ジオコントロール
+601,12,大地掌控
+602,1,じばそうさ
+602,3,자기장조작
+602,4,磁場操控
+602,5,Magné-Contrôle
+602,6,Magnetregler
+602,7,Aura Magnética
+602,8,Controllo Polare
+602,9,Magnetic Flux
+602,11,じばそうさ
+602,12,磁场操控
+603,1,ハッピータイム
+603,3,해피타임
+603,4,歡樂時光
+603,5,Étrennes
+603,6,Goldene Zeiten
+603,7,Paga Extra
+603,8,Cuccagna
+603,9,Happy Hour
+603,11,ハッピータイム
+603,12,欢乐时光
+604,1,エレキフィールド
+604,3,일렉트릭필드
+604,4,電氣場地
+604,5,Champ Électrifié
+604,6,Elektrofeld
+604,7,Campo Eléctrico
+604,8,Campo Elettrico
+604,9,Electric Terrain
+604,11,エレキフィールド
+604,12,电气场地
+605,1,マジカルシャイン
+605,3,매지컬샤인
+605,4,魔法閃耀
+605,5,Éclat Magique
+605,6,Zauberschein
+605,7,Brillo Mágico
+605,8,Magibrillio
+605,9,Dazzling Gleam
+605,11,マジカルシャイン
+605,12,魔法闪耀
+606,1,おいわい
+606,3,축하
+606,4,慶祝
+606,5,Célébration
+606,6,Ehrentag
+606,7,Celebración
+606,8,Auguri
+606,9,Celebrate
+606,11,おいわい
+606,12,庆祝
+607,1,てをつなぐ
+607,3,손에손잡기
+607,4,牽手
+607,5,Mains Jointes
+607,6,Händchenhalten
+607,7,Manos Juntas
+607,8,Mano nella Mano
+607,9,Hold Hands
+607,11,てをつなぐ
+607,12,牵手
+608,1,つぶらなひとみ
+608,3,초롱초롱눈동자
+608,4,圓瞳
+608,5,Regard Touchant
+608,6,Kulleraugen
+608,7,Ojitos Tiernos
+608,8,Occhioni Teneri
+608,9,Baby-Doll Eyes
+608,11,つぶらなひとみ
+608,12,圆瞳
+609,1,ほっぺすりすり
+609,3,볼부비부비
+609,4,蹭蹭臉頰
+609,5,Frotte-Frimousse
+609,6,Wangenrubbler
+609,7,Moflete Estático
+609,8,Elettrococcola
+609,9,Nuzzle
+609,11,ほっぺすりすり
+609,12,蹭蹭脸颊
+610,1,てかげん
+610,3,적당히손봐주기
+610,4,手下留情
+610,5,Retenue
+610,6,Zurückhaltung
+610,7,Clemencia
+610,8,Riguardo
+610,9,Hold Back
+610,11,てかげん
+610,12,手下留情
+611,1,まとわりつく
+611,3,엉겨붙기
+611,4,死纏爛打
+611,5,Harcèlement
+611,6,Plage
+611,7,Acoso
+611,8,Assillo
+611,9,Infestation
+611,11,まとわりつく
+611,12,死缠烂打
+612,1,グロウパンチ
+612,3,그로우펀치
+612,4,增強拳
+612,5,Poing Boost
+612,6,Steigerungshieb
+612,7,Puño Incremento
+612,8,Crescipugno
+612,9,Power-Up Punch
+612,11,グロウパンチ
+612,12,增强拳
+613,1,デスウイング
+613,3,데스윙
+613,4,死亡之翼
+613,5,Mort-Ailes
+613,6,Unheilsschwingen
+613,7,Ala Mortífera
+613,8,Ali del Fato
+613,9,Oblivion Wing
+613,11,デスウイング
+613,12,死亡之翼
+614,1,サウザンアロー
+614,3,사우전드애로
+614,4,千箭齊發
+614,5,Myria-Flèches
+614,6,Tausend Pfeile
+614,7,Mil Flechas
+614,8,Mille Frecce
+614,9,Thousand Arrows
+614,11,サウザンアロー
+614,12,千箭齐发
+615,1,サウザンウェーブ
+615,3,사우전드웨이브
+615,4,千波激盪
+615,5,Myria-Vagues
+615,6,Tausend Wellen
+615,7,Mil Temblores
+615,8,Mille Onde
+615,9,Thousand Waves
+615,11,サウザンウェーブ
+615,12,千波激荡
+616,1,グランドフォース
+616,3,그라운드포스
+616,4,大地神力
+616,5,Force Chtonienne
+616,6,Bodengewalt
+616,7,Fuerza Telúrica
+616,8,Forza Tellurica
+616,9,Land’s Wrath
+616,11,グランドフォース
+616,12,大地神力
+617,1,はめつのひかり
+617,3,파멸의빛
+617,4,破滅之光
+617,5,Lumière du Néant
+617,6,Lux Calamitatis
+617,7,Luz Aniquiladora
+617,8,Luce Nefasta
+617,9,Light of Ruin
+617,11,はめつのひかり
+617,12,破灭之光
+618,1,こんげんのはどう
+618,3,근원의파동
+618,4,根源波動
+618,5,Onde Originelle
+618,6,Ursprungswoge
+618,7,Pulso Primigenio
+618,8,Primopulsar
+618,9,Origin Pulse
+618,11,こんげんのはどう
+618,12,根源波动
+619,1,だんがいのつるぎ
+619,3,단애의칼
+619,4,斷崖之劍
+619,5,Lame Pangéenne
+619,6,Abgrundsklinge
+619,7,Filo del Abismo
+619,8,Spade Telluriche
+619,9,Precipice Blades
+619,11,だんがいのつるぎ
+619,12,断崖之剑
+620,1,ガリョウテンセイ
+620,3,화룡점정
+620,4,畫龍點睛
+620,5,Draco Ascension
+620,6,Zenitstürmer
+620,7,Ascenso Draco
+620,8,Ascesa del Drago
+620,9,Dragon Ascent
+620,11,ガリョウテンセイ
+620,12,画龙点睛
+621,1,いじげんラッシュ
+621,3,다른차원러시
+621,4,異次元猛攻
+621,5,Furie Dimension
+621,6,Dimensionswahn
+621,7,Cerco Dimensión
+621,8,Urtodimensionale
+621,9,Hyperspace Fury
+621,11,いじげんラッシュ
+621,12,异次元猛攻
+622,1,ウルトラダッシュアタック
+622,3,울트라대시어택
+622,4,究極無敵大衝撞
+622,5,Turbo-Charge Bulldozer
+622,6,Hyper-Sprintangriff
+622,7,Carrera Arrolladora
+622,8,Carica Travolgente
+622,9,Breakneck Blitz
+622,11,ウルトラダッシュアタック
+622,12,究极无敌大冲撞
+623,1,ウルトラダッシュアタック
+623,3,울트라대시어택
+623,4,究極無敵大衝撞
+623,5,Turbo-Charge Bulldozer
+623,6,Hyper-Sprintangriff
+623,7,Carrera Arrolladora
+623,8,Carica Travolgente
+623,9,Breakneck Blitz
+623,11,ウルトラダッシュアタック
+623,12,究极无敌大冲撞
+624,1,ぜんりょくむそうげきれつけん
+624,3,전력무쌍격렬권
+624,4,全力無雙激烈拳
+624,5,Combo Hyper-Furie
+624,6,Fulminante Faustschläge
+624,7,Ráfaga Demoledora
+624,8,Iperscarica Furiosa
+624,9,All-Out Pummeling
+624,11,ぜんりょくむそうげきれつけん
+624,12,全力无双激烈拳
+625,1,ぜんりょくむそうげきれつけん
+625,3,전력무쌍격렬권
+625,4,全力無雙激烈拳
+625,5,Combo Hyper-Furie
+625,6,Fulminante Faustschläge
+625,7,Ráfaga Demoledora
+625,8,Iperscarica Furiosa
+625,9,All-Out Pummeling
+625,11,ぜんりょくむそうげきれつけん
+625,12,全力无双激烈拳
+626,1,ファイナルダイブクラッシュ
+626,3,파이널다이브클래시
+626,4,極速俯衝轟烈撞
+626,5,Piqué Supersonique
+626,6,Finaler Steilflug
+626,7,Picado Supersónico
+626,8,Picchiata Devastante
+626,9,Supersonic Skystrike
+626,11,ファイナルダイブクラッシュ
+626,12,极速俯冲轰烈撞
+627,1,ファイナルダイブクラッシュ
+627,3,파이널다이브클래시
+627,4,極速俯衝轟烈撞
+627,5,Piqué Supersonique
+627,6,Finaler Steilflug
+627,7,Picado Supersónico
+627,8,Picchiata Devastante
+627,9,Supersonic Skystrike
+627,11,ファイナルダイブクラッシュ
+627,12,极速俯冲轰烈撞
+628,1,アシッドポイズンデリート
+628,3,애시드포이즌딜리트
+628,4,強酸劇毒滅絕雨
+628,5,Déluge Causti-Toxique
+628,6,Vernichtender Säureregen
+628,7,Diluvio Corrosivo
+628,8,Acidiluvio Corrosivo
+628,9,Acid Downpour
+628,11,アシッドポイズンデリート
+628,12,强酸剧毒灭绝雨
+629,1,アシッドポイズンデリート
+629,3,애시드포이즌딜리트
+629,4,強酸劇毒滅絕雨
+629,5,Déluge Causti-Toxique
+629,6,Vernichtender Säureregen
+629,7,Diluvio Corrosivo
+629,8,Acidiluvio Corrosivo
+629,9,Acid Downpour
+629,11,アシッドポイズンデリート
+629,12,强酸剧毒灭绝雨
+630,1,ライジングランドオーバー
+630,3,라이징랜드오버
+630,4,地隆嘯天大終結
+630,5,Éruption Géo-Sismique
+630,6,Seismische Eruption
+630,7,Barrena Telúrica
+630,8,Furore della Terra
+630,9,Tectonic Rage
+630,11,ライジングランドオーバー
+630,12,地隆啸天大终结
+631,1,ライジングランドオーバー
+631,3,라이징랜드오버
+631,4,地隆嘯天大終結
+631,5,Éruption Géo-Sismique
+631,6,Seismische Eruption
+631,7,Barrena Telúrica
+631,8,Furore della Terra
+631,9,Tectonic Rage
+631,11,ライジングランドオーバー
+631,12,地隆啸天大终结
+632,1,ワールズエンドフォール
+632,3,월즈엔드폴
+632,4,毀天滅地巨岩墜
+632,5,Apocalypse Gigalithique
+632,6,Apokalyptische Steinpresse
+632,7,Aplastamiento Gigalítico
+632,8,Gigamacigno Polverizzante
+632,9,Continental Crush
+632,11,ワールズエンドフォール
+632,12,毁天灭地巨岩坠
+633,1,ワールズエンドフォール
+633,3,월즈엔드폴
+633,4,毀天滅地巨岩墜
+633,5,Apocalypse Gigalithique
+633,6,Apokalyptische Steinpresse
+633,7,Aplastamiento Gigalítico
+633,8,Gigamacigno Polverizzante
+633,9,Continental Crush
+633,11,ワールズエンドフォール
+633,12,毁天灭地巨岩坠
+634,1,ぜったいほしょくかいてんざん
+634,3,절대포식회전참
+634,4,絕對捕食迴旋斬
+634,5,Cocon Fatal
+634,6,Wirbelnder Insektenhieb
+634,7,Guadaña Sedosa
+634,8,Bozzolo Fatale
+634,9,Savage Spin-Out
+634,11,ぜったいほしょくかいてんざん
+634,12,绝对捕食回旋斩
+635,1,ぜったいほしょくかいてんざん
+635,3,절대포식회전참
+635,4,絕對捕食迴旋斬
+635,5,Cocon Fatal
+635,6,Wirbelnder Insektenhieb
+635,7,Guadaña Sedosa
+635,8,Bozzolo Fatale
+635,9,Savage Spin-Out
+635,11,ぜったいほしょくかいてんざん
+635,12,绝对捕食回旋斩
+636,1,むげんあんやへのいざない
+636,3,무한암야로의유인
+636,4,無盡暗夜之誘惑
+636,5,Appel des Ombres Éternelles
+636,6,Ewige Nacht
+636,7,Presa Espectral
+636,8,Abbraccio Spettrale
+636,9,Never-Ending Nightmare
+636,11,むげんあんやへのいざない
+636,12,无尽暗夜之诱惑
+637,1,むげんあんやへのいざない
+637,3,무한암야로의유인
+637,4,無盡暗夜之誘惑
+637,5,Appel des Ombres Éternelles
+637,6,Ewige Nacht
+637,7,Presa Espectral
+637,8,Abbraccio Spettrale
+637,9,Never-Ending Nightmare
+637,11,むげんあんやへのいざない
+637,12,无尽暗夜之诱惑
+638,1,ちょうぜつらせんれんげき
+638,3,초월나선연격
+638,4,超絕螺旋連擊
+638,5,Vrille Maximum
+638,6,Turbo-Spiralkombo
+638,7,Hélice Trepanadora
+638,8,Spirale Perforante
+638,9,Corkscrew Crash
+638,11,ちょうぜつらせんれんげき
+638,12,超绝螺旋连击
+639,1,ちょうぜつらせんれんげき
+639,3,초월나선연격
+639,4,超絕螺旋連擊
+639,5,Vrille Maximum
+639,6,Turbo-Spiralkombo
+639,7,Hélice Trepanadora
+639,8,Spirale Perforante
+639,9,Corkscrew Crash
+639,11,ちょうぜつらせんれんげき
+639,12,超绝螺旋连击
+640,1,ダイナミックフルフレイム
+640,3,다이내믹풀플레임
+640,4,超強極限爆焰彈
+640,5,Pyro-Explosion Cataclysmique
+640,6,Dynamische Maxiflamme
+640,7,Hecatombe Pírica
+640,8,Fiammobomba Detonante
+640,9,Inferno Overdrive
+640,11,ダイナミックフルフレイム
+640,12,超强极限爆焰弹
+641,1,ダイナミックフルフレイム
+641,3,다이내믹풀플레임
+641,4,超強極限爆焰彈
+641,5,Pyro-Explosion Cataclysmique
+641,6,Dynamische Maxiflamme
+641,7,Hecatombe Pírica
+641,8,Fiammobomba Detonante
+641,9,Inferno Overdrive
+641,11,ダイナミックフルフレイム
+641,12,超强极限爆焰弹
+642,1,スーパーアクアトルネード
+642,3,슈퍼아쿠아토네이도
+642,4,超級水流大漩渦
+642,5,Super Tourbillon Abyssal
+642,6,Super-Wassertornado
+642,7,Hidrovórtice Abisal
+642,8,Idrovortice Abissale
+642,9,Hydro Vortex
+642,11,スーパーアクアトルネード
+642,12,超级水流大漩涡
+643,1,スーパーアクアトルネード
+643,3,슈퍼아쿠아토네이도
+643,4,超級水流大漩渦
+643,5,Super Tourbillon Abyssal
+643,6,Super-Wassertornado
+643,7,Hidrovórtice Abisal
+643,8,Idrovortice Abissale
+643,9,Hydro Vortex
+643,11,スーパーアクアトルネード
+643,12,超级水流大漩涡
+644,1,ブルームシャインエクストラ
+644,3,블룸샤인엑스트라
+644,4,絢爛繽紛花怒放
+644,5,Pétalexplosion Éblouissante
+644,6,Brillante Blütenpracht
+644,7,Megatón Floral
+644,8,Floriscoppio Sfolgorante
+644,9,Bloom Doom
+644,11,ブルームシャインエクストラ
+644,12,绚烂缤纷花怒放
+645,1,ブルームシャインエクストラ
+645,3,블룸샤인엑스트라
+645,4,絢爛繽紛花怒放
+645,5,Pétalexplosion Éblouissante
+645,6,Brillante Blütenpracht
+645,7,Megatón Floral
+645,8,Floriscoppio Sfolgorante
+645,9,Bloom Doom
+645,11,ブルームシャインエクストラ
+645,12,绚烂缤纷花怒放
+646,1,スパーキングギガボルト
+646,3,스파킹기가볼트
+646,4,終極伏特狂雷閃
+646,5,Fulguro-Lance Gigavolt
+646,6,Gigavolt-Funkensalve
+646,7,Gigavoltio Destructor
+646,8,Gigascarica Folgorante
+646,9,Gigavolt Havoc
+646,11,スパーキングギガボルト
+646,12,终极伏特狂雷闪
+647,1,スパーキングギガボルト
+647,3,스파킹기가볼트
+647,4,終極伏特狂雷閃
+647,5,Fulguro-Lance Gigavolt
+647,6,Gigavolt-Funkensalve
+647,7,Gigavoltio Destructor
+647,8,Gigascarica Folgorante
+647,9,Gigavolt Havoc
+647,11,スパーキングギガボルト
+647,12,终极伏特狂雷闪
+648,1,マキシマムサイブレイカー
+648,3,맥시멈사이브레이커
+648,4,至高精神破壞波
+648,5,Psycho-Pulvérisation EX
+648,6,Psycho-Schmetterschlag
+648,7,Disruptor Psíquico
+648,8,Impatto Psicocinetico
+648,9,Shattered Psyche
+648,11,マキシマムサイブレイカー
+648,12,至高精神破坏波
+649,1,マキシマムサイブレイカー
+649,3,맥시멈사이브레이커
+649,4,至高精神破壞波
+649,5,Psycho-Pulvérisation EX
+649,6,Psycho-Schmetterschlag
+649,7,Disruptor Psíquico
+649,8,Impatto Psicocinetico
+649,9,Shattered Psyche
+649,11,マキシマムサイブレイカー
+649,12,至高精神破坏波
+650,1,レイジングジオフリーズ
+650,3,레이징지오프리즈
+650,4,激狂大地萬里冰
+650,5,Laser Cryogénique
+650,6,Tobender Geofrost
+650,7,Crioaliento Despiadado
+650,8,Criodistruzione Polare
+650,9,Subzero Slammer
+650,11,レイジングジオフリーズ
+650,12,激狂大地万里冰
+651,1,レイジングジオフリーズ
+651,3,레이징지오프리즈
+651,4,激狂大地萬里冰
+651,5,Laser Cryogénique
+651,6,Tobender Geofrost
+651,7,Crioaliento Despiadado
+651,8,Criodistruzione Polare
+651,9,Subzero Slammer
+651,11,レイジングジオフリーズ
+651,12,激狂大地万里冰
+652,1,アルティメットドラゴンバーン
+652,3,얼티메이트드래곤번
+652,4,究極巨龍震天地
+652,5,Chaos Draconique
+652,6,Drastisches Drachendröhnen
+652,7,Dracoaliento Devastador
+652,8,Dragoschianto Finale
+652,9,Devastating Drake
+652,11,アルティメットドラゴンバーン
+652,12,究极巨龙震天地
+653,1,アルティメットドラゴンバーン
+653,3,얼티메이트드래곤번
+653,4,究極巨龍震天地
+653,5,Chaos Draconique
+653,6,Drastisches Drachendröhnen
+653,7,Dracoaliento Devastador
+653,8,Dragoschianto Finale
+653,9,Devastating Drake
+653,11,アルティメットドラゴンバーン
+653,12,究极巨龙震天地
+654,1,ブラックホールイクリプス
+654,3,블랙홀이클립스
+654,4,黑洞吞噬萬物滅
+654,5,Trou Noir des Ombres
+654,6,Schwarzes Loch des Grauens
+654,7,Agujero Negro Aniquilador
+654,8,Buco Nero del Non Ritorno
+654,9,Black Hole Eclipse
+654,11,ブラックホールイクリプス
+654,12,黑洞吞噬万物灭
+655,1,ブラックホールイクリプス
+655,3,블랙홀이클립스
+655,4,黑洞吞噬萬物滅
+655,5,Trou Noir des Ombres
+655,6,Schwarzes Loch des Grauens
+655,7,Agujero Negro Aniquilador
+655,8,Buco Nero del Non Ritorno
+655,9,Black Hole Eclipse
+655,11,ブラックホールイクリプス
+655,12,黑洞吞噬万物灭
+656,1,ラブリースターインパクト
+656,3,러블리스타임팩트
+656,4,可愛星星飛天撞
+656,5,Impact Choupinova
+656,6,Entzückender Sternenstoß
+656,7,Arrumaco Sideral
+656,8,Astroimpatto Fatato
+656,9,Twinkle Tackle
+656,11,ラブリースターインパクト
+656,12,可爱星星飞天撞
+657,1,ラブリースターインパクト
+657,3,러블리스타임팩트
+657,4,可愛星星飛天撞
+657,5,Impact Choupinova
+657,6,Entzückender Sternenstoß
+657,7,Arrumaco Sideral
+657,8,Astroimpatto Fatato
+657,9,Twinkle Tackle
+657,11,ラブリースターインパクト
+657,12,可爱星星飞天撞
+658,1,ひっさつのピカチュート
+658,3,필살피카슛
+658,4,皮卡皮卡必殺擊
+658,5,Pikachute Foudroyante
+658,6,Perfektes Pika-Projektil
+658,7,Pikavoltio Letal
+658,8,Super Pikaboom
+658,9,Catastropika
+658,11,ひっさつのピカチュート
+658,12,皮卡皮卡必杀击
+659,1,すなあつめ
+659,3,모래모으기
+659,4,集沙
+659,5,Amass’Sable
+659,6,Sandsammler
+659,7,Recogearena
+659,8,Sabbiaccumulo
+659,9,Shore Up
+659,11,すなあつめ
+659,12,集沙
+660,1,であいがしら
+660,3,만나자마자
+660,4,迎頭一擊
+660,5,Escarmouche
+660,6,Überrumpler
+660,7,Escaramuza
+660,8,Schermaglia
+660,9,First Impression
+660,11,であいがしら
+660,12,迎头一击
+661,1,トーチカ
+661,3,토치카
+661,4,碉堡
+661,5,Blockhaus
+661,6,Bunker
+661,7,Búnker
+661,8,Fortino
+661,9,Baneful Bunker
+661,11,トーチカ
+661,12,碉堡
+662,1,かげぬい
+662,3,그림자꿰매기
+662,4,縫影
+662,5,Tisse Ombre
+662,6,Schattenfessel
+662,7,Puntada Sombría
+662,8,Cucitura d’Ombra
+662,9,Spirit Shackle
+662,11,かげぬい
+662,12,缝影
+663,1,ＤＤラリアット
+663,3,DD래리어트
+663,4,ＤＤ金勾臂
+663,5,Dark Lariat
+663,6,Dark Lariat
+663,7,Lariat Oscuro
+663,8,Braccioteso
+663,9,Darkest Lariat
+663,11,ＤＤラリアット
+663,12,ＤＤ金勾臂
+664,1,うたかたのアリア
+664,3,물거품아리아
+664,4,泡影的詠歎調
+664,5,Aria de l’Écume
+664,6,Schaumserenade
+664,7,Aria Burbuja
+664,8,Canto Effimero
+664,9,Sparkling Aria
+664,11,うたかたのアリア
+664,12,泡影的咏叹调
+665,1,アイスハンマー
+665,3,아이스해머
+665,4,冰錘
+665,5,Marteau de Glace
+665,6,Eishammer
+665,7,Martillo Hielo
+665,8,Martelgelo
+665,9,Ice Hammer
+665,11,アイスハンマー
+665,12,冰锤
+666,1,フラワーヒール
+666,3,플라워힐
+666,4,花療
+666,5,Soin Floral
+666,6,Florakur
+666,7,Cura Floral
+666,8,Cura Floreale
+666,9,Floral Healing
+666,11,フラワーヒール
+666,12,花疗
+667,1,１０まんばりき
+667,3,10만마력
+667,4,十萬馬力
+667,5,Cavalerie Lourde
+667,6,Pferdestärke
+667,7,Fuerza Equina
+667,8,Forza Equina
+667,9,High Horsepower
+667,11,１０まんばりき
+667,12,十万马力
+668,1,ちからをすいとる
+668,3,힘흡수
+668,4,吸取力量
+668,5,Vol-Force
+668,6,Kraftabsorber
+668,7,Absorbefuerza
+668,8,Assorbiforza
+668,9,Strength Sap
+668,11,ちからをすいとる
+668,12,吸取力量
+669,1,ソーラーブレード
+669,3,솔라블레이드
+669,4,日光刃
+669,5,Lame Solaire
+669,6,Solarklinge
+669,7,Cuchilla Solar
+669,8,Lama Solare
+669,9,Solar Blade
+669,11,ソーラーブレード
+669,12,日光刃
+670,1,このは
+670,3,나뭇잎
+670,4,樹葉
+670,5,Feuillage
+670,6,Blattwerk
+670,7,Follaje
+670,8,Fogliame
+670,9,Leafage
+670,11,このは
+670,12,树叶
+671,1,スポットライト
+671,3,스포트라이트
+671,4,聚光燈
+671,5,Projecteur
+671,6,Rampenlicht
+671,7,Foco
+671,8,Riflettore
+671,9,Spotlight
+671,11,スポットライト
+671,12,聚光灯
+672,1,どくのいと
+672,3,독실
+672,4,毒絲
+672,5,Fil Toxique
+672,6,Giftfaden
+672,7,Hilo Venenoso
+672,8,Velenotela
+672,9,Toxic Thread
+672,11,どくのいと
+672,12,毒丝
+673,1,とぎすます
+673,3,예민해지기
+673,4,磨礪
+673,5,Affilage
+673,6,Konzentration
+673,7,Aguzar
+673,8,Concentrazione
+673,9,Laser Focus
+673,11,とぎすます
+673,12,磨砺
+674,1,アシストギア
+674,3,어시스트기어
+674,4,輔助齒輪
+674,5,Engrenage
+674,6,Hilfsmechanik
+674,7,Piñón Auxiliar
+674,8,Marciainpiù
+674,9,Gear Up
+674,11,アシストギア
+674,12,辅助齿轮
+675,1,じごくづき
+675,3,지옥찌르기
+675,4,地獄突刺
+675,5,Exécu-Son
+675,6,Neck Strike
+675,7,Golpe Mordaza
+675,8,Colpo Infernale
+675,9,Throat Chop
+675,11,じごくづき
+675,12,地狱突刺
+676,1,かふんだんご
+676,3,꽃가루경단
+676,4,花粉團
+676,5,Boule Pollen
+676,6,Pollenknödel
+676,7,Bola de Polen
+676,8,Sferapolline
+676,9,Pollen Puff
+676,11,かふんだんご
+676,12,花粉团
+677,1,アンカーショット
+677,3,앵커숏
+677,4,擲錨
+677,5,Ancrage
+677,6,Ankerschuss
+677,7,Anclaje
+677,8,Colpo d’Ancora
+677,9,Anchor Shot
+677,11,アンカーショット
+677,12,掷锚
+678,1,サイコフィールド
+678,3,사이코필드
+678,4,精神場地
+678,5,Champ Psychique
+678,6,Psychofeld
+678,7,Campo Psíquico
+678,8,Campo Psichico
+678,9,Psychic Terrain
+678,11,サイコフィールド
+678,12,精神场地
+679,1,とびかかる
+679,3,덤벼들기
+679,4,猛撲
+679,5,Furie-Bond
+679,6,Anfallen
+679,7,Plancha
+679,8,Assalto
+679,9,Lunge
+679,11,とびかかる
+679,12,猛扑
+680,1,ほのおのムチ
+680,3,불꽃채찍
+680,4,火焰鞭
+680,5,Fouet de Feu
+680,6,Feuerpeitsche
+680,7,Látigo Ígneo
+680,8,Frusta di Fuoco
+680,9,Fire Lash
+680,11,ほのおのムチ
+680,12,火焰鞭
+681,1,つけあがる
+681,3,기어오르기
+681,4,囂張
+681,5,Arrogance
+681,6,Überheblichkeit
+681,7,Chulería
+681,8,Tracotanza
+681,9,Power Trip
+681,11,つけあがる
+681,12,嚣张
+682,1,もえつきる
+682,3,불사르기
+682,4,燃盡
+682,5,Flamme Ultime
+682,6,Ausbrennen
+682,7,Llama Final
+682,8,Ultima Fiamma
+682,9,Burn Up
+682,11,もえつきる
+682,12,燃尽
+683,1,スピードスワップ
+683,3,스피드스웹
+683,4,速度互換
+683,5,Permuvitesse
+683,6,Initiativetausch
+683,7,Cambia Velocidad
+683,8,Velociscambio
+683,9,Speed Swap
+683,11,スピードスワップ
+683,12,速度互换
+684,1,スマートホーン
+684,3,스마트호른
+684,4,修長之角
+684,5,Estocorne
+684,6,Schmalhorn
+684,7,Cuerno Certero
+684,8,Sottilcorno
+684,9,Smart Strike
+684,11,スマートホーン
+684,12,修长之角
+685,1,じょうか
+685,3,정화
+685,4,淨化
+685,5,Purification
+685,6,Läuterung
+685,7,Purificación
+685,8,Purificazione
+685,9,Purify
+685,11,じょうか
+685,12,净化
+686,1,めざめるダンス
+686,3,잠재댄스
+686,4,覺醒之舞
+686,5,Danse Éveil
+686,6,Wecktanz
+686,7,Danza Despertar
+686,8,Mutadanza
+686,9,Revelation Dance
+686,11,めざめるダンス
+686,12,觉醒之舞
+687,1,コアパニッシャー
+687,3,코어퍼니셔
+687,4,核心懲罰者
+687,5,Sanction Suprême
+687,6,Sanktionskern
+687,7,Núcleo Castigo
+687,8,Nucleocastigo
+687,9,Core Enforcer
+687,11,コアパニッシャー
+687,12,核心惩罚者
+688,1,トロピカルキック
+688,3,트로피컬킥
+688,4,熱帶踢
+688,5,Botte Sucrette
+688,6,Tropenkick
+688,7,Patada Tropical
+688,8,Tropicalcio
+688,9,Trop Kick
+688,11,トロピカルキック
+688,12,热带踢
+689,1,さいはい
+689,3,지휘
+689,4,號令
+689,5,Sommation
+689,6,Kommando
+689,7,Mandato
+689,8,Imposizione
+689,9,Instruct
+689,11,さいはい
+689,12,号令
+690,1,くちばしキャノン
+690,3,부리캐논
+690,4,鳥嘴加農炮
+690,5,Bec-Canon
+690,6,Schnabelkanone
+690,7,Pico Cañón
+690,8,Cannonbecco
+690,9,Beak Blast
+690,11,くちばしキャノン
+690,12,鸟嘴加农炮
+691,1,スケイルノイズ
+691,3,스케일노이즈
+691,4,鱗片噪音
+691,5,Vibrécaille
+691,6,Schuppenrasseln
+691,7,Fragor Escamas
+691,8,Clamorsquame
+691,9,Clanging Scales
+691,11,スケイルノイズ
+691,12,鳞片噪音
+692,1,ドラゴンハンマー
+692,3,드래곤해머
+692,4,龍錘
+692,5,Draco-Marteau
+692,6,Drachenhammer
+692,7,Martillo Dragón
+692,8,Marteldrago
+692,9,Dragon Hammer
+692,11,ドラゴンハンマー
+692,12,龙锤
+693,1,ぶんまわす
+693,3,세차게휘두르기
+693,4,狂舞揮打
+693,5,Centrifugifle
+693,6,Wirbler
+693,7,Giro Vil
+693,8,Vorticolpo
+693,9,Brutal Swing
+693,11,ぶんまわす
+693,12,狂舞挥打
+694,1,オーロラベール
+694,3,오로라베일
+694,4,極光幕
+694,5,Voile Aurore
+694,6,Auroraschleier
+694,7,Velo Aurora
+694,8,Velaurora
+694,9,Aurora Veil
+694,11,オーロラベール
+694,12,极光幕
+695,1,シャドーアローズストライク
+695,3,섀도애로우즈스트라이크
+695,4,遮天蔽日暗影箭
+695,5,Fureur des Plumes Spectrales
+695,6,Schatten-Pfeilregen
+695,7,Aluvión de Flechas Sombrías
+695,8,Dardoassalto Spettrale
+695,9,Sinister Arrow Raid
+695,11,シャドーアローズストライク
+695,12,遮天蔽日暗影箭
+696,1,ハイパーダーククラッシャー
+696,3,하이퍼다크크러셔
+696,4,極惡飛躍粉碎擊
+696,5,Dark Body Press
+696,6,Hyper Dark Crusher
+696,7,Hiperplancha Oscura
+696,8,Iperschianto delle Tenebre
+696,9,Malicious Moonsault
+696,11,ハイパーダーククラッシャー
+696,12,极恶飞跃粉碎击
+697,1,わだつみのシンフォニア
+697,3,바다의심포니
+697,4,海神莊嚴交響樂
+697,5,Symphonie des Ondines
+697,6,Grandiose Meeressymphonie
+697,7,Sinfonía de la Diva Marina
+697,8,Sinfonia del Mare
+697,9,Oceanic Operetta
+697,11,わだつみのシンフォニア
+697,12,海神庄严交响乐
+698,1,ガーディアン・デ・アローラ
+698,3,알로라의수호자
+698,4,巨人衛士・阿羅拉
+698,5,Colère du Gardien d’Alola
+698,6,Alolas Wächter
+698,7,Cólera del Guardián
+698,8,Collera del Guardiano
+698,9,Guardian of Alola
+698,11,ガーディアン・デ・アローラ
+698,12,巨人卫士・阿罗拉
+699,1,しちせいだっこんたい
+699,3,칠성탈혼퇴
+699,4,七星奪魂腿
+699,5,Fauche-Âme des Sept Étoiles
+699,6,Sternbild des Seelenraubes
+699,7,Constelación Robaalmas
+699,8,Colpo Eptastellare Rubanima
+699,9,Soul-Stealing 7-Star Strike
+699,11,しちせいだっこんたい
+699,12,七星夺魂腿
+700,1,ライトニングサーフライド
+700,3,라이트닝서프라이드
+700,4,駕雷馭電戲衝浪
+700,5,Électro-Surf Survolté
+700,6,Blitz-Wellenritt
+700,7,Surfeo Galvánico
+700,8,Elettrosurf Folgorante
+700,9,Stoked Sparksurfer
+700,11,ライトニングサーフライド
+700,12,驾雷驭电戏冲浪
+701,1,ほんきをだす　こうげき
+701,3,진심의공격
+701,4,認真起來大爆擊
+701,5,Gare au Ronflex
+701,6,Schluss mit lustig
+701,7,Arrojo Intempestivo
+701,8,Adesso Faccio sul Serio
+701,9,Pulverizing Pancake
+701,11,ほんきをだす　こうげき
+701,12,认真起来大爆击
+702,1,ナインエボルブースト
+702,3,나인이볼부스트
+702,4,九彩昇華齊聚頂
+702,5,Neuf pour Un
+702,6,Macht der Neun
+702,7,Novena Potencia
+702,8,Potenziamento Eevolutivo
+702,9,Extreme Evoboost
+702,11,ナインエボルブースト
+702,12,九彩升华齐聚顶
+703,1,オリジンズスーパーノヴァ
+703,3,오리진즈슈퍼노바
+703,4,起源超新星大爆炸
+703,5,Supernova Originelle
+703,6,Supernova des Ursprungs
+703,7,Supernova Original
+703,8,Supernova delle Origini
+703,9,Genesis Supernova
+703,11,オリジンズスーパーノヴァ
+703,12,起源超新星大爆炸
+704,1,トラップシェル
+704,3,트랩셸
+704,4,陷阱甲殼
+704,5,Carapiège
+704,6,Panzerfalle
+704,7,Coraza Trampa
+704,8,Gusciotrappola
+704,9,Shell Trap
+704,11,トラップシェル
+704,12,陷阱甲壳
+705,1,フルールカノン
+705,3,플뢰르캐논
+705,4,花朵加農炮
+705,5,Canon Floral
+705,6,Kanonenbouquet
+705,7,Cañón Floral
+705,8,Cannonfiore
+705,9,Fleur Cannon
+705,11,フルールカノン
+705,12,花朵加农炮
+706,1,サイコファング
+706,3,사이코팽
+706,4,精神之牙
+706,5,Psycho-Croc
+706,6,Psychobeißer
+706,7,Psicocolmillo
+706,8,Psicozanna
+706,9,Psychic Fangs
+706,11,サイコファング
+706,12,精神之牙
+707,1,じだんだ
+707,3,분함의발구르기
+707,4,跺腳
+707,5,Trépignement
+707,6,Fruststampfer
+707,7,Pataleta
+707,8,Battipiedi
+707,9,Stomping Tantrum
+707,11,じだんだ
+707,12,跺脚
+708,1,シャドーボーン
+708,3,섀도본
+708,4,暗影之骨
+708,5,Os’Ombre
+708,6,Schattenknochen
+708,7,Hueso Sombrío
+708,8,Ossotetro
+708,9,Shadow Bone
+708,11,シャドーボーン
+708,12,暗影之骨
+709,1,アクセルロック
+709,3,액셀록
+709,4,衝岩
+709,5,Vif Roc
+709,6,Turbofelsen
+709,7,Roca Veloz
+709,8,Rocciarapida
+709,9,Accelerock
+709,11,アクセルロック
+709,12,冲岩
+710,1,アクアブレイク
+710,3,아쿠아브레이크
+710,4,水流裂破
+710,5,Aqua-Brèche
+710,6,Aquadurchstoß
+710,7,Hidroariete
+710,8,Idrobreccia
+710,9,Liquidation
+710,11,アクアブレイク
+710,12,水流裂破
+711,1,プリズムレーザー
+711,3,프리즘레이저
+711,4,稜鏡鐳射
+711,5,Laser Prisme
+711,6,Prisma-Laser
+711,7,Láser Prisma
+711,8,Prismalaser
+711,9,Prismatic Laser
+711,11,プリズムレーザー
+711,12,棱镜镭射
+712,1,シャドースチール
+712,3,섀도스틸
+712,4,暗影偷盜
+712,5,Clepto-Mânes
+712,6,Diebesschatten
+712,7,Robasombra
+712,8,Ombrafurto
+712,9,Spectral Thief
+712,11,シャドースチール
+712,12,暗影偷盗
+713,1,メテオドライブ
+713,3,메테오드라이브
+713,4,流星閃衝
+713,5,Choc Météore
+713,6,Stahlgestirn
+713,7,Meteoimpacto
+713,8,Astrocarica
+713,9,Sunsteel Strike
+713,11,メテオドライブ
+713,12,流星闪冲
+714,1,シャドーレイ
+714,3,섀도레이
+714,4,暗影之光
+714,5,Rayon Spectral
+714,6,Schattenstrahl
+714,7,Rayo Umbrío
+714,8,Raggio d’Ombra
+714,9,Moongeist Beam
+714,11,シャドーレイ
+714,12,暗影之光
+715,1,なみだめ
+715,3,눈물그렁그렁
+715,4,淚眼汪汪
+715,5,Larme à l’Œil
+715,6,Tränendrüse
+715,7,Ojos Llorosos
+715,8,Occhionilucidi
+715,9,Tearful Look
+715,11,なみだめ
+715,12,泪眼汪汪
+716,1,びりびりちくちく
+716,3,찌리리따끔따끔
+716,4,麻麻刺刺
+716,5,Électrikipik
+716,6,Elektropikser
+716,7,Electropunzada
+716,8,Elettropizzico
+716,9,Zing Zap
+716,11,びりびりちくちく
+716,12,麻麻刺刺
+717,1,しぜんのいかり
+717,3,자연의분노
+717,4,自然之怒
+717,5,Ire de la Nature
+717,6,Naturzorn
+717,7,Furia Natural
+717,8,Ira della Natura
+717,9,Nature’s Madness
+717,11,しぜんのいかり
+717,12,自然之怒
+718,1,マルチアタック
+718,3,멀티어택
+718,4,多屬性攻擊
+718,5,Coup Varia-Type
+718,6,Multi-Angriff
+718,7,Multiataque
+718,8,Multiattacco
+718,9,Multi-Attack
+718,11,マルチアタック
+718,12,多属性攻击
+719,1,１０００まんボルト
+719,3,1000만볼트
+719,4,千萬伏特
+719,5,Giga-Tonnerre
+719,6,Tausendfacher Donnerblitz
+719,7,Gigarrayo Fulminante
+719,8,Iperfulmine
+719,9,"10,000,000 Volt Thunderbolt"
+719,11,１０００まんボルト
+719,12,千万伏特
+10001,1,ダークラッシュ
+10001,5,Charge Noire
+10001,6,Cryptoschlag
+10001,7,Carga Oscura
+10001,8,Ombroraffica
+10001,9,Shadow Rush
+10002,1,ダークブラスト
+10002,5,Aéro Noir
+10002,6,Cryptostrahl
+10002,7,Soplo Oscuro
+10002,8,Ombrolame
+10002,9,Shadow Blast
+10003,1,ダークアタック
+10003,5,Assaut Noir
+10003,6,Cryptoknall
+10003,7,Vigor Oscuro
+10003,8,Ombrattacco
+10003,9,Shadow Blitz
+10004,1,ダークサンダー
+10004,5,Éclair Noir
+10004,6,Cryptoblitz
+10004,7,Rayo Oscuro
+10004,8,Fulminombra
+10004,9,Shadow Bolt
+10005,1,ダークブレイク
+10005,5,Bélier Noir
+10005,6,Cryptohieb
+10005,7,Brío Oscuro
+10005,8,Ombrospinta
+10005,9,Shadow Break
+10006,1,ダークフリーズ
+10006,5,Froid Noir
+10006,6,Cryptofrost
+10006,7,Hielo Oscuro
+10006,8,Gelodombra
+10006,9,Shadow Chill
+10007,1,ダークエンド
+10007,5,Retour Noir
+10007,6,Cryptoretour
+10007,7,Fin Oscuro
+10007,8,Fineoscuro
+10007,9,Shadow End
+10008,1,ダークファイア
+10008,5,Ardeur Noir
+10008,6,Cryptofeuer
+10008,7,Fuego Oscuro
+10008,8,Fuocoscuro
+10008,9,Shadow Fire
+10009,1,ダークレイブ
+10009,5,Rage Noire
+10009,6,Cryptobeben
+10009,7,Rabia Oscura
+10009,8,Ombrolancia
+10009,9,Shadow Rave
+10010,1,ダークストーム
+10010,5,Typhon Noir
+10010,6,Cryptosturm
+10010,7,Tifón Oscuro
+10010,8,Turbinombra
+10010,9,Shadow Storm
+10011,1,ダークウェーブ
+10011,5,Ondo Noire
+10011,6,Cryptowelle
+10011,7,Onda Oscura
+10011,8,Ondascura
+10011,9,Shadow Wave
+10012,1,ダークダウン
+10012,5,Souffle Noir
+10012,6,Cryptobann
+10012,7,Ocaso Oscuro
+10012,8,Declinoscuro
+10012,9,Shadow Down
+10013,1,ダークハーフ
+10013,5,Chute Noire
+10013,6,Cryptozorn
+10013,7,Mitad Oscura
+10013,8,Iraoscura
+10013,9,Shadow Half
+10014,1,ダークホールド
+10014,5,Blocage Noir
+10014,6,Cryptofessel
+10014,7,Traba Oscura
+10014,8,Retedombra
+10014,9,Shadow Hold
+10015,1,ダークミスト
+10015,5,Brume Noire
+10015,6,Cryptodunst
+10015,7,Bruma Oscura
+10015,8,Nebbiascura
+10015,9,Shadow Mist
+10016,1,ダークパニック
+10016,5,Folie Noire
+10016,6,Cryptochaos
+10016,7,Miedo Oscuro
+10016,8,Ombrapanico
+10016,9,Shadow Panic
+10017,1,ダークリムーブ
+10017,5,Percée Noire
+10017,6,Cryptobruch
+10017,7,Muda Oscura
+10017,8,Ombrannulla
+10017,9,Shadow Shed
+10018,1,ダークウェザー
+10018,5,Ciel Noir
+10018,6,Cryptowetter
+10018,7,Cielo Oscuro
+10018,8,Cieloscuro
+10018,9,Shadow Sky

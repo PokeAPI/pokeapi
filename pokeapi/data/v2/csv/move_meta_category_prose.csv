@@ -1,0 +1,15 @@
+move_meta_category_id,local_language_id,description
+0,9,Inflicts damage
+1,9,No damage; inflicts status ailment
+2,9,No damage; lowers target's stats or raises user's stats
+3,9,No damage; heals the user
+4,9,Inflicts damage; inflicts status ailment
+5,9,No damage; inflicts status ailment; raises target's stats
+6,9,Inflicts damage; lowers target's stats
+7,9,Inflicts damage; raises user's stats
+8,9,Inflicts damage; absorbs damage done to heal the user
+9,9,One-hit KO
+10,9,Effect on the whole field
+11,9,Effect on one side of the field
+12,9,Forces target to switch out
+13,9,Unique effect

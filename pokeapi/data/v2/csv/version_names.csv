@@ -1,0 +1,133 @@
+version_id,local_language_id,name
+1,1,赤
+1,5,Rouge
+1,6,Rot
+1,8,Rossa
+1,9,Red
+2,1,緑
+2,5,Bleu
+2,6,Blau
+2,8,Blu
+2,9,Blue
+3,1,ピカチュウ
+3,5,Jaune
+3,6,Gelb
+3,8,Gialla
+3,9,Yellow
+4,1,金
+4,5,Or
+4,6,Gold
+4,8,Oro
+4,9,Gold
+5,1,銀
+5,5,Argent
+5,6,Silber
+5,8,Argento
+5,9,Silver
+6,1,クリスタル
+6,5,Cristal
+6,6,Kristall
+6,8,Cristallo
+6,9,Crystal
+7,1,ルビー
+7,5,Rubis
+7,6,Rubin
+7,8,Rubino
+7,9,Ruby
+8,1,サファイア
+8,5,Saphir
+8,6,Saphir
+8,8,Zaffiro
+8,9,Sapphire
+9,1,エメラルド
+9,5,Émeraude
+9,6,Smaragd
+9,8,Smeraldo
+9,9,Emerald
+10,1,ファイアレッド
+10,5,Rouge Feu
+10,6,Feuerrot
+10,8,Rosso Fuoco
+10,9,FireRed
+11,1,リーフグリーン
+11,5,Vert Feuille
+11,6,Blattgrün
+11,8,Verde Foglia
+11,9,LeafGreen
+12,1,ダイヤモンド
+12,5,Diamant
+12,6,Diamant
+12,8,Diamante
+12,9,Diamond
+13,1,パール
+13,5,Perle
+13,6,Perl
+13,8,Perla
+13,9,Pearl
+14,1,プラチナ
+14,5,Platine
+14,6,Platin
+14,8,Platino
+14,9,Platinum
+15,1,ハートゴールド
+15,5,Or HeartGold
+15,6,HeartGold
+15,8,Oro HeartGold
+15,9,HeartGold
+16,1,ソウルシルバー
+16,5,Argent SoulSilver
+16,6,SoulSilver
+16,8,Argento SoulSilver
+16,9,SoulSilver
+17,1,ブラック
+17,5,Noir
+17,6,Schwarz
+17,8,Nera
+17,9,Black
+18,1,ホワイト
+18,5,Blanc
+18,6,Weiß
+18,8,Bianca
+18,9,White
+19,1,コロシアム
+19,5,Colosseum
+19,6,Colosseum
+19,8,Colosseum
+19,9,Colosseum
+20,1,XD
+20,5,XD
+20,6,XD
+20,8,XD
+20,9,XD
+21,1,ブラック2
+21,5,Noir 2
+21,6,Schwarz 2
+21,8,Nera 2
+21,9,Black 2
+22,1,ホワイト2
+22,5,Blanc 2
+22,6,Weiß 2
+22,8,Bianca 2
+22,9,White 2
+23,1,X
+23,5,X
+23,6,X
+23,8,X
+23,9,X
+24,1,Y
+24,5,Y
+24,6,Y
+24,8,Y
+24,9,Y
+25,1,オメガルビー
+25,5,Rubis Oméga
+25,6,Omega Rubin
+25,8,Rubino Omega
+25,9,Omega Ruby
+26,1,アルファサファイア
+26,5,Saphir Alpha
+26,6,Alpha Saphir
+26,8,Zaffiro Alpha
+26,9,Alpha Sapphire
+27,9,Sun
+28,9,Moon

@@ -1,0 +1,415 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('/static/pokemon/fonts/lato-regular/lato-regular.eot');
+  src: url('/static/pokemon/fonts/lato-regular/lato-regular.eot?#iefix') format('embedded-opentype'),
+       url('/static/pokemon/fonts/lato-regular/lato-regular.woff2') format('woff2'),
+       url('/static/pokemon/fonts/lato-regular/lato-regular.woff') format('woff'),
+       url('/static/pokemon/fonts/lato-regular/lato-regular.ttf')  format('truetype'),
+       url('/static/pokemon/fonts/lato-regular/lato-regular.svg#svgFontName') format('svg');
+}
+
+html { padding-top: 50px; }
+
+body, h1, h2, h3, h4, h5, h6, p {
+
+    font-family: 'Lato', sans-serif;
+    color: #263238;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
+h1, h2 { font-weight: 900; }
+
+h2 { margin-bottom: 10px; }
+
+a { color: #1b95e0; }
+
+p, pre, table, ul {
+
+    margin-bottom: 30px;
+}
+
+pre {
+
+    position: relative;
+}
+
+hr {
+    border-width: 1px;
+    border-color: #CCC;
+    margin: 3px 0;
+}
+
+.center-block {
+    float: none;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    height: 200px;
+    background-color: #263238;
+    width: 100%;
+    color: #FFF;
+}
+
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.header h5 {
+
+    color: #FFF;
+    text-align: center;
+    margin: 0 10%;
+}
+
+.footer {
+    padding:30px;
+}
+
+.navbar {
+    background: #EF5350;
+    border-width: 0px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+
+.navbar-inverse .navbar-nav li a {
+
+    color: #FFF;
+}
+
+.navbar-inverse .navbar-nav .active a,
+.navbar-inverse .navbar-nav .active a:hover,
+.navbar-inverse .navbar-nav .active a:focus {
+    background-color: #C62828!important;
+}
+
+.navbar-brand {
+    /*float: left;*/
+    width: 100px;
+}
+
+.center {
+    text-align: center;
+}
+
+.input-group-addon {
+
+    background-color: #F5F5F5;
+}
+
+.input-group-addon,
+.btn,
+.well,
+pre {
+    border-radius: 0px;
+}
+
+.well p:last-child{
+    margin-bottom: 0px;
+}
+
+.pad_top {
+    padding-top: 15px;
+}
+
+.pad_bot {
+    padding-bottom: 15px;
+}
+
+.do_image {
+    width: 300px;
+}
+
+.twitter-tweet {
+   margin: 0 auto !important;
+   padding-top: 12px !important;
+   padding-bottom: 12px !important;
+}
+
+.twitter-share-button {
+  float: left !important;
+  width: 85px !important;
+}
+
+.fb-like {
+  float: left!important;
+}
+
+.cta {
+
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 30px 0 30px;
+    font-size: 21px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.cta p:last-child {
+
+    margin-bottom: 0;
+}
+
+/*
+*   HOME
+*/
+
+#home .header {
+
+    padding-top: 38px;
+    /*margin-bottom: 30px;*/
+}
+
+#home .header h1 {
+
+    position: relative;
+    display: inline-block;
+}
+
+#home .header h1:before {
+
+    content: "V2";
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    right: -22px;
+}
+
+#home .header h1:after {
+
+    content: "BETA";
+    position: absolute;
+    font-size: 14px;
+    color: #EF5350;
+    top: 0;
+    right: -63px;
+}
+
+#home .header h2 {
+
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#home .header h4 {
+
+    font-weight: 300;
+}
+
+#home .header h4 .count {
+
+    font-weight: 900;
+}
+
+#home .btn-primary {
+
+    background-color: #1b95e0;
+    color: #FFF
+}
+
+#home pre {
+
+    margin-bottom: 30px;
+}
+
+
+/*
+*   ABOUT
+*/
+
+#about .header {
+
+    padding-top: 65px;
+}
+
+@media (min-width: 628px) {
+
+    #about .header {
+
+        padding-top: 80px;
+    }
+}
+
+
+/*
+*   DOCS
+*/
+
+#docs .hide {
+
+    display: none;
+}
+
+#docs .header {
+
+    padding-top: 65px;
+}
+
+@media (min-width: 516px) {
+
+    #docs .header {
+
+        padding-top: 80px;
+    }
+}
+
+#docs h1#pokeapi-v2-api-reference  {
+
+    display: none;
+}
+
+#docs table {
+
+    width: 100%;
+}
+
+#docs table th:first-child,
+#docs table tr:first-child {
+
+    width: 140px;
+}
+
+#docs table th:last-child,
+#docs table tr:last-child {
+
+    width: 180px;
+}
+
+#docs table th, #docs table td {
+
+    border: 1px solid #CCC;
+    padding: 8px;
+}
+
+#docs h1, #docs h2, #docs h4, #docs #resourcename {
+
+    margin-top: -65px;
+    padding-top: 65px;
+}
+
+#docs .docs-body h1 {
+
+    margin-bottom: 30px;
+    border-bottom: 1px solid #CCC;
+}
+
+#docs h3 {
+
+    font-weight: 300;
+}
+
+#docs h6 {
+
+    display: none;
+}
+
+#docs .side-nav ul {
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#docs .side-nav ul li ul {
+
+    margin-left: 10px;
+}
+
+#docs .side-nav .doc-select li a {
+
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#docs .side-nav .doc-select li.active > a {
+
+    border-left: 2px solid #1b95e0;
+    padding-left: 8px;
+}
+
+#docs .side-nav .doc-select li ul {
+
+    display: none;
+}
+
+#docs .side-nav .doc-select li.active ul {
+
+    display: block;
+}
+
+#docs .side-nav hr {
+
+    width: 50%;
+}
+
+#docs .nav-group {
+
+    position: relative;
+    z-index: 20;
+}
+
+#docs .nav-group.stick {
+
+    position: fixed;
+    z-index: 20;
+    top: 65px;
+}
+
+#docs .side-nav .version-select li {
+
+    width: 50%;
+    display: inline-block;
+    float: left;
+    background-color: #EF5350;
+    text-align: center;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2),
+                        0px -15px 0 0 #FFF;
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2),
+                0px -15px 0 0 #FFF;
+}
+
+#docs .version-select li a {
+
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px;
+    width: 100%;
+    color: #FFF;
+}
+
+#docs .version-select li.active {
+
+    background-color: #C62828;
+}
+
+#docs pre {
+
+  min-height: 280px;
+  max-height: 280px;
+  overflow: scroll;
+}
+
+#docs pre:before {
+
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    display: inline-block;
+    content: "example response";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}

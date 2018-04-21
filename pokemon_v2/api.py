@@ -487,4 +487,4 @@ class PokemonEncounterView(APIView):
                 'version_details': version_details_list
             })
 
-        return Response(encounters_list)
+        return Response({'results': encounters_list})

@@ -4250,6 +4250,14 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data['forms'][0]['url'],
             '{}{}/pokemon-form/{}/'.format(test_host, api_v2, pokemon_form.pk))
+        # encounters parameters
+        self.assertEqual(
+            response.data['location_area_encounters'],
+            '{}/pokemon/{}/encounters'.format(api_v2, response.data['id']))
+        # Can't do this because sqlite doesn't support distinct()
+        # which is used by the API call
+        #encounters_response= self.client.get(
+        #    '{}/pokemon/{}/encounters'.format(api_v2, pokemon.pk), HTTP_HOST='testserver')
         # sprite params
         self.assertEqual(
             response.data['sprites']['front_default'],

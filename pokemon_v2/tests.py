@@ -4256,7 +4256,7 @@ class APITests(APIData, APITestCase):
             '{}/pokemon/{}/encounters'.format(api_v2, response.data['id']))
         # Can't do this because sqlite doesn't support distinct()
         # which is used by the API call
-        #encounters_response= self.client.get(
+        # encounters_response= self.client.get(
         #    '{}/pokemon/{}/encounters'.format(api_v2, pokemon.pk), HTTP_HOST='testserver')
         # sprite params
         self.assertEqual(

@@ -39,7 +39,9 @@ imageDir = os.getcwd() + '/data/v2/sprites/'
 resourceImages = []
 for root, dirs, files in os.walk(imageDir):
     for file in files:
-        resourceImages.append(os.path.join(root.replace(imageDir, ""), file))
+        image_path = os.path.join(root.replace(imageDir, ""), file)
+        image_path = image_path.replace("\\", "/") # convert Windows-style path to Unix
+        resourceImages.append(image_path)
 
 
 mediaDir = '/media/sprites/{0}'

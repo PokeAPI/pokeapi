@@ -76,18 +76,26 @@ def clear_table(model):
             "SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
 
-def process_csv(file_name, data_to_models):
-    daten = load_data(file_name)
-    next(daten, None)  # skip header
-    for data in daten:
-        for model in data_to_models(data):
-            model.save()
-
-
 def build_generic(model_classes, file_name, data_to_models):
+    models = {}
     for model_class in model_classes:
         clear_table(model_class)
-    process_csv(file_name, data_to_models)
+        models[model_class] = []
+
+    daten = load_data(file_name)
+    next(daten, None)  # skip header
+
+    for data in daten:
+        for model in data_to_models(data):
+            models[type(model)].append(model)
+
+            # Limit the batch size
+            if len(models[type(model)]) > 200:
+                type(model).objects.bulk_create(models[type(model)])
+                models[type(model)] = []
+
+    for model_class, models_list in models.iteritems():
+        model_class.objects.bulk_create(models_list)
 
 
 def scrubStr(str):
@@ -128,54 +136,45 @@ def _build_languages():
         )
     build_generic((Language,), 'languages.csv', data_to_language)
 
+def _build_language_names():
+    def data_to_language_name(info):
+        yield LanguageName(
+            language_id=int(info[0]),
+            local_language_id=int(info[1]),
+            name=info[2]
+        )
+    build_generic((LanguageName,), 'language_names.csv', data_to_language_name)
 
 def build_languages():
     _build_languages()
+    _build_language_names()
 
-    clear_table(LanguageName)
-    data = load_data('language_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            languageName = LanguageName(
-                language=Language.objects.get(pk=int(info[0])),
-                local_language=Language.objects.get(pk=int(info[1])),
-                name=info[2]
-            )
-
-            languageName.save()
 
 ############
 #  REGION  #
 ############
 
 
+def _build_regions():
+    def data_to_region(info):
+        yield Region(
+            id=int(info[0]),
+            name=info[1]
+        )
+    build_generic((Region,), 'regions.csv', data_to_region)
+
+def _build_region_names():
+    def data_to_region_name(info):
+        yield RegionName(
+            region_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((RegionName,), 'region_names.csv', data_to_region_name)
+
 def build_regions():
-    clear_table(Region)
-    data = load_data('regions.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = Region(
-                id=int(info[0]),
-                name=info[1]
-            )
-            model.save()
-
-    clear_table(RegionName)
-    data = load_data('region_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = RegionName (
-                region = Region.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
+    _build_regions()
+    _build_region_names()
 
 
 
@@ -184,31 +183,21 @@ def build_regions():
 ################
 
 def build_generations():
-    clear_table(Generation)
-    data = load_data('generations.csv')
+    def data_to_model(info):
+        yield Generation(
+            id = int(info[0]),
+            region_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((Generation,), 'generations.csv', data_to_model)
 
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = Generation (
-                id = int(info[0]),
-                region = Region.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-    clear_table(GenerationName)
-    data = load_data('generation_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = GenerationName (
-                generation = Generation.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield GenerationName(
+            generation_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((GenerationName,), 'generation_names.csv', data_to_model)
 
 
 
@@ -217,60 +206,38 @@ def build_generations():
 #############
 
 def build_versions():
-    clear_table(VersionGroup)
-    data = load_data('version_groups.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield VersionGroup(
+            id = int(info[0]),
+            name = info[1],
+            generation_id = int(info[2]),
+            order = int(info[3])
+        )
+    build_generic((VersionGroup,), 'version_groups.csv', data_to_model)
 
-            versionGroup = VersionGroup (
-                id = int(info[0]),
-                name = info[1],
-                generation = Generation.objects.get(pk = int(info[2])),
-                order = int(info[3])
-            )
-            versionGroup.save()
+    def data_to_model(info):
+        yield VersionGroupRegion(
+            version_group_id = int(info[0]),
+            region_id = int(info[1]),
+        )
+    build_generic((VersionGroupRegion,), 'version_group_regions.csv', data_to_model)
 
+    def data_to_model(info):
+        yield Version(
+            id = int(info[0]),
+            version_group_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((Version,), 'versions.csv', data_to_model)
 
-    clear_table(VersionGroupRegion)
-    data = load_data('version_group_regions.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            versionGroupRegion = VersionGroupRegion (
-                version_group = VersionGroup.objects.get(pk = int(info[0])),
-                region = Region.objects.get(pk = int(info[1])),
-            )
-            versionGroupRegion.save()
-
-
-    clear_table(Version)
-    data = load_data('versions.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            version = Version (
-                id = int(info[0]),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            version.save()
-
-
-    clear_table(VersionName)
-    data = load_data('version_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            versionName = VersionName (
-                version = Version.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            versionName.save()
+    def data_to_model(info):
+        yield VersionName(
+            version_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((VersionName,), 'version_names.csv', data_to_model)
 
 
 
@@ -279,39 +246,31 @@ def build_versions():
 ##################
 
 def build_damage_classes():
-    clear_table(MoveDamageClass)
-    data = load_data('move_damage_classes.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield MoveDamageClass(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveDamageClass,), 'move_damage_classes.csv', data_to_model)
 
-            model = MoveDamageClass (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
+    def data_to_model(info):
+        yield MoveDamageClassName(
+            move_damage_class_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+        yield MoveDamageClassDescription(
+            move_damage_class_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[3]
+        )
+    build_generic(
+        (MoveDamageClassName, MoveDamageClassDescription),
+        'move_damage_class_prose.csv',
+        data_to_model
+    )
 
-
-    clear_table(MoveDamageClassName)
-    clear_table(MoveDamageClassDescription)
-    data = load_data('move_damage_class_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model_name = MoveDamageClassName (
-                move_damage_class = MoveDamageClass.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model_name.save()
-
-            model_description = MoveDamageClassDescription (
-                move_damage_class = MoveDamageClass.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[3]
-            )
-            model_description.save()
 
 
 ###########
@@ -319,61 +278,39 @@ def build_damage_classes():
 ###########
 
 def build_stats():
-    clear_table(Stat)
-    data = load_data('stats.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield Stat(
+            id = int(info[0]),
+            move_damage_class_id = int(info[1]) if info[1] != '' else None,
+            name = info[2],
+            is_battle_only = bool(int(info[3])),
+            game_index = int(info[4]) if info[4] else 0,
+        )
+    build_generic((Stat,), 'stats.csv', data_to_model)
 
-            stat = Stat (
-                id = int(info[0]),
-                move_damage_class = MoveDamageClass.objects.get(pk = int(info[1])) if info[1] != '' else None,
-                name = info[2],
-                is_battle_only = bool(int(info[3])),
-                game_index = int(info[4]) if info[4] else 0,
-            )
-            stat.save()
+    def data_to_model(info):
+        yield StatName(
+            stat_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((StatName,), 'stat_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield PokeathlonStat(
+            id = int(info[0]),
+            name = info[1],
+        )
+    build_generic((PokeathlonStat,), 'pokeathlon_stats.csv', data_to_model)
 
-    clear_table(StatName)
-    data = load_data('stat_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            statName = StatName (
-                stat = Stat.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            statName.save()
-
-
-    clear_table(PokeathlonStat)
-    data = load_data('pokeathlon_stats.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            stat = PokeathlonStat (
-                id = int(info[0]),
-                name = info[1],
-            )
-            stat.save()
-
-
-    clear_table(PokeathlonStatName)
-    data = load_data('pokeathlon_stat_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            statName = PokeathlonStatName (
-                pokeathlon_stat = PokeathlonStat.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            statName.save()
+    def data_to_model(info):
+        yield PokeathlonStatName(
+            pokeathlon_stat_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((PokeathlonStatName,), 'pokeathlon_stat_names.csv', data_to_model)
 
 
 
@@ -382,91 +319,57 @@ def build_stats():
 # ###############
 
 def build_abilities():
-    clear_table(Ability)
-    data = load_data('abilities.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield Ability(
+            id = int(info[0]),
+            name = info[1],
+            generation_id = int(info[2]),
+            is_main_series = bool(int(info[3]))
+        )
+    build_generic((Ability,), 'abilities.csv', data_to_model)
 
-            ability = Ability (
-                id = int(info[0]),
-                name = info[1],
-                generation = Generation.objects.get(pk = int(info[2])),
-                is_main_series = bool(int(info[3]))
-            )
-            ability.save()
+    def data_to_model(info):
+        yield AbilityName(
+            ability_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((AbilityName,), 'ability_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield AbilityChange(
+            id = int(info[0]),
+            ability_id = int(info[1]),
+            version_group_id = int(info[2])
+        )
+    build_generic((AbilityChange,), 'ability_changelog.csv', data_to_model)
 
-    clear_table(AbilityName)
-    data = load_data('ability_names.csv')
+    def data_to_model(info):
+        yield AbilityEffectText(
+            ability_id = int(info[0]),
+            language_id = int(info[1]),
+            short_effect = scrubStr(info[2]),
+            effect = scrubStr(info[3])
+        )
+    build_generic((AbilityEffectText,), 'ability_prose.csv', data_to_model)
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield AbilityChangeEffectText(
+            ability_change_id = int(info[0]),
+            language_id = int(info[1]),
+            effect = scrubStr(info[2])
+        )
+    build_generic((AbilityChangeEffectText,), 'ability_changelog_prose.csv', data_to_model)
 
-            abilityName = AbilityName (
-                ability = Ability.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            abilityName.save()
-
-
-    clear_table(AbilityChange)
-    data = load_data('ability_changelog.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            abilityName = AbilityChange (
-                id = int(info[0]),
-                ability = Ability.objects.get(pk = int(info[1])),
-                version_group = VersionGroup.objects.get(pk = int(info[2]))
-            )
-            abilityName.save()
-
-
-    clear_table(AbilityEffectText)
-    data = load_data('ability_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            abilityDesc = AbilityEffectText (
-                ability = Ability.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                short_effect = scrubStr(info[2]),
-                effect = scrubStr(info[3])
-            )
-            abilityDesc.save()
-
-
-    clear_table(AbilityChangeEffectText)
-    data = load_data('ability_changelog_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            abilityChangeEffectText = AbilityChangeEffectText (
-                ability_change = AbilityChange.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                effect = scrubStr(info[2])
-            )
-            abilityChangeEffectText.save()
-
-
-    clear_table(AbilityFlavorText)
-    data = load_data('ability_flavor_text.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            abilityFlavorText = AbilityFlavorText (
-                ability = Ability.objects.get(pk = int(info[0])),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-                language = Language.objects.get(pk = int(info[2])),
-                flavor_text = info[3]
-            )
-            abilityFlavorText.save()
+    def data_to_model(info):
+        yield AbilityFlavorText(
+            ability_id = int(info[0]),
+            version_group_id = int(info[1]),
+            language_id = int(info[2]),
+            flavor_text = info[3]
+        )
+    build_generic((AbilityFlavorText,), 'ability_flavor_text.csv', data_to_model)
 
 
 
@@ -475,32 +378,22 @@ def build_abilities():
 ####################
 
 def build_characteristics():
-    clear_table(Characteristic)
-    data = load_data('characteristics.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield Characteristic(
+            id = int(info[0]),
+            stat_id = int(info[1]),
+            gene_mod_5 = int(info[2])
+        )
+    build_generic((Characteristic,), 'characteristics.csv', data_to_model)
 
-            model = Characteristic (
-                id = int(info[0]),
-                stat = Stat.objects.get(pk = int(info[1])),
-                gene_mod_5 = int(info[2])
-            )
-            model.save()
-
-
-    clear_table(CharacteristicDescription)
-    data = load_data('characteristic_text.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = CharacteristicDescription (
-                characteristic = Characteristic.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield CharacteristicDescription(
+            characteristic_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[2]
+        )
+    build_generic((CharacteristicDescription,), 'characteristic_text.csv', data_to_model)
 
 
 
@@ -509,31 +402,21 @@ def build_characteristics():
 ###############
 
 def build_egg_groups():
-    clear_table(EggGroup)
-    data = load_data('egg_groups.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield EggGroup(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((EggGroup,), 'egg_groups.csv', data_to_model)
 
-            model = EggGroup (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(EggGroupName)
-    data = load_data('egg_group_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = EggGroupName (
-                egg_group = EggGroup.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield EggGroupName(
+            egg_group_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((EggGroupName,), 'egg_group_prose.csv', data_to_model)
 
 
 
@@ -542,32 +425,23 @@ def build_egg_groups():
 #################
 
 def build_growth_rates():
-    clear_table(GrowthRate)
-    data = load_data('growth_rates.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield GrowthRate(
+            id = int(info[0]),
+            name = info[1],
+            formula = info[2]
+        )
+    build_generic((GrowthRate,), 'growth_rates.csv', data_to_model)
 
-            model = GrowthRate (
-                id = int(info[0]),
-                name = info[1],
-                formula = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield GrowthRateDescription(
+            growth_rate_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[2]
+        )
+    build_generic((GrowthRateDescription,), 'growth_rate_prose.csv', data_to_model)
 
-
-    clear_table(GrowthRateDescription)
-    data = load_data('growth_rate_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = GrowthRateDescription (
-                growth_rate = GrowthRate.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[2]
-            )
-            model.save()
 
 
 # ###########
@@ -575,226 +449,149 @@ def build_growth_rates():
 # ###########
 
 def build_items():
-    clear_table(ItemPocket)
-    data = load_data('item_pockets.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield ItemPocket(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((ItemPocket,), 'item_pockets.csv', data_to_model)
 
-            model = ItemPocket (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
+    def data_to_model(info):
+        yield ItemPocketName(
+            item_pocket_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((ItemPocketName,), 'item_pocket_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield ItemFlingEffect(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((ItemFlingEffect,), 'item_fling_effects.csv', data_to_model)
 
-    clear_table(ItemPocketName)
-    data = load_data('item_pocket_names.csv')
+    def data_to_model(info):
+        yield ItemFlingEffectEffectText(
+            item_fling_effect_id = int(info[0]),
+            language_id = int(info[1]),
+            effect = scrubStr(info[2])
+        )
+    build_generic((ItemFlingEffectEffectText,), 'item_fling_effect_prose.csv', data_to_model)
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield ItemCategory(
+            id = int(info[0]),
+            item_pocket_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((ItemCategory,), 'item_categories.csv', data_to_model)
 
-            model = ItemPocketName (
-                item_pocket = ItemPocket.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield ItemCategoryName(
+            item_category_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((ItemCategoryName,), 'item_category_prose.csv', data_to_model)
 
+    def data_to_model(info):
+        yield Item(
+            id = int(info[0]),
+            name = info[1],
+            item_category_id = int(info[2]),
+            cost = int(info[3]),
+            fling_power = int(info[4]) if info[4] != '' else None,
+            item_fling_effect_id = int(info[5]) if info[5] != '' else None
+        )
+    build_generic((Item,), 'items.csv', data_to_model)
 
-    clear_table(ItemFlingEffect)
-    data = load_data('item_fling_effects.csv')
+    def data_to_model(info):
+        if re.search(r"^data-card", info[1]):
+            fileName = 'data-card.png'
+        elif re.search(r"^tm[0-9]", info[1]):
+            fileName = 'tm-normal.png'
+        elif re.search(r"^hm[0-9]", info[1]):
+            fileName = 'hm-normal.png'
+        else:
+            fileName = '%s.png' % info[1]
 
-    for index, info in enumerate(data):
-        if index > 0:
+        itemSprites = 'items/{0}';
+        sprites = {
+            'default': filePathOrNone(itemSprites.format(fileName)),
+        }
+        yield ItemSprites(
+            id = int(info[0]),
+            item_id = int(info[0]),
+            sprites = json.dumps(sprites)
+        )
+    build_generic((ItemSprites,), 'items.csv', data_to_model)
 
-            model = ItemFlingEffect (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
+    def data_to_model(info):
+        yield ItemName(
+            item_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((ItemName,), 'item_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield ItemEffectText(
+            item_id = int(info[0]),
+            language_id = int(info[1]),
+            short_effect = scrubStr(info[2]),
+            effect = scrubStr(info[3])
+        )
+    build_generic((ItemEffectText,), 'item_prose.csv', data_to_model)
 
-    clear_table(ItemFlingEffectEffectText)
-    data = load_data('item_fling_effect_prose.csv')
+    def data_to_model(info):
+        yield ItemGameIndex(
+            item_id = int(info[0]),
+            generation_id = int(info[1]),
+            game_index = int(info[2])
+        )
+    build_generic((ItemGameIndex,), 'item_game_indices.csv', data_to_model)
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield ItemFlavorText(
+            item_id = int(info[0]),
+            version_group_id = int(info[1]),
+            language_id = int(info[2]),
+            flavor_text = info[3]
+        )
+    build_generic((ItemFlavorText,), 'item_flavor_text.csv', data_to_model)
 
-            model = ItemFlingEffectEffectText (
-                item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                effect = scrubStr(info[2])
-            )
-            model.save()
+    def data_to_model(info):
+        yield ItemAttribute(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((ItemAttribute,), 'item_flags.csv', data_to_model)
 
+    def data_to_model(info):
+        yield ItemAttributeName(
+            item_attribute_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+        yield ItemAttributeDescription(
+            item_attribute_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[3]
+        )
+    build_generic(
+        (ItemAttributeName, ItemAttributeDescription),
+        'item_flag_prose.csv',
+        data_to_model
+    )
 
-    clear_table(ItemCategory)
-    data = load_data('item_categories.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ItemCategory (
-                id = int(info[0]),
-                item_pocket = ItemPocket.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(ItemCategoryName)
-    data = load_data('item_category_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ItemCategoryName (
-                item_category = ItemCategory.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(Item)
-    clear_table(ItemSprites)
-    data = load_data('items.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = Item (
-                id = int(info[0]),
-                name = info[1],
-                item_category = ItemCategory.objects.get(pk = int(info[2])),
-                cost = int(info[3]),
-                fling_power = int(info[4]) if info[4] != '' else None,
-                item_fling_effect = ItemFlingEffect.objects.get(pk = int(info[5])) if info[5] != '' else None
-            )
-            model.save()
-
-            if re.search(r"^data-card", info[1]):
-                fileName = 'data-card.png'
-            elif re.search(r"^tm[0-9]", info[1]):
-                fileName = 'tm-normal.png'
-            elif re.search(r"^hm[0-9]", info[1]):
-                fileName = 'hm-normal.png'
-            else:
-                fileName = '%s.png' % info[1]
-
-            itemSprites = 'items/{0}';
-
-            sprites = {
-                'default': filePathOrNone(itemSprites.format(fileName)),
-            }
-
-            imageModel = ItemSprites (
-                id = index,
-                item = Item.objects.get(pk=int(info[0])),
-                sprites = json.dumps(sprites)
-            )
-            imageModel.save()
-
-
-    clear_table(ItemName)
-    data = load_data('item_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ItemName (
-                item = Item.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(ItemEffectText)
-    data = load_data('item_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ItemEffectText (
-                item = Item.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                short_effect = scrubStr(info[2]),
-                effect = scrubStr(info[3])
-            )
-            model.save()
-
-
-    clear_table(ItemGameIndex)
-    data = load_data('item_game_indices.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            model = ItemGameIndex (
-                item = Item.objects.get(pk = int(info[0])),
-                generation = Generation.objects.get(pk = int(info[1])),
-                game_index = int(info[2])
-            )
-            model.save()
-
-
-    clear_table(ItemFlavorText)
-    data = load_data('item_flavor_text.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            model = ItemFlavorText (
-                item = Item.objects.get(pk = int(info[0])),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-                language = Language.objects.get(pk = int(info[2])),
-                flavor_text = info[3]
-            )
-            model.save()
-
-
-    clear_table(ItemAttribute)
-    data = load_data('item_flags.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            model = ItemAttribute (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(ItemAttributeName)
-    clear_table(ItemAttributeDescription)
-    data = load_data('item_flag_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            model_name = ItemAttributeName (
-                item_attribute = ItemAttribute.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model_name.save()
-            model_description = ItemAttributeDescription (
-                item_attribute = ItemAttribute.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[3]
-            )
-            model_description.save()
-
-
-    clear_table(ItemAttributeMap)
-    data = load_data('item_flag_map.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            model = ItemAttributeMap (
-                item = Item.objects.get(pk = int(info[0])),
-                item_attribute = ItemAttribute.objects.get(pk = int(info[1]))
-            )
-            model.save()
+    def data_to_model(info):
+        yield ItemAttributeMap(
+            item_id = int(info[0]),
+            item_attribute_id = int(info[1])
+        )
+    build_generic((ItemAttributeMap,), 'item_flag_map.csv', data_to_model)
 
 
 
@@ -803,61 +600,39 @@ def build_items():
 ###########
 
 def build_types():
-    clear_table(Type)
-    data = load_data('types.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield Type(
+            id = int(info[0]),
+            name = info[1],
+            generation_id = int(info[2]),
+            move_damage_class_id = int(info[3]) if info[3] != '' else None
+        )
+    build_generic((Type,), 'types.csv', data_to_model)
 
-            type = Type (
-                id = int(info[0]),
-                name = info[1],
-                generation = Generation.objects.get(pk = int(info[2])),
-                move_damage_class = MoveDamageClass.objects.get(pk = int(info[3])) if info[3] != '' else None
-            )
-            type.save()
+    def data_to_model(info):
+        yield TypeName(
+            type_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((TypeName,), 'type_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield TypeGameIndex(
+            type_id = int(info[0]),
+            generation_id = int(info[1]),
+            game_index = int(info[2])
+        )
+    build_generic((TypeGameIndex,), 'type_game_indices.csv', data_to_model)
 
-    clear_table(TypeName)
-    data = load_data('type_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            typeName = TypeName (
-                type = Type.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            typeName.save()
-
-
-    clear_table(TypeGameIndex)
-    data = load_data('type_game_indices.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            typeGameIndex = TypeGameIndex (
-                type = Type.objects.get(pk = int(info[0])),
-                generation = Generation.objects.get(pk = int(info[1])),
-                game_index = int(info[2])
-            )
-            typeGameIndex.save()
-
-
-    clear_table(TypeEfficacy)
-    data = load_data('type_efficacy.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            typeEfficacy = TypeEfficacy (
-                damage_type = Type.objects.get(pk = int(info[0])),
-                target_type = Type.objects.get(pk = int(info[1])),
-                damage_factor = int(info[2])
-            )
-            typeEfficacy.save()
+    def data_to_model(info):
+        yield TypeEfficacy(
+            damage_type_id = int(info[0]),
+            target_type_id = int(info[1]),
+            damage_factor = int(info[2])
+        )
+    build_generic((TypeEfficacy,), 'type_efficacy.csv', data_to_model)
 
 
 
@@ -866,95 +641,63 @@ def build_types():
 #############
 
 def build_contests():
-    clear_table(ContestType)
-    data = load_data('contest_types.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield ContestType(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((ContestType,), 'contest_types.csv', data_to_model)
 
-            model = ContestType (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
+    def data_to_model(info):
+        yield ContestTypeName(
+            contest_type_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2],
+            flavor = info[3],
+            color = info[4]
+        )
+    build_generic((ContestTypeName,), 'contest_type_names.csv', data_to_model)
 
+    def data_to_model(info):
+        yield ContestEffect(
+            id = int(info[0]),
+            appeal = int(info[1]),
+            jam = int(info[2])
+        )
+    build_generic((ContestEffect,), 'contest_effects.csv', data_to_model)
 
-    clear_table(ContestTypeName)
-    data = load_data('contest_type_names.csv')
+    def data_to_model(info):
+        yield ContestEffectEffectText(
+            contest_effect_id = int(info[0]),
+            language_id = int(info[1]),
+            effect = info[3]
+        )
+        yield ContestEffectFlavorText(
+            contest_effect_id = int(info[0]),
+            language_id = int(info[1]),
+            flavor_text = info[2]
+        )
+    build_generic(
+        (ContestEffectEffectText, ContestEffectFlavorText),
+        'contest_effect_prose.csv',
+        data_to_model
+    )
 
-    for index, info in enumerate(data):
-        if index > 0:
+    def data_to_model(info):
+        yield SuperContestEffect(
+            id = int(info[0]),
+            appeal = int(info[1])
+        )
+    build_generic((SuperContestEffect,), 'super_contest_effects.csv', data_to_model)
 
-            model = ContestTypeName (
-                contest_type = ContestType.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2],
-                flavor = info[3],
-                color = info[4]
-            )
-            model.save()
-
-
-    clear_table(ContestEffect)
-    data = load_data('contest_effects.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ContestEffect (
-                id = int(info[0]),
-                appeal = int(info[1]),
-                jam = int(info[2])
-            )
-            model.save()
-
-
-    clear_table(ContestEffectEffectText)
-    data = load_data('contest_effect_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ContestEffectEffectText (
-                contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                effect = info[3]
-            )
-            model.save()
-
-            model = ContestEffectFlavorText (
-                contest_effect = ContestEffect.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                flavor_text = info[2]
-            )
-            model.save()
-
-
-    clear_table(SuperContestEffect)
-    data = load_data('super_contest_effects.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = SuperContestEffect (
-                id = int(info[0]),
-                appeal = int(info[1])
-            )
-            model.save()
-
-
-    clear_table(SuperContestEffectFlavorText)
-    data = load_data('super_contest_effect_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = SuperContestEffectFlavorText (
-                super_contest_effect = SuperContestEffect.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                flavor_text = info[2]
-            )
-            model.save()
+    def data_to_model(info):
+        yield SuperContestEffectFlavorText(
+            super_contest_effect_id = int(info[0]),
+            language_id = int(info[1]),
+            flavor_text = info[2]
+        )
+    build_generic((SuperContestEffectFlavorText,), 'super_contest_effect_prose.csv', data_to_model)
 
 
 
@@ -963,429 +706,260 @@ def build_contests():
 ###########
 
 def build_moves():
-    clear_table(MoveEffect)
-    data = load_data('move_effects.csv')
 
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveEffect (
-                id = int(info[0])
-            )
-            model.save()
-
-
-    clear_table(MoveEffectEffectText)
-    data = load_data('move_effect_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveEffectEffectText (
-                move_effect = MoveEffect.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                short_effect = scrubStr(info[2]),
-                effect = scrubStr(info[3])
-            )
-            model.save()
-
-
-    clear_table(MoveEffectChange)
-    data = load_data('move_effect_changelog.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveEffectChange (
-                id = int(info[0]),
-                move_effect = MoveEffect.objects.get(pk = int(info[1])),
-                version_group = VersionGroup.objects.get(pk = int(info[2]))
-            )
-            model.save()
-
-
-    clear_table(MoveEffectChangeEffectText)
-    data = load_data('move_effect_changelog_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveEffectChangeEffectText (
-                move_effect_change = MoveEffectChange.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                effect = scrubStr(info[2])
-            )
-            model.save()
-
-
-    clear_table(MoveLearnMethod)
-    data = load_data('pokemon_move_methods.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveLearnMethod (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(VersionGroupMoveLearnMethod)
-    data = load_data('version_group_pokemon_move_methods.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            versionGroupMoveLearnMethod = VersionGroupMoveLearnMethod (
-                version_group = VersionGroup.objects.get(pk = int(info[0])),
-                move_learn_method = MoveLearnMethod.objects.get(pk = int(info[1])),
-            )
-            versionGroupMoveLearnMethod.save()
-
-
-    clear_table(MoveLearnMethodName)
-    clear_table(MoveLearnMethodDescription)
-    data = load_data('pokemon_move_method_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model_name = MoveLearnMethodName (
-                move_learn_method = MoveLearnMethod.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model_name.save()
-
-            model_description = MoveLearnMethodDescription (
-                move_learn_method = MoveLearnMethod.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[3]
-            )
-            model_description.save()
-
-
-    clear_table(MoveTarget)
-    data = load_data('move_targets.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveTarget (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(MoveTargetName)
-    clear_table(MoveTargetDescription)
-    data = load_data('move_target_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model_name = MoveTargetName (
-                move_target = MoveTarget.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model_name.save()
-
-            model_description = MoveTargetDescription (
-                move_target = MoveTarget.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[3]
-            )
-            model_description.save()
-
-
-    clear_table(Move)
-    data = load_data('moves.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = Move (
-                id = int(info[0]),
-                name = info[1],
-                generation = Generation.objects.get(pk = int(info[2])),
-                type = Type.objects.get(pk = int(info[3])),
-
-                power = int(info[4]) if info[4] != '' else None,
-
-                pp = int(info[5]) if info[5] != '' else None,
-
-                accuracy = int(info[6]) if info[6] != '' else None,
-
-                priority = int(info[7]) if info[7] != '' else None,
-
-                move_target = MoveTarget.objects.get(pk = int(info[8])),
-                move_damage_class = MoveDamageClass.objects.get(pk = int(info[9])),
-                move_effect = MoveEffect.objects.get(pk = int(info[10])),
-
-                move_effect_chance = int(info[11]) if info[11] != '' else None,
-
-                contest_type = ContestType.objects.get(pk = int(info[12])) if info[12] != '' else None,
-
-                contest_effect = ContestEffect.objects.get(pk = int(info[13])) if info[13] != '' else None,
-
-                super_contest_effect = SuperContestEffect.objects.get(pk = int(info[14])) if info[14] != '' else None
-            )
-            model.save()
-
-
-    clear_table(MoveName)
-    data = load_data('move_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveName (
-                move = Move.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(MoveFlavorText)
-    data = load_data('move_flavor_text.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveFlavorText (
-                move = Move.objects.get(pk = int(info[0])),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-                language = Language.objects.get(pk = int(info[2])),
-                flavor_text = info[3]
-            )
-            model.save()
-
-
-    clear_table(MoveChange)
-    data = load_data('move_changelog.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-            _move_effect = None
-            try:
-                _move_effect = MoveEffect.objects.get(pk = int(info[6])) if info[6] != '' else None
-            except:
-                pass
-
-            model = MoveChange (
-                move = Move.objects.get(pk = int(info[0])),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-
-                type = Type.objects.get(pk = int(info[2])) if info[2] != '' else None,
-
-                power = int(info[3]) if info[3] != '' else None,
-
-                pp = int(info[4]) if info[4] != '' else None,
-
-                accuracy = int(info[5]) if info[5] != '' else None,
-
-                move_effect =  _move_effect,
-
-                move_effect_chance = int(info[7]) if info[7] != '' else None
-            )
-            model.save()
-
-
-    clear_table(MoveBattleStyle)
-    data = load_data('move_battle_styles.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveBattleStyle (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(MoveBattleStyleName)
-    data = load_data('move_battle_style_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveBattleStyleName (
-                move_battle_style = MoveBattleStyle.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(MoveAttribute)
-    data = load_data('move_flags.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveAttribute (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(MoveAttributeMap)
-    data = load_data('move_flag_map.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveAttributeMap (
-                move = Move.objects.get(pk = int(info[0])),
-                move_attribute = MoveAttribute.objects.get(pk = int(info[1])),
-            )
-            model.save()
-
-
-    clear_table(MoveAttributeName)
-    clear_table(MoveAttributeDescription)
-    data = load_data('move_flag_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            name_model = MoveAttributeName (
-                move_attribute = MoveAttribute.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            name_model.save()
-
-            description_model = MoveAttributeDescription (
-                move_attribute = MoveAttribute.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = scrubStr(info[3])
-            )
-            description_model.save()
-
-
-    clear_table(MoveMetaAilment)
-    data = load_data('move_meta_ailments.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMetaAilment (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(MoveMetaAilmentName)
-    data = load_data('move_meta_ailment_names.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMetaAilmentName (
-                move_meta_ailment = MoveMetaAilment.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                name = info[2]
-            )
-            model.save()
-
-
-    clear_table(MoveMetaCategory)
-    data = load_data('move_meta_categories.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMetaCategory (
-                id = int(info[0]),
-                name = info[1]
-            )
-            model.save()
-
-
-    clear_table(MoveMetaCategoryDescription)
-    data = load_data('move_meta_category_prose.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMetaCategoryDescription (
-                move_meta_category = MoveMetaCategory.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
-                description = info[2]
-            )
-            model.save()
-
-
-    clear_table(MoveMeta)
-    data = load_data('move_meta.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMeta (
-                move = Move.objects.get(pk = int(info[0])),
-                move_meta_category = MoveMetaCategory.objects.get(pk = int(info[1])),
-                move_meta_ailment = MoveMetaAilment.objects.get(pk = int(info[2])),
-                min_hits = int(info[3]) if info[3] != '' else None,
-                max_hits = int(info[4]) if info[4] != '' else None,
-                min_turns = int(info[5]) if info[5] != '' else None,
-                max_turns = int(info[6]) if info[6] != '' else None,
-                drain = int(info[7]) if info[7] != '' else None,
-                healing = int(info[8]) if info[8] != '' else None,
-                crit_rate = int(info[9]) if info[9] != '' else None,
-                ailment_chance = int(info[10]) if info[10] != '' else None,
-                flinch_chance = int(info[11]) if info[11] != '' else None,
-                stat_chance = int(info[12]) if info[12] != '' else None
-            )
-            model.save()
-
-
-    clear_table(MoveMetaStatChange)
-    data = load_data('move_meta_stat_changes.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = MoveMetaStatChange (
-                move = Move.objects.get(pk = int(info[0])),
-                stat = Stat.objects.get(pk = int(info[1])),
-                change = int(info[2])
-            )
-            model.save()
-
-
-    clear_table(ContestCombo)
-    data = load_data('contest_combos.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = ContestCombo (
-                first_move = Move.objects.get(pk = int(info[0])),
-                second_move = Move.objects.get(pk = int(info[1]))
-            )
-            model.save()
-
-
-    clear_table(SuperContestCombo)
-    data = load_data('super_contest_combos.csv')
-
-    for index, info in enumerate(data):
-        if index > 0:
-
-            model = SuperContestCombo (
-                first_move = Move.objects.get(pk = int(info[0])),
-                second_move = Move.objects.get(pk = int(info[1]))
-            )
-            model.save()
+    def data_to_model(info):
+        yield MoveEffect(
+            id = int(info[0])
+        )
+    build_generic((MoveEffect,), 'move_effects.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveEffectEffectText(
+            move_effect_id = int(info[0]),
+            language_id = int(info[1]),
+            short_effect = scrubStr(info[2]),
+            effect = scrubStr(info[3])
+        )
+    build_generic((MoveEffectEffectText,), 'move_effect_prose.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveEffectChange(
+            id = int(info[0]),
+            move_effect_id = int(info[1]),
+            version_group_id = int(info[2])
+        )
+    build_generic((MoveEffectChange,), 'move_effect_changelog.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveEffectChangeEffectText(
+            move_effect_change_id = int(info[0]),
+            language_id = int(info[1]),
+            effect = scrubStr(info[2])
+        )
+    build_generic((MoveEffectChangeEffectText,), 'move_effect_changelog_prose.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveLearnMethod(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveLearnMethod,), 'pokemon_move_methods.csv', data_to_model)
+
+    def data_to_model(info):
+        yield VersionGroupMoveLearnMethod(
+            version_group_id = int(info[0]),
+            move_learn_method_id = int(info[1]),
+        )
+    build_generic(
+        (VersionGroupMoveLearnMethod,), 'version_group_pokemon_move_methods.csv', data_to_model
+    )
+
+    def data_to_model(info):
+        yield MoveLearnMethodName(
+            move_learn_method_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+        yield MoveLearnMethodDescription(
+            move_learn_method_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[3]
+        )
+    build_generic(
+        (MoveLearnMethodName, MoveLearnMethodDescription),
+        'pokemon_move_method_prose.csv',
+        data_to_model
+    )
+
+    def data_to_model(info):
+        yield MoveTarget(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveTarget,), 'move_targets.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveTargetName(
+            move_target_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+        yield MoveTargetDescription(
+            move_target_id = int(info[0]),
+            language_id = int(info[1]),
+            description = info[3]
+        )
+    build_generic((MoveTargetName, MoveTargetDescription), 'move_target_prose.csv', data_to_model)
+
+    def data_to_model(info):
+        yield Move(
+            id = int(info[0]),
+            name = info[1],
+            generation_id = int(info[2]),
+            type_id = int(info[3]),
+            power = int(info[4]) if info[4] != '' else None,
+            pp = int(info[5]) if info[5] != '' else None,
+            accuracy = int(info[6]) if info[6] != '' else None,
+            priority = int(info[7]) if info[7] != '' else None,
+            move_target_id = int(info[8]),
+            move_damage_class_id = int(info[9]),
+            move_effect_id = int(info[10]),
+            move_effect_chance = int(info[11]) if info[11] != '' else None,
+            contest_type_id = int(info[12]) if info[12] != '' else None,
+            contest_effect_id = int(info[13]) if info[13] != '' else None,
+            super_contest_effect_id = int(info[14]) if info[14] != '' else None
+        )
+    build_generic((Move,), 'moves.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveName(
+            move_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((MoveName,), 'move_names.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveFlavorText(
+            move_id = int(info[0]),
+            version_group_id = int(info[1]),
+            language_id = int(info[2]),
+            flavor_text = info[3]
+        )
+    build_generic((MoveFlavorText,), 'move_flavor_text.csv', data_to_model)
+
+    def data_to_model(info):
+        _move_effect = None
+        try:
+            _move_effect = MoveEffect.objects.get(pk = int(info[6])) if info[6] != '' else None
+        except:
+            pass
+
+        yield MoveChange(
+            move_id = int(info[0]),
+            version_group_id = int(info[1]),
+            type_id = int(info[2]) if info[2] != '' else None,
+            power = int(info[3]) if info[3] != '' else None,
+            pp = int(info[4]) if info[4] != '' else None,
+            accuracy = int(info[5]) if info[5] != '' else None,
+            move_effect_id =  _move_effect.pk if _move_effect else None,
+            move_effect_chance = int(info[7]) if info[7] != '' else None
+        )
+    build_generic((MoveChange,), 'move_changelog.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveBattleStyle(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveBattleStyle,), 'move_battle_styles.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveBattleStyleName(
+            move_battle_style_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((MoveBattleStyleName,), 'move_battle_style_prose.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveAttribute(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveAttribute,), 'move_flags.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveAttributeMap(
+            move_id = int(info[0]),
+            move_attribute_id = int(info[1]),
+        )
+    build_generic((MoveAttributeMap,), 'move_flag_map.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveAttributeName(
+            move_attribute_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+        yield MoveAttributeDescription(
+            move_attribute_id = int(info[0]),
+            language_id = int(info[1]),
+            description = scrubStr(info[3])
+        )
+    build_generic(
+        (MoveAttributeName, MoveAttributeDescription), 'move_flag_prose.csv', data_to_model
+    )
+
+    def data_to_model(info):
+        yield MoveMetaAilment(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveMetaAilment,), 'move_meta_ailments.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveMetaAilmentName(
+            move_meta_ailment_id = int(info[0]),
+            language_id = int(info[1]),
+            name = info[2]
+        )
+    build_generic((MoveMetaAilmentName,), 'move_meta_ailment_names.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveMetaCategory(
+            id = int(info[0]),
+            name = info[1]
+        )
+    build_generic((MoveMetaCategory,), 'move_meta_categories.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveMetaCategoryDescription(
+            move_meta_category_id =  int(info[0]),
+            language_id =  int(info[1]),
+            description = info[2]
+        )
+    build_generic((MoveMetaCategoryDescription,), 'move_meta_category_prose.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveMeta(
+            move_id = int(info[0]),
+            move_meta_category_id = int(info[1]),
+            move_meta_ailment_id = int(info[2]),
+            min_hits = int(info[3]) if info[3] != '' else None,
+            max_hits = int(info[4]) if info[4] != '' else None,
+            min_turns = int(info[5]) if info[5] != '' else None,
+            max_turns = int(info[6]) if info[6] != '' else None,
+            drain = int(info[7]) if info[7] != '' else None,
+            healing = int(info[8]) if info[8] != '' else None,
+            crit_rate = int(info[9]) if info[9] != '' else None,
+            ailment_chance = int(info[10]) if info[10] != '' else None,
+            flinch_chance = int(info[11]) if info[11] != '' else None,
+            stat_chance = int(info[12]) if info[12] != '' else None
+        )
+    build_generic((MoveMeta,), 'move_meta.csv', data_to_model)
+
+    def data_to_model(info):
+        yield MoveMetaStatChange(
+            move_id = int(info[0]),
+            stat_id = int(info[1]),
+            change = int(info[2])
+        )
+    build_generic((MoveMetaStatChange,), 'move_meta_stat_changes.csv', data_to_model)
+
+    def data_to_model(info):
+        yield ContestCombo(
+            first_move_id = int(info[0]),
+            second_move_id = int(info[1])
+        )
+    build_generic((ContestCombo,), 'contest_combos.csv', data_to_model)
+
+    def data_to_model(info):
+        yield SuperContestCombo(
+            first_move_id = int(info[0]),
+            second_move_id = int(info[1])
+        )
+    build_generic((SuperContestCombo,), 'super_contest_combos.csv', data_to_model)
 
 
 
@@ -1884,30 +1458,33 @@ def build_pokemons():
 
     clear_table(PokemonSpecies)
     data = load_data('pokemon_species.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonSpecies (
+            models.append(PokemonSpecies (
                 id = int(info[0]),
                 name = info[1],
-                generation = Generation.objects.get(pk = int(info[2])),
+                generation_id = int(info[2]),
                 evolves_from_species = None,
-                evolution_chain = EvolutionChain.objects.get(pk = int(info[4])),
-                pokemon_color = PokemonColor.objects.get(pk = int(info[5])),
-                pokemon_shape = PokemonShape.objects.get(pk = int(info[6])),
-                pokemon_habitat = PokemonHabitat.objects.get(pk = int(info[7])) if info[7] != '' else None,
+                evolution_chain_id = int(info[4]),
+                pokemon_color_id = int(info[5]),
+                pokemon_shape_id = int(info[6]),
+                pokemon_habitat_id = int(info[7]) if info[7] != '' else None,
                 gender_rate = int(info[8]),
                 capture_rate = int(info[9]),
                 base_happiness = int(info[10]),
                 is_baby = bool(int(info[11])),
                 hatch_counter = int(info[12]),
                 has_gender_differences = bool(int(info[13])),
-                growth_rate = GrowthRate.objects.get(pk = int(info[14])),
+                growth_rate_id = int(info[14]),
                 forms_switchable = bool(int(info[15])),
                 order = int(info[16])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonSpecies.objects.bulk_create(models)
+                models = []
+
+    PokemonSpecies.objects.bulk_create(models)
 
     data = load_data('pokemon_species.csv')
 
@@ -1924,46 +1501,55 @@ def build_pokemons():
 
     clear_table(PokemonSpeciesName)
     data = load_data('pokemon_species_names.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonSpeciesName (
-                pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
+            models.append(PokemonSpeciesName (
+                pokemon_species_id = int(info[0]),
+                language_id = int(info[1]),
                 name = info[2],
                 genus = info[3]
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonSpeciesName.objects.bulk_create(models)
+                models = []
+
+    PokemonSpeciesName.objects.bulk_create(models)
 
 
     clear_table(PokemonSpeciesDescription)
     data = load_data('pokemon_species_prose.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonSpeciesDescription (
-                pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
+            models.append(PokemonSpeciesDescription (
+                pokemon_species_id = int(info[0]),
+                language_id = int(info[1]),
                 description = scrubStr(info[2])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonSpeciesDescription.objects.bulk_create(models)
+                models = []
+
+    PokemonSpeciesDescription.objects.bulk_create(models)
 
 
     clear_table(PokemonSpeciesFlavorText)
     data = load_data('pokemon_species_flavor_text.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonSpeciesFlavorText (
-                pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
-                version = Version.objects.get(pk = int(info[1])),
-                language = Language.objects.get(pk = int(info[2])),
+            models.append(PokemonSpeciesFlavorText (
+                pokemon_species_id = int(info[0]),
+                version_id = int(info[1]),
+                language_id = int(info[2]),
                 flavor_text = info[3]
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonSpeciesFlavorText.objects.bulk_create(models)
+                models = []
+
+    PokemonSpeciesFlavorText.objects.bulk_create(models)
 
 
     clear_table(Pokemon)
@@ -2008,99 +1594,113 @@ def build_pokemons():
 
     clear_table(PokemonAbility)
     data = load_data('pokemon_abilities.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonAbility (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                ability = Ability.objects.get(pk = int(info[1])),
+            models.append(PokemonAbility (
+                pokemon_id = int(info[0]),
+                ability_id = int(info[1]),
                 is_hidden = bool(int(info[2])),
                 slot = int(info[3])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonAbility.objects.bulk_create(models)
+                models = []
+
+    PokemonAbility.objects.bulk_create(models)
 
 
     clear_table(PokemonDexNumber)
     data = load_data('pokemon_dex_numbers.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonDexNumber (
-                pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
-                pokedex = Pokedex.objects.get(pk = int(info[1])),
+            models.append(PokemonDexNumber (
+                pokemon_species_id = int(info[0]),
+                pokedex_id = int(info[1]),
                 pokedex_number = int(info[2])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonDexNumber.objects.bulk_create(models)
+                models = []
+
+    PokemonDexNumber.objects.bulk_create(models)
 
 
     clear_table(PokemonEggGroup)
     data = load_data('pokemon_egg_groups.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
+            models.append(PokemonEggGroup (
+                pokemon_species_id = int(info[0]),
+                egg_group_id = int(info[1])
+            ))
+            if len(models) > 200:
+                PokemonEggGroup.objects.bulk_create(models)
+                models = []
 
-            model = PokemonEggGroup (
-                pokemon_species = PokemonSpecies.objects.get(pk = int(info[0])),
-                egg_group = EggGroup.objects.get(pk = int(info[1]))
-            )
-            model.save()
+    PokemonEggGroup.objects.bulk_create(models)
 
 
     clear_table(PokemonEvolution)
     data = load_data('pokemon_evolution.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonEvolution (
+            models.append(PokemonEvolution (
                 id = int(info[0]),
-                evolved_species = PokemonSpecies.objects.get(pk = int(info[1])),
-                evolution_trigger = EvolutionTrigger.objects.get(pk = int(info[2])),
-                evolution_item = Item.objects.get(pk = int(info[3])) if info[3] != '' else None,
+                evolved_species_id = int(info[1]),
+                evolution_trigger_id = int(info[2]),
+                evolution_item_id = int(info[3]) if info[3] != '' else None,
                 min_level = int(info[4]) if info[4] != '' else None,
-                gender = Gender.objects.get(pk = int(info[5])) if info[5] != '' else None,
-                location = Location.objects.get(pk = int(info[6])) if info[6] != '' else None,
-                held_item = Item.objects.get(pk = int(info[7])) if info[7] != '' else None,
+                gender_id = int(info[5]) if info[5] != '' else None,
+                location_id = int(info[6]) if info[6] != '' else None,
+                held_item_id = int(info[7]) if info[7] != '' else None,
                 time_of_day = info[8],
-                known_move = Move.objects.get(pk = int(info[9])) if info[9] != '' else None,
-                known_move_type = Type.objects.get(pk = int(info[10])) if info[10] != '' else None,
+                known_move_id = int(info[9]) if info[9] != '' else None,
+                known_move_type_id = int(info[10]) if info[10] != '' else None,
                 min_happiness = int(info[11]) if info[11] != '' else None,
                 min_beauty = int(info[12]) if info[12] != '' else None,
                 min_affection = int(info[13]) if info[13] != '' else None,
                 relative_physical_stats = int(info[14]) if info[14] != '' else None,
-                party_species = PokemonSpecies.objects.get(pk = int(info[15])) if info[15] != '' else None,
-                party_type = Type.objects.get(pk = int(info[16])) if info[16] != '' else None,
-                trade_species = PokemonSpecies.objects.get(pk = int(info[17])) if info[17] != '' else None,
+                party_species_id = int(info[15]) if info[15] != '' else None,
+                party_type_id = int(info[16]) if info[16] != '' else None,
+                trade_species_id = int(info[17]) if info[17] != '' else None,
                 needs_overworld_rain = bool(int(info[18])),
                 turn_upside_down = bool(int(info[19]))
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonEvolution.objects.bulk_create(models)
+                models = []
+
+    PokemonEvolution.objects.bulk_create(models)
 
 
     clear_table(PokemonForm)
     clear_table(PokemonFormSprites)
     data = load_data('pokemon_forms.csv')
-
+    models = []
+    spritesModels = []
     for index, info in enumerate(data):
         if index > 0:
 
             pokemon = Pokemon.objects.get(pk = int(info[3]))
-
-            model = PokemonForm (
+            models.append(PokemonForm (
                 id = int(info[0]),
                 name = info[1],
                 form_name = info[2],
-                pokemon = pokemon,
-                version_group = VersionGroup.objects.get(pk = int(info[4])),
+                pokemon_id = int(info[3]),
+                version_group_id = int(info[4]),
                 is_default = bool(int(info[5])),
                 is_battle_only = bool(int(info[6])),
                 is_mega = bool(int(info[7])),
                 form_order = int(info[8]),
                 order = int(info[9])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonForm.objects.bulk_create(models)
+                models = []
 
             if info[2]:
                 if re.search(r"^mega", info[2]):
@@ -2118,131 +1718,164 @@ def build_pokemons():
                 'back_default'       : filePathOrNone(pokeSprites.format('back/'+fileName)),
                 'back_shiny'         : filePathOrNone(pokeSprites.format('back/shiny/'+fileName)),
             }
-
-            imageModel = PokemonFormSprites (
+            spritesModels.append(PokemonFormSprites(
                 id = index,
-                pokemon_form = PokemonForm.objects.get(pk=int(info[0])),
+                pokemon_form_id = int(info[0]),
                 sprites = json.dumps(sprites)
-            )
-            imageModel.save()
+            ))
+            if len(spritesModels) > 200:
+                PokemonFormSprites.objects.bulk_create(spritesModels)
+                spritesModels = []
+
+    PokemonForm.objects.bulk_create(models)
+    PokemonFormSprites.objects.bulk_create(spritesModels)
 
 
     clear_table(PokemonFormName)
     data = load_data('pokemon_form_names.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonFormName (
+            models.append(PokemonFormName (
                 pokemon_form = PokemonForm.objects.get(pk = int(info[0])),
                 language = Language.objects.get(pk = int(info[1])),
                 name = info[2],
                 pokemon_name = info[3]
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonFormName.objects.bulk_create(models)
+                models = []
+
+    PokemonFormName.objects.bulk_create(models)
 
 
     clear_table(PokemonFormGeneration)
     data = load_data('pokemon_form_generations.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonFormGeneration (
-                pokemon_form = PokemonForm.objects.get(pk = int(info[0])),
-                generation = Generation.objects.get(pk = int(info[1])),
+            models.append(PokemonFormGeneration (
+                pokemon_form_id = int(info[0]),
+                generation_id = int(info[1]),
                 game_index = int(info[2])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonFormGeneration.objects.bulk_create(models)
+                models = []
+
+    PokemonFormGeneration.objects.bulk_create(models)
 
 
     clear_table(PokemonGameIndex)
     data = load_data('pokemon_game_indices.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonGameIndex (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                version = Version.objects.get(pk = int(info[1])),
+            models.append(PokemonGameIndex (
+                pokemon_id = int(info[0]),
+                version_id = int(info[1]),
                 game_index = int(info[2])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonGameIndex.objects.bulk_create(models)
+                models = []
+
+    PokemonGameIndex.objects.bulk_create(models)
 
 
     clear_table(PokemonHabitatName)
     data = load_data('pokemon_habitat_names.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonHabitatName (
-                pokemon_habitat = PokemonHabitat.objects.get(pk = int(info[0])),
-                language = Language.objects.get(pk = int(info[1])),
+            models.append(PokemonHabitatName (
+                pokemon_habitat_id = int(info[0]),
+                language_id = int(info[1]),
                 name = info[2]
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonHabitatName.objects.bulk_create(models)
+                models = []
+
+    PokemonHabitatName.objects.bulk_create(models)
 
 
     clear_table(PokemonItem)
     data = load_data('pokemon_items.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonItem (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                version = Version.objects.get(pk = int(info[1])),
-                item = Item.objects.get(pk = int(info[2])),
+            models.append(PokemonItem (
+                pokemon_id = int(info[0]),
+                version_id = int(info[1]),
+                item_id = int(info[2]),
                 rarity = int(info[3])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonItem.objects.bulk_create(models)
+                models = []
+
+    PokemonItem.objects.bulk_create(models)
 
 
     clear_table(PokemonMove)
     data = load_data('pokemon_moves.csv')
+    models = []
 
     for index, info in enumerate(data):
         if index > 0:
 
-            model = PokemonMove (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                version_group = VersionGroup.objects.get(pk = int(info[1])),
-                move = Move.objects.get(pk = int(info[2])),
-                move_learn_method = MoveLearnMethod.objects.get(pk = int(info[3])),
-                level = int(info[4]),
-                order = int(info[5]) if info[5] != '' else None,
+            models.append(
+                PokemonMove(
+                    pokemon_id = int(info[0]),
+                    version_group_id = int(info[1]),
+                    move_id = int(info[2]),
+                    move_learn_method_id = int(info[3]),
+                    level = int(info[4]),
+                    order = int(info[5]) if info[5] != '' else None,
+                )
             )
-            model.save()
+
+            if len(models) > 200:
+                PokemonMove.objects.bulk_create(models)
+                models = []
+
+    PokemonMove.objects.bulk_create(models)
 
 
     clear_table(PokemonStat)
     data = load_data('pokemon_stats.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonStat (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                stat = Stat.objects.get(pk = int(info[1])),
+            models.append(PokemonStat (
+                pokemon_id = int(info[0]),
+                stat_id = int(info[1]),
                 base_stat = int(info[2]),
                 effort = int(info[3])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonStat.objects.bulk_create(models)
+                models = []
+
+    PokemonStat.objects.bulk_create(models)
 
 
     clear_table(PokemonType)
     data = load_data('pokemon_types.csv')
-
+    models = []
     for index, info in enumerate(data):
         if index > 0:
-
-            model = PokemonType (
-                pokemon = Pokemon.objects.get(pk = int(info[0])),
-                type = Type.objects.get(pk = int(info[1])),
+            models.append(PokemonType (
+                pokemon_id = int(info[0]),
+                type_id = int(info[1]),
                 slot = int(info[2])
-            )
-            model.save()
+            ))
+            if len(models) > 200:
+                PokemonType.objects.bulk_create(models)
+                models = []
+
+    PokemonType.objects.bulk_create(models)
 
 
 

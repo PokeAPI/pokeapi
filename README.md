@@ -112,12 +112,14 @@ Start Django shell
 $ python manage.py shell --settings=config.local
 ```
 
-run the build script with
+Run the build script with
 ```
 $ from data.v2.build import build_all
 $ build_all()
 ```
-Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv. Building against a PostgresQL database should take 5–8 minutes, and building against a SQLite database should take about 20–30 minutes.
+Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
+
+In informal tests on a Windows PC with a SSD and a 2.50 GHz processor, building against a PostgresQL database took approximately 6 minutes, and building against a SQLite database took about 7.5 minutes or longer, with some varying results.
 
 The option to build individual portions of the database was removed in order to increase performance of the build script.
 

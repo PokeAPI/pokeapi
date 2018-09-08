@@ -74,26 +74,27 @@ def clear_table(model):
             "SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
 
-def build_generic(model_classes, file_name, data_to_models):
-    models = {}
+def build_generic(model_classes, file_name, csv_record_to_objects):
+    batches = {}
     for model_class in model_classes:
         clear_table(model_class)
-        models[model_class] = [] # one list per model class
+        batches[model_class] = [] # one batch per model class
 
-    data = load_data(file_name)
-    next(data, None)  # skip header
+    csv_data = load_data(file_name)
+    next(csv_data, None)  # skip header
 
-    for record in data:
-        for model in data_to_models(record):
-            models[type(model)].append(model)
+    for csv_record in csv_data:
+        for obj in csv_record_to_objects(csv_record):
+            model_class = type(obj)
+            batches[model_class].append(obj)
 
             # Limit the batch size
-            if len(models[type(model)]) > 200:
-                type(model).objects.bulk_create(models[type(model)])
-                models[type(model)] = []
+            if len(batches[model_class]) > 200:
+                model_class.objects.bulk_create(batches[model_class])
+                batches[model_class] = []
 
-    for model_class, models_list in models.iteritems():
-        model_class.objects.bulk_create(models_list)
+    for model_class, batch in batches.iteritems():
+        model_class.objects.bulk_create(batch)
 
 
 def scrubStr(str):
@@ -124,7 +125,7 @@ def scrubStr(str):
 
 def _build_languages():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Language(
             id=int(info[0]),
             iso639=info[1],
@@ -133,15 +134,15 @@ def _build_languages():
             official=bool(int(info[4])),
             order=info[5],
         )
-    build_generic((Language,), 'languages.csv', data_to_model)
+    build_generic((Language,), 'languages.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield LanguageName(
             language_id=int(info[0]),
             local_language_id=int(info[1]),
             name=info[2]
         )
-    build_generic((LanguageName,), 'language_names.csv', data_to_model)
+    build_generic((LanguageName,), 'language_names.csv', csv_record_to_objects)
 
 
 
@@ -151,20 +152,20 @@ def _build_languages():
 
 def _build_regions():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Region(
             id=int(info[0]),
             name=info[1]
         )
-    build_generic((Region,), 'regions.csv', data_to_model)
+    build_generic((Region,), 'regions.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield RegionName(
             region_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((RegionName,), 'region_names.csv', data_to_model)
+    build_generic((RegionName,), 'region_names.csv', csv_record_to_objects)
 
 
 
@@ -173,21 +174,21 @@ def _build_regions():
 ################
 
 def _build_generations():
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Generation(
             id = int(info[0]),
             region_id = int(info[1]),
             name = info[2]
         )
-    build_generic((Generation,), 'generations.csv', data_to_model)
+    build_generic((Generation,), 'generations.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield GenerationName(
             generation_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((GenerationName,), 'generation_names.csv', data_to_model)
+    build_generic((GenerationName,), 'generation_names.csv', csv_record_to_objects)
 
 
 
@@ -197,37 +198,37 @@ def _build_generations():
 
 def _build_versions():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield VersionGroup(
             id = int(info[0]),
             name = info[1],
             generation_id = int(info[2]),
             order = int(info[3])
         )
-    build_generic((VersionGroup,), 'version_groups.csv', data_to_model)
+    build_generic((VersionGroup,), 'version_groups.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield VersionGroupRegion(
             version_group_id = int(info[0]),
             region_id = int(info[1]),
         )
-    build_generic((VersionGroupRegion,), 'version_group_regions.csv', data_to_model)
+    build_generic((VersionGroupRegion,), 'version_group_regions.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Version(
             id = int(info[0]),
             version_group_id = int(info[1]),
             name = info[2]
         )
-    build_generic((Version,), 'versions.csv', data_to_model)
+    build_generic((Version,), 'versions.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield VersionName(
             version_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((VersionName,), 'version_names.csv', data_to_model)
+    build_generic((VersionName,), 'version_names.csv', csv_record_to_objects)
 
 
 
@@ -237,14 +238,14 @@ def _build_versions():
 
 def _build_damage_classes():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveDamageClass(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveDamageClass,), 'move_damage_classes.csv', data_to_model)
+    build_generic((MoveDamageClass,), 'move_damage_classes.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveDamageClassName(
             move_damage_class_id = int(info[0]),
             language_id = int(info[1]),
@@ -258,7 +259,7 @@ def _build_damage_classes():
     build_generic(
         (MoveDamageClassName, MoveDamageClassDescription),
         'move_damage_class_prose.csv',
-        data_to_model
+        csv_record_to_objects
     )
 
 
@@ -269,7 +270,7 @@ def _build_damage_classes():
 
 def _build_stats():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Stat(
             id = int(info[0]),
             move_damage_class_id = int(info[1]) if info[1] != '' else None,
@@ -277,30 +278,30 @@ def _build_stats():
             is_battle_only = bool(int(info[3])),
             game_index = int(info[4]) if info[4] else 0,
         )
-    build_generic((Stat,), 'stats.csv', data_to_model)
+    build_generic((Stat,), 'stats.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield StatName(
             stat_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((StatName,), 'stat_names.csv', data_to_model)
+    build_generic((StatName,), 'stat_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokeathlonStat(
             id = int(info[0]),
             name = info[1],
         )
-    build_generic((PokeathlonStat,), 'pokeathlon_stats.csv', data_to_model)
+    build_generic((PokeathlonStat,), 'pokeathlon_stats.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokeathlonStatName(
             pokeathlon_stat_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((PokeathlonStatName,), 'pokeathlon_stat_names.csv', data_to_model)
+    build_generic((PokeathlonStatName,), 'pokeathlon_stat_names.csv', csv_record_to_objects)
 
 
 
@@ -310,56 +311,56 @@ def _build_stats():
 
 def _build_abilities():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Ability(
             id = int(info[0]),
             name = info[1],
             generation_id = int(info[2]),
             is_main_series = bool(int(info[3]))
         )
-    build_generic((Ability,), 'abilities.csv', data_to_model)
+    build_generic((Ability,), 'abilities.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield AbilityName(
             ability_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((AbilityName,), 'ability_names.csv', data_to_model)
+    build_generic((AbilityName,), 'ability_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield AbilityChange(
             id = int(info[0]),
             ability_id = int(info[1]),
             version_group_id = int(info[2])
         )
-    build_generic((AbilityChange,), 'ability_changelog.csv', data_to_model)
+    build_generic((AbilityChange,), 'ability_changelog.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield AbilityEffectText(
             ability_id = int(info[0]),
             language_id = int(info[1]),
             short_effect = scrubStr(info[2]),
             effect = scrubStr(info[3])
         )
-    build_generic((AbilityEffectText,), 'ability_prose.csv', data_to_model)
+    build_generic((AbilityEffectText,), 'ability_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield AbilityChangeEffectText(
             ability_change_id = int(info[0]),
             language_id = int(info[1]),
             effect = scrubStr(info[2])
         )
-    build_generic((AbilityChangeEffectText,), 'ability_changelog_prose.csv', data_to_model)
+    build_generic((AbilityChangeEffectText,), 'ability_changelog_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield AbilityFlavorText(
             ability_id = int(info[0]),
             version_group_id = int(info[1]),
             language_id = int(info[2]),
             flavor_text = info[3]
         )
-    build_generic((AbilityFlavorText,), 'ability_flavor_text.csv', data_to_model)
+    build_generic((AbilityFlavorText,), 'ability_flavor_text.csv', csv_record_to_objects)
 
 
 
@@ -369,21 +370,21 @@ def _build_abilities():
 
 def _build_characteristics():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Characteristic(
             id = int(info[0]),
             stat_id = int(info[1]),
             gene_mod_5 = int(info[2])
         )
-    build_generic((Characteristic,), 'characteristics.csv', data_to_model)
+    build_generic((Characteristic,), 'characteristics.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield CharacteristicDescription(
             characteristic_id = int(info[0]),
             language_id = int(info[1]),
             description = info[2]
         )
-    build_generic((CharacteristicDescription,), 'characteristic_text.csv', data_to_model)
+    build_generic((CharacteristicDescription,), 'characteristic_text.csv', csv_record_to_objects)
 
 
 
@@ -393,20 +394,20 @@ def _build_characteristics():
 
 def _build_egg_groups():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EggGroup(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((EggGroup,), 'egg_groups.csv', data_to_model)
+    build_generic((EggGroup,), 'egg_groups.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EggGroupName(
             egg_group_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((EggGroupName,), 'egg_group_prose.csv', data_to_model)
+    build_generic((EggGroupName,), 'egg_group_prose.csv', csv_record_to_objects)
 
 
 
@@ -416,21 +417,21 @@ def _build_egg_groups():
 
 def _build_growth_rates():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield GrowthRate(
             id = int(info[0]),
             name = info[1],
             formula = info[2]
         )
-    build_generic((GrowthRate,), 'growth_rates.csv', data_to_model)
+    build_generic((GrowthRate,), 'growth_rates.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield GrowthRateDescription(
             growth_rate_id = int(info[0]),
             language_id = int(info[1]),
             description = info[2]
         )
-    build_generic((GrowthRateDescription,), 'growth_rate_prose.csv', data_to_model)
+    build_generic((GrowthRateDescription,), 'growth_rate_prose.csv', csv_record_to_objects)
 
 
 
@@ -440,53 +441,53 @@ def _build_growth_rates():
 
 def _build_items():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemPocket(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((ItemPocket,), 'item_pockets.csv', data_to_model)
+    build_generic((ItemPocket,), 'item_pockets.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemPocketName(
             item_pocket_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((ItemPocketName,), 'item_pocket_names.csv', data_to_model)
+    build_generic((ItemPocketName,), 'item_pocket_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemFlingEffect(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((ItemFlingEffect,), 'item_fling_effects.csv', data_to_model)
+    build_generic((ItemFlingEffect,), 'item_fling_effects.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemFlingEffectEffectText(
             item_fling_effect_id = int(info[0]),
             language_id = int(info[1]),
             effect = scrubStr(info[2])
         )
-    build_generic((ItemFlingEffectEffectText,), 'item_fling_effect_prose.csv', data_to_model)
+    build_generic((ItemFlingEffectEffectText,), 'item_fling_effect_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemCategory(
             id = int(info[0]),
             item_pocket_id = int(info[1]),
             name = info[2]
         )
-    build_generic((ItemCategory,), 'item_categories.csv', data_to_model)
+    build_generic((ItemCategory,), 'item_categories.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemCategoryName(
             item_category_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((ItemCategoryName,), 'item_category_prose.csv', data_to_model)
+    build_generic((ItemCategoryName,), 'item_category_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Item(
             id = int(info[0]),
             name = info[1],
@@ -495,9 +496,9 @@ def _build_items():
             fling_power = int(info[4]) if info[4] != '' else None,
             item_fling_effect_id = int(info[5]) if info[5] != '' else None
         )
-    build_generic((Item,), 'items.csv', data_to_model)
+    build_generic((Item,), 'items.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         if re.search(r"^data-card", info[1]):
             fileName = 'data-card.png'
         elif re.search(r"^tm[0-9]", info[1]):
@@ -516,50 +517,50 @@ def _build_items():
             item_id = int(info[0]),
             sprites = json.dumps(sprites)
         )
-    build_generic((ItemSprites,), 'items.csv', data_to_model)
+    build_generic((ItemSprites,), 'items.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemName(
             item_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((ItemName,), 'item_names.csv', data_to_model)
+    build_generic((ItemName,), 'item_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemEffectText(
             item_id = int(info[0]),
             language_id = int(info[1]),
             short_effect = scrubStr(info[2]),
             effect = scrubStr(info[3])
         )
-    build_generic((ItemEffectText,), 'item_prose.csv', data_to_model)
+    build_generic((ItemEffectText,), 'item_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemGameIndex(
             item_id = int(info[0]),
             generation_id = int(info[1]),
             game_index = int(info[2])
         )
-    build_generic((ItemGameIndex,), 'item_game_indices.csv', data_to_model)
+    build_generic((ItemGameIndex,), 'item_game_indices.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemFlavorText(
             item_id = int(info[0]),
             version_group_id = int(info[1]),
             language_id = int(info[2]),
             flavor_text = info[3]
         )
-    build_generic((ItemFlavorText,), 'item_flavor_text.csv', data_to_model)
+    build_generic((ItemFlavorText,), 'item_flavor_text.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemAttribute(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((ItemAttribute,), 'item_flags.csv', data_to_model)
+    build_generic((ItemAttribute,), 'item_flags.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemAttributeName(
             item_attribute_id = int(info[0]),
             language_id = int(info[1]),
@@ -573,15 +574,15 @@ def _build_items():
     build_generic(
         (ItemAttributeName, ItemAttributeDescription),
         'item_flag_prose.csv',
-        data_to_model
+        csv_record_to_objects
     )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ItemAttributeMap(
             item_id = int(info[0]),
             item_attribute_id = int(info[1])
         )
-    build_generic((ItemAttributeMap,), 'item_flag_map.csv', data_to_model)
+    build_generic((ItemAttributeMap,), 'item_flag_map.csv', csv_record_to_objects)
 
 
 
@@ -591,38 +592,38 @@ def _build_items():
 
 def _build_types():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Type(
             id = int(info[0]),
             name = info[1],
             generation_id = int(info[2]),
             move_damage_class_id = int(info[3]) if info[3] != '' else None
         )
-    build_generic((Type,), 'types.csv', data_to_model)
+    build_generic((Type,), 'types.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield TypeName(
             type_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((TypeName,), 'type_names.csv', data_to_model)
+    build_generic((TypeName,), 'type_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield TypeGameIndex(
             type_id = int(info[0]),
             generation_id = int(info[1]),
             game_index = int(info[2])
         )
-    build_generic((TypeGameIndex,), 'type_game_indices.csv', data_to_model)
+    build_generic((TypeGameIndex,), 'type_game_indices.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield TypeEfficacy(
             damage_type_id = int(info[0]),
             target_type_id = int(info[1]),
             damage_factor = int(info[2])
         )
-    build_generic((TypeEfficacy,), 'type_efficacy.csv', data_to_model)
+    build_generic((TypeEfficacy,), 'type_efficacy.csv', csv_record_to_objects)
 
 
 
@@ -632,14 +633,14 @@ def _build_types():
 
 def _build_contests():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ContestType(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((ContestType,), 'contest_types.csv', data_to_model)
+    build_generic((ContestType,), 'contest_types.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ContestTypeName(
             contest_type_id = int(info[0]),
             language_id = int(info[1]),
@@ -647,17 +648,17 @@ def _build_contests():
             flavor = info[3],
             color = info[4]
         )
-    build_generic((ContestTypeName,), 'contest_type_names.csv', data_to_model)
+    build_generic((ContestTypeName,), 'contest_type_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ContestEffect(
             id = int(info[0]),
             appeal = int(info[1]),
             jam = int(info[2])
         )
-    build_generic((ContestEffect,), 'contest_effects.csv', data_to_model)
+    build_generic((ContestEffect,), 'contest_effects.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ContestEffectEffectText(
             contest_effect_id = int(info[0]),
             language_id = int(info[1]),
@@ -671,23 +672,25 @@ def _build_contests():
     build_generic(
         (ContestEffectEffectText, ContestEffectFlavorText),
         'contest_effect_prose.csv',
-        data_to_model
+        csv_record_to_objects
     )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield SuperContestEffect(
             id = int(info[0]),
             appeal = int(info[1])
         )
-    build_generic((SuperContestEffect,), 'super_contest_effects.csv', data_to_model)
+    build_generic((SuperContestEffect,), 'super_contest_effects.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield SuperContestEffectFlavorText(
             super_contest_effect_id = int(info[0]),
             language_id = int(info[1]),
             flavor_text = info[2]
         )
-    build_generic((SuperContestEffectFlavorText,), 'super_contest_effect_prose.csv', data_to_model)
+    build_generic(
+        (SuperContestEffectFlavorText,), 'super_contest_effect_prose.csv', csv_record_to_objects
+    )
 
 
 
@@ -697,54 +700,58 @@ def _build_contests():
 
 def _build_moves():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveEffect(
             id = int(info[0])
         )
-    build_generic((MoveEffect,), 'move_effects.csv', data_to_model)
+    build_generic((MoveEffect,), 'move_effects.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveEffectEffectText(
             move_effect_id = int(info[0]),
             language_id = int(info[1]),
             short_effect = scrubStr(info[2]),
             effect = scrubStr(info[3])
         )
-    build_generic((MoveEffectEffectText,), 'move_effect_prose.csv', data_to_model)
+    build_generic((MoveEffectEffectText,), 'move_effect_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveEffectChange(
             id = int(info[0]),
             move_effect_id = int(info[1]),
             version_group_id = int(info[2])
         )
-    build_generic((MoveEffectChange,), 'move_effect_changelog.csv', data_to_model)
+    build_generic((MoveEffectChange,), 'move_effect_changelog.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveEffectChangeEffectText(
             move_effect_change_id = int(info[0]),
             language_id = int(info[1]),
             effect = scrubStr(info[2])
         )
-    build_generic((MoveEffectChangeEffectText,), 'move_effect_changelog_prose.csv', data_to_model)
+    build_generic(
+        (MoveEffectChangeEffectText,), 'move_effect_changelog_prose.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveLearnMethod(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveLearnMethod,), 'pokemon_move_methods.csv', data_to_model)
+    build_generic((MoveLearnMethod,), 'pokemon_move_methods.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield VersionGroupMoveLearnMethod(
             version_group_id = int(info[0]),
             move_learn_method_id = int(info[1]),
         )
     build_generic(
-        (VersionGroupMoveLearnMethod,), 'version_group_pokemon_move_methods.csv', data_to_model
+        (VersionGroupMoveLearnMethod,),
+        'version_group_pokemon_move_methods.csv',
+        csv_record_to_objects
     )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveLearnMethodName(
             move_learn_method_id = int(info[0]),
             language_id = int(info[1]),
@@ -758,17 +765,17 @@ def _build_moves():
     build_generic(
         (MoveLearnMethodName, MoveLearnMethodDescription),
         'pokemon_move_method_prose.csv',
-        data_to_model
+        csv_record_to_objects
     )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveTarget(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveTarget,), 'move_targets.csv', data_to_model)
+    build_generic((MoveTarget,), 'move_targets.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveTargetName(
             move_target_id = int(info[0]),
             language_id = int(info[1]),
@@ -779,9 +786,11 @@ def _build_moves():
             language_id = int(info[1]),
             description = info[3]
         )
-    build_generic((MoveTargetName, MoveTargetDescription), 'move_target_prose.csv', data_to_model)
+    build_generic(
+        (MoveTargetName, MoveTargetDescription), 'move_target_prose.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Move(
             id = int(info[0]),
             name = info[1],
@@ -799,26 +808,26 @@ def _build_moves():
             contest_effect_id = int(info[13]) if info[13] != '' else None,
             super_contest_effect_id = int(info[14]) if info[14] != '' else None
         )
-    build_generic((Move,), 'moves.csv', data_to_model)
+    build_generic((Move,), 'moves.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveName(
             move_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((MoveName,), 'move_names.csv', data_to_model)
+    build_generic((MoveName,), 'move_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveFlavorText(
             move_id = int(info[0]),
             version_group_id = int(info[1]),
             language_id = int(info[2]),
             flavor_text = info[3]
         )
-    build_generic((MoveFlavorText,), 'move_flavor_text.csv', data_to_model)
+    build_generic((MoveFlavorText,), 'move_flavor_text.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         _move_effect = None
         try:
             _move_effect = MoveEffect.objects.get(pk = int(info[6])) if info[6] != '' else None
@@ -835,38 +844,38 @@ def _build_moves():
             move_effect_id =  _move_effect.pk if _move_effect else None,
             move_effect_chance = int(info[7]) if info[7] != '' else None
         )
-    build_generic((MoveChange,), 'move_changelog.csv', data_to_model)
+    build_generic((MoveChange,), 'move_changelog.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveBattleStyle(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveBattleStyle,), 'move_battle_styles.csv', data_to_model)
+    build_generic((MoveBattleStyle,), 'move_battle_styles.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveBattleStyleName(
             move_battle_style_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((MoveBattleStyleName,), 'move_battle_style_prose.csv', data_to_model)
+    build_generic((MoveBattleStyleName,), 'move_battle_style_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveAttribute(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveAttribute,), 'move_flags.csv', data_to_model)
+    build_generic((MoveAttribute,), 'move_flags.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveAttributeMap(
             move_id = int(info[0]),
             move_attribute_id = int(info[1]),
         )
-    build_generic((MoveAttributeMap,), 'move_flag_map.csv', data_to_model)
+    build_generic((MoveAttributeMap,), 'move_flag_map.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveAttributeName(
             move_attribute_id = int(info[0]),
             language_id = int(info[1]),
@@ -878,40 +887,42 @@ def _build_moves():
             description = scrubStr(info[3])
         )
     build_generic(
-        (MoveAttributeName, MoveAttributeDescription), 'move_flag_prose.csv', data_to_model
+        (MoveAttributeName, MoveAttributeDescription), 'move_flag_prose.csv', csv_record_to_objects
     )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMetaAilment(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveMetaAilment,), 'move_meta_ailments.csv', data_to_model)
+    build_generic((MoveMetaAilment,), 'move_meta_ailments.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMetaAilmentName(
             move_meta_ailment_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((MoveMetaAilmentName,), 'move_meta_ailment_names.csv', data_to_model)
+    build_generic((MoveMetaAilmentName,), 'move_meta_ailment_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMetaCategory(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((MoveMetaCategory,), 'move_meta_categories.csv', data_to_model)
+    build_generic((MoveMetaCategory,), 'move_meta_categories.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMetaCategoryDescription(
             move_meta_category_id =  int(info[0]),
             language_id =  int(info[1]),
             description = info[2]
         )
-    build_generic((MoveMetaCategoryDescription,), 'move_meta_category_prose.csv', data_to_model)
+    build_generic(
+        (MoveMetaCategoryDescription,), 'move_meta_category_prose.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMeta(
             move_id = int(info[0]),
             move_meta_category_id = int(info[1]),
@@ -927,29 +938,29 @@ def _build_moves():
             flinch_chance = int(info[11]) if info[11] != '' else None,
             stat_chance = int(info[12]) if info[12] != '' else None
         )
-    build_generic((MoveMeta,), 'move_meta.csv', data_to_model)
+    build_generic((MoveMeta,), 'move_meta.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield MoveMetaStatChange(
             move_id = int(info[0]),
             stat_id = int(info[1]),
             change = int(info[2])
         )
-    build_generic((MoveMetaStatChange,), 'move_meta_stat_changes.csv', data_to_model)
+    build_generic((MoveMetaStatChange,), 'move_meta_stat_changes.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield ContestCombo(
             first_move_id = int(info[0]),
             second_move_id = int(info[1])
         )
-    build_generic((ContestCombo,), 'contest_combos.csv', data_to_model)
+    build_generic((ContestCombo,), 'contest_combos.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield SuperContestCombo(
             first_move_id = int(info[0]),
             second_move_id = int(info[1])
         )
-    build_generic((SuperContestCombo,), 'super_contest_combos.csv', data_to_model)
+    build_generic((SuperContestCombo,), 'super_contest_combos.csv', csv_record_to_objects)
 
 
 
@@ -959,22 +970,22 @@ def _build_moves():
 
 def _build_berries():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield BerryFirmness(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((BerryFirmness,), 'berry_firmness.csv', data_to_model)
+    build_generic((BerryFirmness,), 'berry_firmness.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield BerryFirmnessName(
             berry_firmness_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((BerryFirmnessName,), 'berry_firmness_names.csv', data_to_model)
+    build_generic((BerryFirmnessName,), 'berry_firmness_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         item = Item.objects.get(pk = int(info[1]))
         yield Berry(
             id = int(info[0]),
@@ -989,9 +1000,9 @@ def _build_berries():
             soil_dryness = int(info[8]),
             smoothness = int(info[9])
         )
-    build_generic((Berry,), 'berries.csv', data_to_model)
+    build_generic((Berry,), 'berries.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         # Get the english name for this contest type
         contest_type_name = ContestTypeName.objects.get(contest_type_id=int(info[0]), language_id=9)
         yield BerryFlavor(
@@ -999,23 +1010,26 @@ def _build_berries():
             name = contest_type_name.flavor.lower(),
             contest_type = ContestType.objects.get(pk = int(info[0]))
         )
-    build_generic((BerryFlavor,), 'contest_types.csv', data_to_model) # This is not an error
+    # This is not an error
+    build_generic((BerryFlavor,), 'contest_types.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield BerryFlavorName(
             berry_flavor_id = int(info[0]),
             language_id = int(info[1]),
             name = info[3]
         )
-    build_generic((BerryFlavorName,), 'contest_type_names.csv', data_to_model) # This is not an error
+    # This is not an error
+    build_generic((BerryFlavorName,), 'contest_type_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield BerryFlavorMap(
             berry_id = int(info[0]),
             berry_flavor_id = int(info[1]),
             potency = int(info[2])
         )
-    build_generic((BerryFlavorMap,), 'berry_flavors.csv', data_to_model) # This is not an error
+    # This is not an error
+    build_generic((BerryFlavorMap,), 'berry_flavors.csv', csv_record_to_objects)
 
 
 
@@ -1025,7 +1039,7 @@ def _build_berries():
 
 def _build_natures():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         decreased_stat = None
         increased_stat = None
         hates_flavor = None
@@ -1048,32 +1062,34 @@ def _build_natures():
             likes_flavor = likes_flavor,
             game_index = info[6]
         )
-    build_generic((Nature,), 'natures.csv', data_to_model)
+    build_generic((Nature,), 'natures.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield NatureName(
             nature_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((NatureName,), 'nature_names.csv', data_to_model)
+    build_generic((NatureName,), 'nature_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield NaturePokeathlonStat(
             nature_id = (info[0]),
             pokeathlon_stat_id = (info[1]),
             max_change = info[2]
         )
-    build_generic((NaturePokeathlonStat,), 'nature_pokeathlon_stats.csv', data_to_model)
+    build_generic((NaturePokeathlonStat,), 'nature_pokeathlon_stats.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield NatureBattleStylePreference(
             nature_id = int(info[0]),
             move_battle_style_id = int(info[1]),
             low_hp_preference = info[2],
             high_hp_preference = info[3]
         )
-    build_generic((NatureBattleStylePreference,), 'nature_battle_style_preferences.csv', data_to_model)
+    build_generic(
+        (NatureBattleStylePreference,), 'nature_battle_style_preferences.csv', csv_record_to_objects
+    )
 
 
 
@@ -1083,12 +1099,12 @@ def _build_natures():
 
 def _build_genders():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Gender(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((Gender,), 'genders.csv', data_to_model)
+    build_generic((Gender,), 'genders.csv', csv_record_to_objects)
 
 
 
@@ -1098,13 +1114,13 @@ def _build_genders():
 
 def _build_experiences():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Experience(
             growth_rate_id = int(info[0]),
             level = int(info[1]),
             experience = int(info[2])
         )
-    build_generic((Experience,), 'experience.csv', data_to_model)
+    build_generic((Experience,), 'experience.csv', csv_record_to_objects)
 
 
 
@@ -1114,14 +1130,14 @@ def _build_experiences():
 
 def _build_machines():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Machine(
             machine_number = int(info[0]),
             version_group_id = int(info[1]),
             item_id = int(info[2]),
             move_id = int(info[3]),
         )
-    build_generic((Machine,), 'machines.csv', data_to_model)
+    build_generic((Machine,), 'machines.csv', csv_record_to_objects)
 
 
 
@@ -1131,27 +1147,27 @@ def _build_machines():
 
 def _build_evolutions():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EvolutionChain(
             id = int(info[0]),
             baby_trigger_item_id = int(info[1]) if info[1] != '' else None,
         )
-    build_generic((EvolutionChain,), 'evolution_chains.csv', data_to_model)
+    build_generic((EvolutionChain,), 'evolution_chains.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EvolutionTrigger(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((EvolutionTrigger,), 'evolution_triggers.csv', data_to_model)
+    build_generic((EvolutionTrigger,), 'evolution_triggers.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EvolutionTriggerName(
             evolution_trigger_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((EvolutionTriggerName,), 'evolution_trigger_prose.csv', data_to_model)
+    build_generic((EvolutionTriggerName,), 'evolution_trigger_prose.csv', csv_record_to_objects)
 
 
 
@@ -1161,16 +1177,16 @@ def _build_evolutions():
 
 def _build_pokedexes():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Pokedex(
             id = int(info[0]),
             region_id = int(info[1]) if info[1] != '' else None,
             name = info[2],
             is_main_series = bool(int(info[3]))
         )
-    build_generic((Pokedex,), 'pokedexes.csv', data_to_model)
+    build_generic((Pokedex,), 'pokedexes.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokedexName(
             pokedex_id = int(info[0]),
             language_id = int(info[1]),
@@ -1181,14 +1197,14 @@ def _build_pokedexes():
             language_id = int(info[1]),
             description = info[3]
         )
-    build_generic((PokedexName, PokedexDescription), 'pokedex_prose.csv', data_to_model)
+    build_generic((PokedexName, PokedexDescription), 'pokedex_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokedexVersionGroup(
             pokedex_id = int(info[0]),
             version_group_id = int(info[1])
         )
-    build_generic((PokedexVersionGroup,), 'pokedex_version_groups.csv', data_to_model)
+    build_generic((PokedexVersionGroup,), 'pokedex_version_groups.csv', csv_record_to_objects)
 
 
 
@@ -1198,47 +1214,49 @@ def _build_pokedexes():
 
 def _build_locations():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Location(
             id = int(info[0]),
             region_id = int(info[1]) if info[1] != '' else None,
             name = info[2]
         )
-    build_generic((Location,), 'locations.csv', data_to_model)
+    build_generic((Location,), 'locations.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield LocationName(
             location_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((LocationName,), 'location_names.csv', data_to_model)
+    build_generic((LocationName,), 'location_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield LocationGameIndex(
             location_id = int(info[0]),
             generation_id = int(info[1]),
             game_index = int(info[2])
         )
-    build_generic((LocationGameIndex,), 'location_game_indices.csv', data_to_model)
+    build_generic((LocationGameIndex,), 'location_game_indices.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         location = Location.objects.get(pk = int(info[1]))
         yield LocationArea(
             id = int(info[0]),
             location_id = int(info[1]),
             game_index = int(info[2]),
-            name = '{}-{}'.format(location.name, info[3]) if info[3] else '{}-{}'.format(location.name, 'area')
+            name = '{}-{}'.format(
+                location.name, info[3]
+            ) if info[3] else '{}-{}'.format(location.name, 'area')
         )
-    build_generic((LocationArea,), 'location_areas.csv', data_to_model)
+    build_generic((LocationArea,), 'location_areas.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield LocationAreaName(
             location_area_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((LocationAreaName,), 'location_area_prose.csv', data_to_model)
+    build_generic((LocationAreaName,), 'location_area_prose.csv', csv_record_to_objects)
 
 
 
@@ -1248,45 +1266,45 @@ def _build_locations():
 
 def _build_pokemons():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonColor(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((PokemonColor,), 'pokemon_colors.csv', data_to_model)
+    build_generic((PokemonColor,), 'pokemon_colors.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonColorName(
             pokemon_color_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((PokemonColorName,), 'pokemon_color_names.csv', data_to_model)
+    build_generic((PokemonColorName,), 'pokemon_color_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonShape(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((PokemonShape,), 'pokemon_shapes.csv', data_to_model)
+    build_generic((PokemonShape,), 'pokemon_shapes.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonShapeName(
             pokemon_shape_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2],
             awesome_name = info[3]
         )
-    build_generic((PokemonShapeName,), 'pokemon_shape_prose.csv', data_to_model)
+    build_generic((PokemonShapeName,), 'pokemon_shape_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonHabitat(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((PokemonHabitat,), 'pokemon_habitats.csv', data_to_model)
+    build_generic((PokemonHabitat,), 'pokemon_habitats.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonSpecies(
             id = int(info[0]),
             name = info[1],
@@ -1306,7 +1324,7 @@ def _build_pokemons():
             forms_switchable = bool(int(info[15])),
             order = int(info[16])
         )
-    build_generic((PokemonSpecies,), 'pokemon_species.csv', data_to_model)
+    build_generic((PokemonSpecies,), 'pokemon_species.csv', csv_record_to_objects)
 
     # PokemonSpecies.evolves_from_species can't be set until all the species are created
     data = load_data('pokemon_species.csv')
@@ -1318,33 +1336,35 @@ def _build_pokemons():
                 species.evolves_from_species = evolves
                 species.save()
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonSpeciesName(
             pokemon_species_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2],
             genus = info[3]
         )
-    build_generic((PokemonSpeciesName,), 'pokemon_species_names.csv', data_to_model)
+    build_generic((PokemonSpeciesName,), 'pokemon_species_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonSpeciesDescription(
             pokemon_species_id = int(info[0]),
             language_id = int(info[1]),
             description = scrubStr(info[2])
         )
-    build_generic((PokemonSpeciesDescription,), 'pokemon_species_prose.csv', data_to_model)
+    build_generic((PokemonSpeciesDescription,), 'pokemon_species_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonSpeciesFlavorText(
             pokemon_species_id = int(info[0]),
             version_id = int(info[1]),
             language_id = int(info[2]),
             flavor_text = info[3]
         )
-    build_generic((PokemonSpeciesFlavorText,), 'pokemon_species_flavor_text.csv', data_to_model)
+    build_generic(
+        (PokemonSpeciesFlavorText,), 'pokemon_species_flavor_text.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Pokemon(
             id = int(info[0]),
             name = info[1],
@@ -1355,9 +1375,9 @@ def _build_pokemons():
             order = int(info[6]),
             is_default = bool(int(info[7]))
         )
-    build_generic((Pokemon,), 'pokemon.csv', data_to_model)
+    build_generic((Pokemon,), 'pokemon.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         fileName = '%s.png' % info[0]
         pokeSprites = 'pokemon/{0}';
         sprites = {
@@ -1375,33 +1395,33 @@ def _build_pokemons():
             pokemon = Pokemon.objects.get(pk=int(info[0])),
             sprites = json.dumps(sprites)
         )
-    build_generic((PokemonSprites,), 'pokemon.csv', data_to_model)
+    build_generic((PokemonSprites,), 'pokemon.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonAbility(
             pokemon_id = int(info[0]),
             ability_id = int(info[1]),
             is_hidden = bool(int(info[2])),
             slot = int(info[3])
         )
-    build_generic((PokemonAbility,), 'pokemon_abilities.csv', data_to_model)
+    build_generic((PokemonAbility,), 'pokemon_abilities.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonDexNumber(
             pokemon_species_id = int(info[0]),
             pokedex_id = int(info[1]),
             pokedex_number = int(info[2])
         )
-    build_generic((PokemonDexNumber,), 'pokemon_dex_numbers.csv', data_to_model)
+    build_generic((PokemonDexNumber,), 'pokemon_dex_numbers.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonEggGroup(
             pokemon_species_id = int(info[0]),
             egg_group_id = int(info[1])
         )
-    build_generic((PokemonEggGroup,), 'pokemon_egg_groups.csv', data_to_model)
+    build_generic((PokemonEggGroup,), 'pokemon_egg_groups.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonEvolution(
             id = int(info[0]),
             evolved_species_id = int(info[1]),
@@ -1424,9 +1444,9 @@ def _build_pokemons():
             needs_overworld_rain = bool(int(info[18])),
             turn_upside_down = bool(int(info[19]))
         )
-    build_generic((PokemonEvolution,), 'pokemon_evolution.csv', data_to_model)
+    build_generic((PokemonEvolution,), 'pokemon_evolution.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonForm(
             id = int(info[0]),
             name = info[1],
@@ -1439,9 +1459,9 @@ def _build_pokemons():
             form_order = int(info[8]),
             order = int(info[9])
         )
-    build_generic((PokemonForm,), 'pokemon_forms.csv', data_to_model)
+    build_generic((PokemonForm,), 'pokemon_forms.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         pokemon = Pokemon.objects.get(pk = int(info[3]))
         if info[2]:
             if re.search(r"^mega", info[2]):
@@ -1462,51 +1482,51 @@ def _build_pokemons():
             pokemon_form_id = int(info[0]),
             sprites = json.dumps(sprites)
         )
-    build_generic((PokemonFormSprites,), 'pokemon_forms.csv', data_to_model)
+    build_generic((PokemonFormSprites,), 'pokemon_forms.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonFormName(
             pokemon_form = PokemonForm.objects.get(pk = int(info[0])),
             language = Language.objects.get(pk = int(info[1])),
             name = info[2],
             pokemon_name = info[3]
         )
-    build_generic((PokemonFormName,), 'pokemon_form_names.csv', data_to_model)
+    build_generic((PokemonFormName,), 'pokemon_form_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonFormGeneration(
             pokemon_form_id = int(info[0]),
             generation_id = int(info[1]),
             game_index = int(info[2])
         )
-    build_generic((PokemonFormGeneration,), 'pokemon_form_generations.csv', data_to_model)
+    build_generic((PokemonFormGeneration,), 'pokemon_form_generations.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonGameIndex(
             pokemon_id = int(info[0]),
             version_id = int(info[1]),
             game_index = int(info[2])
         )
-    build_generic((PokemonGameIndex,), 'pokemon_game_indices.csv', data_to_model)
+    build_generic((PokemonGameIndex,), 'pokemon_game_indices.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonHabitatName(
             pokemon_habitat_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((PokemonHabitatName,), 'pokemon_habitat_names.csv', data_to_model)
+    build_generic((PokemonHabitatName,), 'pokemon_habitat_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonItem(
             pokemon_id = int(info[0]),
             version_id = int(info[1]),
             item_id = int(info[2]),
             rarity = int(info[3])
         )
-    build_generic((PokemonItem,), 'pokemon_items.csv', data_to_model)
+    build_generic((PokemonItem,), 'pokemon_items.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonMove(
             pokemon_id = int(info[0]),
             version_group_id = int(info[1]),
@@ -1515,24 +1535,24 @@ def _build_pokemons():
             level = int(info[4]),
             order = int(info[5]) if info[5] != '' else None,
         )
-    build_generic((PokemonMove,), 'pokemon_moves.csv', data_to_model)
+    build_generic((PokemonMove,), 'pokemon_moves.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonStat(
             pokemon_id = int(info[0]),
             stat_id = int(info[1]),
             base_stat = int(info[2]),
             effort = int(info[3])
         )
-    build_generic((PokemonStat,), 'pokemon_stats.csv', data_to_model)
+    build_generic((PokemonStat,), 'pokemon_stats.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PokemonType(
             pokemon_id = int(info[0]),
             type_id = int(info[1]),
             slot = int(info[2])
         )
-    build_generic((PokemonType,), 'pokemon_types.csv', data_to_model)
+    build_generic((PokemonType,), 'pokemon_types.csv', csv_record_to_objects)
 
 
 
@@ -1542,47 +1562,49 @@ def _build_pokemons():
 
 def _build_encounters():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterMethod(
             id = int(info[0]),
             name = info[1],
             order = int(info[2])
         )
-    build_generic((EncounterMethod,), 'encounter_methods.csv', data_to_model)
+    build_generic((EncounterMethod,), 'encounter_methods.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield LocationAreaEncounterRate(
             location_area_id = int(info[0]),
             encounter_method_id = int(info[1]),
             version_id = int(info[2]),
             rate = int(info[3])
         )
-    build_generic((LocationAreaEncounterRate,), 'location_area_encounter_rates.csv', data_to_model)
+    build_generic(
+        (LocationAreaEncounterRate,), 'location_area_encounter_rates.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterMethodName(
             encounter_method_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((EncounterMethodName,), 'encounter_method_prose.csv', data_to_model)
+    build_generic((EncounterMethodName,), 'encounter_method_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterCondition(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((EncounterCondition,), 'encounter_conditions.csv', data_to_model)
+    build_generic((EncounterCondition,), 'encounter_conditions.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterConditionName(
             encounter_condition_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((EncounterConditionName,), 'encounter_condition_prose.csv', data_to_model)
+    build_generic((EncounterConditionName,), 'encounter_condition_prose.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterSlot(
             id = int(info[0]),
             version_group_id = int(info[1]),
@@ -1590,9 +1612,9 @@ def _build_encounters():
             slot = int(info[3]) if info[3] != '' else None,
             rarity = int(info[4])
         )
-    build_generic((EncounterSlot,), 'encounter_slots.csv', data_to_model)
+    build_generic((EncounterSlot,), 'encounter_slots.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield Encounter(
             id = int(info[0]),
             version_id = int(info[1]),
@@ -1602,31 +1624,37 @@ def _build_encounters():
             min_level = int(info[5]),
             max_level = int(info[6])
         )
-    build_generic((Encounter,), 'encounters.csv', data_to_model)
+    build_generic((Encounter,), 'encounters.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterConditionValue(
             id = int(info[0]),
             encounter_condition_id = int(info[1]),
             name = info[2],
             is_default = bool(int(info[3]))
         )
-    build_generic((EncounterConditionValue,), 'encounter_condition_values.csv', data_to_model)
+    build_generic(
+        (EncounterConditionValue,), 'encounter_condition_values.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterConditionValueName(
             encounter_condition_value_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2],
         )
-    build_generic((EncounterConditionValueName,), 'encounter_condition_value_prose.csv', data_to_model)
+    build_generic(
+        (EncounterConditionValueName,), 'encounter_condition_value_prose.csv', csv_record_to_objects
+    )
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield EncounterConditionValueMap(
             encounter_id = int(info[0]),
             encounter_condition_value_id = int(info[1])
         )
-    build_generic((EncounterConditionValueMap,), 'encounter_condition_value_map.csv', data_to_model)
+    build_generic(
+        (EncounterConditionValueMap,), 'encounter_condition_value_map.csv', csv_record_to_objects
+    )
 
 
 
@@ -1636,29 +1664,29 @@ def _build_encounters():
 
 def _build_pal_parks():
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PalParkArea(
             id = int(info[0]),
             name = info[1]
         )
-    build_generic((PalParkArea,), 'pal_park_areas.csv', data_to_model)
+    build_generic((PalParkArea,), 'pal_park_areas.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PalParkAreaName(
             pal_park_area_id = int(info[0]),
             language_id = int(info[1]),
             name = info[2]
         )
-    build_generic((PalParkAreaName,), 'pal_park_area_names.csv', data_to_model)
+    build_generic((PalParkAreaName,), 'pal_park_area_names.csv', csv_record_to_objects)
 
-    def data_to_model(info):
+    def csv_record_to_objects(info):
         yield PalPark(
             pokemon_species_id = int(info[0]),
             pal_park_area_id = int(info[1]),
             base_score = int(info[2]),
             rate = int(info[3])
         )
-    build_generic((PalPark,), 'pal_park.csv', data_to_model)
+    build_generic((PalPark,), 'pal_park.csv', csv_record_to_objects)
 
 
 def build_all():

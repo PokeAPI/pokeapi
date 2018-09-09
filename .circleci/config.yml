@@ -10,6 +10,9 @@ jobs:
           name: Install deps
           command: sudo make install && sudo make dev-install
       - run:
+          name: Linting
+          command: make lint
+      - run:
           name: Run tests
           command: make test
 

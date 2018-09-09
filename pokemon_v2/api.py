@@ -15,7 +15,8 @@ from hits.models import ResourceView
 #  BEHAVIOR ABSTRACTIONS  #
 ###########################
 
-class ListOrDetailSerialRelation():
+
+class ListOrDetailSerialRelation:
     """
     Mixin to allow association with separate serializers
     for list or detail view.
@@ -24,12 +25,12 @@ class ListOrDetailSerialRelation():
     list_serializer_class = None
 
     def get_serializer_class(self):
-        if (self.action == 'list' and self.list_serializer_class is not None):
+        if self.action == "list" and self.list_serializer_class is not None:
             return self.list_serializer_class
         return self.serializer_class
 
 
-class NameOrIdRetrieval():
+class NameOrIdRetrieval:
     """
     Mixin to allow retrieval of resources by
     pk (in this case ID) or by name
@@ -41,7 +42,7 @@ class NameOrIdRetrieval():
     def get_object(self):
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)
-        lookup = self.kwargs['pk']
+        lookup = self.kwargs["pk"]
 
         if self.idPattern.match(lookup):
             resp = get_object_or_404(queryset, pk=lookup)
@@ -56,21 +57,23 @@ class NameOrIdRetrieval():
 
 
 class IncrementingReadOnlyModelViewSet(viewsets.ReadOnlyModelViewSet):
-
     def retrieve(self, request, *args, **kwargs):
         ResourceView.objects.increment_view_count(version=2)
-        return super(
-            IncrementingReadOnlyModelViewSet, self).retrieve(self, request, *args, **kwargs)
+        return super(IncrementingReadOnlyModelViewSet, self).retrieve(
+            self, request, *args, **kwargs
+        )
 
 
-class PokeapiCommonViewset(ListOrDetailSerialRelation,
-                           NameOrIdRetrieval, IncrementingReadOnlyModelViewSet):
+class PokeapiCommonViewset(
+    ListOrDetailSerialRelation, NameOrIdRetrieval, IncrementingReadOnlyModelViewSet
+):
     pass
 
 
 ##########
 #  APIS  #
 ##########
+
 
 class AbilityResource(PokeapiCommonViewset):
 
@@ -233,7 +236,9 @@ class LocationResource(PokeapiCommonViewset):
     list_serializer_class = LocationSummarySerializer
 
 
-class LocationAreaResource(ListOrDetailSerialRelation, IncrementingReadOnlyModelViewSet):
+class LocationAreaResource(
+    ListOrDetailSerialRelation, IncrementingReadOnlyModelViewSet
+):
 
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
@@ -361,7 +366,7 @@ class PokemonResource(PokeapiCommonViewset):
 
 class PokemonSpeciesResource(PokeapiCommonViewset):
 
-    queryset = PokemonSpecies.objects.all().order_by('id')
+    queryset = PokemonSpecies.objects.all().order_by("id")
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 
@@ -424,10 +429,11 @@ class PokemonEncounterView(APIView):
 
         encounter_objects = Encounter.objects.filter(pokemon=pokemon)
 
-        area_ids = (encounter_objects
-                    .order_by('location_area')
-                    .distinct('location_area')
-                    .values_list('location_area', flat=True))
+        area_ids = (
+            encounter_objects.order_by("location_area")
+            .distinct("location_area")
+            .values_list("location_area", flat=True)
+        )
 
         location_area_objects = LocationArea.objects.filter(pk__in=area_ids)
         version_objects = Version.objects
@@ -440,10 +446,11 @@ class PokemonEncounterView(APIView):
 
             area_encounters = encounter_objects.filter(location_area_id=area_id)
 
-            version_ids = (area_encounters
-                           .order_by('version_id')
-                           .distinct('version_id')
-                           .values_list('version_id', flat=True))
+            version_ids = (
+                area_encounters.order_by("version_id")
+                .distinct("version_id")
+                .values_list("version_id", flat=True)
+            )
 
             version_details_list = []
 
@@ -451,40 +458,48 @@ class PokemonEncounterView(APIView):
 
                 version = version_objects.get(pk=version_id)
 
-                version_encounters = (area_encounters
-                                      .filter(version_id=version_id)
-                                      .order_by('encounter_slot_id'))
+                version_encounters = area_encounters.filter(
+                    version_id=version_id
+                ).order_by("encounter_slot_id")
 
                 encounters_data = EncounterDetailSerializer(
-                    version_encounters, many=True, context=self.context).data
+                    version_encounters, many=True, context=self.context
+                ).data
 
                 max_chance = 0
                 encounter_details_list = []
 
                 for encounter in encounters_data:
-                    slot = EncounterSlot.objects.get(pk=encounter['encounter_slot'])
+                    slot = EncounterSlot.objects.get(pk=encounter["encounter_slot"])
                     slot_data = EncounterSlotSerializer(slot, context=self.context).data
 
-                    del encounter['pokemon']
-                    del encounter['encounter_slot']
-                    del encounter['location_area']
-                    del encounter['version']
-                    encounter['chance'] = slot_data['chance']
-                    max_chance += slot_data['chance']
-                    encounter['method'] = slot_data['encounter_method']
+                    del encounter["pokemon"]
+                    del encounter["encounter_slot"]
+                    del encounter["location_area"]
+                    del encounter["version"]
+                    encounter["chance"] = slot_data["chance"]
+                    max_chance += slot_data["chance"]
+                    encounter["method"] = slot_data["encounter_method"]
 
                     encounter_details_list.append(encounter)
 
-                version_details_list.append({
-                    'version': VersionSummarySerializer(version, context=self.context).data,
-                    'max_chance': max_chance,
-                    'encounter_details': encounter_details_list
-                })
+                version_details_list.append(
+                    {
+                        "version": VersionSummarySerializer(
+                            version, context=self.context
+                        ).data,
+                        "max_chance": max_chance,
+                        "encounter_details": encounter_details_list,
+                    }
+                )
 
-            encounters_list.append({
-                'location_area': LocationAreaSummarySerializer(
-                    location_area, context=self.context).data,
-                'version_details': version_details_list
-            })
+            encounters_list.append(
+                {
+                    "location_area": LocationAreaSummarySerializer(
+                        location_area, context=self.context
+                    ).data,
+                    "version_details": version_details_list,
+                }
+            )
 
         return Response(encounters_list)

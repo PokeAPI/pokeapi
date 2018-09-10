@@ -486,7 +486,6 @@ id,region_id,identifier
 496,1,rixy-chamber
 497,1,viapos-chamber
 498,1,ss-anne
-499,1,kanto-victory-road-3
 500,1,mt-ember
 501,1,berry-forest
 502,1,icefall-cave
@@ -509,14 +508,10 @@ id,region_id,identifier
 519,1,canyon-entrance
 520,1,sevault-canyon
 521,1,tanoby-ruins
-522,1,kanto-route-19
-523,1,kanto-route-20
-524,1,kanto-route-21
 526,1,one-island
 527,1,four-island
 528,1,five-island
 529,1,kanto-altering-cave
-530,1,kanto-victory-road-4
 531,5,aspertia-city
 532,5,virbank-city
 533,5,humilau-city

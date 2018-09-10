@@ -567,6 +567,77 @@ The type change takes place just before the move is used."
 186,9,Strengthens []{type:dark} moves to 1.33× their power for all friendly and opposing Pokémon.,Strengthens []{type:dark} moves for all friendly and opposing Pokémon.
 187,9,Strengthens []{type:fairy} moves to 1.33× their power for all friendly and opposing Pokémon.,Strengthens []{type:fairy} moves for all friendly and opposing Pokémon.
 188,9,Makes []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types.,"While this Pokémon is on the field, []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types to 2/3 their power, rather than strengthening them."
-189,9,,
-190,9,,
-191,9,,
+189,9,"Creates heavy rain, which has all the properties of Rain Dance, cannot be replaced, and causes damaging Fire moves to fail.","When this Pokémon enters battle or gains this ability, the weather becomes heavy rain.  Heavy rain has all the properties of []{move:rain-dance} and also causes damaging Fire moves to fail.
+
+Heavy rain ends when this Pokémon leaves battle or loses this ability, or when this ability is nullified.  The weather cannot otherwise be changed except by the effects of []{ability:delta-stream} and []{ability:desolate-land}.
+
+[]{ability:air-lock} and []{ability:cloud-nine} will prevent the effects of heavy rain, including allowing Fire moves to work, but will not allow the weather to be changed."
+190,9,"Creates extremely harsh sunlight, which has all the properties of Sunny Day, cannot be replaced, and causes damaging Water moves to fail.","When this Pokémon enters battle or gains this ability, the weather becomes extremely harsh sunlight.  Extremely harsh sunlight has all the properties of []{move:sunny-day} and also causes damaging Water moves to fail.
+
+Extremely harsh sunlight ends when this Pokémon leaves battle or loses this ability, or when this ability is nullified.  The weather cannot otherwise be changed except by the effects of []{ability:delta-stream} and []{ability:primordial-sea}.
+
+[]{ability:air-lock} and []{ability:cloud-nine} will prevent the effects of extremely harsh sunlight, including allowing Water moves to work, but will not allow the weather to be changed."
+191,9,"Creates a mysterious air current, which cannot be replaced and causes moves to never be super effective against Flying Pokémon.","When this Pokémon enters battle or gains this ability, the weather becomes a mysterious air current.  A mysterious air current causes moves to not be super effective against Flying; they do neutral damage instead.  []{ability:anticipation} and []{move:stealth-rock} are not affected.
+
+The mysterious air current ends when this Pokémon leaves battle or loses this ability, or when this ability is nullified.  The weather cannot otherwise be changed except by the effects of []{ability:desolate-land} and []{ability:primordial-sea}.
+
+[]{ability:air-lock} and []{ability:cloud-nine} will prevent the effect of a mysterious air current, but will not allow the weather to be changed."
+192,9,Raises this Pokémon's Defense by one stage when it takes damage from a move.,Raises this Pokémon's Defense by one stage when it takes damage from a move.
+193,9,This Pokémon automatically switches out when its HP drops below half.,"After this Pokémon is hit by a move, if that move caused this Pokémon's HP to drop below half, it switches out."
+194,9,This Pokémon automatically switches out when its HP drops below half.,"After this Pokémon is hit by a move, if that move caused this Pokémon's HP to drop below half, it switches out."
+195,9,Raises this Pokémon's Defense by two stages when it's hit by a Water move.,Raises this Pokémon's Defense by two stages when it's hit by a Water move.
+196,9,This Pokémon's moves critical hit against poisoned targets.,This Pokémon's moves critical hit against poisoned targets.
+197,9,Transforms this Minior between Core Form and Meteor Form.  Prevents major status ailments and drowsiness while in Meteor Form.,"When this Pokémon enters battle and at the end of each turn, if its HP is 50% or above, it changes into Meteor Form; otherwise, it changes into Core Form.  In Meteor Form, it cannot be given a major status ailment (though existing ones are not cured), cannot become drowsy from []{move:yawn}, and cannot use []{move:rest} (which will simply fail).
+
+This ability cannot be copied, replaced, or nullified.  This ability only takes effect for Minior."
+198,9,This Pokémon's moves have double power against Pokémon that switched in this turn.,This Pokémon's moves have double power against Pokémon that switched in this turn.
+199,9,"Halves damage from Fire moves, doubles damage of Water moves, and prevents burns.","When this Pokémon is hit by a Fire move, the damage is halved.  When this Pokémon uses a Water move, the power is doubled.  This Pokémon cannot be burned, and if it becomes burned, the  burn is immediately ured."
+200,9,This Pokémon's Steel moves have 1.5× power.,This Pokémon's Steel moves have 1.5× power.
+201,9,Raises this Pokémon's Special Attack by one stage every time its HP drops below half.,"Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
+202,9,"During Hail, this Pokémon has double Speed.","During Hail, this Pokémon has double Speed."
+203,9,This Pokémon's moves do not make contact.,A move used by this Pokémon will not make contact.
+204,9,Sound-based moves become Water-type.,"When this Pokémon uses a move that is sound-based, that move's type is Water."
+205,9,This Pokémon's healing moves have their priority increased by 3.,This Pokémon's healing moves have their priority increased by 3.
+206,9,This Pokémon's Normal moves are Electric and have their power increased to 1.2×.,"When this Pokémon uses a Normal moves, that move is Electric its power is 1.2×."
+207,9,Doubles this Pokémon's Speed on Electric Terrain.,Doubles this Pokémon's Speed on Electric Terrain.
+208,9,Wishiwashi becomes Schooling Form when its HP is 25% or higher.,"If this Pokémon is a []{pokemon:wishiwashi} and level 20 or above, then when it enters battle and at the start of each turn, it becomes Schooling Form if its HP is 25% or higher and Solo Form otherwise.
+
+This ability cannot be replaced, copied, or nullified."
+209,9,Prevents the first instance of battle damage.,"If this Pokémon is in its Disguised Form and takes damage from a move, it switches to its Busted Form and the damage is prevented.  Other effects are not prevented.
+
+This ability cannot be copied or replaced.  This ability only takes effect for Mimikyu."
+210,9,Transforms this Pokémon into Ash-Greninja after fainting an opponent.  Water Shuriken's power is 20 and always hits three times.,"Transforms this Pokémon into Ash-Greninja after fainting an opponent.  Water Shuriken's power is 20 and always hits three times.
+
+This ability cannot be copied or replaced.  This ability only takes effect for Greninja."
+211,9,Transforms 10% or 50% Zygarde into Complete Forme when its HP is below 50%.,"Transforms 10% or 50% Zygarde into Complete Forme when its HP is below 50%.
+
+This ability cannot be copied or replaced.  This ability only takes effect for Zygarde."
+212,9,This Pokémon can inflict poison on Poison and Steel Pokémon.,This Pokémon's moves and item ignore the usual immunity of Poison and Steel Pokémon when attempting to inflict poison.
+213,9,This Pokémon always  acts as though it were Asleep.,This Pokémon always acts as though it were Asleep.  It cannot be given another status ailment; it's unaffected by []{move:yawn}; it can use []{move:sleep-talk}; and so on.
+214,9,Opposing Pokémon cannot use priority attacks.,"When an opposing Pokémon attempts to use a move that targets this Pokémon or an ally, and that move has priority, it will fail."
+215,9,"When this Pokémon faints from an opponent's move, that opponent takes damage equal to the HP this Pokémon had remaining.","When this Pokémon faints from an opponent's move, that opponent takes damage equal to the HP this Pokémon had remaining."
+216,9,"Whenever another Pokémon uses a dance move, this Pokémon will use the same move immediately afterwards.","Whenever another Pokémon uses a dance move, this Pokémon will use the same move immediately afterwards."
+217,9,Ally Pokémon's moves have their power increased to 1.3×.,Ally Pokémon's moves have their power increased to 1.3×.
+218,9,Damage from contact moves is halved.  Damage from Fire moves is doubled.,Damage from contact moves is halved.  Damage from Fire moves is doubled.
+219,9,Opposing Pokémon cannot use priority attacks.,"When an opposing Pokémon attempts to use a move that targets this Pokémon or an ally, and that move has priority, it will fail."
+220,9,This Pokémon's Special Attack rises by one stage every time any Pokémon faints.,This Pokémon's Special Attack rises by one stage every time any Pokémon faints.
+221,9,"When this Pokémon takes regular damage from a contact move, the attacking Pokémon's Speed lowers by one stage.","When this Pokémon takes regular damage from a contact move, the attacking Pokémon's Speed lowers by one stage."
+222,9,"When an ally faints, this Pokémon gains its Ability.","When an ally faints, this Pokémon gains its Ability."
+223,9,"When an ally faints, this Pokémon gains its Ability.","When an ally faints, this Pokémon gains its Ability."
+224,9,Raises this Pokémon's highest stat by one stage when it faints another Pokémon.,Raises this Pokémon's highest stat by one stage when it faints another Pokémon.
+225,9,Changes this Pokémon's type to match its held Memory.,"Changes this Pokémon's type to match its held Memory.
+
+This ability cannot be copied, replaced, or nullified.  This ability only takes effect for Silvally."
+226,9,"When this Pokémon enters battle, it changes the terrain to Electric Terrain.","When this Pokémon enters battle, it changes the terrain to []{move:electric-terrain}."
+227,9,"When this Pokémon enters battle, it changes the terrain to Psychic Terrain.","When this Pokémon enters battle, it changes the terrain to []{move:psychic-terrain}."
+228,9,"When this Pokémon enters battle, it changes the terrain to Misty Terrain.","When this Pokémon enters battle, it changes the terrain to []{move:misty-terrain}."
+229,9,"When this Pokémon enters battle, it changes the terrain to Grassy Terrain.","When this Pokémon enters battle, it changes the terrain to []{move:grassy-terrain}."
+230,9,Other Pokémon cannot lower this Pokémon's stats.,"This Pokémon's stats cannot be lowered by other Pokémon's moves or abilities.  This effect only applies to normal stat modifications and not more exotic effects such as []{move:topsy-turvy} or []{move:power-swap}.
+
+This Ability is not bypassed by []{ability:mold-breaker}, []{ability:teravolt}, or []{ability:turboblaze}."
+231,9,"When this Pokémon has full HP, regular damage from moves is halved.","When this Pokémon has full HP, regular damage (not fixed damage!) from moves is halved.
+
+This ability cannot be nullified."
+232,9,Reduces super-effective damage to 0.75×.,"Super-effective damage this Pokémon takes is reduced to 0.75×.
+
+This Ability is not bypassed by []{ability:mold-breaker}, []{ability:teravolt}, or []{ability:turboblaze}."

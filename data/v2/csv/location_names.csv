@@ -203,7 +203,7 @@ location_id,local_language_id,name
 102,9,Route 22
 103,5,Route 24
 103,9,Route 24
-104,5,Rotue 25
+104,5,Route 25
 104,9,Route 25
 105,5,Route 26
 105,9,Route 26
@@ -1058,8 +1058,6 @@ location_id,local_language_id,name
 497,9,Viapos Chamber
 498,5,L'Océane
 498,9,S.S. Anne
-499,5,Route Victoire
-499,9,Victory Road
 500,5,Mont Braise
 500,9,Mt. Ember
 501,5,Bois Baies
@@ -1104,12 +1102,6 @@ location_id,local_language_id,name
 520,9,Sevault Canyon
 521,5,Ruines Tanoby
 521,9,Tanoby Ruins
-522,5,Route 19
-522,9,Route 19
-523,5,Route 20
-523,9,Route 20
-524,5,Route 21
-524,9,Route 21
 526,5,Ile 1
 526,9,One Island
 527,5,Ile 4
@@ -1118,8 +1110,6 @@ location_id,local_language_id,name
 528,9,Five Island
 529,5,Grotte Métamo
 529,9,Altering Cave
-530,5,Route Victoire
-530,9,Victory Road
 531,1,ヒオウギシティ
 531,5,Pavonnay
 531,9,Aspertia City

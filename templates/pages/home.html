@@ -254,6 +254,12 @@
 </section>
 
 <script>
+    
+    jQuery('#interactive').on('keypress', function(e){
+        if(e.which === 13){
+            interactive_call();
+        }           
+    });
 
     function update (call) {
 
@@ -261,8 +267,7 @@
         interactive_call();
     }
 
-    function interactive_call() {
-
+    function interactive_call() {        
         var content = jQuery('#interactive').val() || 'pokemon/1/';;
 
         var call_url = 'api/v2/' + content;
@@ -285,7 +290,7 @@
 
                 jQuery('#interactive_output').text(data['status'] + ' ' + data['statusText']);
             }
-        });
+        });       
     }
 
 </script>

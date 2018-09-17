@@ -4,7 +4,7 @@ A RESTful API for Pokémon
 
 LICENSE: [BSD](https://github.com/PokeAPI/pokeapi/blob/master/LICENSE.rst)
 
-http://pokeapi.co
+https://pokeapi.co
 
 [![Backers on Open Collective](https://opencollective.com/pokeapi/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/pokeapi/sponsors/badge.svg)](#sponsors) [![ghit.me](https://ghit.me/badge.svg?repo=PokeAPI/pokeapi)](https://ghit.me/repo/PokeAPI/pokeapi)
 

@@ -12,7 +12,6 @@ from .models import (
     Pokemon, Sprite, Move, Description, Game,
     EggGroup, Type, Ability, Pokedex
 )
-from hits.models import ResourceView
 
 
 class PokedexResource(ModelResource):
@@ -56,7 +55,6 @@ class PokemonResource(ModelResource):
         return lst
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['abilities'] = bundle.obj.ability_list
         bundle.data['types'] = bundle.obj.type_list
@@ -93,7 +91,6 @@ class TypeResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['weakness'] = bundle.obj.weaknesses
         bundle.data['resistance'] = bundle.obj.resistances
@@ -113,7 +110,6 @@ class AbilityResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['description'] = unicode(bundle.obj.description)
         return bundle
@@ -129,7 +125,6 @@ class GameResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         return bundle
 
@@ -144,7 +139,6 @@ class SpriteResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['pokemon'] = bundle.obj.pokemon
         return bundle
@@ -160,7 +154,6 @@ class DescriptionResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['games'] = bundle.obj.n_game
         bundle.data['pokemon'] = bundle.obj.pokemon
@@ -177,7 +170,6 @@ class EggResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         bundle.data['pokemon'] = bundle.obj.pokemon
         return bundle
@@ -193,6 +185,5 @@ class MoveResource(ModelResource):
         cache = SimpleCache(timeout=360)
 
     def dehydrate(self, bundle):
-        ResourceView.objects.increment_view_count(version=1)
         bundle.data['name'] = bundle.obj.name.capitalize()
         return bundle

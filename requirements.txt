@@ -1,4 +1,4 @@
-Django==2.0
+Django==2.1.2
 Pillow==2.6.1
 Unipath==1.1
 coverage==4.5.1

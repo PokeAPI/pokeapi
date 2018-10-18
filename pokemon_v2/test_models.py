@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 from django.test import TestCase
 from pokemon_v2.models import *  # NOQA
 

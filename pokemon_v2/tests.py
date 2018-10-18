@@ -1,4 +1,3 @@
-from __future__ import unicode_literals
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *  # NOQA

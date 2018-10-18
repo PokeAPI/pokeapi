@@ -224,7 +224,7 @@ class LocationResource(PokeapiCommonViewset):
     list_serializer_class = LocationSummarySerializer
 
 
-class LocationAreaResource(ListOrDetailSerialRelation):
+class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
 
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer

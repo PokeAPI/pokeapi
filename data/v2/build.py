@@ -59,7 +59,7 @@ def with_iter(context, iterable=None):
 
 def load_data(fileName):
     # with_iter closes the file when it has finished
-    return csv.reader(with_iter(open(DATA_LOCATION + fileName, 'rt')), delimiter=',')
+    return csv.reader(with_iter(open(DATA_LOCATION + fileName, 'rt', encoding="utf8")), delimiter=',')
 
 
 def clear_table(model):
@@ -93,7 +93,7 @@ def build_generic(model_classes, file_name, csv_record_to_objects):
                 model_class.objects.bulk_create(batches[model_class])
                 batches[model_class] = []
 
-    for model_class, batch in batches.iteritems():
+    for model_class, batch in batches.items():
         model_class.objects.bulk_create(batch)
 
 

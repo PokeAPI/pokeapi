@@ -1404,7 +1404,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         sprites_data = json.loads(sprites_data['sprites'])
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key, val in sprites_data.items():
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
@@ -2307,7 +2307,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key, val in sprites_data.items():
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
@@ -2525,7 +2525,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_data = json.loads(sprites_data['sprites'])
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key, val in sprites_data.items():
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 

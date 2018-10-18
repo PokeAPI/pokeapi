@@ -20,7 +20,7 @@ BASE_URL = 'http://pokeapi.co'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['.pokeapi.co', 'localhost']
+ALLOWED_HOSTS = ['.pokeapi.co', 'localhost', '127.0.0.1']
 
 TIME_ZONE = 'Europe/London'
 
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'

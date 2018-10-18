@@ -11,9 +11,6 @@
 #  wipe it and rewrite each row using the data found in data/v2/csv.
 
 
-# support python3
-from __future__ import print_function
-
 import csv
 import os
 import os.path

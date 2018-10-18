@@ -117,8 +117,6 @@ CUSTOM_APPS = (
     'tastypie',
     'pokemon',
     'pokemon_v2',
-    'hits',
-    'alerts',
 )
 
 INSTALLED_APPS = (
@@ -131,7 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'corsheaders',
     'rest_framework',
-    'markdown_deux',
     'cachalot'
 ) + CUSTOM_APPS
 

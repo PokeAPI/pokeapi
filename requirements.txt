@@ -1,9 +1,9 @@
-Django==1.8.14
+Django==1.9
 Pillow==2.6.1
 Unipath==1.1
 coverage==3.6
 django-appconf==0.6
-django-cors-headers==1.0.0
+django-cors-headers==2.4.0
 django-discover-runner==0.4
 django-imagekit==4.0.1
 django-redis==4.8.0

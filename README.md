@@ -61,7 +61,7 @@ Quite a lot of data is missing from the V1 API.
 
 See [This blog post for more information](http://phalt.co/if-you-have-data-they-will-consume-it).
 
-## Setup [![pyVersion27](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/download/releases/2.7/) 
+## Setup [![pyVersion27](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/download/releases/2.7/)
 
 - Download this source code into a working directory.
 
@@ -112,46 +112,16 @@ Start Django shell
 $ python manage.py shell --settings=config.local
 ```
 
-run the build script with
+Run the build script with
 ```
 $ from data.v2.build import build_all
 $ build_all()
 ```
-Each time the build script is run it will iterate over each table in the database, wipe it and rewrite each row using the data found in data/v2/csv.
-When building against sqlite we've heard it can take a ridiculously long time to finish building out the database. In this case you can set up just the portions of the db that you need.
-```
-$ from data.v2.build import *
-$ build_languages()
-$ build_abilities()
-...
-```
+Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
-Heres a list of the data building functions
-- build_languages()
-- build_regions()
-- build_generations()
-- build_versions()
-- build_stats()
-- build_damage_classes()
-- build_abilities()
-- build_characteristics()
-- build_egg_groups()
-- build_growth_rates()
-- build_items()
-- build_types()
-- build_contests()
-- build_moves()
-- build_berries()
-- build_natures()
-- build_genders()
-- build_experiences()
-- build_machines()
-- build_evolutions()
-- build_pokedexes()
-- build_locations()
-- build_pokemons()
-- build_encounters()
-- build_pal_parks()
+In informal tests on a Windows PC with a SSD and a 2.50 GHz processor, building against a PostgresQL database took approximately 6 minutes, and building against a SQLite database took about 7.5 minutes or longer, with some varying results.
+
+The option to build individual portions of the database was removed in order to increase performance of the build script.
 
 
 ## Docker
@@ -183,7 +153,7 @@ Start the process using
 ```
 docker-compose up
 ```
-You can specify the ```-d``` switch to start in detached mode.   
+You can specify the ```-d``` switch to start in detached mode.
 This will bind port 80 and 443. Unfortunately, unlike the ```docker``` command, there is no command line arguments to specify ports. If you want to change them, edit the ```docker-compose.yml``` file.
 
 After that, start the migration process

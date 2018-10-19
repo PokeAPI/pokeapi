@@ -44,7 +44,9 @@ class HasContestEffect(models.Model):
 class HasSuperContestEffect(models.Model):
 
     super_contest_effect = models.ForeignKey(
-        'SuperContestEffect', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'SuperContestEffect', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE
+    )
 
     class Meta:
         abstract = True
@@ -87,7 +89,8 @@ class HasEggGroup(models.Model):
 class HasEncounterMethod(models.Model):
 
     encounter_method = models.ForeignKey(
-        'EncounterMethod', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'EncounterMethod', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -96,7 +99,8 @@ class HasEncounterMethod(models.Model):
 class HasEncounterCondition(models.Model):
 
     encounter_condition = models.ForeignKey(
-        'EncounterCondition', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'EncounterCondition', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -105,7 +109,8 @@ class HasEncounterCondition(models.Model):
 class HasEvolutionTrigger(models.Model):
 
     evolution_trigger = models.ForeignKey(
-        'EvolutionTrigger', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'EvolutionTrigger', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -122,7 +127,8 @@ class HasFlavorText(models.Model):
 class HasFlingEffect(models.Model):
 
     item_fling_effect = models.ForeignKey(
-        'ItemFlingEffect', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'ItemFlingEffect', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -193,7 +199,8 @@ class HasItemPocket(models.Model):
 class HasLanguage(models.Model):
 
     language = models.ForeignKey(
-        'Language', blank=True, null=True, related_name="%(class)s_language", on_delete=models.CASCADE)
+        'Language', blank=True, null=True, related_name="%(class)s_language",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -220,7 +227,8 @@ class HasLocationArea(models.Model):
 class HasMetaAilment(models.Model):
 
     move_meta_ailment = models.ForeignKey(
-        'MoveMetaAilment', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveMetaAilment', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -229,7 +237,8 @@ class HasMetaAilment(models.Model):
 class HasMetaCategory(models.Model):
 
     move_meta_category = models.ForeignKey(
-        'MoveMetaCategory', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveMetaCategory', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -247,7 +256,8 @@ class HasMove(models.Model):
 class HasMoveDamageClass(models.Model):
 
     move_damage_class = models.ForeignKey(
-        'MoveDamageClass', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveDamageClass', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -362,7 +372,8 @@ class HasPokemonHabitat(models.Model):
 class HasMoveLearnMethod(models.Model):
 
     move_learn_method = models.ForeignKey(
-        'MoveLearnMethod', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveLearnMethod', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -507,7 +518,8 @@ class LanguageName(IsName):
 
 class Generation(HasName):
 
-    region = models.OneToOneField('Region', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+    region = models.OneToOneField('Region', blank=True, null=True, related_name="%(class)s",
+                                  on_delete=models.CASCADE)
 
 
 class GenerationName(IsName, HasGeneration):
@@ -848,7 +860,8 @@ class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
 class NatureBattleStylePreference(HasNature):
 
     move_battle_style = models.ForeignKey(
-        'MoveBattleStyle', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveBattleStyle', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
     low_hp_preference = models.IntegerField()
 
@@ -929,7 +942,8 @@ class EncounterConditionValue(HasEncounterCondition, HasName):
 class EncounterConditionValueName(IsName):
 
     encounter_condition_value = models.ForeignKey(
-        EncounterConditionValue, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        EncounterConditionValue, blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
 
 class EncounterConditionValueMap(models.Model):
@@ -1027,7 +1041,8 @@ class MoveEffectChange(HasMoveEffect, HasVersionGroup):
 class MoveEffectChangeEffectText(HasLanguage, HasEffect):
 
     move_effect_change = models.ForeignKey(
-        'MoveEffectChange', blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
+        'MoveEffectChange', blank=True, null=True, related_name="%(class)s",
+        on_delete=models.CASCADE)
 
 
 ################################
@@ -1072,7 +1087,8 @@ class MoveTargetDescription(HasMoveTarget, IsDescription):
 
 class MoveMeta(HasMetaAilment, HasMetaCategory):
 
-    move = models.OneToOneField(Move, blank=False, null=False, related_name="%(class)s", on_delete=models.CASCADE)
+    move = models.OneToOneField(Move, blank=False, null=False, related_name="%(class)s",
+                                on_delete=models.CASCADE)
 
     min_hits = models.IntegerField(blank=True, null=True)
 
@@ -1326,7 +1342,8 @@ class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
 class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     evolution_item = models.ForeignKey(
-        Item, blank=True, null=True, related_name='evolution_item', on_delete=models.CASCADE)
+        Item, blank=True, null=True, related_name='evolution_item',
+        on_delete=models.CASCADE)
 
     evolved_species = models.ForeignKey(
         PokemonSpecies, related_name="evolved_species", blank=True, null=True, on_delete=models.CASCADE)
@@ -1355,13 +1372,15 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     relative_physical_stats = models.IntegerField(blank=True, null=True)
 
     party_species = models.ForeignKey(
-        PokemonSpecies, related_name="party_species", blank=True, null=True, on_delete=models.CASCADE)
+        PokemonSpecies, related_name="party_species", blank=True, null=True,
+        on_delete=models.CASCADE)
 
     party_type = models.ForeignKey(Type, related_name="party_type",
                                    blank=True, null=True, on_delete=models.CASCADE)
 
     trade_species = models.ForeignKey(
-        PokemonSpecies, related_name="trade_species", blank=True, null=True, on_delete=models.CASCADE)
+        PokemonSpecies, related_name="trade_species", blank=True, null=True,
+        on_delete=models.CASCADE)
 
     needs_overworld_rain = models.BooleanField(default=False)
 

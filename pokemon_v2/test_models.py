@@ -6,9 +6,9 @@ class AbilityTestCase(TestCase):
 
     def setUp(self):
         Ability.objects.create(
-          name="Smell",
-          generation_id=3,
-          is_main_series=True
+            name="Smell",
+            generation_id=3,
+            is_main_series=True
         )
 
     def fields_are_valid(self):

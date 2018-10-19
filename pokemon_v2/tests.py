@@ -48,7 +48,7 @@ class APIData():
     def setup_language_name_data(self, language, name='lang nm'):
 
         local_language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         language_name = LanguageName.objects.create(
             language=language,
@@ -74,7 +74,7 @@ class APIData():
     def setup_region_name_data(self, region, name='reg nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         region_name = RegionName.objects.create(
             region=region,
@@ -90,7 +90,7 @@ class APIData():
     def setup_generation_data(self, region=None, name='gen'):
 
         region = region or self.setup_region_data(
-            name='reg for '+name)
+            name='reg for ' + name)
 
         generation = Generation.objects.create(
             region=region,
@@ -104,7 +104,7 @@ class APIData():
     def setup_generation_name_data(self, generation, name='gen nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         generation_name = GenerationName.objects.create(
             generation=generation,
@@ -120,7 +120,7 @@ class APIData():
     def setup_version_group_data(self, name='ver grp', generation=None):
 
         generation = generation or self.setup_generation_data(
-            name='gen for '+name)
+            name='gen for ' + name)
 
         version_group = VersionGroup.objects.create(
             name=name,
@@ -157,7 +157,7 @@ class APIData():
     def setup_version_name_data(self, version, name='ver nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         version_name = VersionName.objects.create(
             version=version,
@@ -173,7 +173,7 @@ class APIData():
     def setup_ability_data(self, name='ablty', generation=None):
 
         generation = generation or self.setup_generation_data(
-            name='gen for '+name)
+            name='gen for ' + name)
 
         ability = Ability.objects.create(
             name=name,
@@ -188,7 +188,7 @@ class APIData():
     def setup_ability_name_data(self, ability, name='ablty nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         ability_name = AbilityName.objects.create(
             ability=ability,
@@ -204,7 +204,7 @@ class APIData():
                                        short_effect='ablty shrt efct', effect='ablty efct'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         ability_effect_text = AbilityEffectText.objects.create(
             ability=ability,
@@ -234,7 +234,7 @@ class APIData():
     def setup_ability_change_effect_text_data(self, ability_change, effect='ablty change efct'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         ability_change_effect_text = AbilityChangeEffectText.objects.create(
             ability_change=ability_change,
@@ -249,10 +249,10 @@ class APIData():
     def setup_ability_flavor_text_data(self, ability, flavor_text='ablty flvr txt'):
 
         version_group = self.setup_version_group_data(
-            name='ver grp for '+flavor_text)
+            name='ver grp for ' + flavor_text)
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         ability_flavor_text = AbilityFlavorText.objects.create(
             ability=ability,
@@ -279,7 +279,7 @@ class APIData():
     def setup_item_attribute_name_data(self, item_attribute, name='itm attr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         item_attribute_name = ItemAttributeName.objects.create(
             item_attribute=item_attribute,
@@ -294,7 +294,7 @@ class APIData():
     def setup_item_attribute_description_data(self, item_attribute, description='itm attr desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         item_attribute_description = ItemAttributeDescription.objects.create(
             item_attribute=item_attribute,
@@ -311,7 +311,7 @@ class APIData():
         item_attribute_map = ItemAttributeMap(
             item=item,
             item_attribute=item_attribute
-          )
+        )
         item_attribute_map.save()
 
         return item_attribute_map
@@ -330,7 +330,7 @@ class APIData():
                                                  effect='itm flng efct efct txt'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         item_fling_effect_effect_text = ItemFlingEffectEffectText.objects.create(
             item_fling_effect=item_fling_effect,
@@ -355,7 +355,7 @@ class APIData():
     def setup_item_pocket_name_data(self, item_pocket, name='itm pkt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         item_pocket_name = ItemPocketName.objects.create(
             item_pocket=item_pocket,
@@ -370,7 +370,7 @@ class APIData():
     def setup_item_category_data(self, name="itm ctgry", item_pocket=None):
 
         item_pocket = item_pocket or self.setup_item_pocket_data(
-            name='itm pkt for '+name)
+            name='itm pkt for ' + name)
 
         item_category = ItemCategory.objects.create(
             name=name,
@@ -383,7 +383,7 @@ class APIData():
     def setup_item_category_name_data(self, item_category, name='itm ctgry nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         item_category_name = ItemCategoryName.objects.create(
             item_category=item_category,
@@ -430,7 +430,7 @@ class APIData():
     def setup_item_name_data(self, item, name='itm nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         item_name = ItemName.objects.create(
             item=item,
@@ -446,7 +446,7 @@ class APIData():
                                     short_effect='ablty shrt efct', effect='ablty efct'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         item_effect_text = ItemEffectText.objects.create(
             item=item,
@@ -462,10 +462,10 @@ class APIData():
     def setup_item_flavor_text_data(self, item, flavor_text='itm flvr txt'):
 
         version_group = self.setup_version_group_data(
-            name='ver grp for '+flavor_text)
+            name='ver grp for ' + flavor_text)
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         item_flavor_text = ItemFlavorText.objects.create(
             item=item,
@@ -507,7 +507,7 @@ class APIData():
     def setup_contest_type_name_data(self, contest_type, name='cntst tp nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         contest_type_name = ContestTypeName.objects.create(
             language=language,
@@ -534,7 +534,7 @@ class APIData():
                                               contest_effect, flavor_text='cntst efct flvr txt'):
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         contest_effect_flavor_text = ContestEffectFlavorText.objects.create(
             language=language,
@@ -549,7 +549,7 @@ class APIData():
     def setup_contest_effect_effect_text_data(self, contest_effect, effect='cntst efct efct txt'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         contest_effect_effect_text = ContestEffectEffectText.objects.create(
             language=language,
@@ -575,7 +575,7 @@ class APIData():
                                                     flavor_text='spr cntst efct flvr txt'):
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         super_contest_effect_flavor_text = SuperContestEffectFlavorText.objects.create(
             language=language,
@@ -605,7 +605,7 @@ class APIData():
     def setup_berry_flavor_name_data(self, berry_flavor, name='bry flvr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         berry_flavor_name = BerryFlavorName.objects.create(
             language=language,
@@ -630,7 +630,7 @@ class APIData():
     def setup_berry_firmness_name_data(self, berry_firmness, name='bry frmns nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         berry_firmness_name = BerryFirmnessName.objects.create(
             language=language,
@@ -659,10 +659,10 @@ class APIData():
                          growth_time=2, soil_dryness=15, smoothness=25):
 
         item = item or self.setup_item_data(
-            name='itm for '+name)
+            name='itm for ' + name)
 
         berry_firmness = berry_firmness or self.setup_berry_firmness_data(
-            name='bry frmns for '+name)
+            name='bry frmns for ' + name)
 
         berry = Berry.objects.create(
             name=name,
@@ -695,7 +695,7 @@ class APIData():
     def setup_egg_group_name_data(self, egg_group, name='ntr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         egg_group_name = EggGroupName.objects.create(
             egg_group=egg_group,
@@ -721,7 +721,7 @@ class APIData():
     def setup_growth_rate_description_data(self, growth_rate, description='grth rt desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         growth_rate_description = GrowthRateDescription.objects.create(
             growth_rate=growth_rate,
@@ -737,7 +737,7 @@ class APIData():
     def setup_location_data(self, region=None, name='lctn'):
 
         region = region or self.setup_region_data(
-            name='rgn for '+name)
+            name='rgn for ' + name)
 
         location = Location(
             name=name,
@@ -766,7 +766,7 @@ class APIData():
     def setup_location_name_data(self, location, name='lctn nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         location_name = LocationName.objects.create(
             language=language,
@@ -781,7 +781,7 @@ class APIData():
     def setup_location_area_data(self, location=None, name='lctn area', game_index=0):
 
         location = location or self.setup_location_data(
-            name='lctn for '+name)
+            name='lctn for ' + name)
 
         location_area = LocationArea(
             location=location,
@@ -796,7 +796,7 @@ class APIData():
     def setup_location_area_name_data(self, location_area, name='lctn area nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         location_area_name = LocationAreaName.objects.create(
             language=language,
@@ -812,10 +812,10 @@ class APIData():
     def setup_type_data(self, name='tp', move_damage_class=None, generation=None):
 
         move_damage_class = move_damage_class or self.setup_move_damage_class_data(
-            name="mv dmg cls for "+name)
+            name="mv dmg cls for " + name)
 
         generation = generation or self.setup_generation_data(
-            name='rgn for '+name)
+            name='rgn for ' + name)
 
         type = Type(
             name=name,
@@ -830,7 +830,7 @@ class APIData():
     def setup_type_name_data(self, type, name='tp nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         type_name = TypeName.objects.create(
             language=language,
@@ -871,7 +871,7 @@ class APIData():
     def setup_move_ailment_name_data(self, move_ailment, name='mv almnt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_ailment_name = MoveMetaAilmentName.objects.create(
             move_meta_ailment=move_ailment,
@@ -896,7 +896,7 @@ class APIData():
     def setup_move_battle_style_name_data(self, move_battle_style, name='mv almnt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_battle_style_name = MoveBattleStyleName.objects.create(
             move_battle_style=move_battle_style,
@@ -921,7 +921,7 @@ class APIData():
     def setup_move_category_description_data(self, move_category, description='mv ctgry desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         move_category_description = MoveMetaCategoryDescription.objects.create(
             move_meta_category=move_category,
@@ -945,7 +945,7 @@ class APIData():
                                            short_effect='mv efct shrt efct txt'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         effect_effect_text = MoveEffectEffectText.objects.create(
             effect=effect,
@@ -971,7 +971,7 @@ class APIData():
     def setup_move_damage_class_name_data(self, move_damage_class, name='mv dmg cls nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_damage_class_name = MoveDamageClassName.objects.create(
             move_damage_class=move_damage_class,
@@ -987,7 +987,7 @@ class APIData():
                                                  description='mv dmg cls desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         move_damage_class_description = MoveDamageClassDescription.objects.create(
             move_damage_class=move_damage_class,
@@ -1012,7 +1012,7 @@ class APIData():
     def setup_move_learn_method_name_data(self, move_learn_method, name='mv lrn mthd nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_learn_method_name = MoveLearnMethodName.objects.create(
             move_learn_method=move_learn_method,
@@ -1028,7 +1028,7 @@ class APIData():
                                                  description='mv lrn mthd desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         move_learn_method_description = MoveLearnMethodDescription.objects.create(
             move_learn_method=move_learn_method,
@@ -1053,7 +1053,7 @@ class APIData():
     def setup_move_target_name_data(self, move_target, name='mv trgt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_target_name = MoveTargetName.objects.create(
             move_target=move_target,
@@ -1068,7 +1068,7 @@ class APIData():
     def setup_move_target_description_data(self, move_target, description='mv trgt desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         move_target_description = MoveTargetDescription.objects.create(
             move_target=move_target,
@@ -1116,10 +1116,10 @@ class APIData():
     @classmethod
     def setup_move_flavor_text_data(self, move, flavor_text='move flvr txt'):
         version_group = self.setup_version_group_data(
-            name='ver grp for '+flavor_text)
+            name='ver grp for ' + flavor_text)
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         move_flavor_text = MoveFlavorText.objects.create(
             move=move,
@@ -1138,23 +1138,23 @@ class APIData():
                         accuracy=80, priority=0, effect_chance=50):
 
         contest_type = contest_type or self.setup_contest_type_data(
-            name='cntst tp for '+name)
+            name='cntst tp for ' + name)
 
         contest_effect = contest_effect or self.setup_contest_effect_data()
 
         super_contest_effect = super_contest_effect or self.setup_super_contest_effect_data()
 
         generation = generation or self.setup_generation_data(
-            name='gen for '+name)
+            name='gen for ' + name)
 
         type = type or self.setup_type_data(
-            name='tp for '+name)
+            name='tp for ' + name)
 
         move_target = move_target or self.setup_move_target_data(
-            name='mv trgt for '+name)
+            name='mv trgt for ' + name)
 
         move_damage_class = move_damage_class or self.setup_move_damage_class_data(
-            name='mv dmg cls for '+name)
+            name='mv dmg cls for ' + name)
 
         move = Move.objects.create(
             name=name,
@@ -1180,7 +1180,7 @@ class APIData():
     def setup_move_name_data(self, move, name='mv nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         move_name = MoveName.objects.create(
             move=move,
@@ -1215,7 +1215,7 @@ class APIData():
             ailment_chance=ailment_chance,
             flinch_chance=flinch_chance,
             stat_chance=stat_chance
-          )
+        )
         move_meta.save()
 
         return move_meta
@@ -1261,7 +1261,7 @@ class APIData():
                                                   effect='mv efct chng efct txt'):
 
         language = self.setup_language_data(
-            name='lang for '+effect)
+            name='lang for ' + effect)
 
         move_effect_change_effect_text = MoveEffectChangeEffectText.objects.create(
             move_effect_change=move_effect_change,
@@ -1277,7 +1277,7 @@ class APIData():
     def setup_stat_data(self, name='stt', is_battle_only=True, game_index=1):
 
         move_damage_class = self.setup_move_damage_class_data(
-            name='mv dmg cls for '+name)
+            name='mv dmg cls for ' + name)
 
         stat = Stat.objects.create(
             name=name,
@@ -1293,7 +1293,7 @@ class APIData():
     def setup_stat_name_data(self, stat, name='stt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         stat_name = StatName.objects.create(
             stat=stat,
@@ -1333,7 +1333,7 @@ class APIData():
     def setup_pokeathlon_stat_name_data(self, pokeathlon_stat, name='pkathln stt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokeathlon_stat_name = PokeathlonStatName.objects.create(
             pokeathlon_stat=pokeathlon_stat,
@@ -1363,7 +1363,7 @@ class APIData():
     def setup_characteristic_description_data(self, characteristic, description='char desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         characteristic_description = CharacteristicDescription.objects.create(
             characteristic=characteristic,
@@ -1395,7 +1395,7 @@ class APIData():
     def setup_nature_name_data(self, nature, name='ntr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         nature_name = NatureName.objects.create(
             nature=nature,
@@ -1437,7 +1437,7 @@ class APIData():
     def setup_pokedex_data(self, region=None, name='pkdx'):
 
         region = region or self.setup_region_data(
-            name='rgn for '+name)
+            name='rgn for ' + name)
 
         pokedex = Pokedex.objects.create(
             name=name,
@@ -1451,7 +1451,7 @@ class APIData():
     def setup_pokedex_name_data(self, pokedex, name='pkdx nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokedex_name = PokedexName.objects.create(
             pokedex=pokedex,
@@ -1466,7 +1466,7 @@ class APIData():
     def setup_pokedex_description_data(self, pokedex, description='pkdx desc'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         pokedex_description = PokedexDescription.objects.create(
             pokedex=pokedex,
@@ -1506,7 +1506,7 @@ class APIData():
     def setup_pokemon_habitat_name_data(self, pokemon_habitat, name='pkm hbtt nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokemon_habitat_name = PokemonHabitatName.objects.create(
             pokemon_habitat=pokemon_habitat,
@@ -1531,7 +1531,7 @@ class APIData():
     def setup_pokemon_color_name_data(self, pokemon_color, name='pkm clr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokemon_color_name = PokemonColorName.objects.create(
             pokemon_color=pokemon_color,
@@ -1557,7 +1557,7 @@ class APIData():
                                       awesome_name='pkm shp awsm nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokemon_shape_name = PokemonShapeName.objects.create(
             pokemon_shape=pokemon_shape,
@@ -1574,7 +1574,7 @@ class APIData():
                                                     description='pkm spcs frm dscr'):
 
         language = self.setup_language_data(
-            name='lang for '+description)
+            name='lang for ' + description)
 
         pokemon_species_form_description = PokemonSpeciesDescription.objects.create(
             pokemon_species=pokemon_species,
@@ -1590,10 +1590,10 @@ class APIData():
                                                flavor_text='pkmn spcs flvr txt'):
 
         version = self.setup_version_data(
-            name='ver for '+flavor_text)
+            name='ver for ' + flavor_text)
 
         language = self.setup_language_data(
-            name='lang for '+flavor_text)
+            name='lang for ' + flavor_text)
 
         pokemon_species_flavor_text = PokemonSpeciesFlavorText.objects.create(
             pokemon_species=pokemon_species,
@@ -1614,19 +1614,19 @@ class APIData():
                                    forms_switchable=False, order=1):
 
         generation = generation or self.setup_generation_data(
-            name='gen for '+name)
+            name='gen for ' + name)
 
         growth_rate = growth_rate or self.setup_growth_rate_data(
-            name='grth rt for '+name)
+            name='grth rt for ' + name)
 
         pokemon_shape = pokemon_shape or self.setup_pokemon_shape_data(
-            name='pkmn shp for '+name)
+            name='pkmn shp for ' + name)
 
         pokemon_color = pokemon_color or self.setup_pokemon_color_data(
-            name='pkmn clr for '+name)
+            name='pkmn clr for ' + name)
 
         pokemon_habitat = pokemon_habitat or self.setup_pokemon_habitat_data(
-            name='pkm hbtt for '+name)
+            name='pkm hbtt for ' + name)
 
         pokemon_species = PokemonSpecies.objects.create(
             name=name,
@@ -1655,7 +1655,7 @@ class APIData():
                                         genus='pkmn spcs gns'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pokemon_species_name = PokemonSpeciesName.objects.create(
             pokemon_species=pokemon_species,
@@ -1674,7 +1674,7 @@ class APIData():
             pokemon_species=pokemon_species,
             pokedex=pokedex,
             pokedex_number=entry_number
-          )
+        )
         dex_number.save()
 
         return dex_number
@@ -1695,7 +1695,7 @@ class APIData():
                            height=100, weight=100, base_experience=0, order=1, is_default=False):
 
         pokemon_species = pokemon_species or self.setup_pokemon_species_data(
-            name='pkmn spcs for '+name)
+            name='pkmn spcs for ' + name)
 
         pokemon = Pokemon.objects.create(
             name=name,
@@ -1754,7 +1754,7 @@ class APIData():
                                 is_battle_only=True, form_order=1, is_mega=False):
 
         version_group = self.setup_version_group_data(
-            name='ver grp for '+name)
+            name='ver grp for ' + name)
 
         pokemon_form = PokemonForm(
             name=name,
@@ -1766,7 +1766,7 @@ class APIData():
             is_mega=is_mega,
             form_order=form_order,
             order=order
-          )
+        )
         pokemon_form.save()
 
         return pokemon_form
@@ -1781,7 +1781,7 @@ class APIData():
             ability=ability,
             is_hidden=is_hidden,
             slot=slot
-          )
+        )
         pokemon_ability.save()
 
         return pokemon_ability
@@ -1797,7 +1797,7 @@ class APIData():
             stat=stat,
             base_stat=base_stat,
             effort=effort
-          )
+        )
         pokemon_stat.save()
 
         return pokemon_stat
@@ -1812,7 +1812,7 @@ class APIData():
             pokemon=pokemon,
             type=type,
             slot=slot
-          )
+        )
         pokemon_type.save()
 
         return pokemon_type
@@ -1834,7 +1834,7 @@ class APIData():
             version=version,
             item=item,
             rarity=rarity
-          )
+        )
         pokemon_item.save()
 
         return pokemon_item
@@ -1901,7 +1901,7 @@ class APIData():
     def setup_evolution_trigger_name_data(self, evolution_trigger, name='evltn trgr nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         evolution_trigger_name = EvolutionTriggerName.objects.create(
             evolution_trigger=evolution_trigger,
@@ -1978,7 +1978,7 @@ class APIData():
     def setup_encounter_method_name_data(self, encounter_method, name='encntr mthd nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         encounter_method_name = EncounterMethodName.objects.create(
             encounter_method=encounter_method,
@@ -2003,7 +2003,7 @@ class APIData():
     def setup_encounter_condition_name_data(self, encounter_condition, name='encntr cndtn nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         encounter_condition_name = EncounterConditionName.objects.create(
             encounter_condition=encounter_condition,
@@ -2032,7 +2032,7 @@ class APIData():
                                                   name='encntr cndtn vlu nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         encounter_condition_value_name = EncounterConditionValueName.objects.create(
             encounter_condition_value=encounter_condition_value,
@@ -2131,7 +2131,7 @@ class APIData():
     def setup_pal_park_area_name_data(self, pal_park_area, name='pl prk area nm'):
 
         language = self.setup_language_data(
-            name='lang for '+name)
+            name='lang for ' + name)
 
         pal_park_area_name = PalParkAreaName.objects.create(
             pal_park_area=pal_park_area,
@@ -2630,7 +2630,7 @@ class APITests(APIData, APITestCase):
         item_attribute_map = ItemAttributeMap(
             item=item,
             item_attribute=item_attribute
-          )
+        )
         item_attribute_map.save()
 
         sprites_data = json.loads(item_sprites.sprites)
@@ -4111,12 +4111,12 @@ class APITests(APIData, APITestCase):
         pokemon_moves = []
         for move in range(0, 4):
             version_group = self.setup_version_group_data(
-                name='ver grp '+str(move)+' for pkmn')
+                name='ver grp ' + str(move) + ' for pkmn')
             new_move = self.setup_pokemon_move_data(
-                    pokemon=pokemon,
-                    move=pokemon_move,
-                    version_group=version_group,
-                    level=move)
+                pokemon=pokemon,
+                move=pokemon_move,
+                version_group=version_group,
+                level=move)
             pokemon_moves.append(new_move)
 
         encounter_method = self.setup_encounter_method_data(name='encntr mthd for lctn area')

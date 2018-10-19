@@ -2,14 +2,14 @@
 from .settings import *  # NOQA
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'pokeapi',
-            'USER': 'ash',
-            'PASSWORD': 'pokemon',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pokeapi',
+        'USER': 'ash',
+        'PASSWORD': 'pokemon',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 

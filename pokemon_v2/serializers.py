@@ -1701,7 +1701,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         model = Type
         fields = (
             'id', 'name', 'damage_relations', 'game_indices', 'generation',
-            'move_damage_class', 'names',  'pokemon', 'moves'
+            'move_damage_class', 'names', 'pokemon', 'moves'
         )
 
     def get_type_relationships(self, obj):

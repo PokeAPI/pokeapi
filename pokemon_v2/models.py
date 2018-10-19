@@ -1346,7 +1346,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE)
 
     evolved_species = models.ForeignKey(
-        PokemonSpecies, related_name="evolved_species", blank=True, null=True, on_delete=models.CASCADE)
+        PokemonSpecies, related_name="evolved_species", blank=True, null=True,
+        on_delete=models.CASCADE)
 
     min_level = models.IntegerField(blank=True, null=True)
 

@@ -1,2 +1,2 @@
-flake8==3.5.0
-pyflakes===1.6.0
+pylint===2.1.1
+pylint-django===2.0.2

@@ -5,7 +5,7 @@ dev-install:
 	pip install -r test-requirements.txt
 
 lint:
-	pylint ../pokeapi --load-plugins pylint_django
+	pylint config data pokemon_v2 --load-plugins pylint_django
 
 setup:
 	python manage.py migrate --settings=config.local

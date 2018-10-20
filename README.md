@@ -57,7 +57,7 @@ Ask your company to also support this open source project by [becoming a sponsor
 
 **As of October 2018, the v1 API has been removed from PokéAPI.** For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).
 
-## Setup [![pyVersion27](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/download/releases/2.7/)
+## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
 - Download this source code into a working directory.
 

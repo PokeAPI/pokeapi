@@ -5,7 +5,7 @@ dev-install:
 	pip install -r test-requirements.txt
 
 lint:
-	flake8 .
+	pylint config data pokemon_v2 --load-plugins pylint_django
 
 setup:
 	python manage.py migrate --settings=config.local

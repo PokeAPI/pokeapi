@@ -1,6 +1,6 @@
 # Production settings
-from unipath import Path
 import os
+from unipath import Path
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
@@ -20,7 +20,7 @@ BASE_URL = 'http://pokeapi.co'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['.pokeapi.co', 'localhost']
+ALLOWED_HOSTS = ['.pokeapi.co', 'localhost', '127.0.0.1']
 
 TIME_ZONE = 'Europe/London'
 
@@ -44,7 +44,7 @@ TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 SECRET_KEY = '4nksdock439320df*(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#'
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'config.urls'
 

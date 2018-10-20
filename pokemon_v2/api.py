@@ -1,14 +1,14 @@
-
-from __future__ import unicode_literals
+import re
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
-from .models import *  # NOQA
-from .serializers import *  # NOQA
-import re
 
+from .models import *
+from .serializers import *
+
+# pylint: disable=no-member, attribute-defined-outside-init
 
 ###########################
 #  BEHAVIOR ABSTRACTIONS  #
@@ -34,8 +34,8 @@ class NameOrIdRetrieval():
     pk (in this case ID) or by name
     """
 
-    idPattern = re.compile("^-?[0-9]+$")
-    namePattern = re.compile("^[0-9A-Za-z\-\+]+$")
+    idPattern = re.compile(r"^-?[0-9]+$")
+    namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
 
     def get_object(self):
         queryset = self.get_queryset()

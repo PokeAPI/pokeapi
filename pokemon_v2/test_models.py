@@ -1,5 +1,5 @@
 from django.test import TestCase
-from pokemon_v2.models import *  # NOQA
+from pokemon_v2.models import *
 
 
 class AbilityTestCase(TestCase):

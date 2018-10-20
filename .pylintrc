@@ -7,7 +7,7 @@ extension-pkg-whitelist=
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
-ignore=CVS
+ignore=CVS, migrations, docker-compose.py, docker.py
 
 # Add files or directories matching the regex patterns to the blacklist. The
 # regex matches against base names, not paths.
@@ -67,7 +67,14 @@ disable=missing-docstring,
         wildcard-import,
         function-redefined,
         too-many-ancestors,
-        too-many-statements
+        too-many-statements,
+        unsubscriptable-object,
+        too-many-locals,
+        too-many-arguments,
+        too-many-public-methods,
+        too-few-public-methods,
+        duplicate-code,
+        no-self-use,
 
         # Disabled by default:
 
@@ -204,7 +211,7 @@ argument-naming-style=snake_case
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style.
-#argument-rgx=
+argument-rgx=[a-z0-9_]{1,30}$
 
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case
@@ -303,7 +310,7 @@ variable-naming-style=snake_case
 
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style.
-#variable-rgx=
+variable-rgx=[a-z0-9_]{1,75}$
 
 
 [FORMAT]

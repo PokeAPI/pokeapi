@@ -782,13 +782,12 @@ class Berry(HasName, HasItem):
     smoothness = models.IntegerField()
 
 
-"""
-Berry Flavors are a bit of a hack because their relationship
-in terms of flavors to contest types is really awkward the
-way it was handled in the veekun data set. Berry Flavor here
-does not match the csv table. Berry Flavor Map
-is a table fabricated just to suit this project.
-"""
+
+# Berry Flavors are a bit of a hack because their relationship
+# in terms of flavors to contest types is really awkward the
+# way it was handled in the veekun data set. Berry Flavor here
+# does not match the csv table. Berry Flavor Map
+# is a table fabricated just to suit this project.
 
 
 class BerryFlavor(HasName):

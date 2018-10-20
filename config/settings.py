@@ -1,6 +1,6 @@
 # Production settings
-from unipath import Path
 import os
+from unipath import Path
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 

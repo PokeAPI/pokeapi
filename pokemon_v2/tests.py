@@ -40,9 +40,9 @@ class APIData():
         return language
 
     @classmethod
-    def setup_language_name_data(cls, language, name='lang nm'):
+    def setup_language_name_data(cls, language, local_language=None, name='lang nm'):
 
-        local_language = cls.setup_language_data(
+        local_language = local_language or cls.setup_language_data(
             name='lang for ' + name)
 
         language_name = LanguageName.objects.create(

@@ -87,6 +87,7 @@ SECRET_KEY = os.environ.get(
 CUSTOM_APPS = (
     'tastypie',
     'pokemon_v2',
+    'graphql'
 )
 
 INSTALLED_APPS = (
@@ -98,8 +99,31 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'corsheaders',
     'rest_framework',
-    'cachalot'
+    'cachalot',
+    'graphene_django'
 ) + CUSTOM_APPS
+
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # 'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                # 'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 
 API_LIMIT_PER_PAGE = 1
@@ -133,4 +157,10 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '1000/hour'
     }
+}
+
+GRAPHENE = {
+    'MIDDLEWARE': [
+        'graphql_api.middleware.LoaderMiddleware'
+    ],
 }

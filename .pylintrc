@@ -66,15 +66,22 @@ disable=missing-docstring,
         unused-wildcard-import,
         wildcard-import,
         function-redefined,
+        unsubscriptable-object,
         too-many-ancestors,
         too-many-statements,
-        unsubscriptable-object,
         too-many-locals,
         too-many-arguments,
+        too-many-function-args,
         too-many-public-methods,
         too-few-public-methods,
         duplicate-code,
         no-self-use,
+        unused-argument,
+        line-too-long,
+        method-hidden,
+        arguments-differ,
+        bad-continuation,
+        fixme,
 
         # Disabled by default:
 
@@ -266,7 +273,9 @@ good-names=i,
            k,
            ex,
            Run,
-           _
+           _,
+           id,
+           maxDiff
 
 # Include a hint for the correct naming format with invalid-name.
 include-naming-hint=no

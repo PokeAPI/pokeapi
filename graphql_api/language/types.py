@@ -1,5 +1,5 @@
 import graphene as g
-from ..loader_key import LoaderKey
+from ..utils import load, load_with_args
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
@@ -24,10 +24,8 @@ class Language(g.ObjectType):
     names = base.TranslationList(
         lambda: LanguageName,
         description="The name of this language listed in different languages.",
+        resolver=load_with_args("language_names", using="pk"),
     )
-
-    def resolve_names(self, info, **kwargs):
-        return info.context.loaders.language_names.load(LoaderKey(self.pk, **kwargs))
 
 
 class LanguageName(g.ObjectType, interfaces=[i.Translation]):
@@ -36,8 +34,7 @@ class LanguageName(g.ObjectType, interfaces=[i.Translation]):
     )
     local_language_id = None
     language = g.Field(
-        Language, description="The local language this language name is in."
+        Language,
+        description="The local language this language name is in.",
+        resolver=load("language", using="local_language_id"),
     )
-
-    def resolve_language(self, info):
-        return info.context.loaders.language.load(self.local_language_id)

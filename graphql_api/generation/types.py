@@ -1,7 +1,6 @@
 import graphene as g
 from pokemon_v2 import models
-from ..loader_key import LoaderKey
-from ..utils import get_connection
+from ..utils import load, load_with_args, get_connection
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
@@ -20,11 +19,13 @@ class Generation(g.ObjectType):
     main_region = g.Field(
         g.lazy_import("graphql_api.region.types.Region"),
         description="The main region travelled in this generation.",
+        resolver=load("region", using="region_id")
     )
     name = g.ID(description="The name of this resource.")
     names = base.TranslationList(
         lambda: GenerationName,
         description="The name of this resource listed in different languages.",
+        resolver=load_with_args("generation_names", using="pk")
     )
     # moves = g.relay.ConnectionField(
     #     g.lazy_import("graphql_api.move.connection.MoveConnection"),
@@ -39,10 +40,12 @@ class Generation(g.ObjectType):
     # types = g.List(
     #     g.lazy_import("graphql_api.type.types.Type"),
     #     description="A list of types that were introduced in this generation.",
+    #     resolver=load("generation_types", using="pk")
     # )
     version_groups = g.List(
         g.lazy_import("graphql_api.version_group.types.VersionGroup"),
         description="A list of version groups that were introduced in this generation.",
+        resolver=load("generation_versiongroups", using="pk")
     )
 
     # def resolve_abilities(self, info, **kwargs):
@@ -50,12 +53,6 @@ class Generation(g.ObjectType):
 
     #     q = models.Ability.objects.filter(generation_id=self.pk)
     #     return getConnection(q, types.AbilityConnection, **kwargs)
-
-    def resolve_names(self, info, **kwargs):
-        return info.context.loaders.generation_names.load(LoaderKey(self.pk, **kwargs))
-
-    def resolve_main_region(self, info):
-        return info.context.loaders.region.load(self.region_id)
 
     # def resolve_moves(self, info, **kwargs):
     #     from ..move import connection as conn
@@ -69,11 +66,6 @@ class Generation(g.ObjectType):
     #     q = models.PokemonSpecies.objects.filter(generation_id=self.pk)
     #     return getConnection(q, conn.PokemonSpeciesConnection, **kwargs)
 
-    def resolve_types(self, info):
-        return info.context.loaders.generation_types.load(self.pk)
-
-    def resolve_version_groups(self, info):
-        return info.context.loaders.generation_versiongroups.load(self.pk)
 
 
 class GenerationName(base.BaseTranslation, interfaces=[i.Translation]):

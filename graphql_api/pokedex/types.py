@@ -1,7 +1,6 @@
 import graphene as g
 from pokemon_v2 import models
-from ..loader_key import LoaderKey
-from ..utils import get_page
+from ..utils import load, load_with_args, get_page
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 # from ..pokemon_species.types import PokemonSpecies
@@ -19,24 +18,19 @@ class Pokedex(g.ObjectType):
     descriptions = base.TranslationList(
         lambda: PokedexDescription,
         description="The description of this resource listed in different languages.",
+        resolver=load_with_args("pokedex_descriptions", using="pk")
     )
     name = g.ID(description="The name of this resource.")
     names = base.TranslationList(
         lambda: PokedexName,
         description="The name of this resource listed in different languages.",
+        resolver=load_with_args("pokedex_names", using="pk")
     )
     # pokemon_entries = g.relay.ConnectionField(
     #     lambda: PokedexEntryConnection,
     #     description="A list of Pokémon catalogued in this Pokédex and their indexes.",
     #     order_by=g.List(lambda: PokedexEntrySort),
     # )
-
-    def resolve_descriptions(self, info, **kwargs):
-        key = LoaderKey(self.pk, **kwargs)
-        return info.context.loaders.pokedex_descriptions.load(key)
-
-    def resolve_names(self, info, **kwargs):
-        return info.context.loaders.pokedex_names.load(LoaderKey(self.pk, **kwargs))
 
     # def resolve_pokemon_entries(self, info, order_by, **kwargs):
     #     q = models.PokemonDexNumber.objects.filter(pokedex_id=self.pk)

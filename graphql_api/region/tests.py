@@ -42,6 +42,7 @@ class RegionTests(GraphQLTest):
                                 text
                                 language {name}
                             }
+                            pokedexes {name}
                             versionGroups {name}
                         }
                     }
@@ -69,6 +70,9 @@ class RegionTests(GraphQLTest):
                                         "language": {"name": n.language.name},
                                     }
                                     for n in reg.regionname.all()
+                                ],
+                                "pokedexes": [
+                                    {"name": p.name} for p in reg.pokedex.all()
                                 ],
                                 "versionGroups": [
                                     {"name": vgr.version_group.name}

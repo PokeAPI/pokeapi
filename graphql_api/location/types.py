@@ -1,5 +1,5 @@
 import graphene as g
-from ..loader_key import LoaderKey
+from ..utils import load, load_with_args
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
@@ -13,33 +13,25 @@ class Location(g.ObjectType):
     areas = g.List(
         g.lazy_import("graphql_api.location_area.types.LocationArea"),
         description="Areas that can be found within this location.",
+        resolver=load("location_locationareas", using="pk"),
     )
     game_indices = g.List(
         lambda: LocationGameIndex,
-        description="A list of game indices relevent to this location by generation."
+        description="A list of game indices relevent to this location by generation.",
+        resolver=load("location_gameindices", using="pk"),
     )
     name = g.ID(description="The name of this resource.")
     names = base.TranslationList(
         lambda: LocationName,
         description="The name of this resource listed in different languages.",
+        resolver=load_with_args("location_names", using="pk"),
     )
     region_id = None
     region = g.Field(
-        g.lazy_import('graphql_api.region.types.Region'),
-        description="The region this location can be found in."
+        g.lazy_import("graphql_api.region.types.Region"),
+        description="The region this location can be found in.",
+        resolver=load("region", using="region_id"),
     )
-
-    def resolve_areas(self, info):
-        return info.context.loaders.location_locationareas.load(self.pk)
-
-    def resolve_game_indices(self, info):
-        return info.context.loaders.location_gameindices.load(self.pk)
-
-    def resolve_names(self, info, **kwargs):
-        return info.context.loaders.location_names.load(LoaderKey(self.pk, **kwargs))
-
-    def resolve_region(self, info):
-        return info.context.loaders.region.load(self.region_id)
 
 
 class LocationName(base.BaseTranslation, interfaces=[i.Translation]):
@@ -56,7 +48,5 @@ class LocationGameIndex(g.ObjectType):
     generation = g.Field(
         g.lazy_import("graphql_api.generation.types.Generation"),
         description="The generation relevent to this game index.",
+        resolver=load("generation", using="generation_id"),
     )
-
-    def resolve_generation(self, info):
-        return info.context.loaders.generation.load(self.generation_id)

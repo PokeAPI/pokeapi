@@ -23,6 +23,7 @@ class VersionTests(GraphQLTest):
                         text
                         language {name}
                     }
+                    versionGroup {name}
                 }
             }
             """
@@ -36,6 +37,7 @@ class VersionTests(GraphQLTest):
                             {"text": n.name, "language": {"name": n.language.name}}
                             for n in v.versionname.all()
                         ],
+                        "versionGroup": {"name": v.version_group.name},
                     }
                     for v in self.versions
                 ]

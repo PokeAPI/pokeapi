@@ -1,11 +1,11 @@
 import json
 import graphene as g
 from pokemon_v2 import models
+from ..constants import IMAGE_HOST
 from ..loader_key import LoaderKey
-from ..utils import get_connection, get_page
+from ..utils import load, load_with_args, get_connection, get_page
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
-from ..constants import IMAGE_HOST
 
 # from ..move.types import Move
 
@@ -19,6 +19,7 @@ class Pokemon(g.ObjectType):
     abilities = g.List(
         lambda: PokemonAbility,
         description="A list of abilities this Pokémon could potentially have.",
+        resolver=load("pokemon_abilities", using="pk"),
     )
     base_experience = g.Int(
         description="The base experience gained for defeating this Pokémon."
@@ -26,10 +27,12 @@ class Pokemon(g.ObjectType):
     # forms = g.List(
     #     g.lazy_import("graphql_api.pokemon_form.types.PokemonForm"),
     #     description="A list of forms this Pokémon can take on.",
+    #     resolver=load("pokemon_forms", using="pk"),
     # )
     game_indices = g.List(
         lambda: PokemonGameIndex,
         description="A list of game indices relevent to Pokémon item by generation.",
+        resolver=load("pokemon_gameindices", using="pk"),
     )
     height = g.Int(description="The height of this Pokémon.")
     # held_items = g.List(
@@ -54,29 +57,25 @@ class Pokemon(g.ObjectType):
     pokemon_species_id = None
     # species = g.Field(
     #     g.lazy_import("graphql_api.pokemon_species.types.PokemonSpecies"),
-    #     description="The species this Pokémon belongs to."
+    #     description="The species this Pokémon belongs to.",
+    #     resolver=load("pokemonspecies", using="pokemon_species_id"),
     # )
     sprites = g.Field(
         lambda: PokemonSprites,
         description="A set of sprites used to depict this Pokémon in the game.",
+        resolver=load("pokemon_sprites", using="pk"),
     )
     stats = g.List(
-        lambda: PokemonStat, description="A list of base stat values for this Pokémon."
+        lambda: PokemonStat,
+        description="A list of base stat values for this Pokémon.",
+        resolver=load("pokemon_stats", using="pk"),
     )
     types = g.List(
         lambda: PokemonType,
         description="A list of details showing types this Pokémon has.",
+        resolver=load("pokemon_types", using="pk"),
     )
     weight = g.Int(description="The weight of this Pokémon.")
-
-    def resolve_abilities(self, info):
-        return info.context.loaders.pokemon_abilities.load(self.pk)
-
-    def resolve_forms(self, info):
-        return info.context.loaders.pokemon_forms.load(self.pk)
-
-    def resolve_game_indices(self, info):
-        return info.context.loaders.pokemon_gameindices.load(self.pk)
 
     def resolve_held_items(self, info):
         def del_duplicates(pokemon_items):
@@ -118,18 +117,6 @@ class Pokemon(g.ObjectType):
     #         total_count=page.total_count,
     #     )
 
-    def resolve_species(self, info):
-        return info.context.loaders.pokemonspecies.load(self.pokemon_species_id)
-
-    def resolve_sprites(self, info):
-        return info.context.loaders.pokemon_sprites.load(self.pk)
-
-    def resolve_stats(self, info):
-        return info.context.loaders.pokemon_stats.load(self.pk)
-
-    def resolve_types(self, info):
-        return info.context.loaders.pokemon_types.load(self.pk)
-
 
 class PokemonAbility(g.ObjectType):
     is_hidden = g.Boolean(description="Whether this is a hidden ability.")
@@ -140,10 +127,8 @@ class PokemonAbility(g.ObjectType):
     # ability = g.Field(
     #     g.lazy_import("graphql_api.ability.types.Ability"),
     #     description="The ability the Pokémon may have.",
+    #     resolver=load("ability", using="ability_id"),
     # )
-
-    def resolve_ability(self, info):
-        return info.context.loaders.ability.load(self.ability_id)
 
 
 class PokemonGameIndex(g.ObjectType):
@@ -152,10 +137,8 @@ class PokemonGameIndex(g.ObjectType):
     version = g.Field(
         g.lazy_import("graphql_api.version.types.Version"),
         description="The version relevent to this game index.",
+        resolver=load("version", using="version_id"),
     )
-
-    def resolve_version(self, info):
-        return info.context.loaders.version.load(self.version_id)
 
 
 class PokemonHeldItem(g.ObjectType):
@@ -164,14 +147,12 @@ class PokemonHeldItem(g.ObjectType):
     # item = g.Field(
     #     lazy_import("graphql_api.item_interface.types.ItemInterface"),
     #     description="The item the referenced Pokémon holds.",
+    #     resolver=load("item", using="item_id"),
     # )
     # versions = g.List(
     #     lambda: PokemonHeldItemVersion,
     #     description="The details of the different versions in which the item is held.",
     # )
-
-    # def resolve_item(self, info):
-    #     return info.context.loaders.item.load(self.item_id)
 
     # def resolve_versions(self, info):
     #     pokemon_items = models.PokemonItem.objects.filter(
@@ -195,10 +176,8 @@ class PokemonHeldItemVersion(g.ObjectType):
     version = g.Field(
         g.lazy_import("graphql_api.version.types.Version"),
         description="The version in which the item is held.",
+        resolver=load("version", using="version_id"),
     )
-
-    def resolve_version(self, info):
-        return info.context.loaders.version.load(self.version_id)
 
 
 # class PokemonMoveConnection(base.BaseConnection, g.relay.Connection, node=Move):
@@ -240,18 +219,14 @@ class PokemonMoveVersion(g.ObjectType):
     move_learn_method = g.Field(
         g.lazy_import("graphql_api.move_learn_method.types.MoveLearnMethod"),
         description="The method by which the move is learned.",
+        resolver=load("movelearnmethod", using="move_learn_method_id"),
     )
     version_group_id = None
     version_group = g.Field(
         g.lazy_import("graphql_api.version_group.types.VersionGroup"),
         description="The version group in which the move is learned.",
+        resolver=load("versiongroup", using="version_group_id"),
     )
-
-    def resolve_move_learn_method(self, info):
-        return info.context.loaders.movelearnmethod.load(self.move_learn_method_id)
-
-    def resolve_version_group(self, info):
-        return info.context.loaders.versiongroup.load(self.version_group_id)
 
 
 def get_sprite(sprite_name):
@@ -287,11 +262,9 @@ class PokemonStat(g.ObjectType):
     stat_id = None
     # stat = g.Field(
     #     g.lazy_import("graphql_api.stat.types.Stat"),
-    #     description="The stat the Pokémon has."
+    #     description="The stat the Pokémon has.",
+    #     resolver=load("stat", using="stat_id"),
     # )
-
-    def resolve_stat(self, info):
-        return info.context.loaders.stat.load(self.stat_id)
 
 
 class PokemonType(g.ObjectType):
@@ -302,7 +275,5 @@ class PokemonType(g.ObjectType):
     # type = g.Field(
     #     g.lazy_import("graphql_api.type.types.Type"),
     #     description="The type the Pokémon has.",
+    #     resolver=load("type", using="type_id"),
     # )
-
-    def resolve_type(self, info):
-        return info.context.loaders.type.load(self.type_id)

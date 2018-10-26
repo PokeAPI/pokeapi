@@ -1,7 +1,6 @@
 import graphene as g
 from pokemon_v2 import models
-from ..loader_key import LoaderKey
-from ..utils import get_connection
+from ..utils import load, load_with_args, get_connection
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
@@ -15,6 +14,7 @@ class LocationArea(g.ObjectType):
     # encounter_method_rates = g.List(
     #     g.lazy_import("graphql_api.encounter_method_rate.types.EncounterMethodRate"),
     #     description="A list of methods in which Pokémon may be encountered in this area and how likely the method will occur depending on the version of the game.",
+    #     resolver=load("locationarea_encounterrates", using="pk"),
     # )
     game_index = g.Int(
         description="The internal id of an API resource within game data."
@@ -23,11 +23,13 @@ class LocationArea(g.ObjectType):
     location = g.Field(
         g.lazy_import("graphql_api.location.types.Location"),
         description="The location this area can be found in.",
+        resolver=load("location", using="location_id")
     )
     name = g.ID(description="The name of this resource.")
     names = base.TranslationList(
         lambda: LocationAreaName,
         description="The name of this resource listed in different languages.",
+        resolver=load_with_args("locationarea_names", using="pk"),
     )
     # pokemon_encounters = g.relay.ConnectionField(
     #     g.lazy_import(
@@ -35,16 +37,6 @@ class LocationArea(g.ObjectType):
     #     ),
     #     description="A list of Pokémon encounters for this location area.",
     # )
-
-    def resolve_encounter_method_rates(self, info):
-        return info.context.loaders.locationarea_encounterrates.load(self.pk)
-
-    def resolve_location(self, info):
-        return info.context.loaders.location.load(self.location_id)
-
-    def resolve_names(self, info, **kwargs):
-        key = LoaderKey(self.pk, **kwargs)
-        return info.context.loaders.locationarea_names.load(key)
 
     # def resolve_pokemon_encounters(self, info):
     #     from ..pokemon_encounter.connection import PokemonEncounterConnection

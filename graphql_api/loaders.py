@@ -150,7 +150,8 @@ class TranslationsLoader(DataLoader):
                     return languages.index(name)
                 return translation.pk
 
-            sorted_results.append(sorted(result, key=sort_key))
+            result = sorted(result, key=sort_key)
+            sorted_results.append(result)
 
         return Promise.resolve(sorted_results)
 

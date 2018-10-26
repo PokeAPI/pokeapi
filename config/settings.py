@@ -87,7 +87,7 @@ SECRET_KEY = os.environ.get(
 CUSTOM_APPS = (
     'tastypie',
     'pokemon_v2',
-    'graphql'
+    'graphql_api'
 )
 
 INSTALLED_APPS = (

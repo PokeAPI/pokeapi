@@ -30,10 +30,10 @@ class Location(g.ObjectType):
     )
 
     def resolve_areas(self, info):
-        return info.context.loaders.location_locationareas.load(LoaderKey(self.pk))
+        return info.context.loaders.location_locationareas.load(self.pk)
 
     def resolve_game_indices(self, info):
-        return info.context.loaders.location_gameindices.load(LoaderKey(self.pk))
+        return info.context.loaders.location_gameindices.load(self.pk)
 
     def resolve_names(self, info, **kwargs):
         return info.context.loaders.location_names.load(LoaderKey(self.pk, **kwargs))

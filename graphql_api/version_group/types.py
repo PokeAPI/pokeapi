@@ -23,4 +23,4 @@ class VersionGroup(g.ObjectType):
         return info.context.loaders.generation.load(self.generation_id)
 
     def resolve_versions(self, info):
-        return info.context.loaders.versiongroup_versions.load(LoaderKey(self.pk))
+        return info.context.loaders.versiongroup_versions.load(self.pk)

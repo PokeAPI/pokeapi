@@ -36,17 +36,18 @@ class Region(g.ObjectType):
 
     def resolve_locations(self, info, **kwargs):
         from ..location.connection import LocationConnection
+
         q = models.Location.objects.filter(region_id=self.pk)
         return get_connection(q, LocationConnection, **kwargs)
 
     def resolve_main_generation(self, info):
-        return info.context.loaders.generation_by_region.load(self.pk)
+        return info.context.loaders.region_generations.load(self.pk)
 
     def resolve_names(self, info, **kwargs):
         return info.context.loaders.region_names.load(LoaderKey(self.pk, **kwargs))
 
     def resolve_version_groups(self, info):
-        return info.context.loaders.region_versiongroups.load(LoaderKey(self.pk))
+        return info.context.loaders.region_versiongroups.load(self.pk)
 
 
 class RegionName(base.BaseTranslation, interfaces=[i.Translation]):

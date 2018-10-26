@@ -70,13 +70,13 @@ class Pokemon(g.ObjectType):
     weight = g.Int(description="The weight of this Pokémon.")
 
     def resolve_abilities(self, info):
-        return info.context.loaders.pokemon_abilities.load(LoaderKey(self.pk))
+        return info.context.loaders.pokemon_abilities.load(self.pk)
 
     def resolve_forms(self, info):
-        return info.context.loaders.pokemon_forms.load(LoaderKey(self.pk))
+        return info.context.loaders.pokemon_forms.load(self.pk)
 
     def resolve_game_indices(self, info):
-        return info.context.loaders.pokemon_gameindices.load(LoaderKey(self.pk))
+        return info.context.loaders.pokemon_gameindices.load(self.pk)
 
     def resolve_held_items(self, info):
         def del_duplicates(pokemon_items):
@@ -89,8 +89,7 @@ class Pokemon(g.ObjectType):
 
             return held_items
 
-        key = LoaderKey(self.pk)
-        return info.context.loaders.pokemon_items.load(key).then(del_duplicates)
+        return info.context.loaders.pokemon_items.load(self.pk).then(del_duplicates)
 
     # def resolve_location_area_encounters(self, info, **kwargs):
     #     from ..pokemon_encounter.connection import PokemonEncounterConnection
@@ -126,10 +125,10 @@ class Pokemon(g.ObjectType):
         return info.context.loaders.pokemon_sprites.load(self.pk)
 
     def resolve_stats(self, info):
-        return info.context.loaders.pokemon_stats.load(LoaderKey(self.pk))
+        return info.context.loaders.pokemon_stats.load(self.pk)
 
     def resolve_types(self, info):
-        return info.context.loaders.pokemon_types.load(LoaderKey(self.pk))
+        return info.context.loaders.pokemon_types.load(self.pk)
 
 
 class PokemonAbility(g.ObjectType):

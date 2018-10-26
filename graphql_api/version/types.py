@@ -23,9 +23,8 @@ class Version(g.ObjectType):
         return info.context.loaders.version.load(self.version_group_id)
 
     def resolve_names(self, info, **kwargs):
-        return info.context.loaders.version_names.load(
-            LoaderKey(self.pk, **kwargs)
-        )
+        key = LoaderKey(self.pk, **kwargs)
+        return info.context.loaders.version_names.load(key)
 
 
 class VersionName(base.BaseTranslation, interfaces=[i.Translation]):

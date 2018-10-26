@@ -1,4 +1,24 @@
-from .create_batches import create_batches
+from ..loader_key import LoaderKey
+
+
+def create_batches(keys):
+    """
+    Batch a requests list. Given a list of `keys` (instances of LoaderKey), return a dictionary that groups each key's `id` value under its `args` value in a dictionary. Each unique `args` object from `keys` forms the dictionary's keys while the dict's values are a list of corresponding key `id`s for values.
+    """
+
+    batches = {}
+    for key in keys:
+        assert isinstance(key, LoaderKey), (
+            "The 'create_batches' function requires keys of type %s, not %s"
+            % (LoaderKey, type(key))
+        )
+        if key.args in batches:
+            batches[key.args].append(key.id)
+        else:
+            batches[key.args] = [key.id]
+
+    return batches
+
 
 def batch_fetch(keys, get_query_set_fn, id_attr):
     """

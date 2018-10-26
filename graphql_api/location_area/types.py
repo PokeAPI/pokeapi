@@ -37,15 +37,14 @@ class LocationArea(g.ObjectType):
     # )
 
     def resolve_encounter_method_rates(self, info):
-        return info.context.loaders.locationarea_encounterrates.load(LoaderKey(self.pk))
+        return info.context.loaders.locationarea_encounterrates.load(self.pk)
 
     def resolve_location(self, info):
         return info.context.loaders.location.load(self.location_id)
 
     def resolve_names(self, info, **kwargs):
-        return info.context.loaders.locationarea_names.load(
-            LoaderKey(self.pk, **kwargs)
-        )
+        key = LoaderKey(self.pk, **kwargs)
+        return info.context.loaders.locationarea_names.load(key)
 
     # def resolve_pokemon_encounters(self, info):
     #     from ..pokemon_encounter.connection import PokemonEncounterConnection

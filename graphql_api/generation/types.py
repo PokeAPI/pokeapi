@@ -70,10 +70,10 @@ class Generation(g.ObjectType):
     #     return getConnection(q, conn.PokemonSpeciesConnection, **kwargs)
 
     def resolve_types(self, info):
-        return info.context.loaders.generation_types.load(LoaderKey(self.pk))
+        return info.context.loaders.generation_types.load(self.pk)
 
     def resolve_version_groups(self, info):
-        return info.context.loaders.generation_versiongroups.load(LoaderKey(self.pk))
+        return info.context.loaders.generation_versiongroups.load(self.pk)
 
 
 class GenerationName(base.BaseTranslation, interfaces=[i.Translation]):

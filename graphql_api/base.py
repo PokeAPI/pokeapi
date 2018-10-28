@@ -1,6 +1,5 @@
 import graphene as g
 from graphql import GraphQLError
-from pokemon_v2 import models
 
 
 class BaseQuery(g.ObjectType):
@@ -17,16 +16,6 @@ class URI(g.String):
     """An RFC 3986, RFC 3987, and RFC 6570 (level 4) compliant URI string."""
 
     pass
-
-
-def lazy_load_language_enum():
-    return g.Enum(
-        "LanguageEnum",
-        [
-            (l.name.upper().replace("-", "_"), l.name)
-            for l in models.Language.objects.all()
-        ],
-    )
 
 
 class BaseWhere(g.InputObjectType):
@@ -55,7 +44,7 @@ class TextSearch(g.InputObjectType):
     query = g.String(description="The text to search for.", required=True)
     case_sensitive = g.Boolean(default_value=False)
     lang = g.Field(
-        lazy_load_language_enum,
+        g.lazy_import("graphql_api.language_enum.LanguageEnum"),
         description="Restrict search results to a specific language. By default, searches will be performed against all languages.",
     )
     # exact = Boolean(
@@ -81,7 +70,7 @@ class BaseSort(g.InputObjectType):
         description="The sort direction.", default_value=SortDirection.ASC
     )
     lang = g.Field(
-        lazy_load_language_enum,
+        g.lazy_import("graphql_api.language_enum.LanguageEnum"),
         description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts.",
     )
 
@@ -110,7 +99,7 @@ class TranslationList(g.List):
         kwargs.setdefault(
             "lang",
             g.List(
-                lazy_load_language_enum,
+                g.lazy_import("graphql_api.language_enum.LanguageEnum"),
                 description="Restrict results to specific languages, in the order specified. This allows a client to specify a primary language with one or more fall-back languages to be used when the primary language is not available.",
             ),
         )

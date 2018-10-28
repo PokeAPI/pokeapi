@@ -15,13 +15,18 @@ class BaseConnection:
 
 class URI(g.String):
     """An RFC 3986, RFC 3987, and RFC 6570 (level 4) compliant URI string."""
+
     pass
 
 
-LanguageEnum = g.Enum(  # pylint: disable=invalid-name
-    "LanguageEnum",
-    [(l.name.upper().replace("-", "_"), l.name) for l in models.Language.objects.all()],
-)
+def lazy_load_language_enum():
+    return g.Enum(
+        "LanguageEnum",
+        [
+            (l.name.upper().replace("-", "_"), l.name)
+            for l in models.Language.objects.all()
+        ],
+    )
 
 
 class BaseWhere(g.InputObjectType):
@@ -50,8 +55,8 @@ class TextSearch(g.InputObjectType):
     query = g.String(description="The text to search for.", required=True)
     case_sensitive = g.Boolean(default_value=False)
     lang = g.Field(
-        LanguageEnum,
-        description="Restrict search results to a specific language. By default, searches will be performed against all languages."
+        lazy_load_language_enum,
+        description="Restrict search results to a specific language. By default, searches will be performed against all languages.",
     )
     # exact = Boolean(
     #     default_value=False,
@@ -76,8 +81,8 @@ class BaseSort(g.InputObjectType):
         description="The sort direction.", default_value=SortDirection.ASC
     )
     lang = g.Field(
-        LanguageEnum,
-        description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts."
+        lazy_load_language_enum,
+        description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts.",
     )
 
     @classmethod
@@ -105,7 +110,7 @@ class TranslationList(g.List):
         kwargs.setdefault(
             "lang",
             g.List(
-                LanguageEnum,
+                lazy_load_language_enum,
                 description="Restrict results to specific languages, in the order specified. This allows a client to specify a primary language with one or more fall-back languages to be used when the primary language is not available.",
             ),
         )

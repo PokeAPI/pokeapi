@@ -1,15 +1,14 @@
-
-from __future__ import unicode_literals
+import re
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
-from .models import *  # NOQA
-from .serializers import *  # NOQA
-import re
-from hits.models import ResourceView
 
+from .models import *
+from .serializers import *
+
+# pylint: disable=no-member, attribute-defined-outside-init
 
 ###########################
 #  BEHAVIOR ABSTRACTIONS  #
@@ -35,8 +34,8 @@ class NameOrIdRetrieval():
     pk (in this case ID) or by name
     """
 
-    idPattern = re.compile("^-?[0-9]+$")
-    namePattern = re.compile("^[0-9A-Za-z\-\+]+$")
+    idPattern = re.compile(r"^-?[0-9]+$")
+    namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
 
     def get_object(self):
         queryset = self.get_queryset()
@@ -55,16 +54,8 @@ class NameOrIdRetrieval():
         return resp
 
 
-class IncrementingReadOnlyModelViewSet(viewsets.ReadOnlyModelViewSet):
-
-    def retrieve(self, request, *args, **kwargs):
-        ResourceView.objects.increment_view_count(version=2)
-        return super(
-            IncrementingReadOnlyModelViewSet, self).retrieve(self, request, *args, **kwargs)
-
-
 class PokeapiCommonViewset(ListOrDetailSerialRelation,
-                           NameOrIdRetrieval, IncrementingReadOnlyModelViewSet):
+                           NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
     pass
 
 
@@ -233,7 +224,7 @@ class LocationResource(PokeapiCommonViewset):
     list_serializer_class = LocationSummarySerializer
 
 
-class LocationAreaResource(ListOrDetailSerialRelation, IncrementingReadOnlyModelViewSet):
+class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
 
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer

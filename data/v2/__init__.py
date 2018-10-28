@@ -1,1 +1,1 @@
-from build import *  # NOQA
+from .build import *

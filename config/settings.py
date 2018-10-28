@@ -1,6 +1,6 @@
 # Production settings
-from unipath import Path
 import os
+from unipath import Path
 
 PROJECT_ROOT = Path(__file__).ancestor(2)
 
@@ -20,7 +20,7 @@ BASE_URL = 'http://pokeapi.co'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['.pokeapi.co', 'localhost']
+ALLOWED_HOSTS = ['.pokeapi.co', 'localhost', '127.0.0.1']
 
 TIME_ZONE = 'Europe/London'
 
@@ -42,34 +42,9 @@ USE_TZ = True
 # Explicitly define test runner to avoid warning messages on test execution
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
-MEDIA_ROOT = PROJECT_ROOT.child('media')
-
-MEDIA_URL = '/media/'
-
-STATIC_ROOT = PROJECT_ROOT.child('assets')
-
-STATIC_URL = '/assets/'
-
-STATICFILES_DIRS = (
-    # '/pokemon/assets/',
-    # 'pokemon_v2/assets/',
-)
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
-
 SECRET_KEY = '4nksdock439320df*(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#'
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    'django.template.loaders.eggs.Loader',
-)
-
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -77,15 +52,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+]
 
 ROOT_URLCONF = 'config.urls'
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-TEMPLATE_DIRS = (
-    PROJECT_ROOT.child('templates'),
-)
 
 DATABASES = {
     'default': {
@@ -115,10 +86,7 @@ SECRET_KEY = os.environ.get(
 
 CUSTOM_APPS = (
     'tastypie',
-    'pokemon',
     'pokemon_v2',
-    'hits',
-    'alerts',
 )
 
 INSTALLED_APPS = (
@@ -126,12 +94,10 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.humanize',
     'corsheaders',
     'rest_framework',
-    'markdown_deux',
     'cachalot'
 ) + CUSTOM_APPS
 
@@ -168,33 +134,3 @@ REST_FRAMEWORK = {
         'anon': '1000/hour'
     }
 }
-
-MARKDOWN_DEUX_STYLES = {
-    "default": {
-        "extras": {
-            "code-friendly": None,
-            "tables": None,
-            "fenced-code-blocks": None,
-            "header-ids": None
-        },
-        "safe_mode": False,
-    },
-}
-
-# Stripe
-
-STRIPE_TEST_SECRET_KEY = os.environ.get('STRIPE_TEST_SECRET_KEY', '')
-STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
-STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY', '')
-STRIPE_TEST_PUBLISHABLE_KEY = os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY', '')
-
-if DEBUG:
-    STRIPE_KEYS = {
-        "secret": STRIPE_TEST_SECRET_KEY,
-        "publishable": STRIPE_TEST_PUBLISHABLE_KEY
-    }
-else:
-    STRIPE_KEYS = {
-        "secret": STRIPE_SECRET_KEY,
-        "publishable": STRIPE_PUBLISHABLE_KEY
-    }

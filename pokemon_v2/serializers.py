@@ -1,15 +1,13 @@
-
-from __future__ import unicode_literals
-from django.core.urlresolvers import reverse
-from rest_framework import serializers
 from collections import OrderedDict
 import json
+from django.urls import reverse
+from rest_framework import serializers
 
-"""
-PokeAPI v2 serializers in order of dependency
-"""
+# pylint: disable=redefined-builtin
 
-from .models import *  # NOQA
+# PokeAPI v2 serializers in order of dependency
+
+from .models import *
 
 
 #########################
@@ -499,7 +497,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
 
         mod = obj.gene_mod_5
         values = []
-        while (mod <= 30):
+        while mod <= 30:
             values.append(mod)
             mod += 5
 
@@ -1404,7 +1402,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         sprites_data = json.loads(sprites_data['sprites'])
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key in sprites_data:
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
@@ -1703,7 +1701,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         model = Type
         fields = (
             'id', 'name', 'damage_relations', 'game_indices', 'generation',
-            'move_damage_class', 'names',  'pokemon', 'moves'
+            'move_damage_class', 'names', 'pokemon', 'moves'
         )
 
     def get_type_relationships(self, obj):
@@ -2307,7 +2305,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key in sprites_data:
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
@@ -2525,7 +2523,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_data = json.loads(sprites_data['sprites'])
         host = 'raw.githubusercontent.com/PokeAPI/sprites/master/'
 
-        for key, val in sprites_data.iteritems():
+        for key in sprites_data:
             if sprites_data[key]:
                 sprites_data[key] = 'https://' + host + sprites_data[key].replace('/media/', '')
 
@@ -2540,12 +2538,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         method_data = MoveLearnMethodSummarySerializer(
             method_objects, many=True, context=self.context).data
 
-        '''
-        Get moves related to this pokemon and pull out unique Move IDs.
-        Note that it's important to order by the same column we're using to
-        determine if the entries are unique.  Otherwise distinct() will
-        return apparent duplicates.
-        '''
+        # Get moves related to this pokemon and pull out unique Move IDs.
+        # Note that it's important to order by the same column we're using to
+        # determine if the entries are unique.  Otherwise distinct() will
+        # return apparent duplicates.
+
         pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by('move_id')
         move_ids = pokemon_moves.values('move_id').distinct()
         move_list = []

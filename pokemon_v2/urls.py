@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.conf.urls import include, url
 
 #####################################
@@ -10,7 +7,9 @@ from django.conf.urls import include, url
 #####################################
 
 from rest_framework import routers
-from pokemon_v2.api import *  # NOQA
+from pokemon_v2.api import *
+
+# pylint: disable=invalid-name
 
 router = routers.DefaultRouter()
 

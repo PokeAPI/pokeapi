@@ -55,13 +55,9 @@ Ask your company to also support this open source project by [becoming a sponsor
 
 ## DEPRECATION
 
-Quite a lot of data is missing from the V1 API.
+**As of October 2018, the v1 API has been removed from PokéAPI.** For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).
 
-**As of January 2015, no new data will be added to the v1 API, you will have to use the V2 API instead.**
-
-See [This blog post for more information](http://phalt.co/if-you-have-data-they-will-consume-it).
-
-## Setup [![pyVersion27](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/download/releases/2.7/)
+## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
 - Download this source code into a working directory.
 
@@ -86,26 +82,7 @@ If you ever need to wipe the database use this command:
 $ make wipe_db
 ```
 
-## V1 Database setup
-
-Start Django shell
-```
-$ python manage.py shell --settings=config.local
-```
-import build functions
-```
-$ from data.v1.build import *
-```
-run the functions in order to populate v1 tables
-```
-$ build_pokes()
-$ build_abilities()
-$ build moves()
-etc...
-```
-
-
-## V2 Database setup
+## Database setup
 
 Start Django shell
 ```

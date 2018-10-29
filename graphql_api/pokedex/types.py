@@ -75,7 +75,7 @@ class PokedexEntryConnection(
 
 
 class PokedexEntrySort(base.BaseSort):
-    sort = g.InputField(
+    field = g.InputField(
         g.Enum("PokedexEntrySortOptions", [("ENTRY_NUMBER", "pokedex_number")]),
         description="The field to sort by.",
     )

@@ -1,7 +1,7 @@
 from collections import namedtuple
+# pylint: disable=redefined-builtin
 
-
-class LoaderKey(object):
+class LoaderKey:
     """
 	A hashable, immutable key identifier for use in dataloaders. To use, create a
     LoaderKey object from a unique `id` and any other optional named kwargs. The `id`

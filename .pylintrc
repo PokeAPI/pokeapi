@@ -74,6 +74,7 @@ disable=missing-docstring,
         too-many-function-args,
         too-many-public-methods,
         too-few-public-methods,
+        too-many-instance-attributes,
         duplicate-code,
         no-self-use,
         unused-argument,
@@ -82,6 +83,7 @@ disable=missing-docstring,
         arguments-differ,
         bad-continuation,
         fixme,
+        inconsistent-return-statements,
 
         # Disabled by default:
 
@@ -254,7 +256,7 @@ const-naming-style=UPPER_CASE
 
 # Regular expression matching correct constant names. Overrides const-naming-
 # style.
-#const-rgx=
+const-rgx=[A-Za-z0-9_]{1,75}$
 
 # Minimum line length for functions/classes that require docstrings, shorter
 # ones are exempt.

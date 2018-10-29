@@ -1,7 +1,7 @@
 from .loaders import Loaders
 
 
-class LoaderMiddleware(object):
+class LoaderMiddleware:
     """
 	Graphene middleware for attaching a new instance of Loaders to the
 	request context.

@@ -1,6 +1,5 @@
 import graphene as g
-from pokemon_v2 import models
-from ..utils import load, load_with_args, get_connection
+from ..utils import load, load_with_args
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 

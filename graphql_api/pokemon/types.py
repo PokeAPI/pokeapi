@@ -1,9 +1,9 @@
 import json
 import graphene as g
-from pokemon_v2 import models
+# from pokemon_v2 import models
 from ..constants import IMAGE_HOST
-from ..loader_key import LoaderKey
-from ..utils import load, load_with_args, get_connection, get_page
+# from ..loader_key import LoaderKey
+from ..utils import load  #, get_connection, get_page
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 

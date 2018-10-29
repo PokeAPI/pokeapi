@@ -22,8 +22,7 @@ def schema_operations_builder(operation_name, operation_module, operation_base, 
     # filter on scopes before this
     for base_class in op_base_classes:
         properties.update(base_class.__dict__["_meta"].fields)
-    all = type(operation_name, tuple(op_base_classes), properties)
-    return all
+    return type(operation_name, tuple(op_base_classes), properties)
 
 
 def build_base_classes(operation_name, operation_module, operation_base, cls_name):

@@ -3617,7 +3617,7 @@ pokemon_species_id,local_language_id,name,genus
 329,8,Vibrava,Pokémon Vibrazione
 329,9,Vibrava,Vibration Pokémon
 329,11,ビブラーバ,しんどうポケモン
-329,12,超音波幼虫,震动宝可梦
+329,12,超音波幼虫,振动宝可梦
 330,1,フライゴン,せいれいポケモン
 330,2,Frygon,
 330,3,플라이곤,정령포켓몬
@@ -5851,7 +5851,7 @@ pokemon_species_id,local_language_id,name,genus
 536,8,Palpitoad,Pokémon Vibrazione
 536,9,Palpitoad,Vibration Pokémon
 536,11,ガマガル,しんどうポケモン
-536,12,蓝蟾蜍,震动宝可梦
+536,12,蓝蟾蜍,振动宝可梦
 537,1,ガマゲロゲ,しんどうポケモン
 537,3,두빅굴,진동포켓몬
 537,4,蟾蜍王,震動寶可夢
@@ -5861,7 +5861,7 @@ pokemon_species_id,local_language_id,name,genus
 537,8,Seismitoad,Pokémon Vibrazione
 537,9,Seismitoad,Vibration Pokémon
 537,11,ガマゲロゲ,しんどうポケモン
-537,12,蟾蜍王,震动宝可梦
+537,12,蟾蜍王,振动宝可梦
 538,1,ナゲキ,じゅうどうポケモン
 538,3,던지미,유도포켓몬
 538,4,投摔鬼,柔道寶可夢
@@ -8512,3 +8512,53 @@ pokemon_species_id,local_language_id,name,genus
 802,9,Marshadow,Gloomdweller Pokémon
 802,11,マーシャドー,かげすみポケモン
 802,12,玛夏多,栖影宝可梦
+803,1,ベベノム,どくばりポケモン
+803,3,베베놈,독침포켓몬
+803,4,毒貝比,毒針寶可夢
+803,5,Vémini,Pokémon Vénépic
+803,6,Venicro,Giftdorn
+803,7,Poipole,Pokémon Pin Veneno
+803,8,Poipole,Pokémon Velenago
+803,9,Poipole,Poison Pin Pokémon
+803,11,ベベノム,どくばりポケモン
+803,12,毒贝比,毒针宝可梦
+804,1,アーゴヨン,どくばりポケモン
+804,3,아고용,독침포켓몬
+804,4,四顎針龍,毒針寶可夢
+804,5,Mandrillon,Pokémon Vénépic
+804,6,Agoyon,Giftdorn
+804,7,Naganadel,Pokémon Pin Veneno
+804,8,Naganadel,Pokémon Velenago
+804,9,Naganadel,Poison Pin Pokémon
+804,11,アーゴヨン,どくばりポケモン
+804,12,四颚针龙,毒针宝可梦
+805,1,ツンデツンデ,いしがきポケモン
+805,3,차곡차곡,돌담포켓몬
+805,4,石,石牆寶可夢
+805,5,Ama-Ama,Pokémon Muraille
+805,6,Muramura,Steinmauer
+805,7,Stakataka,Pokémon Muro
+805,8,Stakataka,Pokémon Bastione
+805,9,Stakataka,Rampart Pokémon
+805,11,ツンデツンデ,いしがきポケモン
+805,12,石,石墙宝可梦
+806,1,ズガドーン,はなびポケモン
+806,3,두파팡,불꽃놀이포켓몬
+806,4,頭小,煙火寶可夢
+806,5,Pierroteknik,Pokémon Artificier
+806,6,Kopplosio,Feuerwerk
+806,7,Blacephalon,Pokémon Pirotecnia
+806,8,Blacephalon,Pokémon Pirotecnico
+806,9,Blacephalon,Fireworks Pokémon
+806,11,ズガドーン,はなびポケモン
+806,12,头小丑,烟火宝可梦
+807,1,ゼラオラ,じんらいポケモン
+807,3,제라오라,신뢰포켓몬
+807,4,捷拉拉,奔雷寶可夢
+807,5,Zeraora,Pokémon Vif Éclair
+807,6,Zeraora,Blitzsturm
+807,7,Zeraora,Pokémon Fulgor
+807,8,Zeraora,Pokémon Fulmirapido
+807,9,Zeraora,Thunderclap Pokémon
+807,11,ゼラオラ,じんらいポケモン
+807,12,捷拉拉,奔雷宝可梦

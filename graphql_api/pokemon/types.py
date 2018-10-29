@@ -55,11 +55,11 @@ class Pokemon(g.ObjectType):
         description="Order for sorting. Almost national order, except families are grouped together."
     )
     pokemon_species_id = None
-    # species = g.Field(
-    #     g.lazy_import("graphql_api.pokemon_species.types.PokemonSpecies"),
-    #     description="The species this Pokémon belongs to.",
-    #     resolver=load("pokemonspecies", using="pokemon_species_id"),
-    # )
+    species = g.Field(
+        g.lazy_import("graphql_api.pokemon_species.types.PokemonSpecies"),
+        description="The species this Pokémon belongs to.",
+        resolver=load("pokemonspecies", using="pokemon_species_id"),
+    )
     sprites = g.Field(
         lambda: PokemonSprites,
         description="A set of sprites used to depict this Pokémon in the game.",

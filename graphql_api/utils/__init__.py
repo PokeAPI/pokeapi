@@ -28,7 +28,10 @@ def load(loader_name, *, using=None):
 
     def inner(root, info):
         loader = getattr(info.context.loaders, loader_name)
-        return loader.load(getattr(root, using))
+        key = getattr(root, using)
+        if key is None:
+            return None
+        return loader.load(key)
 
     return inner
 

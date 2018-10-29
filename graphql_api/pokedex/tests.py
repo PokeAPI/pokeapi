@@ -2,112 +2,86 @@ from pokemon_v2.tests import APIData as A
 from ..graphql_test import GraphQLTest
 
 
-class RegionTests(GraphQLTest):
+class PokedexTests(GraphQLTest):
     def setUp(self):
-        self.regions = [A.setup_region_data(name=f"base rgn {n}") for n in range(4)]
-        generations = []
+        self.pokedexes = [A.setup_pokedex_data(name=f"pkdx {i}") for i in range(4)]
 
-        for r in self.regions:
-            A.setup_region_name_data(r, name=f"{r.name} name")
-            A.setup_location_data(region=r, name=f"lctn for {r.name}")
-            generations.append(
-                A.setup_generation_data(region=r, name=f"gnrtn for {r.name}")
-            )
-            A.setup_pokedex_data(region=r, name=f"pkdx for {r.name}")
-            A.setup_pokedex_data(region=r, name=f"pkdx for {r.name}")
+        for p in self.pokedexes:
+            A.setup_pokedex_name_data(p, name=f"{p.name} name")
+            A.setup_pokedex_description_data(p, description=f"{p.name} desc")
 
-        version_group = A.setup_version_group_data(
-            name="ver grp", generation=generations[0]
-        )
-        for r in self.regions:
-            A.setup_version_group_region_data(region=r, version_group=version_group)
+            for n in range(10):
+                pokemon_species = A.setup_pokemon_species_data(
+                    name=f"pkmn spcs {n} for {p.name}"
+                )
+                A.setup_pokemon_dex_entry_data(
+                    pokedex=p, pokemon_species=pokemon_species
+                )
 
-    def test_regions(self):
+    def test_pokedexes(self):
         executed = self.execute_query(
             """
             query {
-                regions(first: 10) {
-                    edges {
-                        node {
-                            locations(first: 5) {
-                                edges {
-                                    node {
-                                        name
-                                    }
-                                }
-                            }
-                            mainGeneration {name}
-                            name
-                            names {
-                                text
-                                language {name}
-                            }
-                            versionGroups {name}
-                        }
-                    }
-                }
-            }
-            """
-        )
-        expected = {
-            "data": {
-                "regions": {
-                    "edges": [
-                        {
-                            "node": {
-                                "locations": {
-                                    "edges": [
-                                        {"node": {"name": l.name}}
-                                        for l in reg.location.all()
-                                    ]
-                                },
-                                "mainGeneration": {"name": reg.generation.name},
-                                "name": reg.name,
-                                "names": [
-                                    {
-                                        "text": n.name,
-                                        "language": {"name": n.language.name},
-                                    }
-                                    for n in reg.regionname.all()
-                                ],
-                                "versionGroups": [
-                                    {"name": vgr.version_group.name}
-                                    for vgr in reg.versiongroupregion.all()
-                                ],
-                            }
-                        }
-                        for reg in self.regions
-                    ]
-                }
-            }
-        }
-        self.assertEqual(executed, expected)
-
-    def test_region(self):
-        m = self.regions[1]
-        executed = self.execute_query(
-            """
-            query {
-                region(name: "%s") {
+                pokedexes {
+                    isMainSeries
+                    descriptions {text}
                     name
                     names {
                         text
                         language {name}
                     }
+                    pokemonEntries(first: 100) {
+                        totalCount
+                        edges {
+                            entryNumber
+                            node {name}
+                        }
+                    }
                 }
             }
             """
-            % m.name
         )
         expected = {
             "data": {
-                "region": {
-                    "name": m.name,
-                    "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
-                        for n in m.regionname.all()
-                    ],
-                }
+                "pokedexes": [
+                    {
+                        "isMainSeries": p.is_main_series,
+                        "descriptions": [
+                            {"text": d.description} for d in p.pokedexdescription.all()
+                        ],
+                        "name": p.name,
+                        "names": [
+                            {"text": n.name, "language": {"name": n.language.name}}
+                            for n in p.pokedexname.all()
+                        ],
+                        "pokemonEntries": {
+                            "totalCount": len(p.pokemondexnumber.all()),
+                            "edges": [
+                                {
+                                    "entryNumber": pdn.pokedex_number,
+                                    "node": {"name": pdn.pokemon_species.name},
+                                }
+                                for pdn in p.pokemondexnumber.all()
+                            ],
+                        },
+                    }
+                    for p in self.pokedexes
+                ]
             }
         }
+        self.assertEqual(executed, expected)
+
+    def test_pokedex(self):
+        p = self.pokedexes[1]
+        executed = self.execute_query(
+            """
+            query {
+                pokedex(name: "%s") {
+                    name
+                }
+            }
+            """
+            % p.name
+        )
+        expected = {"data": {"pokedex": {"name": p.name}}}
         self.assertEqual(executed, expected)

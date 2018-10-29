@@ -33,6 +33,12 @@ class GenerationTests(GraphQLTest):
                                 text
                                 language {name}
                             }
+                            pokemonSpecies(first: 10) {
+                                totalCount
+                                edges {
+                                    node {name}
+                                }
+                            }
                             versionGroups {name}
                         }
                     }
@@ -55,6 +61,13 @@ class GenerationTests(GraphQLTest):
                                     }
                                     for n in gen.generationname.all()
                                 ],
+                                "pokemonSpecies": {
+                                    "totalCount": len(gen.pokemonspecies.all()),
+                                    "edges": [
+                                        {"node": {"name": ps.name}}
+                                        for ps in gen.pokemonspecies.all()
+                                    ],
+                                },
                                 "versionGroups": [
                                     {"name": vg.name} for vg in gen.versiongroup.all()
                                 ],

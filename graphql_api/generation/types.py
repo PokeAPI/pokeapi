@@ -31,12 +31,12 @@ class Generation(g.ObjectType):
     #     g.lazy_import("graphql_api.move.connection.MoveConnection"),
     #     description="A list of moves that were introduced in this generation.",
     # )
-    # pokemon_species = g.relay.ConnectionField(
-    #     g.lazy_import(
-    #         "graphql_api.pokemon_species.connection.PokemonSpeciesConnection"
-    #     ),
-    #     description="A list of Pokémon species that were introduced in this generation.",
-    # )
+    pokemon_species = g.relay.ConnectionField(
+        g.lazy_import(
+            "graphql_api.pokemon_species.connection.PokemonSpeciesConnection"
+        ),
+        description="A list of Pokémon species that were introduced in this generation.",
+    )
     # types = g.List(
     #     g.lazy_import("graphql_api.type.types.Type"),
     #     description="A list of types that were introduced in this generation.",
@@ -52,19 +52,19 @@ class Generation(g.ObjectType):
     #     from ..ability import connection as conn
 
     #     q = models.Ability.objects.filter(generation_id=self.pk)
-    #     return getConnection(q, types.AbilityConnection, **kwargs)
+    #     return get_connection(q, types.AbilityConnection, **kwargs)
 
     # def resolve_moves(self, info, **kwargs):
     #     from ..move import connection as conn
 
     #     q = models.Move.objects.filter(generation_id=self.pk)
-    #     return getConnection(q, conn.MoveConnection, **kwargs)
+    #     return get_connection(q, conn.MoveConnection, **kwargs)
 
-    # def resolve_pokemon_species(self, info, **kwargs):
-    #     from ..pokemon_species import connection as conn
+    def resolve_pokemon_species(self, info, **kwargs):
+        from ..pokemon_species import connection as conn
 
-    #     q = models.PokemonSpecies.objects.filter(generation_id=self.pk)
-    #     return getConnection(q, conn.PokemonSpeciesConnection, **kwargs)
+        q = models.PokemonSpecies.objects.filter(generation_id=self.pk)
+        return get_connection(q, conn.PokemonSpeciesConnection, **kwargs)
 
 
 

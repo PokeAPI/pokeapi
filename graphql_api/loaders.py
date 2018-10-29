@@ -50,6 +50,7 @@ class Loaders:
         self.locationarea = SingleLoader(m.LocationArea, "pk")
         self.pokedex = SingleLoader(m.Pokedex, "pk")
         self.pokemon = SingleLoader(m.Pokemon, "pk")
+        self.pokemonspecies = SingleLoader(m.PokemonSpecies, "pk")
         self.region = SingleLoader(m.Region, "pk")
         self.version = SingleLoader(m.Version, "pk")
         self.versiongroup = SingleLoader(m.VersionGroup, "pk")
@@ -61,6 +62,7 @@ class Loaders:
         self.n_locationarea = SingleLoader(m.LocationArea, "name")
         self.n_pokedex = SingleLoader(m.Pokedex, "name")
         self.n_pokemon = SingleLoader(m.Pokemon, "name")
+        self.n_pokemonspecies = SingleLoader(m.PokemonSpecies, "name")
         self.n_region = SingleLoader(m.Region, "name")
         self.n_version = SingleLoader(m.Version, "name")
         self.n_versiongroup = SingleLoader(m.VersionGroup, "name")
@@ -94,6 +96,22 @@ class Loaders:
         self.pokemon_gameindices = ListLoader(m.PokemonGameIndex, "pokemon_id")
         self.pokemon_stats = ListLoader(m.PokemonStat, "pokemon_id")
         self.pokemon_types = ListLoader(m.PokemonType, "pokemon_id")
+        self.pokemonspecies_egggroups = ListLoader(m.EggGroup, "pokemon_species_id")
+        self.pokemonspecies_flavortextentries = TranslationsLoader(
+            m.PokemonSpeciesFlavorText, "pokemon_species_id"
+        )
+        self.pokemonspecies_descriptions = TranslationsLoader(
+            m.PokemonSpeciesDescription, "pokemon_species_id"
+        )
+        self.pokemonspecies_names = TranslationsLoader(
+            m.PokemonSpeciesName, "pokemon_species_id"
+        )
+        self.pokemonspecies_dexnumbers = ListLoader(
+            m.PokemonDexNumber, "pokemon_species_id"
+        )
+        self.pokemonspecies_palparks = ListLoader(m.PalPark, "pokemon_species_id")
+        # pardon the ugrammaticality of "pokemons":
+        self.pokemonspecies_pokemons = ListLoader(m.Pokemon, "pokemon_species_id")
         self.region_names = TranslationsLoader(m.RegionName, "region_id")
         self.region_pokedexes = ListLoader(m.Pokedex, "region_id")
         self.region_versiongroups = RegionVersionGroupsLoader()

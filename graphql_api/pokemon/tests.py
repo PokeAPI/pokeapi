@@ -77,6 +77,7 @@ class PokemonTests(GraphQLTest):
                             isDefault
                             name
                             order
+                            species {name}
                             sprites {
                                 frontDefault
                                 frontShiny
@@ -145,6 +146,7 @@ class PokemonTests(GraphQLTest):
                                 "isDefault": p.is_default,
                                 "name": p.name,
                                 "order": p.order,
+                                "species": {"name": p.pokemon_species.name},
                                 "sprites": get_sprites(
                                     json.loads(p.pokemonsprites.all()[0].sprites)
                                 ),

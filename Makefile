@@ -5,7 +5,7 @@ dev-install:
 	pip install -r test-requirements.txt
 
 lint:
-	pylint config data pokemon_v2 graphql --load-plugins pylint_django
+	pylint config data pokemon_v2 graphql_api --load-plugins pylint_django
 
 setup:
 	python manage.py migrate --settings=config.local

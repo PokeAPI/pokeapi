@@ -1,6 +1,6 @@
 import graphene as g
 from pokemon_v2 import models
-from graphql_api.utils import load, load_with_args, get_connection, get_page
+from graphql_api.utils import load, load_with_args, get_page  #, get_connection
 from ..pokemon.types import Pokemon  # pylint: disable=unused-import
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base

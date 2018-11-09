@@ -10,7 +10,7 @@ class EggGroupTests(GraphQLTest):
         for eg in self.egg_groups:
             A.setup_egg_group_name_data(eg, name=f"{eg.name} name")
 
-            for x in range(6):
+            for _ in range(6):
                 ps = A.setup_pokemon_species_data()
                 A.setup_pokemon_egg_group_data(pokemon_species=ps, egg_group=eg)
 

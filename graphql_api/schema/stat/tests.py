@@ -6,17 +6,17 @@ class StatTests(GraphQLTest):
     def setUp(self):
         self.stats = [A.setup_stat_data(name=f"stat {n}") for n in range(10)]
 
-        for i, stat in enumerate(self.stats):
+        for stat in self.stats:
             A.setup_stat_name_data(stat, name=f"{stat.name} name")
 
-            for x in range(3):
+            for _ in range(3):
                 A.setup_characteristic_data(stat=stat)
 
             for change in range(-3, 2):
                 move = A.setup_move_data(name=f"move {change} for {stat.name}")
                 A.setup_move_stat_change_data(move=move, stat=stat, change=change)
 
-            for x in range(4):
+            for _ in range(4):
                 A.setup_nature_data(name=f"+ntr for {stat.name}", increased_stat=stat)
                 A.setup_nature_data(name=f"-ntr for {stat.name}", decreased_stat=stat)
 
@@ -25,6 +25,7 @@ class StatTests(GraphQLTest):
             """
             query {
                 stats{
+                    characteristics {name}
                     gameIndex
                     isBattleOnly
                     name
@@ -42,6 +43,9 @@ class StatTests(GraphQLTest):
             "data": {
                 "stats": [
                     {
+                        "characteristics": [
+                            {"name": str(char.pk)} for char in stat.characteristic.all()
+                        ],
                         "gameIndex": stat.game_index,
                         "isBattleOnly": stat.is_battle_only,
                         "name": stat.name,

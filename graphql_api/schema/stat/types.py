@@ -1,6 +1,6 @@
 import graphene as g
-from pokemon_v2 import models
-from graphql_api.utils import load, load_with_args, get_connection, get_page
+# from pokemon_v2 import models
+from graphql_api.utils import load, load_with_args  #, get_page
 # from ..move.types import Move
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
@@ -18,11 +18,11 @@ class Stat(g.ObjectType):
     #     where=g.Argument(lambda: StatAffectMoveWhere),
     #     order_by=g.List(lambda: StatAffectMoveSort)
     # )
-    # characteristics = g.List(
-    #     g.lazy_import("graphql_api.schema.characteristic.types.Characteristic"),
-    #     description="A list of characteristics that are set on a Pokémon when its highest base stat is this stat.",
-    #     resolver=load("stat_characteristics", using="pk"),
-    # )
+    characteristics = g.List(
+        g.lazy_import("graphql_api.schema.characteristic.types.Characteristic"),
+        description="A list of characteristics that are set on a Pokémon when its highest base stat is this stat.",
+        resolver=load("stat_characteristics", using="pk"),
+    )
     game_index = g.Int(description="ID the games use for this stat.")
     is_battle_only = g.Boolean(
         description="Whether this stat only exists within a battle."

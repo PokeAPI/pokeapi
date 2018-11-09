@@ -1,5 +1,4 @@
 import json
-from pokemon_v2 import models
 from pokemon_v2.tests import APIData as A
 from graphql_api.graphql_test import GraphQLTest
 from graphql_api.constants import IMAGE_HOST

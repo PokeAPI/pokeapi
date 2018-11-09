@@ -217,7 +217,7 @@ class Loaders:
         self.region_versiongroups = ListMapLoader(
             m.VersionGroupRegion, "region_id", "version_group"
         )
-        self.stat_characteristics = TranslationsLoader(m.Characteristic, "stat_id")
+        self.stat_characteristics = ListLoader(m.Characteristic, "stat_id")
         self.stat_names = TranslationsLoader(m.StatName, "stat_id")
         self.targettype_typeefficacies = ListLoader(
             m.TypeEfficacy, "target_type_id", select_related=["damage_type"]

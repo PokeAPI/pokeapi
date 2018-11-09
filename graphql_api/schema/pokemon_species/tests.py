@@ -51,6 +51,8 @@ class PokemonSpeciesTests(GraphQLTest):
                         node {
                             baseHappiness
                             captureRate
+                            color {name}
+                            eggGroups {name}
                             evolvesFromSpecies {name}
                             flavorTextEntries {text}
                             formDescriptions {text}
@@ -58,6 +60,8 @@ class PokemonSpeciesTests(GraphQLTest):
                             genderRate
                             genera {text}
                             generation {name}
+                            growthRate {name}
+                            habitat {name}
                             hasGenderDifferences
                             hatchCounter
                             isBaby
@@ -74,6 +78,7 @@ class PokemonSpeciesTests(GraphQLTest):
                                 baseScore
                                 rate
                             }
+                            shape {name}
                             varieties {name}
                         }
                     }
@@ -89,6 +94,11 @@ class PokemonSpeciesTests(GraphQLTest):
                             "node": {
                                 "baseHappiness": ps.base_happiness,
                                 "captureRate": ps.capture_rate,
+                                "color": {"name": ps.pokemon_color.name},
+                                "eggGroups": [
+                                    {"name": peg.egg_group.name}
+                                    for peg in ps.pokemonegggroup.all()
+                                ],
                                 "evolvesFromSpecies": {
                                     "name": ps.evolves_from_species.name
                                 }
@@ -103,12 +113,16 @@ class PokemonSpeciesTests(GraphQLTest):
                                     for d in ps.pokemonspeciesdescription.all()
                                 ],
                                 "isFormsSwitchable": ps.forms_switchable,
-                                "genderRate": ps.gender_rate,
+                                "genderRate": (
+                                    ps.gender_rate / 8 if ps.gender_rate != -1 else None
+                                ),
                                 "genera": [
                                     {"text": n.genus}
                                     for n in ps.pokemonspeciesname.all()
                                 ],
                                 "generation": {"name": ps.generation.name},
+                                "growthRate": {"name": ps.growth_rate.name},
+                                "habitat": {"name": ps.pokemon_habitat.name},
                                 "hasGenderDifferences": ps.has_gender_differences,
                                 "hatchCounter": ps.hatch_counter,
                                 "isBaby": ps.is_baby,
@@ -136,6 +150,7 @@ class PokemonSpeciesTests(GraphQLTest):
                                     }
                                     for ppe in ps.palpark.all()
                                 ],
+                                "shape": {"name": ps.pokemon_shape.name},
                                 "varieties": [
                                     {"name": p.name} for p in ps.pokemon.all()
                                 ],

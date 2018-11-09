@@ -730,6 +730,18 @@ class APIData():
 
         return growth_rate_description
 
+    @classmethod
+    def setup_experience_data(cls, growth_rate, level=10, experience=3000):
+
+        experience = Experience(
+            growth_rate=growth_rate,
+            level=level,
+            experience=experience
+        )
+        experience.save()
+
+        return experience
+
     # Location Data
     @classmethod
     def setup_location_data(cls, region=None, name='lctn'):
@@ -838,6 +850,16 @@ class APIData():
         type_name.save()
 
         return type_name
+
+    @classmethod
+    def setup_type_efficacy_data(cls, damage_type, target_type, damage_factor):
+        type_efficacy = TypeEfficacy(
+            damage_type=damage_type,
+            target_type=target_type,
+            damage_factor=damage_factor
+        )
+        type_efficacy.save()
+        return type_efficacy
 
     @classmethod
     def setup_type_game_index_data(cls, type, game_index=0):
@@ -1770,6 +1792,23 @@ class APIData():
         return pokemon_form
 
     @classmethod
+    def setup_pokemon_form_name_data(
+        cls, pokemon_form, name='pkmn frm name', pokemon_name="pkmn frm pkmn name"
+    ):
+
+        language = cls.setup_language_data(name='lang for '+name)
+
+        pokemon_form_name = PokemonFormName.objects.create(
+            pokemon_form=pokemon_form,
+            language=language,
+            name=name,
+            pokemon_name=pokemon_name,
+        )
+        pokemon_form_name.save()
+
+        return pokemon_form_name
+
+    @classmethod
     def setup_pokemon_ability_data(cls, pokemon, ability=None, is_hidden=False, slot=1):
 
         ability = ability or cls.setup_ability_data(name='ablty for pkmn')
@@ -2044,7 +2083,7 @@ class APIData():
     @classmethod
     def setup_encounter_condition_value_map_data(cls, encounter, encounter_condition_value):
 
-        encounter_condition_value_map = EncounterConditionValue.objects.create(
+        encounter_condition_value_map = EncounterConditionValueMap.objects.create(
             encounter=encounter,
             encounter_condition_value=encounter_condition_value
         )

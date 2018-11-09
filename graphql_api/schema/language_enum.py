@@ -1,7 +1,7 @@
 import graphene as g
 from pokemon_v2 import models
 
-# This module must be called lazily
+# This module must be loaded lazily
 
 _languages = [
     (l.name.upper().replace("-", "_"), l.name) for l in models.Language.objects.all()

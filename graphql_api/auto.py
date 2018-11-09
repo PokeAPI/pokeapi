@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 
 def schema_operations_builder(
-    operation_name, operation_module, operation_base, cls_name
+    operation_name, operation_module, operation_base, cls_name, **properties
 ):
     op_base_classes = build_base_classes(
         operation_name, operation_module, operation_base, cls_name
@@ -18,7 +18,6 @@ def schema_operations_builder(
             f"Found no '{operation_base}' classes in '{operation_module}' module of subdirectories."
         )
 
-    properties = {}
     for base_class in op_base_classes:
         properties.update(base_class.__dict__["_meta"].fields)
     return type(operation_name, tuple(op_base_classes), properties)

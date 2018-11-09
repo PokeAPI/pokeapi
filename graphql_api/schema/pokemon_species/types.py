@@ -4,6 +4,12 @@ from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
 
+def calculate_gender_rate(root, info):
+    if root.gender_rate == -1:
+        return None
+    return root.gender_rate / 8
+
+
 class PokemonSpecies(g.ObjectType):
     """
     A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
@@ -17,16 +23,16 @@ class PokemonSpecies(g.ObjectType):
         description="The base capture rate; up to 255. The higher the number, the easier the catch."
     )
     pokemon_color_id = None
-    # color = g.Field(
-    #     g.lazy_import("graphql_api.schema.pokemon_color.types.PokemonColor"),
-    #     description="The color of this Pokémon for Pokédex search.",
-    #     resolver=load("pokemoncolor", using="pokemon_color_id"),
-    # )
-    # egg_groups = g.List(
-    #     g.lazy_import("graphql_api.schema.egg_group.types.EggGroup"),
-    #     description="A list of egg groups this Pokémon species is a member of.",
-    #     resolver=load("pokemonspecies_egggroups", using="pk"),
-    # )
+    color = g.Field(
+        g.lazy_import("graphql_api.schema.pokemon_color.types.PokemonColor"),
+        description="The color of this Pokémon for Pokédex search.",
+        resolver=load("pokemoncolor", using="pokemon_color_id"),
+    )
+    egg_groups = g.List(
+        g.lazy_import("graphql_api.schema.egg_group.types.EggGroup"),
+        description="A list of egg groups this Pokémon species is a member of.",
+        resolver=load("pokemonspecies_egggroups", using="pk"),
+    )
     evolution_chain_id = None
     # evolution_chain = g.Field(
     #     g.lazy_import("graphql_api.schema.evolution_chain.types.EvolutionChain"),
@@ -51,10 +57,11 @@ class PokemonSpecies(g.ObjectType):
     )
     forms_switchable = g.Boolean(
         name="isFormsSwitchable",
-        description="Whether or not this Pokémon has multiple forms and can switch between them."
+        description="Whether or not this Pokémon has multiple forms and can switch between them.",
     )
-    gender_rate = g.Int(
-        description="The chance of this Pokémon being female, in eighths; or -1 for genderless."
+    gender_rate = g.Float(
+        description="The chance of this Pokémon being female, out of 1, or null for genderless. A gender rate of 1 indicates that all Pokémon of this species are female, and 0 that all are male.",
+        resolver=calculate_gender_rate,
     )
     genera = base.TranslationList(
         lambda: PokemonSpeciesGenus,
@@ -68,17 +75,17 @@ class PokemonSpecies(g.ObjectType):
         resolver=load("generation", using="generation_id"),
     )
     growth_rate_id = None
-    # growth_rate = g.Field(
-    #     g.lazy_import("graphql_api.schema.growth_rate.types.GrowthRate"),
-    #     description="The rate at which this Pokémon species gains levels.",
-    #     resolver=load("growthrate", using="growth_rate_id"),
-    # )
+    growth_rate = g.Field(
+        g.lazy_import("graphql_api.schema.growth_rate.types.GrowthRate"),
+        description="The rate at which this Pokémon species gains levels.",
+        resolver=load("growthrate", using="growth_rate_id"),
+    )
     pokemon_habitat_id = None
-    # habitat = g.Field(
-    #     g.lazy_import("graphql_api.schema.pokemon_habitat.types.PokemonHabitat"),
-    #     description="The habitat this Pokémon species can be encountered in.",
-    #     resolver=load("pokemonhabitat", using="pokemon_habitat_id"),
-    # )
+    habitat = g.Field(
+        g.lazy_import("graphql_api.schema.pokemon_habitat.types.PokemonHabitat"),
+        description="The habitat this Pokémon species can be encountered in.",
+        resolver=load("pokemonhabitat", using="pokemon_habitat_id"),
+    )
     has_gender_differences = g.Boolean(
         description="Whether or not this Pokémon has visual gender differences."
     )
@@ -95,21 +102,21 @@ class PokemonSpecies(g.ObjectType):
     order = g.Int(
         description="The order in which species should be sorted. Based on National Dex order, except families are grouped together and sorted by stage."
     )
+    pal_park_encounters = g.List(
+        lambda: PokemonSpeciesPalParkEncounter,
+        description="A list of encounters that can be had with this Pokémon species in pal park.",
+        resolver=load("pokemonspecies_palparks", using="pk"),
+    )
     pokedex_numbers = g.List(
         lambda: PokemonSpeciesPokedexEntry,
         description="A list of Pokedexes and the indexes reserved within them for this Pokémon species.",
         resolver=load("pokemonspecies_dexnumbers", using="pk"),
     )
     pokemon_shape_id = None
-    # shape = g.Field(
-    #     g.lazy_import("graphql_api.schema.pokemon_shape.types.PokemonShape"),
-    #     description="The shape of this Pokémon for Pokédex search.",
-    #     resolver=load("pokemonshape", using="pokemon_shape_id"),
-    # )
-    pal_park_encounters = g.List(
-        lambda: PokemonSpeciesPalParkEncounter,
-        description="A list of encounters that can be had with this Pokémon species in pal park.",
-        resolver=load("pokemonspecies_palparks", using="pk"),
+    shape = g.Field(
+        g.lazy_import("graphql_api.schema.pokemon_shape.types.PokemonShape"),
+        description="The shape of this Pokémon for Pokédex search.",
+        resolver=load("pokemonshape", using="pokemon_shape_id"),
     )
     varieties = g.List(
         g.lazy_import("graphql_api.schema.pokemon.types.Pokemon"),

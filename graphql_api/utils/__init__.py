@@ -48,3 +48,12 @@ def load_with_args(loader_name, *, using=None):
         return loader.load(key)
 
     return inner
+
+
+def group(iterable, group_by):
+    groups = {}
+    for item in iterable:
+        if getattr(item, group_by) not in groups:
+            groups[getattr(item, group_by)] = []
+        groups[getattr(item, group_by)].append(item)
+    return groups

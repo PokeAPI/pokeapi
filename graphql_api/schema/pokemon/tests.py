@@ -1,7 +1,9 @@
 import json
+from pokemon_v2 import models
 from pokemon_v2.tests import APIData as A
 from graphql_api.graphql_test import GraphQLTest
 from graphql_api.constants import IMAGE_HOST
+from graphql_api.utils import group
 
 
 class PokemonTests(GraphQLTest):
@@ -42,20 +44,24 @@ class PokemonTests(GraphQLTest):
                 pokemon=p, move=move, version_group=version_group, level=i
             )
 
+            # Encounters
             for x in range(2):
-                encounter_slot = A.setup_encounter_slot_data(
-                    encounter_method, slot=i * 2 + x, rarity=x + 30
-                )
                 location_area = A.setup_location_area_data(
                     name=f"lctn area {x} for {p.name}"
                 )
-                A.setup_encounter_data(
-                    location_area=location_area,
-                    pokemon=p,
-                    encounter_slot=encounter_slot,
-                    min_level=x + 30,
-                    max_level=x + 35,
-                )
+
+                # Some location areas have multiple encounters with this Pokémon
+                for y in range(x):
+                    encounter_slot = A.setup_encounter_slot_data(
+                        encounter_method, slot=i * 2 + x, rarity=x + y + 30
+                    )
+                    A.setup_encounter_data(
+                        location_area=location_area,
+                        pokemon=p,
+                        encounter_slot=encounter_slot,
+                        min_level=x + 30,
+                        max_level=x + 35,
+                    )
 
     def test_pokemons(self):
         executed = self.execute_query(
@@ -67,14 +73,28 @@ class PokemonTests(GraphQLTest):
                             abilities {
                                 isHidden
                                 order
+                                ability {name}
                             }
                             baseExperience
+                            forms {name}
                             gameIndices {
                                 gameIndex
                                 version {name}
                             }
                             height
                             isDefault
+                            locationAreaEncounters(first: 10) {
+                                edges {
+                                    node {
+                                        locationArea {name}
+                                        versionDetails {
+                                            encounters {name}
+                                            maxChance
+                                            version {name}
+                                        }
+                                    }
+                                }
+                            }
                             name
                             order
                             species {name}
@@ -91,9 +111,11 @@ class PokemonTests(GraphQLTest):
                             stats {
                                 baseValue
                                 effortPoints
+                                stat {name}
                             }
                             types {
                                 order
+                                type {name}
                             }
                             weight
                         }
@@ -120,6 +142,32 @@ class PokemonTests(GraphQLTest):
                 "backShinyFemale": get_uri(data["back_shiny_female"]),
             }
 
+        def get_pokemon_encounters(all_encounters):
+            pokemon_encounters = []
+            for lctn_area, la_encntrs in group(all_encounters, "location_area").items():
+                version_details = []
+                for version, v_encounters in group(la_encntrs, "version").items():
+                    max_chance = 0
+                    for e in v_encounters:
+                        max_chance += e.encounter_slot.rarity
+                    version_details.append(
+                        {
+                            "encounters": [{"name": str(e.pk)} for e in v_encounters],
+                            "maxChance": max_chance,
+                            "version": {"name": version.name},
+                        }
+                    )
+                pokemon_encounters.append(
+                    {
+                        "node": {
+                            "locationArea": {"name": lctn_area.name},
+                            "versionDetails": version_details,
+                        }
+                    }
+                )
+
+            return pokemon_encounters
+
         expected = {
             "data": {
                 "pokemons": {
@@ -130,11 +178,14 @@ class PokemonTests(GraphQLTest):
                                     {
                                         "isHidden": pa.is_hidden,
                                         "order": pa.slot,
-                                        # "ability": {"name": pa.ability.name},
+                                        "ability": {"name": pa.ability.name},
                                     }
                                     for pa in p.pokemonability.all()
                                 ],
                                 "baseExperience": p.base_experience,
+                                "forms": [
+                                    {"name": pf.name} for pf in p.pokemonform.all()
+                                ],
                                 "gameIndices": [
                                     {
                                         "gameIndex": pgi.game_index,
@@ -142,8 +193,11 @@ class PokemonTests(GraphQLTest):
                                     }
                                     for pgi in p.pokemongameindex.all()
                                 ],
-                                "height": p.height,
+                                "height": p.height * 10,
                                 "isDefault": p.is_default,
+                                "locationAreaEncounters": {
+                                    "edges": get_pokemon_encounters(p.encounter.all())
+                                },
                                 "name": p.name,
                                 "order": p.order,
                                 "species": {"name": p.pokemon_species.name},
@@ -154,18 +208,15 @@ class PokemonTests(GraphQLTest):
                                     {
                                         "baseValue": ps.base_stat,
                                         "effortPoints": ps.effort,
-                                        # "stat": {"name": ps.stat.name}
+                                        "stat": {"name": ps.stat.name},
                                     }
                                     for ps in p.pokemonstat.all()
                                 ],
                                 "types": [
-                                    {
-                                        "order": pt.slot,
-                                        # "type": {"name": pt.type.name},
-                                    }
+                                    {"order": pt.slot, "type": {"name": pt.type.name}}
                                     for pt in p.pokemontype.all()
                                 ],
-                                "weight": p.weight,
+                                "weight": p.weight / 10,
                             }
                         }
                         for p in self.pokemons

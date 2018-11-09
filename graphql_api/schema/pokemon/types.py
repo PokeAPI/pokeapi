@@ -1,9 +1,9 @@
 import json
 import graphene as g
-# from pokemon_v2 import models
+
+from pokemon_v2 import models
 from graphql_api.constants import IMAGE_HOST
-from graphql_api.utils import load  #, get_connection, get_page
-# from ..loader_key import LoaderKey
+from graphql_api.utils import load, get_connection  # , get_page
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
 
@@ -24,17 +24,20 @@ class Pokemon(g.ObjectType):
     base_experience = g.Int(
         description="The base experience gained for defeating this Pokémon."
     )
-    # forms = g.List(
-    #     g.lazy_import("graphql_api.schema.pokemon_form.types.PokemonForm"),
-    #     description="A list of forms this Pokémon can take on.",
-    #     resolver=load("pokemon_forms", using="pk"),
-    # )
+    forms = g.List(
+        g.lazy_import("graphql_api.schema.pokemon_form.types.PokemonForm"),
+        description="A list of forms this Pokémon can take on.",
+        resolver=load("pokemon_forms", using="pk"),
+    )
     game_indices = g.List(
         lambda: PokemonGameIndex,
         description="A list of game indices relevent to Pokémon item by generation.",
         resolver=load("pokemon_gameindices", using="pk"),
     )
-    height = g.Int(description="The height of this Pokémon.")
+    height = g.Int(
+        description="The height of this Pokémon in centimetres.",
+        resolver=lambda root, info: root.height * 10,
+    )
     # held_items = g.List(
     #     lambda: PokemonHeldItem,
     #     description="A list of items this Pokémon may be holding when encountered.",
@@ -42,10 +45,12 @@ class Pokemon(g.ObjectType):
     is_default = g.Boolean(
         description="Set for exactly one Pokémon used as the default for each species."
     )
-    # location_area_encounters = g.relay.ConnectionField(
-    #     g.lazy_import("graphql_api.schema.pokemon_encounter.types.PokemonEncounterConnection"),
-    #     description="A list of location area encounters for this Pokémon."
-    # )
+    location_area_encounters = g.relay.ConnectionField(
+        g.lazy_import(
+            "graphql_api.schema.pokemon_encounter.connection.PokemonEncounterConnection"
+        ),
+        description="A list of location area encounters for this Pokémon.",
+    )
     # moves = g.relay.ConnectionField(
     #     lambda: PokemonMoveConnection,
     #     description="A list of moves along with learn methods and level details pertaining to specific version groups."
@@ -63,7 +68,7 @@ class Pokemon(g.ObjectType):
     sprites = g.Field(
         lambda: PokemonSprites,
         description="A set of sprites used to depict this Pokémon in the game.",
-        resolver=load("pokemon_sprites", using="pk"),
+        resolver=load("pokemonsprites", using="pk"),
     )
     stats = g.List(
         lambda: PokemonStat,
@@ -75,30 +80,47 @@ class Pokemon(g.ObjectType):
         description="A list of details showing types this Pokémon has.",
         resolver=load("pokemon_types", using="pk"),
     )
-    weight = g.Int(description="The weight of this Pokémon.")
+    weight = g.Float(
+        description="The weight of this Pokémon in kilograms.",
+        resolver=lambda root, info: root.weight / 10,
+    )
 
-    def resolve_held_items(self, info):
-        def del_duplicates(pokemon_items):
-            held_items = set()
-            for pokemon_item in pokemon_items:
-                held_item = PokemonHeldItem()
-                held_item.item_id = pokemon_item.item_id
-                held_item.pokemon_id = pokemon_item.pokemon_id
-                held_items.add(held_item)
+    # def resolve_held_items(self, info):
+    #     def del_duplicates(pokemon_items):
+    #         held_items = set()
+    #         for pokemon_item in pokemon_items:
+    #             held_item = PokemonHeldItem()
+    #             held_item.item_id = pokemon_item.item_id
+    #             held_item.pokemon_id = pokemon_item.pokemon_id
+    #             held_items.add(held_item)
 
-            return held_items
+    #         return held_items
 
-        return info.context.loaders.pokemon_items.load(self.pk).then(del_duplicates)
+    #     return info.context.loaders.pokemon_items.load(self.pk).then(del_duplicates)
 
-    # def resolve_location_area_encounters(self, info, **kwargs):
-    #     from ..pokemon_encounter.connection import PokemonEncounterConnection
+    def resolve_location_area_encounters(self, info, **kwargs):
+        # from ..pokemon_encounter.types import PokemonEncounter
 
-    #     q = models.LocationArea.objects.filter(encounter__pokemon_id=self.id).distinct()
-    #     return get_connection(
-    #         q, PokemonEncounterConnection,
-    #         lambda data: Pokemon.get_pkmn_encounter(self, data),
-    #         **kwargs
-    #     )
+        # def convert(lctn_areas):
+        #     pkmn_encounters = []
+        #     for lctn_area in lctn_areas:
+        #         pe = PokemonEncounter()
+        #         pe.location_area_id = lctn_area.id
+        #         pe.pokemon_id = self.pk
+        #         pkmn_encounters.append(pe)
+        #     return pkmn_encounters
+        # return info.context.loaders.pokemon_locationareas.load(self.pk).then(convert)
+
+        from ..pokemon_encounter import types, connection as conn
+
+        def convert(lctn_area):
+            pe = types.PokemonEncounter()
+            pe.location_area_id = lctn_area.id
+            pe.pokemon_id = self.pk
+            return pe
+
+        q = models.LocationArea.objects.filter(encounter__pokemon_id=self.pk).distinct()
+        return get_connection(q, conn.PokemonEncounterConnection, convert, **kwargs)
 
     # def resolve_moves(self, info, **kwargs):
     #     q = models.Move.objects.filter(pokemonmove__pokemon_id=self.pk).distinct()
@@ -124,11 +146,11 @@ class PokemonAbility(g.ObjectType):
         name="order", description="The sorting order of this ability in this Pokémon."
     )
     ability_id = None
-    # ability = g.Field(
-    #     g.lazy_import("graphql_api.schema.ability.types.Ability"),
-    #     description="The ability the Pokémon may have.",
-    #     resolver=load("ability", using="ability_id"),
-    # )
+    ability = g.Field(
+        g.lazy_import("graphql_api.schema.ability.types.Ability"),
+        description="The ability the Pokémon may have.",
+        resolver=load("ability", using="ability_id"),
+    )
 
 
 class PokemonGameIndex(g.ObjectType):
@@ -260,11 +282,11 @@ class PokemonStat(g.ObjectType):
         description="The effort points (EV) the Pokémon has in the stat.",
     )
     stat_id = None
-    # stat = g.Field(
-    #     g.lazy_import("graphql_api.schema.stat.types.Stat"),
-    #     description="The stat the Pokémon has.",
-    #     resolver=load("stat", using="stat_id"),
-    # )
+    stat = g.Field(
+        g.lazy_import("graphql_api.schema.stat.types.Stat"),
+        description="The stat the Pokémon has.",
+        resolver=load("stat", using="stat_id"),
+    )
 
 
 class PokemonType(g.ObjectType):
@@ -272,8 +294,8 @@ class PokemonType(g.ObjectType):
         name="order", description="The sorting order of this type for this Pokémon."
     )
     type_id = None
-    # type = g.Field(
-    #     g.lazy_import("graphql_api.schema.type.types.Type"),
-    #     description="The type the Pokémon has.",
-    #     resolver=load("type", using="type_id"),
-    # )
+    type = g.Field(
+        g.lazy_import("graphql_api.schema.type.types.Type"),
+        description="The type the Pokémon has.",
+        resolver=load("type", using="type_id"),
+    )

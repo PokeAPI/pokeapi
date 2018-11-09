@@ -18,7 +18,7 @@ class Region(g.ObjectType):
     main_generation = g.Field(
         g.lazy_import("graphql_api.schema.generation.types.Generation"),
         description="The generation this region was introduced in.",
-        resolver=load("region_generations", using="pk"),
+        resolver=load("region_generation", using="pk"),
     )
     name = g.ID(description="The name of this resource.")
     names = base.TranslationList(

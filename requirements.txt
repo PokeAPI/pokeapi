@@ -6,7 +6,7 @@ django-appconf==1.0.2
 django-cors-headers==2.4.0
 django-discover-runner==1.0
 django-imagekit==4.0.2
-django-redis==4.9.0
+django-redis==4.10.0
 django-cachalot==2.1.0
 django-tastypie==0.14.2
 djangorestframework==3.9.0

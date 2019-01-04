@@ -25,3 +25,6 @@ clean:
 
 migrate:
 	python manage.py migrate --settings=config.local
+
+shell:
+	python manage.py shell --settings=config.local

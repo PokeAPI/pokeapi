@@ -118,16 +118,16 @@ This will bind port 80 and 443. Unfortunately, unlike the `docker` command, ther
 After that, start the migration process
 
 ```sh
-python manage.py migrate --settings=config.docker-compose
+docker-compose exec app python manage.py migrate
 ```
 
 And then, import the data using the shell
 
 ```sh
-python manage.py shell --settings=config.docker-compose
+docker-compose exec app python manage.py shell
 ```
 
-You can use the `build_all()` method, or individuals data building functions (See _V2 Database setup_)
+Then use the `build_all()` method in the shell to populate the database.
 
 ```py
 from data.v2.build import build_all

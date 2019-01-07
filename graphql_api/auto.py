@@ -29,7 +29,7 @@ def build_base_classes(operation_name, operation_module, operation_base, cls_nam
     )
     subdirectories = [
         x
-        for x in os.listdir(current_directory)
+        for x in sorted(os.listdir(current_directory))
         if os.path.isdir(os.path.join(current_directory, x))
         and x not in ["__pycache__", "root"]
     ]

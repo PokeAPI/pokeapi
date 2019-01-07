@@ -84,6 +84,7 @@ disable=missing-docstring,
         bad-continuation,
         fixme,
         inconsistent-return-statements,
+        too-many-nested-blocks,
 
         # Disabled by default:
 
@@ -220,7 +221,7 @@ argument-naming-style=snake_case
 
 # Regular expression matching correct argument names. Overrides argument-
 # naming-style.
-argument-rgx=[a-z0-9_]{1,30}$
+argument-rgx=[a-z0-9_]{1,60}$
 
 # Naming style matching correct attribute names.
 attr-naming-style=snake_case

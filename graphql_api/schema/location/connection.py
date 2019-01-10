@@ -10,14 +10,8 @@ class LocationConnection(g.relay.Connection, base.BaseConnection, node=Location)
 
 
 class LocationWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "locationname", "name")
-
-        return super().apply(query_set, **where)
+    locationname__name = g.Argument(base.TextFilter, name="name")
+    region__name = g.List(g.ID, name="region_idName")
 
 
 class LocationSort(base.BaseSort):

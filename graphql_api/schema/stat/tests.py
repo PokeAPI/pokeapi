@@ -25,16 +25,16 @@ class StatTests(GraphQLTest):
             """
             query {
                 stats{
-                    characteristics {name}
+                    characteristics {idName}
                     gameIndex
                     isBattleOnly
-                    name
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
-                    negativeAffectingNatures {name}
-                    positiveAffectingNatures {name}
+                    negativeAffectingNatures {idName}
+                    positiveAffectingNatures {idName}
                 }
             }
             """
@@ -44,20 +44,20 @@ class StatTests(GraphQLTest):
                 "stats": [
                     {
                         "characteristics": [
-                            {"name": str(char.pk)} for char in stat.characteristic.all()
+                            {"idName": str(char.pk)} for char in stat.characteristic.all()
                         ],
                         "gameIndex": stat.game_index,
                         "isBattleOnly": stat.is_battle_only,
-                        "name": stat.name,
+                        "idName": stat.name,
                         "names": [
-                            {"text": n.name, "language": {"name": n.language.name}}
+                            {"text": n.name, "language": {"idName": n.language.name}}
                             for n in stat.statname.all()
                         ],
                         "negativeAffectingNatures": [
-                            {"name": nature.name} for nature in stat.decreased.all()
+                            {"idName": nature.name} for nature in stat.decreased.all()
                         ],
                         "positiveAffectingNatures": [
-                            {"name": nature.name} for nature in stat.increased.all()
+                            {"idName": nature.name} for nature in stat.increased.all()
                         ],
                     }
                     for stat in self.stats
@@ -71,11 +71,11 @@ class StatTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                stat(name: "%s") {
-                    name
+                stat(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -85,9 +85,9 @@ class StatTests(GraphQLTest):
         expected = {
             "data": {
                 "stat": {
-                    "name": stat.name,
+                    "idName": stat.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in stat.statname.all()
                     ],
                 }

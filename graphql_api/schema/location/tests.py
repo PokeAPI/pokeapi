@@ -21,17 +21,17 @@ class LocationTests(GraphQLTest):
                 locations(first: 10) {
                     edges {
                         node {
-                            areas {name}
+                            areas {idName}
                             gameIndices {
                                 gameIndex
-                                generation {name}
+                                generation {idName}
                             }
-                            name
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
-                            region {name}
+                            region {idName}
                         }
                     }
                 }
@@ -45,23 +45,23 @@ class LocationTests(GraphQLTest):
                         {
                             "node": {
                                 "areas": [
-                                    {"name": a.name} for a in l.locationarea.all()
+                                    {"idName": a.name} for a in l.locationarea.all()
                                 ],
                                 "gameIndices": [
                                     {
                                         "gameIndex": lgi.game_index,
-                                        "generation": {"name": lgi.generation.name}
+                                        "generation": {"idName": lgi.generation.name}
                                     } for lgi in l.locationgameindex.all()
                                 ],
-                                "name": l.name,
+                                "idName": l.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in l.locationname.all()
                                 ],
-                                "region": {"name": l.region.name},
+                                "region": {"idName": l.region.name},
                             }
                         }
                         for l in self.locations
@@ -76,11 +76,11 @@ class LocationTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                location(name: "%s") {
-                    name
+                location(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -90,9 +90,9 @@ class LocationTests(GraphQLTest):
         expected = {
             "data": {
                 "location": {
-                    "name": l.name,
+                    "idName": l.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in l.locationname.all()
                     ],
                 }

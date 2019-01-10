@@ -40,11 +40,11 @@ class GenderTests(GraphQLTest):
             """
             query {
                 genders {
-                    name
+                    idName
                     pokemonSpeciess(first: 10) {
                         edges {
                             node {
-                                name
+                                idName
                             }
                         }
                     }
@@ -56,10 +56,10 @@ class GenderTests(GraphQLTest):
             "data": {
                 "genders": [
                     {
-                        "name": gender.name,
+                        "idName": gender.name,
                         "pokemonSpeciess": {
                             "edges": [
-                                {"node": {"name": ps.name}}
+                                {"node": {"idName": ps.name}}
                                 for ps in self.pokemon_species[gender.name]
                             ]
                         },
@@ -75,12 +75,12 @@ class GenderTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                gender(name: "%s") {
-                    name
+                gender(idName: "%s") {
+                    idName
                 }
             }
             """
             % gender.name
         )
-        expected = {"data": {"gender": {"name": gender.name}}}
+        expected = {"data": {"gender": {"idName": gender.name}}}
         self.assertEqual(executed, expected)

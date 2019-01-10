@@ -10,7 +10,7 @@ class EncounterCondition(g.ObjectType):
     """
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: EncounterConditionName,
         description="The name of this resource listed in different languages.",
@@ -37,7 +37,7 @@ class EncounterConditionValue(g.ObjectType):
     is_default = g.Boolean(
         description="Whether or not this is the default condition value."
     )
-    name = g.String(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: EncounterConditionValueName,
         description="The name of this encounter condition value listed in different languages.",

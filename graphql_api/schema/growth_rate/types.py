@@ -28,7 +28,7 @@ class GrowthRate(g.ObjectType):
         description="A list of levels and the amount of experience needed to atain them based on this growth rate. Unless you need a complete list, we recommend using the 'experience' field with a supplied level argument instead.",
         resolver=load("growthrate_experiences", using="pk"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     pokemon_speciess = g.relay.ConnectionField(
         g.lazy_import(
             "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"

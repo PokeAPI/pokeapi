@@ -72,31 +72,31 @@ class PokemonTests(GraphQLTest):
                             abilities {
                                 isHidden
                                 order
-                                ability {name}
+                                ability {idName}
                             }
                             baseExperience
-                            forms {name}
+                            forms {idName}
                             gameIndices {
                                 gameIndex
-                                version {name}
+                                version {idName}
                             }
                             height
                             isDefault
                             locationAreaEncounters(first: 10) {
                                 edges {
                                     node {
-                                        locationArea {name}
+                                        locationArea {idName}
                                         versionDetails {
-                                            encounters {name}
+                                            encounters {idName}
                                             maxChance
-                                            version {name}
+                                            version {idName}
                                         }
                                     }
                                 }
                             }
-                            name
+                            idName
                             order
-                            species {name}
+                            species {idName}
                             sprites {
                                 frontDefault
                                 frontShiny
@@ -110,11 +110,11 @@ class PokemonTests(GraphQLTest):
                             stats {
                                 baseValue
                                 effortPoints
-                                stat {name}
+                                stat {idName}
                             }
                             types {
                                 order
-                                type {name}
+                                type {idName}
                             }
                             weight
                         }
@@ -151,15 +151,15 @@ class PokemonTests(GraphQLTest):
                         max_chance += e.encounter_slot.rarity
                     version_details.append(
                         {
-                            "encounters": [{"name": str(e.pk)} for e in v_encounters],
+                            "encounters": [{"idName": str(e.pk)} for e in v_encounters],
                             "maxChance": max_chance,
-                            "version": {"name": version.name},
+                            "version": {"idName": version.name},
                         }
                     )
                 pokemon_encounters.append(
                     {
                         "node": {
-                            "locationArea": {"name": lctn_area.name},
+                            "locationArea": {"idName": lctn_area.name},
                             "versionDetails": version_details,
                         }
                     }
@@ -177,18 +177,18 @@ class PokemonTests(GraphQLTest):
                                     {
                                         "isHidden": pa.is_hidden,
                                         "order": pa.slot,
-                                        "ability": {"name": pa.ability.name},
+                                        "ability": {"idName": pa.ability.name},
                                     }
                                     for pa in p.pokemonability.all()
                                 ],
                                 "baseExperience": p.base_experience,
                                 "forms": [
-                                    {"name": pf.name} for pf in p.pokemonform.all()
+                                    {"idName": pf.name} for pf in p.pokemonform.all()
                                 ],
                                 "gameIndices": [
                                     {
                                         "gameIndex": pgi.game_index,
-                                        "version": {"name": pgi.version.name},
+                                        "version": {"idName": pgi.version.name},
                                     }
                                     for pgi in p.pokemongameindex.all()
                                 ],
@@ -197,9 +197,9 @@ class PokemonTests(GraphQLTest):
                                 "locationAreaEncounters": {
                                     "edges": get_pokemon_encounters(p.encounter.all())
                                 },
-                                "name": p.name,
+                                "idName": p.name,
                                 "order": p.order,
-                                "species": {"name": p.pokemon_species.name},
+                                "species": {"idName": p.pokemon_species.name},
                                 "sprites": get_sprites(
                                     json.loads(p.pokemonsprites.all()[0].sprites)
                                 ),
@@ -207,12 +207,12 @@ class PokemonTests(GraphQLTest):
                                     {
                                         "baseValue": ps.base_stat,
                                         "effortPoints": ps.effort,
-                                        "stat": {"name": ps.stat.name},
+                                        "stat": {"idName": ps.stat.name},
                                     }
                                     for ps in p.pokemonstat.all()
                                 ],
                                 "types": [
-                                    {"order": pt.slot, "type": {"name": pt.type.name}}
+                                    {"order": pt.slot, "type": {"idName": pt.type.name}}
                                     for pt in p.pokemontype.all()
                                 ],
                                 "weight": p.weight / 10,
@@ -230,12 +230,12 @@ class PokemonTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemon(name: "%s") {
-                    name
+                pokemon(idName: "%s") {
+                    idName
                 }
             }
             """
             % p.name
         )
-        expected = {"data": {"pokemon": {"name": p.name}}}
+        expected = {"data": {"pokemon": {"idName": p.name}}}
         self.assertEqual(executed, expected)

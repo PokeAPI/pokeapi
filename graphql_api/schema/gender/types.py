@@ -9,7 +9,7 @@ class Gender(g.ObjectType):
     """
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     pokemon_speciess = g.relay.ConnectionField(
         g.lazy_import(
             "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"

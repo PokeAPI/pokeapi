@@ -27,19 +27,19 @@ class GenerationTests(GraphQLTest):
                 generations(first: 10) {
                     edges {
                         node {
-                            mainRegion {name}
-                            name
+                            mainRegion {idName}
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
                             pokemonSpecies(first: 10) {
                                 totalCount
                                 edges {
-                                    node {name}
+                                    node {idName}
                                 }
                             }
-                            versionGroups {name}
+                            versionGroups {idName}
                         }
                     }
                 }
@@ -52,24 +52,24 @@ class GenerationTests(GraphQLTest):
                     "edges": [
                         {
                             "node": {
-                                "mainRegion": {"name": gen.region.name},
-                                "name": gen.name,
+                                "mainRegion": {"idName": gen.region.name},
+                                "idName": gen.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in gen.generationname.all()
                                 ],
                                 "pokemonSpecies": {
                                     "totalCount": len(gen.pokemonspecies.all()),
                                     "edges": [
-                                        {"node": {"name": ps.name}}
+                                        {"node": {"idName": ps.name}}
                                         for ps in gen.pokemonspecies.all()
                                     ],
                                 },
                                 "versionGroups": [
-                                    {"name": vg.name} for vg in gen.versiongroup.all()
+                                    {"idName": vg.name} for vg in gen.versiongroup.all()
                                 ],
                             }
                         }
@@ -85,11 +85,11 @@ class GenerationTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                generation(name: "%s") {
-                    name
+                generation(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -99,9 +99,9 @@ class GenerationTests(GraphQLTest):
         expected = {
             "data": {
                 "generation": {
-                    "name": gen.name,
+                    "idName": gen.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in gen.generationname.all()
                     ],
                 }

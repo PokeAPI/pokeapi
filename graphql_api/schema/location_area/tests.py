@@ -55,27 +55,27 @@ class LocationAreaTests(GraphQLTest):
                     edges {
                         node {
                             encounterMethodRates {
-                                encounterMethod {name}
+                                encounterMethod {idName}
                                 versionDetails {
                                     rate
-                                    version {name}
+                                    version {idName}
                                 }
                             }
                             gameIndex
-                            location {name}
-                            name
+                            location {idName}
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
                             pokemonEncounters(first: 10) {
                                 edges {
                                     node {
-                                        pokemon {name}
+                                        pokemon {idName}
                                         versionDetails {
-                                            encounters {name}
+                                            encounters {idName}
                                             maxChance
-                                            version {name}
+                                            version {idName}
                                         }
                                     }
                                 }
@@ -94,12 +94,12 @@ class LocationAreaTests(GraphQLTest):
                 version_details = []
                 for er in encounter_rates:
                     version_details.append(
-                        {"rate": er.rate, "version": {"name": er.version.name}}
+                        {"rate": er.rate, "version": {"idName": er.version.name}}
                     )
 
                 results.append(
                     {
-                        "encounterMethod": {"name": em.name},
+                        "encounterMethod": {"idName": em.name},
                         "versionDetails": version_details,
                     }
                 )
@@ -115,15 +115,15 @@ class LocationAreaTests(GraphQLTest):
                         max_chance += e.encounter_slot.rarity
                     version_details.append(
                         {
-                            "encounters": [{"name": str(e.pk)} for e in v_encounters],
+                            "encounters": [{"idName": str(e.pk)} for e in v_encounters],
                             "maxChance": max_chance,
-                            "version": {"name": version.name},
+                            "version": {"idName": version.name},
                         }
                     )
                 pokemon_encounters.append(
                     {
                         "node": {
-                            "pokemon": {"name": pokemon.name},
+                            "pokemon": {"idName": pokemon.name},
                             "versionDetails": version_details,
                         }
                     }
@@ -141,12 +141,12 @@ class LocationAreaTests(GraphQLTest):
                                     la.locationareaencounterrate.all()
                                 ),
                                 "gameIndex": la.game_index,
-                                "location": {"name": la.location.name},
-                                "name": la.name,
+                                "location": {"idName": la.location.name},
+                                "idName": la.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in la.locationareaname.all()
                                 ],
@@ -167,8 +167,8 @@ class LocationAreaTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                locationArea(name: "%s") {
-                    name
+                locationArea(idName: "%s") {
+                    idName
                     names {text}
                 }
             }
@@ -178,7 +178,7 @@ class LocationAreaTests(GraphQLTest):
         expected = {
             "data": {
                 "locationArea": {
-                    "name": la.name,
+                    "idName": la.name,
                     "names": [{"text": n.name} for n in la.locationareaname.all()],
                 }
             }

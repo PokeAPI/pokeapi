@@ -20,7 +20,7 @@ class Region(g.ObjectType):
         description="The generation this region was introduced in.",
         resolver=load("region_generation", using="pk"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: RegionName,
         description="The name of this resource listed in different languages.",

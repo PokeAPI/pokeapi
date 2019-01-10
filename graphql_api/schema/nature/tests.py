@@ -38,16 +38,16 @@ class NatureTests(GraphQLTest):
             """
             query {
                 natures {
-                    decreasedStat {name}
-                    increasedStat {name}
+                    decreasedStat {idName}
+                    increasedStat {idName}
                     moveBattleStylePreferences {
                         lowHPPreference
                         highHPPreference
                     }
-                    name
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                     pokeathlonStatChanges {
                         maxChange
@@ -60,29 +60,29 @@ class NatureTests(GraphQLTest):
             "data": {
                 "natures": [
                     {
-                        "decreasedStat": {"name": nature.decreased_stat.name},
-                        # "hatesFlavor": {"name": nature.hates_flavor.name},
-                        "increasedStat": {"name": nature.increased_stat.name},
-                        # "likesFlavor": {"name": nature.likes_flavor.name},
+                        "decreasedStat": {"idName": nature.decreased_stat.name},
+                        # "hatesFlavor": {"idName": nature.hates_flavor.name},
+                        "increasedStat": {"idName": nature.increased_stat.name},
+                        # "likesFlavor": {"idName": nature.likes_flavor.name},
                         "moveBattleStylePreferences": [
                             {
                                 "lowHPPreference": nbsp.low_hp_preference,
                                 "highHPPreference": nbsp.high_hp_preference,
                                 # "moveBattleStyle": {
-                                #     "name": nbsp.move_battle_style.name
+                                #     "idName": nbsp.move_battle_style.name
                                 # },
                             }
                             for nbsp in nature.naturebattlestylepreference.all()
                         ],
-                        "name": nature.name,
+                        "idName": nature.name,
                         "names": [
-                            {"text": n.name, "language": {"name": n.language.name}}
+                            {"text": n.name, "language": {"idName": n.language.name}}
                             for n in nature.naturename.all()
                         ],
                         "pokeathlonStatChanges": [
                             {
                                 "maxChange": nps.max_change,
-                                # "pokeathlonStat": {"name": nps.pokeathlon_stat.name},
+                                # "pokeathlonStat": {"idName": nps.pokeathlon_stat.name},
                             }
                             for nps in nature.naturepokeathlonstat.all()
                         ]
@@ -98,11 +98,11 @@ class NatureTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                nature(name: "%s") {
-                    name
+                nature(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -112,9 +112,9 @@ class NatureTests(GraphQLTest):
         expected = {
             "data": {
                 "nature": {
-                    "name": nature.name,
+                    "idName": nature.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in nature.naturename.all()
                     ],
                 }

@@ -45,14 +45,14 @@ class EncounterTests(GraphQLTest):
                     edges {
                         node {
                             chance
-                            conditionValues {name}
-                            locationArea {name}
+                            conditionValues {idName}
+                            locationArea {idName}
                             maxLevel
-                            method {name}
+                            method {idName}
                             minLevel
-                            name
-                            pokemon {name}
-                            version {name}
+                            idName
+                            pokemon {idName}
+                            version {idName}
                         }
                     }
                 }
@@ -65,20 +65,20 @@ class EncounterTests(GraphQLTest):
                     "edges": [
                         {
                             "node": {
-                                "chance": encounter.encounter_slot.rarity / 100,
+                                "chance": encounter.encounter_slot.rarity,
                                 "conditionValues": [
-                                    {"name": ecvm.encounter_condition_value.name}
+                                    {"idName": ecvm.encounter_condition_value.name}
                                     for ecvm in encounter.encounterconditionvaluemap_set.all()
                                 ],
-                                "locationArea": {"name": encounter.location_area.name},
+                                "locationArea": {"idName": encounter.location_area.name},
                                 "maxLevel": encounter.max_level,
                                 "method": {
-                                    "name": encounter.encounter_slot.encounter_method.name
+                                    "idName": encounter.encounter_slot.encounter_method.name
                                 },
                                 "minLevel": encounter.min_level,
-                                "name": str(encounter.pk),
-                                "pokemon": {"name": encounter.pokemon.name},
-                                "version": {"name": encounter.version.name},
+                                "idName": str(encounter.pk),
+                                "pokemon": {"idName": encounter.pokemon.name},
+                                "version": {"idName": encounter.version.name},
                             }
                         }
                         for encounter in self.encounters
@@ -93,12 +93,12 @@ class EncounterTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                encounter(name: "%s") {
-                    name
+                encounter(idName: "%s") {
+                    idName
                 }
             }
             """
             % encounter.pk
         )
-        expected = {"data": {"encounter": {"name": str(encounter.pk)}}}
+        expected = {"data": {"encounter": {"idName": str(encounter.pk)}}}
         self.assertEqual(executed, expected)

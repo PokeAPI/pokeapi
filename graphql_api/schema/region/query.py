@@ -7,7 +7,7 @@ from ..base import BaseQuery
 
 
 class Query(BaseQuery):
-    region = g.Field(types.Region, name=g.ID(required=True))
+    region = g.Field(types.Region, id_name=g.ID(required=True))
     regions = g.relay.ConnectionField(
         conn.RegionConnection,
         description="A list of regions (organized areas) of the Pokémon world.",
@@ -15,8 +15,8 @@ class Query(BaseQuery):
         where=g.Argument(conn.RegionWhere)
     )
 
-    def resolve_region(self, info, name):
-        return info.context.loaders.n_region.load(name)
+    def resolve_region(self, info, id_name):
+        return info.context.loaders.n_region.load(id_name)
 
     def resolve_regions(self, info, where=None, order_by=None, **kwargs):
         where = where or {}

@@ -11,7 +11,7 @@ class VersionGroup(g.ObjectType):
         description="The generation this version was introduced in.",
         resolver=load("generation", using="generation_id"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     order = g.Int(
         description="Order for sorting. Almost by date of release, except similar versions are grouped together."
     )

@@ -16,12 +16,12 @@ class EncounterConditionTests(GraphQLTest):
             """
             query {
                 encounterConditions {
-                    name
+                    idName
                     names {text}
                     values {
-                        condition {name}
+                        condition {idName}
                         isDefault
-                        name
+                        idName
                         names {text}
                     }
                 }
@@ -32,15 +32,15 @@ class EncounterConditionTests(GraphQLTest):
             "data": {
                 "encounterConditions": [
                     {
-                        "name": ec.name,
+                        "idName": ec.name,
                         "names": [
                             {"text": n.name} for n in ec.encounterconditionname.all()
                         ],
                         "values": [
                             {
-                                "condition": {"name": ec.name},
+                                "condition": {"idName": ec.name},
                                 "isDefault": value.is_default,
-                                "name": value.name,
+                                "idName": value.name,
                                 "names": [
                                     {"text": n.name}
                                     for n in value.encounterconditionvaluename.all()
@@ -60,12 +60,12 @@ class EncounterConditionTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                encounterCondition(name: "%s") {
-                    name
+                encounterCondition(idName: "%s") {
+                    idName
                 }
             }
             """
             % ec.name
         )
-        expected = {"data": {"encounterCondition": {"name": ec.name}}}
+        expected = {"data": {"encounterCondition": {"idName": ec.name}}}
         self.assertEqual(executed, expected)

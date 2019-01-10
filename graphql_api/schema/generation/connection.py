@@ -10,15 +10,8 @@ class GenerationConnection(g.relay.Connection, base.BaseConnection, node=types.G
 
 
 class GenerationWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
-    region__name = g.ID(name="region")
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "generationname", "name")
-
-        return super().apply(query_set, **where)
+    generationname__name = g.Argument(base.TextFilter, name="name")
+    region__name = g.List(g.ID, name="mainRegion_idName")
 
 
 class GenerationSort(base.BaseSort):

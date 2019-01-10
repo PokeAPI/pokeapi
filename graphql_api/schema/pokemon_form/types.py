@@ -23,7 +23,7 @@ class PokemonForm(g.ObjectType):
         description="True for exactly one form used as the default for each Pokémon."
     )
     is_mega = g.Boolean(description="Whether or not this form requires mega evolution.")
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: PokemonFormName,
         description="The name of this resource listed in different languages.",

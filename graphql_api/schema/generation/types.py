@@ -21,7 +21,7 @@ class Generation(g.ObjectType):
         description="The main region travelled in this generation.",
         resolver=load("region", using="region_id")
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: GenerationName,
         description="The name of this resource listed in different languages.",

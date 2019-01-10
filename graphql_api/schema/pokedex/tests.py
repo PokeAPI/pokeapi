@@ -25,16 +25,16 @@ class PokedexTests(GraphQLTest):
                 pokedexes {
                     isMainSeries
                     descriptions {text}
-                    name
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                     pokemonEntries(first: 100) {
                         totalCount
                         edges {
                             entryNumber
-                            node {name}
+                            node {idName}
                         }
                     }
                 }
@@ -49,9 +49,9 @@ class PokedexTests(GraphQLTest):
                         "descriptions": [
                             {"text": d.description} for d in p.pokedexdescription.all()
                         ],
-                        "name": p.name,
+                        "idName": p.name,
                         "names": [
-                            {"text": n.name, "language": {"name": n.language.name}}
+                            {"text": n.name, "language": {"idName": n.language.name}}
                             for n in p.pokedexname.all()
                         ],
                         "pokemonEntries": {
@@ -59,7 +59,7 @@ class PokedexTests(GraphQLTest):
                             "edges": [
                                 {
                                     "entryNumber": pdn.pokedex_number,
-                                    "node": {"name": pdn.pokemon_species.name},
+                                    "node": {"idName": pdn.pokemon_species.name},
                                 }
                                 for pdn in p.pokemondexnumber.all()
                             ],
@@ -76,12 +76,12 @@ class PokedexTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokedex(name: "%s") {
-                    name
+                pokedex(idName: "%s") {
+                    idName
                 }
             }
             """
             % p.name
         )
-        expected = {"data": {"pokedex": {"name": p.name}}}
+        expected = {"data": {"pokedex": {"idName": p.name}}}
         self.assertEqual(executed, expected)

@@ -9,7 +9,7 @@ class PokemonShape(g.ObjectType):
     """Shapes used for sorting Pokémon in a Pokédex."""
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: PokemonShapeName,
         description="The name of this resource listed in different languages.",

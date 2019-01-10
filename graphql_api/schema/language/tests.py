@@ -19,12 +19,12 @@ class LanguageTests(GraphQLTest):
             """
             query {
                 languages {
-                    name
+                    idName
                     isOfficial
                     languageCode
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -34,14 +34,14 @@ class LanguageTests(GraphQLTest):
             "data": {
                 "languages": [
                     {
-                        "name": l.name,
+                        "idName": l.name,
                         "isOfficial": l.official,
                         "languageCode": l.iso3166,
                         "names": [
                             {
                                 "text": self.language_names[i].name,
                                 "language": {
-                                    "name": self.language_names[i].local_language.name
+                                    "idName": self.language_names[i].local_language.name
                                 },
                             }
                         ],
@@ -58,13 +58,13 @@ class LanguageTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                language(name: "%s") {
-                    name
+                language(idName: "%s") {
+                    idName
                     isOfficial
                     languageCode
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -74,13 +74,13 @@ class LanguageTests(GraphQLTest):
         expected = {
             "data": {
                 "language": {
-                    "name": l.name,
+                    "idName": l.name,
                     "isOfficial": l.official,
                     "languageCode": l.iso3166,
                     "names": [
                         {
                             "text": l_nm.name,
-                            "language": {"name": l_nm.local_language.name},
+                            "language": {"idName": l_nm.local_language.name},
                         }
                     ],
                 }

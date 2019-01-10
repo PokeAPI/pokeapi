@@ -22,11 +22,11 @@ class CharacteristicTests(GraphQLTest):
                 characteristics {
                     descriptions {
                         text
-                        language {name}
+                        language {idName}
                     }
                     geneModulo
-                    highestStat {name}
-                    name
+                    highestStat {idName}
+                    idName
                     possibleValues
                 }
             }
@@ -47,13 +47,13 @@ class CharacteristicTests(GraphQLTest):
                         "descriptions": [
                             {
                                 "text": d.description,
-                                "language": {"name": d.language.name},
+                                "language": {"idName": d.language.name},
                             }
                             for d in char.characteristicdescription.all()
                         ],
                         "geneModulo": char.gene_mod_5,
-                        "highestStat": {"name": char.stat.name},
-                        "name": str(char.pk),
+                        "highestStat": {"idName": char.stat.name},
+                        "idName": str(char.pk),
                         "possibleValues": get_possible_values(char.gene_mod_5),
                     }
                     for char in self.characteristics
@@ -67,12 +67,12 @@ class CharacteristicTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                characteristic(name: "%i") {
-                    name
+                characteristic(idName: "%i") {
+                    idName
                 }
             }
             """
             % char.pk
         )
-        expected = {"data": {"characteristic": {"name": str(char.pk)}}}
+        expected = {"data": {"characteristic": {"idName": str(char.pk)}}}
         self.assertEqual(executed, expected)

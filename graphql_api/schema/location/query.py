@@ -7,7 +7,7 @@ from ..base import BaseQuery
 
 
 class Query(BaseQuery):
-    location = g.Field(types.Location, name=g.ID(required=True))
+    location = g.Field(types.Location, id_name=g.ID(required=True))
     locations = g.relay.ConnectionField(
         conn.LocationConnection,
         description="A list of locations that can be visited within games.",
@@ -15,8 +15,8 @@ class Query(BaseQuery):
         where=g.Argument(conn.LocationWhere)
     )
 
-    def resolve_location(self, info, name):
-        return info.context.loaders.n_location.load(name)
+    def resolve_location(self, info, id_name):
+        return info.context.loaders.n_location.load(id_name)
 
     def resolve_locations(self, info, where=None, order_by=None, **kwargs):
         where = where or {}

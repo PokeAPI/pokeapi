@@ -10,14 +10,7 @@ class RegionConnection(g.relay.Connection, base.BaseConnection, node=types.Regio
 
 
 class RegionWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "regionname", "name")
-
-        return super().apply(query_set, **where)
+    regionname__name = g.Argument(base.TextFilter, name="name")
 
 
 class RegionSort(base.BaseSort):

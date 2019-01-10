@@ -15,17 +15,9 @@ class PokemonFormWhere(base.BaseWhere):
     is_battle_only = g.Boolean()
     is_default = g.Boolean()
     is_mega = g.Boolean()
-    name = g.Argument(base.TextSearch)
+    pokemonformname__name = g.Argument(base.TextFilter, name="name")
     version_group = g.ID()
-
-    @classmethod
-    def apply(cls, query_set, name=None, version_group=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "pokemonformname", "name")
-        if version_group:
-            query_set = query_set.filter(versiongroup__name=version_group)
-
-        return super().apply(query_set, **where)
+    version_group__name = g.List(g.ID, name="versionGroup_idName")
 
 
 class PokemonFormSort(base.BaseSort):

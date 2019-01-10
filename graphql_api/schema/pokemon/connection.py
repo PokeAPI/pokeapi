@@ -8,19 +8,27 @@ class PokemonConnection(g.relay.Connection, base.BaseConnection, node=types.Poke
 
 
 class PokemonWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
+    base_experience = g.Argument(base.IntFilter)
+    height = g.Argument(base.IntFilter)
+    is_default = g.Boolean()
+    species = g.Argument(
+        g.lazy_import(
+            "graphql_api.schema.pokemon_species.connection.PokemonSpeciesWhere"
+        )
+    )
+    pokemontype__type__name = g.Argument(base.ListFilter, name="types")
+    weight = g.Argument(base.IntFilter)
 
     @classmethod
-    def apply(cls, query_set, name=None, **where):
-        # Unfortunately, Pokemon doesn't have a 'names' property,
-        # so searching against the 'name' property will have to do.
-        if name:
-            if name.case_sensitive:
-                query_set = query_set.filter(name__contains=name.query)
-            else:
-                query_set = query_set.filter(name__icontains=name.query)
+    def apply(cls, qs, prefix="", species=None, **where):
+        from graphql_api.schema.pokemon_species.connection import PokemonSpeciesWhere
 
-        return super().apply(query_set, **where)
+        if species:
+            qs = PokemonSpeciesWhere.apply(
+                qs, **species, prefix=prefix + "pokemon_species__"
+            )
+
+        return super().apply(qs, **where)
 
 
 class PokemonSort(base.BaseSort):

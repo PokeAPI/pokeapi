@@ -18,12 +18,12 @@ class VersionTests(GraphQLTest):
             """
             query {
                 versions {
-                    name
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
-                    versionGroup {name}
+                    versionGroup {idName}
                 }
             }
             """
@@ -32,12 +32,12 @@ class VersionTests(GraphQLTest):
             "data": {
                 "versions": [
                     {
-                        "name": v.name,
+                        "idName": v.name,
                         "names": [
-                            {"text": n.name, "language": {"name": n.language.name}}
+                            {"text": n.name, "language": {"idName": n.language.name}}
                             for n in v.versionname.all()
                         ],
-                        "versionGroup": {"name": v.version_group.name},
+                        "versionGroup": {"idName": v.version_group.name},
                     }
                     for v in self.versions
                 ]
@@ -50,11 +50,11 @@ class VersionTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                version(name: "%s") {
-                    name
+                version(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -64,9 +64,9 @@ class VersionTests(GraphQLTest):
         expected = {
             "data": {
                 "version": {
-                    "name": v.name,
+                    "idName": v.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in v.versionname.all()
                     ],
                 }

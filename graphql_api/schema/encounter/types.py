@@ -3,7 +3,7 @@ from graphql_api.utils import load
 
 
 # This type relies on the private field 'encounter_slot' being pre-loaded for performance,
-# e.g. using 'select_related' on a Django query set
+# e.g. using 'select_related' on a Django query set.
 
 
 class Encounter(g.ObjectType):
@@ -12,9 +12,9 @@ class Encounter(g.ObjectType):
     """
 
     encounter_slot = None
-    chance = g.Float(
-        description="The chance that this encounter will occur, out of 1.",
-        resolver=lambda root, info: root.encounter_slot.rarity / 100,
+    chance = g.Int(
+        description="The percent chance that this encounter will occur.",
+        resolver=lambda root, info: root.encounter_slot.rarity,
     )
     condition_values = g.List(
         g.lazy_import(
@@ -37,7 +37,7 @@ class Encounter(g.ObjectType):
         description="The method by which this encounter happens.",
     )
     min_level = g.Int(description="The lowest level the Pokémon can be encountered at.")
-    pk = g.ID(name="name", description="The name of this resource.")
+    pk = g.ID(name="idName", description="The name of this resource.")
     pokemon_id = None
     pokemon = g.Field(
         g.lazy_import("graphql_api.schema.pokemon.types.Pokemon"),

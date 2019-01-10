@@ -11,7 +11,7 @@ class EggGroup(g.ObjectType):
     """
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: EggGroupName,
         description="The name of this language listed in different languages.",

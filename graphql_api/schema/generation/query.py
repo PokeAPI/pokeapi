@@ -7,7 +7,7 @@ from ..base import BaseQuery
 
 
 class Query(BaseQuery):
-    generation = g.Field(types.Generation, name=g.ID(required=True))
+    generation = g.Field(types.Generation, id_name=g.ID(required=True))
     generations = g.relay.ConnectionField(
         conn.GenerationConnection,
         description="A list of generations (groupings of games based on the Pokémon they include).",
@@ -15,8 +15,8 @@ class Query(BaseQuery):
         where=g.Argument(conn.GenerationWhere),
     )
 
-    def resolve_generation(self, info, name):
-        return info.context.loaders.n_generation.load(name)
+    def resolve_generation(self, info, id_name):
+        return info.context.loaders.n_generation.load(id_name)
 
     def resolve_generations(self, info, where=None, order_by=None, **kwargs):
         where = where or {}

@@ -39,7 +39,7 @@ class Nature(g.ObjectType):
         description="A list of battle styles and how likely a Pokémon with this nature is to use them in the Battle Palace or Battle Tent.",
         resolver=load("nature_battlestylepreferences", using="pk"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: NatureName,
         description="The name of this resource listed in different languages.",

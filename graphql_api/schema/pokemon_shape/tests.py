@@ -21,12 +21,12 @@ class PokemonShapeTests(GraphQLTest):
             """
             query {
                 pokemonShapes {
-                    name
+                    idName
                     names {text}
                     pokemonSpeciess(first: 10) {
                         edges {
                             node {
-                                name
+                                idName
                             }
                         }
                     }
@@ -38,13 +38,13 @@ class PokemonShapeTests(GraphQLTest):
             "data": {
                 "pokemonShapes": [
                     {
+                        "idName": shape.name,
                         "names": [
                             {"text": n.name} for n in shape.pokemonshapename.all()
                         ],
-                        "name": shape.name,
                         "pokemonSpeciess": {
                             "edges": [
-                                {"node": {"name": ps.name}}
+                                {"node": {"idName": ps.name}}
                                 for ps in shape.pokemonspecies.all()
                             ]
                         },
@@ -60,12 +60,12 @@ class PokemonShapeTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemonShape(name: "%s") {
-                    name
+                pokemonShape(idName: "%s") {
+                    idName
                 }
             }
             """
             % shape.name
         )
-        expected = {"data": {"pokemonShape": {"name": shape.name}}}
+        expected = {"data": {"pokemonShape": {"idName": shape.name}}}
         self.assertEqual(executed, expected)

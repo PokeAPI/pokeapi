@@ -24,7 +24,7 @@ class Characteristic(g.ObjectType):
         description="The stat that contains a Pokémon's highest [IV (indivual value)](https://bulbapedia.bulbagarden.net/wiki/Individual_values).",
         resolver=load("stat", using="stat_id"),
     )
-    pk = g.ID(name="name", description="The name of this resource.")
+    pk = g.ID(name="idName", description="The name of this resource.")
     possible_values = g.List(
         g.Int,
         description="The possible values of the highest stat that would result in a Pokémon receiving this characteristic when divided by 5."

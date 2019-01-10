@@ -22,12 +22,12 @@ class PokemonColorTests(GraphQLTest):
             """
             query {
                 pokemonColors {
-                    name
+                    idName
                     names {text}
                     pokemonSpeciess(first: 10) {
                         edges {
                             node {
-                                name
+                                idName
                             }
                         }
                     }
@@ -39,14 +39,14 @@ class PokemonColorTests(GraphQLTest):
             "data": {
                 "pokemonColors": [
                     {
+                        "idName": pc.name,
                         "names": [
                             {"text": n.name}
                             for n in pc.pokemoncolorname.all()
                         ],
-                        "name": pc.name,
                         "pokemonSpeciess": {
                             "edges": [
-                                {"node": {"name": ps.name}}
+                                {"node": {"idName": ps.name}}
                                 for ps in pc.pokemonspecies.all()
                             ]
                         },
@@ -62,12 +62,12 @@ class PokemonColorTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemonColor(name: "%s") {
-                    name
+                pokemonColor(idName: "%s") {
+                    idName
                 }
             }
             """
             % pc.name
         )
-        expected = {"data": {"pokemonColor": {"name": pc.name}}}
+        expected = {"data": {"pokemonColor": {"idName": pc.name}}}
         self.assertEqual(executed, expected)

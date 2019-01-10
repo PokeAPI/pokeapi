@@ -38,20 +38,20 @@ class PokemonFormTests(GraphQLTest):
                             isBattleOnly
                             isDefault
                             isMega
-                            name
+                            idName
                             names {
                                 text
                                 shortText
                             }
                             order
-                            pokemon {name}
+                            pokemon {idName}
                             sprites {
                                 frontDefault
                                 frontShiny
                                 backDefault
                                 backShiny
                             }
-                            versionGroup {name}
+                            versionGroup {idName}
                         }
                     }
                 }
@@ -82,17 +82,17 @@ class PokemonFormTests(GraphQLTest):
                                 "isBattleOnly": pf.is_battle_only,
                                 "isDefault": pf.is_default,
                                 "isMega": pf.is_mega,
-                                "name": pf.name,
+                                "idName": pf.name,
                                 "names": [
                                     {"text": n.pokemon_name, "shortText": n.name}
                                     for n in pf.pokemonformname.all()
                                 ],
                                 "order": pf.order,
-                                "pokemon": {"name": pf.pokemon.name},
+                                "pokemon": {"idName": pf.pokemon.name},
                                 "sprites": get_sprites(
                                     json.loads(pf.pokemonformsprites.all()[0].sprites)
                                 ),
-                                "versionGroup": {"name": pf.version_group.name},
+                                "versionGroup": {"idName": pf.version_group.name},
                             }
                         }
                         for pf in self.pokemon_forms
@@ -107,12 +107,12 @@ class PokemonFormTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemonForm(name: "%s") {
-                    name
+                pokemonForm(idName: "%s") {
+                    idName
                 }
             }
             """
             % pokemon_form.name
         )
-        expected = {"data": {"pokemonForm": {"name": pokemon_form.name}}}
+        expected = {"data": {"pokemonForm": {"idName": pokemon_form.name}}}
         self.assertEqual(executed, expected)

@@ -36,7 +36,7 @@ class Ability(g.ObjectType):
         description="The in-game description of this ability's effects listed in different languages.",
         resolver=load_with_args("ability_flavortextentries", using="pk"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: AbilityName,
         description="The name of this resource listed in different languages.",

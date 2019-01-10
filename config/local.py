@@ -49,7 +49,7 @@ LOGGING = {
 
 MIDDLEWARE = [
     # Log each database SQL query to the console for debugging
-    # 'config.middleware.QueryDebugMiddleware',
+    'config.middleware.QueryDebugMiddleware',
 
     # Log the number of queries and the total run time to the console
     'config.middleware.QueryCountDebugMiddleware'

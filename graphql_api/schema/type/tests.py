@@ -34,28 +34,28 @@ class TypeTests(GraphQLTest):
                         node {
                             gameIndices {
                                 gameIndex
-                                generation {name}
+                                generation {idName}
                             }
-                            generation {name}
-                            name
+                            generation {idName}
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
                             pokemon(first: 100) {
                                 edges {
                                     order
                                     node {
-                                        name
+                                        idName
                                     }
                                 }
                             }
-                            noDamageTo {name}
-                            halfDamageTo {name}
-                            doubleDamageTo {name}
-                            noDamageFrom {name}
-                            halfDamageFrom {name}
-                            doubleDamageFrom {name}
+                            noDamageTo {idName}
+                            halfDamageTo {idName}
+                            doubleDamageTo {idName}
+                            noDamageFrom {idName}
+                            halfDamageFrom {idName}
+                            doubleDamageFrom {idName}
                         }
                     }
                 }
@@ -71,16 +71,16 @@ class TypeTests(GraphQLTest):
                                 "gameIndices": [
                                     {
                                         "gameIndex": tgi.game_index,
-                                        "generation": {"name": tgi.generation.name},
+                                        "generation": {"idName": tgi.generation.name},
                                     }
                                     for tgi in t.typegameindex.all()
                                 ],
-                                "generation": {"name": t.generation.name},
-                                "name": t.name,
+                                "generation": {"idName": t.generation.name},
+                                "idName": t.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in t.typename.all()
                                 ],
@@ -88,43 +88,43 @@ class TypeTests(GraphQLTest):
                                     "edges": [
                                         {
                                             "order": pt.slot,
-                                            "node": {"name": pt.pokemon.name},
+                                            "node": {"idName": pt.pokemon.name},
                                         }
                                         for pt in t.pokemontype.all()
                                     ]
                                 },
                                 "noDamageTo": [
-                                    {"name": te.target_type.name}
+                                    {"idName": te.target_type.name}
                                     for te in t.damage_type.all()
                                     if te.damage_type == t
                                     if te.damage_factor == 0
                                 ],
                                 "halfDamageTo": [
-                                    {"name": te.target_type.name}
+                                    {"idName": te.target_type.name}
                                     for te in t.damage_type.all()
                                     if te.damage_type == t
                                     if te.damage_factor == 50
                                 ],
                                 "doubleDamageTo": [
-                                    {"name": te.target_type.name}
+                                    {"idName": te.target_type.name}
                                     for te in t.damage_type.all()
                                     if te.damage_type == t
                                     if te.damage_factor == 200
                                 ],
                                 "noDamageFrom": [
-                                    {"name": te.damage_type.name}
+                                    {"idName": te.damage_type.name}
                                     for te in t.target_type.all()
                                     if te.target_type == t
                                     if te.damage_factor == 0
                                 ],
                                 "halfDamageFrom": [
-                                    {"name": te.damage_type.name}
+                                    {"idName": te.damage_type.name}
                                     for te in t.target_type.all()
                                     if te.target_type == t
                                     if te.damage_factor == 50
                                 ],
                                 "doubleDamageFrom": [
-                                    {"name": te.damage_type.name}
+                                    {"idName": te.damage_type.name}
                                     for te in t.target_type.all()
                                     if te.target_type == t
                                     if te.damage_factor == 200
@@ -143,11 +143,11 @@ class TypeTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                type(name: "%s") {
-                    name
+                type(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -157,9 +157,9 @@ class TypeTests(GraphQLTest):
         expected = {
             "data": {
                 "type": {
-                    "name": t.name,
+                    "idName": t.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in t.typename.all()
                     ],
                 }

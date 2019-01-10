@@ -12,15 +12,8 @@ class LocationAreaConnection(
 
 
 class LocationAreaWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "locationareaname", "name")
-
-        return super().apply(query_set, **where)
-
+    locationareaname__name = g.Argument(base.TextFilter, name="name")
+    location__name = g.List(g.ID, name="location_idName")
 
 class LocationAreaSort(base.BaseSort):
     field = g.InputField(

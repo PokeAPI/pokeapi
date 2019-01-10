@@ -51,24 +51,25 @@ class PokemonSpeciesTests(GraphQLTest):
                         node {
                             baseHappiness
                             captureRate
-                            color {name}
-                            eggGroups {name}
-                            evolvesFromSpecies {name}
+                            color {idName}
+                            eggGroups {idName}
+                            evolvesFromSpecies {idName}
                             flavorTextEntries {text}
                             formDescriptions {text}
                             isFormsSwitchable
                             genderRate
                             genera {text}
-                            generation {name}
-                            growthRate {name}
-                            habitat {name}
+                            generation {idName}
+                            growthRate {idName}
+                            habitat {idName}
                             hasGenderDifferences
                             hatchCounter
                             isBaby
-                            name
+                            isGenderless
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
                             order
                             pokedexNumbers {
@@ -78,8 +79,8 @@ class PokemonSpeciesTests(GraphQLTest):
                                 baseScore
                                 rate
                             }
-                            shape {name}
-                            varieties {name}
+                            shape {idName}
+                            varieties {idName}
                         }
                     }
                 }
@@ -94,13 +95,13 @@ class PokemonSpeciesTests(GraphQLTest):
                             "node": {
                                 "baseHappiness": ps.base_happiness,
                                 "captureRate": ps.capture_rate,
-                                "color": {"name": ps.pokemon_color.name},
+                                "color": {"idName": ps.pokemon_color.name},
                                 "eggGroups": [
-                                    {"name": peg.egg_group.name}
+                                    {"idName": peg.egg_group.name}
                                     for peg in ps.pokemonegggroup.all()
                                 ],
                                 "evolvesFromSpecies": {
-                                    "name": ps.evolves_from_species.name
+                                    "idName": ps.evolves_from_species.name
                                 }
                                 if ps.evolves_from_species
                                 else None,
@@ -114,23 +115,24 @@ class PokemonSpeciesTests(GraphQLTest):
                                 ],
                                 "isFormsSwitchable": ps.forms_switchable,
                                 "genderRate": (
-                                    ps.gender_rate / 8 if ps.gender_rate != -1 else None
+                                    ps.gender_rate * 12.5 if ps.gender_rate != -1 else None
                                 ),
                                 "genera": [
                                     {"text": n.genus}
                                     for n in ps.pokemonspeciesname.all()
                                 ],
-                                "generation": {"name": ps.generation.name},
-                                "growthRate": {"name": ps.growth_rate.name},
-                                "habitat": {"name": ps.pokemon_habitat.name},
+                                "generation": {"idName": ps.generation.name},
+                                "growthRate": {"idName": ps.growth_rate.name},
+                                "habitat": {"idName": ps.pokemon_habitat.name},
                                 "hasGenderDifferences": ps.has_gender_differences,
                                 "hatchCounter": ps.hatch_counter,
                                 "isBaby": ps.is_baby,
-                                "name": ps.name,
+                                "isGenderless": ps.gender_rate == -1,
+                                "idName": ps.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in ps.pokemonspeciesname.all()
                                 ],
@@ -138,7 +140,7 @@ class PokemonSpeciesTests(GraphQLTest):
                                 "pokedexNumbers": [
                                     {
                                         "entryNumber": pn.pokedex_number,
-                                        # "pokedex": {"name": pn.pokedex.name},
+                                        # "pokedex": {"idName": pn.pokedex.name},
                                     }
                                     for pn in ps.pokemondexnumber.all()
                                 ],
@@ -146,13 +148,13 @@ class PokemonSpeciesTests(GraphQLTest):
                                     {
                                         "baseScore": ppe.base_score,
                                         "rate": ppe.rate,
-                                        # "palParkArea": {"name": ppe.pal_park_area.name},
+                                        # "palParkArea": {"idName": ppe.pal_park_area.name},
                                     }
                                     for ppe in ps.palpark.all()
                                 ],
-                                "shape": {"name": ps.pokemon_shape.name},
+                                "shape": {"idName": ps.pokemon_shape.name},
                                 "varieties": [
-                                    {"name": p.name} for p in ps.pokemon.all()
+                                    {"idName": p.name} for p in ps.pokemon.all()
                                 ],
                             }
                         }
@@ -168,12 +170,12 @@ class PokemonSpeciesTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemonSpecies(name: "%s") {
-                    name
+                pokemonSpecies(idName: "%s") {
+                    idName
                 }
             }
             """
             % ps.name
         )
-        expected = {"data": {"pokemonSpecies": {"name": ps.name}}}
+        expected = {"data": {"pokemonSpecies": {"idName": ps.name}}}
         self.assertEqual(executed, expected)

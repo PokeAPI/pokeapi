@@ -33,7 +33,7 @@ class Stat(g.ObjectType):
     #     description="The class of damage this stat is directly related to.",
     #     resolver=load("movedamageclass", using="move_damage_class_id"),
     # )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: StatName,
         description="The name of this resource listed in different languages.",

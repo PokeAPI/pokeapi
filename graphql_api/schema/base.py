@@ -1,4 +1,7 @@
+import re
+from typing import List
 import graphene as g
+from django.db.models import Count
 from graphql import GraphQLError
 
 
@@ -20,10 +23,18 @@ class URI(g.String):
 
 class BaseWhere(g.InputObjectType):
     @classmethod
-    def apply(cls, query_set, **where):
+    def apply(cls, query_set, prefix="", **where):
         """Iteratively apply each where clause to query_set."""
+
         for arg, value in where.items():
-            query_set = query_set.filter(**{arg: value})
+            # print(arg, value, type(value))
+
+            if isinstance(value, BaseWhere):
+                query_set = value.apply(query_set, prefix=prefix + arg, **value)
+            elif isinstance(value, List):
+                query_set = query_set.filter(**{prefix + arg + "__in": value})
+            else:
+                query_set = query_set.filter(**{prefix + arg: value})
 
         return query_set.distinct()
 
@@ -40,38 +51,99 @@ class BaseWhere(g.InputObjectType):
         return query_set.filter(**filters)
 
 
-class TextSearch(g.InputObjectType):
-    query = g.String(description="The text to search for.", required=True)
-    case_sensitive = g.Boolean(default_value=False)
-    lang = g.Field(
-        g.lazy_import("graphql_api.schema.language_enum.LanguageEnum"),
-        description="Restrict search results to a specific language. By default, searches will be performed against all languages.",
+class IntFilter(BaseWhere):
+    exact = g.Int(name="eq", description="Exactly equal to.")
+    lt = g.Int(description="Less than.")
+    lte = g.Int(description="Less than or equal to.")
+    gt = g.Int(description="Greater than.")
+    gte = g.Int(description="Greater than or equal to.")
+
+    @classmethod
+    def apply(cls, query_set, prefix="", **where):
+        filters = {f"{prefix}__{operator}": value for operator, value in where.items()}
+        return query_set.filter(**filters)
+
+
+class ListFilter(BaseWhere):
+    eq = g.List(g.ID, description="Exactly equal to.")
+    all = g.List(g.ID, description="Contains all of.")
+    some = g.List(g.ID, description="Contains some of (at least one).")
+
+    @classmethod
+    def apply(cls, query_set, prefix="", **where):
+        for operator, value in where.items():
+            if operator == "eq":
+                query_set = query_set.annotate(**{prefix + "__count": Count(prefix)})
+                query_set = query_set.filter(**{prefix + "__count": len(value)})
+
+            if operator in ["eq", "all"]:
+                for v in value:
+                    query_set = query_set.filter(**{prefix + "__exact": v})
+            elif operator == "some":
+                query_set = query_set.filter(**{prefix + "__in": value})
+
+        return query_set
+
+
+class TextFilter(BaseWhere):
+    sw = g.String(description="Starts with.")
+    has = g.String(description="Has/Contains.")
+    eq = g.String(description="Exactly equals to.")
+    ne = g.String(description="Not equals to.")
+    regex = g.String()
+    in_ = g.List(g.String, name="in", description="In.")
+    nin = g.List(g.String, description="Not in.")
+    lang = g.String(
+        description="Restrict search results to a specific language. By default, searches will be performed against all languages."
     )
-    # exact = Boolean(
-    #     default_value=False,
-    #     description="Return only exact, case-sensitive matches."
-    # )
+
+    @classmethod
+    def apply(cls, query_set, prefix="", lang=None, **where):
+        filters = {}
+        exclude = {}
+
+        if lang is not None:
+            resource_name = re.findall("(.+)__.+$", prefix)[0]
+            filters[resource_name + "__language__name"] = lang
+
+        for operator, value in where.items():
+            if operator == "sw":
+                filters[prefix + "__istartswith"] = value
+            elif operator == "has":
+                filters[prefix + "__icontains"] = value
+            elif operator == "eq":
+                filters[prefix + "__exact"] = value
+            elif operator == "regex":
+                filters[prefix + "__regex"] = value
+            elif operator == "in_":
+                filters[prefix + "__in"] = value
+            elif operator == "ne":
+                exclude[prefix + "__exact"] = value
+            elif operator == "nin":
+                exclude[prefix + "__in"] = value
+
+        return query_set.filter(**filters).exclude(**exclude)
 
 
-class SortDirection(g.Enum):
+class SortOrder(g.Enum):
     ASC = "asc"
     DESC = "desc"
 
     @property
     def description(self):
-        if self == SortDirection.ASC:
+        if self == SortOrder.ASC:
             return "Ascending order"
-        if self == SortDirection.DESC:
+        if self == SortOrder.DESC:
             return "Descending order"
 
 
 class BaseSort(g.InputObjectType):
-    direction = SortDirection(
-        description="The sort direction.", default_value=SortDirection.ASC
+    field = g.String()
+    order = SortOrder(
+        description="The sort direction.", default_value=SortOrder.ASC
     )
-    lang = g.Field(
-        g.lazy_import("graphql_api.schema.language_enum.LanguageEnum"),
-        description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts.",
+    lang = g.String(
+        description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts."
     )
 
     @classmethod
@@ -79,7 +151,7 @@ class BaseSort(g.InputObjectType):
         order_by = order_by or []
         ordering = []
         for o in order_by:
-            if o.direction == "asc":
+            if o.order == "asc":
                 ordering.append(o.field)
             else:
                 ordering.append("-" + o.field)
@@ -99,7 +171,7 @@ class TranslationList(g.List):
         kwargs.setdefault(
             "lang",
             g.List(
-                g.lazy_import("graphql_api.schema.language_enum.LanguageEnum"),
+                g.String,
                 description="Restrict results to specific languages, in the order specified. This allows a client to specify a primary language with one or more fall-back languages to be used when the primary language is not available.",
             ),
         )

@@ -7,7 +7,7 @@ from ..base import BaseQuery
 
 
 class Query(BaseQuery):
-    type = g.Field(types.Type, name=g.ID(required=True))
+    type = g.Field(types.Type, id_name=g.ID(required=True))
     types = g.relay.ConnectionField(
         conn.TypeConnection,
         description="A list of types Pokémon and moves can have.",
@@ -15,8 +15,8 @@ class Query(BaseQuery):
         where=g.Argument(conn.TypeWhere)
     )
 
-    def resolve_type(self, info, name):
-        return info.context.loaders.n_type.load(name)
+    def resolve_type(self, info, id_name):
+        return info.context.loaders.n_type.load(id_name)
 
     def resolve_types(self, info, where=None, order_by=None, **kwargs):
         where = where or {}

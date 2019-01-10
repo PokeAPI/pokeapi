@@ -48,7 +48,7 @@ class Type(g.ObjectType):
     #     g.lazy_import("graphql_api.schema.move_damage_class.types.MoveDamageClass"),
     #     description="The class of damage inflicted by moves of this type.",
     # )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: TypeName,
         description="The name of this resource listed in different languages.",

@@ -28,22 +28,22 @@ class StatTests(GraphQLTest):
                         node {
                             isMainSeries
                             effectEntries {text}
-                            generation {name}
+                            generation {idName}
                             effectHistory {
                                 effectEntries {text}
-                                versionGroup {name}
+                                versionGroup {idName}
                             }
                             flavorTextEntries {
                                 text
-                                versionGroup {name}
+                                versionGroup {idName}
                             }
-                            name
+                            idName
                             names {text}
                             pokemons(first: 10) {
                                 edges {
                                     isHidden
                                     order
-                                    node {name}
+                                    node {idName}
                                 }
                             }
                         }
@@ -63,25 +63,25 @@ class StatTests(GraphQLTest):
                                     {"text": e.effect}
                                     for e in a.abilityeffecttext.all()
                                 ],
-                                "generation": {"name": a.generation.name},
+                                "generation": {"idName": a.generation.name},
                                 "effectHistory": [
                                     {
                                         "effectEntries": [
                                             {"text": e.effect}
                                             for e in ac.abilitychangeeffecttext.all()
                                         ],
-                                        "versionGroup": {"name": ac.version_group.name},
+                                        "versionGroup": {"idName": ac.version_group.name},
                                     }
                                     for ac in a.abilitychange.all()
                                 ],
                                 "flavorTextEntries": [
                                     {
                                         "text": f.flavor_text,
-                                        "versionGroup": {"name": f.version_group.name},
+                                        "versionGroup": {"idName": f.version_group.name},
                                     }
                                     for f in a.abilityflavortext.all()
                                 ],
-                                "name": a.name,
+                                "idName": a.name,
                                 "names": [
                                     {"text": n.name} for n in a.abilityname.all()
                                 ],
@@ -90,7 +90,7 @@ class StatTests(GraphQLTest):
                                         {
                                             "isHidden": pa.is_hidden,
                                             "order": pa.slot,
-                                            "node": {"name": pa.pokemon.name},
+                                            "node": {"idName": pa.pokemon.name},
                                         }
                                         for pa in a.pokemonability.all()
                                     ]
@@ -109,11 +109,11 @@ class StatTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                ability(name: "%s") {
-                    name
+                ability(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -123,9 +123,9 @@ class StatTests(GraphQLTest):
         expected = {
             "data": {
                 "ability": {
-                    "name": ability.name,
+                    "idName": ability.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in ability.abilityname.all()
                     ],
                 }

@@ -24,7 +24,7 @@ class LocationArea(g.ObjectType):
         description="The location this area can be found in.",
         resolver=load("location", using="location_id"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: LocationAreaName,
         description="The name of this resource listed in different languages.",

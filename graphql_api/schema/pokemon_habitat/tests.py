@@ -23,12 +23,12 @@ class PokemonHabitatTests(GraphQLTest):
             """
             query {
                 pokemonHabitats {
-                    name
+                    idName
                     names {text}
                     pokemonSpeciess(first: 10) {
                         edges {
                             node {
-                                name
+                                idName
                             }
                         }
                     }
@@ -40,14 +40,14 @@ class PokemonHabitatTests(GraphQLTest):
             "data": {
                 "pokemonHabitats": [
                     {
+                        "idName": ph.name,
                         "names": [
                             {"text": n.name}
                             for n in ph.pokemonhabitatname.all()
                         ],
-                        "name": ph.name,
                         "pokemonSpeciess": {
                             "edges": [
-                                {"node": {"name": ps.name}}
+                                {"node": {"idName": ps.name}}
                                 for ps in ph.pokemonspecies.all()
                             ]
                         },
@@ -63,12 +63,12 @@ class PokemonHabitatTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                pokemonHabitat(name: "%s") {
-                    name
+                pokemonHabitat(idName: "%s") {
+                    idName
                 }
             }
             """
             % ph.name
         )
-        expected = {"data": {"pokemonHabitat": {"name": ph.name}}}
+        expected = {"data": {"pokemonHabitat": {"idName": ph.name}}}
         self.assertEqual(executed, expected)

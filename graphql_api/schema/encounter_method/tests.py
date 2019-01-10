@@ -16,7 +16,7 @@ class EncounterMethodTests(GraphQLTest):
             """
             query {
                 encounterMethods {
-                    name
+                    idName
                     names {text}
                     order
                 }
@@ -27,7 +27,7 @@ class EncounterMethodTests(GraphQLTest):
             "data": {
                 "encounterMethods": [
                     {
-                        "name": em.name,
+                        "idName": em.name,
                         "names": [{"text": n.name} for n in em.encountermethodname.all()],
                         "order": em.order,
                     }
@@ -42,12 +42,12 @@ class EncounterMethodTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                encounterMethod(name: "%s") {
-                    name
+                encounterMethod(idName: "%s") {
+                    idName
                 }
             }
             """
             % em.name
         )
-        expected = {"data": {"encounterMethod": {"name": em.name}}}
+        expected = {"data": {"encounterMethod": {"idName": em.name}}}
         self.assertEqual(executed, expected)

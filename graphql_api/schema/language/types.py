@@ -8,7 +8,7 @@ class Language(g.ObjectType):
     """Languages for translations of resource information."""
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     official = g.Boolean(
         name="isOfficial",
         description="Whether or not the games are published in this language.",

@@ -32,18 +32,18 @@ class RegionTests(GraphQLTest):
                             locations(first: 5) {
                                 edges {
                                     node {
-                                        name
+                                        idName
                                     }
                                 }
                             }
-                            mainGeneration {name}
-                            name
+                            mainGeneration {idName}
+                            idName
                             names {
                                 text
-                                language {name}
+                                language {idName}
                             }
-                            pokedexes {name}
-                            versionGroups {name}
+                            pokedexes {idName}
+                            versionGroups {idName}
                         }
                     }
                 }
@@ -58,24 +58,24 @@ class RegionTests(GraphQLTest):
                             "node": {
                                 "locations": {
                                     "edges": [
-                                        {"node": {"name": l.name}}
+                                        {"node": {"idName": l.name}}
                                         for l in reg.location.all()
                                     ]
                                 },
-                                "mainGeneration": {"name": reg.generation.name},
-                                "name": reg.name,
+                                "mainGeneration": {"idName": reg.generation.name},
+                                "idName": reg.name,
                                 "names": [
                                     {
                                         "text": n.name,
-                                        "language": {"name": n.language.name},
+                                        "language": {"idName": n.language.name},
                                     }
                                     for n in reg.regionname.all()
                                 ],
                                 "pokedexes": [
-                                    {"name": p.name} for p in reg.pokedex.all()
+                                    {"idName": p.name} for p in reg.pokedex.all()
                                 ],
                                 "versionGroups": [
-                                    {"name": vgr.version_group.name}
+                                    {"idName": vgr.version_group.name}
                                     for vgr in reg.versiongroupregion.all()
                                 ],
                             }
@@ -92,11 +92,11 @@ class RegionTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                region(name: "%s") {
-                    name
+                region(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -106,9 +106,9 @@ class RegionTests(GraphQLTest):
         expected = {
             "data": {
                 "region": {
-                    "name": m.name,
+                    "idName": m.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in m.regionname.all()
                     ],
                 }

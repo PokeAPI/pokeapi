@@ -14,7 +14,7 @@ class Version(g.ObjectType):
         description="The version group this version belongs to.",
         resolver=load("versiongroup", using="version_group_id"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: VersionName,
         description="The name of this resource listed in different languages.",

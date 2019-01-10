@@ -20,7 +20,7 @@ class Pokedex(g.ObjectType):
         description="The description of this resource listed in different languages.",
         resolver=load_with_args("pokedex_descriptions", using="pk")
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: PokedexName,
         description="The name of this resource listed in different languages.",

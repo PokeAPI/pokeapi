@@ -7,7 +7,7 @@ from .. import base
 def calculate_gender_rate(root, info):
     if root.gender_rate == -1:
         return None
-    return root.gender_rate / 8
+    return root.gender_rate * 12.5
 
 
 class PokemonSpecies(g.ObjectType):
@@ -60,7 +60,7 @@ class PokemonSpecies(g.ObjectType):
         description="Whether or not this Pokémon has multiple forms and can switch between them.",
     )
     gender_rate = g.Float(
-        description="The chance of this Pokémon being female, out of 1, or null for genderless. A gender rate of 1 indicates that all Pokémon of this species are female, and 0 that all are male.",
+        description="The percent chance of this Pokémon being female, or null for genderless. A gender rate of 100% indicates that all Pokémon of this species are female, and 0% that all are male. A gender rate of 50% means that males and females are equally likely to occur. This value was originally stored as a single byte, with seven possible values (0, 12.5, 25, 50, 75, 87.5, 100, and null).",
         resolver=calculate_gender_rate,
     )
     genera = base.TranslationList(
@@ -93,7 +93,11 @@ class PokemonSpecies(g.ObjectType):
         description="Initial hatch counter: one must walk 255 × (hatch_counter + 1) steps before this Pokémon's egg hatches, unless utilizing bonuses like Flame Body's."
     )
     is_baby = g.Boolean(description="Whether or not this is a baby Pokémon.")
-    name = g.ID(description="The name of this resource.")
+    is_genderless = g.Boolean(
+        description="Whether this Pokémon can have a gender. Genderless Pokémon do not have a gender rate.",
+        resolver=lambda root, info: root.gender_rate == -1,
+    )
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: PokemonSpeciesName,
         description="The name of this resource listed in different languages.",

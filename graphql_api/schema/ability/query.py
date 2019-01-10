@@ -7,7 +7,7 @@ from ..base import BaseQuery
 
 
 class Query(BaseQuery):
-    ability = g.Field(types.Ability, name=g.ID(required=True))
+    ability = g.Field(types.Ability, id_name=g.ID(required=True))
     abilities = g.relay.ConnectionField(
         conn.AbilityConnection,
         description="A list of abilities Pokémon can have.",
@@ -15,8 +15,8 @@ class Query(BaseQuery):
         where=g.Argument(conn.AbilityWhere),
     )
 
-    def resolve_ability(self, info, name):
-        return info.context.loaders.n_ability.load(name)
+    def resolve_ability(self, info, id_name):
+        return info.context.loaders.n_ability.load(id_name)
 
     def resolve_abilities(self, info, where=None, order_by=None, **kwargs):
         where = where or {}

@@ -19,11 +19,11 @@ class EggGroupTests(GraphQLTest):
             """
             query {
                 eggGroups {
-                    name
+                    idName
                     names {text}
                     pokemonSpecies(first: 10) {
                         edges {
-                            node {name}
+                            node {idName}
                         }
                     }
                 }
@@ -34,7 +34,7 @@ class EggGroupTests(GraphQLTest):
             "data": {
                 "eggGroups": [
                     {
-                        "name": egg_group.name,
+                        "idName": egg_group.name,
                         "names": [
                             {"text": n.name}
                             for n in egg_group.egggroupname.all()
@@ -42,7 +42,7 @@ class EggGroupTests(GraphQLTest):
                         "pokemonSpecies": {
                             "edges": [
                                 {
-                                    "node": {"name": peg.pokemon_species.name}
+                                    "node": {"idName": peg.pokemon_species.name}
                                 }
                                 for peg in egg_group.pokemonegggroup.all()
                             ]
@@ -59,11 +59,11 @@ class EggGroupTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                eggGroup(name: "%s") {
-                    name
+                eggGroup(idName: "%s") {
+                    idName
                     names {
                         text
-                        language {name}
+                        language {idName}
                     }
                 }
             }
@@ -73,9 +73,9 @@ class EggGroupTests(GraphQLTest):
         expected = {
             "data": {
                 "eggGroup": {
-                    "name": egg_group.name,
+                    "idName": egg_group.name,
                     "names": [
-                        {"text": n.name, "language": {"name": n.language.name}}
+                        {"text": n.name, "language": {"idName": n.language.name}}
                         for n in egg_group.egggroupname.all()
                     ],
                 }

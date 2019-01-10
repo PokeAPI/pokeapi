@@ -10,15 +10,8 @@ class AbilityConnection(g.relay.Connection, base.BaseConnection, node=types.Abil
 
 
 class AbilityWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
+    abilityname__name = g.Argument(base.TextFilter, name="name")
     is_main_series = g.Boolean()
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "generationname", "name")
-
-        return super().apply(query_set, **where)
 
 
 class AbilitySort(base.BaseSort):

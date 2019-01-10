@@ -10,7 +10,7 @@ class EncounterMethod(g.ObjectType):
     """
 
     pk = None
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: EncounterMethodName,
         description="The name of this resource listed in different languages.",

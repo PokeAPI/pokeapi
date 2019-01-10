@@ -20,7 +20,7 @@ class Location(g.ObjectType):
         description="A list of game indices relevent to this location by generation.",
         resolver=load("location_gameindices", using="pk"),
     )
-    name = g.ID(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     names = base.TranslationList(
         lambda: LocationName,
         description="The name of this resource listed in different languages.",

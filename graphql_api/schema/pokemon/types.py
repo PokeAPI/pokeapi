@@ -55,7 +55,7 @@ class Pokemon(g.ObjectType):
     #     lambda: PokemonMoveConnection,
     #     description="A list of moves along with learn methods and level details pertaining to specific version groups."
     # )
-    name = g.String(description="The name of this resource.")
+    name = g.ID(name="idName", description="The name of this resource.")
     order = g.Int(
         description="Order for sorting. Almost national order, except families are grouped together."
     )

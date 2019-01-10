@@ -33,10 +33,10 @@ class VersionGroupTests(GraphQLTest):
             """
             query {
                 versionGroups{
-                    generation {name}
-                    name
+                    generation {idName}
+                    idName
                     order
-                    versions {name}
+                    versions {idName}
                 }
             }
             """
@@ -45,10 +45,10 @@ class VersionGroupTests(GraphQLTest):
             "data": {
                 "versionGroups": [
                     {
-                        "generation": {"name": vg.generation.name},
-                        "name": vg.name,
+                        "generation": {"idName": vg.generation.name},
+                        "idName": vg.name,
                         "order": vg.order,
-                        "versions": [{"name": v.name} for v in vg.version.all()],
+                        "versions": [{"idName": v.name} for v in vg.version.all()],
                     }
                     for vg in self.version_groups
                 ]
@@ -61,12 +61,12 @@ class VersionGroupTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                versionGroup(name: "%s") {
-                    name
+                versionGroup(idName: "%s") {
+                    idName
                 }
             }
             """
             % vg.name
         )
-        expected = {"data": {"versionGroup": {"name": vg.name}}}
+        expected = {"data": {"versionGroup": {"idName": vg.name}}}
         self.assertEqual(executed, expected)

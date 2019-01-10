@@ -10,14 +10,7 @@ class TypeConnection(g.relay.Connection, base.BaseConnection, node=types.Type):
 
 
 class TypeWhere(base.BaseWhere):
-    name = g.Argument(base.TextSearch)
-
-    @classmethod
-    def apply(cls, query_set, name=None, **where):
-        if name:
-            query_set = cls.text_filter(query_set, name, "typename", "name")
-
-        return super().apply(query_set, **where)
+    typename__name = g.Argument(base.TextFilter, name="name")
 
 
 class TypeSort(base.BaseSort):

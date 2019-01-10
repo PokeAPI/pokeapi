@@ -33,11 +33,11 @@ class GrowthRateTests(GraphQLTest):
                         level
                         experience
                     }
-                    name
+                    idName
                     pokemonSpeciess(first: 10) {
                         edges {
                             node {
-                                name
+                                idName
                             }
                         }
                     }
@@ -66,10 +66,10 @@ class GrowthRateTests(GraphQLTest):
                             {"level": e.level, "experience": e.experience}
                             for e in gr.experience.all()
                         ],
-                        "name": gr.name,
+                        "idName": gr.name,
                         "pokemonSpeciess": {
                             "edges": [
-                                {"node": {"name": ps.name}}
+                                {"node": {"idName": ps.name}}
                                 for ps in gr.pokemonspecies.all()
                             ]
                         },
@@ -85,12 +85,12 @@ class GrowthRateTests(GraphQLTest):
         executed = self.execute_query(
             """
             query {
-                growthRate(name: "%s") {
-                    name
+                growthRate(idName: "%s") {
+                    idName
                 }
             }
             """
             % gr.name
         )
-        expected = {"data": {"growthRate": {"name": gr.name}}}
+        expected = {"data": {"growthRate": {"idName": gr.name}}}
         self.assertEqual(executed, expected)

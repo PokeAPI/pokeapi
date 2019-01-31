@@ -46,7 +46,7 @@ Ask your company to also support this open source project by [becoming a sponsor
 * Browser client-side [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_
 * Java/Kotlin [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin)
 * Python 3 [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
-* Python [PokeAPI/pykemon](https://github.com/PokeAPI/pykemon)
+* Python 2/3 [PokeAPI/pykemon](https://github.com/PokeAPI/pykemon) | _Auto caching_
 * PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy-loading_
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)

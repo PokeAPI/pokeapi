@@ -2,7 +2,7 @@
 
 [![Backers on Open Collective](https://opencollective.com/pokeapi/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/pokeapi/sponsors/badge.svg)](#sponsors)
 
-A RESTful API for Pokémons - [pokeapi.co](http://pokeapi.co)
+A RESTful API for Pokémon - [pokeapi.co](http://pokeapi.co)
 
 ## Fair use policy
 

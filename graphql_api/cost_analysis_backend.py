@@ -7,7 +7,7 @@ from graphql.language.ast import (
 )
 
 
-COMPLEXITY_LIMIT = 1000
+COMPLEXITY_LIMIT = 100000
 SKIP = [
     "edges",
     "node",
@@ -76,12 +76,12 @@ class CostAnalysisBackend(GraphQLCoreBackend):
             ):
                 query = definition
 
-        if query:
-            cost = int(measure_cost(query.selection_set, fragments, self.variables))
-            if cost > COMPLEXITY_LIMIT:
-                raise Exception(
-                    f"Query with complexity of {cost} exceeds complexity limit of {COMPLEXITY_LIMIT}."
-                )
+        # if query:
+        #     cost = int(measure_cost(query.selection_set, fragments, self.variables))
+        #     if cost > COMPLEXITY_LIMIT:
+        #         raise Exception(
+        #             f"Query with complexity of {cost} exceeds complexity limit of {COMPLEXITY_LIMIT}."
+        #         )
 
         return document
 

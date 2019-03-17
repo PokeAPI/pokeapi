@@ -1,8 +1,8 @@
 import graphene as g
-from django.db.models import OuterRef, Subquery
 from pokemon_v2 import models
 from .. import base
 from . import types  # pylint: disable=unused-import
+from ...utils import text_annotate
 
 
 class PokemonFormConnection(
@@ -17,7 +17,7 @@ class PokemonFormWhere(base.BaseWhere):
     is_mega = g.Boolean()
     pokemonformname__name = g.Argument(base.TextFilter, name="name")
     version_group = g.ID()
-    version_group__name = g.List(g.ID, name="versionGroup_idName")
+    version_group__name = g.List(g.ID, name="versionGroup__idName")
 
 
 class PokemonFormSort(base.BaseSort):
@@ -37,17 +37,21 @@ class PokemonFormSort(base.BaseSort):
     )
 
     @classmethod
-    def apply(cls, query_set, order_by):
+    def apply(cls, query_set, order_by, prefix=""):
         order_by = order_by or []
+        order_by2 = []
         for o in order_by:
-            if o.field == "name_annotation":
-                cls.check_lang(o)
-                # Add an annotation with the name to sort by
-                subquery = models.PokemonFormName.objects.filter(
-                    pokemon_form_id=OuterRef("pk"), language__name=o.lang
+            if o.field == prefix + "__name_annotation":
+                query_set, o.field = text_annotate(
+                    query_set,
+                    lang=o.lang,
+                    model=models.PokemonFormName,
+                    id_attr="pokemon_form_id",
+                    text_resource="name",
+                    prefix=prefix,
                 )
-                query_set = query_set.annotate(
-                    name_annotation=Subquery(subquery.values("name")[:1])
-                )
+                order_by2.append(o)
+            else:
+                order_by2.append(o)
 
-        return super().apply(query_set, order_by)
+        return super().apply(query_set, order_by2)

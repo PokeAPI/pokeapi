@@ -33,7 +33,7 @@ class Generation(g.ObjectType):
     # )
     pokemon_species = g.relay.ConnectionField(
         g.lazy_import(
-            "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"
+            "graphql_api.schema.pokemon_species.types.PokemonSpeciesConnection"
         ),
         description="A list of Pokémon species that were introduced in this generation.",
     )

@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.LocationArea.objects.all()
         q = conn.LocationAreaWhere.apply(q, **where)
-        q = conn.LocationAreaSort.apply(q, order_by)
-        return get_connection(q, conn.LocationAreaConnection, **kwargs)
+        q, order_by = conn.LocationAreaSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.LocationAreaConnection, **kwargs)

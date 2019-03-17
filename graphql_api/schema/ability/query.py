@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.Ability.objects.all()
         q = conn.AbilityWhere.apply(q, **where)
-        q = conn.AbilitySort.apply(q, order_by)
-        return get_connection(q, conn.AbilityConnection, **kwargs)
+        q, order_by = conn.AbilitySort.apply(q, order_by)
+        return get_connection(q, order_by, conn.AbilityConnection, **kwargs)

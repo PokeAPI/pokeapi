@@ -32,7 +32,7 @@ class QueryCountDebugMiddleware:
 
             LOGGER.debug("===================================================================")
             LOGGER.debug(
-                "%i queries in %.2f seconds", len(connection.queries), total_time
+                "%i queries in %.3f seconds", len(connection.queries), total_time
             )
 
         return response
@@ -94,6 +94,6 @@ class QueryDebugMiddleware:
                     )
 
                 LOGGER.debug(
-                    "%i (%.2f seconds)\n\n%s", counter + 1, float(query["time"]), string
+                    "%i (%.3f seconds)\n\n%s", counter + 1, float(query["time"]), string
                 )
         return response

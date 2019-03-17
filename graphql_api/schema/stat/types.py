@@ -54,6 +54,7 @@ class Stat(g.ObjectType):
     #     q = models.MoveMetaStatChange.objects.filter(stat_id=self.pk)
     #     q = q.select_related("move")
     #     q = StatAffectMoveWhere.apply(q, **kwargs.get("where", {}))
+    #     total_count = q.count()
 
     #     page = get_page(q, StatAffectMoveConnection.__name__, **kwargs)
     #     return StatAffectMoveConnection(
@@ -65,7 +66,7 @@ class Stat(g.ObjectType):
     #             ) for entry in page
     #         ],
     #         page_info=page.page_info,
-    #         total_count=page.total_count,
+    #         total_count=total_count,
     #     )
 
 

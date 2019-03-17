@@ -2,17 +2,18 @@ import graphene as g
 from pokemon_v2 import models
 from graphql_api.utils import get_connection
 from . import types
-from . import connection as conn
+from .sort import PokemonSort
+from .where import PokemonWhere
 from ..base import BaseQuery
 
 
 class Query(BaseQuery):
     pokemon = g.Field(types.Pokemon, id_name=g.ID(required=True))
     pokemons = g.relay.ConnectionField(
-        conn.PokemonConnection,
+        types.PokemonConnection,
         description="A list of Pokémon.",
-        order_by=g.List(conn.PokemonSort),
-        where=g.Argument(conn.PokemonWhere)
+        order_by=g.List(PokemonSort),
+        where=g.Argument(PokemonWhere),
     )
 
     def resolve_pokemon(self, info, id_name):
@@ -21,6 +22,6 @@ class Query(BaseQuery):
     def resolve_pokemons(self, info, where=None, order_by=None, **kwargs):
         where = where or {}
         q = models.Pokemon.objects.all()
-        q = conn.PokemonWhere.apply(q, **where)
-        q = conn.PokemonSort.apply(q, order_by)
-        return get_connection(q, conn.PokemonConnection, **kwargs)
+        q = PokemonWhere.apply(q, **where)
+        q, order_by = PokemonSort.apply(q, order_by)
+        return get_connection(q, order_by, types.PokemonConnection, **kwargs)

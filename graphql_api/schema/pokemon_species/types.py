@@ -199,3 +199,9 @@ class PokemonSpeciesPokedexEntry(g.ObjectType):
         description="The Pokédex the referenced Pokémon species can be found in.",
         resolver=load("pokedex", using="pokedex_id"),
     )
+
+
+class PokemonSpeciesConnection(
+    g.relay.Connection, base.BaseConnection, node=PokemonSpecies
+):
+    pass

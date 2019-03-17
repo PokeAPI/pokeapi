@@ -14,22 +14,22 @@ class EncounterWhere(base.BaseWhere):
     encounterconditionvaluemap__encounter_condition_value__name = g.Argument(
         base.ListFilter, name="conditions"
     )
-    encountermethod__name = g.List(g.ID, name="encounterMethod_idName")
-    locationarea__name = g.List(g.ID, name="locationArea_idName")
+    encountermethod__name = g.List(g.ID, name="encounterMethod__idName")
+    locationarea__name = g.List(g.ID, name="locationArea__idName")
     location_area = g.Argument(
         g.lazy_import("graphql_api.schema.location_area.connection.LocationAreaWhere")
     )
     max_level = g.Argument(base.IntFilter)
     min_level = g.Argument(base.IntFilter)
     pokemon = g.Argument(
-        g.lazy_import("graphql_api.schema.pokemon.connection.PokemonWhere")
+        g.lazy_import("graphql_api.schema.pokemon.where.PokemonWhere")
     )
-    pokemon__name = g.List(g.ID, name="pokemon_idName")
-    version__name = g.List(g.ID, name="version_idName")
+    pokemon__name = g.List(g.ID, name="pokemon__idName")
+    version__name = g.List(g.ID, name="version__idName")
 
     @classmethod
     def apply(cls, qs, prefix="", pokemon=None, location_area=None, **where):
-        from graphql_api.schema.pokemon.connection import PokemonWhere
+        from graphql_api.schema.pokemon.where import PokemonWhere
         from graphql_api.schema.location_area.connection import LocationAreaWhere
 
         if pokemon:
@@ -39,7 +39,7 @@ class EncounterWhere(base.BaseWhere):
                 qs, **location_area, prefix=prefix + "location_area__"
             )
 
-        return super().apply(qs, **where)
+        return super().apply(qs, **where, prefix=prefix)
 
 
 class EncounterSort(base.BaseSort):

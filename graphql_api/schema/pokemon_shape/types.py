@@ -17,13 +17,13 @@ class PokemonShape(g.ObjectType):
     )
     pokemon_speciess = g.relay.ConnectionField(
         g.lazy_import(
-            "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"
+            "graphql_api.schema.pokemon_species.types.PokemonSpeciesConnection"
         ),
         description="A list of the Pokémon species that have this shape.",
     )
 
     def resolve_pokemon_speciess(self, info, **kwargs):
-        from ..pokemon_species.connection import PokemonSpeciesConnection
+        from ..pokemon_species.types import PokemonSpeciesConnection
 
         q = models.PokemonSpecies.objects.filter(pokemon_shape_id=self.pk)
         return get_connection(q, PokemonSpeciesConnection, **kwargs)

@@ -1,8 +1,8 @@
 import graphene as g
-from django.db.models import OuterRef, Subquery
 from pokemon_v2 import models
 from .. import base
 from . import types  # pylint: disable=unused-import
+from ...utils import text_annotate
 
 
 class LocationAreaConnection(
@@ -13,7 +13,8 @@ class LocationAreaConnection(
 
 class LocationAreaWhere(base.BaseWhere):
     locationareaname__name = g.Argument(base.TextFilter, name="name")
-    location__name = g.List(g.ID, name="location_idName")
+    location__name = g.List(g.ID, name="location__idName")
+
 
 class LocationAreaSort(base.BaseSort):
     field = g.InputField(
@@ -22,17 +23,21 @@ class LocationAreaSort(base.BaseSort):
     )
 
     @classmethod
-    def apply(cls, query_set, order_by):
+    def apply(cls, query_set, order_by, prefix=""):
         order_by = order_by or []
+        order_by2 = []
         for o in order_by:
-            if o.field == "name_annotation":
-                cls.check_lang(o)
-                # Add an annotation with the name to sort by
-                subquery = models.LocationAreaName.objects.filter(
-                    location_area_id=OuterRef("pk"), language__name=o.lang
+            if o.field == prefix + "__name_annotation":
+                query_set, o.field = text_annotate(
+                    query_set,
+                    lang=o.lang,
+                    model=models.LocationAreaName,
+                    id_attr="location_area_id",
+                    text_resource="name",
+                    prefix=prefix,
                 )
-                query_set = query_set.annotate(
-                    name_annotation=Subquery(subquery.values("name")[:1])
-                )
+                order_by2.append(o)
+            else:
+                order_by2.append(o)
 
-        return super().apply(query_set, order_by)
+        return super().apply(query_set, order_by2)

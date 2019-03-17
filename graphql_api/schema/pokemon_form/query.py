@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.PokemonForm.objects.all()
         q = conn.PokemonFormWhere.apply(q, **where)
-        q = conn.PokemonFormSort.apply(q, order_by)
-        return get_connection(q, conn.PokemonFormConnection, **kwargs)
+        q, order_by = conn.PokemonFormSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.PokemonFormConnection, **kwargs)

@@ -27,28 +27,17 @@ class BaseWhere(g.InputObjectType):
         """Iteratively apply each where clause to query_set."""
 
         for arg, value in where.items():
-            # print(arg, value, type(value))
-
-            if isinstance(value, BaseWhere):
-                query_set = value.apply(query_set, prefix=prefix + arg, **value)
-            elif isinstance(value, List):
-                query_set = query_set.filter(**{prefix + arg + "__in": value})
-            else:
-                query_set = query_set.filter(**{prefix + arg: value})
+            if value is not None:
+                if isinstance(value, BaseWhere):
+                    query_set = value.apply(query_set, prefix=prefix + arg, **value)
+                elif isinstance(value, List):
+                    value = [v for v in value if v is not None]
+                    if value:
+                        query_set = query_set.filter(**{prefix + arg + "__in": value})
+                else:
+                    query_set = query_set.filter(**{prefix + arg: value})
 
         return query_set.distinct()
-
-    @classmethod
-    def text_filter(cls, query_set, arg, resource_name, field_name):
-        filters = {}
-        if arg.case_sensitive:
-            filters[f"{resource_name}__{field_name}__contains"] = arg.query
-        else:
-            filters[f"{resource_name}__{field_name}__icontains"] = arg.query
-        if arg.lang:
-            filters[f"{resource_name}__language__name"] = arg.lang
-
-        return query_set.filter(**filters)
 
 
 class IntFilter(BaseWhere):
@@ -60,7 +49,11 @@ class IntFilter(BaseWhere):
 
     @classmethod
     def apply(cls, query_set, prefix="", **where):
-        filters = {f"{prefix}__{operator}": value for operator, value in where.items()}
+        filters = {
+            f"{prefix}__{operator}": value
+            for operator, value in where.items()
+            if value is not None
+        }
         return query_set.filter(**filters)
 
 
@@ -72,15 +65,20 @@ class ListFilter(BaseWhere):
     @classmethod
     def apply(cls, query_set, prefix="", **where):
         for operator, value in where.items():
-            if operator == "eq":
-                query_set = query_set.annotate(**{prefix + "__count": Count(prefix)})
-                query_set = query_set.filter(**{prefix + "__count": len(value)})
+            if value is not None:
+                value = [v for v in value if v is not None]  # filter out null values
+                if value:
+                    if operator == "eq":
+                        query_set = query_set.annotate(
+                            **{prefix + "__count": Count(prefix)}
+                        )
+                        query_set = query_set.filter(**{prefix + "__count": len(value)})
 
-            if operator in ["eq", "all"]:
-                for v in value:
-                    query_set = query_set.filter(**{prefix + "__exact": v})
-            elif operator == "some":
-                query_set = query_set.filter(**{prefix + "__in": value})
+                    if operator in ["eq", "all"]:
+                        for v in value:
+                            query_set = query_set.filter(**{prefix + "__exact": v})
+                    elif operator == "some":
+                        query_set = query_set.filter(**{prefix + "__in": value})
 
         return query_set
 
@@ -107,20 +105,21 @@ class TextFilter(BaseWhere):
             filters[resource_name + "__language__name"] = lang
 
         for operator, value in where.items():
-            if operator == "sw":
-                filters[prefix + "__istartswith"] = value
-            elif operator == "has":
-                filters[prefix + "__icontains"] = value
-            elif operator == "eq":
-                filters[prefix + "__exact"] = value
-            elif operator == "regex":
-                filters[prefix + "__regex"] = value
-            elif operator == "in_":
-                filters[prefix + "__in"] = value
-            elif operator == "ne":
-                exclude[prefix + "__exact"] = value
-            elif operator == "nin":
-                exclude[prefix + "__in"] = value
+            if value is not None:
+                if operator == "sw":
+                    filters[prefix + "__istartswith"] = value
+                elif operator == "has":
+                    filters[prefix + "__icontains"] = value
+                elif operator == "eq":
+                    filters[prefix + "__exact"] = value
+                elif operator == "regex":
+                    filters[prefix + "__regex"] = value
+                elif operator == "in_":
+                    filters[prefix + "__in"] = value
+                elif operator == "ne":
+                    exclude[prefix + "__exact"] = value
+                elif operator == "nin":
+                    exclude[prefix + "__in"] = value
 
         return query_set.filter(**filters).exclude(**exclude)
 
@@ -133,14 +132,13 @@ class SortOrder(g.Enum):
     def description(self):
         if self == SortOrder.ASC:
             return "Ascending order"
-        if self == SortOrder.DESC:
+        elif self == SortOrder.DESC:
             return "Descending order"
 
 
 class BaseSort(g.InputObjectType):
-    field = g.String()
     order = SortOrder(
-        description="The sort direction.", default_value=SortOrder.ASC
+        description="The sort direction (default: ASC).", default_value=SortOrder.ASC
     )
     lang = g.String(
         description="For sorts with text translations (such as `NAME`), you **must** specify the language by which to sort. This argument will be ignored for non translated sorts."
@@ -148,15 +146,16 @@ class BaseSort(g.InputObjectType):
 
     @classmethod
     def apply(cls, query_set, order_by):
-        order_by = order_by or []
-        ordering = []
-        for o in order_by:
-            if o.order == "asc":
-                ordering.append(o.field)
-            else:
-                ordering.append("-" + o.field)
+        return query_set, order_by
 
-        return query_set.order_by(*ordering)
+        # order_by = order_by or []
+        # ordering = []
+        # for o in order_by:
+        #     if o.order == "asc":
+        #         ordering.append(o.field)
+        #     else:
+        #         ordering.append("-" + o.field)
+        # return query_set.order_by(*ordering), order_by
 
     @staticmethod
     def check_lang(order_by_entry):

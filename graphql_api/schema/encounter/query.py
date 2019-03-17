@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.Encounter.objects.all().select_related("encounter_slot")
         q = conn.EncounterWhere.apply(q, **where)
-        q = conn.EncounterSort.apply(q, order_by)
-        return get_connection(q, conn.EncounterConnection, **kwargs)
+        q, order_by = conn.EncounterSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.EncounterConnection, **kwargs)

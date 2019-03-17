@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.Region.objects.all()
         q = conn.RegionWhere.apply(q, **where)
-        q = conn.RegionSort.apply(q, order_by)
-        return get_connection(q, conn.RegionConnection, **kwargs)
+        q, order_by = conn.RegionSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.RegionConnection, **kwargs)

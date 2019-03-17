@@ -56,6 +56,7 @@ class Ability(g.ObjectType):
         q = AbilityPokemonWhere.apply(q, **where)
         q = AbilityPokemonSort.apply(q, order_by)
 
+        total_count = q.count()
         page = get_page(q, AbilityPokemonConnection.__name__, **kwargs)
         edges = []
         for entry in page:
@@ -68,7 +69,7 @@ class Ability(g.ObjectType):
                 )
             )
         return AbilityPokemonConnection(
-            edges=edges, page_info=page.page_info, total_count=page.total_count
+            edges=edges, page_info=page.page_info, total_count=total_count
         )
 
 

@@ -12,13 +12,13 @@ class Gender(g.ObjectType):
     name = g.ID(name="idName", description="The name of this resource.")
     pokemon_speciess = g.relay.ConnectionField(
         g.lazy_import(
-            "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"
+            "graphql_api.schema.pokemon_species.types.PokemonSpeciesConnection"
         ),
         description="A list of Pokémon species that can be this gender and how likely it is that they will be, as well as if it's required for evolution.",
     )
 
     def resolve_pokemon_speciess(self, info, **kwargs):
-        from ..pokemon_species.connection import PokemonSpeciesConnection
+        from ..pokemon_species.types import PokemonSpeciesConnection
 
         if self.name == "male":
             q = models.PokemonSpecies.objects.filter(gender_rate__gt=0)

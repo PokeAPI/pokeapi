@@ -19,13 +19,13 @@ class EggGroup(g.ObjectType):
     )
     pokemon_species = g.relay.ConnectionField(
         g.lazy_import(
-            "graphql_api.schema.pokemon_species.connection.PokemonSpeciesConnection"
+            "graphql_api.schema.pokemon_species.types.PokemonSpeciesConnection"
         ),
         description="A list of all Pokémon species that are members of this egg group.",
     )
 
     def resolve_pokemon_species(self, info, **kwargs):
-        from ..pokemon_species.connection import PokemonSpeciesConnection
+        from ..pokemon_species.types import PokemonSpeciesConnection
 
         q = models.PokemonSpecies.objects.filter(pokemonegggroup__egg_group_id=self.pk)
         return get_connection(q, PokemonSpeciesConnection, **kwargs)

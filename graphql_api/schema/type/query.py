@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.Type.objects.all()
         q = conn.TypeWhere.apply(q, **where)
-        q = conn.TypeSort.apply(q, order_by)
-        return get_connection(q, conn.TypeConnection, **kwargs)
+        q, order_by = conn.TypeSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.TypeConnection, **kwargs)

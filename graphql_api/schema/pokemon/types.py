@@ -124,6 +124,7 @@ class Pokemon(g.ObjectType):
 
     # def resolve_moves(self, info, **kwargs):
     #     q = models.Move.objects.filter(pokemonmove__pokemon_id=self.pk).distinct()
+    #     total_count = q.count()
     #     page = get_page(q, PokemonMoveConnection.__name__, **kwargs)
 
     #     edges = []
@@ -136,7 +137,7 @@ class Pokemon(g.ObjectType):
     #     return PokemonMoveConnection(
     #         edges=edges,
     #         page_info=page.page_info,
-    #         total_count=page.total_count,
+    #         total_count=total_count,
     #     )
 
 
@@ -299,3 +300,7 @@ class PokemonType(g.ObjectType):
         description="The type the Pokémon has.",
         resolver=load("type", using="type_id"),
     )
+
+
+class PokemonConnection(g.relay.Connection, base.BaseConnection, node=Pokemon):
+    pass

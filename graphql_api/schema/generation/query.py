@@ -22,5 +22,5 @@ class Query(BaseQuery):
         where = where or {}
         q = models.Generation.objects.all()
         q = conn.GenerationWhere.apply(q, **where)
-        q = conn.GenerationSort.apply(q, order_by)
-        return get_connection(q, conn.GenerationConnection, **kwargs)
+        q, order_by = conn.GenerationSort.apply(q, order_by)
+        return get_connection(q, order_by, conn.GenerationConnection, **kwargs)

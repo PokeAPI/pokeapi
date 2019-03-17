@@ -1,6 +1,6 @@
 import graphene as g
 from pokemon_v2 import models
-from graphql_api.utils import load, load_with_args, get_page  #, get_connection
+from graphql_api.utils import load, load_with_args, get_page  # , get_connection
 from ..pokemon.types import Pokemon  # pylint: disable=unused-import
 from .. import interfaces as i  # pylint: disable=unused-import
 from .. import base
@@ -35,7 +35,7 @@ class Type(g.ObjectType):
     game_indices = g.List(
         lambda: TypeGameIndex,
         description="A list of game indices relevent to this item by generation.",
-        resolver=load("type_gameindices", using="pk")
+        resolver=load("type_gameindices", using="pk"),
     )
     generation_id = None
     generation = g.Field(
@@ -99,6 +99,7 @@ class Type(g.ObjectType):
         q = q.select_related("pokemon")
         q = TypePokemonSort.apply(q, order_by)
 
+        total_count = q.count()
         page = get_page(q, TypePokemonConnection.__name__, **kwargs)
         return TypePokemonConnection(
             edges=[
@@ -108,7 +109,7 @@ class Type(g.ObjectType):
                 for entry in page
             ],
             page_info=page.page_info,
-            total_count=page.total_count,
+            total_count=total_count,
         )
 
     # def resolve_moves(self, info, **kwargs):

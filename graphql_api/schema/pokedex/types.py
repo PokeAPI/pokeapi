@@ -37,6 +37,7 @@ class Pokedex(g.ObjectType):
         q = q.select_related("pokemon_species")
         q = PokedexEntrySort.apply(q, order_by)
 
+        total_count = q.count()
         page = get_page(q, PokedexEntryConnection.__name__, **kwargs)
         edges = []
         for entry in page:
@@ -48,7 +49,7 @@ class Pokedex(g.ObjectType):
                 )
             )
         return PokedexEntryConnection(
-            edges=edges, page_info=page.page_info, total_count=page.total_count
+            edges=edges, page_info=page.page_info, total_count=total_count
         )
 
 

@@ -35,7 +35,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: .Resources/ngnix/Dockerfile
+      dockerfile: ./Resources/ngnix/Dockerfile
     restart: unless-stopped
     ports:
       - "80:80"

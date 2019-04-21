@@ -2663,14 +2663,14 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
     def get_species(self, obj):
 
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
-        species_list = []
+        species_list = set()
 
         for evo in evo_objects:
             species = PokemonSpeciesSummarySerializer(
                 evo.evolved_species, context=self.context).data
-            species_list.append(species)
+            species_list.add(species)
 
-        return species_list
+        return list(species_list)
 
 
 class PokemonSpeciesDescriptionSerializer(serializers.ModelSerializer):

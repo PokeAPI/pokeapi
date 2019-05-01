@@ -2664,11 +2664,14 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
 
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
+        species_names = set()
 
         for evo in evo_objects:
             species = PokemonSpeciesSummarySerializer(
                 evo.evolved_species, context=self.context).data
-            species_list.append(species)
+            if species['name'] not in species_names:
+                species_list.append(species)
+                species_names.add(species['name'])
 
         return species_list
 

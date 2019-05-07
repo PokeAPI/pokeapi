@@ -48,6 +48,7 @@ Ask your company to also support this open source project by [becoming a sponsor
 * Python 3 [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
 * Python 2/3 [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_
 * PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy-loading_
+* Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 

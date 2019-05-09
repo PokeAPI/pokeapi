@@ -49,6 +49,7 @@ Ask your company to also support this open source project by [becoming a sponsor
 * Python 2/3 [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_
 * PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy-loading_
 * Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
+* .Net Standard [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 

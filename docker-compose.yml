@@ -19,8 +19,11 @@ services:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
     volumes:
-      - /code
+      - .:/code
     links:
+      - db
+      - cache
+    depends_on:
       - db
       - cache
 
@@ -38,6 +41,4 @@ services:
 
 volumes:
   pg_data:
-    external: true
   redis_data:
-    external: true

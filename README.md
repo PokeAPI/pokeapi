@@ -52,6 +52,7 @@ Ask your company to also support this open source project by [becoming a sponsor
 * Python [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
 * Python V1 APIs [PokeAPI/pykemon](https://github.com/PokeAPI/pykemon)
 * PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy-loading_
+* Flutter [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
 
 ## DEPRECATION
 

@@ -159,9 +159,8 @@ docker run -d -p 8000:8000 pokeapi
 
 ## Contributing
 
-This project exists thanks to all the people who contribute. [[Contribute]](blob/master/CONTRIBUTING.md).
+This project exists thanks to all the people who contribute. [[Contribute]](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md).
 <a href="graphs/contributors"><img src="https://opencollective.com/pokeapi/contributors.svg?width=890" /></a>
-
 All contributions are welcome: bug fixes, data contributions, recommendations.
 
 Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.

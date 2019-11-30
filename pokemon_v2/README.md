@@ -2278,30 +2278,30 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 		"slot": 3,
 		"ability": {
 			"name": "friend-guard",
-			"url": "http://localhost:8000/api/v2/ability/132/"
+			"url": "https://pokeapi.co/api/v2/ability/132/"
 		}
 	}],
 	"forms": [{
 		"name": "clefairy",
-		"url": "http://localhost:8000/api/v2/pokemon-form/35/"
+		"url": "https://pokeapi.co/api/v2/pokemon-form/35/"
 	}],
 	"game_indices": [{
 		"game_index": 35,
 		"version": {
 			"name": "white-2",
-			"url": "http://localhost:8000/api/v2/version/22/"
+			"url": "https://pokeapi.co/api/v2/version/22/"
 		}
 	}],
 	"held_items": [{
 		"item": {
 			"name": "moon-stone",
-			"url": "http://localhost:8000/api/v2/item/81/"
+			"url": "https://pokeapi.co/api/v2/item/81/"
 		},
 		"version_details": [{
 			"rarity": 5,
 			"version": {
 				"name": "ruby",
-				"url": "http://localhost:8000/api/v2/version/7/"
+				"url": "https://pokeapi.co/api/v2/version/7/"
 			}
 		}]
 	}],
@@ -2309,50 +2309,50 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 	"moves": [{
 		"move": {
 			"name": "pound",
-			"url": "http://localhost:8000/api/v2/move/1/"
+			"url": "https://pokeapi.co/api/v2/move/1/"
 		},
 		"version_group_details": [{
 			"level_learned_at": 1,
 			"version_group": {
 				"name": "red-blue",
-				"url": "http://localhost:8000/api/v2/version-group/1/"
+				"url": "https://pokeapi.co/api/v2/version-group/1/"
 			},
 			"move_learn_method": {
 				"name": "level-up",
-				"url": "http://localhost:8000/api/v2/move-learn-method/1/"
+				"url": "https://pokeapi.co/api/v2/move-learn-method/1/"
 			}
 		}]
 	}],
 	"species": {
 		"name": "clefairy",
-        "url": "http://localhost:8000/api/v2/pokemon-species/35/"
+        "url": "https://pokeapi.co/api/v2/pokemon-species/35/"
 	},
 	"stats": [{
 		"base_stat": 35,
 		"effort": 0,
 		"stat": {
 			"name": "speed",
-			"url": "http://localhost:8000/api/v2/stat/6/"
+			"url": "https://pokeapi.co/api/v2/stat/6/"
 		}
 	}],
 	"types": [{
 		"slot": 1,
 		"type": {
 			"name": "fairy",
-			"url": "http://localhost:8000/api/v2/type/18/"
+			"url": "https://pokeapi.co/api/v2/type/18/"
 		}
 	}],
 	"past_types": [{
 		"generation": {
 			"name": "generation-v",
-			"url": "http://localhost:8000/api/v2/generation/5/"
+			"url": "https://pokeapi.co/api/v2/generation/5/"
 		},
 		"types": [
 			{
 				"slot": 1,
 				"type": {
 					"name": "normal",
-					"url": "http://localhost:8000/api/v2/type/1/"
+					"url": "https://pokeapi.co/api/v2/type/1/"
 				}
 			}
 		]

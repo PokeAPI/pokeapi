@@ -2266,106 +2266,96 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 
 ```json
 {
-	"id": 12,
-	"name": "butterfree",
-	"base_experience": 178,
-	"height": 11,
-	"is_default": true,
-	"order": 16,
-	"weight": 320,
-	"abilities": [{
+	"id": 35,
+    "name": "clefairy",
+    "base_experience": 113,
+    "height": 6,
+    "is_default": true,
+    "order": 56,
+    "weight": 75,
+    "abilities": [{
 		"is_hidden": true,
 		"slot": 3,
 		"ability": {
-			"name": "tinted-lens",
-			"url": "http://pokeapi.co/api/v2/ability/110/"
+			"name": "friend-guard",
+			"url": "http://localhost:8000/api/v2/ability/132/"
 		}
 	}],
 	"forms": [{
-		"name": "butterfree",
-		"url": "http://pokeapi.co/api/v2/pokemon-form/12/"
+		"name": "clefairy",
+		"url": "http://localhost:8000/api/v2/pokemon-form/35/"
 	}],
 	"game_indices": [{
-		"game_index": 12,
+		"game_index": 35,
 		"version": {
 			"name": "white-2",
-			"url": "http://pokeapi.co/api/v2/version/22/"
+			"url": "http://localhost:8000/api/v2/version/22/"
 		}
 	}],
 	"held_items": [{
 		"item": {
-			"name": "silver-powder",
-			"url": "http://pokeapi.co/api/v2/item/199/"
+			"name": "moon-stone",
+			"url": "http://localhost:8000/api/v2/item/81/"
 		},
 		"version_details": [{
 			"rarity": 5,
 			"version": {
-				"name": "y",
-				"url": "http://pokeapi.co/api/v2/version/24/"
+				"name": "ruby",
+				"url": "http://localhost:8000/api/v2/version/7/"
 			}
 		}]
 	}],
-	"location_area_encounters": [{
-		"location_area": {
-			"name": "kanto-route-2-south-towards-viridian-city",
-			"url": "http://pokeapi.co/api/v2/location-area/296/"
-		},
-		"version_details": [{
-			"max_chance": 10,
-			"encounter_details": [{
-				"min_level": 7,
-				"max_level": 7,
-				"condition_values": [{
-					"name": "time-morning",
-					"url": "http://pokeapi.co/api/v2/encounter-condition-value/3/"
-				}],
-				"chance": 5,
-				"method": {
-					"name": "walk",
-					"url": "http://pokeapi.co/api/v2/encounter-method/1/"
-				}
-			}],
-			"version": {
-				"name": "heartgold",
-				"url": "http://pokeapi.co/api/v2/version/15/"
-			}
-		}]
-	}],
+	"location_area_encounters": "/api/v2/pokemon/35/encounters",
 	"moves": [{
 		"move": {
-			"name": "flash",
-			"url": "http://pokeapi.co/api/v2/move/148/"
+			"name": "pound",
+			"url": "http://localhost:8000/api/v2/move/1/"
 		},
 		"version_group_details": [{
-			"level_learned_at": 0,
+			"level_learned_at": 1,
 			"version_group": {
-				"name": "x-y",
-				"url": "http://pokeapi.co/api/v2/version-group/15/"
+				"name": "red-blue",
+				"url": "http://localhost:8000/api/v2/version-group/1/"
 			},
 			"move_learn_method": {
-				"name": "machine",
-				"url": "http://pokeapi.co/api/v2/move-learn-method/4/"
+				"name": "level-up",
+				"url": "http://localhost:8000/api/v2/move-learn-method/1/"
 			}
 		}]
 	}],
 	"species": {
-		"name": "butterfree",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/12/"
+		"name": "clefairy",
+        "url": "http://localhost:8000/api/v2/pokemon-species/35/"
 	},
 	"stats": [{
-		"base_stat": 70,
+		"base_stat": 35,
 		"effort": 0,
 		"stat": {
 			"name": "speed",
-			"url": "http://pokeapi.co/api/v2/stat/6/"
+			"url": "http://localhost:8000/api/v2/stat/6/"
 		}
 	}],
 	"types": [{
-		"slot": 2,
+		"slot": 1,
 		"type": {
-			"name": "flying",
-			"url": "http://pokeapi.co/api/v2/type/3/"
+			"name": "fairy",
+			"url": "http://localhost:8000/api/v2/type/18/"
 		}
+	}],
+	"past_types": [{
+		"generation": {
+			"name": "generation-v",
+			"url": "http://localhost:8000/api/v2/generation/5/"
+		},
+		"types": [
+			{
+				"slot": 1,
+				"type": {
+					"name": "normal",
+					"url": "http://localhost:8000/api/v2/type/1/"
+				}
+			}
+		]
 	}]
 }
 ```
@@ -2392,6 +2382,7 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | species                  | The species this pokémon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
 | stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
 | types                    | A list of details showing types this pokémon has                                                 | list [PokemonType](#pokemontype) |
+| past_types               | A list of details showing types this pokémon had in previous generations                         | list [PokemonTypePast](#pokemontypepast) |
 
 #### PokemonAbility
 
@@ -2407,6 +2398,13 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | ---- | ----------- | --------- |
 | slot | The order the pokémon types are listed in | integer |
 | type | The type the referenced pokémon has       | string  |
+
+#### PokemonTypePast
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| generation | The last generation in which the referenced pokémon had the listed types       | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
+| types      | The types the referenced pokémon had up to and including the listed generation | list [PokemonType](#pokemontype) |
 
 #### LocationAreaEncounter
 

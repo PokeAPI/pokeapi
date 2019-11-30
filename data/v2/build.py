@@ -1546,6 +1546,16 @@ def _build_pokemons():
 
     build_generic((PokemonType,), "pokemon_types.csv", csv_record_to_objects)
 
+    def csv_record_to_objects(info):
+        yield PokemonTypePast(
+            pokemon_id=int(info[0]),
+            generation_id=int(info[1]),
+            type_id=int(info[2]),
+            slot=int(info[3])
+        )
+
+    build_generic((PokemonTypePast,), "pokemon_types_past.csv", csv_record_to_objects)
+
 
 ###############
 #  ENCOUNTER  #

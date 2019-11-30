@@ -4112,7 +4112,10 @@ class APITests(APIData, APITestCase):
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         generation = self.setup_generation_data(name='base gen')
-        pokemon_past_type = self.setup_pokemon_past_type_data(pokemon=pokemon, generation=generation)
+        pokemon_past_type = self.setup_pokemon_past_type_data(
+            pokemon=pokemon,
+            generation=generation
+        )
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
         pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
         pokemon_game_index = self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
@@ -4183,16 +4186,21 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data['types'][0]['type']['url'],
             '{}{}/type/{}/'.format(TEST_HOST, API_V2, pokemon_type.type.pk))
+
         # past type params
-        self.assertEqual(response.data['past_types'][0]['generation']['name'], pokemon_past_type.generation.name)
+        past_types_obj = response.data['past_types'][0]
+        self.assertEqual(past_types_obj['generation']['name'], pokemon_past_type.generation.name)
         self.assertEqual(
-            response.data['past_types'][0]['generation']['url'],
+            past_types_obj['generation']['url'],
             '{}{}/generation/{}/'.format(TEST_HOST, API_V2, pokemon_past_type.generation.pk))
-        self.assertEqual(response.data['past_types'][0]['types'][0]['slot'], pokemon_past_type.slot)
-        self.assertEqual(response.data['past_types'][0]['types'][0]['type']['name'], pokemon_past_type.type.name)
+
+        past_types_types_obj = past_types_obj['types'][0]
+        self.assertEqual(past_types_types_obj['slot'], pokemon_past_type.slot)
+        self.assertEqual(past_types_types_obj['type']['name'], pokemon_past_type.type.name)
         self.assertEqual(
-            response.data['past_types'][0]['types'][0]['type']['url'],
+            past_types_types_obj['type']['url'],
             '{}{}/type/{}/'.format(TEST_HOST, API_V2, pokemon_past_type.type.pk))
+
         # items params
         self.assertEqual(response.data['held_items'][0]['item']['name'], pokemon_item.item.name)
         self.assertEqual(

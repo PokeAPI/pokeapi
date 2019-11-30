@@ -2649,7 +2649,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     def get_past_pokemon_types(self, obj):
 
         poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
-        poke_past_types = PokemonTypePastSerializer(poke_past_type_objects, many=True, context=self.context).data
+        poke_past_types = PokemonTypePastSerializer(
+            poke_past_type_objects,
+            many=True,
+            context=self.context
+        ).data
 
         # post-process to the form we want
         current_generation = ""

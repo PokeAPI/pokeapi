@@ -1830,7 +1830,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                 self.remove_type_entry(relations, type, direction='_damage_to')
 
                 # add entry
-                damage_factor = relations['damage_factor']
+                damage_factor = relation['damage_factor']
                 self.add_type_entry(relations, type, damage_factor, direction='_damage_to')
 
                 del relation['generation']

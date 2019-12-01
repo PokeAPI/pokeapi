@@ -1744,15 +1744,8 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
         for relation in serializer.data:
             type = Type.objects.get(pk=relation['target_type'])
-            if relation['damage_factor'] == 200:
-                relations['double_damage_to'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
-            elif relation['damage_factor'] == 50:
-                relations['half_damage_to'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
-            elif relation['damage_factor'] == 0:
-                relations['no_damage_to'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
+            damage_factor = relation['damage_factor']
+            self.add_type_entry(relations, type, damage_factor, direction='_damage_to')
 
         # Damage From
         results = TypeEfficacy.objects.filter(target_type=obj)
@@ -1760,15 +1753,8 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
         for relation in serializer.data:
             type = Type.objects.get(pk=relation['damage_type'])
-            if relation['damage_factor'] == 200:
-                relations['double_damage_from'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
-            elif relation['damage_factor'] == 50:
-                relations['half_damage_from'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
-            elif relation['damage_factor'] == 0:
-                relations['no_damage_from'].append(
-                    TypeSummarySerializer(type, context=self.context).data)
+            damage_factor = relation['damage_factor']
+            self.add_type_entry(relations, type, damage_factor, direction='_damage_from')
 
         return relations
 

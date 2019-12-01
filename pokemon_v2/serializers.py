@@ -1794,8 +1794,8 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     def get_type_past_relationships(self, obj):
 
         # collect data from DB
-        damage_type_results = TypeEfficacyPast.objects.filter(damage_type=obj)
-        target_type_results = TypeEfficacyPast.objects.filter(target_type=obj)
+        damage_type_results = list(TypeEfficacyPast.objects.filter(damage_type=obj))
+        target_type_results = list(TypeEfficacyPast.objects.filter(target_type=obj))
         serializer = TypeEfficacyPastSerializer(
             damage_type_results + target_type_results,
             many=True,

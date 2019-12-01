@@ -432,6 +432,20 @@ class HasType(models.Model):
         abstract = True
 
 
+class HasTypeEfficacy(models.Model):
+
+    damage_type = models.ForeignKey('Type', blank=True, null=True,
+                                    related_name="%(class)s_damage_type", on_delete=models.CASCADE)
+
+    target_type = models.ForeignKey('Type', blank=True, null=True,
+                                    related_name="%(class)s_target_type", on_delete=models.CASCADE)
+
+    damage_factor = models.IntegerField()
+
+    class Meta:
+        abstract = True
+
+
 class HasVersion(models.Model):
 
     version = models.ForeignKey('Version', blank=True, null=True,
@@ -585,15 +599,13 @@ class TypeGameIndex(HasType, HasGeneration, HasGameIndex):
     pass
 
 
-class TypeEfficacy(models.Model):
+class TypeEfficacy(HasTypeEfficacy):
+    pass
 
-    damage_type = models.ForeignKey('Type', blank=True, null=True,
-                                    related_name="damage_type", on_delete=models.CASCADE)
 
-    target_type = models.ForeignKey('Type', blank=True, null=True,
-                                    related_name="target_type", on_delete=models.CASCADE)
-
-    damage_factor = models.IntegerField()
+# model for a type's efficacy that was used until a given generation
+class TypeEfficacyPast(HasTypeEfficacy, HasGeneration):
+    pass
 
 
 #################

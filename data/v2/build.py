@@ -591,6 +591,17 @@ def _build_types():
     build_generic((TypeEfficacy,), "type_efficacy.csv", csv_record_to_objects)
 
 
+    def csv_record_to_objects(info):
+        yield TypeEfficacyPast(
+            damage_type_id=int(info[0]),
+            target_type_id=int(info[1]),
+            damage_factor=int(info[2]),
+            generation_id=int(info[3]),
+        )
+
+    build_generic((TypeEfficacyPast,), "type_efficacy_past.csv", csv_record_to_objects)
+
+
 #############
 #  CONTEST  #
 #############

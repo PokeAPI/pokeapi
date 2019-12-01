@@ -3162,6 +3162,57 @@ class APITests(APIData, APITestCase):
         )
         double_damage_from_type_relation.save()
 
+        # past type relations
+        generation = self.setup_generation_data(name='past gen')
+
+        past_no_damage_to_relation = TypeEfficacyPast(
+            damage_type=type,
+            target_type=no_damage_to,
+            damage_factor=0,
+            generation=generation
+        )
+        past_no_damage_to_relation.save()
+
+        past_half_damage_to_relation = TypeEfficacyPast(
+            damage_type=type,
+            target_type=half_damage_to,
+            damage_factor=50,
+            generation=generation
+        )
+        past_half_damage_to_relation.save()
+
+        past_double_damage_to_relation = TypeEfficacyPast(
+            damage_type=type,
+            target_type=double_damage_to,
+            damage_factor=200,
+            generation=generation
+        )
+        past_double_damage_to_relation.save()
+
+        past_no_damage_from_relation = TypeEfficacyPast(
+            damage_type=no_damage_from,
+            target_type=type,
+            damage_factor=0,
+            generation=generation
+        )
+        past_no_damage_from_relation.save()
+
+        past_half_damage_from_relation = TypeEfficacyPast(
+            damage_type=half_damage_from,
+            target_type=type,
+            damage_factor=50,
+            generation=generation
+        )
+        past_half_damage_from_relation.save()
+
+        past_double_damage_from_relation = TypeEfficacyPast(
+            damage_type=double_damage_from,
+            target_type=type,
+            damage_factor=200,
+            generation=generation
+        )
+        past_double_damage_from_relation.save()
+
         response = self.client.get('{}/type/{}/'.format(API_V2, type.pk))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -3228,6 +3279,61 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data['damage_relations']['double_damage_from'][0]['url'],
             '{}{}/type/{}/'.format(TEST_HOST, API_V2, double_damage_from.pk))
+
+        # past damage relations params
+
+        # generation
+        past_damage_relations = response.data['past_damage_relations']
+        gen_data = past_damage_relations[0]['generation']
+        self.assertEqual(
+            gen_data['name'],
+            generation.name)
+        self.assertEqual(
+            gen_data['url'],
+            '{}{}/generation/{}/'.format(
+                TEST_HOST, API_V2, past_no_damage_to_relation.generation.pk
+            )
+        )
+
+        # relations
+        gen_relations = past_damage_relations[0]['damage_relations']
+        self.assertEqual(
+            gen_relations['no_damage_to'][0]['name'],
+            no_damage_to.name)
+        self.assertEqual(
+            gen_relations['no_damage_to'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, no_damage_to.pk))
+        self.assertEqual(
+            gen_relations['half_damage_to'][0]['name'],
+            half_damage_to.name)
+        self.assertEqual(
+            gen_relations['half_damage_to'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, half_damage_to.pk))
+        self.assertEqual(
+            gen_relations['double_damage_to'][0]['name'],
+            double_damage_to.name)
+        self.assertEqual(
+            gen_relations['double_damage_to'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, double_damage_to.pk))
+        self.assertEqual(
+            gen_relations['no_damage_from'][0]['name'],
+            no_damage_from.name)
+        self.assertEqual(
+            gen_relations['no_damage_from'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, no_damage_from.pk))
+        self.assertEqual(
+            gen_relations['half_damage_from'][0]['name'],
+            half_damage_from.name)
+        self.assertEqual(
+            gen_relations['half_damage_from'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, half_damage_from.pk))
+        self.assertEqual(
+            gen_relations['double_damage_from'][0]['name'],
+            double_damage_from.name)
+        self.assertEqual(
+            gen_relations['double_damage_from'][0]['url'],
+            '{}{}/type/{}/'.format(TEST_HOST, API_V2, double_damage_from.pk))
+
         # game indices params
         self.assertEqual(response.data['game_indices'][0]['game_index'], type_game_index.game_index)
         self.assertEqual(

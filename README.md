@@ -72,7 +72,7 @@ from data.v2.build import build_all
 build_all()
 ```
 
-Visit [localhost:8000/api/v2/](localhost:8000/api/v2/) to see the running API!
+Visit [localhost/api/v2/](localhost/api/v2/) to see the running API!
 
 Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 

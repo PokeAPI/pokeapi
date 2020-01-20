@@ -727,6 +727,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 726,lets-snuggle-forever,7,18,190,1,,0,10,2,417,,,,
 727,splintered-stormshards,7,6,190,1,,0,10,2,418,,,,
 728,clangorous-soulblaze,7,16,185,1,,0,11,3,419,100,,,
+729,double-iron-bash,7,9,60,5,100,0,10,2,32,30,,,,
 10001,shadow-rush,3,10002,55,,100,0,10,2,10001,,,,
 10002,shadow-blast,3,10002,80,,100,0,10,2,44,,,,
 10003,shadow-blitz,3,10002,40,,100,0,10,2,1,,,,

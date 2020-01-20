@@ -806,6 +806,8 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 805,stakataka,,805,18,1,0,0,1,1121
 806,blacephalon,,806,18,1,0,0,1,1122
 807,zeraora,,807,18,1,0,0,1,1123
+808,meltan,,10158,,1,0,0,1,1116
+809,melmetal,,10159,,1,0,0,1,1117
 10001,unown-b,b,201,3,0,0,0,2,284
 10002,unown-c,c,201,3,0,0,0,3,285
 10003,unown-d,d,201,3,0,0,0,4,286

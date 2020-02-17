@@ -70,7 +70,10 @@ router.register(r"version-group", VersionGroupResource)
 ###########################
 
 urlpatterns = [
-    url(r'^api/v2/', include(router.urls)),
-    url(r'^api/v2/pokemon/(?P<pokemon_id>\d+)/encounters',
-        PokemonEncounterView.as_view(), name='pokemon_encounters')
+    url(r"^api/v2/", include(router.urls)),
+    url(
+        r"^api/v2/pokemon/(?P<pokemon_id>\d+)/encounters",
+        PokemonEncounterView.as_view(),
+        name="pokemon_encounters",
+    ),
 ]

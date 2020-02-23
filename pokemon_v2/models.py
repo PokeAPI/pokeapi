@@ -690,7 +690,7 @@ class VersionGroupMoveLearnMethod(HasVersionGroup, HasMoveLearnMethod):
 
 class Language(HasName, HasOrder):
 
-    iso639 = models.CharField(max_length=2)
+    iso639 = models.CharField(max_length=10)
 
     iso3166 = models.CharField(max_length=2)
 

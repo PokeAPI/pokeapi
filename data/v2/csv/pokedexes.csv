@@ -13,3 +13,13 @@ id,region_id,identifier,is_main_series
 13,6,kalos-coastal,1
 14,6,kalos-mountain,1
 15,3,updated-hoenn,1
+16,7,original-alola,1
+17,7,original-melemele,1
+18,7,original-akala,1
+19,7,original-ulaula,1
+20,7,original-poni,1
+21,7,updated-alola,1
+22,7,updated-melemele,1
+23,7,updated-akala,1
+24,7,updated-ulaula,1
+25,7,updated-poni,1

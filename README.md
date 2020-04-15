@@ -33,7 +33,7 @@ Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 * Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
 * .Net Standard [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_
 * Go [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_
-* Flutter [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
+* Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
 * Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)

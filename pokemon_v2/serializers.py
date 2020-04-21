@@ -3138,41 +3138,37 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         evolution_tree = self.build_evolution_tree(ref_data)
 
         # serialize chain recursively from tree
-        base_chain_link = evolution_tree
-        chain = self.build_chain_link_entry(base_chain_link, summary_data)
+        chain = self.build_chain_link_entry(evolution_tree, summary_data)
 
         return chain
 
     # converts a list of Pokemon species evolution data into a tree representing the evolution chain
     def build_evolution_tree(self, species_evolution_data):
-        evolution_tree = None
+        evolution_tree = OrderedDict()
+        evolution_tree["species"] = species_evolution_data[0]
+        evolution_tree["children"] = []
 
-        for species in species_evolution_data:
-            if not evolution_tree:
-                evolution_tree = OrderedDict()
-                evolution_tree["species"] = species
-                evolution_tree["children"] = []
-            else:
-                chain_link = OrderedDict()
-                chain_link["species"] = species
-                chain_link["children"] = []
+        for species in species_evolution_data[1:]:
+            chain_link = OrderedDict()
+            chain_link["species"] = species
+            chain_link["children"] = []
 
-                evolves_from_species_id = chain_link["species"]["evolves_from_species"]
+            evolves_from_species_id = chain_link["species"]["evolves_from_species"]
 
-                # find parent link by DFS
-                parent_link = evolution_tree
-                search_stack = [parent_link]
+            # find parent link by DFS
+            parent_link = evolution_tree
+            search_stack = [parent_link]
 
-                while len(search_stack) > 0:
-                    l = search_stack.pop()
-                    if l["species"]["id"] == evolves_from_species_id:
-                        parent_link = l
-                        break
+            while len(search_stack) > 0:
+                l = search_stack.pop()
+                if l["species"]["id"] == evolves_from_species_id:
+                    parent_link = l
+                    break
 
-                    # "left" to "right" requires reversing the list of children
-                    search_stack += reversed(l["children"])
+                # "left" to "right" requires reversing the list of children
+                search_stack += reversed(l["children"])
 
-                parent_link["children"].append(chain_link)
+            parent_link["children"].append(chain_link)
 
         return evolution_tree
 

@@ -20,7 +20,7 @@ jobs:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
       - run:
           name: TEST - Create test branch on api-data and relative PR # TODO: move to the deploy phase TODO: rename
-          command: bash Resources/scripts/updater.sh
+          command: bash -x Resources/scripts/updater.sh
 
 workflows:
   version: 2

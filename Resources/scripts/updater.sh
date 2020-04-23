@@ -70,7 +70,7 @@ prepare
 clone
 configure_git
 push
-sleep 5
-pr_number=create_pr
-sleep 5
+sleep 10
+pr_number=$(create_pr)
+sleep 10
 assign_pr "$pr_number"

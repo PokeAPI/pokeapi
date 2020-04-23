@@ -57,13 +57,13 @@ EOF
 }
 
 create_pr() {
-  pr_number=$(curl -H "Authorization: token $GITHUB_API_TOKEN" -X POST --data "$(pr_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+  pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
   echo pr_number
 }
 
 assign_pr() {
   pr_number=$1
-  curl -H "Authorization: token $GITHUB_API_TOKEN" -X POST --data "$(reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
+  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
 }
 
 prepare

@@ -19,19 +19,8 @@ jobs:
           fingerprints:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
       - run:
-          name: TEST - Create test branch on api-data # TODO: move to the deploy phase TODO: rename
-          command: |
-            mkdir -p ./testpr
-            cd testpr
-            git clone https://github.com/PokeAPI/api-data.git api-data
-            cd api-data
-            git checkout -b testbranch
-            touch .gitkeeptestpr
-            git config --global user.name "pokeapi-machine-user"
-            git config --global user.email pokeapi.co@gmail.com
-            git add .
-            git commit -m "play: add test file"
-            git push -uf origin testbranch
+          name: TEST - Create test branch on api-data and relative PR # TODO: move to the deploy phase TODO: rename
+          command: bash Resources/scripts/updater.sh
 
 workflows:
   version: 2

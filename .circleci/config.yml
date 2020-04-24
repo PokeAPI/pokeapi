@@ -7,14 +7,20 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install deps
-          command: sudo make dev-install
+        name: Install deps
+        command: sudo make dev-install
       - run:
-          name: Linting
-          command: make format-check
+        name: Linting
+        command: make format-check
       - run:
-          name: Run tests
-          command: make test
+        name: Run tests
+        command: make test
+
+  generate_data:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
       - add_ssh_keys:
           fingerprints:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
@@ -27,3 +33,6 @@ workflows:
   test:
     jobs:
       - test
+      - generate_data:
+        requires:
+          - test

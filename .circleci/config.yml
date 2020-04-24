@@ -34,5 +34,5 @@ workflows:
     jobs:
     - test
     - generate_data:
-      requires:
-      - test
+        requires:
+        - test

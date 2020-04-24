@@ -18,6 +18,8 @@ clone() {
 configure_git() {
   git config --global user.name "pokeapi-machine-user"
   git config --global user.email pokeapi.co@gmail.com
+  chown "$USER" ~/.ssh/config
+  chmod 644 ~/.ssh/config
 }
 
 run_updater() {

@@ -17,7 +17,8 @@ jobs:
           command: make test
 
   generate_data:
-    machine: true
+    machine:
+      image: ubuntu-1604:202004-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 19.03.8
     steps:
       - checkout
       - add_ssh_keys:

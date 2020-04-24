@@ -26,7 +26,7 @@ run_updater() {
   sleep 10 # Wait to be sure PokeAPI/pokeapi:origin/master has been updated on Github with the lastest merged PR content
   cd "${data_repo}/updater" || exit
   docker build -t pokeapi-updater .
-  docker run --privileged -v ~/.ssh:/root/.ssh -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI 'https://github.com/PokeAPI/pokeapi.git' -e REPO_DATA 'https://github.com/PokeAPI/api-data.git' pokeapi-updater
+  docker run --privileged -v ~/.ssh:/root/.ssh -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/PokeAPI/pokeapi.git" -e REPO_DATA="https://github.com/PokeAPI/api-data.git" pokeapi-updater
   cd .. || exit
 }
 

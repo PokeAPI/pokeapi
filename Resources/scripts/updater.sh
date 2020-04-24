@@ -59,7 +59,7 @@ assignees_and_labels() {
 EOF
 }
 
-reviewers() {
+reviewers() { # TODO: Add core team
   cat <<EOF
 {
   "reviewers": [
@@ -71,17 +71,27 @@ EOF
 
 create_pr() {
   pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+  if [[ "$pr_number" = "null" ]]; then
+    echo "Couldn't create the Pull Request"
+    exit 1
+  fi
   echo "$pr_number"
 }
 
 customize_pr() {
   pr_number=$1
   curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$pr_number"
+  if [ $? -ne 0 ]; then
+		echo "Couldn't add Assignees and Labes to the Pull Request"
+	fi
 }
 
 assign_pr() {
   pr_number=$1
   curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
+  if [ $? -ne 0 ]; then
+    echo "Couldn't add Reviewers to the Pull Request"
+  fi
 }
 
 prepare

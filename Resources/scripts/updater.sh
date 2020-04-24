@@ -13,6 +13,7 @@ prepare() {
 
 clone() {
   git clone "https://github.com/$org/$data_repo.git" "$data_repo"
+  git checkout test
 }
 
 configure_git() {

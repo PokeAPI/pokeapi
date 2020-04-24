@@ -7,13 +7,12 @@ data_repo='api-data'
 branch_name='testbranch'
 
 prepare() {
-  mkdir -p ./testpr
-  cd testpr || exit
+  mkdir -p ./repositories
+  cd repositories || exit
 }
 
 clone() {
   git clone "https://github.com/$org/$data_repo.git" "$data_repo"
-  cd "$data_repo" || exit
 }
 
 configure_git() {
@@ -21,13 +20,21 @@ configure_git() {
   git config --global user.email pokeapi.co@gmail.com
 }
 
-push() {
-  git checkout -b "$branch_name"
-  touch .gitkeeptestpr
-  git add .
-  git commit -m "play: add test file"
-  git push -uf origin "$branch_name"
+run_updater() {
+  sleep 10 # Wait to be sure PokeAPI/pokeapi:origin/master has been updated on Github with the lastest merged PR content
+  cd "${data_repo}/updater" || exit
+  docker build -t pokeapi-updater .
+  docker run --privileged -v ~/.ssh:/root/.ssh -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" pokeapi-updater
+  cd .. || exit
 }
+
+# push() {
+#   git checkout -b "$branch_name"
+#   touch .gitkeeptestpr
+#   git add .
+#   git commit -m "play: add test file"
+#   git push -uf origin "$branch_name"
+# }
 
 pr_content() {
   cat <<EOF
@@ -70,6 +77,7 @@ EOF
 }
 
 create_pr() {
+  sleep 10 # Wait for Github to update origin/${branch_name}
   pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
   if [[ "$pr_number" = "null" ]]; then
     echo "Couldn't create the Pull Request"
@@ -79,6 +87,7 @@ create_pr() {
 }
 
 customize_pr() {
+  sleep 10 # Wait for Github to open the PR
   pr_number=$1
   curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$pr_number"
   if [ $? -ne 0 ]; then
@@ -97,10 +106,8 @@ assign_pr() {
 prepare
 clone
 configure_git
-push
-sleep 10
+run_updater
+# push
 pr_number=$(create_pr)
-sleep 10
 customize_pr "$pr_number"
-sleep 10
 assign_pr "$pr_number"

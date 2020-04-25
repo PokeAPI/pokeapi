@@ -26,13 +26,7 @@ run_updater() {
   git fetch
   git checkout test
   docker build -t pokeapi-updater .
-  docker run -itd --name pokeapi-api-data-updater --privileged -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" pokeapi-updater bash
-  docker exec pokeapi-api-data-updater mkdir -p /root/.ssh
-  docker cp ~/.ssh pokeapi-api-data-updater:/root/.ssh
-  docker exec pokeapi-api-data-updater chown -R root /root/.ssh
-  docker exec pokeapi-api-data-updater chmod -R 600 /root/.ssh
-  docker exec pokeapi-api-data-updater bash cmd.bash
-  docker stop pokeapi-api-data-updater
+  docker run --privileged -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/PokeAPI/pokeapi.git" -e REPO_DATA="https://${MACHINE_USER_GITHUB_API_TOKEN}@github.com/PokeAPI/api-data.git" pokeapi-updater
   cd .. || exit
 }
 

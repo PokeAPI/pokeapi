@@ -1,4 +1,7 @@
 #!/bin/bash
+# Executed when the master branch of PokeAPI/pokeapi gets updated
+# Runs in CircleCI
+# Generates new data using the latest changes of PokeAPI/pokeapi in order to open a Pull Request towards PokeAPI/api-data
 
 set -o pipefail
 
@@ -12,7 +15,8 @@ email='pokeapi.co@gmail.com'
 function cleanexit {
 	echo "Exiting"
 	echo "$2"
-	exit "$1"
+  # TODO: Notify users on Github
+	exit $1
 }
 
 # Create and use a personal folder
@@ -76,7 +80,7 @@ run_updater() {
   # Run the updater
   docker run --privileged -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/${org}/${engine_repo}.git" -e REPO_DATA="https://${MACHINE_USER_GITHUB_API_TOKEN}@github.com/${org}/${data_repo}.git" pokeapi-updater
   if [ $? -ne 0 ]; then
-    cleanexit 2 "Failed to run the pokeapi-updater container"
+    cleanexit 1 "Failed to run the pokeapi-updater container"
   fi
 
   cd .. || cleanexit 1 "Failed to cd"
@@ -144,11 +148,14 @@ customize_pr() {
 	fi
 }
 
-pr_input_reviewers() { # TODO: Add core team
+pr_input_reviewers() {
   cat <<EOF
 {
   "reviewers": [
     "Naramsim"
+  ],
+  "team_reviewers": [
+    "core-team"
   ]
 }
 EOF
@@ -172,3 +179,4 @@ check_remote_branch "$branch_name"
 pr_number=$(create_pr)
 customize_pr "$pr_number"
 add_reviewers_to_pr "$pr_number"
+cleanexit 0 'Done'

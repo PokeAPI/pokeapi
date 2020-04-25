@@ -18,8 +18,6 @@ clone() {
 configure_git() {
   git config --global user.name "pokeapi-machine-user"
   git config --global user.email pokeapi.co@gmail.com
-  # chown "$USER" ~/.ssh/config
-  # chmod 644 ~/.ssh/config
 }
 
 run_updater() {
@@ -28,7 +26,13 @@ run_updater() {
   git fetch
   git checkout test
   docker build -t pokeapi-updater .
-  docker run --privileged -v ~/.ssh:/root/.ssh -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/PokeAPI/pokeapi.git" -e REPO_DATA="https://github.com/PokeAPI/api-data.git" pokeapi-updater
+  docker run --name pokeapi-api-data-updater --privileged -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" pokeapi-updater bash
+  docker exec pokeapi-api-data-updater mkdir -p /root/.ssh
+  docker cp ~/.ssh pokeapi-api-data-updater:/root/.ssh
+  docker exec pokeapi-api-data-updater chown -R root /root/.ssh
+  docker exec pokeapi-api-data-updater chmod -R 600 /root/.ssh
+  docker exec pokeapi-api-data-updater bash cmd.bash
+  docker stop pokeapi-api-data-updater
   cd .. || exit
 }
 

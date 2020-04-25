@@ -5,7 +5,7 @@ set -o pipefail
 org='PokeAPI'
 data_repo='api-data'
 engine_repo='pokeapi'
-branch_name='testbranch'
+branch_name='updated-data'
 username='pokeapi-machine-user'
 email='pokeapi.co@gmail.com'
 
@@ -15,27 +15,32 @@ function cleanexit {
 	exit "$1"
 }
 
+# Create and use a personal folder
 prepare() {
   mkdir -p ./repositories
   cd repositories || cleanexit 1 "Failed to cd"
 }
 
+# Not used
+# Check and return the number of the Pull Request that started this job
 get_invokator_pr_number() {
   if [ -z "$CIRCLE_PULL_REQUEST" ]; then
     echo "${CIRCLE_PULL_REQUEST##*/}"
   fi
 }
 
+# Clone the repository containing the static JSON files
 clone() {
   git clone "https://github.com/${org}/${data_repo}.git" "$data_repo"
 }
 
+# Configure git to use the supplied user when committing
 configure_git() {
   git config --global user.name "$username"
   git config --global user.email "$email"
 }
 
-notification_comment_content() {
+pr_input_notification_comment() {
   cat <<EOF
 {
   "body": "A [PokeAPI/api-data](https://github.com/PokeAPI/api-data) refresh has started. If everything works out in 30 minutes a Pull Request will be created and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide."
@@ -43,13 +48,15 @@ notification_comment_content() {
 EOF
 }
 
+# If the job was started by a Pull Request add a comment notifying the users that a deployment process has started
 notify_updater_start() {
   if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
     pr_number="${CIRCLE_PULL_REQUEST##*/}"
-    curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(notification_comment_content)" "https://api.github.com/repos/$org/$engine_repo/issues/${pr_number}/comments"
+    curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_notification_comment)" "https://api.github.com/repos/$org/$engine_repo/issues/${pr_number}/comments"
   fi
 }
 
+# Run the updater script (https://github.com/PokeAPI/api-data/blob/master/updater/cmd.bash) which will generate the new pokeapi data and push it to the api-data repository under a new branch
 run_updater() {
   cd "${data_repo}/updater" || cleanexit 1 "Failed to cd"
 
@@ -75,15 +82,18 @@ run_updater() {
   cd .. || cleanexit 1 "Failed to cd"
 }
 
+# Check if the updater script has pushed the data to a new branch
 check_remote_branch() {
-  sleep 10 # Wait for Github to update origin/${branch_name}
+  # Wait for Github to update origin/${branch_name}
+  sleep 10
+
   curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X GET "https://api.github.com/repos/$org/$data_repo/branches/$1"
   if [ $? -ne 0 ]; then
-    cleanexit 1 "The updater script failed to push the updated data"
+    cleanexit 1 "The updater script failed to push the new data"
   fi
 }
 
-pr_content() {
+pr_input_content() {
   cat <<EOF
 {
   "title": "API data update",
@@ -100,7 +110,16 @@ pr_content() {
 EOF
 }
 
-assignees_and_labels() {
+# Create a Pull Request to merge the branch recently pushed by the updater with the master branch
+create_pr() {
+  pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+  if [[ "$pr_number" = "null" ]]; then
+    cleanexit 1 "Couldn't create the Pull Request"
+  fi
+  echo "$pr_number"
+}
+
+pr_input_assignees_and_labels() {
   cat <<EOF
 {
   "assignees": [
@@ -113,7 +132,19 @@ assignees_and_labels() {
 EOF
 }
 
-reviewers() { # TODO: Add core team
+# Assign the PR to Naramsim and add a label
+customize_pr() {
+  # Wait for Github to open the PR
+  sleep 10
+  
+  pr_number=$1
+  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$pr_number"
+  if [ $? -ne 0 ]; then
+		echo "Couldn't add Assignees and Labes to the Pull Request"
+	fi
+}
+
+pr_input_reviewers() { # TODO: Add core team
   cat <<EOF
 {
   "reviewers": [
@@ -123,26 +154,10 @@ reviewers() { # TODO: Add core team
 EOF
 }
 
-create_pr() {
-  pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
-  if [[ "$pr_number" = "null" ]]; then
-    cleanexit 1 "Couldn't create the Pull Request"
-  fi
-  echo "$pr_number"
-}
-
-customize_pr() {
-  sleep 10 # Wait for Github to open the PR
+# Request the Core team to review the Pull Request
+add_reviewers_to_pr() {
   pr_number=$1
-  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$pr_number"
-  if [ $? -ne 0 ]; then
-		echo "Couldn't add Assignees and Labes to the Pull Request"
-	fi
-}
-
-assign_pr() {
-  pr_number=$1
-  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
+  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
   if [ $? -ne 0 ]; then
     echo "Couldn't add Reviewers to the Pull Request"
   fi
@@ -156,4 +171,4 @@ run_updater
 check_remote_branch "$branch_name"
 pr_number=$(create_pr)
 customize_pr "$pr_number"
-assign_pr "$pr_number"
+add_reviewers_to_pr "$pr_number"

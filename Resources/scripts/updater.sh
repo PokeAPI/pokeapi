@@ -26,7 +26,7 @@ run_updater() {
   git fetch
   git checkout test
   docker build -t pokeapi-updater .
-  docker run --name pokeapi-api-data-updater --privileged -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" pokeapi-updater bash
+  docker run -itd --name pokeapi-api-data-updater --privileged -e COMMIT_EMAIL=pokeapi.co@gmail.com -e COMMIT_NAME="pokeapi-machine-user" -e BRANCH_NAME="$branch_name" pokeapi-updater bash
   docker exec pokeapi-api-data-updater mkdir -p /root/.ssh
   docker cp ~/.ssh pokeapi-api-data-updater:/root/.ssh
   docker exec pokeapi-api-data-updater chown -R root /root/.ssh

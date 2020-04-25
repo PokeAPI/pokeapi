@@ -46,7 +46,7 @@ EOF
 notify_updater_start() {
   if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
     pr_number="${CIRCLE_PULL_REQUEST##*/}"
-    curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(notification_comment_content)" "https://api.github.com/repos/$org/$data_repo/issues/${pr_number}/comments"
+    curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(notification_comment_content)" "https://api.github.com/repos/$org/$engine_repo/issues/${pr_number}/comments"
   fi
 }
 

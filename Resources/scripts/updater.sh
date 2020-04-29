@@ -66,10 +66,6 @@ run_updater() {
 
   # Wait to be sure PokeAPI/pokeapi:origin/master has been updated on Github with the lastest merged PR content
   sleep 10
-  
-  # Switch to test branch # TODO: don't checkout
-  git fetch
-  git checkout test 
 
   # Build the updater image
   docker build -t pokeapi-updater .

@@ -15,7 +15,11 @@ email='pokeapi.co@gmail.com'
 function cleanexit {
 	echo "Exiting"
 	echo "$2"
-  # TODO: Notify users on Github
+  if [ "$1" -gt "0" ]; then
+    notify_engine_pr "end_failed"
+  else
+    notify_engine_pr "end_success"
+  fi
 	exit $1
 }
 
@@ -44,7 +48,7 @@ configure_git() {
   git config --global user.email "$email"
 }
 
-pr_input_notification_comment() {
+pr_input_updater_start() {
   cat <<EOF
 {
   "body": "A [PokeAPI/api-data](https://github.com/PokeAPI/api-data) refresh has started. If everything works out in 30 minutes a Pull Request will be created and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide."
@@ -52,11 +56,29 @@ pr_input_notification_comment() {
 EOF
 }
 
-# If the job was started by a Pull Request add a comment notifying the users that a deployment process has started
-notify_updater_start() {
-  if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
-    pr_number="${CIRCLE_PULL_REQUEST##*/}"
-    curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_notification_comment)" "https://api.github.com/repos/$org/$engine_repo/issues/${pr_number}/comments"
+pr_input_updater_end_success() {
+  cat <<EOF
+{
+  "body": "The updater script has finished its job and has opened a Pull Request [PokeAPI/api-data](https://github.com/PokeAPI/api-data) with the updated data."
+}
+EOF
+}
+
+pr_input_updater_end_failed() {
+  cat <<EOF
+{
+  "body": "The updater script couldn't finish it's job. Please check CircleCI's logs."
+}
+EOF
+}
+
+# If the job was started by a Pull Request add a comment to notify the users
+notify_engine_pr() {
+  if [[ $1 == "start" || $1 == "end" ]]; then
+    if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
+      engine_repo_pr_number="${CIRCLE_PULL_REQUEST##*/}"
+      curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/${engine_repo_pr_number}/comments"
+    fi
   fi
 }
 
@@ -112,11 +134,11 @@ EOF
 
 # Create a Pull Request to merge the branch recently pushed by the updater with the master branch
 create_pr() {
-  pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
-  if [[ "$pr_number" = "null" ]]; then
+  data_repo_pr_number=$(curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_content)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+  if [[ "$data_repo_pr_number" = "null" ]]; then
     cleanexit 1 "Couldn't create the Pull Request"
   fi
-  echo "$pr_number"
+  echo "$data_repo_pr_number"
 }
 
 pr_input_assignees_and_labels() {
@@ -137,8 +159,8 @@ customize_pr() {
   # Wait for Github to open the PR
   sleep 10
   
-  pr_number=$1
-  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$pr_number"
+  data_repo_pr_number=$1
+  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$data_repo_pr_number"
   if [ $? -ne 0 ]; then
 		echo "Couldn't add Assignees and Labes to the Pull Request"
 	fi
@@ -159,8 +181,8 @@ EOF
 
 # Request the Core team to review the Pull Request
 add_reviewers_to_pr() {
-  pr_number=$1
-  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$pr_number/requested_reviewers"
+  data_repo_pr_number=$1
+  curl -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_number/requested_reviewers"
   if [ $? -ne 0 ]; then
     echo "Couldn't add Reviewers to the Pull Request"
   fi
@@ -169,10 +191,10 @@ add_reviewers_to_pr() {
 prepare
 clone
 configure_git
-notify_updater_start
+notify_engine_pr "start"
 run_updater
 check_remote_branch "$branch_name"
-pr_number=$(create_pr)
-customize_pr "$pr_number"
-add_reviewers_to_pr "$pr_number"
+data_repo_pr_number=$(create_pr)
+customize_pr "$data_repo_pr_number"
+add_reviewers_to_pr "$data_repo_pr_number"
 cleanexit 0 'Done'

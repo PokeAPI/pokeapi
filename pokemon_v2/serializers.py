@@ -3134,44 +3134,74 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
             pokemon_objects, many=True, context=self.context
         ).data
 
-        chain = entry = OrderedDict()
-        current_evolutions = None
-        evolution_data = None
-        previous_entry = None
-        previous_species = None
+        # convert evolution data list to tree
+        evolution_tree = self.build_evolution_tree(ref_data)
 
-        for index, species in enumerate(ref_data):
-
-            # If evolves from something
-            if species["evolves_from_species"]:
-
-                # In case this pokemon is one of multiple evolutions a pokemon can make
-                if previous_species:
-                    if previous_species["id"] == species["evolves_from_species"]:
-                        current_evolutions = previous_entry["evolves_to"]
-
-                entry = OrderedDict()
-
-                evolution_object = PokemonEvolution.objects.filter(
-                    evolved_species=species["id"]
-                )
-
-                evolution_data = PokemonEvolutionSerializer(
-                    evolution_object, many=True, context=self.context
-                ).data
-
-                current_evolutions.append(entry)
-
-            entry["is_baby"] = species["is_baby"]
-            entry["species"] = summary_data[index]
-            entry["evolution_details"] = evolution_data or []
-            entry["evolves_to"] = []
-
-            # Keep track of previous entries for complex chaining
-            previous_entry = entry
-            previous_species = species
+        # serialize chain recursively from tree
+        chain = self.build_chain_link_entry(evolution_tree, summary_data)
 
         return chain
+
+    # converts a list of Pokemon species evolution data into a tree representing the evolution chain
+    def build_evolution_tree(self, species_evolution_data):
+        evolution_tree = OrderedDict()
+        evolution_tree["species"] = species_evolution_data[0]
+        evolution_tree["children"] = []
+
+        for species in species_evolution_data[1:]:
+            chain_link = OrderedDict()
+            chain_link["species"] = species
+            chain_link["children"] = []
+
+            evolves_from_species_id = chain_link["species"]["evolves_from_species"]
+
+            # find parent link by DFS
+            parent_link = evolution_tree
+            search_stack = [parent_link]
+
+            while len(search_stack) > 0:
+                l = search_stack.pop()
+                if l["species"]["id"] == evolves_from_species_id:
+                    parent_link = l
+                    break
+
+                # "left" to "right" requires reversing the list of children
+                search_stack += reversed(l["children"])
+
+            parent_link["children"].append(chain_link)
+
+        return evolution_tree
+
+    # serializes an evolution chain link recursively
+    # chain_link is a tree representing an evolution chain
+    def build_chain_link_entry(self, chain_link, summary_data):
+        entry = OrderedDict()
+        evolution_data = None
+
+        species = chain_link["species"]
+        if species["evolves_from_species"]:
+
+            evolution_object = PokemonEvolution.objects.filter(
+                evolved_species=species["id"]
+            )
+
+            evolution_data = PokemonEvolutionSerializer(
+                evolution_object, many=True, context=self.context
+            ).data
+
+        entry["is_baby"] = species["is_baby"]
+
+        species_summary = next(x for x in summary_data if x["name"] == species["name"])
+        entry["species"] = species_summary
+
+        entry["evolution_details"] = evolution_data or []
+
+        evolves_to = [
+            self.build_chain_link_entry(c, summary_data) for c in chain_link["children"]
+        ]
+        entry["evolves_to"] = evolves_to
+
+        return entry
 
 
 class PokemonDexNumberSerializer(serializers.ModelSerializer):

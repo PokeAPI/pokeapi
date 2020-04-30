@@ -5203,6 +5203,67 @@ class APITests(APIData, APITestCase):
             "{}{}/type/{}/".format(TEST_HOST, API_V2, stage_two_second_party_type.pk),
         )
 
+    # verifies that the wurmple evolution chain is serialized correctly
+    def test_evolution_chain_api_wurmple_bugfix(self):
+
+        # set up wurmple-like evolution chain
+        evolution_chain = self.setup_evolution_chain_data()
+
+        basic = self.setup_pokemon_species_data(
+            name="wurmple", evolution_chain=evolution_chain,
+        )
+
+        stage_one_first = self.setup_pokemon_species_data(
+            name="silcoon", evolves_from_species=basic, evolution_chain=evolution_chain,
+        )
+        stage_one_first_evolution = self.setup_pokemon_evolution_data(
+            evolved_species=stage_one_first, min_level=7
+        )
+
+        stage_two_first = self.setup_pokemon_species_data(
+            name="beautifly",
+            evolves_from_species=stage_one_first,
+            evolution_chain=evolution_chain,
+        )
+        stage_two_first_evolution = self.setup_pokemon_evolution_data(
+            evolved_species=stage_two_first, min_level=10
+        )
+
+        stage_one_second = self.setup_pokemon_species_data(
+            name="cascoon", evolves_from_species=basic, evolution_chain=evolution_chain,
+        )
+        stage_one_second_evolution = self.setup_pokemon_evolution_data(
+            evolved_species=stage_one_second, min_level=7
+        )
+
+        stage_two_second = self.setup_pokemon_species_data(
+            name="dustox",
+            evolves_from_species=stage_one_second,
+            evolution_chain=evolution_chain,
+        )
+        stage_two_second_evolution = self.setup_pokemon_evolution_data(
+            evolved_species=stage_two_second, min_level=10
+        )
+
+        response = self.client.get(
+            "{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk)
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        # base params
+        self.assertEqual(response.data["id"], evolution_chain.pk)
+
+        # assert tree has been serialized correctly
+        basic_data = response.data["chain"]
+        self.assertEqual(len(basic_data["evolves_to"]), 2)
+
+        stage_one_first_data = basic_data["evolves_to"][0]
+        self.assertEqual(len(stage_one_first_data["evolves_to"]), 1)
+
+        stage_one_second_data = basic_data["evolves_to"][1]
+        self.assertEqual(len(stage_one_second_data["evolves_to"]), 1)
+
     # Encounter Tests
     def test_encounter_method_api(self):
 

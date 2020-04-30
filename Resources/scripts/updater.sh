@@ -12,7 +12,8 @@ branch_name='updated-data'
 username='pokeapi-machine-user'
 email='pokeapi.co@gmail.com'
 
-function cleanexit {
+# Exit the script notifying the user about its success
+cleanexit() {
 	echo "Exiting"
 	echo "$2"
   if [ "$1" -gt "0" ]; then
@@ -51,7 +52,7 @@ configure_git() {
 pr_input_updater_start() {
   cat <<EOF
 {
-  "body": "A [PokeAPI/api-data](https://github.com/PokeAPI/api-data) refresh has started. If everything works out in 30 minutes a Pull Request will be created and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide."
+  "body": "A [PokeAPI/api-data](https://github.com/PokeAPI/api-data) refresh has started. In 40 minutes a Pull Request will be created over there and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide."
 }
 EOF
 }
@@ -59,7 +60,7 @@ EOF
 pr_input_updater_end_success() {
   cat <<EOF
 {
-  "body": "The updater script has finished its job and has opened a Pull Request [PokeAPI/api-data](https://github.com/PokeAPI/api-data) with the updated data."
+  "body": "The updater script has finished its job and has now opened a Pull Request towards the [PokeAPI/api-data](https://github.com/PokeAPI/api-data/pulls) repository with the updated data."
 }
 EOF
 }
@@ -67,12 +68,12 @@ EOF
 pr_input_updater_end_failed() {
   cat <<EOF
 {
-  "body": "The updater script couldn't finish it's job. Please check CircleCI's logs."
+  "body": "The updater script couldn't finish its job. Please check [CircleCI's logs](https://app.circleci.com/pipelines/github/PokeAPI/pokeapi)."
 }
 EOF
 }
 
-# If the job was started by a Pull Request add a comment to notify the users
+# If the job was started by a Pull Request, add a comment to notify the users
 notify_engine_pr() {
   if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" ]]; then
     if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
@@ -189,8 +190,8 @@ add_reviewers_to_pr() {
 }
 
 prepare
-clone
 configure_git
+clone
 notify_engine_pr "start"
 run_updater
 check_remote_branch "$branch_name"

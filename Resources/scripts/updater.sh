@@ -74,7 +74,7 @@ EOF
 
 # If the job was started by a Pull Request add a comment to notify the users
 notify_engine_pr() {
-  if [[ $1 == "start" || $1 == "end" ]]; then
+  if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" ]]; then
     if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
       engine_repo_pr_number="${CIRCLE_PULL_REQUEST##*/}"
       curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/${engine_repo_pr_number}/comments"

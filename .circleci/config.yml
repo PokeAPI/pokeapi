@@ -25,7 +25,7 @@ jobs:
           fingerprints:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
       - run:
-          name: TEST - Create test branch on api-data and relative PR # TODO: move to the deploy phase TODO: rename
+          name: Generate new data and open a Pull Request towards PokeAPI/api-data
           command: bash -x Resources/scripts/updater.sh
 
 workflows:
@@ -36,3 +36,6 @@ workflows:
     - generate_data:
         requires:
         - test
+        filters:
+          branches:
+            only: master

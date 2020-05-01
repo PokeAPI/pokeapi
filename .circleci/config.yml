@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  test:
+  test-and-generate_data:
     docker:
       - image: circleci/python:3.7
     steps:
@@ -30,7 +30,7 @@ jobs:
 
 workflows:
   version: 2
-  test:
+  test-and-generate_data:
     jobs:
     - test
     - generate_data:

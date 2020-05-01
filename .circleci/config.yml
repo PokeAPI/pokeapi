@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  test-and-generate_data:
+  test:
     docker:
       - image: circleci/python:3.7
     steps:

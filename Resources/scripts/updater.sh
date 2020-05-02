@@ -87,7 +87,7 @@ notify_engine_pr() {
 # Run the updater script (https://github.com/PokeAPI/api-data/blob/master/updater/cmd.bash) which will generate the new pokeapi data and push it to the api-data repository under a new branch
 run_updater() {
   cd "${data_repo}/updater" || cleanexit 1 "Failed to cd"
-
+  git checkout staging # TODO: remove
   # Wait to be sure PokeAPI/pokeapi:origin/master has been updated on Github with the lastest merged PR content
   sleep 10
 

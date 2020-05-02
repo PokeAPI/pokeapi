@@ -36,6 +36,6 @@ workflows:
       - generate_data_and_trigger_pullrequest_deploy:
           requires:
             - test
-          # filters:
-          #   branches:
-          #     only: master
+          filters:
+            branches:
+              only: master

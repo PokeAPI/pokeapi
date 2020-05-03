@@ -197,9 +197,11 @@ clone
 notify_engine_pr "start"
 run_updater
 check_remote_branch "$branch_name"
-sleep 300 # 5 minutes, the time it takes for CircleCI's api-data script to generate the data and for CircleCI's deploy script to deploy it to the staging environment
-check_remote_branch "$branch_name"
-data_repo_pr_number=$(create_pr)
-customize_pr "$data_repo_pr_number"
-add_reviewers_to_pr "$data_repo_pr_number"
+if [ "$CIRCLE_BRANCH" = 'master' ]; then
+  sleep 300 # 5 minutes, the time it takes for CircleCI's api-data script to generate the data and for CircleCI's deploy script to deploy it to the staging environment
+  check_remote_branch "$branch_name"
+  data_repo_pr_number=$(create_pr)
+  customize_pr "$data_repo_pr_number"
+  add_reviewers_to_pr "$data_repo_pr_number"
+fi
 cleanexit 0 'Done'

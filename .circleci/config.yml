@@ -16,7 +16,7 @@ jobs:
           name: Run tests
           command: make test
 
-  generate_data_and_trigger_pullrequest_deploy:
+  deploy:
     machine:
       image: ubuntu-1604:201903-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
     steps:
@@ -25,17 +25,19 @@ jobs:
           fingerprints:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
       - run:
-          name: Generate new data, push to PokeAPI/api-data's staging branch and open a Pull Request towards PokeAPI/api-data's master branch
+          name: Generate new data, push to PokeAPI/api-data's staging branch, if master open a Pull Request towards PokeAPI/api-data's master branch
           command: bash -x Resources/scripts/updater.sh
 
 workflows:
   version: 2
-  test-and-generate_data_and_trigger_pullrequest_deploy:
+  test-and-deploy:
     jobs:
       - test
-      - generate_data_and_trigger_pullrequest_deploy:
+      - deploy:
           requires:
             - test
           filters:
             branches:
-              only: master
+              only: 
+                - master
+                - circleci-hook # TODO: change to staging

@@ -44,6 +44,10 @@ class NameOrIdRetrieval:
         lookup = self.kwargs["pk"]
 
         if self.idPattern.match(lookup):
+            lookup_id = int(lookup)
+            if abs(lookup_id) > 2147483647:
+                raise Http404
+
             resp = get_object_or_404(queryset, pk=lookup)
 
         elif self.namePattern.match(lookup):

@@ -5438,3 +5438,10 @@ class APITests(APIData, APITestCase):
             response.data["pokemon_encounters"][0]["pokemon_species"]["url"],
             "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
         )
+
+    # ID Range Tests
+    def test_id_range_api(self):
+
+        response = self.client.get("{}/pokemon/{}/".format(API_V2, 2147483648))
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)

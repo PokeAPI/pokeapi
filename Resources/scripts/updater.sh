@@ -16,6 +16,7 @@ production_environment_url='https://pokeapi.co/api/v2/'
 data_repo_url='https://github.com/PokeAPI/api-data'
 engine_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/pokeapi'
 deploy_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/deploy'
+last_commit_message=$(git log --oneline --format=%B -n 1 HEAD | head -n 1)
 
 # Exit the script notifying the user about its success
 cleanexit() {
@@ -39,6 +40,8 @@ prepare() {
 get_invokator_pr_number() {
   if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
     echo "${CIRCLE_PULL_REQUEST##*/}"
+  elif [[ ${last_commit_message:0:18} == "Merge pull request" ]]; then
+    echo "$last_commit_message" | tr -dc '0-9'
   else
     echo 'null'
   fi
@@ -82,8 +85,8 @@ EOF
 # If the job was started by a Pull Request, add a comment to notify the users
 notify_engine_pr() {
   if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" ]]; then
-    if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
-      engine_repo_pr_number="${CIRCLE_PULL_REQUEST##*/}"
+    engine_repo_pr_number=$(get_invokator_pr_number)
+    if [ "$engine_repo_pr_number" != "null" ]; then
       curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/${engine_repo_pr_number}/comments"
     fi
   fi

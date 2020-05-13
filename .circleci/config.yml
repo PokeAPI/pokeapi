@@ -40,4 +40,4 @@ workflows:
             branches:
               only: 
                 - master
-                - circleci-hook # TODO: change to staging
+                - staging

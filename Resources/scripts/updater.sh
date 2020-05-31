@@ -36,7 +36,7 @@ prepare() {
 }
 
 # GraphQL query to retrieve a PR's number based on a commit hash
-pr_associated_with_sha_grapql_query_content() {
+pr_associated_with_sha_graphql_query_content() {
   cat <<EOF
 query associatedPRs {
   repository(name: \"pokeapi\", owner: \"PokeAPI\") {
@@ -59,7 +59,7 @@ EOF
 # Get the PR's numer associated with the last commit
 get_invokator_pr_number_from_graphql() {
   last_commit_sha="$(git rev-parse HEAD)"
-  query="$(pr_associated_with_sha_grapql_query_content "$last_commit_sha")"
+  query="$(pr_associated_with_sha_graphql_query_content "$last_commit_sha")"
   query=$(echo $query) # echo strips all IFS characters (newline, space)
   pr_number=$(curl -s -H "Content-Type: application/json" -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "{\"query\": \"$query\"}" "https://api.github.com/graphql" | jq ".data.repository.commit.associatedPullRequests.edges[0].node.number" )
   echo "$pr_number"

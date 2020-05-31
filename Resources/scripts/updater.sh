@@ -16,7 +16,6 @@ production_environment_url='https://pokeapi.co/api/v2/'
 data_repo_url='https://github.com/PokeAPI/api-data'
 engine_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/pokeapi'
 deploy_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/deploy'
-last_commit_message=$(git log --oneline --format=%B -n 1 HEAD | head -n 1)
 
 # Exit the script notifying the user about its success
 cleanexit() {
@@ -36,12 +35,46 @@ prepare() {
   cd repositories || cleanexit 1 "Failed to cd"
 }
 
+# GraphQL query to retrieve a PR's number based on a commit hash
+pr_associated_with_sha_grapql_query_content() {
+  cat <<EOF
+query associatedPRs {
+  repository(name: \"pokeapi\", owner: \"PokeAPI\") {
+    commit: object(expression: \"$1\") {
+      ... on Commit {
+        associatedPullRequests(first: 1) {
+          edges {
+            node {
+              number
+            }
+          }
+        }
+      }
+    }
+  }
+}
+EOF
+}
+
+# Get the PR's numer associated with the last commit
+get_invokator_pr_number_from_graphql() {
+  last_commit_sha="$(git rev-parse HEAD)"
+  query="$(pr_associated_with_sha_grapql_query_content "$last_commit_sha")"
+  query=$(echo $query) # echo strips all IFS characters (newline, space)
+  pr_number=$(curl -s -H "Content-Type: application/json" -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "{\"query\": \"$query\"}" "https://api.github.com/graphql" | jq ".data.repository.commit.associatedPullRequests.edges[0].node.number" )
+  echo "$pr_number"
+}
+
 # Check and return the number of the Pull Request that started this job
 get_invokator_pr_number() {
   commit_msg_regex="Merge pull request #([0-9]+) from PokeAPI/(.*)"
+  last_commit_message=$(git log --oneline --format=%B -n 1 HEAD | head -n 1)
+  invokator_pr_number_from_graphql="$(get_invokator_pr_number_from_graphql)"
   if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
     echo "${CIRCLE_PULL_REQUEST##*/}"
-  elif [[ ${last_commit_message} =~ $commit_msg_regex ]]; then
+  elif [ "$invokator_pr_number_from_graphql" != 'null' ]; then
+    echo "$invokator_pr_number_from_graphql"
+  elif [[ $last_commit_message =~ $commit_msg_regex ]]; then
     echo "${BASH_REMATCH[1]}"
   else
     echo 'null'
@@ -88,14 +121,14 @@ notify_engine_pr() {
   if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" ]]; then
     engine_repo_pr_number=$(get_invokator_pr_number)
     if [ "$engine_repo_pr_number" != "null" ]; then
-      curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/${engine_repo_pr_number}/comments"
+      curl -f -H "Authorization: token $MACHINE_USER_GITHUB_API_TOKEN" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"
     fi
   fi
 }
 
 # Run the updater script (https://github.com/PokeAPI/api-data/blob/master/updater/cmd.bash) which will generate the new pokeapi data and push it to the api-data repository under a new branch
 run_updater() {
-  cd "${data_repo}/updater" || cleanexit 1 "Failed to cd"
+  cd "$data_repo/updater" || cleanexit 1 "Failed to cd"
   # Wait to be sure PokeAPI/pokeapi's master branch has been updated on Github with the lastest merged PR content
   sleep 10
 
@@ -106,7 +139,7 @@ run_updater() {
   fi
 
   # Run the updater
-  docker run --privileged -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/${org}/${engine_repo}.git" -e REPO_DATA="https://${MACHINE_USER_GITHUB_API_TOKEN}@github.com/${org}/${data_repo}.git" pokeapi-updater
+  docker run --privileged -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" pokeapi-updater
   if [ $? -ne 0 ]; then
     cleanexit 1 "Failed to run the pokeapi-updater container"
   fi

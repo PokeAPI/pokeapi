@@ -168,7 +168,7 @@ run_updater() {
     cleanexit 'fail' "Failed to run the pokeapi-updater container"
   fi
 
-  cd .. || cleanexit 'fail' "Failed to cd"
+  cd ../.. || cleanexit 'fail' "Failed to cd"
 }
 
 # Check if the updater script has pushed the data to a new branch

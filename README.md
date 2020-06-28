@@ -36,6 +36,7 @@ Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 * Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
 * Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
 * Spring Boot [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_
+* Swift [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 

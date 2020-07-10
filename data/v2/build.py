@@ -1356,11 +1356,15 @@ def _build_pokemons():
             "front_female": file_path_or_none(
                 poke_sprites.format("female/" + file_name_png)
             ),
-            "front_shiny": file_path_or_none(poke_sprites.format("shiny/" + file_name_png)),
+            "front_shiny": file_path_or_none(
+                poke_sprites.format("shiny/" + file_name_png)
+            ),
             "front_shiny_female": file_path_or_none(
                 poke_sprites.format("shiny/female/" + file_name_png)
             ),
-            "back_default": file_path_or_none(poke_sprites.format("back/" + file_name_png)),
+            "back_default": file_path_or_none(
+                poke_sprites.format("back/" + file_name_png)
+            ),
             "back_female": file_path_or_none(
                 poke_sprites.format("back/female/" + file_name_png)
             ),
@@ -1372,10 +1376,16 @@ def _build_pokemons():
             ),
             "other": {
                 "dream_world": {
-                    "front_default": file_path_or_none(poke_sprites.format(dream_world.format(file_name_svg))),
-                    "front_female": file_path_or_none(poke_sprites.format(dream_world.format("female/" + file_name_svg)))
+                    "front_default": file_path_or_none(
+                        poke_sprites.format(dream_world.format(file_name_svg))
+                    ),
+                    "front_female": file_path_or_none(
+                        poke_sprites.format(
+                            dream_world.format("female/" + file_name_svg)
+                        )
+                    ),
                 }
-            }
+            },
         }
         yield PokemonSprites(
             id=int(info[0]),

@@ -2744,11 +2744,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                     replace_sprite_url(value)
                 else:
                     if d[key]:
-                        d[key] = (
-                            "https://" + host + d[key].replace("/media/", "")
-                        )
+                        d[key] = "https://" + host + d[key].replace("/media/", "")
+
         replace_sprite_url(sprites_data)
-        
+
         return sprites_data
 
     def get_pokemon_moves(self, obj):

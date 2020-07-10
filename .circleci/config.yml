@@ -7,6 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote
+      - run:
           name: Install deps
           command: sudo make dev-install
       - run:
@@ -21,6 +26,11 @@ jobs:
       image: ubuntu-1604:201903-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
     steps:
       - checkout
+      - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote
       - add_ssh_keys:
           fingerprints:
             - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"

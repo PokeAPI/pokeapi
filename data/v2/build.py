@@ -31,7 +31,7 @@ DB_VENDOR = connection.vendor
 
 
 MEDIA_DIR = "/media/sprites/{0}"
-IMAGE_DIR = os.getcwd() + "/data/v2/sprites/"
+IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []
 
 for root, dirs, files in os.walk(IMAGE_DIR):
@@ -1347,27 +1347,35 @@ def _build_pokemons():
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
-        file_name = "%s.png" % info[0]
+        file_name_png = "%s.png" % info[0]
+        file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
+        dream_world = "other/dream-world/{0}"
         sprites = {
-            "front_default": file_path_or_none(poke_sprites.format(file_name)),
+            "front_default": file_path_or_none(poke_sprites.format(file_name_png)),
             "front_female": file_path_or_none(
-                poke_sprites.format("female/" + file_name)
+                poke_sprites.format("female/" + file_name_png)
             ),
-            "front_shiny": file_path_or_none(poke_sprites.format("shiny/" + file_name)),
+            "front_shiny": file_path_or_none(poke_sprites.format("shiny/" + file_name_png)),
             "front_shiny_female": file_path_or_none(
-                poke_sprites.format("shiny/female/" + file_name)
+                poke_sprites.format("shiny/female/" + file_name_png)
             ),
-            "back_default": file_path_or_none(poke_sprites.format("back/" + file_name)),
+            "back_default": file_path_or_none(poke_sprites.format("back/" + file_name_png)),
             "back_female": file_path_or_none(
-                poke_sprites.format("back/female/" + file_name)
+                poke_sprites.format("back/female/" + file_name_png)
             ),
             "back_shiny": file_path_or_none(
-                poke_sprites.format("back/shiny/" + file_name)
+                poke_sprites.format("back/shiny/" + file_name_png)
             ),
             "back_shiny_female": file_path_or_none(
-                poke_sprites.format("back/shiny/female/" + file_name)
+                poke_sprites.format("back/shiny/female/" + file_name_png)
             ),
+            "other": {
+                "dream_world": {
+                    "front_default": file_path_or_none(poke_sprites.format(dream_world.format(file_name_svg))),
+                    "front_female": file_path_or_none(poke_sprites.format(dream_world.format("female/" + file_name_svg)))
+                }
+            }
         }
         yield PokemonSprites(
             id=int(info[0]),

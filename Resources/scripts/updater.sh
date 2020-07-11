@@ -28,6 +28,9 @@ cleanexit() {
   elif [ "$1" = "no-deploy" ]; then
     notify_engine_pr "end_no_deploy"
     exit 0
+  elif [ "$1" = "no-new-data" ]; then
+    notify_engine_pr "end_no_new_data"
+    exit 0
   else
     notify_engine_pr "end_failed"
     exit 1
@@ -141,9 +144,17 @@ pr_input_updater_end_failed() {
 EOF
 }
 
+pr_input_updater_end_no_new_data() {
+  cat <<EOF
+{
+  "body": "The updater script finished its job and the generated data didn't change. The deploy was thus skipped. For further information check [CircleCI's builds]($engine_circleci_status_url) and [logs](${CIRCLE_BUILD_URL})."
+}
+EOF
+}
+
 # If the job was started by a Pull Request, add a comment to notify the users
 notify_engine_pr() {
-  if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" || $1 == "end_no_deploy" ]]; then
+  if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" || $1 == "end_no_deploy" || $1 == "end_no_new_data" ]]; then
     engine_repo_pr_number=$(get_invokator_pr_number)
     if [ "$engine_repo_pr_number" != "null" ]; then
       curl -f "$auth_header" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"
@@ -164,8 +175,11 @@ run_updater() {
   fi
 
   # Run the updater
-  docker run --privileged -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" pokeapi-updater
-  if [ $? -ne 0 ]; then
+  docker run --privileged -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" pokeapi-updater
+  return_code=$?
+  if [ "$return_code" -eq 2 ]; then
+    cleanexit 'no-new-data' "Generated data is the same as old data, skipping deploy"
+  elif [ "$return_code" -ne 0 ]; then
     cleanexit 'fail' "Failed to run the pokeapi-updater container"
   fi
 

@@ -16,7 +16,7 @@ production_environment_url='https://pokeapi.co/api/v2/'
 data_repo_url='https://github.com/PokeAPI/api-data'
 engine_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/pokeapi'
 deploy_circleci_status_url='https://app.circleci.com/pipelines/github/PokeAPI/deploy'
-auth_header="-H \"Authorization: token $MACHINE_USER_GITHUB_API_TOKEN\""
+auth_header="Authorization: token $MACHINE_USER_GITHUB_API_TOKEN"
 
 # Exit the script notifying the user about its success
 cleanexit() {
@@ -42,7 +42,7 @@ cleanexit() {
 assert_no_deploy_label() {
   engine_repo_pr_number=$(get_invokator_pr_number)
   if [ "$engine_repo_pr_number" != "null" ]; then
-    no_deploy_label=$(curl -f "$auth_header" -X GET "https://api.github.com/repos/$org/$engine_repo/pulls/$engine_repo_pr_number" | jq --raw-output '.labels | .[] | select(.name == "no-deploy") | .name')
+    no_deploy_label=$(curl -f -H "$auth_header" -X GET "https://api.github.com/repos/$org/$engine_repo/pulls/$engine_repo_pr_number" | jq --raw-output '.labels | .[] | select(.name == "no-deploy") | .name')
     if [ "$no_deploy_label" == 'no-deploy' ]; then
       cleanexit 'no-deploy' 'No-deploy label is present thus no need to deploy the project'
     fi
@@ -81,7 +81,7 @@ get_invokator_pr_number_from_graphql() {
   last_commit_sha="$(git rev-parse HEAD)"
   query="$(pr_associated_with_sha_graphql_query_content "$last_commit_sha")"
   query=$(echo $query) # echo strips all IFS characters (newline, space)
-  pr_number=$(curl -s -H "Content-Type: application/json" "$auth_header" -X POST --data "{\"query\": \"$query\"}" "https://api.github.com/graphql" | jq ".data.repository.commit.associatedPullRequests.edges[0].node.number" )
+  pr_number=$(curl -s -H "Content-Type: application/json" -H "$auth_header" -X POST --data "{\"query\": \"$query\"}" "https://api.github.com/graphql" | jq ".data.repository.commit.associatedPullRequests.edges[0].node.number" )
   echo "$pr_number"
 }
 
@@ -139,7 +139,7 @@ EOF
 pr_input_updater_end_failed() {
   cat <<EOF
 {
-  "body": "The updater script couldn't finish its job. Please check [CircleCI's builds]($engine_circleci_status_url) and [logs](${CIRCLE_BUILD_URL})."
+  "body": "The updater script could not finish its job. Please check [CircleCI's builds]($engine_circleci_status_url) and [logs](${CIRCLE_BUILD_URL})."
 }
 EOF
 }
@@ -157,7 +157,7 @@ notify_engine_pr() {
   if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" || $1 == "end_no_deploy" || $1 == "end_no_new_data" ]]; then
     engine_repo_pr_number=$(get_invokator_pr_number)
     if [ "$engine_repo_pr_number" != "null" ]; then
-      curl -f "$auth_header" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"
+      curl -f -H "$auth_header" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"
     fi
   fi
 }
@@ -191,7 +191,7 @@ check_remote_branch() {
   # Wait for Github to update origin/${branch_name}
   sleep 10
 
-  curl -f "$auth_header" -X GET "https://api.github.com/repos/$org/$data_repo/branches/$1"
+  curl -f -H "$auth_header" -X GET "https://api.github.com/repos/$org/$data_repo/branches/$1"
   if [ $? -ne 0 ]; then
     cleanexit 'fail' "The updater script failed to push the new data"
   fi
@@ -206,7 +206,7 @@ EOF
 }
 
 check_pr_already_open() {
-  data_repo_pr_number=$(curl "$auth_header" -X GET --data "$(pr_input_alredy_open)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.[0].number')
+  data_repo_pr_number=$(curl -H "$auth_header" -X GET --data "$(pr_input_alredy_open)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.[0].number')
   echo "$data_repo_pr_number"
 }
 
@@ -254,19 +254,19 @@ create_pr() {
   if [ "$data_repo_pr_already_open_number" != "null" ]; then
     data_repo_pr_number="$data_repo_pr_already_open_number"
     if [ "$engine_repo_pr_number" != "null" ]; then
-      data_repo_pr_number=$(curl "$auth_header" -X PATCH --data "$(pr_input_content_with_pr_number "$engine_repo_pr_number")" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_already_open_number" | jq '.number')
+      data_repo_pr_number=$(curl -H "$auth_header" -X PATCH --data "$(pr_input_content_with_pr_number "$engine_repo_pr_number")" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_already_open_number" | jq '.number')
     else
-      data_repo_pr_number=$(curl "$auth_header" -X PATCH --data "$(pr_input_content_without_pr_number)" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_already_open_number" | jq '.number')
+      data_repo_pr_number=$(curl -H "$auth_header" -X PATCH --data "$(pr_input_content_without_pr_number)" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_already_open_number" | jq '.number')
     fi
   else
     if [ "$engine_repo_pr_number" != "null" ]; then
-      data_repo_pr_number=$(curl "$auth_header" -X POST --data "$(pr_input_content_with_pr_number "$engine_repo_pr_number")" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+      data_repo_pr_number=$(curl -H "$auth_header" -X POST --data "$(pr_input_content_with_pr_number "$engine_repo_pr_number")" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
     else
-      data_repo_pr_number=$(curl "$auth_header" -X POST --data "$(pr_input_content_without_pr_number)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
+      data_repo_pr_number=$(curl -H "$auth_header" -X POST --data "$(pr_input_content_without_pr_number)" "https://api.github.com/repos/$org/$data_repo/pulls" | jq '.number')
     fi
   fi
   if [[ "$data_repo_pr_number" = "null" ]]; then
-    cleanexit 'fail' "Couldn't create the Pull Request"
+    cleanexit 'fail' "Could not create the Pull Request"
   fi
   echo "$data_repo_pr_number"
 }
@@ -290,9 +290,9 @@ customize_pr() {
   sleep 10
   
   data_repo_pr_number=$1
-  curl "$auth_header" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$data_repo_pr_number"
+  curl -H "$auth_header" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$data_repo_pr_number"
   if [ $? -ne 0 ]; then
-		echo "Couldn't add Assignees and Labes to the Pull Request"
+		echo "Could not add Assignees and Labes to the Pull Request"
 	fi
 }
 
@@ -312,9 +312,9 @@ EOF
 # Request the Core team to review the Pull Request
 add_reviewers_to_pr() {
   data_repo_pr_number=$1
-  curl "$auth_header" -X POST --data "$(pr_input_reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_number/requested_reviewers"
+  curl -H "$auth_header" -X POST --data "$(pr_input_reviewers)" "https://api.github.com/repos/$org/$data_repo/pulls/$data_repo_pr_number/requested_reviewers"
   if [ $? -ne 0 ]; then
-    echo "Couldn't add Reviewers to the Pull Request"
+    echo "Could not add Reviewers to the Pull Request"
   fi
 }
 

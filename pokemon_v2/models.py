@@ -1870,4 +1870,4 @@ class PokemonType(HasPokemon, HasType):
 
 class PokemonSprites(HasPokemon):
 
-    sprites = models.CharField(max_length=500)
+    sprites = models.CharField(max_length=20000)

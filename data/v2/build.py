@@ -1336,12 +1336,12 @@ def _build_pokemons():
         yield Pokemon(
             id=int(info[0]),
             name=info[1],
-            pokemon_species_id=int(info[2]),
-            height=int(info[3]),
-            weight=int(info[4]),
-            base_experience=int(info[5]),
-            order=int(info[6]),
-            is_default=bool(int(info[7])),
+            pokemon_species_id=int(info[2]) if info[2] != "" else None,
+            height=int(info[3]) if info[3] != "" else None,
+            weight=int(info[4]) if info[4] != "" else None,
+            base_experience=int(info[5]) if info[5] != "" else None,
+            order=int(info[6]) if info[6] != "" else None,
+            is_default=bool(int(info[7])) if info[7] != "" else None,
         )
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)

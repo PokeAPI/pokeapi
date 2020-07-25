@@ -1657,11 +1657,11 @@ class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
 
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
 
-    height = models.IntegerField()
+    height = models.IntegerField(blank=True, null=True)
 
-    weight = models.IntegerField()
+    weight = models.IntegerField(blank=True, null=True)
 
-    base_experience = models.IntegerField()
+    base_experience = models.IntegerField(blank=True, null=True)
 
     is_default = models.BooleanField(default=False)
 

@@ -1351,6 +1351,7 @@ def _build_pokemons():
         file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
         dream_world = "other/dream-world/{0}"
+        gen_i = "versions/generation-i/{0}"
         sprites = {
             "front_default": file_path_or_none(poke_sprites.format(file_name_png)),
             "front_female": file_path_or_none(
@@ -1384,6 +1385,32 @@ def _build_pokemons():
                             dream_world.format("female/" + file_name_svg)
                         )
                     ),
+                }
+            },
+            "versions": {
+                "generation-i": {
+                    "red-blue": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/back/" + file_name_png)
+                            )
+                        ),
+                    },
+                    "yellow": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(gen_i.format("yellow/" + file_name_png))
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/back/" + file_name_png)
+                            )
+                        ),
+                    },
                 }
             },
         }

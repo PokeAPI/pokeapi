@@ -1395,9 +1395,19 @@ def _build_pokemons():
                                 gen_i.format("red-blue/" + file_name_png)
                             )
                         ),
+                        "front_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/gray/" + file_name_png)
+                            )
+                        ),
                         "back_default": file_path_or_none(
                             poke_sprites.format(
                                 gen_i.format("red-blue/back/" + file_name_png)
+                            )
+                        ),
+                        "back_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/back/gray/" + file_name_png)
                             )
                         ),
                     },
@@ -1405,9 +1415,19 @@ def _build_pokemons():
                         "front_default": file_path_or_none(
                             poke_sprites.format(gen_i.format("yellow/" + file_name_png))
                         ),
+                        "front_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/gray/" + file_name_png)
+                            )
+                        ),
                         "back_default": file_path_or_none(
                             poke_sprites.format(
                                 gen_i.format("yellow/back/" + file_name_png)
+                            )
+                        ),
+                        "back_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/back/gray/" + file_name_png)
                             )
                         ),
                     },

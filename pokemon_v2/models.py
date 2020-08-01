@@ -1627,15 +1627,15 @@ class PokemonSpecies(
         on_delete=models.CASCADE,
     )
 
-    gender_rate = models.IntegerField()
+    gender_rate = models.IntegerField(blank=True, null=True)
 
-    capture_rate = models.IntegerField()
+    capture_rate = models.IntegerField(blank=True, null=True)
 
-    base_happiness = models.IntegerField()
+    base_happiness = models.IntegerField(blank=True, null=True)
 
     is_baby = models.BooleanField(default=False)
 
-    hatch_counter = models.IntegerField()
+    hatch_counter = models.IntegerField(blank=True, null=True)
 
     has_gender_differences = models.BooleanField(default=False)
 

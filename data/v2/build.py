@@ -1275,7 +1275,7 @@ def _build_pokemons():
             base_happiness=int(info[10]) if info[10] != "" else None,
             is_baby=bool(int(info[11])) if info[11] != "" else None,
             hatch_counter=int(info[12]) if info[12] != "" else None,
-            has_gender_differences=bool(int(info[13])) if info[13] != "" else None,
+            has_gender_differences=bool(int(info[13])) if info[13] != "" else False,
             growth_rate_id=int(info[14]) if info[14] != "" else None,
             forms_switchable=bool(int(info[15])) if info[15] != "" else None,
             order=int(info[16]) if info[16] != "" else None,

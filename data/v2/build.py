@@ -1268,7 +1268,7 @@ def _build_pokemons():
             evolves_from_species=None,
             evolution_chain_id=int(info[4]) if info[4] != "" else None,
             pokemon_color_id=int(info[5]) if info[5] != "" else None,
-            pokemon_shape_id=int(info[6])  if info[6] != "" else None,
+            pokemon_shape_id=int(info[6]) if info[6] != "" else None,
             pokemon_habitat_id=int(info[7]) if info[7] != "" else None,
             gender_rate=int(info[8]) if info[8] != "" else None,
             capture_rate=int(info[9]) if info[9] != "" else None,

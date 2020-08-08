@@ -1278,7 +1278,7 @@ def _build_pokemons():
             has_gender_differences=bool(int(info[13])),
             growth_rate_id=int(info[14]),
             forms_switchable=bool(int(info[15])),
-            order=int(info[16]),
+            order=int(info[18]),
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)

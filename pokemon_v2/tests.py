@@ -4568,7 +4568,9 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["is_baby"], pokemon_species.is_baby)
         self.assertEqual(response.data["is_legendary"], pokemon_species.is_legendary)
         self.assertEqual(response.data["is_mythical"], pokemon_species.is_mythical)
-        self.assertEqual(response.data["is_ultra_beast"], pokemon_species.is_ultra_beast)
+        self.assertEqual(
+            response.data["is_ultra_beast"], pokemon_species.is_ultra_beast
+        )
         self.assertEqual(response.data["hatch_counter"], pokemon_species.hatch_counter)
         self.assertEqual(
             response.data["has_gender_differences"],

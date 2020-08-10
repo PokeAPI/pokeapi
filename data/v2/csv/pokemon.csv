@@ -887,6 +887,9 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 888,zacian,888,28,1100,335,,1
 889,zamazenta,889,29,2100,335,,1
 890,eternatus,890,200,9500,345,,1
+891,kubfu,891,6,120,,,1
+892,urshifu,892,19,1050,,,1
+893,zarude,893,18,700,,,1
 10001,deoxys-attack,386,17,608,270,497,0
 10002,deoxys-defense,386,17,608,270,498,0
 10003,deoxys-speed,386,17,608,270,499,0

@@ -1,9 +1,11 @@
 pokedex_id,local_language_id,name,description
 1,5,National,Pokédex National complet
 1,6,National,Komplette Nationale Dex
+1,7,Nacional,Pokédex Nacional completa
 1,9,National,Entire National dex
 2,5,Kanto,Pokédex régional de Kanto dans Rouge/Bleu/Jaune
 2,6,Kanto,Rot/Blau/Gelb Kanto Dex
+2,7,Kanto,Pokédex regional de Rojo/Azul/Amarillo
 2,9,Kanto,Red/Blue/Yellow Kanto dex
 3,5,Johto initial,"Pokédex régional de Johto dans Or/Argent/Cristal, appellé ""Nouveau"" Pokédex dans le jeu"
 3,6,Original Johto,"Gold/Silber/Kristall Johto Dex — Auch der ""Neue"" Pokédex im Spiel genannt"

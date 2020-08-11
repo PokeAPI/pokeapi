@@ -23,4 +23,24 @@ class Migration(migrations.Migration):
             name="base_experience",
             field=models.IntegerField(blank=True, null=True),
         ),
+        migrations.AlterField(
+            model_name="pokemonspecies",
+            name="base_happiness",
+            field=models.IntegerField(blank=True, null=True),
+        ),
+        migrations.AlterField(
+            model_name="pokemonspecies",
+            name="capture_rate",
+            field=models.IntegerField(blank=True, null=True),
+        ),
+        migrations.AlterField(
+            model_name="pokemonspecies",
+            name="gender_rate",
+            field=models.IntegerField(blank=True, null=True),
+        ),
+        migrations.AlterField(
+            model_name="pokemonspecies",
+            name="hatch_counter",
+            field=models.IntegerField(blank=True, null=True),
+        ),
     ]

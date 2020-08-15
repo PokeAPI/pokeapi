@@ -1348,6 +1348,7 @@ def _build_pokemons():
 
     def csv_record_to_objects(info):
         file_name_png = "%s.png" % info[0]
+        file_name_gif = "%s.gif" % info[0]
         file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
         dream_world = "other/dream-world/{0}"
@@ -1775,6 +1776,68 @@ def _build_pokemons():
                                 )
                             )
                         ),
+                        "animated": {
+                            "front_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/female/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                        },
                     }
                 },
                 "generation-vi": {

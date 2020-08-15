@@ -1264,21 +1264,21 @@ def _build_pokemons():
         yield PokemonSpecies(
             id=int(info[0]),
             name=info[1],
-            generation_id=int(info[2]),
+            generation_id=int(info[2]) if info[2] != "" else None,
             evolves_from_species=None,
-            evolution_chain_id=int(info[4]),
-            pokemon_color_id=int(info[5]),
-            pokemon_shape_id=int(info[6]),
+            evolution_chain_id=int(info[4]) if info[4] != "" else None,
+            pokemon_color_id=int(info[5]) if info[5] != "" else None,
+            pokemon_shape_id=int(info[6]) if info[6] != "" else None,
             pokemon_habitat_id=int(info[7]) if info[7] != "" else None,
-            gender_rate=int(info[8]),
-            capture_rate=int(info[9]),
-            base_happiness=int(info[10]),
-            is_baby=bool(int(info[11])),
-            hatch_counter=int(info[12]),
-            has_gender_differences=bool(int(info[13])),
-            growth_rate_id=int(info[14]),
-            forms_switchable=bool(int(info[15])),
-            order=int(info[18]),
+            gender_rate=int(info[8]) if info[8] != "" else None,
+            capture_rate=int(info[9]) if info[9] != "" else None,
+            base_happiness=int(info[10]) if info[10] != "" else None,
+            is_baby=bool(int(info[11])) if info[11] != "" else None,
+            hatch_counter=int(info[12]) if info[12] != "" else None,
+            has_gender_differences=bool(int(info[13])) if info[13] != "" else False,
+            growth_rate_id=int(info[14]) if info[14] != "" else None,
+            forms_switchable=bool(int(info[15])) if info[15] != "" else None,
+            order=int(info[18]) if info[18] != "" else None,
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)
@@ -1336,12 +1336,12 @@ def _build_pokemons():
         yield Pokemon(
             id=int(info[0]),
             name=info[1],
-            pokemon_species_id=int(info[2]),
-            height=int(info[3]),
-            weight=int(info[4]),
-            base_experience=int(info[5]),
-            order=int(info[6]),
-            is_default=bool(int(info[7])),
+            pokemon_species_id=int(info[2]) if info[2] != "" else None,
+            height=int(info[3]) if info[3] != "" else None,
+            weight=int(info[4]) if info[4] != "" else None,
+            base_experience=int(info[5]) if info[5] != "" else None,
+            order=int(info[6]) if info[6] != "" else -1,
+            is_default=bool(int(info[7])) if info[7] != "" else None,
         )
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)

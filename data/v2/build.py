@@ -1264,23 +1264,23 @@ def _build_pokemons():
         yield PokemonSpecies(
             id=int(info[0]),
             name=info[1],
-            generation_id=int(info[2]),
+            generation_id=int(info[2]) if info[2] != "" else None,
             evolves_from_species=None,
-            evolution_chain_id=int(info[4]),
-            pokemon_color_id=int(info[5]),
-            pokemon_shape_id=int(info[6]),
+            evolution_chain_id=int(info[4]) if info[4] != "" else None,
+            pokemon_color_id=int(info[5]) if info[5] != "" else None,
+            pokemon_shape_id=int(info[6]) if info[6] != "" else None,
             pokemon_habitat_id=int(info[7]) if info[7] != "" else None,
-            gender_rate=int(info[8]),
-            capture_rate=int(info[9]),
-            base_happiness=int(info[10]),
-            is_baby=bool(int(info[11])),
-            hatch_counter=int(info[12]),
-            has_gender_differences=bool(int(info[13])),
-            growth_rate_id=int(info[14]),
-            forms_switchable=bool(int(info[15])),
-            is_legendary=bool(int(info[16])),
-            is_mythical=bool(int(info[17])),
-            order=int(info[18]),
+            gender_rate=int(info[8]) if info[8] != "" else None,
+            capture_rate=int(info[9]) if info[9] != "" else None,
+            base_happiness=int(info[10]) if info[10] != "" else None,
+            is_baby=bool(int(info[11])) if info[11] != "" else None,
+            hatch_counter=int(info[12]) if info[12] != "" else None,
+            has_gender_differences=bool(int(info[13])) if info[13] != "" else False,
+            growth_rate_id=int(info[14]) if info[14] != "" else None,
+            forms_switchable=bool(int(info[15])) if info[15] != "" else None,
+            is_legendary=bool(int(info[16])) if info[16] != "" else None,
+            is_mythical=bool(int(info[17])) if info[17] != "" else None,
+            order=int(info[18]) if info[18] != "" else None,
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)
@@ -1338,18 +1338,19 @@ def _build_pokemons():
         yield Pokemon(
             id=int(info[0]),
             name=info[1],
-            pokemon_species_id=int(info[2]),
-            height=int(info[3]),
-            weight=int(info[4]),
-            base_experience=int(info[5]),
-            order=int(info[6]),
-            is_default=bool(int(info[7])),
+            pokemon_species_id=int(info[2]) if info[2] != "" else None,
+            height=int(info[3]) if info[3] != "" else None,
+            weight=int(info[4]) if info[4] != "" else None,
+            base_experience=int(info[5]) if info[5] != "" else None,
+            order=int(info[6]) if info[6] != "" else -1,
+            is_default=bool(int(info[7])) if info[7] != "" else None,
         )
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
         file_name_png = "%s.png" % info[0]
+        file_name_gif = "%s.gif" % info[0]
         file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
         dream_world = "other/dream-world/{0}"
@@ -1777,6 +1778,68 @@ def _build_pokemons():
                                 )
                             )
                         ),
+                        "animated": {
+                            "front_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/female/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                        },
                     }
                 },
                 "generation-vi": {

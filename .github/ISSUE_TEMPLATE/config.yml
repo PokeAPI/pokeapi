@@ -1,0 +1,9 @@
+  
+blank_issues_enabled: false
+contact_links:
+  - name: Question
+    url: https://stackoverflow.com/search?q=%22pokeapi%22
+    about: Please ask and answer questions here.
+  - name: Slack
+    url: https://pokeapi.slack.com/messages
+    about: Join our Slack

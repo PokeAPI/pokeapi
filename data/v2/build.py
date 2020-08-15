@@ -1280,8 +1280,7 @@ def _build_pokemons():
             forms_switchable=bool(int(info[15])),
             is_legendary=bool(int(info[16])),
             is_mythical=bool(int(info[17])),
-            is_ultra_beast=bool(int(info[18])),
-            order=int(info[19]),
+            order=int(info[18]),
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)

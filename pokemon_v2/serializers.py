@@ -2986,7 +2986,6 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "is_baby",
             "is_legendary",
             "is_mythical",
-            "is_ultra_beast",
             "hatch_counter",
             "has_gender_differences",
             "forms_switchable",

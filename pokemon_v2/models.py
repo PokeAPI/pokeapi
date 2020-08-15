@@ -1634,7 +1634,7 @@ class PokemonSpecies(
     base_happiness = models.IntegerField(blank=True, null=True)
 
     is_baby = models.BooleanField(default=False)
-    
+
     is_legendary = models.BooleanField(default=False)
 
     is_mythical = models.BooleanField(default=False)

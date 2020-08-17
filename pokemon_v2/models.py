@@ -1635,6 +1635,10 @@ class PokemonSpecies(
 
     is_baby = models.BooleanField(default=False)
 
+    is_legendary = models.BooleanField(default=False)
+
+    is_mythical = models.BooleanField(default=False)
+
     hatch_counter = models.IntegerField(blank=True, null=True)
 
     has_gender_differences = models.BooleanField(default=False)

@@ -1278,6 +1278,8 @@ def _build_pokemons():
             has_gender_differences=bool(int(info[13])) if info[13] != "" else False,
             growth_rate_id=int(info[14]) if info[14] != "" else None,
             forms_switchable=bool(int(info[15])) if info[15] != "" else None,
+            is_legendary=bool(int(info[16])) if info[16] != "" else None,
+            is_mythical=bool(int(info[17])) if info[17] != "" else None,
             order=int(info[18]) if info[18] != "" else None,
         )
 

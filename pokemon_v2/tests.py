@@ -1462,6 +1462,8 @@ class APIData:
         hatch_counter=10,
         has_gender_differences=True,
         forms_switchable=False,
+        is_legendary=False,
+        is_mythical=False,
         order=1,
     ):
 
@@ -1499,6 +1501,8 @@ class APIData:
             has_gender_differences=has_gender_differences,
             growth_rate=growth_rate,
             forms_switchable=forms_switchable,
+            is_legendary=is_legendary,
+            is_mythical=is_mythical,
             order=order,
         )
         pokemon_species.save()
@@ -4560,6 +4564,9 @@ class APITests(APIData, APITestCase):
             response.data["base_happiness"], pokemon_species.base_happiness
         )
         self.assertEqual(response.data["is_baby"], pokemon_species.is_baby)
+        self.assertEqual(response.data["is_legendary"], pokemon_species.is_legendary)
+        self.assertEqual(response.data["is_mythical"], pokemon_species.is_mythical)
+
         self.assertEqual(response.data["hatch_counter"], pokemon_species.hatch_counter)
         self.assertEqual(
             response.data["has_gender_differences"],

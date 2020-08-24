@@ -806,6 +806,8 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 805,stakataka,805,55,8200,257,962,1
 806,blacephalon,806,18,130,257,963,1
 807,zeraora,807,15,445,270,964,1
+808,meltan,808,2,80,135,,1
+809,melmetal,809,25,8000,270,,1
 810,grookey,810,3,50,62,,1
 811,thwackey,811,7,140,147,,1
 812,rillaboom,812,21,900,265,,1

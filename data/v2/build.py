@@ -1362,6 +1362,7 @@ def _build_pokemons():
         gen_v = "versions/generation-v/{0}"
         gen_vi = "versions/generation-vi/{0}"
         gen_vii = "versions/generation-vii/{0}"
+        gen_viii = "versions/generation-viii/{0}"
         sprites = {
             "front_default": file_path_or_none(poke_sprites.format(file_name_png)),
             "front_female": file_path_or_none(
@@ -1921,6 +1922,32 @@ def _build_pokemons():
                                 gen_vii.format(
                                     "ultra-sun-ultra-moon/shiny/female/" + file_name_png
                                 )
+                            )
+                        ),
+                    },
+                    "icons": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format("icons/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format("icons/female/" + file_name_png)
+                            )
+                        ),
+                    },
+                },
+                "generation-viii": {
+                    "icons": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_viii.format("icons/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_viii.format("icons/female/" + file_name_png)
                             )
                         ),
                     }

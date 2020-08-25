@@ -1115,6 +1115,11 @@ Any [regular damage]{mechanic:regular-damage} dealt to an affected Pokémon is r
 418,9,XXX new effect for splintered-stormshards,XXX new effect for splintered-stormshards
 419,9,XXX new effect for clangorous-soulblaze,XXX new effect for clangorous-soulblaze
 420,9,XXX new effect for mind-blown,XXX new effect for mind-blown
+421,9,Sets [Light Screen]{move:light-screen} on the user's side of the field after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:light-screen} on the user's side of the [field]{mechanic:field}."
+422,9,Sets [Reflect]{move:reflect} on the user's side of the field after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:reflect} on the user's side of the [field]{mechanic:field}."
+423,9,Seeds the target after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) sets []{move:leech-seed} on the target."
+424,9,Cures the entire party of major status effects after inflicting damage.,"Inflicts [regular damage]{mechanic:regular-damage}, then (if successful) removes [major status effects]{mechanic:major-status-effects} from every Pokémon in the user's party."
+425,9,Hits twice in one turn, with a $effect_chance% chance to make the target flinch.,"Inflicts [regular damage]{mechanic:regular-damage}.  Hits twice in one turn, with a $effect_chance% chance to make the target [flinch]{mechanic:flinch}."
 10001,9,Has an increased chance for a critical hit in Hyper Mode.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move while in [hyper mode]{mechanic:hyper-mode}.
 10002,9,User receives 1/2 its HP in recoil.,Inflicts [regular damage]{mechanic:regular-damage}.  User takes 1/2 of its current [HP]{mechanic:hp} in recoil.
 10003,9,Halves HP of all Pokémon on the field.  Must recharge,"Halves [HP]{mechanic:hp} of all Pokémon on the field.  User loses its next turn to ""recharge"", and cannot attack or [switch]{mechanic:switch} out during that turn."

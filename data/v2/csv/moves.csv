@@ -740,7 +740,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 739,freezy-frost,7,15,90,15,100,0,10,3,305,,,,
 740,sparkly-swirl,7,18,90,15,100,0,10,3,424,,,,
 741,veevee-volley,7,1,,20,,0,10,2,122,,,,
-742,double-iron-bash,7,9,60,5,100,0,10,2,425,30
+742,double-iron-bash,7,9,60,5,100,0,10,2,425,30,,,
 743,max-guard,8,1,,,,+4,7,1,,,,,
 744,dynamax-cannon,8,16,100,5,100,0,10,3,,,,,
 745,snipe-shot,8,11,80,15,100,0,10,3,,,,,

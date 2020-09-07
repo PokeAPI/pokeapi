@@ -7279,6 +7279,662 @@ move_id,local_language_id,name
 728,9,Clangorous Soulblaze
 728,11,ブレイジングソウルビート
 728,12,炽魂热舞烈音爆
+729,1,ばちばちアクセル
+729,3,파찌파찌액셀
+729,4,電電加速
+729,5,Pika-Sprint
+729,6,Britzelturbo
+729,7,Pikaturbo
+729,8,Sprintaboom
+729,9,Zippy Zap
+729,11,ばちばちアクセル
+730,1,ざぶざぶサーフ
+730,3,참방참방서핑
+730,4,滔滔衝浪
+730,5,Pika-Splash
+730,6,Plätschersurfer
+730,7,Salpikasurf
+730,8,Surfasplash
+730,9,Splishy Splash
+730,11,ざぶざぶサーフ
+731,1,ふわふわフォール
+731,3,둥실둥실폴
+731,4,飄飄墜落
+731,5,Pika-Piqué
+731,6,Schwebesturz
+731,7,Pikapicado
+731,8,Piombaflap
+731,9,Floaty Fall
+731,11,ふわふわフォール
+732,1,ピカピカサンダー
+732,3,피카피카썬더
+732,4,閃閃雷光
+732,5,Pika-Fracas
+732,6,Pika-Flash
+732,7,Pikatormenta
+732,8,Pikasaetta
+732,9,Pika Papow
+732,11,ピカピカサンダー
+733,1,いきいきバブル
+733,3,생생버블
+733,4,活活氣泡
+733,5,Évo-Thalasso
+733,6,Blubbsauger
+733,7,Vapodrenaje
+733,8,Bollaslurp
+733,9,Bouncy Bubble
+733,11,いきいきバブル
+734,1,びりびりエレキ
+734,3,찌릿찌릿일렉
+734,4,麻麻電擊
+734,5,Évo-Dynamo
+734,6,Knisterladung
+734,7,Joltioparálisis
+734,8,Elettrozap
+734,9,Buzzy Buzz
+734,11,びりびりエレキ
+735,1,めらめらバーン
+735,3,이글이글번
+735,4,熊熊火爆
+735,5,Évo-Flambo
+735,6,Flackerbrand
+735,7,Flarembestida
+735,8,Fiammabam
+735,9,Sizzly Slide
+735,11,めらめらバーン
+736,1,どばどばオーラ
+736,3,콸콸오라
+736,4,嘩嘩氣場
+736,5,Évo-Psycho
+736,6,Pulsieraura
+736,7,Espeaura
+736,8,Auraswoosh
+736,9,Sizzly Slide
+736,11,どばどばオーラ
+737,1,わるわるゾーン
+737,3,아그아그존
+737,4,壞壞領域
+737,5,Évo-Ténébro
+737,6,Quälzone
+737,7,Umbreozona
+737,8,Zona Buiabuia
+737,9,Baddy Bad
+737,11,わるわるゾーン
+738,1,すくすくボンバー
+738,3,쑥쑥봄버
+738,4,茁茁轟炸
+738,5,Évo-Écolo
+738,6,Sprießbomben
+738,7,Leafitobombas
+738,8,Bombafrush
+738,9,Sappy Seed
+738,11,すくすくボンバー
+739,1,こちこちフロスト
+739,3,꽁꽁프로스트
+739,4,冰冰霜凍
+739,5,Évo-Congélo
+739,6,Klirrfrost
+739,7,Glaceoprisma
+739,8,Scricchiagelo
+739,9,Freezy Frost
+739,11,こちこちフロスト
+740,1,きらきらストーム
+740,3,반짝반짝스톰
+740,4,亮亮風暴
+740,5,Évo-Fabulo
+740,6,Glitzersturm
+740,7,Sylveotornado
+740,8,Sbrilluccibufera
+740,9,Sparkly Swirl
+740,11,きらきらストーム
+741,1,ブイブイブレイク
+741,3,브이브이브레이크
+741,4,砰砰撃破
+741,5,Évo-Chardasso
+741,6,Evo-Crash
+741,7,Eevimpacto
+741,8,Eeveempatto
+741,9,Veevee Volley
+741,11,ブイブイブレイク
+742,1,ダブルパンツァー
+742,3,더블펀처
+742,4,鋼拳雙擊
+742,5,Écrous d'Poing
+742,6,Panzerfäuste
+742,7,Ferropuño Doble
+742,8,Pugni Corazzati
+742,9,Double Iron Bash
+742,11,ダブルパンツァー
+743,1,ダイウォール
+743,3,다이월
+743,4,極巨防壁
+743,5,Gardomax
+743,6,Dyna-Wall
+743,7,Maxibarrera
+743,8,Dynabarriera
+743,9,Max Guard
+743,11,ダイウォール
+743,12,極巨防壁
+744,1,ダイマックス
+744,3,다이맥스포
+744,4,極巨炮
+744,5,Canon Dynamax
+744,6,Dynamax-Kanone
+744,7,Cañón Dinamax
+744,8,Cannone Dynamax
+744,9,Dynamax Cannon
+744,11,ダイマックス
+744,12,極巨炮
+745,1,ねらいうち
+745,3,노려맞히기
+745,4,狙擊
+745,5,Tir de Précision
+745,6,Präzisionsschuss
+745,7,Disparo Certero
+745,8,Tiromirato
+745,9,Snipe Shot
+745,11,ねらいうち
+745,12,狙擊
+746,1,くらいつく
+746,3,물고버티기
+746,4,緊咬不放
+746,5,Croque Fort
+746,6,Fesselbiss
+746,7,Presa Maxilar
+746,8,Morsostretto
+746,9,Jaw Lock
+746,11,くらいつく
+746,12,緊咬不放
+747,1,ほおばる
+747,3,볼가득넣기
+747,4,大快朵頤
+747,5,Garde-à-Joues
+747,6,Backenstopfer
+747,7,Atiborramiento
+747,8,Riempiguance
+747,9,Stuff Cheeks
+747,11,ほおばる
+747,12,大快朵頤
+748,1,はいすいのじん
+748,3,배수의진
+748,4,背水一戰
+748,5,Ultime Bastion
+748,6,Finalformation
+748,7,Bastión Final
+748,8,Spalle al Muro
+748,9,No Retreat
+748,11,はいすいのじん
+748,12,背水一戰
+749,1,タールショット
+749,3,타르숏
+749,4,瀝青射擊
+749,5,Goudronnage
+749,6,Teerschuss
+749,7,Alquitranazo
+749,8,Colpocatrame
+749,9,Tar Shot
+749,11,タールショット
+749,12,瀝青射擊
+750,1,まほうのこな
+750,3,마법가루
+750,4,魔法粉
+750,5,Poudre Magique
+750,6,Magiepuder
+750,7,Polvo Mágico
+750,8,Magipolvere
+750,9,Magic Powder
+750,11,まほうのこな
+750,12,魔法粉
+751,1,ドラゴンアロー
+751,3,드래곤애로
+751,4,龍箭
+751,5,Draco-Flèches
+751,6,Drachenpfeile
+751,7,Dracoflechas
+751,8,Dragofrecce
+751,9,Dragon Darts
+751,11,ドラゴンアロー
+751,12,龍箭
+752,1,おちゃかい
+752,3,다과회
+752,4,茶會
+752,5,Thérémonie
+752,6,Teatime
+752,7,Hora del Té
+752,8,Ora del Tè
+752,9,Teatime
+752,11,おちゃかい
+752,12,茶會
+753,1,たこがため
+753,3,문어굳히기
+753,4,蛸固
+753,5,Octoprise
+753,6,Octoklammer
+753,7,Octopresa
+753,8,Tentacolock
+753,9,Octolock
+753,11,たこがため
+753,12,蛸固
+754,1,でんげきくちばし
+754,3,전격부리
+754,4,電喙
+754,5,Prise de Bec
+754,6,Schockschnabel
+754,7,Electropico
+754,8,Beccoshock
+754,9,Bolt Beak
+754,11,でんげきくちばし
+754,12,電喙
+755,1,エラ
+755,3,아가미물기
+755,4,鰓咬
+755,5,Branchicrok
+755,6,Kiemenbiss
+755,7,Branquibocado
+755,8,Branchiomorso
+755,9,Fishious Rend
+755,11,エラ
+755,12,鰓咬
+756,1,コートチェンジ
+756,3,코트체인지
+756,4,換場
+756,5,Change-Côté
+756,6,Seitenwechsel
+756,7,Cambio de Cancha
+756,8,Cambiocampo
+756,9,Court Change
+756,11,コートチェンジ
+756,12,換場
+757,1,ダイバーン
+757,3,다이번
+757,4,極巨火爆
+757,5,Pyromax
+757,6,Dyna-Brand
+757,7,Maxignición
+757,8,Dynafiammata
+757,9,Max Flare
+757,11,ダイバーン
+757,12,極巨火爆
+758,1,ダイワーム
+758,3,다이웜
+758,4,極巨蟲蠱
+758,5,Insectomax
+758,6,Dyna-Schwarm
+758,7,Maxinsecto
+758,8,Dynainsetto
+758,9,Max Flutterby
+758,11,ダイワーム
+758,12,極巨蟲蠱
+759,1,ダイサンダー
+759,3,다이썬더
+759,4,極巨閃電
+759,5,Fulguromax
+759,6,Dyna-Gewitter
+759,7,Maxitormenta
+759,8,Dynasaetta
+759,9,Max Lightning
+759,11,ダイサンダー
+759,12,極巨閃電
+760,1,ダイアタック
+760,3,다이어택
+760,4,極巨攻擊
+760,5,Normalomax
+760,6,Dyna-Angriff
+760,7,Maxiataque
+760,8,Dynattacco
+760,9,Max Strike
+760,11,ダイアタック
+760,12,極巨攻擊
+761,1,ダイナックル
+761,3,다이너클
+761,4,極巨拳鬥
+761,5,Pugilomax
+761,6,Dyna-Faust
+761,7,Maxipuño
+761,8,Dynapugno
+761,9,Max Knuckle
+761,11,ダイナックル
+761,12,極巨拳鬥
+762,1,ダイホロウ
+762,3,다이할로우
+762,4,極巨幽魂
+762,5,Spectromax
+762,6,Dyna-Spuk
+762,7,Maxiespectro
+762,8,Dynavuoto
+762,9,Max Phantasm
+762,11,ダイホロウ
+762,12,極巨幽魂
+763,1,ダイアイス
+763,3,다이아이스
+763,4,極巨寒冰
+763,5,Cryomax
+763,6,Dyna-Frost
+763,7,Maxihelada
+763,8,Dynagelo
+763,9,Max Hailstorm
+763,11,ダイアイス
+763,12,極巨寒冰
+764,1,ダイアシッド
+764,3,다이애시드
+764,4,極巨酸毒
+764,5,Toxinomax
+764,6,Dyna-Giftschwall
+764,7,Maxiácido
+764,8,Dynacorrosione
+764,9,Max Ooze
+764,11,ダイアシッド
+764,12,極巨酸毒
+765,1,ダイストリーム
+765,3,다이스트림
+765,4,極巨水流
+765,5,Hydromax
+765,6,Dyna-Flut
+765,7,Maxichorro
+765,8,Dynaflusso
+765,9,Max Geyser
+765,11,ダイストリーム
+765,12,極巨水流
+766,1,ダイジェット
+766,3,다이제트
+766,4,極巨飛衝
+766,5,Aéromax
+766,6,Dyna-Düse
+766,7,Maxiciclón
+766,8,Dynajet
+766,9,Max Airstream
+766,11,ダイジェット
+766,12,極巨飛衝
+767,1,ダイフェアリー
+767,3,다이페어리
+767,4,極巨妖精
+767,5,Enchantomax
+767,6,Dyna-Zauber
+767,7,Maxiestela
+767,8,Dynafata
+767,9,Max Starfall
+767,11,ダイフェアリー
+767,12,極巨妖精
+768,1,ダイドラグーン
+768,3,다이드라군
+768,4,極巨龍騎
+768,5,Dracomax
+768,6,Dyna-Wyrm
+768,7,Maxidraco
+768,8,Dynadragone
+768,9,Max Wyrmwind
+768,11,ダイドラグーン
+768,12,極巨龍騎
+769,1,ダイサイコ
+769,3,다이사이코
+769,4,極巨超能
+769,5,Psychomax
+769,6,Dyna-Kinese
+769,7,Maxionda
+769,8,Dynapsiche
+769,9,Max Mindstorm
+769,11,ダイサイコ
+769,12,極巨超能
+770,1,ダイロック
+770,3,다이록
+770,4,極巨岩石
+770,5,Lithomax
+770,6,Dyna-Brocken
+770,7,Maxilito
+770,8,Dynamacigno
+770,9,Max Rockfall
+770,11,ダイロック
+770,12,極巨岩石
+771,1,ダイアース
+771,3,다이어스
+771,4,極巨大地
+771,5,Sismomax
+771,6,Dyna-Erdstoß
+771,7,Maxitemblor
+771,8,Dynasisma
+771,9,Max Quake
+771,11,ダイアース
+771,12,極巨大地
+772,1,ダイアーク
+772,3,다이아크
+772,4,極巨惡霸
+772,5,Sinistromax
+772,6,Dyna-Dunkel
+772,7,Maxisombra
+772,8,Dynatenebre
+772,9,Max Darkness
+772,11,ダイアーク
+772,12,極巨惡霸
+773,1,ダイソウゲン
+773,3,다이그래스
+773,4,極巨草原
+773,5,Phytomax
+773,6,Dyna-Flora
+773,7,Maxiflora
+773,8,Dynaflora
+773,9,Max Overgrowth
+773,11,ダイソウゲン
+773,12,極巨草原
+774,1,ダイスチル
+774,3,다이스틸
+774,4,極巨鋼鐵
+774,5,Métallomax
+774,6,Dyna-Stahlzacken
+774,7,Maximetal
+774,8,Dynametallo
+774,9,Max Steelspike
+774,11,ダイスチル
+774,12,極巨鋼鐵
+775,1,ソウルビート
+775,3,소울비트
+775,4,魂舞烈音爆
+775,5,Dracacophonie
+775,6,Seelentanz
+775,7,Estruendo Escama
+775,8,Dracofonia
+775,9,Clangorous Soul
+775,11,ソウルビート
+775,12,魂舞烈音爆
+776,1,ボディプレス
+776,3,바디프레스
+776,4,撲擊
+776,5,Big Splash
+776,6,Body Press
+776,7,Plancha Corporal
+776,8,Schiacciacorpo
+776,9,Body Press
+776,11,ボディプレス
+776,12,撲擊
+777,1,デコレーション
+777,3,데코레이션
+777,4,裝飾
+777,5,Nappage
+777,6,Verzierung
+777,7,Decoración
+777,8,Decorazione
+777,9,Decorate
+777,11,デコレーション
+777,12,裝飾
+778,1,ドラムアタック
+778,3,드럼어택
+778,4,鼓擊
+778,5,Tambour Battant
+778,6,Trommelschläge
+778,7,Batería Asalto
+778,8,Tamburattacco
+778,9,Drum Beating
+778,11,ドラムアタック
+778,12,鼓擊
+779,1,トラバサミ
+779,3,집게덫
+779,4,捕獸夾
+779,5,Troquenard
+779,6,Fangeisen
+779,7,Cepo
+779,8,Tagliola
+779,9,Snap Trap
+779,11,トラバサミ
+779,12,捕獸夾
+780,1,かえん
+780,3,화염볼
+780,4,火焰球
+780,5,Ballon Brûlant
+780,6,Feuerball
+780,7,Balón Ígneo
+780,8,Palla Infuocata
+780,9,Pyro Ball
+780,11,かえん
+780,12,火焰球
+781,1,きょじゅうざん
+781,3,거수참
+781,4,巨獸斬
+781,5,Gladius Maximus
+781,6,Gigantenhieb
+781,7,Tajo Supremo
+781,8,Taglio Maestoso
+781,9,Behemoth Blade
+781,11,きょじゅうざん
+781,12,巨獸斬
+782,1,きょじゅうだん
+782,3,거수탄
+782,4,巨獸彈
+782,5,Aegis Maxima
+782,6,Gigantenstoß
+782,7,Embate Supremo
+782,8,Colpo Maestoso
+782,9,Behemoth Bash
+782,11,きょじゅうだん
+782,12,巨獸彈
+783,1,オーラ
+783,3,오라휠
+783,4,氣場輪
+783,5,Roue Libre
+783,6,Aura-Rad
+783,7,Rueda Aural
+783,8,Ruota d'Aura
+783,9,Aura Wheel
+783,11,オーラ
+783,12,氣場輪
+784,1,ワイドブレイカー
+784,3,와이드브레이커
+784,4,廣域破壞
+784,5,Abattage
+784,6,Breitseite
+784,7,Vasto Impacto
+784,8,Vastoimpatto
+784,9,Breaking Swipe
+784,11,ワイドブレイカー
+784,12,廣域破壞
+786,1,オーバードライブ
+786,3,오버드라이브
+786,4,破音
+786,5,Overdrive
+786,6,Overdrive
+786,7,Amplificador
+786,8,Overdrive
+786,9,Overdrive
+786,11,オーバードライブ
+786,12,破音
+787,1,りんごさん
+787,3,사과산
+787,4,蘋果酸
+787,5,Acide Malique
+787,6,Apfelsäure
+787,7,Ácido Málico
+787,8,Acido Malico
+787,9,Apple Acid
+787,11,りんごさん
+787,12,蘋果酸
+788,1,
+788,3,
+788,4,萬有引力
+788,5,Force G
+788,6,Gravitation
+788,7,Fuerza G
+788,8,Forza G
+788,9,Grav Apple
+788,11,
+788,12,萬有引力
+789,1,ソウルクラッシュ
+789,3,소울크래시
+789,4,靈魂衝擊
+789,5,Choc Émotionnel
+789,6,Seelenbruch
+789,7,Choque Anímico
+789,8,Frantumanima
+789,9,Spirit Break
+789,11,ソウルクラッシュ
+789,12,靈魂衝擊
+790,1,ワンダースチーム
+790,3,원더스팀
+790,4,神奇蒸汽
+790,5,Vapeur Féérique
+790,6,Wunderdampf
+790,7,Cautivapor
+790,8,Vapore Incantato
+790,9,Strange Steam
+790,11,ワンダースチーム
+790,12,神奇蒸汽
+791,1,いのちのしずく
+791,3,생명의물방울
+791,4,生命水滴
+791,5,Fontaine de Vie
+791,6,Lebenstropfen
+791,7,Gota Vital
+791,8,Goccia Vitale
+791,9,Life Dew
+791,11,いのちのしずく
+791,12,生命水滴
+792,1,ブロッキング
+792,3,블로킹
+792,4,攔堵
+792,5,Blocage
+792,6,Abblocker
+792,7,Obstrucción
+792,8,Sbarramento
+792,9,Obstruct
+792,11,ブロッキング
+792,12,攔堵
+793,1,どげざつき
+793,3,사죄의찌르기
+793,4,假跪真撞
+793,5,Fourbette
+793,6,Kniefalltrick
+793,7,Irreverencia
+793,8,Supplicolpo
+793,9,False Surrender
+793,11,どげざつき
+793,12,假跪真撞
+794,1,スターアサルト
+794,3,스타어설트
+794,4,流星突擊
+794,5,Joute Astrale
+794,6,Sternensturm
+794,7,Asalto Estelar
+794,8,Sfolgorassalto
+794,9,Meteor Assault
+794,11,スターアサルト
+794,12,流星突擊
+795,1,ムゲンダイビーム
+795,3,무한다이빔
+795,4,無極光束
+795,5,Laser Infinimax
+795,6,Unendynastrahlen
+795,7,Rayo Infinito
+795,8,Raggio Infinito
+795,9,Eternabeam
+795,11,ムゲンダイビーム
+795,12,無極光束
+796,1,てっていこうせん
+796,3,철제광선
+796,4,鐵蹄光線
+796,5,Métalaser
+796,6,Stahlstrahl
+796,7,Metaláser
+796,8,Raggio d'Acciaio
+796,9,Steel Beam
+796,11,てっていこうせん
+796,12,鐵蹄光線
 10001,1,ダークラッシュ
 10001,5,Charge Noire
 10001,6,Cryptoschlag

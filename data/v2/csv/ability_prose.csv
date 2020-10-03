@@ -1194,7 +1194,7 @@ The mysterious air current ends when this Pokémon leaves battle or loses this a
 
 This ability cannot be copied, replaced, or nullified.  This ability only takes effect for Minior."
 198,9,This Pokémon's moves have double power against Pokémon that switched in this turn.,This Pokémon's moves have double power against Pokémon that switched in this turn.
-199,9,"Halves damage from Fire moves, doubles damage of Water moves, and prevents burns.","When this Pokémon is hit by a Fire move, the damage is halved.  When this Pokémon uses a Water move, the power is doubled.  This Pokémon cannot be burned, and if it becomes burned, the  burn is immediately ured."
+199,9,"Halves damage from Fire moves, doubles damage of Water moves, and prevents burns.","When this Pokémon is hit by a Fire move, the damage is halved.  When this Pokémon uses a Water move, the power is doubled. This Pokémon cannot be burned, and if it becomes burned, the burn is immediately cured."
 200,9,This Pokémon's Steel moves have 1.5× power.,This Pokémon's Steel moves have 1.5× power.
 201,9,Raises this Pokémon's Special Attack by one stage every time its HP drops below half.,"Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
 202,9,"During Hail, this Pokémon has double Speed.","During Hail, this Pokémon has double Speed."

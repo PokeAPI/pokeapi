@@ -1792,7 +1792,7 @@ class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
 
 class PokemonFormName(HasPokemonForm, IsName):
 
-    pokemon_name = models.CharField(max_length=30)
+    pokemon_name = models.CharField(max_length=60)
 
 
 class PokemonFormSprites(HasPokemonForm):

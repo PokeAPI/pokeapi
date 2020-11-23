@@ -1,4 +1,4 @@
-pokemon_form_id,local_language_id,form_name,pokemon_name
+﻿pokemon_form_id,local_language_id,form_name,pokemon_name
 3,1,,
 3,3,,
 3,4,,
@@ -1136,6 +1136,55 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 801,9,,
 801,11,,
 801,12,,
+845,1,,
+845,3,,
+845,4,,
+845,5,,
+845,6,,
+845,7,,
+845,8,,
+845,9,,
+845,11,,
+845,12,,
+849,9,Amped Form,Amped Toxtricity
+854,9,Phony Form,Phony Sinistea
+855,9,Phony Form,Phony Polteageist
+875,9,Ice Face,Ice Face Eiscue
+876,9,Male,Male Indeedee
+877,9,Full Belly Mode,Full Belly Morpeko
+888,9,Hero of Many Battles,Hero Zacian
+889,9,Hero of Many Battles,Hero Zamazenta
+890,1,,
+890,3,,
+890,4,,
+890,5,,
+890,6,,
+890,7,,
+890,8,,
+890,9,,
+890,11,,
+890,12,,
+892,9,Single Strike Style,Single Strike Urshifu
+893,1,,
+893,3,,
+893,4,,
+893,5,,
+893,6,,
+893,7,,
+893,8,,
+893,9,,
+893,11,,
+893,12,,
+898,1,,
+898,3,,
+898,4,,
+898,5,,
+898,6,,
+898,7,,
+898,8,,
+898,9,,
+898,11,,
+898,12,,
 10001,1,Ｂ,
 10001,3,B,
 10001,5,B,Zarbi B
@@ -3346,3 +3395,71 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,9,Ultra Necrozma,Ultra Necrozma
 10316,11,ウルトラネクロズマ,
 10316,12,究极奈克洛兹玛,
+10317,9,Galarian Form,Galarian Meowth
+10318,9,Galarian Form,Galarian Ponyta
+10319,9,Galarian Form,Galarian Rapidash
+10320,9,Galarian Form,Galarian Slowpoke
+10321,9,Galarian Form,Galarian Slowbro
+10322,9,Galarian Form,Galarian Farfetch'd
+10323,9,Galarian Form,Galarian Weezing
+10324,9,Galarian Form,Galarian Mr. Mime
+10325,9,Galarian Form,Galarian Articuno
+10326,9,Galarian Form,Galarian Zapdos
+10327,9,Galarian Form,Galarian Moltres
+10328,9,Galarian Form,Galarian Slowking
+10329,9,Galarian Form,Galarian Corsola
+10330,9,Galarian Form,Galarian Zigzagoon
+10331,9,Galarian Form,Galarian Linoone
+10332,9,Galarian Form,Galarian Darumaka
+10333,9,Galarian Form,Galarian Darmanitan
+10334,9,Galarian Form,Galarian Zen Darmanitan
+10335,9,Galarian Form,Galarian Yamask
+10336,9,Galarian Form,Galarian Stunfisk
+10337,9,Gulping Form,
+10338,9,Gorging Form,
+10339,9,Low Key Form,Low Key Toxtricity
+10340,9,Antique Form,Antique Sinistea
+10341,9,Antique Form,Antique Polteageist
+10404,9,Noice Face,Noice Face Eiscue
+10405,9,Female,Female Indeedee
+10406,9,Hangry Mode,Hangry Morpeko
+10407,9,Crowned Sword,Crowned Zacian
+10408,9,Crowned Shield,Crowned Zamazenta
+10409,9,Rapid Strike Style,Rapid Strike Urshifu
+10410,9,Dada Form,Dada Zarude
+10411,9,Ice Rider Form,Ice Rider Calyrex
+10412,9,Shadow Rider Form,Shadow Rider Calyrex
+10413,9,Gigantamax Form,Gigantamax Venusaur
+10414,9,Gigantamax Form,Gigantamax Charizard
+10415,9,Gigantamax Form,Gigantamax Blastoise
+10416,9,Gigantamax Form,Gigantamax Butterfree
+10417,9,Gigantamax Form,Gigantamax Pikachu
+10418,9,Gigantamax Form,Gigantamax Meowth
+10419,9,Gigantamax Form,Gigantamax Machamp
+10420,9,Gigantamax Form,Gigantamax Gengar
+10421,9,Gigantamax Form,Gigantamax Kingler
+10422,9,Gigantamax Form,Gigantamax Lapras
+10423,9,Gigantamax Form,Gigantamax Eevee
+10424,9,Gigantamax Form,Gigantamax Snorlax
+10425,9,Gigantamax Form,Gigantamax Garbodor
+10426,9,Gigantamax Form,Gigantamax Melmetal
+10427,9,Gigantamax Form,Gigantamax Rillaboom
+10428,9,Gigantamax Form,Gigantamax Cinderace
+10429,9,Gigantamax Form,Gigantamax Inteleon
+10430,9,Gigantamax Form,Gigantamax Corviknight
+10431,9,Gigantamax Form,Gigantamax Orbeetle
+10432,9,Gigantamax Form,Gigantamax Drednaw
+10433,9,Gigantamax Form,Gigantamax Coalossal
+10434,9,Gigantamax Form,Gigantamax Flapple
+10435,9,Gigantamax Form,Gigantamax Appletun
+10436,9,Gigantamax Form,Gigantamax Sandaconda
+10437,9,Gigantamax Form,Gigantamax Toxtricity
+10438,9,Gigantamax Form,Gigantamax Centiskorch
+10439,9,Gigantamax Form,Gigantamax Hatterene
+10440,9,Gigantamax Form,Gigantamax Grimmsnarl
+10441,9,Gigantamax Form,Gigantamax Alcremie
+10442,9,Gigantamax Form,Gigantamax Copperajah
+10443,9,Gigantamax Form,Gigantamax Duraludon
+10444,9,Eternamax Form,Eternamax Eternatus
+10445,9,Gigantamax Form,Gigantamax Single Strike Urshifu
+10446,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu

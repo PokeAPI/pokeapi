@@ -1,4 +1,4 @@
-pokemon_species_id,local_language_id,name,genus
+﻿pokemon_species_id,local_language_id,name,genus
 1,1,フシギダネ,たねポケモン
 1,2,Fushigidane,
 1,3,이상해씨,씨앗포켓몬
@@ -8562,3 +8562,94 @@ pokemon_species_id,local_language_id,name,genus
 807,9,Zeraora,Thunderclap Pokémon
 807,11,ゼラオラ,じんらいポケモン
 807,12,捷拉奥拉,奔雷宝可梦
+808,9,Meltan,Hex Nut Pokémon
+809,9,Melmetal,Hex Nut Pokémon
+810,9,Grookey,Chimp Pokémon
+811,9,Thwackey,Beat Pokémon
+812,9,Rillaboom,Drummer Pokémon
+813,9,Scorbunny,Rabbit Pokémon
+814,9,Raboot,Rabbit Pokémon
+815,9,Cinderace,Striker Pokémon
+816,9,Sobble,Water Lizard Pokémon
+817,9,Drizzile,Water Lizard Pokémon
+818,9,Inteleon,Secret Agent Pokémon
+819,9,Skwovet,Cheeky Pokémon
+820,9,Greedent,Greedy Pokémon
+821,9,Rookidee,Tiny Bird Pokémon
+822,9,Corvisquire,Raven Pokémon
+823,9,Corviknight,Raven Pokémon
+824,9,Blipbug,Larva Pokémon
+825,9,Dottler,Radome Pokémon
+826,9,Orbeetle,Seven Spot Pokémon
+827,9,Nickit,Fox Pokémon
+828,9,Thievul,Fox Pokémon
+829,9,Gossifleur,Flowering Pokémon
+830,9,Eldegoss,Cotton Bloom Pokémon
+831,9,Wooloo,Sheep Pokémon
+832,9,Dubwool,Pokémon
+833,9,Chewtle,Snapping Pokémon
+834,9,Drednaw,Bite Pokémon
+835,9,Yamper,Puppy Pokémon
+836,9,Boltund,Dog Pokémon
+837,9,Rolycoly,Coal Pokémon
+838,9,Carkol,Coal Pokémon
+839,9,Coalossal,Coal Pokémon
+840,9,Applin,Apple Core Pokémon
+841,9,Flapple,Apple Wing Pokémon
+842,9,Appletun,Apple Nectar Pokémon
+843,9,Silicobra,Sand Snake Pokémon
+844,9,Sandaconda,Sand Snake Pokémon
+845,9,Cramorant,Gulp Pokémon
+846,9,Arrokuda,Rush Pokémon
+847,9,Barraskewda,Skewer Pokémon
+848,9,Toxel,Baby Pokémon
+849,9,Toxtricity,Punk Pokémon
+850,9,Sizzlipede,Radiator Pokémon
+851,9,Centiskorch,Radiator Pokémon
+852,9,Clobbopus,Tantrum Pokémon
+853,9,Grapploct,Jujitsu Pokémon
+854,9,Sinistea,Black Tea Pokémon
+855,9,Polteageist,Black Tea Pokémon
+856,9,Hatenna,Calm Pokémon
+857,9,Hattrem,Serene Pokémon
+858,9,Hatterene,Silent Pokémon
+859,9,Impidimp,Wily Pokémon
+860,9,Morgrem,Devious Pokémon
+861,9,Grimmsnarl,Bulk Up Pokémon
+862,9,Obstagoon,Blocking Pokémon
+863,9,Perrserker,Viking Pokémon
+864,9,Cursola,Coral Pokémon
+865,9,Sirfetch'd,Wild Duck Pokémon
+866,9,Mr. Rime,Comedian Pokémon
+867,9,Runerigus,Grudge Pokémon
+868,9,Milcery,Cream Pokémon
+869,9,Alcremie,Cream Pokémon
+870,9,Falinks,Formation Pokémon
+871,9,Pincurchin,Sea Urchin Pokémon
+872,9,Snom,Worm Pokémon
+873,9,Frosmoth,Frost Moth Pokémon
+874,9,Stonjourner,Big Rock Pokémon
+875,9,Eiscue,Penguin Pokémon
+876,9,Indeedee,Emotion Pokémon
+877,9,Morpeko,Two-Sided Pokémon
+878,9,Cufant,Copperderm Pokémon
+879,9,Copperajah,Copperderm Pokémon
+880,9,Dracozolt,Fossil Pokémon
+881,9,Arctozolt,Fossil Pokémon
+882,9,Dracovish,Fossil Pokémon
+883,9,Arctovish,Fossil Pokémon
+884,9,Duraludon,Alloy Pokémon
+885,9,Dreepy,Lingering Pokémon
+886,9,Drakloak,Caretaker Pokémon
+887,9,Dragapult,Stealth Pokémon
+888,9,Zacian,Warrior Pokémon
+889,9,Zamazenta,Warrior Pokémon
+890,9,Eternatus,Gigantic Pokémon
+891,9,Kubfu,Wushu Pokémon
+892,9,Urshifu,Wushu Pokémon
+893,9,Zarude,Rogue Monkey Pokémon
+894,9,Regieleki,Electron Pokémon
+895,9,Regidrago,Dragon Orb Pokémon
+896,9,Glastrier,Wild Horse Pokémon
+897,9,Spectrier,Swift Horse Pokémon
+898,9,Calyrex,King Pokémon

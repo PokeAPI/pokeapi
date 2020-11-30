@@ -1,4 +1,4 @@
-ability_id,local_language_id,name
+﻿ability_id,local_language_id,name
 1,1,あくしゅう
 1,3,악취
 1,4,惡臭
@@ -2329,6 +2329,34 @@ ability_id,local_language_id,name
 233,9,Neuroforce
 233,11,ブレインフォース
 233,12,脑核之力
+234,9,Intrepid Sword
+235,9,Dauntless Shield
+236,9,Libero
+237,9,Ball Fetch
+238,9,Cotton Down
+239,9,Propeller Tail
+240,9,Mirror Armor
+241,9,Gulp Missile
+242,9,Stalwart
+243,9,Steam Engine
+244,9,Punk Rock
+245,9,Sand Spit
+246,9,Ice Scales
+247,9,Ripen
+248,9,Ice Face
+249,9,Power Spot
+250,9,Mimicry
+251,9,Screen Cleaner
+252,9,Steely Spirit
+253,9,Perish Body
+254,9,Wandering Spirit
+255,9,Gorilla Tactics
+256,9,Neutralizing Gas
+257,9,Pastel Veil
+258,9,Hunger Switch
+259,9,Quick Draw
+260,9,Unseen Fist
+261,9,Curious Medicine
 262,9,Transistor
 263,9,Dragon's Maw
 264,9,Chilling Neigh

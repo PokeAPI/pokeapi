@@ -1,4 +1,4 @@
-pokedex_id,local_language_id,name,description
+﻿pokedex_id,local_language_id,name,description
 1,5,National,Pokédex National complet
 1,6,National,Komplette Nationale Dex
 1,7,Nacional,Pokédex Nacional completa
@@ -53,3 +53,7 @@ pokedex_id,local_language_id,name,description
 23,9,Updated Akala,Ultra Sun/Ultra Moon Akala dex
 24,9,Updated Ula'ula,Ultra Sun/Ultra Moon Ula'ula dex
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
+26,9,Updated Kanto,Let's Go Pikachu/Eevee Kanto dex
+27,9,Galar,Sword/Shield Galar dex
+28,9,Isle of Armor,Isle of Armor dex
+29,9,Crown Tundra,Crown Tundra dex

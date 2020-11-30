@@ -1271,7 +1271,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10434,flapple-gmax,gmax,10207,20,1,1,0,1,1270
 10435,appletun-gmax,gmax,10208,20,1,1,0,1,1271
 10436,sandaconda-gmax,gmax,10209,20,1,1,0,1,1272
-10437,toxtricity-gmax,gmax,10210,20,1,1,0,1,1273
+10437,toxtricity-amped-gmax,gmax,10210,20,1,1,0,1,1273
 10438,centiskorch-gmax,gmax,10211,20,1,1,0,1,1274
 10439,hatterene-gmax,gmax,10212,20,1,1,0,1,1275
 10440,grimmsnarl-gmax,gmax,10213,20,1,1,0,1,1276
@@ -1281,3 +1281,4 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10444,eternatus-eternamax,eternamax,10217,20,1,1,0,1,1280
 10445,urshifu-single-strike-gmax,gmax,10218,20,1,1,0,1,1281
 10446,urshifu-rapid-strike-gmax,gmax,10219,20,1,1,0,1,1282
+10447,toxtricity-low-key-gmax,gmax,10220,20,1,1,0,1,1283

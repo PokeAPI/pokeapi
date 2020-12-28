@@ -2013,7 +2013,7 @@ Egg Groups are categories which determine which Pokémon are able to interbreed.
 
 
 ## Genders
-Genders were introduced in Generation II for the purposes of breeding pokémon but can also rsult in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail. 
+Genders were introduced in Generation II for the purposes of breeding pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail. 
 
 ### GET api/v2/gender/{id or name}
 

@@ -66,7 +66,7 @@ Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
     make serve
     ```
 
-## Database setup
+### Database setup
 
 Start the Django shell by
 
@@ -85,8 +85,6 @@ Visit [localhost:8000/api/v2/](localhost:8000/api/v2/) to see the running API!
 
 Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
-In informal tests on a Windows PC with a SSD and a 2.50 GHz processor, building against a PostgresQL database took approximately 6 minutes, and building against a SQLite database took about 7.5 minutes or longer, with some varying results.
-
 The option to build individual portions of the database was removed in order to increase performance of the build script.
 
 If you ever need to wipe the database use this command:
@@ -95,41 +93,25 @@ If you ever need to wipe the database use this command:
 make wipe_db
 ```
 
-## Docker Compose
+## Docker and Compose
 
 There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allow you to deploy a production-like environment, with separate containers for each services.
 
-Start the process using
+Start everything by simply
 
 ```sh
-docker-compose up --build
+make docker-setup
 ```
 
-You can specify the `-d` switch to start in detached mode.
-This will bind port 80 and 443. Unfortunately, unlike the `docker` command, there is no command line arguments to specify ports. If you want to change them, edit the `docker-compose.yml` file.
-
-After that, start the migration process
+If you don't have `make` on your machine you can use the following commands
 
 ```sh
-docker-compose exec app python manage.py migrate --settings=config.docker-compose
+docker-compose up -d
+docker-compose exec -T app python manage.py migrate --settings=config.docker-compose
+docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
 ```
 
-And then, import the data using the shell
-
-```sh
-docker-compose exec app python manage.py shell --settings=config.docker-compose
-```
-
-Then use the `build_all()` method in the shell to populate the database.
-
-```py
-from data.v2.build import build_all
-build_all()
-```
-
-Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/)
-
-This setup doesn't allow you to use the `scale` command.
+Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
 ## Donations
 

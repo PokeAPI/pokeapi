@@ -1,8 +1,11 @@
+veekun_pokedex_repository = ../pokedex
+local_config = --settings=config.local
+docker_config = --settings=config.docker-compose
+
 .PHONY: help
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
-
 
 install:  # Install base requirements to run project
 	pip install -r requirements.txt
@@ -11,28 +14,71 @@ dev-install:  # Install developer requirements + base requirements
 	pip install -r test-requirements.txt
 
 setup:  # Set up the project database
-	python manage.py migrate --settings=config.local
+	python manage.py migrate ${local_config}
 
-wipe_db:  # Delete's the project database
+wipe-sqlite-db:  # Delete's the project database
 	rm -rf db.sqlite3
 
 serve:  # Run the project locally
-	python manage.py runserver --settings=config.local
+	python manage.py runserver ${local_config}
 
 test:  # Run tests
-	python manage.py test --settings=config.local
+	python manage.py test ${local_config}
 
 clean:  # Remove any pyc files
 	find . -type f -name '*.pyc' -delete
 
-migrate:  # run any outstanding migrations
-	python manage.py migrate --settings=config.local
+migrate:  # Run any outstanding migrations
+	python manage.py migrate ${local_config}
+
+make-migrations:  # Create migrations files if schema has changed
+	python manage.py makemigrations ${local_config}
 
 shell:  # Load a shell
-	python manage.py shell --settings=config.local
+	python manage.py shell ${local_config}
+
+docker-up:  # (Docker) Create services/volumes/networks
+	docker-compose up -d
+
+docker-migrate:  # (Docker) Run any pending migrations
+	docker-compose exec -T app python manage.py migrate ${docker_config}
+
+docker-build-db:  # (Docker) Build the database
+	docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+
+docker-make-migrations:  # (Docker) Create migrations files if schema has changed
+	docker-compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
+
+docker-flush-db:  # (Docker) Removes all the data present in the database
+	docker-compose exec -T app sh -c 'python manage.py flush ${docker_config}'
+
+docker-shell:  # (Docker) Launch an interative shell for the pokeapi container
+	docker-compose exec app sh -l
+
+docker-stop:  # (Docker) Stop containers
+	docker-compose stop
+
+docker-down:  # (Docker) Stop and removes containers and networks
+	docker-compose down
+
+docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format:  # Format the source code
 	black .
 
 format-check:  # Check the source code has been formatted
 	black . --check
+
+pull:
+	git checkout master
+	git pull
+
+pull-veekun:
+	git -C ${veekun_pokedex_repository} checkout master-pokeapi
+	git -C ${veekun_pokedex_repository} pull
+
+sync-from-veekun: pull pull-veekun # Copy data from ../pokedex to this repository
+	cp -a ${veekun_pokedex_repository}/pokedex/data/csv/. ./data/v2/csv
+
+sync-to-veekun: pull pull-veekun # Copy data from this repository to ../pokedex
+	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv

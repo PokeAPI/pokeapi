@@ -2192,6 +2192,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     flavor_text_entries = MoveFlavorTextSerializer(
         many=True, read_only=True, source="moveflavortext"
     )
+    pokemon = serializers.SerializerMethodField("get_learned_by_pokemon")
 
     class Meta:
         model = Move
@@ -2219,7 +2220,25 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "type",
             "machines",
             "flavor_text_entries",
+            "pokemon"
         )
+
+    def get_learned_by_pokemon(self, obj):
+
+        pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
+
+        pokemon_list = []
+
+        pokemon_ids = pokemon_moves.values("pokemon_id").distinct()
+
+        for id in pokemon_ids:
+
+            pokemon_object = Pokemon.objects.get(pk=id["pokemon_id"])
+            pokemon_data = PokemonSummarySerializer(pokemon_object, context=self.context).data
+
+            pokemon_list.append(pokemon_data)
+
+        return pokemon_list
 
     def get_move_machines(self, obj):
 

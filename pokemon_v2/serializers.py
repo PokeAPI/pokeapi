@@ -2192,7 +2192,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     flavor_text_entries = MoveFlavorTextSerializer(
         many=True, read_only=True, source="moveflavortext"
     )
-    pokemon = serializers.SerializerMethodField("get_learned_by_pokemon")
+    learned_by_pokemon = serializers.SerializerMethodField()
 
     class Meta:
         model = Move
@@ -2220,7 +2220,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "type",
             "machines",
             "flavor_text_entries",
-            "pokemon"
+            "learned_by_pokemon"
         )
 
     def get_learned_by_pokemon(self, obj):

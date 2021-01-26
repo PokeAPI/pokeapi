@@ -4151,7 +4151,7 @@ class APITests(APIData, APITestCase):
         )
         # pokemon
         self.assertEqual(
-            response.data["pokemon"][0]["name"],
+            response.data["learned_by_pokemon"][0]["name"],
             pokemon.name
         )
 

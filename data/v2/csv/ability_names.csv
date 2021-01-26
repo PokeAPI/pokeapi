@@ -92,7 +92,7 @@ ability_id,local_language_id,name
 10,1,ちくでん
 10,3,축전
 10,4,蓄電
-10,5,Absorb Volt
+10,5,Absorbe-Volt
 10,6,Voltabsorber
 10,7,Absorbe Elec
 10,8,Assorbivolt
@@ -102,7 +102,7 @@ ability_id,local_language_id,name
 11,1,ちょすい
 11,3,저수
 11,4,儲水
-11,5,Absorb Eau
+11,5,Absorbe-Eau
 11,6,H2O-Absorber
 11,7,Absorbe Agua
 11,8,Assorbacqua
@@ -152,7 +152,7 @@ ability_id,local_language_id,name
 16,1,へんしょく
 16,3,변색
 16,4,變色
-16,5,Déguisement
+16,5,Homochromie
 16,6,Farbwechsel
 16,7,Cambio Color
 16,8,Cambiacolore
@@ -572,7 +572,7 @@ ability_id,local_language_id,name
 58,1,マイナス
 58,3,마이너스
 58,4,負電
-58,5,Minus
+58,5,Moins
 58,6,Minus
 58,7,Menos
 58,8,Meno
@@ -592,7 +592,7 @@ ability_id,local_language_id,name
 60,1,ねんちゃく
 60,3,점착
 60,4,黏著
-60,5,Glue
+60,5,Glu
 60,6,Wertehalter
 60,7,Viscosidad
 60,8,Antifurto
@@ -1054,7 +1054,7 @@ ability_id,local_language_id,name
 106,4,引爆
 106,5,Boom Final
 106,6,Finalschlag
-106,7,Resquicio
+106,7,Detonación
 106,8,Scoppio
 106,9,Aftermath
 106,11,ゆうばく
@@ -1312,7 +1312,7 @@ ability_id,local_language_id,name
 132,1,フレンドガード
 132,3,프렌드가드
 132,4,友情防守
-132,5,Garde Amie
+132,5,Garde-Ami
 132,6,Freundeshut
 132,7,Compiescolta
 132,8,Amicoscudo
@@ -1622,7 +1622,7 @@ ability_id,local_language_id,name
 163,1,ターボブレイズ
 163,3,터보블레이즈
 163,4,渦輪火焰
-163,5,TurboBrasier
+163,5,Turbo Brasier
 163,6,Turbobrand
 163,7,Turbollama
 163,8,Piroturbina
@@ -2419,7 +2419,7 @@ ability_id,local_language_id,name
 244,12,庞克摇滚
 245,3,모래뿜기
 245,4,吐沙
-245,5,Expul'Sable
+245,5,Expul’Sable
 245,6,Sandspeier
 245,7,Expulsarena
 245,8,Sputasabbia
@@ -2459,7 +2459,7 @@ ability_id,local_language_id,name
 250,4,擬態
 250,5,Mimétisme
 250,6,Mimese
-250,7,Mimese
+250,7,Mimetismo
 250,8,Mimetismo
 250,9,Mimicry
 250,12,拟态
@@ -2524,7 +2524,7 @@ ability_id,local_language_id,name
 257,12,粉彩护幕
 257,13,Véu de Tons Pastéis
 258,3,꼬르륵스위치
-258,4,飽了又餓 
+258,4,飽了又餓
 258,5,Déclic Fringale
 258,6,Heißhunger
 258,7,Mutapetito
@@ -2586,7 +2586,7 @@ ability_id,local_language_id,name
 265,7,Relincho Negro
 265,8,Nitrito Nero
 265,9,Grim Neigh
-265,12,漆黑嘶鸣 
+265,12,漆黑嘶鸣
 266,3,혼연일체
 266,4,人馬一體
 266,5,Osmose Équine

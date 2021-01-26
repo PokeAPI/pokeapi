@@ -2220,7 +2220,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "type",
             "machines",
             "flavor_text_entries",
-            "learned_by_pokemon"
+            "learned_by_pokemon",
         )
 
     def get_learned_by_pokemon(self, obj):
@@ -2234,7 +2234,9 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         for id in pokemon_ids:
 
             pokemon_object = Pokemon.objects.get(pk=id["pokemon_id"])
-            pokemon_data = PokemonSummarySerializer(pokemon_object, context=self.context).data
+            pokemon_data = PokemonSummarySerializer(
+                pokemon_object, context=self.context
+            ).data
 
             pokemon_list.append(pokemon_data)
 

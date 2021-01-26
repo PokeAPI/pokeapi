@@ -3900,11 +3900,7 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data()
         version_group = self.setup_version_group_data()
 
-        self.setup_pokemon_move_data(
-            pokemon,
-            move,
-            version_group
-        )
+        self.setup_pokemon_move_data(pokemon, move, version_group)
 
         after_move = self.setup_move_data(name="after mv")
         before_move = self.setup_move_data(name="before mv")
@@ -4150,10 +4146,7 @@ class APITests(APIData, APITestCase):
             ),
         )
         # pokemon
-        self.assertEqual(
-            response.data["learned_by_pokemon"][0]["name"],
-            pokemon.name
-        )
+        self.assertEqual(response.data["learned_by_pokemon"][0]["name"], pokemon.name)
 
     # Stat Tests
     def test_stat_api(self):

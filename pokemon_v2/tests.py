@@ -3897,6 +3897,10 @@ class APITests(APIData, APITestCase):
         move_effect_change_effect_text = self.setup_move_effect_change_effect_text_data(
             move_effect_change=move_effect_change, effect="efct tx for mv efct chng"
         )
+        pokemon = self.setup_pokemon_data()
+        version_group = self.setup_version_group_data()
+
+        self.setup_pokemon_move_data(pokemon, move, version_group)
 
         after_move = self.setup_move_data(name="after mv")
         before_move = self.setup_move_data(name="before mv")
@@ -4141,6 +4145,8 @@ class APITests(APIData, APITestCase):
                 TEST_HOST, API_V2, move_flavor_text.version_group.pk
             ),
         )
+        # pokemon
+        self.assertEqual(response.data["learned_by_pokemon"][0]["name"], pokemon.name)
 
     # Stat Tests
     def test_stat_api(self):

@@ -1348,8 +1348,22 @@ def _build_pokemons():
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
+    def try_image_names(info):
+        poke_sprites = "pokemon/{0}"
+        if "-" in info[1]:
+            file_name_png_str = "%s.png" % (info[2] + "-" + info[1].split("-", 1)[1],)
+            file_name_png_int = "%s.png" % info[0]
+            file_name_png = (
+                file_name_png_str
+                if file_path_or_none(poke_sprites.format(file_name_png_str))
+                else file_name_png_int
+            )
+        else:
+            file_name_png = "%s.png" % info[0]
+        return file_name_png
+
     def csv_record_to_objects(info):
-        file_name_png = "%s.png" % info[0]
+        file_name_png = try_image_names(info)
         file_name_gif = "%s.gif" % info[0]
         file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
@@ -2032,17 +2046,20 @@ def _build_pokemons():
 
     def csv_record_to_objects(info):
         pokemon = Pokemon.objects.get(pk=int(info[3]))
+        poke_sprites = "pokemon/{0}"
         if info[2]:
-            if re.search(r"^mega", info[2]):
-                file_name = "%s.png" % info[3]
-            else:
-                file_name = "%s-%s.png" % (
-                    getattr(pokemon, "pokemon_species_id"),
-                    info[2],
-                )
+            file_name_str = "%s-%s.png" % (
+                getattr(pokemon, "pokemon_species_id"),
+                info[2],
+            )
+            file_name_int = "%s.png" % info[3]
+            file_name = (
+                file_name_str
+                if file_path_or_none(poke_sprites.format(file_name_str))
+                else file_name_int
+            )
         else:
             file_name = "%s.png" % getattr(pokemon, "pokemon_species_id")
-        poke_sprites = "pokemon/{0}"
         sprites = {
             "front_default": file_path_or_none(poke_sprites.format(file_name)),
             "front_shiny": file_path_or_none(poke_sprites.format("shiny/" + file_name)),

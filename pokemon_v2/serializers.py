@@ -393,7 +393,7 @@ class PokemonTypePastSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PokemonTypePast
-        fields = ('pokemon', 'generation', 'slot', 'type')
+        fields = ("pokemon", "generation", "slot", "type")
 
 
 class PokedexVersionGroupSerializer(serializers.ModelSerializer):
@@ -2709,8 +2709,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     moves = serializers.SerializerMethodField("get_pokemon_moves")
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
-    types = serializers.SerializerMethodField('get_pokemon_types')
-    past_types = serializers.SerializerMethodField('get_past_pokemon_types')
+    types = serializers.SerializerMethodField("get_pokemon_types")
+    past_types = serializers.SerializerMethodField("get_past_pokemon_types")
     forms = PokemonFormSummarySerializer(
         many=True, read_only=True, source="pokemonform"
     )
@@ -2721,14 +2721,14 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pokemon
         fields = (
-            'id',
-            'name',
-            'base_experience',
-            'height',
-            'is_default',
-            'order',
-            'weight',
-            'abilities',
+            "id",
+            "name",
+            "base_experience",
+            "height",
+            "is_default",
+            "order",
+            "weight",
+            "abilities",
             "forms",
             "game_indices",
             "held_items",
@@ -2888,27 +2888,27 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         past_obj = {}
         final_data = []
         for poke_past_type in poke_past_types:
-            del poke_past_type['pokemon']
+            del poke_past_type["pokemon"]
 
-            generation = poke_past_type['generation']['name']
+            generation = poke_past_type["generation"]["name"]
             if generation != current_generation:
                 current_generation = generation
                 past_obj = {}
 
                 # create past types object for this generation
-                past_obj['generation'] = poke_past_type['generation']
-                del poke_past_type['generation']
+                past_obj["generation"] = poke_past_type["generation"]
+                del poke_past_type["generation"]
 
                 # create types array
-                past_obj['types'] = [poke_past_type]
+                past_obj["types"] = [poke_past_type]
 
                 # add to past types array
                 final_data.append(past_obj)
 
             else:
                 # add to existing array for this generation
-                del poke_past_type['generation']
-                past_obj['types'].append(poke_past_type)
+                del poke_past_type["generation"]
+                past_obj["types"].append(poke_past_type)
 
         return final_data
 

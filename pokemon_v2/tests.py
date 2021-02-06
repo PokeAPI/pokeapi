@@ -1676,7 +1676,7 @@ class APIData:
     def setup_pokemon_past_type_data(cls, pokemon, generation, type=None, slot=1):
 
         type = type or cls.setup_type_data(
-            name='tp for pkmn')
+            name="tp for pkmn")
 
         pokemon_type_past = PokemonTypePast(
             pokemon=pokemon,

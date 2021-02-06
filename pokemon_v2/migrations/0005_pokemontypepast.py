@@ -7,21 +7,54 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0004_iso639length_20191217'),
+        ("pokemon_v2", "0004_iso639length_20191217"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PokemonTypePast',
+            name="PokemonTypePast",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('slot', models.IntegerField()),
-                ('generation', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemontypepast', to='pokemon_v2.Generation')),
-                ('pokemon', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemontypepast', to='pokemon_v2.Pokemon')),
-                ('type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemontypepast', to='pokemon_v2.Type')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("slot", models.IntegerField()),
+                (
+                    "generation",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pokemontypepast",
+                        to="pokemon_v2.Generation",
+                    ),
+                ),
+                (
+                    "pokemon",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pokemontypepast",
+                        to="pokemon_v2.Pokemon",
+                    ),
+                ),
+                (
+                    "type",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pokemontypepast",
+                        to="pokemon_v2.Type",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
     ]

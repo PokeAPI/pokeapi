@@ -1675,14 +1675,10 @@ class APIData:
     @classmethod
     def setup_pokemon_past_type_data(cls, pokemon, generation, type=None, slot=1):
 
-        type = type or cls.setup_type_data(
-            name="tp for pkmn")
+        type = type or cls.setup_type_data(name="tp for pkmn")
 
         pokemon_type_past = PokemonTypePast(
-            pokemon=pokemon,
-            generation=generation,
-            type=type,
-            slot=slot
+            pokemon=pokemon, generation=generation, type=type, slot=slot
         )
         pokemon_type_past.save()
 
@@ -4767,10 +4763,9 @@ class APITests(APIData, APITestCase):
         pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
-        generation = self.setup_generation_data(name='base gen')
+        generation = self.setup_generation_data(name="base gen")
         pokemon_past_type = self.setup_pokemon_past_type_data(
-            pokemon=pokemon,
-            generation=generation
+            pokemon=pokemon, generation=generation
         )
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
         pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
@@ -4875,17 +4870,25 @@ class APITests(APIData, APITestCase):
         )
         # past type params
         past_types_obj = response.data["past_types"][0]
-        self.assertEqual(past_types_obj["generation"]["name"], pokemon_past_type.generation.name)
+        self.assertEqual(
+            past_types_obj["generation"]["name"], pokemon_past_type.generation.name
+        )
         self.assertEqual(
             past_types_obj["generation"]["url"],
-            "{}{}/generation/{}/".format(TEST_HOST, API_V2, pokemon_past_type.generation.pk))
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_type.generation.pk
+            ),
+        )
 
         past_types_types_obj = past_types_obj["types"][0]
         self.assertEqual(past_types_types_obj["slot"], pokemon_past_type.slot)
-        self.assertEqual(past_types_types_obj["type"]["name"], pokemon_past_type.type.name)
+        self.assertEqual(
+            past_types_types_obj["type"]["name"], pokemon_past_type.type.name
+        )
         self.assertEqual(
             past_types_types_obj["type"]["url"],
-            "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_past_type.type.pk))
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_past_type.type.pk),
+        )
 
         # items params
         self.assertEqual(

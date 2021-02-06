@@ -118,7 +118,11 @@ def scrub_str(string):
         if group[0]:
             sub = group[0]
         else:
-            sub = group[1].split(":")[1]
+            sub = group[1].split(":")
+            if len(sub) >= 2:
+                sub = sub[1]
+            else:
+                sub = sub[0]
             sub = sub.replace("-", " ")
         string = re.sub(SUB_RGX, sub, string, 1)
     return string

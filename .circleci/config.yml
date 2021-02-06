@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run:
           name: Install deps
-          command: sudo make install && sudo make dev-install
+          command: sudo make dev-install
       - run:
           name: Linting
-          command: make lint
+          command: make format-check
       - run:
           name: Run tests
           command: make test

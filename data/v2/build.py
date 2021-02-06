@@ -31,7 +31,7 @@ DB_VENDOR = connection.vendor
 
 
 MEDIA_DIR = "/media/sprites/{0}"
-IMAGE_DIR = os.getcwd() + "/data/v2/sprites/"
+IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []
 
 for root, dirs, files in os.walk(IMAGE_DIR):
@@ -765,9 +765,9 @@ def _build_moves():
             pp=int(info[5]) if info[5] != "" else None,
             accuracy=int(info[6]) if info[6] != "" else None,
             priority=int(info[7]) if info[7] != "" else None,
-            move_target_id=int(info[8]),
-            move_damage_class_id=int(info[9]),
-            move_effect_id=int(info[10]),
+            move_target_id=int(info[8]) if info[8] != "" else None,
+            move_damage_class_id=int(info[9]) if info[9] != "" else None,
+            move_effect_id=int(info[10]) if info[10] != "" else None,
             move_effect_chance=int(info[11]) if info[11] != "" else None,
             contest_type_id=int(info[12]) if info[12] != "" else None,
             contest_effect_id=int(info[13]) if info[13] != "" else None,
@@ -1264,21 +1264,23 @@ def _build_pokemons():
         yield PokemonSpecies(
             id=int(info[0]),
             name=info[1],
-            generation_id=int(info[2]),
+            generation_id=int(info[2]) if info[2] != "" else None,
             evolves_from_species=None,
-            evolution_chain_id=int(info[4]),
-            pokemon_color_id=int(info[5]),
-            pokemon_shape_id=int(info[6]),
+            evolution_chain_id=int(info[4]) if info[4] != "" else None,
+            pokemon_color_id=int(info[5]) if info[5] != "" else None,
+            pokemon_shape_id=int(info[6]) if info[6] != "" else None,
             pokemon_habitat_id=int(info[7]) if info[7] != "" else None,
-            gender_rate=int(info[8]),
-            capture_rate=int(info[9]),
-            base_happiness=int(info[10]),
-            is_baby=bool(int(info[11])),
-            hatch_counter=int(info[12]),
-            has_gender_differences=bool(int(info[13])),
-            growth_rate_id=int(info[14]),
-            forms_switchable=bool(int(info[15])),
-            order=int(info[16]),
+            gender_rate=int(info[8]) if info[8] != "" else None,
+            capture_rate=int(info[9]) if info[9] != "" else None,
+            base_happiness=int(info[10]) if info[10] != "" else None,
+            is_baby=bool(int(info[11])) if info[11] != "" else None,
+            hatch_counter=int(info[12]) if info[12] != "" else None,
+            has_gender_differences=bool(int(info[13])) if info[13] != "" else False,
+            growth_rate_id=int(info[14]) if info[14] != "" else None,
+            forms_switchable=bool(int(info[15])) if info[15] != "" else None,
+            is_legendary=bool(int(info[16])) if info[16] != "" else None,
+            is_mythical=bool(int(info[17])) if info[17] != "" else None,
+            order=int(info[18]) if info[18] != "" else None,
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)
@@ -1336,38 +1338,621 @@ def _build_pokemons():
         yield Pokemon(
             id=int(info[0]),
             name=info[1],
-            pokemon_species_id=int(info[2]),
-            height=int(info[3]),
-            weight=int(info[4]),
-            base_experience=int(info[5]),
-            order=int(info[6]),
-            is_default=bool(int(info[7])),
+            pokemon_species_id=int(info[2]) if info[2] != "" else None,
+            height=int(info[3]) if info[3] != "" else None,
+            weight=int(info[4]) if info[4] != "" else None,
+            base_experience=int(info[5]) if info[5] != "" else None,
+            order=int(info[6]) if info[6] != "" else -1,
+            is_default=bool(int(info[7])) if info[7] != "" else None,
         )
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
-        file_name = "%s.png" % info[0]
+        file_name_png = "%s.png" % info[0]
+        file_name_gif = "%s.gif" % info[0]
+        file_name_svg = "%s.svg" % info[0]
         poke_sprites = "pokemon/{0}"
+        dream_world = "other/dream-world/{0}"
+        official_art = "other/official-artwork/{0}"
+        gen_i = "versions/generation-i/{0}"
+        gen_ii = "versions/generation-ii/{0}"
+        gen_iii = "versions/generation-iii/{0}"
+        gen_iv = "versions/generation-iv/{0}"
+        gen_v = "versions/generation-v/{0}"
+        gen_vi = "versions/generation-vi/{0}"
+        gen_vii = "versions/generation-vii/{0}"
+        gen_viii = "versions/generation-viii/{0}"
         sprites = {
-            "front_default": file_path_or_none(poke_sprites.format(file_name)),
+            "front_default": file_path_or_none(poke_sprites.format(file_name_png)),
             "front_female": file_path_or_none(
-                poke_sprites.format("female/" + file_name)
+                poke_sprites.format("female/" + file_name_png)
             ),
-            "front_shiny": file_path_or_none(poke_sprites.format("shiny/" + file_name)),
+            "front_shiny": file_path_or_none(
+                poke_sprites.format("shiny/" + file_name_png)
+            ),
             "front_shiny_female": file_path_or_none(
-                poke_sprites.format("shiny/female/" + file_name)
+                poke_sprites.format("shiny/female/" + file_name_png)
             ),
-            "back_default": file_path_or_none(poke_sprites.format("back/" + file_name)),
+            "back_default": file_path_or_none(
+                poke_sprites.format("back/" + file_name_png)
+            ),
             "back_female": file_path_or_none(
-                poke_sprites.format("back/female/" + file_name)
+                poke_sprites.format("back/female/" + file_name_png)
             ),
             "back_shiny": file_path_or_none(
-                poke_sprites.format("back/shiny/" + file_name)
+                poke_sprites.format("back/shiny/" + file_name_png)
             ),
             "back_shiny_female": file_path_or_none(
-                poke_sprites.format("back/shiny/female/" + file_name)
+                poke_sprites.format("back/shiny/female/" + file_name_png)
             ),
+            "other": {
+                "dream_world": {
+                    "front_default": file_path_or_none(
+                        poke_sprites.format(dream_world.format(file_name_svg))
+                    ),
+                    "front_female": file_path_or_none(
+                        poke_sprites.format(
+                            dream_world.format("female/" + file_name_svg)
+                        )
+                    ),
+                },
+                "official-artwork": {
+                    "front_default": file_path_or_none(
+                        poke_sprites.format(official_art.format(file_name_png))
+                    )
+                },
+            },
+            "versions": {
+                "generation-i": {
+                    "red-blue": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/" + file_name_png)
+                            )
+                        ),
+                        "front_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/gray/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/back/" + file_name_png)
+                            )
+                        ),
+                        "back_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("red-blue/back/gray/" + file_name_png)
+                            )
+                        ),
+                    },
+                    "yellow": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(gen_i.format("yellow/" + file_name_png))
+                        ),
+                        "front_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/gray/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/back/" + file_name_png)
+                            )
+                        ),
+                        "back_gray": file_path_or_none(
+                            poke_sprites.format(
+                                gen_i.format("yellow/back/gray/" + file_name_png)
+                            )
+                        ),
+                    },
+                },
+                "generation-ii": {
+                    "crystal": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("crystal/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("crystal/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("crystal/back/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("crystal/back/shiny/" + file_name_png)
+                            )
+                        ),
+                    },
+                    "gold": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(gen_ii.format("gold/" + file_name_png))
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("gold/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("gold/back/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("gold/back/shiny/" + file_name_png)
+                            )
+                        ),
+                    },
+                    "silver": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("silver/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("silver/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("silver/back/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_ii.format("silver/back/shiny/" + file_name_png)
+                            )
+                        ),
+                    },
+                },
+                "generation-iii": {
+                    "emerald": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("emerald/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("emerald/shiny/" + file_name_png)
+                            )
+                        ),
+                    },
+                    "firered-leafgreen": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("firered-leafgreen/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format(
+                                    "firered-leafgreen/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format(
+                                    "firered-leafgreen/back/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format(
+                                    "firered-leafgreen/back/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                    "ruby-sapphire": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("ruby-sapphire/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("ruby-sapphire/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format("ruby-sapphire/back/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iii.format(
+                                    "ruby-sapphire/back/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                },
+                "generation-iv": {
+                    "diamond-pearl": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("diamond-pearl/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("diamond-pearl/female/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("diamond-pearl/shiny/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "diamond-pearl/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("diamond-pearl/back/" + file_name_png)
+                            )
+                        ),
+                        "back_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "diamond-pearl/back/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "diamond-pearl/back/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "diamond-pearl/back/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                    "heartgold-soulsilver": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("heartgold-soulsilver/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/back/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/back/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/back/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "heartgold-soulsilver/back/shiny/female/"
+                                    + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                    "platinum": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/female/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/shiny/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/shiny/female/" + file_name_png)
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/back/" + file_name_png)
+                            )
+                        ),
+                        "back_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/back/female/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format("platinum/back/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_iv.format(
+                                    "platinum/back/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                },
+                "generation-v": {
+                    "black-white": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/female/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/shiny/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format(
+                                    "black-white/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "back_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/back/" + file_name_png)
+                            )
+                        ),
+                        "back_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/back/female/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format("black-white/back/shiny/" + file_name_png)
+                            )
+                        ),
+                        "back_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_v.format(
+                                    "black-white/back/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "animated": {
+                            "front_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/female/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "front_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_default": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/" + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                            "back_shiny_female": file_path_or_none(
+                                poke_sprites.format(
+                                    gen_v.format(
+                                        "black-white/animated/back/shiny/female/"
+                                        + file_name_gif
+                                    )
+                                )
+                            ),
+                        },
+                    }
+                },
+                "generation-vi": {
+                    "omegaruby-alphasapphire": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format(
+                                    "omegaruby-alphasapphire/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format(
+                                    "omegaruby-alphasapphire/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format(
+                                    "omegaruby-alphasapphire/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format(
+                                    "omegaruby-alphasapphire/shiny/female/"
+                                    + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                    "x-y": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(gen_vi.format("x-y/" + file_name_png))
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format("x-y/female/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format("x-y/shiny/" + file_name_png)
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vi.format("x-y/shiny/female/" + file_name_png)
+                            )
+                        ),
+                    },
+                },
+                "generation-vii": {
+                    "ultra-sun-ultra-moon": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format("ultra-sun-ultra-moon/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format(
+                                    "ultra-sun-ultra-moon/female/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format(
+                                    "ultra-sun-ultra-moon/shiny/" + file_name_png
+                                )
+                            )
+                        ),
+                        "front_shiny_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format(
+                                    "ultra-sun-ultra-moon/shiny/female/" + file_name_png
+                                )
+                            )
+                        ),
+                    },
+                    "icons": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format("icons/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_vii.format("icons/female/" + file_name_png)
+                            )
+                        ),
+                    },
+                },
+                "generation-viii": {
+                    "icons": {
+                        "front_default": file_path_or_none(
+                            poke_sprites.format(
+                                gen_viii.format("icons/" + file_name_png)
+                            )
+                        ),
+                        "front_female": file_path_or_none(
+                            poke_sprites.format(
+                                gen_viii.format("icons/female/" + file_name_png)
+                            )
+                        ),
+                    }
+                },
+            },
         }
         yield PokemonSprites(
             id=int(info[0]),

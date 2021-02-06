@@ -27,3 +27,4 @@ move_target_id,local_language_id,name,description
 13,9,User and allies,The user and its allies.
 14,6,Jedes Pokémon,Jedes Pokémon auf dem Feld.
 14,9,All Pokémon,Every Pokémon on the field.
+15,9,All allies,All of the user's allies.

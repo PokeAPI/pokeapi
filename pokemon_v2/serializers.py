@@ -2202,6 +2202,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     flavor_text_entries = MoveFlavorTextSerializer(
         many=True, read_only=True, source="moveflavortext"
     )
+    learned_by_pokemon = serializers.SerializerMethodField()
 
     class Meta:
         model = Move
@@ -2229,7 +2230,27 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "type",
             "machines",
             "flavor_text_entries",
+            "learned_by_pokemon",
         )
+
+    def get_learned_by_pokemon(self, obj):
+
+        pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
+
+        pokemon_list = []
+
+        pokemon_ids = pokemon_moves.values("pokemon_id").distinct()
+
+        for id in pokemon_ids:
+
+            pokemon_object = Pokemon.objects.get(pk=id["pokemon_id"])
+            pokemon_data = PokemonSummarySerializer(
+                pokemon_object, context=self.context
+            ).data
+
+            pokemon_list.append(pokemon_data)
+
+        return pokemon_list
 
     def get_move_machines(self, obj):
 
@@ -2750,11 +2771,15 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_data = json.loads(sprites_data["sprites"])
         host = "raw.githubusercontent.com/PokeAPI/sprites/master/"
 
-        for key in sprites_data:
-            if sprites_data[key]:
-                sprites_data[key] = (
-                    "https://" + host + sprites_data[key].replace("/media/", "")
-                )
+        def replace_sprite_url(d):
+            for key, value in d.items():
+                if isinstance(value, dict):
+                    replace_sprite_url(value)
+                else:
+                    if d[key]:
+                        d[key] = "https://" + host + d[key].replace("/media/", "")
+
+        replace_sprite_url(sprites_data)
 
         return sprites_data
 
@@ -3028,6 +3053,8 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "capture_rate",
             "base_happiness",
             "is_baby",
+            "is_legendary",
+            "is_mythical",
             "hatch_counter",
             "has_gender_differences",
             "forms_switchable",

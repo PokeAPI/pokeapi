@@ -3,7 +3,12 @@
 <div align="center">
 	<img height="200" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.svg?sanitize=true" alt="PokeAPI">
 
-[![build status](https://img.shields.io/circleci/project/github/PokeAPI/pokeapi/master.svg)](https://circleci.com/gh/PokeAPI/pokeapi) [![License](https://img.shields.io/github/license/PokeAPI/pokeapi.svg)](https://github.com/PokeAPI/pokeapi/blob/master/LICENSE.rst) [![Backers on Open Collective](https://opencollective.com/pokeapi/backers/badge.svg)](https://opencollective.com/pokeapi) [![Sponsors on Open Collective](https://opencollective.com/pokeapi/sponsors/badge.svg)](https://opencollective.com/pokeapi)
+[![build status](https://img.shields.io/circleci/project/github/PokeAPI/pokeapi/master.svg)](https://circleci.com/gh/PokeAPI/pokeapi)
+[![data status](https://img.shields.io/circleci/build/github/PokeAPI/api-data?label=data)](https://github.com/PokeAPI/api-data)
+[![deploy status](https://img.shields.io/circleci/build/github/PokeAPI/deploy?label=deploy)](https://github.com/PokeAPI/deploy)
+[![License](https://img.shields.io/github/license/PokeAPI/pokeapi.svg)](https://github.com/PokeAPI/pokeapi/blob/master/LICENSE.md)
+[![Backers on Open Collective](https://opencollective.com/pokeapi/backers/badge.svg)](https://opencollective.com/pokeapi)
+[![Sponsors on Open Collective](https://opencollective.com/pokeapi/sponsors/badge.svg)](https://opencollective.com/pokeapi)
 
 <br/>
 
@@ -35,10 +40,12 @@ Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 * Go [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_
 * Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
 * Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
+* Spring Boot [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_
+* Swift [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)
 
 ## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
-- Download this source code into a working directory.
+- Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
 - Install the requirements using pip:
 
@@ -59,7 +66,7 @@ Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
     make serve
     ```
 
-## Database setup
+### Database setup
 
 Start the Django shell by
 
@@ -78,8 +85,6 @@ Visit [localhost:8000/api/v2/](localhost:8000/api/v2/) to see the running API!
 
 Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
-In informal tests on a Windows PC with a SSD and a 2.50 GHz processor, building against a PostgresQL database took approximately 6 minutes, and building against a SQLite database took about 7.5 minutes or longer, with some varying results.
-
 The option to build individual portions of the database was removed in order to increase performance of the build script.
 
 If you ever need to wipe the database use this command:
@@ -88,41 +93,25 @@ If you ever need to wipe the database use this command:
 make wipe_db
 ```
 
-## Docker Compose
+## Docker and Compose
 
 There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allow you to deploy a production-like environment, with separate containers for each services.
 
-Start the process using
+Start everything by simply
 
 ```sh
-docker-compose up --build
+make docker-setup
 ```
 
-You can specify the `-d` switch to start in detached mode.
-This will bind port 80 and 443. Unfortunately, unlike the `docker` command, there is no command line arguments to specify ports. If you want to change them, edit the `docker-compose.yml` file.
-
-After that, start the migration process
+If you don't have `make` on your machine you can use the following commands
 
 ```sh
-docker-compose exec app python manage.py migrate --settings=config.docker-compose
+docker-compose up -d
+docker-compose exec -T app python manage.py migrate --settings=config.docker-compose
+docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
 ```
 
-And then, import the data using the shell
-
-```sh
-docker-compose exec app python manage.py shell --settings=config.docker-compose
-```
-
-Then use the `build_all()` method in the shell to populate the database.
-
-```py
-from data.v2.build import build_all
-build_all()
-```
-
-Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/)
-
-This setup doesn't allow you to use the `scale` command.
+Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
 ## Donations
 
@@ -149,7 +138,7 @@ To contribute to this repository:
 - Download the forked project using git clone:
 
     ```sh
-    git clone git@github.com:<YOUR_USERNAME>/pokeapi.git
+    git clone --recurse-submodules git@github.com:<YOUR_USERNAME>/pokeapi.git
     ```
 
 - Create a new branch with a descriptive name:

@@ -54,9 +54,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -100,9 +98,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -129,9 +125,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -166,9 +160,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -205,9 +197,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -224,9 +214,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -253,9 +241,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -280,9 +266,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -319,9 +303,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -395,9 +377,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -434,9 +414,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -473,9 +451,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -512,9 +488,7 @@ class Migration(migrations.Migration):
                 ("likes_flavor_id", models.IntegerField()),
                 ("game_index", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -542,9 +516,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -564,9 +536,7 @@ class Migration(migrations.Migration):
                 ("is_battle_only", models.BooleanField(default=False)),
                 ("game_index", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -603,9 +573,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -632,10 +600,7 @@ class Migration(migrations.Migration):
             ),
             preserve_default=True,
         ),
-        migrations.RemoveField(
-            model_name="type",
-            name="damage_class_id",
-        ),
+        migrations.RemoveField(model_name="type", name="damage_class_id",),
         migrations.CreateModel(
             name="NatureName",
             fields=[
@@ -670,9 +635,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -698,9 +661,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -726,9 +687,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -765,9 +724,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -784,9 +741,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -823,9 +778,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -843,9 +796,7 @@ class Migration(migrations.Migration):
                 ("name", models.CharField(max_length=30)),
                 ("formula", models.CharField(max_length=500)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -882,9 +833,7 @@ class Migration(migrations.Migration):
                 ),
                 ("description", models.CharField(default="", max_length=1000)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -918,9 +867,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -937,9 +884,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -976,9 +921,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1007,9 +950,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1026,9 +967,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1065,9 +1004,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1118,9 +1055,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1137,9 +1072,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1186,9 +1119,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1214,9 +1145,7 @@ class Migration(migrations.Migration):
                 ("flinch_chance", models.IntegerField()),
                 ("stat_chance", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1233,9 +1162,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1272,9 +1199,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1291,9 +1216,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1330,9 +1253,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1369,9 +1290,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1408,9 +1327,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1427,9 +1344,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=30)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -1466,9 +1381,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -1909,14 +1822,8 @@ class Migration(migrations.Migration):
             field=models.IntegerField(null=True, blank=True),
             preserve_default=True,
         ),
-        migrations.RemoveField(
-            model_name="movemeta",
-            name="drain",
-        ),
-        migrations.RemoveField(
-            model_name="movemeta",
-            name="healing",
-        ),
+        migrations.RemoveField(model_name="movemeta", name="drain",),
+        migrations.RemoveField(model_name="movemeta", name="healing",),
         migrations.AlterField(
             model_name="movemeta",
             name="ailment_chance",
@@ -1977,10 +1884,7 @@ class Migration(migrations.Migration):
             field=models.IntegerField(null=True, blank=True),
             preserve_default=True,
         ),
-        migrations.RemoveField(
-            model_name="stat",
-            name="damage_class_id",
-        ),
+        migrations.RemoveField(model_name="stat", name="damage_class_id",),
         migrations.AddField(
             model_name="stat",
             name="move_damage_class",
@@ -2026,9 +1930,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2062,9 +1964,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2101,9 +2001,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2131,9 +2029,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2150,9 +2046,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2171,9 +2065,7 @@ class Migration(migrations.Migration):
                 ("region_id", models.IntegerField(null=True, blank=True)),
                 ("is_main_series", models.BooleanField(default=False)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2210,9 +2102,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2248,9 +2138,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2272,9 +2160,7 @@ class Migration(migrations.Migration):
                 ("base_experience", models.IntegerField()),
                 ("is_default", models.BooleanField(default=False)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2312,9 +2198,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2331,9 +2215,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2370,9 +2252,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2398,9 +2278,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2425,9 +2303,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2463,9 +2339,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2505,9 +2379,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2544,9 +2416,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2584,9 +2454,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2623,9 +2491,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2642,9 +2508,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2681,9 +2545,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2718,9 +2580,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2768,9 +2628,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2787,9 +2645,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2826,9 +2682,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2845,9 +2699,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2885,9 +2737,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -2975,9 +2825,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3014,9 +2862,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3063,9 +2909,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3103,9 +2947,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3143,9 +2985,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3182,9 +3022,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -3326,8 +3164,7 @@ class Migration(migrations.Migration):
             new_name="baby_evolution_item_id",
         ),
         migrations.RemoveField(
-            model_name="evolutionchain",
-            name="baby_evolution_item_id",
+            model_name="evolutionchain", name="baby_evolution_item_id",
         ),
         migrations.AlterField(
             model_name="abilityflavortext",
@@ -3351,17 +3188,10 @@ class Migration(migrations.Migration):
             new_name="held_item_id",
         ),
         migrations.RemoveField(
-            model_name="pokemonevolution",
-            name="evolution_item_id",
+            model_name="pokemonevolution", name="evolution_item_id",
         ),
-        migrations.RemoveField(
-            model_name="pokemonevolution",
-            name="held_item_id",
-        ),
-        migrations.RemoveField(
-            model_name="pokemonevolution",
-            name="location_id",
-        ),
+        migrations.RemoveField(model_name="pokemonevolution", name="held_item_id",),
+        migrations.RemoveField(model_name="pokemonevolution", name="location_id",),
         migrations.AlterField(
             model_name="pokemonevolution",
             name="min_affection",
@@ -3399,9 +3229,7 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.RenameField(
-            model_name="pokemonform",
-            old_name="is_mega_form_order",
-            new_name="is_mega",
+            model_name="pokemonform", old_name="is_mega_form_order", new_name="is_mega",
         ),
         migrations.AddField(
             model_name="pokemonform",
@@ -3480,9 +3308,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3501,9 +3327,7 @@ class Migration(migrations.Migration):
                 ("cost", models.IntegerField(null=True, blank=True)),
                 ("fling_power", models.IntegerField(null=True, blank=True)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3520,9 +3344,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3559,9 +3381,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3578,9 +3398,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3627,9 +3445,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3683,9 +3499,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3722,9 +3536,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3741,9 +3553,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3780,9 +3590,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -3896,9 +3704,7 @@ class Migration(migrations.Migration):
                 ("soil_dryness", models.IntegerField()),
                 ("smoothness", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3915,9 +3721,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3954,9 +3758,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -3973,9 +3775,7 @@ class Migration(migrations.Migration):
                 ),
                 ("flavor", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4046,9 +3846,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4087,9 +3885,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -4128,9 +3924,7 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.RenameField(
-            model_name="nature",
-            old_name="hates_flavor_id",
-            new_name="hates_flavor",
+            model_name="nature", old_name="hates_flavor_id", new_name="hates_flavor",
         ),
         migrations.AlterField(
             model_name="nature",
@@ -4145,9 +3939,7 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.RenameField(
-            model_name="nature",
-            old_name="likes_flavor_id",
-            new_name="likes_flavor",
+            model_name="nature", old_name="likes_flavor_id", new_name="likes_flavor",
         ),
         migrations.AlterField(
             model_name="nature",
@@ -4175,9 +3967,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4214,19 +4004,11 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
-        migrations.RemoveField(
-            model_name="generation",
-            name="main_region_id",
-        ),
-        migrations.RemoveField(
-            model_name="pokedex",
-            name="region_id",
-        ),
+        migrations.RemoveField(model_name="generation", name="main_region_id",),
+        migrations.RemoveField(model_name="pokedex", name="region_id",),
         migrations.AddField(
             model_name="generation",
             name="region",
@@ -4282,9 +4064,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4311,9 +4091,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4348,9 +4126,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4387,9 +4163,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4426,9 +4200,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4465,9 +4237,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4512,9 +4282,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4531,9 +4299,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4570,9 +4336,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4599,9 +4363,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4672,9 +4434,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4692,9 +4452,7 @@ class Migration(migrations.Migration):
                 ("name", models.CharField(max_length=100)),
                 ("order", models.IntegerField(null=True, blank=True)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4731,9 +4489,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4771,9 +4527,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -4814,9 +4568,7 @@ class Migration(migrations.Migration):
                 ("base_score", models.IntegerField()),
                 ("rate", models.IntegerField()),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4833,9 +4585,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4872,9 +4622,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4891,9 +4639,7 @@ class Migration(migrations.Migration):
                 ),
                 ("name", models.CharField(max_length=100)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -4930,9 +4676,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5451,9 +5195,7 @@ class Migration(migrations.Migration):
             preserve_default=True,
         ),
         migrations.RenameField(
-            model_name="pokemonform",
-            old_name="form_identifier",
-            new_name="form_name",
+            model_name="pokemonform", old_name="form_identifier", new_name="form_name",
         ),
         migrations.AddField(
             model_name="pokemonmove",
@@ -5500,9 +5242,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5539,9 +5279,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5577,9 +5315,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AddField(
@@ -5646,9 +5382,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5684,9 +5418,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5721,9 +5453,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5759,9 +5489,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5798,9 +5526,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5837,9 +5563,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5876,9 +5600,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -5915,9 +5637,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AlterField(
@@ -6002,9 +5722,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6042,9 +5760,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6082,9 +5798,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6121,9 +5835,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6160,9 +5872,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6199,9 +5909,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6238,9 +5946,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.CreateModel(
@@ -6277,9 +5983,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AlterField(
@@ -6399,15 +6103,10 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
-        migrations.RemoveField(
-            model_name="berryflavor",
-            name="flavor",
-        ),
+        migrations.RemoveField(model_name="berryflavor", name="flavor",),
         migrations.AddField(
             model_name="berryflavor",
             name="name",
@@ -6485,9 +6184,7 @@ class Migration(migrations.Migration):
                 ),
                 ("effect", models.CharField(max_length=6000)),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False,},
             bases=(models.Model,),
         ),
         migrations.AlterField(
@@ -6514,18 +6211,9 @@ class Migration(migrations.Migration):
             ),
             preserve_default=True,
         ),
-        migrations.RemoveField(
-            model_name="move",
-            name="contest_effect_id",
-        ),
-        migrations.RemoveField(
-            model_name="move",
-            name="contest_type_id",
-        ),
-        migrations.RemoveField(
-            model_name="move",
-            name="super_contest_effect_id",
-        ),
+        migrations.RemoveField(model_name="move", name="contest_effect_id",),
+        migrations.RemoveField(model_name="move", name="contest_type_id",),
+        migrations.RemoveField(model_name="move", name="super_contest_effect_id",),
         migrations.AddField(
             model_name="move",
             name="contest_effect",

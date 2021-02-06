@@ -17,9 +17,7 @@ class APIData:
     @classmethod
     def setup_gender_data(cls, name="gndr"):
 
-        gender = Gender.objects.create(
-            name=name,
-        )
+        gender = Gender.objects.create(name=name,)
         gender.save()
 
         return gender
@@ -29,11 +27,7 @@ class APIData:
     def setup_language_data(cls, name="lang"):
 
         language = Language.objects.create(
-            iso639="ts",
-            iso3166="tt",
-            name=name,
-            official=True,
-            order=1,
+            iso639="ts", iso3166="tt", name=name, official=True, order=1,
         )
         language.save()
 
@@ -121,10 +115,7 @@ class APIData:
     @classmethod
     def setup_version_data(cls, version_group=None, name="ver"):
 
-        version = Version.objects.create(
-            name=name,
-            version_group=version_group,
-        )
+        version = Version.objects.create(name=name, version_group=version_group,)
         version.save()
 
         return version
@@ -227,9 +218,7 @@ class APIData:
     @classmethod
     def setup_item_attribute_data(cls, name="itm attr"):
 
-        item_attribute = ItemAttribute.objects.create(
-            name=name,
-        )
+        item_attribute = ItemAttribute.objects.create(name=name,)
         item_attribute.save()
 
         return item_attribute
@@ -271,9 +260,7 @@ class APIData:
     @classmethod
     def setup_item_fling_effect_data(cls, name="itm flng efct"):
 
-        item_fling_effect = ItemFlingEffect.objects.create(
-            name=name,
-        )
+        item_fling_effect = ItemFlingEffect.objects.create(name=name,)
         item_fling_effect.save()
 
         return item_fling_effect
@@ -295,9 +282,7 @@ class APIData:
     @classmethod
     def setup_item_pocket_data(cls, name="itm pkt"):
 
-        item_pocket = ItemPocket.objects.create(
-            name=name,
-        )
+        item_pocket = ItemPocket.objects.create(name=name,)
         item_pocket.save()
 
         return item_pocket
@@ -432,9 +417,7 @@ class APIData:
     @classmethod
     def setup_contest_type_data(cls, name="cntst tp"):
 
-        contest_type = ContestType.objects.create(
-            name=name,
-        )
+        contest_type = ContestType.objects.create(name=name,)
         contest_type.save()
 
         return contest_type
@@ -490,9 +473,7 @@ class APIData:
     @classmethod
     def setup_super_contest_effect_data(cls, appeal=2):
 
-        super_contest_effect = SuperContestEffect.objects.create(
-            appeal=appeal,
-        )
+        super_contest_effect = SuperContestEffect.objects.create(appeal=appeal,)
         super_contest_effect.save()
 
         return super_contest_effect
@@ -541,9 +522,7 @@ class APIData:
     @classmethod
     def setup_berry_firmness_data(cls, name="bry frmns"):
 
-        berry_firmness = BerryFirmness.objects.create(
-            name=name,
-        )
+        berry_firmness = BerryFirmness.objects.create(name=name,)
         berry_firmness.save()
 
         return berry_firmness
@@ -611,9 +590,7 @@ class APIData:
     @classmethod
     def setup_egg_group_data(cls, name="egg grp"):
 
-        egg_group = EggGroup.objects.create(
-            name=name,
-        )
+        egg_group = EggGroup.objects.create(name=name,)
         egg_group.save()
 
         return egg_group
@@ -1294,9 +1271,7 @@ class APIData:
     ):
 
         nature_pokeathlon_stat = NaturePokeathlonStat.objects.create(
-            nature=nature,
-            pokeathlon_stat=pokeathlon_stat,
-            max_change=max_change,
+            nature=nature, pokeathlon_stat=pokeathlon_stat, max_change=max_change,
         )
         nature_pokeathlon_stat.save()
 
@@ -1327,10 +1302,7 @@ class APIData:
 
         region = region or cls.setup_region_data(name="rgn for " + name)
 
-        pokedex = Pokedex.objects.create(
-            name=name,
-            region=region,
-        )
+        pokedex = Pokedex.objects.create(name=name, region=region,)
         pokedex.save()
 
         return pokedex
@@ -1377,9 +1349,7 @@ class APIData:
     @classmethod
     def setup_pokemon_habitat_data(cls, name="pkm hbtt"):
 
-        pokemon_habitat = PokemonHabitat.objects.create(
-            name=name,
-        )
+        pokemon_habitat = PokemonHabitat.objects.create(name=name,)
         pokemon_habitat.save()
 
         return pokemon_habitat
@@ -1399,9 +1369,7 @@ class APIData:
     @classmethod
     def setup_pokemon_color_data(cls, name="pkm clr"):
 
-        pokemon_color = PokemonColor.objects.create(
-            name=name,
-        )
+        pokemon_color = PokemonColor.objects.create(name=name,)
         pokemon_color.save()
 
         return pokemon_color
@@ -1421,9 +1389,7 @@ class APIData:
     @classmethod
     def setup_pokemon_shape_data(cls, name="pkm shp"):
 
-        pokemon_shape = PokemonShape.objects.create(
-            name=name,
-        )
+        pokemon_shape = PokemonShape.objects.create(name=name,)
         pokemon_shape.save()
 
         return pokemon_shape
@@ -1799,9 +1765,7 @@ class APIData:
     @classmethod
     def setup_evolution_trigger_data(cls, name="evltn trgr"):
 
-        evolution_trigger = EvolutionTrigger.objects.create(
-            name=name,
-        )
+        evolution_trigger = EvolutionTrigger.objects.create(name=name,)
         evolution_trigger.save()
 
         return evolution_trigger
@@ -3360,10 +3324,8 @@ class APITests(APIData, APITestCase):
     def test_super_contest_effect_api(self):
 
         super_contest_effect = self.setup_super_contest_effect_data(appeal=10)
-        super_contest_effect_flavor_text = (
-            self.setup_super_contest_effect_flavor_text_data(
-                super_contest_effect, flavor_text="base spr cntst efct flvr txt"
-            )
+        super_contest_effect_flavor_text = self.setup_super_contest_effect_flavor_text_data(
+            super_contest_effect, flavor_text="base spr cntst efct flvr txt"
         )
         move = self.setup_move_data(
             name="mv for base spr cntst efct", super_contest_effect=super_contest_effect
@@ -4579,10 +4541,8 @@ class APITests(APIData, APITestCase):
         pokemon_species_name = self.setup_pokemon_species_name_data(
             pokemon_species, name="base pkmn shp name"
         )
-        pokemon_species_form_description = (
-            self.setup_pokemon_species_form_description_data(
-                pokemon_species, description="frm dscr for pkmn spcs"
-            )
+        pokemon_species_form_description = self.setup_pokemon_species_form_description_data(
+            pokemon_species, description="frm dscr for pkmn spcs"
         )
         pokemon_species_flavor_text = self.setup_pokemon_species_flavor_text_data(
             pokemon_species, flavor_text="flvr txt for pkmn spcs"
@@ -5301,14 +5261,11 @@ class APITests(APIData, APITestCase):
         evolution_chain = self.setup_evolution_chain_data()
 
         basic = self.setup_pokemon_species_data(
-            name="wurmple",
-            evolution_chain=evolution_chain,
+            name="wurmple", evolution_chain=evolution_chain,
         )
 
         stage_one_first = self.setup_pokemon_species_data(
-            name="silcoon",
-            evolves_from_species=basic,
-            evolution_chain=evolution_chain,
+            name="silcoon", evolves_from_species=basic, evolution_chain=evolution_chain,
         )
         stage_one_first_evolution = self.setup_pokemon_evolution_data(
             evolved_species=stage_one_first, min_level=7
@@ -5324,9 +5281,7 @@ class APITests(APIData, APITestCase):
         )
 
         stage_one_second = self.setup_pokemon_species_data(
-            name="cascoon",
-            evolves_from_species=basic,
-            evolution_chain=evolution_chain,
+            name="cascoon", evolves_from_species=basic, evolution_chain=evolution_chain,
         )
         stage_one_second_evolution = self.setup_pokemon_evolution_data(
             evolved_species=stage_one_second, min_level=7

@@ -1354,15 +1354,15 @@ def _build_pokemons():
         identifier = info[1]
         species_id = info[2]
         if "-" in identifier:
-            file_name_str = "%s.%s" % (
+            form_file_name = "%s.%s" % (
                 species_id + "-" + identifier.split("-", 1)[1],
                 extension,
             )
-            file_name_int = "%s.%s" % (pokemon_id, extension)
+            id_file_name = "%s.%s" % (pokemon_id, extension)
             file_name = (
-                file_name_int
-                if file_path_or_none(path + file_name_int)
-                else file_name_str
+                id_file_name
+                if file_path_or_none(path + id_file_name)
+                else form_file_name
             )
         else:
             file_name = "%s.%s" % (info[0], extension)
@@ -1908,15 +1908,15 @@ def _build_pokemons():
         species_id = getattr(pokemon, "pokemon_species_id")
         is_default = int(info[5])
         if form_identifier:
-            file_name_str = "%s-%s.%s" % (species_id, form_identifier, extension)
-            file_name_int = "%s.%s" % (pokemon_id, extension)
+            form_file_name = "%s-%s.%s" % (species_id, form_identifier, extension)
+            id_file_name = "%s.%s" % (pokemon_id, extension)
             file_name = (
-                file_name_int
-                if file_path_or_none(path + file_name_int)
-                else file_name_str
+                id_file_name
+                if file_path_or_none(path + id_file_name)
+                else form_file_name
             )
-            if file_name_int and file_name_str and (not is_default):
-                file_name = file_name_str
+            if id_file_name and form_file_name and (not is_default):
+                file_name = form_file_name
         else:
             file_name = "%s.%s" % (species_id, extension)
         return file_path_or_none(path + file_name)

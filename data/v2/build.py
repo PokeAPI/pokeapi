@@ -1906,6 +1906,7 @@ def _build_pokemons():
         pokemon_id = info[3]
         pokemon = Pokemon.objects.get(pk=int(pokemon_id))
         species_id = getattr(pokemon, "pokemon_species_id")
+        is_default = int(info[5])
         if form_identifier:
             file_name_str = "%s-%s.%s" % (species_id, form_identifier, extension)
             file_name_int = "%s.%s" % (pokemon_id, extension)
@@ -1914,6 +1915,8 @@ def _build_pokemons():
                 if file_path_or_none(path + file_name_int)
                 else file_name_str
             )
+            if file_name_int and file_name_str and (not is_default):
+                file_name = file_name_str
         else:
             file_name = "%s.%s" % (species_id, extension)
         return file_path_or_none(path + file_name)

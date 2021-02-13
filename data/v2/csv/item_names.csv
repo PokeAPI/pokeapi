@@ -2194,7 +2194,7 @@ item_id,local_language_id,name
 225,1,まがったスプーン
 225,3,휘어진스푼
 225,4,彎曲的湯匙
-225,5,Cuiller Tordue
+225,5,Cuillère Tordue
 225,6,Krummlöffel
 225,7,Cuchara Torcida
 225,8,Cucchiaio Torto
@@ -2304,7 +2304,7 @@ item_id,local_language_id,name
 236,1,ながねぎ
 236,3,대파
 236,4,大蔥
-236,5,Bâton
+236,5,Poireau
 236,6,Lauchstange
 236,7,Palo
 236,8,Gambo
@@ -2604,7 +2604,7 @@ item_id,local_language_id,name
 266,1,パワーリスト
 266,3,파워리스트
 266,4,力量護腕
-266,5,Poignée Pouvoir
+266,5,Poignet Pouvoir
 266,6,Machtreif
 266,7,Brazal Recio
 266,8,Vigorcerchio
@@ -5843,7 +5843,7 @@ item_id,local_language_id,name
 606,1,たいりょくのハネ
 606,3,체력날개
 606,4,體力之羽
-606,5,Aile Santé
+606,5,Plume Santé
 606,6,Heilfeder
 606,7,Pluma Vigor
 606,8,Piumsalute
@@ -5853,7 +5853,7 @@ item_id,local_language_id,name
 607,1,きんりょくのハネ
 607,3,근력날개
 607,4,肌力之羽
-607,5,Aile Force
+607,5,Plume Force
 607,6,Kraftfeder
 607,7,Pluma Músculo
 607,8,Piumpotenza
@@ -5863,7 +5863,7 @@ item_id,local_language_id,name
 608,1,ていこうのハネ
 608,3,저항력날개
 608,4,抵抗之羽
-608,5,Aile Armure
+608,5,Plume Armure
 608,6,Abwehrfeder
 608,7,Pluma Aguante
 608,8,Piumtutela
@@ -5873,7 +5873,7 @@ item_id,local_language_id,name
 609,1,ちりょくのハネ
 609,3,지력날개
 609,4,智力之羽
-609,5,Aile Esprit
+609,5,Plume Esprit
 609,6,Geniefeder
 609,7,Pluma Intelecto
 609,8,Piumingegno
@@ -5883,7 +5883,7 @@ item_id,local_language_id,name
 610,1,せいしんのハネ
 610,3,정신력날개
 610,4,精神之羽
-610,5,Aile Mental
+610,5,Plume Mental
 610,6,Espritfeder
 610,7,Pluma Mente
 610,8,Piumintuito
@@ -5893,7 +5893,7 @@ item_id,local_language_id,name
 611,1,しゅんぱつのハネ
 611,3,순발력날개
 611,4,瞬發之羽
-611,5,Aile Sprint
+611,5,Plume Sprint
 611,6,Flinkfeder
 611,7,Pluma Ímpetu
 611,8,Piumreazione
@@ -5903,7 +5903,7 @@ item_id,local_language_id,name
 612,1,きれいなハネ
 612,3,고운날개
 612,4,美麗之羽
-612,5,Jolie Aile
+612,5,Jolie Plume
 612,6,Prachtfeder
 612,7,Pluma Bella
 612,8,Piumabella

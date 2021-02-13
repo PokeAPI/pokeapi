@@ -1627,15 +1627,19 @@ class PokemonSpecies(
         on_delete=models.CASCADE,
     )
 
-    gender_rate = models.IntegerField()
+    gender_rate = models.IntegerField(blank=True, null=True)
 
-    capture_rate = models.IntegerField()
+    capture_rate = models.IntegerField(blank=True, null=True)
 
-    base_happiness = models.IntegerField()
+    base_happiness = models.IntegerField(blank=True, null=True)
 
     is_baby = models.BooleanField(default=False)
 
-    hatch_counter = models.IntegerField()
+    is_legendary = models.BooleanField(default=False)
+
+    is_mythical = models.BooleanField(default=False)
+
+    hatch_counter = models.IntegerField(blank=True, null=True)
 
     has_gender_differences = models.BooleanField(default=False)
 
@@ -1657,11 +1661,11 @@ class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
 
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
 
-    height = models.IntegerField()
+    height = models.IntegerField(blank=True, null=True)
 
-    weight = models.IntegerField()
+    weight = models.IntegerField(blank=True, null=True)
 
-    base_experience = models.IntegerField()
+    base_experience = models.IntegerField(blank=True, null=True)
 
     is_default = models.BooleanField(default=False)
 
@@ -1788,7 +1792,7 @@ class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
 
 class PokemonFormName(HasPokemonForm, IsName):
 
-    pokemon_name = models.CharField(max_length=30)
+    pokemon_name = models.CharField(max_length=60)
 
 
 class PokemonFormSprites(HasPokemonForm):
@@ -1873,6 +1877,12 @@ class PokemonFormType(HasPokemonForm, HasType):
     slot = models.IntegerField()
 
 
+# model for a Pokemon's types that were used until a given generation
+class PokemonTypePast(HasPokemon, HasType, HasGeneration):
+
+    slot = models.IntegerField()
+
+
 class PokemonSprites(HasPokemon):
 
-    sprites = models.CharField(max_length=500)
+    sprites = models.CharField(max_length=20000)

@@ -1,4 +1,4 @@
-version: '2'
+version: '2.4'
 services:
   cache:
     image: redis:alpine

@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 
 jobs:
   test:
@@ -7,17 +7,60 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote
+      - run:
           name: Install deps
-          command: sudo make install && sudo make dev-install
+          command: sudo make dev-install
       - run:
           name: Linting
-          command: make lint
+          command: make format-check
       - run:
           name: Run tests
           command: make test
 
+  deploy:
+    machine:
+      image: ubuntu-1604:201903-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
+    steps:
+      - checkout
+      - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote
+      - add_ssh_keys:
+          fingerprints:
+            - "d3:5f:9d:68:ea:12:9a:42:d3:d3:e1:db:b0:6a:fc:d2"
+      - run:
+          name: Generate new data, push to PokeAPI/api-data's staging branch, if master open a Pull Request towards PokeAPI/api-data's master branch
+          command: bash -x Resources/scripts/updater.sh
+
 workflows:
   version: 2
-  test:
+  test-and-deploy:
     jobs:
       - test
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: 
+                - master
+                - staging
+  weekly:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+    triggers:
+      - schedule:
+          cron: "0 0 * * 1"
+          filters:
+            branches:
+              only:
+                - staging

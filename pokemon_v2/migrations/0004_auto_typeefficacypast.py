@@ -7,31 +7,78 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0003_auto_20160530_1132'),
+        ("pokemon_v2", "0003_auto_20160530_1132"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='TypeEfficacyPast',
+            name="TypeEfficacyPast",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('damage_factor', models.IntegerField()),
-                ('damage_type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacypast_damage_type', to='pokemon_v2.Type')),
-                ('generation', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacypast', to='pokemon_v2.Generation')),
-                ('target_type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacypast_target_type', to='pokemon_v2.Type')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("damage_factor", models.IntegerField()),
+                (
+                    "damage_type",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="typeefficacypast_damage_type",
+                        to="pokemon_v2.Type",
+                    ),
+                ),
+                (
+                    "generation",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="typeefficacypast",
+                        to="pokemon_v2.Generation",
+                    ),
+                ),
+                (
+                    "target_type",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="typeefficacypast_target_type",
+                        to="pokemon_v2.Type",
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.AlterField(
-            model_name='typeefficacy',
-            name='damage_type',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacy_damage_type', to='pokemon_v2.Type'),
+            model_name="typeefficacy",
+            name="damage_type",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="typeefficacy_damage_type",
+                to="pokemon_v2.Type",
+            ),
         ),
         migrations.AlterField(
-            model_name='typeefficacy',
-            name='target_type',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacy_target_type', to='pokemon_v2.Type'),
+            model_name="typeefficacy",
+            name="target_type",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="typeefficacy_target_type",
+                to="pokemon_v2.Type",
+            ),
         ),
     ]

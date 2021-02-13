@@ -1,36 +1,51 @@
 generation_id,local_language_id,name
-1,1,だいいっせだい
+1,1,だいいちせだい
+1,3,1세대
 1,5,Génération I
 1,6,Generation I
+1,7,Generación I
 1,9,Generation I
 1,11,第一世代
 2,1,だいにせだい
+2,3,2세대
 2,5,Génération II
 2,6,Generation II
+2,7,Generación II
 2,9,Generation II
 2,11,第二世代
 3,1,だいさんせだい
+3,3,3세대
 3,5,Génération III
 3,6,Generation III
+3,7,Generación III
 3,9,Generation III
 3,11,第三世代
 4,1,だいよんせだい
+4,3,4세대
 4,5,Génération IV
 4,6,Generation IV
+4,7,Generación IV
 4,9,Generation IV
 4,11,第四世代
 5,1,だいごせだい
+5,3,5세대
 5,5,Génération V
 5,6,Generation V
+5,7,Generación V
 5,9,Generation V
 5,11,第五世代
 6,1,だいろくせだい
+6,3,6세대
 6,5,Génération VI
 6,6,Generation VI
+6,7,Generación VI
 6,9,Generation VI
 6,11,第六世代
 7,1,だいななせだい
+7,3,7세대
 7,5,Génération VII
 7,6,Generation VII
+7,7,Generación VII
 7,9,Generation VII
 7,11,第七世代
+8,9,Generation VIII

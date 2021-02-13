@@ -398,7 +398,7 @@ Super contest effects refer to the effects of moves when used in super contests.
 
 #### SuperContestEffect
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | id                  | The identifier for this super contest effect resource                      | integer |
 | appeal              | The level of appeal this super contest effect has                          | string |
@@ -795,7 +795,7 @@ A Pokédex is a handheld electronic encyclopedia device; one which is capable of
 
 
 ## Versions
-Versions of the games, e.g., Red, Blue or Yellow. 
+Versions of the games, e.g., Red, Blue or Yellow.
 
 ### GET api/v2/version/{id or name}
 
@@ -833,7 +833,7 @@ Versions of the games, e.g., Red, Blue or Yellow.
 
 
 ## Version Groups
-Version groups categorize highly similar versions of the games. 
+Version groups categorize highly similar versions of the games.
 
 ### GET api/v2/version-group/{id or name}
 
@@ -1114,7 +1114,7 @@ The various effects of the move "Fling" when used with different items.
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| id             | The identifier for this fling effect resource                 | integer | 
+| id             | The identifier for this fling effect resource                 | integer |
 | name           | The name for this fling effect resource                       | string |
 | effect_entries | The result of this fling effect listed in different languages | list [Effect](#effect) |
 | items          | A list of items that have this fling effect                   | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
@@ -1290,7 +1290,7 @@ Moves are the skills of pokémon in battle.  In battle, a Pokémon uses one move
 | type           | The elemental type of this move                                                                                                                                           | [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 
 #### ContestComboSets
- 
+
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | normal | A detail of moves this move can be used before or after, granting additional appeal points in contests       | list [ContestComboDetail](#contestcombodetail) |
@@ -1300,7 +1300,7 @@ Moves are the skills of pokémon in battle.  In battle, a Pokémon uses one move
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) | 
+| use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | use_after  | A list of moves to use after this move  | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 
 #### MoveMetaData
@@ -1918,7 +1918,7 @@ Abilities provide passive effects for pokémon in battle or in the overworld. Po
 | effect_entries | The previous effect of this ability listed in different languages         | [Effect](#effect) |
 | version_group  | The version group in which the previous effect of this ability originated | [NamedAPIResource](#namedapiresource) ([VersionGroup](#versiongroups)) |
 
-#### AbilityFlavorText 
+#### AbilityFlavorText
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
@@ -2013,7 +2013,7 @@ Egg Groups are categories which determine which Pokémon are able to interbreed.
 
 
 ## Genders
-Genders were introduced in Generation II for the purposes of breeding pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail. 
+Genders were introduced in Generation II for the purposes of breeding pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.
 
 ### GET api/v2/gender/{id or name}
 
@@ -2059,7 +2059,7 @@ Genders were introduced in Generation II for the purposes of breeding pokémon b
 
 
 ## Growth Rates
-Growth rates are the speed with which pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail. 
+Growth rates are the speed with which pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.
 
 ### GET api/v2/growth-rate/{id or name}
 
@@ -2169,7 +2169,7 @@ Natures influence how a pokémon's stats grow. See [Bulbapedia](http://bulbapedi
 | ---- | ----------- | --------- |
 | id                            | The identifier for this nature resource                                                                               | integer |
 | name                          | The name for this nature resource                                                                                     | string  |
-| decreased_stat                | The stat decreased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
+| decreased_stat                | The stat decreased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | increased_stat                | The stat increased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | hates_flavor                  | The flavor hated by pokémon with this nature                                                                          | [NamedAPIResource](#namedapiresource) ([BerryFlavor](#berry-flavors)) |
 | likes_flavor                  | The flavor liked by pokémon with this nature                                                                          | [NamedAPIResource](#namedapiresource) ([BerryFlavor](#berry-flavors)) |
@@ -2380,7 +2380,7 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions            | list [LocationAreaEncounter](#locationareaencounter) |
 | moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | species                  | The species this pokémon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
-| stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
+| stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | types                    | A list of details showing types this pokémon has                                                 | list [PokemonType](#pokemontype) |
 | past_types               | A list of details showing types this pokémon had in previous generations                         | list [PokemonTypePast](#pokemontypepast) |
 
@@ -2539,7 +2539,7 @@ Habitats are generally different terrain pokémon can be found in but can also b
 
 
 ## Pokémon Shapes
-Shapes used for sorting pokémon in a pokédex. 
+Shapes used for sorting pokémon in a pokédex.
 
 ### GET api/v2/pokemon-shape/{id or name}
 
@@ -2597,7 +2597,7 @@ Shapes used for sorting pokémon in a pokédex.
 
 
 ## Pokémon Species
-A Pokémon Species forms the basis for at least one pokémon. Attributes of a Pokémon species are shared across all varieties of pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.  
+A Pokémon Species forms the basis for at least one pokémon. Attributes of a Pokémon species are shared across all varieties of pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
 
 ### GET api/v2/pokemon-species/{id or name}
 
@@ -2685,9 +2685,9 @@ A Pokémon Species forms the basis for at least one pokémon. Attributes of a Po
 
 #### PokemonSpecies
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| id                     | The identifier for this pokémon species resource                                                                                                   | integer | 
+| id                     | The identifier for this pokémon species resource                                                                                                   | integer |
 | name                   | The name for this pokémon species resource                                                                                                         | string |
 | order                  | The order in which species should be sorted.  Based on National Dex order, except families are grouped together and sorted by stage.               | integer |
 | gender_rate            | The chance of this Pokémon being female, in eighths; or -1 for genderless                                                                          | integer |
@@ -2847,99 +2847,133 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 
 ```json
 {
-	"id": 8,
-	"name": "ghost",
-	"damage_relations": {
-		"no_damage_to": [{
-			"name": "normal",
-			"url": "http://pokeapi.co/api/v2/type/1/"
-		}],
-		"half_damage_to": [{
-			"name": "dark",
-			"url": "http://pokeapi.co/api/v2/type/17/"
-		}],
-		"double_damage_to": [{
-			"name": "ghost",
-			"url": "http://pokeapi.co/api/v2/type/8/"
-		}],
-		"no_damage_from": [{
-			"name": "normal",
-			"url": "http://pokeapi.co/api/v2/type/1/"
-		}],
-		"half_damage_from": [{
-			"name": "poison",
-			"url": "http://pokeapi.co/api/v2/type/4/"
-		}],
-		"double_damage_from": [{
-			"name": "ghost",
-			"url": "http://pokeapi.co/api/v2/type/8/"
-		}]
-	},
-	"past_damage_relations": [{
-		"generation": {
-			"name": "generation-v",
-			"url": "http://pokeapi.co/api/v2/generation/5/"
-		},
-		"damage_relations": {
-			"no_damage_to": [{
-				"name": "normal",
-				"url": "http://pokeapi.co/api/v2/type/1/"
-			}],
-			"half_damage_to": [{
-				"name": "steel",
-				"url": "http://pokeapi.co/api/v2/type/9/"
-			}],
-			"double_damage_to": [{
-				"name": "ghost",
-				"url": "http://pokeapi.co/api/v2/type/8/"
-			}],
-			"no_damage_from": [{
-				"name": "normal",
-				"url": "http://pokeapi.co/api/v2/type/1/"
-			}],
-			"half_damage_from": [{
-				"name": "poison",
-				"url": "http://pokeapi.co/api/v2/type/4/"
-			}],
-			"double_damage_from": [{
-				"name": "ghost",
-				"url": "http://pokeapi.co/api/v2/type/8/"
-			}]
-		}
-	}],
-	"game_indices": [{
-		"game_index": 8,
-		"generation": {
-			"name": "generation-i",
-			"url": "http://pokeapi.co/api/v2/generation/1/"
-		}
-	}],
-	"generation": {
-		"name": "generation-i",
-		"url": "http://pokeapi.co/api/v2/generation/1/"
-	},
-	"move_damage_class": {
-		"name": "physical",
-		"url": "http://pokeapi.co/api/v2/move-damage-class/2/"
-	},
-	"names": [{
-		"name": "ゴースト",
-		"language": {
-			"name": "ja-Hrkt",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}],
-	"pokemon": [{
-		"slot": 1,
-		"pokemon": {
-			"name": "gastly",
-			"url": "http://pokeapi.co/api/v2/pokemon/92/"
-		}
-	}],
-	"moves": [{
-		"name": "night-shade",
-		"url": "http://pokeapi.co/api/v2/move/101/"
-	}]
+    "id": 8,
+    "name": "ghost",
+    "damage_relations": {
+        "no_damage_to": [
+            {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+            }
+        ],
+        "half_damage_to": [
+            {
+                "name": "dark",
+                "url": "https://pokeapi.co/api/v2/type/17/"
+            }
+        ],
+        "double_damage_to": [
+            {
+                "name": "ghost",
+                "url": "https://pokeapi.co/api/v2/type/8/"
+            }
+        ],
+        "no_damage_from": [
+            {
+                "name": "normal",
+                "url": "https://pokeapi.co/api/v2/type/1/"
+            }
+        ],
+        "half_damage_from": [
+            {
+                "name": "poison",
+                "url": "https://pokeapi.co/api/v2/type/4/"
+            }
+        ],
+        "double_damage_from": [
+            {
+                "name": "ghost",
+                "url": "https://pokeapi.co/api/v2/type/8/"
+            }
+        ]
+    },
+    "past_damage_relations": [
+        {
+            "generation": {
+                "name": "generation-v",
+                "url": "https://pokeapi.co/api/v2/generation/5/"
+            },
+            "damage_relations": {
+                "no_damage_to": [
+                    {
+                        "name": "normal",
+                        "url": "https://pokeapi.co/api/v2/type/1/"
+                    }
+                ],
+                "half_damage_to": [
+                    {
+                        "name": "steel",
+                        "url": "https://pokeapi.co/api/v2/type/9/"
+                    }
+                ],
+                "double_damage_to": [
+                    {
+                        "name": "ghost",
+                        "url": "https://pokeapi.co/api/v2/type/8/"
+                    }
+                ],
+                "no_damage_from": [
+                    {
+                        "name": "normal",
+                        "url": "https://pokeapi.co/api/v2/type/1/"
+                    }
+                ],
+                "half_damage_from": [
+                    {
+                        "name": "poison",
+                        "url": "https://pokeapi.co/api/v2/type/4/"
+                    }
+                ],
+                "double_damage_from": [
+                    {
+                        "name": "ghost",
+                        "url": "https://pokeapi.co/api/v2/type/8/"
+                    }
+                ]
+            }
+        }
+    ],
+    "game_indices": [
+        {
+            "game_index": 8,
+            "generation": {
+                "name": "generation-i",
+                "url": "https://pokeapi.co/api/v2/generation/1/"
+            }
+        }
+    ],
+    "generation": {
+        "name": "generation-i",
+        "url": "https://pokeapi.co/api/v2/generation/1/"
+    },
+    "move_damage_class": {
+        "name": "physical",
+        "url": "https://pokeapi.co/api/v2/move-damage-class/2/"
+    },
+    "names": [
+        {
+            "name": "ゴースト",
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            }
+        }
+    ],
+    "pokemon": [
+        {
+            "slot": 1,
+            "pokemon": {
+                "name": "gastly",
+                "url": "https://pokeapi.co/api/v2/pokemon/92/"
+            }
+        }
+    ],
+    "moves": [
+        {
+            "name": "night-shade",
+            "url": "https://pokeapi.co/api/v2/move/101/"
+        }
+    ]
 }
 ```
 
@@ -2969,7 +3003,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 
 #### TypeRelations
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | no_damage_to       | A list of types this type has no effect on                    | list [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 | half_damage_to     | A list of types this type is not very effect against          | list [NamedAPIResource](#namedapiresource) ([Type](#types)) |
@@ -3038,7 +3072,7 @@ Languages for translations of api resource information.
 
 #### Description
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | description | The localized description for an api resource in a specific language | string |
 | language    | The language this description is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
@@ -3088,7 +3122,7 @@ Languages for translations of api resource information.
 
 #### NamedAPIResource
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | name | The name of the referenced resource | string |
 | url  | The url of the referenced resource  | string |

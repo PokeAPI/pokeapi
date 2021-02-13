@@ -2467,17 +2467,17 @@ Some pokémon have the ability to take on different forms. At times, these diffe
 
 ```json
 {
-    "id": 10036,
-    "name": "wormadam-sandy",
-    "order": 555,
-    "form_order": 2,
-    "is_default": true,
+    "id": 10041,
+    "name": "arceus-bug",
+    "order": 631,
+    "form_order": 7,
+    "is_default": false,
     "is_battle_only": false,
     "is_mega": false,
-    "form_name": "sandy",
+    "form_name": "bug",
     "pokemon": {
-        "name": "wormadam-sandy",
-        "url": "https://pokeapi.co/api/v2/pokemon/10004/"
+        "name": "arceus",
+        "url": "https://pokeapi.co/api/v2/pokemon/493/"
     },
     "version_group": {
         "name": "diamond-pearl",
@@ -2489,13 +2489,6 @@ Some pokémon have the ability to take on different forms. At times, these diffe
             "type": {
                 "name": "bug",
                 "url": "https://pokeapi.co/api/v2/type/7/"
-            }
-        },
-        {
-            "slot": 2,
-            "type": {
-                "name": "ground",
-                "url": "https://pokeapi.co/api/v2/type/5/"
             }
         }
     ]

@@ -2476,7 +2476,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     sprites = serializers.SerializerMethodField("get_pokemon_form_sprites")
     form_names = serializers.SerializerMethodField("get_pokemon_form_names")
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
-    types = serializers.SerializerMethodField('get_pokemon_form_types')
+    types = serializers.SerializerMethodField("get_pokemon_form_types")
 
     class Meta:
         model = PokemonForm

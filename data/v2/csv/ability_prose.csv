@@ -1085,13 +1085,13 @@ When this Pokémon enters battle, all participating trainers are notified that i
 This ability functions identically to []{ability:mold-breaker} and []{ability:turboblaze}."
 165,6,Schützt Verbündete vor mentalen Attacken.,"Pokémon sind vor mentalen Attacken wie []{move:attract}, []{move:disable}, []{move:taunt} oder []{move:encore} geschützt, solange sich ein Pokémon mit dieser Fähigkeit im Team befindet. Das gilt auch, für das Pokémon selbst."
 165,9,Protects allies against moves that affect their mental state.,Protects allies against moves that affect their mental state.
-166,6,Beschützt verbündete []{type:grass} Pokémon for negativen [Statuswerteänderungenen]{mechanic:stat-modifier}.,"[]{type:grass} Pokémon können durch Gegner keine negativen []{stat-modifier} erleiden, solange sich ein Pokémon mit dieser Fähigkeit im Team befindet.
+166,6,Beschützt verbündete []{type:grass} Pokémon for negativen [Statuswerteänderungenen]{mechanic:stat-modifier}.,"[]{type:grass} Pokémon können durch Gegner keine negativen []{mechanic:stat-modifier} erleiden, solange sich ein Pokémon mit dieser Fähigkeit im Team befindet.
 
-Das betrifft nur direkte [Statuswerteänderungenen]{stat-modifier}, der []{mechanic:speed} Malus von []{mechanic:paralysis} wird nicht verhindert, genauso wie selbstverursachte [Statuswerteänderungenen]{stat-modifier} wie z.B. durch []{move:leaf-storm}."
+Das betrifft nur direkte [Statuswerteänderungenen]{mechanic:stat-modifier}, der []{mechanic:speed} Malus von []{mechanic:paralysis} wird nicht verhindert, genauso wie selbstverursachte [Statuswerteänderungenen]{mechanic:stat-modifier} wie z.B. durch []{move:leaf-storm}."
 166,9,Protects friendly []{type:grass} Pokémon from having their stats lowered by other Pokémon.,Protects friendly []{type:grass} Pokémon from having their stats lowered by other Pokémon.
 167,6,Stellt zusätzlich zum eigentlichen Effekt einer Beere zusätzliche []{mechanic:hp} wieder her.,"Wenn ein Pokémon mit dieser Fähigkeit eine Beere isst, stellt es 1/3 seiner maximalen []{mechanic:hp} wieder her, zusätzlich zum eigentlichen Effekt der Beere.
 
-Die Fähigkeit wirkt auch, wenn das Pokémon die Beere durch []{move:fling}, []{bug-bite} oder []{move:pluck} erhalten hat, solange es von der Beere profitiert.
+Die Fähigkeit wirkt auch, wenn das Pokémon die Beere durch []{move:fling}, []{move:bug-bite} oder []{move:pluck} erhalten hat, solange es von der Beere profitiert.
 
 Die Fähigkeit wirkt nicht, wenn die Beere mit []{move:natural-gift} verbraucht wird."
 167,9,"Restores HP upon eating a Berry, in addition to the Berry's effect.","Restores HP upon eating a Berry, in addition to the Berry's effect."
@@ -1101,7 +1101,7 @@ Die Typumwandlung erfolgt unmittelbar vor dem Einsatz der Attacke, der Anwender 
 
 Wenn der Typ der Attacke geändert wird, zum Beispiel weil die Attacke eine andere Attacke benutzt, wie []{move:nature-power}, weil die Attacke selbst ihren Typ ändern kann oder weil der Typ der Attacke vom Gegner verändert wird, wie z.B. durch []{move:electrify} oder []{move:ion-deluge}, dann wird der geänderte Typ herangezogen. Wenn eine Attacke eingesetzt wird, die den Typ des Anwenders ändert, wie []{move:camouflage}, dann löst zuerst die Fähigkeit aus und ändert den Typ des Anwenders in den der Attacke, danach wird die Attacke entweder fehlschlagen oder den Typ des Anwenders wieder ändern. Wird []{move:curse} eingesetzt und der Anwender ist nicht bereits vom Typ []{type:ghost} wird er zum Typ []{type:ghost}.
 
-Die Fähigkeit löst nicht aus, wenn die Attacke fehlschlägt, außer sie geht wegen der Fähigkeit selbst daneben, wenn die Ausführung unterbrochen wird, z.B. durch []{mechanic:confusion}, wenn die Attacke verhindert wird (durch []{mechanic:rain} oder durch []{move:powder}). Die Fähigkeit löst trotzdem aus, wenn die Attacke daneben geht, blockiert wird (durch []{move:shield} oder ähnliches) oder keine Wirkung auf den Gegner hat.
+Die Fähigkeit löst nicht aus, wenn die Attacke fehlschlägt, außer sie geht wegen der Fähigkeit selbst daneben, wenn die Ausführung unterbrochen wird, z.B. durch []{mechanic:confusion}, wenn die Attacke verhindert wird (durch []{mechanic:rain} oder durch []{move:powder}). Die Fähigkeit löst trotzdem aus, wenn die Attacke daneben geht, blockiert wird (durch []{move:protect} oder ähnliches) oder keine Wirkung auf den Gegner hat.
 
 []{move:struggle} ist nicht betroffen."
 168,9,Changes the bearer's type to match each move it uses.,"Changes the bearer's type to match each move it uses.
@@ -1159,7 +1159,7 @@ Die Fähigkeit löst nicht aus, wenn das Item nur bewegt wird, beispielsweise du
 187,9,Strengthens []{type:fairy} moves to 1.33× their power for all friendly and opposing Pokémon.,Strengthens []{type:fairy} moves for all friendly and opposing Pokémon.
 188,6,Schwächt die von []{ability:dark-aura} und []{ability:fairy-aura} gestärkten Attacken.,"Wenn sich ein Pokémon mit dieser Fähigkeit im Kampf befindet, werden die Attacken die normalerweise durch []{ability:dark-aura} und []{ability:fairy-aura} verstärkt werden, stattdessen um 2/3 Basisstärke gesenkt."
 188,9,Makes []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types.,"While this Pokémon is on the field, []{ability:dark-aura} and []{ability:fairy-aura} weaken moves of their respective types to 2/3 their power, rather than strengthening them."
-189,6,Ändert beim Betreten des Kampfes das []{mechanic:weather} in heftigen []{mechanic:rain} und verhindert []{type:fire} Attacken.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, ändert sich das []{mechanic:weather} in heftigen []{mechanic:rain}. Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drought} noch durch Attacken wie [move:sandstorm] geändert werden und solche Attacken schlagen fehl.
+189,6,Ändert beim Betreten des Kampfes das []{mechanic:weather} in heftigen []{mechanic:rain} und verhindert []{type:fire} Attacken.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, ändert sich das []{mechanic:weather} in heftigen []{mechanic:rain}. Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drought} noch durch Attacken wie []{move:sandstorm} geändert werden und solche Attacken schlagen fehl.
 
 Der []{mechanic:rain} hört auf, wenn das Pokémon mit dieser Fähigkeit den Kampf verlässt oder in eine hintere Position rotiert wird und kein Anderes mit derselben Fähigkeit noch im Kampf ist, wenn die Fähigkeit deaktiviert wird oder ein Pokémon mit der Fähigkeit []{ability:delta-stream} oder []{ability:desolate-land} den Kampf betritt. Die [Wettereffekte]{mechanic:weather} können durch Fähigkeiten wie []{ability:cloud-nine} aufgehoben werden."
 189,9,"Creates heavy rain, which has all the properties of Rain Dance, cannot be replaced, and causes damaging Fire moves to fail.","When this Pokémon enters battle or gains this ability, the weather becomes heavy rain.  Heavy rain has all the properties of []{move:rain-dance} and also causes damaging Fire moves to fail.
@@ -1167,7 +1167,7 @@ Der []{mechanic:rain} hört auf, wenn das Pokémon mit dieser Fähigkeit den Kam
 Heavy rain ends when this Pokémon leaves battle or loses this ability, or when this ability is nullified.  The weather cannot otherwise be changed except by the effects of []{ability:delta-stream} and []{ability:desolate-land}.
 
 []{ability:air-lock} and []{ability:cloud-nine} will prevent the effects of heavy rain, including allowing Fire moves to work, but will not allow the weather to be changed."
-190,6,Ändert beim Betreten des Kampfes das []{mechanic:weather} in sehr [starkes Sonnenlicht]{mechanic:strong-sunlight} und verhindert []{type:water} Attacken.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, ändert sich das []{mechanic:weather} in sehr [starkes Sonnenlicht]{mechanic:strong-sunlight}. Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drizzle} noch durch Attacken wie [move:sandstorm] geändert werden und solche Attacken schlagen fehl.
+190,6,Ändert beim Betreten des Kampfes das []{mechanic:weather} in sehr [starkes Sonnenlicht]{mechanic:strong-sunlight} und verhindert []{type:water} Attacken.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, ändert sich das []{mechanic:weather} in sehr [starkes Sonnenlicht]{mechanic:strong-sunlight}. Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drizzle} noch durch Attacken wie []{move:sandstorm} geändert werden und solche Attacken schlagen fehl.
 
 Der [starke Sonnenschein]{mechanic:strong-sunlight} hört auf, wenn das Pokémon mit dieser Fähigkeit den Kampf verlässt oder in eine hintere Position rotiert wird und kein Anderes mit derselben Fähigkeit noch im Kampf ist, wenn die Fähigkeit deaktiviert wird oder ein Pokémon mit der Fähigkeit []{ability:delta-stream} oder []{ability:primordial-sea} den Kampf betritt. Die [Wettereffekte]{mechanic:weather} können durch Fähigkeiten wie []{ability:air-lock} aufgehoben werden."
 190,9,"Creates extremely harsh sunlight, which has all the properties of Sunny Day, cannot be replaced, and causes damaging Water moves to fail.","When this Pokémon enters battle or gains this ability, the weather becomes extremely harsh sunlight.  Extremely harsh sunlight has all the properties of []{move:sunny-day} and also causes damaging Water moves to fail.
@@ -1177,7 +1177,7 @@ Extremely harsh sunlight ends when this Pokémon leaves battle or loses this abi
 []{ability:air-lock} and []{ability:cloud-nine} will prevent the effects of extremely harsh sunlight, including allowing Water moves to work, but will not allow the weather to be changed."
 191,6,Ändert beim Betreten des Kampfes das []{mechanic:weather} in Windströmungen und hebt Typenvorteile gegenüber []{type:flying} Attacken auf.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, ändert sich das []{mechanic:weather} in starke Windströmungen. Während das Wetter aktiv ist, werden alle Typenvorteile gegenüber []{type:flying} aufgehoben. Das heißt, das z.B. []{type:rock} gegen ein []{type:flying} Pokémon nur normalen Schaden anrichten. Die Effektivität gegen einen eventuellen Zweittyp wird nicht verändert.
 
-Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drizzle} noch durch Attacken wie [move:sandstorm] geändert werden und solche Attacken schlagen fehl.
+Das []{mechanic:weather} kann weder durch Fähigkeiten wie []{ability:drizzle} noch durch Attacken wie []{move:sandstorm} geändert werden und solche Attacken schlagen fehl.
 
 Die Windströmungen hören auf, wenn das Pokémon mit dieser Fähigkeit den Kampf verlässt oder in eine hintere Position rotiert wird und kein Anderes mit derselben Fähigkeit noch im Kampf ist, wenn die Fähigkeit deaktiviert wird oder ein Pokémon mit der Fähigkeit []{ability:delta-stream} oder []{ability:primordial-sea} den Kampf betritt. Die [Wettereffekte]{mechanic:weather} können durch Fähigkeiten wie []{ability:air-lock} aufgehoben werden."
 191,9,"Creates a mysterious air current, which cannot be replaced and causes moves to never be super effective against Flying Pokémon.","When this Pokémon enters battle or gains this ability, the weather becomes a mysterious air current.  A mysterious air current causes moves to not be super effective against Flying; they do neutral damage instead.  []{ability:anticipation} and []{move:stealth-rock} are not affected.
@@ -1194,7 +1194,7 @@ The mysterious air current ends when this Pokémon leaves battle or loses this a
 
 This ability cannot be copied, replaced, or nullified.  This ability only takes effect for Minior."
 198,9,This Pokémon's moves have double power against Pokémon that switched in this turn.,This Pokémon's moves have double power against Pokémon that switched in this turn.
-199,9,"Halves damage from Fire moves, doubles damage of Water moves, and prevents burns.","When this Pokémon is hit by a Fire move, the damage is halved.  When this Pokémon uses a Water move, the power is doubled.  This Pokémon cannot be burned, and if it becomes burned, the  burn is immediately ured."
+199,9,"Halves damage from Fire moves, doubles damage of Water moves, and prevents burns.","When this Pokémon is hit by a Fire move, the damage is halved.  When this Pokémon uses a Water move, the power is doubled. This Pokémon cannot be burned, and if it becomes burned, the burn is immediately cured."
 200,9,This Pokémon's Steel moves have 1.5× power.,This Pokémon's Steel moves have 1.5× power.
 201,9,Raises this Pokémon's Special Attack by one stage every time its HP drops below half.,"Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
 202,9,"During Hail, this Pokémon has double Speed.","During Hail, this Pokémon has double Speed."
@@ -1244,4 +1244,4 @@ This ability cannot be nullified."
 232,9,Reduces super-effective damage to 0.75×.,"Super-effective damage this Pokémon takes is reduced to 0.75×.
 
 This Ability is not bypassed by []{ability:mold-breaker}, []{ability:teravolt}, or []{ability:turboblaze}."
-233,9,XXX new effect for neuroforce,XXX new effect for neuroforce
+233,9,Increases super-effective damage dealt to 1.25×.,Increases super-effective damage dealt to 1.25×.

@@ -1,0 +1,12 @@
+  
+blank_issues_enabled: false
+contact_links:
+  - name: Question
+    url: https://stackoverflow.com/search?q=%22pokeapi%22
+    about: Please ask and answer questions here
+  - name: Slack invitation link
+    url: https://pokeapi-slack-invite.herokuapp.com/
+    about: If you are not a member of our Slack, use this invitation link to be invited to join it
+  - name: Slack
+    url: https://pokeapi.slack.com/messages
+    about: Browse our Slack

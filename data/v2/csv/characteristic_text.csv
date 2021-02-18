@@ -1,61 +1,91 @@
 characteristic_id,local_language_id,message
 1,5,Adore manger
+1,7,Le encanta comer
 1,9,Loves to eat
 2,5,Est fier de sa puissance
+2,7,Está orgulloso de su fuerza
 2,9,Proud of its power
 3,5,Corps robuste
+3,7,Se caracteriza por su cuerpo resistente
 3,9,Sturdy body
 4,5,Extrêmement curieux
+4,7,Es extremadamente curioso
 4,9,Highly curious
 5,5,Très volontaire
+5,7,Se distingue por ser muy voluntarioso
 5,9,Strong willed
 6,5,Aime courir
+6,7,Le gusta correr
 6,9,Likes to run
 7,5,S'assoupit souvent
+7,7,A menudo se duerme
 7,9,Takes plenty of siestas
 8,5,Aime se démener
+8,7,Le gusta revolverse
 8,9,Likes to thrash about
 9,5,Sait encaisser les coups
+9,7,Es un buen fajador
 9,9,Capable of taking hits
 10,5,Coquin
+10,7,Le gusta hacer travesuras
 10,9,Mischievous
 11,5,Un peu vaniteux
+11,7,Es algo orgulloso
 11,9,Somewhat vain
 12,5,Attentif aux sons
+12,7,Siempre tiene el oído alerta
 12,9,Alert to sounds
 13,5,Dort beaucoup
+13,7,Duerme mucho
 13,9,Nods off a lot
 14,5,Un peu coléreux
+14,7,A veces se enfada
 14,9,A little quick tempered
 15,5,Très obstiné
+15,7,Es muy persistente
 15,9,Highly persistent
 16,5,Très astucieux
+16,7,Es muy astuto
 16,9,Thoroughly cunning
 17,5,Esprit rebelle
+17,7,Es muy insolente
 17,9,Strongly defiant
 18,5,Bête et impulsif
+18,7,Resulta algo impetuoso y bobo
 18,9,Impetuous and silly
 19,5,Éparpille des choses
+19,7,Suele desordenar cosas
 19,9,Scatters things often
 20,5,Aime combattre
+20,7,Le gusta luchar
 20,9,Likes to fight
 21,5,Bonne endurance
+21,7,Se caracteriza por ser muy resistente
 21,9,Good endurance
 22,5,Souvent dans la lune
+22,7,A menudo está en Babia
 22,9,Often lost in thought
 23,5,A horreur de perdre
+23,7,Odia perder
 23,9,Hates to lose
 24,5,Aime faire le pitre
+24,7,Es un poco payaso
 24,9,Somewhat of a clown
 25,5,Aime se détendre
+25,7,Le gusta relajarse
 25,9,Likes to relax
 26,5,S'emporte facilement
+26,7,Tiene mal genio
 26,9,Quick tempered
 27,5,Persévérant
+27,7,Es muy perseverante
 27,9,Good perseverance
 28,5,Très particulier
+28,7,Es muy melindroso
 28,9,Very finicky
 29,5,Assez entêté
+29,7,Es un poco cabezota
 29,9,Somewhat stubborn
 30,5,Fuit rapidement
+30,7,Huye rápido
 30,9,Quick to flee

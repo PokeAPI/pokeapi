@@ -386,16 +386,6 @@ class PokemonTypeSerializer(serializers.ModelSerializer):
         fields = ("slot", "pokemon", "type")
 
 
-class PokemonTypePastSerializer(serializers.ModelSerializer):
-
-    generation = GenerationSummarySerializer()
-    type = TypeSummarySerializer()
-
-    class Meta:
-        model = PokemonTypePast
-        fields = ("pokemon", "generation", "slot", "type")
-
-
 class PokemonFormTypeSerializer(serializers.ModelSerializer):
 
     pokemon_form = PokemonFormSummarySerializer()
@@ -404,6 +394,16 @@ class PokemonFormTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PokemonFormType
         fields = ("slot", "pokemon_form", "type")
+
+
+class PokemonTypePastSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+    type = TypeSummarySerializer()
+
+    class Meta:
+        model = PokemonTypePast
+        fields = ("pokemon", "generation", "slot", "type")
 
 
 class PokedexVersionGroupSerializer(serializers.ModelSerializer):

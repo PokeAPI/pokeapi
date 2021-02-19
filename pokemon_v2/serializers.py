@@ -2558,6 +2558,17 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
         for form_type in form_types:
             del form_type["pokemon_form"]
 
+        # defer to parent Pokemon's types if no form-specific types
+        if form_types == []:
+            pokemon_object = Pokemon.objects.get(id=obj.pokemon_id)
+            pokemon_type_objects = PokemonType.objects.filter(pokemon=pokemon_object)
+            form_types = PokemonTypeSerializer(
+                pokemon_type_objects, many=True, context=self.context
+            ).data
+
+            for form_type in form_types:
+                del form_type["pokemon"]
+
         return form_types
 
 

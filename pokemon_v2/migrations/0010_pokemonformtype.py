@@ -7,20 +7,46 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0009_pokemontypepast'),
+        ("pokemon_v2", "0009_pokemontypepast"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PokemonFormType',
+            name="PokemonFormType",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('slot', models.IntegerField()),
-                ('pokemon_form', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemonformtype', to='pokemon_v2.PokemonForm')),
-                ('type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemonformtype', to='pokemon_v2.Type')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("slot", models.IntegerField()),
+                (
+                    "pokemon_form",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pokemonformtype",
+                        to="pokemon_v2.PokemonForm",
+                    ),
+                ),
+                (
+                    "type",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="pokemonformtype",
+                        to="pokemon_v2.Type",
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
     ]

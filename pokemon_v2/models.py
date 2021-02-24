@@ -1884,6 +1884,11 @@ class PokemonType(HasPokemon, HasType):
     slot = models.IntegerField()
 
 
+class PokemonFormType(HasPokemonForm, HasType):
+
+    slot = models.IntegerField()
+
+
 # model for a Pokemon's types that were used until a given generation
 class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 

@@ -1647,6 +1647,16 @@ class APIData:
         return pokemon_form_sprites
 
     @classmethod
+    def setup_pokemon_form_type_data(cls, pokemon_form, type=None, slot=1):
+
+        type = type or cls.setup_type_data(name="tp for pkmn frm")
+
+        form_type = PokemonFormType(pokemon_form=pokemon_form, type=type, slot=slot)
+        form_type.save()
+
+        return form_type
+
+    @classmethod
     def setup_pokemon_form_data(
         cls,
         pokemon,
@@ -5153,6 +5163,7 @@ class APITests(APIData, APITestCase):
             pokemon=pokemon, name="pkm form for base pkmn"
         )
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
+        pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
 
         sprites_data = json.loads(pokemon_form_sprites.sprites)
 
@@ -5196,6 +5207,15 @@ class APITests(APIData, APITestCase):
             ),
         )
         self.assertEqual(response.data["sprites"]["back_default"], None)
+        # type params
+        self.assertEqual(response.data["types"][0]["slot"], pokemon_form_type.slot)
+        self.assertEqual(
+            response.data["types"][0]["type"]["name"], pokemon_form_type.type.name
+        )
+        self.assertEqual(
+            response.data["types"][0]["type"]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_form_type.type.pk),
+        )
 
     # Evolution test
     def test_evolution_trigger_api(self):

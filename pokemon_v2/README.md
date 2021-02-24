@@ -2399,6 +2399,13 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | slot | The order the pokémon types are listed in | integer |
 | type | The type the referenced pokémon has       | string  |
 
+#### PokemonFormType
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| slot | The order the Pokémon form types are listed in | integer |
+| type | The type the referenced Pokémon form has       | string  |
+
 #### PokemonTypePast
 
 | Name | Description | Data Type |
@@ -2460,22 +2467,31 @@ Some pokémon have the ability to take on different forms. At times, these diffe
 
 ```json
 {
-	"id": 413,
-	"name": "wormadam-plant",
-	"order": 503,
-	"form_order": 1,
-	"is_default": true,
-	"is_battle_only": false,
-	"is_mega": false,
-	"form_name": "plant",
-	"pokemon": {
-		"name": "wormadam-plant",
-		"url": "http://pokeapi.co/api/v2/pokemon/413/"
-	},
-	"version_group": {
-		"name": "diamond-pearl",
-		"url": "http://pokeapi.co/api/v2/version-group/8/"
-	}
+    "id": 10041,
+    "name": "arceus-bug",
+    "order": 631,
+    "form_order": 7,
+    "is_default": false,
+    "is_battle_only": false,
+    "is_mega": false,
+    "form_name": "bug",
+    "pokemon": {
+        "name": "arceus",
+        "url": "https://pokeapi.co/api/v2/pokemon/493/"
+    },
+    "version_group": {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "bug",
+                "url": "https://pokeapi.co/api/v2/type/7/"
+            }
+        }
+    ]
 }
 ```
 
@@ -2495,6 +2511,7 @@ Some pokémon have the ability to take on different forms. At times, these diffe
 | form_name      | The name of this form                                                                                                                                    | string  |
 | pokemon        | The pokémon that can take on this form                                                                                                                   | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
 | version_group  | The version group this pokémon form was introduced in                                                                                                    | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| types          | A list of details showing types this Pokémon form has, if they differ from the types of the Pokémon that can take on this form                           | list [PokemonFormType](#pokemonformtype) |
 
 
 ## Pokémon Habitats

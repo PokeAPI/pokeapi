@@ -1976,6 +1976,13 @@ def _build_pokemons():
     )
 
     def csv_record_to_objects(info):
+        yield PokemonFormType(
+            pokemon_form_id=int(info[0]), type_id=int(info[1]), slot=int(info[2])
+        )
+
+    build_generic((PokemonFormType,), "pokemon_form_types.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield PokemonGameIndex(
             pokemon_id=int(info[0]), version_id=int(info[1]), game_index=int(info[2])
         )

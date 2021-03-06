@@ -51,3 +51,16 @@ workflows:
               only: 
                 - master
                 - staging
+  weekly:
+    jobs:
+      - test
+      - deploy:
+          requires:
+            - test
+    triggers:
+      - schedule:
+          cron: "0 0 * * 1"
+          filters:
+            branches:
+              only:
+                - staging

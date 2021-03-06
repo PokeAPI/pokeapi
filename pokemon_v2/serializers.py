@@ -386,6 +386,26 @@ class PokemonTypeSerializer(serializers.ModelSerializer):
         fields = ("slot", "pokemon", "type")
 
 
+class PokemonFormTypeSerializer(serializers.ModelSerializer):
+
+    pokemon_form = PokemonFormSummarySerializer()
+    type = TypeSummarySerializer()
+
+    class Meta:
+        model = PokemonFormType
+        fields = ("slot", "pokemon_form", "type")
+
+
+class PokemonTypePastSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+    type = TypeSummarySerializer()
+
+    class Meta:
+        model = PokemonTypePast
+        fields = ("pokemon", "generation", "slot", "type")
+
+
 class PokedexVersionGroupSerializer(serializers.ModelSerializer):
 
     pokedex = PokedexSummarySerializer()
@@ -2192,6 +2212,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     flavor_text_entries = MoveFlavorTextSerializer(
         many=True, read_only=True, source="moveflavortext"
     )
+    learned_by_pokemon = serializers.SerializerMethodField()
 
     class Meta:
         model = Move
@@ -2219,7 +2240,27 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "type",
             "machines",
             "flavor_text_entries",
+            "learned_by_pokemon",
         )
+
+    def get_learned_by_pokemon(self, obj):
+
+        pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
+
+        pokemon_list = []
+
+        pokemon_ids = pokemon_moves.values("pokemon_id").distinct()
+
+        for id in pokemon_ids:
+
+            pokemon_object = Pokemon.objects.get(pk=id["pokemon_id"])
+            pokemon_data = PokemonSummarySerializer(
+                pokemon_object, context=self.context
+            ).data
+
+            pokemon_list.append(pokemon_data)
+
+        return pokemon_list
 
     def get_move_machines(self, obj):
 
@@ -2435,6 +2476,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     sprites = serializers.SerializerMethodField("get_pokemon_form_sprites")
     form_names = serializers.SerializerMethodField("get_pokemon_form_names")
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
+    types = serializers.SerializerMethodField("get_pokemon_form_types")
 
     class Meta:
         model = PokemonForm
@@ -2452,6 +2494,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "version_group",
             "form_names",
             "names",
+            "types",
         )
 
     def get_pokemon_form_names(self, obj):
@@ -2504,6 +2547,29 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 )
 
         return sprites_data
+
+    def get_pokemon_form_types(self, obj):
+
+        form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
+        form_types = PokemonFormTypeSerializer(
+            form_type_objects, many=True, context=self.context
+        ).data
+
+        for form_type in form_types:
+            del form_type["pokemon_form"]
+
+        # defer to parent Pokemon's types if no form-specific types
+        if form_types == []:
+            pokemon_object = Pokemon.objects.get(id=obj.pokemon_id)
+            pokemon_type_objects = PokemonType.objects.filter(pokemon=pokemon_object)
+            form_types = PokemonTypeSerializer(
+                pokemon_type_objects, many=True, context=self.context
+            ).data
+
+            for form_type in form_types:
+                del form_type["pokemon"]
+
+        return form_types
 
 
 #################################
@@ -2700,6 +2766,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
     types = serializers.SerializerMethodField("get_pokemon_types")
+    past_types = serializers.SerializerMethodField("get_past_pokemon_types")
     forms = PokemonFormSummarySerializer(
         many=True, read_only=True, source="pokemonform"
     )
@@ -2727,6 +2794,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "sprites",
             "stats",
             "types",
+            "past_types",
         )
 
     def get_pokemon_sprites(self, obj):
@@ -2865,6 +2933,42 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             del poke_type["pokemon"]
 
         return poke_types
+
+    def get_past_pokemon_types(self, obj):
+
+        poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
+        poke_past_types = PokemonTypePastSerializer(
+            poke_past_type_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for poke_past_type in poke_past_types:
+            del poke_past_type["pokemon"]
+
+            generation = poke_past_type["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past types object for this generation
+                past_obj["generation"] = poke_past_type["generation"]
+                del poke_past_type["generation"]
+
+                # create types array
+                past_obj["types"] = [poke_past_type]
+
+                # add to past types array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del poke_past_type["generation"]
+                past_obj["types"].append(poke_past_type)
+
+        return final_data
 
     def get_encounters(self, obj):
 

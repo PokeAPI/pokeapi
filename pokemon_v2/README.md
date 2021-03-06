@@ -398,7 +398,7 @@ Super contest effects refer to the effects of moves when used in super contests.
 
 #### SuperContestEffect
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | id                  | The identifier for this super contest effect resource                      | integer |
 | appeal              | The level of appeal this super contest effect has                          | string |
@@ -795,7 +795,7 @@ A Pokédex is a handheld electronic encyclopedia device; one which is capable of
 
 
 ## Versions
-Versions of the games, e.g., Red, Blue or Yellow. 
+Versions of the games, e.g., Red, Blue or Yellow.
 
 ### GET api/v2/version/{id or name}
 
@@ -833,7 +833,7 @@ Versions of the games, e.g., Red, Blue or Yellow.
 
 
 ## Version Groups
-Version groups categorize highly similar versions of the games. 
+Version groups categorize highly similar versions of the games.
 
 ### GET api/v2/version-group/{id or name}
 
@@ -1114,7 +1114,7 @@ The various effects of the move "Fling" when used with different items.
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| id             | The identifier for this fling effect resource                 | integer | 
+| id             | The identifier for this fling effect resource                 | integer |
 | name           | The name for this fling effect resource                       | string |
 | effect_entries | The result of this fling effect listed in different languages | list [Effect](#effect) |
 | items          | A list of items that have this fling effect                   | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
@@ -1290,7 +1290,7 @@ Moves are the skills of pokémon in battle.  In battle, a Pokémon uses one move
 | type           | The elemental type of this move                                                                                                                                           | [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 
 #### ContestComboSets
- 
+
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | normal | A detail of moves this move can be used before or after, granting additional appeal points in contests       | list [ContestComboDetail](#contestcombodetail) |
@@ -1300,7 +1300,7 @@ Moves are the skills of pokémon in battle.  In battle, a Pokémon uses one move
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) | 
+| use_before | A list of moves to use before this move | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | use_after  | A list of moves to use after this move  | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 
 #### MoveMetaData
@@ -1918,7 +1918,7 @@ Abilities provide passive effects for pokémon in battle or in the overworld. Po
 | effect_entries | The previous effect of this ability listed in different languages         | [Effect](#effect) |
 | version_group  | The version group in which the previous effect of this ability originated | [NamedAPIResource](#namedapiresource) ([VersionGroup](#versiongroups)) |
 
-#### AbilityFlavorText 
+#### AbilityFlavorText
 
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
@@ -2013,7 +2013,7 @@ Egg Groups are categories which determine which Pokémon are able to interbreed.
 
 
 ## Genders
-Genders were introduced in Generation II for the purposes of breeding pokémon but can also rsult in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail. 
+Genders were introduced in Generation II for the purposes of breeding pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.
 
 ### GET api/v2/gender/{id or name}
 
@@ -2059,7 +2059,7 @@ Genders were introduced in Generation II for the purposes of breeding pokémon b
 
 
 ## Growth Rates
-Growth rates are the speed with which pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail. 
+Growth rates are the speed with which pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.
 
 ### GET api/v2/growth-rate/{id or name}
 
@@ -2169,7 +2169,7 @@ Natures influence how a pokémon's stats grow. See [Bulbapedia](http://bulbapedi
 | ---- | ----------- | --------- |
 | id                            | The identifier for this nature resource                                                                               | integer |
 | name                          | The name for this nature resource                                                                                     | string  |
-| decreased_stat                | The stat decreased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
+| decreased_stat                | The stat decreased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | increased_stat                | The stat increased by 10% in pokémon with this nature                                                                 | [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | hates_flavor                  | The flavor hated by pokémon with this nature                                                                          | [NamedAPIResource](#namedapiresource) ([BerryFlavor](#berry-flavors)) |
 | likes_flavor                  | The flavor liked by pokémon with this nature                                                                          | [NamedAPIResource](#namedapiresource) ([BerryFlavor](#berry-flavors)) |
@@ -2266,106 +2266,96 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 
 ```json
 {
-	"id": 12,
-	"name": "butterfree",
-	"base_experience": 178,
-	"height": 11,
-	"is_default": true,
-	"order": 16,
-	"weight": 320,
-	"abilities": [{
+	"id": 35,
+    "name": "clefairy",
+    "base_experience": 113,
+    "height": 6,
+    "is_default": true,
+    "order": 56,
+    "weight": 75,
+    "abilities": [{
 		"is_hidden": true,
 		"slot": 3,
 		"ability": {
-			"name": "tinted-lens",
-			"url": "http://pokeapi.co/api/v2/ability/110/"
+			"name": "friend-guard",
+			"url": "https://pokeapi.co/api/v2/ability/132/"
 		}
 	}],
 	"forms": [{
-		"name": "butterfree",
-		"url": "http://pokeapi.co/api/v2/pokemon-form/12/"
+		"name": "clefairy",
+		"url": "https://pokeapi.co/api/v2/pokemon-form/35/"
 	}],
 	"game_indices": [{
-		"game_index": 12,
+		"game_index": 35,
 		"version": {
 			"name": "white-2",
-			"url": "http://pokeapi.co/api/v2/version/22/"
+			"url": "https://pokeapi.co/api/v2/version/22/"
 		}
 	}],
 	"held_items": [{
 		"item": {
-			"name": "silver-powder",
-			"url": "http://pokeapi.co/api/v2/item/199/"
+			"name": "moon-stone",
+			"url": "https://pokeapi.co/api/v2/item/81/"
 		},
 		"version_details": [{
 			"rarity": 5,
 			"version": {
-				"name": "y",
-				"url": "http://pokeapi.co/api/v2/version/24/"
+				"name": "ruby",
+				"url": "https://pokeapi.co/api/v2/version/7/"
 			}
 		}]
 	}],
-	"location_area_encounters": [{
-		"location_area": {
-			"name": "kanto-route-2-south-towards-viridian-city",
-			"url": "http://pokeapi.co/api/v2/location-area/296/"
-		},
-		"version_details": [{
-			"max_chance": 10,
-			"encounter_details": [{
-				"min_level": 7,
-				"max_level": 7,
-				"condition_values": [{
-					"name": "time-morning",
-					"url": "http://pokeapi.co/api/v2/encounter-condition-value/3/"
-				}],
-				"chance": 5,
-				"method": {
-					"name": "walk",
-					"url": "http://pokeapi.co/api/v2/encounter-method/1/"
-				}
-			}],
-			"version": {
-				"name": "heartgold",
-				"url": "http://pokeapi.co/api/v2/version/15/"
-			}
-		}]
-	}],
+	"location_area_encounters": "/api/v2/pokemon/35/encounters",
 	"moves": [{
 		"move": {
-			"name": "flash",
-			"url": "http://pokeapi.co/api/v2/move/148/"
+			"name": "pound",
+			"url": "https://pokeapi.co/api/v2/move/1/"
 		},
 		"version_group_details": [{
-			"level_learned_at": 0,
+			"level_learned_at": 1,
 			"version_group": {
-				"name": "x-y",
-				"url": "http://pokeapi.co/api/v2/version-group/15/"
+				"name": "red-blue",
+				"url": "https://pokeapi.co/api/v2/version-group/1/"
 			},
 			"move_learn_method": {
-				"name": "machine",
-				"url": "http://pokeapi.co/api/v2/move-learn-method/4/"
+				"name": "level-up",
+				"url": "https://pokeapi.co/api/v2/move-learn-method/1/"
 			}
 		}]
 	}],
 	"species": {
-		"name": "butterfree",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/12/"
+		"name": "clefairy",
+        "url": "https://pokeapi.co/api/v2/pokemon-species/35/"
 	},
 	"stats": [{
-		"base_stat": 70,
+		"base_stat": 35,
 		"effort": 0,
 		"stat": {
 			"name": "speed",
-			"url": "http://pokeapi.co/api/v2/stat/6/"
+			"url": "https://pokeapi.co/api/v2/stat/6/"
 		}
 	}],
 	"types": [{
-		"slot": 2,
+		"slot": 1,
 		"type": {
-			"name": "flying",
-			"url": "http://pokeapi.co/api/v2/type/3/"
+			"name": "fairy",
+			"url": "https://pokeapi.co/api/v2/type/18/"
 		}
+	}],
+	"past_types": [{
+		"generation": {
+			"name": "generation-v",
+			"url": "https://pokeapi.co/api/v2/generation/5/"
+		},
+		"types": [
+			{
+				"slot": 1,
+				"type": {
+					"name": "normal",
+					"url": "https://pokeapi.co/api/v2/type/1/"
+				}
+			}
+		]
 	}]
 }
 ```
@@ -2390,8 +2380,9 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions            | list [LocationAreaEncounter](#locationareaencounter) |
 | moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | species                  | The species this pokémon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
-| stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) | 
+| stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | types                    | A list of details showing types this pokémon has                                                 | list [PokemonType](#pokemontype) |
+| past_types               | A list of details showing types this pokémon had in previous generations                         | list [PokemonTypePast](#pokemontypepast) |
 
 #### PokemonAbility
 
@@ -2407,6 +2398,20 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | ---- | ----------- | --------- |
 | slot | The order the pokémon types are listed in | integer |
 | type | The type the referenced pokémon has       | string  |
+
+#### PokemonFormType
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| slot | The order the Pokémon form types are listed in | integer |
+| type | The type the referenced Pokémon form has       | string  |
+
+#### PokemonTypePast
+
+| Name | Description | Data Type |
+| ---- | ----------- | --------- |
+| generation | The last generation in which the referenced pokémon had the listed types       | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
+| types      | The types the referenced pokémon had up to and including the listed generation | list [PokemonType](#pokemontype) |
 
 #### LocationAreaEncounter
 
@@ -2462,22 +2467,31 @@ Some pokémon have the ability to take on different forms. At times, these diffe
 
 ```json
 {
-	"id": 413,
-	"name": "wormadam-plant",
-	"order": 503,
-	"form_order": 1,
-	"is_default": true,
-	"is_battle_only": false,
-	"is_mega": false,
-	"form_name": "plant",
-	"pokemon": {
-		"name": "wormadam-plant",
-		"url": "http://pokeapi.co/api/v2/pokemon/413/"
-	},
-	"version_group": {
-		"name": "diamond-pearl",
-		"url": "http://pokeapi.co/api/v2/version-group/8/"
-	}
+    "id": 10041,
+    "name": "arceus-bug",
+    "order": 631,
+    "form_order": 7,
+    "is_default": false,
+    "is_battle_only": false,
+    "is_mega": false,
+    "form_name": "bug",
+    "pokemon": {
+        "name": "arceus",
+        "url": "https://pokeapi.co/api/v2/pokemon/493/"
+    },
+    "version_group": {
+        "name": "diamond-pearl",
+        "url": "https://pokeapi.co/api/v2/version-group/8/"
+    },
+    "types": [
+        {
+            "slot": 1,
+            "type": {
+                "name": "bug",
+                "url": "https://pokeapi.co/api/v2/type/7/"
+            }
+        }
+    ]
 }
 ```
 
@@ -2497,6 +2511,7 @@ Some pokémon have the ability to take on different forms. At times, these diffe
 | form_name      | The name of this form                                                                                                                                    | string  |
 | pokemon        | The pokémon that can take on this form                                                                                                                   | [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
 | version_group  | The version group this pokémon form was introduced in                                                                                                    | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
+| types          | A list of details showing types this Pokémon form has, if they differ from the types of the Pokémon that can take on this form                           | list [PokemonFormType](#pokemonformtype) |
 
 
 ## Pokémon Habitats
@@ -2541,7 +2556,7 @@ Habitats are generally different terrain pokémon can be found in but can also b
 
 
 ## Pokémon Shapes
-Shapes used for sorting pokémon in a pokédex. 
+Shapes used for sorting pokémon in a pokédex.
 
 ### GET api/v2/pokemon-shape/{id or name}
 
@@ -2599,7 +2614,7 @@ Shapes used for sorting pokémon in a pokédex.
 
 
 ## Pokémon Species
-A Pokémon Species forms the basis for at least one pokémon. Attributes of a Pokémon species are shared across all varieties of pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.  
+A Pokémon Species forms the basis for at least one pokémon. Attributes of a Pokémon species are shared across all varieties of pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
 
 ### GET api/v2/pokemon-species/{id or name}
 
@@ -2687,9 +2702,9 @@ A Pokémon Species forms the basis for at least one pokémon. Attributes of a Po
 
 #### PokemonSpecies
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
-| id                     | The identifier for this pokémon species resource                                                                                                   | integer | 
+| id                     | The identifier for this pokémon species resource                                                                                                   | integer |
 | name                   | The name for this pokémon species resource                                                                                                         | string |
 | order                  | The order in which species should be sorted.  Based on National Dex order, except families are grouped together and sorted by stage.               | integer |
 | gender_rate            | The chance of this Pokémon being female, in eighths; or -1 for genderless                                                                          | integer |
@@ -2938,7 +2953,7 @@ Types are properties for Pokémon and their moves. Each type has three propertie
 
 #### TypeRelations
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | no_damage_to       | A list of types this type has no effect on                    | list [NamedAPIResource](#namedapiresource) ([Type](#types)) |
 | half_damage_to     | A list of types this type is not very effect against          | list [NamedAPIResource](#namedapiresource) ([Type](#types)) |
@@ -3000,7 +3015,7 @@ Languages for translations of api resource information.
 
 #### Description
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | description | The localized description for an api resource in a specific language | string |
 | language    | The language this description is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
@@ -3050,7 +3065,7 @@ Languages for translations of api resource information.
 
 #### NamedAPIResource
 
-| Name | Description | Data Type | 
+| Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | name | The name of the referenced resource | string |
 | url  | The url of the referenced resource  | string |

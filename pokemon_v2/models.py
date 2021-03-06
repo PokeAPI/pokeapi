@@ -1792,7 +1792,7 @@ class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
 
 class PokemonFormName(HasPokemonForm, IsName):
 
-    pokemon_name = models.CharField(max_length=30)
+    pokemon_name = models.CharField(max_length=60)
 
 
 class PokemonFormSprites(HasPokemonForm):
@@ -1868,6 +1868,17 @@ class PokemonStat(HasPokemon, HasStat):
 
 
 class PokemonType(HasPokemon, HasType):
+
+    slot = models.IntegerField()
+
+
+class PokemonFormType(HasPokemonForm, HasType):
+
+    slot = models.IntegerField()
+
+
+# model for a Pokemon's types that were used until a given generation
+class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 
     slot = models.IntegerField()
 

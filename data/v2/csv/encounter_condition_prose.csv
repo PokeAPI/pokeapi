@@ -17,3 +17,7 @@ encounter_condition_id,local_language_id,name
 6,5,Saison
 6,6,Jahreszeit
 6,9,Season
+7,9,Chosen Starter
+8,9,Chosen dialogue at the news report
+9,9,Story Progress
+10,9,Miscellaneous

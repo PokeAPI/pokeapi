@@ -784,3 +784,5 @@ id,region_id,identifier
 800,2,roaming-johto
 801,3,roaming-hoenn
 802,4,roaming-sinnoh
+803,3,terra-cave
+804,3,marine-cave

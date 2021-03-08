@@ -86,3 +86,9 @@ sync-from-veekun: pull pull-veekun # Copy data from ../pokedex to this repositor
 
 sync-to-veekun: pull pull-veekun # Copy data from this repository to ../pokedex
 	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv
+
+hasura-export:  # Export Hasura configuration
+	hasura md export --admin-secret pokemon
+
+hasura-apply:  # Apply local Hasura configuration
+	hasura md apply --admin-secret pokemon

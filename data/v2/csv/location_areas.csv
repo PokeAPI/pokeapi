@@ -687,3 +687,6 @@ id,location_id,game_index,identifier
 795,800,0,roaming-johto-area
 796,801,0,roaming-hoenn-area
 797,802,0,roaming-sinnoh-area
+798,228,0,azalea-town-area
+799,229,0,goldenrod-city-area
+800,230,0,mahogany-city-area

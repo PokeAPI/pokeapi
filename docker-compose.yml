@@ -8,9 +8,9 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: 'pokemon'
-      POSTGRES_USER: 'ash'
-      POSTGRES_DB: 'pokeapi'
+      - POSTGRES_DB=pokeapi
+      - POSTGRES_USER=ash
+      - POSTGRES_PASSWORD=pokemon
     volumes:
       - pg_data:/var/lib/postgresql/data
 

@@ -1,0 +1,31 @@
+query best_grass_poison_pokemons {
+  pokemon: pokemon_v2_pokemon(
+    where: {
+      _and: [
+        {
+          pokemon_v2_pokemontypes: {
+            pokemon_v2_type: { name: { _eq: "grass" } }
+          }
+        }
+        {
+          pokemon_v2_pokemontypes: {
+            pokemon_v2_type: { name: { _eq: "poison" } }
+          }
+        }
+      ]
+    }
+    order_by: {
+      pokemon_v2_pokemonstats_aggregate: { sum: { base_stat: desc } }
+    }
+    limit: 3
+  ) {
+    name
+    stats: pokemon_v2_pokemonstats_aggregate(order_by: {}) {
+      aggregate {
+        sum {
+          base_stat
+        }
+      }
+    }
+  }
+}

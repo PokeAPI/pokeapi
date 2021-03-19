@@ -1,3 +1,10 @@
+"""
+Variables:
+{
+    "region": "alola"
+}
+"""
+
 query location_evolutions_in_alola($region: String) {
   region: pokemon_v2_region(where: {name: {_eq: $region}}) {
     name
@@ -15,4 +22,3 @@ query location_evolutions_in_alola($region: String) {
     }
   }
 }
-

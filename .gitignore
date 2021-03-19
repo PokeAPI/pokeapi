@@ -7,3 +7,4 @@ db.*
 venv*
 node_modules
 .vscode
+.env

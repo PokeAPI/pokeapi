@@ -30,7 +30,7 @@ array_relationships:
 select_permissions:
 - permission:
     allow_aggregations: true
-    columns: '*'
+    columns: "*"
     filter: {}
     limit: 100000
   role: anon

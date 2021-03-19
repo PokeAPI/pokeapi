@@ -31,20 +31,21 @@ services:
     restart: always
 
   web:
-    build: 
-      context: ./Resources
-      dockerfile: ./docker/web/Dockerfile
+    image: nginx:alpine
     ports:
       - "80:80"
       - "443:443"
     restart: always
+    command: [nginx-debug, '-g', 'daemon off;']
+    volumes:
+      - ./Resources/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     volumes_from:
       - app:ro
     links:
       - app
 
   graphql-engine:
-    image: hasura/graphql-engine:v2.0.0-alpha.3
+    image: hasura/graphql-engine:v2.0.0-alpha.5
     ports:
       - "8080:8080"
     depends_on:
@@ -58,7 +59,7 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: pokemon
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anon
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
-      HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
+      # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
 
 volumes:
   pg_data:

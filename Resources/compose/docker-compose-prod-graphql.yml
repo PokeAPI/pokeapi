@@ -18,7 +18,7 @@ services:
       HASURA_GRAPHQL_ADMIN_SECRET: "${HASURA_GRAPHQL_ADMIN_SECRET}"
 
   graphiql:
-    image: pokeapi/graphiql:1.0.0
+    image: pokeapi/graphiql:1.0.1
     command: sh -c 'cp -a /app/static/. /transfer/ && tail -f /etc/passwd'
     volumes:
       - graphiql:/transfer

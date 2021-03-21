@@ -1,4 +1,6 @@
 """
+Finds Pokemons in Alola that evolve when you are in a particular location.
+
 Variables:
 {
     "region": "alola"

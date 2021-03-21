@@ -1,10 +1,21 @@
 /*
-This is an example snippet - you should consider tailoring it
-to your service.
-*/
-/*
-Add these to your `package.json`:
-  "node-fetch": "^2.5.0"
+Get's many details about Staryu.
+
+It gets:
+  - happiness
+  - if legendary/mythical
+  - generation
+  - habitat
+  - height
+  - weight
+  - ID
+  - abilities
+  - stats
+  - types
+  - learnable moves by leveling up
+  - in how many locations it can be found
+  - holdable items in Fire Red
+  - flavor text
 */
 
 // Node doesn't implement fetch so we have to import it
@@ -72,12 +83,12 @@ const operationsDoc = `
               level
             }
           }
-          pokemon_v2_encounters_aggregate {
+          foundInAsManyPlaces: pokemon_v2_encounters_aggregate {
             aggregate {
               count
             }
           }
-          pokemon_v2_pokemonitems(where: {pokemon_v2_version: {name: {_eq: "firered"}}}) {
+          fireRedItems: pokemon_v2_pokemonitems(where: {pokemon_v2_version: {name: {_eq: "firered"}}}) {
             pokemon_v2_item {
               name
               cost

@@ -39,6 +39,7 @@ services:
     command: [nginx-debug, '-g', 'daemon off;']
     volumes:
       - ./Resources/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./Resources/nginx/ssl:/ssl:ro
     volumes_from:
       - app:ro
     links:

@@ -36,7 +36,7 @@ services:
       - "80:80"
       - "443:443"
     restart: always
-    command: [nginx-debug, '-g', 'daemon off;']
+    # command: [nginx-debug, '-g', 'daemon off;']
     volumes:
       - ./Resources/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./Resources/nginx/ssl:/ssl:ro

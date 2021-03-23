@@ -89,14 +89,14 @@ sync-from-veekun: pull pull-veekun  # Copy data from ../pokedex to this reposito
 sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv
 
-read-env-file:  # Exports ./.env into shell environment variables
-	export `egrep -v '^#' .env | xargs`
+# read-env-file:  # Exports ./.env into shell environment variables
+# 	export `egrep -v '^#' .env | xargs`
 
 hasura-export:  # Export Hasura configuration
-	hasura md export --project hasura --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+	hasura md export --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
 
 hasura-apply:  # Apply local Hasura configuration
-	hasura md apply --project hasura --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+	hasura md apply --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
 
 hasura-get-anon-schema:  # Dumps GraphQL schema
-	gq http://localhost:8080/v1/graphql --introspect > hasura/schema.graphql
+	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql

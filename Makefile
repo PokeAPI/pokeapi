@@ -1,8 +1,10 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
+HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
+.SILENT: 
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -81,8 +83,20 @@ pull-veekun:
 	git -C ${veekun_pokedex_repository} checkout master-pokeapi
 	git -C ${veekun_pokedex_repository} pull
 
-sync-from-veekun: pull pull-veekun # Copy data from ../pokedex to this repository
+sync-from-veekun: pull pull-veekun  # Copy data from ../pokedex to this repository
 	cp -a ${veekun_pokedex_repository}/pokedex/data/csv/. ./data/v2/csv
 
-sync-to-veekun: pull pull-veekun # Copy data from this repository to ../pokedex
+sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv
+
+# read-env-file:  # Exports ./.env into shell environment variables
+# 	export `egrep -v '^#' .env | xargs`
+
+hasura-export:  # Export Hasura configuration
+	hasura md export --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+
+hasura-apply:  # Apply local Hasura configuration
+	hasura md apply --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+
+hasura-get-anon-schema:  # Dumps GraphQL schema
+	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql

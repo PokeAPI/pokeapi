@@ -1,0 +1,20 @@
+object_relationships:
+- name: pokemon_v2_encountermethod
+  using:
+    foreign_key_constraint_on: encounter_method_id
+- name: pokemon_v2_locationarea
+  using:
+    foreign_key_constraint_on: location_area_id
+- name: pokemon_v2_version
+  using:
+    foreign_key_constraint_on: version_id
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns: "*"
+    filter: {}
+    limit: 100000
+  role: anon
+table:
+  name: pokemon_v2_locationareaencounterrate
+  schema: public

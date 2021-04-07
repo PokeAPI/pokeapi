@@ -1,0 +1,29 @@
+array_relationships:
+- name: pokemon_v2_itemcategorynames
+  using:
+    foreign_key_constraint_on:
+      column: item_category_id
+      table:
+        name: pokemon_v2_itemcategoryname
+        schema: public
+- name: pokemon_v2_items
+  using:
+    foreign_key_constraint_on:
+      column: item_category_id
+      table:
+        name: pokemon_v2_item
+        schema: public
+object_relationships:
+- name: pokemon_v2_itempocket
+  using:
+    foreign_key_constraint_on: item_pocket_id
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns: "*"
+    filter: {}
+    limit: 100000
+  role: anon
+table:
+  name: pokemon_v2_itemcategory
+  schema: public

@@ -1622,7 +1622,8 @@ class PokedexVersionGroup(HasPokedex, HasVersionGroup):
 class PokemonCry(
     HasName, HasPokemonCry
 ):
-    pass
+    name = models.CharField(max_length=100)
+    pokemon_cries = models.CharField(max_length=500)
 # TO DO: Define class/ create model
 
 

@@ -266,6 +266,12 @@ class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
+class PokemonCriesSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = PokemonCries
+        fields = ("cry", "url")
+
+
 class PokemonFormSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PokemonForm

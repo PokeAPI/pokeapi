@@ -268,7 +268,7 @@ class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
 
 class PokemonCriesSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = PokemonCries
+        model = PokemonCry
         fields = ("cry", "url")
 
 
@@ -3197,7 +3197,7 @@ class PokemonCriesSerializer(serializers.ModelSerializer):
     cries = serializers.SerializerMethodField("get_pokemon_cries")
 
     class Meta:
-        model = PokemonCries
+        model = PokemonCry
         fields = (
             "id",
             "name",

@@ -2,7 +2,6 @@
 import os
 import sys
 
-# Added 4/4/21 - Ryan OConnor - to commit changes to forked project
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")

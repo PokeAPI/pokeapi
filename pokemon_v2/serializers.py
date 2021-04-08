@@ -3185,6 +3185,20 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
         return encounters
 
 
+class PokemonCriesSerializer(serializers.ModelSerializer):
+
+    name = PokemonSpeciesDescriptionSerializer(source="get_pokemon_name")
+    cries = serializers.SerializerMethodField("get_pokemon_cries")
+
+    class Meta:
+        model = PokemonCries
+        fields = (
+            "id",
+            "name",
+            "cry",
+        )
+
+
 class PokemonEvolutionSerializer(serializers.ModelSerializer):
 
     item = ItemSummarySerializer(source="evolution_item")

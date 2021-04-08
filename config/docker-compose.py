@@ -1,12 +1,13 @@
 # Docker settings
+import os
 from .settings import *
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
         "NAME": "pokeapi",
-        "USER": "ash",
-        "PASSWORD": "pokemon",
+        "USER": os.environ.get("POSTGRES_USER", "ash"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "pokemon"),
         "HOST": "db",
         "PORT": 5432,
     }
@@ -25,3 +26,5 @@ CACHES = {
 
 DEBUG = False
 TASTYPIE_FULL_DEBUG = False
+
+ALLOWED_HOSTS = ["*"]

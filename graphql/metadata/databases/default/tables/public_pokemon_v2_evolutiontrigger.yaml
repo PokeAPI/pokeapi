@@ -1,0 +1,25 @@
+array_relationships:
+- name: pokemon_v2_evolutiontriggernames
+  using:
+    foreign_key_constraint_on:
+      column: evolution_trigger_id
+      table:
+        name: pokemon_v2_evolutiontriggername
+        schema: public
+- name: pokemon_v2_pokemonevolutions
+  using:
+    foreign_key_constraint_on:
+      column: evolution_trigger_id
+      table:
+        name: pokemon_v2_pokemonevolution
+        schema: public
+select_permissions:
+- permission:
+    allow_aggregations: true
+    columns: "*"
+    filter: {}
+    limit: 100000
+  role: anon
+table:
+  name: pokemon_v2_evolutiontrigger
+  schema: public

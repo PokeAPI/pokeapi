@@ -495,4 +495,5 @@ class PokemonEncounterView(APIView):
                 }
             )
 
+        print(encounters_list)
         return Response(encounters_list)

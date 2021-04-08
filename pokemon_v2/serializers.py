@@ -266,6 +266,12 @@ class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
+class PokemonCriesSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = PokemonCries
+        fields = ("cry", "url")
+
+
 class PokemonFormSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PokemonForm
@@ -3183,6 +3189,20 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             encounters.append(encounter)
 
         return encounters
+
+
+class PokemonCriesSerializer(serializers.ModelSerializer):
+
+    name = PokemonSpeciesDescriptionSerializer(source="get_pokemon_name")
+    cries = serializers.SerializerMethodField("get_pokemon_cries")
+
+    class Meta:
+        model = PokemonCries
+        fields = (
+            "id",
+            "name",
+            "cry",
+        )
 
 
 class PokemonEvolutionSerializer(serializers.ModelSerializer):

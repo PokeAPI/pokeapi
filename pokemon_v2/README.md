@@ -1,7 +1,6 @@
  
 # Pokeapi V2 API Reference
 
-
 <table class="hide">
   <tbody>
     <tr>

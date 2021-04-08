@@ -17,7 +17,7 @@ from .models import *
 # Summary serializers are just for list and reference behavior
 
 # Putting summary serializers up top so there are no conflicts
-# with reference accross models due to script running order
+# with reference across models due to script running order
 
 
 class AbilitySummarySerializer(serializers.HyperlinkedModelSerializer):

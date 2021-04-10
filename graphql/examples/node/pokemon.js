@@ -1,5 +1,5 @@
 /*
-Get's many details about Staryu.
+Get's many details about a pokemon passed as argument (starmie as default).
 
 It gets:
   - happiness

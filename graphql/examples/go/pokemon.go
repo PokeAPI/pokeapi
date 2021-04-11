@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -17,10 +18,12 @@ type Operation struct {
 var (
 	pokemonDetails = Operation{
 		OperationName: "pokemon_details",
-		Variables:     map[string]interface{}{},
+		Variables:     map[string]interface{}{
+			"name": "staryu",
+		},
 		Query: `
-query pokemon_details {
-	species: pokemon_v2_pokemonspecies(where: {name: {_eq: "staryu"}}) {
+query pokemon_details($name: String) {
+	species: pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {
 	name
 	base_happiness
 	is_legendary
@@ -103,5 +106,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Println(string(body))
+	fmt.Println(string(body))
 }

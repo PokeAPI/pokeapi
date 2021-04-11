@@ -13,7 +13,7 @@ query getItemsTranslation1 {
   }
 }
 
-# for each item, show the English name and get all it's translations
+# for each item, show the English name and get all its translations
 query getItemsTranslation2 {
   items: pokemon_v2_item {
     name

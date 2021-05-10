@@ -563,7 +563,7 @@ class HasPokemonSpecies(models.Model):
     class Meta:
         abstract = True
 
-
+"""
 class HasPokemonCry(models.Model):
 
     pokemon_cries = models.ForeignKey(
@@ -576,7 +576,7 @@ class HasPokemonCry(models.Model):
 
     class Meta:
         abstract = True
-
+"""
 
 class HasRegion(models.Model):
 
@@ -1615,7 +1615,7 @@ class PokedexDescription(HasPokedex, IsDescription):
 class PokedexVersionGroup(HasPokedex, HasVersionGroup):
     pass
 
-
+"""
 ####################
 #  POKEMON MODELS  #
 ####################
@@ -1625,7 +1625,7 @@ class PokemonCry(
     name = models.CharField(max_length=100)
     pokemon_cries = models.CharField(max_length=500)
 # TO DO: Define class/ create model
-
+"""
 
 class PokemonSpecies(
     HasName, HasGeneration, HasPokemonColor, HasPokemonShape, HasGrowthRate, HasOrder

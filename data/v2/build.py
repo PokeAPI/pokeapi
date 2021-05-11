@@ -1918,25 +1918,40 @@ def _build_pokemons_part1():
     build_generic((PokemonForm,), "pokemon_forms.csv", csv_record_to_objects)
 
 def _build_sprites_part1():
-    def try_image_names(path, info, extension):
+    def try_image_names(base_path, info, extension):
         form_identifier = info[2]
         pokemon_id = info[3]
         pokemon = Pokemon.objects.get(pk=int(pokemon_id))
         species_id = getattr(pokemon, "pokemon_species_id")
         is_default = int(info[5])
-        if form_identifier:
-            form_file_name = "%s-%s.%s" % (species_id, form_identifier, extension)
-            id_file_name = "%s.%s" % (pokemon_id, extension)
-            file_name = (
-                id_file_name
-                if file_path_or_none(path + id_file_name)
-                else form_file_name
-            )
-            if id_file_name and form_file_name and (not is_default):
-                file_name = form_file_name
-        else:
-            file_name = "%s.%s" % (species_id, extension)
-        return file_path_or_none(path + file_name)
+        paths_to_try = [ base_path ]
+        all_female_gender_rate = 8
+        female_sprite_tag = "female"
+        to_replace_as_alternative_in_path = "default"
+        #PokemonSpecies
+        if int( Pokemon.objects.get( 
+                    pk=int( pokemon_id ) ).pokemon_species.gender_rate) == \
+                    all_female_gender_rate and female_sprite_tag in base_path:
+            paths_to_try.append( base_path.replace( "female/", "" ) )
+        full_path = None
+        for path in paths_to_try:
+            if form_identifier:
+                form_file_name = "%s-%s.%s" % (species_id, form_identifier, extension)
+                id_file_name = "%s.%s" % (pokemon_id, extension)
+                file_name = (
+                    id_file_name
+                    if file_path_or_none(path + id_file_name)
+                    else form_file_name
+                )
+                if id_file_name and form_file_name and (not is_default):
+                    file_name = form_file_name
+            else:
+                file_name = "%s.%s" % (species_id, extension)
+            if full_path == None:
+                full_path = file_path_or_none(path + file_name)
+            else:
+                break
+        return full_path
     def csv_record_to_objects(info):
         poke_sprites = "pokemon/"
         sprites = {

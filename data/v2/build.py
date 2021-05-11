@@ -1227,7 +1227,7 @@ def _build_locations():
 #############
 
 
-def _build_pokemons():
+def _build_pokemons_part0():
     def csv_record_to_objects(info):
         yield PokemonColor(id=int(info[0]), name=info[1])
 
@@ -1348,26 +1348,53 @@ def _build_pokemons():
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
-    def try_image_names(path, info, extension):
-        # poke_sprites = "pokemon/{0}"
-        pokemon_id = info[0]
-        identifier = info[1]
-        species_id = info[2]
-        if "-" in identifier:
-            form_file_name = "%s.%s" % (
-                species_id + "-" + identifier.split("-", 1)[1],
-                extension,
-            )
-            id_file_name = "%s.%s" % (pokemon_id, extension)
-            file_name = (
-                id_file_name
-                if file_path_or_none(path + id_file_name)
-                else form_file_name
-            )
-        else:
-            file_name = "%s.%s" % (info[0], extension)
-        return file_path_or_none(path + file_name)
+def try_image_names(path, info, extension):
+	# poke_sprites = "pokemon/{0}"
+	pokemon_id = info[0]
+	identifier = info[1]
+	species_id = info[2]
+	debug = lambda x : print( *x ) if "jynx" in identifier else lambda _ : print( end='' )
+	debug( ( pokemon_id, identifier, species_id ) )
+	file_name = None
+	if "-" in identifier:
+		form_file_name = "%s.%s" % (
+			species_id + "-" + identifier.split("-", 1)[1],
+			extension,
+		)
+		id_file_name = "%s.%s" % (pokemon_id, extension)
+		if file_path_or_none(path + id_file_name):
+			file_name = id_file_name
+		elif file_path_or_none(path + form_file_name):
+			file_name = form_file_name
+		#file_name = (
+		#    id_file_name
+		#    if file_path_or_none(path + id_file_name)
+		#    else form_file_name
+		#)
+		#debug( ( "choice 0 form_file_name: ", form_file_name, " path: ", path, " id_file_name " , id_file_name, " file_name ", file_name ) )
+	else:
+		no_dash_file_name = "%s.%s" % (pokemon_id, extension)
+		if  file_path_or_none(path + no_dash_file_name):
+			file_name = no_dash_file_name
+		#debug( ( "choice 1 file_name: ", file_name, " path ", path, " file path or none ", file_path_or_none(path + file_name) ) )
+	if file_name == None:
+		pokemon_id_file_name = "%s.%s" % ((int(pokemon_id)-1), extension)
+		species_id_file_name = "%s.%s" % ((int(species_id)-1), extension)
+		debug( ( "pokemon_id_file_name", pokemon_id_file_name, "species_id_file_name", species_id_file_name ) )
+		if file_path_or_none(path + pokemon_id_file_name):
+			debug( ( "0after ", pokemon_id_file_name ) )
+			file_name = pokemon_id_file_name
+		elif file_path_or_none(path + species_id_file_name):
+			debug( ( "1after ", species_id_file_name ) )
+			file_name = species_id_file_name
+	debug( ( "meep ", str( file_name ) ) )
+	file_name = ( file_name if file_name != None else "not_found" )
+	debug( ( "beep ", str( file_name ) ) )
+	#debug( ( "Found Path: ", file_path_or_none(path + file_name), " for path ", path, " and file name ", file_name ) )
+	debug( ( ( ( "Found path! " + path + file_name ) if file_name != "not_found" else "Failed to find path!" ), ) )
+	return file_path_or_none(path + file_name)
 
+def _build_pokemon_sprites_part0():
     def csv_record_to_objects(info):
         poke_sprites = "pokemon/"
         dream_world = "other/dream-world/"
@@ -1833,6 +1860,29 @@ def _build_pokemons():
 
     build_generic((PokemonSprites,), "pokemon.csv", csv_record_to_objects)
 
+"""
+    def try_image_names(path, info, extension):
+        form_identifier = info[2]
+        pokemon_id = info[3]
+        pokemon = Pokemon.objects.get(pk=int(pokemon_id))
+        species_id = getattr(pokemon, "pokemon_species_id")
+        is_default = int(info[5])
+        if form_identifier:
+            form_file_name = "%s-%s.%s" % (species_id, form_identifier, extension)
+            id_file_name = "%s.%s" % (pokemon_id, extension)
+            file_name = (
+                id_file_name
+                if file_path_or_none(path + id_file_name)
+                else form_file_name
+            )
+            if id_file_name and form_file_name and (not is_default):
+                file_name = form_file_name
+        else:
+            file_name = "%s.%s" % (species_id, extension)
+        return file_path_or_none(path + file_name)
+"""
+
+def _build_pokemons_part1():
     def csv_record_to_objects(info):
         yield PokemonAbility(
             pokemon_id=int(info[0]),
@@ -1900,27 +1950,7 @@ def _build_pokemons():
         )
 
     build_generic((PokemonForm,), "pokemon_forms.csv", csv_record_to_objects)
-
-    def try_image_names(path, info, extension):
-        form_identifier = info[2]
-        pokemon_id = info[3]
-        pokemon = Pokemon.objects.get(pk=int(pokemon_id))
-        species_id = getattr(pokemon, "pokemon_species_id")
-        is_default = int(info[5])
-        if form_identifier:
-            form_file_name = "%s-%s.%s" % (species_id, form_identifier, extension)
-            id_file_name = "%s.%s" % (pokemon_id, extension)
-            file_name = (
-                id_file_name
-                if file_path_or_none(path + id_file_name)
-                else form_file_name
-            )
-            if id_file_name and form_file_name and (not is_default):
-                file_name = form_file_name
-        else:
-            file_name = "%s.%s" % (species_id, extension)
-        return file_path_or_none(path + file_name)
-
+def _build_pokemon_sprites_part1():
     def csv_record_to_objects(info):
         poke_sprites = "pokemon/"
         sprites = {
@@ -1952,7 +1982,7 @@ def _build_pokemons():
         )
 
     build_generic((PokemonFormName,), "pokemon_form_names.csv", csv_record_to_objects)
-
+def _build_pokemons_part2():
     def csv_record_to_objects(info):
         yield PokemonFormGeneration(
             pokemon_form_id=int(info[0]),
@@ -2038,6 +2068,13 @@ def _build_pokemons():
 
     build_generic((PokemonTypePast,), "pokemon_types_past.csv", csv_record_to_objects)
 
+################################# MOCK
+def _build_pokemons():
+    _build_pokemons_part0()
+    _build_pokemon_sprites_part0()
+    _build_pokemons_part1()
+    _build_pokemon_sprites_part1()
+    _build_pokemons_part2()
 
 ###############
 #  ENCOUNTER  #

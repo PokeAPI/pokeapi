@@ -9,7 +9,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 8,ice-punch,1,15,75,15,100,0,10,2,6,10,2,1,17
 9,thunder-punch,1,13,75,15,100,0,10,2,7,10,1,1,17
 10,scratch,1,1,40,35,100,0,10,2,1,,5,1,5
-11,vice-grip,1,1,55,30,100,0,10,2,1,,5,1,5
+11,vise-grip,1,1,55,30,100,0,10,2,1,,5,1,5
 12,guillotine,1,1,,5,30,0,10,2,39,,1,14,9
 13,razor-wind,1,1,80,10,100,0,11,3,40,,1,2,6
 14,swords-dance,1,1,,20,,0,7,1,51,,2,32,11

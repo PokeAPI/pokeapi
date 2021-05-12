@@ -4,7 +4,7 @@ coverage==4.5.1
 django-appconf==1.0.4
 django-cors-headers==2.5.3
 django-discover-runner==1.0
-django-redis==4.12.1
+django-redis==4.10.0
 django-cachalot==2.3.5
 django-tastypie==0.14.3
 djangorestframework==3.10.3

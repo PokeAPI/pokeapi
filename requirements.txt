@@ -1,4 +1,4 @@
-Django==2.2.20
+Django==2.1.11
 Unipath==1.1
 coverage==4.5.1
 django-appconf==1.0.4

@@ -783,7 +783,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 782,behemoth-bash,8,9,100,5,100,0,10,2,,,,,
 783,aura-wheel,8,13,110,10,100,0,10,2,,,,,
 784,breaking-swipe,8,16,60,15,100,0,11,2,,,,,
-784,branch-poke,8,12,40,40,100,0,11,2,,,,,
+785,branch-poke,8,12,40,40,100,0,11,2,,,,,
 786,overdrive,8,13,80,10,100,0,11,3,,,,,
 787,apple-acid,8,12,80,10,100,0,10,3,,,,,
 788,grav-apple,8,12,80,10,100,0,10,2,,,,,

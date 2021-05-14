@@ -6,7 +6,6 @@ ENV PYTHONHASHSEED 'random'
 
 RUN mkdir /code
 WORKDIR /code
-VOLUME /code
 
 ADD requirements.txt /code/
 RUN \

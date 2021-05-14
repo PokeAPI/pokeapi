@@ -1,4 +1,4 @@
-Django==2.1.11
+Django==2.1.15
 Unipath==1.1
 coverage==4.5.1
 django-appconf==1.0.4
@@ -7,7 +7,7 @@ django-discover-runner==1.0
 django-redis==4.10.0
 django-cachalot==2.3.5
 django-tastypie==0.14.3
-djangorestframework==3.9.0
+djangorestframework==3.9.4
 drf-ujson==1.2.0
 gunicorn==20.1.0
 mimeparse==0.1.3

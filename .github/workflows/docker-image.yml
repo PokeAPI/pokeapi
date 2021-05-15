@@ -15,7 +15,8 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-        submodules: 'true'
+        with:
+          submodules: recursive
       -
         name: Docker meta
         id: meta

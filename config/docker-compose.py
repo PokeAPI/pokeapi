@@ -5,7 +5,7 @@ from .settings import *
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "pokeapi",
+        "NAME": os.environ.get("POSTGRES_DB", "pokeapi"),
         "USER": os.environ.get("POSTGRES_USER", "ash"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "pokemon"),
         "HOST": "db",

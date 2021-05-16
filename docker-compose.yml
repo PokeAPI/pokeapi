@@ -9,9 +9,9 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: 'pokemon'
-      POSTGRES_USER: 'ash'
-      POSTGRES_DB: 'pokeapi'
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
+      POSTGRES_USER: ${POSTGRES_USER:-ash}
+      POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
     volumes:
       - pg_data:/var/lib/postgresql/data
     restart: always
@@ -20,6 +20,10 @@ services:
     build:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
+      POSTGRES_USER: ${POSTGRES_USER:-ash}
+      POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
     volumes:
       - .:/code
     links:
@@ -53,11 +57,11 @@ services:
       - "db"
     restart: always
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://ash:pokemon@db:5432/pokeapi
+      HASURA_GRAPHQL_DATABASE_URL: postgres://${POSTGRES_USER:-ash}:${POSTGRES_PASSWORD:-pokemon}@db:5432/${POSTGRES_DB:-pokeapi}
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_DEV_MODE: "false"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
-      HASURA_GRAPHQL_ADMIN_SECRET: pokemon
+      HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_GRAPHQL_ADMIN_SECRET:-pokemon}
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anon
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets

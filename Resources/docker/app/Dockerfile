@@ -6,7 +6,6 @@ ENV PYTHONHASHSEED 'random'
 
 RUN mkdir /code
 WORKDIR /code
-VOLUME /code
 
 ADD requirements.txt /code/
 RUN \
@@ -16,5 +15,6 @@ RUN \
     apk --purge del .build-deps
 ADD . /code/
 
+USER nobody
 CMD gunicorn config.wsgi:application -c gunicorn.py.ini
-EXPOSE 8000
+EXPOSE 80

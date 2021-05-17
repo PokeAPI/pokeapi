@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
-    user: {RUN_AS:-pokeapi}
+    user: ${RUN_AS:-pokeapi}
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}

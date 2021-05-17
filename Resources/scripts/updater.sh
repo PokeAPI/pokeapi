@@ -175,7 +175,7 @@ run_updater() {
   fi
 
   # Run the updater
-  docker run --privileged -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" -e RUN_AS=root pokeapi-updater
+  docker run --privileged -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" -e RUN_AS='root' pokeapi-updater
   return_code=$?
   if [ "$return_code" -eq 2 ]; then
     cleanexit 'no-new-data' "Generated data is the same as old data, skipping deploy"

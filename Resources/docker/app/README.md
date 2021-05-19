@@ -16,6 +16,8 @@
 
 - [`latest`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 
+> `pokeapi` uses `python:3.7-alpine` as base image.
+
 ## What is PokeAPI?
 
 PokeAPI is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
@@ -30,6 +32,19 @@ This container connects to a Postgres database via the environment variables `PO
 
 The container connects to a Redis cache via the environment variable `REDIS_CONNECTION_STRING`.
 
-### Run the container using Compose
+### Run the container
 
-The container exposes port `80`. It's recommended to use the provided [docker-compose.yml](https://github.com/PokeAPI/pokeapi/blob/master/docker-compose.yml) to start a container from this image.
+The container exposes port `80`. It needs a PostgreSQL and a Redis instance to connect to. Refer to the section [How to use this image](./how-to-use-this-image) for mapping the environment variables.
+
+It's recommended to use the provided [docker-compose.yml](https://github.com/PokeAPI/pokeapi/blob/master/docker-compose.yml) to start a container from this image.
+
+### Build the data
+
+Pokémon data isn't automatically present in this image. All Pokémon data is persisted in a PostgreSQL database and thus needs to be built.
+
+When the container is up and running, run the following shell commands:
+
+```sh
+docker exec pokeapi python manage.py migrate --settings=config.docker-compose
+docker exec pokeapi sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+```

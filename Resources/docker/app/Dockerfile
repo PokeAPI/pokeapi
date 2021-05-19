@@ -15,6 +15,9 @@ RUN \
     apk --purge del .build-deps
 ADD . /code/
 
-USER nobody
+RUN addgroup -g 1000 -S pokeapi && \
+    adduser -u 1000 -S pokeapi -G pokeapi
+
+USER pokeapi
 CMD gunicorn config.wsgi:application -c gunicorn.py.ini
 EXPOSE 80

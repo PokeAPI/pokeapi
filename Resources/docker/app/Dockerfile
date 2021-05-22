@@ -2,7 +2,6 @@ FROM python:3.7-alpine
 
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_SETTINGS_MODULE 'config.docker-compose'
-ENV PYTHONHASHSEED 'random'
 
 RUN mkdir /code
 WORKDIR /code

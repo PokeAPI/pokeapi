@@ -8,21 +8,21 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (("Paul Hallett", "paulandrewhallett@gmail.com"),)
+ADMINS = (os.environ.get('ADMINS', "Paul Hallett,paulandrewhallett@gmail.com").split(","),)
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 MANAGERS = ADMINS
 
-BASE_URL = "http://pokeapi.co"
+BASE_URL = os.environ.get("BASE_URL", "http://pokeapi.co")
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [".pokeapi.co", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS", ".pokeapi.co"), "localhost", "127.0.0.1"]
 
-TIME_ZONE = "Europe/London"
+TIME_ZONE = os.environ.get("TIME_ZONE", "Europe/London")
 
-LANGUAGE_CODE = "en-gb"
+LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", "en-gb")
 
 SITE_ID = 1
 
@@ -39,8 +39,6 @@ USE_TZ = True
 
 # Explicitly define test runner to avoid warning messages on test execution
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
-
-SECRET_KEY = "4nksdock439320df*(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#"
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",

@@ -1,4 +1,4 @@
-name: Create Cluster
+name: kustomize
 
 on:
   push:
@@ -21,4 +21,8 @@ jobs:
           kubectl cluster-info
           kubectl get storageclass standard
           cp Resources/k8s/kustomize/secrets/postgres.env.sample Resources/k8s/kustomize/secrets/postgres.env
-          kubectl apply -k Resources/k8s/kustomize/
+          make kustomize-apply
+          bash Resources/scripts/wait.sh http://localhost/api/v2/
+          make k8s-migrate
+          make k8s-build-db
+          bash Resources/scripts/wait.sh http://localhost/api/v2/pal-park-area/5/

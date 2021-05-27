@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load-graphql
+  namespace: pokeapi
+spec:
+  ttlSecondsAfterFinished: 200
+  template:
+    spec:
+      containers:
+      - name: load-graphql
+        image: debian:buster
+        env:
+        - name: HASURA_GRAPHQL_ADMIN_SECRET
+          value: pokemon
+        command: ["sh", "-c"]
+        args: ["apt-get update && apt-get install -y git curl && curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | bash && hasura update-cli --version v2.0.0-alpha.5 && git clone https://github.com/PokeAPI/pokeapi.git && cd pokeapi && git checkout staging && hasura md apply --endpoint http://graphql:8080 --project graphql --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)"]
+      restartPolicy: Never

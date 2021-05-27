@@ -1,0 +1,24 @@
+name: Create Cluster
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'staging'
+
+jobs:
+  create-cluster:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Create k8s Kind Cluster
+        uses: helm/kind-action@v1.1.0
+      - name: Test
+        run: |
+          kubectl cluster-info
+          kubectl get storageclass standard
+          cp Resources/k8s/kustomize/secrets/postgres.env.sample Resources/k8s/kustomize/secrets/postgres.env
+          kubectl apply -k Resources/k8s/kustomize/

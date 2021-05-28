@@ -23,10 +23,12 @@ spec:
       containers:
         - name: pokeapi
           image: pokeapi/pokeapi:staging
-          # imagePullPolicy: Always
+          imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           env:
+            - name: SERVER_PORT
+              value: 8080
             - name: POSTGRES_HOST
               value: postgresql
             - name: POSTGRES_USER

@@ -16,6 +16,10 @@ jobs:
           submodules: recursive
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.1.0
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          limit-access-to-actor: true
       - name: Test
         run: |
           kubectl cluster-info

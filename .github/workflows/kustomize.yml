@@ -28,6 +28,9 @@ jobs:
           make kustomize-apply
           kubectl proxy &
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
+      - name: Set default namespace
+        run: |
+          kubectl config set-context --current --namespace pokeapi
       - name: Migrate and build data
         run: |
           make k8s-migrate

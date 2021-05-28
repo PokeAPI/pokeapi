@@ -26,9 +26,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
           env:
             - name: SERVER_PORT
-              value: 8080
+              value: "8080"
             - name: POSTGRES_HOST
               value: postgresql
             - name: POSTGRES_USER
@@ -51,10 +54,10 @@ spec:
             initialDelaySeconds: 5
             httpGet:
               path: /api/v2/
-              port: 80
+              port: 8080
           livenessProbe:
             periodSeconds: 5
             initialDelaySeconds: 5
             httpGet:
               path: /api/v2/
-              port: 80
+              port: 8080

@@ -105,10 +105,10 @@ kustomize-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluste
 	kubectl apply -k Resources/k8s/kustomize/
 
 k8s-migrate:  # (k8s) Run any pending migrations
-	kubectl exec deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
+	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
 
 k8s-build-db:  # (k8s) Build the database
-	kubectl exec deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi

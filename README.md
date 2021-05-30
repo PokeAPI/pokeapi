@@ -110,6 +110,29 @@ A free public GraphiQL console is browsable at the address https://beta.pokeapi.
 
 A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
+## Kubernetes
+
+[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/. Create and change your secrets:
+
+```sh
+cp Resources/k8s/kustomize/secrets/postgres.env.sample Resources/k8s/kustomize/secrets/postgres.env
+cp Resources/k8s/kustomize/secrets/graphql.env.sample Resources/k8s/kustomize/secrets/graphql.env
+# Edit the newly created files
+```
+
+Configure `kubectl` to point to a cluster and then run the following commands to start a PokéAPI service.
+
+```sh
+kubectl apply -k Resources/k8s/kustomize/
+kubectl config set-context --current --namespace pokeapi # (Optional) Set pokeapi ns as the working ns
+# Wait for the cluster to spin up
+kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose # Migrate the DB
+kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose' # Build the db
+kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/load-graphql # Wait for Graphql configuration job to finish
+```
+
+This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `kubectl delete namespace pokeapi` to delete them. It also creates a _Service_ of type `LoadBalancer` which is exposed on port `80` and `443`. Data is persisted on `12Gi` of `ReadWriteOnce` volumes.
+
 ## Official REST Wrappers
 
 * Node server-side [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_

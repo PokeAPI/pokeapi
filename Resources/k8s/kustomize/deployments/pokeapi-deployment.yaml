@@ -23,10 +23,9 @@ spec:
       containers:
         - name: pokeapi
           image: pokeapi/pokeapi:staging
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          securityContext:
+          securityContext: # CI: Github Actions kills this container if not run with root. Otherwise, it's safe to use the default pokeapi/pokeapi user and remove these lines.
             allowPrivilegeEscalation: false
             runAsUser: 0
           env:

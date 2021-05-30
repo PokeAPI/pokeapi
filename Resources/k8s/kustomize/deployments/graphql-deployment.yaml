@@ -14,6 +14,12 @@ spec:
       labels:
         component: graphql
     spec:
+      initContainers:
+        - name: pokeapi-connection-checker
+          image: curlimages/curl:latest
+          command: ['sh', '-c',
+            'until curl -f -s --output /dev/null http://pokeapi:80/api/v2/; 
+            do echo waiting for pokeapi; sleep 2; done;']
       containers:
         - name: graphql-engine
           image: hasura/graphql-engine:v2.0.0-alpha.5
@@ -25,6 +31,11 @@ spec:
                 secretKeyRef:
                   name: postgres-env-secret
                   key: POSTGRES_PASSWORD
+            - name: HASURA_GRAPHQL_ADMIN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: graphql-env-secret
+                  key: HASURA_GRAPHQL_ADMIN_SECRET
             - name: HASURA_GRAPHQL_DATABASE_URL
               value: postgres://ash:$(POSTGRES_PASSWORD)@postgresql:5432/pokeapi
             - name: HASURA_GRAPHQL_ENABLE_CONSOLE
@@ -33,8 +44,6 @@ spec:
               value: "false"
             - name: HASURA_GRAPHQL_ENABLED_LOG_TYPES
               value: startup, http-log, webhook-log, websocket-log, query-log
-            - name: HASURA_GRAPHQL_ADMIN_SECRET
-              value: pokemon
             - name: HASURA_GRAPHQL_UNAUTHORIZED_ROLE
               value: anon
             - name: HASURA_GRAPHQL_ENABLE_TELEMETRY

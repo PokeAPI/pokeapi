@@ -10,7 +10,10 @@ configMapGenerator:
 
 secretGenerator:
   - name: postgres-env-secret
-    env: secrets/postgres.env # TODO: change in envs as kustomize release 2.0.4
+    env: secrets/postgres.env
+    type: Opaque
+  - name: graphql-env-secret
+    env: secrets/graphql.env
     type: Opaque
 
 resources:
@@ -32,3 +35,4 @@ resources:
   - deployments/graphql-deployment.yaml
   - deployments/haproxy-ingress-controller.yaml
   - other/ingress.yaml
+  - jobs/load-graphql.yaml

@@ -106,7 +106,7 @@ A free public GraphiQL console is browsable at the address https://beta.pokeapi.
 
 A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
-## Kubernetes [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
+## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
 [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/. Create and change your secrets:
 

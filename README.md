@@ -20,7 +20,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql) for more info.
 
-## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
+## Setup &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -70,7 +70,7 @@ If you ever need to wipe the database use this command:
 make wipe_db
 ```
 
-## Docker and Compose
+## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
 There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokéAPI.
 
@@ -90,11 +90,7 @@ docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; bui
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
-## GraphQL
-
-<a href="ttps://github.com/hasura/graphql-engine">
-  <img width="100px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg" />
-</a>
+## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above docker-compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
@@ -110,7 +106,7 @@ A free public GraphiQL console is browsable at the address https://beta.pokeapi.
 
 A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
-## Kubernetes
+## Kubernetes [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
 [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/. Create and change your secrets:
 

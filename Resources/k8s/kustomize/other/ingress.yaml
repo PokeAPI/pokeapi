@@ -48,19 +48,3 @@ spec:
             name: graphql
             port:
               number: 8080
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: auth-ingress
-#   annotations:
-#     ingress.kubernetes.io/auth-type: basic
-#     ingress.kubernetes.io/auth-realm: Default realm
-#     ingress.kubernetes.io/auth-secret: bugs-frontend-secret
-# spec:
-#   rules:
-#   - http:
-#       paths:
-#       - path: /bugs
-#         backend:
-#           serviceName: frontend-bugs
-#           servicePort: 8080

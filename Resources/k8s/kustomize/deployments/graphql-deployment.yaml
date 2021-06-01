@@ -17,9 +17,12 @@ spec:
       initContainers:
         - name: pokeapi-connection-checker
           image: curlimages/curl:latest
-          command: ['sh', '-c',
-            'until curl -f -s --output /dev/null http://pokeapi:80/api/v2/; 
-            do echo waiting for pokeapi; sleep 2; done;']
+          command: ["sh", "-c"]
+          args:
+            - until curl -f -s --output /dev/null http://pokeapi:80/api/v2/; do
+              echo waiting for pokeapi;
+              sleep 2;
+              done;
       containers:
         - name: graphql-engine
           image: hasura/graphql-engine:v2.0.0-alpha.5
@@ -49,4 +52,3 @@ spec:
             - name: HASURA_GRAPHQL_ENABLE_TELEMETRY
               value: "false"
           resources: {}
-

@@ -7,7 +7,7 @@ on:
       - 'master'
       - 'staging'
   schedule:
-    - cron:  '0 0 1 * *'
+    - cron: '0 0 1 * *'
 
 jobs:
   create-kustomize-cluster:
@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
+      - name: Lint
+        run: (cd Resources/k8s/kustomize && yamllint .)
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.1.0
         with:

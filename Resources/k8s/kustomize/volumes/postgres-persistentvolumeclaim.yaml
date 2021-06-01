@@ -1,5 +1,5 @@
-kind: PersistentVolume
 apiVersion: v1
+kind: PersistentVolume
 metadata:
   name: postgres-volume0
   labels:
@@ -10,7 +10,7 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  hostPath: # TODO: change to a cloud-solution
+  hostPath:  # TODO: change to a cloud-solution
     path: "/mnt/data"
 ---
 apiVersion: v1

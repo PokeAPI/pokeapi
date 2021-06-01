@@ -14,15 +14,15 @@ spec:
       port:
         number: 8080
   rules:
-  - http:
-      paths:
-      - path: /api/v2
-        pathType: Prefix
-        backend:
-          service:
-            name: pokeapi
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /api/v2
+            pathType: Prefix
+            backend:
+              service:
+                name: pokeapi
+                port:
+                  number: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -39,12 +39,12 @@ spec:
       port:
         number: 8080
   rules:
-  - http:
-      paths:
-      - path: /graphql
-        pathType: Prefix
-        backend:
-          service:
-            name: graphql
-            port:
-              number: 8080
+    - http:
+        paths:
+          - path: /graphql
+            pathType: Prefix
+            backend:
+              service:
+                name: graphql
+                port:
+                  number: 8080

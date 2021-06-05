@@ -25,7 +25,7 @@ spec:
               done;
       containers:
         - name: pokeapi
-          image: pokeapi/pokeapi:staging
+          image: pokeapi/pokeapi:master
           ports:
             - containerPort: 8080
           securityContext:  # CI: Github Actions kills this container if not run with root. Otherwise, it's safe to use the default pokeapi/pokeapi user and remove these lines.

@@ -108,18 +108,19 @@ A set of examples are provided in the directory [/graphql/examples](./graphql/ex
 
 ## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
-[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/. Create and change your secrets:
+[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
 
 ```sh
-cp Resources/k8s/kustomize/secrets/postgres.env.sample Resources/k8s/kustomize/secrets/postgres.env
-cp Resources/k8s/kustomize/secrets/graphql.env.sample Resources/k8s/kustomize/secrets/graphql.env
+cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
+cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
+cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
 # Edit the newly created files
 ```
 
 Configure `kubectl` to point to a cluster and then run the following commands to start a PokéAPI service.
 
 ```sh
-kubectl apply -k Resources/k8s/kustomize/
+kubectl apply -k Resources/k8s/kustomize/base/
 kubectl config set-context --current --namespace pokeapi # (Optional) Set pokeapi ns as the working ns
 # Wait for the cluster to spin up
 kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose # Migrate the DB

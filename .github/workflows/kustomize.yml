@@ -24,12 +24,16 @@ jobs:
         uses: helm/kind-action@v1.1.0
         with:
           version: v0.11.1
+      - name: Create deployment configuration
+        run: |
+          cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
+          cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
+          cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
       - name: K8s Apply
         run: |
-          cp Resources/k8s/kustomize/secrets/postgres.env.sample Resources/k8s/kustomize/secrets/postgres.env
-          cp Resources/k8s/kustomize/secrets/graphql.env.sample Resources/k8s/kustomize/secrets/graphql.env
-          make kustomize-apply
+          if [ ${GITHUB_REF#refs/heads/} = 'master' ]; then make kustomize-apply; else make kustomize-staging-apply; fi 
           kubectl proxy &
+          kubectl describe deployment
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
       - name: Set default namespace
         run: |

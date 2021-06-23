@@ -7,6 +7,6 @@ db.*
 venv*
 node_modules
 .vscode
-.env
+*.env
 Resources/nginx/ssl/*
 !Resources/nginx/ssl/*.sample.*

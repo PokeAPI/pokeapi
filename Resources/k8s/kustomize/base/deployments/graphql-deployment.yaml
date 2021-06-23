@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphql
+  labels:
+    component: graphql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: graphql
+  template:
+    metadata:
+      labels:
+        component: graphql
+    spec:
+      initContainers:
+        - name: pokeapi-connection-checker
+          image: curlimages/curl:latest
+          command: ["sh", "-c"]
+          args:
+            - until curl -f -s --output /dev/null http://pokeapi:80/api/v2/; do
+              echo waiting for pokeapi;
+              sleep 2;
+              done;
+      containers:
+        - name: graphql-engine
+          image: hasura/graphql-engine:v2.0.0-alpha.5
+          ports:
+            - containerPort: 8080
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-env-secret
+                  key: POSTGRES_PASSWORD
+            - name: HASURA_GRAPHQL_ADMIN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: graphql-env-secret
+                  key: HASURA_GRAPHQL_ADMIN_SECRET
+            - name: HASURA_GRAPHQL_DATABASE_URL
+              value: postgres://ash:$(POSTGRES_PASSWORD)@postgresql:5432/pokeapi
+            - name: HASURA_GRAPHQL_ENABLE_CONSOLE
+              value: "true"
+            - name: HASURA_GRAPHQL_DEV_MODE
+              value: "false"
+            - name: HASURA_GRAPHQL_ENABLED_LOG_TYPES
+              value: startup, http-log, webhook-log, websocket-log, query-log
+            - name: HASURA_GRAPHQL_UNAUTHORIZED_ROLE
+              value: anon
+            - name: HASURA_GRAPHQL_ENABLE_TELEMETRY
+              value: "false"
+          resources: {}

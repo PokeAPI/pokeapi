@@ -100,3 +100,18 @@ hasura-apply:  # Apply local Hasura configuration
 
 hasura-get-anon-schema:  # Dumps GraphQL schema
 	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql
+
+kustomize-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
+	kubectl apply -k Resources/k8s/kustomize/base/
+
+kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
+	kubectl apply -k Resources/k8s/kustomize/staging/
+
+k8s-migrate:  # (k8s) Run any pending migrations
+	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
+
+k8s-build-db:  # (k8s) Build the database
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+
+k8s-delete:  # (k8s) Delete pokeapi namespace
+	kubectl delete namespace pokeapi

@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: haproxy-ingress-controller
+  labels:
+    component: haproxy-ingress
+spec:
+  selector:
+    matchLabels:
+      component: haproxy-ingress
+  template:
+    metadata:
+      labels:
+        component: haproxy-ingress
+    spec:
+      serviceAccountName: ingress-controller
+      containers:
+        - name: haproxy-ingress-controller
+          image: quay.io/jcmoraisjr/haproxy-ingress:v0.12.3
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          args:
+            - --default-ssl-certificate=$(POD_NAMESPACE)/tls-secret
+            - --configmap=$(POD_NAMESPACE)/haproxy-ingress-configmap
+            - --reload-strategy=native
+          ports:
+            - name: http
+              containerPort: 80
+            - name: https
+              containerPort: 443
+            - name: stat
+              containerPort: 1936
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 10253
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace

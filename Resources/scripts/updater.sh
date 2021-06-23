@@ -154,7 +154,8 @@ EOF
 
 # If the job was started by a Pull Request and not by a cron job, add a comment to notify the users
 notify_engine_pr() {
-  if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" || $1 == "end_no_deploy" || $1 == "end_no_new_data" ]]; then
+  local -r allowed_events='start end_failed end_success end_no_deploy end_no_new_data'
+  if [[ "$allowed_events" == *"$1"* ]] && [[ "$CIRCLE_BRANCH" == 'master' ]]; then
     engine_repo_pr_number=$(get_invokator_pr_number)
     if [ "$engine_repo_pr_number" != "null" ] && [ -n "$CIRCLE_USERNAME" ]; then
       curl -f -H "$auth_header" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"

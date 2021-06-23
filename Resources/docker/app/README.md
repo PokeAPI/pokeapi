@@ -15,6 +15,8 @@
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
+- [`master`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
+- [`staging`](https://github.com/PokeAPI/pokeapi/blob/staging/Resources/docker/app/Dockerfile)
 
 > `pokeapi` uses `python:3.7-alpine` as base image.
 

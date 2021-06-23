@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgresql
+  labels:
+    component: postgresql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: postgresql
+  template:
+    metadata:
+      labels:
+        component: postgresql
+    spec:
+      containers:
+        - name: postgresql
+          image: postgres:13.3-alpine
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_USER
+              value: ash
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-env-secret
+                  key: POSTGRES_PASSWORD
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+            - name: POSTGRES_DB
+              value: pokeapi
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-claim0
+      volumes:
+        - name: postgres-claim0
+          persistentVolumeClaim:
+            claimName: postgres-claim0

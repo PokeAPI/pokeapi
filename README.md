@@ -20,7 +20,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql) for more info.
 
-## Setup [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
+## Setup &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -70,9 +70,9 @@ If you ever need to wipe the database use this command:
 make wipe_db
 ```
 
-## Docker and Compose
+## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
-There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokeAPI.
+There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokéAPI.
 
 Start everything by
 
@@ -90,13 +90,9 @@ docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; bui
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
-## GraphQL
+## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
-<a href="ttps://github.com/hasura/graphql-engine">
-  <img width="100px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg" />
-</a>
-
-When you start PokeAPI with the above docker-compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
+When you start PokéAPI with the above docker-compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
 ```sh
 # hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
@@ -109,6 +105,30 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
 A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+
+## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
+
+[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
+
+```sh
+cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
+cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
+cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
+# Edit the newly created files
+```
+
+Configure `kubectl` to point to a cluster and then run the following commands to start a PokéAPI service.
+
+```sh
+kubectl apply -k Resources/k8s/kustomize/base/
+kubectl config set-context --current --namespace pokeapi # (Optional) Set pokeapi ns as the working ns
+# Wait for the cluster to spin up
+kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose # Migrate the DB
+kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose' # Build the db
+kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/load-graphql # Wait for Graphql configuration job to finish
+```
+
+This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `kubectl delete namespace pokeapi` to delete them. It also creates a _Service_ of type `LoadBalancer` which is exposed on port `80` and `443`. Data is persisted on `12Gi` of `ReadWriteOnce` volumes.
 
 ## Official REST Wrappers
 

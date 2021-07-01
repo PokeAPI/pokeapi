@@ -17,6 +17,8 @@
 <br/>
 
 A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
+This fork is only intended for exploration
+I will try to modify the Pokemon List response to show a more detailed UI
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql) for more info.
 

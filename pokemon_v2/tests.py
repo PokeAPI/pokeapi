@@ -4338,7 +4338,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_characteristic_values(self):
-        l = []
         # check for all 5 possible values of gene_modulo
         for modulo in range(5):
             characteristic = self.setup_characteristic_data(gene_mod_5=modulo)

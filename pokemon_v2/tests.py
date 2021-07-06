@@ -11,7 +11,7 @@ API_V2 = "/api/v2"
 
 
 class APIData:
-    """ Data Initializers"""
+    """Data Initializers"""
 
     # Gender Data
     @classmethod
@@ -4345,12 +4345,12 @@ class APITests(APIData, APITestCase):
             # note that 'possible_values' is computed solely from gene_modulo
             # thus it is fine that our test characteristics are indexed 1-5
             result = self.client.get(
-                "{}/characteristic/{}/".format(API_V2, characteristic.pk))
-            for i in range(len(result.data['possible_values'])):
+                "{}/characteristic/{}/".format(API_V2, characteristic.pk)
+            )
+            for i in range(len(result.data["possible_values"])):
                 self.assertEqual(
-                    result.data['possible_values'][i], characteristic.gene_mod_5 + i * 5
+                    result.data["possible_values"][i], characteristic.gene_mod_5 + i * 5
                 )
-
 
     # Nature Tests
     def test_nature_api(self):

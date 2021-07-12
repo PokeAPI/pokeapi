@@ -1,7 +1,7 @@
 <br/>
 
 <div align="center">
-	<img height="200" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.svg?sanitize=true" alt="PokeAPI">
+ <img height="200" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi.svg?sanitize=true" alt="PokeAPI">
 
 [![build status](https://img.shields.io/circleci/project/github/PokeAPI/pokeapi/master.svg)](https://circleci.com/gh/PokeAPI/pokeapi)
 [![data status](https://img.shields.io/circleci/build/github/PokeAPI/api-data?label=data)](https://github.com/PokeAPI/api-data)
@@ -26,22 +26,22 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 - Install the requirements using pip:
 
-    ```sh
-    make install
-    # This will install all the required packages and libraries for using PokeAPI
-    ```
+  ```sh
+  make install
+  # This will install all the required packages and libraries for using PokeAPI
+  ```
 
 - Set up the local development environment using the following command:
 
-    ```sh
-    make setup
-    ```
+  ```sh
+  make setup
+  ```
 
 - Run the server using the following command:
 
-    ```sh
-    make serve
-    ```
+  ```sh
+  make serve
+  ```
 
 ### Database setup
 
@@ -100,15 +100,15 @@ When you start PokéAPI with the above docker-compose setup, an [Hasura Engine](
 make hasura-apply
 ```
 
-When finished browse http://localhost:8080 and you will find the admin console. The GraphQL endpoint will be hosted at http://localhost:8080/v1/graphql.
+When finished browse <http://localhost:8080> and you will find the admin console. The GraphQL endpoint will be hosted at <http://localhost:8080/v1/graphql>.
 
-A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
+A free public GraphiQL console is browsable at the address <https://beta.pokeapi.co/graphql/console/>. The relative GraphQL endpoint is accessible at <https://beta.pokeapi.co/graphql/v1beta>
 
 A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
 ## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
-[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
+[Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder <https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/>. Create and change your secrets:
 
 ```sh
 cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
@@ -132,19 +132,20 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 
 ## Official REST Wrappers
 
-* Node server-side [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_
-* Browser client-side [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_
-* Java/Kotlin [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin)
-* Python 3 [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
-* Python 2/3 [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_
-* PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_
-* Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
-* .Net Standard [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_
-* Go [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_
-* Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
-* Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
-* Spring Boot [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_
-* Swift [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)
+- Node server-side [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_
+- Browser client-side [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_
+- Node server-side/client-side [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching, built-in typings & log configuration_
+- Java/Kotlin [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin)
+- Python 3 [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
+- Python 2/3 [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_
+- PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_
+- Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
+- .Net Standard [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_
+- Go [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_
+- Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
+- Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
+- Spring Boot [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_
+- Swift [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)
 
 ## Donations
 
@@ -154,7 +155,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
 
-## Join Us On Slack!
+## Join Us On Slack
 
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
@@ -179,17 +180,17 @@ To contribute to this repository:
 
 - Download the forked project using git clone:
 
-    ```sh
-    git clone --recurse-submodules git@github.com:<YOUR_USERNAME>/pokeapi.git
-    ```
+  ```sh
+  git clone --recurse-submodules git@github.com:<YOUR_USERNAME>/pokeapi.git
+  ```
 
 - Create a new branch with a descriptive name:
 
-    ```sh
-    git checkout -b my_new_branch
-    ```
+  ```sh
+  git checkout -b my_new_branch
+  ```
 
-- Write some code, fix something, and add a test to prove that it works. *No pull request will be accepted without tests passing, or without new tests if new features are added.*
+- Write some code, fix something, and add a test to prove that it works. _No pull request will be accepted without tests passing, or without new tests if new features are added._
 
 - Commit your code and push it to GitHub
 

@@ -1,0 +1,50 @@
+name: Deploy Kustomize k8s cluster
+
+on:
+  workflow_run:
+    workflows: ["Build and Push Docker image"]
+    branches: [master, staging]
+    types: 
+      - completed
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  create-kustomize-cluster:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Lint
+        run: (cd Resources/k8s/kustomize && yamllint .)
+      - name: Create k8s Kind Cluster
+        uses: helm/kind-action@v1.1.0
+        with:
+          version: v0.11.1
+      - name: Create deployment configuration
+        run: |
+          cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
+          cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
+          cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
+      - name: K8s Apply
+        run: |
+          if [ ${GITHUB_REF#refs/heads/} = 'master' ]; then make kustomize-apply; else make kustomize-staging-apply; fi 
+          kubectl proxy &
+          kubectl describe deployment
+          bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
+      - name: Set default namespace
+        run: |
+          kubectl config set-context --current --namespace pokeapi
+      - name: Migrate and build data
+        run: |
+          make k8s-migrate
+          make k8s-build-db
+          bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
+      - name: K8s Apply
+        run: |
+          kubectl wait --timeout=120s --for=condition=complete job/load-graphql
+          last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
+          test "$last_command" -eq 1

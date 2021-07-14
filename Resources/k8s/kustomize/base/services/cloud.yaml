@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: haproxy-ingress
+  labels:
+    component: haproxy-ingress
+spec:
+  type: LoadBalancer  # TODO: Change to `LoadBalancer`
+  externalTrafficPolicy: Local
+  ports:
+    - name: public-http
+      port: 80
+      targetPort: http
+    - name: public-https
+      port: 443
+      targetPort: http
+    - name: public-stat
+      port: 1936
+      targetPort: stat
+  selector:
+    component: haproxy-ingress

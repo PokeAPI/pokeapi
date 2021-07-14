@@ -1,0 +1,37 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load-graphql
+spec:
+  ttlSecondsAfterFinished: 200
+  template:
+    spec:
+      restartPolicy: Never
+      initContainers:
+        - name: pokeapi-last-built-resource-connection-checker
+          image: curlimages/curl:latest
+          command: ['sh', '-c']
+          args:
+            - until curl -f -s --output /dev/null http://pokeapi:80/api/v2/pal-park-area/5/;
+              do echo waiting for pokeapi;
+              sleep 2;
+              done;
+      containers:
+        - name: load-graphql
+          image: debian:buster
+          env:
+            - name: HASURA_GRAPHQL_ADMIN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: graphql-env-secret
+                  key: HASURA_GRAPHQL_ADMIN_SECRET
+          command: ["sh", "-c"]
+          args:
+            - apt-get update &&
+              apt-get install -y git curl &&
+              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | bash &&
+              hasura update-cli --version v2.0.0-alpha.5 &&
+              git clone https://github.com/PokeAPI/pokeapi.git &&
+              cd pokeapi &&
+              git checkout staging &&
+              hasura md apply --endpoint http://graphql:8080 --project graphql --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)

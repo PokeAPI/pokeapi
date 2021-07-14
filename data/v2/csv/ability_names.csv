@@ -353,7 +353,7 @@ ability_id,local_language_id,name
 36,3,트레이스
 36,4,複製
 36,5,Calque
-36,6,Fährte
+36,6,Erfassen
 36,7,Rastro
 36,8,Traccia
 36,9,Trace
@@ -593,7 +593,7 @@ ability_id,local_language_id,name
 60,3,점착
 60,4,黏著
 60,5,Glu
-60,6,Wertehalter
+60,6,Klebekörper
 60,7,Viscosidad
 60,8,Antifurto
 60,9,Sticky Hold
@@ -1354,7 +1354,7 @@ ability_id,local_language_id,name
 136,4,多重鱗片
 136,5,Multiécaille
 136,6,Multischuppe
-136,7,Compensación
+136,7,Multiescamas
 136,8,Multisquame
 136,9,Multiscale
 136,11,マルチスケイル
@@ -1413,7 +1413,7 @@ ability_id,local_language_id,name
 142,3,방진
 142,4,防塵
 142,5,Envelocape
-142,6,Wetterfest
+142,6,Partikelschutz
 142,7,Funda
 142,8,Copricapo
 142,9,Overcoat
@@ -2329,6 +2329,7 @@ ability_id,local_language_id,name
 233,9,Neuroforce
 233,11,ブレインフォース
 233,12,脑核之力
+234,1,ふとうのけん
 234,3,불요의검
 234,4,不撓之劍
 234,5,Lame Indomptable
@@ -2336,8 +2337,9 @@ ability_id,local_language_id,name
 234,7,Espada Indómita
 234,8,Spada Indomita
 234,9,Intrepid Sword
+234,11,ふとうのけん
 234,12,不挠之剑
-234,13,Espada Intrépida
+235,1,ふくつのたて
 235,3,불굴의방패
 235,4,不屈之盾
 235,5,Égide Inflexible
@@ -2345,7 +2347,9 @@ ability_id,local_language_id,name
 235,7,Escudo Recio
 235,8,Scudo Saldo
 235,9,Dauntless Shield
-235,13,Escudo Destemido
+235,11,ふくつのたて
+235,12,不屈之盾
+236,1,リベロ
 236,3,리베로
 236,4,自由者
 236,5,Libéro
@@ -2353,7 +2357,9 @@ ability_id,local_language_id,name
 236,7,Líbero
 236,8,Libero
 236,9,Libero
-236,13,Líbero
+236,11,リベロ
+236,12,自由者
+237,1,たまひろい
 237,3,볼줍기
 237,4,撿球
 237,5,Ramasse Ball
@@ -2361,7 +2367,9 @@ ability_id,local_language_id,name
 237,7,Recogebolas
 237,8,Raccattapalle
 237,9,Ball Fetch
+237,11,たまひろい
 237,12,捡球
+238,1,わたげ
 238,3,솜털
 238,4,棉絮
 238,5,Effilochage
@@ -2369,6 +2377,9 @@ ability_id,local_language_id,name
 238,7,Pelusa
 238,8,Lanugine
 238,9,Cotton Down
+238,11,わたげ
+238,12,棉絮
+239,1,スクリューおびれ
 239,3,스크루지느러미
 239,4,螺旋尾鰭
 239,5,Propulseur
@@ -2376,7 +2387,9 @@ ability_id,local_language_id,name
 239,7,Hélice Caudal
 239,8,Elicopinna
 239,9,Propeller Tail
+239,11,スクリューおびれ
 239,12,螺旋尾鳍
+240,1,ミラーアーマー
 240,3,미러아머
 240,4,鏡甲
 240,5,Armure Miroir
@@ -2384,23 +2397,29 @@ ability_id,local_language_id,name
 240,7,Coraza Reflejo
 240,8,Blindospecchio
 240,9,Mirror Armor
+240,11,ミラーアーマー
 240,12,镜甲
+241,1,うのミサイル
 241,3,그대로꿀꺽미사일
-241,4,口飛彈
+241,4,一口飛彈
 241,5,Dégobage
 241,6,Würggeschoss
 241,7,Tragamisil
 241,8,Inghiottimissile
 241,9,Gulp Missile
-241,12,口导弹
+241,11,うのミサイル
+241,12,一口导弹
+242,1,すじがねいり
 242,3,굳건한신념
 242,4,堅毅
-242,5,Nerfs d'Acier
+242,5,Nerfs d’Acier
 242,6,Stahlrückgrat
 242,7,Acérrimo
 242,8,Volontà di Ferro
 242,9,Stalwart
+242,11,すじがねいり
 242,12,坚毅
+243,1,じょうききかん
 243,3,증기기관
 243,4,蒸汽機
 243,5,Turbine
@@ -2408,7 +2427,9 @@ ability_id,local_language_id,name
 243,7,Combustible
 243,8,Vapormacchina
 243,9,Steam Engine
+243,11,じょうききかん
 243,12,蒸汽机
+244,1,パンクロック
 244,3,펑크록
 244,4,龐克搖滾
 244,5,Punk Rock
@@ -2416,7 +2437,9 @@ ability_id,local_language_id,name
 244,7,Punk Rock
 244,8,Punk Rock
 244,9,Punk Rock
+244,11,パンクロック
 244,12,庞克摇滚
+245,1,すなはき
 245,3,모래뿜기
 245,4,吐沙
 245,5,Expul’Sable
@@ -2424,6 +2447,9 @@ ability_id,local_language_id,name
 245,7,Expulsarena
 245,8,Sputasabbia
 245,9,Sand Spit
+245,11,すなはき
+245,12,吐沙
+246,1,こおりのりんぷん
 246,3,얼음인분
 246,4,冰鱗粉
 246,5,Écailles Glacées
@@ -2431,7 +2457,9 @@ ability_id,local_language_id,name
 246,7,Escama de Hielo
 246,8,Geloscaglie
 246,9,Ice Scales
+246,11,こおりのりんぷん
 246,12,冰鳞粉
+247,1,じゅくせい
 247,3,숙성
 247,4,熟成
 247,5,Mûrissement
@@ -2439,6 +2467,9 @@ ability_id,local_language_id,name
 247,7,Maduración
 247,8,Maturazione
 247,9,Ripen
+247,11,じゅくせい
+247,12,熟成
+248,1,アイスフェイス
 248,3,아이스페이스
 248,4,結凍頭
 248,5,Tête de Gel
@@ -2446,15 +2477,19 @@ ability_id,local_language_id,name
 248,7,Cara de Hielo
 248,8,Gelofaccia
 248,9,Ice Face
+248,11,アイスフェイス
 248,12,结冻头
+249,1,パワースポット
 249,3,파워스폿
 249,4,能量點
-249,5,Cercle d'Énergie
+249,5,Cercle d’Énergie
 249,6,Kraftquelle
 249,7,Fuente Energía
 249,8,Fonte Energetica
 249,9,Power Spot
+249,11,パワースポット
 249,12,能量点
+250,1,ぎたい
 250,3,의태
 250,4,擬態
 250,5,Mimétisme
@@ -2462,7 +2497,9 @@ ability_id,local_language_id,name
 250,7,Mimetismo
 250,8,Mimetismo
 250,9,Mimicry
+250,11,ぎたい
 250,12,拟态
+251,1,バリアフリー
 251,3,배리어프리
 251,4,除障
 251,5,Brise-Barrière
@@ -2470,7 +2507,9 @@ ability_id,local_language_id,name
 251,7,Antibarrera
 251,8,Annullabarriere
 251,9,Screen Cleaner
-251,13,Limpa-vidro
+251,11,バリアフリー
+251,12,除障
+252,1,はがねのせいしん
 252,3,강철정신
 252,4,鋼之意志
 252,5,Boost Acier
@@ -2478,8 +2517,9 @@ ability_id,local_language_id,name
 252,7,Alma Acerada
 252,8,Spiritoferreo
 252,9,Steely Spirit
+252,11,はがねのせいしん
 252,12,钢之意志
-252,13,Espírito Férreo
+253,1,ほろびのボディ
 253,3,멸망의바디
 253,4,滅亡之軀
 253,5,Corps Condamné
@@ -2487,8 +2527,9 @@ ability_id,local_language_id,name
 253,7,Cuerpo Mortal
 253,8,Ultimotocco
 253,9,Perish Body
+253,11,ほろびのボディ
 253,12,灭亡之躯
-253,13,Corpo Perecido
+254,1,さまようたましい
 254,3,떠도는영혼
 254,4,遊魂
 254,5,Âme Vagabonde
@@ -2496,15 +2537,19 @@ ability_id,local_language_id,name
 254,7,Alma Errante
 254,8,Anima Errante
 254,9,Wandering Spirit
+254,11,さまようたましい
 254,12,游魂
+255,1,ごりむちゅう
 255,3,무아지경
-255,4,猩
+255,4,一猩一意
 255,5,Entêtement
 255,6,Affenfokus
 255,7,Monotema
 255,8,Vigorilla
 255,9,Gorilla Tactics
-255,12,意
+255,11,ごりむちゅう
+255,12,一猩一意
+256,1,かがくへんかガス
 256,3,화학변화가스
 256,4,化學變化氣體
 256,5,Gaz Inhibiteur
@@ -2512,8 +2557,9 @@ ability_id,local_language_id,name
 256,7,Gas Reactivo
 256,8,Gas Reagente
 256,9,Neutralizing Gas
-256,13,化学变化气体
-256,13,Gás Neutralizador
+256,11,かがくへんかガス
+256,12,化学变化气体
+257,1,パステルベール
 257,3,파스텔베일
 257,4,粉彩護幕
 257,5,Voile Pastel
@@ -2521,8 +2567,9 @@ ability_id,local_language_id,name
 257,7,Velo Pastel
 257,8,Pastelvelo
 257,9,Pastel Veil
+257,11,パステルベール
 257,12,粉彩护幕
-257,13,Véu de Tons Pastéis
+258,1,はらぺこスイッチ
 258,3,꼬르륵스위치
 258,4,飽了又餓
 258,5,Déclic Fringale
@@ -2530,7 +2577,9 @@ ability_id,local_language_id,name
 258,7,Mutapetito
 258,8,Pancialterna
 258,9,Hunger Switch
+258,11,はらぺこスイッチ
 258,12,饱了又饿
+259,1,クイックドロウ
 259,3,퀵드로
 259,4,速擊
 259,5,Tir Vif
@@ -2538,7 +2587,9 @@ ability_id,local_language_id,name
 259,7,Mano Rápida
 259,8,Colpolesto
 259,9,Quick Draw
+259,11,クイックドロウ
 259,12,速击
+260,1,ふかしのこぶし
 260,3,보이지않는주먹
 260,4,無形拳
 260,5,Poing Invisible
@@ -2546,7 +2597,9 @@ ability_id,local_language_id,name
 260,7,Puño Invisible
 260,8,Pugni Invisibili
 260,9,Unseen Fist
+260,11,ふかしのこぶし
 260,12,无形拳
+261,1,きみょうなくすり
 261,3,기묘한약
 261,4,怪藥
 261,5,Breuvage Suspect
@@ -2554,7 +2607,9 @@ ability_id,local_language_id,name
 261,7,Medicina Extraña
 261,8,Stranofarmaco
 261,9,Curious Medicine
+261,11,きみょうなくすり
 261,12,怪药
+262,1,トランジスタ
 262,3,트랜지스터
 262,4,電晶體
 262,5,Transistor
@@ -2562,15 +2617,19 @@ ability_id,local_language_id,name
 262,7,Transistor
 262,8,Transistor
 262,9,Transistor
+262,11,トランジスタ
 262,12,电晶体
+263,1,りゅうのあぎと
 263,3,용의턱
 263,4,龍顎
 263,5,Dent de Dragon
 263,6,Drachenkiefer
 263,7,Mandíbula Dragón
 263,8,Dragomascelle
-263,9,Dragon's Maw
+263,9,Dragon’s Maw
+263,11,りゅうのあぎと
 263,12,龙颚
+264,1,しろのいななき
 264,3,백의울음
 264,4,蒼白嘶鳴
 264,5,Blanche Ruade
@@ -2578,7 +2637,9 @@ ability_id,local_language_id,name
 264,7,Relincho Blanco
 264,8,Nitrito Bianco
 264,9,Chilling Neigh
+264,11,しろのいななき
 264,12,苍白嘶鸣
+265,1,くろのいななき
 265,3,흑의울음
 265,4,漆黑嘶鳴
 265,5,Sombre Ruade
@@ -2586,7 +2647,9 @@ ability_id,local_language_id,name
 265,7,Relincho Negro
 265,8,Nitrito Nero
 265,9,Grim Neigh
+265,11,くろのいななき
 265,12,漆黑嘶鸣
+266,1,じんばいったい
 266,3,혼연일체
 266,4,人馬一體
 266,5,Osmose Équine
@@ -2594,7 +2657,9 @@ ability_id,local_language_id,name
 266,7,Unidad Ecuestre
 266,8,Sintonia Equina
 266,9,As One
+266,11,じんばいったい
 266,12,人马一体
+267,1,じんばいったい
 267,3,혼연일체
 267,4,人馬一體
 267,5,Osmose Équine
@@ -2602,6 +2667,7 @@ ability_id,local_language_id,name
 267,7,Unidad Ecuestre
 267,8,Sintonia Equina
 267,9,As One
+267,11,じんばいったい
 267,12,人马一体
 10001,9,Mountaineer
 10002,9,Wave Rider

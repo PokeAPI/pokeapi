@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: haproxy-ingress-configmap
+data:
+  dynamic-scaling: "true"
+  ssl-redirect: "false"
+  app-root: "/"
+  stats-auth: pokeapi:pokeapi

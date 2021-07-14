@@ -35,3 +35,11 @@ encounter_method_id,local_language_id,name
 17,9,Walking on rough terrain
 18,9,Receive as a gift
 19,9,Receive egg as a gift
+20,9,"Static encounter, only one chance"
+21,9,Playing Pokéflute
+22,9,Headbutting a low encounter rate tree
+23,9,Headbutting a normal encounter rate tree
+24,9,Headbutting a high encounter rate tree
+25,9,Using the Squirt Bottle on a Sudowoodo
+26,9,Using the Wailmer Pail on a Sudowoodo
+27,9,Surfing on seaweed

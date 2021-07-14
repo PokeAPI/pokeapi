@@ -1,0 +1,38 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: pokeapi
+
+configMapGenerator:
+  - name: pokeapi-configmap
+    files:
+      - config/pokeapi.env
+
+secretGenerator:
+  - name: postgres-env-secret
+    env: secrets/postgres.env
+    type: Opaque
+  - name: graphql-env-secret
+    env: secrets/graphql.env
+    type: Opaque
+
+resources:
+  - other/namespace.yaml
+  - other/ingress-controller-rbac.yaml
+  - config/haproxy-ingress-configmap.yaml
+  - services/default-service.yaml
+  - services/pokeapi-service.yaml
+  - services/postgres-service.yaml
+  - services/redis-service.yaml
+  - services/graphql-service.yaml
+  - services/cloud.yaml
+  - volumes/postgres-persistentvolumeclaim.yaml
+  - volumes/redis-persistentvolumeclaim.yaml
+  - deployments/default-deployment.yaml
+  - deployments/postgres-deployment.yaml
+  - deployments/redis-deployment.yaml
+  - deployments/pokeapi-deployment.yaml
+  - deployments/graphql-deployment.yaml
+  - deployments/haproxy-ingress-controller.yaml
+  - other/ingress.yaml
+  - jobs/load-graphql.yaml

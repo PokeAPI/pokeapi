@@ -154,7 +154,8 @@ EOF
 
 # If the job was started by a Pull Request and not by a cron job, add a comment to notify the users
 notify_engine_pr() {
-  if [[ $1 == "start" || $1 == "end_failed" || $1 == "end_success" || $1 == "end_no_deploy" || $1 == "end_no_new_data" ]]; then
+  local -r allowed_events='start end_failed end_success end_no_deploy end_no_new_data'
+  if [[ "$allowed_events" == *"$1"* ]] && [[ "$CIRCLE_BRANCH" == 'master' ]]; then
     engine_repo_pr_number=$(get_invokator_pr_number)
     if [ "$engine_repo_pr_number" != "null" ] && [ -n "$CIRCLE_USERNAME" ]; then
       curl -f -H "$auth_header" -X POST --data "$(pr_input_updater_$1)" "https://api.github.com/repos/$org/$engine_repo/issues/$engine_repo_pr_number/comments"
@@ -175,7 +176,7 @@ run_updater() {
   fi
 
   # Run the updater
-  docker run --privileged -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" pokeapi-updater
+  docker run --privileged -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" -e RUN_AS='root' pokeapi-updater
   return_code=$?
   if [ "$return_code" -eq 2 ]; then
     cleanexit 'no-new-data' "Generated data is the same as old data, skipping deploy"

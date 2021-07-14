@@ -1,8 +1,10 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
+HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
+.SILENT: 
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -81,8 +83,35 @@ pull-veekun:
 	git -C ${veekun_pokedex_repository} checkout master-pokeapi
 	git -C ${veekun_pokedex_repository} pull
 
-sync-from-veekun: pull pull-veekun # Copy data from ../pokedex to this repository
+sync-from-veekun: pull pull-veekun  # Copy data from ../pokedex to this repository
 	cp -a ${veekun_pokedex_repository}/pokedex/data/csv/. ./data/v2/csv
 
-sync-to-veekun: pull pull-veekun # Copy data from this repository to ../pokedex
+sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv
+
+# read-env-file:  # Exports ./.env into shell environment variables
+# 	export `egrep -v '^#' .env | xargs`
+
+hasura-export:  # Export Hasura configuration
+	hasura md export --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+
+hasura-apply:  # Apply local Hasura configuration
+	hasura md apply --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+
+hasura-get-anon-schema:  # Dumps GraphQL schema
+	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql
+
+kustomize-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
+	kubectl apply -k Resources/k8s/kustomize/base/
+
+kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
+	kubectl apply -k Resources/k8s/kustomize/staging/
+
+k8s-migrate:  # (k8s) Run any pending migrations
+	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
+
+k8s-build-db:  # (k8s) Build the database
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+
+k8s-delete:  # (k8s) Delete pokeapi namespace
+	kubectl delete namespace pokeapi

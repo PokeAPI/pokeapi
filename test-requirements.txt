@@ -1,5 +1,5 @@
 -r requirements.txt
-pylint===2.1.1
-pylint-django===2.0.2
-astroid==2.0.4
+pylint===2.8.2
+pylint-django===2.4.4
+astroid==2.5.6
 black==20.8b1

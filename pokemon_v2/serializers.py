@@ -487,7 +487,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
 
         mod = obj.gene_mod_5
         values = []
-        while mod <= 30:
+        while mod <= 31:
             values.append(mod)
             mod += 5
 

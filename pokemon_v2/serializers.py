@@ -1951,7 +1951,6 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         final_data = []
         past_relations = {}
         for gen_data in data_by_gen:
-
             # create past relations object for this generation
             past_relations = OrderedDict()
 
@@ -1961,6 +1960,18 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             # use current damage relations object
             past_relations["damage_relations"] = self.get_type_relationships(obj)
             relations = past_relations["damage_relations"]
+
+            current_gen = Generation.objects.get(name=gen_data[0]["generation"]["name"])
+
+            # remove types not yet introduced
+            # e.g. Poison has no effect on Steel, but Steel was not present in generation I
+            # so it should be absent from the list
+            relations["no_damage_to"] = self.remove_newer_types(relations["no_damage_to"], current_gen)
+            relations["half_damage_to"] = self.remove_newer_types(relations["half_damage_to"], current_gen)
+            relations["double_damage_to"] = self.remove_newer_types(relations["double_damage_to"], current_gen)
+            relations["no_damage_from"] = self.remove_newer_types(relations["no_damage_from"], current_gen)
+            relations["half_damage_from"] = self.remove_newer_types(relations["half_damage_from"], current_gen)
+            relations["double_damage_from"] = self.remove_newer_types(relations["double_damage_from"], current_gen)
 
             # populate offensive relations
             results = list(filter(lambda x: x["damage_type"] == obj.id, gen_data))
@@ -2000,6 +2011,14 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             final_data.append(past_relations)
 
         return final_data
+
+    def remove_newer_types(self, relations, current_gen):
+        return list(filter(lambda x: self.type_is_present(x, current_gen), relations))
+
+    def type_is_present(self, type, current_gen):
+        type_obj = Type.objects.get(name=type["name"])
+        gen_introduced = Generation.objects.get(pk=type_obj.generation.id)
+        return gen_introduced.id <= current_gen.id
 
     def get_type_pokemon(self, obj):
 

@@ -1967,12 +1967,24 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             # remove types not yet introduced
             # e.g. Poison has no effect on Steel, but Steel was not present in generation I
             # so it should be absent from the list
-            relations["no_damage_to"] = self.remove_newer_types(relations["no_damage_to"], current_gen)
-            relations["half_damage_to"] = self.remove_newer_types(relations["half_damage_to"], current_gen)
-            relations["double_damage_to"] = self.remove_newer_types(relations["double_damage_to"], current_gen)
-            relations["no_damage_from"] = self.remove_newer_types(relations["no_damage_from"], current_gen)
-            relations["half_damage_from"] = self.remove_newer_types(relations["half_damage_from"], current_gen)
-            relations["double_damage_from"] = self.remove_newer_types(relations["double_damage_from"], current_gen)
+            relations["no_damage_to"] = self.remove_newer_types(
+                relations["no_damage_to"], current_gen
+            )
+            relations["half_damage_to"] = self.remove_newer_types(
+                relations["half_damage_to"], current_gen
+            )
+            relations["double_damage_to"] = self.remove_newer_types(
+                relations["double_damage_to"], current_gen
+            )
+            relations["no_damage_from"] = self.remove_newer_types(
+                relations["no_damage_from"], current_gen
+            )
+            relations["half_damage_from"] = self.remove_newer_types(
+                relations["half_damage_from"], current_gen
+            )
+            relations["double_damage_from"] = self.remove_newer_types(
+                relations["double_damage_from"], current_gen
+            )
 
             # populate offensive relations
             results = list(filter(lambda x: x["damage_type"] == obj.id, gen_data))

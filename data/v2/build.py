@@ -178,7 +178,9 @@ def _build_regions():
 
 def _build_generations():
     def csv_record_to_objects(info):
-        yield Generation(id=int(info[0]), region_id=int(info[1]), name=info[2], order=info[3])
+        yield Generation(
+            id=int(info[0]), region_id=int(info[1]), name=info[2], order=info[3]
+        )
 
     build_generic((Generation,), "generations.csv", csv_record_to_objects)
 
@@ -593,7 +595,6 @@ def _build_types():
         )
 
     build_generic((TypeEfficacy,), "type_efficacy.csv", csv_record_to_objects)
-
 
     def csv_record_to_objects(info):
         yield TypeEfficacyPast(

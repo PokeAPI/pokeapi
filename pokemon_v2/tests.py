@@ -74,11 +74,11 @@ class APIData:
 
     # Generation Data
     @classmethod
-    def setup_generation_data(cls, region=None, name="gen"):
+    def setup_generation_data(cls, order=1, region=None, name="gen"):
 
         region = region or cls.setup_region_data(name="reg for " + name)
 
-        generation = Generation.objects.create(region=region, name=name)
+        generation = Generation.objects.create(region=region, name=name, order=order)
         generation.save()
 
         return generation
@@ -3420,12 +3420,30 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data(name="pkmn for base tp")
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon, type=type)
 
-        no_damage_to = self.setup_type_data(name="no damage to tp")
-        half_damage_to = self.setup_type_data(name="half damage to tp")
-        double_damage_to = self.setup_type_data(name="double damage to tp")
-        no_damage_from = self.setup_type_data(name="no damage from tp")
-        half_damage_from = self.setup_type_data(name="half damage from tp")
-        double_damage_from = self.setup_type_data(name="double damage from tp")
+        generation = self.setup_generation_data(order=1, name="past gen")
+
+        no_damage_to = self.setup_type_data(
+            name="no damage to tp", generation=generation
+        )
+        half_damage_to = self.setup_type_data(
+            name="half damage to tp", generation=generation
+        )
+        double_damage_to = self.setup_type_data(
+            name="double damage to tp", generation=generation
+        )
+        no_damage_from = self.setup_type_data(
+            name="no damage from tp", generation=generation
+        )
+        half_damage_from = self.setup_type_data(
+            name="half damage from tp", generation=generation
+        )
+        double_damage_from = self.setup_type_data(
+            name="double damage from tp", generation=generation
+        )
+
+        newer_generation = self.setup_generation_data(order=5, name="newer_generation")
+
+        newer_type = self.setup_type_data(name="newer tp", generation=newer_generation)
 
         # type relations
         no_damage_to_relation = TypeEfficacy(
@@ -3458,56 +3476,21 @@ class APITests(APIData, APITestCase):
         )
         double_damage_from_type_relation.save()
 
-        # past type relations
-        generation = self.setup_generation_data(name="past gen")
+        double_damage_from_newer_type_relation = TypeEfficacy(
+            damage_type=newer_type, target_type=type, damage_factor=200
+        )
+        double_damage_from_newer_type_relation.save()
 
+        # past type relations
+
+        # type used to deal half damage rather than no damage
         past_no_damage_to_relation = TypeEfficacyPast(
             damage_type=type,
             target_type=no_damage_to,
-            damage_factor=0,
+            damage_factor=50,
             generation=generation,
         )
         past_no_damage_to_relation.save()
-
-        past_half_damage_to_relation = TypeEfficacyPast(
-            damage_type=type,
-            target_type=half_damage_to,
-            damage_factor=50,
-            generation=generation,
-        )
-        past_half_damage_to_relation.save()
-
-        past_double_damage_to_relation = TypeEfficacyPast(
-            damage_type=type,
-            target_type=double_damage_to,
-            damage_factor=200,
-            generation=generation,
-        )
-        past_double_damage_to_relation.save()
-
-        past_no_damage_from_relation = TypeEfficacyPast(
-            damage_type=no_damage_from,
-            target_type=type,
-            damage_factor=0,
-            generation=generation,
-        )
-        past_no_damage_from_relation.save()
-
-        past_half_damage_from_relation = TypeEfficacyPast(
-            damage_type=half_damage_from,
-            target_type=type,
-            damage_factor=50,
-            generation=generation,
-        )
-        past_half_damage_from_relation.save()
-
-        past_double_damage_from_relation = TypeEfficacyPast(
-            damage_type=double_damage_from,
-            target_type=type,
-            damage_factor=200,
-            generation=generation,
-        )
-        past_double_damage_from_relation.save()
 
         response = self.client.get("{}/type/{}/".format(API_V2, type.pk))
 
@@ -3619,11 +3602,11 @@ class APITests(APIData, APITestCase):
 
         # relations
         gen_relations = past_damage_relations[0]["damage_relations"]
-        self.assertEqual(gen_relations["no_damage_to"][0]["name"], no_damage_to.name)
-        self.assertEqual(
-            gen_relations["no_damage_to"][0]["url"],
-            "{}{}/type/{}/".format(TEST_HOST, API_V2, no_damage_to.pk),
-        )
+
+        # type that currently receives no damage used to receive half damage, so is no longer in
+        # this list...
+        self.assertEqual(len(gen_relations["no_damage_to"]), 0)
+
         self.assertEqual(
             gen_relations["half_damage_to"][0]["name"], half_damage_to.name
         )
@@ -3631,6 +3614,14 @@ class APITests(APIData, APITestCase):
             gen_relations["half_damage_to"][0]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, half_damage_to.pk),
         )
+
+        # ...it's in this list instead
+        self.assertEqual(gen_relations["half_damage_to"][1]["name"], no_damage_to.name)
+        self.assertEqual(
+            gen_relations["half_damage_to"][1]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, no_damage_to.pk),
+        )
+
         self.assertEqual(
             gen_relations["double_damage_to"][0]["name"], double_damage_to.name
         )
@@ -3659,6 +3650,10 @@ class APITests(APIData, APITestCase):
             gen_relations["double_damage_from"][0]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, double_damage_from.pk),
         )
+
+        # second double-damage-from type is absent because it's from a newer generation than the
+        # generation of this set of relations
+        self.assertEqual(len(gen_relations["double_damage_from"]), 1)
 
         # game indices params
         self.assertEqual(

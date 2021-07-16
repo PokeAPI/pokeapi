@@ -678,6 +678,7 @@ class GenerationDetailSerializer(serializers.ModelSerializer):
             "main_region",
             "moves",
             "names",
+            "order",
             "pokemon_species",
             "types",
             "version_groups",

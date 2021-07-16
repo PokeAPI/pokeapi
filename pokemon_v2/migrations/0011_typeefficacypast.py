@@ -34,4 +34,10 @@ class Migration(migrations.Migration):
             name='target_type',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='typeefficacy_target_type', to='pokemon_v2.Type'),
         ),
+        migrations.AddField(
+            model_name='generation',
+            name='order',
+            field=models.IntegerField(default=1),
+            preserve_default=False,
+        ),
     ]

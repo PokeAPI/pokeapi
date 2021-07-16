@@ -747,6 +747,8 @@ class Generation(HasName):
         on_delete=models.CASCADE,
     )
 
+    order = models.IntegerField()
+
 
 class GenerationName(IsName, HasGeneration):
     pass

@@ -678,7 +678,6 @@ class GenerationDetailSerializer(serializers.ModelSerializer):
             "main_region",
             "moves",
             "names",
-            "order",
             "pokemon_species",
             "types",
             "version_groups",
@@ -2031,7 +2030,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     def type_is_present(self, type, current_gen):
         type_obj = Type.objects.get(name=type["name"])
         gen_introduced = Generation.objects.get(pk=type_obj.generation.id)
-        return gen_introduced.order <= current_gen.order
+        return gen_introduced.id <= current_gen.id
 
     def get_type_pokemon(self, obj):
 

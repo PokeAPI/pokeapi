@@ -81,10 +81,4 @@ class Migration(migrations.Migration):
                 to="pokemon_v2.Type",
             ),
         ),
-        migrations.AddField(
-            model_name="generation",
-            name="order",
-            field=models.IntegerField(default=1),
-            preserve_default=False,
-        ),
     ]

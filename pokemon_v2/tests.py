@@ -74,11 +74,11 @@ class APIData:
 
     # Generation Data
     @classmethod
-    def setup_generation_data(cls, order=1, region=None, name="gen"):
+    def setup_generation_data(cls, region=None, name="gen"):
 
         region = region or cls.setup_region_data(name="reg for " + name)
 
-        generation = Generation.objects.create(region=region, name=name, order=order)
+        generation = Generation.objects.create(region=region, name=name)
         generation.save()
 
         return generation
@@ -3420,7 +3420,7 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data(name="pkmn for base tp")
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon, type=type)
 
-        generation = self.setup_generation_data(order=1, name="past gen")
+        generation = self.setup_generation_data(name="past gen")
 
         no_damage_to = self.setup_type_data(
             name="no damage to tp", generation=generation
@@ -3441,7 +3441,7 @@ class APITests(APIData, APITestCase):
             name="double damage from tp", generation=generation
         )
 
-        newer_generation = self.setup_generation_data(order=5, name="newer_generation")
+        newer_generation = self.setup_generation_data(name="newer_generation")
 
         newer_type = self.setup_type_data(name="newer tp", generation=newer_generation)
 

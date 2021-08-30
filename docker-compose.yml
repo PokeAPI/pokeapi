@@ -43,13 +43,12 @@ services:
     volumes:
       - ./Resources/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./Resources/nginx/ssl:/ssl:ro
-    volumes_from:
-      - app:ro
-    links:
-      - app
 
   graphql-engine:
     image: hasura/graphql-engine:v2.0.0-alpha.5
+    cpus: 0.7
+    memswap_limit: 3g
+    mem_limit: 450m
     ports:
       - "8080:8080"
     depends_on:

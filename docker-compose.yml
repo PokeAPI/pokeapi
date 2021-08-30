@@ -17,9 +17,7 @@ services:
     restart: always
 
   app:
-    build:
-      context: .
-      dockerfile: ./Resources/docker/app/Dockerfile
+    image: pokeapi/pokeapi:master
     user: ${RUN_AS:-pokeapi}
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}

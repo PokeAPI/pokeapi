@@ -15,10 +15,12 @@ services:
   graphql-engine:
     cpus: 0.7
     memswap_limit: 3g
-    mem_limit: 450m
+    mem_limit: 700m
     environment:
       HASURA_GRAPHQL_DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-pokeapi}"
       HASURA_GRAPHQL_ADMIN_SECRET: "${HASURA_GRAPHQL_ADMIN_SECRET}"
+      HASURA_GRAPHQL_SCHEMA_SYNC_POLL_INTERVAL: 0
+      HASURA_GRAPHQL_EVENTS_HTTP_POOL_SIZE: 10
 
   graphiql:
     image: pokeapi/graphiql:1.0.1

@@ -1,3 +1,13 @@
+table:
+  name: pokemon_v2_item
+  schema: public
+object_relationships:
+- name: pokemon_v2_itemcategory
+  using:
+    foreign_key_constraint_on: item_category_id
+- name: pokemon_v2_itemflingeffect
+  using:
+    foreign_key_constraint_on: item_fling_effect_id
 array_relationships:
 - name: pokemonV2PokemonevolutionsByHeldItemId
   using:
@@ -83,13 +93,6 @@ array_relationships:
       table:
         name: pokemon_v2_pokemonitem
         schema: public
-object_relationships:
-- name: pokemon_v2_itemcategory
-  using:
-    foreign_key_constraint_on: item_category_id
-- name: pokemon_v2_itemflingeffect
-  using:
-    foreign_key_constraint_on: item_fling_effect_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -97,6 +100,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_item
-  schema: public

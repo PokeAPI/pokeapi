@@ -1,3 +1,13 @@
+table:
+  name: pokemon_v2_type
+  schema: public
+object_relationships:
+- name: pokemon_v2_generation
+  using:
+    foreign_key_constraint_on: generation_id
+- name: pokemon_v2_movedamageclass
+  using:
+    foreign_key_constraint_on: move_damage_class_id
 array_relationships:
 - name: pokemonV2PokemonevolutionsByPartyTypeId
   using:
@@ -12,6 +22,13 @@ array_relationships:
       column: target_type_id
       table:
         name: pokemon_v2_typeefficacy
+        schema: public
+- name: pokemonV2TypeefficacypastsByTargetTypeId
+  using:
+    foreign_key_constraint_on:
+      column: target_type_id
+      table:
+        name: pokemon_v2_typeefficacypast
         schema: public
 - name: pokemon_v2_berries
   using:
@@ -69,6 +86,13 @@ array_relationships:
       table:
         name: pokemon_v2_typeefficacy
         schema: public
+- name: pokemon_v2_typeefficacypasts
+  using:
+    foreign_key_constraint_on:
+      column: damage_type_id
+      table:
+        name: pokemon_v2_typeefficacypast
+        schema: public
 - name: pokemon_v2_typegameindices
   using:
     foreign_key_constraint_on:
@@ -83,13 +107,6 @@ array_relationships:
       table:
         name: pokemon_v2_typename
         schema: public
-object_relationships:
-- name: pokemon_v2_generation
-  using:
-    foreign_key_constraint_on: generation_id
-- name: pokemon_v2_movedamageclass
-  using:
-    foreign_key_constraint_on: move_damage_class_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -97,6 +114,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_type
-  schema: public

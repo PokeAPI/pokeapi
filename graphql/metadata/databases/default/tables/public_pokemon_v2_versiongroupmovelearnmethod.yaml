@@ -1,3 +1,6 @@
+table:
+  name: pokemon_v2_versiongroupmovelearnmethod
+  schema: public
 object_relationships:
 - name: pokemon_v2_movelearnmethod
   using:
@@ -12,6 +15,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_versiongroupmovelearnmethod
-  schema: public

@@ -1,3 +1,6 @@
+table:
+  name: pokemon_v2_movemeta
+  schema: public
 object_relationships:
 - name: pokemon_v2_move
   using:
@@ -15,6 +18,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_movemeta
-  schema: public

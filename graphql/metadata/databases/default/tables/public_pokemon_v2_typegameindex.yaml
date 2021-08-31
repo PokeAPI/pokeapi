@@ -1,3 +1,6 @@
+table:
+  name: pokemon_v2_typegameindex
+  schema: public
 object_relationships:
 - name: pokemon_v2_generation
   using:
@@ -12,6 +15,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_typegameindex
-  schema: public

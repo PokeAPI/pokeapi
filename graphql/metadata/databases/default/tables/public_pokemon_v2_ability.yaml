@@ -1,3 +1,10 @@
+table:
+  name: pokemon_v2_ability
+  schema: public
+object_relationships:
+- name: pokemon_v2_generation
+  using:
+    foreign_key_constraint_on: generation_id
 array_relationships:
 - name: pokemon_v2_abilitychanges
   using:
@@ -34,10 +41,6 @@ array_relationships:
       table:
         name: pokemon_v2_pokemonability
         schema: public
-object_relationships:
-- name: pokemon_v2_generation
-  using:
-    foreign_key_constraint_on: generation_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -45,6 +48,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_ability
-  schema: public

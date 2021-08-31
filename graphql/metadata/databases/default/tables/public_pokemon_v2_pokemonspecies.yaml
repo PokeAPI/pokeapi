@@ -1,3 +1,28 @@
+table:
+  name: pokemon_v2_pokemonspecies
+  schema: public
+object_relationships:
+- name: pokemon_v2_evolutionchain
+  using:
+    foreign_key_constraint_on: evolution_chain_id
+- name: pokemon_v2_generation
+  using:
+    foreign_key_constraint_on: generation_id
+- name: pokemon_v2_growthrate
+  using:
+    foreign_key_constraint_on: growth_rate_id
+- name: pokemon_v2_pokemoncolor
+  using:
+    foreign_key_constraint_on: pokemon_color_id
+- name: pokemon_v2_pokemonhabitat
+  using:
+    foreign_key_constraint_on: pokemon_habitat_id
+- name: pokemon_v2_pokemonshape
+  using:
+    foreign_key_constraint_on: pokemon_shape_id
+- name: pokemon_v2_pokemonspecy
+  using:
+    foreign_key_constraint_on: evolves_from_species_id
 array_relationships:
 - name: pokemonV2PokemonevolutionsByPartySpeciesId
   using:
@@ -76,28 +101,6 @@ array_relationships:
       table:
         name: pokemon_v2_pokemonspeciesname
         schema: public
-object_relationships:
-- name: pokemon_v2_evolutionchain
-  using:
-    foreign_key_constraint_on: evolution_chain_id
-- name: pokemon_v2_generation
-  using:
-    foreign_key_constraint_on: generation_id
-- name: pokemon_v2_growthrate
-  using:
-    foreign_key_constraint_on: growth_rate_id
-- name: pokemon_v2_pokemoncolor
-  using:
-    foreign_key_constraint_on: pokemon_color_id
-- name: pokemon_v2_pokemonhabitat
-  using:
-    foreign_key_constraint_on: pokemon_habitat_id
-- name: pokemon_v2_pokemonshape
-  using:
-    foreign_key_constraint_on: pokemon_shape_id
-- name: pokemon_v2_pokemonspecy
-  using:
-    foreign_key_constraint_on: evolves_from_species_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -105,6 +108,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_pokemonspecies
-  schema: public

@@ -1,3 +1,10 @@
+table:
+  name: pokemon_v2_encounterconditionvalue
+  schema: public
+object_relationships:
+- name: pokemon_v2_encountercondition
+  using:
+    foreign_key_constraint_on: encounter_condition_id
 array_relationships:
 - name: pokemon_v2_encounterconditionvaluemaps
   using:
@@ -13,10 +20,6 @@ array_relationships:
       table:
         name: pokemon_v2_encounterconditionvaluename
         schema: public
-object_relationships:
-- name: pokemon_v2_encountercondition
-  using:
-    foreign_key_constraint_on: encounter_condition_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -24,6 +27,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_encounterconditionvalue
-  schema: public

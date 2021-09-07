@@ -354,7 +354,7 @@ class PokemonResource(PokeapiCommonViewset):
 
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
-    list_serializer_class = PokemonSummarySerializer
+    list_serializer_class = PokemonListSummarySerializer
 
 
 class PokemonSpeciesResource(PokeapiCommonViewset):

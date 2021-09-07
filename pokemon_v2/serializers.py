@@ -487,7 +487,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
 
         mod = obj.gene_mod_5
         values = []
-        while mod <= 30:
+        while mod <= 31:
             values.append(mod)
             mod += 5
 
@@ -1793,6 +1793,15 @@ class TypeEfficacySerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class TypeEfficacyPastSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+
+    class Meta:
+        model = TypeEfficacyPast
+        fields = ("target_type", "damage_type", "damage_factor", "generation")
+
+
 class TypeGameIndexSerializer(serializers.ModelSerializer):
 
     generation = GenerationSummarySerializer()
@@ -1823,6 +1832,9 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     )
     move_damage_class = MoveDamageClassSummarySerializer()
     damage_relations = serializers.SerializerMethodField("get_type_relationships")
+    past_damage_relations = serializers.SerializerMethodField(
+        "get_type_past_relationships"
+    )
     pokemon = serializers.SerializerMethodField("get_type_pokemon")
     moves = MoveSummarySerializer(many=True, read_only=True, source="move")
 
@@ -1832,6 +1844,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "damage_relations",
+            "past_damage_relations",
             "game_indices",
             "generation",
             "move_damage_class",
@@ -1839,6 +1852,22 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             "pokemon",
             "moves",
         )
+
+    # adds an entry for the given type with the given damage
+    # factor in the given direction to the set of relations
+    def add_type_entry(self, relations, type, damage_factor, direction="_damage_to"):
+        if damage_factor == 200:
+            relations["double" + direction].append(
+                TypeSummarySerializer(type, context=self.context).data
+            )
+        elif damage_factor == 50:
+            relations["half" + direction].append(
+                TypeSummarySerializer(type, context=self.context).data
+            )
+        elif damage_factor == 0:
+            relations["no" + direction].append(
+                TypeSummarySerializer(type, context=self.context).data
+            )
 
     def get_type_relationships(self, obj):
 
@@ -1857,18 +1886,8 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
         for relation in serializer.data:
             type = Type.objects.get(pk=relation["target_type"])
-            if relation["damage_factor"] == 200:
-                relations["double_damage_to"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
-            elif relation["damage_factor"] == 50:
-                relations["half_damage_to"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
-            elif relation["damage_factor"] == 0:
-                relations["no_damage_to"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
+            damage_factor = relation["damage_factor"]
+            self.add_type_entry(relations, type, damage_factor, direction="_damage_to")
 
         # Damage From
         results = TypeEfficacy.objects.filter(target_type=obj)
@@ -1876,20 +1895,142 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
         for relation in serializer.data:
             type = Type.objects.get(pk=relation["damage_type"])
-            if relation["damage_factor"] == 200:
-                relations["double_damage_from"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
-            elif relation["damage_factor"] == 50:
-                relations["half_damage_from"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
-            elif relation["damage_factor"] == 0:
-                relations["no_damage_from"].append(
-                    TypeSummarySerializer(type, context=self.context).data
-                )
+            damage_factor = relation["damage_factor"]
+            self.add_type_entry(
+                relations, type, damage_factor, direction="_damage_from"
+            )
 
         return relations
+
+    # takes a list of past type relations by generation and
+    # returns a list of lists where each list has the entries
+    # for a single generation
+    def group_relations_by_generation(self, serializer_data):
+        data_by_gen = []
+
+        current_generation = ""
+        generation_data = []
+        for relation in serializer_data:
+
+            gen_name = relation["generation"]["name"]
+            if gen_name != current_generation:
+                # first item for this generation so create its list
+                current_generation = gen_name
+                generation_data = [relation]
+                data_by_gen.append(generation_data)
+            else:
+                # add to this generation's list
+                generation_data.append(relation)
+
+        return data_by_gen
+
+    # removes the entry for the given type in
+    # the given direction from the set of relations
+    def remove_type_entry(self, relations, type, direction="_damage_to"):
+        for k in ["double", "half", "no"]:
+            rel_list = relations[k + direction]
+            for i, o in enumerate(rel_list):
+                if o["name"] == type.name:
+                    del rel_list[i]
+                    return
+
+    # returns past type relationships for the given type object
+    def get_type_past_relationships(self, obj):
+
+        # collect data from DB
+        damage_type_results = list(TypeEfficacyPast.objects.filter(damage_type=obj))
+        target_type_results = list(TypeEfficacyPast.objects.filter(target_type=obj))
+        serializer = TypeEfficacyPastSerializer(
+            damage_type_results + target_type_results, many=True, context=self.context
+        )
+
+        # group data by generation
+        data_by_gen = self.group_relations_by_generation(serializer.data)
+
+        # process each generation's data in turn
+        final_data = []
+        past_relations = {}
+        for gen_data in data_by_gen:
+            # create past relations object for this generation
+            past_relations = OrderedDict()
+
+            # set generation
+            past_relations["generation"] = gen_data[0]["generation"]
+
+            # use current damage relations object
+            past_relations["damage_relations"] = self.get_type_relationships(obj)
+            relations = past_relations["damage_relations"]
+
+            current_gen = Generation.objects.get(name=gen_data[0]["generation"]["name"])
+
+            # remove types not yet introduced
+            # e.g. Poison has no effect on Steel, but Steel was not present in generation I
+            # so it should be absent from the list
+            relations["no_damage_to"] = self.remove_newer_types(
+                relations["no_damage_to"], current_gen
+            )
+            relations["half_damage_to"] = self.remove_newer_types(
+                relations["half_damage_to"], current_gen
+            )
+            relations["double_damage_to"] = self.remove_newer_types(
+                relations["double_damage_to"], current_gen
+            )
+            relations["no_damage_from"] = self.remove_newer_types(
+                relations["no_damage_from"], current_gen
+            )
+            relations["half_damage_from"] = self.remove_newer_types(
+                relations["half_damage_from"], current_gen
+            )
+            relations["double_damage_from"] = self.remove_newer_types(
+                relations["double_damage_from"], current_gen
+            )
+
+            # populate offensive relations
+            results = list(filter(lambda x: x["damage_type"] == obj.id, gen_data))
+            for relation in results:
+
+                type = Type.objects.get(pk=relation["target_type"])
+
+                # remove conflicting entry if it exists
+                self.remove_type_entry(relations, type, direction="_damage_to")
+
+                # add entry
+                damage_factor = relation["damage_factor"]
+                self.add_type_entry(
+                    relations, type, damage_factor, direction="_damage_to"
+                )
+
+                del relation["generation"]
+
+            # populate defensive relations
+            results = list(filter(lambda x: x["target_type"] == obj.id, gen_data))
+            for relation in results:
+
+                type = Type.objects.get(pk=relation["damage_type"])
+
+                # remove conflicting entry if it exists
+                self.remove_type_entry(relations, type, direction="_damage_from")
+
+                # add entry
+                damage_factor = relation["damage_factor"]
+                self.add_type_entry(
+                    relations, type, damage_factor, direction="_damage_from"
+                )
+
+                del relation["generation"]
+
+            # add to final list
+            final_data.append(past_relations)
+
+        return final_data
+
+    def remove_newer_types(self, relations, current_gen):
+        return list(filter(lambda x: self.type_is_present(x, current_gen), relations))
+
+    def type_is_present(self, type, current_gen):
+        type_obj = Type.objects.get(name=type["name"])
+        gen_introduced = Generation.objects.get(pk=type_obj.generation.id)
+        return gen_introduced.id <= current_gen.id
 
     def get_type_pokemon(self, obj):
 

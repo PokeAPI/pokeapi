@@ -10,3 +10,4 @@ node_modules
 *.env
 Resources/nginx/ssl/*
 !Resources/nginx/ssl/*.sample.*
+.idea*

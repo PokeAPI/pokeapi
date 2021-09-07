@@ -11,7 +11,7 @@ API_V2 = "/api/v2"
 
 
 class APIData:
-    """ Data Initializers"""
+    """Data Initializers"""
 
     # Gender Data
     @classmethod
@@ -3420,12 +3420,30 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data(name="pkmn for base tp")
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon, type=type)
 
-        no_damage_to = self.setup_type_data(name="no damage to tp")
-        half_damage_to = self.setup_type_data(name="half damage to tp")
-        double_damage_to = self.setup_type_data(name="double damage to tp")
-        no_damage_from = self.setup_type_data(name="no damage from tp")
-        half_damage_from = self.setup_type_data(name="half damage from tp")
-        double_damage_from = self.setup_type_data(name="double damage from tp")
+        generation = self.setup_generation_data(name="past gen")
+
+        no_damage_to = self.setup_type_data(
+            name="no damage to tp", generation=generation
+        )
+        half_damage_to = self.setup_type_data(
+            name="half damage to tp", generation=generation
+        )
+        double_damage_to = self.setup_type_data(
+            name="double damage to tp", generation=generation
+        )
+        no_damage_from = self.setup_type_data(
+            name="no damage from tp", generation=generation
+        )
+        half_damage_from = self.setup_type_data(
+            name="half damage from tp", generation=generation
+        )
+        double_damage_from = self.setup_type_data(
+            name="double damage from tp", generation=generation
+        )
+
+        newer_generation = self.setup_generation_data(name="newer_generation")
+
+        newer_type = self.setup_type_data(name="newer tp", generation=newer_generation)
 
         # type relations
         no_damage_to_relation = TypeEfficacy(
@@ -3457,6 +3475,22 @@ class APITests(APIData, APITestCase):
             damage_type=double_damage_from, target_type=type, damage_factor=200
         )
         double_damage_from_type_relation.save()
+
+        double_damage_from_newer_type_relation = TypeEfficacy(
+            damage_type=newer_type, target_type=type, damage_factor=200
+        )
+        double_damage_from_newer_type_relation.save()
+
+        # past type relations
+
+        # type used to deal half damage rather than no damage
+        past_no_damage_to_relation = TypeEfficacyPast(
+            damage_type=type,
+            target_type=no_damage_to,
+            damage_factor=50,
+            generation=generation,
+        )
+        past_no_damage_to_relation.save()
 
         response = self.client.get("{}/type/{}/".format(API_V2, type.pk))
 
@@ -3552,6 +3586,75 @@ class APITests(APIData, APITestCase):
             response.data["damage_relations"]["double_damage_from"][0]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, double_damage_from.pk),
         )
+
+        # past damage relations params
+
+        # generation
+        past_damage_relations = response.data["past_damage_relations"]
+        gen_data = past_damage_relations[0]["generation"]
+        self.assertEqual(gen_data["name"], generation.name)
+        self.assertEqual(
+            gen_data["url"],
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, past_no_damage_to_relation.generation.pk
+            ),
+        )
+
+        # relations
+        gen_relations = past_damage_relations[0]["damage_relations"]
+
+        # type that currently receives no damage used to receive half damage, so is no longer in
+        # this list...
+        self.assertEqual(len(gen_relations["no_damage_to"]), 0)
+
+        self.assertEqual(
+            gen_relations["half_damage_to"][0]["name"], half_damage_to.name
+        )
+        self.assertEqual(
+            gen_relations["half_damage_to"][0]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, half_damage_to.pk),
+        )
+
+        # ...it's in this list instead
+        self.assertEqual(gen_relations["half_damage_to"][1]["name"], no_damage_to.name)
+        self.assertEqual(
+            gen_relations["half_damage_to"][1]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, no_damage_to.pk),
+        )
+
+        self.assertEqual(
+            gen_relations["double_damage_to"][0]["name"], double_damage_to.name
+        )
+        self.assertEqual(
+            gen_relations["double_damage_to"][0]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, double_damage_to.pk),
+        )
+        self.assertEqual(
+            gen_relations["no_damage_from"][0]["name"], no_damage_from.name
+        )
+        self.assertEqual(
+            gen_relations["no_damage_from"][0]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, no_damage_from.pk),
+        )
+        self.assertEqual(
+            gen_relations["half_damage_from"][0]["name"], half_damage_from.name
+        )
+        self.assertEqual(
+            gen_relations["half_damage_from"][0]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, half_damage_from.pk),
+        )
+        self.assertEqual(
+            gen_relations["double_damage_from"][0]["name"], double_damage_from.name
+        )
+        self.assertEqual(
+            gen_relations["double_damage_from"][0]["url"],
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, double_damage_from.pk),
+        )
+
+        # second double-damage-from type is absent because it's from a newer generation than the
+        # generation of this set of relations
+        self.assertEqual(len(gen_relations["double_damage_from"]), 1)
+
         # game indices params
         self.assertEqual(
             response.data["game_indices"][0]["game_index"], type_game_index.game_index
@@ -4336,6 +4439,20 @@ class APITests(APIData, APITestCase):
             response.data["highest_stat"]["url"],
             "{}{}/stat/{}/".format(TEST_HOST, API_V2, characteristic.stat.pk),
         )
+
+    def test_characteristic_values(self):
+        # check for all 5 possible values of gene_modulo
+        for modulo in range(5):
+            characteristic = self.setup_characteristic_data(gene_mod_5=modulo)
+            # note that 'possible_values' is computed solely from gene_modulo
+            # thus it is fine that our test characteristics are indexed 1-5
+            result = self.client.get(
+                "{}/characteristic/{}/".format(API_V2, characteristic.pk)
+            )
+            for i in range(len(result.data["possible_values"])):
+                self.assertEqual(
+                    result.data["possible_values"][i], characteristic.gene_mod_5 + i * 5
+                )
 
     # Nature Tests
     def test_nature_api(self):

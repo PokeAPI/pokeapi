@@ -132,21 +132,27 @@ kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/loa
 
 This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `kubectl delete namespace pokeapi` to delete them. It also creates a _Service_ of type `LoadBalancer` which is exposed on port `80` and `443`. Data is persisted on `12Gi` of `ReadWriteOnce` volumes.
 
-## Official REST Wrappers
+## Wrappers
 
-* Node server-side [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_
-* Browser client-side [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_
-* Java/Kotlin [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin)
-* Python 3 [GregHilmes/pokebase](https://github.com/GregHilmes/pokebase) | _Auto caching_
-* Python 2/3 [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_
-* PHP [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_
-* Ruby [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)
-* .Net Standard [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_
-* Go [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_
-* Dart [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)
-* Rust [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_
-* Spring Boot [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_
-* Swift [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)
+| Official wrapper | Repository | Features |
+| --- | --- | --- |
+| Node server-side | [PokeAPI/pokedex-promise-v2](https://github.com/PokeAPI/pokedex-promise-v2) | _Auto caching_ |
+| Browser client-side | [PokeAPI/pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper) | _Auto caching_, _Image caching_ |
+| Java/Kotlin | [PokeAPI/pokekotlin](https://github.com/PokeAPI/pokekotlin) | |
+| Python 2/3 | [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_ |
+| Python 3 | [PokeAPI/pokebase](https://github.com/PokeAPI/pokebase) | _Auto caching_, _Image caching_ |
+
+| Wrapper | Repository | Features |
+| --- | --- | --- |
+| PHP | [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_ |
+| Ruby | [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2) | |
+| .Net Standard | [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_ |
+| Go | [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_ |
+| Dart | [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart) | |
+| Rust | [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_ |
+| Spring Boot | [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_ |
+| Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
+| Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
 
 ## Donations
 

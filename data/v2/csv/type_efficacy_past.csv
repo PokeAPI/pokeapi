@@ -1,0 +1,7 @@
+damage_type_id,target_type_id,damage_factor,generation_id
+4,7,200,1
+7,4,200,1
+8,14,0,1
+15,10,100,1
+8,9,50,5
+17,9,50,5

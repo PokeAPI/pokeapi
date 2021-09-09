@@ -18,7 +18,7 @@
 
 A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
-> Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql) for more info.
+> Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql--) for more info.
 
 ## Setup &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
 

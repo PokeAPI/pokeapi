@@ -17,7 +17,6 @@ services:
     restart: always
 
   app:
-    image: pokeapi/pokeapi:master
     user: ${RUN_AS:-pokeapi}
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}

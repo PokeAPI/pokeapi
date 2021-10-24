@@ -1,3 +1,13 @@
+table:
+  name: pokemon_v2_pokemonform
+  schema: public
+object_relationships:
+- name: pokemon_v2_pokemon
+  using:
+    foreign_key_constraint_on: pokemon_id
+- name: pokemon_v2_versiongroup
+  using:
+    foreign_key_constraint_on: version_group_id
 array_relationships:
 - name: pokemon_v2_pokemonformgenerations
   using:
@@ -27,13 +37,6 @@ array_relationships:
       table:
         name: pokemon_v2_pokemonformtype
         schema: public
-object_relationships:
-- name: pokemon_v2_pokemon
-  using:
-    foreign_key_constraint_on: pokemon_id
-- name: pokemon_v2_versiongroup
-  using:
-    foreign_key_constraint_on: version_group_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -41,6 +44,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_pokemonform
-  schema: public

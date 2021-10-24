@@ -1,3 +1,10 @@
+table:
+  name: pokemon_v2_berryflavor
+  schema: public
+object_relationships:
+- name: pokemon_v2_contesttype
+  using:
+    foreign_key_constraint_on: contest_type_id
 array_relationships:
 - name: pokemonV2NaturesByLikesFlavorId
   using:
@@ -27,10 +34,6 @@ array_relationships:
       table:
         name: pokemon_v2_nature
         schema: public
-object_relationships:
-- name: pokemon_v2_contesttype
-  using:
-    foreign_key_constraint_on: contest_type_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -38,6 +41,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_berryflavor
-  schema: public

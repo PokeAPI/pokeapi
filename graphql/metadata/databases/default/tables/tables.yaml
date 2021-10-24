@@ -141,6 +141,7 @@
 - "!include public_pokemon_v2_supercontesteffectflavortext.yaml"
 - "!include public_pokemon_v2_type.yaml"
 - "!include public_pokemon_v2_typeefficacy.yaml"
+- "!include public_pokemon_v2_typeefficacypast.yaml"
 - "!include public_pokemon_v2_typegameindex.yaml"
 - "!include public_pokemon_v2_typename.yaml"
 - "!include public_pokemon_v2_version.yaml"

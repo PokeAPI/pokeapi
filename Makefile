@@ -4,7 +4,7 @@ docker_config = --settings=config.docker-compose
 HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
-.SILENT: 
+.SILENT:
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -66,6 +66,9 @@ docker-stop:  # (Docker) Stop containers
 
 docker-down:  # (Docker) Stop and removes containers and networks
 	docker-compose down
+
+docker-prod:
+	docker-compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 

@@ -1,0 +1,9 @@
+version: '2.4'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Resources/docker/app/Dockerfile
+
+# # docker-compose -f docker-compose.yml -f Resources/compose/docker-compose-dev.yml up -d

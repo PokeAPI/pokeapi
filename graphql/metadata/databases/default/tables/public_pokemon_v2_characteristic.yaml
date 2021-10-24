@@ -1,3 +1,10 @@
+table:
+  name: pokemon_v2_characteristic
+  schema: public
+object_relationships:
+- name: pokemon_v2_stat
+  using:
+    foreign_key_constraint_on: stat_id
 array_relationships:
 - name: pokemon_v2_characteristicdescriptions
   using:
@@ -6,10 +13,6 @@ array_relationships:
       table:
         name: pokemon_v2_characteristicdescription
         schema: public
-object_relationships:
-- name: pokemon_v2_stat
-  using:
-    foreign_key_constraint_on: stat_id
 select_permissions:
 - permission:
     allow_aggregations: true
@@ -17,6 +20,3 @@ select_permissions:
     filter: {}
     limit: 100000
   role: anon
-table:
-  name: pokemon_v2_characteristic
-  schema: public

@@ -1414,9 +1414,7 @@ def _build_pokemons():
                     ),
                 },
                 "home": {
-                    "front_default": try_image_names(
-                        poke_sprites + home, info, "png"
-                    ),
+                    "front_default": try_image_names(poke_sprites + home, info, "png"),
                     "front_female": try_image_names(
                         poke_sprites + home + "female/", info, "png"
                     ),

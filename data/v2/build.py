@@ -1381,6 +1381,7 @@ def _build_pokemons():
     def csv_record_to_objects(info):
         poke_sprites = "pokemon/"
         dream_world = "other/dream-world/"
+        home = "other/home/"
         official_art = "other/official-artwork/"
         gen_i = "versions/generation-i/"
         gen_ii = "versions/generation-ii/"
@@ -1410,6 +1411,18 @@ def _build_pokemons():
                     ),
                     "front_female": try_image_names(
                         poke_sprites + dream_world + "female/", info, "svg"
+                    ),
+                },
+                "home": {
+                    "front_default": try_image_names(poke_sprites + home, info, "png"),
+                    "front_female": try_image_names(
+                        poke_sprites + home + "female/", info, "png"
+                    ),
+                    "front_shiny": try_image_names(
+                        poke_sprites + home + "shiny/", info, "png"
+                    ),
+                    "front_shiny_female": try_image_names(
+                        poke_sprites + home + "shiny/female/", info, "png"
                     ),
                 },
                 "official-artwork": {

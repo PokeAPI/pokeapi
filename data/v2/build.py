@@ -1446,6 +1446,14 @@ def _build_pokemons():
                         "back_gray": try_image_names(
                             poke_sprites + gen_i + "red-blue/back/gray/", info, "png"
                         ),
+                        "front_transparent": try_image_names(
+                            poke_sprites + gen_i + "red-blue/transparent/", info, "png"
+                        ),
+                        "back_transparent": try_image_names(
+                            poke_sprites + gen_i + "red-blue/transparent/back/",
+                            info,
+                            "png",
+                        ),
                     },
                     "yellow": {
                         "front_default": try_image_names(
@@ -1459,6 +1467,14 @@ def _build_pokemons():
                         ),
                         "back_gray": try_image_names(
                             poke_sprites + gen_i + "yellow/back/gray/", info, "png"
+                        ),
+                        "front_transparent": try_image_names(
+                            poke_sprites + gen_i + "yellow/transparent/", info, "png"
+                        ),
+                        "back_transparent": try_image_names(
+                            poke_sprites + gen_i + "yellow/transparent/back/",
+                            info,
+                            "png",
                         ),
                     },
                 },
@@ -1476,6 +1492,24 @@ def _build_pokemons():
                         "back_shiny": try_image_names(
                             poke_sprites + gen_ii + "crystal/back/shiny/", info, "png"
                         ),
+                        "front_transparent": try_image_names(
+                            poke_sprites + gen_ii + "crystal/transparent/", info, "png"
+                        ),
+                        "front_shiny_transparent": try_image_names(
+                            poke_sprites + gen_ii + "crystal/transparent/shiny/",
+                            info,
+                            "png",
+                        ),
+                        "back_transparent": try_image_names(
+                            poke_sprites + gen_ii + "crystal/transparent/back/",
+                            info,
+                            "png",
+                        ),
+                        "back_shiny_transparent": try_image_names(
+                            poke_sprites + gen_ii + "crystal/transparent/back/shiny/",
+                            info,
+                            "png",
+                        ),
                     },
                     "gold": {
                         "front_default": try_image_names(
@@ -1490,6 +1524,9 @@ def _build_pokemons():
                         "back_shiny": try_image_names(
                             poke_sprites + gen_ii + "gold/back/shiny/", info, "png"
                         ),
+                        "front_transparent": try_image_names(
+                            poke_sprites + gen_ii + "gold/transparent/", info, "png"
+                        ),
                     },
                     "silver": {
                         "front_default": try_image_names(
@@ -1503,6 +1540,9 @@ def _build_pokemons():
                         ),
                         "back_shiny": try_image_names(
                             poke_sprites + gen_ii + "silver/back/shiny/", info, "png"
+                        ),
+                        "front_transparent": try_image_names(
+                            poke_sprites + gen_ii + "silver/transparent/", info, "png"
                         ),
                     },
                 },

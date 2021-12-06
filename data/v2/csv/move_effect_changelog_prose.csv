@@ -4,7 +4,7 @@ move_effect_changelog_id,local_language_id,effect
 3,9,Does nothing in trainer battles.
 4,9,Works while asleep through []{move:sleep-talk} if not at full health.
 5,9,"If this move misses, the user takes 1 point of damage in recoil."
-6,9,"If this move misses, the user takes half of the damage it would have inflicted in recoil."
+6,9,"If this move misses, the user takes damage equal to half of its max HP rounded down."
 7,9,"Locks the user into this move.  Due to a bug, if this move misses, its [accuracy]{mechanic:accuracy} drops to 1/256 as long as the user is still locked in."
 8,9,Can call any move except for []{move:struggle} and itself.
 9,9,Does not interact with []{move:stomp}.

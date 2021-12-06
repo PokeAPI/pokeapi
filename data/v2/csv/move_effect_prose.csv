@@ -71,7 +71,7 @@ Has a 3/8 chance each to hit 2 or 3 times, and a 1/8 chance each to hit 4 or 5 t
 []{move:rapid-spin} cancels this effect."
 44,9,Has an increased chance for a critical hit.,Inflicts [regular damage]{mechanic:regular-damage}.  User's [critical hit]{mechanic:critical-hit} rate is one level higher when using this move.
 45,9,Hits twice in one turn.,Inflicts [regular damage]{mechanic:regular-damage}.  Hits twice in one turn.
-46,9,"If the user misses, it takes half the damage it would have inflicted in recoil.","Inflicts [regular damage]{mechanic:regular-damage}.  If this move misses, is blocked by []{move:protect} or []{move:detect}, or has no effect, the user takes half the damage it would have inflicted in recoil.  This recoil damage will not exceed half the user's max HP.
+46,9,"If the user misses, it takes half the damage it would have inflicted in recoil.","Inflicts [regular damage]{mechanic:regular-damage}. If this move misses, is blocked by []{move:protect} or []{move:detect}, or has no effect, the user takes damage equal to half of its max HP rounded down.
 
 This move cannot be used while []{move:gravity} is in effect."
 47,9,Protects the user's stats from being changed by enemy moves.,"Pokémon on the user's side of the [field]{mechanic:field} are immune to stat-lowering effects for five turns.
@@ -1058,7 +1058,7 @@ Changes []{move:nature-power} to []{move:thunderbolt}."
 371,9,Does nothing.,Does nothing.
 372,9,Has a $effect_chance% chance to paralyze the target.,Inflicts [regular damage]{mechanic:regular-damage}.  Has a $effect_chance% chance to [paralyze]{mechanic:paralysis} the target.
 373,9,"Grounds the target, and hits even Flying-type or levitating Pokémon.",Inflicts regular damage.  Grounds the target until it leaves battle.  Ignores levitation effects and the immunity of []{type:flying}-type Pokémon.
-374,9,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.  
+374,9,Prevents the target from leaving battle.,Inflicts regular damage.  Traps the target.
 375,9,Raises the user's Attack by one stage after inflicting damage.,Inflicts regular damage.  Raises the user's Attack by one stage.
 376,9,Adds []{type:grass} to the target's types.,Adds []{type:grass} to the target's types.
 377,9,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.,Protects all friendly Pokémon from damaging moves.  Only works on the first turn after the user is sent out.

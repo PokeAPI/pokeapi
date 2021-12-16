@@ -20,3 +20,4 @@ pokemon_move_method_id,local_language_id,name,description
 9,9,XD: Purification,Appears on a Shadow Pokémon as it becomes increasingly purified.
 10,6,Rotom Formen,"Erscheint, wenn Rotom seine Form wechselt.  Verschwindet wenn Rotom eine andere Form an nimmt. Diese Fähigkeit kann nur durch wechseln der Form erlernt werden."
 10,9,Form Change,Appears when Rotom or Cosplay Pikachu changes form.  Disappears if the Pokémon becomes another form and this move can only be learned by form change.
+11,9,Zygarde Cube,Can be taught using the Zygarde Cube.  Must find the corresponding Zygarde Core first in Sun/Moon.  All moves are available immediately in Ultra Sun/Ultra Moon.

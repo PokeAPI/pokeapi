@@ -225,7 +225,7 @@ item_id,local_language_id,name
 23,5,Guérison
 23,6,Top-Genesung
 23,7,Restaurar Todo
-23,8,Ricarica Totale
+23,8,Ricarica totale
 23,9,Full Restore
 23,11,かいふくのくすり
 23,12,全复药
@@ -265,7 +265,7 @@ item_id,local_language_id,name
 27,5,Total Soin
 27,6,Hyperheiler
 27,7,Cura Total
-27,8,Cura Totale
+27,8,Cura totale
 27,9,Full Heal
 27,11,なんでもなおし
 27,12,万灵药
@@ -295,7 +295,7 @@ item_id,local_language_id,name
 30,5,Eau Fraîche
 30,6,Tafelwasser
 30,7,Agua Fresca
-30,8,Acqua Fresca
+30,8,Acqua fresca
 30,9,Fresh Water
 30,11,おいしいみず
 30,12,美味之水
@@ -402,7 +402,7 @@ item_id,local_language_id,name
 41,1,ピーピーマックス
 41,3,PP맥스
 41,4,ＰＰ多項全補劑
-41,5,Max Élixir
+41,5,Élixir Max
 41,6,Top-Elixier
 41,7,Elixir Máximo
 41,8,Elisir Max
@@ -495,7 +495,7 @@ item_id,local_language_id,name
 50,5,Super Bonbon
 50,6,Sonderbonbon
 50,7,Caramelo Raro
-50,8,Caramella Rara
+50,8,Caramella rara
 50,9,Rare Candy
 50,11,ふしぎなアメ
 50,12,神奇糖果
@@ -542,9 +542,9 @@ item_id,local_language_id,name
 55,1,エフェクトガード
 55,3,이펙트가드
 55,4,能力防守
-55,5,Défense Spéciale
+55,5,Garde-Stats
 55,6,Megablock
-55,7,Protec. Especial
+55,7,Protección X
 55,8,Superguardia
 55,9,Guard Spec.
 55,11,エフェクトガード
@@ -554,7 +554,7 @@ item_id,local_language_id,name
 56,4,要害攻擊
 56,5,Muscle +
 56,6,Angriffplus
-56,7,Directo
+56,7,Crítico X
 56,8,Supercolpo
 56,9,Dire Hit
 56,11,クリティカット
@@ -573,7 +573,7 @@ item_id,local_language_id,name
 58,3,디펜드업
 58,4,防禦強化
 58,5,Défense +
-58,6,X-Abwehr
+58,6,X-Verteidigung
 58,7,Defensa X
 58,8,Difesa X
 58,9,X Defense
@@ -583,7 +583,7 @@ item_id,local_language_id,name
 59,3,스피드업
 59,4,速度強化
 59,5,Vitesse +
-59,6,X-Tempo
+59,6,X-Initiative
 59,7,Velocidad X
 59,8,Velocità X
 59,9,X Speed
@@ -593,7 +593,7 @@ item_id,local_language_id,name
 60,3,잘-맞히기
 60,4,命中強化
 60,5,Précision +
-60,6,X-Treffer
+60,6,X-Genauigkeit
 60,7,Precisión X
 60,8,Precisione X
 60,9,X Accuracy
@@ -602,9 +602,9 @@ item_id,local_language_id,name
 61,1,スペシャルアップ
 61,3,스페셜업
 61,4,特攻強化
-61,5,Spécial +
-61,6,X-Spezial
-61,7,Especial X
+61,5,Atq. Spé. +
+61,6,X-Sp.-Ang.
+61,7,At. Especial X
 61,8,Att. Speciale X
 61,9,X Sp. Atk
 61,11,スペシャルアップ
@@ -613,7 +613,7 @@ item_id,local_language_id,name
 62,3,스페셜가드
 62,4,特防強化
 62,5,Déf. Spé. +
-62,6,X-Spezial-Vert.
+62,6,X-Sp.-Vert.
 62,7,Def. Especial X
 62,8,Dif. Speciale X
 62,9,X Sp. Def
@@ -762,7 +762,7 @@ item_id,local_language_id,name
 77,1,ゴールドスプレー
 77,3,골드스프레이
 77,4,黃金噴霧
-77,5,Max Repousse
+77,5,Repousse Max
 77,6,Top-Schutz
 77,7,Repelente Máximo
 77,8,Repellente Max
@@ -775,7 +775,7 @@ item_id,local_language_id,name
 78,5,Corde Sortie
 78,6,Fluchtseil
 78,7,Cuerda Huida
-78,8,Fune di Fuga
+78,8,Fune di fuga
 78,9,Escape Rope
 78,11,あなぬけのヒモ
 78,12,离洞绳
@@ -1025,7 +1025,7 @@ item_id,local_language_id,name
 103,5,Vieil Ambre
 103,6,Altbernstein
 103,7,Ámbar Viejo
-103,8,Ambra Antica
+103,8,Ambra antica
 103,9,Old Amber
 103,11,ひみつのコハク
 103,12,秘密琥珀
@@ -1877,7 +1877,7 @@ item_id,local_language_id,name
 193,5,Multi Exp
 193,6,EP-Teiler
 193,7,Repartir Exp
-193,8,Condividi Esp.
+193,8,Condividi esp.
 193,9,Exp. Share
 193,11,がくしゅうそうち
 193,12,学习装置
@@ -1896,7 +1896,7 @@ item_id,local_language_id,name
 195,4,安撫之鈴
 195,5,Grelot Zen
 195,6,Sanftglocke
-195,7,Campana Alivio
+195,7,Cascabel Alivio
 195,8,Calmanella
 195,9,Soothe Bell
 195,11,やすらぎのすず
@@ -1916,7 +1916,7 @@ item_id,local_language_id,name
 197,4,講究頭帶
 197,5,Bandeau Choix
 197,6,Wahlband
-197,7,Cinta Elegida
+197,7,Cinta Elección
 197,8,Bendascelta
 197,9,Choice Band
 197,11,こだわりハチマキ
@@ -1996,7 +1996,7 @@ item_id,local_language_id,name
 205,4,煙霧球
 205,5,Boule Fumée
 205,6,Rauchball
-205,7,Bola Humo
+205,7,Bola de Humo
 205,8,Palla Fumo
 205,9,Smoke Ball
 205,11,けむりだま
@@ -2015,7 +2015,7 @@ item_id,local_language_id,name
 207,3,기합의머리띠
 207,4,氣勢頭帶
 207,5,Bandeau
-207,6,Fokus-Band
+207,6,Fokusband
 207,7,Cinta Focus
 207,8,Bandana
 207,9,Focus Band
@@ -2115,7 +2115,7 @@ item_id,local_language_id,name
 217,3,검은안경
 217,4,黑色眼鏡
 217,5,Lunettes Noires
-217,6,Schattenglas
+217,6,Schattenbrille
 217,7,Gafas de Sol
 217,8,Occhialineri
 217,9,Black Glasses
@@ -2155,7 +2155,7 @@ item_id,local_language_id,name
 221,3,예리한부리
 221,4,銳利鳥嘴
 221,5,Bec Pointu
-221,6,Hackattack
+221,6,Spitzer Schnabel
 221,7,Pico Afilado
 221,8,Beccaffilato
 221,9,Sharp Beak
@@ -2226,7 +2226,7 @@ item_id,local_language_id,name
 228,4,絲綢圍巾
 228,5,Mouchoir Soie
 228,6,Seidenschal
-228,7,Pañuelo Seda
+228,7,Pañuelo de Seda
 228,8,Sciarpa Seta
 228,9,Silk Scarf
 228,11,シルクのスカーフ
@@ -2238,15 +2238,15 @@ item_id,local_language_id,name
 229,6,Up-Grade
 229,7,Mejora
 229,8,Upgrade
-229,9,Up-Grade
+229,9,Upgrade
 229,11,アップグレード
 229,12,升级数据
 230,1,かいがらのすず
 230,3,조개껍질방울
 230,4,貝殼之鈴
 230,5,Grelot Coque
-230,6,Seegesang
-230,7,Campana Concha
+230,6,Muschelglocke
+230,7,Cascabel Concha
 230,8,Conchinella
 230,9,Shell Bell
 230,11,かいがらのすず
@@ -2306,9 +2306,9 @@ item_id,local_language_id,name
 236,4,大蔥
 236,5,Poireau
 236,6,Lauchstange
-236,7,Palo
+236,7,Puerro
 236,8,Gambo
-236,9,Stick
+236,9,Leek
 236,11,ながねぎ
 236,12,大葱
 237,1,あかいバンダナ
@@ -2385,7 +2385,7 @@ item_id,local_language_id,name
 244,3,박식안경
 244,4,博識眼鏡
 244,5,Lunettes Sages
-244,6,Schlauglas
+244,6,Schlaubrille
 244,7,Gafas Especiales
 244,8,Saviocchiali
 244,9,Wise Glasses
@@ -2586,7 +2586,7 @@ item_id,local_language_id,name
 264,4,講究圍巾
 264,5,Mouchoir Choix
 264,6,Wahlschal
-264,7,Pañuelo Elegido
+264,7,Pañuelo Elección
 264,8,Stolascelta
 264,9,Choice Scarf
 264,11,こだわりスカーフ
@@ -2685,8 +2685,8 @@ item_id,local_language_id,name
 274,3,구애안경
 274,4,講究眼鏡
 274,5,Lunettes Choix
-274,6,Wahlglas
-274,7,Gafas Elegid
+274,6,Wahlbrille
+274,7,Gafas Elección
 274,8,Lentiscelta
 274,9,Choice Specs
 274,11,こだわりメガネ
@@ -2754,7 +2754,7 @@ item_id,local_language_id,name
 281,1,もうどくプレート
 281,3,맹독플레이트
 281,4,劇毒石板
-281,5,Plaque Toxik
+281,5,Plaque Toxicité
 281,6,Gifttafel
 281,7,Tabla Tóxica
 281,8,Lastrafiele
@@ -2886,7 +2886,7 @@ item_id,local_language_id,name
 294,4,漣漪薰香
 294,5,Encens Vague
 294,6,Wellenrauch
-294,7,Incienso Aqua
+294,7,Incienso Acua
 294,8,Ondaroma
 294,9,Wave Incense
 294,11,さざなみのおこう
@@ -3991,7 +3991,7 @@ item_id,local_language_id,name
 405,3,탐험세트
 405,4,探險組合
 405,5,Explorakit
-405,6,Forschersack
+405,6,Erkundungs-Set
 405,7,Kit Explorador
 405,8,Esplorokit
 405,9,Explorer Kit
@@ -4133,14 +4133,14 @@ item_id,local_language_id,name
 419,5,Carte
 419,6,Karte
 419,7,Mapa
-419,8,Mappa Città
+419,8,Mappa città
 419,9,Town Map
 419,11,タウンマップ
 419,12,城镇地图
 420,1,バトルサーチャー
 420,3,배틀서처
 420,4,對戰搜尋器
-420,5,Cherche VS
+420,5,Cherch’Combat
 420,6,Kampffahnder
 420,7,Buscapelea
 420,8,Cercasfide
@@ -4270,7 +4270,7 @@ item_id,local_language_id,name
 433,5,Passe Bateau
 433,6,Bootsticket
 433,7,Ticket Barco
-433,8,Biglietto Nave
+433,8,Biglietto nave
 433,9,S.S. Ticket
 433,11,ふねのチケット
 433,12,船票
@@ -4336,11 +4336,14 @@ item_id,local_language_id,name
 439,12,兑换券３
 440,1,そうこのカギ
 440,3,창고열쇠
+440,4,倉庫鑰匙
 440,5,Clé Stockage
-440,6,L-Schlüssel
+440,6,Lagerschlüssel
 440,7,Llave Almacén
 440,8,Depochiave
 440,9,Storage Key
+440,11,そうこのカギ
+440,12,仓库钥匙
 441,1,ひでんのくすり
 441,3,비전신약
 441,4,秘傳之藥
@@ -4385,9 +4388,9 @@ item_id,local_language_id,name
 445,3,비밀의열쇠
 445,4,秘密鑰匙
 445,5,Clé Secrète
-445,6,?-Öffner
+445,6,Geheimschlüssel
 445,7,Llave Secreta
-445,8,Chiave Segreta
+445,8,Chiave segreta
 445,9,Secret Key
 445,11,ひみつのカギ
 445,12,秘密钥匙
@@ -4525,7 +4528,7 @@ item_id,local_language_id,name
 459,3,파란규토리
 459,4,藍球果
 459,5,Noigrume Bleu
-459,6,Aprikoko Blu
+459,6,Aprikoko Blau
 459,7,Bonguri Azul
 459,8,Ghicocca Blu
 459,9,Blue Apricorn
@@ -4535,7 +4538,7 @@ item_id,local_language_id,name
 460,3,노랑규토리
 460,4,黃球果
 460,5,Noigrume Jaune
-460,6,Aprikoko Glb
+460,6,Aprikoko Gelb
 460,7,Bonguri Amarillo
 460,8,Ghicocca Gialla
 460,9,Yellow Apricorn
@@ -4545,7 +4548,7 @@ item_id,local_language_id,name
 461,3,초록규토리
 461,4,綠球果
 461,5,Noigrume Vert
-461,6,Aprikoko Grn
+461,6,Aprikoko Grün
 461,7,Bonguri Verde
 461,8,Ghicocca Verde
 461,9,Green Apricorn
@@ -4555,7 +4558,7 @@ item_id,local_language_id,name
 462,3,담홍규토리
 462,4,粉球果
 462,5,Noigrume Rose
-462,6,Aprikoko Pnk
+462,6,Aprikoko Pink
 462,7,Bonguri Rosa
 462,8,Ghicocca Rosa
 462,9,Pink Apricorn
@@ -4565,7 +4568,7 @@ item_id,local_language_id,name
 463,3,하얀규토리
 463,4,白球果
 463,5,Noigrume Blanc
-463,6,Aprikoko Wss
+463,6,Aprikoko Weiß
 463,7,Bonguri Blanco
 463,8,Ghicocca Bianca
 463,9,White Apricorn
@@ -4575,7 +4578,7 @@ item_id,local_language_id,name
 464,3,검은규토리
 464,4,黑球果
 464,5,Noigrume Noir
-464,6,Aprikoko Swz
+464,6,Aprikoko Schwarz
 464,7,Bonguri Negro
 464,8,Ghicocca Nera
 464,9,Black Apricorn
@@ -4587,7 +4590,7 @@ item_id,local_language_id,name
 465,5,Cherch’Objet
 465,6,Itemradar
 465,7,Zahorí
-465,8,Ricerca Strum.
+465,8,Ricerca strum.
 465,9,Dowsing Machine
 465,11,ダウジングマシン
 465,12,探宝器
@@ -4676,7 +4679,7 @@ item_id,local_language_id,name
 474,4,透明鈴鐺
 474,5,Glas Transparent
 474,6,Klarglocke
-474,7,Campana Clara
+474,7,Cascabel Claro
 474,8,Campana Chiara
 474,9,Clear Bell
 474,11,とうめいなスズ
@@ -4685,7 +4688,7 @@ item_id,local_language_id,name
 475,3,카드키
 475,4,鑰匙卡
 475,5,Carte Magnétique
-475,6,Türöffner
+475,6,Schlüsselkarte
 475,7,Llave Magnética
 475,8,Apriporta
 475,9,Card Key
@@ -4693,15 +4696,18 @@ item_id,local_language_id,name
 475,12,钥匙卡
 476,1,ちかのかぎ
 476,3,지하의열쇠
+476,4,地下鑰匙
 476,5,Clé Sous-Sol
 476,6,Kelleröffner
 476,7,Llave Sótano
-476,8,Chiave Sotterr.
+476,8,Chiave sotterr.
 476,9,Basement Key
+476,11,ちかのかぎ
+476,12,地下钥匙
 477,1,あかいウロコ
 477,3,빨간비늘
 477,4,紅色鱗片
-477,5,Écaillerouge
+477,5,Écaille Rouge
 477,6,Rote Haut
 477,7,Escama Roja
 477,8,Squama Rossa
@@ -4783,7 +4789,7 @@ item_id,local_language_id,name
 485,4,海聲鈴鐺
 485,5,Glas Tempête
 485,6,Gischtglocke
-485,7,Campana Oleaje
+485,7,Cascabel Oleaje
 485,8,Campana Onda
 485,9,Tidal Bell
 485,11,うみなりのスズ
@@ -5236,7 +5242,7 @@ item_id,local_language_id,name
 536,3,고고고글
 536,4,ＧＯＧＯ護目鏡
 536,5,Lunettes Sable
-536,6,Wüstenglas
+536,6,Wüstenbrille
 536,7,Gafas Aislantes
 536,8,Occhialoni
 536,9,Go-Goggles
@@ -5295,7 +5301,7 @@ item_id,local_language_id,name
 544,1,ポケモンのふえ
 544,3,포켓몬피리
 544,4,寶可夢之笛
-544,5,Pokéflûte
+544,5,Poké Flûte
 544,6,Pokéflöte
 544,7,Poké Flauta
 544,8,Poké Flauto
@@ -5309,23 +5315,35 @@ item_id,local_language_id,name
 545,8,Buono Bici
 545,9,Bike Voucher
 546,1,きんのいれば
-546,5,Dent d'Or
-546,6,Goldzähne
-546,7,Dientes Oro
-546,8,Denti d'Oro
+546,3,금틀니
+546,4,金假牙
+546,5,Dentier en Or
+546,6,Goldenes Gebiss
+546,7,Dentadura de Oro
+546,8,Denti d’oro
 546,9,Gold Teeth
+546,11,きんのいれば
+546,12,金假牙
 547,1,エレベータのカギ
-547,5,Clé Asc.
-547,6,Liftöffner
-547,7,Ll. Ascensor
-547,8,Chiave Asc.
+547,3,엘리베이터열쇠
+547,4,電梯鑰匙
+547,5,Clé Ascenseur
+547,6,Aufzugsschlüssel
+547,7,Llave Ascensor
+547,8,Chiave ascensore
 547,9,Lift Key
+547,11,エレベータのカギ
+547,12,电梯钥匙
 548,1,シルフスコープ
+548,3,실프스코프
+548,4,西爾佛檢視鏡
 548,5,Scope Sylphe
 548,6,Silph Scope
-548,7,Scope Silph
+548,7,Visor Silph
 548,8,Spettrosonda
 548,9,Silph Scope
+548,11,シルフスコープ
+548,12,西尔佛检视镜
 549,1,ボイスチェッカー
 549,5,Memorydex
 549,6,Ruhmesdatei
@@ -5333,11 +5351,15 @@ item_id,local_language_id,name
 549,8,PokéVIP
 549,9,Fame Checker
 550,1,わざマシンケース
+550,3,기술머신케이스
+550,4,招式學習器盒
 550,5,Boîte CT
-550,6,VM/TM-Box
-550,7,Tubo MT-MO
-550,8,Porta-MT
+550,6,TM-Box
+550,7,Estuche de MT
+550,8,Porta MT
 550,9,TM Case
+550,11,わざマシンケース
+550,12,招式学习器盒
 551,1,きのみぶくろ
 551,5,Sac à Baies
 551,6,Beerentüte
@@ -5363,11 +5385,15 @@ item_id,local_language_id,name
 554,8,Sette Pass
 554,9,Rainbow Pass
 555,1,おちゃ
+555,3,차
+555,4,茶
 555,5,Thé
 555,6,Tee
 555,7,Té
 555,8,Tè
 555,9,Tea
+555,11,おちゃ
+555,12,茶
 556,1,しんぴのチケット
 556,5,Ticketmystik
 556,6,Geheimticket
@@ -5847,7 +5873,7 @@ item_id,local_language_id,name
 606,6,Heilfeder
 606,7,Pluma Vigor
 606,8,Piumsalute
-606,9,Health Wing
+606,9,Health Feather
 606,11,たいりょくのハネ
 606,12,体力之羽
 607,1,きんりょくのハネ
@@ -5857,7 +5883,7 @@ item_id,local_language_id,name
 607,6,Kraftfeder
 607,7,Pluma Músculo
 607,8,Piumpotenza
-607,9,Muscle Wing
+607,9,Muscle Feather
 607,11,きんりょくのハネ
 607,12,肌力之羽
 608,1,ていこうのハネ
@@ -5867,7 +5893,7 @@ item_id,local_language_id,name
 608,6,Abwehrfeder
 608,7,Pluma Aguante
 608,8,Piumtutela
-608,9,Resist Wing
+608,9,Resist Feather
 608,11,ていこうのハネ
 608,12,抵抗之羽
 609,1,ちりょくのハネ
@@ -5877,7 +5903,7 @@ item_id,local_language_id,name
 609,6,Geniefeder
 609,7,Pluma Intelecto
 609,8,Piumingegno
-609,9,Genius Wing
+609,9,Genius Feather
 609,11,ちりょくのハネ
 609,12,智力之羽
 610,1,せいしんのハネ
@@ -5887,7 +5913,7 @@ item_id,local_language_id,name
 610,6,Espritfeder
 610,7,Pluma Mente
 610,8,Piumintuito
-610,9,Clever Wing
+610,9,Clever Feather
 610,11,せいしんのハネ
 610,12,精神之羽
 611,1,しゅんぱつのハネ
@@ -5897,7 +5923,7 @@ item_id,local_language_id,name
 611,6,Flinkfeder
 611,7,Pluma Ímpetu
 611,8,Piumreazione
-611,9,Swift Wing
+611,9,Swift Feather
 611,11,しゅんぱつのハネ
 611,12,瞬发之羽
 612,1,きれいなハネ
@@ -5907,7 +5933,7 @@ item_id,local_language_id,name
 612,6,Prachtfeder
 612,7,Pluma Bella
 612,8,Piumabella
-612,9,Pretty Wing
+612,9,Pretty Feather
 612,11,きれいなハネ
 612,12,美丽之羽
 613,1,ふたのカセキ
@@ -6115,7 +6141,7 @@ item_id,local_language_id,name
 633,4,要害攻擊２
 633,5,Muscle 2
 633,6,Angriffplus2
-633,7,Directo 2
+633,7,Crítico X 2
 633,8,Supercolpo 2
 633,9,Dire Hit 2
 633,11,クリティカット２
@@ -6124,7 +6150,7 @@ item_id,local_language_id,name
 634,3,스피드업2
 634,4,速度強化２
 634,5,Vitesse 2
-634,6,X-Tempo2
+634,6,X-Initiative 2
 634,7,Velocidad X 2
 634,8,Velocità X-2
 634,9,X Speed 2
@@ -6134,8 +6160,8 @@ item_id,local_language_id,name
 635,3,스페셜업2
 635,4,特攻強化２
 635,5,Atq. Spé. 2
-635,6,X-Spezial2
-635,7,Especial X 2
+635,6,X-Sp.-Ang. 2
+635,7,At. Esp. X 2
 635,8,Att. Sp. X-2
 635,9,X Sp. Atk 2
 635,11,ＳＰアップ２
@@ -6144,7 +6170,7 @@ item_id,local_language_id,name
 636,3,스페셜가드2
 636,4,特防強化２
 636,5,Déf. Spé. 2
-636,6,X-Sp.-Vert.2
+636,6,X-Sp.-Vert. 2
 636,7,Def. Esp. X 2
 636,8,Dif. Spec. X-2
 636,9,X Sp. Def 2
@@ -6154,7 +6180,7 @@ item_id,local_language_id,name
 637,3,디펜드업2
 637,4,防禦強化２
 637,5,Défense 2
-637,6,X-Abwehr2
+637,6,X-Verteidigung 2
 637,7,Defensa X 2
 637,8,Difesa X-2
 637,9,X Defense 2
@@ -6164,7 +6190,7 @@ item_id,local_language_id,name
 638,3,플러스파워2
 638,4,力量強化２
 638,5,Attaque 2
-638,6,X-Angriff2
+638,6,X-Angriff 2
 638,7,Ataque X 2
 638,8,Attacco X-2
 638,9,X Attack 2
@@ -6174,7 +6200,7 @@ item_id,local_language_id,name
 639,3,잘-맞히기2
 639,4,命中強化２
 639,5,Précision 2
-639,6,X-Treffer2
+639,6,X-Genauigkeit 2
 639,7,Precisión X 2
 639,8,Precisione X-2
 639,9,X Accuracy 2
@@ -6184,7 +6210,7 @@ item_id,local_language_id,name
 640,3,스피드업3
 640,4,速度強化３
 640,5,Vitesse 3
-640,6,X-Tempo3
+640,6,X-Initiative 3
 640,7,Velocidad X 3
 640,8,Velocità X-3
 640,9,X Speed 3
@@ -6194,8 +6220,8 @@ item_id,local_language_id,name
 641,3,스페셜업3
 641,4,特攻強化３
 641,5,Atq. Spé. 3
-641,6,X-Spezial3
-641,7,Especial X 3
+641,6,X-Sp.-Ang. 3
+641,7,At. Esp. X 3
 641,8,Att. Sp. X-3
 641,9,X Sp. Atk 3
 641,11,ＳＰアップ３
@@ -6204,7 +6230,7 @@ item_id,local_language_id,name
 642,3,스페셜가드3
 642,4,特防強化３
 642,5,Déf. Spé. 3
-642,6,X-Sp.-Vert.3
+642,6,X-Sp.-Vert. 3
 642,7,Def. Esp. X 3
 642,8,Dif. Spec. X-3
 642,9,X Sp. Def 3
@@ -6214,7 +6240,7 @@ item_id,local_language_id,name
 643,3,디펜드업3
 643,4,防禦強化３
 643,5,Défense 3
-643,6,X-Abwehr3
+643,6,X-Verteidigung 3
 643,7,Defensa X 3
 643,8,Difesa X-3
 643,9,X Defense 3
@@ -6224,7 +6250,7 @@ item_id,local_language_id,name
 644,3,플러스파워3
 644,4,力量強化３
 644,5,Attaque 3
-644,6,X-Angriff3
+644,6,X-Angriff 3
 644,7,Ataque X 3
 644,8,Attacco X-3
 644,9,X Attack 3
@@ -6234,7 +6260,7 @@ item_id,local_language_id,name
 645,3,잘-맞히기3
 645,4,命中強化３
 645,5,Précision 3
-645,6,X-Treffer3
+645,6,X-Genauigkeit 3
 645,7,Precisión X 3
 645,8,Precisione X-3
 645,9,X Accuracy 3
@@ -6244,7 +6270,7 @@ item_id,local_language_id,name
 646,3,스피드업6
 646,4,速度強化６
 646,5,Vitesse 6
-646,6,X-Tempo6
+646,6,X-Initiative 6
 646,7,Velocidad X 6
 646,8,Velocità X-6
 646,9,X Speed 6
@@ -6254,8 +6280,8 @@ item_id,local_language_id,name
 647,3,스페셜업6
 647,4,特攻強化６
 647,5,Atq. Spé. 6
-647,6,X-Spezial6
-647,7,Especial X 6
+647,6,X-Sp.-Ang. 6
+647,7,At. Esp. X 6
 647,8,Att. Sp. X-6
 647,9,X Sp. Atk 6
 647,11,ＳＰアップ６
@@ -6264,7 +6290,7 @@ item_id,local_language_id,name
 648,3,스페셜가드6
 648,4,特防強化６
 648,5,Déf. Spé. 6
-648,6,X-Sp.-Vert.6
+648,6,X-Sp.-Vert. 6
 648,7,Def. Esp. X 6
 648,8,Dif. Spec. X-6
 648,9,X Sp. Def 6
@@ -6274,7 +6300,7 @@ item_id,local_language_id,name
 649,3,디펜드업6
 649,4,防禦強化６
 649,5,Défense 6
-649,6,X-Abwehr6
+649,6,X-Verteidigung 6
 649,7,Defensa X 6
 649,8,Difesa X-6
 649,9,X Defense 6
@@ -6284,7 +6310,7 @@ item_id,local_language_id,name
 650,3,플러스파워6
 650,4,力量強化６
 650,5,Attaque 6
-650,6,X-Angriff6
+650,6,X-Angriff 6
 650,7,Ataque X 6
 650,8,Attacco X-6
 650,9,X Attack 6
@@ -6294,7 +6320,7 @@ item_id,local_language_id,name
 651,3,잘-맞히기6
 651,4,命中強化６
 651,5,Précision 6
-651,6,X-Treffer6
+651,6,X-Genauigkeit 6
 651,7,Precisión X 6
 651,8,Precisione X-6
 651,9,X Accuracy 6
@@ -6345,7 +6371,7 @@ item_id,local_language_id,name
 656,4,要害攻擊３
 656,5,Muscle 3
 656,6,Angriffplus3
-656,7,Directo 3
+656,7,Crítico X 3
 656,8,Supercolpo 3
 656,9,Dire Hit 3
 656,11,クリティカット３
@@ -6402,11 +6428,14 @@ item_id,local_language_id,name
 661,12,招式学习器９５
 662,1,ライブキャスター
 662,3,라이브캐스터
+662,4,即時通訊器
 662,5,Vokit
 662,6,Viso-Caster
 662,7,Videomisor
 662,8,Interpoké
 662,9,Xtransceiver
+662,11,ライブキャスター
+662,12,即时通讯器
 663,1,ゴッドストーン
 663,9,god stone
 664,1,はいたつぶつ１
@@ -6471,11 +6500,14 @@ item_id,local_language_id,name
 670,12,奖牌盒
 671,1,いでんしのくさび
 671,3,유전자쐐기
+671,4,基因之楔
 671,5,Pointeau ADN
 671,6,DNS-Keil
 671,7,Punta ADN
 671,8,Cuneo DNA
 671,9,DNA Splicers
+671,11,いでんしのくさび
+671,12,基因之楔
 673,1,きょかしょう
 673,3,허가증
 673,4,許可證
@@ -6538,11 +6570,14 @@ item_id,local_language_id,name
 678,12,阿克罗玛机器
 679,1,わすれもの
 679,3,잊은물건
+679,4,遺忘物
 679,5,Objet Trouvé
 679,6,Fundsache
 679,7,Objeto Perdido
 679,8,Oggetto perso
 679,9,Dropped Item
+679,11,わすれもの
+679,12,遗忘物
 681,1,うつしかがみ
 681,3,비추는거울
 681,4,現形鏡
@@ -7058,9 +7093,9 @@ item_id,local_language_id,name
 732,4,探險心得
 732,5,ABC Aventure
 732,6,Abenteuerfibel
-732,7,Guía de Máximas
+732,7,Guía de Aventura
 732,8,Guida Avventura
-732,9,Adventure Rules
+732,9,Adventure Guide
 732,11,たんけんこころえ
 732,12,探险心得
 733,1,エレベータのキー
@@ -7075,11 +7110,14 @@ item_id,local_language_id,name
 733,12,电梯钥匙
 734,1,ホロキャスター
 734,3,홀로캐스터
+734,4,全像投影通訊器
 734,5,Holokit
 734,6,Holo-Log
 734,7,Holomisor
 734,8,Holovox
 734,9,Holo Caster
+734,11,ホロキャスター
+734,12,全息影像通讯器
 735,1,カロスエンブレム
 735,3,칼로스엠블럼
 735,4,卡洛斯勳章
@@ -8586,7 +8624,7 @@ item_id,local_language_id,name
 933,5,Passe Bateau
 933,6,Bootsticket
 933,7,Ticket Barco
-933,8,Biglietto Nave
+933,8,Biglietto nave
 933,9,S.S. Ticket
 933,11,ふねのチケット
 933,12,船票
@@ -9180,16 +9218,16 @@ item_id,local_language_id,name
 992,9,N-Lunarizer
 992,11,ネクロプラスルナ
 992,12,奈克洛露奈合体器
-993,1,イリマのノーマルＺ
+993,1,イリマノーマルＺ
 993,3,일리마의 노말Z
-993,4,伊利馬的一般Ｚ
+993,4,伊利馬一般Ｚ
 993,5,Cristal Z Althéo
 993,6,Elimas Normium Z
 993,7,Cristal Z (Liam)
 993,8,Normium Z Liam
-993,9,Ilima’s Normalium Z
-993,11,イリマのノーマルＺ
-993,12,伊利马的一般Ｚ
+993,9,Ilima Normalium Z
+993,11,イリマノーマルＺ
+993,12,伊利马一般Ｚ
 994,1,のこされたボール
 994,3,남겨진 볼
 994,4,留下的精靈球
@@ -9310,3 +9348,6533 @@ item_id,local_language_id,name
 1005,9,Roto Catch
 1005,11,つかまえポン
 1005,12,捕捉碰碰
+1006,1,マチスのサイン
+1006,3,마티스의사인
+1006,4,馬志士的簽名
+1006,5,Dédicace de Bob
+1006,6,Autogramm
+1006,7,Autógrafo
+1006,8,Autografo
+1006,9,Autograph
+1006,11,マチスのサイン
+1006,12,马志士的签名
+1007,1,ポケモンボックス
+1007,3,포켓몬 박스
+1007,4,寶可夢盒
+1007,5,Boîte Pokémon
+1007,6,Pokémon-Box
+1007,7,Caja de Pokémon
+1007,8,Box Pokémon
+1007,9,Pokémon Box Link
+1007,11,ポケモンボックス
+1007,12,宝可梦盒
+1008,1,かいふくポケット
+1008,3,회복포켓
+1008,4,回復口袋
+1008,5,Trousse de Soins
+1008,6,Medizintasche
+1008,7,Botiquín
+1008,8,Tasca rimedi
+1008,9,Medicine Pocket
+1008,11,かいふくポケット
+1008,12,回复口袋
+1009,1,アメボトル
+1009,3,사탕보틀
+1009,4,糖果罐
+1009,5,Bonbonnière
+1009,6,Bonbonglas
+1009,7,Tarro de Caramelos
+1009,8,Portacaramelle
+1009,9,Candy Jar
+1009,11,アメボトル
+1009,12,糖果罐
+1010,1,きょうかポケット
+1010,3,강화포켓
+1010,4,強化口袋
+1010,5,Poche à Renforts
+1010,6,Stärkungstasche
+1010,7,Bolsillo Mejoras
+1010,8,Tasca potenziam.
+1010,9,Power-Up Pocket
+1010,11,きょうかポケット
+1010,12,强化口袋
+1011,1,おきがえトランク
+1011,3,옷갈아입기트렁크
+1011,4,換裝箱
+1011,5,Malle à Costumes
+1011,6,Klamottenkoffer
+1011,7,Maleta
+1011,8,Valigia vestiti
+1011,9,Clothing Trunk
+1011,11,おきがえトランク
+1011,12,换装箱
+1012,1,ほかくポケット
+1012,3,포획포켓
+1012,4,捕捉口袋
+1012,5,Poche de Capture
+1012,6,Fangtasche
+1012,7,Bolsillo Captura
+1012,8,Tasca cattura
+1012,9,Catching Pocket
+1012,11,ほかくポケット
+1012,12,捕捉口袋
+1013,1,バトルポケット
+1013,3,배틀포켓
+1013,4,對戰口袋
+1013,5,Poche de Combat
+1013,6,Kampftasche
+1013,7,Bolsillo Combate
+1013,8,Tasca lotta
+1013,9,Battle Pocket
+1013,11,バトルポケット
+1013,12,对战口袋
+1014,1,ぎんのズリのみ
+1014,3,은 라즈열매
+1014,4,銀色蔓莓果
+1014,5,Baie Framby argentée
+1014,6,Silberne Himmihbeere
+1014,7,Baya Frambu Plateada
+1014,8,Baccalampon argentata
+1014,9,Silver Razz Berry
+1014,11,ぎんのズリのみ
+1014,12,银色蔓莓果
+1015,1,きんのズリのみ
+1015,3,황금 라즈열매
+1015,4,金色蔓莓果
+1015,5,Baie Framby dorée
+1015,6,Goldene Himmihbeere
+1015,7,Baya Frambu Dorada
+1015,8,Baccalampon dorata
+1015,9,Golden Razz Berry
+1015,11,きんのズリのみ
+1015,12,金色蔓莓果
+1016,1,ぎんのナナのみ
+1016,3,은 나나열매
+1016,4,銀色蕉香果
+1016,5,Baie Nanab argentée
+1016,6,Silberne Nanabbeere
+1016,7,Baya Latano Plateada
+1016,8,Baccabana argentata
+1016,9,Silver Nanab Berry
+1016,11,ぎんのナナのみ
+1016,12,银色蕉香果
+1017,1,きんのナナのみ
+1017,3,황금 나나열매
+1017,4,金色蕉香果
+1017,5,Baie Nanab dorée
+1017,6,Goldene Nanabbeere
+1017,7,Baya Latano Dorada
+1017,8,Baccabana dorata
+1017,9,Golden Nanab Berry
+1017,11,きんのナナのみ
+1017,12,金色蕉香果
+1018,1,ぎんのパイルのみ
+1018,3,은 파인열매
+1018,4,銀色凰梨果
+1018,5,Baie Nanana argentée
+1018,6,Silberne Sananabeere
+1018,7,Baya Pinia Plateada
+1018,8,Baccananas argentata
+1018,9,Silver Pinap Berry
+1018,11,ぎんのパイルのみ
+1018,12,银色凰梨果
+1019,1,きんのパイルのみ
+1019,3,황금 파인열매
+1019,4,金色凰梨果
+1019,5,Baie Nanana dorée
+1019,6,Goldene Sananabeere
+1019,7,Baya Pinia Dorada
+1019,8,Baccananas dorata
+1019,9,Golden Pinap Berry
+1019,11,きんのパイルのみ
+1019,12,金色凰梨果
+1020,1,ひみつのカギ
+1020,3,비밀의열쇠
+1020,4,秘密鑰匙
+1020,5,Clé Secrète
+1020,6,Geheimschlüssel
+1020,7,Llave Secreta
+1020,8,Chiave segreta
+1020,9,Secret Key
+1020,11,ひみつのカギ
+1020,12,秘密钥匙
+1021,1,ふねのチケット
+1021,3,승선티켓
+1021,4,船票
+1021,5,Passe Bateau
+1021,6,Bootsticket
+1021,7,Ticket del Barco
+1021,8,Biglietto nave
+1021,9,S.S. Ticket
+1021,11,ふねのチケット
+1021,12,船票
+1022,1,おとどけもの
+1022,3,전해줄물건
+1022,4,包裹
+1022,5,Colis
+1022,6,Paket
+1022,7,Paquete
+1022,8,Pacco
+1022,9,Parcel
+1022,11,おとどけもの
+1022,12,包裹
+1023,1,カードキー
+1023,3,카드키
+1023,4,鑰匙卡
+1023,5,Carte Magnétique
+1023,6,Schlüsselkarte
+1023,7,Llave Magnética
+1023,8,Apriporta
+1023,9,Card Key
+1023,11,カードキー
+1023,12,钥匙卡
+1024,1,のびたバネ
+1024,3,늘어난용수철
+1024,4,鬆掉的彈簧
+1024,5,Ressort Détendu
+1024,6,Spiralfeder
+1024,7,Muelle Estirado
+1024,8,Molla elastica
+1024,9,Stretchy Spring
+1024,11,のびたバネ
+1024,12,松掉的弹簧
+1025,1,チョークいし
+1025,3,초크돌
+1025,4,粉筆石
+1025,5,Craie
+1025,6,Kreidestein
+1025,7,Tiza
+1025,8,Gessetto
+1025,9,Chalky Stone
+1025,11,チョークいし
+1025,12,粉笔石
+1026,1,ビーだま
+1026,3,유리구슬
+1026,4,彈珠
+1026,5,Bille
+1026,6,Glasmurmel
+1026,7,Canica
+1026,8,Biglia
+1026,9,Marble
+1026,11,ビーだま
+1026,12,弹珠
+1027,1,かたっぽピアス
+1027,3,한쪽귀고리
+1027,4,一邊的耳環
+1027,5,Boucle d’Oreille
+1027,6,Ohrring
+1027,7,Pendiente
+1027,8,Orecchino
+1027,9,Lone Earring
+1027,11,かたっぽピアス
+1027,12,一边的耳环
+1028,1,うみべのガラス
+1028,3,바닷가유리
+1028,4,海邊的玻璃
+1028,5,Galet de Verre
+1028,6,Strandscherbe
+1028,7,Cristal Marino
+1028,8,Vetro marino
+1028,9,Beach Glass
+1028,11,うみべのガラス
+1028,12,海边的玻璃
+1029,1,きんのはっぱ
+1029,3,금빛잎사귀
+1029,4,金色葉子
+1029,5,Feuille Dorée
+1029,6,Goldblatt
+1029,7,Hoja de Oro
+1029,8,Fogliadoro
+1029,9,Gold Leaf
+1029,11,きんのはっぱ
+1029,12,金色叶子
+1030,1,ぎんのはっぱ
+1030,3,은빛잎사귀
+1030,4,銀色葉子
+1030,5,Feuille Argentée
+1030,6,Silberblatt
+1030,7,Hoja de Plata
+1030,8,Fogliargento
+1030,9,Silver Leaf
+1030,11,ぎんのはっぱ
+1030,12,银色叶子
+1031,1,ピカピカだんご
+1031,3,반짝반짝경단
+1031,4,光滑泥球
+1031,5,Boulette de Boue
+1031,6,Glanzkugel
+1031,7,Bola de Arcilla
+1031,8,Pallina di fango
+1031,9,Polished Mud Ball
+1031,11,ピカピカだんご
+1031,12,光滑泥球
+1032,1,なんごくかいがら
+1032,3,트로피컬조개껍질
+1032,4,南國貝殼
+1032,5,Coquille du Sud
+1032,6,Tropenmuschel
+1032,7,Concha Tropical
+1032,8,Tropiconchiglia
+1032,9,Tropical Shell
+1032,11,なんごくかいがら
+1032,12,南国贝壳
+1033,1,このはのおてがみ
+1033,3,나뭇잎편지
+1033,4,樹葉信
+1033,5,Lettre Végétale
+1033,6,Blattbrief
+1033,7,Hoja Escrita
+1033,8,Foglialettera
+1033,9,Leaf Letter
+1033,11,このはのおてがみ
+1033,12,树叶信
+1034,1,このはのおてがみ
+1034,3,나뭇잎편지
+1034,4,樹葉信
+1034,5,Lettre Végétale
+1034,6,Blattbrief
+1034,7,Hoja Escrita
+1034,8,Foglialettera
+1034,9,Leaf Letter
+1034,11,このはのおてがみ
+1034,12,树叶信
+1035,1,ちいさなはなたば
+1035,3,작은꽃다발
+1035,4,小小花束
+1035,5,Petit Bouquet
+1035,6,Ministrauß
+1035,7,Ramo Pequeño
+1035,8,Bouquet
+1035,9,Small Bouquet
+1035,11,ちいさなはなたば
+1035,12,小小花束
+1036,1,むしよせコロン
+1036,3,벌레유인코롱
+1036,4,引蟲香水
+1036,5,Parfum
+1036,6,Lockparfüm
+1036,7,Colonia
+1036,8,Profumo invito
+1036,9,Lure
+1036,11,むしよせコロン
+1036,12,引虫香水
+1037,1,シルバーコロン
+1037,3,실버코롱
+1037,4,白銀香水
+1037,5,Super Parfum
+1037,6,Super-Lockparfüm
+1037,7,Supercolonia
+1037,8,Superprofumo
+1037,9,Super Lure
+1037,11,シルバーコロン
+1037,12,白银香水
+1038,1,ゴールドコロン
+1038,3,골드코롱
+1038,4,黃金香水
+1038,5,Parfum Max
+1038,6,Top-Lockparfüm
+1038,7,Colonia Máxima
+1038,8,Profumo Max
+1038,9,Max Lure
+1038,11,ゴールドコロン
+1038,12,黄金香水
+1039,1,ニビあられ
+1039,3,회색강정
+1039,4,深灰米果
+1039,5,Crok’Argenta
+1039,6,Marmoria-Kräcker
+1039,7,Rokikos
+1039,8,Plumbeosalatini
+1039,9,Pewter Crunchies
+1039,11,ニビあられ
+1039,12,深灰米果
+1040,1,げんきのアメ
+1040,3,기력의사탕
+1040,4,元氣糖果
+1040,5,Bonbon Santé S
+1040,6,Energiebonbon
+1040,7,Caramelo Vigor
+1040,8,Caramella vitalità S
+1040,9,Health Candy
+1040,11,げんきのアメ
+1040,12,元气糖果
+1041,1,ちからのアメ
+1041,3,힘의사탕
+1041,4,力量糖果
+1041,5,Bonbon Force S
+1041,6,Stärkebonbon
+1041,7,Caramelo Músculo
+1041,8,Caramella potenza S
+1041,9,Mighty Candy
+1041,11,ちからのアメ
+1041,12,力量糖果
+1042,1,まもりのアメ
+1042,3,수비의사탕
+1042,4,守護糖果
+1042,5,Bonbon Armure S
+1042,6,Robustbonbon
+1042,7,Caramelo Aguante
+1042,8,Caramella protezione S
+1042,9,Tough Candy
+1042,11,まもりのアメ
+1042,12,守护糖果
+1043,1,ちしきのアメ
+1043,3,지식의사탕
+1043,4,知識糖果
+1043,5,Bonbon Esprit S
+1043,6,Gripsbonbon
+1043,7,Caramelo Intelecto
+1043,8,Caramella acume S
+1043,9,Smart Candy
+1043,11,ちしきのアメ
+1043,12,知识糖果
+1044,1,こころのアメ
+1044,3,마음의사탕
+1044,4,心靈糖果
+1044,5,Bonbon Mental S
+1044,6,Mentalbonbon
+1044,7,Caramelo Mente
+1044,8,Caramella intuito S
+1044,9,Courage Candy
+1044,11,こころのアメ
+1044,12,心灵糖果
+1045,1,はやさのアメ
+1045,3,속도의사탕
+1045,4,敏捷糖果
+1045,5,Bonbon Sprint S
+1045,6,Flottbonbon
+1045,7,Caramelo Ímpetu
+1045,8,Caramella rapidità S
+1045,9,Quick Candy
+1045,11,はやさのアメ
+1045,12,敏捷糖果
+1046,1,げんきのアメＬ
+1046,3,기력의사탕L
+1046,4,元氣糖果Ｌ
+1046,5,Bonbon Santé M
+1046,6,Energiebonbon+
+1046,7,Caramelo Vigor +
+1046,8,Caramella vitalità M
+1046,9,Health Candy L
+1046,11,げんきのアメＬ
+1046,12,元气糖果Ｌ
+1047,1,ちからのアメＬ
+1047,3,힘의사탕L
+1047,4,力量糖果Ｌ
+1047,5,Bonbon Force M
+1047,6,Stärkebonbon+
+1047,7,Caramelo Músculo +
+1047,8,Caramella potenza M
+1047,9,Mighty Candy L
+1047,11,ちからのアメＬ
+1047,12,力量糖果Ｌ
+1048,1,まもりのアメＬ
+1048,3,수비의사탕L
+1048,4,守護糖果Ｌ
+1048,5,Bonbon Armure M
+1048,6,Robustbonbon+
+1048,7,Caramelo Aguante +
+1048,8,Caramella protezione M
+1048,9,Tough Candy L
+1048,11,まもりのアメＬ
+1048,12,守护糖果Ｌ
+1049,1,ちしきのアメＬ
+1049,3,지식의사탕L
+1049,4,知識糖果Ｌ
+1049,5,Bonbon Esprit M
+1049,6,Gripsbonbon+
+1049,7,Caramelo Intelecto +
+1049,8,Caramella acume M
+1049,9,Smart Candy L
+1049,11,ちしきのアメＬ
+1049,12,知识糖果Ｌ
+1050,1,こころのアメＬ
+1050,3,마음의사탕L
+1050,4,心靈糖果Ｌ
+1050,5,Bonbon Mental M
+1050,6,Mentalbonbon+
+1050,7,Caramelo Mente +
+1050,8,Caramella intuito M
+1050,9,Courage Candy L
+1050,11,こころのアメＬ
+1050,12,心灵糖果Ｌ
+1051,1,はやさのアメＬ
+1051,3,속도의사탕L
+1051,4,敏捷糖果Ｌ
+1051,5,Bonbon Sprint M
+1051,6,Flottbonbon+
+1051,7,Caramelo Ímpetu +
+1051,8,Caramella rapidità M
+1051,9,Quick Candy L
+1051,11,はやさのアメＬ
+1051,12,敏捷糖果Ｌ
+1052,1,げんきのアメＸＬ
+1052,3,기력의사탕XL
+1052,4,元氣糖果ＸＬ
+1052,5,Bonbon Santé L
+1052,6,Energiebonbon++
+1052,7,Caramelo Vigor ++
+1052,8,Caramella vitalità L
+1052,9,Health Candy XL
+1052,11,げんきのアメＸＬ
+1052,12,元气糖果ＸＬ
+1053,1,ちからのアメＸＬ
+1053,3,힘의사탕XL
+1053,4,力量糖果ＸＬ
+1053,5,Bonbon Force L
+1053,6,Stärkebonbon++
+1053,7,Caramelo Músculo ++
+1053,8,Caramella potenza L
+1053,9,Mighty Candy XL
+1053,11,ちからのアメＸＬ
+1053,12,力量糖果ＸＬ
+1054,1,まもりのアメＸＬ
+1054,3,수비의사탕XL
+1054,4,守護糖果ＸＬ
+1054,5,Bonbon Armure L
+1054,6,Robustbonbon++
+1054,7,Caramelo Aguante ++
+1054,8,Caramella protezione L
+1054,9,Tough Candy XL
+1054,11,まもりのアメＸＬ
+1054,12,守护糖果ＸＬ
+1055,1,ちしきのアメＸＬ
+1055,3,지식의사탕XL
+1055,4,知識糖果ＸＬ
+1055,5,Bonbon Esprit L
+1055,6,Gripsbonbon++
+1055,7,Caramelo Intelecto ++
+1055,8,Caramella acume L
+1055,9,Smart Candy XL
+1055,11,ちしきのアメＸＬ
+1055,12,知识糖果ＸＬ
+1056,1,こころのアメＸＬ
+1056,3,마음의사탕XL
+1056,4,心靈糖果ＸＬ
+1056,5,Bonbon Mental L
+1056,6,Mentalbonbon++
+1056,7,Caramelo Mente ++
+1056,8,Caramella intuito L
+1056,9,Courage Candy XL
+1056,11,こころのアメＸＬ
+1056,12,心灵糖果ＸＬ
+1057,1,はやさのアメＸＬ
+1057,3,속도의사탕XL
+1057,4,敏捷糖果ＸＬ
+1057,5,Bonbon Sprint L
+1057,6,Flottbonbon++
+1057,7,Caramelo Ímpetu ++
+1057,8,Caramella rapidità L
+1057,9,Quick Candy XL
+1057,11,はやさのアメＸＬ
+1057,12,敏捷糖果ＸＬ
+1058,1,フシギダネのアメ
+1058,3,이상해씨의사탕
+1058,4,妙蛙種子的糖果
+1058,5,Bonbon Bulbizarre
+1058,6,Bisasam-Bonbon
+1058,7,Caramelo Bulbasaur
+1058,8,Caramella Bulbasaur
+1058,9,Bulbasaur Candy
+1058,11,フシギダネのアメ
+1058,12,妙蛙种子的糖果
+1059,1,ヒトカゲのアメ
+1059,3,파이리의사탕
+1059,4,小火龍的糖果
+1059,5,Bonbon Salamèche
+1059,6,Glumanda-Bonbon
+1059,7,Caramelo Charmander
+1059,8,Caramella Charmander
+1059,9,Charmander Candy
+1059,11,ヒトカゲのアメ
+1059,12,小火龙的糖果
+1060,1,ゼニガメのアメ
+1060,3,꼬부기의사탕
+1060,4,傑尼龜的糖果
+1060,5,Bonbon Carapuce
+1060,6,Schiggy-Bonbon
+1060,7,Caramelo Squirtle
+1060,8,Caramella Squirtle
+1060,9,Squirtle Candy
+1060,11,ゼニガメのアメ
+1060,12,杰尼龟的糖果
+1061,1,キャタピーのアメ
+1061,3,캐터피의사탕
+1061,4,綠毛蟲的糖果
+1061,5,Bonbon Chenipan
+1061,6,Raupy-Bonbon
+1061,7,Caramelo Caterpie
+1061,8,Caramella Caterpie
+1061,9,Caterpie Candy
+1061,11,キャタピーのアメ
+1061,12,绿毛虫的糖果
+1062,1,ビードルのアメ
+1062,3,뿔충이의사탕
+1062,4,獨角蟲的糖果
+1062,5,Bonbon Aspicot
+1062,6,Hornliu-Bonbon
+1062,7,Caramelo Weedle
+1062,8,Caramella Weedle
+1062,9,Weedle Candy
+1062,11,ビードルのアメ
+1062,12,独角虫的糖果
+1063,1,ポッポのアメ
+1063,3,구구의사탕
+1063,4,波波的糖果
+1063,5,Bonbon Roucool
+1063,6,Taubsi-Bonbon
+1063,7,Caramelo Pidgey
+1063,8,Caramella Pidgey
+1063,9,Pidgey Candy
+1063,11,ポッポのアメ
+1063,12,波波的糖果
+1064,1,コラッタのアメ
+1064,3,꼬렛의사탕
+1064,4,小拉達的糖果
+1064,5,Bonbon Rattata
+1064,6,Rattfratz-Bonbon
+1064,7,Caramelo Rattata
+1064,8,Caramella Rattata
+1064,9,Rattata Candy
+1064,11,コラッタのアメ
+1064,12,小拉达的糖果
+1065,1,オニスズメのアメ
+1065,3,깨비참의사탕
+1065,4,烈雀的糖果
+1065,5,Bonbon Piafabec
+1065,6,Habitak-Bonbon
+1065,7,Caramelo Spearow
+1065,8,Caramella Spearow
+1065,9,Spearow Candy
+1065,11,オニスズメのアメ
+1065,12,烈雀的糖果
+1066,1,アーボのアメ
+1066,3,아보의사탕
+1066,4,阿柏蛇的糖果
+1066,5,Bonbon Abo
+1066,6,Rettan-Bonbon
+1066,7,Caramelo Ekans
+1066,8,Caramella Ekans
+1066,9,Ekans Candy
+1066,11,アーボのアメ
+1066,12,阿柏蛇的糖果
+1067,1,ピカチュウのアメ
+1067,3,피카츄의사탕
+1067,4,皮卡丘的糖果
+1067,5,Bonbon Pikachu
+1067,6,Pikachu-Bonbon
+1067,7,Caramelo Pikachu
+1067,8,Caramella Pikachu
+1067,9,Pikachu Candy
+1067,11,ピカチュウのアメ
+1067,12,皮卡丘的糖果
+1068,1,サンドのアメ
+1068,3,모래두지의사탕
+1068,4,穿山鼠的糖果
+1068,5,Bonbon Sabelette
+1068,6,Sandan-Bonbon
+1068,7,Caramelo Sandshrew
+1068,8,Caramella Sandshrew
+1068,9,Sandshrew Candy
+1068,11,サンドのアメ
+1068,12,穿山鼠的糖果
+1069,1,ニドラン♀のアメ
+1069,3,니드런♀의사탕
+1069,4,尼多蘭的糖果
+1069,5,Bonbon Nidoran♀
+1069,6,Nidoran♀-Bonbon
+1069,7,Caramelo Nidoran♀
+1069,8,Caramella Nidoran♀
+1069,9,Nidoran♀ Candy
+1069,11,ニドラン♀のアメ
+1069,12,尼多兰的糖果
+1070,1,ニドラン♂のアメ
+1070,3,니드런♂의사탕
+1070,4,尼多朗的糖果
+1070,5,Bonbon Nidoran♂
+1070,6,Nidoran♂-Bonbon
+1070,7,Caramelo Nidoran♂
+1070,8,Caramella Nidoran♂
+1070,9,Nidoran♂ Candy
+1070,11,ニドラン♂のアメ
+1070,12,尼多朗的糖果
+1071,1,ピッピのアメ
+1071,3,삐삐의사탕
+1071,4,皮皮的糖果
+1071,5,Bonbon Mélofée
+1071,6,Piepi-Bonbon
+1071,7,Caramelo Clefairy
+1071,8,Caramella Clefairy
+1071,9,Clefairy Candy
+1071,11,ピッピのアメ
+1071,12,皮皮的糖果
+1072,1,ロコンのアメ
+1072,3,식스테일의사탕
+1072,4,六尾的糖果
+1072,5,Bonbon Goupix
+1072,6,Vulpix-Bonbon
+1072,7,Caramelo Vulpix
+1072,8,Caramella Vulpix
+1072,9,Vulpix Candy
+1072,11,ロコンのアメ
+1072,12,六尾的糖果
+1073,1,プリンのアメ
+1073,3,푸린의사탕
+1073,4,胖丁的糖果
+1073,5,Bonbon Rondoudou
+1073,6,Pummeluff-Bonbon
+1073,7,Caramelo Jigglypuff
+1073,8,Caramella Jigglypuff
+1073,9,Jigglypuff Candy
+1073,11,プリンのアメ
+1073,12,胖丁的糖果
+1074,1,ズバットのアメ
+1074,3,주뱃의사탕
+1074,4,超音蝠的糖果
+1074,5,Bonbon Nosferapti
+1074,6,Zubat-Bonbon
+1074,7,Caramelo Zubat
+1074,8,Caramella Zubat
+1074,9,Zubat Candy
+1074,11,ズバットのアメ
+1074,12,超音蝠的糖果
+1075,1,ナゾノクサのアメ
+1075,3,뚜벅쵸의사탕
+1075,4,走路草的糖果
+1075,5,Bonbon Mystherbe
+1075,6,Myrapla-Bonbon
+1075,7,Caramelo Oddish
+1075,8,Caramella Oddish
+1075,9,Oddish Candy
+1075,11,ナゾノクサのアメ
+1075,12,走路草的糖果
+1076,1,パラスのアメ
+1076,3,파라스의사탕
+1076,4,派拉斯的糖果
+1076,5,Bonbon Paras
+1076,6,Paras-Bonbon
+1076,7,Caramelo Paras
+1076,8,Caramella Paras
+1076,9,Paras Candy
+1076,11,パラスのアメ
+1076,12,派拉斯的糖果
+1077,1,コンパンのアメ
+1077,3,콘팡의사탕
+1077,4,毛球的糖果
+1077,5,Bonbon Mimitoss
+1077,6,Bluzuk-Bonbon
+1077,7,Caramelo Venonat
+1077,8,Caramella Venonat
+1077,9,Venonat Candy
+1077,11,コンパンのアメ
+1077,12,毛球的糖果
+1078,1,ディグダのアメ
+1078,3,디그다의사탕
+1078,4,地鼠的糖果
+1078,5,Bonbon Taupiqueur
+1078,6,Digda-Bonbon
+1078,7,Caramelo Diglett
+1078,8,Caramella Diglett
+1078,9,Diglett Candy
+1078,11,ディグダのアメ
+1078,12,地鼠的糖果
+1079,1,ニャースのアメ
+1079,3,나옹의사탕
+1079,4,喵喵的糖果
+1079,5,Bonbon Miaouss
+1079,6,Mauzi-Bonbon
+1079,7,Caramelo Meowth
+1079,8,Caramella Meowth
+1079,9,Meowth Candy
+1079,11,ニャースのアメ
+1079,12,喵喵的糖果
+1080,1,コダックのアメ
+1080,3,고라파덕의사탕
+1080,4,可達鴨的糖果
+1080,5,Bonbon Psykokwak
+1080,6,Enton-Bonbon
+1080,7,Caramelo Psyduck
+1080,8,Caramella Psyduck
+1080,9,Psyduck Candy
+1080,11,コダックのアメ
+1080,12,可达鸭的糖果
+1081,1,マンキーのアメ
+1081,3,망키의사탕
+1081,4,猴怪的糖果
+1081,5,Bonbon Férosinge
+1081,6,Menki-Bonbon
+1081,7,Caramelo Mankey
+1081,8,Caramella Mankey
+1081,9,Mankey Candy
+1081,11,マンキーのアメ
+1081,12,猴怪的糖果
+1082,1,ガーディのアメ
+1082,3,가디의사탕
+1082,4,卡蒂狗的糖果
+1082,5,Bonbon Caninos
+1082,6,Fukano-Bonbon
+1082,7,Caramelo Growlithe
+1082,8,Caramella Growlithe
+1082,9,Growlithe Candy
+1082,11,ガーディのアメ
+1082,12,卡蒂狗的糖果
+1083,1,ニョロモのアメ
+1083,3,발챙이의사탕
+1083,4,蚊香蝌蚪的糖果
+1083,5,Bonbon Ptitard
+1083,6,Quapsel-Bonbon
+1083,7,Caramelo Poliwag
+1083,8,Caramella Poliwag
+1083,9,Poliwag Candy
+1083,11,ニョロモのアメ
+1083,12,蚊香蝌蚪的糖果
+1084,1,ケーシィのアメ
+1084,3,캐이시의사탕
+1084,4,凱西的糖果
+1084,5,Bonbon Abra
+1084,6,Abra-Bonbon
+1084,7,Caramelo Abra
+1084,8,Caramella Abra
+1084,9,Abra Candy
+1084,11,ケーシィのアメ
+1084,12,凯西的糖果
+1085,1,ワンリキーのアメ
+1085,3,알통몬의사탕
+1085,4,腕力的糖果
+1085,5,Bonbon Machoc
+1085,6,Machollo-Bonbon
+1085,7,Caramelo Machop
+1085,8,Caramella Machop
+1085,9,Machop Candy
+1085,11,ワンリキーのアメ
+1085,12,腕力的糖果
+1086,1,マダツボミのアメ
+1086,3,모다피의사탕
+1086,4,喇叭芽的糖果
+1086,5,Bonbon Chétiflor
+1086,6,Knofensa-Bonbon
+1086,7,Caramelo Bellsprout
+1086,8,Caramella Bellsprout
+1086,9,Bellsprout Candy
+1086,11,マダツボミのアメ
+1086,12,喇叭芽的糖果
+1087,1,メノクラゲのアメ
+1087,3,왕눈해의사탕
+1087,4,瑪瑙水母的糖果
+1087,5,Bonbon Tentacool
+1087,6,Tentacha-Bonbon
+1087,7,Caramelo Tentacool
+1087,8,Caramella Tentacool
+1087,9,Tentacool Candy
+1087,11,メノクラゲのアメ
+1087,12,玛瑙水母的糖果
+1088,1,イシツブテのアメ
+1088,3,꼬마돌의사탕
+1088,4,小拳石的糖果
+1088,5,Bonbon Racaillou
+1088,6,Kleinstein-Bonbon
+1088,7,Caramelo Geodude
+1088,8,Caramella Geodude
+1088,9,Geodude Candy
+1088,11,イシツブテのアメ
+1088,12,小拳石的糖果
+1089,1,ポニータのアメ
+1089,3,포니타의사탕
+1089,4,小火馬的糖果
+1089,5,Bonbon Ponyta
+1089,6,Ponita-Bonbon
+1089,7,Caramelo Ponyta
+1089,8,Caramella Ponyta
+1089,9,Ponyta Candy
+1089,11,ポニータのアメ
+1089,12,小火马的糖果
+1090,1,ヤドンのアメ
+1090,3,야돈의사탕
+1090,4,呆呆獸的糖果
+1090,5,Bonbon Ramoloss
+1090,6,Flegmon-Bonbon
+1090,7,Caramelo Slowpoke
+1090,8,Caramella Slowpoke
+1090,9,Slowpoke Candy
+1090,11,ヤドンのアメ
+1090,12,呆呆兽的糖果
+1091,1,コイルのアメ
+1091,3,코일의사탕
+1091,4,小磁怪的糖果
+1091,5,Bonbon Magnéti
+1091,6,Magnetilo-Bonbon
+1091,7,Caramelo Magnemite
+1091,8,Caramella Magnemite
+1091,9,Magnemite Candy
+1091,11,コイルのアメ
+1091,12,小磁怪的糖果
+1092,1,カモネギのアメ
+1092,3,파오리의사탕
+1092,4,大蔥鴨的糖果
+1092,5,Bonbon Canarticho
+1092,6,Porenta-Bonbon
+1092,7,Caramelo Farfetch’d
+1092,8,Caramella Farfetch’d
+1092,9,Farfetch’d Candy
+1092,11,カモネギのアメ
+1092,12,大葱鸭的糖果
+1093,1,ドードーのアメ
+1093,3,두두의사탕
+1093,4,嘟嘟的糖果
+1093,5,Bonbon Doduo
+1093,6,Dodu-Bonbon
+1093,7,Caramelo Doduo
+1093,8,Caramella Doduo
+1093,9,Doduo Candy
+1093,11,ドードーのアメ
+1093,12,嘟嘟的糖果
+1094,1,パウワウのアメ
+1094,3,쥬쥬의사탕
+1094,4,小海獅的糖果
+1094,5,Bonbon Otaria
+1094,6,Jurob-Bonbon
+1094,7,Caramelo Seel
+1094,8,Caramella Seel
+1094,9,Seel Candy
+1094,11,パウワウのアメ
+1094,12,小海狮的糖果
+1095,1,ベトベターのアメ
+1095,3,질퍽이의사탕
+1095,4,臭泥的糖果
+1095,5,Bonbon Tadmorv
+1095,6,Sleima-Bonbon
+1095,7,Caramelo Grimer
+1095,8,Caramella Grimer
+1095,9,Grimer Candy
+1095,11,ベトベターのアメ
+1095,12,臭泥的糖果
+1096,1,シェルダーのアメ
+1096,3,셀러의사탕
+1096,4,大舌貝的糖果
+1096,5,Bonbon Kokiyas
+1096,6,Muschas-Bonbon
+1096,7,Caramelo Shellder
+1096,8,Caramella Shellder
+1096,9,Shellder Candy
+1096,11,シェルダーのアメ
+1096,12,大舌贝的糖果
+1097,1,ゴースのアメ
+1097,3,고오스의사탕
+1097,4,鬼斯的糖果
+1097,5,Bonbon Fantominus
+1097,6,Nebulak-Bonbon
+1097,7,Caramelo Gastly
+1097,8,Caramella Gastly
+1097,9,Gastly Candy
+1097,11,ゴースのアメ
+1097,12,鬼斯的糖果
+1098,1,イワークのアメ
+1098,3,롱스톤의사탕
+1098,4,大岩蛇的糖果
+1098,5,Bonbon Onix
+1098,6,Onix-Bonbon
+1098,7,Caramelo Onix
+1098,8,Caramella Onix
+1098,9,Onix Candy
+1098,11,イワークのアメ
+1098,12,大岩蛇的糖果
+1099,1,スリープのアメ
+1099,3,슬리프의사탕
+1099,4,催眠貘的糖果
+1099,5,Bonbon Soporifik
+1099,6,Traumato-Bonbon
+1099,7,Caramelo Drowzee
+1099,8,Caramella Drowzee
+1099,9,Drowzee Candy
+1099,11,スリープのアメ
+1099,12,催眠貘的糖果
+1100,1,クラブのアメ
+1100,3,크랩의사탕
+1100,4,大鉗蟹的糖果
+1100,5,Bonbon Krabby
+1100,6,Krabby-Bonbon
+1100,7,Caramelo Krabby
+1100,8,Caramella Krabby
+1100,9,Krabby Candy
+1100,11,クラブのアメ
+1100,12,大钳蟹的糖果
+1101,1,ビリリダマのアメ
+1101,3,찌리리공의사탕
+1101,4,霹靂電球的糖果
+1101,5,Bonbon Voltorbe
+1101,6,Voltobal-Bonbon
+1101,7,Caramelo Voltorb
+1101,8,Caramella Voltorb
+1101,9,Voltorb Candy
+1101,11,ビリリダマのアメ
+1101,12,霹雳电球的糖果
+1102,1,タマタマのアメ
+1102,3,아라리의사탕
+1102,4,蛋蛋的糖果
+1102,5,Bonbon Noeunoeuf
+1102,6,Owei-Bonbon
+1102,7,Caramelo Exeggcute
+1102,8,Caramella Exeggcute
+1102,9,Exeggcute Candy
+1102,11,タマタマのアメ
+1102,12,蛋蛋的糖果
+1103,1,カラカラのアメ
+1103,3,탕구리의사탕
+1103,4,卡拉卡拉的糖果
+1103,5,Bonbon Osselait
+1103,6,Tragosso-Bonbon
+1103,7,Caramelo Cubone
+1103,8,Caramella Cubone
+1103,9,Cubone Candy
+1103,11,カラカラのアメ
+1103,12,卡拉卡拉的糖果
+1104,1,サワムラーのアメ
+1104,3,시라소몬의사탕
+1104,4,飛腿郎的糖果
+1104,5,Bonbon Kicklee
+1104,6,Kicklee-Bonbon
+1104,7,Caramelo Hitmonlee
+1104,8,Caramella Hitmonlee
+1104,9,Hitmonlee Candy
+1104,11,サワムラーのアメ
+1104,12,飞腿郎的糖果
+1105,1,エビワラーのアメ
+1105,3,홍수몬의사탕
+1105,4,快拳郎的糖果
+1105,5,Bonbon Tygnon
+1105,6,Nockchan-Bonbon
+1105,7,Caramelo Hitmonchan
+1105,8,Caramella Hitmonchan
+1105,9,Hitmonchan Candy
+1105,11,エビワラーのアメ
+1105,12,快拳郎的糖果
+1106,1,ベロリンガのアメ
+1106,3,내루미의사탕
+1106,4,大舌頭的糖果
+1106,5,Bonbon Excelangue
+1106,6,Schlurp-Bonbon
+1106,7,Caramelo Lickitung
+1106,8,Caramella Lickitung
+1106,9,Lickitung Candy
+1106,11,ベロリンガのアメ
+1106,12,大舌头的糖果
+1107,1,ドガースのアメ
+1107,3,또가스의사탕
+1107,4,瓦斯彈的糖果
+1107,5,Bonbon Smogo
+1107,6,Smogon-Bonbon
+1107,7,Caramelo Koffing
+1107,8,Caramella Koffing
+1107,9,Koffing Candy
+1107,11,ドガースのアメ
+1107,12,瓦斯弹的糖果
+1108,1,サイホーンのアメ
+1108,3,뿔카노의사탕
+1108,4,獨角犀牛的糖果
+1108,5,Bonbon Rhinocorne
+1108,6,Rihorn-Bonbon
+1108,7,Caramelo Rhyhorn
+1108,8,Caramella Rhyhorn
+1108,9,Rhyhorn Candy
+1108,11,サイホーンのアメ
+1108,12,独角犀牛的糖果
+1109,1,ラッキーのアメ
+1109,3,럭키의사탕
+1109,4,吉利蛋的糖果
+1109,5,Bonbon Leveinard
+1109,6,Chaneira-Bonbon
+1109,7,Caramelo Chansey
+1109,8,Caramella Chansey
+1109,9,Chansey Candy
+1109,11,ラッキーのアメ
+1109,12,吉利蛋的糖果
+1110,1,モンジャラのアメ
+1110,3,덩쿠리의사탕
+1110,4,蔓藤怪的糖果
+1110,5,Bonbon Saquedeneu
+1110,6,Tangela-Bonbon
+1110,7,Caramelo Tangela
+1110,8,Caramella Tangela
+1110,9,Tangela Candy
+1110,11,モンジャラのアメ
+1110,12,蔓藤怪的糖果
+1111,1,ガルーラのアメ
+1111,3,캥카의사탕
+1111,4,袋獸的糖果
+1111,5,Bonbon Kangourex
+1111,6,Kangama-Bonbon
+1111,7,Caramelo Kangaskhan
+1111,8,Caramella Kangaskhan
+1111,9,Kangaskhan Candy
+1111,11,ガルーラのアメ
+1111,12,袋兽的糖果
+1112,1,タッツーのアメ
+1112,3,쏘드라의사탕
+1112,4,墨海馬的糖果
+1112,5,Bonbon Hypotrempe
+1112,6,Seeper-Bonbon
+1112,7,Caramelo Horsea
+1112,8,Caramella Horsea
+1112,9,Horsea Candy
+1112,11,タッツーのアメ
+1112,12,墨海马的糖果
+1113,1,トサキントのアメ
+1113,3,콘치의사탕
+1113,4,角金魚的糖果
+1113,5,Bonbon Poissirène
+1113,6,Goldini-Bonbon
+1113,7,Caramelo Goldeen
+1113,8,Caramella Goldeen
+1113,9,Goldeen Candy
+1113,11,トサキントのアメ
+1113,12,角金鱼的糖果
+1114,1,ヒトデマンのアメ
+1114,3,별가사리의사탕
+1114,4,海星星的糖果
+1114,5,Bonbon Stari
+1114,6,Sterndu-Bonbon
+1114,7,Caramelo Staryu
+1114,8,Caramella Staryu
+1114,9,Staryu Candy
+1114,11,ヒトデマンのアメ
+1114,12,海星星的糖果
+1115,1,バリヤードのアメ
+1115,3,마임맨의사탕
+1115,4,魔牆人偶的糖果
+1115,5,Bonbon M. Mime
+1115,6,Pantimos-Bonbon
+1115,7,Caramelo Mr. Mime
+1115,8,Caramella Mr. Mime
+1115,9,Mr. Mime Candy
+1115,11,バリヤードのアメ
+1115,12,魔墙人偶的糖果
+1116,1,ストライクのアメ
+1116,3,스라크의사탕
+1116,4,飛天螳螂的糖果
+1116,5,Bonbon Insécateur
+1116,6,Sichlor-Bonbon
+1116,7,Caramelo Scyther
+1116,8,Caramella Scyther
+1116,9,Scyther Candy
+1116,11,ストライクのアメ
+1116,12,飞天螳螂的糖果
+1117,1,ルージュラのアメ
+1117,3,루주라의사탕
+1117,4,迷唇姐的糖果
+1117,5,Bonbon Lippoutou
+1117,6,Rossana-Bonbon
+1117,7,Caramelo Jynx
+1117,8,Caramella Jynx
+1117,9,Jynx Candy
+1117,11,ルージュラのアメ
+1117,12,迷唇姐的糖果
+1118,1,エレブーのアメ
+1118,3,에레브의사탕
+1118,4,電擊獸的糖果
+1118,5,Bonbon Élektek
+1118,6,Elektek-Bonbon
+1118,7,Caramelo Electabuzz
+1118,8,Caramella Electabuzz
+1118,9,Electabuzz Candy
+1118,11,エレブーのアメ
+1118,12,电击兽的糖果
+1119,1,カイロスのアメ
+1119,3,쁘사이저의사탕
+1119,4,凱羅斯的糖果
+1119,5,Bonbon Scarabrute
+1119,6,Pinsir-Bonbon
+1119,7,Caramelo Pinsir
+1119,8,Caramella Pinsir
+1119,9,Pinsir Candy
+1119,11,カイロスのアメ
+1119,12,凯罗斯的糖果
+1120,1,ケンタロスのアメ
+1120,3,켄타로스의사탕
+1120,4,肯泰羅的糖果
+1120,5,Bonbon Tauros
+1120,6,Tauros-Bonbon
+1120,7,Caramelo Tauros
+1120,8,Caramella Tauros
+1120,9,Tauros Candy
+1120,11,ケンタロスのアメ
+1120,12,肯泰罗的糖果
+1121,1,コイキングのアメ
+1121,3,잉어킹의사탕
+1121,4,鯉魚王的糖果
+1121,5,Bonbon Magicarpe
+1121,6,Karpador-Bonbon
+1121,7,Caramelo Magikarp
+1121,8,Caramella Magikarp
+1121,9,Magikarp Candy
+1121,11,コイキングのアメ
+1121,12,鲤鱼王的糖果
+1122,1,ラプラスのアメ
+1122,3,라프라스의사탕
+1122,4,拉普拉斯的糖果
+1122,5,Bonbon Lokhlass
+1122,6,Lapras-Bonbon
+1122,7,Caramelo Lapras
+1122,8,Caramella Lapras
+1122,9,Lapras Candy
+1122,11,ラプラスのアメ
+1122,12,拉普拉斯的糖果
+1123,1,メタモンのアメ
+1123,3,메타몽의사탕
+1123,4,百變怪的糖果
+1123,5,Bonbon Métamorph
+1123,6,Ditto-Bonbon
+1123,7,Caramelo Ditto
+1123,8,Caramella Ditto
+1123,9,Ditto Candy
+1123,11,メタモンのアメ
+1123,12,百变怪的糖果
+1124,1,イーブイのアメ
+1124,3,이브이의사탕
+1124,4,伊布的糖果
+1124,5,Bonbon Évoli
+1124,6,Evoli-Bonbon
+1124,7,Caramelo Eevee
+1124,8,Caramella Eevee
+1124,9,Eevee Candy
+1124,11,イーブイのアメ
+1124,12,伊布的糖果
+1125,1,ポリゴンのアメ
+1125,3,폴리곤의사탕
+1125,4,多邊獸的糖果
+1125,5,Bonbon Porygon
+1125,6,Porygon-Bonbon
+1125,7,Caramelo Porygon
+1125,8,Caramella Porygon
+1125,9,Porygon Candy
+1125,11,ポリゴンのアメ
+1125,12,多边兽的糖果
+1126,1,オムナイトのアメ
+1126,3,암나이트의사탕
+1126,4,菊石獸的糖果
+1126,5,Bonbon Amonita
+1126,6,Amonitas-Bonbon
+1126,7,Caramelo Omanyte
+1126,8,Caramella Omanyte
+1126,9,Omanyte Candy
+1126,11,オムナイトのアメ
+1126,12,菊石兽的糖果
+1127,1,カブトのアメ
+1127,3,투구의사탕
+1127,4,化石盔的糖果
+1127,5,Bonbon Kabuto
+1127,6,Kabuto-Bonbon
+1127,7,Caramelo Kabuto
+1127,8,Caramella Kabuto
+1127,9,Kabuto Candy
+1127,11,カブトのアメ
+1127,12,化石盔的糖果
+1128,1,プテラのアメ
+1128,3,프테라의사탕
+1128,4,化石翼龍的糖果
+1128,5,Bonbon Ptéra
+1128,6,Aerodactyl-Bonbon
+1128,7,Caramelo Aerodactyl
+1128,8,Caramella Aerodactyl
+1128,9,Aerodactyl Candy
+1128,11,プテラのアメ
+1128,12,化石翼龙的糖果
+1129,1,カビゴンのアメ
+1129,3,잠만보의사탕
+1129,4,卡比獸的糖果
+1129,5,Bonbon Ronflex
+1129,6,Relaxo-Bonbon
+1129,7,Caramelo Snorlax
+1129,8,Caramella Snorlax
+1129,9,Snorlax Candy
+1129,11,カビゴンのアメ
+1129,12,卡比兽的糖果
+1130,1,フリーザーのアメ
+1130,3,프리져의사탕
+1130,4,急凍鳥的糖果
+1130,5,Bonbon Artikodin
+1130,6,Arktos-Bonbon
+1130,7,Caramelo Articuno
+1130,8,Caramella Articuno
+1130,9,Articuno Candy
+1130,11,フリーザーのアメ
+1130,12,急冻鸟的糖果
+1131,1,サンダーのアメ
+1131,3,썬더의사탕
+1131,4,閃電鳥的糖果
+1131,5,Bonbon Électhor
+1131,6,Zapdos-Bonbon
+1131,7,Caramelo Zapdos
+1131,8,Caramella Zapdos
+1131,9,Zapdos Candy
+1131,11,サンダーのアメ
+1131,12,闪电鸟的糖果
+1132,1,ファイヤーのアメ
+1132,3,파이어의사탕
+1132,4,火焰鳥的糖果
+1132,5,Bonbon Sulfura
+1132,6,Lavados-Bonbon
+1132,7,Caramelo Moltres
+1132,8,Caramella Moltres
+1132,9,Moltres Candy
+1132,11,ファイヤーのアメ
+1132,12,火焰鸟的糖果
+1133,1,ミニリュウのアメ
+1133,3,미뇽의사탕
+1133,4,迷你龍的糖果
+1133,5,Bonbon Minidraco
+1133,6,Dratini-Bonbon
+1133,7,Caramelo Dratini
+1133,8,Caramella Dratini
+1133,9,Dratini Candy
+1133,11,ミニリュウのアメ
+1133,12,迷你龙的糖果
+1134,1,ミュウツーのアメ
+1134,3,뮤츠의사탕
+1134,4,超夢的糖果
+1134,5,Bonbon Mewtwo
+1134,6,Mewtu-Bonbon
+1134,7,Caramelo Mewtwo
+1134,8,Caramella Mewtwo
+1134,9,Mewtwo Candy
+1134,11,ミュウツーのアメ
+1134,12,超梦的糖果
+1135,1,ミュウのアメ
+1135,3,뮤의사탕
+1135,4,夢幻的糖果
+1135,5,Bonbon Mew
+1135,6,Mew-Bonbon
+1135,7,Caramelo Mew
+1135,8,Caramella Mew
+1135,9,Mew Candy
+1135,11,ミュウのアメ
+1135,12,梦幻的糖果
+1136,1,メルタンのアメ
+1136,3,멜탄의사탕
+1136,4,美錄坦的糖果
+1136,5,Bonbon Meltan
+1136,6,Meltan-Bonbon
+1136,7,Caramelo Meltan
+1136,8,Caramella Meltan
+1136,9,Meltan Candy
+1136,11,メルタンのアメ
+1136,12,美录坦的糖果
+1137,1,ブーバーのアメ
+1137,3,마그마의사탕
+1137,4,鴨嘴火獸的糖果
+1137,5,Bonbon Magmar
+1137,6,Magmar-Bonbon
+1137,7,Caramelo Magmar
+1137,8,Caramella Magmar
+1137,9,Magmar Candy
+1137,11,ブーバーのアメ
+1137,12,鸭嘴火兽的糖果
+1138,1,すいせんじょう
+1138,3,추천장
+1138,4,推薦函
+1138,5,Recommandation
+1138,6,Empfehlungsbrief
+1138,7,Recomendación
+1138,8,Referenze
+1138,9,Endorsement
+1138,11,すいせんじょう
+1138,12,推荐函
+1139,1,ポケモンボックス
+1139,3,포켓몬 박스
+1139,4,寶可夢盒
+1139,5,Boîte Pokémon
+1139,6,Pokémon-Box
+1139,7,Caja de Pokémon
+1139,8,Box Pokémon
+1139,9,Pokémon Box Link
+1139,11,ポケモンボックス
+1139,12,宝可梦盒
+1140,1,ねがいぼし
+1140,3,소원의별
+1140,4,許願星
+1140,5,Étoile Vœu
+1140,6,Wunschstern
+1140,7,Estrella Deseo
+1140,8,Desiostella
+1140,9,Wishing Star
+1140,11,ねがいぼし
+1140,12,许愿星
+1141,1,ダイマックスＢ
+1141,3,다이맥스 밴드
+1141,4,極巨腕帶
+1141,5,Poignet Dynamax
+1141,6,Dynamax-Band
+1141,7,Maximuñequera
+1141,8,Polsino Dynamax
+1141,9,Dynamax Band
+1141,11,ダイマックスＢ
+1141,12,极巨腕带
+1142,1,つりざお
+1142,3,낚싯대
+1142,4,釣竿
+1142,5,Canne à Pêche
+1142,6,Angel
+1142,7,Caña
+1142,8,Amo
+1142,9,Fishing Rod
+1142,11,つりざお
+1142,12,钓竿
+1143,1,ロトムじてんしゃ
+1143,3,로토무자전거
+1143,4,洛托姆自行車
+1143,5,Moticyclette
+1143,6,Rotom-Rad
+1143,7,Bici Rotom
+1143,8,Bici Rotom
+1143,9,Rotom Bike
+1143,11,ロトムじてんしゃ
+1143,12,洛托姆自行车
+1144,1,あらびきヴルスト
+1144,3,탱글탱글부어스트
+1144,4,粗絞肉香腸
+1144,5,Saucisses
+1144,6,Würstchen
+1144,7,Salchichas
+1144,8,Salsicce
+1144,9,Sausages
+1144,11,あらびきヴルスト
+1144,12,粗绞肉香肠
+1145,1,ボブのかんづめ
+1145,3,밥의통조림
+1145,4,飽伯罐頭
+1145,5,Conserve de Bob
+1145,6,Pauls Feinkost
+1145,7,Lata de Darren
+1145,8,Lattina Gustavo
+1145,9,Bob’s Food Tin
+1145,11,ボブのかんづめ
+1145,12,饱伯罐头
+1146,1,バックのかんづめ
+1146,3,바크의통조림
+1146,4,巴哈罐頭
+1146,5,Conserve de Bach
+1146,6,Bachs Feinkost
+1146,7,Lata de Bach
+1146,8,Scatoletta Bach
+1146,9,Bach’s Food Tin
+1146,11,バックのかんづめ
+1146,12,巴哈罐头
+1147,1,マメかん
+1147,3,콩통조림
+1147,4,豆子罐頭
+1147,5,Haricots
+1147,6,Dosenbohnen
+1147,7,Lata de Habas
+1147,8,Lattina fagioli
+1147,9,Tin of Beans
+1147,11,マメかん
+1147,12,豆子罐头
+1148,1,しょくパン
+1148,3,식빵
+1148,4,吐司麵包
+1148,5,Pain de Mie
+1148,6,Toastbrot
+1148,7,Pan de Molde
+1148,8,Pan carré
+1148,9,Bread
+1148,11,しょくパン
+1148,12,吐司面包
+1149,1,パスタ
+1149,3,파스타
+1149,4,通心麵
+1149,5,Pâtes
+1149,6,Spaghetti
+1149,7,Pasta
+1149,8,Pasta
+1149,9,Pasta
+1149,11,パスタ
+1149,12,通心粉
+1150,1,キノコパック
+1150,3,버섯팩
+1150,4,袋裝蕈菇
+1150,5,Champignons
+1150,6,Pilzmix
+1150,7,Setas
+1150,8,Funghi
+1150,9,Mixed Mushrooms
+1150,11,キノコパック
+1150,12,袋装蕈菇
+1151,1,しっぽのくんせい
+1151,3,꼬리훈제
+1151,4,煙燻尾巴
+1151,5,Queue Fumée
+1151,6,Röstrute
+1151,7,Cola Ahumada
+1151,8,Coda affumicata
+1151,9,Smoke-Poke Tail
+1151,11,しっぽのくんせい
+1151,12,烟熏尾巴
+1152,1,ふといながねぎ
+1152,3,굵은대파
+1152,4,粗枝大蔥
+1152,5,Gros Poireau
+1152,6,Dicker Lauch
+1152,7,Puerro Grueso
+1152,8,Grosso porro
+1152,9,Large Leek
+1152,11,ふといながねぎ
+1152,12,粗枝大葱
+1153,1,とくせんリンゴ
+1153,3,특선사과
+1153,4,特選蘋果
+1153,5,Pomme Juteuse
+1153,6,Luxusapfel
+1153,7,Manzana Selecta
+1153,8,Mela prelibata
+1153,9,Fancy Apple
+1153,11,とくせんリンゴ
+1153,12,特选苹果
+1154,1,かぼそいホネ
+1154,3,가느다란뼈
+1154,4,細骨
+1154,5,Os à Moelle
+1154,6,Feine Knochen
+1154,7,Huesos Finos
+1154,8,Ossi sottili
+1154,9,Brittle Bones
+1154,11,かぼそいホネ
+1154,12,细骨
+1155,1,ポテトパック
+1155,3,포테이토팩
+1155,4,袋裝洋芋
+1155,5,Pommes de Terre
+1155,6,Kartoffeln
+1155,7,Patatas
+1155,8,Patate
+1155,9,Pack of Potatoes
+1155,11,ポテトパック
+1155,12,袋装土豆
+1156,1,みずべのハーブ
+1156,3,물가허브팩
+1156,4,水邊香草
+1156,5,Tubercule
+1156,6,Uferkraut
+1156,7,Hierba Intensa
+1156,8,Erbe acquatiche
+1156,9,Pungent Root
+1156,11,みずべのハーブ
+1156,12,水边香草
+1157,1,やさいパック
+1157,3,채소팩
+1157,4,袋裝蔬菜
+1157,5,Légumes
+1157,6,Gemüse
+1157,7,Verduras
+1157,8,Verdure
+1157,9,Salad Mix
+1157,11,やさいパック
+1157,12,袋装蔬菜
+1158,1,フライもりあわせ
+1158,3,모둠튀김
+1158,4,炸物拼盤
+1158,5,Fritures
+1158,6,Frittiertes
+1158,7,Frituras
+1158,8,Fritto misto
+1158,9,Fried Food
+1158,11,フライもりあわせ
+1158,12,炸物拼盘
+1159,1,ゆでタマゴ
+1159,3,삶은알
+1159,4,水煮蛋
+1159,5,Œuf Dur
+1159,6,Gekochtes Ei
+1159,7,Huevo Duro
+1159,8,Uovo sodo
+1159,9,Boiled Egg
+1159,11,ゆでタマゴ
+1159,12,水煮蛋
+1160,1,キャンプセット
+1160,3,캠프세트
+1160,4,露營組合
+1160,5,Kit de Camping
+1160,6,Camping-Set
+1160,7,Kit de Acampada
+1160,8,Kit da campeggio
+1160,9,Camping Gear
+1160,11,キャンプセット
+1160,12,露营组合
+1161,1,くちたけん
+1161,3,녹슨검
+1161,4,腐朽的劍
+1161,5,Épée Rouillée
+1161,6,Rostiges Schwert
+1161,7,Espada Oxidada
+1161,8,Spada rovinata
+1161,9,Rusted Sword
+1161,11,くちたけん
+1161,12,腐朽的剑
+1162,1,くちたたて
+1162,3,녹슨방패
+1162,4,腐朽的盾
+1162,5,Bouclier Rouillé
+1162,6,Rostiger Schild
+1162,7,Escudo Oxidado
+1162,8,Scudo rovinato
+1162,9,Rusted Shield
+1162,11,くちたたて
+1162,12,腐朽的盾
+1163,1,カセキのトリ
+1163,3,화석새
+1163,4,化石鳥
+1163,5,Fossile Oiseau
+1163,6,Vogelfossil
+1163,7,Ornitofósil
+1163,8,Ornitofossile
+1163,9,Fossilized Bird
+1163,11,カセキのトリ
+1163,12,化石鸟
+1164,1,カセキのサカナ
+1164,3,화석물고기
+1164,4,化石魚
+1164,5,Fossile Poisson
+1164,6,Fischfossil
+1164,7,Ictiofósil
+1164,8,Ittiofossile
+1164,9,Fossilized Fish
+1164,11,カセキのサカナ
+1164,12,化石鱼
+1165,1,カセキのリュウ
+1165,3,화석용
+1165,4,化石龍
+1165,5,Fossile Dragon
+1165,6,Drachenfossil
+1165,7,Dracofósil
+1165,8,Dracofossile
+1165,9,Fossilized Drake
+1165,11,カセキのリュウ
+1165,12,化石龙
+1166,1,カセキのクビナガ
+1166,3,화석긴목
+1166,4,化石海獸
+1166,5,Fossile Aileron
+1166,6,Paddelfossil
+1166,7,Plesiofósil
+1166,8,Plesiofossile
+1166,9,Fossilized Dino
+1166,11,カセキのクビナガ
+1166,12,化石海兽
+1167,1,いちごアメざいく
+1167,3,딸기사탕공예
+1167,4,草莓糖飾
+1167,5,Fraise en Sucre
+1167,6,Zucker-Erdbeere
+1167,7,Confite Fresa
+1167,8,Bonbonfragola
+1167,9,Strawberry Sweet
+1167,11,いちごアメざいく
+1167,12,草莓糖饰
+1168,1,ハートアメざいく
+1168,3,하트사탕공예
+1168,4,愛心糖飾
+1168,5,Cœur en Sucre
+1168,6,Zucker-Herz
+1168,7,Confite Corazón
+1168,8,Bonboncuore
+1168,9,Love Sweet
+1168,11,ハートアメざいく
+1168,12,爱心糖饰
+1169,1,ベリーアメざいく
+1169,3,베리사탕공예
+1169,4,野莓糖飾
+1169,5,Baie en Sucre
+1169,6,Zucker-Beere
+1169,7,Confite Fruto
+1169,8,Bonbonbosco
+1169,9,Berry Sweet
+1169,11,ベリーアメざいく
+1169,12,野莓糖饰
+1170,1,よつばアメざいく
+1170,3,네잎사탕공예
+1170,4,幸運草糖飾
+1170,5,Trèfle en Sucre
+1170,6,Zucker-Kleeblatt
+1170,7,Confite Trébol
+1170,8,Bonbonfoglio
+1170,9,Clover Sweet
+1170,11,よつばアメざいく
+1170,12,幸运草糖饰
+1171,1,おはなアメざいく
+1171,3,꽃사탕공예
+1171,4,花朵糖飾
+1171,5,Fleur en Sucre
+1171,6,Zucker-Blume
+1171,7,Confite Flor
+1171,8,Bonbonfiore
+1171,9,Flower Sweet
+1171,11,おはなアメざいく
+1171,12,花朵糖饰
+1172,1,スターアメざいく
+1172,3,스타사탕공예
+1172,4,星星糖飾
+1172,5,Étoile en Sucre
+1172,6,Zucker-Stern
+1172,7,Confite Estrella
+1172,8,Bonbonstella
+1172,9,Star Sweet
+1172,11,スターアメざいく
+1172,12,星星糖饰
+1173,1,リボンアメざいく
+1173,3,리본사탕공예
+1173,4,蝴蝶結糖飾
+1173,5,Ruban en Sucre
+1173,6,Zucker-Schleife
+1173,7,Confite Lazo
+1173,8,Bonbonfiocco
+1173,9,Ribbon Sweet
+1173,11,リボンアメざいく
+1173,12,蝴蝶结糖饰
+1174,1,あまーいりんご
+1174,3,달콤한사과
+1174,4,甜甜蘋果
+1174,5,Pomme Sucrée
+1174,6,Süßer Apfel
+1174,7,Manzana Dulce
+1174,8,Dolcepomo
+1174,9,Sweet Apple
+1174,11,あまーいりんご
+1174,12,甜甜苹果
+1175,1,すっぱいりんご
+1175,3,새콤한사과
+1175,4,酸酸蘋果
+1175,5,Pomme Acidulée
+1175,6,Saurer Apfel
+1175,7,Manzana Ácida
+1175,8,Aspropomo
+1175,9,Tart Apple
+1175,11,すっぱいりんご
+1175,12,酸酸苹果
+1176,1,のどスプレー
+1176,3,목스프레이
+1176,4,爽喉噴霧
+1176,5,Spray Gorge
+1176,6,Halsspray
+1176,7,Espray Bucal
+1176,8,Spray gola
+1176,9,Throat Spray
+1176,11,のどスプレー
+1176,12,爽喉喷雾
+1177,1,だっしゅつパック
+1177,3,탈출팩
+1177,4,避難背包
+1177,5,Sac Fuite
+1177,6,Fluchttasche
+1177,7,Mochila Escape
+1177,8,Zainofuga
+1177,9,Eject Pack
+1177,11,だっしゅつパック
+1177,12,避难背包
+1178,1,あつぞこブーツ
+1178,3,통굽부츠
+1178,4,厚底靴
+1178,5,Grosses Bottes
+1178,6,Plateauschuhe
+1178,7,Botas Gruesas
+1178,8,Scarponi robusti
+1178,9,Heavy-Duty Boots
+1178,11,あつぞこブーツ
+1178,12,厚底靴
+1179,1,からぶりほけん
+1179,3,허탕보험
+1179,4,打空保險
+1179,5,Assurance Échec
+1179,6,Fehlschlagschutz
+1179,7,Seguro Fallo
+1179,8,Fiascopolizza
+1179,9,Blunder Policy
+1179,11,からぶりほけん
+1179,12,打空保险
+1180,1,ルームサービス
+1180,3,룸서비스
+1180,4,客房服務
+1180,5,Chariot Distordu
+1180,6,Bizarroservice
+1180,7,Servicio Raro
+1180,8,Distorservizio
+1180,9,Room Service
+1180,11,ルームサービス
+1180,12,客房服务
+1181,1,ばんのうがさ
+1181,3,만능우산
+1181,4,萬能傘
+1181,5,Parapluie Solide
+1181,6,Allzweckschirm
+1181,7,Parasol Multiuso
+1181,8,Superombrello
+1181,9,Utility Umbrella
+1181,11,ばんのうがさ
+1181,12,万能伞
+1182,1,けいけんアメＸＳ
+1182,3,경험사탕XS
+1182,4,經驗糖果ＸＳ
+1182,5,Bonbon Exp. XS
+1182,6,EP-Bonbon XS
+1182,7,Caramelo Exp. XS
+1182,8,Caram. Esp. XS
+1182,9,Exp. Candy XS
+1182,11,けいけんアメＸＳ
+1182,12,经验糖果ＸＳ
+1183,1,けいけんアメＳ
+1183,3,경험사탕S
+1183,4,經驗糖果Ｓ
+1183,5,Bonbon Exp. S
+1183,6,EP-Bonbon S
+1183,7,Caramelo Exp. S
+1183,8,Caram. Esp. S
+1183,9,Exp. Candy S
+1183,11,けいけんアメＳ
+1183,12,经验糖果Ｓ
+1184,1,けいけんアメＭ
+1184,3,경험사탕M
+1184,4,經驗糖果Ｍ
+1184,5,Bonbon Exp. M
+1184,6,EP-Bonbon M
+1184,7,Caramelo Exp. M
+1184,8,Caram. Esp. M
+1184,9,Exp. Candy M
+1184,11,けいけんアメＭ
+1184,12,经验糖果Ｍ
+1185,1,けいけんアメＬ
+1185,3,경험사탕L
+1185,4,經驗糖果Ｌ
+1185,5,Bonbon Exp. L
+1185,6,EP-Bonbon L
+1185,7,Caramelo Exp. L
+1185,8,Caram. Esp. L
+1185,9,Exp. Candy L
+1185,11,けいけんアメＬ
+1185,12,经验糖果Ｌ
+1186,1,けいけんアメＸＬ
+1186,3,경험사탕XL
+1186,4,經驗糖果ＸＬ
+1186,5,Bonbon Exp. XL
+1186,6,EP-Bonbon XL
+1186,7,Caramelo Exp. XL
+1186,8,Caram. Esp. XL
+1186,9,Exp. Candy XL
+1186,11,けいけんアメＸＬ
+1186,12,经验糖果ＸＬ
+1187,1,ダイマックスアメ
+1187,3,다이맥스사탕
+1187,4,極巨糖果
+1187,5,Bonbon Dynamax
+1187,6,Dynamax-Bonbon
+1187,7,Caramelo Dinamax
+1187,8,Caram. Dynamax
+1187,9,Dynamax Candy
+1187,11,ダイマックスアメ
+1187,12,极巨糖果
+1188,1,わざレコード００
+1188,3,기술레코드00
+1188,4,招式紀錄００
+1188,5,DT00
+1188,6,TP00
+1188,7,DT00
+1188,8,DT00
+1188,9,TR00
+1188,11,わざレコード００
+1188,12,招式记录００
+1189,1,わざレコード０１
+1189,3,기술레코드01
+1189,4,招式紀錄０１
+1189,5,DT01
+1189,6,TP01
+1189,7,DT01
+1189,8,DT01
+1189,9,TR01
+1189,11,わざレコード０１
+1189,12,招式记录０１
+1190,1,わざレコード０２
+1190,3,기술레코드02
+1190,4,招式紀錄０２
+1190,5,DT02
+1190,6,TP02
+1190,7,DT02
+1190,8,DT02
+1190,9,TR02
+1190,11,わざレコード０２
+1190,12,招式记录０２
+1191,1,わざレコード０３
+1191,3,기술레코드03
+1191,4,招式紀錄０３
+1191,5,DT03
+1191,6,TP03
+1191,7,DT03
+1191,8,DT03
+1191,9,TR03
+1191,11,わざレコード０３
+1191,12,招式记录０３
+1192,1,わざレコード０４
+1192,3,기술레코드04
+1192,4,招式紀錄０４
+1192,5,DT04
+1192,6,TP04
+1192,7,DT04
+1192,8,DT04
+1192,9,TR04
+1192,11,わざレコード０４
+1192,12,招式记录０４
+1193,1,わざレコード０５
+1193,3,기술레코드05
+1193,4,招式紀錄０５
+1193,5,DT05
+1193,6,TP05
+1193,7,DT05
+1193,8,DT05
+1193,9,TR05
+1193,11,わざレコード０５
+1193,12,招式记录０５
+1194,1,わざレコード０６
+1194,3,기술레코드06
+1194,4,招式紀錄０６
+1194,5,DT06
+1194,6,TP06
+1194,7,DT06
+1194,8,DT06
+1194,9,TR06
+1194,11,わざレコード０６
+1194,12,招式记录０６
+1195,1,わざレコード０７
+1195,3,기술레코드07
+1195,4,招式紀錄０７
+1195,5,DT07
+1195,6,TP07
+1195,7,DT07
+1195,8,DT07
+1195,9,TR07
+1195,11,わざレコード０７
+1195,12,招式记录０７
+1196,1,わざレコード０８
+1196,3,기술레코드08
+1196,4,招式紀錄０８
+1196,5,DT08
+1196,6,TP08
+1196,7,DT08
+1196,8,DT08
+1196,9,TR08
+1196,11,わざレコード０８
+1196,12,招式记录０８
+1197,1,わざレコード０９
+1197,3,기술레코드09
+1197,4,招式紀錄０９
+1197,5,DT09
+1197,6,TP09
+1197,7,DT09
+1197,8,DT09
+1197,9,TR09
+1197,11,わざレコード０９
+1197,12,招式记录０９
+1198,1,わざレコード１０
+1198,3,기술레코드10
+1198,4,招式紀錄１０
+1198,5,DT10
+1198,6,TP10
+1198,7,DT10
+1198,8,DT10
+1198,9,TR10
+1198,11,わざレコード１０
+1198,12,招式记录１０
+1199,1,わざレコード１１
+1199,3,기술레코드11
+1199,4,招式紀錄１１
+1199,5,DT11
+1199,6,TP11
+1199,7,DT11
+1199,8,DT11
+1199,9,TR11
+1199,11,わざレコード１１
+1199,12,招式记录１１
+1200,1,わざレコード１２
+1200,3,기술레코드12
+1200,4,招式紀錄１２
+1200,5,DT12
+1200,6,TP12
+1200,7,DT12
+1200,8,DT12
+1200,9,TR12
+1200,11,わざレコード１２
+1200,12,招式记录１２
+1201,1,わざレコード１３
+1201,3,기술레코드13
+1201,4,招式紀錄１３
+1201,5,DT13
+1201,6,TP13
+1201,7,DT13
+1201,8,DT13
+1201,9,TR13
+1201,11,わざレコード１３
+1201,12,招式记录１３
+1202,1,わざレコード１４
+1202,3,기술레코드14
+1202,4,招式紀錄１４
+1202,5,DT14
+1202,6,TP14
+1202,7,DT14
+1202,8,DT14
+1202,9,TR14
+1202,11,わざレコード１４
+1202,12,招式记录１４
+1203,1,わざレコード１５
+1203,3,기술레코드15
+1203,4,招式紀錄１５
+1203,5,DT15
+1203,6,TP15
+1203,7,DT15
+1203,8,DT15
+1203,9,TR15
+1203,11,わざレコード１５
+1203,12,招式记录１５
+1204,1,わざレコード１６
+1204,3,기술레코드16
+1204,4,招式紀錄１６
+1204,5,DT16
+1204,6,TP16
+1204,7,DT16
+1204,8,DT16
+1204,9,TR16
+1204,11,わざレコード１６
+1204,12,招式记录１６
+1205,1,わざレコード１７
+1205,3,기술레코드17
+1205,4,招式紀錄１７
+1205,5,DT17
+1205,6,TP17
+1205,7,DT17
+1205,8,DT17
+1205,9,TR17
+1205,11,わざレコード１７
+1205,12,招式记录１７
+1206,1,わざレコード１８
+1206,3,기술레코드18
+1206,4,招式紀錄１８
+1206,5,DT18
+1206,6,TP18
+1206,7,DT18
+1206,8,DT18
+1206,9,TR18
+1206,11,わざレコード１８
+1206,12,招式记录１８
+1207,1,わざレコード１９
+1207,3,기술레코드19
+1207,4,招式紀錄１９
+1207,5,DT19
+1207,6,TP19
+1207,7,DT19
+1207,8,DT19
+1207,9,TR19
+1207,11,わざレコード１９
+1207,12,招式记录１９
+1208,1,わざレコード２０
+1208,3,기술레코드20
+1208,4,招式紀錄２０
+1208,5,DT20
+1208,6,TP20
+1208,7,DT20
+1208,8,DT20
+1208,9,TR20
+1208,11,わざレコード２０
+1208,12,招式记录２０
+1209,1,わざレコード２１
+1209,3,기술레코드21
+1209,4,招式紀錄２１
+1209,5,DT21
+1209,6,TP21
+1209,7,DT21
+1209,8,DT21
+1209,9,TR21
+1209,11,わざレコード２１
+1209,12,招式记录２１
+1210,1,わざレコード２２
+1210,3,기술레코드22
+1210,4,招式紀錄２２
+1210,5,DT22
+1210,6,TP22
+1210,7,DT22
+1210,8,DT22
+1210,9,TR22
+1210,11,わざレコード２２
+1210,12,招式记录２２
+1211,1,わざレコード２３
+1211,3,기술레코드23
+1211,4,招式紀錄２３
+1211,5,DT23
+1211,6,TP23
+1211,7,DT23
+1211,8,DT23
+1211,9,TR23
+1211,11,わざレコード２３
+1211,12,招式记录２３
+1212,1,わざレコード２４
+1212,3,기술레코드24
+1212,4,招式紀錄２４
+1212,5,DT24
+1212,6,TP24
+1212,7,DT24
+1212,8,DT24
+1212,9,TR24
+1212,11,わざレコード２４
+1212,12,招式记录２４
+1213,1,わざレコード２５
+1213,3,기술레코드25
+1213,4,招式紀錄２５
+1213,5,DT25
+1213,6,TP25
+1213,7,DT25
+1213,8,DT25
+1213,9,TR25
+1213,11,わざレコード２５
+1213,12,招式记录２５
+1214,1,わざレコード２６
+1214,3,기술레코드26
+1214,4,招式紀錄２６
+1214,5,DT26
+1214,6,TP26
+1214,7,DT26
+1214,8,DT26
+1214,9,TR26
+1214,11,わざレコード２６
+1214,12,招式记录２６
+1215,1,わざレコード２７
+1215,3,기술레코드27
+1215,4,招式紀錄２７
+1215,5,DT27
+1215,6,TP27
+1215,7,DT27
+1215,8,DT27
+1215,9,TR27
+1215,11,わざレコード２７
+1215,12,招式记录２７
+1216,1,わざレコード２８
+1216,3,기술레코드28
+1216,4,招式紀錄２８
+1216,5,DT28
+1216,6,TP28
+1216,7,DT28
+1216,8,DT28
+1216,9,TR28
+1216,11,わざレコード２８
+1216,12,招式记录２８
+1217,1,わざレコード２９
+1217,3,기술레코드29
+1217,4,招式紀錄２９
+1217,5,DT29
+1217,6,TP29
+1217,7,DT29
+1217,8,DT29
+1217,9,TR29
+1217,11,わざレコード２９
+1217,12,招式记录２９
+1218,1,わざレコード３０
+1218,3,기술레코드30
+1218,4,招式紀錄３０
+1218,5,DT30
+1218,6,TP30
+1218,7,DT30
+1218,8,DT30
+1218,9,TR30
+1218,11,わざレコード３０
+1218,12,招式记录３０
+1219,1,わざレコード３１
+1219,3,기술레코드31
+1219,4,招式紀錄３１
+1219,5,DT31
+1219,6,TP31
+1219,7,DT31
+1219,8,DT31
+1219,9,TR31
+1219,11,わざレコード３１
+1219,12,招式记录３１
+1220,1,わざレコード３２
+1220,3,기술레코드32
+1220,4,招式紀錄３２
+1220,5,DT32
+1220,6,TP32
+1220,7,DT32
+1220,8,DT32
+1220,9,TR32
+1220,11,わざレコード３２
+1220,12,招式记录３２
+1221,1,わざレコード３３
+1221,3,기술레코드33
+1221,4,招式紀錄３３
+1221,5,DT33
+1221,6,TP33
+1221,7,DT33
+1221,8,DT33
+1221,9,TR33
+1221,11,わざレコード３３
+1221,12,招式记录３３
+1222,1,わざレコード３４
+1222,3,기술레코드34
+1222,4,招式紀錄３４
+1222,5,DT34
+1222,6,TP34
+1222,7,DT34
+1222,8,DT34
+1222,9,TR34
+1222,11,わざレコード３４
+1222,12,招式记录３４
+1223,1,わざレコード３５
+1223,3,기술레코드35
+1223,4,招式紀錄３５
+1223,5,DT35
+1223,6,TP35
+1223,7,DT35
+1223,8,DT35
+1223,9,TR35
+1223,11,わざレコード３５
+1223,12,招式记录３５
+1224,1,わざレコード３６
+1224,3,기술레코드36
+1224,4,招式紀錄３６
+1224,5,DT36
+1224,6,TP36
+1224,7,DT36
+1224,8,DT36
+1224,9,TR36
+1224,11,わざレコード３６
+1224,12,招式记录３６
+1225,1,わざレコード３７
+1225,3,기술레코드37
+1225,4,招式紀錄３７
+1225,5,DT37
+1225,6,TP37
+1225,7,DT37
+1225,8,DT37
+1225,9,TR37
+1225,11,わざレコード３７
+1225,12,招式记录３７
+1226,1,わざレコード３８
+1226,3,기술레코드38
+1226,4,招式紀錄３８
+1226,5,DT38
+1226,6,TP38
+1226,7,DT38
+1226,8,DT38
+1226,9,TR38
+1226,11,わざレコード３８
+1226,12,招式记录３８
+1227,1,わざレコード３９
+1227,3,기술레코드39
+1227,4,招式紀錄３９
+1227,5,DT39
+1227,6,TP39
+1227,7,DT39
+1227,8,DT39
+1227,9,TR39
+1227,11,わざレコード３９
+1227,12,招式记录３９
+1228,1,わざレコード４０
+1228,3,기술레코드40
+1228,4,招式紀錄４０
+1228,5,DT40
+1228,6,TP40
+1228,7,DT40
+1228,8,DT40
+1228,9,TR40
+1228,11,わざレコード４０
+1228,12,招式记录４０
+1229,1,わざレコード４１
+1229,3,기술레코드41
+1229,4,招式紀錄４１
+1229,5,DT41
+1229,6,TP41
+1229,7,DT41
+1229,8,DT41
+1229,9,TR41
+1229,11,わざレコード４１
+1229,12,招式记录４１
+1230,1,わざレコード４２
+1230,3,기술레코드42
+1230,4,招式紀錄４２
+1230,5,DT42
+1230,6,TP42
+1230,7,DT42
+1230,8,DT42
+1230,9,TR42
+1230,11,わざレコード４２
+1230,12,招式记录４２
+1231,1,わざレコード４３
+1231,3,기술레코드43
+1231,4,招式紀錄４３
+1231,5,DT43
+1231,6,TP43
+1231,7,DT43
+1231,8,DT43
+1231,9,TR43
+1231,11,わざレコード４３
+1231,12,招式记录４３
+1232,1,わざレコード４４
+1232,3,기술레코드44
+1232,4,招式紀錄４４
+1232,5,DT44
+1232,6,TP44
+1232,7,DT44
+1232,8,DT44
+1232,9,TR44
+1232,11,わざレコード４４
+1232,12,招式记录４４
+1233,1,わざレコード４５
+1233,3,기술레코드45
+1233,4,招式紀錄４５
+1233,5,DT45
+1233,6,TP45
+1233,7,DT45
+1233,8,DT45
+1233,9,TR45
+1233,11,わざレコード４５
+1233,12,招式记录４５
+1234,1,わざレコード４６
+1234,3,기술레코드46
+1234,4,招式紀錄４６
+1234,5,DT46
+1234,6,TP46
+1234,7,DT46
+1234,8,DT46
+1234,9,TR46
+1234,11,わざレコード４６
+1234,12,招式记录４６
+1235,1,わざレコード４７
+1235,3,기술레코드47
+1235,4,招式紀錄４７
+1235,5,DT47
+1235,6,TP47
+1235,7,DT47
+1235,8,DT47
+1235,9,TR47
+1235,11,わざレコード４７
+1235,12,招式记录４７
+1236,1,わざレコード４８
+1236,3,기술레코드48
+1236,4,招式紀錄４８
+1236,5,DT48
+1236,6,TP48
+1236,7,DT48
+1236,8,DT48
+1236,9,TR48
+1236,11,わざレコード４８
+1236,12,招式记录４８
+1237,1,わざレコード４９
+1237,3,기술레코드49
+1237,4,招式紀錄４９
+1237,5,DT49
+1237,6,TP49
+1237,7,DT49
+1237,8,DT49
+1237,9,TR49
+1237,11,わざレコード４９
+1237,12,招式记录４９
+1238,1,わざレコード５０
+1238,3,기술레코드50
+1238,4,招式紀錄５０
+1238,5,DT50
+1238,6,TP50
+1238,7,DT50
+1238,8,DT50
+1238,9,TR50
+1238,11,わざレコード５０
+1238,12,招式记录５０
+1239,1,わざレコード５１
+1239,3,기술레코드51
+1239,4,招式紀錄５１
+1239,5,DT51
+1239,6,TP51
+1239,7,DT51
+1239,8,DT51
+1239,9,TR51
+1239,11,わざレコード５１
+1239,12,招式记录５１
+1240,1,わざレコード５２
+1240,3,기술레코드52
+1240,4,招式紀錄５２
+1240,5,DT52
+1240,6,TP52
+1240,7,DT52
+1240,8,DT52
+1240,9,TR52
+1240,11,わざレコード５２
+1240,12,招式记录５２
+1241,1,わざレコード５３
+1241,3,기술레코드53
+1241,4,招式紀錄５３
+1241,5,DT53
+1241,6,TP53
+1241,7,DT53
+1241,8,DT53
+1241,9,TR53
+1241,11,わざレコード５３
+1241,12,招式记录５３
+1242,1,わざレコード５４
+1242,3,기술레코드54
+1242,4,招式紀錄５４
+1242,5,DT54
+1242,6,TP54
+1242,7,DT54
+1242,8,DT54
+1242,9,TR54
+1242,11,わざレコード５４
+1242,12,招式记录５４
+1243,1,わざレコード５５
+1243,3,기술레코드55
+1243,4,招式紀錄５５
+1243,5,DT55
+1243,6,TP55
+1243,7,DT55
+1243,8,DT55
+1243,9,TR55
+1243,11,わざレコード５５
+1243,12,招式记录５５
+1244,1,わざレコード５６
+1244,3,기술레코드56
+1244,4,招式紀錄５６
+1244,5,DT56
+1244,6,TP56
+1244,7,DT56
+1244,8,DT56
+1244,9,TR56
+1244,11,わざレコード５６
+1244,12,招式记录５６
+1245,1,わざレコード５７
+1245,3,기술레코드57
+1245,4,招式紀錄５７
+1245,5,DT57
+1245,6,TP57
+1245,7,DT57
+1245,8,DT57
+1245,9,TR57
+1245,11,わざレコード５７
+1245,12,招式记录５７
+1246,1,わざレコード５８
+1246,3,기술레코드58
+1246,4,招式紀錄５８
+1246,5,DT58
+1246,6,TP58
+1246,7,DT58
+1246,8,DT58
+1246,9,TR58
+1246,11,わざレコード５８
+1246,12,招式记录５８
+1247,1,わざレコード５９
+1247,3,기술레코드59
+1247,4,招式紀錄５９
+1247,5,DT59
+1247,6,TP59
+1247,7,DT59
+1247,8,DT59
+1247,9,TR59
+1247,11,わざレコード５９
+1247,12,招式记录５９
+1248,1,わざレコード６０
+1248,3,기술레코드60
+1248,4,招式紀錄６０
+1248,5,DT60
+1248,6,TP60
+1248,7,DT60
+1248,8,DT60
+1248,9,TR60
+1248,11,わざレコード６０
+1248,12,招式记录６０
+1249,1,わざレコード６１
+1249,3,기술레코드61
+1249,4,招式紀錄６１
+1249,5,DT61
+1249,6,TP61
+1249,7,DT61
+1249,8,DT61
+1249,9,TR61
+1249,11,わざレコード６１
+1249,12,招式记录６１
+1250,1,わざレコード６２
+1250,3,기술레코드62
+1250,4,招式紀錄６２
+1250,5,DT62
+1250,6,TP62
+1250,7,DT62
+1250,8,DT62
+1250,9,TR62
+1250,11,わざレコード６２
+1250,12,招式记录６２
+1251,1,わざレコード６３
+1251,3,기술레코드63
+1251,4,招式紀錄６３
+1251,5,DT63
+1251,6,TP63
+1251,7,DT63
+1251,8,DT63
+1251,9,TR63
+1251,11,わざレコード６３
+1251,12,招式记录６３
+1252,1,わざレコード６４
+1252,3,기술레코드64
+1252,4,招式紀錄６４
+1252,5,DT64
+1252,6,TP64
+1252,7,DT64
+1252,8,DT64
+1252,9,TR64
+1252,11,わざレコード６４
+1252,12,招式记录６４
+1253,1,わざレコード６５
+1253,3,기술레코드65
+1253,4,招式紀錄６５
+1253,5,DT65
+1253,6,TP65
+1253,7,DT65
+1253,8,DT65
+1253,9,TR65
+1253,11,わざレコード６５
+1253,12,招式记录６５
+1254,1,わざレコード６６
+1254,3,기술레코드66
+1254,4,招式紀錄６６
+1254,5,DT66
+1254,6,TP66
+1254,7,DT66
+1254,8,DT66
+1254,9,TR66
+1254,11,わざレコード６６
+1254,12,招式记录６６
+1255,1,わざレコード６７
+1255,3,기술레코드67
+1255,4,招式紀錄６７
+1255,5,DT67
+1255,6,TP67
+1255,7,DT67
+1255,8,DT67
+1255,9,TR67
+1255,11,わざレコード６７
+1255,12,招式记录６７
+1256,1,わざレコード６８
+1256,3,기술레코드68
+1256,4,招式紀錄６８
+1256,5,DT68
+1256,6,TP68
+1256,7,DT68
+1256,8,DT68
+1256,9,TR68
+1256,11,わざレコード６８
+1256,12,招式记录６８
+1257,1,わざレコード６９
+1257,3,기술레코드69
+1257,4,招式紀錄６９
+1257,5,DT69
+1257,6,TP69
+1257,7,DT69
+1257,8,DT69
+1257,9,TR69
+1257,11,わざレコード６９
+1257,12,招式记录６９
+1258,1,わざレコード７０
+1258,3,기술레코드70
+1258,4,招式紀錄７０
+1258,5,DT70
+1258,6,TP70
+1258,7,DT70
+1258,8,DT70
+1258,9,TR70
+1258,11,わざレコード７０
+1258,12,招式记录７０
+1259,1,わざレコード７１
+1259,3,기술레코드71
+1259,4,招式紀錄７１
+1259,5,DT71
+1259,6,TP71
+1259,7,DT71
+1259,8,DT71
+1259,9,TR71
+1259,11,わざレコード７１
+1259,12,招式记录７１
+1260,1,わざレコード７２
+1260,3,기술레코드72
+1260,4,招式紀錄７２
+1260,5,DT72
+1260,6,TP72
+1260,7,DT72
+1260,8,DT72
+1260,9,TR72
+1260,11,わざレコード７２
+1260,12,招式记录７２
+1261,1,わざレコード７３
+1261,3,기술레코드73
+1261,4,招式紀錄７３
+1261,5,DT73
+1261,6,TP73
+1261,7,DT73
+1261,8,DT73
+1261,9,TR73
+1261,11,わざレコード７３
+1261,12,招式记录７３
+1262,1,わざレコード７４
+1262,3,기술레코드74
+1262,4,招式紀錄７４
+1262,5,DT74
+1262,6,TP74
+1262,7,DT74
+1262,8,DT74
+1262,9,TR74
+1262,11,わざレコード７４
+1262,12,招式记录７４
+1263,1,わざレコード７５
+1263,3,기술레코드75
+1263,4,招式紀錄７５
+1263,5,DT75
+1263,6,TP75
+1263,7,DT75
+1263,8,DT75
+1263,9,TR75
+1263,11,わざレコード７５
+1263,12,招式记录７５
+1264,1,わざレコード７６
+1264,3,기술레코드76
+1264,4,招式紀錄７６
+1264,5,DT76
+1264,6,TP76
+1264,7,DT76
+1264,8,DT76
+1264,9,TR76
+1264,11,わざレコード７６
+1264,12,招式记录７６
+1265,1,わざレコード７７
+1265,3,기술레코드77
+1265,4,招式紀錄７７
+1265,5,DT77
+1265,6,TP77
+1265,7,DT77
+1265,8,DT77
+1265,9,TR77
+1265,11,わざレコード７７
+1265,12,招式记录７７
+1266,1,わざレコード７８
+1266,3,기술레코드78
+1266,4,招式紀錄７８
+1266,5,DT78
+1266,6,TP78
+1266,7,DT78
+1266,8,DT78
+1266,9,TR78
+1266,11,わざレコード７８
+1266,12,招式记录７８
+1267,1,わざレコード７９
+1267,3,기술레코드79
+1267,4,招式紀錄７９
+1267,5,DT79
+1267,6,TP79
+1267,7,DT79
+1267,8,DT79
+1267,9,TR79
+1267,11,わざレコード７９
+1267,12,招式记录７９
+1268,1,わざレコード８０
+1268,3,기술레코드80
+1268,4,招式紀錄８０
+1268,5,DT80
+1268,6,TP80
+1268,7,DT80
+1268,8,DT80
+1268,9,TR80
+1268,11,わざレコード８０
+1268,12,招式记录８０
+1269,1,わざレコード８１
+1269,3,기술레코드81
+1269,4,招式紀錄８１
+1269,5,DT81
+1269,6,TP81
+1269,7,DT81
+1269,8,DT81
+1269,9,TR81
+1269,11,わざレコード８１
+1269,12,招式记录８１
+1270,1,わざレコード８２
+1270,3,기술레코드82
+1270,4,招式紀錄８２
+1270,5,DT82
+1270,6,TP82
+1270,7,DT82
+1270,8,DT82
+1270,9,TR82
+1270,11,わざレコード８２
+1270,12,招式记录８２
+1271,1,わざレコード８３
+1271,3,기술레코드83
+1271,4,招式紀錄８３
+1271,5,DT83
+1271,6,TP83
+1271,7,DT83
+1271,8,DT83
+1271,9,TR83
+1271,11,わざレコード８３
+1271,12,招式记录８３
+1272,1,わざレコード８４
+1272,3,기술레코드84
+1272,4,招式紀錄８４
+1272,5,DT84
+1272,6,TP84
+1272,7,DT84
+1272,8,DT84
+1272,9,TR84
+1272,11,わざレコード８４
+1272,12,招式记录８４
+1273,1,わざレコード８５
+1273,3,기술레코드85
+1273,4,招式紀錄８５
+1273,5,DT85
+1273,6,TP85
+1273,7,DT85
+1273,8,DT85
+1273,9,TR85
+1273,11,わざレコード８５
+1273,12,招式记录８５
+1274,1,わざレコード８６
+1274,3,기술레코드86
+1274,4,招式紀錄８６
+1274,5,DT86
+1274,6,TP86
+1274,7,DT86
+1274,8,DT86
+1274,9,TR86
+1274,11,わざレコード８６
+1274,12,招式记录８６
+1275,1,わざレコード８７
+1275,3,기술레코드87
+1275,4,招式紀錄８７
+1275,5,DT87
+1275,6,TP87
+1275,7,DT87
+1275,8,DT87
+1275,9,TR87
+1275,11,わざレコード８７
+1275,12,招式记录８７
+1276,1,わざレコード８８
+1276,3,기술레코드88
+1276,4,招式紀錄８８
+1276,5,DT88
+1276,6,TP88
+1276,7,DT88
+1276,8,DT88
+1276,9,TR88
+1276,11,わざレコード８８
+1276,12,招式记录８８
+1277,1,わざレコード８９
+1277,3,기술레코드89
+1277,4,招式紀錄８９
+1277,5,DT89
+1277,6,TP89
+1277,7,DT89
+1277,8,DT89
+1277,9,TR89
+1277,11,わざレコード８９
+1277,12,招式记录８９
+1278,1,わざレコード９０
+1278,3,기술레코드90
+1278,4,招式紀錄９０
+1278,5,DT90
+1278,6,TP90
+1278,7,DT90
+1278,8,DT90
+1278,9,TR90
+1278,11,わざレコード９０
+1278,12,招式记录９０
+1279,1,わざレコード９１
+1279,3,기술레코드91
+1279,4,招式紀錄９１
+1279,5,DT91
+1279,6,TP91
+1279,7,DT91
+1279,8,DT91
+1279,9,TR91
+1279,11,わざレコード９１
+1279,12,招式记录９１
+1280,1,わざレコード９２
+1280,3,기술레코드92
+1280,4,招式紀錄９２
+1280,5,DT92
+1280,6,TP92
+1280,7,DT92
+1280,8,DT92
+1280,9,TR92
+1280,11,わざレコード９２
+1280,12,招式记录９２
+1281,1,わざレコード９３
+1281,3,기술레코드93
+1281,4,招式紀錄９３
+1281,5,DT93
+1281,6,TP93
+1281,7,DT93
+1281,8,DT93
+1281,9,TR93
+1281,11,わざレコード９３
+1281,12,招式记录９３
+1282,1,わざレコード９４
+1282,3,기술레코드94
+1282,4,招式紀錄９４
+1282,5,DT94
+1282,6,TP94
+1282,7,DT94
+1282,8,DT94
+1282,9,TR94
+1282,11,わざレコード９４
+1282,12,招式记录９４
+1283,1,わざレコード９５
+1283,3,기술레코드95
+1283,4,招式紀錄９５
+1283,5,DT95
+1283,6,TP95
+1283,7,DT95
+1283,8,DT95
+1283,9,TR95
+1283,11,わざレコード９５
+1283,12,招式记录９５
+1284,1,わざレコード９６
+1284,3,기술레코드96
+1284,4,招式紀錄９６
+1284,5,DT96
+1284,6,TP96
+1284,7,DT96
+1284,8,DT96
+1284,9,TR96
+1284,11,わざレコード９６
+1284,12,招式记录９６
+1285,1,わざレコード９７
+1285,3,기술레코드97
+1285,4,招式紀錄９７
+1285,5,DT97
+1285,6,TP97
+1285,7,DT97
+1285,8,DT97
+1285,9,TR97
+1285,11,わざレコード９７
+1285,12,招式记录９７
+1286,1,わざレコード９８
+1286,3,기술레코드98
+1286,4,招式紀錄９８
+1286,5,DT98
+1286,6,TP98
+1286,7,DT98
+1286,8,DT98
+1286,9,TR98
+1286,11,わざレコード９８
+1286,12,招式记录９８
+1287,1,わざレコード９９
+1287,3,기술레코드99
+1287,4,招式紀錄９９
+1287,5,DT99
+1287,6,TP99
+1287,7,DT99
+1287,8,DT99
+1287,9,TR99
+1287,11,わざレコード９９
+1287,12,招式记录９９
+1288,1,わざマシン００
+1288,3,기술머신00
+1288,4,招式學習器００
+1288,5,CT00
+1288,6,TM00
+1288,7,MT00
+1288,8,MT00
+1288,9,TM00
+1288,11,わざマシン００
+1288,12,招式学习器００
+1289,1,さみしがりミント
+1289,3,외로움민트
+1289,4,怕寂寞薄荷
+1289,5,Aromate Solo
+1289,6,Solo-Minze
+1289,7,Menta Huraña
+1289,8,Menta Schiva
+1289,9,Lonely Mint
+1289,11,さみしがりミント
+1289,12,怕寂寞薄荷
+1290,1,いじっぱりミント
+1290,3,고집민트
+1290,4,固執薄荷
+1290,5,Aromate Rigide
+1290,6,Hart-Minze
+1290,7,Menta Firme
+1290,8,Menta Decisa
+1290,9,Adamant Mint
+1290,11,いじっぱりミント
+1290,12,固执薄荷
+1291,1,やんちゃミント
+1291,3,개구쟁이민트
+1291,4,頑皮薄荷
+1291,5,Aromate Mauvais
+1291,6,Frech-Minze
+1291,7,Menta Pícara
+1291,8,Menta Birbona
+1291,9,Naughty Mint
+1291,11,やんちゃミント
+1291,12,顽皮薄荷
+1292,1,ゆうかんミント
+1292,3,용감민트
+1292,4,勇敢薄荷
+1292,5,Aromate Brave
+1292,6,Mutig-Minze
+1292,7,Menta Audaz
+1292,8,Menta Audace
+1292,9,Brave Mint
+1292,11,ゆうかんミント
+1292,12,勇敢薄荷
+1293,1,ずぶといミント
+1293,3,대담민트
+1293,4,大膽薄荷
+1293,5,Aromate Assuré
+1293,6,Kühn-Minze
+1293,7,Menta Osada
+1293,8,Menta Sicura
+1293,9,Bold Mint
+1293,11,ずぶといミント
+1293,12,大胆薄荷
+1294,1,わんぱくミント
+1294,3,장난꾸러기민트
+1294,4,淘氣薄荷
+1294,5,Aromate Malin
+1294,6,Pfiffig-Minze
+1294,7,Menta Agitada
+1294,8,Menta Scaltra
+1294,9,Impish Mint
+1294,11,わんぱくミント
+1294,12,淘气薄荷
+1295,1,のうてんきミント
+1295,3,촐랑민트
+1295,4,樂天薄荷
+1295,5,Aromate Lâche
+1295,6,Lasch-Minze
+1295,7,Menta Floja
+1295,8,Menta Fiacca
+1295,9,Lax Mint
+1295,11,のうてんきミント
+1295,12,乐天薄荷
+1296,1,のんきミント
+1296,3,무사태평민트
+1296,4,悠閒薄荷
+1296,5,Aromate Relax
+1296,6,Locker-Minze
+1296,7,Menta Plácida
+1296,8,Menta Placida
+1296,9,Relaxed Mint
+1296,11,のんきミント
+1296,12,悠闲薄荷
+1297,1,ひかえめミント
+1297,3,조심민트
+1297,4,內斂薄荷
+1297,5,Aromate Modeste
+1297,6,Mäßig-Minze
+1297,7,Menta Modesta
+1297,8,Menta Modesta
+1297,9,Modest Mint
+1297,11,ひかえめミント
+1297,12,内敛薄荷
+1298,1,おっとりミント
+1298,3,의젓민트
+1298,4,慢吞吞薄荷
+1298,5,Aromate Doux
+1298,6,Mild-Minze
+1298,7,Menta Afable
+1298,8,Menta Mite
+1298,9,Mild Mint
+1298,11,おっとりミント
+1298,12,慢吞吞薄荷
+1299,1,うっかりやミント
+1299,3,덜렁민트
+1299,4,馬虎薄荷
+1299,5,Aromate Foufou
+1299,6,Hitzig-Minze
+1299,7,Menta Alocada
+1299,8,Menta Ardente
+1299,9,Rash Mint
+1299,11,うっかりやミント
+1299,12,马虎薄荷
+1300,1,れいせいミント
+1300,3,냉정민트
+1300,4,冷靜薄荷
+1300,5,Aromate Discret
+1300,6,Ruhig-Minze
+1300,7,Menta Mansa
+1300,8,Menta Quieta
+1300,9,Quiet Mint
+1300,11,れいせいミント
+1300,12,冷静薄荷
+1301,1,おだやかミント
+1301,3,차분민트
+1301,4,溫和薄荷
+1301,5,Aromate Calme
+1301,6,Still-Minze
+1301,7,Menta Serena
+1301,8,Menta Calma
+1301,9,Calm Mint
+1301,11,おだやかミント
+1301,12,温和薄荷
+1302,1,おとなしいミント
+1302,3,얌전민트
+1302,4,溫順薄荷
+1302,5,Aromate Gentil
+1302,6,Zart-Minze
+1302,7,Menta Amable
+1302,8,Menta Gentile
+1302,9,Gentle Mint
+1302,11,おとなしいミント
+1302,12,温顺薄荷
+1303,1,しんちょうミント
+1303,3,신중민트
+1303,4,慎重薄荷
+1303,5,Aromate Prudent
+1303,6,Sacht-Minze
+1303,7,Menta Cauta
+1303,8,Menta Cauta
+1303,9,Careful Mint
+1303,11,しんちょうミント
+1303,12,慎重薄荷
+1304,1,なまいきミント
+1304,3,건방민트
+1304,4,自大薄荷
+1304,5,Aromate Malpoli
+1304,6,Forsch-Minze
+1304,7,Menta Grosera
+1304,8,Menta Vivace
+1304,9,Sassy Mint
+1304,11,なまいきミント
+1304,12,自大薄荷
+1305,1,おくびょうミント
+1305,3,겁쟁이민트
+1305,4,膽小薄荷
+1305,5,Aromate Timide
+1305,6,Scheu-Minze
+1305,7,Menta Miedosa
+1305,8,Menta Timida
+1305,9,Timid Mint
+1305,11,おくびょうミント
+1305,12,胆小薄荷
+1306,1,せっかちミント
+1306,3,성급민트
+1306,4,急躁薄荷
+1306,5,Aromate Pressé
+1306,6,Hastig-Minze
+1306,7,Menta Activa
+1306,8,Menta Lesta
+1306,9,Hasty Mint
+1306,11,せっかちミント
+1306,12,急躁薄荷
+1307,1,ようきミント
+1307,3,명랑민트
+1307,4,爽朗薄荷
+1307,5,Aromate Jovial
+1307,6,Froh-Minze
+1307,7,Menta Alegre
+1307,8,Menta Allegra
+1307,9,Jolly Mint
+1307,11,ようきミント
+1307,12,爽朗薄荷
+1308,1,むじゃきミント
+1308,3,천진난만민트
+1308,4,天真薄荷
+1308,5,Aromate Naïf
+1308,6,Naiv-Minze
+1308,7,Menta Ingenua
+1308,8,Menta Ingenua
+1308,9,Naive Mint
+1308,11,むじゃきミント
+1308,12,天真薄荷
+1309,1,まじめミント
+1309,3,성실민트
+1309,4,認真薄荷
+1309,5,Aromate Sérieux
+1309,6,Ernst-Minze
+1309,7,Menta Seria
+1309,8,Menta Seria
+1309,9,Serious Mint
+1309,11,まじめミント
+1309,12,认真薄荷
+1310,1,ねがいのかたまり
+1310,3,소원의덩어리
+1310,4,許願星塊
+1310,5,Morceau Vœu
+1310,6,Wunschbrocken
+1310,7,Trozo Deseo
+1310,8,Desioblocco
+1310,9,Wishing Piece
+1310,11,ねがいのかたまり
+1310,12,许愿星块
+1311,1,われたポット
+1311,3,깨진포트
+1311,4,破裂的茶壺
+1311,5,Théière Fêlée
+1311,6,Rissige Kanne
+1311,7,Tetera Agrietada
+1311,8,Teiera rotta
+1311,9,Cracked Pot
+1311,11,われたポット
+1311,12,破裂的茶壶
+1312,1,かけたポット
+1312,3,이빠진포트
+1312,4,缺損的茶壺
+1312,5,Théière Ébréchée
+1312,6,Löchrige Kanne
+1312,7,Tetera Rota
+1312,8,Teiera crepata
+1312,9,Chipped Pot
+1312,11,かけたポット
+1312,12,缺损的茶壶
+1313,1,すごいみみせん
+1313,3,대단한귀마개
+1313,4,厲害耳塞
+1313,5,Bouchons Audio
+1313,6,Top-Ohrenstöpsel
+1313,7,Supertapones
+1313,8,Supertappi
+1313,9,Hi-tech Earbuds
+1313,11,すごいみみせん
+1313,12,厉害耳塞
+1314,1,フサパック
+1314,3,송이팩
+1314,4,袋裝果實
+1314,5,Fruits
+1314,6,Früchte
+1314,7,Fruta Tropical
+1314,8,Frutti
+1314,9,Fruit Bunch
+1314,11,フサパック
+1314,12,袋装果实
+1315,1,モーモーチーズ
+1315,3,튼튼치즈
+1315,4,哞哞乳酪
+1315,5,Fromage Meumeu
+1315,6,Kuhmuh-Käse
+1315,7,Queso Mu-mu
+1315,8,Formaggio Mumu
+1315,9,Moomoo Cheese
+1315,11,モーモーチーズ
+1315,12,哞哞乳酪
+1316,1,スパイスセット
+1316,3,스파이스세트
+1316,4,香料組合
+1316,5,Épices
+1316,6,Gewürzmix
+1316,7,Especias
+1316,8,Spezie assortite
+1316,9,Spice Mix
+1316,11,スパイスセット
+1316,12,香料组合
+1317,1,しんせんクリーム
+1317,3,신선한크림
+1317,4,鮮鮮奶油
+1317,5,Crème Fraîche
+1317,6,Frische Sahne
+1317,7,Nata Fresca
+1317,8,Panna da cucina
+1317,9,Fresh Cream
+1317,11,しんせんクリーム
+1317,12,鲜鲜奶油
+1318,1,レトルトカレー
+1318,3,레토르트카레
+1318,4,即食咖哩
+1318,5,Curry Instantané
+1318,6,Fertigcurry
+1318,7,Curri de Bote
+1318,8,Curry precotto
+1318,9,Packaged Curry
+1318,11,レトルトカレー
+1318,12,即食咖喱
+1319,1,ヤシのミルク
+1319,3,야자밀크
+1319,4,椰奶
+1319,5,Lait de Coco
+1319,6,Kokosmilch
+1319,7,Leche de Coco
+1319,8,Latte di cocco
+1319,9,Coconut Milk
+1319,11,ヤシのミルク
+1319,12,椰奶
+1320,1,レトルトめん
+1320,3,레토르트면
+1320,4,即食麵
+1320,5,Nouilles
+1320,6,Fertignudeln
+1320,7,Fideos de Bote
+1320,8,Noodle precotti
+1320,9,Instant Noodles
+1320,11,レトルトめん
+1320,12,即食面
+1321,1,レトルトバーグ
+1321,3,레토르트햄버그
+1321,4,即食肉排
+1321,5,Steak Haché
+1321,6,Frikadellen
+1321,7,Hamburguesas
+1321,8,Hamburger
+1321,9,Precooked Burger
+1321,11,レトルトバーグ
+1321,12,即食肉排
+1322,1,キョダイパウダー
+1322,3,거대파우더
+1322,4,超極粉
+1322,5,Poudre Gigamax
+1322,6,Giga-Pulver
+1322,7,Especias Gigamax
+1322,8,Gigaspezia
+1322,9,Gigantamix
+1322,11,キョダイパウダー
+1322,12,超极粉
+1323,1,ねがいのかけら
+1323,3,소원의조각
+1323,4,許願星碎片
+1323,5,Fragment Vœu
+1323,6,Wunschsplitter
+1323,7,Trocito Deseo
+1323,8,Desioframmento
+1323,9,Wishing Chip
+1323,11,ねがいのかけら
+1323,12,许愿星碎片
+1324,1,ロトムじてんしゃ
+1324,3,로토무자전거
+1324,4,洛托姆自行車
+1324,5,Moticyclette
+1324,6,Rotom-Rad
+1324,7,Bici Rotom
+1324,8,Bici Rotom
+1324,9,Rotom Bike
+1324,11,ロトムじてんしゃ
+1324,12,洛托姆自行车
+1325,1,ゆれないおまもり
+1325,3,흔들림없는부적
+1325,4,防晃護符
+1325,5,Charme Stabilité
+1325,6,Superfangpin
+1325,7,Amuleto Captura
+1325,8,Catturamuleto
+1325,9,Catching Charm
+1325,11,ゆれないおまもり
+1325,12,防晃护符
+1326,1,ふるびたてがみ
+1326,3,낡은편지
+1326,4,陳舊的信
+1326,5,Lettre Jaunie
+1326,6,Vergilbter Brief
+1326,7,Carta Ajada
+1326,8,Vecchia lettera
+1326,9,Old Letter
+1326,11,ふるびたてがみ
+1326,12,陈旧的信
+1327,1,バンドのサイン
+1327,3,밴드의사인
+1327,4,樂團的簽名
+1327,5,Dédicace
+1327,6,Band-Autogramm
+1327,7,Autógrafo Grupo
+1327,8,Autografo band
+1327,9,Band Autograph
+1327,11,バンドのサイン
+1327,12,乐队的签名
+1328,1,ソニアのほん
+1328,3,소니아의책
+1328,4,索妮亞的書
+1328,5,Livre de Sonya
+1328,6,Sanias Buch
+1328,7,Libro de Sonia
+1328,8,Libro di Sonia
+1328,9,Sonia’s Book
+1328,11,ソニアのほん
+1328,12,索妮亚的书
+1329,1,ロトムのカタログ
+1329,3,로토무카탈로그
+1329,4,洛托姆型錄
+1329,5,Moti-Catalogue
+1329,6,Rotom-Katalog
+1329,7,Catálogo Rotom
+1329,8,Catalogo Rotom
+1329,9,Rotom Catalog
+1329,11,ロトムのカタログ
+1329,12,洛托姆型录
+1330,1,★And458
+1330,3,★And458
+1330,4,★And458
+1330,5,★And458
+1330,6,★And458
+1330,7,★And458
+1330,8,★And458
+1330,9,★And458
+1330,11,★And458
+1330,12,★And458
+1331,1,★And15
+1331,3,★And15
+1331,4,★And15
+1331,5,★And15
+1331,6,★And15
+1331,7,★And15
+1331,8,★And15
+1331,9,★And15
+1331,11,★And15
+1331,12,★And15
+1332,1,★And337
+1332,3,★And337
+1332,4,★And337
+1332,5,★And337
+1332,6,★And337
+1332,7,★And337
+1332,8,★And337
+1332,9,★And337
+1332,11,★And337
+1332,12,★And337
+1333,1,★And603
+1333,3,★And603
+1333,4,★And603
+1333,5,★And603
+1333,6,★And603
+1333,7,★And603
+1333,8,★And603
+1333,9,★And603
+1333,11,★And603
+1333,12,★And603
+1334,1,★And390
+1334,3,★And390
+1334,4,★And390
+1334,5,★And390
+1334,6,★And390
+1334,7,★And390
+1334,8,★And390
+1334,9,★And390
+1334,11,★And390
+1334,12,★And390
+1335,1,★Sgr6879
+1335,3,★Sgr6879
+1335,4,★Sgr6879
+1335,5,★Sgr6879
+1335,6,★Sgr6879
+1335,7,★Sgr6879
+1335,8,★Sgr6879
+1335,9,★Sgr6879
+1335,11,★Sgr6879
+1335,12,★Sgr6879
+1336,1,★Sgr6859
+1336,3,★Sgr6859
+1336,4,★Sgr6859
+1336,5,★Sgr6859
+1336,6,★Sgr6859
+1336,7,★Sgr6859
+1336,8,★Sgr6859
+1336,9,★Sgr6859
+1336,11,★Sgr6859
+1336,12,★Sgr6859
+1337,1,★Sgr6913
+1337,3,★Sgr6913
+1337,4,★Sgr6913
+1337,5,★Sgr6913
+1337,6,★Sgr6913
+1337,7,★Sgr6913
+1337,8,★Sgr6913
+1337,9,★Sgr6913
+1337,11,★Sgr6913
+1337,12,★Sgr6913
+1338,1,★Sgr7348
+1338,3,★Sgr7348
+1338,4,★Sgr7348
+1338,5,★Sgr7348
+1338,6,★Sgr7348
+1338,7,★Sgr7348
+1338,8,★Sgr7348
+1338,9,★Sgr7348
+1338,11,★Sgr7348
+1338,12,★Sgr7348
+1339,1,★Sgr7121
+1339,3,★Sgr7121
+1339,4,★Sgr7121
+1339,5,★Sgr7121
+1339,6,★Sgr7121
+1339,7,★Sgr7121
+1339,8,★Sgr7121
+1339,9,★Sgr7121
+1339,11,★Sgr7121
+1339,12,★Sgr7121
+1340,1,★Sgr6746
+1340,3,★Sgr6746
+1340,4,★Sgr6746
+1340,5,★Sgr6746
+1340,6,★Sgr6746
+1340,7,★Sgr6746
+1340,8,★Sgr6746
+1340,9,★Sgr6746
+1340,11,★Sgr6746
+1340,12,★Sgr6746
+1341,1,★Sgr7194
+1341,3,★Sgr7194
+1341,4,★Sgr7194
+1341,5,★Sgr7194
+1341,6,★Sgr7194
+1341,7,★Sgr7194
+1341,8,★Sgr7194
+1341,9,★Sgr7194
+1341,11,★Sgr7194
+1341,12,★Sgr7194
+1342,1,★Sgr7337
+1342,3,★Sgr7337
+1342,4,★Sgr7337
+1342,5,★Sgr7337
+1342,6,★Sgr7337
+1342,7,★Sgr7337
+1342,8,★Sgr7337
+1342,9,★Sgr7337
+1342,11,★Sgr7337
+1342,12,★Sgr7337
+1343,1,★Sgr7343
+1343,3,★Sgr7343
+1343,4,★Sgr7343
+1343,5,★Sgr7343
+1343,6,★Sgr7343
+1343,7,★Sgr7343
+1343,8,★Sgr7343
+1343,9,★Sgr7343
+1343,11,★Sgr7343
+1343,12,★Sgr7343
+1344,1,★Sgr6812
+1344,3,★Sgr6812
+1344,4,★Sgr6812
+1344,5,★Sgr6812
+1344,6,★Sgr6812
+1344,7,★Sgr6812
+1344,8,★Sgr6812
+1344,9,★Sgr6812
+1344,11,★Sgr6812
+1344,12,★Sgr6812
+1345,1,★Sgr7116
+1345,3,★Sgr7116
+1345,4,★Sgr7116
+1345,5,★Sgr7116
+1345,6,★Sgr7116
+1345,7,★Sgr7116
+1345,8,★Sgr7116
+1345,9,★Sgr7116
+1345,11,★Sgr7116
+1345,12,★Sgr7116
+1346,1,★Sgr7264
+1346,3,★Sgr7264
+1346,4,★Sgr7264
+1346,5,★Sgr7264
+1346,6,★Sgr7264
+1346,7,★Sgr7264
+1346,8,★Sgr7264
+1346,9,★Sgr7264
+1346,11,★Sgr7264
+1346,12,★Sgr7264
+1347,1,★Sgr7597
+1347,3,★Sgr7597
+1347,4,★Sgr7597
+1347,5,★Sgr7597
+1347,6,★Sgr7597
+1347,7,★Sgr7597
+1347,8,★Sgr7597
+1347,9,★Sgr7597
+1347,11,★Sgr7597
+1347,12,★Sgr7597
+1348,1,★Del7882
+1348,3,★Del7882
+1348,4,★Del7882
+1348,5,★Del7882
+1348,6,★Del7882
+1348,7,★Del7882
+1348,8,★Del7882
+1348,9,★Del7882
+1348,11,★Del7882
+1348,12,★Del7882
+1349,1,★Del7906
+1349,3,★Del7906
+1349,4,★Del7906
+1349,5,★Del7906
+1349,6,★Del7906
+1349,7,★Del7906
+1349,8,★Del7906
+1349,9,★Del7906
+1349,11,★Del7906
+1349,12,★Del7906
+1350,1,★Del7852
+1350,3,★Del7852
+1350,4,★Del7852
+1350,5,★Del7852
+1350,6,★Del7852
+1350,7,★Del7852
+1350,8,★Del7852
+1350,9,★Del7852
+1350,11,★Del7852
+1350,12,★Del7852
+1351,1,★Psc596
+1351,3,★Psc596
+1351,4,★Psc596
+1351,5,★Psc596
+1351,6,★Psc596
+1351,7,★Psc596
+1351,8,★Psc596
+1351,9,★Psc596
+1351,11,★Psc596
+1351,12,★Psc596
+1352,1,★Psc361
+1352,3,★Psc361
+1352,4,★Psc361
+1352,5,★Psc361
+1352,6,★Psc361
+1352,7,★Psc361
+1352,8,★Psc361
+1352,9,★Psc361
+1352,11,★Psc361
+1352,12,★Psc361
+1353,1,★Psc510
+1353,3,★Psc510
+1353,4,★Psc510
+1353,5,★Psc510
+1353,6,★Psc510
+1353,7,★Psc510
+1353,8,★Psc510
+1353,9,★Psc510
+1353,11,★Psc510
+1353,12,★Psc510
+1354,1,★Psc437
+1354,3,★Psc437
+1354,4,★Psc437
+1354,5,★Psc437
+1354,6,★Psc437
+1354,7,★Psc437
+1354,8,★Psc437
+1354,9,★Psc437
+1354,11,★Psc437
+1354,12,★Psc437
+1355,1,★Psc8773
+1355,3,★Psc8773
+1355,4,★Psc8773
+1355,5,★Psc8773
+1355,6,★Psc8773
+1355,7,★Psc8773
+1355,8,★Psc8773
+1355,9,★Psc8773
+1355,11,★Psc8773
+1355,12,★Psc8773
+1356,1,★Lep1865
+1356,3,★Lep1865
+1356,4,★Lep1865
+1356,5,★Lep1865
+1356,6,★Lep1865
+1356,7,★Lep1865
+1356,8,★Lep1865
+1356,9,★Lep1865
+1356,11,★Lep1865
+1356,12,★Lep1865
+1357,1,★Lep1829
+1357,3,★Lep1829
+1357,4,★Lep1829
+1357,5,★Lep1829
+1357,6,★Lep1829
+1357,7,★Lep1829
+1357,8,★Lep1829
+1357,9,★Lep1829
+1357,11,★Lep1829
+1357,12,★Lep1829
+1358,1,★Boo5340
+1358,3,★Boo5340
+1358,4,★Boo5340
+1358,5,★Boo5340
+1358,6,★Boo5340
+1358,7,★Boo5340
+1358,8,★Boo5340
+1358,9,★Boo5340
+1358,11,★Boo5340
+1358,12,★Boo5340
+1359,1,★Boo5506
+1359,3,★Boo5506
+1359,4,★Boo5506
+1359,5,★Boo5506
+1359,6,★Boo5506
+1359,7,★Boo5506
+1359,8,★Boo5506
+1359,9,★Boo5506
+1359,11,★Boo5506
+1359,12,★Boo5506
+1360,1,★Boo5435
+1360,3,★Boo5435
+1360,4,★Boo5435
+1360,5,★Boo5435
+1360,6,★Boo5435
+1360,7,★Boo5435
+1360,8,★Boo5435
+1360,9,★Boo5435
+1360,11,★Boo5435
+1360,12,★Boo5435
+1361,1,★Boo5602
+1361,3,★Boo5602
+1361,4,★Boo5602
+1361,5,★Boo5602
+1361,6,★Boo5602
+1361,7,★Boo5602
+1361,8,★Boo5602
+1361,9,★Boo5602
+1361,11,★Boo5602
+1361,12,★Boo5602
+1362,1,★Boo5733
+1362,3,★Boo5733
+1362,4,★Boo5733
+1362,5,★Boo5733
+1362,6,★Boo5733
+1362,7,★Boo5733
+1362,8,★Boo5733
+1362,9,★Boo5733
+1362,11,★Boo5733
+1362,12,★Boo5733
+1363,1,★Boo5235
+1363,3,★Boo5235
+1363,4,★Boo5235
+1363,5,★Boo5235
+1363,6,★Boo5235
+1363,7,★Boo5235
+1363,8,★Boo5235
+1363,9,★Boo5235
+1363,11,★Boo5235
+1363,12,★Boo5235
+1364,1,★Boo5351
+1364,3,★Boo5351
+1364,4,★Boo5351
+1364,5,★Boo5351
+1364,6,★Boo5351
+1364,7,★Boo5351
+1364,8,★Boo5351
+1364,9,★Boo5351
+1364,11,★Boo5351
+1364,12,★Boo5351
+1365,1,★Hya3748
+1365,3,★Hya3748
+1365,4,★Hya3748
+1365,5,★Hya3748
+1365,6,★Hya3748
+1365,7,★Hya3748
+1365,8,★Hya3748
+1365,9,★Hya3748
+1365,11,★Hya3748
+1365,12,★Hya3748
+1366,1,★Hya3903
+1366,3,★Hya3903
+1366,4,★Hya3903
+1366,5,★Hya3903
+1366,6,★Hya3903
+1366,7,★Hya3903
+1366,8,★Hya3903
+1366,9,★Hya3903
+1366,11,★Hya3903
+1366,12,★Hya3903
+1367,1,★Hya3418
+1367,3,★Hya3418
+1367,4,★Hya3418
+1367,5,★Hya3418
+1367,6,★Hya3418
+1367,7,★Hya3418
+1367,8,★Hya3418
+1367,9,★Hya3418
+1367,11,★Hya3418
+1367,12,★Hya3418
+1368,1,★Hya3482
+1368,3,★Hya3482
+1368,4,★Hya3482
+1368,5,★Hya3482
+1368,6,★Hya3482
+1368,7,★Hya3482
+1368,8,★Hya3482
+1368,9,★Hya3482
+1368,11,★Hya3482
+1368,12,★Hya3482
+1369,1,★Hya3845
+1369,3,★Hya3845
+1369,4,★Hya3845
+1369,5,★Hya3845
+1369,6,★Hya3845
+1369,7,★Hya3845
+1369,8,★Hya3845
+1369,9,★Hya3845
+1369,11,★Hya3845
+1369,12,★Hya3845
+1370,1,★Eri1084
+1370,3,★Eri1084
+1370,4,★Eri1084
+1370,5,★Eri1084
+1370,6,★Eri1084
+1370,7,★Eri1084
+1370,8,★Eri1084
+1370,9,★Eri1084
+1370,11,★Eri1084
+1370,12,★Eri1084
+1371,1,★Eri472
+1371,3,★Eri472
+1371,4,★Eri472
+1371,5,★Eri472
+1371,6,★Eri472
+1371,7,★Eri472
+1371,8,★Eri472
+1371,9,★Eri472
+1371,11,★Eri472
+1371,12,★Eri472
+1372,1,★Eri1666
+1372,3,★Eri1666
+1372,4,★Eri1666
+1372,5,★Eri1666
+1372,6,★Eri1666
+1372,7,★Eri1666
+1372,8,★Eri1666
+1372,9,★Eri1666
+1372,11,★Eri1666
+1372,12,★Eri1666
+1373,1,★Eri897
+1373,3,★Eri897
+1373,4,★Eri897
+1373,5,★Eri897
+1373,6,★Eri897
+1373,7,★Eri897
+1373,8,★Eri897
+1373,9,★Eri897
+1373,11,★Eri897
+1373,12,★Eri897
+1374,1,★Eri1231
+1374,3,★Eri1231
+1374,4,★Eri1231
+1374,5,★Eri1231
+1374,6,★Eri1231
+1374,7,★Eri1231
+1374,8,★Eri1231
+1374,9,★Eri1231
+1374,11,★Eri1231
+1374,12,★Eri1231
+1375,1,★Eri874
+1375,3,★Eri874
+1375,4,★Eri874
+1375,5,★Eri874
+1375,6,★Eri874
+1375,7,★Eri874
+1375,8,★Eri874
+1375,9,★Eri874
+1375,11,★Eri874
+1375,12,★Eri874
+1376,1,★Eri1298
+1376,3,★Eri1298
+1376,4,★Eri1298
+1376,5,★Eri1298
+1376,6,★Eri1298
+1376,7,★Eri1298
+1376,8,★Eri1298
+1376,9,★Eri1298
+1376,11,★Eri1298
+1376,12,★Eri1298
+1377,1,★Eri1325
+1377,3,★Eri1325
+1377,4,★Eri1325
+1377,5,★Eri1325
+1377,6,★Eri1325
+1377,7,★Eri1325
+1377,8,★Eri1325
+1377,9,★Eri1325
+1377,11,★Eri1325
+1377,12,★Eri1325
+1378,1,★Eri984
+1378,3,★Eri984
+1378,4,★Eri984
+1378,5,★Eri984
+1378,6,★Eri984
+1378,7,★Eri984
+1378,8,★Eri984
+1378,9,★Eri984
+1378,11,★Eri984
+1378,12,★Eri984
+1379,1,★Eri1464
+1379,3,★Eri1464
+1379,4,★Eri1464
+1379,5,★Eri1464
+1379,6,★Eri1464
+1379,7,★Eri1464
+1379,8,★Eri1464
+1379,9,★Eri1464
+1379,11,★Eri1464
+1379,12,★Eri1464
+1380,1,★Eri1393
+1380,3,★Eri1393
+1380,4,★Eri1393
+1380,5,★Eri1393
+1380,6,★Eri1393
+1380,7,★Eri1393
+1380,8,★Eri1393
+1380,9,★Eri1393
+1380,11,★Eri1393
+1380,12,★Eri1393
+1381,1,★Eri850
+1381,3,★Eri850
+1381,4,★Eri850
+1381,5,★Eri850
+1381,6,★Eri850
+1381,7,★Eri850
+1381,8,★Eri850
+1381,9,★Eri850
+1381,11,★Eri850
+1381,12,★Eri850
+1382,1,★Tau1409
+1382,3,★Tau1409
+1382,4,★Tau1409
+1382,5,★Tau1409
+1382,6,★Tau1409
+1382,7,★Tau1409
+1382,8,★Tau1409
+1382,9,★Tau1409
+1382,11,★Tau1409
+1382,12,★Tau1409
+1383,1,★Tau1457
+1383,3,★Tau1457
+1383,4,★Tau1457
+1383,5,★Tau1457
+1383,6,★Tau1457
+1383,7,★Tau1457
+1383,8,★Tau1457
+1383,9,★Tau1457
+1383,11,★Tau1457
+1383,12,★Tau1457
+1384,1,★Tau1165
+1384,3,★Tau1165
+1384,4,★Tau1165
+1384,5,★Tau1165
+1384,6,★Tau1165
+1384,7,★Tau1165
+1384,8,★Tau1165
+1384,9,★Tau1165
+1384,11,★Tau1165
+1384,12,★Tau1165
+1385,1,★Tau1791
+1385,3,★Tau1791
+1385,4,★Tau1791
+1385,5,★Tau1791
+1385,6,★Tau1791
+1385,7,★Tau1791
+1385,8,★Tau1791
+1385,9,★Tau1791
+1385,11,★Tau1791
+1385,12,★Tau1791
+1386,1,★Tau1910
+1386,3,★Tau1910
+1386,4,★Tau1910
+1386,5,★Tau1910
+1386,6,★Tau1910
+1386,7,★Tau1910
+1386,8,★Tau1910
+1386,9,★Tau1910
+1386,11,★Tau1910
+1386,12,★Tau1910
+1387,1,★Tau1346
+1387,3,★Tau1346
+1387,4,★Tau1346
+1387,5,★Tau1346
+1387,6,★Tau1346
+1387,7,★Tau1346
+1387,8,★Tau1346
+1387,9,★Tau1346
+1387,11,★Tau1346
+1387,12,★Tau1346
+1388,1,★Tau1373
+1388,3,★Tau1373
+1388,4,★Tau1373
+1388,5,★Tau1373
+1388,6,★Tau1373
+1388,7,★Tau1373
+1388,8,★Tau1373
+1388,9,★Tau1373
+1388,11,★Tau1373
+1388,12,★Tau1373
+1389,1,★Tau1412
+1389,3,★Tau1412
+1389,4,★Tau1412
+1389,5,★Tau1412
+1389,6,★Tau1412
+1389,7,★Tau1412
+1389,8,★Tau1412
+1389,9,★Tau1412
+1389,11,★Tau1412
+1389,12,★Tau1412
+1390,1,★CMa2491
+1390,3,★CMa2491
+1390,4,★CMa2491
+1390,5,★CMa2491
+1390,6,★CMa2491
+1390,7,★CMa2491
+1390,8,★CMa2491
+1390,9,★CMa2491
+1390,11,★CMa2491
+1390,12,★CMa2491
+1391,1,★CMa2693
+1391,3,★CMa2693
+1391,4,★CMa2693
+1391,5,★CMa2693
+1391,6,★CMa2693
+1391,7,★CMa2693
+1391,8,★CMa2693
+1391,9,★CMa2693
+1391,11,★CMa2693
+1391,12,★CMa2693
+1392,1,★CMa2294
+1392,3,★CMa2294
+1392,4,★CMa2294
+1392,5,★CMa2294
+1392,6,★CMa2294
+1392,7,★CMa2294
+1392,8,★CMa2294
+1392,9,★CMa2294
+1392,11,★CMa2294
+1392,12,★CMa2294
+1393,1,★CMa2827
+1393,3,★CMa2827
+1393,4,★CMa2827
+1393,5,★CMa2827
+1393,6,★CMa2827
+1393,7,★CMa2827
+1393,8,★CMa2827
+1393,9,★CMa2827
+1393,11,★CMa2827
+1393,12,★CMa2827
+1394,1,★CMa2282
+1394,3,★CMa2282
+1394,4,★CMa2282
+1394,5,★CMa2282
+1394,6,★CMa2282
+1394,7,★CMa2282
+1394,8,★CMa2282
+1394,9,★CMa2282
+1394,11,★CMa2282
+1394,12,★CMa2282
+1395,1,★CMa2618
+1395,3,★CMa2618
+1395,4,★CMa2618
+1395,5,★CMa2618
+1395,6,★CMa2618
+1395,7,★CMa2618
+1395,8,★CMa2618
+1395,9,★CMa2618
+1395,11,★CMa2618
+1395,12,★CMa2618
+1396,1,★CMa2657
+1396,3,★CMa2657
+1396,4,★CMa2657
+1396,5,★CMa2657
+1396,6,★CMa2657
+1396,7,★CMa2657
+1396,8,★CMa2657
+1396,9,★CMa2657
+1396,11,★CMa2657
+1396,12,★CMa2657
+1397,1,★CMa2646
+1397,3,★CMa2646
+1397,4,★CMa2646
+1397,5,★CMa2646
+1397,6,★CMa2646
+1397,7,★CMa2646
+1397,8,★CMa2646
+1397,9,★CMa2646
+1397,11,★CMa2646
+1397,12,★CMa2646
+1398,1,★UMa4905
+1398,3,★UMa4905
+1398,4,★UMa4905
+1398,5,★UMa4905
+1398,6,★UMa4905
+1398,7,★UMa4905
+1398,8,★UMa4905
+1398,9,★UMa4905
+1398,11,★UMa4905
+1398,12,★UMa4905
+1399,1,★UMa4301
+1399,3,★UMa4301
+1399,4,★UMa4301
+1399,5,★UMa4301
+1399,6,★UMa4301
+1399,7,★UMa4301
+1399,8,★UMa4301
+1399,9,★UMa4301
+1399,11,★UMa4301
+1399,12,★UMa4301
+1400,1,★UMa5191
+1400,3,★UMa5191
+1400,4,★UMa5191
+1400,5,★UMa5191
+1400,6,★UMa5191
+1400,7,★UMa5191
+1400,8,★UMa5191
+1400,9,★UMa5191
+1400,11,★UMa5191
+1400,12,★UMa5191
+1401,1,★UMa5054
+1401,3,★UMa5054
+1401,4,★UMa5054
+1401,5,★UMa5054
+1401,6,★UMa5054
+1401,7,★UMa5054
+1401,8,★UMa5054
+1401,9,★UMa5054
+1401,11,★UMa5054
+1401,12,★UMa5054
+1402,1,★UMa4295
+1402,3,★UMa4295
+1402,4,★UMa4295
+1402,5,★UMa4295
+1402,6,★UMa4295
+1402,7,★UMa4295
+1402,8,★UMa4295
+1402,9,★UMa4295
+1402,11,★UMa4295
+1402,12,★UMa4295
+1403,1,★UMa4660
+1403,3,★UMa4660
+1403,4,★UMa4660
+1403,5,★UMa4660
+1403,6,★UMa4660
+1403,7,★UMa4660
+1403,8,★UMa4660
+1403,9,★UMa4660
+1403,11,★UMa4660
+1403,12,★UMa4660
+1404,1,★UMa4554
+1404,3,★UMa4554
+1404,4,★UMa4554
+1404,5,★UMa4554
+1404,6,★UMa4554
+1404,7,★UMa4554
+1404,8,★UMa4554
+1404,9,★UMa4554
+1404,11,★UMa4554
+1404,12,★UMa4554
+1405,1,★UMa4069
+1405,3,★UMa4069
+1405,4,★UMa4069
+1405,5,★UMa4069
+1405,6,★UMa4069
+1405,7,★UMa4069
+1405,8,★UMa4069
+1405,9,★UMa4069
+1405,11,★UMa4069
+1405,12,★UMa4069
+1406,1,★UMa3569
+1406,3,★UMa3569
+1406,4,★UMa3569
+1406,5,★UMa3569
+1406,6,★UMa3569
+1406,7,★UMa3569
+1406,8,★UMa3569
+1406,9,★UMa3569
+1406,11,★UMa3569
+1406,12,★UMa3569
+1407,1,★UMa3323
+1407,3,★UMa3323
+1407,4,★UMa3323
+1407,5,★UMa3323
+1407,6,★UMa3323
+1407,7,★UMa3323
+1407,8,★UMa3323
+1407,9,★UMa3323
+1407,11,★UMa3323
+1407,12,★UMa3323
+1408,1,★UMa4033
+1408,3,★UMa4033
+1408,4,★UMa4033
+1408,5,★UMa4033
+1408,6,★UMa4033
+1408,7,★UMa4033
+1408,8,★UMa4033
+1408,9,★UMa4033
+1408,11,★UMa4033
+1408,12,★UMa4033
+1409,1,★UMa4377
+1409,3,★UMa4377
+1409,4,★UMa4377
+1409,5,★UMa4377
+1409,6,★UMa4377
+1409,7,★UMa4377
+1409,8,★UMa4377
+1409,9,★UMa4377
+1409,11,★UMa4377
+1409,12,★UMa4377
+1410,1,★UMa4375
+1410,3,★UMa4375
+1410,4,★UMa4375
+1410,5,★UMa4375
+1410,6,★UMa4375
+1410,7,★UMa4375
+1410,8,★UMa4375
+1410,9,★UMa4375
+1410,11,★UMa4375
+1410,12,★UMa4375
+1411,1,★UMa4518
+1411,3,★UMa4518
+1411,4,★UMa4518
+1411,5,★UMa4518
+1411,6,★UMa4518
+1411,7,★UMa4518
+1411,8,★UMa4518
+1411,9,★UMa4518
+1411,11,★UMa4518
+1411,12,★UMa4518
+1412,1,★UMa3594
+1412,3,★UMa3594
+1412,4,★UMa3594
+1412,5,★UMa3594
+1412,6,★UMa3594
+1412,7,★UMa3594
+1412,8,★UMa3594
+1412,9,★UMa3594
+1412,11,★UMa3594
+1412,12,★UMa3594
+1413,1,★Vir5056
+1413,3,★Vir5056
+1413,4,★Vir5056
+1413,5,★Vir5056
+1413,6,★Vir5056
+1413,7,★Vir5056
+1413,8,★Vir5056
+1413,9,★Vir5056
+1413,11,★Vir5056
+1413,12,★Vir5056
+1414,1,★Vir4825
+1414,3,★Vir4825
+1414,4,★Vir4825
+1414,5,★Vir4825
+1414,6,★Vir4825
+1414,7,★Vir4825
+1414,8,★Vir4825
+1414,9,★Vir4825
+1414,11,★Vir4825
+1414,12,★Vir4825
+1415,1,★Vir4932
+1415,3,★Vir4932
+1415,4,★Vir4932
+1415,5,★Vir4932
+1415,6,★Vir4932
+1415,7,★Vir4932
+1415,8,★Vir4932
+1415,9,★Vir4932
+1415,11,★Vir4932
+1415,12,★Vir4932
+1416,1,★Vir4540
+1416,3,★Vir4540
+1416,4,★Vir4540
+1416,5,★Vir4540
+1416,6,★Vir4540
+1416,7,★Vir4540
+1416,8,★Vir4540
+1416,9,★Vir4540
+1416,11,★Vir4540
+1416,12,★Vir4540
+1417,1,★Vir4689
+1417,3,★Vir4689
+1417,4,★Vir4689
+1417,5,★Vir4689
+1417,6,★Vir4689
+1417,7,★Vir4689
+1417,8,★Vir4689
+1417,9,★Vir4689
+1417,11,★Vir4689
+1417,12,★Vir4689
+1418,1,★Vir5338
+1418,3,★Vir5338
+1418,4,★Vir5338
+1418,5,★Vir5338
+1418,6,★Vir5338
+1418,7,★Vir5338
+1418,8,★Vir5338
+1418,9,★Vir5338
+1418,11,★Vir5338
+1418,12,★Vir5338
+1419,1,★Vir4910
+1419,3,★Vir4910
+1419,4,★Vir4910
+1419,5,★Vir4910
+1419,6,★Vir4910
+1419,7,★Vir4910
+1419,8,★Vir4910
+1419,9,★Vir4910
+1419,11,★Vir4910
+1419,12,★Vir4910
+1420,1,★Vir5315
+1420,3,★Vir5315
+1420,4,★Vir5315
+1420,5,★Vir5315
+1420,6,★Vir5315
+1420,7,★Vir5315
+1420,8,★Vir5315
+1420,9,★Vir5315
+1420,11,★Vir5315
+1420,12,★Vir5315
+1421,1,★Vir5359
+1421,3,★Vir5359
+1421,4,★Vir5359
+1421,5,★Vir5359
+1421,6,★Vir5359
+1421,7,★Vir5359
+1421,8,★Vir5359
+1421,9,★Vir5359
+1421,11,★Vir5359
+1421,12,★Vir5359
+1422,1,★Vir5409
+1422,3,★Vir5409
+1422,4,★Vir5409
+1422,5,★Vir5409
+1422,6,★Vir5409
+1422,7,★Vir5409
+1422,8,★Vir5409
+1422,9,★Vir5409
+1422,11,★Vir5409
+1422,12,★Vir5409
+1423,1,★Vir5107
+1423,3,★Vir5107
+1423,4,★Vir5107
+1423,5,★Vir5107
+1423,6,★Vir5107
+1423,7,★Vir5107
+1423,8,★Vir5107
+1423,9,★Vir5107
+1423,11,★Vir5107
+1423,12,★Vir5107
+1424,1,★Ari617
+1424,3,★Ari617
+1424,4,★Ari617
+1424,5,★Ari617
+1424,6,★Ari617
+1424,7,★Ari617
+1424,8,★Ari617
+1424,9,★Ari617
+1424,11,★Ari617
+1424,12,★Ari617
+1425,1,★Ari553
+1425,3,★Ari553
+1425,4,★Ari553
+1425,5,★Ari553
+1425,6,★Ari553
+1425,7,★Ari553
+1425,8,★Ari553
+1425,9,★Ari553
+1425,11,★Ari553
+1425,12,★Ari553
+1426,1,★Ari546
+1426,3,★Ari546
+1426,4,★Ari546
+1426,5,★Ari546
+1426,6,★Ari546
+1426,7,★Ari546
+1426,8,★Ari546
+1426,9,★Ari546
+1426,11,★Ari546
+1426,12,★Ari546
+1427,1,★Ari951
+1427,3,★Ari951
+1427,4,★Ari951
+1427,5,★Ari951
+1427,6,★Ari951
+1427,7,★Ari951
+1427,8,★Ari951
+1427,9,★Ari951
+1427,11,★Ari951
+1427,12,★Ari951
+1428,1,★Ori1713
+1428,3,★Ori1713
+1428,4,★Ori1713
+1428,5,★Ori1713
+1428,6,★Ori1713
+1428,7,★Ori1713
+1428,8,★Ori1713
+1428,9,★Ori1713
+1428,11,★Ori1713
+1428,12,★Ori1713
+1429,1,★Ori2061
+1429,3,★Ori2061
+1429,4,★Ori2061
+1429,5,★Ori2061
+1429,6,★Ori2061
+1429,7,★Ori2061
+1429,8,★Ori2061
+1429,9,★Ori2061
+1429,11,★Ori2061
+1429,12,★Ori2061
+1430,1,★Ori1790
+1430,3,★Ori1790
+1430,4,★Ori1790
+1430,5,★Ori1790
+1430,6,★Ori1790
+1430,7,★Ori1790
+1430,8,★Ori1790
+1430,9,★Ori1790
+1430,11,★Ori1790
+1430,12,★Ori1790
+1431,1,★Ori1903
+1431,3,★Ori1903
+1431,4,★Ori1903
+1431,5,★Ori1903
+1431,6,★Ori1903
+1431,7,★Ori1903
+1431,8,★Ori1903
+1431,9,★Ori1903
+1431,11,★Ori1903
+1431,12,★Ori1903
+1432,1,★Ori1948
+1432,3,★Ori1948
+1432,4,★Ori1948
+1432,5,★Ori1948
+1432,6,★Ori1948
+1432,7,★Ori1948
+1432,8,★Ori1948
+1432,9,★Ori1948
+1432,11,★Ori1948
+1432,12,★Ori1948
+1433,1,★Ori2004
+1433,3,★Ori2004
+1433,4,★Ori2004
+1433,5,★Ori2004
+1433,6,★Ori2004
+1433,7,★Ori2004
+1433,8,★Ori2004
+1433,9,★Ori2004
+1433,11,★Ori2004
+1433,12,★Ori2004
+1434,1,★Ori1852
+1434,3,★Ori1852
+1434,4,★Ori1852
+1434,5,★Ori1852
+1434,6,★Ori1852
+1434,7,★Ori1852
+1434,8,★Ori1852
+1434,9,★Ori1852
+1434,11,★Ori1852
+1434,12,★Ori1852
+1435,1,★Ori1879
+1435,3,★Ori1879
+1435,4,★Ori1879
+1435,5,★Ori1879
+1435,6,★Ori1879
+1435,7,★Ori1879
+1435,8,★Ori1879
+1435,9,★Ori1879
+1435,11,★Ori1879
+1435,12,★Ori1879
+1436,1,★Ori1899
+1436,3,★Ori1899
+1436,4,★Ori1899
+1436,5,★Ori1899
+1436,6,★Ori1899
+1436,7,★Ori1899
+1436,8,★Ori1899
+1436,9,★Ori1899
+1436,11,★Ori1899
+1436,12,★Ori1899
+1437,1,★Ori1543
+1437,3,★Ori1543
+1437,4,★Ori1543
+1437,5,★Ori1543
+1437,6,★Ori1543
+1437,7,★Ori1543
+1437,8,★Ori1543
+1437,9,★Ori1543
+1437,11,★Ori1543
+1437,12,★Ori1543
+1438,1,★Cas21
+1438,3,★Cas21
+1438,4,★Cas21
+1438,5,★Cas21
+1438,6,★Cas21
+1438,7,★Cas21
+1438,8,★Cas21
+1438,9,★Cas21
+1438,11,★Cas21
+1438,12,★Cas21
+1439,1,★Cas168
+1439,3,★Cas168
+1439,4,★Cas168
+1439,5,★Cas168
+1439,6,★Cas168
+1439,7,★Cas168
+1439,8,★Cas168
+1439,9,★Cas168
+1439,11,★Cas168
+1439,12,★Cas168
+1440,1,★Cas403
+1440,3,★Cas403
+1440,4,★Cas403
+1440,5,★Cas403
+1440,6,★Cas403
+1440,7,★Cas403
+1440,8,★Cas403
+1440,9,★Cas403
+1440,11,★Cas403
+1440,12,★Cas403
+1441,1,★Cas153
+1441,3,★Cas153
+1441,4,★Cas153
+1441,5,★Cas153
+1441,6,★Cas153
+1441,7,★Cas153
+1441,8,★Cas153
+1441,9,★Cas153
+1441,11,★Cas153
+1441,12,★Cas153
+1442,1,★Cas542
+1442,3,★Cas542
+1442,4,★Cas542
+1442,5,★Cas542
+1442,6,★Cas542
+1442,7,★Cas542
+1442,8,★Cas542
+1442,9,★Cas542
+1442,11,★Cas542
+1442,12,★Cas542
+1443,1,★Cas219
+1443,3,★Cas219
+1443,4,★Cas219
+1443,5,★Cas219
+1443,6,★Cas219
+1443,7,★Cas219
+1443,8,★Cas219
+1443,9,★Cas219
+1443,11,★Cas219
+1443,12,★Cas219
+1444,1,★Cas265
+1444,3,★Cas265
+1444,4,★Cas265
+1444,5,★Cas265
+1444,6,★Cas265
+1444,7,★Cas265
+1444,8,★Cas265
+1444,9,★Cas265
+1444,11,★Cas265
+1444,12,★Cas265
+1445,1,★Cnc3572
+1445,3,★Cnc3572
+1445,4,★Cnc3572
+1445,5,★Cnc3572
+1445,6,★Cnc3572
+1445,7,★Cnc3572
+1445,8,★Cnc3572
+1445,9,★Cnc3572
+1445,11,★Cnc3572
+1445,12,★Cnc3572
+1446,1,★Cnc3208
+1446,3,★Cnc3208
+1446,4,★Cnc3208
+1446,5,★Cnc3208
+1446,6,★Cnc3208
+1446,7,★Cnc3208
+1446,8,★Cnc3208
+1446,9,★Cnc3208
+1446,11,★Cnc3208
+1446,12,★Cnc3208
+1447,1,★Cnc3461
+1447,3,★Cnc3461
+1447,4,★Cnc3461
+1447,5,★Cnc3461
+1447,6,★Cnc3461
+1447,7,★Cnc3461
+1447,8,★Cnc3461
+1447,9,★Cnc3461
+1447,11,★Cnc3461
+1447,12,★Cnc3461
+1448,1,★Cnc3449
+1448,3,★Cnc3449
+1448,4,★Cnc3449
+1448,5,★Cnc3449
+1448,6,★Cnc3449
+1448,7,★Cnc3449
+1448,8,★Cnc3449
+1448,9,★Cnc3449
+1448,11,★Cnc3449
+1448,12,★Cnc3449
+1449,1,★Cnc3429
+1449,3,★Cnc3429
+1449,4,★Cnc3429
+1449,5,★Cnc3429
+1449,6,★Cnc3429
+1449,7,★Cnc3429
+1449,8,★Cnc3429
+1449,9,★Cnc3429
+1449,11,★Cnc3429
+1449,12,★Cnc3429
+1450,1,★Cnc3627
+1450,3,★Cnc3627
+1450,4,★Cnc3627
+1450,5,★Cnc3627
+1450,6,★Cnc3627
+1450,7,★Cnc3627
+1450,8,★Cnc3627
+1450,9,★Cnc3627
+1450,11,★Cnc3627
+1450,12,★Cnc3627
+1451,1,★Cnc3268
+1451,3,★Cnc3268
+1451,4,★Cnc3268
+1451,5,★Cnc3268
+1451,6,★Cnc3268
+1451,7,★Cnc3268
+1451,8,★Cnc3268
+1451,9,★Cnc3268
+1451,11,★Cnc3268
+1451,12,★Cnc3268
+1452,1,★Cnc3249
+1452,3,★Cnc3249
+1452,4,★Cnc3249
+1452,5,★Cnc3249
+1452,6,★Cnc3249
+1452,7,★Cnc3249
+1452,8,★Cnc3249
+1452,9,★Cnc3249
+1452,11,★Cnc3249
+1452,12,★Cnc3249
+1453,1,★Com4968
+1453,3,★Com4968
+1453,4,★Com4968
+1453,5,★Com4968
+1453,6,★Com4968
+1453,7,★Com4968
+1453,8,★Com4968
+1453,9,★Com4968
+1453,11,★Com4968
+1453,12,★Com4968
+1454,1,★Crv4757
+1454,3,★Crv4757
+1454,4,★Crv4757
+1454,5,★Crv4757
+1454,6,★Crv4757
+1454,7,★Crv4757
+1454,8,★Crv4757
+1454,9,★Crv4757
+1454,11,★Crv4757
+1454,12,★Crv4757
+1455,1,★Crv4623
+1455,3,★Crv4623
+1455,4,★Crv4623
+1455,5,★Crv4623
+1455,6,★Crv4623
+1455,7,★Crv4623
+1455,8,★Crv4623
+1455,9,★Crv4623
+1455,11,★Crv4623
+1455,12,★Crv4623
+1456,1,★Crv4662
+1456,3,★Crv4662
+1456,4,★Crv4662
+1456,5,★Crv4662
+1456,6,★Crv4662
+1456,7,★Crv4662
+1456,8,★Crv4662
+1456,9,★Crv4662
+1456,11,★Crv4662
+1456,12,★Crv4662
+1457,1,★Crv4786
+1457,3,★Crv4786
+1457,4,★Crv4786
+1457,5,★Crv4786
+1457,6,★Crv4786
+1457,7,★Crv4786
+1457,8,★Crv4786
+1457,9,★Crv4786
+1457,11,★Crv4786
+1457,12,★Crv4786
+1458,1,★Aur1708
+1458,3,★Aur1708
+1458,4,★Aur1708
+1458,5,★Aur1708
+1458,6,★Aur1708
+1458,7,★Aur1708
+1458,8,★Aur1708
+1458,9,★Aur1708
+1458,11,★Aur1708
+1458,12,★Aur1708
+1459,1,★Aur2088
+1459,3,★Aur2088
+1459,4,★Aur2088
+1459,5,★Aur2088
+1459,6,★Aur2088
+1459,7,★Aur2088
+1459,8,★Aur2088
+1459,9,★Aur2088
+1459,11,★Aur2088
+1459,12,★Aur2088
+1460,1,★Aur1605
+1460,3,★Aur1605
+1460,4,★Aur1605
+1460,5,★Aur1605
+1460,6,★Aur1605
+1460,7,★Aur1605
+1460,8,★Aur1605
+1460,9,★Aur1605
+1460,11,★Aur1605
+1460,12,★Aur1605
+1461,1,★Aur2095
+1461,3,★Aur2095
+1461,4,★Aur2095
+1461,5,★Aur2095
+1461,6,★Aur2095
+1461,7,★Aur2095
+1461,8,★Aur2095
+1461,9,★Aur2095
+1461,11,★Aur2095
+1461,12,★Aur2095
+1462,1,★Aur1577
+1462,3,★Aur1577
+1462,4,★Aur1577
+1462,5,★Aur1577
+1462,6,★Aur1577
+1462,7,★Aur1577
+1462,8,★Aur1577
+1462,9,★Aur1577
+1462,11,★Aur1577
+1462,12,★Aur1577
+1463,1,★Aur1641
+1463,3,★Aur1641
+1463,4,★Aur1641
+1463,5,★Aur1641
+1463,6,★Aur1641
+1463,7,★Aur1641
+1463,8,★Aur1641
+1463,9,★Aur1641
+1463,11,★Aur1641
+1463,12,★Aur1641
+1464,1,★Aur1612
+1464,3,★Aur1612
+1464,4,★Aur1612
+1464,5,★Aur1612
+1464,6,★Aur1612
+1464,7,★Aur1612
+1464,8,★Aur1612
+1464,9,★Aur1612
+1464,11,★Aur1612
+1464,12,★Aur1612
+1465,1,★Pav7790
+1465,3,★Pav7790
+1465,4,★Pav7790
+1465,5,★Pav7790
+1465,6,★Pav7790
+1465,7,★Pav7790
+1465,8,★Pav7790
+1465,9,★Pav7790
+1465,11,★Pav7790
+1465,12,★Pav7790
+1466,1,★Cet911
+1466,3,★Cet911
+1466,4,★Cet911
+1466,5,★Cet911
+1466,6,★Cet911
+1466,7,★Cet911
+1466,8,★Cet911
+1466,9,★Cet911
+1466,11,★Cet911
+1466,12,★Cet911
+1467,1,★Cet681
+1467,3,★Cet681
+1467,4,★Cet681
+1467,5,★Cet681
+1467,6,★Cet681
+1467,7,★Cet681
+1467,8,★Cet681
+1467,9,★Cet681
+1467,11,★Cet681
+1467,12,★Cet681
+1468,1,★Cet188
+1468,3,★Cet188
+1468,4,★Cet188
+1468,5,★Cet188
+1468,6,★Cet188
+1468,7,★Cet188
+1468,8,★Cet188
+1468,9,★Cet188
+1468,11,★Cet188
+1468,12,★Cet188
+1469,1,★Cet539
+1469,3,★Cet539
+1469,4,★Cet539
+1469,5,★Cet539
+1469,6,★Cet539
+1469,7,★Cet539
+1469,8,★Cet539
+1469,9,★Cet539
+1469,11,★Cet539
+1469,12,★Cet539
+1470,1,★Cet804
+1470,3,★Cet804
+1470,4,★Cet804
+1470,5,★Cet804
+1470,6,★Cet804
+1470,7,★Cet804
+1470,8,★Cet804
+1470,9,★Cet804
+1470,11,★Cet804
+1470,12,★Cet804
+1471,1,★Cep8974
+1471,3,★Cep8974
+1471,4,★Cep8974
+1471,5,★Cep8974
+1471,6,★Cep8974
+1471,7,★Cep8974
+1471,8,★Cep8974
+1471,9,★Cep8974
+1471,11,★Cep8974
+1471,12,★Cep8974
+1472,1,★Cep8162
+1472,3,★Cep8162
+1472,4,★Cep8162
+1472,5,★Cep8162
+1472,6,★Cep8162
+1472,7,★Cep8162
+1472,8,★Cep8162
+1472,9,★Cep8162
+1472,11,★Cep8162
+1472,12,★Cep8162
+1473,1,★Cep8238
+1473,3,★Cep8238
+1473,4,★Cep8238
+1473,5,★Cep8238
+1473,6,★Cep8238
+1473,7,★Cep8238
+1473,8,★Cep8238
+1473,9,★Cep8238
+1473,11,★Cep8238
+1473,12,★Cep8238
+1474,1,★Cep8417
+1474,3,★Cep8417
+1474,4,★Cep8417
+1474,5,★Cep8417
+1474,6,★Cep8417
+1474,7,★Cep8417
+1474,8,★Cep8417
+1474,9,★Cep8417
+1474,11,★Cep8417
+1474,12,★Cep8417
+1475,1,★Cen5267
+1475,3,★Cen5267
+1475,4,★Cen5267
+1475,5,★Cen5267
+1475,6,★Cen5267
+1475,7,★Cen5267
+1475,8,★Cen5267
+1475,9,★Cen5267
+1475,11,★Cen5267
+1475,12,★Cen5267
+1476,1,★Cen5288
+1476,3,★Cen5288
+1476,4,★Cen5288
+1476,5,★Cen5288
+1476,6,★Cen5288
+1476,7,★Cen5288
+1476,8,★Cen5288
+1476,9,★Cen5288
+1476,11,★Cen5288
+1476,12,★Cen5288
+1477,1,★Cen551
+1477,3,★Cen551
+1477,4,★Cen551
+1477,5,★Cen551
+1477,6,★Cen551
+1477,7,★Cen551
+1477,8,★Cen551
+1477,9,★Cen551
+1477,11,★Cen551
+1477,12,★Cen551
+1478,1,★Cen5459
+1478,3,★Cen5459
+1478,4,★Cen5459
+1478,5,★Cen5459
+1478,6,★Cen5459
+1478,7,★Cen5459
+1478,8,★Cen5459
+1478,9,★Cen5459
+1478,11,★Cen5459
+1478,12,★Cen5459
+1479,1,★Cen5460
+1479,3,★Cen5460
+1479,4,★Cen5460
+1479,5,★Cen5460
+1479,6,★Cen5460
+1479,7,★Cen5460
+1479,8,★Cen5460
+1479,9,★Cen5460
+1479,11,★Cen5460
+1479,12,★Cen5460
+1480,1,★CMi2943
+1480,3,★CMi2943
+1480,4,★CMi2943
+1480,5,★CMi2943
+1480,6,★CMi2943
+1480,7,★CMi2943
+1480,8,★CMi2943
+1480,9,★CMi2943
+1480,11,★CMi2943
+1480,12,★CMi2943
+1481,1,★CMi2845
+1481,3,★CMi2845
+1481,4,★CMi2845
+1481,5,★CMi2845
+1481,6,★CMi2845
+1481,7,★CMi2845
+1481,8,★CMi2845
+1481,9,★CMi2845
+1481,11,★CMi2845
+1481,12,★CMi2845
+1482,1,★Equ8131
+1482,3,★Equ8131
+1482,4,★Equ8131
+1482,5,★Equ8131
+1482,6,★Equ8131
+1482,7,★Equ8131
+1482,8,★Equ8131
+1482,9,★Equ8131
+1482,11,★Equ8131
+1482,12,★Equ8131
+1483,1,★Vul7405
+1483,3,★Vul7405
+1483,4,★Vul7405
+1483,5,★Vul7405
+1483,6,★Vul7405
+1483,7,★Vul7405
+1483,8,★Vul7405
+1483,9,★Vul7405
+1483,11,★Vul7405
+1483,12,★Vul7405
+1484,1,★UMi424
+1484,3,★UMi424
+1484,4,★UMi424
+1484,5,★UMi424
+1484,6,★UMi424
+1484,7,★UMi424
+1484,8,★UMi424
+1484,9,★UMi424
+1484,11,★UMi424
+1484,12,★UMi424
+1485,1,★UMi5563
+1485,3,★UMi5563
+1485,4,★UMi5563
+1485,5,★UMi5563
+1485,6,★UMi5563
+1485,7,★UMi5563
+1485,8,★UMi5563
+1485,9,★UMi5563
+1485,11,★UMi5563
+1485,12,★UMi5563
+1486,1,★UMi5735
+1486,3,★UMi5735
+1486,4,★UMi5735
+1486,5,★UMi5735
+1486,6,★UMi5735
+1486,7,★UMi5735
+1486,8,★UMi5735
+1486,9,★UMi5735
+1486,11,★UMi5735
+1486,12,★UMi5735
+1487,1,★UMi6789
+1487,3,★UMi6789
+1487,4,★UMi6789
+1487,5,★UMi6789
+1487,6,★UMi6789
+1487,7,★UMi6789
+1487,8,★UMi6789
+1487,9,★UMi6789
+1487,11,★UMi6789
+1487,12,★UMi6789
+1488,1,★Crt4287
+1488,3,★Crt4287
+1488,4,★Crt4287
+1488,5,★Crt4287
+1488,6,★Crt4287
+1488,7,★Crt4287
+1488,8,★Crt4287
+1488,9,★Crt4287
+1488,11,★Crt4287
+1488,12,★Crt4287
+1489,1,★Lyr7001
+1489,3,★Lyr7001
+1489,4,★Lyr7001
+1489,5,★Lyr7001
+1489,6,★Lyr7001
+1489,7,★Lyr7001
+1489,8,★Lyr7001
+1489,9,★Lyr7001
+1489,11,★Lyr7001
+1489,12,★Lyr7001
+1490,1,★Lyr7178
+1490,3,★Lyr7178
+1490,4,★Lyr7178
+1490,5,★Lyr7178
+1490,6,★Lyr7178
+1490,7,★Lyr7178
+1490,8,★Lyr7178
+1490,9,★Lyr7178
+1490,11,★Lyr7178
+1490,12,★Lyr7178
+1491,1,★Lyr7106
+1491,3,★Lyr7106
+1491,4,★Lyr7106
+1491,5,★Lyr7106
+1491,6,★Lyr7106
+1491,7,★Lyr7106
+1491,8,★Lyr7106
+1491,9,★Lyr7106
+1491,11,★Lyr7106
+1491,12,★Lyr7106
+1492,1,★Lyr7298
+1492,3,★Lyr7298
+1492,4,★Lyr7298
+1492,5,★Lyr7298
+1492,6,★Lyr7298
+1492,7,★Lyr7298
+1492,8,★Lyr7298
+1492,9,★Lyr7298
+1492,11,★Lyr7298
+1492,12,★Lyr7298
+1493,1,★Ara6585
+1493,3,★Ara6585
+1493,4,★Ara6585
+1493,5,★Ara6585
+1493,6,★Ara6585
+1493,7,★Ara6585
+1493,8,★Ara6585
+1493,9,★Ara6585
+1493,11,★Ara6585
+1493,12,★Ara6585
+1494,1,★Sco6134
+1494,3,★Sco6134
+1494,4,★Sco6134
+1494,5,★Sco6134
+1494,6,★Sco6134
+1494,7,★Sco6134
+1494,8,★Sco6134
+1494,9,★Sco6134
+1494,11,★Sco6134
+1494,12,★Sco6134
+1495,1,★Sco6527
+1495,3,★Sco6527
+1495,4,★Sco6527
+1495,5,★Sco6527
+1495,6,★Sco6527
+1495,7,★Sco6527
+1495,8,★Sco6527
+1495,9,★Sco6527
+1495,11,★Sco6527
+1495,12,★Sco6527
+1496,1,★Sco6553
+1496,3,★Sco6553
+1496,4,★Sco6553
+1496,5,★Sco6553
+1496,6,★Sco6553
+1496,7,★Sco6553
+1496,8,★Sco6553
+1496,9,★Sco6553
+1496,11,★Sco6553
+1496,12,★Sco6553
+1497,1,★Sco5953
+1497,3,★Sco5953
+1497,4,★Sco5953
+1497,5,★Sco5953
+1497,6,★Sco5953
+1497,7,★Sco5953
+1497,8,★Sco5953
+1497,9,★Sco5953
+1497,11,★Sco5953
+1497,12,★Sco5953
+1498,1,★Sco5984
+1498,3,★Sco5984
+1498,4,★Sco5984
+1498,5,★Sco5984
+1498,6,★Sco5984
+1498,7,★Sco5984
+1498,8,★Sco5984
+1498,9,★Sco5984
+1498,11,★Sco5984
+1498,12,★Sco5984
+1499,1,★Sco6508
+1499,3,★Sco6508
+1499,4,★Sco6508
+1499,5,★Sco6508
+1499,6,★Sco6508
+1499,7,★Sco6508
+1499,8,★Sco6508
+1499,9,★Sco6508
+1499,11,★Sco6508
+1499,12,★Sco6508
+1500,1,★Sco6084
+1500,3,★Sco6084
+1500,4,★Sco6084
+1500,5,★Sco6084
+1500,6,★Sco6084
+1500,7,★Sco6084
+1500,8,★Sco6084
+1500,9,★Sco6084
+1500,11,★Sco6084
+1500,12,★Sco6084
+1501,1,★Sco5944
+1501,3,★Sco5944
+1501,4,★Sco5944
+1501,5,★Sco5944
+1501,6,★Sco5944
+1501,7,★Sco5944
+1501,8,★Sco5944
+1501,9,★Sco5944
+1501,11,★Sco5944
+1501,12,★Sco5944
+1502,1,★Sco6630
+1502,3,★Sco6630
+1502,4,★Sco6630
+1502,5,★Sco6630
+1502,6,★Sco6630
+1502,7,★Sco6630
+1502,8,★Sco6630
+1502,9,★Sco6630
+1502,11,★Sco6630
+1502,12,★Sco6630
+1503,1,★Sco6027
+1503,3,★Sco6027
+1503,4,★Sco6027
+1503,5,★Sco6027
+1503,6,★Sco6027
+1503,7,★Sco6027
+1503,8,★Sco6027
+1503,9,★Sco6027
+1503,11,★Sco6027
+1503,12,★Sco6027
+1504,1,★Sco6247
+1504,3,★Sco6247
+1504,4,★Sco6247
+1504,5,★Sco6247
+1504,6,★Sco6247
+1504,7,★Sco6247
+1504,8,★Sco6247
+1504,9,★Sco6247
+1504,11,★Sco6247
+1504,12,★Sco6247
+1505,1,★Sco6252
+1505,3,★Sco6252
+1505,4,★Sco6252
+1505,5,★Sco6252
+1505,6,★Sco6252
+1505,7,★Sco6252
+1505,8,★Sco6252
+1505,9,★Sco6252
+1505,11,★Sco6252
+1505,12,★Sco6252
+1506,1,★Sco5928
+1506,3,★Sco5928
+1506,4,★Sco5928
+1506,5,★Sco5928
+1506,6,★Sco5928
+1506,7,★Sco5928
+1506,8,★Sco5928
+1506,9,★Sco5928
+1506,11,★Sco5928
+1506,12,★Sco5928
+1507,1,★Sco6241
+1507,3,★Sco6241
+1507,4,★Sco6241
+1507,5,★Sco6241
+1507,6,★Sco6241
+1507,7,★Sco6241
+1507,8,★Sco6241
+1507,9,★Sco6241
+1507,11,★Sco6241
+1507,12,★Sco6241
+1508,1,★Sco6165
+1508,3,★Sco6165
+1508,4,★Sco6165
+1508,5,★Sco6165
+1508,6,★Sco6165
+1508,7,★Sco6165
+1508,8,★Sco6165
+1508,9,★Sco6165
+1508,11,★Sco6165
+1508,12,★Sco6165
+1509,1,★Tri544
+1509,3,★Tri544
+1509,4,★Tri544
+1509,5,★Tri544
+1509,6,★Tri544
+1509,7,★Tri544
+1509,8,★Tri544
+1509,9,★Tri544
+1509,11,★Tri544
+1509,12,★Tri544
+1510,1,★Leo3982
+1510,3,★Leo3982
+1510,4,★Leo3982
+1510,5,★Leo3982
+1510,6,★Leo3982
+1510,7,★Leo3982
+1510,8,★Leo3982
+1510,9,★Leo3982
+1510,11,★Leo3982
+1510,12,★Leo3982
+1511,1,★Leo4534
+1511,3,★Leo4534
+1511,4,★Leo4534
+1511,5,★Leo4534
+1511,6,★Leo4534
+1511,7,★Leo4534
+1511,8,★Leo4534
+1511,9,★Leo4534
+1511,11,★Leo4534
+1511,12,★Leo4534
+1512,1,★Leo4357
+1512,3,★Leo4357
+1512,4,★Leo4357
+1512,5,★Leo4357
+1512,6,★Leo4357
+1512,7,★Leo4357
+1512,8,★Leo4357
+1512,9,★Leo4357
+1512,11,★Leo4357
+1512,12,★Leo4357
+1513,1,★Leo4057
+1513,3,★Leo4057
+1513,4,★Leo4057
+1513,5,★Leo4057
+1513,6,★Leo4057
+1513,7,★Leo4057
+1513,8,★Leo4057
+1513,9,★Leo4057
+1513,11,★Leo4057
+1513,12,★Leo4057
+1514,1,★Leo4359
+1514,3,★Leo4359
+1514,4,★Leo4359
+1514,5,★Leo4359
+1514,6,★Leo4359
+1514,7,★Leo4359
+1514,8,★Leo4359
+1514,9,★Leo4359
+1514,11,★Leo4359
+1514,12,★Leo4359
+1515,1,★Leo4031
+1515,3,★Leo4031
+1515,4,★Leo4031
+1515,5,★Leo4031
+1515,6,★Leo4031
+1515,7,★Leo4031
+1515,8,★Leo4031
+1515,9,★Leo4031
+1515,11,★Leo4031
+1515,12,★Leo4031
+1516,1,★Leo3852
+1516,3,★Leo3852
+1516,4,★Leo3852
+1516,5,★Leo3852
+1516,6,★Leo3852
+1516,7,★Leo3852
+1516,8,★Leo3852
+1516,9,★Leo3852
+1516,11,★Leo3852
+1516,12,★Leo3852
+1517,1,★Leo3905
+1517,3,★Leo3905
+1517,4,★Leo3905
+1517,5,★Leo3905
+1517,6,★Leo3905
+1517,7,★Leo3905
+1517,8,★Leo3905
+1517,9,★Leo3905
+1517,11,★Leo3905
+1517,12,★Leo3905
+1518,1,★Leo3773
+1518,3,★Leo3773
+1518,4,★Leo3773
+1518,5,★Leo3773
+1518,6,★Leo3773
+1518,7,★Leo3773
+1518,8,★Leo3773
+1518,9,★Leo3773
+1518,11,★Leo3773
+1518,12,★Leo3773
+1519,1,★Gru8425
+1519,3,★Gru8425
+1519,4,★Gru8425
+1519,5,★Gru8425
+1519,6,★Gru8425
+1519,7,★Gru8425
+1519,8,★Gru8425
+1519,9,★Gru8425
+1519,11,★Gru8425
+1519,12,★Gru8425
+1520,1,★Gru8636
+1520,3,★Gru8636
+1520,4,★Gru8636
+1520,5,★Gru8636
+1520,6,★Gru8636
+1520,7,★Gru8636
+1520,8,★Gru8636
+1520,9,★Gru8636
+1520,11,★Gru8636
+1520,12,★Gru8636
+1521,1,★Gru8353
+1521,3,★Gru8353
+1521,4,★Gru8353
+1521,5,★Gru8353
+1521,6,★Gru8353
+1521,7,★Gru8353
+1521,8,★Gru8353
+1521,9,★Gru8353
+1521,11,★Gru8353
+1521,12,★Gru8353
+1522,1,★Lib5685
+1522,3,★Lib5685
+1522,4,★Lib5685
+1522,5,★Lib5685
+1522,6,★Lib5685
+1522,7,★Lib5685
+1522,8,★Lib5685
+1522,9,★Lib5685
+1522,11,★Lib5685
+1522,12,★Lib5685
+1523,1,★Lib5531
+1523,3,★Lib5531
+1523,4,★Lib5531
+1523,5,★Lib5531
+1523,6,★Lib5531
+1523,7,★Lib5531
+1523,8,★Lib5531
+1523,9,★Lib5531
+1523,11,★Lib5531
+1523,12,★Lib5531
+1524,1,★Lib5787
+1524,3,★Lib5787
+1524,4,★Lib5787
+1524,5,★Lib5787
+1524,6,★Lib5787
+1524,7,★Lib5787
+1524,8,★Lib5787
+1524,9,★Lib5787
+1524,11,★Lib5787
+1524,12,★Lib5787
+1525,1,★Lib5603
+1525,3,★Lib5603
+1525,4,★Lib5603
+1525,5,★Lib5603
+1525,6,★Lib5603
+1525,7,★Lib5603
+1525,8,★Lib5603
+1525,9,★Lib5603
+1525,11,★Lib5603
+1525,12,★Lib5603
+1526,1,★Pup3165
+1526,3,★Pup3165
+1526,4,★Pup3165
+1526,5,★Pup3165
+1526,6,★Pup3165
+1526,7,★Pup3165
+1526,8,★Pup3165
+1526,9,★Pup3165
+1526,11,★Pup3165
+1526,12,★Pup3165
+1527,1,★Pup3185
+1527,3,★Pup3185
+1527,4,★Pup3185
+1527,5,★Pup3185
+1527,6,★Pup3185
+1527,7,★Pup3185
+1527,8,★Pup3185
+1527,9,★Pup3185
+1527,11,★Pup3185
+1527,12,★Pup3185
+1528,1,★Pup3045
+1528,3,★Pup3045
+1528,4,★Pup3045
+1528,5,★Pup3045
+1528,6,★Pup3045
+1528,7,★Pup3045
+1528,8,★Pup3045
+1528,9,★Pup3045
+1528,11,★Pup3045
+1528,12,★Pup3045
+1529,1,★Cyg7924
+1529,3,★Cyg7924
+1529,4,★Cyg7924
+1529,5,★Cyg7924
+1529,6,★Cyg7924
+1529,7,★Cyg7924
+1529,8,★Cyg7924
+1529,9,★Cyg7924
+1529,11,★Cyg7924
+1529,12,★Cyg7924
+1530,1,★Cyg7417
+1530,3,★Cyg7417
+1530,4,★Cyg7417
+1530,5,★Cyg7417
+1530,6,★Cyg7417
+1530,7,★Cyg7417
+1530,8,★Cyg7417
+1530,9,★Cyg7417
+1530,11,★Cyg7417
+1530,12,★Cyg7417
+1531,1,★Cyg7796
+1531,3,★Cyg7796
+1531,4,★Cyg7796
+1531,5,★Cyg7796
+1531,6,★Cyg7796
+1531,7,★Cyg7796
+1531,8,★Cyg7796
+1531,9,★Cyg7796
+1531,11,★Cyg7796
+1531,12,★Cyg7796
+1532,1,★Cyg8301
+1532,3,★Cyg8301
+1532,4,★Cyg8301
+1532,5,★Cyg8301
+1532,6,★Cyg8301
+1532,7,★Cyg8301
+1532,8,★Cyg8301
+1532,9,★Cyg8301
+1532,11,★Cyg8301
+1532,12,★Cyg8301
+1533,1,★Cyg7949
+1533,3,★Cyg7949
+1533,4,★Cyg7949
+1533,5,★Cyg7949
+1533,6,★Cyg7949
+1533,7,★Cyg7949
+1533,8,★Cyg7949
+1533,9,★Cyg7949
+1533,11,★Cyg7949
+1533,12,★Cyg7949
+1534,1,★Cyg7528
+1534,3,★Cyg7528
+1534,4,★Cyg7528
+1534,5,★Cyg7528
+1534,6,★Cyg7528
+1534,7,★Cyg7528
+1534,8,★Cyg7528
+1534,9,★Cyg7528
+1534,11,★Cyg7528
+1534,12,★Cyg7528
+1535,1,★Oct7228
+1535,3,★Oct7228
+1535,4,★Oct7228
+1535,5,★Oct7228
+1535,6,★Oct7228
+1535,7,★Oct7228
+1535,8,★Oct7228
+1535,9,★Oct7228
+1535,11,★Oct7228
+1535,12,★Oct7228
+1536,1,★Col1956
+1536,3,★Col1956
+1536,4,★Col1956
+1536,5,★Col1956
+1536,6,★Col1956
+1536,7,★Col1956
+1536,8,★Col1956
+1536,9,★Col1956
+1536,11,★Col1956
+1536,12,★Col1956
+1537,1,★Col2040
+1537,3,★Col2040
+1537,4,★Col2040
+1537,5,★Col2040
+1537,6,★Col2040
+1537,7,★Col2040
+1537,8,★Col2040
+1537,9,★Col2040
+1537,11,★Col2040
+1537,12,★Col2040
+1538,1,★Col2177
+1538,3,★Col2177
+1538,4,★Col2177
+1538,5,★Col2177
+1538,6,★Col2177
+1538,7,★Col2177
+1538,8,★Col2177
+1538,9,★Col2177
+1538,11,★Col2177
+1538,12,★Col2177
+1539,1,★Gem2990
+1539,3,★Gem2990
+1539,4,★Gem2990
+1539,5,★Gem2990
+1539,6,★Gem2990
+1539,7,★Gem2990
+1539,8,★Gem2990
+1539,9,★Gem2990
+1539,11,★Gem2990
+1539,12,★Gem2990
+1540,1,★Gem2891
+1540,3,★Gem2891
+1540,4,★Gem2891
+1540,5,★Gem2891
+1540,6,★Gem2891
+1540,7,★Gem2891
+1540,8,★Gem2891
+1540,9,★Gem2891
+1540,11,★Gem2891
+1540,12,★Gem2891
+1541,1,★Gem2421
+1541,3,★Gem2421
+1541,4,★Gem2421
+1541,5,★Gem2421
+1541,6,★Gem2421
+1541,7,★Gem2421
+1541,8,★Gem2421
+1541,9,★Gem2421
+1541,11,★Gem2421
+1541,12,★Gem2421
+1542,1,★Gem2473
+1542,3,★Gem2473
+1542,4,★Gem2473
+1542,5,★Gem2473
+1542,6,★Gem2473
+1542,7,★Gem2473
+1542,8,★Gem2473
+1542,9,★Gem2473
+1542,11,★Gem2473
+1542,12,★Gem2473
+1543,1,★Gem2216
+1543,3,★Gem2216
+1543,4,★Gem2216
+1543,5,★Gem2216
+1543,6,★Gem2216
+1543,7,★Gem2216
+1543,8,★Gem2216
+1543,9,★Gem2216
+1543,11,★Gem2216
+1543,12,★Gem2216
+1544,1,★Gem2777
+1544,3,★Gem2777
+1544,4,★Gem2777
+1544,5,★Gem2777
+1544,6,★Gem2777
+1544,7,★Gem2777
+1544,8,★Gem2777
+1544,9,★Gem2777
+1544,11,★Gem2777
+1544,12,★Gem2777
+1545,1,★Gem2650
+1545,3,★Gem2650
+1545,4,★Gem2650
+1545,5,★Gem2650
+1545,6,★Gem2650
+1545,7,★Gem2650
+1545,8,★Gem2650
+1545,9,★Gem2650
+1545,11,★Gem2650
+1545,12,★Gem2650
+1546,1,★Gem2286
+1546,3,★Gem2286
+1546,4,★Gem2286
+1546,5,★Gem2286
+1546,6,★Gem2286
+1546,7,★Gem2286
+1546,8,★Gem2286
+1546,9,★Gem2286
+1546,11,★Gem2286
+1546,12,★Gem2286
+1547,1,★Gem2484
+1547,3,★Gem2484
+1547,4,★Gem2484
+1547,5,★Gem2484
+1547,6,★Gem2484
+1547,7,★Gem2484
+1547,8,★Gem2484
+1547,9,★Gem2484
+1547,11,★Gem2484
+1547,12,★Gem2484
+1548,1,★Gem2930
+1548,3,★Gem2930
+1548,4,★Gem2930
+1548,5,★Gem2930
+1548,6,★Gem2930
+1548,7,★Gem2930
+1548,8,★Gem2930
+1548,9,★Gem2930
+1548,11,★Gem2930
+1548,12,★Gem2930
+1549,1,★Peg8775
+1549,3,★Peg8775
+1549,4,★Peg8775
+1549,5,★Peg8775
+1549,6,★Peg8775
+1549,7,★Peg8775
+1549,8,★Peg8775
+1549,9,★Peg8775
+1549,11,★Peg8775
+1549,12,★Peg8775
+1550,1,★Peg8781
+1550,3,★Peg8781
+1550,4,★Peg8781
+1550,5,★Peg8781
+1550,6,★Peg8781
+1550,7,★Peg8781
+1550,8,★Peg8781
+1550,9,★Peg8781
+1550,11,★Peg8781
+1550,12,★Peg8781
+1551,1,★Peg39
+1551,3,★Peg39
+1551,4,★Peg39
+1551,5,★Peg39
+1551,6,★Peg39
+1551,7,★Peg39
+1551,8,★Peg39
+1551,9,★Peg39
+1551,11,★Peg39
+1551,12,★Peg39
+1552,1,★Peg8308
+1552,3,★Peg8308
+1552,4,★Peg8308
+1552,5,★Peg8308
+1552,6,★Peg8308
+1552,7,★Peg8308
+1552,8,★Peg8308
+1552,9,★Peg8308
+1552,11,★Peg8308
+1552,12,★Peg8308
+1553,1,★Peg8650
+1553,3,★Peg8650
+1553,4,★Peg8650
+1553,5,★Peg8650
+1553,6,★Peg8650
+1553,7,★Peg8650
+1553,8,★Peg8650
+1553,9,★Peg8650
+1553,11,★Peg8650
+1553,12,★Peg8650
+1554,1,★Peg8634
+1554,3,★Peg8634
+1554,4,★Peg8634
+1554,5,★Peg8634
+1554,6,★Peg8634
+1554,7,★Peg8634
+1554,8,★Peg8634
+1554,9,★Peg8634
+1554,11,★Peg8634
+1554,12,★Peg8634
+1555,1,★Peg8684
+1555,3,★Peg8684
+1555,4,★Peg8684
+1555,5,★Peg8684
+1555,6,★Peg8684
+1555,7,★Peg8684
+1555,8,★Peg8684
+1555,9,★Peg8684
+1555,11,★Peg8684
+1555,12,★Peg8684
+1556,1,★Peg8450
+1556,3,★Peg8450
+1556,4,★Peg8450
+1556,5,★Peg8450
+1556,6,★Peg8450
+1556,7,★Peg8450
+1556,8,★Peg8450
+1556,9,★Peg8450
+1556,11,★Peg8450
+1556,12,★Peg8450
+1557,1,★Peg8880
+1557,3,★Peg8880
+1557,4,★Peg8880
+1557,5,★Peg8880
+1557,6,★Peg8880
+1557,7,★Peg8880
+1557,8,★Peg8880
+1557,9,★Peg8880
+1557,11,★Peg8880
+1557,12,★Peg8880
+1558,1,★Peg8905
+1558,3,★Peg8905
+1558,4,★Peg8905
+1558,5,★Peg8905
+1558,6,★Peg8905
+1558,7,★Peg8905
+1558,8,★Peg8905
+1558,9,★Peg8905
+1558,11,★Peg8905
+1558,12,★Peg8905
+1559,1,★Oph6556
+1559,3,★Oph6556
+1559,4,★Oph6556
+1559,5,★Oph6556
+1559,6,★Oph6556
+1559,7,★Oph6556
+1559,8,★Oph6556
+1559,9,★Oph6556
+1559,11,★Oph6556
+1559,12,★Oph6556
+1560,1,★Oph6378
+1560,3,★Oph6378
+1560,4,★Oph6378
+1560,5,★Oph6378
+1560,6,★Oph6378
+1560,7,★Oph6378
+1560,8,★Oph6378
+1560,9,★Oph6378
+1560,11,★Oph6378
+1560,12,★Oph6378
+1561,1,★Oph6603
+1561,3,★Oph6603
+1561,4,★Oph6603
+1561,5,★Oph6603
+1561,6,★Oph6603
+1561,7,★Oph6603
+1561,8,★Oph6603
+1561,9,★Oph6603
+1561,11,★Oph6603
+1561,12,★Oph6603
+1562,1,★Oph6149
+1562,3,★Oph6149
+1562,4,★Oph6149
+1562,5,★Oph6149
+1562,6,★Oph6149
+1562,7,★Oph6149
+1562,8,★Oph6149
+1562,9,★Oph6149
+1562,11,★Oph6149
+1562,12,★Oph6149
+1563,1,★Oph6056
+1563,3,★Oph6056
+1563,4,★Oph6056
+1563,5,★Oph6056
+1563,6,★Oph6056
+1563,7,★Oph6056
+1563,8,★Oph6056
+1563,9,★Oph6056
+1563,11,★Oph6056
+1563,12,★Oph6056
+1564,1,★Oph6075
+1564,3,★Oph6075
+1564,4,★Oph6075
+1564,5,★Oph6075
+1564,6,★Oph6075
+1564,7,★Oph6075
+1564,8,★Oph6075
+1564,9,★Oph6075
+1564,11,★Oph6075
+1564,12,★Oph6075
+1565,1,★Ser5854
+1565,3,★Ser5854
+1565,4,★Ser5854
+1565,5,★Ser5854
+1565,6,★Ser5854
+1565,7,★Ser5854
+1565,8,★Ser5854
+1565,9,★Ser5854
+1565,11,★Ser5854
+1565,12,★Ser5854
+1566,1,★Ser7141
+1566,3,★Ser7141
+1566,4,★Ser7141
+1566,5,★Ser7141
+1566,6,★Ser7141
+1566,7,★Ser7141
+1566,8,★Ser7141
+1566,9,★Ser7141
+1566,11,★Ser7141
+1566,12,★Ser7141
+1567,1,★Ser5879
+1567,3,★Ser5879
+1567,4,★Ser5879
+1567,5,★Ser5879
+1567,6,★Ser5879
+1567,7,★Ser5879
+1567,8,★Ser5879
+1567,9,★Ser5879
+1567,11,★Ser5879
+1567,12,★Ser5879
+1568,1,★Her6406
+1568,3,★Her6406
+1568,4,★Her6406
+1568,5,★Her6406
+1568,6,★Her6406
+1568,7,★Her6406
+1568,8,★Her6406
+1568,9,★Her6406
+1568,11,★Her6406
+1568,12,★Her6406
+1569,1,★Her6148
+1569,3,★Her6148
+1569,4,★Her6148
+1569,5,★Her6148
+1569,6,★Her6148
+1569,7,★Her6148
+1569,8,★Her6148
+1569,9,★Her6148
+1569,11,★Her6148
+1569,12,★Her6148
+1570,1,★Her6410
+1570,3,★Her6410
+1570,4,★Her6410
+1570,5,★Her6410
+1570,6,★Her6410
+1570,7,★Her6410
+1570,8,★Her6410
+1570,9,★Her6410
+1570,11,★Her6410
+1570,12,★Her6410
+1571,1,★Her6526
+1571,3,★Her6526
+1571,4,★Her6526
+1571,5,★Her6526
+1571,6,★Her6526
+1571,7,★Her6526
+1571,8,★Her6526
+1571,9,★Her6526
+1571,11,★Her6526
+1571,12,★Her6526
+1572,1,★Her6117
+1572,3,★Her6117
+1572,4,★Her6117
+1572,5,★Her6117
+1572,6,★Her6117
+1572,7,★Her6117
+1572,8,★Her6117
+1572,9,★Her6117
+1572,11,★Her6117
+1572,12,★Her6117
+1573,1,★Her6008
+1573,3,★Her6008
+1573,4,★Her6008
+1573,5,★Her6008
+1573,6,★Her6008
+1573,7,★Her6008
+1573,8,★Her6008
+1573,9,★Her6008
+1573,11,★Her6008
+1573,12,★Her6008
+1574,1,★Per936
+1574,3,★Per936
+1574,4,★Per936
+1574,5,★Per936
+1574,6,★Per936
+1574,7,★Per936
+1574,8,★Per936
+1574,9,★Per936
+1574,11,★Per936
+1574,12,★Per936
+1575,1,★Per1017
+1575,3,★Per1017
+1575,4,★Per1017
+1575,5,★Per1017
+1575,6,★Per1017
+1575,7,★Per1017
+1575,8,★Per1017
+1575,9,★Per1017
+1575,11,★Per1017
+1575,12,★Per1017
+1576,1,★Per1131
+1576,3,★Per1131
+1576,4,★Per1131
+1576,5,★Per1131
+1576,6,★Per1131
+1576,7,★Per1131
+1576,8,★Per1131
+1576,9,★Per1131
+1576,11,★Per1131
+1576,12,★Per1131
+1577,1,★Per1228
+1577,3,★Per1228
+1577,4,★Per1228
+1577,5,★Per1228
+1577,6,★Per1228
+1577,7,★Per1228
+1577,8,★Per1228
+1577,9,★Per1228
+1577,11,★Per1228
+1577,12,★Per1228
+1578,1,★Per834
+1578,3,★Per834
+1578,4,★Per834
+1578,5,★Per834
+1578,6,★Per834
+1578,7,★Per834
+1578,8,★Per834
+1578,9,★Per834
+1578,11,★Per834
+1578,12,★Per834
+1579,1,★Per941
+1579,3,★Per941
+1579,4,★Per941
+1579,5,★Per941
+1579,6,★Per941
+1579,7,★Per941
+1579,8,★Per941
+1579,9,★Per941
+1579,11,★Per941
+1579,12,★Per941
+1580,1,★Phe99
+1580,3,★Phe99
+1580,4,★Phe99
+1580,5,★Phe99
+1580,6,★Phe99
+1580,7,★Phe99
+1580,8,★Phe99
+1580,9,★Phe99
+1580,11,★Phe99
+1580,12,★Phe99
+1581,1,★Phe338
+1581,3,★Phe338
+1581,4,★Phe338
+1581,5,★Phe338
+1581,6,★Phe338
+1581,7,★Phe338
+1581,8,★Phe338
+1581,9,★Phe338
+1581,11,★Phe338
+1581,12,★Phe338
+1582,1,★Vel3634
+1582,3,★Vel3634
+1582,4,★Vel3634
+1582,5,★Vel3634
+1582,6,★Vel3634
+1582,7,★Vel3634
+1582,8,★Vel3634
+1582,9,★Vel3634
+1582,11,★Vel3634
+1582,12,★Vel3634
+1583,1,★Vel3485
+1583,3,★Vel3485
+1583,4,★Vel3485
+1583,5,★Vel3485
+1583,6,★Vel3485
+1583,7,★Vel3485
+1583,8,★Vel3485
+1583,9,★Vel3485
+1583,11,★Vel3485
+1583,12,★Vel3485
+1584,1,★Vel3734
+1584,3,★Vel3734
+1584,4,★Vel3734
+1584,5,★Vel3734
+1584,6,★Vel3734
+1584,7,★Vel3734
+1584,8,★Vel3734
+1584,9,★Vel3734
+1584,11,★Vel3734
+1584,12,★Vel3734
+1585,1,★Aqr8232
+1585,3,★Aqr8232
+1585,4,★Aqr8232
+1585,5,★Aqr8232
+1585,6,★Aqr8232
+1585,7,★Aqr8232
+1585,8,★Aqr8232
+1585,9,★Aqr8232
+1585,11,★Aqr8232
+1585,12,★Aqr8232
+1586,1,★Aqr8414
+1586,3,★Aqr8414
+1586,4,★Aqr8414
+1586,5,★Aqr8414
+1586,6,★Aqr8414
+1586,7,★Aqr8414
+1586,8,★Aqr8414
+1586,9,★Aqr8414
+1586,11,★Aqr8414
+1586,12,★Aqr8414
+1587,1,★Aqr8709
+1587,3,★Aqr8709
+1587,4,★Aqr8709
+1587,5,★Aqr8709
+1587,6,★Aqr8709
+1587,7,★Aqr8709
+1587,8,★Aqr8709
+1587,9,★Aqr8709
+1587,11,★Aqr8709
+1587,12,★Aqr8709
+1588,1,★Aqr8518
+1588,3,★Aqr8518
+1588,4,★Aqr8518
+1588,5,★Aqr8518
+1588,6,★Aqr8518
+1588,7,★Aqr8518
+1588,8,★Aqr8518
+1588,9,★Aqr8518
+1588,11,★Aqr8518
+1588,12,★Aqr8518
+1589,1,★Aqr7950
+1589,3,★Aqr7950
+1589,4,★Aqr7950
+1589,5,★Aqr7950
+1589,6,★Aqr7950
+1589,7,★Aqr7950
+1589,8,★Aqr7950
+1589,9,★Aqr7950
+1589,11,★Aqr7950
+1589,12,★Aqr7950
+1590,1,★Aqr8499
+1590,3,★Aqr8499
+1590,4,★Aqr8499
+1590,5,★Aqr8499
+1590,6,★Aqr8499
+1590,7,★Aqr8499
+1590,8,★Aqr8499
+1590,9,★Aqr8499
+1590,11,★Aqr8499
+1590,12,★Aqr8499
+1591,1,★Aqr8610
+1591,3,★Aqr8610
+1591,4,★Aqr8610
+1591,5,★Aqr8610
+1591,6,★Aqr8610
+1591,7,★Aqr8610
+1591,8,★Aqr8610
+1591,9,★Aqr8610
+1591,11,★Aqr8610
+1591,12,★Aqr8610
+1592,1,★Aqr8264
+1592,3,★Aqr8264
+1592,4,★Aqr8264
+1592,5,★Aqr8264
+1592,6,★Aqr8264
+1592,7,★Aqr8264
+1592,8,★Aqr8264
+1592,9,★Aqr8264
+1592,11,★Aqr8264
+1592,12,★Aqr8264
+1593,1,★Cru4853
+1593,3,★Cru4853
+1593,4,★Cru4853
+1593,5,★Cru4853
+1593,6,★Cru4853
+1593,7,★Cru4853
+1593,8,★Cru4853
+1593,9,★Cru4853
+1593,11,★Cru4853
+1593,12,★Cru4853
+1594,1,★Cru4730
+1594,3,★Cru4730
+1594,4,★Cru4730
+1594,5,★Cru4730
+1594,6,★Cru4730
+1594,7,★Cru4730
+1594,8,★Cru4730
+1594,9,★Cru4730
+1594,11,★Cru4730
+1594,12,★Cru4730
+1595,1,★Cru4763
+1595,3,★Cru4763
+1595,4,★Cru4763
+1595,5,★Cru4763
+1595,6,★Cru4763
+1595,7,★Cru4763
+1595,8,★Cru4763
+1595,9,★Cru4763
+1595,11,★Cru4763
+1595,12,★Cru4763
+1596,1,★Cru4700
+1596,3,★Cru4700
+1596,4,★Cru4700
+1596,5,★Cru4700
+1596,6,★Cru4700
+1596,7,★Cru4700
+1596,8,★Cru4700
+1596,9,★Cru4700
+1596,11,★Cru4700
+1596,12,★Cru4700
+1597,1,★Cru4656
+1597,3,★Cru4656
+1597,4,★Cru4656
+1597,5,★Cru4656
+1597,6,★Cru4656
+1597,7,★Cru4656
+1597,8,★Cru4656
+1597,9,★Cru4656
+1597,11,★Cru4656
+1597,12,★Cru4656
+1598,1,★PsA8728
+1598,3,★PsA8728
+1598,4,★PsA8728
+1598,5,★PsA8728
+1598,6,★PsA8728
+1598,7,★PsA8728
+1598,8,★PsA8728
+1598,9,★PsA8728
+1598,11,★PsA8728
+1598,12,★PsA8728
+1599,1,★TrA6217
+1599,3,★TrA6217
+1599,4,★TrA6217
+1599,5,★TrA6217
+1599,6,★TrA6217
+1599,7,★TrA6217
+1599,8,★TrA6217
+1599,9,★TrA6217
+1599,11,★TrA6217
+1599,12,★TrA6217
+1600,1,★Cap7776
+1600,3,★Cap7776
+1600,4,★Cap7776
+1600,5,★Cap7776
+1600,6,★Cap7776
+1600,7,★Cap7776
+1600,8,★Cap7776
+1600,9,★Cap7776
+1600,11,★Cap7776
+1600,12,★Cap7776
+1601,1,★Cap7754
+1601,3,★Cap7754
+1601,4,★Cap7754
+1601,5,★Cap7754
+1601,6,★Cap7754
+1601,7,★Cap7754
+1601,8,★Cap7754
+1601,9,★Cap7754
+1601,11,★Cap7754
+1601,12,★Cap7754
+1602,1,★Cap8278
+1602,3,★Cap8278
+1602,4,★Cap8278
+1602,5,★Cap8278
+1602,6,★Cap8278
+1602,7,★Cap8278
+1602,8,★Cap8278
+1602,9,★Cap8278
+1602,11,★Cap8278
+1602,12,★Cap8278
+1603,1,★Cap8322
+1603,3,★Cap8322
+1603,4,★Cap8322
+1603,5,★Cap8322
+1603,6,★Cap8322
+1603,7,★Cap8322
+1603,8,★Cap8322
+1603,9,★Cap8322
+1603,11,★Cap8322
+1603,12,★Cap8322
+1604,1,★Cap7773
+1604,3,★Cap7773
+1604,4,★Cap7773
+1604,5,★Cap7773
+1604,6,★Cap7773
+1604,7,★Cap7773
+1604,8,★Cap7773
+1604,9,★Cap7773
+1604,11,★Cap7773
+1604,12,★Cap7773
+1605,1,★Sge7479
+1605,3,★Sge7479
+1605,4,★Sge7479
+1605,5,★Sge7479
+1605,6,★Sge7479
+1605,7,★Sge7479
+1605,8,★Sge7479
+1605,9,★Sge7479
+1605,11,★Sge7479
+1605,12,★Sge7479
+1606,1,★Car2326
+1606,3,★Car2326
+1606,4,★Car2326
+1606,5,★Car2326
+1606,6,★Car2326
+1606,7,★Car2326
+1606,8,★Car2326
+1606,9,★Car2326
+1606,11,★Car2326
+1606,12,★Car2326
+1607,1,★Car3685
+1607,3,★Car3685
+1607,4,★Car3685
+1607,5,★Car3685
+1607,6,★Car3685
+1607,7,★Car3685
+1607,8,★Car3685
+1607,9,★Car3685
+1607,11,★Car3685
+1607,12,★Car3685
+1608,1,★Car3307
+1608,3,★Car3307
+1608,4,★Car3307
+1608,5,★Car3307
+1608,6,★Car3307
+1608,7,★Car3307
+1608,8,★Car3307
+1608,9,★Car3307
+1608,11,★Car3307
+1608,12,★Car3307
+1609,1,★Car3699
+1609,3,★Car3699
+1609,4,★Car3699
+1609,5,★Car3699
+1609,6,★Car3699
+1609,7,★Car3699
+1609,8,★Car3699
+1609,9,★Car3699
+1609,11,★Car3699
+1609,12,★Car3699
+1610,1,★Dra5744
+1610,3,★Dra5744
+1610,4,★Dra5744
+1610,5,★Dra5744
+1610,6,★Dra5744
+1610,7,★Dra5744
+1610,8,★Dra5744
+1610,9,★Dra5744
+1610,11,★Dra5744
+1610,12,★Dra5744
+1611,1,★Dra5291
+1611,3,★Dra5291
+1611,4,★Dra5291
+1611,5,★Dra5291
+1611,6,★Dra5291
+1611,7,★Dra5291
+1611,8,★Dra5291
+1611,9,★Dra5291
+1611,11,★Dra5291
+1611,12,★Dra5291
+1612,1,★Dra6705
+1612,3,★Dra6705
+1612,4,★Dra6705
+1612,5,★Dra6705
+1612,6,★Dra6705
+1612,7,★Dra6705
+1612,8,★Dra6705
+1612,9,★Dra6705
+1612,11,★Dra6705
+1612,12,★Dra6705
+1613,1,★Dra6536
+1613,3,★Dra6536
+1613,4,★Dra6536
+1613,5,★Dra6536
+1613,6,★Dra6536
+1613,7,★Dra6536
+1613,8,★Dra6536
+1613,9,★Dra6536
+1613,11,★Dra6536
+1613,12,★Dra6536
+1614,1,★Dra7310
+1614,3,★Dra7310
+1614,4,★Dra7310
+1614,5,★Dra7310
+1614,6,★Dra7310
+1614,7,★Dra7310
+1614,8,★Dra7310
+1614,9,★Dra7310
+1614,11,★Dra7310
+1614,12,★Dra7310
+1615,1,★Dra6688
+1615,3,★Dra6688
+1615,4,★Dra6688
+1615,5,★Dra6688
+1615,6,★Dra6688
+1615,7,★Dra6688
+1615,8,★Dra6688
+1615,9,★Dra6688
+1615,11,★Dra6688
+1615,12,★Dra6688
+1616,1,★Dra4434
+1616,3,★Dra4434
+1616,4,★Dra4434
+1616,5,★Dra4434
+1616,6,★Dra4434
+1616,7,★Dra4434
+1616,8,★Dra4434
+1616,9,★Dra4434
+1616,11,★Dra4434
+1616,12,★Dra4434
+1617,1,★Dra6370
+1617,3,★Dra6370
+1617,4,★Dra6370
+1617,5,★Dra6370
+1617,6,★Dra6370
+1617,7,★Dra6370
+1617,8,★Dra6370
+1617,9,★Dra6370
+1617,11,★Dra6370
+1617,12,★Dra6370
+1618,1,★Dra7462
+1618,3,★Dra7462
+1618,4,★Dra7462
+1618,5,★Dra7462
+1618,6,★Dra7462
+1618,7,★Dra7462
+1618,8,★Dra7462
+1618,9,★Dra7462
+1618,11,★Dra7462
+1618,12,★Dra7462
+1619,1,★Dra6396
+1619,3,★Dra6396
+1619,4,★Dra6396
+1619,5,★Dra6396
+1619,6,★Dra6396
+1619,7,★Dra6396
+1619,8,★Dra6396
+1619,9,★Dra6396
+1619,11,★Dra6396
+1619,12,★Dra6396
+1620,1,★Dra6132
+1620,3,★Dra6132
+1620,4,★Dra6132
+1620,5,★Dra6132
+1620,6,★Dra6132
+1620,7,★Dra6132
+1620,8,★Dra6132
+1620,9,★Dra6132
+1620,11,★Dra6132
+1620,12,★Dra6132
+1621,1,★Dra6636
+1621,3,★Dra6636
+1621,4,★Dra6636
+1621,5,★Dra6636
+1621,6,★Dra6636
+1621,7,★Dra6636
+1621,8,★Dra6636
+1621,9,★Dra6636
+1621,11,★Dra6636
+1621,12,★Dra6636
+1622,1,★CVn4915
+1622,3,★CVn4915
+1622,4,★CVn4915
+1622,5,★CVn4915
+1622,6,★CVn4915
+1622,7,★CVn4915
+1622,8,★CVn4915
+1622,9,★CVn4915
+1622,11,★CVn4915
+1622,12,★CVn4915
+1623,1,★CVn4785
+1623,3,★CVn4785
+1623,4,★CVn4785
+1623,5,★CVn4785
+1623,6,★CVn4785
+1623,7,★CVn4785
+1623,8,★CVn4785
+1623,9,★CVn4785
+1623,11,★CVn4785
+1623,12,★CVn4785
+1624,1,★CVn4846
+1624,3,★CVn4846
+1624,4,★CVn4846
+1624,5,★CVn4846
+1624,6,★CVn4846
+1624,7,★CVn4846
+1624,8,★CVn4846
+1624,9,★CVn4846
+1624,11,★CVn4846
+1624,12,★CVn4846
+1625,1,★Aql7595
+1625,3,★Aql7595
+1625,4,★Aql7595
+1625,5,★Aql7595
+1625,6,★Aql7595
+1625,7,★Aql7595
+1625,8,★Aql7595
+1625,9,★Aql7595
+1625,11,★Aql7595
+1625,12,★Aql7595
+1626,1,★Aql7557
+1626,3,★Aql7557
+1626,4,★Aql7557
+1626,5,★Aql7557
+1626,6,★Aql7557
+1626,7,★Aql7557
+1626,8,★Aql7557
+1626,9,★Aql7557
+1626,11,★Aql7557
+1626,12,★Aql7557
+1627,1,★Aql7525
+1627,3,★Aql7525
+1627,4,★Aql7525
+1627,5,★Aql7525
+1627,6,★Aql7525
+1627,7,★Aql7525
+1627,8,★Aql7525
+1627,9,★Aql7525
+1627,11,★Aql7525
+1627,12,★Aql7525
+1628,1,★Aql7602
+1628,3,★Aql7602
+1628,4,★Aql7602
+1628,5,★Aql7602
+1628,6,★Aql7602
+1628,7,★Aql7602
+1628,8,★Aql7602
+1628,9,★Aql7602
+1628,11,★Aql7602
+1628,12,★Aql7602
+1629,1,★Aql7235
+1629,3,★Aql7235
+1629,4,★Aql7235
+1629,5,★Aql7235
+1629,6,★Aql7235
+1629,7,★Aql7235
+1629,8,★Aql7235
+1629,9,★Aql7235
+1629,11,★Aql7235
+1629,12,★Aql7235
+1630,1,ダイミツ
+1630,3,다이꿀
+1630,4,極巨甜蜜
+1630,5,Maxi Miel
+1630,6,Dyna-Honig
+1630,7,Maxipanal
+1630,8,Mielemax
+1630,9,Max Honey
+1630,11,ダイミツ
+1630,12,极巨甜蜜
+1631,1,ダイキノコ
+1631,3,다이버섯
+1631,4,極巨菇菇
+1631,5,Maxi Champi
+1631,6,Dyna-Pilz
+1631,7,Maxiseta
+1631,8,Fungomax
+1631,9,Max Mushrooms
+1631,11,ダイキノコ
+1631,12,极巨菇菇
+1632,1,ガラナツのえだ
+1632,3,가라두구가지
+1632,4,伽勒荳蔻枝
+1632,5,Branche Galanoa
+1632,6,Galarnuss-Zweig
+1632,7,Rama de Galanuez
+1632,8,Ramo Galarnoce
+1632,9,Galarica Twig
+1632,11,ガラナツのえだ
+1632,12,伽勒豆蔻枝
+1633,1,ガラナツブレス
+1633,3,가라두구팔찌
+1633,4,伽勒荳蔻手環
+1633,5,Bracelet Galanoa
+1633,6,Galarnuss-Reif
+1633,7,Brazal Galanuez
+1633,8,Fascia Galarnoce
+1633,9,Galarica Cuff
+1633,11,ガラナツブレス
+1633,12,伽勒豆蔻手环
+1634,1,おしゃれカード
+1634,3,멋쟁이카드
+1634,4,時尚名人卡
+1634,5,Carte Élégance
+1634,6,Style-Karte
+1634,7,Tarjeta Chic
+1634,8,Tessera chic
+1634,9,Style Card
+1634,11,おしゃれカード
+1634,12,时尚名人卡
+1635,1,ヨロイパス
+1635,3,갑옷패스
+1635,4,鎧甲車票
+1635,5,Pass Isolarmure
+1635,6,Rüstungspass
+1635,7,Pase Armadura
+1635,8,Pass Armatura
+1635,9,Armor Pass
+1635,11,ヨロイパス
+1635,12,铠甲车票
+1636,1,ロトムじてんしゃ
+1636,3,로토무자전거
+1636,4,洛托姆自行車
+1636,5,Moticyclette
+1636,6,Rotom-Rad
+1636,7,Bici Rotom
+1636,8,Bici Rotom
+1636,9,Rotom Bike
+1636,11,ロトムじてんしゃ
+1636,12,洛托姆自行车
+1637,1,ロトムじてんしゃ
+1637,3,로토무자전거
+1637,4,洛托姆自行車
+1637,5,Moticyclette
+1637,6,Rotom-Rad
+1637,7,Bici Rotom
+1637,8,Bici Rotom
+1637,9,Rotom Bike
+1637,11,ロトムじてんしゃ
+1637,12,洛托姆自行车
+1638,1,けいけんおまもり
+1638,3,경험부적
+1638,4,經驗護符
+1638,5,Charme Exp
+1638,6,EP-Pin
+1638,7,Amuleto Exp
+1638,8,Esperienzamuleto
+1638,9,Exp. Charm
+1638,11,けいけんおまもり
+1638,12,经验护符
+1639,1,ヨロイこうせき
+1639,3,갑옷광석
+1639,4,鎧甲礦石
+1639,5,Armurium
+1639,6,Rüstungserz
+1639,7,Duralium
+1639,8,Rocciarmatura
+1639,9,Armorite Ore
+1639,11,ヨロイこうせき
+1639,12,铠甲矿石
+1640,1,あかしのおまもり
+1640,3,증표의부적
+1640,4,證章護符
+1640,5,Charme Insigne
+1640,6,Zeichenpin
+1640,7,Amuleto Emblema
+1640,8,Emblemamuleto
+1640,9,Mark Charm
+1640,11,あかしのおまもり
+1640,12,证章护符
+1641,1,キズナのタヅナ
+1641,3,유대의고삐
+1641,4,牽絆韁繩
+1641,5,Rênes de l’Unité
+1641,6,Zügel des Bundes
+1641,7,Riendas Unión
+1641,8,Briglie legame
+1641,9,Reins of Unity
+1641,11,キズナのタヅナ
+1641,12,牵绊缰绳
+1642,1,キズナのタヅナ
+1642,3,유대의고삐
+1642,4,牽絆韁繩
+1642,5,Rênes de l’Unité
+1642,6,Zügel des Bundes
+1642,7,Riendas Unión
+1642,8,Briglie legame
+1642,9,Reins of Unity
+1642,11,キズナのタヅナ
+1642,12,牵绊缰绳
+1643,1,ガラナツリース
+1643,3,가라두구머리장식
+1643,4,伽勒荳蔻花圈
+1643,5,Couronne Galanoa
+1643,6,Galarnuss-Kranz
+1643,7,Corona Galanuez
+1643,8,Corona Galarnoce
+1643,9,Galarica Wreath
+1643,11,ガラナツリース
+1643,12,伽勒豆蔻花圈
+1644,1,でんせつのメモ１
+1644,3,전설의메모1
+1644,4,傳說筆記１
+1644,5,Note Légende 1
+1644,6,Legenden-Notiz 1
+1644,7,Leyenda 1
+1644,8,Leggenda 1
+1644,9,Legendary Clue 1
+1644,11,でんせつのメモ１
+1644,12,传说笔记１
+1645,1,でんせつのメモ２
+1645,3,전설의메모2
+1645,4,傳說筆記２
+1645,5,Note Légende 2
+1645,6,Legenden-Notiz 2
+1645,7,Leyenda 2
+1645,8,Leggenda 2
+1645,9,Legendary Clue 2
+1645,11,でんせつのメモ２
+1645,12,传说笔记２
+1646,1,でんせつのメモ３
+1646,3,전설의메모3
+1646,4,傳說筆記３
+1646,5,Note Légende 3
+1646,6,Legenden-Notiz 3
+1646,7,Leyenda 3
+1646,8,Leggenda 3
+1646,9,Legendary Clue 3
+1646,11,でんせつのメモ３
+1646,12,传说笔记３
+1647,1,でんせつのメモ？
+1647,3,전설의메모?
+1647,4,傳說筆記？
+1647,5,Note Légende (?)
+1647,6,Legenden-Notiz X
+1647,7,Leyenda (?)
+1647,8,Leggenda ?
+1647,9,Legendary Clue?
+1647,11,でんせつのメモ？
+1647,12,传说笔记？
+1648,1,カンムリパス
+1648,3,왕관패스
+1648,4,王冠車票
+1648,5,Pass Couronneige
+1648,6,Kronenpass
+1648,7,Pase Corona
+1648,8,Pass Corona
+1648,9,Crown Pass
+1648,11,カンムリパス
+1648,12,王冠车票
+1649,1,きぼりのかんむり
+1649,3,목각왕관
+1649,4,木雕王冠
+1649,5,Couronne en Bois
+1649,6,Holzkrone
+1649,7,Corona Tallada
+1649,8,Corona di legno
+1649,9,Wooden Crown
+1649,11,きぼりのかんむり
+1649,12,木雕王冠
+1650,1,かがやくはなびら
+1650,3,빛나는꽃잎
+1650,4,光輝花瓣
+1650,5,Pétale Brillant
+1650,6,Kronblatt
+1650,7,Pétalo Fulgor
+1650,8,Petalo lucente
+1650,9,Radiant Petal
+1650,11,かがやくはなびら
+1650,12,光辉花瓣
+1651,1,しろいたてがみ
+1651,3,하얀갈기
+1651,4,白色鬃毛
+1651,5,Crins Blancs
+1651,6,Helles Rosshaar
+1651,7,Crin Blanca
+1651,8,Crini bianchi
+1651,9,White Mane Hair
+1651,11,しろいたてがみ
+1651,12,白色鬃毛
+1652,1,くろいたてがみ
+1652,3,검은갈기
+1652,4,黑色鬃毛
+1652,5,Crins Sombres
+1652,6,Dunkles Rosshaar
+1652,7,Crin Negra
+1652,8,Crini neri
+1652,9,Black Mane Hair
+1652,11,くろいたてがみ
+1652,12,黑色鬃毛
+1653,1,つめたいにんじん
+1653,3,차가운당근
+1653,4,冰蘿蔔
+1653,5,Carotte Gelée
+1653,6,Polarkarotte
+1653,7,Zanahoria Nívea
+1653,8,Carota algida
+1653,9,Iceroot Carrot
+1653,11,つめたいにんじん
+1653,12,冰萝卜
+1654,1,くろいにんじん
+1654,3,검은당근
+1654,4,黑蘿蔔
+1654,5,Carotte Sombre
+1654,6,Phantomkarotte
+1654,7,Zanahoria Oscura
+1654,8,Carota oscura
+1654,9,Shaderoot Carrot
+1654,11,くろいにんじん
+1654,12,黑萝卜
+1655,1,マックスこうせき
+1655,3,맥스광석
+1655,4,極礦石
+1655,5,Dynamaxium
+1655,6,Dyna-Erz
+1655,7,Maxinium
+1655,8,Rocciamax
+1655,9,Dynite Ore
+1655,11,マックスこうせき
+1655,12,极矿石
+1656,1,にんじんのタネ
+1656,3,당근씨
+1656,4,蘿蔔種子
+1656,5,Graines Carotte
+1656,6,Karottensamen
+1656,7,Sem. Zanahoria
+1656,8,Semi di carota
+1656,9,Carrot Seeds
+1656,11,にんじんのタネ
+1656,12,萝卜种子
+1657,1,とくせいパッチ
+1657,3,특성패치
+1657,4,特性膏藥
+1657,5,Patch Talent
+1657,6,Fähigk.-Pflaster
+1657,7,Parche Habilidad
+1657,8,Cerotto abilità
+1657,9,Ability Patch
+1657,11,とくせいパッチ
+1657,12,特性膏药
+1658,1,キズナのタヅナ
+1658,3,유대의고삐
+1658,4,牽絆韁繩
+1658,5,Rênes de l’Unité
+1658,6,Zügel des Bundes
+1658,7,Riendas Unión
+1658,8,Briglie legame
+1658,9,Reins of Unity
+1658,11,キズナのタヅナ
+1658,12,牵绊缰绳

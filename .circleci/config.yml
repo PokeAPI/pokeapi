@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.10.1
     steps:
       - checkout
       - run:
@@ -23,7 +23,8 @@ jobs:
 
   deploy:
     machine:
-      image: ubuntu-1604:201903-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
+      image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -48,7 +49,7 @@ workflows:
             - test
           filters:
             branches:
-              only: 
+              only:
                 - master
                 - staging
   weekly:

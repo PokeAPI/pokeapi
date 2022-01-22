@@ -1,10 +1,12 @@
-veekun_pokedex_repository = ../pokedex
-local_config = --settings=config.local
-docker_config = --settings=config.docker-compose
-HASURA_GRAPHQL_ADMIN_SECRET=pokemon
+veekun_pokedex_repository := ../pokedex
+local_config := --settings=config.local
+docker_config := --settings=config.docker-compose
+HASURA_GRAPHQL_ADMIN_SECRET := pokemon
 
-.PHONY: help
+.PHONY: $(shell sed -n -e '/^$$/ { n ; /^[^ .\#][^ ]*:/ { s/:.*$$// ; p ; } ; }' $(MAKEFILE_LIST))
+ifndef VERBOSE
 .SILENT:
+endif
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

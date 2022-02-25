@@ -7,6 +7,7 @@ services:
 
   app:
     env_file: .env
+    restart: "no"
 
   web:
     volumes:

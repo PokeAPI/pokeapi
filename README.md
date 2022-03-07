@@ -151,6 +151,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 | Spring Boot | [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_ |
 | Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
 | Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
+| Python | [beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi) | _Auto caching, asynchronous_
 
 ## Donations
 

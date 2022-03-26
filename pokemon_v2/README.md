@@ -51,18 +51,18 @@
         <ul>
           <li><a href="#pal-park-areas">Pal Park Areas</a></li>
           <li><a href="#pokedexes">Pokédexes</a></li>
-          <li><a href="#pokemon">Pokémon</a></li>
-          <li><a href="#pokemon-colors">Pokémon Colors</a></li>
-          <li><a href="#pokemon-forms">Pokémon Forms</a></li>
-          <li><a href="#pokemon-habitats">Pokémon Habitats</a></li>
-          <li><a href="#pokemon-shapes">Pokémon Shapes</a></li>
-          <li><a href="#pokemon-species">Pokémon Species</a></li>
-          <li><a href="#pokeathlon-stats">Pokéathlon Stats</a></li>
+          <li><a href="#pokémon">Pokémon</a></li>
+          <li><a href="#pokémon-colors">Pokémon Colors</a></li>
+          <li><a href="#pokémon-forms">Pokémon Forms</a></li>
+          <li><a href="#pokémon-habitats">Pokémon Habitats</a></li>
+          <li><a href="#pokémon-shapes">Pokémon Shapes</a></li>
+          <li><a href="#pokémon-species">Pokémon Species</a></li>
+          <li><a href="#pokéathlon-stats">Pokéathlon Stats</a></li>
           <li><a href="#regions">Regions</a></li>
           <li><a href="#stats">Stats</a></li>
           <li><a href="#super-contest-effects">Super Contest Effects</a></li>
           <li><a href="#types">Types</a></li>
-          <li><a href="#version">Versions</a></li>
+          <li><a href="#versions">Versions</a></li>
           <li><a href="#version-groups">Version Groups</a></li>
         </ul>
       </td>
@@ -95,7 +95,7 @@ Calling any api endpoint without a resource id or name will return a paginated l
 | count    | The total number of resources available from this api | integer |
 | next     | The url for the next 'page' in the list               | string  |
 | previous | The url for the previous page in the list             | boolean |
-| results  | The list of non-named api resources                     | list [APIResource](#apiresource) |
+| results  | The list of non-named api resources                   | list [APIResource](#apiresource) |
 
 
 ###### example response for named resources
@@ -119,7 +119,7 @@ Calling any api endpoint without a resource id or name will return a paginated l
 | count    | The total number of resources available from this api | integer |
 | next     | The url for the next 'page' in the list               | string  |
 | previous | The url for the previous page in the list             | boolean |
-| results  | The list of named api resources                    	   | list [NamedAPIResource](#namedapiresource) |
+| results  | The list of named api resources                       | list [NamedAPIResource](#namedapiresource) |
 
 
 
@@ -1372,7 +1372,7 @@ Move Ailments are status conditions caused by moves used during battle. See [Bul
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | id    | The identifier for this move ailment resource               | integer |
-| name  | The name for this move ailment resource	                  | string  |
+| name  | The name for this move ailment resource                     | string  |
 | moves | A list of moves that cause this ailment                     | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | names | The name of this move ailment listed in different languages | list [Name](#resourcename) |
 
@@ -1441,7 +1441,7 @@ Very general categories that loosely group move effects.
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | id           | The identifier for this move category resource                     | integer |
-| name         | The name for this move category resource	                        | string  |
+| name         | The name for this move category resource                           | string  |
 | moves        | A list of moves that fall into this category                       | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | descriptions | The description of this move ailment listed in different languages | list [Description](#description) |
 
@@ -1478,7 +1478,7 @@ Damage classes moves can have, e.g. physical, special, or status (non-damaging).
 | Name | Description | Data Type |
 | ---- | ----------- | --------- |
 | id           | The identifier for this move damage class resource                      | integer |
-| name         | The name for this move damage class resource	                         | string |
+| name         | The name for this move damage class resource                            | string |
 | descriptions | The description of this move damage class listed in different languages | list [Description](#description) |
 | moves        | A list of moves that fall into this damage class                        | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
 | names        | The name of this move damage class listed in different languages        | list [Name](#resourcename) |
@@ -2725,7 +2725,7 @@ A Pokémon Species forms the basis for at least one pokémon. Attributes of a Po
 | generation             | The generation this pokémon species was introduced in                                                                                              | [NamedAPIResource](#namedapiresource) ([Generation](#generations)) |
 | names                  | The name of this pokémon species listed in different languages                                                                                     | list [Name](#resourcename) |
 | pal_park_encounters    | A list of encounters that can be had with this pokémon species in pal park                                                                         | list [PalParkEncounterArea](#palparkencounterarea) |
-| form_descriptions      | Descriptions of different forms pokémon take on within the pokémon species		                                                                  | list [Description](#description) |
+| form_descriptions      | Descriptions of different forms pokémon take on within the pokémon species                                                                         | list [Description](#description) |
 | genera                 | The genus of this pokémon species listed in multiple languages                                                                                     | [Genus](#genus) |
 | varieties              | A list of the pokémon that exist within this pokémon species                                                                                       | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
 

@@ -79,12 +79,12 @@ Calling any api endpoint without a resource id or name will return a paginated l
 
 ```json
 {
-	"count": 365,
-	"next": "http://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20",
-	"previous": null,
-	"results": [{
-		"url": "http://pokeapi.co/api/v2/evolution-chain/1/"
-	}]
+    "count": 365,
+    "next": "http://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20",
+    "previous": null,
+    "results": [{
+        "url": "http://pokeapi.co/api/v2/evolution-chain/1/"
+    }]
 }
 ```
 
@@ -102,13 +102,13 @@ Calling any api endpoint without a resource id or name will return a paginated l
 
 ```json
 {
-	"count": 248,
-	"next": "http://pokeapi.co/api/v2/ability/?limit=20&offset=20",
-	"previous": null,
-	"results": [{
-		"name": "stench",
-		"url": "http://pokeapi.co/api/v2/ability/1/"
-	}]
+    "count": 248,
+    "next": "http://pokeapi.co/api/v2/ability/?limit=20&offset=20",
+    "previous": null,
+    "results": [{
+        "name": "stench",
+        "url": "http://pokeapi.co/api/v2/ability/1/"
+    }]
 }
 ```
 
@@ -134,33 +134,33 @@ Berries are small fruits that can provide HP and status condition restoration, s
 
 ```json
 {
-	"id": 1,
-	"name": "cheri",
-	"growth_time": 3,
-	"max_harvest": 5,
-	"natural_gift_power": 60,
-	"size": 20,
-	"smoothness": 25,
-	"soil_dryness": 15,
-	"firmness": {
-		"name": "soft",
-		"url": "http://pokeapi.co/api/v2/berry-firmness/2/"
-	},
-	"flavors": [{
-		"potency": 10,
-		"flavor": {
-			"name": "spicy",
-			"url": "http://pokeapi.co/api/v2/berry-flavor/1/"
-		}
-	}],
-	"item": {
-		"name": "cheri-berry",
-		"url": "http://pokeapi.co/api/v2/item/126/"
-	},
-	"natural_gift_type": {
-		"name": "fire",
-		"url": "http://pokeapi.co/api/v2/type/10/"
-	}
+    "id": 1,
+    "name": "cheri",
+    "growth_time": 3,
+    "max_harvest": 5,
+    "natural_gift_power": 60,
+    "size": 20,
+    "smoothness": 25,
+    "soil_dryness": 15,
+    "firmness": {
+        "name": "soft",
+        "url": "http://pokeapi.co/api/v2/berry-firmness/2/"
+    },
+    "flavors": [{
+        "potency": 10,
+        "flavor": {
+            "name": "spicy",
+            "url": "http://pokeapi.co/api/v2/berry-flavor/1/"
+        }
+    }],
+    "item": {
+        "name": "cheri-berry",
+        "url": "http://pokeapi.co/api/v2/item/126/"
+    },
+    "natural_gift_type": {
+        "name": "fire",
+        "url": "http://pokeapi.co/api/v2/type/10/"
+    }
 }
 
 ```
@@ -200,19 +200,19 @@ Berries are small fruits that can provide HP and status condition restoration, s
 
 ```json
 {
-	"id": 1,
-	"name": "very-soft",
-	"berries": [{
-		"name": "pecha",
-		"url": "http://pokeapi.co/api/v2/berry/3/"
-	}],
-	"names": [{
-		"name": "Very Soft",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "very-soft",
+    "berries": [{
+        "name": "pecha",
+        "url": "http://pokeapi.co/api/v2/berry/3/"
+    }],
+    "names": [{
+        "name": "Very Soft",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -239,26 +239,26 @@ Flavors determine whether a pokemon will benefit or suffer from eating a berry b
 
 ```json
 {
-	"id": 1,
-	"name": "spicy",
-	"berries": [{
-		"potency": 10,
-		"berry": {
-			"name": "rowap",
-			"url": "http://pokeapi.co/api/v2/berry/64/"
-		}
-	}],
-	"contest_type": {
-		"name": "cool",
-		"url": "http://pokeapi.co/api/v2/contest-type/1/"
-	},
-	"names": [{
-		"name": "Spicy",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "spicy",
+    "berries": [{
+        "potency": 10,
+        "berry": {
+            "name": "rowap",
+            "url": "http://pokeapi.co/api/v2/berry/64/"
+        }
+    }],
+    "contest_type": {
+        "name": "cool",
+        "url": "http://pokeapi.co/api/v2/contest-type/1/"
+    },
+    "names": [{
+        "name": "Spicy",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -295,20 +295,20 @@ Contest types are categories judges used to weigh a pokémon's condition in poke
 
 ```json
 {
-	"id": 1,
-	"name": "cool",
-	"berry_flavor": {
-		"name": "spicy",
-		"url": "http://pokeapi.co/api/v2/berry-flavor/1/"
-	},
-	"names": [{
-		"name": "Cool",
-		"color": "Red",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "cool",
+    "berry_flavor": {
+        "name": "spicy",
+        "url": "http://pokeapi.co/api/v2/berry-flavor/1/"
+    },
+    "names": [{
+        "name": "Cool",
+        "color": "Red",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -335,23 +335,23 @@ Contest effects refer to the effects of moves when used in contests.
 
 ```json
 {
-	"id": 1,
-	"appeal": 4,
-	"jam": 0,
-	"effect_entries": [{
-		"effect": "Gives a high number of appeal points wth no other effects.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"flavor_text_entries": [{
-		"flavor_text": "A highly appealing move.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "appeal": 4,
+    "jam": 0,
+    "effect_entries": [{
+        "effect": "Gives a high number of appeal points wth no other effects.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "flavor_text_entries": [{
+        "flavor_text": "A highly appealing move.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -378,19 +378,19 @@ Super contest effects refer to the effects of moves when used in super contests.
 
 ```json
 {
-	"id": 1,
-	"appeal": 2,
-	"flavor_text_entries": [{
-		"flavor_text": "Enables the user to perform first in the next turn.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"moves": [{
-		"name": "agility",
-		"url": "http://pokeapi.co/api/v2/move/97/"
-	}]
+    "id": 1,
+    "appeal": 2,
+    "flavor_text_entries": [{
+        "flavor_text": "Enables the user to perform first in the next turn.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "moves": [{
+        "name": "agility",
+        "url": "http://pokeapi.co/api/v2/move/97/"
+    }]
 }
 ```
 
@@ -418,16 +418,16 @@ Methods by which the player might can encounter pokémon in the wild, e.g., walk
 
 ```json
 {
-	"id": 1,
-	"name": "walk",
-	"order": 1,
-	"names": [{
-		"name": "Walking in tall grass or a cave",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "walk",
+    "order": 1,
+    "names": [{
+        "name": "Walking in tall grass or a cave",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -454,22 +454,22 @@ Conditions which affect what pokémon might appear in the wild, e.g., day or nig
 
 ```json
 {
-	"id": 1,
-	"name": "swarm",
-	"values": [{
-		"name": "swarm-yes",
-		"url": "http://pokeapi.co/api/v2/encounter-condition-value/1/"
-	}, {
-		"name": "swarm-no",
-		"url": "http://pokeapi.co/api/v2/encounter-condition-value/2/"
-	}],
-	"names": [{
-		"name": "Schwarm",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}]
+    "id": 1,
+    "name": "swarm",
+    "values": [{
+        "name": "swarm-yes",
+        "url": "http://pokeapi.co/api/v2/encounter-condition-value/1/"
+    }, {
+        "name": "swarm-no",
+        "url": "http://pokeapi.co/api/v2/encounter-condition-value/2/"
+    }],
+    "names": [{
+        "name": "Schwarm",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }]
 }
 
 ```
@@ -496,19 +496,19 @@ Encounter condition values are the various states that an encounter condition ca
 
 ```json
 {
-	"id": 1,
-	"name": "swarm-yes",
-	"condition": {
-		"name": "swarm",
-		"url": "http://pokeapi.co/api/v2/encounter-condition/1/"
-	},
-	"names": [{
-		"name": "WÃ¤hrend eines Schwarms",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}]
+    "id": 1,
+    "name": "swarm-yes",
+    "condition": {
+        "name": "swarm",
+        "url": "http://pokeapi.co/api/v2/encounter-condition/1/"
+    },
+    "names": [{
+        "name": "WÃ¤hrend eines Schwarms",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }]
 }
 
 ```
@@ -537,47 +537,47 @@ Evolution chains are essentially family trees. They start with the lowest stage 
 
 ```json
 {
-	"id": 7,
-	"baby_trigger_item": null,
-	"chain": {
-		"is_baby": false,
-		"species": {
-			"name": "rattata",
-			"url": "http://pokeapi.co/api/v2/pokemon-species/19/"
-		},
-		"evolution_details": null,
-		"evolves_to": [{
-			"is_baby": false,
-			"species": {
-				"name": "raticate",
-				"url": "http://pokeapi.co/api/v2/pokemon-species/20/"
-			},
-			"evolution_details": {
-				"item": null,
-				"trigger": {
-					"name": "level-up",
-					"url": "http://pokeapi.co/api/v2/evolution-trigger/1/"
-				},
-				"gender": null,
-				"held_item": null,
-				"known_move": null,
-				"known_move_type": null,
-				"location": null,
-				"min_level": 20,
-				"min_happiness": null,
-				"min_beauty": null,
-				"min_affection": null,
-				"needs_overworld_rain": false,
-				"party_species": null,
-				"party_type": null,
-				"relative_physical_stats": null,
-				"time_of_day": "",
-				"trade_species": null,
-				"turn_upside_down": false
-			},
-			"evolves_to": []
-		}]
-	}
+    "id": 7,
+    "baby_trigger_item": null,
+    "chain": {
+        "is_baby": false,
+        "species": {
+            "name": "rattata",
+            "url": "http://pokeapi.co/api/v2/pokemon-species/19/"
+        },
+        "evolution_details": null,
+        "evolves_to": [{
+            "is_baby": false,
+            "species": {
+                "name": "raticate",
+                "url": "http://pokeapi.co/api/v2/pokemon-species/20/"
+            },
+            "evolution_details": {
+                "item": null,
+                "trigger": {
+                    "name": "level-up",
+                    "url": "http://pokeapi.co/api/v2/evolution-trigger/1/"
+                },
+                "gender": null,
+                "held_item": null,
+                "known_move": null,
+                "known_move_type": null,
+                "location": null,
+                "min_level": 20,
+                "min_happiness": null,
+                "min_beauty": null,
+                "min_affection": null,
+                "needs_overworld_rain": false,
+                "party_species": null,
+                "party_type": null,
+                "relative_physical_stats": null,
+                "time_of_day": "",
+                "trade_species": null,
+                "turn_upside_down": false
+            },
+            "evolves_to": []
+        }]
+    }
 }
 ```
 
@@ -633,19 +633,19 @@ Evolution triggers are the events and conditions that cause a pokémon to evolve
 
 ```json
 {
-	"id": 1,
-	"name": "level-up",
-	"names": [{
-		"name": "Level up",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"pokemon_species": [{
-		"name": "ivysaur",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/2/"
-	}]
+    "id": 1,
+    "name": "level-up",
+    "names": [{
+        "name": "Level up",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "pokemon_species": [{
+        "name": "ivysaur",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/2/"
+    }]
 }
 
 ```
@@ -674,36 +674,36 @@ A generation is a grouping of the Pokémon games that separates them based on th
 
 ```json
 {
-	"id": 1,
-	"name": "generation-i",
-	"abilities": [],
-	"main_region": {
-		"name": "kanto",
-		"url": "http://pokeapi.co/api/v2/region/1/"
-	},
-	"moves": [{
-		"name": "pound",
-		"url": "http://pokeapi.co/api/v2/move/1/"
-	}],
-	"names": [{
-		"name": "Generation I",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"pokemon_species": [{
-		"name": "bulbasaur",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/1/"
-	}],
-	"types": [{
-		"name": "normal",
-		"url": "http://pokeapi.co/api/v2/type/1/"
-	}],
-	"version_groups": [{
-		"name": "red-blue",
-		"url": "http://pokeapi.co/api/v2/version-group/1/"
-	}]
+    "id": 1,
+    "name": "generation-i",
+    "abilities": [],
+    "main_region": {
+        "name": "kanto",
+        "url": "http://pokeapi.co/api/v2/region/1/"
+    },
+    "moves": [{
+        "name": "pound",
+        "url": "http://pokeapi.co/api/v2/move/1/"
+    }],
+    "names": [{
+        "name": "Generation I",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "pokemon_species": [{
+        "name": "bulbasaur",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/1/"
+    }],
+    "types": [{
+        "name": "normal",
+        "url": "http://pokeapi.co/api/v2/type/1/"
+    }],
+    "version_groups": [{
+        "name": "red-blue",
+        "url": "http://pokeapi.co/api/v2/version-group/1/"
+    }]
 }
 
 ```
@@ -735,38 +735,38 @@ A Pokédex is a handheld electronic encyclopedia device; one which is capable of
 
 ```json
 {
-	"id": 2,
-	"name": "kanto",
-	"is_main_series": true,
-	"descriptions": [{
-		"description": "Rot/Blau/Gelb Kanto Dex",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"names": [{
-		"name": "Kanto",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"pokemon_entries": [{
-		"entry_number": 1,
-		"pokemon_species": {
-			"name": "bulbasaur",
-			"url": "http://pokeapi.co/api/v2/pokemon-species/1/"
-		}
-	}],
-	"region": {
-		"name": "kanto",
-		"url": "http://pokeapi.co/api/v2/region/1/"
-	},
-	"version_groups": [{
-		"name": "red-blue",
-		"url": "http://pokeapi.co/api/v2/version-group/1/"
-	}]
+    "id": 2,
+    "name": "kanto",
+    "is_main_series": true,
+    "descriptions": [{
+        "description": "Rot/Blau/Gelb Kanto Dex",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "names": [{
+        "name": "Kanto",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "pokemon_entries": [{
+        "entry_number": 1,
+        "pokemon_species": {
+            "name": "bulbasaur",
+            "url": "http://pokeapi.co/api/v2/pokemon-species/1/"
+        }
+    }],
+    "region": {
+        "name": "kanto",
+        "url": "http://pokeapi.co/api/v2/region/1/"
+    },
+    "version_groups": [{
+        "name": "red-blue",
+        "url": "http://pokeapi.co/api/v2/version-group/1/"
+    }]
 }
 ```
 
@@ -804,19 +804,19 @@ Versions of the games, e.g., Red, Blue or Yellow.
 ```json
 
 {
-	"id": 1,
-	"name": "red",
-	"names": [{
-		"name": "Rot",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"version_group": {
-		"name": "red-blue",
-		"url": "http://pokeapi.co/api/v2/version-group/1/"
-	}
+    "id": 1,
+    "name": "red",
+    "names": [{
+        "name": "Rot",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "version_group": {
+        "name": "red-blue",
+        "url": "http://pokeapi.co/api/v2/version-group/1/"
+    }
 }
 ```
 
@@ -841,29 +841,29 @@ Version groups categorize highly similar versions of the games.
 
 ```json
 {
-	"id": 1,
-	"name": "red-blue",
-	"order": 1,
-	"generation": {
-		"name": "generation-i",
-		"url": "http://pokeapi.co/api/v2/generation/1/"
-	},
-	"move_learn_methods": [{
-		"name": "level-up",
-		"url": "http://pokeapi.co/api/v2/move-learn-method/1/"
-	}],
-	"pokedexes": [{
-		"name": "kanto",
-		"url": "http://pokeapi.co/api/v2/pokedex/2/"
-	}],
-	"regions": [{
-		"name": "kanto",
-		"url": "http://pokeapi.co/api/v2/region/1/"
-	}],
-	"versions": [{
-		"name": "red",
-		"url": "http://pokeapi.co/api/v2/version/1/"
-	}]
+    "id": 1,
+    "name": "red-blue",
+    "order": 1,
+    "generation": {
+        "name": "generation-i",
+        "url": "http://pokeapi.co/api/v2/generation/1/"
+    },
+    "move_learn_methods": [{
+        "name": "level-up",
+        "url": "http://pokeapi.co/api/v2/move-learn-method/1/"
+    }],
+    "pokedexes": [{
+        "name": "kanto",
+        "url": "http://pokeapi.co/api/v2/pokedex/2/"
+    }],
+    "regions": [{
+        "name": "kanto",
+        "url": "http://pokeapi.co/api/v2/region/1/"
+    }],
+    "versions": [{
+        "name": "red",
+        "url": "http://pokeapi.co/api/v2/version/1/"
+    }]
 }
 ```
 
@@ -895,71 +895,71 @@ An item is an object in the games which the player can pick up, keep in their ba
 
 ```json
 {
-	"id": 1,
-	"name": "master-ball",
-	"cost": 0,
-	"fling_power": 10,
-	"fling_effect": {
-		"name":"flinch",
-		"url":"http://pokeapi.co/api/v2/item-fling-effect/7/"
-	},
-	"attributes": [{
-		"name": "holdable",
-		"url": "http://pokeapi.co/api/v2/item-attribute/5/"
-	}],
-	"category": {
-		"name": "standard-balls",
-		"url": "http://pokeapi.co/api/v2/item-category/34/"
-	},
-	"effect_entries": [{
-		"effect": "Used in battle\n:   [Catches]{mechanic:catch} a wild Pokémon without fail.\n\n    If used in a trainer battle, nothing happens and the ball is lost.",
-		"short_effect": "Catches a wild Pokémon every time.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"flavor_text_entries": [{
-		"text": "é‡Žç”Ÿã®ã€€ãƒã‚±ãƒ¢ãƒ³ã‚’ã€€å¿…ãš\næ•ã¾ãˆã‚‹ã“ã¨ãŒã€€ã§ãã‚‹\næœ€é«˜ã€€æ€§èƒ½ã®ã€€ãƒœãƒ¼ãƒ«ã€‚",
-		"version_group": {
-			"name": "x-y",
-			"url": "http://pokeapi.co/api/v2/version-group/15/"
-		},
-		"language": {
-			"name": "ja-kanji",
-			"url": "http://pokeapi.co/api/v2/language/11/"
-		}
-	}],
-	"game_indices": [{
-		"game_index": 1,
-		"generation": {
-			"name": "generation-vi",
-			"url": "http://pokeapi.co/api/v2/generation/6/"
-		}
-	}],
-	"names": [{
-		"name": "Master Ball",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"held_by_pokemon": [{
-		"pokemon": {
-			"name": "chansey",
-			"url": "http://pokeapi.co/api/v2/pokemon/113/"
-		},
-		"version_details": [{
-			"rarity": 50,
-			"version": {
-				"name": "soulsilver",
-				"url": "http://pokeapi.co/api/v2/version/16/"
-			}
-		}]
-	}],
-	"baby_trigger_for": {
-		"url":"http://pokeapi.co/api/v2/evolution-chain/1/"
-	}
+    "id": 1,
+    "name": "master-ball",
+    "cost": 0,
+    "fling_power": 10,
+    "fling_effect": {
+        "name":"flinch",
+        "url":"http://pokeapi.co/api/v2/item-fling-effect/7/"
+    },
+    "attributes": [{
+        "name": "holdable",
+        "url": "http://pokeapi.co/api/v2/item-attribute/5/"
+    }],
+    "category": {
+        "name": "standard-balls",
+        "url": "http://pokeapi.co/api/v2/item-category/34/"
+    },
+    "effect_entries": [{
+        "effect": "Used in battle\n:   [Catches]{mechanic:catch} a wild Pokémon without fail.\n\n    If used in a trainer battle, nothing happens and the ball is lost.",
+        "short_effect": "Catches a wild Pokémon every time.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "flavor_text_entries": [{
+        "text": "é‡Žç”Ÿã®ã€€ãƒã‚±ãƒ¢ãƒ³ã‚’ã€€å¿…ãš\næ•ã¾ãˆã‚‹ã“ã¨ãŒã€€ã§ãã‚‹\næœ€é«˜ã€€æ€§èƒ½ã®ã€€ãƒœãƒ¼ãƒ«ã€‚",
+        "version_group": {
+            "name": "x-y",
+            "url": "http://pokeapi.co/api/v2/version-group/15/"
+        },
+        "language": {
+            "name": "ja-kanji",
+            "url": "http://pokeapi.co/api/v2/language/11/"
+        }
+    }],
+    "game_indices": [{
+        "game_index": 1,
+        "generation": {
+            "name": "generation-vi",
+            "url": "http://pokeapi.co/api/v2/generation/6/"
+        }
+    }],
+    "names": [{
+        "name": "Master Ball",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "held_by_pokemon": [{
+        "pokemon": {
+            "name": "chansey",
+            "url": "http://pokeapi.co/api/v2/pokemon/113/"
+        },
+        "version_details": [{
+            "rarity": 50,
+            "version": {
+                "name": "soulsilver",
+                "url": "http://pokeapi.co/api/v2/version/16/"
+            }
+        }]
+    }],
+    "baby_trigger_for": {
+        "url":"http://pokeapi.co/api/v2/evolution-chain/1/"
+    }
 }
 ```
 
@@ -1005,26 +1005,26 @@ Item attributes define particular aspects of items, e.g. "usable in battle" or "
 
 ```json
 {
-	"id": 1,
-	"name": "countable",
-	"descriptions": [{
-		"description": "Has a count in the bag",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"items": [{
-		"name": "master-ball",
-		"url": "http://pokeapi.co/api/v2/item/1/"
-	}],
-	"names": [{
-		"name": "Countable",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "countable",
+    "descriptions": [{
+        "description": "Has a count in the bag",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "items": [{
+        "name": "master-ball",
+        "url": "http://pokeapi.co/api/v2/item/1/"
+    }],
+    "names": [{
+        "name": "Countable",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 
@@ -1050,23 +1050,23 @@ Item categories determine where items will be placed in the players bag.
 
 ```json
 {
-	"id": 1,
-	"name": "stat-boosts",
-	"items": [{
-		"name": "guard-spec",
-		"url": "http://pokeapi.co/api/v2/item/55/"
-	}],
-	"names": [{
-		"name": "Stat boosts",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"pocket": {
-		"name": "battle",
-		"url": "http://pokeapi.co/api/v2/item-pocket/7/"
-	}
+    "id": 1,
+    "name": "stat-boosts",
+    "items": [{
+        "name": "guard-spec",
+        "url": "http://pokeapi.co/api/v2/item/55/"
+    }],
+    "names": [{
+        "name": "Stat boosts",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "pocket": {
+        "name": "battle",
+        "url": "http://pokeapi.co/api/v2/item-pocket/7/"
+    }
 }
 ```
 
@@ -1092,19 +1092,19 @@ The various effects of the move "Fling" when used with different items.
 
 ```json
 {
-	"id": 1,
-	"name": "badly-poison",
-	"effect_entries": [{
-		"effect": "Badly poisons the target.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"items": [{
-		"name": "toxic-orb",
-		"url": "http://pokeapi.co/api/v2/item/249/"
-	}]
+    "id": 1,
+    "name": "badly-poison",
+    "effect_entries": [{
+        "effect": "Badly poisons the target.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "items": [{
+        "name": "toxic-orb",
+        "url": "http://pokeapi.co/api/v2/item/249/"
+    }]
 }
 ```
 
@@ -1129,19 +1129,19 @@ Pockets within the players bag used for storing items by category.
 
 ```json
 {
-	"id": 1,
-	"name": "misc",
-	"categories": [{
-		"name": "collectibles",
-		"url": "http://pokeapi.co/api/v2/item-category/9/"
-	}],
-	"names": [{
-		"name": "Items",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "misc",
+    "categories": [{
+        "name": "collectibles",
+        "url": "http://pokeapi.co/api/v2/item-category/9/"
+    }],
+    "names": [{
+        "name": "Items",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 
@@ -1168,96 +1168,96 @@ Moves are the skills of pokémon in battle.  In battle, a Pokémon uses one move
 
 ```json
 {
-	"id": 1,
-	"name": "pound",
-	"accuracy": 100,
-	"effect_chance": null,
-	"pp": 35,
-	"priority": 0,
-	"power": 40,
-	"contest_combos": {
-		"normal": {
-			"use_before": [{
-				"name": "double-slap",
-				"url": "http://pokeapi.co/api/v2/move/3/"
-			}, {
-				"name": "headbutt",
-				"url": "http://pokeapi.co/api/v2/move/29/"
-			}, {
-				"name": "feint-attack",
-				"url": "http://pokeapi.co/api/v2/move/185/"
-			}],
-			"use_after": null
-		},
-		"super": {
-			"use_before": null,
-			"use_after": null
-		}
-	},
-	"contest_type": {
-		"name": "tough",
-		"url": "http://pokeapi.co/api/v2/contest-type/5/"
-	},
-	"contest_effect": {
-		"url": "http://pokeapi.co/api/v2/contest-effect/1/"
-	},
-	"damage_class": {
-		"name": "physical",
-		"url": "http://pokeapi.co/api/v2/move-damage-class/2/"
-	},
-	"effect_entries": [{
-		"effect": "Inflicts [regular damage]{mechanic:regular-damage}.",
-		"short_effect": "Inflicts regular damage with no additional effect.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"effect_changes": [],
-	"generation": {
-		"name": "generation-i",
-		"url": "http://pokeapi.co/api/v2/generation/1/"
-	},
-	"meta": {
-		"ailment": {
-			"name": "none",
-			"url": "http://pokeapi.co/api/v2/move-ailment/0/"
-		},
-		"category": {
-			"name": "damage",
-			"url": "http://pokeapi.co/api/v2/move-category/0/"
-		},
-		"min_hits": null,
-		"max_hits": null,
-		"min_turns": null,
-		"max_turns": null,
-		"drain": 0,
-		"healing": 0,
-		"crit_rate": 0,
-		"ailment_chance": 0,
-		"flinch_chance": 0,
-		"stat_chance": 0
-	},
-	"names": [{
-		"name": "Pound",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"past_values": [],
-	"stat_changes": [],
-	"super_contest_effect": {
-		"url": "http://pokeapi.co/api/v2/super-contest-effect/5/"
-	},
-	"target": {
-		"name": "selected-pokemon",
-		"url": "http://pokeapi.co/api/v2/move-target/10/"
-	},
-	"type": {
-		"name": "normal",
-		"url": "http://pokeapi.co/api/v2/type/1/"
-	}
+    "id": 1,
+    "name": "pound",
+    "accuracy": 100,
+    "effect_chance": null,
+    "pp": 35,
+    "priority": 0,
+    "power": 40,
+    "contest_combos": {
+        "normal": {
+            "use_before": [{
+                "name": "double-slap",
+                "url": "http://pokeapi.co/api/v2/move/3/"
+            }, {
+                "name": "headbutt",
+                "url": "http://pokeapi.co/api/v2/move/29/"
+            }, {
+                "name": "feint-attack",
+                "url": "http://pokeapi.co/api/v2/move/185/"
+            }],
+            "use_after": null
+        },
+        "super": {
+            "use_before": null,
+            "use_after": null
+        }
+    },
+    "contest_type": {
+        "name": "tough",
+        "url": "http://pokeapi.co/api/v2/contest-type/5/"
+    },
+    "contest_effect": {
+        "url": "http://pokeapi.co/api/v2/contest-effect/1/"
+    },
+    "damage_class": {
+        "name": "physical",
+        "url": "http://pokeapi.co/api/v2/move-damage-class/2/"
+    },
+    "effect_entries": [{
+        "effect": "Inflicts [regular damage]{mechanic:regular-damage}.",
+        "short_effect": "Inflicts regular damage with no additional effect.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "effect_changes": [],
+    "generation": {
+        "name": "generation-i",
+        "url": "http://pokeapi.co/api/v2/generation/1/"
+    },
+    "meta": {
+        "ailment": {
+            "name": "none",
+            "url": "http://pokeapi.co/api/v2/move-ailment/0/"
+        },
+        "category": {
+            "name": "damage",
+            "url": "http://pokeapi.co/api/v2/move-category/0/"
+        },
+        "min_hits": null,
+        "max_hits": null,
+        "min_turns": null,
+        "max_turns": null,
+        "drain": 0,
+        "healing": 0,
+        "crit_rate": 0,
+        "ailment_chance": 0,
+        "flinch_chance": 0,
+        "stat_chance": 0
+    },
+    "names": [{
+        "name": "Pound",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "past_values": [],
+    "stat_changes": [],
+    "super_contest_effect": {
+        "url": "http://pokeapi.co/api/v2/super-contest-effect/5/"
+    },
+    "target": {
+        "name": "selected-pokemon",
+        "url": "http://pokeapi.co/api/v2/move-target/10/"
+    },
+    "type": {
+        "name": "normal",
+        "url": "http://pokeapi.co/api/v2/type/1/"
+    }
 }
 ```
 
@@ -1349,19 +1349,19 @@ Move Ailments are status conditions caused by moves used during battle. See [Bul
 
 ```json
 {
-	"id": 1,
-	"name": "paralysis",
-	"moves": [{
-		"name": "thunder-punch",
-		"url": "http://pokeapi.co/api/v2/move/9/"
-	}],
-	"names": [{
-		"name": "Paralysis",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "paralysis",
+    "moves": [{
+        "name": "thunder-punch",
+        "url": "http://pokeapi.co/api/v2/move/9/"
+    }],
+    "names": [{
+        "name": "Paralysis",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 
@@ -1386,15 +1386,15 @@ Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbaped
 
 ```json
 {
-	"id": 1,
-	"name": "attack",
-	"names": [{
-		"name": "Attack",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "attack",
+    "names": [{
+        "name": "Attack",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 
@@ -1418,19 +1418,19 @@ Very general categories that loosely group move effects.
 
 ```json
 {
-	"id": 1,
-	"name": "ailment",
-	"descriptions": [{
-		"description": "No damage; inflicts status ailment",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"moves": [{
-		"name": "sing",
-		"url": "http://pokeapi.co/api/v2/move/47/"
-	}]
+    "id": 1,
+    "name": "ailment",
+    "descriptions": [{
+        "description": "No damage; inflicts status ailment",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "moves": [{
+        "name": "sing",
+        "url": "http://pokeapi.co/api/v2/move/47/"
+    }]
 }
 ```
 
@@ -1455,19 +1455,19 @@ Damage classes moves can have, e.g. physical, special, or status (non-damaging).
 
 ```json
 {
-	"id": 1,
-	"name": "status",
-	"descriptions": [{
-		"description": "ãƒ€ãƒ¡ãƒ¼ã‚¸ãªã„",
-		"language": {
-			"name": "ja",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}],
-	"moves": [{
-		"name": "swords-dance",
-		"url": "http://pokeapi.co/api/v2/move/14/"
-	}]
+    "id": 1,
+    "name": "status",
+    "descriptions": [{
+        "description": "ãƒ€ãƒ¡ãƒ¼ã‚¸ãªã„",
+        "language": {
+            "name": "ja",
+            "url": "http://pokeapi.co/api/v2/language/1/"
+        }
+    }],
+    "moves": [{
+        "name": "swords-dance",
+        "url": "http://pokeapi.co/api/v2/move/14/"
+    }]
 }
 ```
 
@@ -1493,26 +1493,26 @@ Methods by which pokémon can learn moves.
 
 ```json
 {
-	"id": 1,
-	"name": "level-up",
-	"names": [{
-		"name": "Level up",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"descriptions": [{
-		"description": "Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht.",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"version_groups": [{
-		"name": "red-blue",
-		"url": "http://pokeapi.co/api/v2/version-group/1/"
-	}]
+    "id": 1,
+    "name": "level-up",
+    "names": [{
+        "name": "Level up",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "descriptions": [{
+        "description": "Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht.",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "version_groups": [{
+        "name": "red-blue",
+        "url": "http://pokeapi.co/api/v2/version-group/1/"
+    }]
 }
 ```
 
@@ -1538,26 +1538,26 @@ Targets moves can be directed at during battle. Targets can be pokémon, environ
 
 ```json
 {
-	"id": 1,
-	"name": "specific-move",
-	"descriptions": [{
-		"description": "Eine spezifische FÃ¤higkeit.  Wie diese FÃ¤higkeit genutzt wird hÃ¤ngt von den genutzten FÃ¤higkeiten ab.",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"moves": [{
-		"name": "counter",
-		"url": "http://pokeapi.co/api/v2/move/68/"
-	}],
-	"names": [{
-		"name": "Spezifische FÃ¤higkeit",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}]
+    "id": 1,
+    "name": "specific-move",
+    "descriptions": [{
+        "description": "Eine spezifische FÃ¤higkeit.  Wie diese FÃ¤higkeit genutzt wird hÃ¤ngt von den genutzten FÃ¤higkeiten ab.",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "moves": [{
+        "name": "counter",
+        "url": "http://pokeapi.co/api/v2/move/68/"
+    }],
+    "names": [{
+        "name": "Spezifische FÃ¤higkeit",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }]
 }
 ```
 
@@ -1586,30 +1586,30 @@ Locations that can be visited within the games. Locations make up sizable portio
 
 ```json
 {
-	"id": 1,
-	"name": "canalave-city",
-	"region": {
-		"name": "sinnoh",
-		"url": "http://pokeapi.co/api/v2/region/4/"
-	},
-	"names": [{
-		"name": "Canalave City",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"game_indices": [{
-		"game_index": 7,
-		"generation": {
-			"name": "generation-iv",
-			"url": "http://pokeapi.co/api/v2/generation/4/"
-		}
-	}],
-	"areas": [{
-		"name": "canalave-city-area",
-		"url": "http://pokeapi.co/api/v2/location-area/1/"
-	}]
+    "id": 1,
+    "name": "canalave-city",
+    "region": {
+        "name": "sinnoh",
+        "url": "http://pokeapi.co/api/v2/region/4/"
+    },
+    "names": [{
+        "name": "Canalave City",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "game_indices": [{
+        "game_index": 7,
+        "generation": {
+            "name": "generation-iv",
+            "url": "http://pokeapi.co/api/v2/generation/4/"
+        }
+    }],
+    "areas": [{
+        "name": "canalave-city-area",
+        "url": "http://pokeapi.co/api/v2/location-area/1/"
+    }]
 }
 ```
 
@@ -1636,56 +1636,56 @@ Location areas are sections of areas, such as floors in a building or cave. Each
 
 ```json
 {
-	"id": 1,
-	"name": "canalave-city-area",
-	"game_index": 1,
-	"encounter_method_rates": [{
-		"encounter_method": {
-			"name": "old-rod",
-			"url": "http://pokeapi.co/api/v2/encounter-method/2/"
-		},
-		"version_details": [{
-			"rate": 25,
-			"version": {
-				"name": "platinum",
-				"url": "http://pokeapi.co/api/v2/version/14/"
-			}
-		}]
-	}],
-	"location": {
-		"name": "canalave-city",
-		"url": "http://pokeapi.co/api/v2/location/1/"
-	},
-	"names": [{
-		"name": "",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"pokemon_encounters": [{
-		"pokemon": {
-			"name": "tentacool",
-			"url": "http://pokeapi.co/api/v2/pokemon/72/"
-		},
-		"version_details": [{
-			"version": {
-				"name": "diamond",
-				"url": "http://pokeapi.co/api/v2/version/12/"
-			},
-			"max_chance": 60,
-			"encounter_details": [{
-				"min_level": 20,
-				"max_level": 30,
-				"condition_values": [],
-				"chance": 60,
-				"method": {
-					"name": "surf",
-					"url": "http://pokeapi.co/api/v2/encounter-method/5/"
-				}
-			}]
-		}]
-	}]
+    "id": 1,
+    "name": "canalave-city-area",
+    "game_index": 1,
+    "encounter_method_rates": [{
+        "encounter_method": {
+            "name": "old-rod",
+            "url": "http://pokeapi.co/api/v2/encounter-method/2/"
+        },
+        "version_details": [{
+            "rate": 25,
+            "version": {
+                "name": "platinum",
+                "url": "http://pokeapi.co/api/v2/version/14/"
+            }
+        }]
+    }],
+    "location": {
+        "name": "canalave-city",
+        "url": "http://pokeapi.co/api/v2/location/1/"
+    },
+    "names": [{
+        "name": "",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "pokemon_encounters": [{
+        "pokemon": {
+            "name": "tentacool",
+            "url": "http://pokeapi.co/api/v2/pokemon/72/"
+        },
+        "version_details": [{
+            "version": {
+                "name": "diamond",
+                "url": "http://pokeapi.co/api/v2/version/12/"
+            },
+            "max_chance": 60,
+            "encounter_details": [{
+                "min_level": 20,
+                "max_level": 30,
+                "condition_values": [],
+                "chance": 60,
+                "method": {
+                    "name": "surf",
+                    "url": "http://pokeapi.co/api/v2/encounter-method/5/"
+                }
+            }]
+        }]
+    }]
 }
 ```
 
@@ -1734,23 +1734,23 @@ Areas used for grouping pokémon encounters in Pal Park. They're like habitats t
 
 ```json
 {
-	"id": 1,
-	"name": "forest",
-	"names": [{
-		"name": "Forest",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"pokemon_encounters": [{
-		"base_score": 30,
-		"rate": 50,
-		"pokemon_species": {
-			"name": "caterpie",
-			"url": "http://pokeapi.co/api/v2/pokemon-species/10/"
-		}
-	}]
+    "id": 1,
+    "name": "forest",
+    "names": [{
+        "name": "Forest",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "pokemon_encounters": [{
+        "base_score": 30,
+        "rate": 50,
+        "pokemon_species": {
+            "name": "caterpie",
+            "url": "http://pokeapi.co/api/v2/pokemon-species/10/"
+        }
+    }]
 }
 ```
 
@@ -1783,31 +1783,31 @@ A region is an organized area of the pokémon world. Most often, the main differ
 
 ```json
 {
-	"id": 1,
-	"name": "kanto",
-	"locations": [{
-		"name": "celadon-city",
-		"url": "http://pokeapi.co/api/v2/location/67/"
-	}],
-	"main_generation": {
-		"name": "generation-i",
-		"url": "http://pokeapi.co/api/v2/generation/1/"
-	},
-	"names": [{
-		"name": "Kanto",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"pokedexes": [{
-		"name": "kanto",
-		"url": "http://pokeapi.co/api/v2/pokedex/2/"
-	}],
-	"version_groups": [{
-		"name": "red-blue",
-		"url": "http://pokeapi.co/api/v2/version-group/1/"
-	}]
+    "id": 1,
+    "name": "kanto",
+    "locations": [{
+        "name": "celadon-city",
+        "url": "http://pokeapi.co/api/v2/location/67/"
+    }],
+    "main_generation": {
+        "name": "generation-i",
+        "url": "http://pokeapi.co/api/v2/generation/1/"
+    },
+    "names": [{
+        "name": "Kanto",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "pokedexes": [{
+        "name": "kanto",
+        "url": "http://pokeapi.co/api/v2/pokedex/2/"
+    }],
+    "version_groups": [{
+        "name": "red-blue",
+        "url": "http://pokeapi.co/api/v2/version-group/1/"
+    }]
 }
 ```
 
@@ -1838,60 +1838,60 @@ Abilities provide passive effects for pokémon in battle or in the overworld. Po
 
 ```json
 {
-	"id": 1,
-	"name": "stench",
-	"is_main_series": true,
-	"generation": {
-		"name": "generation-iii",
-		"url": "http://pokeapi.co/api/v2/generation/3/"
-	},
-	"names": [{
-		"name": "Stench",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"effect_entries": [{
-		"effect": "This Pokémon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this Pokémon is first in the party.",
-		"short_effect": "Has a 10% chance of making target Pokémon [flinch]{mechanic:flinch} with each hit.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"effect_changes": [{
-		"version_group": {
-			"name": "black-white",
-			"url": "http://pokeapi.co/api/v2/version-group/11/"
-		},
-		"effect_entries": [{
-			"effect": "Has no effect in battle.",
-			"language": {
-				"name": "en",
-				"url": "http://pokeapi.co/api/v2/language/9/"
-			}
-		}]
-	}],
-	"flavor_text_entries": [{
-		"flavor_text": "è‡­ãã¦ã€€ç›¸æ‰‹ãŒ\nã²ã‚‹ã‚€ã€€ã“ã¨ãŒã‚ã‚‹ã€‚",
-		"language": {
-			"name": "ja-kanji",
-			"url": "http://pokeapi.co/api/v2/language/11/"
-		},
-		"version_group": {
-			"name": "x-y",
-			"url": "http://pokeapi.co/api/v2/version-group/15/"
-		}
-	}],
-	"pokemon": [{
-		"is_hidden": true,
-		"slot": 3,
-		"pokemon": {
-			"name": "gloom",
-			"url": "http://pokeapi.co/api/v2/pokemon/44/"
-		}
-	}]
+    "id": 1,
+    "name": "stench",
+    "is_main_series": true,
+    "generation": {
+        "name": "generation-iii",
+        "url": "http://pokeapi.co/api/v2/generation/3/"
+    },
+    "names": [{
+        "name": "Stench",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "effect_entries": [{
+        "effect": "This Pokémon's damaging moves have a 10% chance to make the target [flinch]{mechanic:flinch} with each hit if they do not already cause flinching as a secondary effect.\n\nThis ability does not stack with a held item.\n\nOverworld: The wild encounter rate is halved while this Pokémon is first in the party.",
+        "short_effect": "Has a 10% chance of making target Pokémon [flinch]{mechanic:flinch} with each hit.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "effect_changes": [{
+        "version_group": {
+            "name": "black-white",
+            "url": "http://pokeapi.co/api/v2/version-group/11/"
+        },
+        "effect_entries": [{
+            "effect": "Has no effect in battle.",
+            "language": {
+                "name": "en",
+                "url": "http://pokeapi.co/api/v2/language/9/"
+            }
+        }]
+    }],
+    "flavor_text_entries": [{
+        "flavor_text": "è‡­ãã¦ã€€ç›¸æ‰‹ãŒ\nã²ã‚‹ã‚€ã€€ã“ã¨ãŒã‚ã‚‹ã€‚",
+        "language": {
+            "name": "ja-kanji",
+            "url": "http://pokeapi.co/api/v2/language/11/"
+        },
+        "version_group": {
+            "name": "x-y",
+            "url": "http://pokeapi.co/api/v2/version-group/15/"
+        }
+    }],
+    "pokemon": [{
+        "is_hidden": true,
+        "slot": 3,
+        "pokemon": {
+            "name": "gloom",
+            "url": "http://pokeapi.co/api/v2/pokemon/44/"
+        }
+    }]
 }
 ```
 
@@ -1944,20 +1944,20 @@ Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon
 
 ```json
 {
-	"id": 1,
-	"gene_modulo": 0,
-	"possible_values": [0, 5, 10, 15, 20, 25, 30],
-	"highest_stat": {
-		"name": "hp",
-		"url": "http://pokeapi.co/api/v2/stat/1/"
-	},
-	"descriptions": [{
-		"description": "Loves to eat",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "gene_modulo": 0,
+    "possible_values": [0, 5, 10, 15, 20, 25, 30],
+    "highest_stat": {
+        "name": "hp",
+        "url": "http://pokeapi.co/api/v2/stat/1/"
+    },
+    "descriptions": [{
+        "description": "Loves to eat",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 
 ```
@@ -1983,19 +1983,19 @@ Egg Groups are categories which determine which Pokémon are able to interbreed.
 
 ```json
 {
-	"id": 1,
-	"name": "monster",
-	"names": [{
-		"name": "ã‹ã„ã˜ã‚…ã†",
-		"language": {
-			"name": "ja",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}],
-	"pokemon_species": [{
-		"name": "bulbasaur",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/1/"
-	}]
+    "id": 1,
+    "name": "monster",
+    "names": [{
+        "name": "ã‹ã„ã˜ã‚…ã†",
+        "language": {
+            "name": "ja",
+            "url": "http://pokeapi.co/api/v2/language/1/"
+        }
+    }],
+    "pokemon_species": [{
+        "name": "bulbasaur",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/1/"
+    }]
 }
 
 ```
@@ -2021,19 +2021,19 @@ Genders were introduced in Generation II for the purposes of breeding pokémon b
 
 ```json
 {
-	"id": 1,
-	"name": "female",
-	"pokemon_species_details": [{
-		"rate": 1,
-		"pokemon_species": {
-			"name": "bulbasaur",
-			"url": "http://pokeapi.co/api/v2/pokemon-species/1/"
-		}
-	}],
-	"required_for_evolution": [{
-		"name": "wormadam",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/413/"
-	}]
+    "id": 1,
+    "name": "female",
+    "pokemon_species_details": [{
+        "rate": 1,
+        "pokemon_species": {
+            "name": "bulbasaur",
+            "url": "http://pokeapi.co/api/v2/pokemon-species/1/"
+        }
+    }],
+    "required_for_evolution": [{
+        "name": "wormadam",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/413/"
+    }]
 }
 
 ```
@@ -2067,24 +2067,24 @@ Growth rates are the speed with which pokémon gain levels through experience. C
 
 ```json
 {
-	"id": 1,
-	"name": "slow",
-	"formula": "\\frac{5x^3}{4}",
-	"descriptions": [{
-		"description": "langsam",
-		"language": {
-			"name": "de",
-			"url": "http://pokeapi.co/api/v2/language/6/"
-		}
-	}],
-	"levels": [{
-		"level": 100,
-		"experience": 1250000
-	}],
-	"pokemon_species": [{
-		"name": "growlithe",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/58/"
-	}]
+    "id": 1,
+    "name": "slow",
+    "formula": "\\frac{5x^3}{4}",
+    "descriptions": [{
+        "description": "langsam",
+        "language": {
+            "name": "de",
+            "url": "http://pokeapi.co/api/v2/language/6/"
+        }
+    }],
+    "levels": [{
+        "level": 100,
+        "experience": 1250000
+    }],
+    "pokemon_species": [{
+        "name": "growlithe",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/58/"
+    }]
 }
 ```
 
@@ -2118,46 +2118,46 @@ Natures influence how a pokémon's stats grow. See [Bulbapedia](http://bulbapedi
 
 ```json
 {
-	"id": 2,
-	"name": "bold",
-	"decreased_stat": {
-		"name": "attack",
-		"url": "http://pokeapi.co/api/v2/stat/2/"
-	},
-	"increased_stat": {
-		"name": "defense",
-		"url": "http://pokeapi.co/api/v2/stat/3/"
-	},
-	"likes_flavor": {
-		"name": "sour",
-		"url": "http://pokeapi.co/api/v2/berry-flavor/5/"
-	},
-	"hates_flavor": {
-		"name": "spicy",
-		"url": "http://pokeapi.co/api/v2/berry-flavor/1/"
-	},
-	"pokeathlon_stat_changes": [{
-		"max_change": -2,
-		"pokeathlon_stat": {
-			"name": "speed",
-			"url": "http://pokeapi.co/api/v2/pokeathlon-stat/1/"
-		}
-	}],
-	"move_battle_style_preferences": [{
-		"low_hp_preference": 32,
-		"high_hp_preference": 30,
-		"move_battle_style": {
-			"name": "attack",
-			"url": "http://pokeapi.co/api/v2/move-battle-style/1/"
-		}
-	}],
-	"names": [{
-		"name": "ãšã¶ã¨ã„",
-		"language": {
-			"name": "ja",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}]
+    "id": 2,
+    "name": "bold",
+    "decreased_stat": {
+        "name": "attack",
+        "url": "http://pokeapi.co/api/v2/stat/2/"
+    },
+    "increased_stat": {
+        "name": "defense",
+        "url": "http://pokeapi.co/api/v2/stat/3/"
+    },
+    "likes_flavor": {
+        "name": "sour",
+        "url": "http://pokeapi.co/api/v2/berry-flavor/5/"
+    },
+    "hates_flavor": {
+        "name": "spicy",
+        "url": "http://pokeapi.co/api/v2/berry-flavor/1/"
+    },
+    "pokeathlon_stat_changes": [{
+        "max_change": -2,
+        "pokeathlon_stat": {
+            "name": "speed",
+            "url": "http://pokeapi.co/api/v2/pokeathlon-stat/1/"
+        }
+    }],
+    "move_battle_style_preferences": [{
+        "low_hp_preference": 32,
+        "high_hp_preference": 30,
+        "move_battle_style": {
+            "name": "attack",
+            "url": "http://pokeapi.co/api/v2/move-battle-style/1/"
+        }
+    }],
+    "names": [{
+        "name": "ãšã¶ã¨ã„",
+        "language": {
+            "name": "ja",
+            "url": "http://pokeapi.co/api/v2/language/1/"
+        }
+    }]
 }
 ```
 
@@ -2202,31 +2202,31 @@ Pokéathlon Stats are different attributes of a pokémon's performance in pokeat
 
 ```json
 {
-	"id": 1,
-	"name": "speed",
-	"affecting_natures": {
-		"increase": [{
-			"max_change": 2,
-			"nature": {
-				"name": "timid",
-				"url": "http://pokeapi.co/api/v2/nature/5/"
-			}
-		}],
-		"decrease": [{
-			"max_change": -1,
-			"nature": {
-				"name": "hardy",
-				"url": "http://pokeapi.co/api/v2/nature/1/"
-			}
-		}]
-	},
-	"names": [{
-		"name": "Speed",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "speed",
+    "affecting_natures": {
+        "increase": [{
+            "max_change": 2,
+            "nature": {
+                "name": "timid",
+                "url": "http://pokeapi.co/api/v2/nature/5/"
+            }
+        }],
+        "decrease": [{
+            "max_change": -1,
+            "nature": {
+                "name": "hardy",
+                "url": "http://pokeapi.co/api/v2/nature/1/"
+            }
+        }]
+    },
+    "names": [{
+        "name": "Speed",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 
@@ -2266,7 +2266,7 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 
 ```json
 {
-	"id": 35,
+    "id": 35,
     "name": "clefairy",
     "base_experience": 113,
     "height": 6,
@@ -2274,89 +2274,89 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
     "order": 56,
     "weight": 75,
     "abilities": [{
-		"is_hidden": true,
-		"slot": 3,
-		"ability": {
-			"name": "friend-guard",
-			"url": "https://pokeapi.co/api/v2/ability/132/"
-		}
-	}],
-	"forms": [{
-		"name": "clefairy",
-		"url": "https://pokeapi.co/api/v2/pokemon-form/35/"
-	}],
-	"game_indices": [{
-		"game_index": 35,
-		"version": {
-			"name": "white-2",
-			"url": "https://pokeapi.co/api/v2/version/22/"
-		}
-	}],
-	"held_items": [{
-		"item": {
-			"name": "moon-stone",
-			"url": "https://pokeapi.co/api/v2/item/81/"
-		},
-		"version_details": [{
-			"rarity": 5,
-			"version": {
-				"name": "ruby",
-				"url": "https://pokeapi.co/api/v2/version/7/"
-			}
-		}]
-	}],
-	"location_area_encounters": "/api/v2/pokemon/35/encounters",
-	"moves": [{
-		"move": {
-			"name": "pound",
-			"url": "https://pokeapi.co/api/v2/move/1/"
-		},
-		"version_group_details": [{
-			"level_learned_at": 1,
-			"version_group": {
-				"name": "red-blue",
-				"url": "https://pokeapi.co/api/v2/version-group/1/"
-			},
-			"move_learn_method": {
-				"name": "level-up",
-				"url": "https://pokeapi.co/api/v2/move-learn-method/1/"
-			}
-		}]
-	}],
-	"species": {
-		"name": "clefairy",
+        "is_hidden": true,
+        "slot": 3,
+        "ability": {
+            "name": "friend-guard",
+            "url": "https://pokeapi.co/api/v2/ability/132/"
+        }
+    }],
+    "forms": [{
+        "name": "clefairy",
+        "url": "https://pokeapi.co/api/v2/pokemon-form/35/"
+    }],
+    "game_indices": [{
+        "game_index": 35,
+        "version": {
+            "name": "white-2",
+            "url": "https://pokeapi.co/api/v2/version/22/"
+        }
+    }],
+    "held_items": [{
+        "item": {
+            "name": "moon-stone",
+            "url": "https://pokeapi.co/api/v2/item/81/"
+        },
+        "version_details": [{
+            "rarity": 5,
+            "version": {
+                "name": "ruby",
+                "url": "https://pokeapi.co/api/v2/version/7/"
+            }
+        }]
+    }],
+    "location_area_encounters": "/api/v2/pokemon/35/encounters",
+    "moves": [{
+        "move": {
+            "name": "pound",
+            "url": "https://pokeapi.co/api/v2/move/1/"
+        },
+        "version_group_details": [{
+            "level_learned_at": 1,
+            "version_group": {
+                "name": "red-blue",
+                "url": "https://pokeapi.co/api/v2/version-group/1/"
+            },
+            "move_learn_method": {
+                "name": "level-up",
+                "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+            }
+        }]
+    }],
+    "species": {
+        "name": "clefairy",
         "url": "https://pokeapi.co/api/v2/pokemon-species/35/"
-	},
-	"stats": [{
-		"base_stat": 35,
-		"effort": 0,
-		"stat": {
-			"name": "speed",
-			"url": "https://pokeapi.co/api/v2/stat/6/"
-		}
-	}],
-	"types": [{
-		"slot": 1,
-		"type": {
-			"name": "fairy",
-			"url": "https://pokeapi.co/api/v2/type/18/"
-		}
-	}],
-	"past_types": [{
-		"generation": {
-			"name": "generation-v",
-			"url": "https://pokeapi.co/api/v2/generation/5/"
-		},
-		"types": [
-			{
-				"slot": 1,
-				"type": {
-					"name": "normal",
-					"url": "https://pokeapi.co/api/v2/type/1/"
-				}
-			}
-		]
-	}]
+    },
+    "stats": [{
+        "base_stat": 35,
+        "effort": 0,
+        "stat": {
+            "name": "speed",
+            "url": "https://pokeapi.co/api/v2/stat/6/"
+        }
+    }],
+    "types": [{
+        "slot": 1,
+        "type": {
+            "name": "fairy",
+            "url": "https://pokeapi.co/api/v2/type/18/"
+        }
+    }],
+    "past_types": [{
+        "generation": {
+            "name": "generation-v",
+            "url": "https://pokeapi.co/api/v2/generation/5/"
+        },
+        "types": [
+            {
+                "slot": 1,
+                "type": {
+                    "name": "normal",
+                    "url": "https://pokeapi.co/api/v2/type/1/"
+                }
+            }
+        ]
+    }]
 }
 ```
 
@@ -2430,19 +2430,19 @@ Colors used for sorting pokémon in a pokédex. The color listed in the Pokédex
 
 ```json
 {
-	"id": 1,
-	"name": "black",
-	"names": [{
-		"name": "é»’ã„",
-		"language": {
-			"name": "ja",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}],
-	"pokemon_species": [{
-		"name": "snorlax",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/143/"
-	}]
+    "id": 1,
+    "name": "black",
+    "names": [{
+        "name": "é»’ã„",
+        "language": {
+            "name": "ja",
+            "url": "http://pokeapi.co/api/v2/language/1/"
+        }
+    }],
+    "pokemon_species": [{
+        "name": "snorlax",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/143/"
+    }]
 }
 ```
 
@@ -2622,79 +2622,79 @@ A Pokémon Species forms the basis for at least one pokémon. Attributes of a Po
 
 ```json
 {
-	"id": 413,
-	"name": "wormadam",
-	"order": 441,
-	"gender_rate": 8,
-	"capture_rate": 45,
-	"base_happiness": 70,
-	"is_baby": false,
-	"hatch_counter": 15,
-	"has_gender_differences": false,
-	"forms_switchable": false,
-	"growth_rate": {
-		"name": "medium",
-		"url": "http://pokeapi.co/api/v2/growth-rate/2/"
-	},
-	"pokedex_numbers": [{
-		"entry_number": 45,
-		"pokedex": {
-			"name": "kalos-central",
-			"url": "http://pokeapi.co/api/v2/pokedex/12/"
-		}
-	}],
-	"egg_groups": [{
-		"name": "bug",
-		"url": "http://pokeapi.co/api/v2/egg-group/3/"
-	}],
-	"color": {
-		"name": "gray",
-		"url": "http://pokeapi.co/api/v2/pokemon-color/4/"
-	},
-	"shape": {
-		"name": "squiggle",
-		"url": "http://pokeapi.co/api/v2/pokemon-shape/2/"
-	},
-	"evolves_from_species": {
-		"name": "burmy",
-		"url": "http://pokeapi.co/api/v2/pokemon-species/412/"
-	},
-	"evolution_chain": {
-		"url": "http://pokeapi.co/api/v2/evolution-chain/213/"
-	},
-	"habitat": null,
-	"generation": {
-		"name": "generation-iv",
-		"url": "http://pokeapi.co/api/v2/generation/4/"
-	},
-	"names": [{
-		"name": "Wormadam",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"form_descriptions": [{
-		"description": "Forms have different stats and movepools.  During evolution, Burmy's current cloak becomes Wormadam's form, and can no longer be changed.",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"genera": [{
-		"genus": "Bagworm",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}],
-	"varieties": [{
-		"is_default": true,
-		"pokemon": {
-			"name": "wormadam-plant",
-			"url": "http://pokeapi.co/api/v2/pokemon/413/"
-		}
-	}]
+    "id": 413,
+    "name": "wormadam",
+    "order": 441,
+    "gender_rate": 8,
+    "capture_rate": 45,
+    "base_happiness": 70,
+    "is_baby": false,
+    "hatch_counter": 15,
+    "has_gender_differences": false,
+    "forms_switchable": false,
+    "growth_rate": {
+        "name": "medium",
+        "url": "http://pokeapi.co/api/v2/growth-rate/2/"
+    },
+    "pokedex_numbers": [{
+        "entry_number": 45,
+        "pokedex": {
+            "name": "kalos-central",
+            "url": "http://pokeapi.co/api/v2/pokedex/12/"
+        }
+    }],
+    "egg_groups": [{
+        "name": "bug",
+        "url": "http://pokeapi.co/api/v2/egg-group/3/"
+    }],
+    "color": {
+        "name": "gray",
+        "url": "http://pokeapi.co/api/v2/pokemon-color/4/"
+    },
+    "shape": {
+        "name": "squiggle",
+        "url": "http://pokeapi.co/api/v2/pokemon-shape/2/"
+    },
+    "evolves_from_species": {
+        "name": "burmy",
+        "url": "http://pokeapi.co/api/v2/pokemon-species/412/"
+    },
+    "evolution_chain": {
+        "url": "http://pokeapi.co/api/v2/evolution-chain/213/"
+    },
+    "habitat": null,
+    "generation": {
+        "name": "generation-iv",
+        "url": "http://pokeapi.co/api/v2/generation/4/"
+    },
+    "names": [{
+        "name": "Wormadam",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "form_descriptions": [{
+        "description": "Forms have different stats and movepools.  During evolution, Burmy's current cloak becomes Wormadam's form, and can no longer be changed.",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "genera": [{
+        "genus": "Bagworm",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }],
+    "varieties": [{
+        "is_default": true,
+        "pokemon": {
+            "name": "wormadam-plant",
+            "url": "http://pokeapi.co/api/v2/pokemon/413/"
+        }
+    }]
 }
 ```
 
@@ -2761,50 +2761,50 @@ Stats determine certain aspects of battles. Each pokémon has a value for each s
 
 ```json
 {
-	"id": 2,
-	"name": "attack",
-	"game_index": 2,
-	"is_battle_only": false,
-	"affecting_moves": {
-		"increase": [{
-			"change": 2,
-			"move": {
-				"name": "swords-dance",
-				"url": "http://pokeapi.co/api/v2/move/14/"
-			}
-		}],
-		"decrease": [{
-			"change": -1,
-			"move": {
-				"name": "growl",
-				"url": "http://pokeapi.co/api/v2/move/45/"
-			}
-		}]
-	},
-	"affecting_natures": {
-		"increase": [{
-			"name": "lonely",
-			"url": "http://pokeapi.co/api/v2/nature/6/"
-		}],
-		"decrease": [{
-			"name": "bold",
-			"url": "http://pokeapi.co/api/v2/nature/2/"
-		}]
-	},
-	"characteristics": [{
-		"url": "http://pokeapi.co/api/v2/characteristic/2/"
-	}],
-	"move_damage_class": {
-		"name": "physical",
-		"url": "http://pokeapi.co/api/v2/move-damage-class/2/"
-	},
-	"names": [{
-		"name": "ã“ã†ã’ã",
-		"language": {
-			"name": "ja",
-			"url": "http://pokeapi.co/api/v2/language/1/"
-		}
-	}]
+    "id": 2,
+    "name": "attack",
+    "game_index": 2,
+    "is_battle_only": false,
+    "affecting_moves": {
+        "increase": [{
+            "change": 2,
+            "move": {
+                "name": "swords-dance",
+                "url": "http://pokeapi.co/api/v2/move/14/"
+            }
+        }],
+        "decrease": [{
+            "change": -1,
+            "move": {
+                "name": "growl",
+                "url": "http://pokeapi.co/api/v2/move/45/"
+            }
+        }]
+    },
+    "affecting_natures": {
+        "increase": [{
+            "name": "lonely",
+            "url": "http://pokeapi.co/api/v2/nature/6/"
+        }],
+        "decrease": [{
+            "name": "bold",
+            "url": "http://pokeapi.co/api/v2/nature/2/"
+        }]
+    },
+    "characteristics": [{
+        "url": "http://pokeapi.co/api/v2/characteristic/2/"
+    }],
+    "move_damage_class": {
+        "name": "physical",
+        "url": "http://pokeapi.co/api/v2/move-damage-class/2/"
+    },
+    "names": [{
+        "name": "ã“ã†ã’ã",
+        "language": {
+            "name": "ja",
+            "url": "http://pokeapi.co/api/v2/language/1/"
+        }
+    }]
 }
 ```
 
@@ -3048,18 +3048,18 @@ Languages for translations of api resource information.
 
 ```json
 {
-	"id": 1,
-	"name": "ja",
-	"official": true,
-	"iso639": "ja",
-	"iso3166": "jp",
-	"names": [{
-		"name": "Japanese",
-		"language": {
-			"name": "en",
-			"url": "http://pokeapi.co/api/v2/language/9/"
-		}
-	}]
+    "id": 1,
+    "name": "ja",
+    "official": true,
+    "iso639": "ja",
+    "iso3166": "jp",
+    "names": [{
+        "name": "Japanese",
+        "language": {
+            "name": "en",
+            "url": "http://pokeapi.co/api/v2/language/9/"
+        }
+    }]
 }
 ```
 

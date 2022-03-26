@@ -8,63 +8,63 @@
     </tr>
     <tr>
       <td>
-		<ul>
-			<li><a href="#abilities">Abilities</a></li>
-			<li><a href="#berries">Berries</a></li>
-			<li><a href="#berry-firmnesses">Berry Firmnesses</a></li>
-			<li><a href="#berry-flavors">Berry Flavors</a></li>
-			<li><a href="#characteristics">Characteristics</a></li>
-			<li><a href="#contest-types">Contest Types</a></li>
-			<li><a href="#contest-effects">Contest Effects</a></li>
-			<li><a href="#egg-groups">Egg Groups</a></li>
-			<li><a href="#encounter-methods">Encounter Methods</a></li>
-			<li><a href="#encounter-conditions">Encounter Conditions</a></li>
-			<li><a href="#encounter-condition-values">Encounter Condition Values</a></li>
-			<li><a href="#evolution-chains">Evolution Chains</a></li>
-			<li><a href="#evolution-triggers">Evolution Triggers</a></li>
-			<li><a href="#generations">Generations</a></li>
-			<li><a href="#genders">Genders</a></li>
-			<li><a href="#growth-rates">Growth Rates</a></li>
-		</ul>
+        <ul>
+          <li><a href="#abilities">Abilities</a></li>
+          <li><a href="#berries">Berries</a></li>
+          <li><a href="#berry-firmnesses">Berry Firmnesses</a></li>
+          <li><a href="#berry-flavors">Berry Flavors</a></li>
+          <li><a href="#characteristics">Characteristics</a></li>
+          <li><a href="#contest-types">Contest Types</a></li>
+          <li><a href="#contest-effects">Contest Effects</a></li>
+          <li><a href="#egg-groups">Egg Groups</a></li>
+          <li><a href="#encounter-methods">Encounter Methods</a></li>
+          <li><a href="#encounter-conditions">Encounter Conditions</a></li>
+          <li><a href="#encounter-condition-values">Encounter Condition Values</a></li>
+          <li><a href="#evolution-chains">Evolution Chains</a></li>
+          <li><a href="#evolution-triggers">Evolution Triggers</a></li>
+          <li><a href="#generations">Generations</a></li>
+          <li><a href="#genders">Genders</a></li>
+          <li><a href="#growth-rates">Growth Rates</a></li>
+        </ul>
       </td>
       <td>
-		<ul>
-			<li><a href="#items">Items</a></li>
-			<li><a href="#item-categories">Item Categories</a></li>
-			<li><a href="#item-attributes">Item Attributes</a></li>
-			<li><a href="#item-fling-effects">Item Fling Effects</a></li>
-			<li><a href="#item-pockets">Item Pockets</a></li>
-			<li><a href="#languages">Languages</a></li>
-			<li><a href="#locations">Locations</a></li>
-			<li><a href="#location-areas">Location Areas</a></li>
-			<li><a href="#moves">Moves</a></li>
-			<li><a href="#move-ailments">Move Ailments</a></li>
-			<li><a href="#move-battle-styles">Move Battle Styles</a></li>
-			<li><a href="#move-categories">Move Categories</a></li>
-			<li><a href="#move-damage-classes">Move Damage Classes</a></li>
-			<li><a href="#move-learn-methods">Move Learn Methods</a></li>
-			<li><a href="#move-targets">Move Targets</a></li>
-			<li><a href="#natures">Natures</a></li>
-		</ul>
+        <ul>
+          <li><a href="#items">Items</a></li>
+          <li><a href="#item-categories">Item Categories</a></li>
+          <li><a href="#item-attributes">Item Attributes</a></li>
+          <li><a href="#item-fling-effects">Item Fling Effects</a></li>
+          <li><a href="#item-pockets">Item Pockets</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#locations">Locations</a></li>
+          <li><a href="#location-areas">Location Areas</a></li>
+          <li><a href="#moves">Moves</a></li>
+          <li><a href="#move-ailments">Move Ailments</a></li>
+          <li><a href="#move-battle-styles">Move Battle Styles</a></li>
+          <li><a href="#move-categories">Move Categories</a></li>
+          <li><a href="#move-damage-classes">Move Damage Classes</a></li>
+          <li><a href="#move-learn-methods">Move Learn Methods</a></li>
+          <li><a href="#move-targets">Move Targets</a></li>
+          <li><a href="#natures">Natures</a></li>
+        </ul>
       </td>
       <td>
-		<ul>
-			<li><a href="#pal-park-areas">Pal Park Areas</a></li>
-			<li><a href="#pokedexes">Pokédexes</a></li>
-			<li><a href="#pokemon">Pokémon</a></li>
-			<li><a href="#pokemon-colors">Pokémon Colors</a></li>
-			<li><a href="#pokemon-forms">Pokémon Forms</a></li>
-			<li><a href="#pokemon-habitats">Pokémon Habitats</a></li>
-			<li><a href="#pokemon-shapes">Pokémon Shapes</a></li>
-			<li><a href="#pokemon-species">Pokémon Species</a></li>
-			<li><a href="#pokeathlon-stats">Pokéathlon Stats</a></li>
-			<li><a href="#regions">Regions</a></li>
-			<li><a href="#stats">Stats</a></li>
-			<li><a href="#super-contest-effects">Super Contest Effects</a></li>
-			<li><a href="#types">Types</a></li>
-			<li><a href="#version">Versions</a></li>
-			<li><a href="#version-groups">Version Groups</a></li>
-		</ul>
+        <ul>
+          <li><a href="#pal-park-areas">Pal Park Areas</a></li>
+          <li><a href="#pokedexes">Pokédexes</a></li>
+          <li><a href="#pokemon">Pokémon</a></li>
+          <li><a href="#pokemon-colors">Pokémon Colors</a></li>
+          <li><a href="#pokemon-forms">Pokémon Forms</a></li>
+          <li><a href="#pokemon-habitats">Pokémon Habitats</a></li>
+          <li><a href="#pokemon-shapes">Pokémon Shapes</a></li>
+          <li><a href="#pokemon-species">Pokémon Species</a></li>
+          <li><a href="#pokeathlon-stats">Pokéathlon Stats</a></li>
+          <li><a href="#regions">Regions</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#super-contest-effects">Super Contest Effects</a></li>
+          <li><a href="#types">Types</a></li>
+          <li><a href="#version">Versions</a></li>
+          <li><a href="#version-groups">Version Groups</a></li>
+        </ul>
       </td>
     </tr>
   </tbody>

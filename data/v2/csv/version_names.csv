@@ -213,14 +213,48 @@ version_id,local_language_id,name
 32,9,"Let’s Go, Eevee!"
 33,9,Sword
 34,9,Shield
+35,1,鎧の孤島
+35,3,갑옷의 외딴섬
+35,4,鎧之孤島
+35,5,"L'île solitaire de l'Armure"
+35,6,"Die Insel der Rüstung"
+35,7,"La isla de la armadura"
+35,8,"L'isola solitaria dell'armatura"
 35,9,"The Isle of Armor"
+35,12,铠之孤岛
+36,1,冠の雪原
+36,3,왕관의 설원
+36,4,冠之雪原
+36,5,Les terres enneigées de la Couronne
+36,6,Die Schneelande der Krone
+36,7,Las nieves de la corona
+36,8,Le terre innevate della corona
 36,9,"The Crown Tundra"
-37,9,"Brilliant Diamond"
-38,9,"Shining Pearl"
+36,12,冠之雪原
+37,1,ブリリアントダイヤモンド
+37,3,브릴리언트 다이아몬드
+37,4,晶燦鑽石
+37,5,Diamant Étincelant
+37,6,Strahlender Diamant
+37,7,Diamante Brillante
+37,8,Diamante Lucente
+37,9,Brilliant Diamond
+37,12,晶灿钻石
+38,1,シャイニングパール
+38,3,샤이닝 펄
+38,4,明亮珍珠
+38,5,Perle Scintillante
+38,6,Leuchtende Perle
+38,7,Perla Reluciente
+38,8,Perla Splendente
+38,9,Shining Pearl
+38,12,明亮珍珠
 39,1,LEGENDS アルセウス
 39,3,LEGENDS 아르세우스
+39,4,傳說 阿爾宙斯
 39,5,Légendes : Arceus
 39,6,Legenden: Arceus
 39,7,Leyendas: Arceus
 39,8,Leggende: Arceus
 39,9,Legends: Arceus
+39,12,传说 阿尔宙斯

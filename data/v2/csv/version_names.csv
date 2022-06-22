@@ -1,130 +1,166 @@
 version_id,local_language_id,name
 1,1,赤
 1,3,레드
+1,4,紅
 1,5,Rouge
 1,6,Rot
 1,7,Rojo
 1,8,Rossa
 1,9,Red
+1,12,紅
 2,1,緑
 2,3,블루
+2,4,藍
 2,5,Bleu
 2,6,Blau
 2,7,Azul
 2,8,Blu
 2,9,Blue
+2,12,藍
 3,1,ピカチュウ
 3,3,피카츄
+3,4,皮卡丘
 3,5,Jaune
 3,6,Gelb
 3,7,Amarillo
 3,8,Gialla
 3,9,Yellow
+3,12,皮卡丘
 4,1,金
 4,3,골드
+4,4,金
 4,5,Or
 4,6,Gold
 4,7,Oro
 4,8,Oro
 4,9,Gold
+4,12,金
 5,1,銀
 5,3,실버
+5,4,銀
 5,5,Argent
 5,6,Silber
 5,7,Plata
 5,8,Argento
 5,9,Silver
+5,12,銀
 6,1,クリスタル
 6,3,크리스탈
+6,4,水晶
 6,5,Cristal
 6,6,Kristall
 6,7,Cristal
 6,8,Cristallo
 6,9,Crystal
+6,12,水晶
 7,1,ルビー
 7,3,루비
+7,4,紅寶石
 7,5,Rubis
 7,6,Rubin
 7,7,Rubí
 7,8,Rubino
 7,9,Ruby
+7,12,紅寶石
 8,1,サファイア
 8,3,사파이어
+8,4,藍寶石
 8,5,Saphir
 8,6,Saphir
 8,7,Zafiro
 8,8,Zaffiro
 8,9,Sapphire
+8,12,藍寶石
 9,1,エメラルド
 9,3,에메랄드
+9,4,綠寶石
 9,5,Émeraude
 9,6,Smaragd
 9,7,Esmeralda
 9,8,Smeraldo
 9,9,Emerald
+9,12,綠寶石
 10,1,ファイアレッド
 10,3,파이어레드
+10,4,火紅
 10,5,Rouge Feu
 10,6,Feuerrot
 10,7,Rojo Fuego
 10,8,Rosso Fuoco
 10,9,FireRed
+10,12,火紅
 11,1,リーフグリーン
 11,3,리프그린
+11,4,葉綠
 11,5,Vert Feuille
 11,6,Blattgrün
 11,7,Verde Hoja
 11,8,Verde Foglia
 11,9,LeafGreen
+11,12,葉綠
 12,1,ダイヤモンド
 12,3,디아루가
+12,4,鑽石
 12,5,Diamant
 12,6,Diamant
 12,7,Diamante
 12,8,Diamante
 12,9,Diamond
+12,12,钻石
 13,1,パール
 13,3,펄기아
+13,4,珍珠
 13,5,Perle
 13,6,Perl
 13,7,Perla
 13,8,Perla
 13,9,Pearl
+13,12,珍珠
 14,1,プラチナ
 14,3,기라티나
+14,4,白金
 14,5,Platine
 14,6,Platin
 14,7,Platino
 14,8,Platino
 14,9,Platinum
+14,12,白金
 15,1,ハートゴールド
 15,3,하트골드
+15,4,心金
 15,5,Or HeartGold
 15,6,HeartGold
 15,7,Oro HeartGold
 15,8,Oro HeartGold
 15,9,HeartGold
+15,12,心金
 16,1,ソウルシルバー
 16,3,소울실버
+16,4,魂銀
 16,5,Argent SoulSilver
 16,6,SoulSilver
 16,7,Plata SoulSilver
 16,8,Argento SoulSilver
 16,9,SoulSilver
+16,12,魂銀
 17,1,ブラック
 17,3,블랙
+17,4,黑
 17,5,Noir
 17,6,Schwarz
 17,7,Negro
 17,8,Nera
 17,9,Black
+17,12,黑
 18,1,ホワイト
 18,3,화이트
+18,4,白
 18,5,Blanc
 18,6,Weiß
 18,7,Blanco
 18,8,Bianca
 18,9,White
+18,12,白
 19,1,コロシアム
 19,3,콜로세움
 19,5,Colosseum
@@ -141,78 +177,130 @@ version_id,local_language_id,name
 20,9,XD
 21,1,ブラック2
 21,3,블랙 2
+21,4,黑2
 21,5,Noir 2
 21,6,Schwarz 2
 21,7,Negro 2
 21,8,Nera 2
 21,9,Black 2
+21,12,黑2
 22,1,ホワイト2
 22,3,화이트 2
+22,4,白
 22,5,Blanc 2
 22,6,Weiß 2
 22,7,Blanco 2
 22,8,Bianca 2
 22,9,White 2
+22,12,白2
 23,1,X
 23,3,X
+23,4,X
 23,5,X
 23,6,X
 23,7,X
 23,8,X
 23,9,X
+23,12,X
 24,1,Y
 24,3,Y
+24,4,Y
 24,5,Y
 24,6,Y
 24,7,Y
 24,8,Y
 24,9,Y
+24,12,Y
 25,1,オメガルビー
 25,3,오메가루비
+25,4,歐米加紅寶石
 25,5,Rubis Oméga
 25,6,Omega Rubin
 25,7,Rubí Omega
 25,8,Rubino Omega
 25,9,Omega Ruby
+25,12,欧米伽红宝石
 26,1,アルファサファイア
 26,3,알파사파이어
+26,4,阿爾法藍寶石
 26,5,Saphir Alpha
 26,6,Alpha Saphir
 26,7,Zafiro Alfa
 26,8,Zaffiro Alpha
 26,9,Alpha Sapphire
+26,12,阿尔法蓝宝石
 27,1,サン
 27,3,썬
+27,4,太陽
 27,5,Soleil
 27,6,Sonne
 27,7,Sol
 27,8,Sole
 27,9,Sun
+27,12,太阳
 28,1,ムーン
 28,3,문
+28,4,月亮
 28,5,Lune
 28,6,Mond
 28,7,Luna
 28,8,Luna
 28,9,Moon
+28,12,月亮
 29,1,ウルトラサン
 29,3,울트라썬
+29,4,究極之日
 29,5,Ultra-Soleil
 29,6,Ultrasonne
 29,7,Ultrasol
 29,8,Ultrasole
 29,9,Ultra Sun
+29,12,究极之日
 30,1,ウルトラムーン
 30,3,울트라문
+30,4,究極之月
 30,5,Ultra-Lune
 30,6,Ultramond
 30,7,Ultraluna
 30,8,Ultraluna
 30,9,Ultra Moon
+30,12,究极之月
+31,1,"Let's Go! ピカチュウ"
+31,3,"레츠고! 피카츄"
+31,4,"Let's Go！皮卡丘"
+31,5,"Let's Go, Pikachu"
+31,6,"Let's Go, Pikachu!"
+31,7,"Let's Go, Pikachu!"
+31,8,"Let's Go, Pikachu!"
 31,9,"Let’s Go, Pikachu!"
+31,12,"Let's Go！皮卡丘"
+32,1,"Let's Go! イーブイ"
+32,3,"레츠고! 이브이"
+32,4,"Let's Go！伊布"
+32,5,"Let's Go, Évoli"
+32,6,"Let's Go, Evoli!"
+32,8,"Let's Go, Eevee!"
+32,7,"Let's Go, Eevee!"
 32,9,"Let’s Go, Eevee!"
+32,12,Let's Go！伊布"
+33,1, ソード
+33,3,소드
+33,4,劍
+33,5,Épée
+33,6,Schwert
+33,7,Espada
+33,8,çSpada
 33,9,Sword
+33,12,剑
+34,1,シールド
+34,3,실드
+34,4,盾
+34,5,Bouclier
+34,6,Schild
+34,7,Escudo
+34,8,Spada
 34,9,Shield
+34,12,盾
 35,1,鎧の孤島
 35,3,갑옷의 외딴섬
 35,4,鎧之孤島

@@ -30,7 +30,7 @@ DB_CURSOR = connection.cursor()
 DB_VENDOR = connection.vendor
 
 
-MEDIA_DIR = "/media/sprites/{0}"
+MEDIA_DIR = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/{0}"
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []
 

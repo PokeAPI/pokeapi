@@ -4,7 +4,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("pokemon_v2", "0002_itemsprites_pokemonformsprites_pokemonsprites"),
+        ("pokemon_v2", "0002_itemsprites_pokemonformsprites_pokemonsprites")
     ]
 
     operations = [

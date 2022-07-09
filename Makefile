@@ -15,6 +15,9 @@ install:  # Install base requirements to run project
 dev-install:  # Install developer requirements + base requirements
 	pip install -r test-requirements.txt
 
+lint: # Running a lot of poetry tests to see if the coding is not broken by other dependencies
+	poetry run pre-commit install && poetry run pre-commit run -a -v
+
 setup:  # Set up the project database
 	python manage.py migrate ${local_config}
 

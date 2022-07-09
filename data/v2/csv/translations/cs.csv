@@ -334,7 +334,7 @@ language_id,table,id,column,source_crc,string
 10,LocationArea,238,name,98efa44b,Spodní jeskyně
 10,LocationArea,239,name,3ae88ad0,Vrchní jeskyně
 10,LocationArea,253,name,8f00d6f7,vstup do Violetu
-10,LocationArea,254,name,74f25a17,vstup do Blackthornu 
+10,LocationArea,254,name,74f25a17,vstup do Blackthornu
 10,LocationArea,266,name,10891a9e,vchod do jeskyně
 10,LocationArea,267,name,4b800254,v jeskyni
 10,LocationArea,269,name,b5eafda6,venku
@@ -980,7 +980,7 @@ language_id,table,id,column,source_crc,string
 10,MoveFlag,8,name,ae7d93f1,Úderový
 10,MoveFlag,9,description,b34264c8,Pokémoni s []{ability:soundproof} jsou proti tomuto útoku odolní.
 10,MoveFlag,9,name,752347d8,Zvukový
-10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při [zvýšené gravitaci]{move:gravity} 
+10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při [zvýšené gravitaci]{move:gravity}
 10,MoveFlag,10,name,05543fc0,Nepoužitelný s Gravitací
 10,MoveFlag,11,description,e68d87da,Tento útok může zmražený pokémon použít k rozmrznutí.
 10,MoveFlag,11,name,a2a771b1,Rozmrazí při použití

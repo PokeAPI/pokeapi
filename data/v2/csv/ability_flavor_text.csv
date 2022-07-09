@@ -2954,7 +2954,7 @@ attacker on contact."
 contact."
 24,16,6,Verletzt Angreifer bei Berührung.
 24,16,7,Hiere al hacer contacto.
-24,16,8,"Se chi attacca mette a segno una    
+24,16,8,"Se chi attacca mette a segno una
 mossa fisica, viene danneggiato."
 24,16,9,"Inflicts damage to the
 attacker on contact."
@@ -3231,7 +3231,7 @@ capacités de type Sol."
 alle Boden-Attacken."
 26,16,7,"Proporciona inmunidad frente a
 los ataques de tipo Tierra."
-26,16,8,"Conferisce immunità agli attacchi 
+26,16,8,"Conferisce immunità agli attacchi
 di tipo Terra."
 26,16,9,"Gives full immunity to all
 Ground-type moves."
@@ -3931,8 +3931,8 @@ Spezial-Angriff."
 tipo Eléctrico, sube el Ataque Especial."
 31,17,8,"Attira e neutralizza mosse di tipo Elettro
 e aumenta l’Attacco Speciale."
-31,17,9,"The Pokémon draws in all Electric-type moves. 
-Instead of being hit by Electric-type moves, 
+31,17,9,"The Pokémon draws in all Electric-type moves.
+Instead of being hit by Electric-type moves,
 it boosts its Sp. Atk."
 31,17,11,"でんきタイプの　技を　自分に
 寄せつけ　ダメージを　受けずに
@@ -3957,8 +3957,8 @@ Spezial-Angriff."
 tipo Eléctrico, sube el Ataque Especial."
 31,18,8,"Attira e neutralizza mosse di tipo Elettro
 e aumenta l’Attacco Speciale."
-31,18,9,"The Pokémon draws in all Electric-type moves. 
-Instead of being hit by Electric-type moves, 
+31,18,9,"The Pokémon draws in all Electric-type moves.
+Instead of being hit by Electric-type moves,
 it boosts its Sp. Atk."
 31,18,11,"でんきタイプの　技を　自分に
 寄せつけ　ダメージを　受けずに
@@ -4074,7 +4074,7 @@ von Attacken auftreten."
 32,17,7,"Aumenta la probabilidad de que los movimientos
 causen efectos secundarios."
 32,17,8,Gli effetti secondari delle mosse sono più probabili.
-32,17,9,"Boosts the likelihood of additional effects occurring 
+32,17,9,"Boosts the likelihood of additional effects occurring
 when attacking."
 32,17,11,"天の恵みの　おかげで
 技の　追加効果が　でやすい。"
@@ -4093,7 +4093,7 @@ von Attacken auftreten."
 32,18,7,"Aumenta la probabilidad de que los movimientos
 causen efectos secundarios."
 32,18,8,Gli effetti secondari delle mosse sono più probabili.
-32,18,9,"Boosts the likelihood of additional effects occurring 
+32,18,9,"Boosts the likelihood of additional effects occurring
 when attacking."
 32,18,11,"天の恵みの　おかげで
 技の　追加効果が　でやすい。"
@@ -5381,7 +5381,7 @@ que usan sonido."
 43,17,8,"Il Pokémon è dotato di una sorta di isolamento
 acustico che lo rende immune alle mosse basate
 sul suono."
-43,17,9,"Soundproofing of the Pokémon itself gives full 
+43,17,9,"Soundproofing of the Pokémon itself gives full
 immunity to all sound-based moves."
 43,17,11,"音を　遮断　することに　よって
 音の　攻撃を　受けない。"
@@ -5401,7 +5401,7 @@ que usan sonido."
 43,18,8,"Il Pokémon è dotato di una sorta di isolamento
 acustico che lo rende immune alle mosse basate
 sul suono."
-43,18,9,"Soundproofing of the Pokémon itself gives full 
+43,18,9,"Soundproofing of the Pokémon itself gives full
 immunity to all sound-based moves."
 43,18,11,"音を　遮断　することに　よって
 音の　攻撃を　受けない。"
@@ -7426,7 +7426,7 @@ le climat."
 abhängig vom Wetter."
 59,16,7,"Se transforma según el tiempo
 atmosférico."
-59,16,8,"La forma di Castform cambia in 
+59,16,8,"La forma di Castform cambia in
 base alle condizioni atmosferiche. "
 59,16,9,"Castform transforms with
 the weather."
@@ -8309,7 +8309,7 @@ cas de besoin."
 von Pflanzen-Attacken."
 65,16,7,"Potencia los ataques de tipo
 Planta en un apuro."
-65,16,8,"Quando si è in difficoltà, potenzia  
+65,16,8,"Quando si è in difficoltà, potenzia
 le mosse di tipo Erba."
 65,16,9,"Powers up Grass-type moves
 when the Pokémon is in trouble."
@@ -8452,7 +8452,7 @@ cas de besoin."
 von Feuer-Attacken."
 66,16,7,"Potencia los ataques de tipo
 Fuego en un apuro."
-66,16,8,"Quando si è in difficoltà, potenzia  
+66,16,8,"Quando si è in difficoltà, potenzia
 le mosse di tipo Fuoco."
 66,16,9,"Powers up Fire-type moves when
 the Pokémon is in trouble."
@@ -8595,7 +8595,7 @@ cas de besoin."
 von Wasser-Attacken."
 67,16,7,"Potencia los ataques de tipo
 Agua en un apuro."
-67,16,8,"Quando si è in difficoltà, potenzia  
+67,16,8,"Quando si è in difficoltà, potenzia
 le mosse di tipo Acqua."
 67,16,9,"Powers up Water-type moves
 when the Pokémon is in trouble."
@@ -8738,7 +8738,7 @@ cas de besoin."
 von Käfer-Attacken."
 68,16,7,"Potencia los ataques de tipo
 Bicho en un apuro."
-68,16,8,"Quando si è in difficoltà, potenzia  
+68,16,8,"Quando si è in difficoltà, potenzia
 le mosse di tipo Coleottero."
 68,16,9,"Powers up Bug-type moves when
 the Pokémon is in trouble."
@@ -8999,7 +8999,7 @@ ce Pokémon rejoint le combat."
 Sonnenlicht."
 70,16,7,"El sol sale si el Pokémon entra en
 combate."
-70,16,8,"Il sole brilla intensamente quando 
+70,16,8,"Il sole brilla intensamente quando
 il Pokémon entra in campo."
 70,16,9,"Turns the sunlight harsh when
 the Pokémon enters a battle."
@@ -10781,7 +10781,7 @@ oder verloren geht, erhöht dies seine Initiative."
 84,17,7,Sube la Velocidad si usa o pierde el objeto que lleva.
 84,17,8,"Aumenta la Velocità dopo aver usato o perso
 uno strumento."
-84,17,9,"Boosts the Speed stat if the Pokémon’s held item is 
+84,17,9,"Boosts the Speed stat if the Pokémon’s held item is
 used or lost."
 84,17,11,"持っていた　道具が　なくなると
 素早さが　上がる。"
@@ -10800,7 +10800,7 @@ oder verloren geht, erhöht dies seine Initiative."
 84,18,7,Sube la Velocidad si usa o pierde el objeto que lleva.
 84,18,8,"Aumenta la Velocità dopo aver usato o perso
 uno strumento."
-84,18,9,"Boosts the Speed stat if the Pokémon’s held item is 
+84,18,9,"Boosts the Speed stat if the Pokémon’s held item is
 used or lost."
 84,18,11,"持っていた　道具が　なくなると
 素早さが　上がる。"
@@ -12754,7 +12754,7 @@ even slower foes."
 even slower foes."
 100,10,9,"The Pokémon moves after
 even slower foes."
-100,11,5,"Attaque toujours après 
+100,11,5,"Attaque toujours après
 l’ennemi, même plus lent."
 100,11,9,"The Pokémon moves after
 all other Pokémon do."
@@ -13454,7 +13454,7 @@ the finishing hit."
 the finishing hit."
 106,10,9,"Damages the foe landing
 the finishing hit."
-106,11,5,"Blesse l’ennemi qui 
+106,11,5,"Blesse l’ennemi qui
 porte le coup de grâce."
 106,11,9,"Damages the attacker
 landing the finishing hit."
@@ -14559,7 +14559,7 @@ Spezial-Angriff."
 tipo Agua, sube el Ataque Especial."
 114,17,8,"Attira e neutralizza mosse di tipo Acqua
 e aumenta l’Attacco Speciale."
-114,17,9,"Draws in all Water-type moves. Instead of being hit 
+114,17,9,"Draws in all Water-type moves. Instead of being hit
 by Water-type moves, it boosts its Sp. Atk."
 114,17,11,"みずタイプの　技を　自分に　よせつけ
 ダメージは　受けずに　特攻が　上がる。"
@@ -14582,7 +14582,7 @@ Spezial-Angriff."
 tipo Agua, sube el Ataque Especial."
 114,18,8,"Attira e neutralizza mosse di tipo Acqua
 e aumenta l’Attacco Speciale."
-114,18,9,"Draws in all Water-type moves. Instead of being hit 
+114,18,9,"Draws in all Water-type moves. Instead of being hit
 by Water-type moves, it boosts its Sp. Atk."
 114,18,11,"みずタイプの　技を　自分に　よせつけ
 ダメージは　受けずに　特攻が　上がる。"
@@ -15288,7 +15288,7 @@ dégâts de contrecoups."
 Rückstoß-Schaden."
 120,16,7,"Potencia los movimientos que
 dañan al usuario."
-120,16,8,"Potenzia le mosse che provocano 
+120,16,8,"Potenzia le mosse che provocano
 contraccolpi."
 120,16,9,"Powers up moves that
 have recoil damage."
@@ -19946,7 +19946,7 @@ contact."
 160,16,6,"Angreifer nehmen durch
 bloßes Berühren Schaden."
 160,16,7,Hiere al hacer contacto.
-160,16,8,"Se chi attacca mette a segno una    
+160,16,8,"Se chi attacca mette a segno una
 mossa fisica, viene danneggiato."
 160,16,9,"Inflicts damage to the
 attacker on contact."
@@ -20499,7 +20499,7 @@ limitant le choix des capacités."
 vor manchen mentalen Angriffen."
 165,16,7,"Protege al equipo de ataques
 que impiden elegir movimientos."
-165,16,8,"Protegge sé e gli alleati da mosse 
+165,16,8,"Protegge sé e gli alleati da mosse
 che limitano la scelta di attacchi."
 165,16,9,"Protects allies from attacks that
 limit their move choices."
@@ -21380,7 +21380,7 @@ les morsures sont plus fortes."
 verleiht ihm einen starken Biss."
 173,16,7,"Su robusta mandíbula le confiere
 una potente mordedura."
-173,16,8,"La robusta mascella del Pokémon  
+173,16,8,"La robusta mascella del Pokémon
 permette morsi molto potenti."
 173,16,9,"The Pokémon’s strong jaw gives
 it tremendous biting power."
@@ -21896,7 +21896,7 @@ einsetzen."
 PS están al máximo."
 177,17,8,"Se il Pokémon ha tutti i PS, le sue mosse
 di tipo Volante acquistano priorità alta."
-177,17,9,"Gives priority to Flying-type moves when the 
+177,17,9,"Gives priority to Flying-type moves when the
 Pokémon’s HP is full."
 177,17,11,"ＨＰが　満タン　だと
 ひこうタイプの　技を
@@ -21920,7 +21920,7 @@ einsetzen."
 PS están al máximo."
 177,18,8,"Se il Pokémon ha tutti i PS, le sue mosse
 di tipo Volante acquistano priorità alta."
-177,18,9,"Gives priority to Flying-type moves when the 
+177,18,9,"Gives priority to Flying-type moves when the
 Pokémon’s HP is full."
 177,18,11,"ＨＰが　満タン　だと
 ひこうタイプの　技を
@@ -22126,7 +22126,7 @@ est actif."
 terreno de combate."
 179,17,8,"In presenza di un Campo Erboso, la Difesa
 aumenta."
-179,17,9,"Boosts the Pokémon’s Defense stat in 
+179,17,9,"Boosts the Pokémon’s Defense stat in
 Grassy Terrain."
 179,17,11,"グラスフィールドのとき
 防御が　上がる。"
@@ -22145,7 +22145,7 @@ est actif."
 terreno de combate."
 179,18,8,"In presenza di un Campo Erboso, la Difesa
 aumenta."
-179,18,9,"Boosts the Pokémon’s Defense stat in 
+179,18,9,"Boosts the Pokémon’s Defense stat in
 Grassy Terrain."
 179,18,11,"グラスフィールドのとき
 防御が　上がる。"
@@ -22993,7 +22993,7 @@ Fée de tous les Pokémon."
 des Typs Fee."
 187,16,7,"Aumenta la potencia de todos los
 movimientos de tipo Hada."
-187,16,8,"Potenzia le mosse di tipo Folletto 
+187,16,8,"Potenzia le mosse di tipo Folletto
 di tutti i Pokémon."
 187,16,9,"Powers up each Pokémon’s
 Fairy-type moves."
@@ -23173,7 +23173,7 @@ rend inefficaces les attaques Feu."
 direkte Feuer-Attacken."
 189,16,7,"Altera el clima para anular los
 ataques de tipo Fuego."
-189,16,8,"Crea un clima che rende inefficaci  
+189,16,8,"Crea un clima che rende inefficaci
 gli attacchi di tipo Fuoco."
 189,16,9,"Affects weather and nullifies any
 Fire-type attacks."
@@ -23265,7 +23265,7 @@ rend inefficaces les attaques Eau."
 direkte Wasser-Attacken."
 190,16,7,"Altera el clima para anular los
 ataques de tipo Agua."
-190,16,8,"Crea un clima che rende inefficaci  
+190,16,8,"Crea un clima che rende inefficaci
 gli attacchi di tipo Acqua."
 190,16,9,"Affects weather and nullifies any
 Water-type attacks."
@@ -24254,7 +24254,7 @@ Spezial-Angriff."
 oponente le reducen los PS a la mitad."
 201,17,8,"Se i PS scendono a metà o meno a causa di
 un attacco, l’Attacco Speciale aumenta."
-201,17,9,"Boosts the Pokémon’s Sp. Atk stat when it takes a 
+201,17,9,"Boosts the Pokémon’s Sp. Atk stat when it takes a
 hit that causes its HP to become half or less."
 201,17,11,"相手の　攻撃で
 ＨＰが　半分に　なると
@@ -24281,7 +24281,7 @@ Spezial-Angriff."
 oponente le reducen los PS a la mitad."
 201,18,8,"Se i PS scendono a metà o meno a causa di
 un attacco, l’Attacco Speciale aumenta."
-201,18,9,"Boosts the Pokémon’s Sp. Atk stat when it takes a 
+201,18,9,"Boosts the Pokémon’s Sp. Atk stat when it takes a
 hit that causes its HP to become half or less."
 201,18,11,"相手の　攻撃で
 ＨＰが　半分に　なると
@@ -25349,7 +25349,7 @@ tout en dormant."
 213,17,6,"Das Pokémon befindet sich ununterbrochen im
 Halbschlaf und wacht nie vollständig auf. Es kann
 jedoch im Schlaf angreifen."
-213,17,7,"No despierta jamás de su profundo letargo 
+213,17,7,"No despierta jamás de su profundo letargo
 e incluso ataca dormido."
 213,17,8,"Il Pokémon si trova in un costante stato di
 dormiveglia che gli impedisce di svegliarsi.
@@ -25377,7 +25377,7 @@ tout en dormant."
 213,18,6,"Das Pokémon befindet sich ununterbrochen im
 Halbschlaf und wacht nie vollständig auf. Es kann
 jedoch im Schlaf angreifen."
-213,18,7,"No despierta jamás de su profundo letargo 
+213,18,7,"No despierta jamás de su profundo letargo
 e incluso ataca dormido."
 213,18,8,"Il Pokémon si trova in un costante stato di
 dormiveglia che gli impedisce di svegliarsi.
@@ -25405,7 +25405,7 @@ tout en dormant."
 213,19,6,"Das Pokémon befindet sich ununterbrochen im
 Halbschlaf und wacht nie vollständig auf. Es kann
 jedoch im Schlaf angreifen."
-213,19,7,"No despierta jamás de su profundo letargo 
+213,19,7,"No despierta jamás de su profundo letargo
 e incluso ataca dormido."
 213,19,8,"Il Pokémon si trova in un costante stato di
 dormiveglia che gli impedisce di svegliarsi.

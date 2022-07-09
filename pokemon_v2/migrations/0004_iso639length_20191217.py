@@ -3,9 +3,7 @@ from django.db import models, migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("pokemon_v2", "0003_auto_20160530_1132"),
-    ]
+    dependencies = [("pokemon_v2", "0003_auto_20160530_1132")]
 
     operations = [
         migrations.AlterField(
@@ -13,5 +11,5 @@ class Migration(migrations.Migration):
             name="iso639",
             field=models.CharField(max_length=10),
             preserve_default=True,
-        ),
+        )
     ]

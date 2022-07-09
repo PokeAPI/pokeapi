@@ -6,9 +6,7 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("pokemon_v2", "0009_pokemontypepast"),
-    ]
+    dependencies = [("pokemon_v2", "0009_pokemontypepast")]
 
     operations = [
         migrations.CreateModel(
@@ -45,8 +43,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
-        ),
+            options={"abstract": False},
+        )
     ]

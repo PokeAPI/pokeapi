@@ -3,9 +3,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("pokemon_v2", "0005_auto_20200709_1930"),
-    ]
+    dependencies = [("pokemon_v2", "0005_auto_20200709_1930")]
 
     operations = [
         migrations.AlterField(

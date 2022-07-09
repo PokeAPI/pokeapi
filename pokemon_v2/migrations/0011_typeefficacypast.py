@@ -6,9 +6,7 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("pokemon_v2", "0010_pokemonformtype"),
-    ]
+    dependencies = [("pokemon_v2", "0010_pokemonformtype")]
 
     operations = [
         migrations.CreateModel(
@@ -55,9 +53,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False},
         ),
         migrations.AlterField(
             model_name="typeefficacy",

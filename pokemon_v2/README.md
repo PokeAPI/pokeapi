@@ -3178,5 +3178,3 @@ Languages for translations of api resource information.
 | text          | The localized name for an api resource in a specific language | string |
 | language      | The language this name is in                                  | [NamedAPIResource](#namedapiresource) ([Language](#languages)) |
 | version_group | The version group which uses this flavor text                 | [NamedAPIResource](#namedapiresource) ([VersionGroup](#version-groups)) |
-
-

@@ -330,10 +330,7 @@ class ItemAttributeMapSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ItemAttributeMap
-        fields = (
-            "item",
-            "attribute",
-        )
+        fields = ("item", "attribute")
 
 
 class MoveMetaStatChangeSerializer(serializers.ModelSerializer):
@@ -433,10 +430,7 @@ class VersionGroupRegionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ItemAttributeMap
-        fields = (
-            "version_group",
-            "region",
-        )
+        fields = ("version_group", "region")
 
 
 class EncounterConditionValueMapSerializer(serializers.ModelSerializer):
@@ -1118,10 +1112,7 @@ class AbilityChangeEffectTextSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AbilityChangeEffectText
-        fields = (
-            "effect",
-            "language",
-        )
+        fields = ("effect", "language")
 
 
 class AbilityChangeSerializer(serializers.ModelSerializer):
@@ -1583,11 +1574,7 @@ class NatureBattleStylePreferenceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NatureBattleStylePreference
-        fields = (
-            "low_hp_preference",
-            "high_hp_preference",
-            "move_battle_style",
-        )
+        fields = ("low_hp_preference", "high_hp_preference", "move_battle_style")
 
 
 class NatureNameSerializer(serializers.ModelSerializer):
@@ -2115,13 +2102,7 @@ class MoveDamageClassDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MoveDamageClass
-        fields = (
-            "id",
-            "name",
-            "descriptions",
-            "moves",
-            "names",
-        )
+        fields = ("id", "name", "descriptions", "moves", "names")
 
 
 ###########################

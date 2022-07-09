@@ -289,7 +289,7 @@ EOF
 customize_pr() {
   # Wait for Github to open the PR
   sleep 10
-  
+
   data_repo_pr_number=$1
   curl -H "$auth_header" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$data_repo_pr_number"
   if [ $? -ne 0 ]; then

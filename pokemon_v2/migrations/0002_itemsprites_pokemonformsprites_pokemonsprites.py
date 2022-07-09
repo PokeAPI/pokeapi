@@ -3,9 +3,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("pokemon_v2", "0001_squashed_0002_auto_20160301_1408"),
-    ]
+    dependencies = [("pokemon_v2", "0001_squashed_0002_auto_20160301_1408")]
 
     operations = [
         migrations.CreateModel(
@@ -32,9 +30,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False},
         ),
         migrations.CreateModel(
             name="PokemonFormSprites",
@@ -60,9 +56,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False},
         ),
         migrations.CreateModel(
             name="PokemonSprites",
@@ -88,8 +82,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
             ],
-            options={
-                "abstract": False,
-            },
+            options={"abstract": False},
         ),
     ]

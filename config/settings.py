@@ -76,9 +76,7 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        },
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
     }
 }
 
@@ -86,10 +84,7 @@ SECRET_KEY = os.environ.get(
     "SECRET_KEY", "ubx+22!jbo(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#"
 )
 
-CUSTOM_APPS = (
-    "tastypie",
-    "pokemon_v2",
-)
+CUSTOM_APPS = ("tastypie", "pokemon_v2")
 
 INSTALLED_APPS = (
     "django.contrib.auth",

@@ -1580,14 +1580,10 @@ def _build_pokemons():
                             poke_sprites + gen_iii + "ruby-sapphire/", info, "png"
                         ),
                         "front_shiny": try_image_names(
-                            poke_sprites + gen_iii + "ruby-sapphire/shiny/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iii + "ruby-sapphire/shiny/", info, "png"
                         ),
                         "back_default": try_image_names(
-                            poke_sprites + gen_iii + "ruby-sapphire/back/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iii + "ruby-sapphire/back/", info, "png"
                         ),
                         "back_shiny": try_image_names(
                             poke_sprites + gen_iii + "ruby-sapphire/back/shiny/",
@@ -1602,14 +1598,10 @@ def _build_pokemons():
                             poke_sprites + gen_iv + "diamond-pearl/", info, "png"
                         ),
                         "front_female": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/female/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iv + "diamond-pearl/female/", info, "png"
                         ),
                         "front_shiny": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/shiny/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iv + "diamond-pearl/shiny/", info, "png"
                         ),
                         "front_shiny_female": try_image_names(
                             poke_sprites + gen_iv + "diamond-pearl/shiny/female/",
@@ -1637,9 +1629,7 @@ def _build_pokemons():
                     },
                     "heartgold-soulsilver": {
                         "front_default": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iv + "heartgold-soulsilver/", info, "png"
                         ),
                         "front_female": try_image_names(
                             poke_sprites + gen_iv + "heartgold-soulsilver/female/",
@@ -1700,14 +1690,10 @@ def _build_pokemons():
                             poke_sprites + gen_iv + "platinum/back/", info, "png"
                         ),
                         "back_female": try_image_names(
-                            poke_sprites + gen_iv + "platinum/back/female/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iv + "platinum/back/female/", info, "png"
                         ),
                         "back_shiny": try_image_names(
-                            poke_sprites + gen_iv + "platinum/back/shiny/",
-                            info,
-                            "png",
+                            poke_sprites + gen_iv + "platinum/back/shiny/", info, "png"
                         ),
                         "back_shiny_female": try_image_names(
                             poke_sprites + gen_iv + "platinum/back/shiny/female/",
@@ -1884,7 +1870,7 @@ def _build_pokemons():
                         "front_female": try_image_names(
                             poke_sprites + gen_viii + "icons/female/", info, "png"
                         ),
-                    },
+                    }
                 },
             },
         }

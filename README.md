@@ -152,6 +152,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 | Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
 | Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
 | Python | [beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi) | _Auto caching, asynchronous_
+| Scala | [juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala) | _Auto caching_ |
 
 ## Donations
 

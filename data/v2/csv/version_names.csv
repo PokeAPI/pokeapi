@@ -265,24 +265,24 @@ version_id,local_language_id,name
 30,8,Ultraluna
 30,9,Ultra Moon
 30,12,究极之月
-31,1,"Let's Go! ピカチュウ"
-31,3,"레츠고! 피카츄"
-31,4,"Let's Go！皮卡丘"
+31,1,Let's Go! ピカチュウ
+31,3,레츠고! 피카츄
+31,4,Let's Go！皮卡丘
 31,5,"Let's Go, Pikachu"
 31,6,"Let's Go, Pikachu!"
 31,7,"Let's Go, Pikachu!"
 31,8,"Let's Go, Pikachu!"
-31,9,"Let’s Go, Pikachu!"
-31,12,"Let's Go！皮卡丘"
-32,1,"Let's Go! イーブイ"
-32,3,"레츠고! 이브이"
-32,4,"Let's Go！伊布"
+31,9,"Let's Go, Pikachu!"
+31,12,Let's Go！皮卡丘
+32,1,Let's Go! イーブイ
+32,3,레츠고! 이브이
+32,4,Let's Go！伊布
 32,5,"Let's Go, Évoli"
 32,6,"Let's Go, Evoli!"
 32,8,"Let's Go, Eevee!"
 32,7,"Let's Go, Eevee!"
-32,9,"Let’s Go, Eevee!"
-32,12,Let's Go！伊布"
+32,9,"Let's Go, Eevee!"
+32,12,Let's Go！伊布
 33,1, ソード
 33,3,소드
 33,4,劍
@@ -304,11 +304,11 @@ version_id,local_language_id,name
 35,1,鎧の孤島
 35,3,갑옷의 외딴섬
 35,4,鎧之孤島
-35,5,"L'île solitaire de l'Armure"
-35,6,"Die Insel der Rüstung"
-35,7,"La isla de la armadura"
-35,8,"L'isola solitaria dell'armatura"
-35,9,"The Isle of Armor"
+35,5,L'île solitaire de l'Armure
+35,6,Die Insel der Rüstung
+35,7,La isla de la armadura
+35,8,L'isola solitaria dell'armatura
+35,9,The Isle of Armor
 35,12,铠之孤岛
 36,1,冠の雪原
 36,3,왕관의 설원
@@ -317,7 +317,7 @@ version_id,local_language_id,name
 36,6,Die Schneelande der Krone
 36,7,Las nieves de la corona
 36,8,Le terre innevate della corona
-36,9,"The Crown Tundra"
+36,9,The Crown Tundra
 36,12,冠之雪原
 37,1,ブリリアントダイヤモンド
 37,3,브릴리언트 다이아몬드

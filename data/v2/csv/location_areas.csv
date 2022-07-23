@@ -701,3 +701,15 @@ id,location_id,game_index,identifier
 810,582,0,area
 811,581,0,area
 812,583,0,area
+813,814,0,johto-safari-zone-peak
+814,814,0,johto-safari-zone-desert
+815,814,0,johto-safari-zone-plains
+816,814,0,johto-safari-zone-meadow
+817,814,0,johto-safari-zone-forest
+818,814,0,johto-safari-zone-swamp
+819,814,0,johto-safari-zone-marshland
+820,814,0,johto-safari-zone-mountain
+821,814,0,johto-safari-zone-rocky-beach
+822,814,0,johto-safari-zone-wasteland
+823,814,0,johto-safari-zone-savannah
+824,814,0,johto-safari-zone-wetland

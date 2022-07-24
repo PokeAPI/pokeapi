@@ -44,3 +44,6 @@ id,encounter_condition_id,identifier,is_default
 43,11,item-none,1
 44,11,item-adamant-orb,0
 45,11,item-lustrous-orb,0
+46,11,item-helix-fossil,0
+47,11,item-dome-fossil,0
+48,11,item-old-amber,0

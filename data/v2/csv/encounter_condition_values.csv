@@ -47,3 +47,5 @@ id,encounter_condition_id,identifier,is_default
 46,11,item-helix-fossil,0
 47,11,item-dome-fossil,0
 48,11,item-old-amber,0
+49,11,item-root-fossil,0
+50,11,item-claw-fossil,0

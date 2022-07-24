@@ -64,3 +64,4 @@ id,encounter_condition_id,identifier,is_default
 63,12,weekday-thursday,0
 64,12,weekday-friday,0
 65,12,weekday-saturday,0
+66,13,first-party-pokemon-high-friendship,0

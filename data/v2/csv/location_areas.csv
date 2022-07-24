@@ -714,3 +714,6 @@ id,location_id,game_index,identifier
 823,814,0,johto-safari-zone-savannah
 824,814,0,johto-safari-zone-wetland
 825,500,0,summit
+826,248,0,kyogre-room
+827,248,0,groundon-room
+828,248,0,rayquaza-room

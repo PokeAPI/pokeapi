@@ -51,3 +51,7 @@ id,encounter_condition_id,identifier,is_default
 50,11,item-claw-fossil,0
 51,9,story-progress-defeat-jupiter,0
 52,9,story-progress-beat-team-galactic-iron-island,0
+53,9,other-correct-password,0
+54,9,story-progress-zephyr-badge,0
+55,9,story-progress-beat-red,0
+56,9,other-received-kanto-starter,0

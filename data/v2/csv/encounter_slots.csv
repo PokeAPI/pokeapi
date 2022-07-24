@@ -811,3 +811,5 @@ id,version_group_id,encounter_method_id,slot,rarity
 810,10,5,10,10
 811,10,5,11,10
 812,10,5,12,10
+813,5,30,1,100
+814,6,30,1,100

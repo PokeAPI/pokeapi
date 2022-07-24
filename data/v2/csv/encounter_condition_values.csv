@@ -39,4 +39,8 @@ id,encounter_condition_id,identifier,is_default
 38,10,other-none,1
 39,10,other-snorlax-11-beat-league,0
 40,10,other-virtual-console,0
-41,9,cure-eldritch-nightmares,0
+41,9,story-progress-cure-eldritch-nightmares,0
+42,9,other-talk-to-cynthias-grandmother,0
+43,11,item-none,1
+44,11,item-adamant-orb,0
+45,11,item-lustrous-orb,0

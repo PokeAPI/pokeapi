@@ -64,11 +64,11 @@ encounter_condition_value_id,local_language_id,name
 43,9,No item requirement
 44,9,Have Adamant Orb in bag
 45,9,Have Lustrous Orb in bag
-46,9,Have Helix Fossil
-47,9,Have Dome Fossil
-48,9,Have Old Amber
-49,9,Have Root Fossil
-50,9,Have Claw Fossil
+46,9,Have Helix Fossil in bag
+47,9,Have Dome Fossil in bag
+48,9,Have Old Amber in bag
+49,9,Have Root Fossil in bag
+50,9,Have Claw Fossil in bag
 51,9,Defeat Jupiter
 52,9,Defeat Team Galactic at Iron Island
 53,9,Input correct password
@@ -85,3 +85,6 @@ encounter_condition_value_id,local_language_id,name
 64,9,Friday
 65,9,Saturday
 66,9,The first Pokémon in the player’s party has a high friendship stat
+67,9,Beat Mars for the first time
+68,9,Have Odd Keystone in bag
+69,9,Has talked to at least 32 people in the underground

@@ -30,7 +30,9 @@ DB_CURSOR = connection.cursor()
 DB_VENDOR = connection.vendor
 
 
-MEDIA_DIR = "{prefix}{{file_name}}".format(prefix=os.environ.get("POKEAPI_SPRITES_PREFIX", "/media/sprites/"))
+MEDIA_DIR = "{prefix}{{file_name}}".format(
+    prefix=os.environ.get("POKEAPI_SPRITES_PREFIX", "/media/sprites/")
+)
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []
 
@@ -42,7 +44,9 @@ for root, dirs, files in os.walk(IMAGE_DIR):
 
 
 def file_path_or_none(file_name):
-    return MEDIA_DIR.format(file_name=file_name) if file_name in RESOURCE_IMAGES else None
+    return (
+        MEDIA_DIR.format(file_name=file_name) if file_name in RESOURCE_IMAGES else None
+    )
 
 
 def with_iter(context, iterable=None):

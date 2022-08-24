@@ -566,11 +566,10 @@ class ContestTypeDetailSerializer(serializers.ModelSerializer):
     names = ContestTypeNameSerializer(
         many=True, read_only=True, source="contesttypename"
     )
-    berry_flavor = BerryFlavorSummarySerializer(read_only=True, source="berryflavor")
-
+    
     class Meta:
         model = ContestType
-        fields = ("id", "name", "berry_flavor", "names")
+        fields = ("id", "name", "names")
 
 
 class SuperContestComboSerializer(serializers.ModelSerializer):

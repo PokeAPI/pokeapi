@@ -566,7 +566,7 @@ class ContestTypeDetailSerializer(serializers.ModelSerializer):
     names = ContestTypeNameSerializer(
         many=True, read_only=True, source="contesttypename"
     )
-    
+
     class Meta:
         model = ContestType
         fields = ("id", "name", "names")

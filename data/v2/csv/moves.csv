@@ -797,7 +797,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 796,steel-beam,8,9,140,5,95,0,10,3,420,,,,
 797,expanding-force,8,14,80,10,100,0,10,3,1,,,,
 798,steel-roller,8,9,130,5,100,0,10,2,1,,,,
-799,scale-shot,8,16,25,20,90,0,10,2,1,,,,
+799,scale-shot,8,16,25,20,90,0,10,2,443,,,,
 800,meteor-beam,8,6,120,10,90,0,10,3,1,100,,,
 801,shell-side-arm,8,4,90,10,100,0,10,3,1,20,,,
 802,misty-explosion,8,18,100,5,100,0,9,3,1,,,,

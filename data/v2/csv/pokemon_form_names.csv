@@ -2025,7 +2025,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10193,1,アローラのすがた,
 10193,3,알로라의 모습,
 10193,4,阿羅拉的樣子,
-10193,5,Forme d’Alola,
+10193,5,Forme d’Alola,Rattata d'Alola
 10193,6,Alola-Form,
 10193,7,Forma de Alola,
 10193,8,Forma di Alola,
@@ -2035,7 +2035,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10194,1,アローラのすがた,
 10194,3,알로라의 모습,
 10194,4,阿羅拉的樣子,
-10194,5,Forme d’Alola,
+10194,5,Forme d’Alola,Rattatac d'Alola
 10194,6,Alola-Form,
 10194,7,Forma de Alola,
 10194,8,Forma di Alola,
@@ -2043,10 +2043,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10194,11,アローラのすがた,
 10194,12,阿罗拉的样子,
 10195,9,,Totem Alolan Raticate
+10195,5,,Rattatac d'Alola Dominant
 10196,1,オリジナルキャップ,
 10196,3,오리지널캡,
 10196,4,初始帽子,
-10196,5,Casquette Originale,
+10196,5,Casquette Originale,Pikachu Casquette Originale
 10196,6,Original-Kappe,
 10196,7,Gorra Original,
 10196,8,Berretto Originale,
@@ -2056,7 +2057,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10197,1,ホウエンキャップ,
 10197,3,호연캡,
 10197,4,豐緣帽子,
-10197,5,Casquette de Hoenn,
+10197,5,Casquette de Hoenn,Pikachu Casquette de Hoenn
 10197,6,Hoenn-Kappe,
 10197,7,Gorra Hoenn,
 10197,8,Berretto Hoenn,
@@ -2066,7 +2067,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10198,1,シンオウキャップ,
 10198,3,신오캡,
 10198,4,神奧帽子,
-10198,5,Casquette de Sinnoh,
+10198,5,Casquette de Sinnoh,Pikachu Casquette de Sinnoh
 10198,6,Sinnoh-Kappe,
 10198,7,Gorra Sinnoh,
 10198,8,Berretto Sinnoh,
@@ -2076,7 +2077,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10199,1,イッシュキャップ,
 10199,3,하나캡,
 10199,4,合眾帽子,
-10199,5,Casquette d’Unys,
+10199,5,Casquette d’Unys,Pikachu Casquette d’Unys
 10199,6,Einall-Kappe,
 10199,7,Gorra Teselia,
 10199,8,Berretto Unima,
@@ -2086,7 +2087,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10200,1,カロスキャップ,
 10200,3,칼로스캡,
 10200,4,卡洛斯帽子,
-10200,5,Casquette de Kalos,
+10200,5,Casquette de Kalos, Pikachu Casquette de Kalos
 10200,6,Kalos-Kappe,
 10200,7,Gorra Kalos,
 10200,8,Berretto Kalos,
@@ -2096,7 +2097,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10201,1,アローラキャップ,
 10201,3,알로라캡,
 10201,4,阿羅拉帽子,
-10201,5,Casquette d’Alola,
+10201,5,Casquette d’Alola, Pikachu Casquette d’Alola
 10201,6,Alola-Kappe,
 10201,7,Gorra Alola,
 10201,8,Berretto Alola,
@@ -2106,7 +2107,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10202,1,アローラのすがた,
 10202,3,알로라의 모습,
 10202,4,阿羅拉的樣子,
-10202,5,Forme d’Alola,
+10202,5,Forme d’Alola,Raichu d'Alola
 10202,6,Alola-Form,
 10202,7,Forma de Alola,
 10202,8,Forma di Alola,
@@ -2116,7 +2117,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10203,1,アローラのすがた,
 10203,3,알로라의 모습,
 10203,4,阿羅拉的樣子,
-10203,5,Forme d’Alola,
+10203,5,Forme d’Alola,Sabelette d'Alola
 10203,6,Alola-Form,
 10203,7,Forma de Alola,
 10203,8,Forma di Alola,
@@ -2126,7 +2127,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10204,1,アローラのすがた,
 10204,3,알로라의 모습,
 10204,4,阿羅拉的樣子,
-10204,5,Forme d’Alola,
+10204,5,Forme d’Alola,Sablaireau d'Alola
 10204,6,Alola-Form,
 10204,7,Forma de Alola,
 10204,8,Forma di Alola,
@@ -2136,7 +2137,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10205,1,アローラのすがた,
 10205,3,알로라의 모습,
 10205,4,阿羅拉的樣子,
-10205,5,Forme d’Alola,
+10205,5,Forme d’Alola,Goupix d'Alola
 10205,6,Alola-Form,
 10205,7,Forma de Alola,
 10205,8,Forma di Alola,
@@ -2146,7 +2147,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10206,1,アローラのすがた,
 10206,3,알로라의 모습,
 10206,4,阿羅拉的樣子,
-10206,5,Forme d’Alola,
+10206,5,Forme d’Alola,Feunard d'Alola
 10206,6,Alola-Form,
 10206,7,Forma de Alola,
 10206,8,Forma di Alola,
@@ -2156,7 +2157,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10207,1,アローラのすがた,
 10207,3,알로라의 모습,
 10207,4,阿羅拉的樣子,
-10207,5,Forme d’Alola,
+10207,5,Forme d’Alola,Taupiqueur d'Alola
 10207,6,Alola-Form,
 10207,7,Forma de Alola,
 10207,8,Forma di Alola,
@@ -2166,7 +2167,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10208,1,アローラのすがた,
 10208,3,알로라의 모습,
 10208,4,阿羅拉的樣子,
-10208,5,Forme d’Alola,
+10208,5,Forme d’Alola,Triopikeur d'Alola
 10208,6,Alola-Form,
 10208,7,Forma de Alola,
 10208,8,Forma di Alola,
@@ -2176,7 +2177,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10209,1,アローラのすがた,
 10209,3,알로라의 모습,
 10209,4,阿羅拉的樣子,
-10209,5,Forme d’Alola,
+10209,5,Forme d’Alola,Miaouss d'Alola
 10209,6,Alola-Form,
 10209,7,Forma de Alola,
 10209,8,Forma di Alola,
@@ -2186,7 +2187,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10210,1,アローラのすがた,
 10210,3,알로라의 모습,
 10210,4,阿羅拉的樣子,
-10210,5,Forme d’Alola,
+10210,5,Forme d’Alola,Persian d'Alola
 10210,6,Alola-Form,
 10210,7,Forma de Alola,
 10210,8,Forma di Alola,
@@ -2196,7 +2197,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10211,1,アローラのすがた,
 10211,3,알로라의 모습,
 10211,4,阿羅拉的樣子,
-10211,5,Forme d’Alola,
+10211,5,Forme d’Alola,Racaillou d'Alola
 10211,6,Alola-Form,
 10211,7,Forma de Alola,
 10211,8,Forma di Alola,
@@ -2206,7 +2207,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10212,1,アローラのすがた,
 10212,3,알로라의 모습,
 10212,4,阿羅拉的樣子,
-10212,5,Forme d’Alola,
+10212,5,Forme d’Alola,Gravalanch d'Alola
 10212,6,Alola-Form,
 10212,7,Forma de Alola,
 10212,8,Forma di Alola,
@@ -2216,7 +2217,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10213,1,アローラのすがた,
 10213,3,알로라의 모습,
 10213,4,阿羅拉的樣子,
-10213,5,Forme d’Alola,
+10213,5,Forme d’Alola,Grolem d'Alola
 10213,6,Alola-Form,
 10213,7,Forma de Alola,
 10213,8,Forma di Alola,
@@ -2226,7 +2227,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10214,1,アローラのすがた,
 10214,3,알로라의 모습,
 10214,4,阿羅拉的樣子,
-10214,5,Forme d’Alola,
+10214,5,Forme d’Alola,Tadmorv d'Alola
 10214,6,Alola-Form,
 10214,7,Forma de Alola,
 10214,8,Forma di Alola,
@@ -2236,7 +2237,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10215,1,アローラのすがた,
 10215,3,알로라의 모습,
 10215,4,阿羅拉的樣子,
-10215,5,Forme d’Alola,
+10215,5,Forme d’Alola,Grotadmorv d'Alola
 10215,6,Alola-Form,
 10215,7,Forma de Alola,
 10215,8,Forma di Alola,
@@ -2246,7 +2247,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10216,1,アローラのすがた,
 10216,3,알로라의 모습,
 10216,4,阿羅拉的樣子,
-10216,5,Forme d’Alola,
+10216,5,Forme d’Alola,Noadkoko d'Alola
 10216,6,Alola-Form,
 10216,7,Forma de Alola,
 10216,8,Forma di Alola,
@@ -2256,18 +2257,19 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10217,1,アローラのすがた,
 10217,3,알로라의 모습,
 10217,4,阿羅拉的樣子,
-10217,5,Forme d’Alola,
+10217,5,Forme d’Alola,Ossatueur d'Alola
 10217,6,Alola-Form,
 10217,7,Forma de Alola,
 10217,8,Forma di Alola,
 10217,9,Alolan Form,Alolan Marowak
 10217,11,アローラのすがた,
 10217,12,阿罗拉的样子,
+10218,5,,Amphinobi Synergie
 10218,9,,Battle Bond Greninja
 10219,1,サトシゲッコウガ,
 10219,3,지우개굴닌자,
 10219,4,小智版甲賀忍蛙,
-10219,5,Forme Sacha,
+10219,5,Forme Sacha,Amphinobi Forme Sacha
 10219,6,Ash-Form,
 10219,7,Forma Ash,
 10219,8,Forma Ash,
@@ -2277,7 +2279,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10220,1,１０％フォルム,
 10220,3,10%폼,
 10220,4,１０％形態,
-10220,5,Forme 10 %,
+10220,5,Forme 10 %,Zygarde Forme 10 %
 10220,6,10%-Form,
 10220,7,Forma 10%,
 10220,8,Forma 10%,
@@ -2287,7 +2289,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10221,1,５０％フォルム,
 10221,3,50%폼,
 10221,4,５０％形態,
-10221,5,Forme 50 %,
+10221,5,Forme 50 %,Zygarde Forme 50 %
 10221,6,50%-Form,
 10221,7,Forma 50%,
 10221,8,Forma 50%,
@@ -2297,19 +2299,21 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10222,1,パーフェクトフォルム,
 10222,3,퍼펙트폼,
 10222,4,完全體形態,
-10222,5,Forme Parfaite,
+10222,5,Forme Parfaite,Zygarde Forme Parfaite
 10222,6,Optimumform,
 10222,7,Forma Completa,
 10222,8,Forma Perfetta,
 10222,9,Complete Forme,Complete Zygarde
 10222,11,パーフェクトフォルム,
 10222,12,完全体形态,
+10223,5,,Argouste Dominant
 10223,9,,Totem Gumshoos
+10224,5,,Lucanon Dominant
 10224,9,,Totem Vikavolt
 10225,1,ぱちぱちスタイル,
 10225,3,파칙파칙스타일,
 10225,4,啪滋啪滋風格,
-10225,5,Style Pom-Pom,
+10225,5,Style Pom-Pom,Plumeline Style Pom-Pom
 10225,6,Cheerleading-Stil,
 10225,7,Estilo Animado,
 10225,8,Stile Cheerdance,
@@ -2319,7 +2323,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10226,1,ふらふらスタイル,
 10226,3,훌라훌라스타일,
 10226,4,呼拉呼拉風格,
-10226,5,Style Hula,
+10226,5,Style Hula,Plumeline Style Hula
 10226,6,Hula-Stil,
 10226,7,Estilo Plácido,
 10226,8,Stile Hula,
@@ -2329,7 +2333,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10227,1,まいまいスタイル,
 10227,3,하늘하늘스타일,
 10227,4,輕盈輕盈風格,
-10227,5,Style Buyō,
+10227,5,Style Buyō,Plumeline Style Buyō
 10227,6,Buyo-Stil,
 10227,7,Estilo Refinado,
 10227,8,Stile Buyō,
@@ -2339,7 +2343,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10228,1,まよなかのすがた,
 10228,3,한밤중의 모습,
 10228,4,黑夜的樣子,
-10228,5,Forme Nocturne,
+10228,5,Forme Nocturne,Lougaroc Forme Nocturne
 10228,6,Nachtform,
 10228,7,Forma Nocturna,
 10228,8,Forma Notte,
@@ -2349,14 +2353,16 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10229,1,むれたすがた,
 10229,3,군집의 모습,
 10229,4,魚群的樣子,
-10229,5,Forme Banc,
+10229,5,Forme Banc,Froussardine Forme Banc
 10229,6,Schwarmform,
 10229,7,Forma Banco,
 10229,8,Forma Banco,
 10229,9,School Form,School Wishiwashi
 10229,11,むれたすがた,
 10229,12,鱼群的样子,
+10230,5,,Floramantis Dominant
 10230,9,,Totem Lurantis
+10231,5,,Malamandre Dominant
 10231,9,,Totem Salazzle
 10232,1,タイプ：ファイト,
 10232,3,타입:파이팅,
@@ -2531,7 +2537,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10249,1,りゅうせいのすがた,
 10249,3,유성의 모습,
 10249,4,流星的樣子,
-10249,5,Forme Météore,
+10249,5,Forme Météore,Météno Forme Météore Noyeau Orange
 10249,6,Meteorform,
 10249,7,Forma Meteorito,
 10249,8,Forma Meteora,
@@ -2541,7 +2547,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10250,1,りゅうせいのすがた,
 10250,3,유성의 모습,
 10250,4,流星的樣子,
-10250,5,Forme Météore,
+10250,5,Forme Météore,Météno Forme Météore Noyeau Jaune
 10250,6,Meteorform,
 10250,7,Forma Meteorito,
 10250,8,Forma Meteora,
@@ -2551,7 +2557,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10251,1,りゅうせいのすがた,
 10251,3,유성의 모습,
 10251,4,流星的樣子,
-10251,5,Forme Météore,
+10251,5,Forme Météore,Météno Forme Météore Noyeau Vert
 10251,6,Meteorform,
 10251,7,Forma Meteorito,
 10251,8,Forma Meteora,
@@ -2561,7 +2567,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10252,1,りゅうせいのすがた,
 10252,3,유성의 모습,
 10252,4,流星的樣子,
-10252,5,Forme Météore,
+10252,5,Forme Météore,Météno Forme Météore Noyeau Bleu
 10252,6,Meteorform,
 10252,7,Forma Meteorito,
 10252,8,Forma Meteora,
@@ -2571,7 +2577,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10253,1,りゅうせいのすがた,
 10253,3,유성의 모습,
 10253,4,流星的樣子,
-10253,5,Forme Météore,
+10253,5,Forme Météore,Météno Forme Météore Noyeau Indigo
 10253,6,Meteorform,
 10253,7,Forma Meteorito,
 10253,8,Forma Meteora,
@@ -2581,7 +2587,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10254,1,りゅうせいのすがた,
 10254,3,유성의 모습,
 10254,4,流星的樣子,
-10254,5,Forme Météore,
+10254,5,Forme Météore,Météno NoyeaForme Météore u Violet
 10254,6,Meteorform,
 10254,7,Forma Meteorito,
 10254,8,Forma Meteora,
@@ -2591,7 +2597,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10255,1,あかいろのコア,
 10255,3,빨간색 코어,
 10255,4,紅色核心,
-10255,5,Noyau Rouge,
+10255,5,Noyau Rouge,Météno Noyeau Rouge
 10255,6,Roter Kern,
 10255,7,Núcleo Rojo,
 10255,8,Nucleo Rosso,
@@ -2601,7 +2607,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10256,1,だいだいいろのコア,
 10256,3,주황색 코어,
 10256,4,橙色核心,
-10256,5,Noyau Orange,
+10256,5,Noyau Orange,Météno Noyeau Orange
 10256,6,Oranger Kern,
 10256,7,Núcleo Naranja,
 10256,8,Nucleo Arancione,
@@ -2611,7 +2617,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10257,1,きいろのコア,
 10257,3,노란색 코어,
 10257,4,黃色核心,
-10257,5,Noyau Jaune,
+10257,5,Noyau Jaune,Météno Noyeau Jaune
 10257,6,Gelber Kern,
 10257,7,Núcleo Amarillo,
 10257,8,Nucleo Giallo,
@@ -2621,7 +2627,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10258,1,みどりいろのコア,
 10258,3,초록색 코어,
 10258,4,綠色核心,
-10258,5,Noyau Vert,
+10258,5,Noyau Vert,Météno Noyeau Vert
 10258,6,Grüner Kern,
 10258,7,Núcleo Verde,
 10258,8,Nucleo Verde,
@@ -2631,7 +2637,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10259,1,みずいろのコア,
 10259,3,옥색 코어,
 10259,4,淺藍色核心,
-10259,5,Noyau Bleu,
+10259,5,Noyau Bleu,Météno Noyeau Bleu
 10259,6,Hellblauer Kern,
 10259,7,Núcleo Azul,
 10259,8,Nucleo Azzurro,
@@ -2641,7 +2647,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10260,1,あおいろのコア,
 10260,3,파란색 코어,
 10260,4,藍色核心,
-10260,5,Noyau Indigo,
+10260,5,Noyau Indigo,Météno Noyeau Indigo
 10260,6,Blauer Kern,
 10260,7,Núcleo Añil,
 10260,8,Nucleo Indaco,
@@ -2651,7 +2657,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10261,1,むらさきいろのコア,
 10261,3,보라색 코어,
 10261,4,紫色核心,
-10261,5,Noyau Violet,
+10261,5,Noyau Violet,Météno Noyeau Violet
 10261,6,Violetter Kern,
 10261,7,Núcleo Violeta,
 10261,8,Nucleo Violetto,
@@ -2661,20 +2667,23 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10262,1,ばれたすがた,
 10262,3,들킨 모습,
 10262,4,現形的樣子,
-10262,5,Forme Démasquée,
+10262,5,Forme Démasquée,Mimiqui Forme Démasquée
 10262,6,Entlarvte Form,
 10262,7,Forma Descubierta,
 10262,8,Forma Smascherata,
 10262,9,Busted Form,Busted Mimikyu
 10262,11,ばれたすがた,
 10262,12,现形的样子,
+10263,5,,Mimiqui Dominant
 10263,9,,Totem Disguised Mimikyu
+10264,5,,Mimiqui Dominant Forme Démasquée
 10264,9,,Totem Busted Mimikyu
+10265,5,,Ékaïser Dominant
 10265,9,,Totem Kommo-o
 10266,1,５００ねんまえのいろ,
 10266,3,500년 전의 색,
 10266,4,５００年前的顏色,
-10266,5,Couleur du Passé,
+10266,5,Couleur du Passé,Magearna Couleur du Passé
 10266,6,Originalfarbe,
 10266,7,Color Vetusto,
 10266,8,Colore Antico,
@@ -2684,7 +2693,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10267,1,キミにきめたキャップ,
 10267,3,너로정했다캡,
 10267,4,就決定是你了之帽子,
-10267,5,Casquette Partenaire,
+10267,5,Casquette Partenaire,Pikachu Casquette Partenaire
 10267,6,Partner-Kappe,
 10267,7,Gorra Compañero,
 10267,8,Berretto Compagni,
@@ -2692,25 +2701,30 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10267,11,キミにきめたキャップ,
 10267,12,就决定是你了之帽子,
 10268,3,알로라의 모습,
+10268,5,,Ossatueur d'Alola Dominant
 10268,9,,Totem Alolan Marowak
+10309,5,,Rubombelle Dominant
 10309,9,,Totem Ribombee
+10310,5,,Rocabot Tempo Perso
 10310,9,,Own Tempo Rockruff
 10311,1,たそがれのすがた,
 10311,3,황혼의 모습,
 10311,4,黃昏的樣子,
-10311,5,Forme Crépusculaire,
+10311,5,Forme Crépusculaire,Lougaroc Forme Crépusculaire
 10311,6,Zwielichtform,
 10311,7,Forma Crepuscular,
 10311,8,Forma Crepuscolo,
 10311,9,Dusk Form,Dusk Lycanroc
 10311,11,たそがれのすがた,
 10311,12,黄昏的样子,
+10312,5,,Tarenbulle Dominant
 10312,9,,Totem Araquanid
+10313,5,,Togedemaru Dominant
 10313,9,,Totem Togedemaru
 10314,1,たそがれのたてがみ,
 10314,3,황혼의 갈기,
 10314,4,黃昏之鬃,
-10314,5,Crinière du Couchant,
+10314,5,Crinière du Couchant,Necrozma Crinière du Couchant
 10314,6,Abendmähne,
 10314,7,Melena Crepuscular,
 10314,8,Criniera del Vespro,
@@ -2720,7 +2734,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10315,1,あかつきのつばさ,
 10315,3,새벽의 날개,
 10315,4,拂曉之翼,
-10315,5,Ailes de l’Aurore,
+10315,5,Ailes de l’Aurore,Necrozma Ailes de l’Aurore
 10315,6,Morgenschwingen,
 10315,7,Alas del Alba,
 10315,8,Ali dell’Aurora,
@@ -2730,7 +2744,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,1,ウルトラネクロズマ,
 10316,3,울트라네크로즈마,
 10316,4,究極奈克洛茲瑪,
-10316,5,Ultra-Necrozma,
+10316,5,Ultra-Necrozma,Ultra-Necrozma
 10316,6,Ultra-Necrozma,
 10316,7,Ultra-Necrozma,
 10316,8,UltraNecrozma,
@@ -2738,11 +2752,13 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,11,ウルトラネクロズマ,
 10316,12,究极奈克洛兹玛,
 10317,9,,Partner Pikachu
+10317,5,,Pikachu Partenaire
 10318,9,,Partner Eevee
+10318,5,,Évoli Partenaire
 10319,1,ワールドキャップ,
 10319,3,월드캡,
 10319,4,世界帽子,
-10319,5,Casquette Monde,
+10319,5,Casquette Monde,Pikachu Casquette Monde
 10319,6,Weltreise-Kappe,
 10319,7,Gorra Trotamundos,
 10319,8,Berretto Giramondo,
@@ -2752,7 +2768,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10320,1,ガラルのすがた,
 10320,3,가라르의 모습,
 10320,4,伽勒爾的樣子,
-10320,5,Forme de Galar,
+10320,5,Forme de Galar,Miaouss de Galar
 10320,6,Galar-Form,
 10320,7,Forma de Galar,
 10320,8,Forma di Galar,
@@ -2762,7 +2778,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10321,1,ガラルのすがた,
 10321,3,가라르의 모습,
 10321,4,伽勒爾的樣子,
-10321,5,Forme de Galar,
+10321,5,Forme de Galar,Ponyta de Galar
 10321,6,Galar-Form,
 10321,7,Forma de Galar,
 10321,8,Forma di Galar,
@@ -2772,7 +2788,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10322,1,ガラルのすがた,
 10322,3,가라르의 모습,
 10322,4,伽勒爾的樣子,
-10322,5,Forme de Galar,
+10322,5,Forme de Galar,Galopa de Galar
 10322,6,Galar-Form,
 10322,7,Forma de Galar,
 10322,8,Forma di Galar,
@@ -2782,7 +2798,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10323,1,ガラルのすがた,
 10323,3,가라르의 모습,
 10323,4,伽勒爾的樣子,
-10323,5,Forme de Galar,
+10323,5,Forme de Galar,Ramoloss de Galar
 10323,6,Galar-Form,
 10323,7,Forma de Galar,
 10323,8,Forma di Galar,
@@ -2792,7 +2808,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10324,1,ガラルのすがた,
 10324,3,가라르의 모습,
 10324,4,伽勒爾的樣子,
-10324,5,Forme de Galar,
+10324,5,Forme de Galar,Flagadoss de Galar
 10324,6,Galar-Form,
 10324,7,Forma de Galar,
 10324,8,Forma di Galar,
@@ -2802,7 +2818,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10325,1,ガラルのすがた,
 10325,3,가라르의 모습,
 10325,4,伽勒爾的樣子,
-10325,5,Forme de Galar,
+10325,5,Forme de Galar,Canarticho de Galar
 10325,6,Galar-Form,
 10325,7,Forma de Galar,
 10325,8,Forma di Galar,
@@ -2812,7 +2828,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10326,1,ガラルのすがた,
 10326,3,가라르의 모습,
 10326,4,伽勒爾的樣子,
-10326,5,Forme de Galar,
+10326,5,Forme de Galar,Smogogo de Galar
 10326,6,Galar-Form,
 10326,7,Forma de Galar,
 10326,8,Forma di Galar,
@@ -2822,7 +2838,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10327,1,ガラルのすがた,
 10327,3,가라르의 모습,
 10327,4,伽勒爾的樣子,
-10327,5,Forme de Galar,
+10327,5,Forme de Galar,M. Mime de Galar
 10327,6,Galar-Form,
 10327,7,Forma de Galar,
 10327,8,Forma di Galar,
@@ -2832,7 +2848,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10328,1,ガラルのすがた,
 10328,3,가라르의 모습,
 10328,4,伽勒爾的樣子,
-10328,5,Forme de Galar,
+10328,5,Forme de Galar,Artikodin de Galar
 10328,6,Galar-Form,
 10328,7,Forma de Galar,
 10328,8,Forma di Galar,
@@ -2842,7 +2858,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10329,1,ガラルのすがた,
 10329,3,가라르의 모습,
 10329,4,伽勒爾的樣子,
-10329,5,Forme de Galar,
+10329,5,Forme de Galar,Électhor de Galar
 10329,6,Galar-Form,
 10329,7,Forma de Galar,
 10329,8,Forma di Galar,
@@ -2852,7 +2868,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10330,1,ガラルのすがた,
 10330,3,가라르의 모습,
 10330,4,伽勒爾的樣子,
-10330,5,Forme de Galar,
+10330,5,Forme de Galar,Sulfura de Galar
 10330,6,Galar-Form,
 10330,7,Forma de Galar,
 10330,8,Forma di Galar,
@@ -2862,7 +2878,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10331,1,ガラルのすがた,
 10331,3,가라르의 모습,
 10331,4,伽勒爾的樣子,
-10331,5,Forme de Galar,
+10331,5,Forme de Galar,Roigada de Galar
 10331,6,Galar-Form,
 10331,7,Forma de Galar,
 10331,8,Forma di Galar,
@@ -2872,7 +2888,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10332,1,ガラルのすがた,
 10332,3,가라르의 모습,
 10332,4,伽勒爾的樣子,
-10332,5,Forme de Galar,
+10332,5,Forme de Galar,Corayon de Galar
 10332,6,Galar-Form,
 10332,7,Forma de Galar,
 10332,8,Forma di Galar,
@@ -2882,7 +2898,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10333,1,ガラルのすがた,
 10333,3,가라르의 모습,
 10333,4,伽勒爾的樣子,
-10333,5,Forme de Galar,
+10333,5,Forme de Galar,	Zigzaton de Galar
 10333,6,Galar-Form,
 10333,7,Forma de Galar,
 10333,8,Forma di Galar,
@@ -2892,7 +2908,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10334,1,ガラルのすがた,
 10334,3,가라르의 모습,
 10334,4,伽勒爾的樣子,
-10334,5,Forme de Galar,
+10334,5,Forme de Galar,Linéon de Galar
 10334,6,Galar-Form,
 10334,7,Forma de Galar,
 10334,8,Forma di Galar,
@@ -2902,7 +2918,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10335,1,ガラルのすがた,
 10335,3,가라르의 모습,
 10335,4,伽勒爾的樣子,
-10335,5,Forme de Galar,
+10335,5,Forme de Galar,Darumarond de Galar
 10335,6,Galar-Form,
 10335,7,Forma de Galar,
 10335,8,Forma di Galar,
@@ -2912,7 +2928,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10336,1,ガラルのすがた,
 10336,3,가라르의 모습,
 10336,4,伽勒爾的樣子,
-10336,5,Forme de Galar,
+10336,5,Forme de Galar,Darumacho de Galar Normal
 10336,6,Galar-Form,
 10336,7,Forma de Galar,
 10336,8,Forma di Galar,
@@ -2922,7 +2938,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10337,1,ダルマモード,
 10337,3,달마모드,
 10337,4,達摩模式,
-10337,5,Mode Transe,
+10337,5,Mode Transe,Darumacho de Galar Transe
 10337,6,Trance-Modus,
 10337,7,Modo Daruma,
 10337,8,Stato Zen,
@@ -2932,7 +2948,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10338,1,ガラルのすがた,
 10338,3,가라르의 모습,
 10338,4,伽勒爾的樣子,
-10338,5,Forme de Galar,
+10338,5,Forme de Galar,Tutafeh de Galar
 10338,6,Galar-Form,
 10338,7,Forma de Galar,
 10338,8,Forma di Galar,
@@ -2942,7 +2958,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10339,1,ガラルのすがた,
 10339,3,가라르의 모습,
 10339,4,伽勒爾的樣子,
-10339,5,Forme de Galar,
+10339,5,Forme de Galar,Limonde de Galar
 10339,6,Galar-Form,
 10339,7,Forma de Galar,
 10339,8,Forma di Galar,
@@ -2952,7 +2968,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10340,1,１０％フォルム,
 10340,3,10%폼,
 10340,4,１０％形態,
-10340,5,Forme 10 %,
+10340,5,Forme 10 %,Zygarde Forme 10 %
 10340,6,10%-Form,
 10340,7,Forma 10%,
 10340,8,Forma 10%,
@@ -2962,7 +2978,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10341,1,うのみのすがた,
 10341,3,그대로 삼킨 모습,
 10341,4,一口吞的樣子,
-10341,5,Forme Gobe-Tout,
+10341,5,Forme Gobe-Tout,Nigosier Forme Gobe-Tout
 10341,6,Schlingform,
 10341,7,Forma Tragatodo,
 10341,8,Forma Inghiottitutto,
@@ -2972,7 +2988,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10342,1,まるのみのすがた,
 10342,3,통째로 삼킨 모습,
 10342,4,大口吞的樣子,
-10342,5,Forme Gobe-Chu,
+10342,5,Forme Gobe-Chu,Nigosier Forme Gobe-Chu
 10342,6,Stopfform,
 10342,7,Forma Engulletodo,
 10342,8,Forma Inghiottintero,
@@ -2982,7 +2998,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10343,1,ローなすがた,
 10343,3,로우한 모습,
 10343,4,低調的樣子,
-10343,5,Forme Grave,
+10343,5,Forme Grave,Salarsen Forme Grave
 10343,6,Tief-Form,
 10343,7,Forma Grave,
 10343,8,Forma Basso,
@@ -3074,7 +3090,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10354,1,ナイスフェイス,
 10354,3,나이스페이스,
 10354,4,解凍頭,
-10354,5,Tête Dégel,
+10354,5,Tête Dégel,Bekaglaçon Tête Dégel
 10354,6,Wohlfühlkopf,
 10354,7,Cara Deshielo,
 10354,8,Liquefaccia,
@@ -3084,7 +3100,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10355,1,メスのすがた,
 10355,3,암컷의 모습,
 10355,4,雌性的樣子,
-10355,5,Femelle,
+10355,5,Femelle,Wimessir Femelle
 10355,6,Weiblich,
 10355,7,Hembra,
 10355,8,Femmina,
@@ -3094,7 +3110,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10356,1,はらぺこもよう,
 10356,3,배고픈 모양,
 10356,4,空腹花紋,
-10356,5,Mode Affamé,
+10356,5,Mode Affamé,Morpeko Mode Affamé
 10356,6,Kohldampfmuster,
 10356,7,Forma Voraz,
 10356,8,Motivo Panciavuota,
@@ -3104,7 +3120,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10357,1,けんのおう,
 10357,3,검왕,
 10357,4,劍之王,
-10357,5,Épée Suprême,
+10357,5,Épée Suprême,Zacian Épée Suprême
 10357,6,König des Schwertes,
 10357,7,Espada Suprema,
 10357,8,Re delle Spade,
@@ -3114,7 +3130,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10358,1,たてのおう,
 10358,3,방패왕,
 10358,4,盾之王,
-10358,5,Bouclier Suprême,
+10358,5,Bouclier Suprême,Zamazenta Bouclier Suprême
 10358,6,König des Schildes,
 10358,7,Escudo Supremo,
 10358,8,Re degli Scudi,
@@ -3124,7 +3140,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10359,1,ムゲンダイマックス,
 10359,3,무한다이맥스,
 10359,4,無極巨化,
-10359,5,Infinimax,
+10359,5,Infinimax,Éthernatos Infinimax
 10359,6,Unendynamax,
 10359,7,Dinamax Infinito,
 10359,8,Dynamax Infinito,
@@ -3134,7 +3150,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10360,1,れんげきのかた,
 10360,3,연격의 태세,
 10360,4,連擊流,
-10360,5,Style Mille Poings,
+10360,5,Style Mille Poings,Shifours Style Mille Poings
 10360,6,Fließender Stil,
 10360,7,Estilo Fluido,
 10360,8,Stile Pluricolpo,
@@ -3144,7 +3160,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10361,1,とうちゃん,
 10361,3,아빠,
 10361,4,阿爸,
-10361,5,Papa,
+10361,5,Papa,Zarude Papa
 10361,6,Papa,
 10361,7,Papá,
 10361,8,Papà,
@@ -3154,7 +3170,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10362,1,はくばじょうのすがた,
 10362,3,백마 탄 모습,
 10362,4,騎白馬的樣子,
-10362,5,Cavalier du Froid,
+10362,5,Cavalier du Froid,Calyrex Cavalier du Froid
 10362,6,Schimmelreiter,
 10362,7,Jinete Glacial,
 10362,8,Cavaliere Glaciale,
@@ -3164,65 +3180,120 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10363,1,こくばじょうのすがた,
 10363,3,흑마 탄 모습,
 10363,4,騎黑馬的樣子,
-10363,5,Cavalier d’Effroi,
+10363,5,Cavalier d’Effroi,Calyrex Cavalier d’Effroi
 10363,6,Rappenreiter,
 10363,7,Jinete Espectral,
 10363,8,Cavaliere Spettrale,
 10363,9,Shadow Rider,Shadow Calyrex
 10363,11,こくばじょうのすがた,
 10363,12,骑黑马的样子,
+10364,5,Forme Gigamax,Florizarre Gigamax
 10364,9,Gigantamax Form,Gigantamax Venusaur
+10365,5,Forme Gigamax,Dracaufeu Gigamax
 10365,9,Gigantamax Form,Gigantamax Charizard
+10366,5,Forme Gigamax,Tortank Gigamax
 10366,9,Gigantamax Form,Gigantamax Blastoise
+10367,5,Forme Gigamax,Papilusion Gigamax
 10367,9,Gigantamax Form,Gigantamax Butterfree
+10368,5,Forme Gigamax,Pikachu Gigamax
 10368,9,Gigantamax Form,Gigantamax Pikachu
+10369,5,Forme Gigamax,Miaouss Gigamax
 10369,9,Gigantamax Form,Gigantamax Meowth
+10370,5,Forme Gigamax,Mackogneur Gigamax
 10370,9,Gigantamax Form,Gigantamax Machamp
+10371,5,Forme Gigamax,Ectoplasma Gigamax
 10371,9,Gigantamax Form,Gigantamax Gengar
+10372,5,Forme Gigamax,Leviator Gigamax
 10372,9,Gigantamax Form,Gigantamax Kingler
+10373,5,Forme Gigamax,Lokhlass Gigamax
 10373,9,Gigantamax Form,Gigantamax Lapras
+10374,5,Forme Gigamax,Évoli Gigamax
 10374,9,Gigantamax Form,Gigantamax Eevee
+10375,5,Forme Gigamax,Ronflex Gigamax
 10375,9,Gigantamax Form,Gigantamax Snorlax
+10376,5,Forme Gigamax,Miasmax Gigamax
 10376,9,Gigantamax Form,Gigantamax Garbodor
+10377,5,Forme Gigamax,Melmetal Gigamax
 10377,9,Gigantamax Form,Gigantamax Melmetal
+10378,5,Forme Gigamax,Gorythmic Gigamax
 10378,9,Gigantamax Form,Gigantamax Rillaboom
+10379,5,Forme Gigamax,Pyrobut Gigamax
 10379,9,Gigantamax Form,Gigantamax Cinderace
+10380,5,Forme Gigamax,Lézargus Gigamax
 10380,9,Gigantamax Form,Gigantamax Inteleon
+10381,5,Forme Gigamax,Corvaillus Gigamax
 10381,9,Gigantamax Form,Gigantamax Corviknight
+10382,5,Forme Gigamax,Astronelle Gigamax
 10382,9,Gigantamax Form,Gigantamax Orbeetle
+10383,5,Forme Gigamax,Torgamord Gigamax
 10383,9,Gigantamax Form,Gigantamax Drednaw
+10384,5,Forme Gigamax,Monthracite Gigamax
 10384,9,Gigantamax Form,Gigantamax Coalossal
+10385,5,Forme Gigamax,Pomdrapi Gigamax
 10385,9,Gigantamax Form,Gigantamax Flapple
+10386,5,Forme Gigamax,Dratatin Gigamax
 10386,9,Gigantamax Form,Gigantamax Appletun
+10387,5,Forme Gigamax,Dunaconda 
 10387,9,Gigantamax Form,Gigantamax Sandaconda
+10388,5,Forme Gigamax,Salarsen Forme Aigüe Gigamax
 10388,9,Gigantamax Form,Gigantamax Amped Toxtricity
+10389,5,Forme Gigamax,Scolocendre Gigamax
 10389,9,Gigantamax Form,Gigantamax Centiskorch
+10390,5,Forme Gigamax,Sorcilence Gigamax
 10390,9,Gigantamax Form,Gigantamax Hatterene
+10391,5,Forme Gigamax,Angoliath Gigamax
 10391,9,Gigantamax Form,Gigantamax Grimmsnarl
+10392,5,Forme Gigamax,Charmilly Gigamax
 10392,9,Gigantamax Form,Gigantamax Alcremie
+10393,5,Forme Gigamax,Pachyradjah Gigamax
 10393,9,Gigantamax Form,Gigantamax Copperajah
+10394,5,Forme Gigamax,Duralugon Gigamax
 10394,9,Gigantamax Form,Gigantamax Duraludon
+10395,5,Forme Gigamax,Shifours Style Poing Final Gigamax
 10395,9,Gigantamax Form,Gigantamax Single Strike Urshifu
+10396,5,Forme Gigamax,Shifours Style Mille Poings Gigamax
 10396,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu
+10397,5,Gigantamax Form,Salarsen Forme Grave Gigamax
 10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
+10398,5,Forme de Hisui,Caninos de Hisui
 10398,9,Hisuian Form,Hisuian Growlithe
+10399,5,Forme de Hisui,Arcanin de Hisui
 10399,9,Hisuian Form,Hisuian Arcanine
+10400,5,Forme de Hisui,Voltorbe de Hisui
 10400,9,Hisuian Form,Hisuian Voltorb
+10401,5,Forme de Hisui,Électrode de Hisui
 10401,9,Hisuian Form,Hisuian Electrode
+10402,5,Forme de Hisui,Typhlosion de Hisui
 10402,9,Hisuian Form,Hisuian Typhlosion
+10403,5,Forme de Hisui,Qwilfish de Hisui
 10403,9,Hisuian Form,Hisuian Qwilfish
+10404,5,Forme de Hisui,Farfuret de Hisui
 10404,9,Hisuian Form,Hisuian Sneasel
+10405,5,Forme de Hisui,Clamiral de Hisui
 10405,9,Hisuian Form,Hisuian Samurott
+10406,5,Forme de Hisui,Fragilady de Hisui
 10406,9,Hisuian Form,Hisuian Lilligant
+10407,5,Forme de Hisui,Zorua de Hisui
 10407,9,Hisuian Form,Hisuian Zorua
+10408,5,Forme de Hisui,Zoroark de Hisui
 10408,9,Hisuian Form,Hisuian Zoroark
+10409,5,Forme de Hisui,Gueriaigle de Hisui
 10409,9,Hisuian Form,Hisuian Braviary
+10410,5,Forme de Hisui,Colimucus de Hisui
 10410,9,Hisuian Form,Hisuian Sliggoo
+10411,5,Forme de Hisui,Muplodocus de Hisui
 10411,9,Hisuian Form,Hisuian Goodra
+10412,5,Forme de Hisui,Séracrawl de Hisui
 10412,9,Hisuian Form,Hisuian Avalugg
+10413,5,Forme de Hisui,Archéduc de Hisui
 10413,9,Hisuian Form,Hisuian Decidueye
+10414,5,Forme Originelle,Diagla Originel
 10414,9,Origin Forme,Origin Dialga
+10415,5,Forme Originelle,Palkia Originel
 10415,9,Origin Forme,Origin Palkia
+10416,5,Motif Blanch,Basculin Blanc
 10416,9,White-Striped Form,White-Striped Basculin
+10417,5,Femelle,Paragruel Femelle
 10417,9,Female,Female Basculegion
+10418,5,Forme Avatar,Amovénus Avatar
 10418,9,Therian Forme,Therian Enamorus

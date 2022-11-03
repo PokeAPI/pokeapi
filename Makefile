@@ -121,6 +121,7 @@ k8s-delete:  # (k8s) Delete pokeapi namespace
 
 update-graphql-prod:
 	git pull origin master
+	git submodule update --init
 	docker stop pokeapi_graphql-engine_1
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app

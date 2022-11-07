@@ -9,3 +9,6 @@ id,identifier
 8,three-critical-hits
 9,take-damage
 10,other
+11,agile-style-move
+12,strong-style-move
+13,recoil-damage

@@ -167,7 +167,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://pokeapi-slack-invite.herokuapp.com/) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-1l4vpwa8k-muQmMrFfv7TIFGrVWzjzcw) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 

@@ -1006,7 +1006,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 1007,toedscruel,1007,1.9,58,,1007,1
 1008,kingambit,1008,2,120,,1008,1
 1009,clodsire,1009,1.8,223,,1009,1
-1010,annihilape,1008,1.2,56,,1010,1
+1010,annihilape,1010,1.2,56,,1010,1
 10001,deoxys-attack,386,17,608,270,515,0
 10002,deoxys-defense,386,17,608,270,516,0
 10003,deoxys-speed,386,17,608,270,517,0

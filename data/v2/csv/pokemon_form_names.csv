@@ -397,11 +397,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 849,11,ハイなすがた,
 849,12,高调的样子,
 854,1,がんさくフォルム,
-854,9,,Phony Sinistea
+854,9,Phony Form,Phony Sinistea
 854,6,Fälschungsform,Fatalitee (Fälschung)
 854,11,がんさくフォルム,
 855,1,がんさくフォルム,
-855,9,,Phony Polteageist
+855,9,Phony Form,Phony Polteageist
 855,6,Fälschungsform,Mortipot (Fälschung)
 855,11,がんさくフォルム,
 869,1,ミルキィバニラ,
@@ -3042,11 +3042,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10343,12,低调的样子,
 10344,1,しんさくフォルム,
 10344,6,Originalform,Fatalitee (Original)
-10344,9,,Antique Sinistea
+10344,9,Antique Form,Antique Sinistea
 10344,11,しんさくフォルム,
 10345,1,しんさくフォルム,
 10345,6,Originalform,Mortipot (Original)
-10345,9,,Antique Polteageist
+10345,9,Antique Form,Antique Polteageist
 10345,11,しんさくフォルム,
 10346,1,ミルキィルビー,
 10346,3,밀키루비,

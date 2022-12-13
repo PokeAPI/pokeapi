@@ -2729,9 +2729,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10309,5,,Rubombelle Dominant
 10309,6,Totemform,Totem Bandelby
 10309,9,,Totem Ribombee
+10310,1,,
 10310,5,,Rocabot Tempo Perso
 10310,6,Tempomacherform,Wuffels (Tempomacher)
 10310,9,,Own Tempo Rockruff
+10310,11,,
 10311,1,たそがれのすがた,
 10311,3,황혼의 모습,
 10311,4,黃昏的樣子,
@@ -3034,10 +3036,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10343,9,Low Key Form,Low Key Toxtricity
 10343,11,ローなすがた,
 10343,12,低调的样子,
+10344,1,がんさくフォルム,
 10344,6,Originalform,Fatalitee (Original)
 10344,9,,Antique Sinistea
+10344,11,がんさくフォルム,
+10345,1,しんさくフォルム,
 10345,6,Originalform,Mortipot (Original)
 10345,9,,Antique Polteageist
+10345,11,しんさくフォルム,
 10346,1,ミルキィルビー,
 10346,3,밀키루비,
 10346,4,奶香紅鑽,

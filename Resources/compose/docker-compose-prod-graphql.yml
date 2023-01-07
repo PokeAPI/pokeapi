@@ -30,6 +30,7 @@ services:
       - graphiql:/transfer
     depends_on:
       - graphql-engine
+    restart: always
 
 volumes:
   graphiql:

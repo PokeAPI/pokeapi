@@ -23,7 +23,7 @@ jobs:
 
   deploy:
     machine:
-      image: ubuntu-2204:2022.10.2 # https://circleci.com/developer/machine/image/ubuntu-2204#image-tags
+      image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3. Newer images don't work
     resource_class: large
     steps:
       - checkout

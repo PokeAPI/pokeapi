@@ -24,7 +24,7 @@ jobs:
   deploy:
     machine:
       image: ubuntu-2204:2022.10.2 # https://circleci.com/developer/machine/image/ubuntu-2204#image-tags
-    resource_class: 2xlarge
+    resource_class: large
     steps:
       - checkout
       - run:

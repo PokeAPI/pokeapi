@@ -1,13 +1,13 @@
 version: '2.4'
 services:
   cache:
-    image: redis:alpine
+    image: redis:7.0.7-alpine
     volumes:
       - redis_data:/data
     restart: always
 
   db:
-    image: postgres
+    image: postgres:15.1
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
@@ -33,7 +33,7 @@ services:
     restart: always
 
   web:
-    image: nginx:alpine
+    image: nginx:1.23.3-alpine
     ports:
       - "80:80"
       - "443:443"
@@ -44,7 +44,7 @@ services:
       - ./Resources/nginx/ssl:/ssl:ro
       - graphql_cache:/tmp/cache
   graphql-engine:
-    image: hasura/graphql-engine:v2.0.8
+    image: hasura/graphql-engine:v2.16.1
     ports:
       - "8080:8080"
     depends_on:

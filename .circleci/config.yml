@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/python:3.10.1
+      - image: cimg/python:3.10.9
     steps:
       - checkout
       - run:
@@ -23,7 +23,7 @@ jobs:
 
   deploy:
     machine:
-      image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3
+      image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3. Newer images don't work
     resource_class: large
     steps:
       - checkout

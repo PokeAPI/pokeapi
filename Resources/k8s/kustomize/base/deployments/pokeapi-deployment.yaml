@@ -16,7 +16,7 @@ spec:
     spec:
       initContainers:
         - name: postgres-connection-checker
-          image: postgres:13.3-alpine
+          image: postgres:15.1-alpine
           command: ['sh', '-c']
           args:
             - until pg_isready -h postgresql -p 5432; do
@@ -26,6 +26,7 @@ spec:
       containers:
         - name: pokeapi
           image: pokeapi/pokeapi:master
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           securityContext:  # CI: Github Actions kills this container if not run with root. Otherwise, it's safe to use the default pokeapi/pokeapi user and remove these lines.

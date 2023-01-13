@@ -103,10 +103,10 @@ location_area_id,local_language_id,name
 141,9,Road 201
 142,9,Road 202
 143,9,Road 203
-144,9,Road 204 (south, towards Jubilife City)
-145,9,Road 204 (north, towards Floaroma Town)
-146,9,Road 205 (south, towards Floaroma Town)
-147,9,Road 205 (east, towards Eterna City)
+144,9,"Road 204 (south, towards Jubilife City)"
+145,9,"Road 204 (north, towards Floaroma Town)"
+146,9,"Road 205 (south, towards Floaroma Town)"
+147,9,"Road 205 (east, towards Eterna City)"
 148,9,Road 206
 149,9,Road 207
 150,9,Road 208
@@ -116,12 +116,12 @@ location_area_id,local_language_id,name
 154,9,Lost Tower (3F)
 155,9,Lost Tower (4F)
 156,9,Lost Tower (5F)
-157,9,Road 210 (south, towards Solaceon Town)
-158,9,Road 210 (west, towards Celestic Town)
-159,9,Road 211 (west, towards Eterna City)
-160,9,Road 211 (east, towards Celestic Town)
-161,9,Road 212 (north, towards Hearthome City)
-162,9,Road 212 (east, towards Pastoria City)
+157,9,"Road 210 (south, towards Solaceon Town)"
+158,9,"Road 210 (west, towards Celestic Town)"
+159,9,"Road 211 (west, towards Eterna City)"
+160,9,"Road 211 (east, towards Celestic Town)"
+161,9,"Road 212 (north, towards Hearthome City)"
+162,9,"Road 212 (east, towards Pastoria City)"
 163,9,Road 213
 164,9,Road 214
 165,9,Road 215
@@ -251,7 +251,7 @@ location_area_id,local_language_id,name
 293,9,Rock Tunnel (B1F)
 294,9,Victory Road 1 (1F)
 295,9,Road 1
-296,9,Road 2 (south, towards Viridian City)
+296,9,"Road 2 (south, towards Viridian City)"
 297,9,Road 3
 298,9,Road 4
 299,9,Road 5
@@ -275,7 +275,7 @@ location_area_id,local_language_id,name
 317,9,Digletts Cave
 318,9,Victory Road 1 (2F)
 319,9,Victory Road 1 (3F)
-320,9,Road 2 (north, towards Pewter City)
+320,9,"Road 2 (north, towards Pewter City)"
 321,9,Viridian Forest
 323,9,Cerulean Cave (1F)
 324,9,Cerulean Cave (2F)
@@ -300,9 +300,9 @@ location_area_id,local_language_id,name
 343,9,Pokemon Mansion (3F)
 344,9,Pokemon Mansion (B1F)
 345,9,Safari Zone (middle)
-346,9,Safari Zone (Area 1, east)
-347,9,Safari Zone (Area 2, north)
-348,9,Safari Zone (Area 3, west)
+346,9,"Safari Zone (Area 1, east)"
+347,9,"Safari Zone (Area 2, north)"
+348,9,"Safari Zone (Area 3, west)"
 349,9,S.S. Anne dock
 350,9,Petalburg City
 351,9,Slateport City
@@ -318,7 +318,7 @@ location_area_id,local_language_id,name
 361,9,Granite Cave (1F)
 362,9,Granite Cave (B1F)
 363,9,Granite Cave (B2F)
-364,9,Granite Cave (1F/small Room)
+364,9,Granite Cave (1F/small room)
 365,9,Petalburg Woods
 366,9,Jagged Pass
 367,9,Fiery Path
@@ -415,7 +415,7 @@ location_area_id,local_language_id,name
 488,9,Mount Ember
 489,9,Mount Ember (cave)
 490,9,Mount Ember (inside)
-491,9,Mount Ember (1F, cave behind team rocket)
+491,9,"Mount Ember (1F, cave behind team rocket)"
 492,9,Mount Ember (B1F)
 493,9,Mount Ember (B2F)
 494,9,Mount Ember (B3F)

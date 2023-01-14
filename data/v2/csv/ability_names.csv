@@ -2669,161 +2669,223 @@ ability_id,local_language_id,name
 267,9,As One
 267,11,じんばいったい
 267,12,人马一体
+268,1,とれないにおい
 268,5,Odeur Tenace
 268,6,Duftschwade
 268,7,Olor Persistente
 268,8,Odore Tenace
 268,9,Lingering Aroma
+268,11,とれないにおい
+269,1,こぼれダネ
 269,5,Semencier
 269,6,Streusaat
 269,7,Disemillar
 269,8,Spargisemi
 269,9,Seed Sower
+269,11,こぼれダネ
+270,1,ねつこうかん
 270,5,Thermodynamique
 270,6,Thermowandel
 270,7,Termoscambio
 270,8,Termoscambio
 270,9,Thermal Exchange
+270,11,ねつこうかん
+271,1,いかりのこうら
 271,5,Courroupace
 271,6,Wutpanzer
 271,7,Coraza Ira
 271,8,Iraguscio
 271,9,Anger Shell
+271,11,いかりのこうら
+272,1,きよめのしお
 272,5,Sel Purificateur
 272,6,Läutersalz
 272,7,Sal Purificadora
 272,8,Sale Purificante
 272,9,Purifying Salt
+272,11,きよめのしお
+273,1,こんがりボディ
 273,5,Bien Cuit
 273,6,Knusperkruste
 273,7,Cuerpo Horneado
 273,8,Bentostato
 273,9,Well-Baked Body
+273,11,こんがりボディ
+274,1,かぜのり
 274,5,Aéroporté
 274,6,Windreiter
 274,7,Surcavientos
 274,8,Vento Propizio
 274,9,Wind Rider
+274,11,かぜのり
+275,1,ばんけん
 275,5,Chien de Garde
 275,6,Wachhund
 275,7,Perro Guardián
 275,8,Cane da Guardia
 275,9,Guard Dog
+275,11,ばんけん
+276,1,いわはこび
 276,5,Porte-Roche
 276,6,Steinträger
 276,7,Transportarrocas
 276,8,Portamassi
 276,9,Rocky Payload
+276,11,いわはこび
+277,1,ふうりょくでんき
 277,5,Turbine Éolienne
 277,6,Windkraft
 277,7,Energía Eólica
 277,8,Energia Eolica
 277,9,Wind Power
+277,11,ふうりょくでんき
+278,1,マイティチェンジ
 278,5,Supermutation
 278,6,Superwechsel
 278,7,Cambio Heroico
 278,8,Supercambio
 278,9,Zero to Hero
+278,11,マイティチェンジ
+279,1,しれいとう
 279,5,Commandant
 279,6,Kommandant
 279,7,Comandar
 279,8,Torre di Comando
 279,9,Commander
+279,11,しれいとう
+280,1,でんきにかえる
 280,5,Grecharge
 280,6,Dynamo
 280,7,Dinamo
 280,8,Convertivolt
 280,9,Electromorphosis
+280,11,でんきにかえる
+281,1,こだいかっせい
 281,5,Paléosynthèse
 281,6,Paläosynthese
 281,7,Paleosíntesis
 281,8,Paleoattivazione
 281,9,Protosynthesis
+281,11,こだいかっせい
+282,1,クォークチャージ
 282,5,Charge Quantique
 282,6,Quantenantrieb
 282,7,Carga Cuark
 282,8,Carica Quark
 282,9,Quark Drive
+282,11,クォークチャージ
+283,1,おうごんのからだ
 283,5,Corps en Or
 283,6,Goldkörper
 283,7,Cuerpo Áureo
 283,8,Corpo Aureo
 283,9,Good as Gold
+283,11,おうごんのからだ
+284,1,わざわいのうつわ
 284,5,Urne du Fléau
 284,6,Unheilsgefäß
 284,7,Caldero Debacle
 284,8,Vaso Nefasto
 284,9,Vessel of Ruin
+284,11,わざわいのうつわ
+285,1,わざわいのつるぎ
 285,5,Épée du Fléau
 285,6,Unheilsschwert
 285,7,Espada Debacle
 285,8,Spada Nefasta
 285,9,Sword of Ruin
+285,11,わざわいのつるぎ
+286,1,わざわいのおふだ
 286,5,Bois du Fléau
 286,6,Unheilstafeln
 286,7,Tablilla Debacle
 286,8,Amuleto Nefasto
 286,9,Tablets of Ruin
+286,11,わざわいのおふだ
+287,1,わざわいのたま
 287,5,Perles du Fléau
 287,6,Unheilsjuwelen
 287,7,Abalorio Debacle
 287,8,Monile Nefasto
 287,9,Beads of Ruin
+287,11,わざわいのたま
+288,1,ひひいろのこどう
 288,5,Pouls Orichalque
 288,6,Orichalkum-Puls
 288,7,Latido Oricalco
 288,8,Ritmo d’Oricalco
 288,9,Orichalcum Pulse
+288,11,ひひいろのこどう
+289,1,ハドロンエンジン
 289,5,Moteur à Hadrons
 289,6,Hadronen-Motor
 289,7,Motor Hadrónico
 289,8,Motore Adronico
 289,9,Hadron Engine
+289,11,ハドロンエンジン
+290,1,びんじょう
 290,5,Opportuniste
 290,6,Profiteur
 290,7,Oportunista
 290,8,Scrocco
 290,9,Opportunist
+290,11,びんじょう
+291,1,はんすう
 291,5,Ruminant
 291,6,Wiederkäuer
 291,7,Rumia
 291,8,Ruminante
 291,9,Cud Chew
+291,11,はんすう
+292,1,きれあじ
 292,5,Incisif
 292,6,Scharfkantig
 292,7,Cortante
 292,8,Affilama
 292,9,Sharpness
+292,11,きれあじ
+293,1,そうだいしょう
 293,5,Général Suprême
 293,6,Feldherr
 293,7,General Supremo
 293,8,Generale Supremo
 293,9,Supreme Overlord
+293,11,そうだいしょう
+294,1,きょうえん
 294,5,Collab
 294,6,Synchronauftritt
 294,7,Unísono
 294,8,Coprotagonismo
 294,9,Costar
+294,11,きょうえん
+295,1,どくげしょう
 295,5,Dépôt Toxique
 295,6,Giftbelag
 295,7,Capa Tóxica
 295,8,Mantossina
 295,9,Toxic Debris
+295,11,どくげしょう
+296,1,テイルアーマー
 296,5,Armure Caudale
 296,6,Schweifrüstung
 296,7,Cola Armadura
 296,8,Codarmatura
 296,9,Armor Tail
+296,11,テイルアーマー
+297,1,どしょく
 297,5,Absorbe-Terre
 297,6,Bodenschmaus
 297,7,Geofagia
 297,8,Mangiaterra
 297,9,Earth Eater
+297,11,どしょく
+298,1,きんしのちから
 298,5,Force Fongique
 298,6,Myzelienkraft
 298,7,Poder Fúngico
 298,8,Micoforza
 298,9,Mycelium Might
+298,11,きんしのちから
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

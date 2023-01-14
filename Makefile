@@ -68,7 +68,7 @@ docker-down:  # (Docker) Stop and removes containers and networks
 	docker-compose down
 
 docker-prod:
-	docker-compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 

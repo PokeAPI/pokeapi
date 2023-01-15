@@ -1,5 +1,5 @@
 #!/bin/bash
-# Executed when the master branch of PokeAPI/pokeapi gets updated
+# Executed when the master/staging branch of PokeAPI/pokeapi gets updated
 # Runs in CircleCI
 # Generates new data using the latest changes of PokeAPI/pokeapi in order to open a Pull Request towards PokeAPI/api-data
 
@@ -90,10 +90,10 @@ get_invokator_pr_number() {
   commit_msg_regex="Merge pull request #([0-9]+) from PokeAPI/(.*)"
   last_commit_message=$(git log --oneline --format=%B -n 1 HEAD | head -n 1)
   invokator_pr_number_from_graphql="$(get_invokator_pr_number_from_graphql)"
-  if ! [ -z "$CIRCLE_PULL_REQUEST" ]; then
-    echo "${CIRCLE_PULL_REQUEST##*/}"
-  elif [ "$invokator_pr_number_from_graphql" != 'null' ]; then
+  if [ "$invokator_pr_number_from_graphql" != 'null' ]; then
     echo "$invokator_pr_number_from_graphql"
+  elif [ -n "$CIRCLE_PULL_REQUEST" ]; then
+    echo "${CIRCLE_PULL_REQUEST##*/}"
   elif [[ $last_commit_message =~ $commit_msg_regex ]]; then
     echo "${BASH_REMATCH[1]}"
   else
@@ -289,7 +289,7 @@ EOF
 customize_pr() {
   # Wait for Github to open the PR
   sleep 10
-  
+
   data_repo_pr_number=$1
   curl -H "$auth_header" -X PATCH --data "$(pr_input_assignees_and_labels)" "https://api.github.com/repos/$org/$data_repo/issues/$data_repo_pr_number"
   if [ $? -ne 0 ]; then

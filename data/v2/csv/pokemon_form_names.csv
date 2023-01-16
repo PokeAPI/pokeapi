@@ -397,12 +397,12 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 849,11,ハイなすがた,
 849,12,高调的样子,
 854,1,がんさくフォルム,
-854,9,Phony Form,Phony Sinistea
 854,6,Fälschungsform,Fatalitee (Fälschung)
+854,9,Phony Form,Phony Sinistea
 854,11,がんさくフォルム,
 855,1,がんさくフォルム,
-855,9,Phony Form,Phony Polteageist
 855,6,Fälschungsform,Mortipot (Fälschung)
+855,9,Phony Form,Phony Polteageist
 855,11,がんさくフォルム,
 869,1,ミルキィバニラ,
 869,3,밀키바닐라,
@@ -475,38 +475,38 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 892,11,いちげきのかた,
 892,12,一击流,
 902,1,オスのすがた,
-902,9,Male, Male Basculegion
+902,9,Male,Male Basculegion
 902,11,オスのすがた,
 905,1,けしんフォルム,
-905,9,Incarnate Forme, Incarnate Enamorus
+905,9,Incarnate Forme,Incarnate Enamorus
 905,11,けしんフォルム,
 916,1,オスのすがた,
 916,9,Male,
 916,11,オスのすがた,
-917,1,ふたふしフォルム,
-917,9,Two-Segment Form,
-917,11,ふたふしフォルム,
-934,1,ナイーブフォルム,
-934,9,Zero Form,
-934,11,ナイーブフォルム,
-946,1,４ひきかぞく,
-946,9,Family of Four,
-946,11,４ひきかぞく,
-952,1,そったすがた,
-952,9,Curly Form,
-952,11,そったすがた,
-960,1,グリーンフェザー,
-960,9,Green Plumage,
-960,11,グリーンフェザー,
-976,1,はこフォルム,
-976,9,Chest Form,
-976,11,はこフォルム,
-998,1,かんぜんけいたい,
-998,9,Apex Build,
-998,11,かんぜんけいたい,
-999,1,コンプリートモード,
-999,9,Ultimate Mode,
-999,11,コンプリートモード,
+925,1,４ひきかぞく,
+925,9,Family of Four,
+925,11,４ひきかぞく,
+931,1,グリーンフェザー,
+931,9,Green Plumage,
+931,11,グリーンフェザー,
+964,1,ナイーブフォルム,
+964,9,Zero Form,
+964,11,ナイーブフォルム,
+978,1,そったすがた,
+978,9,Curly Form,
+978,11,そったすがた,
+982,1,ふたふしフォルム,
+982,9,Two-Segment Form,
+982,11,ふたふしフォルム,
+999,1,はこフォルム,
+999,9,Chest Form,
+999,11,はこフォルム,
+1007,1,かんぜんけいたい,
+1007,9,Apex Build,
+1007,11,かんぜんけいたい,
+1008,1,コンプリートモード,
+1008,9,Ultimate Mode,
+1008,11,コンプリートモード,
 10001,1,Ｂ,
 10001,3,B,
 10001,5,B,Zarbi B
@@ -993,8 +993,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10064,11,スカイフォルム,
 10064,12,天空形态,
 10065,5,Troizépi,Pichu Troizépi
-10065,9,Spiky-eared,Spiky-eared Pichu
 10065,6,Strubbelohrform,Strubbelohr-Pichu
+10065,9,Spiky-eared,Spiky-eared Pichu
 10066,1,あおすじのすがた,
 10066,3,청색근의 모습,
 10066,4,藍條紋的樣子,
@@ -2086,9 +2086,9 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10194,9,Alolan Form,Alolan Raticate
 10194,11,アローラのすがた,
 10194,12,阿罗拉的样子,
-10195,9,,Totem Alolan Raticate
 10195,5,,Rattatac d'Alola Dominant
 10195,6,Totemform,Totem Alola Rattikarl
+10195,9,,Totem Alolan Raticate
 10196,1,オリジナルキャップ,
 10196,3,오리지널캡,
 10196,4,初始帽子,
@@ -2811,12 +2811,12 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,9,Ultra Necrozma,Ultra Necrozma
 10316,11,ウルトラネクロズマ,
 10316,12,究极奈克洛兹玛,
-10317,9,,Partner Pikachu
 10317,5,,Pikachu Partenaire
 10317,6,Partnerform,Partner Pikachu
-10318,9,,Partner Eevee
+10317,9,,Partner Pikachu
 10318,5,,Évoli Partenaire
 10318,6,Partnerform,Partner Evoli
+10318,9,,Partner Eevee
 10319,1,ワールドキャップ,
 10319,3,월드캡,
 10319,4,世界帽子,

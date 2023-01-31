@@ -20,7 +20,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql--) for more info.
 
-## Setup &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
+## Setup &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -151,6 +151,8 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 | Spring Boot | [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_ |
 | Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
 | Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
+| Python | [beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi) | _Auto caching, asynchronous_
+| Scala | [juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala) | _Auto caching_ |
 
 ## Donations
 
@@ -165,7 +167,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://pokeapi-slack-invite.herokuapp.com/) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-1l4vpwa8k-muQmMrFfv7TIFGrVWzjzcw) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 

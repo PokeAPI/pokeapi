@@ -1,18 +1,25 @@
 version: '2.4'
 services:
+  cache:
+    image: redis:7.0.7-alpine
   db:
+    image: postgres:15.1
     environment:
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
       POSTGRES_USER: "${POSTGRES_USER}"
 
   app:
+    image: pokeapi/pokeapi:master
     env_file: .env
+    restart: "no"
 
   web:
+    image: nginx:1.23.3-alpine
     volumes:
       - graphiql:/public-console:ro
 
   graphql-engine:
+    image: hasura/graphql-engine:v2.16.1
     cpus: 0.7
     memswap_limit: 3g
     mem_limit: 700m
@@ -29,8 +36,7 @@ services:
       - graphiql:/transfer
     depends_on:
       - graphql-engine
+    restart: always
 
 volumes:
   graphiql:
-
-# docker-compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d

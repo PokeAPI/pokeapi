@@ -1,0 +1,20 @@
+# This query searches for pokemon having a german name like "Ento.*"
+# Should return Psyduck and Golduck
+
+query searchForPokemonInGerman {
+  pokemon_v2_pokemonspecies(
+    where: {
+      pokemon_v2_pokemonspeciesnames: {
+        pokemon_v2_language: { name: { _eq: "de" } }
+        name: { _regex: "Ento.*" }
+      }
+    }
+  ) {
+    pokemon_v2_pokemonspeciesnames(
+      where: { pokemon_v2_language: { name: { _eq: "de" } } }
+    ) {
+      name
+    }
+    id
+  }
+}

@@ -70,7 +70,7 @@ docker-down:  # (Docker) Stop and removes containers and networks
 	docker-compose down
 
 docker-prod:
-	docker-compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
@@ -120,3 +120,21 @@ k8s-build-db:  # (k8s) Build the database
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi
+
+start-graphql-prod:
+	git pull origin master
+	git submodule update --init
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+
+update-graphql-data-prod:
+	git pull origin master
+	git submodule update --init
+	docker stop pokeapi_graphql-engine_1
+	sync; echo 3 > /proc/sys/vm/drop_caches
+	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
+	make docker-migrate
+	make docker-build-db
+	docker stop pokeapi_app_1
+	sync; echo 3 > /proc/sys/vm/drop_caches
+	docker exec pokeapi_web_1 sh -c 'rm -rf /tmp/cache/*'
+	docker start pokeapi_graphql-engine_1

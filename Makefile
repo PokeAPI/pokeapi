@@ -18,6 +18,9 @@ dev-install:  # Install developer requirements + base requirements
 setup:  # Set up the project database
 	python manage.py migrate ${local_config}
 
+build-db:  # Build database
+	echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${local_config}
+
 wipe-sqlite-db:  # Delete's the project database
 	rm -rf db.sqlite3
 

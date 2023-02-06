@@ -20,7 +20,26 @@ jobs:
       - run:
           name: Run tests
           command: make test
-
+  build:
+    docker:
+      - image: cimg/python:3.10.9
+    steps:
+      - checkout
+      - run:
+          name: Pull Submodules
+          command: |
+            git submodule init
+            git submodule update --remote
+      - run:
+          name: Install deps
+          command: make install
+      - run:
+          name: Run migrations
+          command: make setup
+      - run:
+          name: Build database
+          command: make build-db
+   
   deploy:
     machine:
       image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3. Newer images don't work
@@ -44,9 +63,11 @@ workflows:
   test-and-deploy:
     jobs:
       - test
+      - build
       - deploy:
           requires:
             - test
+            - build
           filters:
             branches:
               only:
@@ -55,6 +76,7 @@ workflows:
   weekly:
     jobs:
       - test
+      - build
       - deploy:
           requires:
             - test

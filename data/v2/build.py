@@ -1922,7 +1922,9 @@ def _build_pokemons():
             slot=int(info[4]),
         )
 
-    build_generic((PokemonAbilityPast,), "pokemon_abilities_past.csv", csv_record_to_objects)
+    build_generic(
+        (PokemonAbilityPast,), "pokemon_abilities_past.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield PokemonDexNumber(

@@ -3074,7 +3074,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             abilities.append(ability)
 
         return abilities
-    
+
     def get_past_pokemon_abilities(self, obj):
 
         pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)

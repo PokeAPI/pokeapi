@@ -1687,13 +1687,13 @@ class PokemonAbility(HasPokemon, HasAbility):
     is_hidden = models.BooleanField(default=False)
 
     slot = models.IntegerField()
- 
+
 
 # model for a Pokemon's abilities that were used until a given generation
 class PokemonAbilityPast(HasPokemon, HasAbility, HasGeneration):
 
     is_hidden = models.BooleanField(default=False)
-    
+
     slot = models.IntegerField()
 
 

@@ -1914,6 +1914,17 @@ def _build_pokemons():
     build_generic((PokemonAbility,), "pokemon_abilities.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        yield PokemonAbilityPast(
+            pokemon_id=int(info[0]),
+            generation_id=int(info[1]),
+            ability_id=int(info[2]),
+            is_hidden=bool(int(info[3])),
+            slot=int(info[4]),
+        )
+
+    build_generic((PokemonAbilityPast,), "pokemon_abilities_past.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield PokemonDexNumber(
             pokemon_species_id=int(info[0]),
             pokedex_id=int(info[1]),

@@ -1699,6 +1699,18 @@ class APIData:
         return pokemon_ability
 
     @classmethod
+    def setup_pokemon_past_ability_data(cls, pokemon, generation, ability=None, is_hidden=False, slot=1):
+
+        type = type or cls.setup_ability_data(name="ablty for pkmn")
+
+        pokemon_ability_past = PokemonAbilityPast(
+            pokemon=pokemon, generation=generation, ability=ability, is_hidden=is_hidden, slot=slot
+        )
+        pokemon_ability_past.save()
+
+        return pokemon_ability_past
+
+    @classmethod
     def setup_pokemon_stat_data(cls, pokemon, base_stat=10, effort=10):
 
         stat = cls.setup_stat_data(name="stt for pkmn")

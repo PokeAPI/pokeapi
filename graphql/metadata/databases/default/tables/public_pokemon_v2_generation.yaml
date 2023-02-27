@@ -13,13 +13,6 @@ array_relationships:
       table:
         name: pokemon_v2_ability
         schema: public
-- name: pokemon_v2_abilitiespast
-  using:
-    foreign_key_constraint_on:
-      column: generation_id
-      table:
-        name: pokemon_v2_abilitypast
-        schema: public
 - name: pokemon_v2_generationnames
   using:
     foreign_key_constraint_on:

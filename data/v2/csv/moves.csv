@@ -899,8 +899,8 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 898,noxious-torque,9,4,100,10,100,0,10,2,,,,,
 899,combat-torque,9,2,100,10,100,0,10,2,,,,,
 900,magical-torque,9,18,100,10,100,0,10,2,,,,,
-901,hydro-steam,9,11,80,15,100,0,10,3,0,0,0,0,0
-902,psyblade,9,14,80,15,100,0,10,2,0,0,0,0,0
+901,hydro-steam,9,11,80,15,100,0,10,3,,,,,
+902,psyblade,9,14,80,15,100,0,10,2,,,,,
 10001,shadow-rush,3,10002,55,,100,0,10,2,10001,,,,
 10002,shadow-blast,3,10002,80,,100,0,10,2,44,,,,
 10003,shadow-blitz,3,10002,40,,100,0,10,2,1,,,,

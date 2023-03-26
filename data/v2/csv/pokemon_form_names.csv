@@ -1,3530 +1,3647 @@
-pokemon_form_id,local_language_id,form_name,pokemon_name
-201,1,Ａ,
-201,3,A,
-201,5,A,Zarbi A
-201,6,A,Icognito A
-201,7,A,
-201,8,A,
-201,9,A,Unown A
-351,1,ポワルンのすがた,
-351,3,캐스퐁의 모습,
-351,4,飄浮泡泡的樣子,
-351,5,Forme de Morphéo,
-351,6,Formeo,Formeo
-351,7,Forma de Castform,
-351,8,Forma Castform,
-351,9,Normal,
-351,11,ポワルンのすがた,
-351,12,飘浮泡泡的样子,
-382,1,カイオーガのすがた,
-382,3,가이오가의 모습,
-382,4,蓋歐卡的樣子,
-382,5,Kyogre,
-382,6,Kyogre,Kyogre
-382,7,Kyogre,
-382,9,Kyogre,
-382,11,カイオーガのすがた,
-382,12,盖欧卡的样子,
-383,1,グラードンのすがた,
-383,3,그란돈의 모습,
-383,4,固拉多的樣子,
-383,5,Groudon,
-383,6,Groudon,Groudon
-383,7,Groudon,
-383,9,Groudon,
-383,11,グラードンのすがた,
-383,12,固拉多的样子,
-386,1,ノーマルフォルム,
-386,3,노말폼,
-386,4,普通形態,
-386,5,Forme Normale,Deoxys Normal
-386,6,Normalform,Deoxys
-386,7,Forma Normal,
-386,8,Forma Normale,
-386,9,Normal Forme,Normal Deoxys
-386,11,ノーマルフォルム,
-386,12,普通形态,
-412,1,くさきのミノ,
-412,3,초목도롱,
-412,5,Cape Plante,Cheniti Plante
-412,6,Pflanzenumhang,Burmy (Pflanze)
-412,7,Tronco Planta,
-412,8,Manto Pianta,
-412,9,Plant Cloak,Plant Burmy
-413,1,くさきのミノ,
-413,3,초목도롱,
-413,4,草木蓑衣,
-413,5,Cape Plante,Cheniselle Plante
-413,6,Pflanzenumhang,Burmadame (Pflanze)
-413,7,Tronco Planta,
-413,8,Manto Pianta,
-413,9,Plant Cloak,Plant Wormadam
-413,11,くさきのミノ,
-413,12,草木蓑衣,
-421,1,ネガフォルム,
-421,3,네거폼,
-421,4,陰天形態,
-421,5,Temps Couvert,Ceriflor Couvert
-421,6,Wolkenform,Kinoso (Wolken)
-421,7,Forma Encapotado,
-421,8,Forma Nuvola,
-421,9,Overcast Form,Overcast Cherrim
-421,11,ネガフォルム,
-421,12,阴天形态,
-422,1,にしのうみ,
-422,3,서쪽바다,
-422,4,西海,
-422,5,Mer Occident,Sancoki Occident
-422,6,Westliches Meer,Westliches Schalellos
-422,7,Mar Oeste,
-422,8,Mare Ovest,
-422,9,West Sea,West Shellos
-422,11,にしのうみ,
-422,12,西海,
-423,1,にしのうみ,
-423,3,서쪽바다,
-423,4,西海,
-423,5,Mer Occident,Tritosor Occident
-423,6,Westliches Meer,Westliches Gastrodon
-423,7,Mar Oeste,
-423,8,Mare Ovest,
-423,9,West Sea,West Gastrodon
-423,11,にしのうみ,
-423,12,西海,
-479,1,ロトムのすがた,
-479,3,로토무의 모습,
-479,4,洛托姆的樣子,
-479,5,Forme de Motisma,
-479,6,Rotom,Rotom
-479,7,Forma de Rotom,
-479,8,Forma Rotom,
-479,9,Rotom,
-479,11,ロトムのすがた,
-479,12,洛托姆的样子,
-487,1,アナザーフォルム,
-487,3,어나더폼,
-487,4,別種形態,
-487,5,Forme Alternative,Giratina Alternative
-487,6,Wandelform,Giratina
-487,7,Forma Modificada,
-487,8,Forma Alterata,
-487,9,Altered Forme,Altered Giratina
-487,11,アナザーフォルム,
-487,12,别种形态,
-492,1,ランドフォルム,
-492,3,랜드폼,
-492,4,陸上形態,
-492,5,Forme Terrestre,Shaymin Terrestre
-492,6,Landform,Shaymin (Land)
-492,7,Forma Tierra,
-492,8,Forma Terra,
-492,9,Land Forme,Land Shaymin
-492,11,ランドフォルム,
-492,12,陆上形态,
-493,1,ノーマルタイプ,
-493,5,Normal,Arceus Normal
-493,6,Normalform,Arceus
-493,7,Tipo Normal,
-493,8,Tipo Normale,
-493,9,Normal Type,Normal Arceus
-550,1,あかすじのすがた,
-550,3,적색근의 모습,
-550,4,紅條紋的樣子,
-550,5,Motif Rouge,Bargantua Rouge
-550,6,Rotlinige Form,Rotliniges Barschuft
-550,7,Forma Raya Roja,
-550,8,Forma Linearossa,
-550,9,Red-Striped Form,Red-Striped Basculin
-550,11,あかすじのすがた,
-550,12,红条纹的样子,
-555,1,ノーマルモード,
-555,3,노말모드,
-555,4,普通模式,
-555,5,Mode Normal,Darumacho Normal
-555,6,Normalmodus,Flampivian
-555,7,Modo Normal,
-555,8,Stato Normale,
-555,9,Standard Mode,Standard Darmanitan
-555,11,ノーマルモード,
-555,12,普通模式,
-585,1,はるのすがた,
-585,3,봄의 모습,
-585,5,Forme Printemps,Vivaldaim Printemps
-585,6,Frühlingsform,Sesokitz (Frühling)
-585,7,Forma Primavera,
-585,8,Forma Primavera,
-585,9,Spring Form,Spring Deerling
-586,1,はるのすがた,
-586,3,봄의 모습,
-586,5,Forme Printemps,Haydaim Printemps
-586,6,Frühlingsform,Kronjuwild (Frühling)
-586,7,Forma Primavera,
-586,8,Forma Primavera,
-586,9,Spring Form,Spring Sawsbuck
-641,1,けしんフォルム,
-641,3,화신폼,
-641,4,化身形態,
-641,5,Forme Avatar,Boréas Avatar
-641,6,Inkarnationsform,Boreos
-641,7,Forma Avatar,
-641,8,Forma Incarnazione,
-641,9,Incarnate Forme,Incarnate Tornadus
-641,11,けしんフォルム,
-641,12,化身形态,
-642,1,けしんフォルム,
-642,3,화신폼,
-642,4,化身形態,
-642,5,Forme Avatar,Fulguris Avatar
-642,6,Inkarnationsform,Voltolos
-642,7,Forma Avatar,
-642,8,Forma Incarnazione,
-642,9,Incarnate Forme,Incarnate Thundurus
-642,11,けしんフォルム,
-642,12,化身形态,
-645,1,けしんフォルム,
-645,3,화신폼,
-645,4,化身形態,
-645,5,Forme Avatar,Démétéros Avatar
-645,6,Inkarnationsform,Demeteros
-645,7,Forma Avatar,
-645,8,Forma Incarnazione,
-645,9,Incarnate Forme,Incarnate Landorus
-645,11,けしんフォルム,
-645,12,化身形态,
-646,1,キュレムのすがた,
-646,3,큐레무의 모습,
-646,4,酋雷姆的樣子,
-646,5,Forme de Kyurem,
-646,6,Kyurem,Kyurem
-646,7,Forma de Kyurem,
-646,8,Forma di Kyurem,
-646,9,Kyurem,
-646,11,キュレムのすがた,
-646,12,酋雷姆的样子,
-647,1,いつものすがた,
-647,3,평상시 모습,
-647,4,平常的樣子,
-647,5,Aspect Normal,Keldeo Normal
-647,6,Standardform,Keldeo
-647,7,Forma Habitual,
-647,8,Forma Normale,
-647,9,Ordinary Form,Ordinary Keldeo
-647,11,いつものすがた,
-647,12,平常的样子,
-648,1,ボイスフォルム,
-648,3,보이스폼,
-648,4,歌聲形態,
-648,5,Forme Chant,Meloetta Chant
-648,6,Gesangsform,Meloetta (Gesang)
-648,7,Forma Lírica,
-648,8,Forma Canto,
-648,9,Aria Forme,Aria Meloetta
-648,11,ボイスフォルム,
-648,12,歌声形态,
-666,1,はなぞののもよう,
-666,3,화원의 모양,
-666,5,Motif Floraison,Prismillon Floraison
-666,6,Blumenmeermuster,Vivillon (Blumen)
-666,7,Motivo Floral,
-666,8,Motivo Giardinfiore,
-666,9,Meadow Pattern,Meadow Vivillon
-669,1,あかいはな,
-669,3,빨간 꽃,
-669,5,Fleur Rouge,Flabébé Rouge
-669,6,Rotblütler,Flabébé (Rot)
-669,7,Flor Roja,
-669,8,Fiore Rosso,
-669,9,Red Flower,Red Flabébé
-670,1,あかいはな,
-670,3,빨간 꽃,
-670,5,Fleur Rouge,Floette Rouge
-670,6,Rotblütler,Floette (Rot)
-670,7,Flor Roja,
-670,8,Fiore Rosso,
-670,9,Red Flower,Red Floette
-671,1,あかいはな,
-671,3,빨간 꽃,
-671,5,Fleur Rouge,Florges Rouge
-671,6,Rotblütler,Florges (Rot)
-671,7,Flor Roja,
-671,8,Fiore Rosso,
-671,9,Red Flower,Red Florges
-676,1,やせいのすがた,
-676,3,야생의 모습,
-676,5,Forme Sauvage,Couafarel Sauvage
-676,6,Zottelform,Coiffwaff
-676,7,Forma Salvaje,
-676,8,Forma Selvatica,
-676,9,Natural Form,Natural Furfrou
-678,1,オスのすがた,
-678,3,수컷의 모습,
-678,4,雄性的樣子,
-678,5,Mâle,Mistigrix Mâle
-678,6,Männlich,Psiaugon ♂
-678,7,Macho,
-678,8,Maschio,
-678,9,Male,Male Meowstic
-678,11,オスのすがた,
-678,12,雄性的样子,
-681,1,シールドフォルム,
-681,3,실드폼,
-681,4,盾牌形態,
-681,5,Forme Parade,Exagide Parade
-681,6,Schildform,Durengard (Schild)
-681,7,Forma Escudo,
-681,8,Forma Scudo,
-681,9,Shield Forme,Shield Aegislash
-681,11,シールドフォルム,
-681,12,盾牌形态,
-710,1,ふつうのサイズ,
-710,3,보통 사이즈,
-710,4,普通尺寸,
-710,5,Taille Normale,Pitrouille Normal
-710,6,Größe M,Irrbis (M)
-710,7,Tamaño Normal,
-710,8,Normale,
-710,9,Average Size,Average Pumpkaboo
-710,11,ふつうのサイズ,
-710,12,普通尺寸,
-711,1,ふつうのサイズ,
-711,3,보통 사이즈,
-711,4,普通尺寸,
-711,5,Taille Normale,Banshitrouye Normal
-711,6,Größe M,Pumpdjinn (M)
-711,7,Tamaño Normal,
-711,8,Normale,
-711,9,Average Size,Average Gourgeist
-711,11,ふつうのサイズ,
-711,12,普通尺寸,
-716,1,アクティブモード,
-716,3,액티브모드,
-716,4,活躍模式,
-716,5,Mode Déchaîné,Xerneas Déchaîné
-716,6,Aktiv-Modus,Xerneas (Aktiv)
-716,7,Modo Activo,
-716,8,Modo Attivo,
-716,9,Active Mode,Active Xerneas
-716,11,アクティブモード,
-716,12,活跃模式,
-718,1,５０％フォルム,
-718,3,50%폼,
-718,4,５０％形態,
-718,5,Forme 50 %,
-718,6,50%-Form,Zygarde (50%)
-718,7,Forma 50%,
-718,8,Forma 50%,
-718,9,50% Forme,
-718,11,５０％フォルム,
-718,12,５０％形态,
-720,1,いましめられしフーパ,
-720,3,굴레에 빠진 후파,
-720,4,懲戒胡帕,
-720,5,Hoopa Enchaîné,
-720,6,Gebanntes Hoopa,Gebanntes Hoopa
-720,7,Hoopa Contenido,
-720,8,Hoopa Vincolato,
-720,9,Hoopa Confined,Confined Hoopa
-720,11,いましめられしフーパ,
-720,12,惩戒胡帕,
-741,1,めらめらスタイル,
-741,3,이글이글스타일,
-741,4,熱辣熱辣風格,
-741,5,Style Flamenco,
-741,6,Flamenco-Stil,Choreogel (Flamenco)
-741,7,Estilo Apasionado,
-741,8,Stile Flamenco,
-741,9,Baile Style,Baile Oricorio
-741,11,めらめらスタイル,
-741,12,热辣热辣风格,
-745,1,まひるのすがた,
-745,3,한낮의 모습,
-745,4,白晝的樣子,
-745,5,Forme Diurne,
-745,6,Tagform,Wolwerock (Tag)
-745,7,Forma Diurna,
-745,8,Forma Giorno,
-745,9,Midday Form,Midday Lycanroc
-745,11,まひるのすがた,
-745,12,白昼的样子,
-746,1,たんどくのすがた,
-746,3,단독의 모습,
-746,4,單獨的樣子,
-746,5,Forme Solitaire,
-746,6,Einzelform,Lusardin
-746,7,Forma Individual,
-746,8,Forma Individuale,
-746,9,Solo Form,Solo Wishiwashi
-746,11,たんどくのすがた,
-746,12,单独的样子,
-773,1,タイプ：ノーマル,
-773,3,타입:노말,
-773,4,屬性：一般,
-773,5,Type : Normal,
-773,6,Typ:Normal,Amigento
-773,7,Tipo: Normal,
-773,8,Tipo Normale,
-773,9,Type: Normal,
-773,11,タイプ：ノーマル,
-773,12,属性：一般,
-774,1,りゅうせいのすがた,
-774,3,유성의 모습,
-774,4,流星的樣子,
-774,5,Forme Météore,
-774,6,Meteorform,Meteno (Meteor Rot)
-774,7,Forma Meteorito,
-774,8,Forma Meteora,
-774,9,Meteor Form,Red Meteor Minior
-774,11,りゅうせいのすがた,
-774,12,流星的样子,
-778,1,ばけたすがた,
-778,3,둔갑한 모습,
-778,4,化形的樣子,
-778,5,Forme Déguisée,
-778,6,Verkleidete Form,Mimigma (Getarnt)
-778,7,Forma Encubierta,
-778,8,Forma Mascherata,
-778,9,Disguised Form,Disguised Mimikyu
-778,11,ばけたすがた,
-778,12,化形的样子,
-849,1,ハイなすがた,
-849,3,하이한 모습,
-849,4,高調的樣子,
-849,5,Forme Aigüe,
-849,6,Hoch-Form,Riffex (Hochform)
-849,7,Forma Aguda,
-849,8,Forma Melodia,
-849,9,Amped Form,Amped Toxtricity
-849,11,ハイなすがた,
-849,12,高调的样子,
-854,1,がんさくフォルム,
-854,6,Fälschungsform,Fatalitee (Fälschung)
-854,9,Phony Form,Phony Sinistea
-854,11,がんさくフォルム,
-855,1,がんさくフォルム,
-855,6,Fälschungsform,Mortipot (Fälschung)
-855,9,Phony Form,Phony Polteageist
-855,11,がんさくフォルム,
-869,1,ミルキィバニラ,
-869,3,밀키바닐라,
-869,4,奶香香草,
-869,5,Lait Vanille,
-869,6,Vanille-Creme,Pokusan (Vanille-Creme)
-869,7,Crema de Vainilla,
-869,8,Lattevaniglia,
-869,9,Vanilla Cream,Vanilla Cream Alcremie
-869,11,ミルキィバニラ,
-869,12,奶香香草,
-875,1,アイスフェイス,
-875,3,아이스페이스,
-875,4,結凍頭,
-875,5,Tête de Gel,
-875,6,Tiefkühlkopf,Kubuin (Tiefkühlkopf)
-875,7,Cara de Hielo,
-875,8,Gelofaccia,
-875,9,Ice Face,Ice Eiscue
-875,11,アイスフェイス,
-875,12,结冻头,
-876,1,オスのすがた,
-876,3,수컷의 모습,
-876,4,雄性的樣子,
-876,5,Mâle,
-876,6,Männlich,Servol ♂
-876,7,Macho,
-876,8,Maschio,
-876,9,Male,Male Indeedee
-876,11,オスのすがた,
-876,12,雄性的样子,
-877,1,まんぷくもよう,
-877,3,배부른 모양,
-877,4,滿腹花紋,
-877,5,Mode Rassasié,
-877,6,Pappsattmuster,Morpeko (Pappsattmuster)
-877,7,Forma Saciada,
-877,8,Motivo Panciapiena,
-877,9,Full Belly Mode,Full Belly Morpeko
-877,11,まんぷくもよう,
-877,12,满腹花纹,
-888,1,れきせんのゆうしゃ,
-888,3,역전의 용사,
-888,4,百戰勇者,
-888,5,Héros Aguerri,
-888,6,Heldenhafter Krieger,Zacian
-888,7,Guerrero Avezado,
-888,8,Eroe di Mille Lotte,
-888,9,Hero of Many Battles,Zacian
-888,11,れきせんのゆうしゃ,
-888,12,百战勇者,
-889,1,れきせんのゆうしゃ,
-889,3,역전의 용사,
-889,4,百戰勇者,
-889,5,Héros Aguerri,
-889,6,Heldenhafter Krieger,Zamazenta
-889,7,Guerrero Avezado,
-889,8,Eroe di Mille Lotte,
-889,9,Hero of Many Battles,Zamazenta
-889,11,れきせんのゆうしゃ,
-889,12,百战勇者,
-892,1,いちげきのかた,
-892,3,일격의 태세,
-892,4,一擊流,
-892,5,Style Poing Final,
-892,6,Fokussierter Stil,Wulaosu (Fokussiert)
-892,7,Estilo Brusco,
-892,8,Stile Singolcolpo,
-892,9,Single Strike Style,Single Strike Urshifu
-892,11,いちげきのかた,
-892,12,一击流,
-902,1,オスのすがた,
-902,9,Male,Male Basculegion
-902,11,オスのすがた,
-905,1,けしんフォルム,
-905,9,Incarnate Forme,Incarnate Enamorus
-905,11,けしんフォルム,
-916,1,オスのすがた,
-916,9,Male,
-916,11,オスのすがた,
-925,1,４ひきかぞく,
-925,9,Family of Four,
-925,11,４ひきかぞく,
-931,1,グリーンフェザー,
-931,9,Green Plumage,
-931,11,グリーンフェザー,
-964,1,ナイーブフォルム,
-964,9,Zero Form,
-964,11,ナイーブフォルム,
-978,1,そったすがた,
-978,9,Curly Form,
-978,11,そったすがた,
-982,1,ふたふしフォルム,
-982,9,Two-Segment Form,
-982,11,ふたふしフォルム,
-999,1,はこフォルム,
-999,9,Chest Form,
-999,11,はこフォルム,
-1007,1,かんぜんけいたい,
-1007,9,Apex Build,
-1007,11,かんぜんけいたい,
-1008,1,コンプリートモード,
-1008,9,Ultimate Mode,
-1008,11,コンプリートモード,
-10001,1,Ｂ,
-10001,3,B,
-10001,5,B,Zarbi B
-10001,6,B,Icognito B
-10001,7,B,
-10001,8,B,
-10001,9,B,Unown B
-10002,1,Ｃ,
-10002,3,C,
-10002,5,C,Zarbi C
-10002,6,C,Icognito C
-10002,7,C,
-10002,8,C,
-10002,9,C,Unown C
-10003,1,Ｄ,
-10003,3,D,
-10003,5,D,Zarbi D
-10003,6,D,Icognito D
-10003,7,D,
-10003,8,D,
-10003,9,D,Unown D
-10004,1,Ｅ,
-10004,3,E,
-10004,5,E,Zarbi E
-10004,6,E,Icognito E
-10004,7,E,
-10004,8,E,
-10004,9,E,Unown E
-10005,1,Ｆ,
-10005,3,F,
-10005,5,F,Zarbi F
-10005,6,F,Icognito F
-10005,7,F,
-10005,8,F,
-10005,9,F,Unown F
-10006,1,Ｇ,
-10006,3,G,
-10006,5,G,Zarbi G
-10006,6,G,Icognito G
-10006,7,G,
-10006,8,G,
-10006,9,G,Unown G
-10007,1,Ｈ,
-10007,3,H,
-10007,5,H,Zarbi H
-10007,6,H,Icognito H
-10007,7,H,
-10007,8,H,
-10007,9,H,Unown H
-10008,1,Ｉ,
-10008,3,I,
-10008,5,I,Zarbi I
-10008,6,I,Icognito I
-10008,7,I,
-10008,8,I,
-10008,9,I,Unown I
-10009,1,Ｊ,
-10009,3,J,
-10009,5,J,Zarbi J
-10009,6,J,Icognito J
-10009,7,J,
-10009,8,J,
-10009,9,J,Unown J
-10010,1,Ｋ,
-10010,3,K,
-10010,5,K,Zarbi K
-10010,6,K,Icognito K
-10010,7,K,
-10010,8,K,
-10010,9,K,Unown K
-10011,1,Ｌ,
-10011,3,L,
-10011,5,L,Zarbi L
-10011,6,L,Icognito L
-10011,7,L,
-10011,8,L,
-10011,9,L,Unown L
-10012,1,Ｍ,
-10012,3,M,
-10012,5,M,Zarbi M
-10012,6,M,Icognito M
-10012,7,M,
-10012,8,M,
-10012,9,M,Unown M
-10013,1,Ｎ,
-10013,3,N,
-10013,5,N,Zarbi N
-10013,6,N,Icognito N
-10013,7,N,
-10013,8,N,
-10013,9,N,Unown N
-10014,1,Ｏ,
-10014,3,O,
-10014,5,O,Zarbi O
-10014,6,O,Icognito O
-10014,7,O,
-10014,8,O,
-10014,9,O,Unown O
-10015,1,Ｐ,
-10015,3,P,
-10015,5,P,Zarbi P
-10015,6,P,Icognito P
-10015,7,P,
-10015,8,P,
-10015,9,P,Unown P
-10016,1,Ｑ,
-10016,3,Q,
-10016,5,Q,Zarbi Q
-10016,6,Q,Icognito Q
-10016,7,Q,
-10016,8,Q,
-10016,9,Q,Unown Q
-10017,1,Ｒ,
-10017,3,R,
-10017,5,R,Zarbi R
-10017,6,R,Icognito R
-10017,7,R,
-10017,8,R,
-10017,9,R,Unown R
-10018,1,Ｓ,
-10018,3,S,
-10018,5,S,Zarbi S
-10018,6,S,Icognito S
-10018,7,S,
-10018,8,S,
-10018,9,S,Unown S
-10019,1,Ｔ,
-10019,3,T,
-10019,5,T,Zarbi T
-10019,6,T,Icognito T
-10019,7,T,
-10019,8,T,
-10019,9,T,Unown T
-10020,1,Ｕ,
-10020,3,U,
-10020,5,U,Zarbi U
-10020,6,U,Icognito U
-10020,7,U,
-10020,8,U,
-10020,9,U,Unown U
-10021,1,Ｖ,
-10021,3,V,
-10021,5,V,Zarbi V
-10021,6,V,Icognito V
-10021,7,V,
-10021,8,V,
-10021,9,V,Unown V
-10022,1,Ｗ,
-10022,3,W,
-10022,5,W,Zarbi W
-10022,6,W,Icognito W
-10022,7,W,
-10022,8,W,
-10022,9,W,Unown W
-10023,1,Ｘ,
-10023,3,X,
-10023,5,X,Zarbi X
-10023,6,X,Icognito X
-10023,7,X,
-10023,8,X,
-10023,9,X,Unown X
-10024,1,Ｙ,
-10024,3,Y,
-10024,5,Y,Zarbi Y
-10024,6,Y,Icognito Y
-10024,7,Y,
-10024,8,Y,
-10024,9,Y,Unown Y
-10025,1,Ｚ,
-10025,3,Z,
-10025,5,Z,Zarbi Z
-10025,6,Z,Icognito Z
-10025,7,Z,
-10025,8,Z,
-10025,9,Z,Unown Z
-10026,1,!,
-10026,3,!,
-10026,5,!,Zarbi !
-10026,6,!,Icognito !
-10026,7,!,
-10026,8,!,
-10026,9,!,Unown !
-10027,1,?,
-10027,3,?,
-10027,5,?,Zarbi ?
-10027,6,?,Icognito ?
-10027,7,?,
-10027,8,?,
-10027,9,?,Unown ?
-10028,1,たいようのすがた,
-10028,3,태양의 모습,
-10028,4,太陽的樣子,
-10028,5,Forme Solaire,Morphéo Solaire
-10028,6,Sonnenform,Formeo (Sonne)
-10028,7,Forma Sol,
-10028,8,Forma Sole,
-10028,9,Sunny Form,Sunny Castform
-10028,11,たいようのすがた,
-10028,12,太阳的样子,
-10029,1,あまみずのすがた,
-10029,3,빗방울의 모습,
-10029,4,雨水的樣子,
-10029,5,Forme Eau de Pluie,Morphéo Eau de Pluie
-10029,6,Regenform,Formeo (Regen)
-10029,7,Forma Lluvia,
-10029,8,Forma Pioggia,
-10029,9,Rainy Form,Rainy Castform
-10029,11,あまみずのすがた,
-10029,12,雨水的样子,
-10030,1,ゆきぐものすがた,
-10030,3,설운의 모습,
-10030,4,雪雲的樣子,
-10030,5,Forme Blizzard,Morphéo Blizzard
-10030,6,Schneeform,Formeo (Schnee)
-10030,7,Forma Nieve,
-10030,8,Forma Nuvola di Neve,
-10030,9,Snowy Form,Snowy Castform
-10030,11,ゆきぐものすがた,
-10030,12,雪云的样子,
-10031,1,アタックフォルム,
-10031,3,어택폼,
-10031,4,攻擊形態,
-10031,5,Forme Attaque,Deoxys Attaque
-10031,6,Angriffsform,Deoxys (Angriff)
-10031,7,Forma Ataque,
-10031,8,Forma Attacco,
-10031,9,Attack Forme,Attack Deoxys
-10031,11,アタックフォルム,
-10031,12,攻击形态,
-10032,1,ディフェンスフォルム,
-10032,3,디펜스폼,
-10032,4,防禦形態,
-10032,5,Forme Défense,Deoxys Défense
-10032,6,Verteidigungsform,Deoxys (Verteidigung)
-10032,7,Forma Defensa,
-10032,8,Forma Difesa,
-10032,9,Defense Forme,Defense Deoxys
-10032,11,ディフェンスフォルム,
-10032,12,防御形态,
-10033,1,スピードフォルム,
-10033,3,스피드폼,
-10033,4,速度形態,
-10033,5,Forme Vitesse,Deoxys Vitesse
-10033,6,Initiativeform,Deoxys (Initiative)
-10033,7,Forma Velocidad,
-10033,8,Forma Velocità,
-10033,9,Speed Forme,Speed Deoxys
-10033,11,スピードフォルム,
-10033,12,速度形态,
-10034,1,すなちのミノ,
-10034,3,모래땅도롱,
-10034,5,Cape Sable,Cheniti Sable
-10034,6,Sandumhang,Burmy (Sand)
-10034,7,Tronco Arena,
-10034,8,Manto Sabbia,
-10034,9,Sandy Cloak,Sandy Burmy
-10035,1,ゴミのミノ,
-10035,3,슈레도롱,
-10035,5,Cape Déchet,Cheniti Déchet
-10035,6,Lumpenumhang,Burmy (Lumpen)
-10035,7,Tronco Basura,
-10035,8,Manto Scarti,
-10035,9,Trash Cloak,Trash Burmy
-10036,1,すなちのミノ,
-10036,3,모래땅도롱,
-10036,4,砂土蓑衣,
-10036,5,Cape Sable,Cheniselle Sable
-10036,6,Sandumhang,Burmadame (Sand)
-10036,7,Tronco Arena,
-10036,8,Manto Sabbia,
-10036,9,Sandy Cloak,Sandy Wormadam
-10036,11,すなちのミノ,
-10036,12,砂土蓑衣,
-10037,1,ゴミのミノ,
-10037,3,슈레도롱,
-10037,4,垃圾蓑衣,
-10037,5,Cape Déchet,Cheniselle Déchet
-10037,6,Lumpenumhang,Burmadame (Lumpen)
-10037,7,Tronco Basura,
-10037,8,Manto Scarti,
-10037,9,Trash Cloak,Trash Wormadam
-10037,11,ゴミのミノ,
-10037,12,垃圾蓑衣,
-10038,1,ポジフォルム,
-10038,3,포지폼,
-10038,4,晴天形態,
-10038,5,Temps Ensoleillé,Ceriflor Ensoleillé
-10038,6,Sonnenform,Kinoso (Sonne)
-10038,7,Forma Soleado,
-10038,8,Forma Splendore,
-10038,9,Sunshine Form,Sunshine Cherrim
-10038,11,ポジフォルム,
-10038,12,晴天形态,
-10039,1,ひがしのうみ,
-10039,3,동쪽바다,
-10039,4,東海,
-10039,5,Mer Orient,Sancoki Orient
-10039,6,Östliches Meer,Östliches Schalellos
-10039,7,Mar Este,
-10039,8,Mare Est,
-10039,9,East Sea,East Shellos
-10039,11,ひがしのうみ,
-10039,12,东海,
-10040,1,ひがしのうみ,
-10040,3,동쪽바다,
-10040,4,東海,
-10040,5,Mer Orient,Tritosor Orient
-10040,6,Östliches Meer,Östliches Gastrodon
-10040,7,Mar Este,
-10040,8,Mare Est,
-10040,9,East Sea,East Gastrodon
-10040,11,ひがしのうみ,
-10040,12,东海,
-10041,1,むしタイプ,
-10041,5,Insecte,Arceus Insecte
-10041,6,Käfer,Arceus (Käfer)
-10041,7,Tipo Bicho,
-10041,8,Tipo Coleottero,
-10041,9,Bug Type,Bug Arceus
-10042,1,あくタイプ,
-10042,5,Ténèbres,Arceus Ténèbres
-10042,6,Unlicht,Arceus (Unlicht)
-10042,7,Tipo Siniestro,
-10042,8,Tipo Buio,
-10042,9,Dark Type,Dark Arceus
-10043,1,ドラゴンタイプ,
-10043,5,Dragon,Arceus Dragon
-10043,6,Drache,Arceus (Drache)
-10043,7,Tipo Dragón,
-10043,8,Tipo Drago,
-10043,9,Dragon Type,Dragon Arceus
-10044,1,でんきタイプ,
-10044,5,Électrik,Arceus Électrik
-10044,6,Elektro,Arceus (Elektro)
-10044,7,Tipo Eléctrico,
-10044,8,Tipo Elettro,
-10044,9,Electric Type,Electric Arceus
-10045,1,かくとうタイプ,
-10045,5,Combat,Arceus Combat
-10045,6,Kampf,Arceus (Kampf)
-10045,7,Tipo Lucha,
-10045,8,Tipo Lotta,
-10045,9,Fighting Type,Fighting Arceus
-10046,1,ほのおタイプ,
-10046,5,Feu,Arceus Feu
-10046,6,Feuer,Arceus (Feuer)
-10046,7,Tipo Fuego,
-10046,8,Tipo Fuoco,
-10046,9,Fire Type,Fire Arceus
-10047,1,ひこうタイプ,
-10047,5,Vol,Arceus Vol
-10047,6,Flug,Arceus (Flug)
-10047,7,Tipo Volador,
-10047,8,Tipo Volante,
-10047,9,Flying Type,Flying Arceus
-10048,1,ゴーストタイプ,
-10048,5,Spectre,Arceus Spectre
-10048,6,Geist,Arceus (Geist)
-10048,7,Tipo Fantasma,
-10048,8,Tipo Spettro,
-10048,9,Ghost Type,Ghost Arceus
-10049,1,くさタイプ,
-10049,5,Plante,Arceus Plante
-10049,6,Pflanze,Arceus (Pflanze)
-10049,7,Tipo Planta,
-10049,8,Tipo Erba,
-10049,9,Grass Type,Grass Arceus
-10050,1,じめんタイプ,
-10050,5,Sol,Arceus Sol
-10050,6,Boden,Arceus (Boden)
-10050,7,Tipo Tierra,
-10050,8,Tipo Terra,
-10050,9,Ground Type,Ground Arceus
-10051,1,こおりタイプ,
-10051,5,Glace,Arceus Glace
-10051,6,Eis,Arceus (Eis)
-10051,7,Tipo Hielo,
-10051,8,Tipo Ghiaccio,
-10051,9,Ice Type,Ice Arceus
-10052,1,どくタイプ,
-10052,5,Poison,Arceus Poison
-10052,6,Gift,Arceus (Gift)
-10052,7,Tipo Veneno,
-10052,8,Tipo Veleno,
-10052,9,Poison Type,Poison Arceus
-10053,1,エスパータイプ,
-10053,5,Psy,Arceus Psy
-10053,6,Psycho,Arceus (Psycho)
-10053,7,Tipo Psíquico,
-10053,8,Tipo Psico,
-10053,9,Psychic Type,Psychic Arceus
-10054,1,いわタイプ,
-10054,5,Roche,Arceus Roche
-10054,6,Gestein,Arceus (Gestein)
-10054,7,Tipo Roca,
-10054,8,Tipo Roccia,
-10054,9,Rock Type,Rock Arceus
-10055,1,はがねタイプ,
-10055,5,Acier,Arceus Acier
-10055,6,Stahl,Arceus (Stahl)
-10055,7,Tipo Acero,
-10055,8,Tipo Acciaio,
-10055,9,Steel Type,Steel Arceus
-10056,1,みずタイプ,
-10056,5,Eau,Arceus Eau
-10056,6,Wasser,Arceus (Wasser)
-10056,7,Tipo Agua,
-10056,8,Tipo Acqua,
-10056,9,Water Type,Water Arceus
-10057,1,？？？タイプ,
-10057,5,???,Arceus ???
-10057,6,???,Arceus (???)
-10057,7,Tipo ???,
-10057,8,Tipo ???,
-10057,9,??? Type,??? Arceus
-10058,1,ヒートロトム,
-10058,3,히트로토무,
-10058,4,加熱洛托姆,
-10058,5,Motisma Chaleur,Motisma Chaleur
-10058,6,Hitze-Rotom,Hitze-Rotom
-10058,7,Rotom Calor,
-10058,8,Rotom Calore,
-10058,9,Heat Rotom,Heat Rotom
-10058,11,ヒートロトム,
-10058,12,加热洛托姆,
-10059,1,ウォッシュロトム,
-10059,3,워시로토무,
-10059,4,清洗洛托姆,
-10059,5,Motisma Lavage,Motisma Lavage
-10059,6,Wasch-Rotom,Wasch-Rotom
-10059,7,Rotom Lavado,
-10059,8,Rotom Lavaggio,
-10059,9,Wash Rotom,Wash Rotom
-10059,11,ウォッシュロトム,
-10059,12,清洗洛托姆,
-10060,1,フロストロトム,
-10060,3,프로스트로토무,
-10060,4,結冰洛托姆,
-10060,5,Motisma Froid,Motisma Froid
-10060,6,Frost-Rotom,Frost-Rotom
-10060,7,Rotom Frío,
-10060,8,Rotom Gelo,
-10060,9,Frost Rotom,Frost Rotom
-10060,11,フロストロトム,
-10060,12,结冰洛托姆,
-10061,1,スピンロトム,
-10061,3,스핀로토무,
-10061,4,旋轉洛托姆,
-10061,5,Motisma Hélice,Motisma Hélice
-10061,6,Wirbel-Rotom,Wirbel-Rotom
-10061,7,Rotom Ventilador,
-10061,8,Rotom Vortice,
-10061,9,Fan Rotom,Fan Rotom
-10061,11,スピンロトム,
-10061,12,旋转洛托姆,
-10062,1,カットロトム,
-10062,3,커트로토무,
-10062,4,切割洛托姆,
-10062,5,Motisma Tonte,Motisma Tonte
-10062,6,Schneid-Rotom,Schneid-Rotom
-10062,7,Rotom Corte,
-10062,8,Rotom Taglio,
-10062,9,Mow Rotom,Mow Rotom
-10062,11,カットロトム,
-10062,12,切割洛托姆,
-10063,1,オリジンフォルム,
-10063,3,오리진폼,
-10063,4,起源形態,
-10063,5,Forme Originelle,Giratina Originel
-10063,6,Urform,Ur-Giratina
-10063,7,Forma Origen,
-10063,8,Forma Originale,
-10063,9,Origin Forme,Origin Giratina
-10063,11,オリジンフォルム,
-10063,12,起源形态,
-10064,1,スカイフォルム,
-10064,3,스카이폼,
-10064,4,天空形態,
-10064,5,Forme Céleste,Shaymin Céleste
-10064,6,Zenitform,Shaymin (Zenit)
-10064,7,Forma Cielo,
-10064,8,Forma Cielo,
-10064,9,Sky Forme,Sky Shaymin
-10064,11,スカイフォルム,
-10064,12,天空形态,
-10065,5,Troizépi,Pichu Troizépi
-10065,6,Strubbelohrform,Strubbelohr-Pichu
-10065,9,Spiky-eared,Spiky-eared Pichu
-10066,1,あおすじのすがた,
-10066,3,청색근의 모습,
-10066,4,藍條紋的樣子,
-10066,5,Motif Bleu,Bargantua Bleu
-10066,6,Blaulinige Form,Blauliniges Barschuft
-10066,7,Forma Raya Azul,
-10066,8,Forma Lineablu,
-10066,9,Blue-Striped Form,Blue-Striped Basculin
-10066,11,あおすじのすがた,
-10066,12,蓝条纹的样子,
-10067,1,ダルマモード,
-10067,3,달마모드,
-10067,4,達摩模式,
-10067,5,Mode Transe,Darumacho Transe
-10067,6,Trance-Modus,Flampivian (Trance)
-10067,7,Modo Daruma,
-10067,8,Stato Zen,
-10067,9,Zen Mode,Zen Darmanitan
-10067,11,ダルマモード,
-10067,12,达摩模式,
-10068,1,なつのすがた,
-10068,3,여름의 모습,
-10068,5,Forme Été,Vivaldaim Été
-10068,6,Sommerform,Sesokitz (Sommer)
-10068,7,Forma Verano,
-10068,8,Forma Estate,
-10068,9,Summer Form,Summer Deerling
-10069,1,あきのすがた,
-10069,3,가을의 모습,
-10069,5,Forme Automne,Vivaldaim Automne
-10069,6,Herbstform,Sesokitz (Herbst)
-10069,7,Forma Otoño,
-10069,8,Forma Autunno,
-10069,9,Autumn Form,Autumn Deerling
-10070,1,ふゆのすがた,
-10070,3,겨울의 모습,
-10070,5,Forme Hiver,Vivaldaim Hiver
-10070,6,Winterform,Sesokitz (Winter)
-10070,7,Forma Invierno,
-10070,8,Forma Inverno,
-10070,9,Winter Form,Winter Deerling
-10071,1,なつのすがた,
-10071,3,여름의 모습,
-10071,5,Forme Été,Haydaim Été
-10071,6,Sommerform,Kronjuwild (Sommer)
-10071,7,Forma Verano,
-10071,8,Forma Estate,
-10071,9,Summer Form,Summer Sawsbuck
-10072,1,あきのすがた,
-10072,3,가을의 모습,
-10072,5,Forme Automne,Haydaim Automne
-10072,6,Herbstform,Kronjuwild (Herbst)
-10072,7,Forma Otoño,
-10072,8,Forma Autunno,
-10072,9,Autumn Form,Autumn Sawsbuck
-10073,1,ふゆのすがた,
-10073,3,겨울의 모습,
-10073,5,Forme Hiver,Haydaim Hiver
-10073,6,Winterform,Kronjuwild (Winter)
-10073,7,Forma Invierno,
-10073,8,Forma Inverno,
-10073,9,Winter Form,Winter Sawsbuck
-10074,1,ステップフォルム,
-10074,3,스텝폼,
-10074,4,舞步形態,
-10074,5,Forme Danse,Meloetta Danse
-10074,6,Tanzform,Meloetta (Tanz)
-10074,7,Forma Danza,
-10074,8,Forma Danza,
-10074,9,Pirouette Forme,Pirouette Meloetta
-10074,11,ステップフォルム,
-10074,12,舞步形态,
-10075,1,アクアカセット,
-10075,3,아쿠아카세트,
-10075,5,Module Aqua,Genesect Aqua
-10075,6,Aquamodul,Genesect (Aquamodul)
-10075,7,HidroROM,
-10075,8,Idromodulo,
-10075,9,Douse Drive,Douse Genesect
-10076,1,イナズマカセット,
-10076,3,번개카세트,
-10076,5,Module Choc,Genesect Choc
-10076,6,Blitzmodul,Genesect (Blitzmodul)
-10076,7,FulgoROM,
-10076,8,Voltmodulo,
-10076,9,Shock Drive,Shock Genesect
-10077,1,ブレイズカセット,
-10077,3,블레이즈카세트,
-10077,5,Module Pyro,Genesect Pyro
-10077,6,Flammenmodul,Genesect (Flammenmodul)
-10077,7,PiroROM,
-10077,8,Piromodulo,
-10077,9,Burn Drive,Burn Genesect
-10078,1,フリーズカセット,
-10078,3,프리즈카세트,
-10078,5,Module Cryo,Genesect Cryo
-10078,6,Gefriermodul,Genesect (Gefriermodul)
-10078,7,CrioROM,
-10078,8,Gelomodulo,
-10078,9,Chill Drive,Chill Genesect
-10079,1,れいじゅうフォルム,
-10079,3,영물폼,
-10079,4,靈獸形態,
-10079,5,Forme Totémique,Boréas Totémique
-10079,6,Tiergeistform,Boreos (Tiergeist)
-10079,7,Forma Tótem,
-10079,8,Forma Totem,
-10079,9,Therian Forme,Therian Tornadus
-10079,11,れいじゅうフォルム,
-10079,12,灵兽形态,
-10080,1,れいじゅうフォルム,
-10080,3,영물폼,
-10080,4,靈獸形態,
-10080,5,Forme Totémique,Fulguris Totémique
-10080,6,Tiergeistform,Voltolos (Tiergeist)
-10080,7,Forma Tótem,
-10080,8,Forma Totem,
-10080,9,Therian Forme,Therian Thundurus
-10080,11,れいじゅうフォルム,
-10080,12,灵兽形态,
-10081,1,れいじゅうフォルム,
-10081,3,영물폼,
-10081,4,靈獸形態,
-10081,5,Forme Totémique,Démétéros Totémique
-10081,6,Tiergeistform,Demeteros (Tiergeist)
-10081,7,Forma Tótem,
-10081,8,Forma Totem,
-10081,9,Therian Forme,Therian Landorus
-10081,11,れいじゅうフォルム,
-10081,12,灵兽形态,
-10082,1,ブラックキュレム,
-10082,3,블랙큐레무,
-10082,4,闇黑酋雷姆,
-10082,5,Kyurem Noir,Kyurem Noir
-10082,6,Schwarzes Kyurem,Schwarzes Kyurem
-10082,7,Kyurem Negro,
-10082,8,Kyurem Nero,
-10082,9,Black Kyurem,Black Kyurem
-10082,11,ブラックキュレム,
-10082,12,暗黑酋雷姆,
-10083,1,ホワイトキュレム,
-10083,3,화이트큐레무,
-10083,4,焰白酋雷姆,
-10083,5,Kyurem Blanc,Kyurem Blanc
-10083,6,Weißes Kyurem,Weißes Kyurem
-10083,7,Kyurem Blanco,
-10083,8,Kyurem Bianco,
-10083,9,White Kyurem,White Kyurem
-10083,11,ホワイトキュレム,
-10083,12,焰白酋雷姆,
-10084,1,かくごのすがた,
-10084,3,각오의 모습,
-10084,4,覺悟的樣子,
-10084,5,Aspect Décidé,Keldeo Décidé
-10084,6,Resolutform,Keldeo (Resolut)
-10084,7,Forma Brío,
-10084,8,Forma Risoluta,
-10084,9,Resolute Form,Resolute Keldeo
-10084,11,かくごのすがた,
-10084,12,觉悟的样子,
-10085,1,フェアリータイプ,
-10085,5,Fée,Arceus Fée
-10085,6,Fee,Arceus (Fee)
-10085,7,Tipo Hada,
-10085,8,Tipo Folletto,
-10085,9,Fairy Type,Fairy Arceus
-10086,1,ひょうせつのもよう,
-10086,3,빙설의 모양,
-10086,5,Motif Blizzard,Prismillon Blizzard
-10086,6,Frostmuster,Vivillon (Frost)
-10086,7,Motivo Polar,
-10086,8,Motivo Nevi Perenni,
-10086,9,Icy Snow Pattern,Icy Snow Vivillon
-10087,1,ゆきぐにのもよう,
-10087,3,설국의 모양,
-10087,5,Motif Banquise,Prismillon Banquise
-10087,6,Schneefeldmuster,Vivillon (Schnee)
-10087,7,Motivo Taiga,
-10087,8,Motivo Nordico,
-10087,9,Polar Pattern,Polar Vivillon
-10088,1,せつげんのもよう,
-10088,3,설원의 모양,
-10088,5,Motif Glace,Prismillon Glace
-10088,6,Flockenmuster,Vivillion (Flocken)
-10088,7,Motivo Tundra,
-10088,8,Motivo Manto di Neve,
-10088,9,Tundra Pattern,Tundra Vivillon
-10089,1,たいりくのもよう,
-10089,3,대륙의 모양,
-10089,5,Motif Continent,Prismillon Continent
-10089,6,Kontinentalmuster,Vivillion (Kontinental)
-10089,7,Motivo Continental,
-10089,8,Motivo Continentale,
-10089,9,Continental Pattern,Continental Vivillon
-10090,1,ていえんのもよう,
-10090,3,정원의 모양,
-10090,5,Motif Verdure,Prismillon Verdure
-10090,6,Ziergartenmuster,Vivillion (Ziergatten)
-10090,7,Motivo Vergel,
-10090,8,Motivo Prato,
-10090,9,Garden Pattern,Garden Vivillon
-10091,1,みやびなもよう,
-10091,3,우아한 모양,
-10091,5,Motif Monarchie,Prismillon Monarchie
-10091,6,Prunkmuster,Vivillion (Prunk)
-10091,7,Motivo Oriental,
-10091,8,Motivo Eleganza,
-10091,9,Elegant Pattern,Elegant Vivillon
-10092,1,モダンなもよう,
-10092,3,모던한 모양,
-10092,5,Motif Métropole,Prismillon Métropole
-10092,6,Innovationsmuster,Vivillion (Innovation)
-10092,7,Motivo Moderno,
-10092,8,Motivo Trendy,
-10092,9,Modern Pattern,Modern Vivillon
-10093,1,マリンのもよう,
-10093,3,마린의 모양,
-10093,5,Motif Rivage,Prismillon Rivage
-10093,6,Aquamarinmuster,Vivillion (Aquamarin)
-10093,7,Motivo Marino,
-10093,8,Motivo Marino,
-10093,9,Marine Pattern,Marine Vivillon
-10094,1,ぐんとうのもよう,
-10094,3,군도의 모양,
-10094,5,Motif Archipel,Prismillon Archipel
-10094,6,Archipelmuster,Vivillion (Archipel)
-10094,7,Motivo Isleño,
-10094,8,Motivo Arcipelago,
-10094,9,Archipelago Pattern,Archipelago Vivillon
-10095,1,こうやのもよう,
-10095,3,황야의 모양,
-10095,5,Motif Sécheresse,Prismillon Sécheresse
-10095,6,Dürremuster,Vivillion (Dürre)
-10095,7,Motivo Estepa,
-10095,8,Motivo Deserto,
-10095,9,High Plains Pattern,High Plains Vivillon
-10096,1,さじんのもよう,
-10096,3,사진의 모양,
-10096,5,Motif Sable,Prismillon Sable
-10096,6,Sandmuster,Vivillion (Sand)
-10096,7,Motivo Desierto,
-10096,8,Motivo Sabbia,
-10096,9,Sandstorm Pattern,Sandstorm Vivillon
-10097,1,たいがのもよう,
-10097,3,대하의 모양,
-10097,5,Motif Delta,Prismillon Delta
-10097,6,Flussdeltamuster,Vivillion (Flussdelta)
-10097,7,Motivo Oasis,
-10097,8,Motivo Fluviale,
-10097,9,River Pattern,River Vivillon
-10098,1,スコールのもよう,
-10098,3,스콜의 모양,
-10098,5,Motif Cyclone,Prismillon Cyclone
-10098,6,Monsunmuster,Vivillion (Monsun)
-10098,7,Motivo Monzón,
-10098,8,Motivo Pluviale,
-10098,9,Monsoon Pattern,Monsoon Vivillon
-10099,1,サバンナのもよう,
-10099,3,사바나의 모양,
-10099,5,Motif Mangrove,Prismillon Mangrove
-10099,6,Savannenmuster,Vivillion (Savanne)
-10099,7,Motivo Pantano,
-10099,8,Motivo Savana,
-10099,9,Savanna Pattern,Savanna Vivillon
-10100,1,たいようのもよう,
-10100,3,태양의 모양,
-10100,5,Motif Zénith,Prismillon Zénith
-10100,6,Sonnenmuster,Vivillion (Sonne)
-10100,7,Motivo Solar,
-10100,8,Motivo Solare,
-10100,9,Sun Pattern,Sun Vivillon
-10101,1,オーシャンのもよう,
-10101,3,오션의 모양,
-10101,5,Motif Soleil Levant,Prismillon Soleil Levant
-10101,6,Ozeanmuster,Vivillion (Ozean)
-10101,7,Motivo Océano,
-10101,8,Motivo Oceanico,
-10101,9,Ocean Pattern,Ocean Vivillon
-10102,1,ジャングルのもよう,
-10102,3,정글의 모양,
-10102,5,Motif Jungle,Prismillon Jungle
-10102,6,Dschungelmuster,Vivillion (Dschungel)
-10102,7,Motivo Jungla,
-10102,8,Motivo Giungla,
-10102,9,Jungle Pattern,Jungle Vivillon
-10103,1,きいろのはな,
-10103,3,노란 꽃,
-10103,5,Fleur Jaune,Flabébé Jaune
-10103,6,Gelbblütler,Flabébé (Gelb)
-10103,7,Flor Amarilla,
-10103,8,Fiore Giallo,
-10103,9,Yellow Flower,Yellow Flabébé
-10104,1,オレンジいろのはな,
-10104,3,오렌지색 꽃,
-10104,5,Fleur Orange,Flabébé Orange
-10104,6,Orangeblütler,Flabébé (Orange)
-10104,7,Flor Naranja,
-10104,8,Fiore Arancione,
-10104,9,Orange Flower,Orange Flabébé
-10105,1,あおいはな,
-10105,3,파란 꽃,
-10105,5,Fleur Bleue,Flabébé Bleu
-10105,6,Blaublütler,Flabébé (Blau)
-10105,7,Flor Azul,
-10105,8,Fiore Blu,
-10105,9,Blue Flower,Blue Flabébé
-10106,1,しろいはな,
-10106,3,하얀 꽃,
-10106,5,Fleur Blanche,Flabébé Blanc
-10106,6,Weißblütler,Flabébé (Weiß)
-10106,7,Flor Blanca,
-10106,8,Fiore Bianco,
-10106,9,White Flower,White Flabébé
-10107,1,きいろのはな,
-10107,3,노란 꽃,
-10107,5,Fleur Jaune,Floette Jaune
-10107,6,Gelbblütler,Floette (Gelb)
-10107,7,Flor Amarilla,
-10107,8,Fiore Giallo,
-10107,9,Yellow Flower,Yellow Floette
-10108,1,オレンジいろのはな,
-10108,3,오렌지색 꽃,
-10108,5,Fleur Orange,Floette Orange
-10108,6,Orangeblütler,Floette (Orange)
-10108,7,Flor Naranja,
-10108,8,Fiore Arancione,
-10108,9,Orange Flower,Orange Floette
-10109,1,あおいはな,
-10109,3,파란 꽃,
-10109,5,Fleur Bleue,Floette Bleu
-10109,6,Blaublütler,Floette (Blau)
-10109,7,Flor Azul,
-10109,8,Fiore Blu,
-10109,9,Blue Flower,Blue Floette
-10110,1,しろいはな,
-10110,3,하얀 꽃,
-10110,5,Fleur Blanche,Floette Blanc
-10110,6,Weißblütler,Floette (Weiß)
-10110,7,Flor Blanca,
-10110,8,Fiore Bianco,
-10110,9,White Flower,White Floette
-10111,1,きいろのはな,
-10111,3,노란 꽃,
-10111,5,Fleur Jaune,Florges Jaune
-10111,6,Gelbblütler,Florges (Gelb)
-10111,7,Flor Amarilla,
-10111,8,Fiore Giallo,
-10111,9,Yellow Flower,Yellow Florges
-10112,1,オレンジいろのはな,
-10112,3,오렌지색 꽃,
-10112,5,Fleur Orange,Florges Orange
-10112,6,Orangeblütler,Florges (Orange)
-10112,7,Flor Naranja,
-10112,8,Fiore Arancione,
-10112,9,Orange Flower,Orange Florges
-10113,1,あおいはな,
-10113,3,파란 꽃,
-10113,5,Fleur Bleue,Florges Bleu
-10113,6,Blaublütler,Florges (Blau)
-10113,7,Flor Azul,
-10113,8,Fiore Blu,
-10113,9,Blue Flower,Blue Florges
-10114,1,しろいはな,
-10114,3,하얀 꽃,
-10114,5,Fleur Blanche,Florges Blanc
-10114,6,Weißblütler,Florges (Weiß)
-10114,7,Flor Blanca,
-10114,8,Fiore Bianco,
-10114,9,White Flower,White Florges
-10115,1,ハートカット,
-10115,3,하트컷,
-10115,5,Coupe Cœur,Couafarel Cœur
-10115,6,Herzchenschnitt,Coiffwaff (Herzchen)
-10115,7,Corte Corazón,
-10115,8,Taglio Cuore,
-10115,9,Heart Trim,Heart Furfrou
-10116,1,スターカット,
-10116,3,스타컷,
-10116,5,Coupe Étoile,Couafarel Étoile
-10116,6,Sternchenschnitt,Coiffwaff (Sternchen)
-10116,7,Corte Estrella,
-10116,8,Taglio Stella,
-10116,9,Star Trim,Star Furfrou
-10117,1,ダイヤカット,
-10117,3,다이아컷,
-10117,5,Coupe Diamant,Couafarel Diamant
-10117,6,Diamantenschnitt,Coiffwaff (Diamanten)
-10117,7,Corte Rombo,
-10117,8,Taglio Diamante,
-10117,9,Diamond Trim,Diamond Furfrou
-10118,1,レディカット,
-10118,3,레이디컷,
-10118,5,Coupe Demoiselle,Couafarel Demoiselle
-10118,6,Fräuleinschnitt,Coiffwaff (Fräulein)
-10118,7,Corte Señorita,
-10118,8,Taglio Signorina,
-10118,9,Debutante Trim,Debutante Furfrou
-10119,1,マダムカット,
-10119,3,마담컷,
-10119,5,Coupe Madame,Couafarel Madame
-10119,6,Damenschnitt,Coiffwaff (Damen)
-10119,7,Corte Dama,
-10119,8,Taglio Gentildonna,
-10119,9,Matron Trim,Matron Furfrou
-10120,1,ジェントルカット,
-10120,3,젠틀컷,
-10120,5,Coupe Monsieur,Couafarel Monsieur
-10120,6,Kavaliersschnitt,Coiffwaff (Kavalier)
-10120,7,Corte Caballero,
-10120,8,Taglio Gentiluomo,
-10120,9,Dandy Trim,Dandy Furfrou
-10121,1,クイーンカット,
-10121,3,퀸컷,
-10121,5,Coupe Reine,Couafarel Reine
-10121,6,Königinnenschnitt,Coiffwaff (Königin)
-10121,7,Corte Aristocrático,
-10121,8,Taglio Regina,
-10121,9,La Reine Trim,La Reine Furfrou
-10122,1,カブキカット,
-10122,3,가부키컷,
-10122,5,Coupe Kabuki,Couafarel Kabuki
-10122,6,Kabuki-Schnitt,Coiffwaff (Kabuki)
-10122,7,Corte Kabuki,
-10122,8,Taglio Kabuki,
-10122,9,Kabuki Trim,Kabuki Furfrou
-10123,1,キングダムカット,
-10123,3,킹덤컷,
-10123,5,Coupe Pharaon,Couafarel Pharaon
-10123,6,Herrscherschnitt,Coiffwaff (Herrscher)
-10123,7,Corte Faraónico,
-10123,8,Taglio Faraone,
-10123,9,Pharaoh Trim,Pharaoh Furfrou
-10124,1,メスのすがた,
-10124,3,암컷의 모습,
-10124,4,雌性的樣子,
-10124,5,Femelle,Mistigrix Femelle
-10124,6,Weiblich,Psiaugon ♀
-10124,7,Hembra,
-10124,8,Femmina,
-10124,9,Female,Female Meowstic
-10124,11,メスのすがた,
-10124,12,雌性的样子,
-10125,1,ブレードフォルム,
-10125,3,블레이드폼,
-10125,4,刀劍形態,
-10125,5,Forme Assaut,Exagide Assaut
-10125,6,Klingenform,Durengard (Klinge)
-10125,7,Forma Filo,
-10125,8,Forma Spada,
-10125,9,Blade Forme,Blade Aegislash
-10125,11,ブレードフォルム,
-10125,12,刀剑形态,
-10126,1,ちいさいサイズ,
-10126,3,작은 사이즈,
-10126,4,小尺寸,
-10126,5,Taille Mini,Pitrouille Mini
-10126,6,Größe S,Irrbis (S)
-10126,7,Tamaño Pequeño,
-10126,8,Mini,
-10126,9,Small Size,Small Pumpkaboo
-10126,11,ちいさいサイズ,
-10126,12,小尺寸,
-10127,1,おおきいサイズ,
-10127,3,큰 사이즈,
-10127,4,大尺寸,
-10127,5,Taille Maxi,Pitrouille Maxi
-10127,6,Größe L,Irrbis (L)
-10127,7,Tamaño Grande,
-10127,8,Grande,
-10127,9,Large Size,Large Pumpkaboo
-10127,11,おおきいサイズ,
-10127,12,大尺寸,
-10128,1,とくだいサイズ,
-10128,3,특대 사이즈,
-10128,4,特大尺寸,
-10128,5,Taille Ultra,Pitrouille Ultra
-10128,6,Größe XL,Irrbis (XL)
-10128,7,Tamaño Extragrande,
-10128,8,Maxi,
-10128,9,Super Size,Super Pumpkaboo
-10128,11,とくだいサイズ,
-10128,12,特大尺寸,
-10129,1,ちいさいサイズ,
-10129,3,작은 사이즈,
-10129,4,小尺寸,
-10129,5,Taille Mini,Banshitrouye Mini
-10129,6,Größe S,Pumpdjinn (S)
-10129,7,Tamaño Pequeño,
-10129,8,Mini,
-10129,9,Small Size,Small Gourgeist
-10129,11,ちいさいサイズ,
-10129,12,小尺寸,
-10130,1,おおきいサイズ,
-10130,3,큰 사이즈,
-10130,4,大尺寸,
-10130,5,Taille Maxi,Banshitrouye Maxi
-10130,6,Größe L,Pumpdjinn (L)
-10130,7,Tamaño Grande,
-10130,8,Grande,
-10130,9,Large Size,Large Gourgeist
-10130,11,おおきいサイズ,
-10130,12,大尺寸,
-10131,1,とくだいサイズ,
-10131,3,특대 사이즈,
-10131,4,特大尺寸,
-10131,5,Taille Ultra,Banshitrouye Ultra
-10131,6,Größe XL,Pumpdjinn (XL)
-10131,7,Tamaño Extragrande,
-10131,8,Maxi,
-10131,9,Super Size,Super Gourgeist
-10131,11,とくだいサイズ,
-10131,12,特大尺寸,
-10132,1,リラックスモード,
-10132,3,릴랙스모드,
-10132,4,放鬆模式,
-10132,5,Mode Paisible,Xerneas Paisible
-10132,6,Ruhe-Modus,Xerneas (Ruhe)
-10132,7,Modo Relajado,
-10132,8,Modo Relax,
-10132,9,Neutral Mode,Neutral Xerneas
-10132,11,リラックスモード,
-10132,12,放松模式,
-10133,1,メガフシギバナ,
-10133,3,메가이상해꽃,
-10133,4,超級妙蛙花,
-10133,5,Méga-Florizarre,Méga-Florizarre
-10133,6,Mega-Form,Mega-Bisaflor
-10133,7,Mega-Venusaur,
-10133,8,MegaVenusaur,
-10133,9,Mega Venusaur,Mega Venusaur
-10133,11,メガフシギバナ,
-10133,12,超级妙蛙花,
-10134,1,メガリザードンＸ,
-10134,3,메가리자몽X,
-10134,4,超級噴火龍Ｘ,
-10134,5,Méga-Dracaufeu X,Méga-Dracaufeu X
-10134,6,Mega-Form,Mega-Glurak X
-10134,7,Mega-Charizard X,
-10134,8,MegaCharizard X,
-10134,9,Mega Charizard X,Mega Charizard X
-10134,11,メガリザードンＸ,
-10134,12,超级喷火龙Ｘ,
-10135,1,メガリザードンＹ,
-10135,3,메가리자몽Y,
-10135,4,超級噴火龍Ｙ,
-10135,5,Méga-Dracaufeu Y,Méga-Dracaufeu Y
-10135,6,Mega-Form,Mega-Glurak Y
-10135,7,Mega-Charizard Y,
-10135,8,MegaCharizard Y,
-10135,9,Mega Charizard Y,Mega Charizard Y
-10135,11,メガリザードンＹ,
-10135,12,超级喷火龙Ｙ,
-10136,1,メガカメックス,
-10136,3,메가거북왕,
-10136,4,超級水箭龜,
-10136,5,Méga-Tortank,Méga-Tortank
-10136,6,Mega-Form,Mega-Turtok
-10136,7,Mega-Blastoise,
-10136,8,MegaBlastoise,
-10136,9,Mega Blastoise,Mega Blastoise
-10136,11,メガカメックス,
-10136,12,超级水箭龟,
-10137,1,メガフーディン,
-10137,3,메가후딘,
-10137,4,超級胡地,
-10137,5,Méga-Alakazam,Méga-Alakazam
-10137,6,Mega-Form,Mega-Simsala
-10137,7,Mega-Alakazam,
-10137,8,MegaAlakazam,
-10137,9,Mega Alakazam,Mega Alakazam
-10137,11,メガフーディン,
-10137,12,超级胡地,
-10138,1,メガゲンガー,
-10138,3,메가팬텀,
-10138,4,超級耿鬼,
-10138,5,Méga-Ectoplasma,Méga-Ectoplasma
-10138,6,Mega-Form,Mega-Gengar
-10138,7,Mega-Gengar,
-10138,8,MegaGengar,
-10138,9,Mega Gengar,Mega Gengar
-10138,11,メガゲンガー,
-10138,12,超级耿鬼,
-10139,1,メガガルーラ,
-10139,3,메가캥카,
-10139,4,超級袋獸,
-10139,5,Méga-Kangourex,Méga-Kangourex
-10139,6,Mega-Form,Mega-Kangama
-10139,7,Mega-Kangaskhan,
-10139,8,MegaKangaskhan,
-10139,9,Mega Kangaskhan,Mega Kangaskhan
-10139,11,メガガルーラ,
-10139,12,超级袋兽,
-10140,1,メガカイロス,
-10140,3,메가쁘사이저,
-10140,4,超級凱羅斯,
-10140,5,Méga-Scarabrute,Méga-Scarabrute
-10140,6,Mega-Form,Mega-Pinsir
-10140,7,Mega-Pinsir,
-10140,8,MegaPinsir,
-10140,9,Mega Pinsir,Mega Pinsir
-10140,11,メガカイロス,
-10140,12,超级凯罗斯,
-10141,1,メガギャラドス,
-10141,3,메가갸라도스,
-10141,4,超級暴鯉龍,
-10141,5,Méga-Léviator,Méga-Léviator
-10141,6,Mega-Form,Mega-Garados
-10141,7,Mega-Gyarados,
-10141,8,MegaGyarados,
-10141,9,Mega Gyarados,Mega Gyarados
-10141,11,メガギャラドス,
-10141,12,超级暴鲤龙,
-10142,1,メガプテラ,
-10142,3,메가프테라,
-10142,4,超級化石翼龍,
-10142,5,Méga-Ptéra,Méga-Ptéra
-10142,6,Mega-Form,Mega-Aerodactyl
-10142,7,Mega-Aerodactyl,
-10142,8,MegaAerodactyl,
-10142,9,Mega Aerodactyl,Mega Aerodactyl
-10142,11,メガプテラ,
-10142,12,超级化石翼龙,
-10143,1,メガミュウツーＸ,
-10143,3,메가뮤츠X,
-10143,4,超級超夢Ｘ,
-10143,5,Méga-Mewtwo X,Méga-Mewtwo X
-10143,6,Mega-Form,Mega-Mewtu X
-10143,7,Mega-Mewtwo X,
-10143,8,MegaMewtwo X,
-10143,9,Mega Mewtwo X,Mega Mewtwo X
-10143,11,メガミュウツーＸ,
-10143,12,超级超梦Ｘ,
-10144,1,メガミュウツーＹ,
-10144,3,메가뮤츠Y,
-10144,4,超級超夢Ｙ,
-10144,5,Méga-Mewtwo Y,Méga-Mewtwo Y
-10144,6,Mega-Form,Mega-Mewtu Y
-10144,7,Mega-Mewtwo Y,
-10144,8,MegaMewtwo Y,
-10144,9,Mega Mewtwo Y,Mega Mewtwo Y
-10144,11,メガミュウツーＹ,
-10144,12,超级超梦Ｙ,
-10145,1,メガデンリュウ,
-10145,3,메가전룡,
-10145,4,超級電龍,
-10145,5,Méga-Pharamp,Méga-Pharamp
-10145,6,Mega-Form,Mega-Ampharos
-10145,7,Mega-Ampharos,
-10145,8,MegaAmpharos,
-10145,9,Mega Ampharos,Mega Ampharos
-10145,11,メガデンリュウ,
-10145,12,超级电龙,
-10146,1,メガハッサム,
-10146,3,메가핫삼,
-10146,4,超級巨鉗螳螂,
-10146,5,Méga-Cizayox,Méga-Cizayox
-10146,6,Mega-Form,Mega-Scherox
-10146,7,Mega-Scizor,
-10146,8,MegaScizor,
-10146,9,Mega Scizor,Mega Scizor
-10146,11,メガハッサム,
-10146,12,超级巨钳螳螂,
-10147,1,メガヘラクロス,
-10147,3,메가헤라크로스,
-10147,4,超級赫拉克羅斯,
-10147,5,Méga-Scarhino,Méga-Scarhino
-10147,6,Mega-Form,Mega-Skaraborn
-10147,7,Mega-Heracross,
-10147,8,MegaHeracross,
-10147,9,Mega Heracross,Mega Heracross
-10147,11,メガヘラクロス,
-10147,12,超级赫拉克罗斯,
-10148,1,メガヘルガー,
-10148,3,메가헬가,
-10148,4,超級黑魯加,
-10148,5,Méga-Démolosse,Méga-Démolosse
-10148,6,Mega-Form,Mega-Hundemon
-10148,7,Mega-Houndoom,
-10148,8,MegaHoundoom,
-10148,9,Mega Houndoom,Mega Houndoom
-10148,11,メガヘルガー,
-10148,12,超级黑鲁加,
-10149,1,メガバンギラス,
-10149,3,메가마기라스,
-10149,4,超級班基拉斯,
-10149,5,Méga-Tyranocif,Méga-Tyranocif
-10149,6,Mega-Form,Mega-Despotar
-10149,7,Mega-Tyranitar,
-10149,8,MegaTyranitar,
-10149,9,Mega Tyranitar,Mega Tyranitar
-10149,11,メガバンギラス,
-10149,12,超级班基拉斯,
-10150,1,メガバシャーモ,
-10150,3,메가번치코,
-10150,4,超級火焰雞,
-10150,5,Méga-Braségali,Méga-Braségali
-10150,6,Mega-Form,Mega-Lohgock
-10150,7,Mega-Blaziken,
-10150,8,MegaBlaziken,
-10150,9,Mega Blaziken,Mega Blaziken
-10150,11,メガバシャーモ,
-10150,12,超级火焰鸡,
-10151,1,メガサーナイト,
-10151,3,메가가디안,
-10151,4,超級沙奈朵,
-10151,5,Méga-Gardevoir,Méga-Gardevoir
-10151,6,Mega-Form,Mega-Guardevoir
-10151,7,Mega-Gardevoir,
-10151,8,MegaGardevoir,
-10151,9,Mega Gardevoir,Mega Gardevoir
-10151,11,メガサーナイト,
-10151,12,超级沙奈朵,
-10152,1,メガクチート,
-10152,3,메가입치트,
-10152,4,超級大嘴娃,
-10152,5,Méga-Mysdibule,Méga-Mysdibule
-10152,6,Mega-Form,Mega-Flunkifer
-10152,7,Mega-Mawile,
-10152,8,MegaMawile,
-10152,9,Mega Mawile,Mega Mawile
-10152,11,メガクチート,
-10152,12,超级大嘴娃,
-10153,1,メガボスゴドラ,
-10153,3,메가보스로라,
-10153,4,超級波士可多拉,
-10153,5,Méga-Galeking,Méga-Galeking
-10153,6,Mega-Form,Mega-Stolloss
-10153,7,Mega-Aggron,
-10153,8,MegaAggron,
-10153,9,Mega Aggron,Mega Aggron
-10153,11,メガボスゴドラ,
-10153,12,超级波士可多拉,
-10154,1,メガチャーレム,
-10154,3,메가요가램,
-10154,4,超級恰雷姆,
-10154,5,Méga-Charmina,Méga-Charmina
-10154,6,Mega-Form,Mega-Meditalis
-10154,7,Mega-Medicham,
-10154,8,MegaMedicham,
-10154,9,Mega Medicham,Mega Medicham
-10154,11,メガチャーレム,
-10154,12,超级恰雷姆,
-10155,1,メガライボルト,
-10155,3,메가썬더볼트,
-10155,4,超級雷電獸,
-10155,5,Méga-Élecsprint,Méga-Élecsprint
-10155,6,Mega-Form,Mega-Voltenso
-10155,7,Mega-Manectric,
-10155,8,MegaManectric,
-10155,9,Mega Manectric,Mega Manectric
-10155,11,メガライボルト,
-10155,12,超级雷电兽,
-10156,1,メガジュペッタ,
-10156,3,메가다크펫,
-10156,4,超級詛咒娃娃,
-10156,5,Méga-Branette,Méga-Branette
-10156,6,Mega-Form,Mega-Banette
-10156,7,Mega-Banette,
-10156,8,MegaBanette,
-10156,9,Mega Banette,Mega Banette
-10156,11,メガジュペッタ,
-10156,12,超级诅咒娃娃,
-10157,1,メガアブソル,
-10157,3,메가앱솔,
-10157,4,超級阿勃梭魯,
-10157,5,Méga-Absol,Méga-Absol
-10157,6,Mega-Form,Mega-Absol
-10157,7,Mega-Absol,
-10157,8,MegaAbsol,
-10157,9,Mega Absol,Mega Absol
-10157,11,メガアブソル,
-10157,12,超级阿勃梭鲁,
-10158,1,メガガブリアス,
-10158,3,메가한카리아스,
-10158,4,超級烈咬陸鯊,
-10158,5,Méga-Carchacrok,Méga-Carchacrok
-10158,6,Mega-Form,Mega-Knakrack
-10158,7,Mega-Garchomp,
-10158,8,MegaGarchomp,
-10158,9,Mega Garchomp,Mega Garchomp
-10158,11,メガガブリアス,
-10158,12,超级烈咬陆鲨,
-10159,1,メガルカリオ,
-10159,3,메가루카리오,
-10159,4,超級路卡利歐,
-10159,5,Méga-Lucario,Méga-Lucario
-10159,6,Mega-Form,Mega-Lucario
-10159,7,Mega-Lucario,
-10159,8,MegaLucario,
-10159,9,Mega Lucario,Mega Lucario
-10159,11,メガルカリオ,
-10159,12,超级路卡利欧,
-10160,1,メガユキノオー,
-10160,3,메가눈설왕,
-10160,4,超級暴雪王,
-10160,5,Méga-Blizzaroi,Méga-Blizzaroi
-10160,6,Mega-Form,Mega-Rexblisar
-10160,7,Mega-Abomasnow,
-10160,8,MegaAbomasnow,
-10160,9,Mega Abomasnow,Mega Abomasnow
-10160,11,メガユキノオー,
-10160,12,超级暴雪王,
-10161,1,ファンシーなもよう,
-10161,3,팬시한 모양,
-10161,5,Motif Fantaisie,Prismillon Fantaisie
-10161,6,Fantasiemuster,Vivillion (Fantasie)
-10161,7,Motivo Fantasía,
-10161,8,Motivo Sbarazzino,
-10161,9,Fancy Pattern,Fancy Vivillon
-10162,1,ボールのもよう,
-10162,3,볼의 모양,
-10162,5,Motif Poké Ball,Prismillon Poké Ball
-10162,6,Pokéball-Muster,Vivillion (Pokeball)
-10162,7,Motivo Poké Ball,
-10162,8,Motivo Poké Ball,
-10162,9,Poké Ball Pattern,Poké Ball Vivillon
-10163,1,えいえんのはな,
-10163,3,영원의 꽃,
-10163,5,Fleur Éternelle,Floette Éternel
-10163,6,Ewigblütler,Floette (Ewigblütler)
-10163,7,Flor Eterna,
-10163,8,Fiore Eterno,
-10163,9,Eternal Flower,Eternal Floette
-10164,1,メガラティアス,
-10164,3,메가라티아스,
-10164,4,超級拉帝亞斯,
-10164,5,Méga-Latias,Méga-Latias
-10164,6,Mega-Form,Mega-Latias
-10164,7,Mega-Latias,
-10164,8,MegaLatias,
-10164,9,Mega Latias,Mega Latias
-10164,11,メガラティアス,
-10164,12,超级拉帝亚斯,
-10165,1,メガラティオス,
-10165,3,메가라티오스,
-10165,4,超級拉帝歐斯,
-10165,5,Méga-Latios,Méga-Latios
-10165,6,Mega-Form,Mega-Latios
-10165,7,Mega-Latios,
-10165,8,MegaLatios,
-10165,9,Mega Latios,Mega Latios
-10165,11,メガラティオス,
-10165,12,超级拉帝欧斯,
-10166,1,メガラグラージ,
-10166,3,메가대짱이,
-10166,4,超級巨沼怪,
-10166,5,Méga-Laggron,Méga-Laggron
-10166,6,Mega-Form,Mega-Sumpex
-10166,7,Mega-Swampert,
-10166,8,MegaSwampert,
-10166,9,Mega Swampert,Mega Swampert
-10166,11,メガラグラージ,
-10166,12,超级巨沼怪,
-10167,1,メガジュカイン,
-10167,3,메가나무킹,
-10167,4,超級蜥蜴王,
-10167,5,Méga-Jungko,Méga-Jungko
-10167,6,Mega-Form,Mega-Gewaldro
-10167,7,Mega-Sceptile,
-10167,8,MegaSceptile,
-10167,9,Mega Sceptile,Mega Sceptile
-10167,11,メガジュカイン,
-10167,12,超级蜥蜴王,
-10168,1,メガヤミラミ,
-10168,3,메가깜까미,
-10168,4,超級勾魂眼,
-10168,5,Méga-Ténéfix,Méga-Ténéfix
-10168,6,Mega-Form,Mega-Zobiris
-10168,7,Mega-Sableye,
-10168,8,MegaSableye,
-10168,9,Mega Sableye,Mega Sableye
-10168,11,メガヤミラミ,
-10168,12,超级勾魂眼,
-10169,1,メガチルタリス,
-10169,3,메가파비코리,
-10169,4,超級七夕青鳥,
-10169,5,Méga-Altaria,Méga-Altaria
-10169,6,Mega-Form,Mega-Altaria
-10169,7,Mega-Altaria,
-10169,8,MegaAltaria,
-10169,9,Mega Altaria,Mega Altaria
-10169,11,メガチルタリス,
-10169,12,超级七夕青鸟,
-10170,1,メガエルレイド,
-10170,3,메가엘레이드,
-10170,4,超級艾路雷朵,
-10170,5,Méga-Gallame,Méga-Gallame
-10170,6,Mega-Form,Mega-Galagladi
-10170,7,Mega-Gallade,
-10170,8,MegaGallade,
-10170,9,Mega Gallade,Mega Gallade
-10170,11,メガエルレイド,
-10170,12,超级艾路雷朵,
-10171,1,メガタブンネ,
-10171,3,메가다부니,
-10171,4,超級差不多娃娃,
-10171,5,Méga-Nanméouïe,Méga-Nanméouïe
-10171,6,Mega-Form,Mega-Ohrdoch
-10171,7,Mega-Audino,
-10171,8,MegaAudino,
-10171,9,Mega Audino,Mega Audino
-10171,11,メガタブンネ,
-10171,12,超级差不多娃娃,
-10172,1,メガサメハダー,
-10172,3,메가샤크니아,
-10172,4,超級巨牙鯊,
-10172,5,Méga-Sharpedo,Méga-Sharpedo
-10172,6,Mega-Form,Mega-Tohaido
-10172,7,Mega-Sharpedo,
-10172,8,MegaSharpedo,
-10172,9,Mega Sharpedo,Mega Sharpedo
-10172,11,メガサメハダー,
-10172,12,超级巨牙鲨,
-10173,1,メガヤドラン,
-10173,3,메가야도란,
-10173,4,超級呆殼獸,
-10173,5,Méga-Flagadoss,Méga-Flagadoss
-10173,6,Mega-Form,Mega-Lahmus
-10173,7,Mega-Slowbro,
-10173,8,MegaSlowbro,
-10173,9,Mega Slowbro,Mega Slowbro
-10173,11,メガヤドラン,
-10173,12,超级呆壳兽,
-10174,1,メガハガネール,
-10174,3,메가강철톤,
-10174,4,超級大鋼蛇,
-10174,5,Méga-Steelix,Méga-Steelix
-10174,6,Mega-Form,Mega-Stahlos
-10174,7,Mega-Steelix,
-10174,8,MegaSteelix,
-10174,9,Mega Steelix,Mega Steelix
-10174,11,メガハガネール,
-10174,12,超级大钢蛇,
-10175,1,メガピジョット,
-10175,3,메가피죤투,
-10175,4,超級大比鳥,
-10175,5,Méga-Roucarnage,Méga-Roucarnage
-10175,6,Mega-Form,Mega-Tauboss
-10175,7,Mega-Pidgeot,
-10175,8,MegaPidgeot,
-10175,9,Mega Pidgeot,Mega Pidgeot
-10175,11,メガピジョット,
-10175,12,超级大比鸟,
-10176,1,メガオニゴーリ,
-10176,3,메가얼음귀신,
-10176,4,超級冰鬼護,
-10176,5,Méga-Oniglali,Méga-Oniglali
-10176,6,Mega-Form,Mega-Firnontor
-10176,7,Mega-Glalie,
-10176,8,MegaGlalie,
-10176,9,Mega Glalie,Mega Glalie
-10176,11,メガオニゴーリ,
-10176,12,超级冰鬼护,
-10177,1,メガディアンシー,
-10177,3,메가디안시,
-10177,4,超級蒂安希,
-10177,5,Méga-Diancie,Méga-Diancie
-10177,6,Mega-Form,Mega-Diancie
-10177,7,Mega-Diancie,
-10177,8,MegaDiancie,
-10177,9,Mega Diancie,Mega Diancie
-10177,11,メガディアンシー,
-10177,12,超级蒂安希,
-10178,1,メガメタグロス,
-10178,3,메가메타그로스,
-10178,4,超級巨金怪,
-10178,5,Méga-Métalosse,Méga-Métalosse
-10178,6,Mega-Form,Mega-Metagross
-10178,7,Mega-Metagross,
-10178,8,MegaMetagross,
-10178,9,Mega Metagross,Mega Metagross
-10178,11,メガメタグロス,
-10178,12,超级巨金怪,
-10179,1,ゲンシカイキのすがた,
-10179,3,원시회귀의 모습,
-10179,4,原始回歸的樣子,
-10179,5,Primo-Résurgence,Primo-Kyogre
-10179,6,Protomorphose,Proto-Kyogre
-10179,7,Regresión Primigenia,
-10179,8,Archeorisveglio,
-10179,9,Primal Reversion,Primal Kyogre
-10179,11,ゲンシカイキのすがた,
-10179,12,原始回归的样子,
-10180,1,ゲンシカイキのすがた,
-10180,3,원시회귀의 모습,
-10180,4,原始回歸的樣子,
-10180,5,Primo-Résurgence,Primo-Groudon
-10180,6,Protomorphose,Proto-Groudon
-10180,7,Regresión Primigenia,
-10180,8,Archeorisveglio,
-10180,9,Primal Reversion,Primal Groudon
-10180,11,ゲンシカイキのすがた,
-10180,12,原始回归的样子,
-10181,1,メガレックウザ,
-10181,3,메가레쿠쟈,
-10181,4,超級烈空坐,
-10181,5,Méga-Rayquaza,Méga-Rayquaza
-10181,6,Mega-Form,Mega-Rayquaza
-10181,7,Mega-Rayquaza,
-10181,8,MegaRayquaza,
-10181,9,Mega Rayquaza,Mega Rayquaza
-10181,11,メガレックウザ,
-10181,12,超级烈空坐,
-10182,5,Pikachu Rockeur,Pikachu Rockeur
-10182,6,Cosplayform,Rock Star Pikachu
-10182,9,Pikachu Rock Star,Pikachu Rock Star
-10183,5,Pikachu Lady,Pikachu Lady
-10183,6,Cosplayform,Lady Pikachu
-10183,9,Pikachu Belle,Pikachu Belle
-10184,5,Pikachu Star,Pikachu Star
-10184,6,Cosplayform,Pop Star Pikachu
-10184,9,Pikachu Pop Star,Pikachu Pop Star
-10185,5,Pikachu Docteur,Pikachu Docteur
-10185,6,Cosplayform,Dr. Pikachu
-10185,9,Pikachu Ph.D.,Pikachu Ph.D.
-10186,5,Pikachu Catcheur,Pikachu Catcheur
-10186,6,Cosplayform,Wrestling Pikachu
-10186,9,Pikachu Libre,Pikachu Libre
-10187,5,Pikachu Cosplayeur,Pikachu Cosplayeur
-10187,6,Cosplayform,Cosplay Pikachu
-10187,9,Cosplay Pikachu,Cosplay Pikachu
-10188,1,ときはなたれしフーパ,
-10188,3,굴레를 벗어난 후파,
-10188,4,解放胡帕,
-10188,5,Hoopa Déchaîné,Hoopa Déchaîné
-10188,6,Entfesseltes Hoopa,Entfesseltes Hoopa
-10188,7,Hoopa Desatado,
-10188,8,Hoopa Libero,
-10188,9,Hoopa Unbound,Hoopa Unbound
-10188,11,ときはなたれしフーパ,
-10188,12,解放胡帕,
-10189,1,メガバクーダ,
-10189,3,메가폭타,
-10189,4,超級噴火駝,
-10189,5,Méga-Camérupt,Méga-Camérupt
-10189,6,Mega-Form,Mega-Camerupt
-10189,7,Mega-Camerupt,
-10189,8,MegaCamerupt,
-10189,9,Mega Camerupt,Mega Camerupt
-10189,11,メガバクーダ,
-10189,12,超级喷火驼,
-10190,1,メガミミロップ,
-10190,3,메가이어롭,
-10190,4,超級長耳兔,
-10190,5,Méga-Lockpin,Méga-Lockpin
-10190,6,Mega-Form,Mega-Schlapor
-10190,7,Mega-Lopunny,
-10190,8,MegaLopunny,
-10190,9,Mega Lopunny,Mega Lopunny
-10190,11,メガミミロップ,
-10190,12,超级长耳兔,
-10191,1,メガボーマンダ,
-10191,3,메가보만다,
-10191,4,超級暴飛龍,
-10191,5,Méga-Drattak,Méga-Drattak
-10191,6,Mega-Form,Mega-Brutalanda
-10191,7,Mega-Salamence,
-10191,8,MegaSalamence,
-10191,9,Mega Salamence,Mega Salamence
-10191,11,メガボーマンダ,
-10191,12,超级暴飞龙,
-10192,1,メガスピアー,
-10192,3,메가독침붕,
-10192,4,超級大針蜂,
-10192,5,Méga-Dardargnan,Méga-Dardargnan
-10192,6,Mega-Form,Mega-Bibor
-10192,7,Mega-Beedrill,
-10192,8,MegaBeedrill,
-10192,9,Mega Beedrill,Mega Beedrill
-10192,11,メガスピアー,
-10192,12,超级大针蜂,
-10193,1,アローラのすがた,
-10193,3,알로라의 모습,
-10193,4,阿羅拉的樣子,
-10193,5,Forme d’Alola,Rattata d'Alola
-10193,6,Alola-Form,Alola Rattfratz
-10193,7,Forma de Alola,
-10193,8,Forma di Alola,
-10193,9,Alolan Form,Alolan Rattata
-10193,11,アローラのすがた,
-10193,12,阿罗拉的样子,
-10194,1,アローラのすがた,
-10194,3,알로라의 모습,
-10194,4,阿羅拉的樣子,
-10194,5,Forme d’Alola,Rattatac d'Alola
-10194,6,Alola-Form,Alola Rattikarl
-10194,7,Forma de Alola,
-10194,8,Forma di Alola,
-10194,9,Alolan Form,Alolan Raticate
-10194,11,アローラのすがた,
-10194,12,阿罗拉的样子,
-10195,5,,Rattatac d'Alola Dominant
-10195,6,Totemform,Totem Alola Rattikarl
-10195,9,,Totem Alolan Raticate
-10196,1,オリジナルキャップ,
-10196,3,오리지널캡,
-10196,4,初始帽子,
-10196,5,Casquette Originale,Pikachu Casquette Originale
-10196,6,Original-Kappe,Pikachu (Original-Kappe)
-10196,7,Gorra Original,
-10196,8,Berretto Originale,
-10196,9,Original Cap,Original Cap Pikachu
-10196,11,オリジナルキャップ,
-10196,12,初始帽子,
-10197,1,ホウエンキャップ,
-10197,3,호연캡,
-10197,4,豐緣帽子,
-10197,5,Casquette de Hoenn,Pikachu Casquette de Hoenn
-10197,6,Hoenn-Kappe,Pikachu (Hoenn-Kappe)
-10197,7,Gorra Hoenn,
-10197,8,Berretto Hoenn,
-10197,9,Hoenn Cap,Hoenn Cap Pikachu
-10197,11,ホウエンキャップ,
-10197,12,丰缘帽子,
-10198,1,シンオウキャップ,
-10198,3,신오캡,
-10198,4,神奧帽子,
-10198,5,Casquette de Sinnoh,Pikachu Casquette de Sinnoh
-10198,6,Sinnoh-Kappe,Pikachu (Sinnoh-Kappe)
-10198,7,Gorra Sinnoh,
-10198,8,Berretto Sinnoh,
-10198,9,Sinnoh Cap,Sinnoh Cap Pikachu
-10198,11,シンオウキャップ,
-10198,12,神奥帽子,
-10199,1,イッシュキャップ,
-10199,3,하나캡,
-10199,4,合眾帽子,
-10199,5,Casquette d’Unys,Pikachu Casquette d’Unys
-10199,6,Einall-Kappe,Pikachu (Einall-Kappe)
-10199,7,Gorra Teselia,
-10199,8,Berretto Unima,
-10199,9,Unova Cap,Unova Cap Pikachu
-10199,11,イッシュキャップ,
-10199,12,合众帽子,
-10200,1,カロスキャップ,
-10200,3,칼로스캡,
-10200,4,卡洛斯帽子,
-10200,5,Casquette de Kalos,Pikachu Casquette de Kalos
-10200,6,Kalos-Kappe,Pikachu (Kalos-Kappe)
-10200,7,Gorra Kalos,
-10200,8,Berretto Kalos,
-10200,9,Kalos Cap,Kalos Cap Pikachu
-10200,11,カロスキャップ,
-10200,12,卡洛斯帽子,
-10201,1,アローラキャップ,
-10201,3,알로라캡,
-10201,4,阿羅拉帽子,
-10201,5,Casquette d’Alola,Pikachu Casquette d’Alola
-10201,6,Alola-Kappe,Pikachu (Alola-Kappe)
-10201,7,Gorra Alola,
-10201,8,Berretto Alola,
-10201,9,Alola Cap,Alola Cap Pikachu
-10201,11,アローラキャップ,
-10201,12,阿罗拉帽子,
-10202,1,アローラのすがた,
-10202,3,알로라의 모습,
-10202,4,阿羅拉的樣子,
-10202,5,Forme d’Alola,Raichu d'Alola
-10202,6,Alola-Form,Alola Raichu
-10202,7,Forma de Alola,
-10202,8,Forma di Alola,
-10202,9,Alolan Form,Alolan Raichu
-10202,11,アローラのすがた,
-10202,12,阿罗拉的样子,
-10203,1,アローラのすがた,
-10203,3,알로라의 모습,
-10203,4,阿羅拉的樣子,
-10203,5,Forme d’Alola,Sabelette d'Alola
-10203,6,Alola-Form,Alola Sandan
-10203,7,Forma de Alola,
-10203,8,Forma di Alola,
-10203,9,Alolan Form,Alolan Sandshrew
-10203,11,アローラのすがた,
-10203,12,阿罗拉的样子,
-10204,1,アローラのすがた,
-10204,3,알로라의 모습,
-10204,4,阿羅拉的樣子,
-10204,5,Forme d’Alola,Sablaireau d'Alola
-10204,6,Alola-Form,Alola Sandamer
-10204,7,Forma de Alola,
-10204,8,Forma di Alola,
-10204,9,Alolan Form,Alolan Sandslash
-10204,11,アローラのすがた,
-10204,12,阿罗拉的样子,
-10205,1,アローラのすがた,
-10205,3,알로라의 모습,
-10205,4,阿羅拉的樣子,
-10205,5,Forme d’Alola,Goupix d'Alola
-10205,6,Alola-Form,Alola Vulpix
-10205,7,Forma de Alola,
-10205,8,Forma di Alola,
-10205,9,Alolan Form,Alolan Vulpix
-10205,11,アローラのすがた,
-10205,12,阿罗拉的样子,
-10206,1,アローラのすがた,
-10206,3,알로라의 모습,
-10206,4,阿羅拉的樣子,
-10206,5,Forme d’Alola,Feunard d'Alola
-10206,6,Alola-Form,Alola Vulnona
-10206,7,Forma de Alola,
-10206,8,Forma di Alola,
-10206,9,Alolan Form,Alolan Ninetales
-10206,11,アローラのすがた,
-10206,12,阿罗拉的样子,
-10207,1,アローラのすがた,
-10207,3,알로라의 모습,
-10207,4,阿羅拉的樣子,
-10207,5,Forme d’Alola,Taupiqueur d'Alola
-10207,6,Alola-Form,Alola Digda
-10207,7,Forma de Alola,
-10207,8,Forma di Alola,
-10207,9,Alolan Form,Alolan Diglett
-10207,11,アローラのすがた,
-10207,12,阿罗拉的样子,
-10208,1,アローラのすがた,
-10208,3,알로라의 모습,
-10208,4,阿羅拉的樣子,
-10208,5,Forme d’Alola,Triopikeur d'Alola
-10208,6,Alola-Form,Alola Digdri
-10208,7,Forma de Alola,
-10208,8,Forma di Alola,
-10208,9,Alolan Form,Alolan Dugtrio
-10208,11,アローラのすがた,
-10208,12,阿罗拉的样子,
-10209,1,アローラのすがた,
-10209,3,알로라의 모습,
-10209,4,阿羅拉的樣子,
-10209,5,Forme d’Alola,Miaouss d'Alola
-10209,6,Alola-Form,Alola Mauzi
-10209,7,Forma de Alola,
-10209,8,Forma di Alola,
-10209,9,Alolan Form,Alolan Meowth
-10209,11,アローラのすがた,
-10209,12,阿罗拉的样子,
-10210,1,アローラのすがた,
-10210,3,알로라의 모습,
-10210,4,阿羅拉的樣子,
-10210,5,Forme d’Alola,Persian d'Alola
-10210,6,Alola-Form,Alola Snobilikat
-10210,7,Forma de Alola,
-10210,8,Forma di Alola,
-10210,9,Alolan Form,Alolan Persian
-10210,11,アローラのすがた,
-10210,12,阿罗拉的样子,
-10211,1,アローラのすがた,
-10211,3,알로라의 모습,
-10211,4,阿羅拉的樣子,
-10211,5,Forme d’Alola,Racaillou d'Alola
-10211,6,Alola-Form,Alola Kleinstein
-10211,7,Forma de Alola,
-10211,8,Forma di Alola,
-10211,9,Alolan Form,Alolan Geodude
-10211,11,アローラのすがた,
-10211,12,阿罗拉的样子,
-10212,1,アローラのすがた,
-10212,3,알로라의 모습,
-10212,4,阿羅拉的樣子,
-10212,5,Forme d’Alola,Gravalanch d'Alola
-10212,6,Alola-Form,Alola Georok
-10212,7,Forma de Alola,
-10212,8,Forma di Alola,
-10212,9,Alolan Form,Alolan Graveler
-10212,11,アローラのすがた,
-10212,12,阿罗拉的样子,
-10213,1,アローラのすがた,
-10213,3,알로라의 모습,
-10213,4,阿羅拉的樣子,
-10213,5,Forme d’Alola,Grolem d'Alola
-10213,6,Alola-Form,Alola Geowaz
-10213,7,Forma de Alola,
-10213,8,Forma di Alola,
-10213,9,Alolan Form,Alolan Golem
-10213,11,アローラのすがた,
-10213,12,阿罗拉的样子,
-10214,1,アローラのすがた,
-10214,3,알로라의 모습,
-10214,4,阿羅拉的樣子,
-10214,5,Forme d’Alola,Tadmorv d'Alola
-10214,6,Alola-Form,Alola Sleima
-10214,7,Forma de Alola,
-10214,8,Forma di Alola,
-10214,9,Alolan Form,Alolan Grimer
-10214,11,アローラのすがた,
-10214,12,阿罗拉的样子,
-10215,1,アローラのすがた,
-10215,3,알로라의 모습,
-10215,4,阿羅拉的樣子,
-10215,5,Forme d’Alola,Grotadmorv d'Alola
-10215,6,Alola-Form,Alola Sleimok
-10215,7,Forma de Alola,
-10215,8,Forma di Alola,
-10215,9,Alolan Form,Alolan Muk
-10215,11,アローラのすがた,
-10215,12,阿罗拉的样子,
-10216,1,アローラのすがた,
-10216,3,알로라의 모습,
-10216,4,阿羅拉的樣子,
-10216,5,Forme d’Alola,Noadkoko d'Alola
-10216,6,Alola-Form,Alola Kokowei
-10216,7,Forma de Alola,
-10216,8,Forma di Alola,
-10216,9,Alolan Form,Alolan Exeggutor
-10216,11,アローラのすがた,
-10216,12,阿罗拉的样子,
-10217,1,アローラのすがた,
-10217,3,알로라의 모습,
-10217,4,阿羅拉的樣子,
-10217,5,Forme d’Alola,Ossatueur d'Alola
-10217,6,Alola-Form,Alola Knogga
-10217,7,Forma de Alola,
-10217,8,Forma di Alola,
-10217,9,Alolan Form,Alolan Marowak
-10217,11,アローラのすがた,
-10217,12,阿罗拉的样子,
-10218,5,,Amphinobi Synergie
-10218,6,Freundschaftsaktform,Battle Bond Quajutsu
-10218,9,,Battle Bond Greninja
-10219,1,サトシゲッコウガ,
-10219,3,지우개굴닌자,
-10219,4,小智版甲賀忍蛙,
-10219,5,Forme Sacha,Amphinobi Forme Sacha
-10219,6,Ash-Form,Ash Quajutsu
-10219,7,Forma Ash,
-10219,8,Forma Ash,
-10219,9,Ash-Greninja,Ash's Greninja
-10219,11,サトシゲッコウガ,
-10219,12,小智版甲贺忍蛙,
-10220,1,１０％フォルム,
-10220,3,10%폼,
-10220,4,１０％形態,
-10220,5,Forme 10 %,Zygarde Forme 10 %
-10220,6,10%-Form,Zygarde (10%)
-10220,7,Forma 10%,
-10220,8,Forma 10%,
-10220,9,10% Forme,10% Zygarde
-10220,11,１０％フォルム,
-10220,12,１０％形态,
-10221,1,５０％フォルム,
-10221,3,50%폼,
-10221,4,５０％形態,
-10221,5,Forme 50 %,Zygarde Forme 50 %
-10221,6,50%-Form,Zygarde (50%)
-10221,7,Forma 50%,
-10221,8,Forma 50%,
-10221,9,50% Forme,50% Zygarde
-10221,11,５０％フォルム,
-10221,12,５０％形态,
-10222,1,パーフェクトフォルム,
-10222,3,퍼펙트폼,
-10222,4,完全體形態,
-10222,5,Forme Parfaite,Zygarde Forme Parfaite
-10222,6,Optimumform,Zygarde (Optimum)
-10222,7,Forma Completa,
-10222,8,Forma Perfetta,
-10222,9,Complete Forme,Complete Zygarde
-10222,11,パーフェクトフォルム,
-10222,12,完全体形态,
-10223,5,,Argouste Dominant
-10223,6,Totemform,Totem Manguspektor
-10223,9,,Totem Gumshoos
-10224,5,,Lucanon Dominant
-10224,6,Totemform,Totem Donarion
-10224,9,,Totem Vikavolt
-10225,1,ぱちぱちスタイル,
-10225,3,파칙파칙스타일,
-10225,4,啪滋啪滋風格,
-10225,5,Style Pom-Pom,Plumeline Style Pom-Pom
-10225,6,Cheerleading-Stil,Choreogel (Cheerleading)
-10225,7,Estilo Animado,
-10225,8,Stile Cheerdance,
-10225,9,Pom-Pom Style,Pom-pom Oricorio
-10225,11,ぱちぱちスタイル,
-10225,12,啪滋啪滋风格,
-10226,1,ふらふらスタイル,
-10226,3,훌라훌라스타일,
-10226,4,呼拉呼拉風格,
-10226,5,Style Hula,Plumeline Style Hula
-10226,6,Hula-Stil,Choreogel (Hula)
-10226,7,Estilo Plácido,
-10226,8,Stile Hula,
-10226,9,Pa’u Style,Pa’u Oricorio
-10226,11,ふらふらスタイル,
-10226,12,呼拉呼拉风格,
-10227,1,まいまいスタイル,
-10227,3,하늘하늘스타일,
-10227,4,輕盈輕盈風格,
-10227,5,Style Buyō,Plumeline Style Buyō
-10227,6,Buyo-Stil,Choreogel (Buyo)
-10227,7,Estilo Refinado,
-10227,8,Stile Buyō,
-10227,9,Sensu Style,Sensu Oricorio
-10227,11,まいまいスタイル,
-10227,12,轻盈轻盈风格,
-10228,1,まよなかのすがた,
-10228,3,한밤중의 모습,
-10228,4,黑夜的樣子,
-10228,5,Forme Nocturne,Lougaroc Forme Nocturne
-10228,6,Nachtform,Wolwerock (Nacht)
-10228,7,Forma Nocturna,
-10228,8,Forma Notte,
-10228,9,Midnight Form,Midnight Lycanroc
-10228,11,まよなかのすがた,
-10228,12,黑夜的样子,
-10229,1,むれたすがた,
-10229,3,군집의 모습,
-10229,4,魚群的樣子,
-10229,5,Forme Banc,Froussardine Forme Banc
-10229,6,Schwarmform,Lusardin (Schwarm)
-10229,7,Forma Banco,
-10229,8,Forma Banco,
-10229,9,School Form,School Wishiwashi
-10229,11,むれたすがた,
-10229,12,鱼群的样子,
-10230,5,,Floramantis Dominant
-10230,6,Totemform,Totem Mantidea
-10230,9,,Totem Lurantis
-10231,5,,Malamandre Dominant
-10231,6,Totemform,Totem Amfira
-10231,9,,Totem Salazzle
-10232,1,タイプ：ファイト,
-10232,3,타입:파이팅,
-10232,4,屬性：戰鬥,
-10232,5,Type : Combat,
-10232,6,Typ:Kampf,Amigento (Kampf)
-10232,7,Tipo: Lucha,
-10232,8,Tipo Lotta,
-10232,9,Type: Fighting,
-10232,11,タイプ：ファイト,
-10232,12,属性：战斗,
-10233,1,タイプ：フライング,
-10233,3,타입:플라잉,
-10233,4,屬性：飛翔,
-10233,5,Type : Vol,
-10233,6,Typ:Flug,Amigento (Flug)
-10233,7,Tipo: Volador,
-10233,8,Tipo Volante,
-10233,9,Type: Flying,
-10233,11,タイプ：フライング,
-10233,12,属性：飞翔,
-10234,1,タイプ：ポイズン,
-10234,3,타입:포이즌,
-10234,4,屬性：毒,
-10234,5,Type : Poison,
-10234,6,Typ:Gift,Amigento (Gift)
-10234,7,Tipo: Veneno,
-10234,8,Tipo Veleno,
-10234,9,Type: Poison,
-10234,11,タイプ：ポイズン,
-10234,12,属性：毒,
-10235,1,タイプ：グラウンド,
-10235,3,타입:그라운드,
-10235,4,屬性：大地,
-10235,5,Type : Sol,
-10235,6,Typ:Boden,Amigento (Boden)
-10235,7,Tipo: Tierra,
-10235,8,Tipo Terra,
-10235,9,Type: Ground,
-10235,11,タイプ：グラウンド,
-10235,12,属性：大地,
-10236,1,タイプ：ロック,
-10236,3,타입:락,
-10236,4,屬性：岩石,
-10236,5,Type : Roche,
-10236,6,Typ:Gestein,Amigento (Gestein)
-10236,7,Tipo: Roca,
-10236,8,Tipo Roccia,
-10236,9,Type: Rock,
-10236,11,タイプ：ロック,
-10236,12,属性：岩石,
-10237,1,タイプ：バグ,
-10237,3,타입:버그,
-10237,4,屬性：蟲子,
-10237,5,Type : Insecte,
-10237,6,Typ:Käfer,Amigento (Käfer)
-10237,7,Tipo: Bicho,
-10237,8,Tipo Coleottero,
-10237,9,Type: Bug,
-10237,11,タイプ：バグ,
-10237,12,属性：虫子,
-10238,1,タイプ：ゴースト,
-10238,3,타입:고스트,
-10238,4,屬性：幽靈,
-10238,5,Type : Spectre,
-10238,6,Typ:Geist,Amigento (Geist)
-10238,7,Tipo: Fantasma,
-10238,8,Tipo Spettro,
-10238,9,Type: Ghost,
-10238,11,タイプ：ゴースト,
-10238,12,属性：幽灵,
-10239,1,タイプ：スチール,
-10239,3,타입:스틸,
-10239,4,屬性：鋼鐵,
-10239,5,Type : Acier,
-10239,6,Typ:Stahl,Amigento (Stahl)
-10239,7,Tipo: Acero,
-10239,8,Tipo Acciaio,
-10239,9,Type: Steel,
-10239,11,タイプ：スチール,
-10239,12,属性：钢铁,
-10240,1,タイプ：ファイヤー,
-10240,3,타입:파이어,
-10240,4,屬性：火焰,
-10240,5,Type : Feu,
-10240,6,Typ:Feuer,Amigento (Feuer)
-10240,7,Tipo: Fuego,
-10240,8,Tipo Fuoco,
-10240,9,Type: Fire,
-10240,11,タイプ：ファイヤー,
-10240,12,属性：火焰,
-10241,1,タイプ：ウオーター,
-10241,3,타입:워터,
-10241,4,屬性：清水,
-10241,5,Type : Eau,
-10241,6,Typ:Wasser,Amigento (Wasser)
-10241,7,Tipo: Agua,
-10241,8,Tipo Acqua,
-10241,9,Type: Water,
-10241,11,タイプ：ウオーター,
-10241,12,属性：清水,
-10242,1,タイプ：グラス,
-10242,3,타입:그래스,
-10242,4,屬性：青草,
-10242,5,Type : Plante,
-10242,6,Typ:Pflanze,Amigento (Pflanze)
-10242,7,Tipo: Planta,
-10242,8,Tipo Erba,
-10242,9,Type: Grass,
-10242,11,タイプ：グラス,
-10242,12,属性：青草,
-10243,1,タイプ：エレクトロ,
-10243,3,타입:일렉트릭,
-10243,4,屬性：電子,
-10243,5,Type : Électrik,
-10243,6,Typ:Elektro,Amigento (Elektro)
-10243,7,Tipo: Eléctrico,
-10243,8,Tipo Elettro,
-10243,9,Type: Electric,
-10243,11,タイプ：エレクトロ,
-10243,12,属性：电子,
-10244,1,タイプ：サイキック,
-10244,3,타입:사이킥,
-10244,4,屬性：精神,
-10244,5,Type : Psy,
-10244,6,Typ:Psycho,Amigento (Psycho)
-10244,7,Tipo: Psíquico,
-10244,8,Tipo Psico,
-10244,9,Type: Psychic,
-10244,11,タイプ：サイキック,
-10244,12,属性：精神,
-10245,1,タイプ：アイス,
-10245,3,타입:아이스,
-10245,4,屬性：冰雪,
-10245,5,Type : Glace,
-10245,6,Typ:Eis,Amigento (Eis)
-10245,7,Tipo: Hielo,
-10245,8,Tipo Ghiaccio,
-10245,9,Type: Ice,
-10245,11,タイプ：アイス,
-10245,12,属性：冰雪,
-10246,1,タイプ：ドラゴン,
-10246,3,타입:드래곤,
-10246,4,屬性：龍,
-10246,5,Type : Dragon,
-10246,6,Typ:Drache,Amigento (Drache)
-10246,7,Tipo: Dragón,
-10246,8,Tipo Drago,
-10246,9,Type: Dragon,
-10246,11,タイプ：ドラゴン,
-10246,12,属性：龙,
-10247,1,タイプ：ダーク,
-10247,3,타입:다크,
-10247,4,屬性：黑暗,
-10247,5,Type : Ténèbres,
-10247,6,Typ:Unlicht,Amigento (Unlicht)
-10247,7,Tipo: Siniestro,
-10247,8,Tipo Buio,
-10247,9,Type: Dark,
-10247,11,タイプ：ダーク,
-10247,12,属性：黑暗,
-10248,1,タイプ：フェアリー,
-10248,3,타입:페어리,
-10248,4,屬性：妖精,
-10248,5,Type : Fée,
-10248,6,Typ:Fee,Amigento (Fee)
-10248,7,Tipo: Hada,
-10248,8,Tipo Folletto,
-10248,9,Type: Fairy,
-10248,11,タイプ：フェアリー,
-10248,12,属性：妖精,
-10249,1,りゅうせいのすがた,
-10249,3,유성의 모습,
-10249,4,流星的樣子,
-10249,5,Forme Météore,Météno Forme Météore Noyeau Orange
-10249,6,Meteorform,Meteno (Meteor Orange)
-10249,7,Forma Meteorito,
-10249,8,Forma Meteora,
-10249,9,Meteor Form,Orange Meteor Minior
-10249,11,りゅうせいのすがた,
-10249,12,流星的样子,
-10250,1,りゅうせいのすがた,
-10250,3,유성의 모습,
-10250,4,流星的樣子,
-10250,5,Forme Météore,Météno Forme Météore Noyeau Jaune
-10250,6,Meteorform,Meteno (Meteor Gelb)
-10250,7,Forma Meteorito,
-10250,8,Forma Meteora,
-10250,9,Meteor Form,Yellow Meteor Minior
-10250,11,りゅうせいのすがた,
-10250,12,流星的样子,
-10251,1,りゅうせいのすがた,
-10251,3,유성의 모습,
-10251,4,流星的樣子,
-10251,5,Forme Météore,Météno Forme Météore Noyeau Vert
-10251,6,Meteorform,Meteno (Meteor Grün)
-10251,7,Forma Meteorito,
-10251,8,Forma Meteora,
-10251,9,Meteor Form,Green Meteor Minior
-10251,11,りゅうせいのすがた,
-10251,12,流星的样子,
-10252,1,りゅうせいのすがた,
-10252,3,유성의 모습,
-10252,4,流星的樣子,
-10252,5,Forme Météore,Météno Forme Météore Noyeau Bleu
-10252,6,Meteorform,Meteno (Meteor Hellblau)
-10252,7,Forma Meteorito,
-10252,8,Forma Meteora,
-10252,9,Meteor Form,Blue Meteor Minior
-10252,11,りゅうせいのすがた,
-10252,12,流星的样子,
-10253,1,りゅうせいのすがた,
-10253,3,유성의 모습,
-10253,4,流星的樣子,
-10253,5,Forme Météore,Météno Forme Météore Noyeau Indigo
-10253,6,Meteorform,Meteno (Meteor Blau)
-10253,7,Forma Meteorito,
-10253,8,Forma Meteora,
-10253,9,Meteor Form,Indigo Meteor Minior
-10253,11,りゅうせいのすがた,
-10253,12,流星的样子,
-10254,1,りゅうせいのすがた,
-10254,3,유성의 모습,
-10254,4,流星的樣子,
-10254,5,Forme Météore,Météno NoyeaForme Météore u Violet
-10254,6,Meteorform,Meteno (Meteor Violet)
-10254,7,Forma Meteorito,
-10254,8,Forma Meteora,
-10254,9,Meteor Form,Violet Meteor Minior
-10254,11,りゅうせいのすがた,
-10254,12,流星的样子,
-10255,1,あかいろのコア,
-10255,3,빨간색 코어,
-10255,4,紅色核心,
-10255,5,Noyau Rouge,Météno Noyeau Rouge
-10255,6,Roter Kern,Meteno (Rot)
-10255,7,Núcleo Rojo,
-10255,8,Nucleo Rosso,
-10255,9,Red Core,Red Core Minior
-10255,11,あかいろのコア,
-10255,12,红色核心,
-10256,1,だいだいいろのコア,
-10256,3,주황색 코어,
-10256,4,橙色核心,
-10256,5,Noyau Orange,Météno Noyeau Orange
-10256,6,Oranger Kern,Meteno (Orange)
-10256,7,Núcleo Naranja,
-10256,8,Nucleo Arancione,
-10256,9,Orange Core,Orange Core Minior
-10256,11,だいだいいろのコア,
-10256,12,橙色核心,
-10257,1,きいろのコア,
-10257,3,노란색 코어,
-10257,4,黃色核心,
-10257,5,Noyau Jaune,Météno Noyeau Jaune
-10257,6,Gelber Kern,Meteno (Gelb)
-10257,7,Núcleo Amarillo,
-10257,8,Nucleo Giallo,
-10257,9,Yellow Core,Yellow Core Minior
-10257,11,きいろのコア,
-10257,12,黄色核心,
-10258,1,みどりいろのコア,
-10258,3,초록색 코어,
-10258,4,綠色核心,
-10258,5,Noyau Vert,Météno Noyeau Vert
-10258,6,Grüner Kern,Meteno (Grün)
-10258,7,Núcleo Verde,
-10258,8,Nucleo Verde,
-10258,9,Green Core,Green Core Minior
-10258,11,みどりいろのコア,
-10258,12,绿色核心,
-10259,1,みずいろのコア,
-10259,3,옥색 코어,
-10259,4,淺藍色核心,
-10259,5,Noyau Bleu,Météno Noyeau Bleu
-10259,6,Hellblauer Kern,Meteno (Hellblau)
-10259,7,Núcleo Azul,
-10259,8,Nucleo Azzurro,
-10259,9,Blue Core,Blue Core Minior
-10259,11,みずいろのコア,
-10259,12,浅蓝色核心,
-10260,1,あおいろのコア,
-10260,3,파란색 코어,
-10260,4,藍色核心,
-10260,5,Noyau Indigo,Météno Noyeau Indigo
-10260,6,Blauer Kern,Meteno (Blau)
-10260,7,Núcleo Añil,
-10260,8,Nucleo Indaco,
-10260,9,Indigo Core,Indigo Core Minior
-10260,11,あおいろのコア,
-10260,12,蓝色核心,
-10261,1,むらさきいろのコア,
-10261,3,보라색 코어,
-10261,4,紫色核心,
-10261,5,Noyau Violet,Météno Noyeau Violet
-10261,6,Violetter Kern,Meteno (Violett)
-10261,7,Núcleo Violeta,
-10261,8,Nucleo Violetto,
-10261,9,Violet Core,Violet Core Minior
-10261,11,むらさきいろのコア,
-10261,12,紫色核心,
-10262,1,ばれたすがた,
-10262,3,들킨 모습,
-10262,4,現形的樣子,
-10262,5,Forme Démasquée,Mimiqui Forme Démasquée
-10262,6,Entlarvte Form,Mimigma (Entlarvt)
-10262,7,Forma Descubierta,
-10262,8,Forma Smascherata,
-10262,9,Busted Form,Busted Mimikyu
-10262,11,ばれたすがた,
-10262,12,现形的样子,
-10263,5,,Mimiqui Dominant
-10263,6,Totemform,Totem Mimigma (Getarnt)
-10263,9,,Totem Disguised Mimikyu
-10264,5,,Mimiqui Dominant Forme Démasquée
-10264,6,Totemform,Totem Mimigma (Entlarvt)
-10264,9,,Totem Busted Mimikyu
-10265,5,,Ékaïser Dominant
-10265,6,Totemform,Totem Grandiras
-10265,9,,Totem Kommo-o
-10266,1,５００ねんまえのいろ,
-10266,3,500년 전의 색,
-10266,4,５００年前的顏色,
-10266,5,Couleur du Passé,Magearna Couleur du Passé
-10266,6,Originalfarbe,Magearna
-10266,7,Color Vetusto,
-10266,8,Colore Antico,
-10266,9,Original Color,Original Magearna
-10266,11,５００ねんまえのいろ,
-10266,12,５００年前的颜色,
-10267,1,キミにきめたキャップ,
-10267,3,너로정했다캡,
-10267,4,就決定是你了之帽子,
-10267,5,Casquette Partenaire,Pikachu Casquette Partenaire
-10267,6,Partner-Kappe,Pikachu (Partner-Kappe)
-10267,7,Gorra Compañero,
-10267,8,Berretto Compagni,
-10267,9,Partner Cap,Partner Cap Pikachu
-10267,11,キミにきめたキャップ,
-10267,12,就决定是你了之帽子,
-10268,3,알로라의 모습,
-10268,5,,Ossatueur d'Alola Dominant
-10268,6,Totemform,Totem Alola Knogga
-10268,9,,Totem Alolan Marowak
-10309,5,,Rubombelle Dominant
-10309,6,Totemform,Totem Bandelby
-10309,9,,Totem Ribombee
-10310,1,,イワンコ（マイペース）
-10310,5,,Rocabot Tempo Perso
-10310,6,Tempomacherform,Wuffels (Tempomacher)
-10310,9,,Own Tempo Rockruff
-10310,11,,イワンコ（マイペース）
-10311,1,たそがれのすがた,
-10311,3,황혼의 모습,
-10311,4,黃昏的樣子,
-10311,5,Forme Crépusculaire,Lougaroc Forme Crépusculaire
-10311,6,Zwielichtform,Wolwerock (Zwielicht)
-10311,7,Forma Crepuscular,
-10311,8,Forma Crepuscolo,
-10311,9,Dusk Form,Dusk Lycanroc
-10311,11,たそがれのすがた,
-10311,12,黄昏的样子,
-10312,5,,Tarenbulle Dominant
-10312,6,Totemform,Totem Aranestro
-10312,9,,Totem Araquanid
-10313,5,,Togedemaru Dominant
-10313,6,Totemform,Totem Togedemaru
-10313,9,,Totem Togedemaru
-10314,1,たそがれのたてがみ,
-10314,3,황혼의 갈기,
-10314,4,黃昏之鬃,
-10314,5,Crinière du Couchant,Necrozma Crinière du Couchant
-10314,6,Abendmähne,Necrozma (Abendmähne)
-10314,7,Melena Crepuscular,
-10314,8,Criniera del Vespro,
-10314,9,Dusk Mane,Dusk Necrozma
-10314,11,たそがれのたてがみ,
-10314,12,黄昏之鬃,
-10315,1,あかつきのつばさ,
-10315,3,새벽의 날개,
-10315,4,拂曉之翼,
-10315,5,Ailes de l’Aurore,Necrozma Ailes de l’Aurore
-10315,6,Morgenschwingen,Necrozma (Morgenschwingen)
-10315,7,Alas del Alba,
-10315,8,Ali dell’Aurora,
-10315,9,Dawn Wings,Dawn Necrozma
-10315,11,あかつきのつばさ,
-10315,12,拂晓之翼,
-10316,1,ウルトラネクロズマ,
-10316,3,울트라네크로즈마,
-10316,4,究極奈克洛茲瑪,
-10316,5,Ultra-Necrozma,Ultra-Necrozma
-10316,6,Ultra,Ultra-Necrozma
-10316,7,Ultra-Necrozma,
-10316,8,UltraNecrozma,
-10316,9,Ultra Necrozma,Ultra Necrozma
-10316,11,ウルトラネクロズマ,
-10316,12,究极奈克洛兹玛,
-10317,5,,Pikachu Partenaire
-10317,6,Partnerform,Partner Pikachu
-10317,9,,Partner Pikachu
-10318,5,,Évoli Partenaire
-10318,6,Partnerform,Partner Evoli
-10318,9,,Partner Eevee
-10319,1,ワールドキャップ,
-10319,3,월드캡,
-10319,4,世界帽子,
-10319,5,Casquette Monde,Pikachu Casquette Monde
-10319,6,Weltreise-Kappe,Pikachu (Weltreise-Kappe)
-10319,7,Gorra Trotamundos,
-10319,8,Berretto Giramondo,
-10319,9,World Cap,World Cap Pikachu
-10319,11,ワールドキャップ,
-10319,12,世界帽子,
-10320,1,ガラルのすがた,
-10320,3,가라르의 모습,
-10320,4,伽勒爾的樣子,
-10320,5,Forme de Galar,Miaouss de Galar
-10320,6,Galar-Form,Galar Mauzi
-10320,7,Forma de Galar,
-10320,8,Forma di Galar,
-10320,9,Galarian Form,Galarian Meowth
-10320,11,ガラルのすがた,
-10320,12,伽勒尔的样子,
-10321,1,ガラルのすがた,
-10321,3,가라르의 모습,
-10321,4,伽勒爾的樣子,
-10321,5,Forme de Galar,Ponyta de Galar
-10321,6,Galar-Form,Galar Ponita
-10321,7,Forma de Galar,
-10321,8,Forma di Galar,
-10321,9,Galarian Form,Galarian Ponyta
-10321,11,ガラルのすがた,
-10321,12,伽勒尔的样子,
-10322,1,ガラルのすがた,
-10322,3,가라르의 모습,
-10322,4,伽勒爾的樣子,
-10322,5,Forme de Galar,Galopa de Galar
-10322,6,Galar-Form,Galar Gallopa
-10322,7,Forma de Galar,
-10322,8,Forma di Galar,
-10322,9,Galarian Form,Galarian Rapidash
-10322,11,ガラルのすがた,
-10322,12,伽勒尔的样子,
-10323,1,ガラルのすがた,
-10323,3,가라르의 모습,
-10323,4,伽勒爾的樣子,
-10323,5,Forme de Galar,Ramoloss de Galar
-10323,6,Galar-Form,Galar Flegmon
-10323,7,Forma de Galar,
-10323,8,Forma di Galar,
-10323,9,Galarian Form,Galarian Slowpoke
-10323,11,ガラルのすがた,
-10323,12,伽勒尔的样子,
-10324,1,ガラルのすがた,
-10324,3,가라르의 모습,
-10324,4,伽勒爾的樣子,
-10324,5,Forme de Galar,Flagadoss de Galar
-10324,6,Galar-Form,Galar Lahmus
-10324,7,Forma de Galar,
-10324,8,Forma di Galar,
-10324,9,Galarian Form,Galarian Slowbro
-10324,11,ガラルのすがた,
-10324,12,伽勒尔的样子,
-10325,1,ガラルのすがた,
-10325,3,가라르의 모습,
-10325,4,伽勒爾的樣子,
-10325,5,Forme de Galar,Canarticho de Galar
-10325,6,Galar-Form,Galar Porenta
-10325,7,Forma de Galar,
-10325,8,Forma di Galar,
-10325,9,Galarian Form,Galarian Farfetch’d
-10325,11,ガラルのすがた,
-10325,12,伽勒尔的样子,
-10326,1,ガラルのすがた,
-10326,3,가라르의 모습,
-10326,4,伽勒爾的樣子,
-10326,5,Forme de Galar,Smogogo de Galar
-10326,6,Galar-Form,Galar Smogmog
-10326,7,Forma de Galar,
-10326,8,Forma di Galar,
-10326,9,Galarian Form,Galarian Weezing
-10326,11,ガラルのすがた,
-10326,12,伽勒尔的样子,
-10327,1,ガラルのすがた,
-10327,3,가라르의 모습,
-10327,4,伽勒爾的樣子,
-10327,5,Forme de Galar,M. Mime de Galar
-10327,6,Galar-Form,Galar Pantimos
-10327,7,Forma de Galar,
-10327,8,Forma di Galar,
-10327,9,Galarian Form,Galarian Mr. Mime
-10327,11,ガラルのすがた,
-10327,12,伽勒尔的样子,
-10328,1,ガラルのすがた,
-10328,3,가라르의 모습,
-10328,4,伽勒爾的樣子,
-10328,5,Forme de Galar,Artikodin de Galar
-10328,6,Galar-Form,Galar Arktos
-10328,7,Forma de Galar,
-10328,8,Forma di Galar,
-10328,9,Galarian Form,Galarian Articuno
-10328,11,ガラルのすがた,
-10328,12,伽勒尔的样子,
-10329,1,ガラルのすがた,
-10329,3,가라르의 모습,
-10329,4,伽勒爾的樣子,
-10329,5,Forme de Galar,Électhor de Galar
-10329,6,Galar-Form,Galar Zapdos
-10329,7,Forma de Galar,
-10329,8,Forma di Galar,
-10329,9,Galarian Form,Galarian Zapdos
-10329,11,ガラルのすがた,
-10329,12,伽勒尔的样子,
-10330,1,ガラルのすがた,
-10330,3,가라르의 모습,
-10330,4,伽勒爾的樣子,
-10330,5,Forme de Galar,Sulfura de Galar
-10330,6,Galar-Form,Galar Lavados
-10330,7,Forma de Galar,
-10330,8,Forma di Galar,
-10330,9,Galarian Form,Galarian Moltres
-10330,11,ガラルのすがた,
-10330,12,伽勒尔的样子,
-10331,1,ガラルのすがた,
-10331,3,가라르의 모습,
-10331,4,伽勒爾的樣子,
-10331,5,Forme de Galar,Roigada de Galar
-10331,6,Galar-Form,Galar Laschoking
-10331,7,Forma de Galar,
-10331,8,Forma di Galar,
-10331,9,Galarian Form,Galarian Slowking
-10331,11,ガラルのすがた,
-10331,12,伽勒尔的样子,
-10332,1,ガラルのすがた,
-10332,3,가라르의 모습,
-10332,4,伽勒爾的樣子,
-10332,5,Forme de Galar,Corayon de Galar
-10332,6,Galar-Form,Galar Corasonn
-10332,7,Forma de Galar,
-10332,8,Forma di Galar,
-10332,9,Galarian Form,Galarian Corsola
-10332,11,ガラルのすがた,
-10332,12,伽勒尔的样子,
-10333,1,ガラルのすがた,
-10333,3,가라르의 모습,
-10333,4,伽勒爾的樣子,
-10333,5,Forme de Galar,Zigzaton de Galar
-10333,6,Galar-Form,Galar Zigzachs
-10333,7,Forma de Galar,
-10333,8,Forma di Galar,
-10333,9,Galarian Form,Galarian Zigzagoon
-10333,11,ガラルのすがた,
-10333,12,伽勒尔的样子,
-10334,1,ガラルのすがた,
-10334,3,가라르의 모습,
-10334,4,伽勒爾的樣子,
-10334,5,Forme de Galar,Linéon de Galar
-10334,6,Galar-Form,Galar Geradaks
-10334,7,Forma de Galar,
-10334,8,Forma di Galar,
-10334,9,Galarian Form,Galarian Linoone
-10334,11,ガラルのすがた,
-10334,12,伽勒尔的样子,
-10335,1,ガラルのすがた,
-10335,3,가라르의 모습,
-10335,4,伽勒爾的樣子,
-10335,5,Forme de Galar,Darumarond de Galar
-10335,6,Galar-Form,Galar Flampion
-10335,7,Forma de Galar,
-10335,8,Forma di Galar,
-10335,9,Galarian Form,Galarian Darumaka
-10335,11,ガラルのすがた,
-10335,12,伽勒尔的样子,
-10336,1,ガラルのすがた,
-10336,3,가라르의 모습,
-10336,4,伽勒爾的樣子,
-10336,5,Forme de Galar,Darumacho de Galar Normal
-10336,6,Galar-Form,Galar Flampivian
-10336,7,Forma de Galar,
-10336,8,Forma di Galar,
-10336,9,Galarian Form,Standard Galarian Darmanitan
-10336,11,ガラルのすがた,
-10336,12,伽勒尔的样子,
-10337,1,ダルマモード,
-10337,3,달마모드,
-10337,4,達摩模式,
-10337,5,Mode Transe,Darumacho de Galar Transe
-10337,6,Trance-Modus,Galar Flampivian (Trance)
-10337,7,Modo Daruma,
-10337,8,Stato Zen,
-10337,9,Zen Mode,Zen Galarian Darmanitan
-10337,11,ダルマモード,
-10337,12,达摩模式,
-10338,1,ガラルのすがた,
-10338,3,가라르의 모습,
-10338,4,伽勒爾的樣子,
-10338,5,Forme de Galar,Tutafeh de Galar
-10338,6,Galar-Form,Galar Makabaja
-10338,7,Forma de Galar,
-10338,8,Forma di Galar,
-10338,9,Galarian Form,Galarian Yamask
-10338,11,ガラルのすがた,
-10338,12,伽勒尔的样子,
-10339,1,ガラルのすがた,
-10339,3,가라르의 모습,
-10339,4,伽勒爾的樣子,
-10339,5,Forme de Galar,Limonde de Galar
-10339,6,Galar-Form,Galar Flunschlik
-10339,7,Forma de Galar,
-10339,8,Forma di Galar,
-10339,9,Galarian Form,Galarian Stunfisk
-10339,11,ガラルのすがた,
-10339,12,伽勒尔的样子,
-10340,1,１０％フォルム,
-10340,3,10%폼,
-10340,4,１０％形態,
-10340,5,Forme 10 %,Zygarde Forme 10 %
-10340,6,10%-Form,Zygarde (10%)
-10340,7,Forma 10%,
-10340,8,Forma 10%,
-10340,9,10% Forme,10% Zygarde
-10340,11,１０％フォルム,
-10340,12,１０％形态,
-10341,1,うのみのすがた,
-10341,3,그대로 삼킨 모습,
-10341,4,一口吞的樣子,
-10341,5,Forme Gobe-Tout,Nigosier Forme Gobe-Tout
-10341,6,Schlingform,Urgl (Schlingend)
-10341,7,Forma Tragatodo,
-10341,8,Forma Inghiottitutto,
-10341,9,Gulping Form,Gulping Cramorant
-10341,11,うのみのすがた,
-10341,12,一口吞的样子,
-10342,1,まるのみのすがた,
-10342,3,통째로 삼킨 모습,
-10342,4,大口吞的樣子,
-10342,5,Forme Gobe-Chu,Nigosier Forme Gobe-Chu
-10342,6,Stopfform,Urgl (Stopfend)
-10342,7,Forma Engulletodo,
-10342,8,Forma Inghiottintero,
-10342,9,Gorging Form,Gorging Cramorant
-10342,11,まるのみのすがた,
-10342,12,大口吞的样子,
-10343,1,ローなすがた,
-10343,3,로우한 모습,
-10343,4,低調的樣子,
-10343,5,Forme Grave,Salarsen Forme Grave
-10343,6,Tief-Form,Riffex (Tiefform)
-10343,7,Forma Grave,
-10343,8,Forma Basso,
-10343,9,Low Key Form,Low Key Toxtricity
-10343,11,ローなすがた,
-10343,12,低调的样子,
-10344,1,しんさくフォルム,
-10344,6,Originalform,Fatalitee (Original)
-10344,9,Antique Form,Antique Sinistea
-10344,11,しんさくフォルム,
-10345,1,しんさくフォルム,
-10345,6,Originalform,Mortipot (Original)
-10345,9,Antique Form,Antique Polteageist
-10345,11,しんさくフォルム,
-10346,1,ミルキィルビー,
-10346,3,밀키루비,
-10346,4,奶香紅鑽,
-10346,5,Lait Ruby,
-10346,6,Ruby-Creme,Pokusan (Ruby-Creme)
-10346,7,Crema Rosa,
-10346,8,Latterosa,
-10346,9,Ruby Cream,Ruby Cream Alcremie
-10346,11,ミルキィルビー,
-10346,12,奶香红钻,
-10347,1,ミルキィまっちゃ,
-10347,3,밀키말차,
-10347,4,奶香抹茶,
-10347,5,Lait Matcha,
-10347,6,Matcha-Creme,Pokusan (Matcha-Creme)
-10347,7,Crema de Té,
-10347,8,Lattematcha,
-10347,9,Matcha Cream,Matcha Cream Alcremie
-10347,11,ミルキィまっちゃ,
-10347,12,奶香抹茶,
-10348,1,ミルキィミント,
-10348,3,밀키민트,
-10348,4,奶香薄荷,
-10348,5,Lait Menthe,
-10348,6,Minz-Creme,Pokusan (Minz-Creme)
-10348,7,Crema de Menta,
-10348,8,Lattementa,
-10348,9,Mint Cream,Mint Cream Alcremie
-10348,11,ミルキィミント,
-10348,12,奶香薄荷,
-10349,1,ミルキィレモン,
-10349,3,밀키레몬,
-10349,4,奶香檸檬,
-10349,5,Lait Citron,
-10349,6,Zitronen-Creme,Pokusan (Zitronen-Creme)
-10349,7,Crema de Limón,
-10349,8,Lattelimone,
-10349,9,Lemon Cream,Lemon Cream Alcremie
-10349,11,ミルキィレモン,
-10349,12,奶香柠檬,
-10350,1,ミルキィソルト,
-10350,3,밀키솔트,
-10350,4,奶香雪鹽,
-10350,5,Lait Salé,
-10350,6,Salz-Creme,Pokusan (Salz-Creme)
-10350,7,Crema Salada,
-10350,8,Lattesale,
-10350,9,Salted Cream,Salted Cream Alcremie
-10350,11,ミルキィソルト,
-10350,12,奶香雪盐,
-10351,1,ルビーミックス,
-10351,3,루비믹스,
-10351,4,紅鑽綜合,
-10351,5,Mélange Ruby,
-10351,6,Ruby-Mix,Pokusan (Ruby-Mix)
-10351,7,Mezcla Rosa,
-10351,8,Rosamix,
-10351,9,Ruby Swirl,Ruby Swirl Alcremie
-10351,11,ルビーミックス,
-10351,12,红钻综合,
-10352,1,キャラメルミックス,
-10352,3,캐러멜믹스,
-10352,4,焦糖綜合,
-10352,5,Mélange Caramel,
-10352,6,Karamell-Mix,Pokusan (Karamell-Mix)
-10352,7,Mezcla Caramelo,
-10352,8,Caramelmix,
-10352,9,Caramel Swirl,Caramel Swirl Alcremie
-10352,11,キャラメルミックス,
-10352,12,焦糖综合,
-10353,1,トリプルミックス,
-10353,3,트리플믹스,
-10353,4,三色綜合,
-10353,5,Mélange Tricolore,
-10353,6,Trio-Mix,Pokusan (Trio-Mix)
-10353,7,Tres Sabores,
-10353,8,Triplomix,
-10353,9,Rainbow Swirl,Rainbow Swirl Alcremie
-10353,11,トリプルミックス,
-10353,12,三色综合,
-10354,1,ナイスフェイス,
-10354,3,나이스페이스,
-10354,4,解凍頭,
-10354,5,Tête Dégel,Bekaglaçon Tête Dégel
-10354,6,Wohlfühlkopf,Kubuin (Wohlfühlkopf)
-10354,7,Cara Deshielo,
-10354,8,Liquefaccia,
-10354,9,Noice Face,Noice Eiscue
-10354,11,ナイスフェイス,
-10354,12,解冻头,
-10355,1,メスのすがた,
-10355,3,암컷의 모습,
-10355,4,雌性的樣子,
-10355,5,Femelle,Wimessir Femelle
-10355,6,Weiblich,Servol ♀
-10355,7,Hembra,
-10355,8,Femmina,
-10355,9,Female,Female Indeedee
-10355,11,メスのすがた,
-10355,12,雌性的样子,
-10356,1,はらぺこもよう,
-10356,3,배고픈 모양,
-10356,4,空腹花紋,
-10356,5,Mode Affamé,Morpeko Mode Affamé
-10356,6,Kohldampfmuster,Morpeko (Kohldampf)
-10356,7,Forma Voraz,
-10356,8,Motivo Panciavuota,
-10356,9,Hangry Mode,Hangry Morpeko
-10356,11,はらぺこもよう,
-10356,12,空腹花纹,
-10357,1,けんのおう,
-10357,3,검왕,
-10357,4,劍之王,
-10357,5,Épée Suprême,Zacian Épée Suprême
-10357,6,König des Schwertes,König Zacian
-10357,7,Espada Suprema,
-10357,8,Re delle Spade,
-10357,9,Crowned Sword,Crowned Zacian
-10357,11,けんのおう,
-10357,12,剑之王,
-10358,1,たてのおう,
-10358,3,방패왕,
-10358,4,盾之王,
-10358,5,Bouclier Suprême,Zamazenta Bouclier Suprême
-10358,6,König des Schildes,König Zamazenta
-10358,7,Escudo Supremo,
-10358,8,Re degli Scudi,
-10358,9,Crowned Shield,Crowned Zamazenta
-10358,11,たてのおう,
-10358,12,盾之王,
-10359,1,ムゲンダイマックス,
-10359,3,무한다이맥스,
-10359,4,無極巨化,
-10359,5,Infinimax,Éthernatos Infinimax
-10359,6,Unendynamax,Unendynamax-Endynalos
-10359,7,Dinamax Infinito,
-10359,8,Dynamax Infinito,
-10359,9,Eternamax,Eternamax Eternatus
-10359,11,ムゲンダイマックス,
-10359,12,无极巨化,
-10360,1,れんげきのかた,
-10360,3,연격의 태세,
-10360,4,連擊流,
-10360,5,Style Mille Poings,Shifours Style Mille Poings
-10360,6,Fließender Stil,Wulaosu (Fließend)
-10360,7,Estilo Fluido,
-10360,8,Stile Pluricolpo,
-10360,9,Rapid Strike Style,Rapid Strike Urshifu
-10360,11,れんげきのかた,
-10360,12,连击流,
-10361,1,とうちゃん,
-10361,3,아빠,
-10361,4,阿爸,
-10361,5,Papa,Zarude Papa
-10361,6,Papa,Papa Zarude
-10361,7,Papá,
-10361,8,Papà,
-10361,9,Dada,Dada Zarude
-10361,11,とうちゃん,
-10361,12,阿爸,
-10362,1,はくばじょうのすがた,
-10362,3,백마 탄 모습,
-10362,4,騎白馬的樣子,
-10362,5,Cavalier du Froid,Calyrex Cavalier du Froid
-10362,6,Schimmelreiter,Coronospa (Schimmelreiter)
-10362,7,Jinete Glacial,
-10362,8,Cavaliere Glaciale,
-10362,9,Ice Rider,Ice Calyrex
-10362,11,はくばじょうのすがた,
-10362,12,骑白马的样子,
-10363,1,こくばじょうのすがた,
-10363,3,흑마 탄 모습,
-10363,4,騎黑馬的樣子,
-10363,5,Cavalier d’Effroi,Calyrex Cavalier d’Effroi
-10363,6,Rappenreiter,Coronospa (Rappenreiter)
-10363,7,Jinete Espectral,
-10363,8,Cavaliere Spettrale,
-10363,9,Shadow Rider,Shadow Calyrex
-10363,11,こくばじょうのすがた,
-10363,12,骑黑马的样子,
-10364,5,Forme Gigamax,Florizarre Gigamax
-10364,6,Gigadynamax-Form,Gigadynamax-Bisaflor
-10364,9,Gigantamax Form,Gigantamax Venusaur
-10365,5,Forme Gigamax,Dracaufeu Gigamax
-10365,6,Gigadynamax-Form,Gigadynamax-Glurak
-10365,9,Gigantamax Form,Gigantamax Charizard
-10366,5,Forme Gigamax,Tortank Gigamax
-10366,6,Gigadynamax-Form,Gigadynamax-Turtok
-10366,9,Gigantamax Form,Gigantamax Blastoise
-10367,5,Forme Gigamax,Papilusion Gigamax
-10367,6,Gigadynamax-Form,Gigadynamax-Smettbo
-10367,9,Gigantamax Form,Gigantamax Butterfree
-10368,5,Forme Gigamax,Pikachu Gigamax
-10368,6,Gigadynamax-Form,Gigadynamax-Pikachu
-10368,9,Gigantamax Form,Gigantamax Pikachu
-10369,5,Forme Gigamax,Miaouss Gigamax
-10369,6,Gigadynamax-Form,Gigadynamax-Mauzi
-10369,9,Gigantamax Form,Gigantamax Meowth
-10370,5,Forme Gigamax,Mackogneur Gigamax
-10370,6,Gigadynamax-Form,Gigadynamax-Machomei
-10370,9,Gigantamax Form,Gigantamax Machamp
-10371,5,Forme Gigamax,Ectoplasma Gigamax
-10371,6,Gigadynamax-Form,Gigadynamax-Gengar
-10371,9,Gigantamax Form,Gigantamax Gengar
-10372,5,Forme Gigamax,Leviator Gigamax
-10372,6,Gigadynamax-Form,Gigadynamax-Kingler
-10372,9,Gigantamax Form,Gigantamax Kingler
-10373,5,Forme Gigamax,Lokhlass Gigamax
-10373,6,Gigadynamax-Form,Gigadynamax-Lapras
-10373,9,Gigantamax Form,Gigantamax Lapras
-10374,5,Forme Gigamax,Évoli Gigamax
-10374,6,Gigadynamax-Form,Gigadynamax-Evoli
-10374,9,Gigantamax Form,Gigantamax Eevee
-10375,5,Forme Gigamax,Ronflex Gigamax
-10375,6,Gigadynamax-Form,Gigadynamax-Relaxo
-10375,9,Gigantamax Form,Gigantamax Snorlax
-10376,5,Forme Gigamax,Miasmax Gigamax
-10376,6,Gigadynamax-Form,Gigadynamax-Deponitox
-10376,9,Gigantamax Form,Gigantamax Garbodor
-10377,5,Forme Gigamax,Melmetal Gigamax
-10377,6,Gigadynamax-Form,Gigadynamax-Melmetal
-10377,9,Gigantamax Form,Gigantamax Melmetal
-10378,5,Forme Gigamax,Gorythmic Gigamax
-10378,6,Gigadynamax-Form,Gigadynamax-Gortrom
-10378,9,Gigantamax Form,Gigantamax Rillaboom
-10379,5,Forme Gigamax,Pyrobut Gigamax
-10379,6,Gigadynamax-Form,Gigadynamax-Liberlo
-10379,9,Gigantamax Form,Gigantamax Cinderace
-10380,5,Forme Gigamax,Lézargus Gigamax
-10380,6,Gigadynamax-Form,Gigadynamax-Intelleon
-10380,9,Gigantamax Form,Gigantamax Inteleon
-10381,5,Forme Gigamax,Corvaillus Gigamax
-10381,6,Gigadynamax-Form,Gigadynamax-Krarmor
-10381,9,Gigantamax Form,Gigantamax Corviknight
-10382,5,Forme Gigamax,Astronelle Gigamax
-10382,6,Gigadynamax-Form,Gigadynamax-Maritellit
-10382,9,Gigantamax Form,Gigantamax Orbeetle
-10383,5,Forme Gigamax,Torgamord Gigamax
-10383,6,Gigadynamax-Form,Gigadynamax-Kamalm
-10383,9,Gigantamax Form,Gigantamax Drednaw
-10384,5,Forme Gigamax,Monthracite Gigamax
-10384,6,Gigadynamax-Form,Gigadynamax-Montecarbo
-10384,9,Gigantamax Form,Gigantamax Coalossal
-10385,5,Forme Gigamax,Pomdrapi Gigamax
-10385,6,Gigadynamax-Form,Gigadynamax-Drapfel
-10385,9,Gigantamax Form,Gigantamax Flapple
-10386,5,Forme Gigamax,Dratatin Gigamax
-10386,6,Gigadynamax-Form,Gigadynamax-Schlapfel
-10386,9,Gigantamax Form,Gigantamax Appletun
-10387,5,Forme Gigamax,Dunaconda
-10387,6,Gigadynamax-Form,Gigadynamax-Sanaconda
-10387,9,Gigantamax Form,Gigantamax Sandaconda
-10388,5,Forme Gigamax,Salarsen Forme Aigüe Gigamax
-10388,6,Gigadynamax-Form,Gigadynamax-Riffex (Hochform)
-10388,9,Gigantamax Form,Gigantamax Amped Toxtricity
-10389,5,Forme Gigamax,Scolocendre Gigamax
-10389,6,Gigadynamax-Form,Gigadynamax-Infernopod
-10389,9,Gigantamax Form,Gigantamax Centiskorch
-10390,5,Forme Gigamax,Sorcilence Gigamax
-10390,6,Gigadynamax-Form,Gigadynamax-Silembrim
-10390,9,Gigantamax Form,Gigantamax Hatterene
-10391,5,Forme Gigamax,Angoliath Gigamax
-10391,6,Gigadynamax-Form,Gigadynamax-Olangaar
-10391,9,Gigantamax Form,Gigantamax Grimmsnarl
-10392,5,Forme Gigamax,Charmilly Gigamax
-10392,6,Gigadynamax-Form,Gigadynamax-Pokusan
-10392,9,Gigantamax Form,Gigantamax Alcremie
-10393,5,Forme Gigamax,Pachyradjah Gigamax
-10393,6,Gigadynamax-Form,Gigadynamax-Patinaraja
-10393,9,Gigantamax Form,Gigantamax Copperajah
-10394,5,Forme Gigamax,Duralugon Gigamax
-10394,6,Gigadynamax-Form,Gigadynamax-Duraludon
-10394,9,Gigantamax Form,Gigantamax Duraludon
-10395,5,Forme Gigamax,Shifours Style Poing Final Gigamax
-10395,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fokussiert)
-10395,9,Gigantamax Form,Gigantamax Single Strike Urshifu
-10396,5,Forme Gigamax,Shifours Style Mille Poings Gigamax
-10396,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fließend)
-10396,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu
-10397,5,Gigantamax Form,Salarsen Forme Grave Gigamax
-10397,6,Gigadynamax-Form,Gigadynamax-Riffex (Tiefform)
-10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
-10398,1,ヒスイのすがた,
-10398,5,Forme de Hisui,Caninos de Hisui
-10398,6,Hisui-Form,Hisui Fukano
-10398,9,Hisuian Form,Hisuian Growlithe
-10398,11,ヒスイのすがた,
-10399,1,ヒスイのすがた,
-10399,5,Forme de Hisui,Arcanin de Hisui
-10399,6,Hisui-Form,Hisui Arkani
-10399,9,Hisuian Form,Hisuian Arcanine
-10399,11,ヒスイのすがた,
-10400,1,ヒスイのすがた,
-10400,5,Forme de Hisui,Voltorbe de Hisui
-10400,6,Hisui-Form,Hisui Voltobal
-10400,9,Hisuian Form,Hisuian Voltorb
-10400,11,ヒスイのすがた,
-10401,1,ヒスイのすがた,
-10401,5,Forme de Hisui,Électrode de Hisui
-10401,6,Hisui-Form,Hisui Lektrobal
-10401,9,Hisuian Form,Hisuian Electrode
-10401,11,ヒスイのすがた,
-10402,1,ヒスイのすがた,
-10402,5,Forme de Hisui,Typhlosion de Hisui
-10402,6,Hisui-Form,Hisui Tornupto
-10402,9,Hisuian Form,Hisuian Typhlosion
-10402,11,ヒスイのすがた,
-10403,1,ヒスイのすがた,
-10403,5,Forme de Hisui,Qwilfish de Hisui
-10403,6,Hisui-Form,Hisui Baldorfish
-10403,9,Hisuian Form,Hisuian Qwilfish
-10403,11,ヒスイのすがた,
-10404,1,ヒスイのすがた,
-10404,5,Forme de Hisui,Farfuret de Hisui
-10404,6,Hisui-Form,Hisui Sniebel
-10404,9,Hisuian Form,Hisuian Sneasel
-10404,11,ヒスイのすがた,
-10405,1,ヒスイのすがた,
-10405,5,Forme de Hisui,Clamiral de Hisui
-10405,6,Hisui-Form,Hisui Admurai
-10405,9,Hisuian Form,Hisuian Samurott
-10405,11,ヒスイのすがた,
-10406,1,ヒスイのすがた,
-10406,5,Forme de Hisui,Fragilady de Hisui
-10406,6,Hisui-Form,Hisui Dressella
-10406,9,Hisuian Form,Hisuian Lilligant
-10406,11,ヒスイのすがた,
-10407,1,ヒスイのすがた,
-10407,5,Forme de Hisui,Zorua de Hisui
-10407,6,Hisui-Form,Hisui Zorua
-10407,9,Hisuian Form,Hisuian Zorua
-10407,11,ヒスイのすがた,
-10408,1,ヒスイのすがた,
-10408,5,Forme de Hisui,Zoroark de Hisui
-10408,6,Hisui-Form,Hisui Zoroark
-10408,9,Hisuian Form,Hisuian Zoroark
-10408,11,ヒスイのすがた,
-10409,1,ヒスイのすがた,
-10409,5,Forme de Hisui,Gueriaigle de Hisui
-10409,6,Hisui-Form,Hisui Washakwil
-10409,9,Hisuian Form,Hisuian Braviary
-10409,11,ヒスイのすがた,
-10410,1,ヒスイのすがた,
-10410,5,Forme de Hisui,Colimucus de Hisui
-10410,6,Hisui-Form,Hisui Viscargot
-10410,9,Hisuian Form,Hisuian Sliggoo
-10410,11,ヒスイのすがた,
-10411,1,ヒスイのすがた,
-10411,5,Forme de Hisui,Muplodocus de Hisui
-10411,6,Hisui-Form,Hisui Viscogon
-10411,9,Hisuian Form,Hisuian Goodra
-10411,11,ヒスイのすがた,
-10412,1,ヒスイのすがた,
-10412,5,Forme de Hisui,Séracrawl de Hisui
-10412,6,Hisui-Form,Hisui Arktilas
-10412,9,Hisuian Form,Hisuian Avalugg
-10412,11,ヒスイのすがた,
-10413,1,ヒスイのすがた,
-10413,5,Forme de Hisui,Archéduc de Hisui
-10413,6,Hisui-Form,Hisui Silvarro
-10413,9,Hisuian Form,Hisuian Decidueye
-10413,11,ヒスイのすがた,
-10414,1,オリジンフォルム,
-10414,5,Forme Originelle,Diagla Originel
-10414,6,Urform,Ur-Dialga
-10414,9,Origin Forme,Origin Dialga
-10414,11,オリジンフォルム,
-10415,1,オリジンフォルム,
-10415,5,Forme Originelle,Palkia Originel
-10415,6,Urform,Ur-Palkia
-10415,9,Origin Forme,Origin Palkia
-10415,11,オリジンフォルム,
-10416,1,しろすじのすがた,
-10416,5,Motif Blanch,Basculin Blanc
-10416,6,Weißlinienform,Weißliniges Barschuft
-10416,9,White-Striped Form,White-Striped Basculin
-10416,11,しろすじのすがた,
-10417,1,メスのすがた,
-10417,5,Femelle,Paragruel Femelle
-10417,6,Weiblich,Barschuft ♀
-10417,9,Female,Female Basculegion
-10417,11,メスのすがた,
-10418,1,れいじゅうフォルム,
-10418,5,Forme Avatar,Amovénus Avatar
-10418,6,Tiergeistform,Enamorus (Tiergeist)
-10418,9,Therian Forme,Therian Enamorus
-10418,11,れいじゅうフォルム,
-10419,1,パルデアのすがた,
-10419,9,Paldean Form,
-10419,11,パルデアのすがた,
-10420,1,パルデアのすがた,
-10420,9,Paldean Form,
-10420,11,パルデアのすがた,
-10421,1,パルデアのすがた,
-10421,9,Paldean Form,
-10421,11,パルデアのすがた,
-10422,1,パルデアのすがた,
-10422,9,Paldean Form,
-10422,11,パルデアのすがた,
-10423,1,メスのすがた,
-10423,9,Female,
-10423,11,メスのすがた,
-10424,1,みつふしフォルム,
-10424,9,Three-Segment Form,
-10424,11,みつふしフォルム,
-10425,1,マイティフォルム,
-10425,9,Hero Form,
-10425,11,マイティフォルム,
-10426,1,３びきかぞく,
-10426,9,Family of Three,
-10426,11,３びきかぞく,
-10427,1,たれたすがた,
-10427,9,Droopy Form,
-10427,11,たれたすがた,
-10428,1,のびたすがた,
-10428,9,Stretchy Form,
-10428,11,のびたすがた,
-10429,1,ブルーフェザー,
-10429,9,Blue Plumage,
-10429,11,ブルーフェザー,
-10430,1,イエローフェザー,
-10430,9,Yellow Plumage,
-10430,11,イエローフェザー,
-10431,1,ホワイトフェザー,
-10431,9,White Plumage,
-10431,11,ホワイトフェザー,
-10432,1,とほフォルム,
-10432,9,Roaming Form,
-10432,11,とほフォルム,
-10433,1,せいげんけいたい,
-10433,9,Limited Build,
-10433,11,せいげんけいたい,
-10434,1,しっそうけいたい,
-10434,9,Sprinting Build,
-10434,11,しっそうけいたい,
-10435,1,ゆうえいけいたい,
-10435,9,Swimming Build,
-10435,11,ゆうえいけいたい,
-10436,1,かっくうけいたい,
-10436,9,Gliding Build,
-10436,11,かっくうけいたい,
-10437,1,リミテッドモード,
-10437,9,Low-Power Mode,
-10437,11,リミテッドモード,
-10438,1,ドライブモード,
-10438,9,Drive Mode,
-10438,11,ドライブモード,
-10439,1,フロートモード,
-10439,9,Aquatic Mode,
-10439,11,フロートモード,
-10440,1,グライドモード,
-10440,9,Glide Mode,
-10440,11,グライドモード,
+pokemon_form_id;local_language_id;form_name;pokemon_name
+201;1;Ａ;
+201;3;A;
+201;5;A;Zarbi A
+201;6;A;Icognito A
+201;7;A;
+201;8;A;Unown
+201;9;A;Unown A
+351;1;ポワルンのすがた;
+351;3;캐스퐁의 모습;
+351;4;飄浮泡泡的樣子;
+351;5;Forme de Morphéo;
+351;6;Formeo;Formeo
+351;7;Forma de Castform;
+351;8;Forma Castform;Castform
+351;9;Normal;
+351;11;ポワルンのすがた;
+351;12;飘浮泡泡的样子;
+382;1;カイオーガのすがた;
+382;3;가이오가의 모습;
+382;4;蓋歐卡的樣子;
+382;5;Kyogre;
+382;6;Kyogre;Kyogre
+382;7;Kyogre;
+382;8;Kyogre;Kyogre
+382;9;Kyogre;
+382;11;カイオーガのすがた;
+382;12;盖欧卡的样子;
+383;1;グラードンのすがた;
+383;3;그란돈의 모습;
+383;4;固拉多的樣子;
+383;5;Groudon;
+383;6;Groudon;Groudon
+383;7;Groudon;
+383;8;Groudon;Groudon
+383;9;Groudon;
+383;11;グラードンのすがた;
+383;12;固拉多的样子;
+386;1;ノーマルフォルム;
+386;3;노말폼;
+386;4;普通形態;
+386;5;Forme Normale;Deoxys Normal
+386;6;Normalform;Deoxys
+386;7;Forma Normal;
+386;8;Forma Normale;Deoxys
+386;9;Normal Forme;Normal Deoxys
+386;11;ノーマルフォルム;
+386;12;普通形态;
+412;1;くさきのミノ;
+412;3;초목도롱;
+412;5;Cape Plante;Cheniti Plante
+412;6;Pflanzenumhang;Burmy (Pflanze)
+412;7;Tronco Planta;
+412;8;Manto Pianta;Burmy
+412;9;Plant Cloak;Plant Burmy
+413;1;くさきのミノ;
+413;3;초목도롱;
+413;4;草木蓑衣;
+413;5;Cape Plante;Cheniselle Plante
+413;6;Pflanzenumhang;Burmadame (Pflanze)
+413;7;Tronco Planta;
+413;8;Manto Pianta;Wormadam
+413;9;Plant Cloak;Plant Wormadam
+413;11;くさきのミノ;
+413;12;草木蓑衣;
+421;1;ネガフォルム;
+421;3;네거폼;
+421;4;陰天形態;
+421;5;Temps Couvert;Ceriflor Couvert
+421;6;Wolkenform;Kinoso (Wolken)
+421;7;Forma Encapotado;
+421;8;Forma Nuvola;Cherrim
+421;9;Overcast Form;Overcast Cherrim
+421;11;ネガフォルム;
+421;12;阴天形态;
+422;1;にしのうみ;
+422;3;서쪽바다;
+422;4;西海;
+422;5;Mer Occident;Sancoki Occident
+422;6;Westliches Meer;Westliches Schalellos
+422;7;Mar Oeste;
+422;8;Mare Ovest;Shellos
+422;9;West Sea;West Shellos
+422;11;にしのうみ;
+422;12;西海;
+423;1;にしのうみ;
+423;3;서쪽바다;
+423;4;西海;
+423;5;Mer Occident;Tritosor Occident
+423;6;Westliches Meer;Westliches Gastrodon
+423;7;Mar Oeste;
+423;8;Mare Ovest;Gastrodon
+423;9;West Sea;West Gastrodon
+423;11;にしのうみ;
+423;12;西海;
+479;1;ロトムのすがた;
+479;3;로토무의 모습;
+479;4;洛托姆的樣子;
+479;5;Forme de Motisma;
+479;6;Rotom;Rotom
+479;7;Forma de Rotom;
+479;8;Forma Rotom;Rotom
+479;9;Rotom;
+479;11;ロトムのすがた;
+479;12;洛托姆的样子;
+487;1;アナザーフォルム;
+487;3;어나더폼;
+487;4;別種形態;
+487;5;Forme Alternative;Giratina Alternative
+487;6;Wandelform;Giratina
+487;7;Forma Modificada;
+487;8;Forma Alterata;Giratina
+487;9;Altered Forme;Altered Giratina
+487;11;アナザーフォルム;
+487;12;别种形态;
+492;1;ランドフォルム;
+492;3;랜드폼;
+492;4;陸上形態;
+492;5;Forme Terrestre;Shaymin Terrestre
+492;6;Landform;Shaymin (Land)
+492;7;Forma Tierra;
+492;8;Forma Terra;Shaymin
+492;9;Land Forme;Land Shaymin
+492;11;ランドフォルム;
+492;12;陆上形态;
+493;1;ノーマルタイプ;
+493;5;Normal;Arceus Normal
+493;6;Normalform;Arceus
+493;7;Tipo Normal;
+493;8;Tipo Normale;Arceus
+493;9;Normal Type;Normal Arceus
+550;1;あかすじのすがた;
+550;3;적색근의 모습;
+550;4;紅條紋的樣子;
+550;5;Motif Rouge;Bargantua Rouge
+550;6;Rotlinige Form;Rotliniges Barschuft
+550;7;Forma Raya Roja;
+550;8;Forma Linearossa;Basculin
+550;9;Red-Striped Form;Red-Striped Basculin
+550;11;あかすじのすがた;
+550;12;红条纹的样子;
+555;1;ノーマルモード;
+555;3;노말모드;
+555;4;普通模式;
+555;5;Mode Normal;Darumacho Normal
+555;6;Normalmodus;Flampivian
+555;7;Modo Normal;
+555;8;Stato Normale;Darmanitan
+555;9;Standard Mode;Standard Darmanitan
+555;11;ノーマルモード;
+555;12;普通模式;
+585;1;はるのすがた;
+585;3;봄의 모습;
+585;5;Forme Printemps;Vivaldaim Printemps
+585;6;Frühlingsform;Sesokitz (Frühling)
+585;7;Forma Primavera;
+585;8;Forma Primavera;Deerling
+585;9;Spring Form;Spring Deerling
+586;1;はるのすがた;
+586;3;봄의 모습;
+586;5;Forme Printemps;Haydaim Printemps
+586;6;Frühlingsform;Kronjuwild (Frühling)
+586;7;Forma Primavera;
+586;8;Forma Primavera;Sawsbuck
+586;9;Spring Form;Spring Sawsbuck
+641;1;けしんフォルム;
+641;3;화신폼;
+641;4;化身形態;
+641;5;Forme Avatar;Boréas Avatar
+641;6;Inkarnationsform;Boreos
+641;7;Forma Avatar;
+641;8;Forma Incarnazione;Tornadus
+641;9;Incarnate Forme;Incarnate Tornadus
+641;11;けしんフォルム;
+641;12;化身形态;
+642;1;けしんフォルム;
+642;3;화신폼;
+642;4;化身形態;
+642;5;Forme Avatar;Fulguris Avatar
+642;6;Inkarnationsform;Voltolos
+642;7;Forma Avatar;
+642;8;Forma Incarnazione;Thundurus
+642;9;Incarnate Forme;Incarnate Thundurus
+642;11;けしんフォルム;
+642;12;化身形态;
+645;1;けしんフォルム;
+645;3;화신폼;
+645;4;化身形態;
+645;5;Forme Avatar;Démétéros Avatar
+645;6;Inkarnationsform;Demeteros
+645;7;Forma Avatar;
+645;8;Forma Incarnazione;Landorus
+645;9;Incarnate Forme;Incarnate Landorus
+645;11;けしんフォルム;
+645;12;化身形态;
+646;1;キュレムのすがた;
+646;3;큐레무의 모습;
+646;4;酋雷姆的樣子;
+646;5;Forme de Kyurem;
+646;6;Kyurem;Kyurem
+646;7;Forma de Kyurem;
+646;8;Forma di Kyurem;Kyurem
+646;9;Kyurem;
+646;11;キュレムのすがた;
+646;12;酋雷姆的样子;
+647;1;いつものすがた;
+647;3;평상시 모습;
+647;4;平常的樣子;
+647;5;Aspect Normal;Keldeo Normal
+647;6;Standardform;Keldeo
+647;7;Forma Habitual;
+647;8;Forma Normale;Keldeo
+647;9;Ordinary Form;Ordinary Keldeo
+647;11;いつものすがた;
+647;12;平常的样子;
+648;1;ボイスフォルム;
+648;3;보이스폼;
+648;4;歌聲形態;
+648;5;Forme Chant;Meloetta Chant
+648;6;Gesangsform;Meloetta (Gesang)
+648;7;Forma Lírica;
+648;8;Forma Canto;Meloetta
+648;9;Aria Forme;Aria Meloetta
+648;11;ボイスフォルム;
+648;12;歌声形态;
+666;1;はなぞののもよう;
+666;3;화원의 모양;
+666;5;Motif Floraison;Prismillon Floraison
+666;6;Blumenmeermuster;Vivillon (Blumen)
+666;7;Motivo Floral;
+666;8;Motivo Giardinfiore;Vivillon
+666;9;Meadow Pattern;Meadow Vivillon
+669;1;あかいはな;
+669;3;빨간 꽃;
+669;5;Fleur Rouge;Flabébé Rouge
+669;6;Rotblütler;Flabébé (Rot)
+669;7;Flor Roja;
+669;8;Fiore Rosso;Flabébé
+669;9;Red Flower;Red Flabébé
+670;1;あかいはな;
+670;3;빨간 꽃;
+670;5;Fleur Rouge;Floette Rouge
+670;6;Rotblütler;Floette (Rot)
+670;7;Flor Roja;
+670;8;Fiore Rosso;Floette
+670;9;Red Flower;Red Floette
+671;1;あかいはな;
+671;3;빨간 꽃;
+671;5;Fleur Rouge;Florges Rouge
+671;6;Rotblütler;Florges (Rot)
+671;7;Flor Roja;
+671;8;Fiore Rosso;Florges
+671;9;Red Flower;Red Florges
+676;1;やせいのすがた;
+676;3;야생의 모습;
+676;5;Forme Sauvage;Couafarel Sauvage
+676;6;Zottelform;Coiffwaff
+676;7;Forma Salvaje;
+676;8;Forma Selvatica;Furfrou
+676;9;Natural Form;Natural Furfrou
+678;1;オスのすがた;
+678;3;수컷의 모습;
+678;4;雄性的樣子;
+678;5;Mâle;Mistigrix Mâle
+678;6;Männlich;Psiaugon ♂
+678;7;Macho;
+678;8;Maschio;Meowstic
+678;9;Male;Male Meowstic
+678;11;オスのすがた;
+678;12;雄性的样子;
+681;1;シールドフォルム;
+681;3;실드폼;
+681;4;盾牌形態;
+681;5;Forme Parade;Exagide Parade
+681;6;Schildform;Durengard (Schild)
+681;7;Forma Escudo;
+681;8;Forma Scudo;Aegislash
+681;9;Shield Forme;Shield Aegislash
+681;11;シールドフォルム;
+681;12;盾牌形态;
+710;1;ふつうのサイズ;
+710;3;보통 사이즈;
+710;4;普通尺寸;
+710;5;Taille Normale;Pitrouille Normal
+710;6;Größe M;Irrbis (M)
+710;7;Tamaño Normal;
+710;8;Normale;Pumpkaboo
+710;9;Average Size;Average Pumpkaboo
+710;11;ふつうのサイズ;
+710;12;普通尺寸;
+711;1;ふつうのサイズ;
+711;3;보통 사이즈;
+711;4;普通尺寸;
+711;5;Taille Normale;Banshitrouye Normal
+711;6;Größe M;Pumpdjinn (M)
+711;7;Tamaño Normal;
+711;8;Normale;Gourgeist
+711;9;Average Size;Average Gourgeist
+711;11;ふつうのサイズ;
+711;12;普通尺寸;
+716;1;アクティブモード;
+716;3;액티브모드;
+716;4;活躍模式;
+716;5;Mode Déchaîné;Xerneas Déchaîné
+716;6;Aktiv-Modus;Xerneas (Aktiv)
+716;7;Modo Activo;
+716;8;Modo Attivo;Xerneas
+716;9;Active Mode;Active Xerneas
+716;11;アクティブモード;
+716;12;活跃模式;
+718;1;５０％フォルム;
+718;3;50%폼;
+718;4;５０％形態;
+718;5;Forme 50 %;
+718;6;50%-Form;Zygarde (50%)
+718;7;Forma 50%;
+718;8;Forma 50%;Zygarde
+718;9;50% Forme;
+718;11;５０％フォルム;
+718;12;５０％形态;
+720;1;いましめられしフーパ;
+720;3;굴레에 빠진 후파;
+720;4;懲戒胡帕;
+720;5;Hoopa Enchaîné;
+720;6;Gebanntes Hoopa;Gebanntes Hoopa
+720;7;Hoopa Contenido;
+720;8;Hoopa Vincolato;Hoopa
+720;9;Hoopa Confined;Confined Hoopa
+720;11;いましめられしフーパ;
+720;12;惩戒胡帕;
+741;1;めらめらスタイル;
+741;3;이글이글스타일;
+741;4;熱辣熱辣風格;
+741;5;Style Flamenco;
+741;6;Flamenco-Stil;Choreogel (Flamenco)
+741;7;Estilo Apasionado;
+741;8;Stile Flamenco;Oricorio
+741;9;Baile Style;Baile Oricorio
+741;11;めらめらスタイル;
+741;12;热辣热辣风格;
+745;1;まひるのすがた;
+745;3;한낮의 모습;
+745;4;白晝的樣子;
+745;5;Forme Diurne;
+745;6;Tagform;Wolwerock (Tag)
+745;7;Forma Diurna;
+745;8;Forma Giorno;Lycanroc
+745;9;Midday Form;Midday Lycanroc
+745;11;まひるのすがた;
+745;12;白昼的样子;
+746;1;たんどくのすがた;
+746;3;단독의 모습;
+746;4;單獨的樣子;
+746;5;Forme Solitaire;
+746;6;Einzelform;Lusardin
+746;7;Forma Individual;
+746;8;Forma Individuale;Wishiwashi
+746;9;Solo Form;Solo Wishiwashi
+746;11;たんどくのすがた;
+746;12;单独的样子;
+773;1;タイプ：ノーマル;
+773;3;타입:노말;
+773;4;屬性：一般;
+773;5;Type : Normal;
+773;6;Typ:Normal;Amigento
+773;7;Tipo: Normal;
+773;8;Tipo Normale;Silvally
+773;9;Type: Normal;
+773;11;タイプ：ノーマル;
+773;12;属性：一般;
+774;1;りゅうせいのすがた;
+774;3;유성의 모습;
+774;4;流星的樣子;
+774;5;Forme Météore;
+774;6;Meteorform;Meteno (Meteor Rot)
+774;7;Forma Meteorito;
+774;8;Forma Meteora;Minior
+774;9;Meteor Form;Red Meteor Minior
+774;11;りゅうせいのすがた;
+774;12;流星的样子;
+778;1;ばけたすがた;
+778;3;둔갑한 모습;
+778;4;化形的樣子;
+778;5;Forme Déguisée;
+778;6;Verkleidete Form;Mimigma (Getarnt)
+778;7;Forma Encubierta;
+778;8;Forma Mascherata;Mimikyu
+778;9;Disguised Form;Disguised Mimikyu
+778;11;ばけたすがた;
+778;12;化形的样子;
+849;1;ハイなすがた;
+849;3;하이한 모습;
+849;4;高調的樣子;
+849;5;Forme Aigüe;
+849;6;Hoch-Form;Riffex (Hochform)
+849;7;Forma Aguda;
+849;8;Forma Melodia;Toxtricity
+849;9;Amped Form;Amped Toxtricity
+849;11;ハイなすがた;
+849;12;高调的样子;
+854;1;がんさくフォルム;
+854;6;Fälschungsform;Fatalitee (Fälschung)
+854;8;Forma Contraffatta;Sinistea
+854;9;Phony Form;Phony Sinistea
+854;11;がんさくフォルム;
+855;1;がんさくフォルム;
+855;6;Fälschungsform;Mortipot (Fälschung)
+855;8;Forma Contraffatta;Polteageist
+855;9;Phony Form;Phony Polteageist
+855;11;がんさくフォルム;
+869;1;ミルキィバニラ;
+869;3;밀키바닐라;
+869;4;奶香香草;
+869;5;Lait Vanille;
+869;6;Vanille-Creme;Pokusan (Vanille-Creme)
+869;7;Crema de Vainilla;
+869;8;Lattevaniglia;Alcremie
+869;9;Vanilla Cream;Vanilla Cream Alcremie
+869;11;ミルキィバニラ;
+869;12;奶香香草;
+875;1;アイスフェイス;
+875;3;아이스페이스;
+875;4;結凍頭;
+875;5;Tête de Gel;
+875;6;Tiefkühlkopf;Kubuin (Tiefkühlkopf)
+875;7;Cara de Hielo;
+875;8;Gelofaccia;Eiscue
+875;9;Ice Face;Ice Eiscue
+875;11;アイスフェイス;
+875;12;结冻头;
+876;1;オスのすがた;
+876;3;수컷의 모습;
+876;4;雄性的樣子;
+876;5;Mâle;
+876;6;Männlich;Servol ♂
+876;7;Macho;
+876;8;Maschio;Indeedee
+876;9;Male;Male Indeedee
+876;11;オスのすがた;
+876;12;雄性的样子;
+877;1;まんぷくもよう;
+877;3;배부른 모양;
+877;4;滿腹花紋;
+877;5;Mode Rassasié;
+877;6;Pappsattmuster;Morpeko (Pappsattmuster)
+877;7;Forma Saciada;
+877;8;Motivo Panciapiena;Morpeko
+877;9;Full Belly Mode;Full Belly Morpeko
+877;11;まんぷくもよう;
+877;12;满腹花纹;
+888;1;れきせんのゆうしゃ;
+888;3;역전의 용사;
+888;4;百戰勇者;
+888;5;Héros Aguerri;
+888;6;Heldenhafter Krieger;Zacian
+888;7;Guerrero Avezado;
+888;8;Eroe di Mille Lotte;Zacian
+888;9;Hero of Many Battles;Zacian
+888;11;れきせんのゆうしゃ;
+888;12;百战勇者;
+889;1;れきせんのゆうしゃ;
+889;3;역전의 용사;
+889;4;百戰勇者;
+889;5;Héros Aguerri;
+889;6;Heldenhafter Krieger;Zamazenta
+889;7;Guerrero Avezado;
+889;8;Eroe di Mille Lotte;Zamazenta
+889;9;Hero of Many Battles;Zamazenta
+889;11;れきせんのゆうしゃ;
+889;12;百战勇者;
+892;1;いちげきのかた;
+892;3;일격의 태세;
+892;4;一擊流;
+892;5;Style Poing Final;
+892;6;Fokussierter Stil;Wulaosu (Fokussiert)
+892;7;Estilo Brusco;
+892;8;Stile Singolcolpo;Urshifu
+892;9;Single Strike Style;Single Strike Urshifu
+892;11;いちげきのかた;
+892;12;一击流;
+902;1;オスのすがた;
+902;8;Basculegion maschio;Basculegion
+902;9;Male;Male Basculegion
+902;11;オスのすがた;
+905;1;けしんフォルム;
+905;8;Forma Incarnazione;Enamorus
+905;9;Incarnate Forme;Incarnate Enamorus
+905;11;けしんフォルム;
+916;1;オスのすがた;
+916;8;Maschio;Oinkologne
+916;9;Male;
+916;11;オスのすがた;
+925;1;４ひきかぞく;
+925;8;Quadrifamiglia;Maushold
+925;9;Family of Four;
+925;11;４ひきかぞく;
+931;1;グリーンフェザー;
+931;8;Piume Verdi;Squawkabilly
+931;9;Green Plumage;
+931;11;グリーンフェザー;
+964;1;ナイーブフォルム;
+964;8;Forma Ingenua;Palafin
+964;9;Zero Form;
+964;11;ナイーブフォルム;
+978;1;そったすがた;
+978;8;Forma Arcuata;Tatsugiri
+978;9;Curly Form;
+978;11;そったすがた;
+982;1;ふたふしフォルム;
+982;8;Forma Bimetamero;Dudunsparce
+982;9;Two-Segment Form;
+982;11;ふたふしフォルム;
+999;1;はこフォルム;
+999;8;Forma Scrigno;Gimmighoul
+999;9;Chest Form;
+999;11;はこフォルム;
+1007;1;かんぜんけいたい;
+1007;8;Foggia Integrale;Koraidon
+1007;9;Apex Build;
+1007;11;かんぜんけいたい;
+1008;1;コンプリートモード;
+1008;8;Assetto Completo;Miraidon
+1008;9;Ultimate Mode;
+1008;11;コンプリートモード;
+10001;1;Ｂ;
+10001;3;B;
+10001;5;B;Zarbi B
+10001;6;B;Icognito B
+10001;7;B;
+10001;8;B;Unown
+10001;9;B;Unown B
+10002;1;Ｃ;
+10002;3;C;
+10002;5;C;Zarbi C
+10002;6;C;Icognito C
+10002;7;C;
+10002;8;C;Unown
+10002;9;C;Unown C
+10003;1;Ｄ;
+10003;3;D;
+10003;5;D;Zarbi D
+10003;6;D;Icognito D
+10003;7;D;
+10003;8;D;Unown
+10003;9;D;Unown D
+10004;1;Ｅ;
+10004;3;E;
+10004;5;E;Zarbi E
+10004;6;E;Icognito E
+10004;7;E;
+10004;8;E;Unown
+10004;9;E;Unown E
+10005;1;Ｆ;
+10005;3;F;
+10005;5;F;Zarbi F
+10005;6;F;Icognito F
+10005;7;F;
+10005;8;F;Unown
+10005;9;F;Unown F
+10006;1;Ｇ;
+10006;3;G;
+10006;5;G;Zarbi G
+10006;6;G;Icognito G
+10006;7;G;
+10006;8;G;Unown
+10006;9;G;Unown G
+10007;1;Ｈ;
+10007;3;H;
+10007;5;H;Zarbi H
+10007;6;H;Icognito H
+10007;7;H;
+10007;8;H;Unown
+10007;9;H;Unown H
+10008;1;Ｉ;
+10008;3;I;
+10008;5;I;Zarbi I
+10008;6;I;Icognito I
+10008;7;I;
+10008;8;I;Unown
+10008;9;I;Unown I
+10009;1;Ｊ;
+10009;3;J;
+10009;5;J;Zarbi J
+10009;6;J;Icognito J
+10009;7;J;
+10009;8;J;Unown
+10009;9;J;Unown J
+10010;1;Ｋ;
+10010;3;K;
+10010;5;K;Zarbi K
+10010;6;K;Icognito K
+10010;7;K;
+10010;8;K;Unown
+10010;9;K;Unown K
+10011;1;Ｌ;
+10011;3;L;
+10011;5;L;Zarbi L
+10011;6;L;Icognito L
+10011;7;L;
+10011;8;L;Unown
+10011;9;L;Unown L
+10012;1;Ｍ;
+10012;3;M;
+10012;5;M;Zarbi M
+10012;6;M;Icognito M
+10012;7;M;
+10012;8;M;Unown
+10012;9;M;Unown M
+10013;1;Ｎ;
+10013;3;N;
+10013;5;N;Zarbi N
+10013;6;N;Icognito N
+10013;7;N;
+10013;8;N;Unown
+10013;9;N;Unown N
+10014;1;Ｏ;
+10014;3;O;
+10014;5;O;Zarbi O
+10014;6;O;Icognito O
+10014;7;O;
+10014;8;O;Unown
+10014;9;O;Unown O
+10015;1;Ｐ;
+10015;3;P;
+10015;5;P;Zarbi P
+10015;6;P;Icognito P
+10015;7;P;
+10015;8;P;Unown
+10015;9;P;Unown P
+10016;1;Ｑ;
+10016;3;Q;
+10016;5;Q;Zarbi Q
+10016;6;Q;Icognito Q
+10016;7;Q;
+10016;8;Q;Unown
+10016;9;Q;Unown Q
+10017;1;Ｒ;
+10017;3;R;
+10017;5;R;Zarbi R
+10017;6;R;Icognito R
+10017;7;R;
+10017;8;R;Unown
+10017;9;R;Unown R
+10018;1;Ｓ;
+10018;3;S;
+10018;5;S;Zarbi S
+10018;6;S;Icognito S
+10018;7;S;
+10018;8;S;Unown
+10018;9;S;Unown S
+10019;1;Ｔ;
+10019;3;T;
+10019;5;T;Zarbi T
+10019;6;T;Icognito T
+10019;7;T;
+10019;8;T;Unown
+10019;9;T;Unown T
+10020;1;Ｕ;
+10020;3;U;
+10020;5;U;Zarbi U
+10020;6;U;Icognito U
+10020;7;U;
+10020;8;U;Unown
+10020;9;U;Unown U
+10021;1;Ｖ;
+10021;3;V;
+10021;5;V;Zarbi V
+10021;6;V;Icognito V
+10021;7;V;
+10021;8;V;Unown
+10021;9;V;Unown V
+10022;1;Ｗ;
+10022;3;W;
+10022;5;W;Zarbi W
+10022;6;W;Icognito W
+10022;7;W;
+10022;8;W;Unown
+10022;9;W;Unown W
+10023;1;Ｘ;
+10023;3;X;
+10023;5;X;Zarbi X
+10023;6;X;Icognito X
+10023;7;X;
+10023;8;X;Unown
+10023;9;X;Unown X
+10024;1;Ｙ;
+10024;3;Y;
+10024;5;Y;Zarbi Y
+10024;6;Y;Icognito Y
+10024;7;Y;
+10024;8;Y;Unown
+10024;9;Y;Unown Y
+10025;1;Ｚ;
+10025;3;Z;
+10025;5;Z;Zarbi Z
+10025;6;Z;Icognito Z
+10025;7;Z;
+10025;8;Z;Unown
+10025;9;Z;Unown Z
+10026;1;!;
+10026;3;!;
+10026;5;!;Zarbi !
+10026;6;!;Icognito !
+10026;7;!;
+10026;8;!;Unown
+10026;9;!;Unown !
+10027;1;?;
+10027;3;?;
+10027;5;?;Zarbi ?
+10027;6;?;Icognito ?
+10027;7;?;
+10027;8;?;Unown
+10027;9;?;Unown ?
+10028;1;たいようのすがた;
+10028;3;태양의 모습;
+10028;4;太陽的樣子;
+10028;5;Forme Solaire;Morphéo Solaire
+10028;6;Sonnenform;Formeo (Sonne)
+10028;7;Forma Sol;
+10028;8;Forma Sole;Castform
+10028;9;Sunny Form;Sunny Castform
+10028;11;たいようのすがた;
+10028;12;太阳的样子;
+10029;1;あまみずのすがた;
+10029;3;빗방울의 모습;
+10029;4;雨水的樣子;
+10029;5;Forme Eau de Pluie;Morphéo Eau de Pluie
+10029;6;Regenform;Formeo (Regen)
+10029;7;Forma Lluvia;
+10029;8;Forma Pioggia;Castform
+10029;9;Rainy Form;Rainy Castform
+10029;11;あまみずのすがた;
+10029;12;雨水的样子;
+10030;1;ゆきぐものすがた;
+10030;3;설운의 모습;
+10030;4;雪雲的樣子;
+10030;5;Forme Blizzard;Morphéo Blizzard
+10030;6;Schneeform;Formeo (Schnee)
+10030;7;Forma Nieve;
+10030;8;Forma Nuvola di Neve;Castform
+10030;9;Snowy Form;Snowy Castform
+10030;11;ゆきぐものすがた;
+10030;12;雪云的样子;
+10031;1;アタックフォルム;
+10031;3;어택폼;
+10031;4;攻擊形態;
+10031;5;Forme Attaque;Deoxys Attaque
+10031;6;Angriffsform;Deoxys (Angriff)
+10031;7;Forma Ataque;
+10031;8;Forma Attacco;Deoxys
+10031;9;Attack Forme;Attack Deoxys
+10031;11;アタックフォルム;
+10031;12;攻击形态;
+10032;1;ディフェンスフォルム;
+10032;3;디펜스폼;
+10032;4;防禦形態;
+10032;5;Forme Défense;Deoxys Défense
+10032;6;Verteidigungsform;Deoxys (Verteidigung)
+10032;7;Forma Defensa;
+10032;8;Forma Difesa;Deoxys
+10032;9;Defense Forme;Defense Deoxys
+10032;11;ディフェンスフォルム;
+10032;12;防御形态;
+10033;1;スピードフォルム;
+10033;3;스피드폼;
+10033;4;速度形態;
+10033;5;Forme Vitesse;Deoxys Vitesse
+10033;6;Initiativeform;Deoxys (Initiative)
+10033;7;Forma Velocidad;
+10033;8;Forma Velocità;Deoxys
+10033;9;Speed Forme;Speed Deoxys
+10033;11;スピードフォルム;
+10033;12;速度形态;
+10034;1;すなちのミノ;
+10034;3;모래땅도롱;
+10034;5;Cape Sable;Cheniti Sable
+10034;6;Sandumhang;Burmy (Sand)
+10034;7;Tronco Arena;
+10034;8;Manto Sabbia;Burmy
+10034;9;Sandy Cloak;Sandy Burmy
+10035;1;ゴミのミノ;
+10035;3;슈레도롱;
+10035;5;Cape Déchet;Cheniti Déchet
+10035;6;Lumpenumhang;Burmy (Lumpen)
+10035;7;Tronco Basura;
+10035;8;Manto Scarti;Burmy
+10035;9;Trash Cloak;Trash Burmy
+10036;1;すなちのミノ;
+10036;3;모래땅도롱;
+10036;4;砂土蓑衣;
+10036;5;Cape Sable;Cheniselle Sable
+10036;6;Sandumhang;Burmadame (Sand)
+10036;7;Tronco Arena;
+10036;8;Manto Sabbia;Wormadam
+10036;9;Sandy Cloak;Sandy Wormadam
+10036;11;すなちのミノ;
+10036;12;砂土蓑衣;
+10037;1;ゴミのミノ;
+10037;3;슈레도롱;
+10037;4;垃圾蓑衣;
+10037;5;Cape Déchet;Cheniselle Déchet
+10037;6;Lumpenumhang;Burmadame (Lumpen)
+10037;7;Tronco Basura;
+10037;8;Manto Scarti;Wormadam
+10037;9;Trash Cloak;Trash Wormadam
+10037;11;ゴミのミノ;
+10037;12;垃圾蓑衣;
+10038;1;ポジフォルム;
+10038;3;포지폼;
+10038;4;晴天形態;
+10038;5;Temps Ensoleillé;Ceriflor Ensoleillé
+10038;6;Sonnenform;Kinoso (Sonne)
+10038;7;Forma Soleado;
+10038;8;Forma Splendore;Cherrim
+10038;9;Sunshine Form;Sunshine Cherrim
+10038;11;ポジフォルム;
+10038;12;晴天形态;
+10039;1;ひがしのうみ;
+10039;3;동쪽바다;
+10039;4;東海;
+10039;5;Mer Orient;Sancoki Orient
+10039;6;Östliches Meer;Östliches Schalellos
+10039;7;Mar Este;
+10039;8;Mare Est;Shellos
+10039;9;East Sea;East Shellos
+10039;11;ひがしのうみ;
+10039;12;东海;
+10040;1;ひがしのうみ;
+10040;3;동쪽바다;
+10040;4;東海;
+10040;5;Mer Orient;Tritosor Orient
+10040;6;Östliches Meer;Östliches Gastrodon
+10040;7;Mar Este;
+10040;8;Mare Est;Gastrodon
+10040;9;East Sea;East Gastrodon
+10040;11;ひがしのうみ;
+10040;12;东海;
+10041;1;むしタイプ;
+10041;5;Insecte;Arceus Insecte
+10041;6;Käfer;Arceus (Käfer)
+10041;7;Tipo Bicho;
+10041;8;Tipo Coleottero;Arceus
+10041;9;Bug Type;Bug Arceus
+10042;1;あくタイプ;
+10042;5;Ténèbres;Arceus Ténèbres
+10042;6;Unlicht;Arceus (Unlicht)
+10042;7;Tipo Siniestro;
+10042;8;Tipo Buio;Arceus
+10042;9;Dark Type;Dark Arceus
+10043;1;ドラゴンタイプ;
+10043;5;Dragon;Arceus Dragon
+10043;6;Drache;Arceus (Drache)
+10043;7;Tipo Dragón;
+10043;8;Tipo Drago;Arceus
+10043;9;Dragon Type;Dragon Arceus
+10044;1;でんきタイプ;
+10044;5;Électrik;Arceus Électrik
+10044;6;Elektro;Arceus (Elektro)
+10044;7;Tipo Eléctrico;
+10044;8;Tipo Elettro;Arceus
+10044;9;Electric Type;Electric Arceus
+10045;1;かくとうタイプ;
+10045;5;Combat;Arceus Combat
+10045;6;Kampf;Arceus (Kampf)
+10045;7;Tipo Lucha;
+10045;8;Tipo Lotta;Arceus
+10045;9;Fighting Type;Fighting Arceus
+10046;1;ほのおタイプ;
+10046;5;Feu;Arceus Feu
+10046;6;Feuer;Arceus (Feuer)
+10046;7;Tipo Fuego;
+10046;8;Tipo Fuoco;Arceus
+10046;9;Fire Type;Fire Arceus
+10047;1;ひこうタイプ;
+10047;5;Vol;Arceus Vol
+10047;6;Flug;Arceus (Flug)
+10047;7;Tipo Volador;
+10047;8;Tipo Volante;Arceus
+10047;9;Flying Type;Flying Arceus
+10048;1;ゴーストタイプ;
+10048;5;Spectre;Arceus Spectre
+10048;6;Geist;Arceus (Geist)
+10048;7;Tipo Fantasma;
+10048;8;Tipo Spettro;Arceus
+10048;9;Ghost Type;Ghost Arceus
+10049;1;くさタイプ;
+10049;5;Plante;Arceus Plante
+10049;6;Pflanze;Arceus (Pflanze)
+10049;7;Tipo Planta;
+10049;8;Tipo Erba;Arceus
+10049;9;Grass Type;Grass Arceus
+10050;1;じめんタイプ;
+10050;5;Sol;Arceus Sol
+10050;6;Boden;Arceus (Boden)
+10050;7;Tipo Tierra;
+10050;8;Tipo Terra;Arceus
+10050;9;Ground Type;Ground Arceus
+10051;1;こおりタイプ;
+10051;5;Glace;Arceus Glace
+10051;6;Eis;Arceus (Eis)
+10051;7;Tipo Hielo;
+10051;8;Tipo Ghiaccio;Arceus
+10051;9;Ice Type;Ice Arceus
+10052;1;どくタイプ;
+10052;5;Poison;Arceus Poison
+10052;6;Gift;Arceus (Gift)
+10052;7;Tipo Veneno;
+10052;8;Tipo Veleno;Arceus
+10052;9;Poison Type;Poison Arceus
+10053;1;エスパータイプ;
+10053;5;Psy;Arceus Psy
+10053;6;Psycho;Arceus (Psycho)
+10053;7;Tipo Psíquico;
+10053;8;Tipo Psico;Arceus
+10053;9;Psychic Type;Psychic Arceus
+10054;1;いわタイプ;
+10054;5;Roche;Arceus Roche
+10054;6;Gestein;Arceus (Gestein)
+10054;7;Tipo Roca;
+10054;8;Tipo Roccia;Arceus
+10054;9;Rock Type;Rock Arceus
+10055;1;はがねタイプ;
+10055;5;Acier;Arceus Acier
+10055;6;Stahl;Arceus (Stahl)
+10055;7;Tipo Acero;
+10055;8;Tipo Acciaio;Arceus
+10055;9;Steel Type;Steel Arceus
+10056;1;みずタイプ;
+10056;5;Eau;Arceus Eau
+10056;6;Wasser;Arceus (Wasser)
+10056;7;Tipo Agua;
+10056;8;Tipo Acqua;Arceus
+10056;9;Water Type;Water Arceus
+10057;1;？？？タイプ;
+10057;5;???;Arceus ???
+10057;6;???;Arceus (???)
+10057;7;Tipo ???;
+10057;8;Tipo ???;Arceus
+10057;9;??? Type;??? Arceus
+10058;1;ヒートロトム;
+10058;3;히트로토무;
+10058;4;加熱洛托姆;
+10058;5;Motisma Chaleur;Motisma Chaleur
+10058;6;Hitze-Rotom;Hitze-Rotom
+10058;7;Rotom Calor;
+10058;8;Rotom Calore;Rotom
+10058;9;Heat Rotom;Heat Rotom
+10058;11;ヒートロトム;
+10058;12;加热洛托姆;
+10059;1;ウォッシュロトム;
+10059;3;워시로토무;
+10059;4;清洗洛托姆;
+10059;5;Motisma Lavage;Motisma Lavage
+10059;6;Wasch-Rotom;Wasch-Rotom
+10059;7;Rotom Lavado;
+10059;8;Rotom Lavaggio;Rotom
+10059;9;Wash Rotom;Wash Rotom
+10059;11;ウォッシュロトム;
+10059;12;清洗洛托姆;
+10060;1;フロストロトム;
+10060;3;프로스트로토무;
+10060;4;結冰洛托姆;
+10060;5;Motisma Froid;Motisma Froid
+10060;6;Frost-Rotom;Frost-Rotom
+10060;7;Rotom Frío;
+10060;8;Rotom Gelo;Rotom
+10060;9;Frost Rotom;Frost Rotom
+10060;11;フロストロトム;
+10060;12;结冰洛托姆;
+10061;1;スピンロトム;
+10061;3;스핀로토무;
+10061;4;旋轉洛托姆;
+10061;5;Motisma Hélice;Motisma Hélice
+10061;6;Wirbel-Rotom;Wirbel-Rotom
+10061;7;Rotom Ventilador;
+10061;8;Rotom Vortice;Rotom
+10061;9;Fan Rotom;Fan Rotom
+10061;11;スピンロトム;
+10061;12;旋转洛托姆;
+10062;1;カットロトム;
+10062;3;커트로토무;
+10062;4;切割洛托姆;
+10062;5;Motisma Tonte;Motisma Tonte
+10062;6;Schneid-Rotom;Schneid-Rotom
+10062;7;Rotom Corte;
+10062;8;Rotom Taglio;Rotom
+10062;9;Mow Rotom;Mow Rotom
+10062;11;カットロトム;
+10062;12;切割洛托姆;
+10063;1;オリジンフォルム;
+10063;3;오리진폼;
+10063;4;起源形態;
+10063;5;Forme Originelle;Giratina Originel
+10063;6;Urform;Ur-Giratina
+10063;7;Forma Origen;
+10063;8;Forma Originale;Giratina
+10063;9;Origin Forme;Origin Giratina
+10063;11;オリジンフォルム;
+10063;12;起源形态;
+10064;1;スカイフォルム;
+10064;3;스카이폼;
+10064;4;天空形態;
+10064;5;Forme Céleste;Shaymin Céleste
+10064;6;Zenitform;Shaymin (Zenit)
+10064;7;Forma Cielo;
+10064;8;Forma Cielo;Shaymin
+10064;9;Sky Forme;Sky Shaymin
+10064;11;スカイフォルム;
+10064;12;天空形态;
+10065;5;Troizépi;Pichu Troizépi
+10065;6;Strubbelohrform;Strubbelohr-Pichu
+10065;8;Spunzorek;Pichu
+10065;9;Spiky-eared;Spiky-eared Pichu
+10066;1;あおすじのすがた;
+10066;3;청색근의 모습;
+10066;4;藍條紋的樣子;
+10066;5;Motif Bleu;Bargantua Bleu
+10066;6;Blaulinige Form;Blauliniges Barschuft
+10066;7;Forma Raya Azul;
+10066;8;Forma Lineablu;Basculin
+10066;9;Blue-Striped Form;Blue-Striped Basculin
+10066;11;あおすじのすがた;
+10066;12;蓝条纹的样子;
+10067;1;ダルマモード;
+10067;3;달마모드;
+10067;4;達摩模式;
+10067;5;Mode Transe;Darumacho Transe
+10067;6;Trance-Modus;Flampivian (Trance)
+10067;7;Modo Daruma;
+10067;8;Stato Zen;Darmanitan
+10067;9;Zen Mode;Zen Darmanitan
+10067;11;ダルマモード;
+10067;12;达摩模式;
+10068;1;なつのすがた;
+10068;3;여름의 모습;
+10068;5;Forme Été;Vivaldaim Été
+10068;6;Sommerform;Sesokitz (Sommer)
+10068;7;Forma Verano;
+10068;8;Forma Estate;Deerling
+10068;9;Summer Form;Summer Deerling
+10069;1;あきのすがた;
+10069;3;가을의 모습;
+10069;5;Forme Automne;Vivaldaim Automne
+10069;6;Herbstform;Sesokitz (Herbst)
+10069;7;Forma Otoño;
+10069;8;Forma Autunno;Deerling
+10069;9;Autumn Form;Autumn Deerling
+10070;1;ふゆのすがた;
+10070;3;겨울의 모습;
+10070;5;Forme Hiver;Vivaldaim Hiver
+10070;6;Winterform;Sesokitz (Winter)
+10070;7;Forma Invierno;
+10070;8;Forma Inverno;Deerling
+10070;9;Winter Form;Winter Deerling
+10071;1;なつのすがた;
+10071;3;여름의 모습;
+10071;5;Forme Été;Haydaim Été
+10071;6;Sommerform;Kronjuwild (Sommer)
+10071;7;Forma Verano;
+10071;8;Forma Estate;Sawsbuck
+10071;9;Summer Form;Summer Sawsbuck
+10072;1;あきのすがた;
+10072;3;가을의 모습;
+10072;5;Forme Automne;Haydaim Automne
+10072;6;Herbstform;Kronjuwild (Herbst)
+10072;7;Forma Otoño;
+10072;8;Forma Autunno;Sawsbuck
+10072;9;Autumn Form;Autumn Sawsbuck
+10073;1;ふゆのすがた;
+10073;3;겨울의 모습;
+10073;5;Forme Hiver;Haydaim Hiver
+10073;6;Winterform;Kronjuwild (Winter)
+10073;7;Forma Invierno;
+10073;8;Forma Inverno;Sawsbuck
+10073;9;Winter Form;Winter Sawsbuck
+10074;1;ステップフォルム;
+10074;3;스텝폼;
+10074;4;舞步形態;
+10074;5;Forme Danse;Meloetta Danse
+10074;6;Tanzform;Meloetta (Tanz)
+10074;7;Forma Danza;
+10074;8;Forma Danza;Meloetta
+10074;9;Pirouette Forme;Pirouette Meloetta
+10074;11;ステップフォルム;
+10074;12;舞步形态;
+10075;1;アクアカセット;
+10075;3;아쿠아카세트;
+10075;5;Module Aqua;Genesect Aqua
+10075;6;Aquamodul;Genesect (Aquamodul)
+10075;7;HidroROM;
+10075;8;Idromodulo;Genesect
+10075;9;Douse Drive;Douse Genesect
+10076;1;イナズマカセット;
+10076;3;번개카세트;
+10076;5;Module Choc;Genesect Choc
+10076;6;Blitzmodul;Genesect (Blitzmodul)
+10076;7;FulgoROM;
+10076;8;Voltmodulo;Genesect
+10076;9;Shock Drive;Shock Genesect
+10077;1;ブレイズカセット;
+10077;3;블레이즈카세트;
+10077;5;Module Pyro;Genesect Pyro
+10077;6;Flammenmodul;Genesect (Flammenmodul)
+10077;7;PiroROM;
+10077;8;Piromodulo;Genesect
+10077;9;Burn Drive;Burn Genesect
+10078;1;フリーズカセット;
+10078;3;프리즈카세트;
+10078;5;Module Cryo;Genesect Cryo
+10078;6;Gefriermodul;Genesect (Gefriermodul)
+10078;7;CrioROM;
+10078;8;Gelomodulo;Genesect
+10078;9;Chill Drive;Chill Genesect
+10079;1;れいじゅうフォルム;
+10079;3;영물폼;
+10079;4;靈獸形態;
+10079;5;Forme Totémique;Boréas Totémique
+10079;6;Tiergeistform;Boreos (Tiergeist)
+10079;7;Forma Tótem;
+10079;8;Forma Totem;Tornadus
+10079;9;Therian Forme;Therian Tornadus
+10079;11;れいじゅうフォルム;
+10079;12;灵兽形态;
+10080;1;れいじゅうフォルム;
+10080;3;영물폼;
+10080;4;靈獸形態;
+10080;5;Forme Totémique;Fulguris Totémique
+10080;6;Tiergeistform;Voltolos (Tiergeist)
+10080;7;Forma Tótem;
+10080;8;Forma Totem;Thundurus
+10080;9;Therian Forme;Therian Thundurus
+10080;11;れいじゅうフォルム;
+10080;12;灵兽形态;
+10081;1;れいじゅうフォルム;
+10081;3;영물폼;
+10081;4;靈獸形態;
+10081;5;Forme Totémique;Démétéros Totémique
+10081;6;Tiergeistform;Demeteros (Tiergeist)
+10081;7;Forma Tótem;
+10081;8;Forma Totem;Landorus
+10081;9;Therian Forme;Therian Landorus
+10081;11;れいじゅうフォルム;
+10081;12;灵兽形态;
+10082;1;ブラックキュレム;
+10082;3;블랙큐레무;
+10082;4;闇黑酋雷姆;
+10082;5;Kyurem Noir;Kyurem Noir
+10082;6;Schwarzes Kyurem;Schwarzes Kyurem
+10082;7;Kyurem Negro;
+10082;8;Kyurem Nero;Kyurem
+10082;9;Black Kyurem;Black Kyurem
+10082;11;ブラックキュレム;
+10082;12;暗黑酋雷姆;
+10083;1;ホワイトキュレム;
+10083;3;화이트큐레무;
+10083;4;焰白酋雷姆;
+10083;5;Kyurem Blanc;Kyurem Blanc
+10083;6;Weißes Kyurem;Weißes Kyurem
+10083;7;Kyurem Blanco;
+10083;8;Kyurem Bianco;Kyurem
+10083;9;White Kyurem;White Kyurem
+10083;11;ホワイトキュレム;
+10083;12;焰白酋雷姆;
+10084;1;かくごのすがた;
+10084;3;각오의 모습;
+10084;4;覺悟的樣子;
+10084;5;Aspect Décidé;Keldeo Décidé
+10084;6;Resolutform;Keldeo (Resolut)
+10084;7;Forma Brío;
+10084;8;Forma Risoluta;Keldeo
+10084;9;Resolute Form;Resolute Keldeo
+10084;11;かくごのすがた;
+10084;12;觉悟的样子;
+10085;1;フェアリータイプ;
+10085;5;Fée;Arceus Fée
+10085;6;Fee;Arceus (Fee)
+10085;7;Tipo Hada;
+10085;8;Tipo Folletto;Arceus
+10085;9;Fairy Type;Fairy Arceus
+10086;1;ひょうせつのもよう;
+10086;3;빙설의 모양;
+10086;5;Motif Blizzard;Prismillon Blizzard
+10086;6;Frostmuster;Vivillon (Frost)
+10086;7;Motivo Polar;
+10086;8;Motivo Nevi Perenni;Vivillon
+10086;9;Icy Snow Pattern;Icy Snow Vivillon
+10087;1;ゆきぐにのもよう;
+10087;3;설국의 모양;
+10087;5;Motif Banquise;Prismillon Banquise
+10087;6;Schneefeldmuster;Vivillon (Schnee)
+10087;7;Motivo Taiga;
+10087;8;Motivo Nordico;Vivillon
+10087;9;Polar Pattern;Polar Vivillon
+10088;1;せつげんのもよう;
+10088;3;설원의 모양;
+10088;5;Motif Glace;Prismillon Glace
+10088;6;Flockenmuster;Vivillion (Flocken)
+10088;7;Motivo Tundra;
+10088;8;Motivo Manto di Neve;Vivillon
+10088;9;Tundra Pattern;Tundra Vivillon
+10089;1;たいりくのもよう;
+10089;3;대륙의 모양;
+10089;5;Motif Continent;Prismillon Continent
+10089;6;Kontinentalmuster;Vivillion (Kontinental)
+10089;7;Motivo Continental;
+10089;8;Motivo Continentale;Vivillon
+10089;9;Continental Pattern;Continental Vivillon
+10090;1;ていえんのもよう;
+10090;3;정원의 모양;
+10090;5;Motif Verdure;Prismillon Verdure
+10090;6;Ziergartenmuster;Vivillion (Ziergatten)
+10090;7;Motivo Vergel;
+10090;8;Motivo Prato;Vivillon
+10090;9;Garden Pattern;Garden Vivillon
+10091;1;みやびなもよう;
+10091;3;우아한 모양;
+10091;5;Motif Monarchie;Prismillon Monarchie
+10091;6;Prunkmuster;Vivillion (Prunk)
+10091;7;Motivo Oriental;
+10091;8;Motivo Eleganza;Vivillon
+10091;9;Elegant Pattern;Elegant Vivillon
+10092;1;モダンなもよう;
+10092;3;모던한 모양;
+10092;5;Motif Métropole;Prismillon Métropole
+10092;6;Innovationsmuster;Vivillion (Innovation)
+10092;7;Motivo Moderno;
+10092;8;Motivo Trendy;Vivillon
+10092;9;Modern Pattern;Modern Vivillon
+10093;1;マリンのもよう;
+10093;3;마린의 모양;
+10093;5;Motif Rivage;Prismillon Rivage
+10093;6;Aquamarinmuster;Vivillion (Aquamarin)
+10093;7;Motivo Marino;
+10093;8;Motivo Marino;Vivillon
+10093;9;Marine Pattern;Marine Vivillon
+10094;1;ぐんとうのもよう;
+10094;3;군도의 모양;
+10094;5;Motif Archipel;Prismillon Archipel
+10094;6;Archipelmuster;Vivillion (Archipel)
+10094;7;Motivo Isleño;
+10094;8;Motivo Arcipelago;Vivillon
+10094;9;Archipelago Pattern;Archipelago Vivillon
+10095;1;こうやのもよう;
+10095;3;황야의 모양;
+10095;5;Motif Sécheresse;Prismillon Sécheresse
+10095;6;Dürremuster;Vivillion (Dürre)
+10095;7;Motivo Estepa;
+10095;8;Motivo Deserto;Vivillon
+10095;9;High Plains Pattern;High Plains Vivillon
+10096;1;さじんのもよう;
+10096;3;사진의 모양;
+10096;5;Motif Sable;Prismillon Sable
+10096;6;Sandmuster;Vivillion (Sand)
+10096;7;Motivo Desierto;
+10096;8;Motivo Sabbia;Vivillon
+10096;9;Sandstorm Pattern;Sandstorm Vivillon
+10097;1;たいがのもよう;
+10097;3;대하의 모양;
+10097;5;Motif Delta;Prismillon Delta
+10097;6;Flussdeltamuster;Vivillion (Flussdelta)
+10097;7;Motivo Oasis;
+10097;8;Motivo Fluviale;Vivillon
+10097;9;River Pattern;River Vivillon
+10098;1;スコールのもよう;
+10098;3;스콜의 모양;
+10098;5;Motif Cyclone;Prismillon Cyclone
+10098;6;Monsunmuster;Vivillion (Monsun)
+10098;7;Motivo Monzón;
+10098;8;Motivo Pluviale;Vivillon
+10098;9;Monsoon Pattern;Monsoon Vivillon
+10099;1;サバンナのもよう;
+10099;3;사바나의 모양;
+10099;5;Motif Mangrove;Prismillon Mangrove
+10099;6;Savannenmuster;Vivillion (Savanne)
+10099;7;Motivo Pantano;
+10099;8;Motivo Savana;Vivillon
+10099;9;Savanna Pattern;Savanna Vivillon
+10100;1;たいようのもよう;
+10100;3;태양의 모양;
+10100;5;Motif Zénith;Prismillon Zénith
+10100;6;Sonnenmuster;Vivillion (Sonne)
+10100;7;Motivo Solar;
+10100;8;Motivo Solare;Vivillon
+10100;9;Sun Pattern;Sun Vivillon
+10101;1;オーシャンのもよう;
+10101;3;오션의 모양;
+10101;5;Motif Soleil Levant;Prismillon Soleil Levant
+10101;6;Ozeanmuster;Vivillion (Ozean)
+10101;7;Motivo Océano;
+10101;8;Motivo Oceanico;Vivillon
+10101;9;Ocean Pattern;Ocean Vivillon
+10102;1;ジャングルのもよう;
+10102;3;정글의 모양;
+10102;5;Motif Jungle;Prismillon Jungle
+10102;6;Dschungelmuster;Vivillion (Dschungel)
+10102;7;Motivo Jungla;
+10102;8;Motivo Giungla;Vivillon
+10102;9;Jungle Pattern;Jungle Vivillon
+10103;1;きいろのはな;
+10103;3;노란 꽃;
+10103;5;Fleur Jaune;Flabébé Jaune
+10103;6;Gelbblütler;Flabébé (Gelb)
+10103;7;Flor Amarilla;
+10103;8;Fiore Giallo;Flabébé
+10103;9;Yellow Flower;Yellow Flabébé
+10104;1;オレンジいろのはな;
+10104;3;오렌지색 꽃;
+10104;5;Fleur Orange;Flabébé Orange
+10104;6;Orangeblütler;Flabébé (Orange)
+10104;7;Flor Naranja;
+10104;8;Fiore Arancione;Flabébé
+10104;9;Orange Flower;Orange Flabébé
+10105;1;あおいはな;
+10105;3;파란 꽃;
+10105;5;Fleur Bleue;Flabébé Bleu
+10105;6;Blaublütler;Flabébé (Blau)
+10105;7;Flor Azul;
+10105;8;Fiore Blu;Flabébé
+10105;9;Blue Flower;Blue Flabébé
+10106;1;しろいはな;
+10106;3;하얀 꽃;
+10106;5;Fleur Blanche;Flabébé Blanc
+10106;6;Weißblütler;Flabébé (Weiß)
+10106;7;Flor Blanca;
+10106;8;Fiore Bianco;Flabébé
+10106;9;White Flower;White Flabébé
+10107;1;きいろのはな;
+10107;3;노란 꽃;
+10107;5;Fleur Jaune;Floette Jaune
+10107;6;Gelbblütler;Floette (Gelb)
+10107;7;Flor Amarilla;
+10107;8;Fiore Giallo;Floette
+10107;9;Yellow Flower;Yellow Floette
+10108;1;オレンジいろのはな;
+10108;3;오렌지색 꽃;
+10108;5;Fleur Orange;Floette Orange
+10108;6;Orangeblütler;Floette (Orange)
+10108;7;Flor Naranja;
+10108;8;Fiore Arancione;Floette
+10108;9;Orange Flower;Orange Floette
+10109;1;あおいはな;
+10109;3;파란 꽃;
+10109;5;Fleur Bleue;Floette Bleu
+10109;6;Blaublütler;Floette (Blau)
+10109;7;Flor Azul;
+10109;8;Fiore Blu;Floette
+10109;9;Blue Flower;Blue Floette
+10110;1;しろいはな;
+10110;3;하얀 꽃;
+10110;5;Fleur Blanche;Floette Blanc
+10110;6;Weißblütler;Floette (Weiß)
+10110;7;Flor Blanca;
+10110;8;Fiore Bianco;Floette
+10110;9;White Flower;White Floette
+10111;1;きいろのはな;
+10111;3;노란 꽃;
+10111;5;Fleur Jaune;Florges Jaune
+10111;6;Gelbblütler;Florges (Gelb)
+10111;7;Flor Amarilla;
+10111;8;Fiore Giallo;Florges
+10111;9;Yellow Flower;Yellow Florges
+10112;1;オレンジいろのはな;
+10112;3;오렌지색 꽃;
+10112;5;Fleur Orange;Florges Orange
+10112;6;Orangeblütler;Florges (Orange)
+10112;7;Flor Naranja;
+10112;8;Fiore Arancione;Florges
+10112;9;Orange Flower;Orange Florges
+10113;1;あおいはな;
+10113;3;파란 꽃;
+10113;5;Fleur Bleue;Florges Bleu
+10113;6;Blaublütler;Florges (Blau)
+10113;7;Flor Azul;
+10113;8;Fiore Blu;Florges
+10113;9;Blue Flower;Blue Florges
+10114;1;しろいはな;
+10114;3;하얀 꽃;
+10114;5;Fleur Blanche;Florges Blanc
+10114;6;Weißblütler;Florges (Weiß)
+10114;7;Flor Blanca;
+10114;8;Fiore Bianco;Florges
+10114;9;White Flower;White Florges
+10115;1;ハートカット;
+10115;3;하트컷;
+10115;5;Coupe Cœur;Couafarel Cœur
+10115;6;Herzchenschnitt;Coiffwaff (Herzchen)
+10115;7;Corte Corazón;
+10115;8;Taglio Cuore;Furfrou
+10115;9;Heart Trim;Heart Furfrou
+10116;1;スターカット;
+10116;3;스타컷;
+10116;5;Coupe Étoile;Couafarel Étoile
+10116;6;Sternchenschnitt;Coiffwaff (Sternchen)
+10116;7;Corte Estrella;
+10116;8;Taglio Stella;Furfrou
+10116;9;Star Trim;Star Furfrou
+10117;1;ダイヤカット;
+10117;3;다이아컷;
+10117;5;Coupe Diamant;Couafarel Diamant
+10117;6;Diamantenschnitt;Coiffwaff (Diamanten)
+10117;7;Corte Rombo;
+10117;8;Taglio Diamante;Furfrou
+10117;9;Diamond Trim;Diamond Furfrou
+10118;1;レディカット;
+10118;3;레이디컷;
+10118;5;Coupe Demoiselle;Couafarel Demoiselle
+10118;6;Fräuleinschnitt;Coiffwaff (Fräulein)
+10118;7;Corte Señorita;
+10118;8;Taglio Signorina;Furfrou
+10118;9;Debutante Trim;Debutante Furfrou
+10119;1;マダムカット;
+10119;3;마담컷;
+10119;5;Coupe Madame;Couafarel Madame
+10119;6;Damenschnitt;Coiffwaff (Damen)
+10119;7;Corte Dama;
+10119;8;Taglio Gentildonna;Furfrou
+10119;9;Matron Trim;Matron Furfrou
+10120;1;ジェントルカット;
+10120;3;젠틀컷;
+10120;5;Coupe Monsieur;Couafarel Monsieur
+10120;6;Kavaliersschnitt;Coiffwaff (Kavalier)
+10120;7;Corte Caballero;
+10120;8;Taglio Gentiluomo;Furfrou
+10120;9;Dandy Trim;Dandy Furfrou
+10121;1;クイーンカット;
+10121;3;퀸컷;
+10121;5;Coupe Reine;Couafarel Reine
+10121;6;Königinnenschnitt;Coiffwaff (Königin)
+10121;7;Corte Aristocrático;
+10121;8;Taglio Regina;Furfrou
+10121;9;La Reine Trim;La Reine Furfrou
+10122;1;カブキカット;
+10122;3;가부키컷;
+10122;5;Coupe Kabuki;Couafarel Kabuki
+10122;6;Kabuki-Schnitt;Coiffwaff (Kabuki)
+10122;7;Corte Kabuki;
+10122;8;Taglio Kabuki;Furfrou
+10122;9;Kabuki Trim;Kabuki Furfrou
+10123;1;キングダムカット;
+10123;3;킹덤컷;
+10123;5;Coupe Pharaon;Couafarel Pharaon
+10123;6;Herrscherschnitt;Coiffwaff (Herrscher)
+10123;7;Corte Faraónico;
+10123;8;Taglio Faraone;Furfrou
+10123;9;Pharaoh Trim;Pharaoh Furfrou
+10124;1;メスのすがた;
+10124;3;암컷의 모습;
+10124;4;雌性的樣子;
+10124;5;Femelle;Mistigrix Femelle
+10124;6;Weiblich;Psiaugon ♀
+10124;7;Hembra;
+10124;8;Femmina;Meowstic
+10124;9;Female;Female Meowstic
+10124;11;メスのすがた;
+10124;12;雌性的样子;
+10125;1;ブレードフォルム;
+10125;3;블레이드폼;
+10125;4;刀劍形態;
+10125;5;Forme Assaut;Exagide Assaut
+10125;6;Klingenform;Durengard (Klinge)
+10125;7;Forma Filo;
+10125;8;Forma Spada;Aegislash
+10125;9;Blade Forme;Blade Aegislash
+10125;11;ブレードフォルム;
+10125;12;刀剑形态;
+10126;1;ちいさいサイズ;
+10126;3;작은 사이즈;
+10126;4;小尺寸;
+10126;5;Taille Mini;Pitrouille Mini
+10126;6;Größe S;Irrbis (S)
+10126;7;Tamaño Pequeño;
+10126;8;Mini;Pumpkaboo
+10126;9;Small Size;Small Pumpkaboo
+10126;11;ちいさいサイズ;
+10126;12;小尺寸;
+10127;1;おおきいサイズ;
+10127;3;큰 사이즈;
+10127;4;大尺寸;
+10127;5;Taille Maxi;Pitrouille Maxi
+10127;6;Größe L;Irrbis (L)
+10127;7;Tamaño Grande;
+10127;8;Grande;Pumpkaboo
+10127;9;Large Size;Large Pumpkaboo
+10127;11;おおきいサイズ;
+10127;12;大尺寸;
+10128;1;とくだいサイズ;
+10128;3;특대 사이즈;
+10128;4;特大尺寸;
+10128;5;Taille Ultra;Pitrouille Ultra
+10128;6;Größe XL;Irrbis (XL)
+10128;7;Tamaño Extragrande;
+10128;8;Maxi;Pumpkaboo
+10128;9;Super Size;Super Pumpkaboo
+10128;11;とくだいサイズ;
+10128;12;特大尺寸;
+10129;1;ちいさいサイズ;
+10129;3;작은 사이즈;
+10129;4;小尺寸;
+10129;5;Taille Mini;Banshitrouye Mini
+10129;6;Größe S;Pumpdjinn (S)
+10129;7;Tamaño Pequeño;
+10129;8;Mini;Gourgeist
+10129;9;Small Size;Small Gourgeist
+10129;11;ちいさいサイズ;
+10129;12;小尺寸;
+10130;1;おおきいサイズ;
+10130;3;큰 사이즈;
+10130;4;大尺寸;
+10130;5;Taille Maxi;Banshitrouye Maxi
+10130;6;Größe L;Pumpdjinn (L)
+10130;7;Tamaño Grande;
+10130;8;Grande;Gourgeist
+10130;9;Large Size;Large Gourgeist
+10130;11;おおきいサイズ;
+10130;12;大尺寸;
+10131;1;とくだいサイズ;
+10131;3;특대 사이즈;
+10131;4;特大尺寸;
+10131;5;Taille Ultra;Banshitrouye Ultra
+10131;6;Größe XL;Pumpdjinn (XL)
+10131;7;Tamaño Extragrande;
+10131;8;Maxi;Gourgeist
+10131;9;Super Size;Super Gourgeist
+10131;11;とくだいサイズ;
+10131;12;特大尺寸;
+10132;1;リラックスモード;
+10132;3;릴랙스모드;
+10132;4;放鬆模式;
+10132;5;Mode Paisible;Xerneas Paisible
+10132;6;Ruhe-Modus;Xerneas (Ruhe)
+10132;7;Modo Relajado;
+10132;8;Modo Relax;Xerneas
+10132;9;Neutral Mode;Neutral Xerneas
+10132;11;リラックスモード;
+10132;12;放松模式;
+10133;1;メガフシギバナ;
+10133;3;메가이상해꽃;
+10133;4;超級妙蛙花;
+10133;5;Méga-Florizarre;Méga-Florizarre
+10133;6;Mega-Form;Mega-Bisaflor
+10133;7;Mega-Venusaur;
+10133;8;Mega;Venusaur
+10133;9;Mega Venusaur;Mega Venusaur
+10133;11;メガフシギバナ;
+10133;12;超级妙蛙花;
+10134;1;メガリザードンＸ;
+10134;3;메가리자몽X;
+10134;4;超級噴火龍Ｘ;
+10134;5;Méga-Dracaufeu X;Méga-Dracaufeu X
+10134;6;Mega-Form;Mega-Glurak X
+10134;7;Mega-Charizard X;
+10134;8; X;Charizard
+10134;9;Mega Charizard X;Mega Charizard X
+10134;11;メガリザードンＸ;
+10134;12;超级喷火龙Ｘ;
+10135;1;メガリザードンＹ;
+10135;3;메가리자몽Y;
+10135;4;超級噴火龍Ｙ;
+10135;5;Méga-Dracaufeu Y;Méga-Dracaufeu Y
+10135;6;Mega-Form;Mega-Glurak Y
+10135;7;Mega-Charizard Y;
+10135;8; Y;Charizard
+10135;9;Mega Charizard Y;Mega Charizard Y
+10135;11;メガリザードンＹ;
+10135;12;超级喷火龙Ｙ;
+10136;1;メガカメックス;
+10136;3;메가거북왕;
+10136;4;超級水箭龜;
+10136;5;Méga-Tortank;Méga-Tortank
+10136;6;Mega-Form;Mega-Turtok
+10136;7;Mega-Blastoise;
+10136;8;Mega;Blastoise
+10136;9;Mega Blastoise;Mega Blastoise
+10136;11;メガカメックス;
+10136;12;超级水箭龟;
+10137;1;メガフーディン;
+10137;3;메가후딘;
+10137;4;超級胡地;
+10137;5;Méga-Alakazam;Méga-Alakazam
+10137;6;Mega-Form;Mega-Simsala
+10137;7;Mega-Alakazam;
+10137;8;Mega;Alakazam
+10137;9;Mega Alakazam;Mega Alakazam
+10137;11;メガフーディン;
+10137;12;超级胡地;
+10138;1;メガゲンガー;
+10138;3;메가팬텀;
+10138;4;超級耿鬼;
+10138;5;Méga-Ectoplasma;Méga-Ectoplasma
+10138;6;Mega-Form;Mega-Gengar
+10138;7;Mega-Gengar;
+10138;8;Mega;Gengar
+10138;9;Mega Gengar;Mega Gengar
+10138;11;メガゲンガー;
+10138;12;超级耿鬼;
+10139;1;メガガルーラ;
+10139;3;메가캥카;
+10139;4;超級袋獸;
+10139;5;Méga-Kangourex;Méga-Kangourex
+10139;6;Mega-Form;Mega-Kangama
+10139;7;Mega-Kangaskhan;
+10139;8;Mega;Kangaskhan
+10139;9;Mega Kangaskhan;Mega Kangaskhan
+10139;11;メガガルーラ;
+10139;12;超级袋兽;
+10140;1;メガカイロス;
+10140;3;메가쁘사이저;
+10140;4;超級凱羅斯;
+10140;5;Méga-Scarabrute;Méga-Scarabrute
+10140;6;Mega-Form;Mega-Pinsir
+10140;7;Mega-Pinsir;
+10140;8;Mega;Pinsir
+10140;9;Mega Pinsir;Mega Pinsir
+10140;11;メガカイロス;
+10140;12;超级凯罗斯;
+10141;1;メガギャラドス;
+10141;3;메가갸라도스;
+10141;4;超級暴鯉龍;
+10141;5;Méga-Léviator;Méga-Léviator
+10141;6;Mega-Form;Mega-Garados
+10141;7;Mega-Gyarados;
+10141;8;Mega;Gyarados
+10141;9;Mega Gyarados;Mega Gyarados
+10141;11;メガギャラドス;
+10141;12;超级暴鲤龙;
+10142;1;メガプテラ;
+10142;3;메가프테라;
+10142;4;超級化石翼龍;
+10142;5;Méga-Ptéra;Méga-Ptéra
+10142;6;Mega-Form;Mega-Aerodactyl
+10142;7;Mega-Aerodactyl;
+10142;8;Mega;Aerodactyl
+10142;9;Mega Aerodactyl;Mega Aerodactyl
+10142;11;メガプテラ;
+10142;12;超级化石翼龙;
+10143;1;メガミュウツーＸ;
+10143;3;메가뮤츠X;
+10143;4;超級超夢Ｘ;
+10143;5;Méga-Mewtwo X;Méga-Mewtwo X
+10143;6;Mega-Form;Mega-Mewtu X
+10143;7;Mega-Mewtwo X;
+10143;8;Mega X;Mewtwo
+10143;9;Mega Mewtwo X;Mega Mewtwo X
+10143;11;メガミュウツーＸ;
+10143;12;超级超梦Ｘ;
+10144;1;メガミュウツーＹ;
+10144;3;메가뮤츠Y;
+10144;4;超級超夢Ｙ;
+10144;5;Méga-Mewtwo Y;Méga-Mewtwo Y
+10144;6;Mega-Form;Mega-Mewtu Y
+10144;7;Mega-Mewtwo Y;
+10144;8;Mega Y;Mewtwo
+10144;9;Mega Mewtwo Y;Mega Mewtwo Y
+10144;11;メガミュウツーＹ;
+10144;12;超级超梦Ｙ;
+10145;1;メガデンリュウ;
+10145;3;메가전룡;
+10145;4;超級電龍;
+10145;5;Méga-Pharamp;Méga-Pharamp
+10145;6;Mega-Form;Mega-Ampharos
+10145;7;Mega-Ampharos;
+10145;8;Mega;Ampharos
+10145;9;Mega Ampharos;Mega Ampharos
+10145;11;メガデンリュウ;
+10145;12;超级电龙;
+10146;1;メガハッサム;
+10146;3;메가핫삼;
+10146;4;超級巨鉗螳螂;
+10146;5;Méga-Cizayox;Méga-Cizayox
+10146;6;Mega-Form;Mega-Scherox
+10146;7;Mega-Scizor;
+10146;8;Mega;Scizor
+10146;9;Mega Scizor;Mega Scizor
+10146;11;メガハッサム;
+10146;12;超级巨钳螳螂;
+10147;1;メガヘラクロス;
+10147;3;메가헤라크로스;
+10147;4;超級赫拉克羅斯;
+10147;5;Méga-Scarhino;Méga-Scarhino
+10147;6;Mega-Form;Mega-Skaraborn
+10147;7;Mega-Heracross;
+10147;8;Mega;Heracross
+10147;9;Mega Heracross;Mega Heracross
+10147;11;メガヘラクロス;
+10147;12;超级赫拉克罗斯;
+10148;1;メガヘルガー;
+10148;3;메가헬가;
+10148;4;超級黑魯加;
+10148;5;Méga-Démolosse;Méga-Démolosse
+10148;6;Mega-Form;Mega-Hundemon
+10148;7;Mega-Houndoom;
+10148;8;Mega;Houndoom
+10148;9;Mega Houndoom;Mega Houndoom
+10148;11;メガヘルガー;
+10148;12;超级黑鲁加;
+10149;1;メガバンギラス;
+10149;3;메가마기라스;
+10149;4;超級班基拉斯;
+10149;5;Méga-Tyranocif;Méga-Tyranocif
+10149;6;Mega-Form;Mega-Despotar
+10149;7;Mega-Tyranitar;
+10149;8;Mega;Tyranitar
+10149;9;Mega Tyranitar;Mega Tyranitar
+10149;11;メガバンギラス;
+10149;12;超级班基拉斯;
+10150;1;メガバシャーモ;
+10150;3;메가번치코;
+10150;4;超級火焰雞;
+10150;5;Méga-Braségali;Méga-Braségali
+10150;6;Mega-Form;Mega-Lohgock
+10150;7;Mega-Blaziken;
+10150;8;Mega;Blaziken
+10150;9;Mega Blaziken;Mega Blaziken
+10150;11;メガバシャーモ;
+10150;12;超级火焰鸡;
+10151;1;メガサーナイト;
+10151;3;메가가디안;
+10151;4;超級沙奈朵;
+10151;5;Méga-Gardevoir;Méga-Gardevoir
+10151;6;Mega-Form;Mega-Guardevoir
+10151;7;Mega-Gardevoir;
+10151;8;Mega;Gardevoir
+10151;9;Mega Gardevoir;Mega Gardevoir
+10151;11;メガサーナイト;
+10151;12;超级沙奈朵;
+10152;1;メガクチート;
+10152;3;메가입치트;
+10152;4;超級大嘴娃;
+10152;5;Méga-Mysdibule;Méga-Mysdibule
+10152;6;Mega-Form;Mega-Flunkifer
+10152;7;Mega-Mawile;
+10152;8;Mega;Mawile
+10152;9;Mega Mawile;Mega Mawile
+10152;11;メガクチート;
+10152;12;超级大嘴娃;
+10153;1;メガボスゴドラ;
+10153;3;메가보스로라;
+10153;4;超級波士可多拉;
+10153;5;Méga-Galeking;Méga-Galeking
+10153;6;Mega-Form;Mega-Stolloss
+10153;7;Mega-Aggron;
+10153;8;Mega;Aggron
+10153;9;Mega Aggron;Mega Aggron
+10153;11;メガボスゴドラ;
+10153;12;超级波士可多拉;
+10154;1;メガチャーレム;
+10154;3;메가요가램;
+10154;4;超級恰雷姆;
+10154;5;Méga-Charmina;Méga-Charmina
+10154;6;Mega-Form;Mega-Meditalis
+10154;7;Mega-Medicham;
+10154;8;Mega;Medicham
+10154;9;Mega Medicham;Mega Medicham
+10154;11;メガチャーレム;
+10154;12;超级恰雷姆;
+10155;1;メガライボルト;
+10155;3;메가썬더볼트;
+10155;4;超級雷電獸;
+10155;5;Méga-Élecsprint;Méga-Élecsprint
+10155;6;Mega-Form;Mega-Voltenso
+10155;7;Mega-Manectric;
+10155;8;Mega;Manectric
+10155;9;Mega Manectric;Mega Manectric
+10155;11;メガライボルト;
+10155;12;超级雷电兽;
+10156;1;メガジュペッタ;
+10156;3;메가다크펫;
+10156;4;超級詛咒娃娃;
+10156;5;Méga-Branette;Méga-Branette
+10156;6;Mega-Form;Mega-Banette
+10156;7;Mega-Banette;
+10156;8;Mega;Banette
+10156;9;Mega Banette;Mega Banette
+10156;11;メガジュペッタ;
+10156;12;超级诅咒娃娃;
+10157;1;メガアブソル;
+10157;3;메가앱솔;
+10157;4;超級阿勃梭魯;
+10157;5;Méga-Absol;Méga-Absol
+10157;6;Mega-Form;Mega-Absol
+10157;7;Mega-Absol;
+10157;8;Mega;Absol
+10157;9;Mega Absol;Mega Absol
+10157;11;メガアブソル;
+10157;12;超级阿勃梭鲁;
+10158;1;メガガブリアス;
+10158;3;메가한카리아스;
+10158;4;超級烈咬陸鯊;
+10158;5;Méga-Carchacrok;Méga-Carchacrok
+10158;6;Mega-Form;Mega-Knakrack
+10158;7;Mega-Garchomp;
+10158;8;Mega;Garchomp
+10158;9;Mega Garchomp;Mega Garchomp
+10158;11;メガガブリアス;
+10158;12;超级烈咬陆鲨;
+10159;1;メガルカリオ;
+10159;3;메가루카리오;
+10159;4;超級路卡利歐;
+10159;5;Méga-Lucario;Méga-Lucario
+10159;6;Mega-Form;Mega-Lucario
+10159;7;Mega-Lucario;
+10159;8;Mega;Lucario
+10159;9;Mega Lucario;Mega Lucario
+10159;11;メガルカリオ;
+10159;12;超级路卡利欧;
+10160;1;メガユキノオー;
+10160;3;메가눈설왕;
+10160;4;超級暴雪王;
+10160;5;Méga-Blizzaroi;Méga-Blizzaroi
+10160;6;Mega-Form;Mega-Rexblisar
+10160;7;Mega-Abomasnow;
+10160;8;Mega;Abomasnow
+10160;9;Mega Abomasnow;Mega Abomasnow
+10160;11;メガユキノオー;
+10160;12;超级暴雪王;
+10161;1;ファンシーなもよう;
+10161;3;팬시한 모양;
+10161;5;Motif Fantaisie;Prismillon Fantaisie
+10161;6;Fantasiemuster;Vivillion (Fantasie)
+10161;7;Motivo Fantasía;
+10161;8;Motivo Sbarazzino;Vivillon
+10161;9;Fancy Pattern;Fancy Vivillon
+10162;1;ボールのもよう;
+10162;3;볼의 모양;
+10162;5;Motif Poké Ball;Prismillon Poké Ball
+10162;6;Pokéball-Muster;Vivillion (Pokeball)
+10162;7;Motivo Poké Ball;
+10162;8;Motivo Poké Ball;Vivillon
+10162;9;Poké Ball Pattern;Poké Ball Vivillon
+10163;1;えいえんのはな;
+10163;3;영원의 꽃;
+10163;5;Fleur Éternelle;Floette Éternel
+10163;6;Ewigblütler;Floette (Ewigblütler)
+10163;7;Flor Eterna;
+10163;8;Fiore Eterno;Floette
+10163;9;Eternal Flower;Eternal Floette
+10164;1;メガラティアス;
+10164;3;메가라티아스;
+10164;4;超級拉帝亞斯;
+10164;5;Méga-Latias;Méga-Latias
+10164;6;Mega-Form;Mega-Latias
+10164;7;Mega-Latias;
+10164;8;Mega;Latias
+10164;9;Mega Latias;Mega Latias
+10164;11;メガラティアス;
+10164;12;超级拉帝亚斯;
+10165;1;メガラティオス;
+10165;3;메가라티오스;
+10165;4;超級拉帝歐斯;
+10165;5;Méga-Latios;Méga-Latios
+10165;6;Mega-Form;Mega-Latios
+10165;7;Mega-Latios;
+10165;8;Mega;Latios
+10165;9;Mega Latios;Mega Latios
+10165;11;メガラティオス;
+10165;12;超级拉帝欧斯;
+10166;1;メガラグラージ;
+10166;3;메가대짱이;
+10166;4;超級巨沼怪;
+10166;5;Méga-Laggron;Méga-Laggron
+10166;6;Mega-Form;Mega-Sumpex
+10166;7;Mega-Swampert;
+10166;8;Mega;Swampert
+10166;9;Mega Swampert;Mega Swampert
+10166;11;メガラグラージ;
+10166;12;超级巨沼怪;
+10167;1;メガジュカイン;
+10167;3;메가나무킹;
+10167;4;超級蜥蜴王;
+10167;5;Méga-Jungko;Méga-Jungko
+10167;6;Mega-Form;Mega-Gewaldro
+10167;7;Mega-Sceptile;
+10167;8;Mega;Sceptile
+10167;9;Mega Sceptile;Mega Sceptile
+10167;11;メガジュカイン;
+10167;12;超级蜥蜴王;
+10168;1;メガヤミラミ;
+10168;3;메가깜까미;
+10168;4;超級勾魂眼;
+10168;5;Méga-Ténéfix;Méga-Ténéfix
+10168;6;Mega-Form;Mega-Zobiris
+10168;7;Mega-Sableye;
+10168;8;Mega;Sableye
+10168;9;Mega Sableye;Mega Sableye
+10168;11;メガヤミラミ;
+10168;12;超级勾魂眼;
+10169;1;メガチルタリス;
+10169;3;메가파비코리;
+10169;4;超級七夕青鳥;
+10169;5;Méga-Altaria;Méga-Altaria
+10169;6;Mega-Form;Mega-Altaria
+10169;7;Mega-Altaria;
+10169;8;Mega;Altaria
+10169;9;Mega Altaria;Mega Altaria
+10169;11;メガチルタリス;
+10169;12;超级七夕青鸟;
+10170;1;メガエルレイド;
+10170;3;메가엘레이드;
+10170;4;超級艾路雷朵;
+10170;5;Méga-Gallame;Méga-Gallame
+10170;6;Mega-Form;Mega-Galagladi
+10170;7;Mega-Gallade;
+10170;8;Mega;Gallade
+10170;9;Mega Gallade;Mega Gallade
+10170;11;メガエルレイド;
+10170;12;超级艾路雷朵;
+10171;1;メガタブンネ;
+10171;3;메가다부니;
+10171;4;超級差不多娃娃;
+10171;5;Méga-Nanméouïe;Méga-Nanméouïe
+10171;6;Mega-Form;Mega-Ohrdoch
+10171;7;Mega-Audino;
+10171;8;Mega;Audino
+10171;9;Mega Audino;Mega Audino
+10171;11;メガタブンネ;
+10171;12;超级差不多娃娃;
+10172;1;メガサメハダー;
+10172;3;메가샤크니아;
+10172;4;超級巨牙鯊;
+10172;5;Méga-Sharpedo;Méga-Sharpedo
+10172;6;Mega-Form;Mega-Tohaido
+10172;7;Mega-Sharpedo;
+10172;8;Mega;Sharpedo
+10172;9;Mega Sharpedo;Mega Sharpedo
+10172;11;メガサメハダー;
+10172;12;超级巨牙鲨;
+10173;1;メガヤドラン;
+10173;3;메가야도란;
+10173;4;超級呆殼獸;
+10173;5;Méga-Flagadoss;Méga-Flagadoss
+10173;6;Mega-Form;Mega-Lahmus
+10173;7;Mega-Slowbro;
+10173;8;Mega;Slowbro
+10173;9;Mega Slowbro;Mega Slowbro
+10173;11;メガヤドラン;
+10173;12;超级呆壳兽;
+10174;1;メガハガネール;
+10174;3;메가강철톤;
+10174;4;超級大鋼蛇;
+10174;5;Méga-Steelix;Méga-Steelix
+10174;6;Mega-Form;Mega-Stahlos
+10174;7;Mega-Steelix;
+10174;8;Mega;Steelix
+10174;9;Mega Steelix;Mega Steelix
+10174;11;メガハガネール;
+10174;12;超级大钢蛇;
+10175;1;メガピジョット;
+10175;3;메가피죤투;
+10175;4;超級大比鳥;
+10175;5;Méga-Roucarnage;Méga-Roucarnage
+10175;6;Mega-Form;Mega-Tauboss
+10175;7;Mega-Pidgeot;
+10175;8;Mega;Pidgeot
+10175;9;Mega Pidgeot;Mega Pidgeot
+10175;11;メガピジョット;
+10175;12;超级大比鸟;
+10176;1;メガオニゴーリ;
+10176;3;메가얼음귀신;
+10176;4;超級冰鬼護;
+10176;5;Méga-Oniglali;Méga-Oniglali
+10176;6;Mega-Form;Mega-Firnontor
+10176;7;Mega-Glalie;
+10176;8;Mega;Glalie
+10176;9;Mega Glalie;Mega Glalie
+10176;11;メガオニゴーリ;
+10176;12;超级冰鬼护;
+10177;1;メガディアンシー;
+10177;3;메가디안시;
+10177;4;超級蒂安希;
+10177;5;Méga-Diancie;Méga-Diancie
+10177;6;Mega-Form;Mega-Diancie
+10177;7;Mega-Diancie;
+10177;8;Mega;Diancie
+10177;9;Mega Diancie;Mega Diancie
+10177;11;メガディアンシー;
+10177;12;超级蒂安希;
+10178;1;メガメタグロス;
+10178;3;메가메타그로스;
+10178;4;超級巨金怪;
+10178;5;Méga-Métalosse;Méga-Métalosse
+10178;6;Mega-Form;Mega-Metagross
+10178;7;Mega-Metagross;
+10178;8;Mega;Metagross
+10178;9;Mega Metagross;Mega Metagross
+10178;11;メガメタグロス;
+10178;12;超级巨金怪;
+10179;1;ゲンシカイキのすがた;
+10179;3;원시회귀의 모습;
+10179;4;原始回歸的樣子;
+10179;5;Primo-Résurgence;Primo-Kyogre
+10179;6;Protomorphose;Proto-Kyogre
+10179;7;Regresión Primigenia;
+10179;8;Mega;Kyogre
+10179;9;Primal Reversion;Primal Kyogre
+10179;11;ゲンシカイキのすがた;
+10179;12;原始回归的样子;
+10180;1;ゲンシカイキのすがた;
+10180;3;원시회귀의 모습;
+10180;4;原始回歸的樣子;
+10180;5;Primo-Résurgence;Primo-Groudon
+10180;6;Protomorphose;Proto-Groudon
+10180;7;Regresión Primigenia;
+10180;8;Mega;Groudon
+10180;9;Primal Reversion;Primal Groudon
+10180;11;ゲンシカイキのすがた;
+10180;12;原始回归的样子;
+10181;1;メガレックウザ;
+10181;3;메가레쿠쟈;
+10181;4;超級烈空坐;
+10181;5;Méga-Rayquaza;Méga-Rayquaza
+10181;6;Mega-Form;Mega-Rayquaza
+10181;7;Mega-Rayquaza;
+10181;8;Mega;Rayquaza
+10181;9;Mega Rayquaza;Mega Rayquaza
+10181;11;メガレックウザ;
+10181;12;超级烈空坐;
+10182;5;Pikachu Rockeur;Pikachu Rockeur
+10182;6;Cosplayform;Rock Star Pikachu
+10182;8;Rockstar;Pikachu
+10182;9;Pikachu Rock Star;Pikachu Rock Star
+10183;5;Pikachu Lady;Pikachu Lady
+10183;6;Cosplayform;Lady Pikachu
+10183;8;Damigella;Pikachu
+10183;9;Pikachu Belle;Pikachu Belle
+10184;5;Pikachu Star;Pikachu Star
+10184;6;Cosplayform;Pop Star Pikachu
+10184;8;Confetto;Pikachu
+10184;9;Pikachu Pop Star;Pikachu Pop Star
+10185;5;Pikachu Docteur;Pikachu Docteur
+10185;6;Cosplayform;Dr. Pikachu
+10185;8;Scienziata;Pikachu
+10185;9;Pikachu Ph.D.;Pikachu Ph.D.
+10186;5;Pikachu Catcheur;Pikachu Catcheur
+10186;6;Cosplayform;Wrestling Pikachu
+10186;8;Wrestler;Pikachu
+10186;9;Pikachu Libre;Pikachu Libre
+10187;5;Pikachu Cosplayeur;Pikachu Cosplayeur
+10187;6;Cosplayform;Cosplay Pikachu
+10187;8;Cosplay;Pikachu
+10187;9;Cosplay Pikachu;Cosplay Pikachu
+10188;1;ときはなたれしフーパ;
+10188;3;굴레를 벗어난 후파;
+10188;4;解放胡帕;
+10188;5;Hoopa Déchaîné;Hoopa Déchaîné
+10188;6;Entfesseltes Hoopa;Entfesseltes Hoopa
+10188;7;Hoopa Desatado;
+10188;8;Libero;Hoopa
+10188;9;Hoopa Unbound;Hoopa Unbound
+10188;11;ときはなたれしフーパ;
+10188;12;解放胡帕;
+10189;1;メガバクーダ;
+10189;3;메가폭타;
+10189;4;超級噴火駝;
+10189;5;Méga-Camérupt;Méga-Camérupt
+10189;6;Mega-Form;Mega-Camerupt
+10189;7;Mega-Camerupt;
+10189;8;Mega;Camerupt
+10189;9;Mega Camerupt;Mega Camerupt
+10189;11;メガバクーダ;
+10189;12;超级喷火驼;
+10190;1;メガミミロップ;
+10190;3;메가이어롭;
+10190;4;超級長耳兔;
+10190;5;Méga-Lockpin;Méga-Lockpin
+10190;6;Mega-Form;Mega-Schlapor
+10190;7;Mega-Lopunny;
+10190;8;Mega;Lopunny
+10190;9;Mega Lopunny;Mega Lopunny
+10190;11;メガミミロップ;
+10190;12;超级长耳兔;
+10191;1;メガボーマンダ;
+10191;3;메가보만다;
+10191;4;超級暴飛龍;
+10191;5;Méga-Drattak;Méga-Drattak
+10191;6;Mega-Form;Mega-Brutalanda
+10191;7;Mega-Salamence;
+10191;8;Mega;Salamence
+10191;9;Mega Salamence;Mega Salamence
+10191;11;メガボーマンダ;
+10191;12;超级暴飞龙;
+10192;1;メガスピアー;
+10192;3;메가독침붕;
+10192;4;超級大針蜂;
+10192;5;Méga-Dardargnan;Méga-Dardargnan
+10192;6;Mega-Form;Mega-Bibor
+10192;7;Mega-Beedrill;
+10192;8;Mega;Beedrill
+10192;9;Mega Beedrill;Mega Beedrill
+10192;11;メガスピアー;
+10192;12;超级大针蜂;
+10193;1;アローラのすがた;
+10193;3;알로라의 모습;
+10193;4;阿羅拉的樣子;
+10193;5;Forme d’Alola;Rattata d'Alola
+10193;6;Alola-Form;Alola Rattfratz
+10193;7;Forma de Alola;
+10193;8;Forma di Alola;Rattata
+10193;9;Alolan Form;Alolan Rattata
+10193;11;アローラのすがた;
+10193;12;阿罗拉的样子;
+10194;1;アローラのすがた;
+10194;3;알로라의 모습;
+10194;4;阿羅拉的樣子;
+10194;5;Forme d’Alola;Rattatac d'Alola
+10194;6;Alola-Form;Alola Rattikarl
+10194;7;Forma de Alola;
+10194;8;Forma di Alola;Raticate
+10194;9;Alolan Form;Alolan Raticate
+10194;11;アローラのすがた;
+10194;12;阿罗拉的样子;
+10195;5;;Rattatac d'Alola Dominant
+10195;6;Totemform;Totem Alola Rattikarl
+10195;8;Dominante;Raticate
+10195;9;;Totem Alolan Raticate
+10196;1;オリジナルキャップ;
+10196;3;오리지널캡;
+10196;4;初始帽子;
+10196;5;Casquette Originale;Pikachu Casquette Originale
+10196;6;Original-Kappe;Pikachu (Original-Kappe)
+10196;7;Gorra Original;
+10196;8;Berretto Originale;Pikachu
+10196;9;Original Cap;Original Cap Pikachu
+10196;11;オリジナルキャップ;
+10196;12;初始帽子;
+10197;1;ホウエンキャップ;
+10197;3;호연캡;
+10197;4;豐緣帽子;
+10197;5;Casquette de Hoenn;Pikachu Casquette de Hoenn
+10197;6;Hoenn-Kappe;Pikachu (Hoenn-Kappe)
+10197;7;Gorra Hoenn;
+10197;8;Berretto Hoenn;Pikachu
+10197;9;Hoenn Cap;Hoenn Cap Pikachu
+10197;11;ホウエンキャップ;
+10197;12;丰缘帽子;
+10198;1;シンオウキャップ;
+10198;3;신오캡;
+10198;4;神奧帽子;
+10198;5;Casquette de Sinnoh;Pikachu Casquette de Sinnoh
+10198;6;Sinnoh-Kappe;Pikachu (Sinnoh-Kappe)
+10198;7;Gorra Sinnoh;
+10198;8;Berretto Sinnoh;Pikachu
+10198;9;Sinnoh Cap;Sinnoh Cap Pikachu
+10198;11;シンオウキャップ;
+10198;12;神奥帽子;
+10199;1;イッシュキャップ;
+10199;3;하나캡;
+10199;4;合眾帽子;
+10199;5;Casquette d’Unys;Pikachu Casquette d’Unys
+10199;6;Einall-Kappe;Pikachu (Einall-Kappe)
+10199;7;Gorra Teselia;
+10199;8;Berretto Unima;Pikachu
+10199;9;Unova Cap;Unova Cap Pikachu
+10199;11;イッシュキャップ;
+10199;12;合众帽子;
+10200;1;カロスキャップ;
+10200;3;칼로스캡;
+10200;4;卡洛斯帽子;
+10200;5;Casquette de Kalos;Pikachu Casquette de Kalos
+10200;6;Kalos-Kappe;Pikachu (Kalos-Kappe)
+10200;7;Gorra Kalos;
+10200;8;Berretto Kalos;Pikachu
+10200;9;Kalos Cap;Kalos Cap Pikachu
+10200;11;カロスキャップ;
+10200;12;卡洛斯帽子;
+10201;1;アローラキャップ;
+10201;3;알로라캡;
+10201;4;阿羅拉帽子;
+10201;5;Casquette d’Alola;Pikachu Casquette d’Alola
+10201;6;Alola-Kappe;Pikachu (Alola-Kappe)
+10201;7;Gorra Alola;
+10201;8;Berretto Alola;Pikachu
+10201;9;Alola Cap;Alola Cap Pikachu
+10201;11;アローラキャップ;
+10201;12;阿罗拉帽子;
+10202;1;アローラのすがた;
+10202;3;알로라의 모습;
+10202;4;阿羅拉的樣子;
+10202;5;Forme d’Alola;Raichu d'Alola
+10202;6;Alola-Form;Alola Raichu
+10202;7;Forma de Alola;
+10202;8;Forma di Alola;Raichu
+10202;9;Alolan Form;Alolan Raichu
+10202;11;アローラのすがた;
+10202;12;阿罗拉的样子;
+10203;1;アローラのすがた;
+10203;3;알로라의 모습;
+10203;4;阿羅拉的樣子;
+10203;5;Forme d’Alola;Sabelette d'Alola
+10203;6;Alola-Form;Alola Sandan
+10203;7;Forma de Alola;
+10203;8;Forma di Alola;Sandshrew
+10203;9;Alolan Form;Alolan Sandshrew
+10203;11;アローラのすがた;
+10203;12;阿罗拉的样子;
+10204;1;アローラのすがた;
+10204;3;알로라의 모습;
+10204;4;阿羅拉的樣子;
+10204;5;Forme d’Alola;Sablaireau d'Alola
+10204;6;Alola-Form;Alola Sandamer
+10204;7;Forma de Alola;
+10204;8;Forma di Alola;Sandslash
+10204;9;Alolan Form;Alolan Sandslash
+10204;11;アローラのすがた;
+10204;12;阿罗拉的样子;
+10205;1;アローラのすがた;
+10205;3;알로라의 모습;
+10205;4;阿羅拉的樣子;
+10205;5;Forme d’Alola;Goupix d'Alola
+10205;6;Alola-Form;Alola Vulpix
+10205;7;Forma de Alola;
+10205;8;Forma di Alola;Vulpix
+10205;9;Alolan Form;Alolan Vulpix
+10205;11;アローラのすがた;
+10205;12;阿罗拉的样子;
+10206;1;アローラのすがた;
+10206;3;알로라의 모습;
+10206;4;阿羅拉的樣子;
+10206;5;Forme d’Alola;Feunard d'Alola
+10206;6;Alola-Form;Alola Vulnona
+10206;7;Forma de Alola;
+10206;8;Forma di Alola;Ninetales
+10206;9;Alolan Form;Alolan Ninetales
+10206;11;アローラのすがた;
+10206;12;阿罗拉的样子;
+10207;1;アローラのすがた;
+10207;3;알로라의 모습;
+10207;4;阿羅拉的樣子;
+10207;5;Forme d’Alola;Taupiqueur d'Alola
+10207;6;Alola-Form;Alola Digda
+10207;7;Forma de Alola;
+10207;8;Forma di Alola;Diglett
+10207;9;Alolan Form;Alolan Diglett
+10207;11;アローラのすがた;
+10207;12;阿罗拉的样子;
+10208;1;アローラのすがた;
+10208;3;알로라의 모습;
+10208;4;阿羅拉的樣子;
+10208;5;Forme d’Alola;Triopikeur d'Alola
+10208;6;Alola-Form;Alola Digdri
+10208;7;Forma de Alola;
+10208;8;Forma di Alola;Dugtrio
+10208;9;Alolan Form;Alolan Dugtrio
+10208;11;アローラのすがた;
+10208;12;阿罗拉的样子;
+10209;1;アローラのすがた;
+10209;3;알로라의 모습;
+10209;4;阿羅拉的樣子;
+10209;5;Forme d’Alola;Miaouss d'Alola
+10209;6;Alola-Form;Alola Mauzi
+10209;7;Forma de Alola;
+10209;8;Forma di Alola;Meowth
+10209;9;Alolan Form;Alolan Meowth
+10209;11;アローラのすがた;
+10209;12;阿罗拉的样子;
+10210;1;アローラのすがた;
+10210;3;알로라의 모습;
+10210;4;阿羅拉的樣子;
+10210;5;Forme d’Alola;Persian d'Alola
+10210;6;Alola-Form;Alola Snobilikat
+10210;7;Forma de Alola;
+10210;8;Forma di Alola;Persian
+10210;9;Alolan Form;Alolan Persian
+10210;11;アローラのすがた;
+10210;12;阿罗拉的样子;
+10211;1;アローラのすがた;
+10211;3;알로라의 모습;
+10211;4;阿羅拉的樣子;
+10211;5;Forme d’Alola;Racaillou d'Alola
+10211;6;Alola-Form;Alola Kleinstein
+10211;7;Forma de Alola;
+10211;8;Forma di Alola;Geodude
+10211;9;Alolan Form;Alolan Geodude
+10211;11;アローラのすがた;
+10211;12;阿罗拉的样子;
+10212;1;アローラのすがた;
+10212;3;알로라의 모습;
+10212;4;阿羅拉的樣子;
+10212;5;Forme d’Alola;Gravalanch d'Alola
+10212;6;Alola-Form;Alola Georok
+10212;7;Forma de Alola;
+10212;8;Forma di Alola;Graveler
+10212;9;Alolan Form;Alolan Graveler
+10212;11;アローラのすがた;
+10212;12;阿罗拉的样子;
+10213;1;アローラのすがた;
+10213;3;알로라의 모습;
+10213;4;阿羅拉的樣子;
+10213;5;Forme d’Alola;Grolem d'Alola
+10213;6;Alola-Form;Alola Geowaz
+10213;7;Forma de Alola;
+10213;8;Forma di Alola;Golem
+10213;9;Alolan Form;Alolan Golem
+10213;11;アローラのすがた;
+10213;12;阿罗拉的样子;
+10214;1;アローラのすがた;
+10214;3;알로라의 모습;
+10214;4;阿羅拉的樣子;
+10214;5;Forme d’Alola;Tadmorv d'Alola
+10214;6;Alola-Form;Alola Sleima
+10214;7;Forma de Alola;
+10214;8;Forma di Alola;Grimer
+10214;9;Alolan Form;Alolan Grimer
+10214;11;アローラのすがた;
+10214;12;阿罗拉的样子;
+10215;1;アローラのすがた;
+10215;3;알로라의 모습;
+10215;4;阿羅拉的樣子;
+10215;5;Forme d’Alola;Grotadmorv d'Alola
+10215;6;Alola-Form;Alola Sleimok
+10215;7;Forma de Alola;
+10215;8;Forma di Alola;Muk
+10215;9;Alolan Form;Alolan Muk
+10215;11;アローラのすがた;
+10215;12;阿罗拉的样子;
+10216;1;アローラのすがた;
+10216;3;알로라의 모습;
+10216;4;阿羅拉的樣子;
+10216;5;Forme d’Alola;Noadkoko d'Alola
+10216;6;Alola-Form;Alola Kokowei
+10216;7;Forma de Alola;
+10216;8;Forma di Alola;Exeggutor
+10216;9;Alolan Form;Alolan Exeggutor
+10216;11;アローラのすがた;
+10216;12;阿罗拉的样子;
+10217;1;アローラのすがた;
+10217;3;알로라의 모습;
+10217;4;阿羅拉的樣子;
+10217;5;Forme d’Alola;Ossatueur d'Alola
+10217;6;Alola-Form;Alola Knogga
+10217;7;Forma de Alola;
+10217;8;Forma di Alola;Marowak
+10217;9;Alolan Form;Alolan Marowak
+10217;11;アローラのすがた;
+10217;12;阿罗拉的样子;
+10218;5;;Amphinobi Synergie
+10218;6;Freundschaftsaktform;Battle Bond Quajutsu
+10218;8;Morfosintonia;Greninja
+10218;9;;Battle Bond Greninja
+10219;1;サトシゲッコウガ;
+10219;3;지우개굴닌자;
+10219;4;小智版甲賀忍蛙;
+10219;5;Forme Sacha;Amphinobi Forme Sacha
+10219;6;Ash-Form;Ash Quajutsu
+10219;7;Forma Ash;
+10219;8;Forma Ash;Greninja
+10219;9;Ash-Greninja;Ash's Greninja
+10219;11;サトシゲッコウガ;
+10219;12;小智版甲贺忍蛙;
+10220;1;１０％フォルム;
+10220;3;10%폼;
+10220;4;１０％形態;
+10220;5;Forme 10 %;Zygarde Forme 10 %
+10220;6;10%-Form;Zygarde (10%)
+10220;7;Forma 10%;
+10220;8;Forma 10%;Zygarde
+10220;9;10% Forme;10% Zygarde
+10220;11;１０％フォルム;
+10220;12;１０％形态;
+10221;1;５０％フォルム;
+10221;3;50%폼;
+10221;4;５０％形態;
+10221;5;Forme 50 %;Zygarde Forme 50 %
+10221;6;50%-Form;Zygarde (50%)
+10221;7;Forma 50%;
+10221;8;Forma 50%;Zygarde
+10221;9;50% Forme;50% Zygarde
+10221;11;５０％フォルム;
+10221;12;５０％形态;
+10222;1;パーフェクトフォルム;
+10222;3;퍼펙트폼;
+10222;4;完全體形態;
+10222;5;Forme Parfaite;Zygarde Forme Parfaite
+10222;6;Optimumform;Zygarde (Optimum)
+10222;7;Forma Completa;
+10222;8;Forma Perfetta;Zygarde
+10222;9;Complete Forme;Complete Zygarde
+10222;11;パーフェクトフォルム;
+10222;12;完全体形态;
+10223;5;;Argouste Dominant
+10223;6;Totemform;Totem Manguspektor
+10223;8;Dominante;Gumshoos
+10223;9;;Totem Gumshoos
+10224;5;;Lucanon Dominant
+10224;6;Totemform;Totem Donarion
+10224;8;Dominante;Vikavolt
+10224;9;;Totem Vikavolt
+10225;1;ぱちぱちスタイル;
+10225;3;파칙파칙스타일;
+10225;4;啪滋啪滋風格;
+10225;5;Style Pom-Pom;Plumeline Style Pom-Pom
+10225;6;Cheerleading-Stil;Choreogel (Cheerleading)
+10225;7;Estilo Animado;
+10225;8;Stile Cheerdance;Oricorio
+10225;9;Pom-Pom Style;Pom-pom Oricorio
+10225;11;ぱちぱちスタイル;
+10225;12;啪滋啪滋风格;
+10226;1;ふらふらスタイル;
+10226;3;훌라훌라스타일;
+10226;4;呼拉呼拉風格;
+10226;5;Style Hula;Plumeline Style Hula
+10226;6;Hula-Stil;Choreogel (Hula)
+10226;7;Estilo Plácido;
+10226;8;Stile Hula;Oricorio
+10226;9;Pa’u Style;Pa’u Oricorio
+10226;11;ふらふらスタイル;
+10226;12;呼拉呼拉风格;
+10227;1;まいまいスタイル;
+10227;3;하늘하늘스타일;
+10227;4;輕盈輕盈風格;
+10227;5;Style Buyō;Plumeline Style Buyō
+10227;6;Buyo-Stil;Choreogel (Buyo)
+10227;7;Estilo Refinado;
+10227;8;Stile Buyō;Oricorio
+10227;9;Sensu Style;Sensu Oricorio
+10227;11;まいまいスタイル;
+10227;12;轻盈轻盈风格;
+10228;1;まよなかのすがた;
+10228;3;한밤중의 모습;
+10228;4;黑夜的樣子;
+10228;5;Forme Nocturne;Lougaroc Forme Nocturne
+10228;6;Nachtform;Wolwerock (Nacht)
+10228;7;Forma Nocturna;
+10228;8;Forma Notte;Lycanroc
+10228;9;Midnight Form;Midnight Lycanroc
+10228;11;まよなかのすがた;
+10228;12;黑夜的样子;
+10229;1;むれたすがた;
+10229;3;군집의 모습;
+10229;4;魚群的樣子;
+10229;5;Forme Banc;Froussardine Forme Banc
+10229;6;Schwarmform;Lusardin (Schwarm)
+10229;7;Forma Banco;
+10229;8;Forma Banco;Wishiwashi
+10229;9;School Form;School Wishiwashi
+10229;11;むれたすがた;
+10229;12;鱼群的样子;
+10230;5;;Floramantis Dominant
+10230;6;Totemform;Totem Mantidea
+10230;8;Dominante;Lurantis
+10230;9;;Totem Lurantis
+10231;5;;Malamandre Dominant
+10231;6;Totemform;Totem Amfira
+10231;8;Dominante;Salazzle
+10231;9;;Totem Salazzle
+10232;1;タイプ：ファイト;
+10232;3;타입:파이팅;
+10232;4;屬性：戰鬥;
+10232;5;Type : Combat;
+10232;6;Typ:Kampf;Amigento (Kampf)
+10232;7;Tipo: Lucha;
+10232;8;Tipo Lotta;Silvally
+10232;9;Type: Fighting;
+10232;11;タイプ：ファイト;
+10232;12;属性：战斗;
+10233;1;タイプ：フライング;
+10233;3;타입:플라잉;
+10233;4;屬性：飛翔;
+10233;5;Type : Vol;
+10233;6;Typ:Flug;Amigento (Flug)
+10233;7;Tipo: Volador;
+10233;8;Tipo Volante;Silvally
+10233;9;Type: Flying;
+10233;11;タイプ：フライング;
+10233;12;属性：飞翔;
+10234;1;タイプ：ポイズン;
+10234;3;타입:포이즌;
+10234;4;屬性：毒;
+10234;5;Type : Poison;
+10234;6;Typ:Gift;Amigento (Gift)
+10234;7;Tipo: Veneno;
+10234;8;Tipo Veleno;Silvally
+10234;9;Type: Poison;
+10234;11;タイプ：ポイズン;
+10234;12;属性：毒;
+10235;1;タイプ：グラウンド;
+10235;3;타입:그라운드;
+10235;4;屬性：大地;
+10235;5;Type : Sol;
+10235;6;Typ:Boden;Amigento (Boden)
+10235;7;Tipo: Tierra;
+10235;8;Tipo Terra;Silvally
+10235;9;Type: Ground;
+10235;11;タイプ：グラウンド;
+10235;12;属性：大地;
+10236;1;タイプ：ロック;
+10236;3;타입:락;
+10236;4;屬性：岩石;
+10236;5;Type : Roche;
+10236;6;Typ:Gestein;Amigento (Gestein)
+10236;7;Tipo: Roca;
+10236;8;Tipo Roccia;Silvally
+10236;9;Type: Rock;
+10236;11;タイプ：ロック;
+10236;12;属性：岩石;
+10237;1;タイプ：バグ;
+10237;3;타입:버그;
+10237;4;屬性：蟲子;
+10237;5;Type : Insecte;
+10237;6;Typ:Käfer;Amigento (Käfer)
+10237;7;Tipo: Bicho;
+10237;8;Tipo Coleottero;Silvally
+10237;9;Type: Bug;
+10237;11;タイプ：バグ;
+10237;12;属性：虫子;
+10238;1;タイプ：ゴースト;
+10238;3;타입:고스트;
+10238;4;屬性：幽靈;
+10238;5;Type : Spectre;
+10238;6;Typ:Geist;Amigento (Geist)
+10238;7;Tipo: Fantasma;
+10238;8;Tipo Spettro;Silvally
+10238;9;Type: Ghost;
+10238;11;タイプ：ゴースト;
+10238;12;属性：幽灵;
+10239;1;タイプ：スチール;
+10239;3;타입:스틸;
+10239;4;屬性：鋼鐵;
+10239;5;Type : Acier;
+10239;6;Typ:Stahl;Amigento (Stahl)
+10239;7;Tipo: Acero;
+10239;8;Tipo Acciaio;Silvally
+10239;9;Type: Steel;
+10239;11;タイプ：スチール;
+10239;12;属性：钢铁;
+10240;1;タイプ：ファイヤー;
+10240;3;타입:파이어;
+10240;4;屬性：火焰;
+10240;5;Type : Feu;
+10240;6;Typ:Feuer;Amigento (Feuer)
+10240;7;Tipo: Fuego;
+10240;8;Tipo Fuoco;Silvally
+10240;9;Type: Fire;
+10240;11;タイプ：ファイヤー;
+10240;12;属性：火焰;
+10241;1;タイプ：ウオーター;
+10241;3;타입:워터;
+10241;4;屬性：清水;
+10241;5;Type : Eau;
+10241;6;Typ:Wasser;Amigento (Wasser)
+10241;7;Tipo: Agua;
+10241;8;Tipo Acqua;Silvally
+10241;9;Type: Water;
+10241;11;タイプ：ウオーター;
+10241;12;属性：清水;
+10242;1;タイプ：グラス;
+10242;3;타입:그래스;
+10242;4;屬性：青草;
+10242;5;Type : Plante;
+10242;6;Typ:Pflanze;Amigento (Pflanze)
+10242;7;Tipo: Planta;
+10242;8;Tipo Erba;Silvally
+10242;9;Type: Grass;
+10242;11;タイプ：グラス;
+10242;12;属性：青草;
+10243;1;タイプ：エレクトロ;
+10243;3;타입:일렉트릭;
+10243;4;屬性：電子;
+10243;5;Type : Électrik;
+10243;6;Typ:Elektro;Amigento (Elektro)
+10243;7;Tipo: Eléctrico;
+10243;8;Tipo Elettro;Silvally
+10243;9;Type: Electric;
+10243;11;タイプ：エレクトロ;
+10243;12;属性：电子;
+10244;1;タイプ：サイキック;
+10244;3;타입:사이킥;
+10244;4;屬性：精神;
+10244;5;Type : Psy;
+10244;6;Typ:Psycho;Amigento (Psycho)
+10244;7;Tipo: Psíquico;
+10244;8;Tipo Psico;Silvally
+10244;9;Type: Psychic;
+10244;11;タイプ：サイキック;
+10244;12;属性：精神;
+10245;1;タイプ：アイス;
+10245;3;타입:아이스;
+10245;4;屬性：冰雪;
+10245;5;Type : Glace;
+10245;6;Typ:Eis;Amigento (Eis)
+10245;7;Tipo: Hielo;
+10245;8;Tipo Ghiaccio;Silvally
+10245;9;Type: Ice;
+10245;11;タイプ：アイス;
+10245;12;属性：冰雪;
+10246;1;タイプ：ドラゴン;
+10246;3;타입:드래곤;
+10246;4;屬性：龍;
+10246;5;Type : Dragon;
+10246;6;Typ:Drache;Amigento (Drache)
+10246;7;Tipo: Dragón;
+10246;8;Tipo Drago;Silvally
+10246;9;Type: Dragon;
+10246;11;タイプ：ドラゴン;
+10246;12;属性：龙;
+10247;1;タイプ：ダーク;
+10247;3;타입:다크;
+10247;4;屬性：黑暗;
+10247;5;Type : Ténèbres;
+10247;6;Typ:Unlicht;Amigento (Unlicht)
+10247;7;Tipo: Siniestro;
+10247;8;Tipo Buio;Silvally
+10247;9;Type: Dark;
+10247;11;タイプ：ダーク;
+10247;12;属性：黑暗;
+10248;1;タイプ：フェアリー;
+10248;3;타입:페어리;
+10248;4;屬性：妖精;
+10248;5;Type : Fée;
+10248;6;Typ:Fee;Amigento (Fee)
+10248;7;Tipo: Hada;
+10248;8;Tipo Folletto;Silvally
+10248;9;Type: Fairy;
+10248;11;タイプ：フェアリー;
+10248;12;属性：妖精;
+10249;1;りゅうせいのすがた;
+10249;3;유성의 모습;
+10249;4;流星的樣子;
+10249;5;Forme Météore;Météno Forme Météore Noyeau Orange
+10249;6;Meteorform;Meteno (Meteor Orange)
+10249;7;Forma Meteorito;
+10249;8;Forma Meteora;Minior
+10249;9;Meteor Form;Orange Meteor Minior
+10249;11;りゅうせいのすがた;
+10249;12;流星的样子;
+10250;1;りゅうせいのすがた;
+10250;3;유성의 모습;
+10250;4;流星的樣子;
+10250;5;Forme Météore;Météno Forme Météore Noyeau Jaune
+10250;6;Meteorform;Meteno (Meteor Gelb)
+10250;7;Forma Meteorito;
+10250;8;Forma Meteora;Minior
+10250;9;Meteor Form;Yellow Meteor Minior
+10250;11;りゅうせいのすがた;
+10250;12;流星的样子;
+10251;1;りゅうせいのすがた;
+10251;3;유성의 모습;
+10251;4;流星的樣子;
+10251;5;Forme Météore;Météno Forme Météore Noyeau Vert
+10251;6;Meteorform;Meteno (Meteor Grün)
+10251;7;Forma Meteorito;
+10251;8;Forma Meteora;Minior
+10251;9;Meteor Form;Green Meteor Minior
+10251;11;りゅうせいのすがた;
+10251;12;流星的样子;
+10252;1;りゅうせいのすがた;
+10252;3;유성의 모습;
+10252;4;流星的樣子;
+10252;5;Forme Météore;Météno Forme Météore Noyeau Bleu
+10252;6;Meteorform;Meteno (Meteor Hellblau)
+10252;7;Forma Meteorito;
+10252;8;Forma Meteora;Minior
+10252;9;Meteor Form;Blue Meteor Minior
+10252;11;りゅうせいのすがた;
+10252;12;流星的样子;
+10253;1;りゅうせいのすがた;
+10253;3;유성의 모습;
+10253;4;流星的樣子;
+10253;5;Forme Météore;Météno Forme Météore Noyeau Indigo
+10253;6;Meteorform;Meteno (Meteor Blau)
+10253;7;Forma Meteorito;
+10253;8;Forma Meteora;Minior
+10253;9;Meteor Form;Indigo Meteor Minior
+10253;11;りゅうせいのすがた;
+10253;12;流星的样子;
+10254;1;りゅうせいのすがた;
+10254;3;유성의 모습;
+10254;4;流星的樣子;
+10254;5;Forme Météore;Météno NoyeaForme Météore u Violet
+10254;6;Meteorform;Meteno (Meteor Violet)
+10254;7;Forma Meteorito;
+10254;8;Forma Meteora;Minior
+10254;9;Meteor Form;Violet Meteor Minior
+10254;11;りゅうせいのすがた;
+10254;12;流星的样子;
+10255;1;あかいろのコア;
+10255;3;빨간색 코어;
+10255;4;紅色核心;
+10255;5;Noyau Rouge;Météno Noyeau Rouge
+10255;6;Roter Kern;Meteno (Rot)
+10255;7;Núcleo Rojo;
+10255;8;Nucleo Rosso;Minior
+10255;9;Red Core;Red Core Minior
+10255;11;あかいろのコア;
+10255;12;红色核心;
+10256;1;だいだいいろのコア;
+10256;3;주황색 코어;
+10256;4;橙色核心;
+10256;5;Noyau Orange;Météno Noyeau Orange
+10256;6;Oranger Kern;Meteno (Orange)
+10256;7;Núcleo Naranja;
+10256;8;Nucleo Arancione;Minior
+10256;9;Orange Core;Orange Core Minior
+10256;11;だいだいいろのコア;
+10256;12;橙色核心;
+10257;1;きいろのコア;
+10257;3;노란색 코어;
+10257;4;黃色核心;
+10257;5;Noyau Jaune;Météno Noyeau Jaune
+10257;6;Gelber Kern;Meteno (Gelb)
+10257;7;Núcleo Amarillo;
+10257;8;Nucleo Giallo;Minior
+10257;9;Yellow Core;Yellow Core Minior
+10257;11;きいろのコア;
+10257;12;黄色核心;
+10258;1;みどりいろのコア;
+10258;3;초록색 코어;
+10258;4;綠色核心;
+10258;5;Noyau Vert;Météno Noyeau Vert
+10258;6;Grüner Kern;Meteno (Grün)
+10258;7;Núcleo Verde;
+10258;8;Nucleo Verde;Minior
+10258;9;Green Core;Green Core Minior
+10258;11;みどりいろのコア;
+10258;12;绿色核心;
+10259;1;みずいろのコア;
+10259;3;옥색 코어;
+10259;4;淺藍色核心;
+10259;5;Noyau Bleu;Météno Noyeau Bleu
+10259;6;Hellblauer Kern;Meteno (Hellblau)
+10259;7;Núcleo Azul;
+10259;8;Nucleo Azzurro;Minior
+10259;9;Blue Core;Blue Core Minior
+10259;11;みずいろのコア;
+10259;12;浅蓝色核心;
+10260;1;あおいろのコア;
+10260;3;파란색 코어;
+10260;4;藍色核心;
+10260;5;Noyau Indigo;Météno Noyeau Indigo
+10260;6;Blauer Kern;Meteno (Blau)
+10260;7;Núcleo Añil;
+10260;8;Nucleo Indaco;Minior
+10260;9;Indigo Core;Indigo Core Minior
+10260;11;あおいろのコア;
+10260;12;蓝色核心;
+10261;1;むらさきいろのコア;
+10261;3;보라색 코어;
+10261;4;紫色核心;
+10261;5;Noyau Violet;Météno Noyeau Violet
+10261;6;Violetter Kern;Meteno (Violett)
+10261;7;Núcleo Violeta;
+10261;8;Nucleo Violetto;Minior
+10261;9;Violet Core;Violet Core Minior
+10261;11;むらさきいろのコア;
+10261;12;紫色核心;
+10262;1;ばれたすがた;
+10262;3;들킨 모습;
+10262;4;現形的樣子;
+10262;5;Forme Démasquée;Mimiqui Forme Démasquée
+10262;6;Entlarvte Form;Mimigma (Entlarvt)
+10262;7;Forma Descubierta;
+10262;8;Forma Smascherata;Mimikyu
+10262;9;Busted Form;Busted Mimikyu
+10262;11;ばれたすがた;
+10262;12;现形的样子;
+10263;5;;Mimiqui Dominant
+10263;6;Totemform;Totem Mimigma (Getarnt)
+10263;8;Forma Mascherata Dominante;Mimikyu
+10263;9;;Totem Disguised Mimikyu
+10264;5;;Mimiqui Dominant Forme Démasquée
+10264;6;Totemform;Totem Mimigma (Entlarvt)
+10264;8;Forma Smascherata Dominante;Mimikyu
+10264;9;;Totem Busted Mimikyu
+10265;5;;Ékaïser Dominant
+10265;6;Totemform;Totem Grandiras
+10265;8;Dominante;Kommo-o
+10265;9;;Totem Kommo-o
+10266;1;５００ねんまえのいろ;
+10266;3;500년 전의 색;
+10266;4;５００年前的顏色;
+10266;5;Couleur du Passé;Magearna Couleur du Passé
+10266;6;Originalfarbe;Magearna
+10266;7;Color Vetusto;
+10266;8;Colore Antico;Magearna
+10266;9;Original Color;Original Magearna
+10266;11;５００ねんまえのいろ;
+10266;12;５００年前的颜色;
+10267;1;キミにきめたキャップ;
+10267;3;너로정했다캡;
+10267;4;就決定是你了之帽子;
+10267;5;Casquette Partenaire;Pikachu Casquette Partenaire
+10267;6;Partner-Kappe;Pikachu (Partner-Kappe)
+10267;7;Gorra Compañero;
+10267;8;Berretto Compagni;Pikachu
+10267;9;Partner Cap;Partner Cap Pikachu
+10267;11;キミにきめたキャップ;
+10267;12;就决定是你了之帽子;
+10268;3;알로라의 모습;
+10268;5;;Ossatueur d'Alola Dominant
+10268;6;Totemform;Totem Alola Knogga
+10268;8;Forma Alola Dominante;Marowak
+10268;9;;Totem Alolan Marowak
+10309;5;;Rubombelle Dominant
+10309;6;Totemform;Totem Bandelby
+10309;8;Dominante;Ribombee
+10309;9;;Totem Ribombee
+10310;1;;イワンコ（マイペース）
+10310;5;;Rocabot Tempo Perso
+10310;6;Tempomacherform;Wuffels (Tempomacher)
+10310;8;Mente Locale;Rockruff
+10310;9;;Own Tempo Rockruff
+10310;11;;イワンコ（マイペース）
+10311;1;たそがれのすがた;
+10311;3;황혼의 모습;
+10311;4;黃昏的樣子;
+10311;5;Forme Crépusculaire;Lougaroc Forme Crépusculaire
+10311;6;Zwielichtform;Wolwerock (Zwielicht)
+10311;7;Forma Crepuscular;
+10311;8;Forma Crepuscolo;Lycanroc
+10311;9;Dusk Form;Dusk Lycanroc
+10311;11;たそがれのすがた;
+10311;12;黄昏的样子;
+10312;5;;Tarenbulle Dominant
+10312;6;Totemform;Totem Aranestro
+10312;8;Dominante;Araquanid
+10312;9;;Totem Araquanid
+10313;5;;Togedemaru Dominant
+10313;6;Totemform;Totem Togedemaru
+10313;8;Dominante;Togedemaru
+10313;9;;Totem Togedemaru
+10314;1;たそがれのたてがみ;
+10314;3;황혼의 갈기;
+10314;4;黃昏之鬃;
+10314;5;Crinière du Couchant;Necrozma Crinière du Couchant
+10314;6;Abendmähne;Necrozma (Abendmähne)
+10314;7;Melena Crepuscular;
+10314;8;Criniera del Vespro;Necrozma
+10314;9;Dusk Mane;Dusk Necrozma
+10314;11;たそがれのたてがみ;
+10314;12;黄昏之鬃;
+10315;1;あかつきのつばさ;
+10315;3;새벽의 날개;
+10315;4;拂曉之翼;
+10315;5;Ailes de l’Aurore;Necrozma Ailes de l’Aurore
+10315;6;Morgenschwingen;Necrozma (Morgenschwingen)
+10315;7;Alas del Alba;
+10315;8;Ali dell’Aurora;Necrozma
+10315;9;Dawn Wings;Dawn Necrozma
+10315;11;あかつきのつばさ;
+10315;12;拂晓之翼;
+10316;1;ウルトラネクロズマ;
+10316;3;울트라네크로즈마;
+10316;4;究極奈克洛茲瑪;
+10316;5;Ultra-Necrozma;Ultra-Necrozma
+10316;6;Ultra;Ultra-Necrozma
+10316;7;Ultra-Necrozma;
+10316;8;UltraNecrozma;Necrozma
+10316;9;Ultra Necrozma;Ultra Necrozma
+10316;11;ウルトラネクロズマ;
+10316;12;究极奈克洛兹玛;
+10317;5;;Pikachu Partenaire
+10317;6;Partnerform;Partner Pikachu
+10317;8;Compagno;Pikachu
+10317;9;;Partner Pikachu
+10318;5;;Évoli Partenaire
+10318;6;Partnerform;Partner Evoli
+10318;8;Compagno;Eevee
+10318;9;;Partner Eevee
+10319;1;ワールドキャップ;
+10319;3;월드캡;
+10319;4;世界帽子;
+10319;5;Casquette Monde;Pikachu Casquette Monde
+10319;6;Weltreise-Kappe;Pikachu (Weltreise-Kappe)
+10319;7;Gorra Trotamundos;
+10319;8;Berretto Giramondo;Pikachu
+10319;9;World Cap;World Cap Pikachu
+10319;11;ワールドキャップ;
+10319;12;世界帽子;
+10320;1;ガラルのすがた;
+10320;3;가라르의 모습;
+10320;4;伽勒爾的樣子;
+10320;5;Forme de Galar;Miaouss de Galar
+10320;6;Galar-Form;Galar Mauzi
+10320;7;Forma de Galar;
+10320;8;Forma di Galar;Meowth
+10320;9;Galarian Form;Galarian Meowth
+10320;11;ガラルのすがた;
+10320;12;伽勒尔的样子;
+10321;1;ガラルのすがた;
+10321;3;가라르의 모습;
+10321;4;伽勒爾的樣子;
+10321;5;Forme de Galar;Ponyta de Galar
+10321;6;Galar-Form;Galar Ponita
+10321;7;Forma de Galar;
+10321;8;Forma di Galar;Ponyta
+10321;9;Galarian Form;Galarian Ponyta
+10321;11;ガラルのすがた;
+10321;12;伽勒尔的样子;
+10322;1;ガラルのすがた;
+10322;3;가라르의 모습;
+10322;4;伽勒爾的樣子;
+10322;5;Forme de Galar;Galopa de Galar
+10322;6;Galar-Form;Galar Gallopa
+10322;7;Forma de Galar;
+10322;8;Forma di Galar;Rapidash
+10322;9;Galarian Form;Galarian Rapidash
+10322;11;ガラルのすがた;
+10322;12;伽勒尔的样子;
+10323;1;ガラルのすがた;
+10323;3;가라르의 모습;
+10323;4;伽勒爾的樣子;
+10323;5;Forme de Galar;Ramoloss de Galar
+10323;6;Galar-Form;Galar Flegmon
+10323;7;Forma de Galar;
+10323;8;Forma di Galar;Slowpoke
+10323;9;Galarian Form;Galarian Slowpoke
+10323;11;ガラルのすがた;
+10323;12;伽勒尔的样子;
+10324;1;ガラルのすがた;
+10324;3;가라르의 모습;
+10324;4;伽勒爾的樣子;
+10324;5;Forme de Galar;Flagadoss de Galar
+10324;6;Galar-Form;Galar Lahmus
+10324;7;Forma de Galar;
+10324;8;Forma di Galar;Slowbro
+10324;9;Galarian Form;Galarian Slowbro
+10324;11;ガラルのすがた;
+10324;12;伽勒尔的样子;
+10325;1;ガラルのすがた;
+10325;3;가라르의 모습;
+10325;4;伽勒爾的樣子;
+10325;5;Forme de Galar;Canarticho de Galar
+10325;6;Galar-Form;Galar Porenta
+10325;7;Forma de Galar;
+10325;8;Forma di Galar;Farfetch’d
+10325;9;Galarian Form;Galarian Farfetch’d
+10325;11;ガラルのすがた;
+10325;12;伽勒尔的样子;
+10326;1;ガラルのすがた;
+10326;3;가라르의 모습;
+10326;4;伽勒爾的樣子;
+10326;5;Forme de Galar;Smogogo de Galar
+10326;6;Galar-Form;Galar Smogmog
+10326;7;Forma de Galar;
+10326;8;Forma di Galar;Weezing
+10326;9;Galarian Form;Galarian Weezing
+10326;11;ガラルのすがた;
+10326;12;伽勒尔的样子;
+10327;1;ガラルのすがた;
+10327;3;가라르의 모습;
+10327;4;伽勒爾的樣子;
+10327;5;Forme de Galar;M. Mime de Galar
+10327;6;Galar-Form;Galar Pantimos
+10327;7;Forma de Galar;
+10327;8;Forma di Galar;Mr.Mime
+10327;9;Galarian Form;Galarian Mr. Mime
+10327;11;ガラルのすがた;
+10327;12;伽勒尔的样子;
+10328;1;ガラルのすがた;
+10328;3;가라르의 모습;
+10328;4;伽勒爾的樣子;
+10328;5;Forme de Galar;Artikodin de Galar
+10328;6;Galar-Form;Galar Arktos
+10328;7;Forma de Galar;
+10328;8;Forma di Galar;Articuno
+10328;9;Galarian Form;Galarian Articuno
+10328;11;ガラルのすがた;
+10328;12;伽勒尔的样子;
+10329;1;ガラルのすがた;
+10329;3;가라르의 모습;
+10329;4;伽勒爾的樣子;
+10329;5;Forme de Galar;Électhor de Galar
+10329;6;Galar-Form;Galar Zapdos
+10329;7;Forma de Galar;
+10329;8;Forma di Galar;Zapdos
+10329;9;Galarian Form;Galarian Zapdos
+10329;11;ガラルのすがた;
+10329;12;伽勒尔的样子;
+10330;1;ガラルのすがた;
+10330;3;가라르의 모습;
+10330;4;伽勒爾的樣子;
+10330;5;Forme de Galar;Sulfura de Galar
+10330;6;Galar-Form;Galar Lavados
+10330;7;Forma de Galar;
+10330;8;Forma di Galar;Moltres
+10330;9;Galarian Form;Galarian Moltres
+10330;11;ガラルのすがた;
+10330;12;伽勒尔的样子;
+10331;1;ガラルのすがた;
+10331;3;가라르의 모습;
+10331;4;伽勒爾的樣子;
+10331;5;Forme de Galar;Roigada de Galar
+10331;6;Galar-Form;Galar Laschoking
+10331;7;Forma de Galar;
+10331;8;Forma di Galar;Slowking
+10331;9;Galarian Form;Galarian Slowking
+10331;11;ガラルのすがた;
+10331;12;伽勒尔的样子;
+10332;1;ガラルのすがた;
+10332;3;가라르의 모습;
+10332;4;伽勒爾的樣子;
+10332;5;Forme de Galar;Corayon de Galar
+10332;6;Galar-Form;Galar Corasonn
+10332;7;Forma de Galar;
+10332;8;Forma di Galar;Corsola
+10332;9;Galarian Form;Galarian Corsola
+10332;11;ガラルのすがた;
+10332;12;伽勒尔的样子;
+10333;1;ガラルのすがた;
+10333;3;가라르의 모습;
+10333;4;伽勒爾的樣子;
+10333;5;Forme de Galar;Zigzaton de Galar
+10333;6;Galar-Form;Galar Zigzachs
+10333;7;Forma de Galar;
+10333;8;Forma di Galar;Zigzagoon
+10333;9;Galarian Form;Galarian Zigzagoon
+10333;11;ガラルのすがた;
+10333;12;伽勒尔的样子;
+10334;1;ガラルのすがた;
+10334;3;가라르의 모습;
+10334;4;伽勒爾的樣子;
+10334;5;Forme de Galar;Linéon de Galar
+10334;6;Galar-Form;Galar Geradaks
+10334;7;Forma de Galar;
+10334;8;Forma di Galar;Linoone
+10334;9;Galarian Form;Galarian Linoone
+10334;11;ガラルのすがた;
+10334;12;伽勒尔的样子;
+10335;1;ガラルのすがた;
+10335;3;가라르의 모습;
+10335;4;伽勒爾的樣子;
+10335;5;Forme de Galar;Darumarond de Galar
+10335;6;Galar-Form;Galar Flampion
+10335;7;Forma de Galar;
+10335;8;Forma di Galar;Darumaka
+10335;9;Galarian Form;Galarian Darumaka
+10335;11;ガラルのすがた;
+10335;12;伽勒尔的样子;
+10336;1;ガラルのすがた;
+10336;3;가라르의 모습;
+10336;4;伽勒爾的樣子;
+10336;5;Forme de Galar;Darumacho de Galar Normal
+10336;6;Galar-Form;Galar Flampivian
+10336;7;Forma de Galar;
+10336;8;Stato Normale;Darmanitan
+10336;9;Galarian Form;Standard Galarian Darmanitan
+10336;11;ガラルのすがた;
+10336;12;伽勒尔的样子;
+10337;1;ダルマモード;
+10337;3;달마모드;
+10337;4;達摩模式;
+10337;5;Mode Transe;Darumacho de Galar Transe
+10337;6;Trance-Modus;Galar Flampivian (Trance)
+10337;7;Modo Daruma;
+10337;8;Stato Zen;Darmanitan
+10337;9;Zen Mode;Zen Galarian Darmanitan
+10337;11;ダルマモード;
+10337;12;达摩模式;
+10338;1;ガラルのすがた;
+10338;3;가라르의 모습;
+10338;4;伽勒爾的樣子;
+10338;5;Forme de Galar;Tutafeh de Galar
+10338;6;Galar-Form;Galar Makabaja
+10338;7;Forma de Galar;
+10338;8;Forma di Galar;Yamask
+10338;9;Galarian Form;Galarian Yamask
+10338;11;ガラルのすがた;
+10338;12;伽勒尔的样子;
+10339;1;ガラルのすがた;
+10339;3;가라르의 모습;
+10339;4;伽勒爾的樣子;
+10339;5;Forme de Galar;Limonde de Galar
+10339;6;Galar-Form;Galar Flunschlik
+10339;7;Forma de Galar;
+10339;8;Forma di Galar;Stunfisk
+10339;9;Galarian Form;Galarian Stunfisk
+10339;11;ガラルのすがた;
+10339;12;伽勒尔的样子;
+10340;1;１０％フォルム;
+10340;3;10%폼;
+10340;4;１０％形態;
+10340;5;Forme 10 %;Zygarde Forme 10 %
+10340;6;10%-Form;Zygarde (10%)
+10340;7;Forma 10%;
+10340;8;Forma 10%;Zygarde
+10340;9;10% Forme;10% Zygarde
+10340;11;１０％フォルム;
+10340;12;１０％形态;
+10341;1;うのみのすがた;
+10341;3;그대로 삼킨 모습;
+10341;4;一口吞的樣子;
+10341;5;Forme Gobe-Tout;Nigosier Forme Gobe-Tout
+10341;6;Schlingform;Urgl (Schlingend)
+10341;7;Forma Tragatodo;
+10341;8;Forma Inghiottitutto;Cramorant
+10341;9;Gulping Form;Gulping Cramorant
+10341;11;うのみのすがた;
+10341;12;一口吞的样子;
+10342;1;まるのみのすがた;
+10342;3;통째로 삼킨 모습;
+10342;4;大口吞的樣子;
+10342;5;Forme Gobe-Chu;Nigosier Forme Gobe-Chu
+10342;6;Stopfform;Urgl (Stopfend)
+10342;7;Forma Engulletodo;
+10342;8;Forma Inghiottintero;Cramorant
+10342;9;Gorging Form;Gorging Cramorant
+10342;11;まるのみのすがた;
+10342;12;大口吞的样子;
+10343;1;ローなすがた;
+10343;3;로우한 모습;
+10343;4;低調的樣子;
+10343;5;Forme Grave;Salarsen Forme Grave
+10343;6;Tief-Form;Riffex (Tiefform)
+10343;7;Forma Grave;
+10343;8;Forma Basso;Toxtricity
+10343;9;Low Key Form;Low Key Toxtricity
+10343;11;ローなすがた;
+10343;12;低调的样子;
+10344;1;しんさくフォルム;
+10344;6;Originalform;Fatalitee (Original)
+10344;8;Forma Autentica;Sinistea
+10344;9;Antique Form;Antique Sinistea
+10344;11;しんさくフォルム;
+10345;1;しんさくフォルム;
+10345;6;Originalform;Mortipot (Original)
+10345;8;Forma Autentica;Polteageist
+10345;9;Antique Form;Antique Polteageist
+10345;11;しんさくフォルム;
+10346;1;ミルキィルビー;
+10346;3;밀키루비;
+10346;4;奶香紅鑽;
+10346;5;Lait Ruby;
+10346;6;Ruby-Creme;Pokusan (Ruby-Creme)
+10346;7;Crema Rosa;
+10346;8;Latterosa;Alcremie
+10346;9;Ruby Cream;Ruby Cream Alcremie
+10346;11;ミルキィルビー;
+10346;12;奶香红钻;
+10347;1;ミルキィまっちゃ;
+10347;3;밀키말차;
+10347;4;奶香抹茶;
+10347;5;Lait Matcha;
+10347;6;Matcha-Creme;Pokusan (Matcha-Creme)
+10347;7;Crema de Té;
+10347;8;Lattematcha;Alcremie
+10347;9;Matcha Cream;Matcha Cream Alcremie
+10347;11;ミルキィまっちゃ;
+10347;12;奶香抹茶;
+10348;1;ミルキィミント;
+10348;3;밀키민트;
+10348;4;奶香薄荷;
+10348;5;Lait Menthe;
+10348;6;Minz-Creme;Pokusan (Minz-Creme)
+10348;7;Crema de Menta;
+10348;8;Lattementa;Alcremie
+10348;9;Mint Cream;Mint Cream Alcremie
+10348;11;ミルキィミント;
+10348;12;奶香薄荷;
+10349;1;ミルキィレモン;
+10349;3;밀키레몬;
+10349;4;奶香檸檬;
+10349;5;Lait Citron;
+10349;6;Zitronen-Creme;Pokusan (Zitronen-Creme)
+10349;7;Crema de Limón;
+10349;8;Lattelimone;Alcremie
+10349;9;Lemon Cream;Lemon Cream Alcremie
+10349;11;ミルキィレモン;
+10349;12;奶香柠檬;
+10350;1;ミルキィソルト;
+10350;3;밀키솔트;
+10350;4;奶香雪鹽;
+10350;5;Lait Salé;
+10350;6;Salz-Creme;Pokusan (Salz-Creme)
+10350;7;Crema Salada;
+10350;8;Lattesale;Alcremie
+10350;9;Salted Cream;Salted Cream Alcremie
+10350;11;ミルキィソルト;
+10350;12;奶香雪盐;
+10351;1;ルビーミックス;
+10351;3;루비믹스;
+10351;4;紅鑽綜合;
+10351;5;Mélange Ruby;
+10351;6;Ruby-Mix;Pokusan (Ruby-Mix)
+10351;7;Mezcla Rosa;
+10351;8;Rosamix;Alcremie
+10351;9;Ruby Swirl;Ruby Swirl Alcremie
+10351;11;ルビーミックス;
+10351;12;红钻综合;
+10352;1;キャラメルミックス;
+10352;3;캐러멜믹스;
+10352;4;焦糖綜合;
+10352;5;Mélange Caramel;
+10352;6;Karamell-Mix;Pokusan (Karamell-Mix)
+10352;7;Mezcla Caramelo;
+10352;8;Caramelmix;Alcremie
+10352;9;Caramel Swirl;Caramel Swirl Alcremie
+10352;11;キャラメルミックス;
+10352;12;焦糖综合;
+10353;1;トリプルミックス;
+10353;3;트리플믹스;
+10353;4;三色綜合;
+10353;5;Mélange Tricolore;
+10353;6;Trio-Mix;Pokusan (Trio-Mix)
+10353;7;Tres Sabores;
+10353;8;Triplomix;Alcremie
+10353;9;Rainbow Swirl;Rainbow Swirl Alcremie
+10353;11;トリプルミックス;
+10353;12;三色综合;
+10354;1;ナイスフェイス;
+10354;3;나이스페이스;
+10354;4;解凍頭;
+10354;5;Tête Dégel;Bekaglaçon Tête Dégel
+10354;6;Wohlfühlkopf;Kubuin (Wohlfühlkopf)
+10354;7;Cara Deshielo;
+10354;8;Liquefaccia;Eiscue
+10354;9;Noice Face;Noice Eiscue
+10354;11;ナイスフェイス;
+10354;12;解冻头;
+10355;1;メスのすがた;
+10355;3;암컷의 모습;
+10355;4;雌性的樣子;
+10355;5;Femelle;Wimessir Femelle
+10355;6;Weiblich;Servol ♀
+10355;7;Hembra;
+10355;8;Femmina;Indeedee
+10355;9;Female;Female Indeedee
+10355;11;メスのすがた;
+10355;12;雌性的样子;
+10356;1;はらぺこもよう;
+10356;3;배고픈 모양;
+10356;4;空腹花紋;
+10356;5;Mode Affamé;Morpeko Mode Affamé
+10356;6;Kohldampfmuster;Morpeko (Kohldampf)
+10356;7;Forma Voraz;
+10356;8;Motivo Panciavuota;Morpeko
+10356;9;Hangry Mode;Hangry Morpeko
+10356;11;はらぺこもよう;
+10356;12;空腹花纹;
+10357;1;けんのおう;
+10357;3;검왕;
+10357;4;劍之王;
+10357;5;Épée Suprême;Zacian Épée Suprême
+10357;6;König des Schwertes;König Zacian
+10357;7;Espada Suprema;
+10357;8;Re delle;Spade 
+10357;9;Crowned Sword;Crowned Zacian
+10357;11;けんのおう;
+10357;12;剑之王;
+10358;1;たてのおう;
+10358;3;방패왕;
+10358;4;盾之王;
+10358;5;Bouclier Suprême;Zamazenta Bouclier Suprême
+10358;6;König des Schildes;König Zamazenta
+10358;7;Escudo Supremo;
+10358;8;Re degli Scudi;Zacian
+10358;9;Crowned Shield;Crowned Zamazenta
+10358;11;たてのおう;
+10358;12;盾之王;
+10359;1;ムゲンダイマックス;
+10359;3;무한다이맥스;
+10359;4;無極巨化;
+10359;5;Infinimax;Éthernatos Infinimax
+10359;6;Unendynamax;Unendynamax-Endynalos
+10359;7;Dinamax Infinito;
+10359;8;Dynamax Infinito;Eternatus
+10359;9;Eternamax;Eternamax Eternatus
+10359;11;ムゲンダイマックス;
+10359;12;无极巨化;
+10360;1;れんげきのかた;
+10360;3;연격의 태세;
+10360;4;連擊流;
+10360;5;Style Mille Poings;Shifours Style Mille Poings
+10360;6;Fließender Stil;Wulaosu (Fließend)
+10360;7;Estilo Fluido;
+10360;8;Stile Pluricolpo;Urshifu
+10360;9;Rapid Strike Style;Rapid Strike Urshifu
+10360;11;れんげきのかた;
+10360;12;连击流;
+10361;1;とうちゃん;
+10361;3;아빠;
+10361;4;阿爸;
+10361;5;Papa;Zarude Papa
+10361;6;Papa;Papa Zarude
+10361;7;Papá;
+10361;8;Papà;Zarude
+10361;9;Dada;Dada Zarude
+10361;11;とうちゃん;
+10361;12;阿爸;
+10362;1;はくばじょうのすがた;
+10362;3;백마 탄 모습;
+10362;4;騎白馬的樣子;
+10362;5;Cavalier du Froid;Calyrex Cavalier du Froid
+10362;6;Schimmelreiter;Coronospa (Schimmelreiter)
+10362;7;Jinete Glacial;
+10362;8;Cavaliere Glaciale;Calyrex
+10362;9;Ice Rider;Ice Calyrex
+10362;11;はくばじょうのすがた;
+10362;12;骑白马的样子;
+10363;1;こくばじょうのすがた;
+10363;3;흑마 탄 모습;
+10363;4;騎黑馬的樣子;
+10363;5;Cavalier d’Effroi;Calyrex Cavalier d’Effroi
+10363;6;Rappenreiter;Coronospa (Rappenreiter)
+10363;7;Jinete Espectral;
+10363;8;Cavaliere Spettrale;Calyrex
+10363;9;Shadow Rider;Shadow Calyrex
+10363;11;こくばじょうのすがた;
+10363;12;骑黑马的样子;
+10364;5;Forme Gigamax;Florizarre Gigamax
+10364;6;Gigadynamax-Form;Gigadynamax-Bisaflor
+10364;8;Gigamax;Venusaur
+10364;9;Gigantamax Form;Gigantamax Venusaur
+10365;5;Forme Gigamax;Dracaufeu Gigamax
+10365;6;Gigadynamax-Form;Gigadynamax-Glurak
+10365;8;Gigamax;Charizard
+10365;9;Gigantamax Form;Gigantamax Charizard
+10366;5;Forme Gigamax;Tortank Gigamax
+10366;6;Gigadynamax-Form;Gigadynamax-Turtok
+10366;8;Gigamax;Blastoise
+10366;9;Gigantamax Form;Gigantamax Blastoise
+10367;5;Forme Gigamax;Papilusion Gigamax
+10367;6;Gigadynamax-Form;Gigadynamax-Smettbo
+10367;8;Gigamax;Butterfree
+10367;9;Gigantamax Form;Gigantamax Butterfree
+10368;5;Forme Gigamax;Pikachu Gigamax
+10368;6;Gigadynamax-Form;Gigadynamax-Pikachu
+10368;8;Gigamax;Pikachu
+10368;9;Gigantamax Form;Gigantamax Pikachu
+10369;5;Forme Gigamax;Miaouss Gigamax
+10369;6;Gigadynamax-Form;Gigadynamax-Mauzi
+10369;8;Gigamax;Meowth
+10369;9;Gigantamax Form;Gigantamax Meowth
+10370;5;Forme Gigamax;Mackogneur Gigamax
+10370;6;Gigadynamax-Form;Gigadynamax-Machomei
+10370;8;Gigamax;Machamp
+10370;9;Gigantamax Form;Gigantamax Machamp
+10371;5;Forme Gigamax;Ectoplasma Gigamax
+10371;6;Gigadynamax-Form;Gigadynamax-Gengar
+10371;8;Gigamax;Gengar
+10371;9;Gigantamax Form;Gigantamax Gengar
+10372;5;Forme Gigamax;Leviator Gigamax
+10372;6;Gigadynamax-Form;Gigadynamax-Kingler
+10372;8;Gigamax;Kingler
+10372;9;Gigantamax Form;Gigantamax Kingler
+10373;5;Forme Gigamax;Lokhlass Gigamax
+10373;6;Gigadynamax-Form;Gigadynamax-Lapras
+10373;8;Gigamax;Lapras
+10373;9;Gigantamax Form;Gigantamax Lapras
+10374;5;Forme Gigamax;Évoli Gigamax
+10374;6;Gigadynamax-Form;Gigadynamax-Evoli
+10374;8;Gigamax;Eevee
+10374;9;Gigantamax Form;Gigantamax Eevee
+10375;5;Forme Gigamax;Ronflex Gigamax
+10375;6;Gigadynamax-Form;Gigadynamax-Relaxo
+10375;8;Gigamax;Snorlax
+10375;9;Gigantamax Form;Gigantamax Snorlax
+10376;5;Forme Gigamax;Miasmax Gigamax
+10376;6;Gigadynamax-Form;Gigadynamax-Deponitox
+10376;8;Gigamax;Garbodor
+10376;9;Gigantamax Form;Gigantamax Garbodor
+10377;5;Forme Gigamax;Melmetal Gigamax
+10377;6;Gigadynamax-Form;Gigadynamax-Melmetal
+10377;8;Gigamax;Melmetal
+10377;9;Gigantamax Form;Gigantamax Melmetal
+10378;5;Forme Gigamax;Gorythmic Gigamax
+10378;6;Gigadynamax-Form;Gigadynamax-Gortrom
+10378;8;Gigamax;Rillaboom
+10378;9;Gigantamax Form;Gigantamax Rillaboom
+10379;5;Forme Gigamax;Pyrobut Gigamax
+10379;6;Gigadynamax-Form;Gigadynamax-Liberlo
+10379;8;Gigamax;Cinderace
+10379;9;Gigantamax Form;Gigantamax Cinderace
+10380;5;Forme Gigamax;Lézargus Gigamax
+10380;6;Gigadynamax-Form;Gigadynamax-Intelleon
+10380;8;Gigamax;Inteleon
+10380;9;Gigantamax Form;Gigantamax Inteleon
+10381;5;Forme Gigamax;Corvaillus Gigamax
+10381;6;Gigadynamax-Form;Gigadynamax-Krarmor
+10381;8;Gigamax;Corviknight
+10381;9;Gigantamax Form;Gigantamax Corviknight
+10382;5;Forme Gigamax;Astronelle Gigamax
+10382;6;Gigadynamax-Form;Gigadynamax-Maritellit
+10382;8;Gigamax;Orbeetle
+10382;9;Gigantamax Form;Gigantamax Orbeetle
+10383;5;Forme Gigamax;Torgamord Gigamax
+10383;6;Gigadynamax-Form;Gigadynamax-Kamalm
+10383;8;Gigamax;Drednaw
+10383;9;Gigantamax Form;Gigantamax Drednaw
+10384;5;Forme Gigamax;Monthracite Gigamax
+10384;6;Gigadynamax-Form;Gigadynamax-Montecarbo
+10384;8;Gigamax;Coalossal
+10384;9;Gigantamax Form;Gigantamax Coalossal
+10385;5;Forme Gigamax;Pomdrapi Gigamax
+10385;6;Gigadynamax-Form;Gigadynamax-Drapfel
+10385;8;Gigamax;Flapple
+10385;9;Gigantamax Form;Gigantamax Flapple
+10386;5;Forme Gigamax;Dratatin Gigamax
+10386;6;Gigadynamax-Form;Gigadynamax-Schlapfel
+10386;8;Gigamax;Appletun
+10386;9;Gigantamax Form;Gigantamax Appletun
+10387;5;Forme Gigamax;Dunaconda
+10387;6;Gigadynamax-Form;Gigadynamax-Sanaconda
+10387;8;Gigamax;Sandaconda
+10387;9;Gigantamax Form;Gigantamax Sandaconda
+10388;5;Forme Gigamax;Salarsen Forme Aigüe Gigamax
+10388;6;Gigadynamax-Form;Gigadynamax-Riffex (Hochform)
+10388;8;Gigamax;Toxtricity
+10388;9;Gigantamax Form;Gigantamax Amped Toxtricity
+10389;5;Forme Gigamax;Scolocendre Gigamax
+10389;6;Gigadynamax-Form;Gigadynamax-Infernopod
+10389;8;Gigamax;Centiskorch
+10389;9;Gigantamax Form;Gigantamax Centiskorch
+10390;5;Forme Gigamax;Sorcilence Gigamax
+10390;6;Gigadynamax-Form;Gigadynamax-Silembrim
+10390;8;Gigamax;Hatterene
+10390;9;Gigantamax Form;Gigantamax Hatterene
+10391;5;Forme Gigamax;Angoliath Gigamax
+10391;6;Gigadynamax-Form;Gigadynamax-Olangaar
+10391;8;Gigamax;Grimmsnarl
+10391;9;Gigantamax Form;Gigantamax Grimmsnarl
+10392;5;Forme Gigamax;Charmilly Gigamax
+10392;6;Gigadynamax-Form;Gigadynamax-Pokusan
+10392;8;Gigamax;Alcremie
+10392;9;Gigantamax Form;Gigantamax Alcremie
+10393;5;Forme Gigamax;Pachyradjah Gigamax
+10393;6;Gigadynamax-Form;Gigadynamax-Patinaraja
+10393;8;Gigamax;Copperajah
+10393;9;Gigantamax Form;Gigantamax Copperajah
+10394;5;Forme Gigamax;Duralugon Gigamax
+10394;6;Gigadynamax-Form;Gigadynamax-Duraludon
+10394;8;Gigamax;Duraludon
+10394;9;Gigantamax Form;Gigantamax Duraludon
+10395;5;Forme Gigamax;Shifours Style Poing Final Gigamax
+10395;6;Gigadynamax-Form;Gigadynamax-Wulaosu (Fokussiert)
+10395;8;Gigamax;Urshifu
+10395;9;Gigantamax Form;Gigantamax Single Strike Urshifu
+10396;5;Forme Gigamax;Shifours Style Mille Poings Gigamax
+10396;6;Gigadynamax-Form;Gigadynamax-Wulaosu (Fließend)
+10396;8;Gigamax;Urshifu
+10396;9;Gigantamax Form;Gigantamax Rapid Strike Urshifu
+10397;5;Gigantamax Form;Salarsen Forme Grave Gigamax
+10397;6;Gigadynamax-Form;Gigadynamax-Riffex (Tiefform)
+10397;8;Gigamax;Toxtricity
+10397;9;Gigantamax Form;Gigantamax Low Key Toxtricity
+10398;1;ヒスイのすがた;
+10398;5;Forme de Hisui;Caninos de Hisui
+10398;6;Hisui-Form;Hisui Fukano
+10398;8;Forma di Hisui;Growlithe
+10398;9;Hisuian Form;Hisuian Growlithe
+10398;11;ヒスイのすがた;
+10399;1;ヒスイのすがた;
+10399;5;Forme de Hisui;Arcanin de Hisui
+10399;6;Hisui-Form;Hisui Arkani
+10399;8;Forma di Hisui;Arcanine
+10399;9;Hisuian Form;Hisuian Arcanine
+10399;11;ヒスイのすがた;
+10400;1;ヒスイのすがた;
+10400;5;Forme de Hisui;Voltorbe de Hisui
+10400;6;Hisui-Form;Hisui Voltobal
+10400;8;Forma di Hisui;Voltorb
+10400;9;Hisuian Form;Hisuian Voltorb
+10400;11;ヒスイのすがた;
+10401;1;ヒスイのすがた;
+10401;5;Forme de Hisui;Électrode de Hisui
+10401;6;Hisui-Form;Hisui Lektrobal
+10401;8;Forma di Hisui;Electrode
+10401;9;Hisuian Form;Hisuian Electrode
+10401;11;ヒスイのすがた;
+10402;1;ヒスイのすがた;
+10402;5;Forme de Hisui;Typhlosion de Hisui
+10402;6;Hisui-Form;Hisui Tornupto
+10402;8;Forma di Hisui;Typhlosion
+10402;9;Hisuian Form;Hisuian Typhlosion
+10402;11;ヒスイのすがた;
+10403;1;ヒスイのすがた;
+10403;5;Forme de Hisui;Qwilfish de Hisui
+10403;6;Hisui-Form;Hisui Baldorfish
+10403;8;Forma di Hisui;Qwilfish
+10403;9;Hisuian Form;Hisuian Qwilfish
+10403;11;ヒスイのすがた;
+10404;1;ヒスイのすがた;
+10404;5;Forme de Hisui;Farfuret de Hisui
+10404;6;Hisui-Form;Hisui Sniebel
+10404;8;Forma di Hisui;Sneasel
+10404;9;Hisuian Form;Hisuian Sneasel
+10404;11;ヒスイのすがた;
+10405;1;ヒスイのすがた;
+10405;5;Forme de Hisui;Clamiral de Hisui
+10405;6;Hisui-Form;Hisui Admurai
+10405;8;Forma di Hisui;Samurott
+10405;9;Hisuian Form;Hisuian Samurott
+10405;11;ヒスイのすがた;
+10406;1;ヒスイのすがた;
+10406;5;Forme de Hisui;Fragilady de Hisui
+10406;6;Hisui-Form;Hisui Dressella
+10406;8;Forma di Hisui;Lilligant
+10406;9;Hisuian Form;Hisuian Lilligant
+10406;11;ヒスイのすがた;
+10407;1;ヒスイのすがた;
+10407;5;Forme de Hisui;Zorua de Hisui
+10407;6;Hisui-Form;Hisui Zorua
+10407;8;Forma di Hisui;Zorua
+10407;9;Hisuian Form;Hisuian Zorua
+10407;11;ヒスイのすがた;
+10408;1;ヒスイのすがた;
+10408;5;Forme de Hisui;Zoroark de Hisui
+10408;6;Hisui-Form;Hisui Zoroark
+10408;8;Forma di Hisui;Zoroark
+10408;9;Hisuian Form;Hisuian Zoroark
+10408;11;ヒスイのすがた;
+10409;1;ヒスイのすがた;
+10409;5;Forme de Hisui;Gueriaigle de Hisui
+10409;6;Hisui-Form;Hisui Washakwil
+10409;8;Forma di Hisui;Braviary
+10409;9;Hisuian Form;Hisuian Braviary
+10409;11;ヒスイのすがた;
+10410;1;ヒスイのすがた;
+10410;5;Forme de Hisui;Colimucus de Hisui
+10410;6;Hisui-Form;Hisui Viscargot
+10410;8;Forma di Hisui;Sliggoo
+10410;9;Hisuian Form;Hisuian Sliggoo
+10410;11;ヒスイのすがた;
+10411;1;ヒスイのすがた;
+10411;5;Forme de Hisui;Muplodocus de Hisui
+10411;6;Hisui-Form;Hisui Viscogon
+10411;8;Forma di Hisui;Goodra
+10411;9;Hisuian Form;Hisuian Goodra
+10411;11;ヒスイのすがた;
+10412;1;ヒスイのすがた;
+10412;5;Forme de Hisui;Séracrawl de Hisui
+10412;6;Hisui-Form;Hisui Arktilas
+10412;8;Forma di Hisui;Avalugg
+10412;9;Hisuian Form;Hisuian Avalugg
+10412;11;ヒスイのすがた;
+10413;1;ヒスイのすがた;
+10413;5;Forme de Hisui;Archéduc de Hisui
+10413;6;Hisui-Form;Hisui Silvarro
+10413;8;Forma di Hisui;Decidueye
+10413;9;Hisuian Form;Hisuian Decidueye
+10413;11;ヒスイのすがた;
+10414;1;オリジンフォルム;
+10414;5;Forme Originelle;Diagla Originel
+10414;6;Urform;Ur-Dialga
+10414;8;Forma Originale;Dialga
+10414;9;Origin Forme;Origin Dialga
+10414;11;オリジンフォルム;
+10415;1;オリジンフォルム;
+10415;5;Forme Originelle;Palkia Originel
+10415;6;Urform;Ur-Palkia
+10415;8;Forma Originale;Palkia
+10415;9;Origin Forme;Origin Palkia
+10415;11;オリジンフォルム;
+10416;1;しろすじのすがた;
+10416;5;Motif Blanch;Basculin Blanc
+10416;6;Weißlinienform;Weißliniges Barschuft
+10416;8;Forma Lineabianca;Basculin
+10416;9;White-Striped Form;White-Striped Basculin
+10416;11;しろすじのすがた;
+10417;1;メスのすがた;
+10417;5;Femelle;Paragruel Femelle
+10417;6;Weiblich;Barschuft ♀
+10417;8;femmina;Basculegion
+10417;9;Female;Female Basculegion
+10417;11;メスのすがた;
+10418;1;れいじゅうフォルム;
+10418;5;Forme Avatar;Amovénus Avatar
+10418;6;Tiergeistform;Enamorus (Tiergeist)
+10418;8;Forma Totem;Enamorus
+10418;9;Therian Forme;Therian Enamorus
+10418;11;れいじゅうフォルム;
+10419;1;パルデアのすがた;
+10419;8;Varietà Combattiva;Tauros
+10419;9;Paldean Form;
+10419;11;パルデアのすがた;
+10420;1;パルデアのすがた;
+10420;8;Varietà Infuocata;Tauros
+10420;9;Paldean Form;
+10420;11;パルデアのすがた;
+10421;1;パルデアのすがた;
+10421;8;Varietà Acquatica;Tauros
+10421;9;Paldean Form;
+10421;11;パルデアのすがた;
+10422;1;パルデアのすがた;
+10422;8;Forma di Paldea;Wooper
+10422;9;Paldean Form;
+10422;11;パルデアのすがた;
+10423;1;メスのすがた;
+10423;8;Femmina;Oinkologne
+10423;9;Female;
+10423;11;メスのすがた;
+10424;1;みつふしフォルム;
+10424;8;Forma Trimetamero;Dudunsparce
+10424;9;Three-Segment Form;
+10424;11;みつふしフォルム;
+10425;1;マイティフォルム;
+10425;8;Forma Possente;Palafin
+10425;9;Hero Form;
+10425;11;マイティフォルム;
+10426;1;３びきかぞく;
+10426;8;Trifamiglia;Maushold
+10426;9;Family of Three;
+10426;11;３びきかぞく;
+10427;1;たれたすがた;
+10427;8;Forma Adagiata;Tatsugiri
+10427;9;Droopy Form;
+10427;11;たれたすがた;
+10428;1;のびたすがた;
+10428;8;Forma Tesa;Tatsugiri
+10428;9;Stretchy Form;
+10428;11;のびたすがた;
+10429;1;ブルーフェザー;
+10429;8;Piume Azzurre;Squawkabilly
+10429;9;Blue Plumage;
+10429;11;ブルーフェザー;
+10430;1;イエローフェザー;
+10430;8;Piume Gialle;Squawkabilly
+10430;9;Yellow Plumage;
+10430;11;イエローフェザー;
+10431;1;ホワイトフェザー;
+10431;8;Piume Bianche;Squawkabilly
+10431;9;White Plumage;
+10431;11;ホワイトフェザー;
+10432;1;とほフォルム;
+10432;8;Forma Ambulante;Gimmighoul
+10432;9;Roaming Form;
+10432;11;とほフォルム;
+10433;1;せいげんけいたい;
+10433;8;Foggia Parziale;Koraidon
+10433;9;Limited Build;
+10433;11;せいげんけいたい;
+10434;1;しっそうけいたい;
+10434;8;Foggia Scattante;Koraidon
+10434;9;Sprinting Build;
+10434;11;しっそうけいたい;
+10435;1;ゆうえいけいたい;
+10435;8;Foggia Nautica;Koraidon
+10435;9;Swimming Build;
+10435;11;ゆうえいけいたい;
+10436;1;かっくうけいたい;
+10436;8;Foggia Librata;Koraidon
+10436;9;Gliding Build;
+10436;11;かっくうけいたい;
+10437;1;リミテッドモード;
+10437;8;Assetto Limitato;Miraidon
+10437;9;Low-Power Mode;
+10437;11;リミテッドモード;
+10438;1;ドライブモード;
+10438;8;Assetto Sprint;Miraidon
+10438;9;Drive Mode;
+10438;11;ドライブモード;
+10439;1;フロートモード;
+10439;8;Assetto Nuoto;Miraidon
+10439;9;Aquatic Mode;
+10439;11;フロートモード;
+10440;1;グライドモード;
+10440;8;Assetto Planata;Miraidon
+10440;9;Glide Mode;
+10440;11;グライドモード;

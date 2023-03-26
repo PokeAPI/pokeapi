@@ -31,8 +31,8 @@ evolution_trigger_id;local_language_id;name
 11;9;Use a move in the agile style a number of times
 12;8;Usando una mossa tot. volte come Tecnica potente
 12;9;Use a move in the strong style a number of times
-13;8;Perdendo HP da contraccolpo senza andare KO
-13;9;Loosing HP from recoil without fainting
+13;8;Perdendo almeno tot. HP da contraccolpo senza andare KO
+13;9;Loosing almost a number of HP from recoil without fainting
 14;8;Facendo passi mandando avanti il pokemon
 14;9;whilst outside of its Poké Ball after walking a number of steps using the Let's Go! feature
 15;8;Facendo il livello richiesto e vincendo la battaglia successiva
@@ -41,5 +41,5 @@ evolution_trigger_id;local_language_id;name
 16;9;Level up while in a Union Circle group
 17;8;Usando una mossa tot. volte
 17;9;Using a move a number of times
-18;8;Avendo un item nella Borsa
+18;8;Avendo un oggetto nella Borsa
 18;9;Having an item in the bag

@@ -1,4 +1,4 @@
-region_id,local_language_id,name
+"region_id","local_language_id","name"
 1,1,カントー地方
 1,3,관동지방
 1,5,Kanto
@@ -35,7 +35,11 @@ region_id,local_language_id,name
 6,6,Kalos
 6,8,Kalos
 6,9,Kalos
+7,8,Alola
 7,9,Alola
+8,8,Galar
 8,9,Galar
 9,8,Hisui
 9,9,Hisui
+10,8,Paldea
+10,9,Paldea

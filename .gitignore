@@ -4,7 +4,7 @@
 *build/*
 *.DS_STORE
 db.*
-venv*
+*venv*
 node_modules
 .vscode
 *.env

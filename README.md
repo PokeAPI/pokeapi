@@ -20,7 +20,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql--) for more info.
 
-## Setup &nbsp; [![pyVersion37](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/download/releases/3.7/)
+## Setup &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -45,17 +45,8 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ### Database setup
 
-Start the Django shell by
-
 ```sh
-python manage.py shell --settings=config.local
-```
-
-Run the build script with
-
-```py
-from data.v2.build import build_all
-build_all()
+make build-db
 ```
 
 Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
@@ -156,7 +147,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 
 ## Donations
 
-Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 60 million requests a month!
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 330 million requests a month!
 
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
@@ -167,7 +158,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://pokeapi-slack-invite.herokuapp.com/) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-1l4vpwa8k-muQmMrFfv7TIFGrVWzjzcw) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 

@@ -1,24 +1,23 @@
 # Quick reference
 
-- **Maintained by**:  
+- **Maintained by**:
     [the PokeAPI Contributors](https://github.com/PokeAPI/pokeapi/graphs/contributors)
 
-- **Where to get help**:  
+- **Where to get help**:
     [PokeAPI Slack](http://pokeapi.slack.com/).
 
-- **Where to file issues**:  
+- **Where to file issues**:
     [https://github.com/PokeAPI/pokeapi/issues](https://github.com/PokeAPI/pokeapi/issues)
 
-- **Source of this description**:  
+- **Source of this description**:
     [pokeapi repo's `Resources/docker/app/` directory](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/README.md)
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 - [`master`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 - [`staging`](https://github.com/PokeAPI/pokeapi/blob/staging/Resources/docker/app/Dockerfile)
 
-> `pokeapi` uses `python:3.7-alpine` as base image.
+> `pokeapi` uses `python:3.10-alpine` as base image.
 
 ## What is PokeAPI?
 

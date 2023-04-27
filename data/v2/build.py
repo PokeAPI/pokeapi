@@ -1432,7 +1432,10 @@ def _build_pokemons():
                 "official-artwork": {
                     "front_default": try_image_names(
                         poke_sprites + official_art, info, "png"
-                    )
+                    ),
+                    "front_shiny": try_image_names(
+                        poke_sprites + official_art + "shiny/", info, "png"
+                    ),
                 },
             },
             "versions": {

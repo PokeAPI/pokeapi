@@ -1007,6 +1007,8 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 1006,iron-valiant,1006,14,350,,993,1
 1007,koraidon,1007,25,3030,,998,1
 1008,miraidon,1008,35,2400,,999,1
+1009,walking-wake,1009,35,2800,,1093,1
+1010,iron-leaves,1010,15,1250,,1094,1
 10001,deoxys-attack,386,17,608,270,515,0
 10002,deoxys-defense,386,17,608,270,516,0
 10003,deoxys-speed,386,17,608,270,517,0

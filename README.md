@@ -45,17 +45,8 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ### Database setup
 
-Start the Django shell by
-
 ```sh
-python manage.py shell --settings=config.local
-```
-
-Run the build script with
-
-```py
-from data.v2.build import build_all
-build_all()
+make build-db
 ```
 
 Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
@@ -156,7 +147,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 
 ## Donations
 
-Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 60 million requests a month!
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 330 million requests a month!
 
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 

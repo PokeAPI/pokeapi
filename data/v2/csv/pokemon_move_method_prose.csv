@@ -1,13 +1,17 @@
 pokemon_move_method_id,local_language_id,name,description
+1,5,Montée de niveau,"Appris lorsqu’un Pokémon atteint un certain niveau."
 1,6,Level up,"Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht."
 1,7,Nivel,Se aprende cuando un pokemon alcanza un cierto nivel.
 1,9,Level up,Learned when a Pokémon reaches a certain level.
+2,5,Œuf,"Apparaît à l’éclosion d’un œuf de Pokémon, si le père connaît ce mouvement."
 2,6,Ei,"Erscheint bei einem frisch geschlüpften Pokémon, wenn der Vater die selbe Fähigkeit hatte."
 2,7,Huevo,"Aparece en un Pokémon recién nacido, si el padre tuvo el mismo movimiento."
 2,9,Egg,"Appears on a newly-hatched Pokémon, if the father had the same move."
+3,5,Enseigné,"Enseigné par un PNJ"
 3,6,Tutor,Kann jederzeit von einem NPC erlernt werden.
 3,7,Tutor, Puede ser enseñado en cualquier momento por un NPC.
 3,9,Tutor,Can be taught at any time by an NPC.
+4,5,Capsule,"Peut être appris n’importe quand par une CT ou une CS."
 4,6,Maschine,Kann jederzeit durch das benutzen eines TM oder VM erlernt werden.
 4,7,Máquina,Se puede enseñar en cualquier momento usando una MT o MO.
 4,9,Machine,Can be taught at any time by using a TM or HM.

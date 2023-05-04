@@ -1,733 +1,1465 @@
 location_area_id,local_language_id,name
 1,9,Canalave City
+1,5,Joliberges
 2,9,Eterna City
+2,5,Vestigion
 3,9,Pastoria City
+3,5,Verchamps
 4,9,Sunyshore City
+4,5,Rivamar
 5,9,Sinnoh League
+5,5,Ligue Pokémon
 6,9,Oreburgh mine (1F)
+6,5,Mine Charbourg (RdC)
 7,9,Oreburgh mine (B1F)
+7,5,Mine Charbourg (sous-sol)
 8,9,Valley Windworks
+8,5,Les Eoliennes
 9,9,Eterna Forest
+9,5,Forêt Vestigion
 10,9,Fuego Ironworks
+10,5,Forge Fuego
 11,9,Mount Coronet (1F Road 207)
+11,5,Mont Couronné (RdC côté route 207)
 12,9,Mount Coronet (2F)
+12,5,Mont Couronné (1er ét.)
 13,9,Mount Coronet (3F)
+13,5,Mont Couronné (2e ét.)
 14,9,Mount Coronet (exterior snowfall)
+14,5,Mont Couronné (extérieur neige)
 15,9,Mount Coronet (exterior blizzard)
+15,5,Mont Couronné (extérieur blizzard)
 16,9,Mount Coronet (4F)
+16,5,Mont Couronné (3e ét.)
 17,9,Mount Coronet (4F small room)
+17,5,"Mont Couronné (3e ét., petite salle)"
 18,9,Mount Coronet (5F)
+18,5,Mont Couronné (4e ét.)
 19,9,Mount Coronet (6F)
+19,5,Mont Couronné (5e ét.)
 20,9,Mount Coronet (1F from exterior)
+20,5,Mont Couronné (RdC depuis l'extérieur)
 21,9,Mount Coronet (1F Road 216)
+21,5,Mont Couronné (RdC côté route 216)
 22,9,Mount Coronet (1F Road 211)
+22,5,Mont Couronné (RdC côté route 211)
 23,9,Mount Coronet (B1F)
+23,5,Mont Couronné (sous-sol)
 24,9,Great Marsh Area 1
+24,5,Grand Marais Zone 1
 25,9,Great Marsh Area 2
+25,5,Grand Marais Zone 2
 26,9,Great Marsh Area 3
+26,5,Grand Marais Zone 3
 27,9,Great Marsh Area 4
+27,5,Grand Marais Zone 4
 28,9,Great Marsh Area 5
+28,5,Grand Marais Zone 5
 29,9,Great Marsh Area 6
+29,5,Grand Marais Zone 6
 30,9,Solaceon Ruins (2F)
+30,5,Ruines Bonville (étage)
 31,9,Solaceon Ruins (1F)
+31,5,Ruines Bonville (RdC)
 32,9,Solaceon Ruins (B1F A)
+32,5,Ruines Bonville (1er s-sol A)
 33,9,Solaceon Ruins (B1F B)
+33,5,Ruines Bonville (1er s-sol B)
 34,9,Solaceon Ruins (B1F C)
+34,5,Ruines Bonville (1er s-sol C)
 35,9,Solaceon Ruins (B2F A)
+35,5,Ruines Bonville (2e s-sol A)
 36,9,Solaceon Ruins (B2F B)
+36,5,Ruines Bonville (2e s-sol B)
 37,9,Solaceon Ruins (B2F C)
+37,5,Ruines Bonville (2e s-sol C)
 38,9,Solaceon Ruins (B3F A)
+38,5,Ruines Bonville (3e s-sol A)
 39,9,Solaceon Ruins (B3F B)
+39,5,Ruines Bonville (3e s-sol B)
 40,9,Solaceon Ruins (B3F C)
+40,5,Ruines Bonville (3e s-sol C)
 41,9,Solaceon Ruins (B3F D)
+41,5,Ruines Bonville (3e s-sol D)
 42,9,Solaceon Ruins (B3F E)
+42,5,Ruines Bonville (3e s-sol E)
 43,9,Solaceon Ruins (B4F A)
+43,5,Ruines Bonville (4e s-sol A)
 44,9,Solaceon Ruins (B4F B)
+44,5,Ruines Bonville (4e s-sol B)
 45,9,Solaceon Ruins (B4F C)
+45,5,Ruines Bonville (4e s-sol C)
 46,9,Solaceon Ruins (B4F D)
+46,5,Ruines Bonville (4e s-sol D)
 47,9,Solaceon Ruins (B5F)
+47,5,Ruines Bonville (5e s-sol)
 48,9,Victory Road (1F)
+48,5,Route Victoire (RdC)
 49,9,Victory Road (2F)
+49,5,Route Victoire (étage)
 50,9,Victory Road (B1F)
+50,5,Route Victoire (sous-sol)
 51,9,Victory Road (inside B1F)
+51,5,Route Victoire (intérieur sous-sol)
 52,9,Victory Road (inside)
+52,5,Route Victoire (intérieur)
 53,9,Victory Road (inside exit)
+53,5,"Route Victoire (intérieur, sortie)"
 54,9,Ravaged Path
+54,5,Chemin Rocheux
 55,9,Oreburgh Gate (1F)
+55,5,Entrée Charbourg (RdC)
 56,9,Oreburgh Gate (B1F)
+56,5,Entrée Charbourg (sous-sol)
 57,9,Stark Mountain exterior
+57,5,Mont Abrupt (extérieur)
 58,9,Stark Mountain entrance
+58,5,Mont Abrupt (entrée)
 59,9,Stark Mountain main cavern
+59,5,Mont Abrupt (caverne principale)
 60,9,Sendoff Spring
+60,5,Source Adieu
 61,9,Turnback Cave (pillar 1)
+61,5,Grotte Retour (1er pilier)
 62,9,Turnback Cave (pillar 2)
+62,5,Grotte Retour (2e pilier)
 63,9,Turnback Cave (pillar 3)
+63,5,Grotte Retour (3e pilier)
 64,9,Turnback Cave (before pillar 1)
+64,5,Grotte Retour (avant 1er pilier)
 70,9,Turnback Cave (between pillars 1 and 2)
+70,5,Grotte Retour (entre 1er et 2e piliers)
 76,9,Turnback Cave (between pillars 2 and 3)
+76,5,Grotte Retour (entre 2e et 3e piliers)
 82,9,Turnback Cave (after pillar 3)
+82,5,Grotte Retour (après 3e pilier)
 107,9,Snowpoint Temple (1F)
+107,5,Temple Frimapic (RdC)
 108,9,Snowpoint Temple (B1F)
+108,5,Temple Frimapic (1er s-sol)
 109,9,Snowpoint Temple (B2F)
+109,5,Temple Frimapic (2e s-sol)
 110,9,Snowpoint Temple (B3F)
+110,5,Temple Frimapic (3e s-sol)
 111,9,Snowpoint Temple (B4F)
+111,5,Temple Frimapic (4e s-sol)
 112,9,Snowpoint Temple (B5F)
+112,5,Temple Frimapic (5e s-sol)
 113,9,Wayward Cave (1F)
+113,5,Grotte Revèche (RdC)
 114,9,Wayward Cave (B1F)
+114,5,Grotte Revèche (sous-sol)
 115,9,Ruin Maniac Cave (0–9 different Unown caught)
+115,5,Grotte Ruinemaniac (de 0 à 9 Zarbi différents capturés)
 116,9,Ruin Maniac Cave (10–25 different Unown caught)
+116,5,Grotte Ruinemaniac (de 10 à 25 Zarbi différents capturés)
 117,9,Maniac Tunnel (26+ different Unown caught)
+117,5,Tunnel Ruinemaniac (+ de 26 Zarbi différents attrapés)
 118,9,Trophy Garden
+118,5,Jardin Trophée
 119,9,Iron Island area
+119,5,Ile de Fer (alentours)
 120,9,Iron Island (1F)
+120,5,Ile de Fer (RdC)
 121,9,Iron Island (B1F left)
+121,5,Ile de Fer (1er s-sol gauche)
 122,9,Iron Island (B1F right)
+122,5,Ile de Fer (1er s-sol droit)
 123,9,Iron Island (B2F right)
+123,5,Ile de Fer (2e s-sol droit)
 124,9,Iron Island (B2F left)
+124,5,Ile de Fer (2e s-sol gauche)
 125,9,Iron Island (B3F)
+125,5,Ile de Fer (3e s-sol)
 126,9,Old Chateau (entrance)
+126,5,Vieux Château (entrée)
 127,9,Old Chateau (dining room)
+127,5,Vieux Château (salle à manger)
 128,9,Old Chateau (2F private room)
+128,5,Vieux Château (étage pièce privée)
 129,9,Old Chateau (2F)
+129,5,Vieux Château (étage)
 130,9,Old Chateau (2F leftmost room)
+130,5,Vieux Château (étage pièce tout à gauche)
 131,9,Old Chateau (2F left room)
+131,5,Vieux Château (étage pièce centre gauche)
 132,9,Old Chateau (2F middle room)
+132,5,Vieux Château (étage pièce du centre)
 133,9,Old Chateau (2F right room)
+133,5,Vieux Château (étage pièce centre droite)
 134,9,Old Chateau (2F rightmost room)
+134,5,Vieux Château (étage pièce tout à droite)
 135,9,Lake Verity (before Galactic intervention)
+135,5,Lac Vérité (avant la team Galaxie)
 136,9,Lake Verity (after Galactic intervention)
+136,5,Lac Vérité (après la team Galaxie)
 137,9,Lake Valor
+137,5,Lac Courage
 138,9,Lake Acuity
+138,5,Lac Savoir
 139,9,Valor Lakefront
+139,5,Rive Lac Courage
 140,9,Acuity Lakefront
+140,5,Rive Lac Savoir
 141,9,Road 201
+141,5,Route 201
 142,9,Road 202
+142,5,Route 202
 143,9,Road 203
+143,5,Route 203
 144,9,"Road 204 (south, towards Jubilife City)"
+144,5,"Route 204 (sud, vers Féli-Cité)"
 145,9,"Road 204 (north, towards Floaroma Town)"
+145,5,"Route 204 (nord, vers Floraville)"
 146,9,"Road 205 (south, towards Floaroma Town)"
+146,5,"Route 205 (sud, vers Floraville)"
 147,9,"Road 205 (east, towards Eterna City)"
+147,5,"Route 205 (est, vers Vestigion)"
 148,9,Road 206
+148,5,Route 206
 149,9,Road 207
+149,5,Route 207
 150,9,Road 208
+150,5,Route 208
 151,9,Road 209
+151,5,Route 209
 152,9,Lost Tower (1F)
+152,5,Tour Perdue (RdC)
 153,9,Lost Tower (2F)
+153,5,Tour Perdue (1er ét.)
 154,9,Lost Tower (3F)
+154,5,Tour Perdue (2e ét.)
 155,9,Lost Tower (4F)
+155,5,Tour Perdue (3e ét.)
 156,9,Lost Tower (5F)
+156,5,Tour Perdue (4e ét.)
 157,9,"Road 210 (south, towards Solaceon Town)"
+157,5,"Route 210 (sud, vers Bonville)"
 158,9,"Road 210 (west, towards Celestic Town)"
+158,5,"Route 210 (ouest, vers Celestia)"
 159,9,"Road 211 (west, towards Eterna City)"
+159,5,"Route 211 (ouest, vers Vestigion)"
 160,9,"Road 211 (east, towards Celestic Town)"
+160,5,"Route 211 (est, vers Celestia)"
 161,9,"Road 212 (north, towards Hearthome City)"
+161,5,"Route 212 (nord, vers Unionpolis)"
 162,9,"Road 212 (east, towards Pastoria City)"
+162,5,"Route 212 (est, vers Verchamps)"
 163,9,Road 213
+163,5,Route 213
 164,9,Road 214
+164,5,Route 214
 165,9,Road 215
+165,5,Route 215
 166,9,Road 216
+166,5,Route 216
 167,9,Road 217
+167,5,Route 217
 168,9,Road 218
+168,5,Route 218
 169,9,Road 219
+169,5,Route 219
 170,9,Road 221
+170,5,Route 221
 171,9,Road 222
+171,5,Route 222
 172,9,Road 224
+172,5,Route 224
 173,9,Road 225
+173,5,Route 225
 174,9,Road 227
+174,5,Route 227
 175,9,Road 228
+175,5,Route 228
 176,9,Road 229
+176,5,Route 229
 177,9,Twinleaf Town
+177,5,Bonaugure
 178,9,Celestic Town
+178,5,Célestia
 179,9,Resort Area
+179,5,Aire de Détente
 180,9,Road 220
+180,5,Route 220
 181,9,Road 223
+181,5,Route 223
 182,9,Road 226
+182,5,Route 226
 183,9,Road 230
+183,5,Route 230
 184,9,New Bark Town
+184,5,Bourg Geon
 185,9,Road 29
+185,5,Route 29
 186,9,Cherrygrove City
+186,5,Ville Griotte
 187,9,Road 30
+187,5,Route 30
 188,9,Road 31
+188,5,Route 31
 189,9,Violet City
+189,5,Mauville
 190,9,Sprout Tower (2F)
+190,5,Tour CHETIFLOR (1er ét.)
 191,9,Sprout Tower (3F)
+191,5,Tour CHETIFLOR (2e ét.)
 192,9,Road 32
+192,5,Route 32
 193,9,Ruins of Alph (outside)
+193,5,Ruines d'Alpha (extérieur)
 194,9,Ruins of Alph (interior A)
+194,5,Ruines d'Alpha (intérieur A)
 195,9,Ruins of Alph (interior B)
+195,5,Ruines d'Alpha (intérieur B)
 196,9,Ruins of Alph (interior C)
+196,5,Ruines d'Alpha (intérieur C)
 197,9,Ruins of Alph (interior D)
+197,5,Ruines d'Alpha (intérieur D)
 198,9,Union Cave (1F)
+198,5,Caves Jumelles (RdC)
 199,9,Union Cave (B1F)
+199,5,Caves Jumelles (1er s-sol)
 200,9,Union Cave (B2F)
+200,5,Caves Jumelles (2e s-sol)
 201,9,Road 33
+201,5,Route 33
 202,9,Slowpoke Well (1F)
+202,5,Puits RAMOLOSS (RdC)
 203,9,Slowpoke Well (B1F)
+203,5,Puits RAMOLOSS (Sous-sol)
 204,9,Ilex Forest
+204,5,Bois aux Chênes
 205,9,Road 34
+205,5,Route 34
 206,9,Road 35
+206,5,Route 35
 207,9,National Park
+207,5,Parc Naturel
 208,9,Unknown Area; all bugs
+208,5,Zone inconnue ; que des insectes
 209,9,Road 36
+209,5,Route 36
 210,9,Road 37
+210,5,Route 37
 211,9,Ecruteak City
+211,5,Rosalia
 212,9,Burned Tower (1F)
+212,5,Tour Cendrée (RdC)
 213,9,Burned Tower (B1F)
+213,5,Tour Cendrée (sous-sol)
 214,9,Bell Tower (2F)
+214,5,Tour Carillon (1er ét.)
 215,9,Bell Tower (3F)
+215,5,Tour Carillon (2e ét.)
 216,9,Bell Tower (4F)
+216,5,Tour Carillon (3e ét.)
 217,9,Bell Tower (5F)
+217,5,Tour Carillon (4e ét.)
 218,9,Bell Tower (6F)
+218,5,Tour Carillon (5e ét.)
 219,9,Bell Tower (7F)
+219,5,Tour Carillon (6e ét.)
 220,9,Bell Tower (8F)
+220,5,Tour Carillon (7e ét.)
 221,9,Bell Tower (9F)
+221,5,Tour Carillon (8e ét.)
 222,9,Road 38
+222,5,Route 38
 223,9,Road 39
+223,5,Route 39
 224,9,Olivine City
+224,5,Oliville
 225,9,Road 40
+225,5,Route 4
 226,9,Road 41
+226,5,Route 41
 227,9,Whirl Islands (1F)
+227,5,Tourb'Iles (RdC)
 228,9,Whirl Islands (B1F)
+228,5,Tourb'Iles (1er s-sol)
 229,9,Whirl Islands (empty floor X)
+229,5,Tourb'Iles (étage vide X)
 230,9,Whirl Islands (B2F)
+230,5,Tourb'Iles (2e s-sol)
 231,9,Whirl Islands (empty floor Y)
+231,5,Tourb'Iles (étage vide Y)
 232,9,Whirl Islands (B3F)
+232,5,Tourb'Iles (3e s-sol)
 235,9,Cianwood City
+235,5,Irisia
 236,9,Road 42
+236,5,Route 42
 237,9,Mount Mortar (1F)
+237,5,Mont Creuset (RdC)
 238,9,Mount Mortar (Lower Cave)
+238,5,Mont Creuset (caverne inférieure)
 239,9,Mount Mortar (Upper Cave)
+239,5,Mont Creuset (caverne supérieure)
 240,9,Mount Mortar (B1F)
+240,5,Mont Creuset (sous-sol)
 241,9,Road 43
+241,5,Route 43
 242,9,Lake of Rage
+242,5,Lac Colère
 243,9,Road 44
+243,5,Route 44
 244,9,Ice Path (1F)
+244,5,Route de Glace (RdC)
 245,9,Ice Path (B1F)
+245,5,Route de Glace (1er s-sol)
 246,9,Ice Path (B2F)
+246,5,Route de Glace (2e s-sol)
 247,9,Ice Path (B3F)
+247,5,Route de Glace (3e s-sol)
 249,9,Blackthorn City
+249,5,Ebènelle
 250,9,Dragon's Den
+250,5,Antre du Dragon
 251,9,Road 45
+251,5,Route 45
 252,9,Road 46
+252,5,Route 46
 253,9,Dark Cave (Violet City entrance)
+253,5,Antre Noir (entrée Mauville)
 254,9,Dark Cave (Blackthorn City entrance)
+254,5,Antre Noir (entrée Ebènelle)
 255,9,Road 47
+255,5,Route 47
 256,9,Mount Moon Square
+256,5,Aire de repos du Mont Sélénite
 257,9,Unknown Area; all Poliwag
+257,5,Zone inconnue ; que des Ptitard
 258,9,Seafoam Islands (1F)
+258,5,Iles Ecume (RdC)
 259,9,Seafoam Islands (B1F)
+259,5,Iles Ecume (1er s-sol)
 260,9,Seafoam Islands (B2F)
+260,5,Iles Ecume (2e s-sol)
 261,9,Seafoam Islands (B3F)
+261,5,Iles Ecume (3e s-sol)
 262,9,Seafoam Islands (B4F)
+262,5,Iles Ecume (4e s-sol)
 263,9,Mount Silver (2F)
+263,5,Mont Argenté (1er étage)
 264,9,Mount Silver (1F top)
+264,5,Mont Argenté (RdC haut)
 265,9,Mount Silver (4F)
+265,5,Mont Argenté (3e étage)
 266,9,Road 47 (cave gate)
+266,5,Route 47 (Portail Falaise)
 267,9,Road 47 (inside cave)
+267,5,Route 47 (Grotte Falaise)
 268,9,Bell Tower (10F)
+268,5,Tour Carillon (9e ét.)
 269,9,Mount Silver (outside)
+269,5,Mont Argenté (extérieur)
 270,9,Mount Silver (1F)
+270,5,Mont Argenté (RdC)
 271,9,Mount Silver (mountainside)
+271,5,Mont Argenté (flancs)
 272,9,Mount Silver (3F)
+272,5,Mont Argenté (2e étage)
 273,9,Mount Silver (top)
+273,5,Mon Argenté (sommet)
 275,9,Unknown Area; all Rattata
+275,5,Zone inconnue ; que des Rattata
 276,9,Road 12
+276,5,Route 12
 277,9,Road 19
+277,5,Route 19
 278,9,Road 20
+278,5,Route 20
 279,9,Cinnabar Island
+279,5,Cramois'Ile
 280,9,Viridian City
+280,5,Jadielle
 281,9,Cerulean City
+281,5,Azuria
 282,9,Vermilion City
+282,5,Carmin sur Mer
 283,9,Celadon City
+283,5,Céladopole
 284,9,Fuchsia City
+284,5,Parmanie
 285,9,Pallet Town
+285,5,Bourg Palette
 286,9,Road 48
+286,5,Route 47
 287,9,Road 26
+287,5,Route 26
 288,9,Road 27
+288,5,Route 27
 289,9,Road 28
+289,5,Route 28
 290,9,Mount Moon (1F)
+290,5,Mont Sélénite (RdC)
 291,9,Mount Moon (2F)
+291,5,Mont Sélénite (étage)
 292,9,Rock Tunnel (1F)
+292,5,Grotte (RdC)
 293,9,Rock Tunnel (B1F)
+293,5,Grotte (1er s-sol)
 294,9,Victory Road 1 (1F)
+294,5,Route Victoire 1 (RdC)
 295,9,Road 1
+295,5,Route 1
 296,9,"Road 2 (south, towards Viridian City)"
+296,5,"Route 2 (sud, vers Jadielle)"
 297,9,Road 3
+297,5,Route 3
 298,9,Road 4
+298,5,Route 4
 299,9,Road 5
+299,5,Route 5
 300,9,Road 6
+300,5,Route 6
 301,9,Road 7
+301,5,Route 7
 302,9,Road 8
+302,5,Route 8
 303,9,Road 9
+303,5,Route 9
 304,9,Road 10
+304,5,Route 1
 305,9,Road 11
+305,5,Route 1
 306,9,Road 13
+306,5,Route 13
 307,9,Road 14
+307,5,Route 14
 308,9,Road 15
+308,5,Route 15
 309,9,Road 16
+309,5,Route 16
 310,9,Road 17
+310,5,Route 17
 311,9,Road 18
+311,5,Route 18
 312,9,Road 21
+312,5,Route 21
 313,9,Road 22
+313,5,Route 22
 314,9,Road 24
+314,5,Route 24
 315,9,Road 25
+315,5,Route 25
 316,9,Tohjo Falls
+316,5,Chutes Tohjo
 317,9,Digletts Cave
+317,5,Cave Taupiqueur
 318,9,Victory Road 1 (2F)
+318,5,Route Victoire 1 (1er ét.)
 319,9,Victory Road 1 (3F)
+319,5,Route Victoire 1 (2e ét.)
 320,9,"Road 2 (north, towards Pewter City)"
+320,5,"Route 2 (nord, vers Argenta)"
 321,9,Viridian Forest
+321,5,Forêt de Jade
 323,9,Cerulean Cave (1F)
+323,5,Caverne Azurée (RdC)
 324,9,Cerulean Cave (2F)
+324,5,Caverne Azurée (étage)
 325,9,Cerulean Cave (B1F)
+325,5,Caverne Azurée (sous-sol)
 326,9,Mount Moon (B1F)
+326,5,Mont Sélénite (1er s-sol)
 327,9,Mount Moon (B2F)
+327,5,Mont Sélénite (2e s-sol)
 328,9,Rock Tunnel (B2F)
+328,5,Grotte (2e s-sol)
 329,9,Road 23
+329,5,Route 23
 330,9,Power Plant
+330,5,Centrale
 331,9,Victory Road 2 (1F)
+331,5,Route Victoire 2 (RdC)
 332,9,Victory Road 2 (2F)
+332,5,Route Victoire 2 (1er ét.)
 333,9,Victory Road 2 (3F)
+333,5,Route Victoire 2 (2e ét.)
 334,9,Pokemon Tower (1F)
+334,5,Tour Pokémon (RdC)
 335,9,Pokemon Tower (2F)
+335,5,Tour Pokémon (1er ét.)
 336,9,Pokemon Tower (3F)
+336,5,Tour Pokémon (2e ét.)
 337,9,Pokemon Tower (4F)
+337,5,Tour Pokémon (3e ét.)
 338,9,Pokemon Tower (5F)
+338,5,Tour Pokémon (4e ét.)
 339,9,Pokemon Tower (6F)
+339,5,Tour Pokémon (5e ét.)
 340,9,Pokemon Tower (7F)
+340,5,Tour Pokémon (6e ét.)
 341,9,Pokemon Mansion (1F)
+341,5,Manoir Pokémon (RdC)
 342,9,Pokemon Mansion (2F)
+342,5,Manoir Pokémon (1er ét.)
 343,9,Pokemon Mansion (3F)
+343,5,Manoir Pokémon (2e ét.)
 344,9,Pokemon Mansion (B1F)
+344,5,Manoir Pokémon (sous-sol)
 345,9,Safari Zone (middle)
+345,5,Parc Safari (centre)
 346,9,"Safari Zone (Area 1, east)"
+346,5,"Parc Safari (Zone 1, est)"
 347,9,"Safari Zone (Area 2, north)"
+347,5,"Parc Safari (Zone 2, nord)"
 348,9,"Safari Zone (Area 3, west)"
+348,5,"Parc Safari (Zone 3, ouest)"
 349,9,S.S. Anne dock
+349,5,Pont de l'Océane
 350,9,Petalburg City
+350,5,Clémenti-Ville
 351,9,Slateport City
+351,5,Poivressel
 352,9,Lilycove City
+352,5,Nénucrique
 353,9,Mossdeep City
+353,5,Algatia
 354,9,Sootopolis City
+354,5,Atalanopolis
 355,9,Ever Grande City
+355,5,Éternara
 356,9,Meteor Falls
+356,5,Site Météore
 357,9,Meteor Falls (back)
+357,5,Site Météore (arrière)
 358,9,Meteor Falls (B1F)
+358,5,Site Météore (sous-sol)
 359,9,Meteor Falls (back/small room)
+359,5,Site Météore (petite salle)
 360,9,Rusturf Tunnel
+360,5,Tunnel Mérazon
 361,9,Granite Cave (1F)
+361,5,Grotte Granite (RdC)
 362,9,Granite Cave (B1F)
+362,5,Grotte Granite (1er s-sol)
 363,9,Granite Cave (B2F)
+363,5,Grotte Granite (2e s-sol)
 364,9,Granite Cave (1F/small room)
+364,5,"Grotte Granite (RdC, petite salle)"
 365,9,Petalburg Woods
+365,5,Bois Clémenti
 366,9,Jagged Pass
+366,5,Sentier Sinuroc
 367,9,Fiery Path
+367,5,Chemin Ardent
 368,9,Mount Pyre (1F)
+368,5,Mont Mémoria (RdC)
 369,9,Mount Pyre (2F)
+369,5,Mont Mémoria (1er ét.)
 370,9,Mount Pyre (3F)
+370,5,Mont Mémoria (2e ét.)
 371,9,Mount Pyre (4F)
+371,5,Mont Mémoria (3e ét.)
 372,9,Mount Pyre (5F)
+372,5,Mont Mémoria (4e ét.)
 373,9,Mount Pyre (6F)
+373,5,Mont Mémoria (5e ét.)
 374,9,Mount Pyre (outside)
+374,5,Mont Mémoria (extérieur)
 375,9,Mount Pyre (summit)
+375,5,Mont Mémoria (sommet)
 376,9,Seafloor Cavern
+376,5,Caverne Fondmer
 377,9,Cave of Origin (entrance)
+377,5,Grotte Origine (entrée)
 378,9,Cave of Origin (1F)
+378,5,Grotte Origine (RdC)
 379,9,Cave of Origin (B1F)
+379,5,Grotte Origine (1er s-sol)
 380,9,Cave of Origin (B2F)
+380,5,Grotte Origine (2e s-sol)
 381,9,Cave of Origin (B3F)
+381,5,Grotte Origine (3e s-sol)
 382,9,Victory Road (1F)
+382,5,Route Victoire (RdC)
 383,9,Victory Road (B1F)
+383,5,Route Victoire (1er s-sol)
 384,9,Victory Road (B2F)
+384,5,Route Victoire (2e s-sol)
 385,9,Shoal Cave
+385,5,Grotte Tréfonds
 386,9,Shoal Cave (B1F)
+386,5,Grotte Tréfonds (sous-sol)
 387,9,New Mauville (entrance)
+387,5,New Lavandia (entrée)
 388,9,New Mauville
+388,5,New Lavandia
 389,9,Abandoned Ship
+389,5,Épave
 390,9,Sky Pillar (1F)
+390,5,Pilier Céleste (RdC)
 391,9,Sky Pillar (3F)
+391,5,Pilier Céleste (2e ét.)
 392,9,Sky Pillar (5F)
+392,5,Pilier Céleste (4e ét.)
 393,9,Road 101
+393,5,Route 101
 394,9,Road 102
+394,5,Route 102
 395,9,Road 103
+395,5,Route 103
 396,9,Road 104
+396,5,Route 104
 397,9,Road 105
+397,5,Route 105
 398,9,Road 106
+398,5,Route 106
 399,9,Road 107
+399,5,Route 107
 400,9,Road 108
+400,5,Route 108
 401,9,Road 109
+401,5,Route 109
 402,9,Road 110
+402,5,Route 110
 403,9,Road 111
+403,5,Route 111
 404,9,Road 112
+404,5,Route 112
 405,9,Road 113
+405,5,Route 113
 406,9,Road 114
+406,5,Route 114
 407,9,Road 115
+407,5,Route 115
 408,9,Road 116
+408,5,Route 116
 409,9,Road 117
+409,5,Route 117
 410,9,Road 118
+410,5,Route 118
 411,9,Road 119
+411,5,Route 119
 412,9,Road 120
+412,5,Route 120
 413,9,Road 121
+413,5,Route 121
 414,9,Road 122
+414,5,Route 122
 415,9,Road 123
+415,5,Route 123
 416,9,Road 124
+416,5,Route 124
 417,9,Road 124 (underwater)
+417,5,Route 124 (sous l'eau)
 418,9,Road 125
+418,5,Route 125
 419,9,Road 126
+419,5,Route 126
 420,9,Road 126 (underwater)
+420,5,Route 126 (sous l'eau)
 421,9,Road 127
+421,5,Route 127
 422,9,Road 128
+422,5,Route 128
 423,9,Road 129
+423,5,Route 129
 424,9,Road 130
+424,5,Route 130
 425,9,Road 131
+425,5,Route 131
 426,9,Road 132
+426,5,Route 132
 427,9,Road 133
+427,5,Route 133
 428,9,Road 134
+428,5,Route 134
 429,9,Safari Zone (NW/mach bike area)
+429,5,Parc Safari (nord-ouest)
 430,9,Safari Zone (NE/acro bike area)
+430,5,Parc Safari (nord-est)
 431,9,Safari Zone (SW)
+431,5,Parc Safari (sud-ouest)
 432,9,Safari Zone (SE)
+432,5,Parc Safari (sud-est)
 433,9,Dewford Town
+433,5,Myokara
 434,9,Pacifidlog Town
+434,5,Pacifiville
 435,9,Safari Zone (expansion south)
+435,5,Parc Safari (ext. sud à l’est)
 436,9,Safari Zone (expansion north)
+436,5,Parc Safari (ext. nord à l’est)
 437,9,Magma Hideout
+437,5,Planque Magma
 438,9,Mirage Tower
+438,5,Tour Mirage
 439,9,Desert Underpass
+439,5,Voie du Désert
 440,9,Artisan Cave
+440,5,Grotte Atelier
 441,9,Altering Cave (A)
+441,5,Grotte Métamo (A)
 442,9,Altering Cave (B)
+442,5,Grotte Métamo (B)
 443,9,Altering Cave (C)
+443,5,Grotte Métamo (C)
 444,9,Altering Cave (D)
+444,5,Grotte Métamo (D)
 445,9,Altering Cave (E)
+445,5,Grotte Métamo (E)
 446,9,Altering Cave (F)
+446,5,Grotte Métamo (F)
 447,9,Altering Cave (G)
+447,5,Grotte Métamo (G)
 448,9,Altering Cave (H)
+448,5,Grotte Métamo (H)
 449,9,Altering Cave (I)
+449,5,Grotte Métamo (I)
 450,9,Monean Chamber
+450,5,Chambre Anemune
 451,9,Liptoo Chamber
+451,5,Chambre Deulipe
 452,9,Weepth Chamber
+452,5,Chambre Prois
 453,9,Dilford Chamber
+453,5,Chambre Jonquatre
 454,9,Scufib Chamber
+454,5,Chambre Hibicinq
 455,9,Rixy Chamber
+455,5,Chambre Irix
 456,9,Viapos Chamber
+456,5,Chambre Poinsept
 461,9,S.S. Anne
+461,5,L'Océane
 488,9,Mount Ember
+488,5,Mont Braise
 489,9,Mount Ember (cave)
+489,5,Mont Braise (caverne)
 490,9,Mount Ember (inside)
+490,5,Mont Braise (intérieur)
 491,9,"Mount Ember (1F, cave behind team rocket)"
+491,5,"Mont Braise (RdC, caverne derrière Team Rocket)"
 492,9,Mount Ember (B1F)
+492,5,Mont Braise (1er s-sol)
 493,9,Mount Ember (B2F)
+493,5,Mont Braise (2e s-sol)
 494,9,Mount Ember (B3F)
+494,5,Mont Braise (3e s-sol)
 495,9,Berry Forest
+495,5,Bois Baies
 496,9,Icefall Cave (entrance)
+496,5,Grotte de Glace (entrée)
 497,9,Icefall Cave (1F)
+497,5,Grotte de Glace (RdC)
 498,9,Icefall Cave (B1F)
+498,5,Grotte de Glace (sous-sol)
 499,9,Icefall Cave (waterfall)
+499,5,Grotte de Glace (cascade)
 500,9,Pattern Bush
+500,5,Forbuissons
 501,9,Lost Cave (room 1)
+501,5,Grotte Perdue (salle 1)
 502,9,Lost Cave (room 2)
+502,5,Grotte Perdue (salle 2)
 503,9,Lost Cave (room 3)
+503,5,Grotte Perdue (salle 3)
 504,9,Lost Cave (room 4)
+504,5,Grotte Perdue (salle 4)
 505,9,Lost Cave (room 5)
+505,5,Grotte Perdue (salle 5)
 506,9,Lost Cave (room 6)
+506,5,Grotte Perdue (salle 6)
 507,9,Lost Cave (room 7)
+507,5,Grotte Perdue (salle 7)
 508,9,Lost Cave (room 8)
+508,5,Grotte Perdue (salle 8)
 509,9,Lost Cave (room 9)
+509,5,Grotte Perdue (salle 9)
 510,9,Lost Cave (room 10)
+510,5,Grotte Perdue (salle 10)
 511,9,Lost Cave (item rooms)
+511,5,Grotte Perdue (salle des objets)
 512,9,Kindle Road
+512,5,Route Tison
 513,9,Treasure Beach
+513,5,Plage Trésor
 514,9,Cape Brink
+514,5,Cap Falaise
 515,9,Bond Bridge
+515,5,Pont du Lien
 516,9,Three Isle Port
+516,5,Port Ile 3
 517,9,Resort Gorgeous
+517,5,Camp de Vacances
 518,9,Water Labyrinth
+518,5,Labyrinthe d'O
 519,9,Five Isle Meadow
+519,5,Pré Ile 5
 520,9,Memorial Pillar
+520,5,Mémorial
 521,9,Outcast Island
+521,5,Ile du Lointain
 522,9,Green Path
+522,5,Chemin Vert
 523,9,Water Path
+523,5,Agualcanal
 524,9,Ruin Valley
+524,5,Vallée Ruine
 525,9,Trainer Tower
+525,5,Tour Dresseurs
 526,9,Canyon Entrance
+526,5,Entrée du Canyon
 527,9,Sevault Canyon
+527,5,Canyon Sesor
 528,9,Tanoby Ruins
+528,5,Ruines Tanoby
 561,9,One Island
+561,5,Ile 1
 562,9,Four Island
+562,5,Ile 4
 563,9,Five Island
+563,5,Ile 5
 564,9,Altering Cave (A)
+564,5,Grotte Métamo (A)
 565,9,Altering Cave (B)
+565,5,Grotte Métamo (B)
 566,9,Altering Cave (C)
+566,5,Grotte Métamo (C)
 567,9,Altering Cave (D)
+567,5,Grotte Métamo (D)
 568,9,Altering Cave (E)
+568,5,Grotte Métamo (E)
 569,9,Altering Cave (F)
+569,5,Grotte Métamo (F)
 570,9,Altering Cave (G)
+570,5,Grotte Métamo (G)
 571,9,Altering Cave (H)
+571,5,Grotte Métamo (H)
 572,9,Altering Cave (I)
+572,5,Grotte Métamo (I)
 576,9,Striaton City
+576,5,Ogoesse
 577,9,Driftveil City
+577,5,Port Yoneuve
 578,9,Icirrus City
+578,5,Flocombe
 579,9,Dreamyard
+579,5,Vestiges du Rêve
 580,9,Dreamyard (B1F)
+580,5,Vestiges du Rêve (sous-sol)
 581,9,Pinwheel Forest (outside)
+581,5,Forêt d'Empoigne (extérieur)
 582,9,Pinwheel Forest (inside)
+582,5,Forêt d'Empoigne (intérieur)
 583,9,Desert Resort (entrance)
+583,5,Désert Délassant (entrée)
 584,9,Desert Resort
+584,5,Désert Délassant
 585,9,Relic Castle (A)
+585,5,Château Enfoui (A)
 586,9,Relic Castle (B)
+586,5,Château Enfoui (B)
 587,9,Relic Castle (C)
+587,5,Château Enfoui (C)
 588,9,Relic Castle (D)
+588,5,Château Enfoui (D)
 589,9,Cold Storage
+589,5,Hangar Frigorifique
 590,9,Chargestone Cave (1F)
+590,5,Grotte Électrolithe (RdC)
 591,9,Chargestone Cave (B1F)
+591,5,Grotte Électrolithe (1er s-sol)
 592,9,Chargestone Cave (B2F)
+592,5,Grotte Électrolithe (2e s-sol)
 593,9,Twist Mountain
+593,5,Mont Foré
 594,9,Dragonspiral Tower (entrance)
+594,5,Tour Dragospire (entrée)
 595,9,Dragonspiral Tower (outside)
+595,5,Tour Dragospire (extérieur)
 596,9,Dragonspiral Tower (1F)
+596,5,Tour Dragospire (RdC)
 597,9,Dragonspiral Tower (2F)
+597,5,Tour Dragospire (1er ét.)
 598,9,Victory Road (outside)
+598,5,Route Victoire (extérieur)
 599,9,Victory Road (unknown area 53)
+599,5,Route Victoire (zone inconnue 53)
 600,9,Victory Road (unknown area 54)
+600,5,Route Victoire (zone inconnue 54)
 601,9,Victory Road (unknown area 55)
+601,5,Route Victoire (zone inconnue 55)
 602,9,Victory Road (unknown area 56)
+602,5,Route Victoire (zone inconnue 56)
 603,9,Victory Road (unknown area 57)
+603,5,Route Victoire (zone inconnue 57)
 604,9,Victory Road (unknown area 58)
+604,5,Route Victoire (zone inconnue 58)
 605,9,Victory Road (unknown area 59)
+605,5,Route Victoire (zone inconnue 59)
 606,9,Victory Road (unknown area 60)
+606,5,Route Victoire (zone inconnue 60)
 607,9,Victory Road (unknown area 61)
+607,5,Route Victoire (zone inconnue 61)
 608,9,Victory Road (unknown area 62)
+608,5,Route Victoire (zone inconnue 62)
 609,9,Victory Road (unknown area 63)
+609,5,Route Victoire (zone inconnue 63)
 610,9,Victory Road (unknown area 64)
+610,5,Route Victoire (zone inconnue 64)
 611,9,Victory Road (unknown area 65)
+611,5,Route Victoire (zone inconnue 65)
 612,9,Victory Road (unknown area 66)
+612,5,Route Victoire (zone inconnue 66)
 613,9,Trial Chamber
+613,5,Salle Épreuve
 614,9,Giant Chasm (outside)
+614,5,Grotte Cyclopéenne (extérieur)
 615,9,Giant Chasm
+615,5,Grotte Cyclopéenne
 616,9,Giant Chasm (forest)
+616,5,Grotte Cyclopéenne (forêt)
 617,9,Giant Chasm (forest cave)
+617,5,Grotte Cyclopéenne (caverne-forêt)
 618,9,P2 Laboratory
+618,5,Labo P2
 619,9,Undella Bay
+619,5,Baie Vaguelone
 620,9,Driftveil Drawbridge
+620,5,Pont Yoneuve
 621,9,Village Bridge
+621,5,Pont du Hameau
 622,9,Marvelous Bridge
+622,5,Pont de l'Inconnu
 623,9,Road 1
+623,5,Route 1
 624,9,Road 2
+624,5,Route 2
 625,9,Road 3
+625,5,Route 3
 626,9,Wellspring Cave
+626,5,Veine Souterraine
 627,9,Road 4
+627,5,Route 4
 628,9,Road 5
+628,5,Route 5
 629,9,Road 6
+629,5,Route 6
 630,9,Mistralton Cave
+630,5,Grotte Parsemille
 631,9,Guidance Chamber
+631,5,Espace Guide
 632,9,Road 7
+632,5,Route 7
 633,9,Celestial Tower (2F)
+633,5,Tour des Cieux (1er ét.)
 634,9,Celestial Tower (3F)
+634,5,Tour des Cieux (2e ét.)
 635,9,Celestial Tower (4F)
+635,5,Tour des Cieux (3e ét.)
 636,9,Celestial Tower (5F)
+636,5,Tour des Cieux (4e ét.)
 637,9,Road 8
+637,5,Route 8
 638,9,Moor of Icirrus
+638,5,Tourbière Flocombe
 639,9,Road 9
+639,5,Route 9
 640,9,Challengers Cave (1F)
+640,5,Antre d'Entraînement (RdC)
 641,9,Challengers Cave (B1F)
+641,5,Antre d'Entraînement (1er s-sol)
 642,9,Challengers Cave (B2F)
+642,5,Antre d'Entraînement (2e s-sol)
 643,9,Road 10
+643,5,Route 10
 644,9,Road 10 (Victory Road gate)
+644,5,Route 10 (point de contrôle des badges)
 645,9,Road 11
+645,5,Route 11
 646,9,Road 12
+646,5,Route 12
 647,9,Road 13
+647,5,Route 13
 648,9,Road 14
+648,5,Route 14
 649,9,Abundant Shrine
+649,5,Autel Abondance
 650,9,Road 15
+650,5,Route 15
 651,9,Road 16
+651,5,Route 16
 652,9,Lostlorn Forest
+652,5,Bois des Illusions
 653,9,Road 18
+653,5,Route 18
 654,9,Undella Town
+654,5,Vaguelone
 655,9,Road 17
+655,5,Route 17
 656,9,Castelia City
+656,5,Volucité
 657,9,Aspertia City
+657,5,Pavonnay
 658,9,Virbank City
+658,5,Ondes-sur-Mer
 659,9,Humilau City
+659,5,Papeloa
 660,9,Victory Road (7F)
+660,5,Route Victoire (6e ét.)
 661,9,Victory Road 2 (unknown area 71)
+661,5,Route Victoire 2 (zone inconnue 71)
 662,9,Victory Road 2 (unknown area 72)
+662,5,Route Victoire 2 (zone inconnue 72)
 663,9,Victory Road 2 (unknown area 73)
+663,5,Route Victoire 2 (zone inconnue 73)
 664,9,Victory Road 2 (unknown area 74)
+664,5,Route Victoire 2 (zone inconnue 74)
 665,9,Victory Road 2 (unknown area 75)
+665,5,Route Victoire 2 (zone inconnue 75)
 666,9,Victory Road 2 (unknown area 76)
+666,5,Route Victoire 2 (zone inconnue 76)
 667,9,Victory Road 2 (unknown area 77)
+667,5,Route Victoire 2 (zone inconnue 77)
 668,9,Victory Road 2 (unknown area 78)
+668,5,Route Victoire 2 (zone inconnue 78)
 669,9,Victory Road 2 (unknown area 79)
+669,5,Route Victoire 2 (zone inconnue 79)
 670,9,Victory Road 2 (unknown area 80)
+670,5,Route Victoire 2 (zone inconnue 80)
 671,9,Castelia Sewers
+671,5,Égouts de Volucité
 672,9,Castelia Sewers (unknown area 38)
+672,5,Égouts de Volucité (zone inconnue 38)
 673,9,Floccesy Ranch (outer)
+673,5,Ranch d'Amaillide (extérieur)
 674,9,Floccesy Ranch (inner)
+674,5,Ranch d'Amaillide (intérieur)
 675,9,Virbank Complex (outer)
+675,5,Z.I. d'Ondes-sur-Mer (extérieur)
 676,9,Virbank Complex (inner)
+676,5,Z.I. d'Ondes-sur-Mer (intérieur)
 677,9,Reversal Mountain (unknown area 48)
+677,5,Mont Renenvers (zone inconnue 48)
 678,9,Reversal Mountain (unknown area 49)
+678,5,Mont Renenvers (zone inconnue49)
 679,9,Reversal Mountain (unknown area 50)
+679,5,Mont Renenvers (zone inconnue 50)
 680,9,Reversal Mountain (unknown area 51)
+680,5,Mont Renenvers (zone inconnue 51)
 681,9,Reversal Mountain (unknown area 52)
+681,5,Mont Renenvers (zone inconnue 52)
 682,9,Reversal Mountain (unknown area 53)
+682,5,Mont Renenvers (zone inconnue 53)
 683,9,Reversal Mountain (unknown area 54)
+683,5,Mont Renenvers (zone inconnue 54)
 684,9,Reversal Mountain (unknown area 55)
+684,5,Mont Renenvers (zone inconnue 55)
 685,9,Reversal Mountain (unknown area 56)
+685,5,Mont Renenvers (zone inconnue 56)
 686,9,Reversal Mountain (unknown area 57)
+686,5,Mont Renenvers (zone inconnue 57)
 687,9,Reversal Mountain (unknown area 58)
+687,5,Mont Renenvers (zone inconnue 58)
 688,9,Reversal Mountain (unknown area 59)
+688,5,Mont Renenvers (zone inconnue 59)
 689,9,Reversal Mountain (unknown area 60)
+689,5,Mont Renenvers (zone inconnue 60)
 690,9,Strange House (1F)
+690,5,Manoir de l'Étrange (RdC)
 691,9,Strange House (B1F)
+691,5,Manoir de l'Étrange (sous-sol)
 692,9,Relic Tunnel (Castelia Sewers entrance)
+692,5,Chemin Enfoui (entrée des égoûts de Volucité)
 693,9,Relic Tunnel (Relic Castle entrance)
+693,5,Chemin Enfoui (entrée du Château Enfoui)
 694,9,Relic Tunnel (PWT entrance)
+694,5,Chemin Enfoui (entrée PWT)
 695,9,Clay Tunnel
+695,5,Route Bardane
 696,9,Underground Ruins
+696,5,Ruines Enfouies
 697,9,Rocky Mountain Room
+697,5,Salle Pic Rocheux
 698,9,Glacier Room
+698,5,Salle Iceberg
 699,9,Iron Room
+699,5,Salle Fer
 700,9,Seaside Cave (1F)
+700,5,Grotte Littorale (RdC)
 701,9,Seaside Cave (B1F)
+701,5,Grotte Littorale (sous-sol)
 702,9,Nature Sanctuary
+702,5,Réserve Naturelle
 703,9,Road 19
+703,5,Route 19
 704,9,Road 20
+704,5,Route 20
 705,9,Road 22
+705,5,Route 22
 706,9,Road 23
+706,5,Route 230
 707,9,Road 21
+707,5,Route 21
 708,9,Couriway Town
+708,5,Mozheim
 709,9,Ambrette Town
+709,5,Roche-sur-Gliffe
 710,9,Cyllage City
+710,5,Relifac-le-Haut
 711,9,Shalour City
+711,5,Yantreizh
 712,9,Laverre City
+712,5,Romant-sous-Bois
 713,9,Road 2
+713,5,Route 2
 714,9,Road 3
+714,5,Route 3
 715,9,Road 4
+715,5,Route 4
 716,9,Road 5
+716,5,Route 5
 717,9,Road 6
+717,5,Route 6
 718,9,Road 7
+718,5,Route 7
 719,9,Road 8
+719,5,Route 8
 720,9,Road 9
+720,5,Route 9
 721,9,Road 10
+721,5,Route 10
 722,9,Road 11
+722,5,Route 11
 723,9,Road 12
+723,5,Route 12
 724,9,Road 13
+724,5,Route 13
 725,9,Road 14
+725,5,Route 14
 726,9,Road 15
+726,5,Route 15
 727,9,Road 16
+727,5,Route 16
 728,9,Road 17
+728,5,Route 17
 729,9,Road 18
+729,5,Route 18
 730,9,Road 19
+730,5,Route 19
 731,9,Road 20
+731,5,Route 20
 732,9,Road 21
+732,5,Route 21
 733,9,Road 22
+733,5,Route 22
 734,9,Santalune Forest
+734,5,Forêt de Neuvartault
 735,9,Parfum Palace
+735,5,Palais Chaydeuvre
 736,9,Glittering Cave (unknown area 303)
+736,5,Grotte Étincelante (zone inconnue 303)
 737,9,Glittering Cave (unknown area 304)
+737,5,Grotte Étincelante (zone inconnue 304)
 738,9,Reflection Cave (unknown area 305)
+738,5,Grotte Miroitante (zone inconnue 305)
 739,9,Reflection Cave (unknown area 306)
+739,5,Grotte Miroitante (zone inconnue 306)
 740,9,Reflection Cave (unknown area 307)
+740,5,Grotte Miroitante (zone inconnue 307)
 741,9,Reflection Cave (unknown area 308)
+741,5,Grotte Miroitante (zone inconnue 308)
 742,9,Frost Cavern (unknown area 313)
+742,5,Caverne Gelée (zone inconnue 313)
 743,9,Frost Cavern (unknown area 314)
+743,5,Caverne Gelée (zone inconnue 314)
 744,9,Frost Cavern (unknown area 315)
+744,5,Caverne Gelée (zone inconnue 315)
 745,9,Frost Cavern (unknown area 316)
+745,5,Caverne Gelée (zone inconnue 316)
 746,9,Frost Cavern (unknown area 317)
+746,5,Caverne Gelée (zone inconnue 317)
 747,9,Pokemon Village
+747,5,Village Pokémon
 748,9,Victory Road (unknown area 322)
+748,5,Route Victoire (zone inconnue 322)
 749,9,Victory Road (unknown area 324)
+749,5,Route Victoire (zone inconnue 324)
 750,9,Victory Road (unknown area 326)
+750,5,Route Victoire (zone inconnue 326)
 751,9,Victory Road (unknown area 327)
+751,5,Route Victoire (zone inconnue 327)
 752,9,Victory Road (unknown area 328)
+752,5,Route Victoire (zone inconnue 328)
 753,9,Connecting Cave
+753,5,Cave Connecterre
 754,9,Terminus Cave (unknown area 343)
+754,5,Grotte Coda (zone inconnue 343)
 755,9,Terminus Cave (unknown area 344)
+755,5,Grotte Coda (zone inconnue 344)
 756,9,Terminus Cave (unknown area 345)
+756,5,Grotte Coda (zone inconnue 345)
 757,9,Terminus Cave (unknown area 347)
+757,5,Grotte Coda (zone inconnue 347)
 758,9,Terminus Cave (unknown area 348)
+758,5,Grotte Coda (zone inconnue 348)
 759,9,Lost Hotel
+759,5,Hôtel Désolation
 760,9,Azure Bay
+760,5,Baie Azur
 761,9,Pokemon Center (Road 4)
+761,5,Centre Pokémon (Route 4)
 762,9,Fighting Dojo
+762,5,Dojo de Combat
 763,9,Celadon Mansion rooftop
+763,5,Toit du manoir Céladon
 764,9,Silph Co. 7F
+764,5,Sylphe SARL (6e ét.)
 765,9,Goldenrod City (north gate)
+765,5,Doublonville (porte Nord)
 766,9,Goldenrod City (Bill's house)
+766,5,Doublonville (maison de Bill)
 767,9,Cianwood City (Mania's house)
+767,5,Irisia (maison à l'ouest du centre Pokémon)
 768,9,Weather Institute (Road 119)
+768,5,Centre météo (Route 119)
 769,9,Mossdeep City (Steven's house)
+769,5,Algatia (maison de Pierre Rochard)
 770,9,Littleroot Town
+770,5,Bourg-en-Vol
 771,9,Hearthome City
+771,5,Unionpolis
 772,9,Veilstone City
+772,5,Voilaroc
 773,9,Cianwood City (Kirk's house)
+773,5,Irisia (maison à l'ouest du centre Pokémon)
 774,9,Nuvema Town
+774,5,Renouet
 775,9,Game Freak HQ 1F (Castelia City)
+775,5,Bureaux de Game Freak (Volucité)
 776,9,Weather Institute (Road 6)
+776,5,Centre météo (Route 6)
 777,9,Floccesy Town
+777,5,Amaillide
 778,9,Aquacorde Town
+778,5,Quarellis
 779,9,Lumiose City
+779,5,Illumis
 780,9,Tower of Mastery
+780,5,Tour Maîtrise
 781,9,Contest Hall (Slateport City)
+781,5,Centre de concours (Poivressel)
 782,9,Contest Hall (Verdanturf Town)
+782,5,Centre de concours (Vergazon)
 783,9,Contest Hall (Fallarbor Town)
+783,5,Centre de concours (Autéquia)
 784,9,Contest Hall (Lilycove City)
+784,5,Centre de concours (Nénucrique)
 785,9,Southern Island
+785,5,Île du Sud
 786,9,Battle Resort
+786,5,Atoll de Combat
 787,9,Lavaridge Town
+787,5,Vermilava
 788,9,Eterna City (west gate)
+788,5,Vestigion (porte ouest)
 789,9,Hearthome City (west gate)
+789,5,Unionpolis (porte ouest)
 790,9,Violet City (Poke Mart)
+790,5,Mauville (Boutique Pokémon)
 791,9,Violet City (Pokemon Center)
+791,5,Mauville (Centre Pokémon)
 792,9,Nacrene City (west gate)
+792,5,Maillard (porte ouest)
 793,9,Bell Tower (roof)
+793,5,Tour Carillon (toit)
 794,9,Roaming Kanto
+794,5,Sillonnant Kanto
 795,9,Roaming Johto
+795,5,Sillonnant Johto
 796,9,Roaming Hoenn
+796,5,Sillonnant Hoenn
 797,9,Roaming Sinnoh
+797,5,Sillonnant Sinnoh
 798,9,Azalea Town
+798,5,Ecorcia
 800,9,Mahogany City
+800,5,Acajou
 801,9,Cave of Origin (B4F)
+801,5,Grotte Origine (4e s-sol)
 802,9,Terra Cave
+802,5,Grotte Terra
 803,9,Marine Cave
+803,5,Grotte Marine
 804,9,Sky Pillar Apex
+804,5,Pilier Céleste (sommet)
 805,9,Bell Tower (1F)
+805,5,Tour Carillon (RdC)
 806,9,Birth Island
+806,5,Île Aurore
 807,9,Navel Rock
+807,5,Roc Nombri
 808,9,Faraway Island
+808,5,Île lointaine
 809,9,Hoenn Battle Frontier
+809,5,Zone de Combat
 810,9,Desert Ruins
+810,5,Ruines Désert
 811,9,Island Cave
+811,5,Grotte de l’Îlot
 812,9,Ancient Tomb
+812,5,Tombeau Antique
 813,9,Safari Zone Peak
+813,5,Parc Safari - Rochers
 814,9,Safari Zone Desert
+814,5,Parc Safari - Désert
 815,9,Safari Zone Plains
+815,5,Parc Safari - Prairie
 816,9,Safari Zone Meadow
+816,5,Parc Safari - Champ de fleurs
 817,9,Safari Zone Forest
+817,5,Parc Safari - Bois 
 818,9,Safari Zone Swamp
+818,5,Parc Safari - Bois et lacs
 819,9,Safari Zone Marshland
+819,5,Parc Safari - Marais
 820,9,Safari Zone Mountain
+820,5,Parc Safari - Montagne
 821,9,Safari Zone Rocky Beach
+821,5,Parc Safari - Rocs et lacs
 822,9,Safari Zone Wasteland
+822,5,Parc Safari - Terre aride
 823,9,Safari Zone Savannah
+823,5,Parc Safari - Savane
 824,9,Safari Zone Wetland
+824,5,Parc Safari - Terre humide
 825,9,Mount Ember Summit
+825,5,Mont Braise (sommet)
 826,9,Embedded Tower (Kyogre’s room)
+826,5,Tour Enfouie (salle de Kyogre)
 827,9,Embedded Tower (Groudon’s room)
+827,5,Tour Enfouie (salle de Groudon)
 828,9,Embedded Tower (Rayquaza’s room)
+828,5,Tour Enfouie (salle de Rayquaza)
 829,9,Lake Acuity Cavern
+829,5,Lac Savoir (caverne)
 830,9,Lake Valor Cavern
+830,5,Lac Courage (caverne)
 831,9,Spear Pillar
+831,5,Colonnes Lances
 832,9,Pokemon Center (Road 3)
+832,5,Centre Pokémon (Route 3)
 833,9,Cinnabar Lab (Cinnabar Island)
+833,5,Laboratoire (Cramois'Île)
 834,9,Rustboro City
+834,5,Mérouville
 835,9,Silph Co.
+835,5,Sylphe SARL
 836,9,Pokemon Center (Cianwood City)
+836,5,Centre Pokémon (Irisia)
 837,9,Stark Mountain (Heatran Chamber)
+837,5,Mont Abrupt (salle d'Heatran)
 838,9,Newmoon Island
+838,5,Ile Nouvellelune
 839,9,Flower Paradise
+839,5,Paradis Fleuri
 840,9,Hall of Origin
+840,5,Salle Originelle
 841,9,Team Rocket HQ
+841,5,Repaire Rocket d'Acajou
 842,9,Sinjoy Ruins
+842,5,Ruines Sinjoh

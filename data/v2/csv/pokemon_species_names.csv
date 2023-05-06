@@ -10004,7 +10004,7 @@ pokemon_species_id,local_language_id,name,genus
 912,1,クワッス,こがもポケモン
 912,2,Kuwassu,
 912,3,꾸왁스,
-913,4,潤水鴨,小鴨寶可夢
+912,4,潤水鴨,小鴨寶可夢
 912,5,Coiffeton,
 912,6,Kwaks,Jungente
 912,9,Quaxly,Duckling Pokémon
@@ -10126,7 +10126,7 @@ pokemon_species_id,local_language_id,name,genus
 925,6,Famieps,Familie
 925,9,Maushold,Family Pokémon
 925,11,イッカネズミ,
-625,12,一家鼠,家族宝可梦
+925,12,一家鼠,家族宝可梦
 926,1,パピモッチ,こいぬポケモン
 926,2,Papimocchi,
 926,3,쫀도기,
@@ -10193,7 +10193,7 @@ pokemon_species_id,local_language_id,name,genus
 933,1,ジオヅム,がんえんポケモン
 933,2,Jiozumu,
 933,3,스태솔트,
-934,4,鹽石壘,岩鹽寶可夢
+933,4,鹽石壘,岩鹽寶可夢
 933,5,Amassel,
 933,6,Sedisal,Steinsalz
 933,9,Naclstack,Rock Salt Pokémon
@@ -10247,7 +10247,7 @@ pokemon_species_id,local_language_id,name,genus
 939,1,ハラバリー,でんきがえるポケモン
 939,2,Harabarī,
 939,3,찌리배리,
-940,4,電肚蛙,電蛙寶可夢
+939,4,電肚蛙,電蛙寶可夢
 939,5,Ampibidou,
 939,6,Wampitz,Stromfrosch
 939,9,Bellibolt,EleFrog Pokémon
@@ -10373,7 +10373,7 @@ pokemon_species_id,local_language_id,name,genus
 953,1,シガロコ,ころがしポケモン
 953,2,Shigaroko,
 953,3,구르데,
-954,4,蟲滾泥,滾動寶可夢
+953,4,蟲滾泥,滾動寶可夢
 953,5,Léboulérou,
 953,6,Relluk,Wälz
 953,9,Rellor,Rolling Pokémon
@@ -10454,7 +10454,7 @@ pokemon_species_id,local_language_id,name,genus
 962,1,オトシドリ,おとしものポケモン
 962,2,Otoshidori,
 962,3,떨구새,
-926,4,下石鳥,掉東西寶可夢
+962,4,下石鳥,掉東西寶可夢
 962,5,Lestombaile,
 962,6,Adebom,Abwurf
 962,9,Bombirdier,Item Drop Pokémon
@@ -10468,7 +10468,7 @@ pokemon_species_id,local_language_id,name,genus
 963,6,Normifin,Delfin
 963,9,Finizen,Dolphin Pokémon
 963,11,ナミイルカ,
-964,12,波普海豚,海豚宝可梦
+963,12,波普海豚,海豚宝可梦
 964,1,イルカマン,イルカポケモン
 964,2,Irukaman,
 964,3,돌핀맨,
@@ -10481,12 +10481,12 @@ pokemon_species_id,local_language_id,name,genus
 965,1,ブロロン,たんきとうポケモン
 965,2,Buroron,
 965,3,부르롱,
-966,4,噗隆隆,單汽缸寶可夢
+965,4,噗隆隆,單汽缸寶可夢
 965,5,Vrombi,
 965,6,Knattox,Einzylinder
 965,9,Varoom,Single-Cyl Pokémon
 965,11,ブロロン,
-966,12,噗隆隆,单汽缸宝可梦
+965,12,噗隆隆,单汽缸宝可梦
 966,1,ブロロローム,たきとうポケモン
 966,2,Burororōmu,
 966,3,부르르룸,
@@ -10522,7 +10522,7 @@ pokemon_species_id,local_language_id,name,genus
 969,6,Lumispross,Erz
 969,9,Glimmet,Ore Pokémon
 969,11,キラーメ,
-970,12,晶光芽,矿石宝可梦
+969,12,晶光芽,矿石宝可梦
 970,1,キラフロル,こうせきポケモン
 970,2,Kirafuroru,
 970,3,킬라플로르,

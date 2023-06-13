@@ -8261,292 +8261,366 @@ move_id,local_language_id,name
 826,12,诡异咒语
 827,1,フェイタルクロー
 827,4,克命爪
+827,8,Artigli Fatali
 827,9,Dire Claw
 827,11,フェイタルクロー
 828,1,バリアーラッシュ
 828,4,屏障猛攻
+828,8,Barrierassalto
 828,9,Psyshield Bash
 828,11,バリアーラッシュ
 829,1,パワーシフト
 829,4,力量转换
+829,8,Scambioforza
 829,9,Power Shift
 829,11,パワーシフト
 830,1,がんせきアックス
 830,4,岩斧
+830,8,Rocciascure
 830,9,Stone Axe
 830,11,がんせきアックス
 831,1,はるのあらし
 831,4,阳春风暴
+831,8,Tempesta Zefirea
 831,9,Springtide Storm
 831,11,はるのあらし
 832,1,しんぴのちから
 832,4,神秘之力
+832,8,Forza Mistica
 832,9,Mystical Power
 832,11,しんぴのちから
 833,1,だいふんげき
 833,4,大愤慨
+833,8,Ira Furente
 833,9,Raging Fury
 833,11,だいふんげき
 834,1,ウェーブタックル
 834,4,波动冲
+834,8,Ondaschianto
 834,9,Wave Crash
 834,11,ウェーブタックル
 835,1,クロロブラスト
 835,4,叶绿爆震
+835,8,Clorofillaser
 835,9,Chloroblast
 835,11,クロロブラスト
 836,1,ひょうざんおろし
 836,4,冰山风
+836,8,Soffio d’Iceberg
 836,9,Mountain Gale
 836,11,ひょうざんおろし
 837,1,しょうりのまい
 837,4,胜利之舞
+837,8,Danzavittoria
 837,9,Victory Dance
 837,11,しょうりのまい
 838,1,ぶちかまし
 838,4,突飞猛扑
+838,8,Scontro Frontale
 838,9,Headlong Rush
 838,11,ぶちかまし
 839,1,どくばりセンボン
 839,4,毒千针
+839,8,Mille Fielespine
 839,9,Barb Barrage
 839,11,どくばりセンボン
 840,1,オーラウイング
 840,4,气场之翼
+840,8,Ali d'Aura
 840,9,Esper Wing
 840,11,オーラウイング
 841,1,うらみつらみ
 841,4,冤冤相报
+841,8,Livore
 841,9,Bitter Malice
 841,11,うらみつらみ
 842,1,たてこもる
 842,4,闭关
+842,8,Barricata
 842,9,Shelter
 842,11,たてこもる
 843,1,３ぼんのや
 843,4,三连箭
+843,8,Triplodardo
 843,9,Triple Arrows
 843,11,３ぼんのや
 844,1,ひゃっきやこう
 844,4,群魔乱舞
+844,8,Corteo Spettrale
 844,9,Infernal Parade
 844,11,ひゃっきやこう
 845,1,ひけん・ちえなみ
 845,4,秘剑・千重涛
+845,8,Lama Milleflutti
 845,9,Ceaseless Edge
 845,11,ひけん・ちえなみ
 846,1,こがらしあらし
 846,4,枯叶风暴
+846,8,Tempesta Boreale
 846,9,Bleakwind Storm
 846,11,こがらしあらし
 847,1,かみなりあらし
 847,4,鸣雷风暴
+847,8,Tempesta Tonante
 847,9,Wildbolt Storm
 847,11,かみなりあらし
 848,1,ねっさのあらし
 848,4,热沙风暴
+848,8,Tempesta Ardente
 848,9,Sandsear Storm
 848,11,ねっさのあらし
 849,1,みかづきのいのり
 849,4,新月祈祷
+849,8,Invocaluna
 849,9,Lunar Blessing
 849,11,みかづきのいのり
 850,1,ブレイブチャージ
 850,4,勇气填充
+850,8,Baldimpulso
 850,9,Take Heart
 850,11,ブレイブチャージ
 851,1,テラバースト
 851,4,太晶爆发
+851,8,Terascoppio
 851,9,Tera Blast
 851,11,テラバースト
 852,1,スレッドトラップ
 852,4,线阱
+852,8,Telatrappola
 852,9,Silk Trap
 852,11,スレッドトラップ
 853,1,かかとおとし
 853,4,下压踢
+853,8,Calcio ad Ascia
 853,9,Axe Kick
 853,11,かかとおとし
 854,1,おはかまいり
 854,4,扫墓
+854,8,Omaggio ai KO
 854,9,Last Respects
 854,11,おはかまいり
 855,1,ルミナコリジョン
 855,4,琉光冲激
+855,8,Fotocollisione
 855,9,Lumina Crash
 855,11,ルミナコリジョン
 856,1,いっちょうあがり
 856,4,上菜
+856,8,Alta Cucina
 856,9,Order Up
 856,11,いっちょうあがり
 857,1,ジェットパンチ
 857,4,喷射拳
+857,8,Pugnojet
 857,9,Jet Punch
 857,11,ジェットパンチ
 858,1,ハバネロエキス
 858,4,辣椒精华
+858,8,Essenza Piccante
 858,9,Spicy Extract
 858,11,ハバネロエキス
 859,1,ホイールスピン
 859,4,疾速转轮
+859,8,Slittaruote
 859,9,Spin Out
 859,11,ホイールスピン
 860,1,ネズミざん
 860,4,鼠数儿
+860,8,Infestazione
 860,9,Population Bomb
 860,11,ネズミざん
 861,1,アイススピナー
 861,4,冰旋
+861,8,Vortighiaccio
 861,9,Ice Spinner
 861,11,アイススピナー
 862,1,きょけんとつげき
 862,4,巨剑突击
+862,8,Spadoncarica
 862,9,Glaive Rush
 862,11,きょけんとつげき
 863,1,さいきのいのり
 863,4,复生祈祷
+863,8,Preghiera Vitale
 863,9,Revival Blessing
 863,11,さいきのいのり
 864,1,しおづけ
 864,4,盐腌
+864,8,Sotto Sale
 864,9,Salt Cure
 864,11,しおづけ
 865,1,トリプルダイブ
 865,4,三连钻
+865,8,Triplo Tuffo
 865,9,Triple Dive
 865,11,トリプルダイブ
 866,1,キラースピン
 866,4,晶光转转
+866,8,Glitturbine
 866,9,Mortal Spin
 866,11,キラースピン
 867,1,うつしえ
 867,4,描绘
+867,8,Ricalco
 867,9,Doodle
 867,11,うつしえ
 868,1,みをけずる
 868,4,甩肉
+868,8,Alleggerimento
 868,9,Fillet Away
 868,11,みをけずる
 869,1,ドゲザン
 869,4,仆刀
+869,8,Genufendente
 869,9,Kowtow Cleave
 869,11,ドゲザン
 870,1,トリックフラワー
 870,4,千变万花
+870,8,Prestigiafiore
 870,9,Flower Trick
 870,11,トリックフラワー
 871,1,フレアソング
 871,4,闪焰高歌
+871,8,Canzone Ardente
 871,9,Torch Song
 871,11,フレアソング
 872,1,アクアステップ
 872,4,流水旋舞
+872,8,Idroballetto
 872,9,Aqua Step
 872,11,アクアステップ
 873,1,レイジングブル
 873,4,怒牛
+873,8,Scatenatoro
 873,9,Raging Bull
 873,11,レイジングブル
 874,1,ゴールドラッシュ
 874,4,淘金潮
+874,8,Corsa all'Oro
 874,9,Make It Rain
 874,11,ゴールドラッシュ
+875,8,Botta
 875,9,Psyblade
+876,8,Botta
 876,9,Hydro Steam
 877,1,カタストロフィ
 877,4,大灾难
+877,8,Catastrofe
 877,9,Ruination
 877,11,カタストロフィ
 878,1,アクセルブレイク
 878,4,全开猛撞
+878,8,Turboschianto
 878,9,Collision Course
 878,11,アクセルブレイク
 879,1,イナズマドライブ
 879,4,闪电猛冲
+879,8,Fulmiscatto
 879,9,Electro Drift
 879,11,イナズマドライブ
 880,1,しっぽきり
 880,4,断尾
+880,8,Tagliacoda
 880,9,Shed Tail
 880,11,しっぽきり
 881,1,さむいギャグ
 881,4,冷笑话
+881,8,Freddura
 881,9,Chilly Reception
 881,11,さむいギャグ
 882,1,おかたづけ
 882,4,大扫除
+882,8,Pulizie
 882,9,Tidy Up
 882,11,おかたづけ
 883,1,ゆきげしき
 883,4,雪景
+883,8,Vista Innevata
 883,9,Snowscape
 883,11,ゆきげしき
 884,1,とびつく
 884,4,虫扑
+884,8,Balzo
 884,9,Pounce
 884,11,とびつく
 885,1,くさわけ
 885,4,起草
+885,8,Apripista
 885,9,Trailblaze
 885,11,くさわけ
 886,1,ひやみず
 886,4,泼冷水
+886,8,Doccia Fredda
 886,9,Chilling Water
 886,11,ひやみず
 887,1,ハイパードリル
 887,4,强力钻
+887,8,Ipertrapano
 887,9,Hyper Drill
 887,11,ハイパードリル
 888,1,ツインビーム
 888,4,双光束
+888,8,Doppioraggio
 888,9,Twin Beam
 888,11,ツインビーム
 889,1,ふんどのこぶし
 889,4,愤怒之拳
+889,8,Pugno Furibondo
 889,9,Rage Fist
 889,11,ふんどのこぶし
 890,1,アーマーキャノン
 890,4,铠农炮
+890,8,Corazza Cannone
 890,9,Armor Cannon
 890,11,アーマーキャノン
 891,1,むねんのつるぎ
 891,4,悔念剑
+891,8,Lama del Rimorso
 891,9,Bitter Blade
 891,11,むねんのつるぎ
 892,1,でんこうそうげき
 892,4,电光双击
+892,8,Doppiolampo
 892,9,Double Shock
 892,11,でんこうそうげき
 893,1,デカハンマー
 893,4,巨力锤
+893,8,Granmartello
 893,9,Gigaton Hammer
 893,11,デカハンマー
 894,1,ほうふく
 894,4,复仇
+894,8,Ritorsione
 894,9,Comeuppance
 894,11,ほうふく
 895,1,アクアカッター
 895,4,水波刀
+895,8,Idrotaglio
 895,9,Aqua Cutter
 895,11,アクアカッター
 896,1,バーンアクセル
 896,4,灼热暴冲
+896,8,Turboustione
 896,9,Blazing Torque
 896,11,バーンアクセル
 897,1,ダークアクセル
 897,4,黑暗暴冲
+897,8,Turbotenebra
 897,9,Wicked Torque
 897,11,ダークアクセル
 898,1,ポイズンアクセル
 898,4,剧毒暴冲
+898,8,Turbotossina
 898,9,Noxious Torque
 898,11,ポイズンアクセル
 899,1,ファイトアクセル
 899,4,格斗暴冲
+899,8,Turborissa
 899,9,Combat Torque
 899,11,ファイトアクセル
 900,1,マジカルアクセル
 900,4,魔法暴冲
+900,8,Turboincanto
 900,9,Magical Torque
 900,11,マジカルアクセル
 10001,1,ダークラッシュ
@@ -8657,77 +8731,3 @@ move_id,local_language_id,name
 10018,7,Cielo Oscuro
 10018,8,Cieloscuro
 10018,9,Shadow Sky
-827,8,Artigli Fatali
-828,8,Barrierassalto
-829,8,Scambioforza
-830,8,Rocciascure
-831,8,Tempesta Zefirea
-832,8,Forza Mistica
-833,8,Ira Furente
-834,8,Ondaschianto
-835,8,Clorofillaser
-836,8,Soffio d’Iceberg
-837,8,Danzavittoria
-838,8,Scontro Frontale
-839,8,Mille Fielespine
-840,8,Ali d'Aura
-841,8,Livore
-842,8,Barricata
-843,8,Triplodardo
-844,8,Corteo Spettrale
-845,8,Lama Milleflutti
-846,8,Tempesta Boreale
-847,8,Tempesta Tonante
-848,8,Tempesta Ardente
-849,8,Invocaluna
-850,8,Baldimpulso
-851,8,Terascoppio
-852,8,Telatrappola
-853,8,Calcio ad Ascia
-854,8,Omaggio ai KO
-855,8,Fotocollisione
-856,8,Alta Cucina
-857,8,Pugnojet
-858,8,Essenza Piccante
-859,8,Slittaruote
-860,8,Infestazione
-861,8,Vortighiaccio
-862,8,Spadoncarica
-863,8,Preghiera Vitale
-864,8,Sotto Sale
-865,8,Triplo Tuffo
-866,8,Glitturbine
-867,8,Ricalco
-868,8,Alleggerimento
-869,8,Genufendente
-870,8,Prestigiafiore
-871,8,Canzone Ardente
-872,8,Idroballetto
-873,8,Scatenatoro
-874,8,Corsa all'Oro
-875,8,Botta
-876,8,Botta
-877,8,Catastrofe
-878,8,Turboschianto
-879,8,Fulmiscatto
-880,8,Tagliacoda
-881,8,Freddura
-882,8,Pulizie
-883,8,Vista Innevata
-884,8,Balzo
-885,8,Apripista
-886,8,Doccia Fredda
-887,8,Ipertrapano
-888,8,Doppioraggio
-889,8,Pugno Furibondo
-890,8,Corazza Cannone
-891,8,Lama del Rimorso
-892,8,Doppiolampo
-893,8,Granmartello
-894,8,Ritorsione
-895,8,Idrotaglio
-896,8,Turboustione
-897,8,Turbotenebra
-898,8,Turbotossina
-899,8,Turborissa
-900,8,Turboincanto

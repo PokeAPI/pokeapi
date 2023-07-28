@@ -159,6 +159,7 @@ class EvolutionChainPokemonResource(PokeapiCommonViewset):
     serializer_class = EvolutionChainDetailPokemonSerializer
     list_serializer_class = EvolutionChainPokemonSummarySerializer
 
+
 class EvolutionTriggerResource(PokeapiCommonViewset):
 
     queryset = EvolutionTrigger.objects.all()

@@ -97,6 +97,7 @@ class EvolutionChainSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionChain
         fields = ("url",)
 
+
 class EvolutionChainPokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = EvolutionChain

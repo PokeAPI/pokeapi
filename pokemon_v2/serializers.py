@@ -3459,7 +3459,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         entry["evolves_to"] = evolves_to
 
         return entry
-    
+
 
 class EvolutionChainDetailPokemonSerializer(serializers.ModelSerializer):
 
@@ -3474,7 +3474,7 @@ class EvolutionChainDetailPokemonSerializer(serializers.ModelSerializer):
 
         pokemon_id = obj.id
         pokemon_objects = PokemonSpecies.objects.filter(
-            evolution_chain_id = PokemonSpecies.objects.get(
+            evolution_chain_id=PokemonSpecies.objects.get(
                 id=pokemon_id
             ).evolution_chain_id
         ).order_by("order")

@@ -3463,7 +3463,6 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 
 class EvolutionChainDetailPokemonSerializer(serializers.ModelSerializer):
 
-    baby_trigger_item = ItemSummarySerializer()
     chain = serializers.SerializerMethodField("build_chain")
 
     class Meta:

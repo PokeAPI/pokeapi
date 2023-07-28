@@ -3376,7 +3376,9 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         chain_id = obj.id
 
         pokemon_objects = PokemonSpecies.objects.filter(
-            evolution_chain_id=chain_id
+            evolution_chain_id=PokemonSpecies.objects.get(
+                id=chain_id
+            ).evolution_chain_id
         ).order_by("order")
         summary_data = PokemonSpeciesSummarySerializer(
             pokemon_objects, many=True, context=self.context

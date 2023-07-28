@@ -97,6 +97,11 @@ class EvolutionChainSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionChain
         fields = ("url",)
 
+class EvolutionChainPokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = EvolutionChain
+        fields = ("url",)
+
 
 class GenerationSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -3391,6 +3396,97 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         # serialize chain recursively from tree
         chain = self.build_chain_link_entry(evolution_tree, summary_data)
 
+        return chain
+
+    # converts a list of Pokemon species evolution data into a tree representing the evolution chain
+    def build_evolution_tree(self, species_evolution_data):
+        evolution_tree = OrderedDict()
+        evolution_tree["species"] = species_evolution_data[0]
+        evolution_tree["children"] = []
+
+        for species in species_evolution_data[1:]:
+            chain_link = OrderedDict()
+            chain_link["species"] = species
+            chain_link["children"] = []
+
+            evolves_from_species_id = chain_link["species"]["evolves_from_species"]
+
+            # find parent link by DFS
+            parent_link = evolution_tree
+            search_stack = [parent_link]
+
+            while len(search_stack) > 0:
+                l = search_stack.pop()
+                if l["species"]["id"] == evolves_from_species_id:
+                    parent_link = l
+                    break
+
+                # "left" to "right" requires reversing the list of children
+                search_stack += reversed(l["children"])
+
+            parent_link["children"].append(chain_link)
+
+        return evolution_tree
+
+    # serializes an evolution chain link recursively
+    # chain_link is a tree representing an evolution chain
+    def build_chain_link_entry(self, chain_link, summary_data):
+        entry = OrderedDict()
+        evolution_data = None
+
+        species = chain_link["species"]
+        if species["evolves_from_species"]:
+
+            evolution_object = PokemonEvolution.objects.filter(
+                evolved_species=species["id"]
+            )
+
+            evolution_data = PokemonEvolutionSerializer(
+                evolution_object, many=True, context=self.context
+            ).data
+
+        entry["is_baby"] = species["is_baby"]
+
+        species_summary = next(x for x in summary_data if x["name"] == species["name"])
+        entry["species"] = species_summary
+
+        entry["evolution_details"] = evolution_data or []
+
+        evolves_to = [
+            self.build_chain_link_entry(c, summary_data) for c in chain_link["children"]
+        ]
+        entry["evolves_to"] = evolves_to
+
+        return entry
+    
+
+class EvolutionChainDetailPokemonSerializer(serializers.ModelSerializer):
+
+    baby_trigger_item = ItemSummarySerializer()
+    chain = serializers.SerializerMethodField("build_chain")
+
+    class Meta:
+        model = EvolutionChain
+        fields = ("id", "baby_trigger_item", "chain")
+
+    def build_chain(self, obj):
+
+        pokemon_id = obj.id
+        pokemon_objects = PokemonSpecies.objects.filter(
+            evolution_chain_id = PokemonSpecies.objects.get(
+                id=pokemon_id
+            ).evolution_chain_id
+        ).order_by("order")
+        summary_data = PokemonSpeciesSummarySerializer(
+            pokemon_objects, many=True, context=self.context
+        ).data
+        ref_data = PokemonSpeciesEvolutionSerializer(
+            pokemon_objects, many=True, context=self.context
+        ).data
+        # convert evolution data list to tree
+        evolution_tree = self.build_evolution_tree(ref_data)
+        # serialize chain recursively from tree
+        chain = self.build_chain_link_entry(evolution_tree, summary_data)
         return chain
 
     # converts a list of Pokemon species evolution data into a tree representing the evolution chain

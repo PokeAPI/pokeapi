@@ -8623,10 +8623,18 @@ move_id,local_language_id,name
 900,8,Turboincanto
 900,9,Magical Torque
 900,11,マジカルアクセル
+901,1,ブラッドムーン
 901,9,Blood Moon
+901,11,ブラッドムーン
+902,1,シャカシャカほう
 902,9,Matcha Gotcha
+902,11,シャカシャカほう
+903,1,みずあめボム
 903,9,Syrup Bomb
+903,11,みずあめボム
+904,1,ツタこんぼう
 904,9,Ivy Cudgel
+904,11,ツタこんぼう
 10001,1,ダークラッシュ
 10001,5,Charge Noire
 10001,6,Cryptoschlag

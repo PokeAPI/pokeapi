@@ -1009,6 +1009,13 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 1008,miraidon,1008,35,2400,,999,1
 1009,walking-wake,1009,35,2800,,1093,1
 1010,iron-leaves,1010,15,1250,,1094,1
+1011,dipplin,1011,4,97,,1095,1
+1012,poltchageist,1012,1,11,,1096,1
+1013,sinistcha,1013,2,22,,1097,1
+1014,okidogi,1014,18,922,,1098,1
+1015,munkidori,1015,10,122,,1099,1
+1016,fezandipiti,1016,14,301,,1100,1
+1017,ogerpon,1017,12,398,,1101,1
 10001,deoxys-attack,386,17,608,270,515,0
 10002,deoxys-defense,386,17,608,270,516,0
 10003,deoxys-speed,386,17,608,270,517,0
@@ -1280,3 +1287,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10269,miraidon-drive-mode,1008,28,2400,,,0
 10270,miraidon-aquatic-mode,1008,28,2400,,,0
 10271,miraidon-glide-mode,1008,28,2400,,,0
+10272,ursaluna-bloodmoon,901,24,2900,,,0
+10273,ogerpon-wellspring-mask,1017,12,398,,,0
+10274,ogerpon-hearthflame-mask,1017,12,398,,,0
+10275,ogerpon-cornerstone-mask,1017,12,398,,,0

@@ -27866,3 +27866,7 @@ Unnerve Ability and Spectrier’s Grim Neigh Ability."
 二つの　特性を　あわせ持つ。"
 267,20,12,"兼备蕾冠王的紧张感和
 灵幽马的漆黑嘶鸣这两种特性。"
+299,26,9,"The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal-type and Fighting-type moves"
+300,26,9,Lowers the evasion of opposing Pok�mon by 1 stage when first sent into battle
+301,26,9,"When the Pok�mon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP"
+302,26,9,The power of the Pok�mon's toxic chain may badly poison any target the Pok�mon hits with a move

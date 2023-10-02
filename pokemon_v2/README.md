@@ -410,7 +410,7 @@ Super contest effects refer to the effects of moves when used in super contests.
 <h1 id="encounters-section">Encounters</h1>
 
 ## Encounter Methods
-Methods by which the player might can encounter pokémon in the wild, e.g., walking in tall grass. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Wild_Pokémon) for greater detail.
+Methods by which the player can encounter pokémon in the wild, e.g., walking in tall grass. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Wild_Pokémon) for greater detail.
 
 ### GET api/v2/encounter-method/{id or name}
 

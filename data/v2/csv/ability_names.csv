@@ -2886,6 +2886,21 @@ ability_id,local_language_id,name
 298,8,Micoforza
 298,9,Mycelium Might
 298,11,きんしのちから
+299,1,しんがん
+299,9,Minds Eye
+299,11,しんがん
+300,1,かんろなミツ
+300,9,Supersweet Syrup
+300,11,かんろなミツ
+301,1,おもてなし
+301,9,Hospitality
+301,11,おもてなし
+302,1,どくのくさり
+302,9,Toxic Chain
+302,11,どくのくさり
+303,1,おもかげやどし
+303,9,Embody Aspect
+303,11,おもかげやどし
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

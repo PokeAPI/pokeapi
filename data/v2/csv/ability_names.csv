@@ -2886,6 +2886,58 @@ ability_id,local_language_id,name
 298,8,Micoforza
 298,9,Mycelium Might
 298,11,きんしのちから
+299,1,しんがん
+299,3,심안
+299,4,心眼
+299,5,Œil Révélateur 
+299,7,Ojo Mental 
+299,8,Occhio Interiore 
+299,9,Minds Eye
+299,11,しんがん
+299,12,心眼
+300,1,かんろなミツ
+300,3,감미로운꿀
+300,4,甘露之蜜
+300,5,Nectar Mielleux
+300,1,かんろなミツ
+300,3,감미로운꿀
+300,4,甘露之蜜
+300,5,Nectar Mielleux
+300,6,Süßer Nektar
+300,7,Néctar Dulce
+300,8,Sciroppo Sublime
+300,9,Supersweet Syrup
+300,12,甘露之蜜
+301,1,おもてなし
+301,3,대접
+301,4,款待
+301,5,Aux Petits Soins
+301,6,Gastlichkeit
+301,7,Hospitalidad
+301,8,Ospitalità
+301,9,Hospitality
+301,11,おもてなし
+301,12,款待
+302,1,どくのくさり
+302,3,독사슬
+302,4,毒鎖鏈
+302,5,Chaîne Toxique
+302,6,Giftkette
+302,7,Cadena Tóxica
+302,8,Catena Tossica
+302,9,Toxic Chain
+302,11,どくのくさり
+302,12,毒锁链
+303,1,おもかげやどし
+303,3,초상투영
+303,4,面影輝映
+303,5,Force Mémorielle
+303,6,Erinnerungskraft
+303,7,Evocarrecuerdos
+303,8,Albergamemorie
+303,9,Embody Aspect
+303,11,おもかげやどし
+303,12,面影辉映
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

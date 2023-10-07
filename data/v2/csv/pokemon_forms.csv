@@ -1007,8 +1007,15 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 1006,iron-valiant,,1006,25,1,0,0,1,1352
 1007,koraidon-apex-build,apex-build,1007,25,1,0,0,1,1357
 1008,miraidon-ultimate-mode,ultimate-mode,1008,25,1,0,0,1,1358
-1009,walking-wake,,1009,25,1,0,0,1,1370
-1010,iron-leaves,,1010,25,1,0,0,1,1371
+1009,walking-wake,,1009,25,1,0,0,1,1381
+1010,iron-leaves,,1010,25,1,0,0,1,1382
+1011,dipplin,,1011,26,1,0,0,1,1371
+1012,poltchageist,,1012,26,1,0,0,1,1372
+1013,sinistcha,,1013,26,1,0,0,1,1373
+1014,okidogi,,1014,26,1,0,0,1,1374
+1015,munkidori,,1015,26,1,0,0,1,1375
+1016,fezandipiti,,1016,26,1,0,0,1,1376
+1017,ogerpon,,1017,26,1,0,0,1,1377
 10001,unown-b,b,201,3,0,0,0,2,299
 10002,unown-c,c,201,3,0,0,0,3,300
 10003,unown-d,d,201,3,0,0,0,4,301
@@ -1449,3 +1456,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10438,miraidon-drive-mode,drive-mode,10269,25,0,0,0,3,1324
 10439,miraidon-aquatic-mode,aquatic-mode,10270,25,0,0,0,4,1325
 10440,miraidon-glide-mode,glide-mode,10271,25,0,0,0,5,1326
+10441,ursaluna-bloodmoon,bloodmoon,10272,26,0,0,0,2,1370
+10442,ogerpon-wellspring-mask,wellspring-mask,10273,26,0,0,0,2,1378
+10443,ogerpon-hearthflame-mask,hearthflame-mask,10274,26,0,0,0,3,1379
+10444,ogerpon-cornerstone-mask,cornerstone-mask,10275,26,0,0,0,4,1380

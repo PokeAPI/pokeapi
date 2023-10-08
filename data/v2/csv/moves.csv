@@ -801,7 +801,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 800,meteor-beam,8,6,120,10,90,0,10,3,1,100,,,
 801,shell-side-arm,8,4,90,10,100,0,10,3,1,20,,,
 802,misty-explosion,8,18,100,5,100,0,9,3,1,,,,
-803,grassy-glide,8,12,70,20,100,0,10,2,1,,,,
+803,grassy-glide,8,12,55,20,100,0,10,2,1,,,,
 804,rising-voltage,8,13,70,20,100,0,10,3,1,,,,
 805,terrain-pulse,8,1,50,10,100,0,10,3,1,,,,
 806,skitter-smack,8,7,70,10,90,0,10,2,1,100,,,

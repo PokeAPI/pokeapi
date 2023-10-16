@@ -1689,6 +1689,14 @@ class PokemonAbility(HasPokemon, HasAbility):
     slot = models.IntegerField()
 
 
+# model for a Pokemon's abilities that were used until a given generation
+class PokemonAbilityPast(HasPokemon, HasAbility, HasGeneration):
+
+    is_hidden = models.BooleanField(default=False)
+
+    slot = models.IntegerField()
+
+
 class PokemonColor(HasName):
     pass
 

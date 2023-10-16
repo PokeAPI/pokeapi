@@ -20,6 +20,13 @@ array_relationships:
       table:
         name: pokemon_v2_pokemonability
         schema: public
+- name: pokemon_v2_pokemonabilitypasts
+  using:
+    foreign_key_constraint_on:
+      column: pokemon_id
+      table:
+        name: pokemon_v2_pokemonabilitypast
+        schema: public
 - name: pokemon_v2_pokemonforms
   using:
     foreign_key_constraint_on:

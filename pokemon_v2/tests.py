@@ -1699,6 +1699,24 @@ class APIData:
         return pokemon_ability
 
     @classmethod
+    def setup_pokemon_past_ability_data(
+        cls, pokemon, generation, ability=None, is_hidden=False, slot=1
+    ):
+
+        ability = ability or cls.setup_ability_data(name="ablty for pkmn")
+
+        pokemon_ability_past = PokemonAbilityPast(
+            pokemon=pokemon,
+            generation=generation,
+            ability=ability,
+            is_hidden=is_hidden,
+            slot=slot,
+        )
+        pokemon_ability_past.save()
+
+        return pokemon_ability_past
+
+    @classmethod
     def setup_pokemon_stat_data(cls, pokemon, base_stat=10, effort=10):
 
         stat = cls.setup_stat_data(name="stt for pkmn")
@@ -4940,10 +4958,13 @@ class APITests(APIData, APITestCase):
         pokemon_form = self.setup_pokemon_form_data(
             pokemon=pokemon, name="pkm form for base pkmn"
         )
+        generation = self.setup_generation_data(name="base gen")
         pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
+        pokemon_past_ability = self.setup_pokemon_past_ability_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
-        generation = self.setup_generation_data(name="base gen")
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
         )
@@ -5028,6 +5049,36 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["abilities"][0]["ability"]["url"],
             "{}{}/ability/{}/".format(TEST_HOST, API_V2, pokemon_ability.ability.pk),
+        )
+        # past abilities params
+        past_abilities_obj = response.data["past_abilities"][0]
+        self.assertEqual(
+            past_abilities_obj["generation"]["name"],
+            pokemon_past_ability.generation.name,
+        )
+        self.assertEqual(
+            past_abilities_obj["generation"]["url"],
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_ability.generation.pk
+            ),
+        )
+
+        past_abilities_abilities_obj = past_abilities_obj["abilities"][0]
+        self.assertEqual(
+            past_abilities_abilities_obj["is_hidden"], pokemon_past_ability.is_hidden
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["slot"], pokemon_past_ability.slot
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["ability"]["name"],
+            pokemon_past_ability.ability.name,
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["ability"]["url"],
+            "{}{}/ability/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_ability.ability.pk
+            ),
         )
         # stat params
         self.assertEqual(response.data["stats"][0]["base_stat"], pokemon_stat.base_stat)

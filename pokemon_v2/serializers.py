@@ -366,6 +366,16 @@ class PokemonAbilitySerializer(serializers.ModelSerializer):
         fields = ("is_hidden", "slot", "ability", "pokemon")
 
 
+class PokemonAbilityPastSerializer(serializers.ModelSerializer):
+
+    generation = GenerationSummarySerializer()
+    ability = AbilitySummarySerializer()
+
+    class Meta:
+        model = PokemonAbilityPast
+        fields = ("is_hidden", "pokemon", "generation", "slot", "ability")
+
+
 class PokemonDexEntrySerializer(serializers.ModelSerializer):
 
     entry_number = serializers.IntegerField(source="pokedex_number")
@@ -2900,6 +2910,7 @@ class PokemonSpritesSerializer(serializers.ModelSerializer):
 class PokemonDetailSerializer(serializers.ModelSerializer):
 
     abilities = serializers.SerializerMethodField("get_pokemon_abilities")
+    past_abilities = serializers.SerializerMethodField("get_past_pokemon_abilities")
     game_indices = PokemonGameIndexSerializer(
         many=True, read_only=True, source="pokemongameindex"
     )
@@ -2926,6 +2937,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "order",
             "weight",
             "abilities",
+            "past_abilities",
             "forms",
             "game_indices",
             "held_items",
@@ -3062,6 +3074,42 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             abilities.append(ability)
 
         return abilities
+
+    def get_past_pokemon_abilities(self, obj):
+
+        pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
+        pokemon_past_abilities = PokemonAbilityPastSerializer(
+            pokemon_past_ability_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for pokemon_past_ability in pokemon_past_abilities:
+            del pokemon_past_ability["pokemon"]
+
+            generation = pokemon_past_ability["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past abilities object for this generation
+                past_obj["generation"] = pokemon_past_ability["generation"]
+                del pokemon_past_ability["generation"]
+
+                # create abilities array
+                past_obj["abilities"] = [pokemon_past_ability]
+
+                # add to past abilities array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del pokemon_past_ability["generation"]
+                past_obj["abilities"].append(pokemon_past_ability)
+
+        return final_data
 
     def get_pokemon_types(self, obj):
 

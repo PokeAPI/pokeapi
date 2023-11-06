@@ -31,7 +31,10 @@ DB_VENDOR = connection.vendor
 
 
 MEDIA_DIR = "{prefix}{{file_name}}".format(
-    prefix=os.environ.get("POKEAPI_SPRITES_PREFIX", "/media/sprites/")
+    prefix=os.environ.get(
+        "POKEAPI_SPRITES_PREFIX",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/"
+    )
 )
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []

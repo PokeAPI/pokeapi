@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0010_pokemonformtype"),
     ]

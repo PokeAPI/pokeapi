@@ -2,7 +2,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0001_squashed_0002_auto_20160301_1408"),
     ]

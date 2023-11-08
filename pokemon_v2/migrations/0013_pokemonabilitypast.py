@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0012_auto_20220626_1402"),
     ]

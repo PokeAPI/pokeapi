@@ -1507,13 +1507,6 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         sprites_data = ItemSpritesSerializer(sprites_object, context=self.context).data
         sprites_data = json.loads(sprites_data["sprites"])
-        host = "raw.githubusercontent.com/PokeAPI/sprites/master/"
-
-        for key in sprites_data:
-            if sprites_data[key]:
-                sprites_data[key] = (
-                    "https://" + host + sprites_data[key].replace("/media/", "")
-                )
 
         return sprites_data
 
@@ -2689,14 +2682,6 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
         ).data
         sprites_data = json.loads(sprites_data["sprites"])
 
-        host = "raw.githubusercontent.com/PokeAPI/sprites/master/"
-
-        for key in sprites_data:
-            if sprites_data[key]:
-                sprites_data[key] = (
-                    "https://" + host + sprites_data[key].replace("/media/", "")
-                )
-
         return sprites_data
 
     def get_pokemon_form_types(self, obj):
@@ -2956,20 +2941,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_data = PokemonSpritesSerializer(
             sprites_object, context=self.context
         ).data
-        sprites_data = json.loads(sprites_data["sprites"])
-        host = "raw.githubusercontent.com/PokeAPI/sprites/master/"
 
-        def replace_sprite_url(d):
-            for key, value in d.items():
-                if isinstance(value, dict):
-                    replace_sprite_url(value)
-                else:
-                    if d[key]:
-                        d[key] = "https://" + host + d[key].replace("/media/", "")
-
-        replace_sprite_url(sprites_data)
-
-        return sprites_data
+        return json.loads(sprites_data["sprites"])
 
     def get_pokemon_moves(self, obj):
 

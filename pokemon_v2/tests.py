@@ -6,7 +6,6 @@ from pokemon_v2.models import *
 # pylint: disable=redefined-builtin
 
 TEST_HOST = "http://testserver"
-MEDIA_HOST = "https://raw.githubusercontent.com/PokeAPI/sprites/master/"
 API_V2 = "/api/v2"
 
 
@@ -313,7 +312,7 @@ class APIData:
 
     @classmethod
     def setup_item_sprites_data(cls, item, default=True):
-        sprite_path = "/media/sprites/items/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
         sprites = {
             "default": sprite_path % item.id if default else None,
@@ -1516,7 +1515,7 @@ class APIData:
         back_default=False,
         back_shiny=False,
     ):
-        sprite_path = "/media/sprites/pokemon/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
         sprites = {
             "front_default": sprite_path % pokemon_form.id if front_default else None,
@@ -1675,7 +1674,7 @@ class APIData:
         back_shiny=False,
         back_shiny_female=False,
     ):
-        sprite_path = "/media/sprites/pokemon/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
@@ -2712,7 +2711,7 @@ class APITests(APIData, APITestCase):
         # sprites
         self.assertEqual(
             response.data["sprites"]["default"],
-            "{}{}".format(MEDIA_HOST, sprites_data["default"].replace("/media/", "")),
+            "{}".format(sprites_data["default"]),
         )
 
     # Berry Tests
@@ -5028,9 +5027,7 @@ class APITests(APIData, APITestCase):
         # sprite params
         self.assertEqual(
             response.data["sprites"]["front_default"],
-            "{}{}".format(
-                MEDIA_HOST, sprites_data["front_default"].replace("/media/", "")
-            ),
+            "{}".format(sprites_data["front_default"]),
         )
         self.assertEqual(response.data["sprites"]["back_default"], None)
 
@@ -5080,9 +5077,7 @@ class APITests(APIData, APITestCase):
         # sprite params
         self.assertEqual(
             response.data["sprites"]["front_default"],
-            "{}{}".format(
-                MEDIA_HOST, sprites_data["front_default"].replace("/media/", "")
-            ),
+            "{}".format(sprites_data["front_default"]),
         )
         self.assertEqual(response.data["sprites"]["back_default"], None)
         # type params

@@ -1901,7 +1901,7 @@ def _build_pokemons():
         yield PokemonSprites(
             id=int(info[0]),
             pokemon=Pokemon.objects.get(pk=int(info[0])),
-            sprites=json.dumps(sprites),
+            sprites=sprites,
         )
 
     build_generic((PokemonSprites,), "pokemon.csv", csv_record_to_objects)

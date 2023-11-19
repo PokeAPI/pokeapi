@@ -2713,12 +2713,6 @@ class PokemonGameIndexSerializer(serializers.ModelSerializer):
         fields = ("game_index", "version")
 
 
-class PokemonSpritesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PokemonSprites
-        fields = ("sprites",)
-
-
 class PokemonDetailSerializer(serializers.ModelSerializer):
     abilities = serializers.SerializerMethodField("get_pokemon_abilities")
     past_abilities = serializers.SerializerMethodField("get_past_pokemon_abilities")

@@ -5,15 +5,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pokemon_v2', '0013_pokemonabilitypast'),
+        ("pokemon_v2", "0013_pokemonabilitypast"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pokemonsprites',
-            name='sprites',
+            model_name="pokemonsprites",
+            name="sprites",
             field=django.contrib.postgres.fields.jsonb.JSONField(),
         ),
     ]

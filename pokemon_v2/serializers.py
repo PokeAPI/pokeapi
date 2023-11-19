@@ -2763,11 +2763,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
-        sprites_data = PokemonSpritesSerializer(
-            sprites_object, context=self.context
-        ).data
-
-        return json.loads(sprites_data["sprites"])
+        return sprites_object.sprites
 
     def get_pokemon_moves(self, obj):
         version_objects = VersionGroup.objects.all()

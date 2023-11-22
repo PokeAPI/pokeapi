@@ -97,6 +97,7 @@ INSTALLED_APPS = (
     "django.contrib.sessions",
     "django.contrib.sites",
     "django.contrib.admin",
+    'django.contrib.messages',
     "django.contrib.humanize",
     "corsheaders",
     "rest_framework",
@@ -115,9 +116,26 @@ CORS_ALLOW_METHODS = "GET"
 CORS_URLS_REGEX = r"^/api/.*$"
 
 REST_FRAMEWORK = {
-    "DEFAULT_RENDERER_CLASSES": ("drf_ujson.renderers.UJSONRenderer",),
-    "DEFAULT_PARSER_CLASSES": ("drf_ujson.renderers.UJSONRenderer",),
+    "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_PARSER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
     "PAGINATE_BY": 20,
 }
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]

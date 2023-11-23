@@ -5024,12 +5024,15 @@ class APITests(APIData, APITestCase):
             response.data["forms"][0]["url"],
             "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, pokemon_form.pk),
         )
+
+        sprite_response = json.loads(response.data["sprites"])
+
         # sprite params
         self.assertEqual(
-            response.data["sprites"]["front_default"],
+            sprite_response["front_default"],
             "{}".format(sprites_data["front_default"]),
         )
-        self.assertEqual(response.data["sprites"]["back_default"], None)
+        self.assertEqual(sprite_response["back_default"], None)
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

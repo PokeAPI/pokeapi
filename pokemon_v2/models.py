@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.postgres.fields import JSONField
 
 #####################
 #  ABSTRACT MODELS  #
@@ -1796,4 +1795,4 @@ class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 
 
 class PokemonSprites(HasPokemon):
-    sprites = JSONField()
+    sprites = models.JSONField()

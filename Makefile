@@ -70,6 +70,9 @@ docker-stop:  # (Docker) Stop containers
 docker-down:  # (Docker) Stop and removes containers and networks
 	docker-compose down
 
+docker-test:  # (Docker) Run tests
+	docker-compose exec -T app python manage.py test ${local_config}
+
 docker-prod:
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 

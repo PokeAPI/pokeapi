@@ -86,10 +86,7 @@ SECRET_KEY = os.environ.get(
     "SECRET_KEY", "ubx+22!jbo(^x2_scm-o$*py3e@-awu-n^hipkm%2l$sw$&2l#"
 )
 
-CUSTOM_APPS = (
-    "tastypie",
-    "pokemon_v2",
-)
+CUSTOM_APPS = ("pokemon_v2",)
 
 INSTALLED_APPS = (
     "django.contrib.auth",
@@ -106,8 +103,6 @@ INSTALLED_APPS = (
 
 
 API_LIMIT_PER_PAGE = 1
-
-TASTYPIE_DEFAULT_FORMATS = ["json"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 

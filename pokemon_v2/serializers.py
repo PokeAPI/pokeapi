@@ -1417,10 +1417,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
-        sprites_data = ItemSpritesSerializer(sprites_object, context=self.context).data
-        sprites_data = json.loads(sprites_data["sprites"])
-
-        return sprites_data
+        return sprites_object.sprites
 
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
@@ -2518,12 +2515,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
     def get_pokemon_form_sprites(self, obj):
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
-        sprites_data = PokemonFormSpritesSerializer(
-            sprites_object, context=self.context
-        ).data
-        sprites_data = json.loads(sprites_data["sprites"])
-
-        return sprites_data
+        return sprites_object.sprites
 
     def get_pokemon_form_types(self, obj):
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)

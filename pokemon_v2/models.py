@@ -882,7 +882,7 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 
 
 class ItemSprites(HasItem):
-    sprites = models.CharField(max_length=1000)
+    sprites = models.JSONField()
 
 
 ####################
@@ -1716,7 +1716,7 @@ class PokemonFormName(HasPokemonForm, IsName):
 
 
 class PokemonFormSprites(HasPokemonForm):
-    sprites = models.CharField(max_length=1000)
+    sprites = models.JSONField()
 
 
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):

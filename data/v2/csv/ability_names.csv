@@ -2892,7 +2892,11 @@ ability_id,local_language_id,name
 299,5,"Œil Révélateur "
 299,7,"Ojo Mental "
 299,8,"Occhio Interiore "
+<<<<<<< Updated upstream
 299,9,Minds Eye
+=======
+299,9,Mind’s Eye
+>>>>>>> Stashed changes
 299,11,しんがん
 299,12,心眼
 300,1,かんろなミツ

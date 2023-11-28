@@ -2,22 +2,32 @@ encounter_condition_id,local_language_id,name
 1,5,Essaim
 1,6,Schwarm
 1,9,Swarm
+1,8,Aiutinsetto
 2,5,Période horaire
 2,6,Tageszeit
 2,9,Time of day
+2,8,Orario del giorno
 3,5,Poké Radar
 3,6,PokeRadar
 3,9,PokeRadar
+3,8,PokeRadar
 4,5,Jeu GBA dans le Slot 2
 4,6,Spiel der 3. Generation in Slot 2
 4,9,Gen 3 game in slot 2
+4,8,gioco della Gen 3 nello slot 2
 5,5,Radio
 5,6,Radio
 5,9,Radio
+5,8,Radio
 6,5,Saison
 6,6,Jahreszeit
 6,9,Season
+6,8,Stagione
 7,9,Chosen Starter
+7,8,Starter Scelto
 8,9,Chosen dialogue at the news report
+8,8,Opzione scelta nel dialogo del notiziario televisivo
 9,9,Story Progress
+9,8,Progredendo con la storia
 10,9,Miscellaneous
+10,8,Vario

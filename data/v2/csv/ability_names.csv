@@ -2889,9 +2889,9 @@ ability_id,local_language_id,name
 299,1,しんがん
 299,3,심안
 299,4,心眼
-299,5,Œil Révélateur 
-299,7,Ojo Mental 
-299,8,Occhio Interiore 
+299,5,"Œil Révélateur "
+299,7,"Ojo Mental "
+299,8,"Occhio Interiore "
 299,9,Minds Eye
 299,11,しんがん
 299,12,心眼
@@ -2939,62 +2939,122 @@ ability_id,local_language_id,name
 303,11,おもかげやどし
 303,12,面影辉映
 10001,9,Mountaineer
+10001,8,Escursionista
 10002,9,Wave Rider
+10002,8,Surfista
 10003,9,Skater
+10003,8,Skater
 10004,9,Thrust
+10004,8,Spinta
 10005,9,Perception
+10005,8,Percezione
 10006,9,Parry
+10006,8,Parata
 10007,9,Instinct
+10007,8,Istinto
 10008,9,Dodge
+10008,8,Schivata
 10009,9,Jagged Edge
+10009,8,Lama Dentata
 10010,9,Frostbite
+10010,8,Gelomanto
 10011,9,Tenacity
+10011,8,Tenacia
 10012,9,Pride
+10012,8,Fierezza
 10013,9,Deep Sleep
+10013,8,Profondo Sonno
 10014,9,Power Nap
+10014,8,Pisolino
 10015,9,Spirit
+10015,8,Spirito
 10016,9,Warm Blanket
+10016,8,Coperte Calde
 10017,9,Gulp
+10017,8,Ingurgito
 10018,9,Herbivore
+10018,8,Erbivoro
 10019,9,Sandpit
+10019,8,Sabbie Mobili
 10020,9,Hot Blooded
+10020,8,Sangue Caldo
 10021,9,Medic
+10021,8,Medico
 10022,9,Life Force
+10022,8,Forza Vitale
 10023,9,Lunchbox
+10023,8,Pranzo
 10024,9,Nurse
+10024,8,Infermiera
 10025,9,Melee
+10025,8,Corpo a Corpo
 10026,9,Sponge
+10026,8,Spugna
 10027,9,Bodyguard
+10027,8,Guardaspalle
 10028,9,Hero
+10028,8,Eroe
 10029,9,Last Bastion
+10029,8,Ultima Bastione
 10030,9,Stealth
+10030,8,Furtività
 10031,9,Vanguard
+10031,8,Avanguardia
 10032,9,Nomad
+10032,8,Nomade
 10033,9,Sequence
+10033,8,Sequenza
 10034,9,Grass Cloak
+10034,8,Manto Erboso
 10035,9,Celebrate
+10035,8,Celebrazione
 10036,9,Lullaby
+10036,8,Ninna Nanna
 10037,9,Calming
+10037,8,Calma
 10038,9,Daze
+10038,8,Confusione
 10039,9,Frighten
+10039,8,Spavento
 10040,9,Interference
+10040,8,Interferenza
 10041,9,Mood Maker
+10041,8,Creazione di Umore
 10042,9,Confidence
+10042,8,Sicurezza
 10043,9,Fortune
+10043,8,Fortuna
 10044,9,Bonanza
+10044,8,Abbondanza
 10045,9,Explode
+10045,8,Esplosione
 10046,9,Omnipotent
+10046,8,Omnipotente
 10047,9,Share
+10047,8,Condivisione
 10048,9,Black Hole
+10048,8,Buco Nero
 10049,9,Shadow Dash
+10049,8,Ombra Rapida
 10050,9,Sprint
+10050,8,Sprint
 10051,9,Disgust
+10051,8,Disgusto
 10052,9,High-rise
+10052,8,Grattacielo
 10053,9,Climber
+10053,8,Scalatore
 10054,9,Flame Boost
+10054,8,Fiamma Potenziata
 10055,9,Aqua Boost
+10055,8,Acqua Potenziata
 10056,9,Run Up
+10056,8,Corsa in Salita
 10057,9,Conqueror
+10057,8,Conquistatore
 10058,9,Shackle
+10058,8,Catena
 10059,9,Decoy
+10059,8,Esca
 10060,9,Shield
+10060,8,Scudo

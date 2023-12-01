@@ -1417,10 +1417,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
-        sprites_data = ItemSpritesSerializer(sprites_object, context=self.context).data
-        sprites_data = json.loads(sprites_data["sprites"])
-
-        return sprites_data
+        return sprites_object.sprites
 
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
@@ -2518,12 +2515,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
     def get_pokemon_form_sprites(self, obj):
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
-        sprites_data = PokemonFormSpritesSerializer(
-            sprites_object, context=self.context
-        ).data
-        sprites_data = json.loads(sprites_data["sprites"])
-
-        return sprites_data
+        return sprites_object.sprites
 
     def get_pokemon_form_types(self, obj):
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
@@ -2713,12 +2705,6 @@ class PokemonGameIndexSerializer(serializers.ModelSerializer):
         fields = ("game_index", "version")
 
 
-class PokemonSpritesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PokemonSprites
-        fields = ("sprites",)
-
-
 class PokemonDetailSerializer(serializers.ModelSerializer):
     abilities = serializers.SerializerMethodField("get_pokemon_abilities")
     past_abilities = serializers.SerializerMethodField("get_past_pokemon_abilities")
@@ -2763,11 +2749,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
-        sprites_data = PokemonSpritesSerializer(
-            sprites_object, context=self.context
-        ).data
-
-        return json.loads(sprites_data["sprites"])
+        return sprites_object.sprites
 
     def get_pokemon_moves(self, obj):
         version_objects = VersionGroup.objects.all()

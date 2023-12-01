@@ -499,9 +499,7 @@ def _build_items():
 
         item_sprites = "items/{0}"
         sprites = {"default": file_path_or_none(item_sprites.format(file_name))}
-        yield ItemSprites(
-            id=int(info[0]), item_id=int(info[0]), sprites=json.dumps(sprites)
-        )
+        yield ItemSprites(id=int(info[0]), item_id=int(info[0]), sprites=sprites)
 
     build_generic((ItemSprites,), "items.csv", csv_record_to_objects)
 
@@ -1901,7 +1899,7 @@ def _build_pokemons():
         yield PokemonSprites(
             id=int(info[0]),
             pokemon=Pokemon.objects.get(pk=int(info[0])),
-            sprites=json.dumps(sprites),
+            sprites=sprites,
         )
 
     build_generic((PokemonSprites,), "pokemon.csv", csv_record_to_objects)
@@ -2024,7 +2022,7 @@ def _build_pokemons():
             ),
         }
         yield PokemonFormSprites(
-            id=int(info[0]), pokemon_form_id=int(info[0]), sprites=json.dumps(sprites)
+            id=int(info[0]), pokemon_form_id=int(info[0]), sprites=sprites
         )
 
     build_generic((PokemonFormSprites,), "pokemon_forms.csv", csv_record_to_objects)

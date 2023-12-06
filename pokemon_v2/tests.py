@@ -2588,8 +2588,6 @@ class APITests(APIData, APITestCase):
         item_attribute_map = ItemAttributeMap(item=item, item_attribute=item_attribute)
         item_attribute_map.save()
 
-        sprites_data = json.loads(item_sprites.sprites)
-
         response = self.client.get(
             "{}/item/{}/".format(API_V2, item.pk), HTTP_HOST="testserver"
         )
@@ -2708,9 +2706,12 @@ class APITests(APIData, APITestCase):
             response.data["baby_trigger_for"]["url"],
             "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
         )
+
+        sprites_data = json.loads(response.data["sprites"])
+
         # sprites
         self.assertEqual(
-            response.data["sprites"]["default"],
+            sprites_data["default"],
             "{}".format(sprites_data["default"]),
         )
 
@@ -4837,8 +4838,6 @@ class APITests(APIData, APITestCase):
             "{}/pokemon/{}/".format(API_V2, pokemon.pk), HTTP_HOST="testserver"
         )
 
-        sprites_data = json.loads(pokemon_sprites.sprites)
-
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         # base params
@@ -5024,12 +5023,15 @@ class APITests(APIData, APITestCase):
             response.data["forms"][0]["url"],
             "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, pokemon_form.pk),
         )
+
+        sprites_data = json.loads(pokemon_sprites.sprites)
+
         # sprite params
         self.assertEqual(
-            response.data["sprites"]["front_default"],
+            sprites_data["front_default"],
             "{}".format(sprites_data["front_default"]),
         )
-        self.assertEqual(response.data["sprites"]["back_default"], None)
+        self.assertEqual(sprites_data["back_default"], None)
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()
@@ -5039,8 +5041,6 @@ class APITests(APIData, APITestCase):
         )
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
         pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
-
-        sprites_data = json.loads(pokemon_form_sprites.sprites)
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
@@ -5074,12 +5074,15 @@ class APITests(APIData, APITestCase):
                 TEST_HOST, API_V2, pokemon_form.version_group.pk
             ),
         )
+
+        sprites_data = json.loads(pokemon_form_sprites.sprites)
+
         # sprite params
         self.assertEqual(
-            response.data["sprites"]["front_default"],
+            sprites_data["front_default"],
             "{}".format(sprites_data["front_default"]),
         )
-        self.assertEqual(response.data["sprites"]["back_default"], None)
+        self.assertEqual(sprites_data["back_default"], None)
         # type params
         self.assertEqual(response.data["types"][0]["slot"], pokemon_form_type.slot)
         self.assertEqual(

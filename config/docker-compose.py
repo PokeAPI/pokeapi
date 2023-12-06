@@ -24,6 +24,5 @@ CACHES = {
 }
 
 DEBUG = False
-TASTYPIE_FULL_DEBUG = False
 
 ALLOWED_HOSTS = ["*"]

@@ -104,6 +104,7 @@ get_invokator_pr_number() {
 # Clone the repository containing the static JSON files
 clone() {
   git clone "https://github.com/${org}/${data_repo}.git" "$data_repo"
+  cd "$data_repo" && git checkout staging
 }
 
 # Configure git to use the supplied user when committing

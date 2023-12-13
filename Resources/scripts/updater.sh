@@ -104,7 +104,6 @@ get_invokator_pr_number() {
 # Clone the repository containing the static JSON files
 clone() {
   git clone "https://github.com/${org}/${data_repo}.git" "$data_repo"
-  (cd "$data_repo" && git checkout staging)
 }
 
 # Configure git to use the supplied user when committing
@@ -178,7 +177,7 @@ run_updater() {
 
   # Run the updater
   docker network create pokeapi
-  docker run --privileged --network pokeapi --network-alias docker -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" -e COMMIT_MESSAGE="[Updater Bot] Regenerate data from https://github.com/$org/$engine_repo/pull/$(get_invokator_pr_number)" -e RUN_AS='root' pokeapi-updater
+  docker run --privileged --network pokeapi --network-alias docker -e REPO_POKEAPI_CHECKOUT_OBJECT="$CIRCLE_SHA1" -e COMMIT_EMAIL="$email" -e COMMIT_NAME="$username" -e BRANCH_NAME="$branch_name" -e REPO_POKEAPI="https://github.com/$org/$engine_repo.git" -e REPO_DATA="https://$MACHINE_USER_GITHUB_API_TOKEN@github.com/$org/$data_repo.git" -e COMMIT_MESSAGE="[Updater Bot] Regenerate data from https://github.com/$org/$engine_repo/pull/$(get_invokator_pr_number)" -e COMMIT_AND_PUSH='true' -e RUN_AS='root' pokeapi-updater
   return_code=$?
   if [ "$return_code" -eq 2 ]; then
     cleanexit 'no-new-data' "Generated data is the same as old data, skipping deploy"

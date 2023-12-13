@@ -39,10 +39,9 @@ jobs:
       - run:
           name: Build database
           command: make build-db
-   
   deploy:
     machine:
-      image: ubuntu-2004:202111-01 # https://circleci.com/docs/2.0/configuration-reference/#available-machine-images with Docker 18.09.3. Newer images don't work
+      image: ubuntu-2204:2023.10.1
     resource_class: large
     steps:
       - checkout

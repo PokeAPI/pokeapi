@@ -6,6 +6,7 @@ move_damage_class_id,local_language_id,name,description
 1,7,estado,Sin Daño
 1,9,status,No damage
 1,12,变化,没有伤害
+1,8,status,Nessun danno
 2,1,ぶつり,ぶつりのダメージ。こうげきとぼうぎょを行使する
 2,4,物理,物理傷害，受攻擊和防禦影響
 2,5,physique,"Dégâts physique, influencés par l'Attaque et la Défense"
@@ -13,6 +14,7 @@ move_damage_class_id,local_language_id,name,description
 2,7,físico,"Daño Físico, controlado por el Ataque y Defensa"
 2,9,physical,"Physical damage, controlled by Attack and Defense"
 2,12,物理,物理伤害，受攻击和防御影响
+2,8,fisica,"Danno fisico, influenzato dall'Attacco e dalla Difesa"
 3,1,とくしゅ,とくしゅのダメージ。とくこうととくぼうを行使する
 3,4,特殊,特殊傷害，受特攻和特防影響
 3,5,spéciale,"Dégâts spéciaux, influencés par l'Attaque Spéciale et la Défense Spéciale"
@@ -20,3 +22,4 @@ move_damage_class_id,local_language_id,name,description
 3,7,especial,"Daño Especial, controlado por el Ataque Esecieal y Defensa Especial"
 3,9,special,"Special damage, controlled by Special Attack and Special Defense"
 3,12,特殊,特殊伤害，受特攻和特防影响
+3,8,speciale,"Danno speciale, influenzato dall'Attacco Speciale e dalla Difesa Speciale"

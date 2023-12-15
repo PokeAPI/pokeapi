@@ -3,59 +3,89 @@ pokedex_id,local_language_id,name,description
 1,6,National,Komplette Nationale Dex
 1,7,Nacional,Pokédex Nacional completa
 1,9,National,Entire National dex
+1,8,Nazionale,L'intero pokedex nazionale
 2,5,Kanto,Pokédex régional de Kanto dans Rouge/Bleu/Jaune
 2,6,Kanto,Rot/Blau/Gelb Kanto Dex
 2,7,Kanto,Pokédex regional de Rojo/Azul/Amarillo
 2,9,Kanto,Red/Blue/Yellow Kanto dex
+2,8,Kanto,Il Pokedex di Kanto Rosso/Blu/Giallo
 3,5,Johto initial,"Pokédex régional de Johto dans Or/Argent/Cristal, appellé ""Nouveau"" Pokédex dans le jeu"
 3,6,Original Johto,"Gold/Silber/Kristall Johto Dex — Auch der ""Neue"" Pokédex im Spiel genannt"
 3,9,Original Johto,"Gold/Silver/Crystal Johto dex—called the ""New"" Pokédex in-game"
+3,8,Johto Originale,"Il ""Nuovo"" pokedex di Oro/Argento/Cristallo"
 4,5,Hoenn initial,Pokédex régional d'Hoenn dans Rubis/Saphir/Émeraude
 4,6,Original Hoenn,Rubin/Saphir/Smaragd Hoenn Dex
 4,9,Original Hoenn,Ruby/Sapphire/Emerald Hoenn dex
+4,8,Hoenn Originale,Il pokedex di Hoenn di Rubino/Zaffiro/Smeraldo
 5,5,Sinnoh initial,Pokédex régional de Sinnoh dans Diamant/Perle
 5,6,Original Sinnoh,Diamant/Perl Sinnoh Dex
 5,9,Original Sinnoh,Diamond/Pearl Sinnoh dex
+5,8,Sinnoh Originale,Il pokedex di Sinnoh di Diamante/Perla
 6,5,Sinnoh étendu,Pokédex régional de Sinnoh dans Platine
 6,6,Erweitertes Sinnoh,Platin Sinnoh Dex — eine erweiterte Version von Diamant und Perl
 6,9,Extended Sinnoh,Platinum Sinnoh dex—an extended version of Diamond and Pearl's
+6,8,Sinnoh Esteso,Il pokedex di Sinnoh di Diamante/Perla esteso con Platino
 7,5,Johto amélioré,"Pokédex régional de Johto dans Or HeartGold/Argent SoulSilver, mis à jour pour la 4ème génération"
 7,6,Aktualisiertes Johto,HeartGold/SoulSilver Johto Dex — Dex aus Gold/Silber/Kristall um Fähigkeiten basierende Entwicklungen aus Generation IV erweitert
 7,9,Updated Johto,"HeartGold/SoulSilver Johto dex—Gold/Silver/Crystal's, extended to add move-based Generation IV evolutions"
+7,8,Johto Aggiornato,Il pokedex di Johto di HeartGold/SoulSilver esteso con le mosse di IV Generazione
 8,5,Unys initial,Pokédex régional d'Unys dans Noir/Blanc
 8,6,Original Einall,Schwarz/Weiß Einall Dex
 8,9,Original Unova,Black/White Unova dex
+8,8,Unima Originale,Il pokedex di Bianco/Nero
 9,5,Unys amélioré,Pokédex régional d'Unys dans Noir 2/Blanc 2
 9,6,Aktualisiertes Einall,Schwarz 2/Weiß 2 Einall Dex
 9,9,Updated Unova,Black 2/White 2 Unova dex
+9,8,Unima Aggiornato,Il pokedex di Bianco2/Nero2
 11,5,Galerie,Ordre de la Galerie dans Pokémon Conquest
 11,6,Gallerie,Pokémon Conquest Galerie Reihenfolge
 11,9,Gallery,Pokémon Conquest gallery order
+11,8,Galleria,La galleria ordinata di Pokemon Conquest
 12,5,Kalos : Centre,
 12,6,Kalos-Zentral,
 12,9,Central Kalos,
+12,8,Kalos Centrale,
 13,5,Kalos : Côtes,
 13,6,Kalos-Küste,
 13,9,Coastal Kalos,
+13,8,Kalos Costiera,
 14,5,Kalos : Monts,
 14,6,Kalos-Gebirge,
 14,9,Mountain Kalos,
+14,8,Kalos Montana,
 15,5,Hoenn amélioré,"Pokédex régional d'Hoenn dans Rubis Oméga/Saphir Alpha, mis à jour pour les nouvelles évolutions"
 15,6,Neue Hoenn,Omega Rubin/Alpha Saphir Hoenn Dex — Dex aus Rubin/Saphir/Smaragd um Neue Entwicklungen erweitert
 15,9,New Hoenn,"Omega Ruby/Alpha Sapphire Hoenn Dex—Ruby/Sapphire/Emerald's, updated to add new evolutions"
+15,8,Hoenn Nuova,Il pokedex di Rubino Omega/Zaffiro Alfa con l'aggiunta delle nuove evoluzioni
 16,9,Original Alola,Sun/Moon Alola dex
+16,8,Alola Originale,Il pokedex di Sole/Luna
 17,9,Original Melemele,Sun/Moon Melemele dex
+17,8,Melemele Originale,Il pokedex di Sole/Luna Melemele
 18,9,Original Akala,Sun/Moon Akala dex
+18,8,Akala Originale,Il pokedex di Sole/Luna Akala
 19,9,Original Ula'ula,Sun/Moon Ula'ula dex
+19,8,Ula Ula Originale,Il pokedex di Sole/Luna Ula Ula
 20,9,Original Poni,Sun/Moon Poni dex
+20,8,Poni Originale,Il pokedex di Sole/Luna Poni
 21,9,Updated Alola,Ultra Sun/Ultra Moon Alola dex
+21,8,Alola Aggiornata,Il pokedex di Ultra Sole/Ultra Luna
 22,9,Updated Melemele,Ultra Sun/Ultra Moon Melemele dex
+22,8,Melemele Aggiornata,Il pokedex di Ultra Sole/Ultra Luna Melemele
 23,9,Updated Akala,Ultra Sun/Ultra Moon Akala dex
+23,8,Akala Aggiornata,Il pokedex di Ultra Sole/Ultra Luna Akala
 24,9,Updated Ula'ula,Ultra Sun/Ultra Moon Ula'ula dex
+24,8,Ula Ula Aggiornata,Il pokedex di Ultra Sole/Ultra Luna Ula Ula
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
+25,8,Poni Aggiornata,Il pokedex di Ultra Sole/Ultra Luna Poni
 26,9,Let’s Go Kanto,Let’s Go: Pikachu/Let’s Go: Eevee Kanto dex
+26,8,Let’s Go Kanto,Il pokedex di Kanto di Let’s Go: Pikachu/Let’s Go: Eevee
 27,9,Galar,Sword/Shield Galar dex
+27,8,Galar,Il pokedex di Spada/Scudo
 28,9,Isle of Armor,Isle of Armor dex
+28,8,L'isola dell'armatura,Il pokedex dell'isola dell'armatura
 29,9,Crown Tundra,Crown Tundra dex
+29,8,Le Terre Innevate della corona,Il pokedex delle Terre Innevate della corona
 30,9,Hisui,Hisui dex
+30,8,Hisui,Il pokedex di Hisui
 31,9,Paldea,Paldea dex
+31,8,Paldea,Il pokedex di Paldea

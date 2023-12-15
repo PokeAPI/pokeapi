@@ -2,74 +2,101 @@ encounter_method_id,local_language_id,name
 1,6,Im hohen Gras oder in einer Höhle laufen
 1,9,Walking in tall grass or a cave
 1,5,En marchant dans les herbes hautes ou une grotte
+1,8,Camminando nell'erba alta o in una caverna
 2,6,Mit einer normalen Angel angeln
 2,9,Fishing with an Old Rod
 2,5,En pêchant avec une Canne
+2,8,Pescando con l'Amo Vecchio
 3,6,Mit einer Profiangel angeln
 3,9,Fishing with a Good Rod
 3,5,En pêchant avec une Super Canne
+3,8,Pescando con l'Amo Buono
 4,6,Mit einer Superangel angeln
 4,9,Fishing with a Super Rod
 4,5,En pêchant avec une Méga Canne
+4,8,Pescando col Super Amo
 5,6,Surfen
 5,9,Surfing
 5,5,En surfant
+5,8,Surfando
 6,6,Steine zertrümmern
 6,9,Smashing rocks
 6,5,En brisant des rochers
+6,8,Spaccando le rocce
 7,6,Bäumen Kopfnüsse geben
 7,9,Headbutting trees
 7,5,En utilisant Coup d’Boule sur un arbre
+7,8,Usando Bottintesta su un albero
 8,6,Im dunklen Gras laufen
 8,9,Walking in dark grass
 8,5,En marchant dans les herbes sombres
+8,8,Camminando nell'erba alta scura
 9,6,Im raschelndem Gras laufen
 9,9,Walking in rustling grass
 9,5,En marchant dans les herbes mouvantes
+9,8,Camminando nell'erba alta che ondeggia
 10,6,In Staubwolken laufen
 10,9,Walking in dust clouds
 10,5,En marchant dans un nuage de poussière
+10,8,Camminando in un polverone
 11,6,Im Schatten einer Brücke laufen
 11,9,Walking in bridge shadows
 11,5,En marchant à l’ombre d’un pont
+11,8,Cammianndo in un'ombra dall'alto
 12,6,An dunklen stellen angeln
 12,9,Fishing in dark spots
 12,5,En pêchant dans les endroits sombres
+12,8,Pescando in un'increspatura sull'acqua
 13,6,An dunklen stellen surfen
 13,9,Surfing in dark spots
 13,5,En surfant sur les endroits sombres
+13,8,Surfando in un'increspatura sull'acqua
 14,6,In gelben Blumenfeldern laufen
 14,9,Walking in yellow flowers
 14,5,En marchant dans les fleurs jaunes
+14,8,Camminando nei fiori gialli
 15,6,In violetten Blumenfeldern laufen
 15,9,Walking in purple flowers
 15,5,En marchant dans les fleurs violettes
+15,8,Camminando nei fiori viola
 16,6,In roten Blumenfeldern laufen
 16,9,Walking in red flowers
 16,5,En marchant dans les fleurs rouges
+16,8,Camminando nei fiori rossi
 17,6,Auf unwegsamen Gelände laufen
 17,9,Walking on rough terrain
 17,5,En marchant sur un terrain accidenté
+17,8,Camminando in un terreno spoglio
 18,9,Receive as a gift
 18,5,Reçu en cadeau
+18,8,Ricevuto in dono
 19,9,Receive egg as a gift
 19,5,Œuf reçu en cadeau
+19,8,Ricevito in dono come uovo
 20,9,"Static encounter, only one chance"
 20,5,"Rencontre statique, chance unique"
+20,8,"Incontro statico, solo una possibilità"
 21,9,Playing Pokéflute
 21,5,En jouant de la Pokéflûte
+21,8,Suonando il Pokeflauto
 22,9,Headbutting a low encounter rate tree
 22,5,En utilisant Coup d’Boule sur un arbre à taux bas
-23,9,Headbutting a normal encounter rate tree
 22,5,En utilisant Coup d’Boule sur un arbre à taux normal
-24,9,Headbutting a high encounter rate tree
 22,5,En utilisant Coup d’Boule sur un arbre à taux élevé
+22,8,Usando Bottintesta su un albero ad basso tasso d'incontro
+23,9,Headbutting a normal encounter rate tree
+23,8,Usando Bottintesta su un albero ad medio tasso d'incontro
+24,9,Headbutting a high encounter rate tree
+24,8,Usando Bottintesta su un albero ad alto tasso d'incontro
 25,9,Using the Squirt Bottle on a Sudowoodo
 25,5,En utilisant la Carapuce à O sur Simularbre
+25,8,Usando l'Annaffiatoio su un Sudowoodo
 26,9,Using the Wailmer Pail on a Sudowoodo
 26,5,En utilisant le Seau Wailmer / Wailmerrosoir sur Simularbre
+26,8,Usando il Vaso Wailmer su un Sudowoodo
 27,9,Diving on seaweed
 27,5,En plongeant dans les algues
+27,8,Nuotanto sott'acqua
 28,9,On any overworld patch of grass
 28,5,Dans les herbes
 29,9,On any overworld water tile
@@ -78,3 +105,4 @@ encounter_method_id,local_language_id,name
 30,5,En utilisant le Devon Scope
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
+32,8,Girando per la mappa

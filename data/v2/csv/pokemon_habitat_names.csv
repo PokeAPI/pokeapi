@@ -2,27 +2,36 @@ pokemon_habitat_id,local_language_id,name
 1,5,grottes
 1,7,caverna
 1,9,cave
+1,8,Caverna
 2,5,forêts
 2,7,bosque
 2,9,forest
+2,8,Foresta
 3,5,champs
 3,7,pradera
 3,9,grassland
+3,8,Pianura
 4,5,montagnes
 4,7,montaña
 4,9,mountain
+4,8,Montagna
 5,5,rares
 5,7,raro
 5,9,rare
+5,8,Raro
 6,5,milieux hostiles
 6,7,campo
 6,9,rough terrain
+6,8,Terresto dissestato
 7,5,mers
 7,7,mar
 7,9,sea
+7,8,Mare
 8,5,urbains
 8,7,ciudad
 8,9,urban
+8,8,Urbano
 9,5,marécages
 9,7,agua salada
 9,9,water's edge
+9,8,Bagnasciuga

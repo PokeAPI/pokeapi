@@ -1,5 +1,5 @@
 pokemon_move_method_id,local_language_id,name,description
-1,5,Montée de niveau,"Appris lorsqu’un Pokémon atteint un certain niveau."
+1,5,Montée de niveau,Appris lorsqu’un Pokémon atteint un certain niveau.
 1,6,Level up,"Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht."
 1,7,Nivel,Se aprende cuando un pokemon alcanza un cierto nivel.
 1,9,Level up,Learned when a Pokémon reaches a certain level.
@@ -7,11 +7,11 @@ pokemon_move_method_id,local_language_id,name,description
 2,6,Ei,"Erscheint bei einem frisch geschlüpften Pokémon, wenn der Vater die selbe Fähigkeit hatte."
 2,7,Huevo,"Aparece en un Pokémon recién nacido, si el padre tuvo el mismo movimiento."
 2,9,Egg,"Appears on a newly-hatched Pokémon, if the father had the same move."
-3,5,Enseigné,"Enseigné par un PNJ"
+3,5,Enseigné,Enseigné par un PNJ
 3,6,Tutor,Kann jederzeit von einem NPC erlernt werden.
-3,7,Tutor, Puede ser enseñado en cualquier momento por un NPC.
+3,7,Tutor," Puede ser enseñado en cualquier momento por un NPC."
 3,9,Tutor,Can be taught at any time by an NPC.
-4,5,Capsule,"Peut être appris n’importe quand par une CT ou une CS."
+4,5,Capsule,Peut être appris n’importe quand par une CT ou une CS.
 4,6,Maschine,Kann jederzeit durch das benutzen eines TM oder VM erlernt werden.
 4,7,Máquina,Se puede enseñar en cualquier momento usando una MT o MO.
 4,9,Machine,Can be taught at any time by using a TM or HM.
@@ -25,3 +25,16 @@ pokemon_move_method_id,local_language_id,name,description
 10,6,Rotom Formen,"Erscheint, wenn Rotom seine Form wechselt.  Verschwindet wenn Rotom eine andere Form an nimmt. Diese Fähigkeit kann nur durch wechseln der Form erlernt werden."
 10,9,Form Change,Appears when Rotom or Cosplay Pikachu changes form.  Disappears if the Pokémon becomes another form and this move can only be learned by form change.
 11,9,Zygarde Cube,Can be taught using the Zygarde Cube.  Must find the corresponding Zygarde Core first in Sun/Moon.  All moves are available immediately in Ultra Sun/Ultra Moon.
+1,8,Aumento livello,La impara quando il pokemon raggiunge un certo livello.
+2,8,Mossa Uovo,Appare su un pokemon appena nato.
+3,8,Insegnamosse,Può essere insegnata in qualsiasi momento da un NPC.
+4,8,Macchina,Può essere insegnata in qualsiasi momento usando una MT o una MN.
+5,8,Stadium: Surfing Pikachu,Appreso quando un Pikachu non noleggiato aiuta a battere la Prime Cup Master Ball R-2. Deve partecipare a ogni battaglia e devi vincere senza continuare.
+6,8,Pichu locomovolt,Appare su un Pichu che ha la madre che tiene una Elettropalla. Il padre non può essere un Diito.
+7,8,Colosseum: Purificazione,Appare su un Pokemon Ombra quando viene purificato.
+8,8,XD: Ombra,Appare su un pokemon ombra sostratto.
+9,8,XD: Purificazione,Appare su un Pokemon Ombra quando viene purificato.
+10,8,Cambio forma,Appare quando Rotom o Pikachu Cosplay cambiano forma. Sparisce if il pokemon cambia la sua forma e questa mossa può essere imparata solo cambiando di nuovo forma.
+11,8,Nuclei di Zygarde,Può essere insegnata usando i Nuclei di Zygarde. Bisogna prima trovare la corrispondente forma di Zygarde in Sole/Luna
+12,8,Evoluzione,Impara la mossa quando si evolve.
+13,8,Ricordamosse,Può essere insegnata in qualsiasi momento da un NPC.

@@ -2,18 +2,36 @@ evolution_trigger_id,local_language_id,name
 1,5,Montée de niveau
 1,6,Levelaufstieg
 1,9,Level up
+1,8,Aumento di livello
 2,5,Échange
 2,6,Tausch
 2,9,Trade
+2,8,Scambio
 3,5,Utilisation d'un objet
 3,6,Gegenstand nutzen
 3,9,Use item
+3,8,Usando un oggetto
 4,5,Place dans l'équipe et une Poké Ball
 4,6,Platz im Team und ein Pokéball
 4,9,Shed
+4,8,Muta
 5,9,Spin
+5,8,Piroetta
 6,9,Train in the Tower of Darkness
+6,8,Allenamento nella Torre Buio
 7,9,Train in the Tower of Waters
+7,8,Allenamento nella Torre Acqua
 8,9,Land three critical hits in a battle
+8,8,Sferrando tre colpi critici in battaglia
 9,9,Go somewhere after taking damage
+9,8,Andando da qualche parte dopo aver ricevuto del danno
 10,9,Other
+10,8,Altro
+11,8,Usando una mossa tot. volte come Tecnica rapida
+12,8,Usando una mossa tot. volte come Tecnica potente
+13,8,Perdendo almeno tot. HP da contraccolpo senza andare KO
+14,8,Facendo passi mandando avanti il pokemon
+15,8,Facendo il livello richiesto e vincendo la battaglia successiva
+16,8,Livellando mentre si è in modalità cooperativa con la Cerchia contatto
+17,8,Usando una mossa tot. volte
+18,8,Avendo un oggetto nella Borsa

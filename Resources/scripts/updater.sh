@@ -115,7 +115,7 @@ configure_git() {
 pr_input_updater_start() {
   cat <<EOF
 {
-  "body": "A [PokeAPI/api-data](${data_repo_url}) refresh has started. In 45 minutes the staging branch of [PokeAPI/api-data](${data_repo_url}/tree/staging) will be pushed with the new generated data. <br><br> The staging branch will be deployed in our [staging environment]($staging_environment_url) and you will be able to review the entire API. <br><br> A Pull Request ([master](${data_repo_url}/tree/master)<-[staging](${data_repo_url}/tree/staging)) will be also created at [PokeAPI/api-data](${data_repo_url}/pulls) and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide at [pokeapi.co]($production_environment_url)."
+  "body": "A [PokeAPI/api-data](${data_repo_url}) refresh has started. In ~45 minutes the staging branch of [PokeAPI/api-data](${data_repo_url}/tree/staging) will be pushed with the new generated data. <br><br> The staging branch will be deployed in our [staging environment]($staging_environment_url) and the entire API will be ready to review. <br><br> A Pull Request ([master](${data_repo_url}/tree/master)<-[staging](${data_repo_url}/tree/staging)) will be also created at [PokeAPI/api-data](${data_repo_url}/pulls) and assigned to the PokeAPI Core team to be reviewed. If approved and merged new data will soon be available worldwide at [pokeapi.co]($production_environment_url)."
 }
 EOF
 }
@@ -123,7 +123,7 @@ EOF
 pr_input_updater_end_success() {
   cat <<EOF
 {
-  "body": "The updater script has finished its job and has now opened a Pull Request towards [PokeAPI/api-data](${data_repo_url}/pulls) with the updated data. <br><br> You can see the Pull Request deployed at our [staging environment]($staging_environment_url) when [CircleCI deploy]($deploy_circleci_status_url) will be finished (_check the started time of the last build_)."
+  "body": "The updater script has finished its job and has now opened a Pull Request towards [PokeAPI/api-data](${data_repo_url}/pulls) with the updated data. <br><br> The Pull Request can be seen deployed in our [staging environment]($staging_environment_url) when [CircleCI deploy]($deploy_circleci_status_url) will be finished (_check the start time of the last build_)."
 }
 EOF
 }
@@ -165,10 +165,10 @@ notify_engine_pr() {
 
 # Run the updater script (https://github.com/PokeAPI/api-data/blob/master/updater/cmd.bash) which will generate the new pokeapi data and push it to the api-data repository under a new branch
 run_updater() {
+  engine_repo_pr_number=$(get_invokator_pr_number)
   cd "$data_repo/updater" || cleanexit 'fail' "Failed to cd"
   # Wait to be sure PokeAPI/pokeapi's master branch has been updated on Github with the lastest merged PR content
   sleep 10
-  engine_repo_pr_number=$(get_invokator_pr_number)
 
   # Build the updater image
   docker build -t pokeapi-updater .

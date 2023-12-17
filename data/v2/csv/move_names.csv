@@ -8635,6 +8635,156 @@ move_id,local_language_id,name
 904,1,ツタこんぼう
 904,9,Ivy Cudgel
 904,11,ツタこんぼう
+905,1,エレクトロビーム
+905,3,일렉트로빔
+905,4,電光束
+905,5,Fulgurayon
+905,6,Stromstrahl
+905,7,Electrorrayo
+905,8,Elettroraggio
+905,9,Electro Shot
+905,11,エレクトロビーム
+905,12,电光束
+906,1,テラクラスター
+906,3,테라클러스터
+906,4,晶光星群
+906,5,Pluie Térastrale
+906,6,Tera-Sternhagel
+906,7,Teraclúster
+906,8,Teracluster
+906,9,Tera Starstorm
+906,11,テラクラスター
+906,12,晶光星群
+907,1,きまぐレーザー
+907,3,변덕레이저
+907,4,隨機光
+907,5,Laser Hasard
+907,6,Launenlaser
+907,7,Láser Veleidoso
+907,8,Irregolaser
+907,9,Fickle Beam
+907,11,きまぐレーザー
+907,12,随机光
+908,1,かえんのまもり
+908,3,화염의수호
+908,4,火焰守護
+908,5,Rempart Brûlant
+908,6,Flammenschild
+908,7,Llama Protectora
+908,8,Egida Ignea
+908,9,Burning Bulwark
+908,11,かえんのまもり
+908,12,火焰守护
+909,1,じんらい
+909,3,질풍신뢰
+909,4,迅雷
+909,5,Vif Éclair
+909,6,Sturmblitz
+909,7,Relámpago Súbito
+909,8,Saetta
+909,9,Thunderclap
+909,11,じんらい
+909,12,迅雷
+910,1,パワフルエッジ
+910,3,파워풀에지
+910,4,強刃攻擊
+910,5,Lame Puissante
+910,6,Wuchtklinge
+910,7,Filo Potente
+910,8,Taglio Poderoso
+910,9,Mighty Cleave
+910,11,パワフルエッジ
+910,12,强刃攻击
+911,1,タキオンカッター
+911,3,타키온커터
+911,4,迅子利刃
+911,5,Lame Tachyonique
+911,6,Tachyon-Schnitt
+911,7,Tajo Taquión
+911,8,Tachiontaglio
+911,9,Tachyon Cutter
+911,11,タキオンカッター
+911,12,迅子利刃
+912,1,ハードプレス
+912,3,하드프레스
+912,4,硬壓
+912,5,Pression Extrême
+912,6,Stahlpresse
+912,7,Prensa Metálica
+912,8,Pressa d’Acciaio
+912,9,Hard Press
+912,11,ハードプレス
+912,12,硬压
+913,1,ドラゴンエール
+913,3,드래곤옐
+913,4,龍聲鼓舞
+913,5,Cri Draconique
+913,6,Drachenschrei
+913,7,Bramido Dragón
+913,8,Grido del Drago
+913,9,Dragon Cheer
+913,11,ドラゴンエール
+913,12,龙声鼓舞
+914,1,みわくのボイス
+914,3,매혹의보이스
+914,4,魅誘之聲
+914,5,Voix Envoûtante
+914,6,Lockstimme
+914,7,Canto Encantador
+914,8,Ammaliavoce
+914,9,Alluring Voice
+914,11,みわくのボイス
+914,12,魅诱之声
+915,1,やけっぱち
+915,3,열불내기
+915,4,豁出去
+915,5,Indignition
+915,6,Frustflamme
+915,7,Cólera Ardiente
+915,8,Rabbia Bruciante
+915,9,Temper Flare
+915,11,やけっぱち
+915,12,豁出去
+916,1,サンダーダイブ
+916,3,썬더다이브
+916,4,閃電強襲
+916,5,Volt Assaut
+916,6,Donnerstoß
+916,7,Plancha Voltaica
+916,8,Elettrotuffo
+916,9,Supercell Slam
+916,11,サンダーダイブ
+916,12,闪电强袭
+917,1,サイコノイズ
+917,3,사이코노이즈
+917,4,精神噪音
+917,5,Dissonance Psy
+917,6,Psycholärm
+917,7,Psicorruido
+917,8,Psicorumore
+917,9,Psychic Noise
+917,11,サイコノイズ
+917,12,精神噪音
+918,1,はやてがえし
+918,3,기선제압
+918,4,快手還擊
+918,5,Prio-Parade
+918,6,Schnellkonter
+918,7,Palma Rauda
+918,8,Colpo di Mano
+918,9,Upper Hand
+918,11,はやてがえし
+918,12,快手还击
+919,1,じゃどくのくさり
+919,3,악독사슬
+919,4,邪毒鎖鏈
+919,5,Chaîne Malsaine
+919,6,Giftkettung
+919,7,Cadena Virulenta
+919,8,Intossicatena
+919,9,Malignant Chain
+919,11,じゃどくのくさり
+919,12,邪毒锁链
 10001,1,ダークラッシュ
 10001,5,Charge Noire
 10001,6,Cryptoschlag

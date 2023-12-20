@@ -1016,6 +1016,14 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 1015,munkidori,1015,10,122,,1099,1
 1016,fezandipiti,1016,14,301,,1100,1
 1017,ogerpon,1017,12,398,,1101,1
+1018,archaludon,1018,20,600,,1102,1
+1019,hydrapple,1019,18,930,,1103,1
+1020,gouging-fire,1020,35,5900,,1104,1
+1021,raging-bolt,1021,52,4800,,1105,1
+1022,iron-boulder,1022,15,1625,,1106,1
+1023,iron-crown,1023,16,1560,,1107,1
+1024,terapagos,1024,2,65,,1108,1
+1025,pecharunt,1025,3,3,,1109,1
 10001,deoxys-attack,386,17,608,270,515,0
 10002,deoxys-defense,386,17,608,270,516,0
 10003,deoxys-speed,386,17,608,270,517,0
@@ -1291,3 +1299,5 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10273,ogerpon-wellspring-mask,1017,12,398,,,0
 10274,ogerpon-hearthflame-mask,1017,12,398,,,0
 10275,ogerpon-cornerstone-mask,1017,12,398,,,0
+10276,terapagos-terastal,1024,3,160,,,0
+10277,terapagos-stellar,1024,17,770,,,0

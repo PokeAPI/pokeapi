@@ -8,6 +8,7 @@ generation_id,local_language_id,name
 1,9,Generation I
 1,11,第一世代
 1,12,第一世代
+1,8,Generazione I
 2,1,だいにせだい
 2,3,2세대
 2,4,第二世代
@@ -17,6 +18,7 @@ generation_id,local_language_id,name
 2,9,Generation II
 2,11,第二世代
 2,12,第二世代
+2,8,Generazione II
 3,1,だいさんせだい
 3,3,3세대
 3,4,第三世代
@@ -26,6 +28,7 @@ generation_id,local_language_id,name
 3,9,Generation III
 3,11,第三世代
 3,12,第三世代
+3,8,Generazione III
 4,1,だいよんせだい
 4,3,4세대
 4,4,第四世代
@@ -35,6 +38,7 @@ generation_id,local_language_id,name
 4,9,Generation IV
 4,11,第四世代
 4,12,第四世代
+4,8,Generazione IV
 5,1,だいごせだい
 5,3,5세대
 5,4,第五世代
@@ -44,6 +48,7 @@ generation_id,local_language_id,name
 5,9,Generation V
 5,11,第五世代
 5,12,第五世代
+5,8,Generazione V
 6,1,だいろくせだい
 6,3,6세대
 6,4,第六世代
@@ -53,6 +58,7 @@ generation_id,local_language_id,name
 6,9,Generation VI
 6,11,第六世代
 6,12,第六世代
+6,8,Generazione VI
 7,1,だいななせだい
 7,3,7세대
 7,4,第七世代
@@ -62,6 +68,7 @@ generation_id,local_language_id,name
 7,9,Generation VII
 7,11,第七世代
 7,12,第七世代
+7,8,Generazione VII
 8,1,だいはちせだい
 8,3,8세대
 8,4,第八世代
@@ -71,6 +78,7 @@ generation_id,local_language_id,name
 8,9,Generation VIII
 8,11,第八世代
 8,12,第八世代
+8,8,Generazione VIII
 9,1,だいきゅうせだい
 9,3,9세대
 9,4,第九世代
@@ -80,3 +88,4 @@ generation_id,local_language_id,name
 9,9,Generation IX
 9,11,第九世代
 9,12,第九世代
+9,8,Generazione IX

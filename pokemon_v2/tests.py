@@ -1675,6 +1675,32 @@ class APIData:
         back_shiny_female=False,
     ):
         sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
+        showdown_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/%s.png"
+
+        showdown = {
+            "front_default": showdown_path % pokemon.id if front_default else None,
+            "front_female": showdown_path % f"female/{pokemon.id}"
+            if front_female
+            else None,
+            "front_shiny": showdown_path % f"shiny/{pokemon.id}"
+            if front_shiny
+            else None,
+            "front_shiny_female": showdown_path % f"shiny/female/{pokemon.id}"
+            if front_shiny_female
+            else None,
+            "back_default": showdown_path % f"back/{pokemon.id}"
+            if back_default
+            else None,
+            "back_female": showdown_path % f"back/female/{pokemon.id}"
+            if back_female
+            else None,
+            "back_shiny": showdown_path % f"back/shiny/{pokemon.id}"
+            if back_shiny
+            else None,
+            "back_shiny_female": showdown_path % f"back/shiny/female/{pokemon.id}"
+            if back_shiny_female
+            else None,
+        }
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
@@ -1692,7 +1718,8 @@ class APIData:
         }
 
         pokemon_sprites = PokemonSprites.objects.create(
-            pokemon=pokemon, sprites=json.dumps(sprites)
+            pokemon=pokemon,
+            sprites=json.dumps(sprites | {"other": {"showdown": showdown}}),
         )
         pokemon_sprites.save()
 
@@ -5025,6 +5052,7 @@ class APITests(APIData, APITestCase):
         )
 
         sprites_data = json.loads(pokemon_sprites.sprites)
+        response_sprites_data = json.loads(response.data["sprites"])
 
         # sprite params
         self.assertEqual(
@@ -5032,6 +5060,15 @@ class APITests(APIData, APITestCase):
             "{}".format(sprites_data["front_default"]),
         )
         self.assertEqual(sprites_data["back_default"], None)
+
+        self.assertEqual(
+            sprites_data["other"]["showdown"]["front_default"],
+            response_sprites_data["other"]["showdown"]["front_default"],
+        )
+        self.assertEqual(
+            sprites_data["other"]["showdown"]["back_default"],
+            response_sprites_data["other"]["showdown"]["back_default"],
+        )
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

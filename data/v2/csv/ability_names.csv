@@ -2938,6 +2938,46 @@ ability_id,local_language_id,name
 303,9,Embody Aspect
 303,11,おもかげやどし
 303,12,面影辉映
+304,1,テラスチェンジ
+304,3,테라체인지
+304,4,太晶變形
+304,5,Téramorphose
+304,6,Tera-Wandel
+304,7,Teracambio
+304,8,Teramorfosi
+304,9,Tera Shift
+304,11,テラスチェンジ
+304,12,太晶变形
+305,1,テラスシェル
+305,3,테라셸
+305,4,太晶甲殼
+305,5,Téra-Carapace
+305,6,Tera-Panzer
+305,7,Teracaparazón
+305,8,Teraguscio
+305,9,Tera Shell
+305,11,テラスシェル
+305,12,太晶甲壳
+306,1,ゼロフォーミング
+306,3,제로포밍
+306,4,歸零化境
+306,5,Téraformation 0
+306,6,Teraforming Null
+306,7,Teraformación 0
+306,8,Zeroformazione
+306,9,Teraform Zero
+306,11,ゼロフォーミング
+306,12,归零化境
+307,1,どくくぐつ
+307,3,독조종
+307,4,毒傀儡
+307,5,Emprise Toxique
+307,6,Giftpuppenspiel
+307,7,Títere Tóxico
+307,8,Malia Tossica
+307,9,Poison Puppeteer
+307,11,どくくぐつ
+307,12,毒傀儡
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

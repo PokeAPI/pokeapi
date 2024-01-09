@@ -2,24 +2,24 @@ table:
   name: pokemon_v2_movebattlestyle
   schema: public
 array_relationships:
-- name: pokemon_v2_movebattlestylenames
-  using:
-    foreign_key_constraint_on:
-      column: move_battle_style_id
-      table:
-        name: pokemon_v2_movebattlestylename
-        schema: public
-- name: pokemon_v2_naturebattlestylepreferences
-  using:
-    foreign_key_constraint_on:
-      column: move_battle_style_id
-      table:
-        name: pokemon_v2_naturebattlestylepreference
-        schema: public
+  - name: pokemon_v2_movebattlestylenames
+    using:
+      foreign_key_constraint_on:
+        column: move_battle_style_id
+        table:
+          name: pokemon_v2_movebattlestylename
+          schema: public
+  - name: pokemon_v2_naturebattlestylepreferences
+    using:
+      foreign_key_constraint_on:
+        column: move_battle_style_id
+        table:
+          name: pokemon_v2_naturebattlestylepreference
+          schema: public
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns: "*"
-    filter: {}
-    limit: 100000
-  role: anon
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

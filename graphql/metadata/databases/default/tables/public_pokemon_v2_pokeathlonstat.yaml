@@ -2,24 +2,24 @@ table:
   name: pokemon_v2_pokeathlonstat
   schema: public
 array_relationships:
-- name: pokemon_v2_naturepokeathlonstats
-  using:
-    foreign_key_constraint_on:
-      column: pokeathlon_stat_id
-      table:
-        name: pokemon_v2_naturepokeathlonstat
-        schema: public
-- name: pokemon_v2_pokeathlonstatnames
-  using:
-    foreign_key_constraint_on:
-      column: pokeathlon_stat_id
-      table:
-        name: pokemon_v2_pokeathlonstatname
-        schema: public
+  - name: pokemon_v2_naturepokeathlonstats
+    using:
+      foreign_key_constraint_on:
+        column: pokeathlon_stat_id
+        table:
+          name: pokemon_v2_naturepokeathlonstat
+          schema: public
+  - name: pokemon_v2_pokeathlonstatnames
+    using:
+      foreign_key_constraint_on:
+        column: pokeathlon_stat_id
+        table:
+          name: pokemon_v2_pokeathlonstatname
+          schema: public
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns: "*"
-    filter: {}
-    limit: 100000
-  role: anon
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

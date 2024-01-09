@@ -8499,10 +8499,26 @@ move_id,local_language_id,name
 874,8,Corsa all'Oro
 874,9,Make It Rain
 874,11,ゴールドラッシュ
-875,8,Botta
+875,1,サイコブレイド 
+875,3,사이코블레이드
+875,4,精神劍
+875,5,Lame Psychique
+875,6,Psychoschneide
+875,7,Psicohojas
+875,8,Psicolama
 875,9,Psyblade
-876,8,Botta
+875,11,サイコブレイド 
+875,12,精神剑
+876,1,ハイドロスチーム
+876,3,하이드로스팀
+876,4,水蒸氣
+876,5,Hydrovapeur
+876,6,Hydrodampf
+876,7,Hidrovapor
+876,8,Idrovapore
 876,9,Hydro Steam
+876,11,ハイドロスチーム
+876,12,水蒸气
 877,1,カタストロフィ
 877,4,大灾难
 877,8,Catastrofe

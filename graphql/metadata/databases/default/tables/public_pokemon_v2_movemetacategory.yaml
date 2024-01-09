@@ -2,24 +2,24 @@ table:
   name: pokemon_v2_movemetacategory
   schema: public
 array_relationships:
-- name: pokemon_v2_movemeta
-  using:
-    foreign_key_constraint_on:
-      column: move_meta_category_id
-      table:
-        name: pokemon_v2_movemeta
-        schema: public
-- name: pokemon_v2_movemetacategorydescriptions
-  using:
-    foreign_key_constraint_on:
-      column: move_meta_category_id
-      table:
-        name: pokemon_v2_movemetacategorydescription
-        schema: public
+  - name: pokemon_v2_movemeta
+    using:
+      foreign_key_constraint_on:
+        column: move_meta_category_id
+        table:
+          name: pokemon_v2_movemeta
+          schema: public
+  - name: pokemon_v2_movemetacategorydescriptions
+    using:
+      foreign_key_constraint_on:
+        column: move_meta_category_id
+        table:
+          name: pokemon_v2_movemetacategorydescription
+          schema: public
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns: "*"
-    filter: {}
-    limit: 100000
-  role: anon
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

@@ -2,24 +2,24 @@ table:
   name: pokemon_v2_abilitychange
   schema: public
 object_relationships:
-- name: pokemon_v2_ability
-  using:
-    foreign_key_constraint_on: ability_id
-- name: pokemon_v2_versiongroup
-  using:
-    foreign_key_constraint_on: version_group_id
+  - name: pokemon_v2_ability
+    using:
+      foreign_key_constraint_on: ability_id
+  - name: pokemon_v2_versiongroup
+    using:
+      foreign_key_constraint_on: version_group_id
 array_relationships:
-- name: pokemon_v2_abilitychangeeffecttexts
-  using:
-    foreign_key_constraint_on:
-      column: ability_change_id
-      table:
-        name: pokemon_v2_abilitychangeeffecttext
-        schema: public
+  - name: pokemon_v2_abilitychangeeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: ability_change_id
+        table:
+          name: pokemon_v2_abilitychangeeffecttext
+          schema: public
 select_permissions:
-- permission:
-    allow_aggregations: true
-    columns: "*"
-    filter: {}
-    limit: 100000
-  role: anon
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

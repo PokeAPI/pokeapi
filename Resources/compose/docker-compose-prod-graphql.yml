@@ -9,9 +9,7 @@ services:
       POSTGRES_USER: "${POSTGRES_USER}"
 
   app:
-    build:
-      context: .
-      dockerfile: ./Resources/docker/app/Dockerfile
+    image: pokeapi/pokeapi:master
     env_file: .env
     restart: "no"
 

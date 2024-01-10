@@ -138,7 +138,8 @@ update-graphql-data-prod:
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
 	make docker-migrate
 	make docker-build-db
-	docker stop pokeapi_app_1
+	make hasura-apply
+	docker compose stop app
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	docker exec pokeapi_web_1 sh -c 'rm -rf /tmp/cache/*'
 	docker start pokeapi_graphql-engine_1

@@ -7,6 +7,7 @@ pokedex_id,version_group_id
 4,5
 4,6
 5,8
+5,23
 6,9
 7,10
 8,11
@@ -28,6 +29,8 @@ pokedex_id,version_group_id
 26,19
 27,20
 28,20
+28,21
+29,22
 29,20
 30,24
 31,25

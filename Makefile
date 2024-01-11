@@ -147,5 +147,5 @@ update-graphql-data-prod:
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
 	docker compose start graphql-engine
-	sleep 30
+	sleep 120
 	make hasura-apply

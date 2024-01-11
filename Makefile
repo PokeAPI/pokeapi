@@ -1,7 +1,6 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
 .SILENT:

@@ -1,7 +1,6 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
 .SILENT:
@@ -148,5 +147,5 @@ update-graphql-data-prod:
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
 	docker compose start graphql-engine
-	sleep 30
+	sleep 120
 	make hasura-apply

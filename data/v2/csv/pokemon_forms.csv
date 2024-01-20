@@ -1439,9 +1439,9 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10413,decidueye-hisui,hisui,10244,24,1,0,0,2,1299
 10414,dialga-origin,origin,10245,24,1,0,0,2,1300
 10415,palkia-origin,origin,10246,24,1,0,0,2,1301
-10416,basculin-white-striped,white-striped,10247,24,1,0,0,1,1302
-10417,basculegion-female,female,10248,24,1,0,0,1,1303
-10418,enamorus-therian,therian,10249,24,1,0,0,1,1304
+10416,basculin-white-striped,white-striped,10247,24,1,0,0,3,1302
+10417,basculegion-female,female,10248,24,1,0,0,2,1303
+10418,enamorus-therian,therian,10249,24,1,0,0,2,1304
 10419,tauros-paldea-combat-breed,paldea-combat-breed,10250,25,0,0,0,2,1305
 10420,tauros-paldea-blaze-breed,paldea-blaze-breed,10251,25,0,0,0,3,1306
 10421,tauros-paldea-aqua-breed,paldea-aqua-breed,10252,25,0,0,0,4,1307

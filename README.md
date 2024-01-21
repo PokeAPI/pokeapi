@@ -51,7 +51,7 @@ To build or rebuild the database by applying any CSV file update, run
 make build-db
 ```
 
-Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
+Visit [localhost:8000/api/v2/](http://localhost:8000/api/v2/) to see the running API!
 
 Each time the `build-db` script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 

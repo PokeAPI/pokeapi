@@ -1044,5 +1044,12 @@ id,location_id,game_index,identifier
 1153,789,0,outside
 1154,1043,0,trial-site
 1155,1043,0,totems-den
-1156,746,0,main
+1156,746,0,
 1157,746,0,totems-den
+1158,1052,0,poni-island-reached
+1159,1052,0,ulaula-island-reached
+1160,1052,0,elite-four-defeated
+1161,1053,0,
+1162,1050,0,
+1163,750,0,all-areas
+1164,762,0,all-areas

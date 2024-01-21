@@ -42,6 +42,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     ```sh
     make serve
     ```
+    This will serve on port `8000` by default.
 
 ### Database setup
 
@@ -58,7 +59,7 @@ The option to build individual portions of the database was removed in order to 
 If you ever need to wipe the database use this command:
 
 ```sh
-make wipe_db
+make wipe-sqlite-db
 ```
 
 ## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
@@ -80,6 +81,11 @@ docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; bui
 ```
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
+
+To rebuild the Docker database and apply any CSV file updates, run
+```sh
+make docker-build-db
+```
 
 ## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 

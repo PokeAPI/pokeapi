@@ -37,14 +37,15 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make setup
     ```
 
-- Run the server using the following command:
+- Run the server on port `8000` using the following command:
 
     ```sh
     make serve
     ```
-    This will serve on port `8000` by default.
 
 ### Database setup
+
+To build or rebuild the database by applying any CSV file update, run
 
 ```sh
 make build-db
@@ -52,9 +53,7 @@ make build-db
 
 Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
 
-Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
-
-The option to build individual portions of the database was removed in order to increase performance of the build script.
+Each time the `build-db` script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
 If you ever need to wipe the database use this command:
 
@@ -62,9 +61,18 @@ If you ever need to wipe the database use this command:
 make wipe-sqlite-db
 ```
 
+If the database schema has changed, generate any outstanding migrations and apply them
+
+```sh
+make make-migrations
+make migrate
+```
+
+Run `make help` to see all tasks.
+
 ## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
-There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokéAPI.
+There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.
 
 Start everything by
 
@@ -82,9 +90,17 @@ docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; bui
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
-To rebuild the Docker database and apply any CSV file updates, run
+To rebuild the database and apply any CSV file updates, run
+
 ```sh
 make docker-build-db
+```
+
+If the database schema has changed, generate the migrations and apply those
+
+```sh
+make docker-make-migrations
+make docker-migrate
 ```
 
 ## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
@@ -101,7 +117,7 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
 ## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
@@ -177,7 +193,7 @@ This project exists thanks to all the people who [contribute](https://github.com
 
 <a href="graphs/contributors"><img src="https://opencollective.com/pokeapi/contributors.svg?width=890" /></a>
 
-All contributions are welcome: bug fixes, data contributions, recommendations.
+All contributions are welcome: bug fixes, data contributions, and recommendations.
 
 Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 

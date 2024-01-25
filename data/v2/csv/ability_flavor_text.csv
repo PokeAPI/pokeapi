@@ -146,6 +146,7 @@ may cause the target to flinch."
 1,20,12,"通过释放臭臭的气味，
 在攻击的时候，
 有时会使对手畏缩。"
+1,25,9,"By releasing a stench when attacking, the Pokémon may cause the target to flinch."
 2,5,9,Summons rain in battle.
 2,6,9,Summons rain in battle.
 2,7,9,Summons rain in battle.
@@ -254,6 +255,7 @@ au combat."
 天気を　雨に　する。"
 2,20,12,"出场时，
 会将天气变为下雨。"
+2,25,9,The Pokémon makes it rain when it enters a battle.
 3,5,9,Gradually boosts SPEED.
 3,6,9,Gradually boosts SPEED.
 3,7,9,Gradually boosts SPEED.
@@ -339,6 +341,7 @@ gradually boosted."
 3,20,9,Its Speed stat is boosted every turn.
 3,20,11,毎ターン　素早さが　上がる。
 3,20,12,每一回合速度会变快。
+3,25,9,The Pokémon's Speed stat is boosted every turn.
 4,5,9,Blocks critical hits.
 4,6,9,Blocks critical hits.
 4,7,9,Blocks critical hits.
@@ -470,6 +473,7 @@ che gli evita di subire brutti colpi."
 急所に　当たらない。"
 4,20,12,"被坚硬的甲壳守护着，
 不会被对手的攻击击中要害。"
+4,25,9,Hard armor protects the Pokémon from critical hits.
 5,5,9,Negates 1-hit KO attacks.
 5,6,9,Negates 1-hit KO attacks.
 5,7,9,Negates 1-hit KO attacks.
@@ -627,6 +631,7 @@ moves cannot knock it out, either."
 5,20,12,"即使受到对手的招式攻击，
 也不会被一击打倒。
 一击必杀的招式也没有效果。"
+5,25,9,The Pokémon cannot be knocked out by a single hit as long as its HP is full. One-hit KO moves will also fail to knock it out.
 6,5,9,Prevents self-destruction.
 6,6,9,Prevents self-destruction.
 6,7,9,Prevents self-destruction.
@@ -777,6 +782,7 @@ Self-Destruct, by dampening its surroundings."
 だれも　使えなくなる。"
 6,20,12,"通过把周围都弄湿，
 使谁都无法使用自爆等爆炸类的招式。"
+6,25,9,"The Pokémon dampens its surroundings, preventing all Pokémon from using explosive moves such as Self-Destruct."
 7,5,9,Prevents paralysis.
 7,6,9,Prevents paralysis.
 7,7,9,Prevents paralysis.
@@ -896,6 +902,7 @@ di subire gli effetti della paralisi."
 まひ状態に　ならない。"
 7,20,12,"因为身体柔软，
 不会变为麻痹状态。"
+7,25,9,The Pokémon's limber body prevents it from being paralyzed.
 8,5,9,Ups evasion in a sandstorm.
 8,6,9,Ups evasion in a sandstorm.
 8,7,9,Ups evasion in a sandstorm.
@@ -1007,6 +1014,7 @@ de sable."
 回避率が　上がる。"
 8,20,12,"在沙暴的时候，
 闪避率会提高。"
+8,25,9,Boosts the Pokémon's evasiveness in a sandstorm.
 9,5,9,Paralyzes on contact.
 9,6,9,Paralyzes on contact.
 9,7,9,Paralyzes on contact.
@@ -1148,6 +1156,7 @@ contact with it may cause paralysis."
 まひさせる　ことがある。"
 9,20,12,"身上带有静电，
 有时会让接触到的对手麻痹。"
+9,25,9,The Pokémon is charged with static electricity and may paralyze attackers that make direct contact with it.
 10,5,9,Turns electricity into HP.
 10,6,9,Turns electricity into HP.
 10,7,9,Turns electricity into HP.
@@ -1275,6 +1284,7 @@ of taking damage."
 ダメージを　受けずに　回復する。"
 10,20,12,"受到电属性的招式攻击时，
 不会受到伤害，而是会回复。"
+10,25,9,"If hit by an Electric-type move, the Pokémon has its HP restored instead of taking damage."
 11,5,9,Changes water into HP.
 11,6,9,Changes water into HP.
 11,7,9,Changes water into HP.
@@ -1402,6 +1412,7 @@ taking damage."
 ダメージを　受けずに　回復する。"
 11,20,12,"受到水属性的招式攻击时，
 不会受到伤害，而是会回复。"
+11,25,9,"If hit by a Water-type move, the Pokémon has its HP restored instead of taking damage."
 12,5,9,Prevents attraction.
 12,6,9,Prevents attraction.
 12,7,9,Prevents attraction.
@@ -1541,6 +1552,7 @@ being infatuated or falling for taunts."
 ならない。"
 12,20,12,"因为感觉迟钝，
 不会变为着迷和被挑衅状态。"
+12,25,9,"The Pokémon is oblivious, keeping it from being infatuated, falling for taunts, or being affected by Intimidate."
 13,5,9,Negates weather effects.
 13,6,9,Negates weather effects.
 13,7,9,Negates weather effects.
@@ -1639,6 +1651,7 @@ atmosferiche."
 13,20,11,"あらゆる　天気の　影響が
 なくなって　しまう。"
 13,20,12,任何天气的影响都会消失。
+13,25,9,Eliminates the effects of weather.
 14,5,9,Raises accuracy.
 14,6,9,Raises accuracy.
 14,7,9,Raises accuracy.
@@ -1752,6 +1765,7 @@ occhi composti."
 技の　命中率が　上がる。"
 14,20,12,"因为拥有复眼，
 招式的命中率会提高。"
+14,25,9,The Pokémon's compound eyes boost its accuracy.
 15,5,9,Prevents sleep.
 15,6,9,Prevents sleep.
 15,7,9,Prevents sleep.
@@ -1862,6 +1876,7 @@ fall asleep."
 ねむり状態に　ならない。"
 15,20,12,"因为有着睡不着的体质，
 所以不会陷入睡眠状态。"
+15,20,9,The Pokémon's insomnia prevents it from falling asleep.
 16,5,9,Changes type to foe’s move.
 16,6,9,Changes type to foe’s move.
 16,7,9,Changes type to foe’s move.
@@ -2103,6 +2118,7 @@ getting poisoned."
 どく状態に　ならない。"
 17,20,12,"因为体内拥有免疫能力，
 不会变为中毒状态。"
+17,25,9,The Pokémon's immune system prevents it from being poisoned.
 18,5,9,Powers up if hit by fire.
 18,6,9,Powers up if hit by fire.
 18,7,9,Powers up if hit by fire.
@@ -2258,6 +2274,7 @@ by one."
 18,20,12,"受到火属性的招式攻击时，
 吸收火焰，自己使出的
 火属性招式会变强。"
+18,25,9,"If hit by a Fire-type move, the Pokémon absorbs the flames and uses them to power up its own Fire-type moves."
 19,5,9,Prevents added effects.
 19,6,9,Prevents added effects.
 19,7,9,Prevents added effects.
@@ -2388,6 +2405,7 @@ attacks taken."
 技の　追加効果を　受けなくなる。"
 19,20,12,"被鳞粉守护着，
 不会受到招式的追加效果影响。"
+19,25,9,Protective dust shields the Pokémon from the additional effects of moves.
 20,5,9,Prevents confusion.
 20,6,9,Prevents confusion.
 20,7,9,Prevents confusion.
@@ -2508,6 +2526,7 @@ it from becoming confused."
 こんらん状態に　ならない。"
 20,20,12,"因为我行我素，
 不会变为混乱状态。"
+20,25,9,"The Pokémon sticks to its own tempo, preventing it from becoming confused or being affected by Intimidate."
 21,5,9,Firmly anchors the body.
 21,6,9,Firmly anchors the body.
 21,7,9,Firmly anchors the body.
@@ -2660,6 +2679,7 @@ switching out."
 技や　道具が　効かなくなる。"
 21,20,12,"用吸盘牢牢贴在地面上，
 让替换宝可梦的招式和道具无效。"
+21,27,9,The Pokémon uses suction cups to stay in one spot. This protects it from moves and items that would force it to switch out.
 22,5,9,Lowers the foe’s ATTACK.
 22,6,9,Lowers the foe’s ATTACK.
 22,7,9,Lowers the foe’s ATTACK.
@@ -2804,6 +2824,7 @@ entering battle, lowering their Attack stat."
 22,20,12,"出场时威吓对手，
 让其退缩，
 降低对手的攻击。"
+22,25,9,"When the Pokémon enters a battle, it intimidates opposing Pokémon and makes them cower, lowering their Attack stats."
 23,5,9,Prevents the foe’s escape.
 23,6,9,Prevents the foe’s escape.
 23,7,9,Prevents the foe’s escape.
@@ -2917,6 +2938,7 @@ shadow to prevent it from escaping."
 逃げたり　交代　できなくする。"
 23,20,12,"踩住对手的影子
 使其无法逃走或替换。"
+23,25,9,The Pokémon steps on the opposing Pokémon's shadows to prevent them from fleeing or switching out.
 24,5,9,Hurts to touch.
 24,6,9,Hurts to touch.
 24,7,9,Hurts to touch.
@@ -3060,6 +3082,7 @@ to the attacker on contact."
 24,20,12,"受到攻击时，
 用粗糙的皮肤弄伤
 接触到自己的对手。"
+24,25,9,The Pokémon's rough skin damages attackers that make direct contact with it.
 25,5,9,“Super effective” hits.
 25,6,9,“Super effective” hits.
 25,7,9,“Super effective” hits.
@@ -3317,6 +3340,7 @@ immunity to all Ground-type moves."
 じめんタイプの　技を　受けない。"
 26,20,12,"从地面浮起，
 从而不会受到地面属性招式的攻击。"
+26,25,9,"By floating in the air, the Pokémon receives full immunity to all Ground-type moves."
 27,5,9,Leaves spores on contact.
 27,6,9,Leaves spores on contact.
 27,7,9,Leaves spores on contact.
@@ -3465,6 +3489,7 @@ or paralysis on its attacker."
 27,20,12,"受到攻击时，
 有时会把接触到自己的对手
 变为中毒、麻痹或睡眠状态。"
+27,25,9,"Contact with the Pokémon may inflict poison, sleep, or paralysis on the attacker."
 28,5,9,Passes on status problems.
 28,6,9,Passes on status problems.
 28,7,9,Passes on status problems.
@@ -3615,6 +3640,7 @@ it inflicts a burn, poison, or paralysis to the Pokémon."
 相手に　うつす。"
 28,20,12,"将自己的中毒、麻痹
 或灼伤状态传染给对手。"
+28,25,9,"If the Pokémon is burned, paralyzed, or poisoned by another Pokémon, that Pokémon will be inflicted with the same status condition."
 29,5,9,Prevents ability reduction.
 29,6,9,Prevents ability reduction.
 29,7,9,Prevents ability reduction.
@@ -3742,6 +3768,7 @@ lowering the Pokémon’s stats."
 能力を　下げられない。"
 29,20,12,"不会因为对手的招式或特性
 而被降低能力。"
+29,25,9,Prevents other Pokémon's moves or Abilities from lowering the Pokémon's stats.
 30,5,9,Heals upon switching out.
 30,6,9,Heals upon switching out.
 30,7,9,Heals upon switching out.
@@ -3866,6 +3893,7 @@ switches out."
 状態異常が　治る。"
 30,20,12,"回到同行队伍后，
 异常状态就会被治愈。"
+30,25,9,The Pokémon's status conditions are cured when it switches out.
 31,5,9,Draws electrical moves.
 31,6,9,Draws electrical moves.
 31,7,9,Draws electrical moves.
@@ -4016,6 +4044,7 @@ it boosts its Sp. Atk."
 特攻が　上がる。"
 31,20,12,"将电属性的招式吸引到自己身上，
 不会受到伤害，而是会提高特攻。"
+31,25,9,"The Pokémon draws in all Electric-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted."
 32,5,9,Promotes added effects.
 32,6,9,Promotes added effects.
 32,7,9,Promotes added effects.
@@ -4136,6 +4165,7 @@ when attacking."
 技の　追加効果が　でやすい。"
 32,20,12,"托天恩的福，
 招式的追加效果容易出现。"
+32,25,9,Raises the likelihood of additional effects occurring when the Pokémon uses its moves.
 33,5,9,Raises SPEED in rain.
 33,6,9,Raises SPEED in rain.
 33,7,9,Raises SPEED in rain.
@@ -4241,6 +4271,7 @@ Speed stat in rain."
 素早さが　上がる。"
 33,20,12,"下雨天气时，
 速度会提高。"
+33,25,9,Boosts the Pokémon's Speed stat in rain.
 34,5,9,Raises SPEED in sunshine.
 34,6,9,Raises SPEED in sunshine.
 34,7,9,Raises SPEED in sunshine.
@@ -4348,6 +4379,7 @@ Speed stat in sunshine."
 素早さが　上がる。"
 34,20,12,"晴朗天气时，
 速度会提高。"
+34,25,9,Boosts the Pokémon's Speed stat in harsh sunlight.
 35,5,9,Encounter rate increases.
 35,6,9,Encounter rate increases.
 35,7,9,Encounter rate increases.
@@ -4487,6 +4519,7 @@ illuminating the surroundings."
 遭遇　しやすくなる。"
 35,20,12,"通过让周围变亮，
 变得容易遇到野生的宝可梦。"
+35,26,9,"By illuminating its surroundings, the Pokémon prevents its accuracy from being lowered."
 36,5,9,Copies special ability.
 36,6,9,Copies special ability.
 36,7,9,Copies special ability.
@@ -4612,6 +4645,7 @@ opposing Pokémon’s Ability."
 同じ　特性に　なる。"
 36,20,12,"出场时，复制对手的特性，
 变为与之相同的特性。"
+36,25,9,"When it enters a battle, the Pokémon copies an opposing Pokémon's Ability."
 37,5,9,Raises ATTACK.
 37,6,9,Raises ATTACK.
 37,7,9,Raises ATTACK.
@@ -4705,6 +4739,7 @@ Attack stat."
 37,20,11,"物理攻撃の
 威力が　２倍になる。"
 37,20,12,物理攻击的威力会变为２倍。
+37,25,9,Doubles the Pokémon's Attack stat.
 38,5,9,Poisons foe on contact.
 38,6,9,Poisons foe on contact.
 38,7,9,Poisons foe on contact.
@@ -4819,6 +4854,7 @@ subit une attaque directe."
 どく状態に　することがある。"
 38,20,12,"有时会让接触到自己的
 对手变为中毒状态。"
+38,25,9,Contact with the Pokémon may poison the attacker.
 39,5,9,Prevents flinching.
 39,6,9,Prevents flinching.
 39,7,9,Prevents flinching.
@@ -4938,6 +4974,7 @@ the Pokémon from flinching."
 相手の　攻撃に　ひるまない。"
 39,20,12,"拥有经过锻炼的精神，
 而不会因对手的攻击而畏缩。"
+39,25,9,The Pokémon's intense focus prevents it from flinching or being affected by Intimidate.
 40,5,9,Prevents freezing.
 40,6,9,Prevents freezing.
 40,7,9,Prevents freezing.
@@ -5061,6 +5098,7 @@ prevents the Pokémon from becoming frozen."
 こおり状態に　ならない。"
 40,20,12,"将炽热的熔岩覆盖在身上，
 不会变为冰冻状态。"
+40,25,9,The Pokémon’s hot magma coating prevents it from being frozen.
 41,5,9,Prevents burns.
 41,6,9,Prevents burns.
 41,7,9,Prevents burns.
@@ -5183,6 +5221,7 @@ prevents the Pokémon from getting a burn."
 やけど状態に　ならない。"
 41,20,12,"将水幕裹在身上，
 不会变为灼伤状态。"
+41,25,9,The Pokémon's water veil prevents it from being burned.
 42,5,9,Traps STEEL-type POKéMON.
 42,6,9,Traps STEEL-type POKéMON.
 42,7,9,Traps STEEL-type POKéMON.
@@ -5322,6 +5361,7 @@ its magnetic force."
 逃げられなくする。"
 42,20,12,"用磁力吸住钢属性的宝可梦，
 使其无法逃走。"
+42,25,9,Prevents Steel-type Pokémon from fleeing by pulling them in with magnetism.
 43,5,9,Avoids sound-based moves.
 43,6,9,Avoids sound-based moves.
 43,7,9,Avoids sound-based moves.
@@ -5447,6 +5487,7 @@ immunity to all sound-based moves."
 音の　攻撃を　受けない。"
 43,20,12,"通过屏蔽声音，
 不受到声音招式的攻击。"
+43,25,9,Soundproofing gives the Pokémon full immunity to all sound-based moves.
 44,5,9,Slight HP recovery in rain.
 44,6,9,Slight HP recovery in rain.
 44,7,9,Slight HP recovery in rain.
@@ -5558,6 +5599,7 @@ lorsqu’il pleut."
 少しずつ　ＨＰを　回復する。"
 44,20,12,"下雨天气时，
 会缓缓回复ＨＰ。"
+44,25,9,The Pokémon gradually regains HP in rain.
 45,5,9,Summons a sandstorm.
 45,6,9,Summons a sandstorm.
 45,7,9,Summons a sandstorm.
@@ -5675,6 +5717,7 @@ a battle."
 天気を　砂あらしにする。"
 45,20,12,"出场时，
 会把天气变为沙暴。"
+45,25,9,The Pokémon summons a sandstorm when it enters a battle.
 46,5,9,Raises foe’s PP usage.
 46,6,9,Raises foe’s PP usage.
 46,7,9,Raises foe’s PP usage.
@@ -5805,6 +5848,7 @@ raises their PP usage."
 多く　減らす。"
 46,20,12,"给予对手压迫感，
 大量减少其使用招式的ＰＰ。"
+46,25,9,"Puts other Pokémon under pressure, causing them to expend more PP to use their moves."
 47,5,9,Heat-and-cold protection.
 47,6,9,Heat-and-cold protection.
 47,7,9,Heat-and-cold protection.
@@ -5968,6 +6012,7 @@ Ice-type moves."
 技の　ダメージを　半減させる。"
 47,20,12,"因为被厚厚的脂肪保护着，
 会让火属性和冰属性的招式伤害减半。"
+47,25,9,"The Pokémon is protected by a layer of thick fat, which halves the damage taken from Fire- and Ice-type moves."
 48,5,9,Awakens quickly from sleep.
 48,6,9,Awakens quickly from sleep.
 48,7,9,Awakens quickly from sleep.
@@ -6107,6 +6152,7 @@ as other Pokémon."
 目覚める　ことが　できる。"
 48,20,12,"即使变为睡眠状态，
 也能以２倍的速度提早醒来。"
+48,25,9,The Pokémon awakens from sleep twice as fast as other Pokémon.
 49,5,9,Burns the foe on contact.
 49,6,9,Burns the foe on contact.
 49,7,9,Burns the foe on contact.
@@ -6225,6 +6271,7 @@ Verbrennungen zu."
 やけど状態に　する　ことがある。"
 49,20,12,"有时会让接触到自己的
 对手变为灼伤状态。"
+49,25,9,Contact with the Pokémon may burn the attacker.
 50,5,9,Makes escaping easier.
 50,6,9,Makes escaping easier.
 50,7,9,Makes escaping easier.
@@ -6332,6 +6379,7 @@ from wild Pokémon."
 必ず　逃げられる。"
 50,20,12,"一定能从野生宝可梦
 那儿逃走。"
+50,25,9,Enables a sure getaway from wild Pokémon.
 51,5,9,Prevents loss of accuracy.
 51,6,9,Prevents loss of accuracy.
 51,7,9,Prevents loss of accuracy.
@@ -6456,6 +6504,7 @@ Pokémon’s accuracy."
 命中率を　下げられない。"
 51,20,12,"多亏了锐利的目光，
 命中率不会被降低。"
+51,25,9,The Pokémon's keen eyes prevent its accuracy from being lowered.
 52,5,9,Prevents ATTACK reduction.
 52,6,9,Prevents ATTACK reduction.
 52,7,9,Prevents ATTACK reduction.
@@ -6581,6 +6630,7 @@ prevent other Pokémon from lowering its Attack stat."
 相手に　攻撃を　下げられない。"
 52,20,12,"因为拥有以力量自豪的钳子，
 不会被对手降低攻击。"
+52,25,9,"The Pokémon's prized, mighty pincers prevent other Pokémon from lowering its Attack stat."
 53,5,9,May pick up items.
 53,6,9,May pick up items.
 53,7,9,May pick up items.
@@ -6734,6 +6784,7 @@ outside of battle, too."
 冒険中も　拾ってくる。"
 53,20,12,"有时会捡来对手用过的道具，
 冒险过程中也会捡到。"
+53,25,9,"The Pokémon may pick up an item another Pokémon used during a battle. It may pick up items outside of battle, too."
 54,5,9,Moves only every two turns.
 54,6,9,Moves only every two turns.
 54,7,9,Moves only every two turns.
@@ -6859,6 +6910,7 @@ on the previous turn."
 次の　ターンは　休んでしまう。"
 54,20,12,"如果使出招式，
 下一回合就会休息。"
+54,25,9,"Each time the Pokémon uses a move, it spends the next turn loafing around."
 55,5,9,Trades accuracy for power.
 55,6,9,Trades accuracy for power.
 55,7,9,Trades accuracy for power.
@@ -6973,6 +7025,7 @@ la Précision."
 命中率が　下がる。"
 55,20,12,"自己的攻击变高，
 但命中率会降低。"
+55,25,9,Boosts the Pokémon's Attack stat but lowers its accuracy.
 56,5,9,Infatuates on contact.
 56,6,9,Infatuates on contact.
 56,7,9,Infatuates on contact.
@@ -7091,6 +7144,7 @@ un attacco diretto."
 56,20,11,"自分に　触った　相手を
 メロメロに　することが　ある。"
 56,20,12,有时会让接触到自己的对手着迷。
+56,25,9,The Pokémon may infatuate attackers that make direct contact with it.
 57,5,9,Powers up with MINUS.
 57,6,9,Powers up with MINUS.
 57,7,9,Powers up with MINUS.
@@ -7238,6 +7292,7 @@ with the Plus or Minus Ability is also in battle."
 57,20,12,"出场的伙伴之间
 如果有正电或负电特性的宝可梦，
 自己的特攻会提高。"
+57,25,9,Boosts the Sp. Atk stat of the Pokémon if an ally with the Plus or Minus Ability is also in battle.
 58,5,9,Powers up with PLUS.
 58,6,9,Powers up with PLUS.
 58,7,9,Powers up with PLUS.
@@ -7385,6 +7440,7 @@ with the Plus or Minus Ability is also in battle."
 58,20,12,"出场的伙伴之间
 如果有正电或负电特性的宝可梦，
 自己的特攻会提高。"
+58,25,9,Boosts the Sp. Atk stat of the Pokémon if an ally with the Plus or Minus Ability is also in battle.
 59,5,9,Changes with the weather.
 59,6,9,Changes with the weather.
 59,7,9,Changes with the weather.
@@ -7678,6 +7734,7 @@ cannot be removed by other Pokémon."
 相手に　道具を　奪われない。"
 60,20,12,"因为道具是粘在黏性身体上的，
 所以不会被对手夺走。"
+60,25,9,The Pokémon's held items cling to its sticky body and cannot be removed by other Pokémon.
 61,5,9,Heals the body by shedding.
 61,6,9,Heals the body by shedding.
 61,7,9,Heals the body by shedding.
@@ -7816,6 +7873,7 @@ by shedding its skin."
 治すことが　ある。"
 61,20,12,"通过蜕去身上的皮，
 有时会治愈异常状态。"
+61,25,9,The Pokémon may cure its own status conditions by shedding its skin.
 62,5,9,Ups ATTACK if suffering.
 62,6,9,Ups ATTACK if suffering.
 62,7,9,Ups ATTACK if suffering.
@@ -7963,6 +8021,7 @@ the Pokémon’s Attack stat."
 62,20,12,"如果变为异常状态，
 会拿出毅力，
 攻击会提高。"
+62,25,9,It's so gutsy that having a status condition boosts the Pokémon's Attack stat.
 63,5,9,Ups DEFENSE if suffering.
 63,6,9,Ups DEFENSE if suffering.
 63,7,9,Ups DEFENSE if suffering.
@@ -8113,6 +8172,7 @@ stat if it has a status condition."
 63,20,12,"如果变为异常状态，
 神奇鳞片会发生反应，
 防御会提高。"
+63,25,9,The Pokémon's marvelous scales boost its Defense stat if it has a status condition.
 64,5,9,Draining causes injury.
 64,6,9,Draining causes injury.
 64,7,9,Draining causes injury.
@@ -8268,6 +8328,7 @@ attackers using any draining move."
 64,20,12,"吸收了污泥浆的对手
 会因强烈的恶臭
 而受到伤害，减少ＨＰ。"
+64,25,9,The strong stench of the Pokémon's oozed liquid damages attackers that use HP-draining moves.
 65,5,9,Ups GRASS moves in a pinch.
 65,6,9,Ups GRASS moves in a pinch.
 65,7,9,Ups GRASS moves in a pinch.
@@ -8411,6 +8472,7 @@ HP is low."
 威力が　上がる。"
 65,20,12,"ＨＰ减少的时候，
 草属性的招式威力会提高。"
+65,25,9,Powers up Grass-type moves when the Pokémon's HP is low.
 66,5,9,Ups FIRE moves in a pinch.
 66,6,9,Ups FIRE moves in a pinch.
 66,7,9,Ups FIRE moves in a pinch.
@@ -8554,6 +8616,7 @@ is low."
 威力が　上がる。"
 66,20,12,"ＨＰ减少的时候，
 火属性的招式威力会提高。"
+66,25,9,Powers up Fire-type moves when the Pokémon's HP is low.
 67,5,9,Ups WATER moves in a pinch.
 67,6,9,Ups WATER moves in a pinch.
 67,7,9,Ups WATER moves in a pinch.
@@ -8697,6 +8760,7 @@ HP is low."
 威力が　上がる。"
 67,20,12,"ＨＰ减少的时候，
 水属性的招式威力会提高。"
+67,25,9,Powers up Water-type moves when the Pokémon's HP is low.
 68,5,9,Ups BUG moves in a pinch.
 68,6,9,Ups BUG moves in a pinch.
 68,7,9,Ups BUG moves in a pinch.
@@ -8840,6 +8904,7 @@ is low."
 威力が　上がる。"
 68,20,12,"ＨＰ减少的时候，
 虫属性的招式威力会提高。"
+68,25,9,Powers up Bug-type moves when the Pokémon's HP is low.
 69,5,9,Prevents recoil damage.
 69,6,9,Prevents recoil damage.
 69,7,9,Prevents recoil damage.
@@ -8958,6 +9023,7 @@ würde."
 ＨＰが　減らない。"
 69,20,12,"即使使出会受反作用力伤害的招式，
 ＨＰ也不会减少。"
+69,25,9,Protects the Pokémon from recoil damage.
 70,5,9,Summons sunlight in battle.
 70,6,9,Summons sunlight in battle.
 70,7,9,Summons sunlight in battle.
@@ -9081,6 +9147,7 @@ a battle."
 天気を　晴れに　する。"
 70,20,12,"出场时，
 会将天气变为晴朗。"
+70,25,9,Turns the sunlight harsh when the Pokémon enters a battle.
 71,5,9,Prevents fleeing.
 71,6,9,Prevents fleeing.
 71,7,9,Prevents fleeing.
@@ -9174,6 +9241,7 @@ from fleeing."
 71,20,11,"戦闘で　相手を
 逃げられなくする。"
 71,20,12,在战斗中让对手无法逃走。
+71,25,9,Prevents opposing Pokémon from fleeing from battle.
 72,5,9,Prevents sleep.
 72,6,9,Prevents sleep.
 72,7,9,Prevents sleep.
@@ -9289,6 +9357,7 @@ it from falling asleep."
 ねむり状態に　ならない。"
 72,20,12,"通过激发出干劲，
 不会变为睡眠状态。"
+72,25,9,"The Pokémon is full of vitality, and that prevents it from falling asleep."
 73,5,9,Prevents ability reduction.
 73,6,9,Prevents ability reduction.
 73,7,9,Prevents ability reduction.
@@ -9416,6 +9485,7 @@ prevents other Pokémon from lowering its stats."
 相手に　能力を　下げられない。"
 73,20,12,"被白色烟雾保护着，
 不会被对手降低能力。"
+73,25,9,"The Pokémon is protected by its white smoke, which prevents other Pokémon from lowering its stats."
 74,5,9,Raises ATTACK.
 74,6,9,Raises ATTACK.
 74,7,9,Raises ATTACK.
@@ -9546,6 +9616,7 @@ Attack stat."
 ２倍に　なる。"
 74,20,12,"因瑜伽的力量，
 物理攻击的威力会变为２倍。"
+74,25,9,"Using its pure power, the Pokémon doubles its Attack stat."
 75,5,9,Blocks critical hits.
 75,6,9,Blocks critical hits.
 75,7,9,Blocks critical hits.
@@ -9677,6 +9748,7 @@ che gli evita di subire brutti colpi."
 急所に　当たらない。"
 75,20,12,"被坚硬的壳保护着，
 对手的攻击不会击中要害。"
+75,25,9,A hard shell protects the Pokémon from critical hits.
 76,5,9,Negates weather effects.
 76,6,9,Negates weather effects.
 76,7,9,Negates weather effects.
@@ -9775,6 +9847,7 @@ atmosferiche."
 76,20,11,"あらゆる　天気の　影響が
 消えて　しまう。"
 76,20,12,所有天气的影响都会消失。
+76,27,9,Eliminates the effects of weather.
 77,8,9,"Raises evasion if the
 Pokémon is confused."
 77,9,9,"Raises evasion if the
@@ -9883,6 +9956,7 @@ verwirrt ist."
 回避率が　アップする。"
 77,20,12,"在混乱状态时，
 闪避率会提高。"
+77,25,9,Boosts the Pokémon's evasiveness if it is confused.
 78,8,9,"Raises Speed if hit by an
 Electric-type move."
 78,9,9,"Raises Speed if hit by an
@@ -10027,6 +10101,7 @@ instead of taking damage."
 素早さが　上がる。"
 78,20,12,"受到电属性的招式攻击时，
 不会受到伤害，而是速度会提高。"
+78,27,9,"The Pokémon takes no damage when hit by Electric-type moves. Instead, its Speed stat is boosted."
 79,8,9,"Raises Attack if the foe
 is of the same gender."
 79,9,9,"Raises Attack if the foe
@@ -10187,6 +10262,7 @@ Pokémon of the opposite gender."
 79,20,12,"面对性别相同的对手，
 会燃起斗争心，变得更强。
 而面对性别不同的，则会变弱。"
+79,25,9,"The Pokémon's competitive spirit makes it deal more damage to Pokémon of the same gender, but less damage to Pokémon of the opposite gender."
 80,8,9,"Raises Speed each time
 the Pokémon flinches."
 80,9,9,"Raises Speed each time
@@ -10327,6 +10403,7 @@ stat each time the Pokémon flinches."
 80,20,12,"每次畏缩时，
 不屈之心就会燃起，
 速度也会提高。"
+80,25,9,The Pokémon's determination boosts its Speed stat every time it flinches.
 81,8,9,"Raises evasion in a
 hailstorm."
 81,9,9,"Raises evasion in a
@@ -10432,6 +10509,7 @@ de grêle."
 回避率が　上がる。"
 81,20,12,"冰雹天气时，
 闪避率会提高。"
+81,25,9,Boosts the Pokémon's evasiveness in snow.
 82,8,9,"Encourages the early use
 of a held Berry."
 82,9,9,"Encourages the early use
@@ -10580,6 +10658,7 @@ drops to half or less, which is sooner than usual."
 時に　食べてしまう。"
 82,20,12,"原本ＨＰ变得很少时才会吃树果，
 在ＨＰ还有一半时就会把它吃掉。"
+82,25,9,"If the Pokémon is holding a Berry to be eaten when its HP is low, it will instead eat the Berry when its HP drops to half or less."
 83,8,9,"Raises Attack upon taking
 a critical hit."
 83,9,9,"Raises Attack upon taking
@@ -10724,6 +10803,7 @@ and that maxes its Attack stat."
 83,20,12,"要害被击中时，
 会大发雷霆，
 攻击力变为最大。"
+83,25,9,"The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat."
 84,8,9,"Raises Speed if a held
 item is used."
 84,9,9,"Raises Speed if a held
@@ -10844,6 +10924,7 @@ used or lost."
 素早さが　上がる。"
 84,20,12,"失去所持有的道具时，
 速度会提高。"
+84,25,9,Boosts the Speed stat if the Pokémon's held item is used or lost.
 85,8,9,"Weakens the power of
 Fire-type moves."
 85,9,9,"Weakens the power of
@@ -10980,6 +11061,7 @@ damage from Fire-type moves that hit it."
 威力を　半減させる。"
 85,20,12,"耐热的体质会
 让火属性的招式威力减半。"
+85,25,9,The Pokémon's heatproof body halves the damage taken from Fire-type moves.
 86,8,9,"The Pokémon is prone to
 wild stat changes."
 86,9,9,"The Pokémon is prone to
@@ -11083,6 +11165,7 @@ pour le Pokémon."
 86,20,11,"能力　変化が
 いつもの　２倍に　なる。"
 86,20,12,能力变化会变为平时的２倍。
+86,25,9,Doubles the effects of the Pokémon's stat changes.
 87,8,9,"Reduces HP if it is hot.
 Water restores HP."
 87,9,9,"Reduces HP if it is hot.
@@ -11247,6 +11330,7 @@ the damage received from Fire-type moves."
 87,20,12,"下雨天气时和受到水属性的招式时，
 ＨＰ会回复。晴朗天气时和受到火属性的
 招式时，ＨＰ会减少。"
+87,25,9,"Restores the Pokémon's HP in rain or when it is hit by Water-type moves. Reduces HP in harsh sunlight, and increases the damage received from Fire-type moves."
 88,8,9,"Adjusts power according
 to the foe’s ability."
 88,9,9,"Adjusts power according
@@ -11409,6 +11493,7 @@ Sp. Atk stat—whichever will be more effective."
 88,20,12,"比较对手的防御和特防，
 根据较低的那项能力
 相应地提高自己的攻击或特攻。"
+88,27,9,The Pokémon compares an opposing Pokémon's Defense and Sp. Def stats before raising its own Attack or Sp. Atk stat—whichever will be more effective.
 89,8,9,"Boosts the power of
 punching moves."
 89,9,9,"Boosts the power of
@@ -11514,6 +11599,7 @@ Schlag-Attacken."
 89,20,11,"パンチを　使う　技の
 威力が　上がる。"
 89,20,12,使用拳类招式的威力会提高。
+89,25,9,Powers up punching moves.
 90,8,9,"Restores HP if the
 Pokémon is poisoned."
 90,9,9,"Restores HP if the
@@ -11635,6 +11721,7 @@ losing HP."
 ＨＰが　減らずに　増えていく。"
 90,20,12,"变为中毒状态时，
 ＨＰ不会减少，反而会增加起来。"
+90,25,9,"If poisoned, the Pokémon has its HP restored instead of taking damage."
 91,8,9,"Powers up moves of the
 same type."
 91,9,9,"Powers up moves of the
@@ -11759,6 +11846,7 @@ del Pokémon."
 技の　威力が　上がる。"
 91,20,12,"与自身同属性的招式
 威力会提高。"
+91,25,9,Powers up moves of the same type as the Pokémon.
 92,8,9,"Increases the frequency
 of multi-strike moves."
 92,9,9,"Increases the frequency
@@ -11883,6 +11971,7 @@ moves hit."
 最高回数　出すことが　できる。"
 92,20,12,"如果使用连续招式，
 总是能使出最高次数。"
+92,25,9,Maximizes the number of times multistrike moves hit.
 93,8,9,"Heals status problems if
 it is raining."
 93,9,9,"Heals status problems if
@@ -11987,6 +12076,7 @@ quand il pleut."
 状態異常が　治る。"
 93,20,12,"下雨天气时，
 异常状态会治愈。"
+93,25,9,Cures the Pokémon's status conditions in rain.
 94,8,9,"Boosts Sp. Atk, but
 lowers HP in sunshine."
 94,9,9,"Boosts Sp. Atk, but
@@ -12127,6 +12217,7 @@ decreases every turn."
 94,20,12,"晴朗天气时，
 特攻会提高，
 而每回合ＨＰ会减少。"
+94,25,9,"In harsh sunlight, the Pokémon's Sp. Atk stat is boosted, but its HP decreases every turn."
 95,8,9,"Boosts Speed if there is a
 status problem."
 95,9,9,"Boosts Speed if there is a
@@ -12243,6 +12334,7 @@ status condition."
 素早さが　上がる。"
 95,20,12,"变为异常状态时，
 速度会提高。"
+95,25,9,Boosts the Speed stat if the Pokémon has a status condition.
 96,8,9,"All the Pokémon’s moves
 become the Normal type."
 96,9,9,"All the Pokémon’s moves
@@ -12511,6 +12603,7 @@ when attacking."
 威力が　さらに　上がる。"
 97,20,12,"击中要害时，
 威力会变得更强。"
+97,26,9,"If the Pokémon's attack lands a critical hit, the attack is powered up even further."
 98,8,9,"The Pokémon only takes
 damage from attacks."
 98,9,9,"The Pokémon only takes
@@ -12611,6 +12704,7 @@ Schaden."
 98,20,11,"攻撃　以外では
 ダメージを　受けない。"
 98,20,12,不会受到攻击以外的伤害。
+98,26,9,The Pokémon only takes damage from attacks.
 99,8,9,"Ensures the Pokémon and
 its foe’s attacks land."
 99,9,9,"Ensures the Pokémon and
@@ -12748,6 +12842,7 @@ incoming and outgoing attacks always land."
 かならず　当たる　ようになる。"
 99,20,12,"由于无防守战术，
 双方使出的招式都必定会击中。"
+99,25,9,The Pokémon employs no-guard tactics to ensure incoming and outgoing attacks always land. 
 100,8,9,"The Pokémon moves after
 even slower foes."
 100,9,9,"The Pokémon moves after
@@ -12858,6 +12953,7 @@ demás."
 かならず　最後に　なる。"
 100,20,12,"使出招式的顺序
 必定会变为最后。"
+100,25,9,The Pokémon is always the last to use its moves. 
 101,8,9,"Powers up the Pokémon’s
 weaker moves."
 101,9,9,"Powers up the Pokémon’s
@@ -12965,6 +13061,7 @@ les plus faibles."
 威力を　高くして　攻撃できる。"
 101,20,12,"攻击时可以将
 低威力招式的威力提高。"
+101,25,9,Powers up weak moves so the Pokémon can deal more damage with them.
 102,8,9,"Prevents status problems
 in sunny weather."
 102,9,9,"Prevents status problems
@@ -13077,6 +13174,7 @@ di stato."
 状態異常に　ならない。"
 102,20,12,"晴朗天气时，
 不会变为异常状态。"
+102,25,9,Prevents status conditions in harsh sunlight.
 103,8,9,"The Pokémon can’t use
 any held items."
 103,9,9,"The Pokémon can’t use
@@ -13176,6 +13274,7 @@ verwenden."
 103,20,11,"持っている　道具を
 使うことが　できない。"
 103,20,12,无法使用持有的道具。
+103,25,9,The Pokémon can't use any held items.
 104,8,9,"Moves can be used
 regardless of abilities."
 104,9,9,"Moves can be used
@@ -13312,6 +13411,7 @@ its Abilities."
 技を　出すことが　できる。"
 104,20,12,"可以不受对手特性的干扰，
 向对手使出招式。"
+104,25,9,The Pokémon's moves are unimpeded by the Ability of the target.
 105,8,9,"Heightens the critical-hit
 ratios of moves."
 105,9,9,"Heightens the critical-hit
@@ -13448,6 +13548,7 @@ of its moves are boosted."
 攻撃が　当たりやすい。"
 105,20,12,"因为拥有超幸运，
 攻击容易击中对手的要害。"
+105,25,9,The Pokémon is so lucky that the critical-hit ratios of its moves are boosted.
 106,8,9,"Damages the foe landing
 the finishing hit."
 106,9,9,"Damages the foe landing
@@ -13584,6 +13685,7 @@ with a finishing hit."
 ダメージを　あたえる。"
 106,20,12,"变为濒死时，
 会对接触到自己的对手造成伤害。"
+106,25,9,Damages the attacker if it knocks out the Pokémon with a move that makes direct contact.
 107,8,9,"Senses the foe’s
 dangerous moves."
 107,9,9,"Senses the foe’s
@@ -13696,6 +13798,7 @@ dangerous moves."
 察知する　ことができる。"
 107,20,12,"可以察觉到
 对手拥有的危险招式。"
+107,25,9,The Pokémon can sense an opposing Pokémon's dangerous moves.
 108,8,9,"Determines what moves
 the foe has."
 108,9,9,"Determines what moves
@@ -13832,6 +13935,7 @@ the moves an opposing Pokémon has."
 ひとつだけ　読み取る。"
 108,20,12,"出场时，
 只读取１个对手拥有的招式。"
+108,25,9,"When it enters a battle, the Pokémon can tell one of the moves an opposing Pokémon has."
 109,8,9,"Ignores any change in
 ability by the foe."
 109,9,9,"Ignores any change in
@@ -13956,6 +14060,7 @@ Pokémon’s stat changes."
 無視して　攻撃が　できる。"
 109,20,12,"可以无视对手能力的变化，
 进行攻击。"
+109,25,9,"When attacking, the Pokémon ignores the target's stat changes."
 110,8,9,"Powers up “not very
 effective” moves."
 110,9,9,"Powers up “not very
@@ -14095,6 +14200,7 @@ to deal regular damage."
 出すことが　できる。"
 110,20,12,"可以将效果不好的招式
 以通常的威力使出。"
+110,25,9,The Pokémon can use “not very effective” moves to deal regular damage.
 111,8,9,"Powers down super­
 effective moves."
 111,9,9,"Powers down super­
@@ -14227,6 +14333,7 @@ supereficaces."
 弱める　ことが　できる。"
 111,20,12,"受到效果绝佳的攻击时，
 可以减弱其威力。"
+111,25,9,Reduces the power of supereffective attacks that hit the Pokémon.
 112,8,9,"Temporarily halves Attack
 and Speed."
 112,9,9,"Temporarily halves Attack
@@ -14359,6 +14466,7 @@ stats are halved."
 半分に　なる。"
 112,20,12,"在５回合内，
 攻击和速度减半。"
+112,25,9,"For five turns, the Pokémon's Attack and Speed stats are halved."
 113,8,9,"Enables moves to hit
 Ghost-type foes."
 113,9,9,"Enables moves to hit
@@ -14498,6 +14606,7 @@ Normal- and Fighting-type moves."
 技を　当てることが　できる。"
 113,20,12,"一般属性和格斗属性的招式
 可以击中幽灵属性的宝可梦。"
+113,25,9,The Pokémon can hit Ghost-type Pokémon with Normal- and Fighting-type moves. It is also unaffected by Intimidate.
 114,8,9,"The Pokémon draws in all
 Water-type moves."
 114,9,9,"The Pokémon draws in all
@@ -14632,6 +14741,7 @@ by Water-type moves, it boosts its Sp. Atk."
 ダメージは　受けずに　特攻が　上がる。"
 114,20,12,"将水属性的招式引到自己身上，
 不会受到伤害，而是会提高特攻。"
+114,25,9,"The Pokémon draws in all Water-type moves. Instead of taking damage from them, its Sp. Atk stat is boosted."
 115,8,9,"The Pokémon regains HP in
 a hailstorm."
 115,9,9,"The Pokémon regains HP in
@@ -14743,6 +14853,7 @@ de granizo."
 少しずつ　回復　する。"
 115,20,12,"冰雹天气时，
 会缓缓回复ＨＰ。"
+115,25,9,The Pokémon gradually regains HP in snow.
 116,8,9,"Powers down super­
 effective moves."
 116,9,9,"Powers down super­
@@ -14875,6 +14986,7 @@ supereficaces."
 弱める　ことが　できる。"
 116,20,12,"受到效果绝佳的攻击时，
 可以减弱其威力。"
+116,25,9,Reduces the power of supereffective attacks that hit the Pokémon.
 117,8,9,"The Pokémon summons a
 hailstorm in battle."
 117,9,9,"The Pokémon summons a
@@ -14994,6 +15106,7 @@ a battle."
 天気を　あられに　する。"
 117,20,12,"出场时，
 会将天气变为冰雹。"
+117,25,9,The Pokémon makes it snow when it enters a battle.
 118,8,9,"The Pokémon may gather
 Honey from somewhere."
 118,9,9,"The Pokémon may gather
@@ -15114,6 +15227,7 @@ della lotta."
 あまいミツを　拾うことが　ある。"
 118,20,12,"战斗结束时，
 有时候会捡来甜甜蜜。"
+118,25,9,The Pokémon may gather Honey after a battle.
 119,8,9,"The Pokémon can check
 the foe’s held item."
 119,9,9,"The Pokémon can check
@@ -15250,6 +15364,7 @@ opposing Pokémon’s held item."
 見通すことが　できる。"
 119,20,12,"出场时，
 可以察觉对手的持有物。"
+119,25,9,"When it enters a battle, the Pokémon can check an opposing Pokémon's held item."
 120,8,9,"Powers up moves that
 have recoil damage."
 120,9,9,"Powers up moves that
@@ -15364,6 +15479,7 @@ un contrecoup."
 受ける　技の　威力が　上がる。"
 120,20,12,"自己会因反作用力受伤的招式，
 其威力会提高。"
+120,25,9,Powers up moves that have recoil damage.
 121,8,9,"Changes type to match
 the held Plate."
 121,9,9,"Changes type to match
@@ -15500,6 +15616,7 @@ Z-Crystal it holds."
 自分の　タイプが　変わる。"
 121,20,12,"自己的属性会根据持有的石板
 或Ｚ纯晶的属性而改变。"
+121,25,9,Changes the Pokémon's type to match the plate it holds. 
 122,8,9,"Powers up party Pokémon
 when it is sunny."
 122,9,9,"Powers up party Pokémon
@@ -15740,6 +15857,7 @@ opposing Pokémon."
 123,20,11,"ねむり状態の　相手に
 ダメージを　あたえる。"
 123,20,12,给予睡眠状态的对手伤害。
+123,25,9,Damages opposing Pokémon that are asleep.
 124,11,5,"Vole l’objet de l’ennemi
 si son attaque touche."
 124,11,9,"Steals an item when hit
@@ -15854,6 +15972,7 @@ direct contact."
 盗んで　しまう。"
 124,20,12,"盗取接触到自己的
 对手的道具。"
+124,25,9,The Pokémon steals the held item from attackers that made direct contact with it.
 125,11,5,"Frappe plus fort mais
 annule les effets cumulés."
 125,11,9,"Removes added effects to
@@ -15984,6 +16103,7 @@ of moves when attacking."
 技を　出すことが　できる。"
 125,20,12,"招式的追加效果消失，
 但因此能以更高的威力使出招式。"
+125,25,9,"Removes any additional effects from the Pokémon's moves, but increases the moves' power."
 126,11,5,"Inverse les variations
 de stats."
 126,11,9,"Makes stat changes have
@@ -16128,6 +16248,7 @@ e viceversa."
 126,20,12,"能力的变化发生逆转，
 原本提高时会降低，
 而原本降低时会提高。"
+126,25,9,Reverses any stat changes affecting the Pokémon so that attempts to boost its stats instead lower them—and attempts to lower its stats will boost them.
 127,11,5,"L’ennemi stresse et ne
 peut plus manger de Baies."
 127,11,9,"Makes the foe nervous and
@@ -16242,6 +16363,7 @@ to eat Berries."
 きのみを　食べられなく　させる。"
 127,20,12,"让对手紧张，
 使其无法食用树果。"
+127,25,9,Unnerves opposing Pokémon and makes them unable to eat Berries.
 128,11,5,"Monte l’Attaque quand
 les stats baissent."
 128,11,9,"When its stats are lowered
@@ -16360,6 +16482,7 @@ stats are lowered."
 攻撃が　ぐーんと　上がる。"
 128,20,12,"能力被降低时，
 攻击会大幅提高。"
+128,25,9,"If the Pokémon has any stat lowered by an opposing Pokémon, its Attack stat will be boosted sharply."
 129,11,5,"Baisse les stats quand les
 PV tombent à la moitié."
 129,11,9,"Lowers stats when HP
@@ -16634,6 +16757,7 @@ Angreifer es getroffen hat."
 130,20,12,"受到攻击时，
 有时会把对手的招式
 变为定身法状态。"
+130,25,9,May disable a move that has dealt damage to the Pokémon.
 131,11,5,"Guérit parfois le statut
 des alliés alentour."
 131,11,9,"May heal an ally’s status
@@ -16727,6 +16851,7 @@ proche."
 131,20,11,"状態異常の　味方を
 たまに　治してあげる。"
 131,20,12,有时会治愈异常状态的同伴。
+131,25,9,Sometimes cures the status conditions of the Pokémon's allies.
 132,11,5,"Diminue les dégâts subis
 par les alliés."
 132,11,9,"Reduces damage done
@@ -16823,6 +16948,7 @@ vengono ridotti."
 132,20,11,"味方の　ダメージを
 減らすことが　できる。"
 132,20,12,可以减少我方的伤害。
+132,25,9,Reduces damage dealt to allies.
 133,11,5,"Un coup physique baisse la
 Défense, monte la Vitesse."
 133,11,9,"Physical attacks lower
@@ -16969,6 +17095,7 @@ stat but sharply raise its Speed stat."
 133,20,12,"如果因物理招式受到伤害，
 防御会降低，
 速度会大幅提高。"
+133,25,9,"The Pokémon's Defense stat is lowered when it takes damage from physical moves, but its Speed stat is sharply boosted."
 134,11,5,"Double le poids
 du Pokémon."
 134,11,9,"Doubles the Pokémon’s
@@ -17049,6 +17176,7 @@ weight."
 134,20,11,"自分の　重さが
 ２倍に　なる。"
 134,20,12,自身的重量会变为２倍。
+134,25,9,Doubles the Pokémon's weight.
 135,11,5,"Divise par deux le
 poids du Pokémon."
 135,11,9,"Halves the Pokémon’s
@@ -17133,6 +17261,7 @@ Pokémon."
 135,20,11,"自分の　重さが
 半分に　なる。"
 135,20,12,自身的重量会减半。
+135,25,9,Halves the Pokémon's weight.
 136,11,5,"Reçoit moins de dégâts si
 les PV sont au maximum."
 136,11,9,"Reduces damage when HP
@@ -17239,6 +17368,7 @@ while its HP is full."
 受ける　ダメージが　少なくなる。"
 136,20,12,"ＨＰ全满时，
 受到的伤害会变少。"
+136,25,9,Reduces the amount of damage the Pokémon takes while its HP is full.
 137,11,5,"Booste les att. physiques
 si le statut est poison."
 137,11,9,"Powers up physical
@@ -17357,6 +17487,7 @@ is poisoned."
 物理技の　威力が　上がる。"
 137,20,12,"变为中毒状态时，
 物理招式的威力会提高。"
+137,25,9,Powers up physical moves when the Pokémon is poisoned.
 138,11,5,"Booste les att. spéciales
 si le statut est brûlure."
 138,11,9,"Powers up special attacks
@@ -17475,6 +17606,7 @@ is burned."
 特殊技の　威力が　上がる。"
 138,20,12,"变为灼伤状态时，
 特殊招式的威力会提高。"
+138,25,9,Powers up special moves when the Pokémon is burned.
 139,11,5,"Les Baies utilisées
 peuvent repousser."
 139,11,9,"May create another
@@ -17571,6 +17703,7 @@ Berry after one is used."
 何回も　作りだす。"
 139,20,12,"可以多次制作出
 已被使用掉的树果。"
+139,25,9,May create another Berry after one is used.
 140,11,5,"Anticipe et évite les
 attaques de ses alliés."
 140,11,9,"Anticipates an ally’s
@@ -17672,6 +17805,7 @@ ses alliés."
 技を　回避する。"
 140,20,12,"读取我方的攻击，
 并闪避其招式伤害。"
+140,25,9,The Pokémon anticipates and dodges the attacks of its allies.
 141,11,5,"Monte une stat tout en
 en baissant une autre."
 141,11,9,"Raises one stat and
@@ -17790,6 +17924,7 @@ every turn."
 ぐーんと　上がって　どれかが　下がる。"
 141,20,12,"每一回合，能力中的某项
 会大幅提高，而某项会降低。"
+141,25,9,"Every turn, one of the Pokémon's stats will be boosted sharply but another stat will be lowered."
 142,11,5,"Neutralise les dégâts dus
 à la météo."
 142,11,9,"Protects the Pokémon from
@@ -17928,6 +18063,7 @@ and powder."
 粉の　技を　受けない。"
 142,20,12,"不会受到沙暴或冰雹等的伤害。
 不会受到粉末类招式的攻击。"
+142,25,9,The Pokémon takes no damage from sandstorms. It is also protected from the effects of powders and spores.
 143,11,5,"Peut empoisonner l’ennemi
 par simple contact."
 143,11,9,"May poison targets when a
@@ -18030,6 +18166,7 @@ makes contact."
 どく　状態に　することがある。"
 143,20,12,"只通过接触就有可能
 让对手变为中毒状态。"
+143,25,9,May poison a target when the Pokémon makes contact.
 144,11,5,"Restaure un peu de PV
 si le Pokémon est retiré."
 144,11,9,"Restores a little HP when
@@ -18141,6 +18278,7 @@ il campo."
 ＨＰが　少し　回復する。"
 144,20,12,"退回同行队伍后，
 ＨＰ会少量回复。"
+144,25,9,The Pokémon has a little of its HP restored when withdrawn from battle.
 145,11,5,"Empêche la Déf. de baisser
 à cause d’attaques."
 145,11,9,"Protects the Pokémon from
@@ -18240,6 +18378,7 @@ Defense-lowering effects."
 145,20,11,"防御を　下げる
 効果を　受けない。"
 145,20,12,不会受到防御降低的效果。
+145,25,9,Prevents the Pokémon from having its Defense stat lowered.
 146,11,5,"Augmente la Vitesse lors
 des tempêtes de sable."
 146,11,9,"Boosts the Pokémon’s
@@ -18341,6 +18480,7 @@ arena."
 素早さが　上がる。"
 146,20,12,"沙暴天气时，
 速度会提高。"
+146,25,9,Boosts the Pokémon's Speed stat in a sandstorm.
 147,11,5,"Son corps résiste mieux
 aux attaques de statut."
 147,11,9,"Makes status-changing
@@ -18443,6 +18583,7 @@ estado."
 体に　なっている。"
 147,20,12,"成为不易受到变化招式
 攻击的身体。"
+147,25,9,Makes status moves more likely to miss the Pokémon.
 148,11,5,"Booste les capacités s’il
 attaque en dernier."
 148,11,9,"Boosts move power when
@@ -18557,6 +18698,7 @@ della mossa aumenta."
 技の　威力が　上がる。"
 148,20,12,"如果在最后使出招式，
 招式的威力会提高。"
+148,25,9,Boosts the power of the Pokémon's move if it is the last to act that turn.
 149,11,5,"Prend l’apparence du der-
 nier Pokémon de l’équipe."
 149,11,9,"Comes out disguised as
@@ -18703,6 +18845,7 @@ last spot."
 149,20,12,"假扮成同行队伍中的
 最后一只宝可梦出场，
 迷惑对手。"
+149,25,9,The Pokémon fools opponents by entering battle disguised as the last Pokémon in its Trainer's party.
 150,11,5,"Adopte l’apparence du
 Pokémon adverse."
 150,11,9,"It transforms itself into
@@ -18797,6 +18940,7 @@ it’s facing."
 150,20,11,"目の前の　ポケモンに
 変身　してしまう。"
 150,20,12,变身为当前面对的宝可梦。
+150,25,9,The Pokémon transforms itself into the Pokémon it's facing.
 151,11,5,"Traverse les barrières de
 l’ennemi pour attaquer."
 151,11,9,"Passes through the foe’s
@@ -18911,6 +19055,7 @@ substitute, and the like and strikes."
 すりぬけて　攻撃　できる"
 151,20,12,"可以穿透对手的壁障
 或替身进行攻击。"
+151,25,9,"The Pokémon's moves are unaffected by the target's barriers, substitutes, and the like."
 152,11,5,"Momifie la cap. spé. de
 l’ennemi qui le touche."
 152,11,9,"Contact with this Pokémon
@@ -19163,6 +19308,7 @@ Attack stat after knocking out any Pokémon."
 攻撃が　上がる。"
 153,20,12,"如果打倒对手，
 就会充满自信，攻击会提高。"
+153,25,9,"When the Pokémon knocks out a target, it shows moxie, which boosts its Attack stat."
 154,11,5,"Monte l’Attaque si une
 att. Ténèbres le touche."
 154,11,9,"Raises Attack when hit by
@@ -19293,6 +19439,7 @@ stat of the Pokémon, for justice."
 正義感で　攻撃が　上がる。"
 154,20,12,"受到恶属性的招式攻击时，
 因为正义感，攻击会提高。"
+154,25,9,"When the Pokémon is hit by a Dark-type attack, its Attack stat is boosted by its sense of justice."
 155,11,5,"Sa peur de certains types
 augmente sa Vitesse."
 155,11,9,"Some move types scare
@@ -19438,6 +19585,7 @@ Pokémon and boost its Speed stat."
 155,20,12,"受到恶属性、幽灵属性
 和虫属性的招式攻击时，
 会因胆怯而速度提高。"
+155,25,9,"The Pokémon gets scared when hit by a Dark-, Ghost-, or Bug-type attack or if intimidated, which boosts its Speed stat."
 156,11,5,"Renvoie les attaques
 de statut."
 156,11,9,"Reflects status-
@@ -19552,6 +19700,7 @@ by them."
 そのまま　返す　ことが　できる。"
 156,20,12,"可以不受到由对手使出的
 变化招式影响，并将其反弹。"
+156,25,9,The Pokémon reflects status moves instead of getting hit by them.
 157,11,5,"Augmente l’Attaque après
 une attaque Plante."
 157,11,9,"Boosts Attack when hit by
@@ -19685,6 +19834,7 @@ instead of taking damage."
 攻撃が　上がる。"
 157,20,12,"受到草属性的招式攻击时，
 不会受到伤害，而是攻击会提高。"
+157,25,9,"The Pokémon takes no damage when hit by Grass-type moves. Instead, its Attack stat is boosted."
 158,11,5,"Utilise les attaques de
 statut en premier."
 158,11,9,"Gives priority to a
@@ -19778,6 +19928,7 @@ priorità alta."
 158,20,11,"変化技を　先制で
 出すことが　できる。"
 158,20,12,可以率先使出变化招式。
+158,25,9,Gives priority to the Pokémon's status moves.
 159,11,5,"Renforce des capacités en
 cas de tempête de sable."
 159,11,9,"Boosts certain moves’
@@ -19916,6 +20067,7 @@ moves in a sandstorm."
 159,20,12,"沙暴天气时，
 岩石属性、地面属性
 和钢属性的招式威力会提高。"
+159,25,9,"Boosts the power of Rock-, Ground-, and Steel-type moves in a sandstorm. "
 160,11,5,"Blesse l’ennemi au moindre
 contact."
 160,11,9,"Inflicts damage to the
@@ -20355,6 +20507,7 @@ its Abilities."
 相手に　技を　出すことが　できる。"
 163,20,12,"可以不受对手特性的干扰，
 向对手使出招式。"
+163,27,9,The Pokémon's moves are unimpeded by the Ability of the target.
 164,11,5,"Les cap. spé. adverses ne
 bloquent pas ses cap."
 164,11,9,"Moves can be used
@@ -20473,6 +20626,7 @@ its Abilities."
 相手に　技を　出すことが　できる。"
 164,20,12,"可以不受对手特性的干扰，
 向对手使出招式。"
+164,27,9,The Pokémon's moves are unimpeded by the Ability of the target.
 165,15,1,"みかたへの　メンタル
 こうげきを　ふせぐ。"
 165,15,3,"같은 편으로 향하는
@@ -20581,6 +20735,7 @@ their move choices."
 攻撃を　防ぐことが　できる。"
 165,20,12,"可以防住向自己和同伴
 发出的心灵攻击。"
+165,25,9,Protects the Pokémon and its allies from effects that prevent the use of moves.
 166,15,1,"みかたの　くさポケモンは
 のうりょくが　さがらない。"
 166,15,3,"같은 편의 풀타입 포켓몬은
@@ -20716,6 +20871,7 @@ status conditions and the lowering of their stats."
 166,20,12,"我方的草属性宝可梦
 能力不会降低，
 也不会变为异常状态。"
+166,25,9,Ally Grass-type Pokémon are protected from status conditions and the lowering of their stats.
 167,15,1,"きのみを　たべると
 ＨＰも　かいふくする。"
 167,15,3,"나무열매를 먹으면
@@ -20818,6 +20974,7 @@ dei PS."
 食べると　ＨＰも　回復する。"
 167,20,12,"无论是哪种树果，
 食用后，ＨＰ都会回复。"
+167,25,9,"The Pokémon's HP is restored when it eats any Berry, in addition to the Berry's usual effect."
 168,15,1,"だした　わざと　おなじ
 タイプに　へんかする。"
 168,15,3,"사용한 기술과 같은
@@ -20922,6 +21079,7 @@ move it’s about to use."
 同じ　タイプに　変化する。"
 168,20,12,"变为与自己使出的招式
 相同的属性。"
+168,25,9,Changes the Pokémon's type to the type of the move it's about to use. This works only once each time the Pokémon enters battle.
 169,15,1,"ぶつりわざの　ダメージが
 はんぶんになる。"
 169,15,3,"물리 기술의 데미지가
@@ -21026,6 +21184,7 @@ físicos del rival."
 ダメージが　半分に　なる。"
 169,20,12,"对手给予的物理招式的
 伤害会减半。"
+169,25,9,Halves the damage from physical moves.
 170,15,1,"わざを　あてた　あいての
 どうぐを　うばってしまう。"
 170,15,3,"기술을 맞은 상대의
@@ -21134,6 +21293,7 @@ hits with a move."
 道具を　奪ってしまう。"
 170,20,12,"夺走被自己的招式
 击中的对手的道具。"
+170,25,9,The Pokémon steals the held item from any target it hits with a move.
 171,15,1,"たまや　ばくだんに
 あたらない。"
 171,15,3,"구슬이나 폭탄에
@@ -21242,6 +21402,7 @@ bomb moves."
 技を　防ぐことが　できる。"
 171,20,12,"可以防住对手的
 球和弹类招式。"
+171,25,9,Protects the Pokémon from ball and bomb moves.
 172,15,1,"のうりょくが　さがると
 とくこうが　あがる。"
 172,15,3,"능력이 떨어지면
@@ -21354,6 +21515,7 @@ is lowered."
 特攻が　ぐーんと　上がる。"
 172,20,12,"如果能力被降低，
 特攻就会大幅提高。"
+172,25,9,Boosts the Pokémon's Sp. Atk stat sharply when its stats are lowered by an opposing Pokémon.
 173,15,1,"あごが　がんじょうで
 かむ　ちからが　つよい。"
 173,15,3,"턱이 튼튼하여
@@ -21478,6 +21640,7 @@ biting moves."
 高くなる。"
 173,20,12,"因为颚部强壮，
 啃咬类招式的威力会提高。"
+173,25,9,The Pokémon's strong jaw boosts the power of its biting moves.
 174,15,1,"ノーマルタイプの　わざが
 こおりタイプになる。"
 174,15,3,"노말타입의 기술이
@@ -21703,6 +21866,7 @@ duerman."
 眠らなくなる。"
 175,20,12,"我方的宝可梦
 不会变为睡眠状态。"
+175,25,9,Prevents the Pokémon and its allies from falling asleep.
 176,15,1,"せんとうモードで
 すがたが　かわる。"
 176,15,3,"배틀모드에서
@@ -21975,6 +22139,7 @@ the Pokémon’s HP is full."
 先制で　出すことが　できる。"
 177,20,12,"ＨＰ全满时，
 飞行属性的招式可以率先使出。"
+177,25,9,Gives priority to the Pokémon's Flying-type moves while its HP is full.
 178,15,1,"はどうの　わざの
 いりょくが　たかい。"
 178,15,3,"파동 기술의
@@ -22081,6 +22246,7 @@ e Ondasana."
 威力が　高くなる。"
 178,20,12,"波动和波导类招式的
 威力会提高。"
+178,25,9,Powers up pulse moves.
 179,15,1,"グラスフィールドのとき
 ぼうぎょが　あがる。"
 179,15,3,"그래스필드일 때
@@ -22189,6 +22355,7 @@ Grassy Terrain."
 防御が　上がる。"
 179,20,12,"在青草场地时，
 防御会提高。"
+179,25,9,Boosts the Pokémon's Defense stat on Grassy Terrain.
 180,15,1,"みかたに　どうぐを
 わたせるように　なる。"
 180,15,3,"같은 편에게 도구를
@@ -22316,6 +22483,7 @@ used up an item."
 味方に　渡す。"
 180,20,12,"同伴使用道具时，
 会把自己持有的道具传递给同伴。"
+180,25,9,The Pokémon passes its held item to an ally that has used up an item.
 181,15,1,"せっしょくする　わざの
 いりょくが　あがる。"
 181,15,3,"접촉하는 기술의
@@ -22412,6 +22580,7 @@ du Pokémon."
 威力が　高くなる。"
 181,20,12,"接触到对手的招式
 威力会提高。"
+181,25,9,Powers up moves that make direct contact.
 182,15,1,"ノーマルタイプの　わざが
 フェアリータイプになる。"
 182,15,3,"노말타입의 기술이
@@ -22544,6 +22713,7 @@ The power of those moves is boosted a little."
 182,20,12,"一般属性的招式
 会变为妖精属性。
 威力会少量提高。"
+182,25,9,Normal-type moves become Fairy-type moves. The power of those moves is boosted a little.
 183,15,1,"ふれた　あいての
 すばやさを　さげる。"
 183,15,3,"접촉한 상대의
@@ -22656,6 +22826,7 @@ Speed stat."
 素早さを　下げる。"
 183,20,12,"对于用攻击接触到自己的对手，
 会降低其速度。"
+183,25,9,Contact with the Pokémon lowers the attacker's Speed stat.
 184,15,1,"ノーマルタイプの　わざが
 ひこうタイプになる。"
 184,15,3,"노말타입의 기술이
@@ -23515,6 +23686,7 @@ aumenta."
 防御が　上がる。"
 192,20,12,"受到攻击时，
 防御会提高。"
+192,25,9,Boosts the Defense stat when the Pokémon is hit by an attack.
 193,17,1,"ＨＰが　はんぶんに　なると
 あわてて　にげだして
 てもちに　ひっこんで　しまう。"
@@ -23803,6 +23975,7 @@ by a Water-type move."
 防御が　ぐーんと　上がる。"
 195,20,12,"受到水属性的招式攻击时，
 防御会大幅提高。"
+195,25,9,Boosts the Defense stat sharply when the Pokémon is hit by a Water-type move.
 196,17,1,"どく　じょうたいの
 あいてを　こうげきすると
 かならず　きゅうしょに　あたる。"
@@ -23895,6 +24068,7 @@ target is poisoned."
 かならず　急所に　当たる。"
 196,20,12,"攻击中毒状态的对手时，
 必定会击中要害。"
+196,25,9,The Pokémon's attacks become critical hits if the target is poisoned.
 197,17,1,"ＨＰが　はんぶんに　なると
 からが　こわれて
 こうげきてきに　なる。"
@@ -23995,6 +24169,7 @@ shell breaks and it becomes aggressive."
 攻撃的に　なる。"
 197,20,12,"ＨＰ变为一半时，
 壳会坏掉，变得有攻击性。"
+197,27,9,"When its HP drops to half or less, the Pokémon's shell breaks and it becomes aggressive."
 198,17,1,"こうたいで　でてきた　あいてに
 ２ばいの　ダメージで　こうげき　できる。"
 198,17,3,"교체로 나온 상대에게
@@ -24083,6 +24258,7 @@ replacement if the target switches out."
 ２倍の　ダメージで　攻撃　できる。"
 198,20,12,"可以对替换出场的对手
 以２倍的伤害进行攻击。"
+198,25,9,Doubles the damage dealt to a target that has just switched into battle.
 199,17,1,"じぶんに　たいする　ほのおタイプの
 わざの　いりょくを　さげる。
 やけど　しない。"
@@ -24183,6 +24359,7 @@ a burn."
 やけど　しない。"
 199,20,12,"降低自己受到的火属性
 招式的威力，不会灼伤。"
+199,27,9,Lowers the power of Fire-type moves that hit the Pokémon and prevents it from being burned.
 200,17,1,"はがねタイプの　わざの
 いりょくが　あがる。"
 200,17,3,"강철타입 기술의
@@ -24341,6 +24518,7 @@ a hit that causes its HP to become half or less."
 201,20,12,"因对手的攻击
 ＨＰ变为一半时，
 特攻会提高。"
+201,25,9,Boosts the Pokémon's Sp. Atk stat when it takes a hit that causes its HP to drop to half or less.
 202,17,1,"てんきが　あられ　のとき
 すばやさが　あがる。"
 202,17,3,"날씨가 싸라기눈일 때
@@ -24401,6 +24579,7 @@ a hit that causes its HP to become half or less."
 素早さが　上がる。"
 202,20,12,"冰雹天气时，
 速度会提高。"
+202,25,9,Boosts the Pokémon's Speed stat in snow.
 203,17,1,"すべての　わざを
 あいてに　せっしょく　しないで
 だすことが　できる。"
@@ -24496,6 +24675,7 @@ with the target."
 出すことが　できる。"
 203,20,12,"可以不接触对手
 就使出所有的招式。"
+203,25,9,The Pokémon uses its moves without making contact with the target.
 204,17,1,"すべての　おとわざが
 みずタイプに　なる。"
 204,17,3,"모든 소리 기술이
@@ -24572,6 +24752,7 @@ di tipo Acqua."
 みずタイプに　なる。"
 204,20,12,"所有的声音招式
 都变为水属性。"
+204,27,9,Sound-based moves become Water-type moves.
 205,17,1,"かいふくわざを　せんせいで
 だすことが　できる。"
 205,17,3,"회복 기술을 먼저
@@ -24639,6 +24820,7 @@ del Pokémon acquistano priorità alta."
 205,20,11,"回復技を　先制で
 出すことが　できる。"
 205,20,12,可以率先使出回复招式。
+205,27,9,Gives priority to the Pokémon's healing moves.
 206,17,1,"ノーマルタイプの　わざが
 でんきタイプになる。
 いりょくが　すこし　あがる。"
@@ -24739,6 +24921,7 @@ The power of those moves is boosted a little."
 206,20,12,"一般属性的招式
 会变为电属性。
 威力会少量提高。"
+206,26,9,Normal-type moves become Electric-type moves. The power of those moves is boosted a little.
 207,17,1,"エレキフィールド　のとき
 すばやさが　２ばいに　なる。"
 207,17,3,"일렉트릭필드일 때
@@ -24819,6 +25002,7 @@ Electric Terrain."
 素早さが　２倍に　なる。"
 207,20,12,"电气场地时，
 速度会变为２倍。"
+207,25,9,Doubles the Pokémon's Speed stat on Electric Terrain.
 208,17,1,"ＨＰが　おおいときは　むれて　つよくなる。
 ＨＰの　のこりが　すくなくなると
 むれは　ちりぢりに　なってしまう。"
@@ -25019,6 +25203,7 @@ Pokémon can protect it from an attack."
 １回　攻撃を　防ぐことが　できる。"
 209,20,12,"通过画皮覆盖住身体，
 可以防住１次攻击。"
+209,25,9,"Once per battle, the shroud that covers the Pokémon can protect it from an attack."
 210,17,1,"あいてを　たおすと　トレーナーとの
 きずなが　ふかまり　サトシゲッコウガに
 へんげする。みずしゅりけんが　つよくなる。"
@@ -25139,6 +25324,7 @@ Ash-Greninja. Water Shuriken gets more powerful."
 210,20,12,"打倒对手时，与训练家的牵绊会增强，
 变为小智版甲贺忍蛙。
 飞水手里剑的招式威力会增强。"
+210,25,9,"When the Pokémon knocks out a target, its bond with its Trainer is strengthened, and its Attack, Sp. Atk, and Speed stats are boosted."
 211,17,1,"ＨＰが　はんぶんに　なると
 セルたちが　おうえんに　かけつけ
 パーフェクトフォルムに　すがたを　かえる。"
@@ -25334,6 +25520,7 @@ a Steel or Poison type."
 どく状態に　することが　できる。"
 212,20,12,"可以使钢属性和毒属性的宝可梦
 也陷入中毒状态。"
+212,25,9,The Pokémon can poison the target even if it's a Steel or Poison type.
 213,17,1,"つねに　ゆめうつつの　じょうたいで
 ぜったいに　めざめない。
 ねむったまま　こうげきが　できる。"
@@ -25446,6 +25633,7 @@ It can attack without waking up."
 213,20,12,"总是半梦半醒的状态，
 绝对不会醒来。
 可以就这么睡着进行攻击。"
+213,25,9,The Pokémon is always drowsing and will never wake up. It can attack while in its sleeping state.
 214,17,1,"あいてに　いあつかんを　あたえ
 こちらに　むかって　せんせいわざを
 だせない　ようにする。"
@@ -25541,6 +25729,7 @@ making it unable to attack using priority moves."
 出せない　ようにする。"
 214,20,12,"向对手施加威慑力，
 使其无法对我方使出先制招式。"
+214,25,9,The Pokémon's majesty pressures opponents and makes them unable to use priority moves against the Pokémon or its allies.
 215,17,1,"あいてに　たおされたとき
 ＨＰの　のこりの　ぶんだけ
 あいてに　ダメージを　あたえる。"
@@ -25763,6 +25952,7 @@ of its Speed."
 踊り技を　出すことが　できる。"
 216,20,12,"有谁使出跳舞招式时，
 自己也能就这么接着使出跳舞招式。"
+216,25,9,"Whenever a dance move is used in battle, the Pokémon will copy the user to immediately perform that dance move itself."
 217,17,1,"みかたの　とくしゅわざの
 いりょくを　あげる。"
 217,17,3,"같은 편 특수 기술의
@@ -25834,6 +26024,7 @@ degli alleati."
 威力を　上げる。"
 217,20,12,"会提高我方的
 特殊招式的威力。"
+217,26,9,Powers up ally Pokémon's special moves.
 218,17,1,"あいてから　うけた　せっしょくする　わざの
 ダメージを　はんげんするが　ほのおタイプの
 わざの　ダメージは　２ばいになる。"
@@ -25942,6 +26133,7 @@ direct contact, but doubles that of Fire-type moves."
 技の　ダメージは　２倍になる。"
 218,20,12,"会将对手所给予的接触类招式的伤害减半，
 但火属性招式的伤害会变为２倍。"
+218,25,9,"Halves the damage taken from moves that make direct contact, but doubles that of Fire-type moves."
 219,17,1,"あいてを　びっくり　させて
 こちらに　むかって　せんせいわざを
 だせない　ようにする。"
@@ -26034,6 +26226,7 @@ to attack using priority moves."
 出せない　ようにする。"
 219,20,12,"让对手吓一跳，
 使其无法对我方使出先制招式。"
+219,25,9,"The Pokémon dazzles its opponents, making them unable to use priority moves against the Pokémon or its allies."
 220,17,1,"ポケモンが　ひんしに　なるたびに
 とくこうが　あがる。"
 220,17,3,"포켓몬이 기절할 때마다
@@ -26114,6 +26307,7 @@ un Pokémon va KO."
 特攻が　上がる。"
 220,20,12,"宝可梦每次变为濒死状态时，
 特攻会提高。"
+220,25,9,Boosts the Pokémon's Sp. Atk stat every time another Pokémon faints.
 221,17,1,"こうげきで　じぶんに　ふれた　あいての
 すばやさを　さげる。"
 221,17,3,"공격으로 자신과 접촉한 상대의
@@ -26194,6 +26388,7 @@ Speed stat."
 素早さを　下げる。"
 221,20,12,"对于用攻击接触到自己的对手，
 会降低其速度。"
+221,25,9,Contact with the Pokémon lowers the attacker's Speed stat.
 222,17,1,"たおされた　みかたの　とくせいを
 うけついで　おなじ　とくせいに　なる。"
 222,17,3,"쓰러진 같은 편의 특성을
@@ -26262,6 +26457,7 @@ andato KO."
 受け継いで　同じ　特性に　なる。"
 222,20,12,"继承被打倒的同伴的特性，
 变为相同的特性。"
+222,25,9,The Pokémon copies the Ability of a defeated ally.
 223,17,1,"たおされた　みかたの　とくせいを　うけつぎ
 おなじ　とくせいに　かわる。"
 223,17,3,"쓰러진 같은 편의 특성을
@@ -26334,6 +26530,7 @@ di un alleato andato KO."
 同じ　特性に　変わる。"
 223,20,12,"继承被打倒的同伴的特性，
 变为相同的特性。"
+223,25,9,The Pokémon copies the Ability of a defeated ally.
 224,17,1,"あいてを　たおしたとき
 じぶんの　いちばん　たかい
 のうりょくが　あがる。　"
@@ -26576,6 +26773,7 @@ Pokémon enters a battle."
 エレキフィールドを　はりめぐらせる。"
 226,20,12,"出场时，
 会布下电气场地。"
+226,25,9,Turns the ground into Electric Terrain when the Pokémon enters a battle.
 227,17,1,"とうじょう　したときに
 サイコフィールドを　はりめぐらせる。"
 227,17,3,"등장했을 때
@@ -26648,6 +26846,7 @@ the Pokémon enters a battle."
 サイコフィールドを　はりめぐらせる。"
 227,20,12,"出场时，
 会布下精神场地。"
+227,25,9,Turns the ground into Psychic Terrain when the Pokémon enters a battle.
 228,17,1,"とうじょう　したときに
 ミストフィールドを　はりめぐらせる。"
 228,17,3,"등장했을 때
@@ -26720,6 +26919,7 @@ the Pokémon enters a battle."
 ミストフィールドを　はりめぐらせる。"
 228,20,12,"出场时，
 会布下薄雾场地。"
+228,25,9,Turns the ground into Misty Terrain when the Pokémon enters a battle.
 229,17,1,"とうじょう　したときに
 グラスフィールドを　はりめぐらせる。"
 229,17,3,"등장했을 때
@@ -26792,6 +26992,7 @@ the Pokémon enters a battle."
 グラスフィールドを　はりめぐらせる。"
 229,20,12,"出场时，
 会布下青草场地。"
+229,25,9,Turns the ground into Grassy Terrain when the Pokémon enters a battle.
 230,17,1,"あいての　わざや　とくせいで
 のうりょくを　さげられない。"
 230,17,3,"상대 기술이나 특성으로
@@ -27094,6 +27295,7 @@ enters a battle."
 攻撃が　上がる。"
 234,20,12,"出场时，
 攻击会提高。"
+234,25,9,Boosts the Pokémon’s Attack stat the first time the Pokémon enters a battle.
 235,20,1,"とうじょう　したときに
 ぼうぎょが　あがる。"
 235,20,3,"등장했을 때
@@ -27112,6 +27314,7 @@ enters a battle."
 防御が　上がる。"
 235,20,12,"出场时，
 防御会提高。"
+235,25,9,Boosts the Pokémon’s Defense stat the first time the Pokémon enters a battle.
 236,20,1,"じぶんが　だす　わざと
 おなじ　タイプに　へんかする。"
 236,20,3,"자신이 사용한 기술과
@@ -27130,6 +27333,7 @@ move it’s about to use."
 同じ　タイプに　変化する。"
 236,20,12,"变为与自己使出的招式
 相同的属性。"
+236,25,9,Changes the Pokémon's type to the type of the move it's about to use. This works only once each time the Pokémon enters battle.
 237,20,1,"どうぐを　もっていない　ばあい
 １かいめに　なげて　しっぱい　した
 モンスターボールを　ひろってくる。"
@@ -27213,6 +27417,7 @@ moves that draw in moves."
 239,20,12,"能无视具有吸引
 对手招式效果的
 特性或招式的影响。"
+239,25,9,Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
 240,20,1,"じぶんが　うけた
 のうりょく　ダウンの
 こうか　だけを　はねかえす。"
@@ -27235,6 +27440,7 @@ the Pokémon receives."
 効果　だけを　跳ね返す。"
 240,20,12,"只反弹自己受到的
 能力降低效果。"
+240,25,9,Bounces back only the stat-lowering effects that the Pokémon receives.
 241,20,1,"なみのりか　ダイビングを　すると
 えものを　くわえてくる。　ダメージを
 うけると　えものを　はきだして　こうげき。"
@@ -27263,6 +27469,7 @@ to attack."
 241,20,12,"冲浪或潜水时会叼来猎物。
 受到伤害时，
 会吐出猎物进行攻击。"
+214,26,9,"When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
 242,20,1,"あいての　わざを　ひきうける
 とくせいや　わざの
 えいきょうを　むし　できる。"
@@ -27288,6 +27495,7 @@ moves that draw in moves."
 242,20,12,"能无视具有吸引
 对手招式效果的
 特性或招式的影响。"
+242,27,9,Ignores the effects of opposing Pokémon's Abilities and moves that draw in moves.
 243,20,1,"みずタイプ　ほのおタイプの
 わざを　うけると
 すばやさが　ぐぐーんと　あがる。"
@@ -27313,6 +27521,7 @@ Fire- or Water-type move."
 243,20,12,"受到水属性或
 火属性的招式攻击时，
 速度会巨幅提高。"
+243,25,9,Boosts the Speed stat drastically when the Pokémon is hit by a Fire- or Water-type move.
 244,20,1,"おとわざの　いりょくが　あがる。
 うけた　おとわざの
 ダメージは　はんぶんに　なる。"
@@ -27340,6 +27549,7 @@ these kinds of moves."
 ダメージは　半分に　なる。"
 244,20,12,"声音招式的威力会提高。
 受到的声音招式伤害会减半。"
+244,25,9,Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves.
 245,20,1,"こうげきを　うけると
 すなあらしを　おこす。"
 245,20,3,"공격을 받으면
@@ -27359,6 +27569,7 @@ an attack."
 砂あらしを　起こす。"
 245,20,12,"受到攻击时，
 会刮起沙暴。"
+245,25,9,The Pokémon creates a sandstorm when it's hit by an attack.
 246,20,1,"こおりのりんぷんに　まもられて
 とくしゅこうげきで　うける
 ダメージが　はんげん　する。"
@@ -27384,6 +27595,7 @@ the damage taken from special moves."
 ダメージが　半減　する。"
 246,20,12,"由于有冰鳞粉的守护，
 受到的特殊攻击伤害会减半。"
+246,25,9,"The Pokémon is protected by ice scales, which halve the damage taken from special moves."
 247,20,1,"じゅくせい　させることで
 きのみの　こうかが
 ばいに　なる。"
@@ -27404,6 +27616,7 @@ heranreifen lässt."
 倍に　なる。"
 247,20,12,"使树果成熟，
 效果变为２倍。"
+247,25,9,Ripens Berries and doubles their effect.
 248,20,1,"ぶつりこうげきは　あたまの　こおりが
 みがわりに　なるが　すがたも　かわる。
 こおりは　あられが　ふると　もとにもどる。"
@@ -27434,6 +27647,7 @@ appearance. The ice will be restored when it hails."
 248,20,12,"头部的冰会代替自己承受
 物理攻击，但是样子会改变。
 下冰雹时，冰会恢复原状。"
+248,25,9,"The Pokémon's ice head can take a physical attack as a substitute, but the attack also changes the Pokémon's appearance. The ice will be restored when it snows."
 249,20,1,"となりに　いるだけで
 わざの　いりょくが　あがる。"
 249,20,3,"옆에 있기만 해도
@@ -27452,6 +27666,7 @@ vicinanze."
 技の　威力が　上がる。"
 249,20,12,"只要处在相邻位置，
 招式的威力就会提高。"
+249,25,9,Just being next to the Pokémon powers up moves.
 250,20,1,"フィールドの　じょうたいに　あわせて
 ポケモンの　タイプが　かわる。"
 250,20,3,"필드의 상태에 따라
@@ -27516,6 +27731,7 @@ Mitstreiterseite."
 攻撃の　威力が　上がる。"
 252,20,12,"我方的钢属性
 攻击威力会提高。"
+252,25,9,Powers up the Steel-type moves of the Pokémon and its allies.
 253,20,1,"せっしょくする　わざを　うけると
 おたがい　３ターン　たつと　ひんしになる。
 こうたいすると　こうかは　なくなる。"
@@ -27627,6 +27843,7 @@ or will not be triggered."
 256,20,12,"特性为化学变化气体的宝可梦在场时，
 场上所有宝可梦的
 特性效果都会消失或者无法生效。"
+256,26,9,"While the Pokémon is in the battle, the effects of all other Pokémon's Abilities will be nullified or will not be triggered."
 257,20,1,"じぶんも　みかたも
 どくの　じょうたいいじょうを
 うけなくなる。"
@@ -27677,6 +27894,7 @@ each turn."
 258,20,12,"每回合结束时会在
 满腹花纹与空腹花纹之间
 交替改变样子。"
+258,26,9,"The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn."
 259,20,1,"あいてより　さきに
 こうどう　できることが　ある。"
 259,20,3,"상대보다 먼저
@@ -27690,6 +27908,7 @@ each turn."
 259,20,11,"相手より　先に
 行動できることが　ある。"
 259,20,12,有时能比对手先一步行动。
+259,25,9,Enables the Pokémon to move first occasionally.
 260,20,1,"あいてに　せっしょくする　わざなら
 まもりの　こうかを
 むしして　こうげき　することが　できる。"
@@ -27713,6 +27932,7 @@ it can attack the target even if the target protects itself."
 無視して　攻撃することが　できる。"
 260,20,12,"如果使出的是接触到对手的招式，
 就可以无视守护效果进行攻击。"
+260,27,9,"If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself."
 261,20,1,"とうじょう　したときに
 かいがらから　くすりを　ふりまいて
 みかたの　のうりょくへんかを　もとにもどす。"
@@ -27741,6 +27961,7 @@ from allies."
 味方の　能力変化を　元に戻す。"
 261,20,12,"出场时会从贝壳撒药，
 将我方的能力变化复原。"
+261,25,9,"When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies."
 262,20,1,"でんきタイプの　わざの
 いりょくが　あがる。"
 262,20,3,"전기타입 기술의
@@ -27754,6 +27975,7 @@ from allies."
 262,20,11,"でんきタイプの　技の
 威力が　上がる。"
 262,20,12,电属性的招式威力会提高。
+262,25,9,Powers up Electric-type moves.
 263,20,1,"ドラゴンタイプの　わざの
 いりょくが　あがる。"
 263,20,3,"드래곤타입 기술의
@@ -27767,6 +27989,7 @@ from allies."
 263,20,11,"ドラゴンタイプの　技の
 威力が　上がる。"
 263,20,12,龙属性的招式威力会提高。
+263,25,9,Powers up Dragon-type moves.
 264,20,1,"あいてを　たおすと
 つめたい　こえで　いなないて
 こうげきが　あがる。"
@@ -27792,6 +28015,7 @@ chilling neigh, which boosts its Attack stat."
 264,20,12,"打倒对手时
 会用冰冷的声音嘶鸣
 并提高攻击。"
+264,25,9,"When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
 265,20,1,"あいてを　たおすと
 おそろしい　こえで　いなないて
 とくこうが　あがる。"
@@ -27818,6 +28042,7 @@ terrifying neigh, which boosts its Sp. Atk stat."
 265,20,12,"打倒对手时
 会用恐怖的声音嘶鸣
 并提高特攻。"
+265,25,9,"When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
 266,20,1,"バドレックスの　きんちょうかんと
 ブリザポスの　しろのいななきの
 ふたつの　とくせいを　あわせもつ。"
@@ -27842,6 +28067,7 @@ Unnerve Ability and Glastrier’s Chilling Neigh Ability."
 二つの　特性を　あわせ持つ。"
 266,20,12,"兼备蕾冠王的紧张感和
 雪暴马的苍白嘶鸣这两种特性。"
+266,25,9,This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability.
 267,20,1,"バドレックスの　きんちょうかんと
 レイスポスの　くろのいななきの
 ふたつの　とくせいを　あわせもつ。"
@@ -27866,7 +28092,44 @@ Unnerve Ability and Spectrier’s Grim Neigh Ability."
 二つの　特性を　あわせ持つ。"
 267,20,12,"兼备蕾冠王的紧张感和
 灵幽马的漆黑嘶鸣这两种特性。"
+267,25,9,This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.
+268,25,9,Contact with the Pokémon changes the attacker's Ability to Lingering Aroma.
+269,25,9,Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.
+270,25,9,Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.
+271,25,9,"When an attack causes its HP to drop to half or less, the Pokémon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats."
+272,25,9,The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.
+273,25,9,"The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted."
+274,25,9,Boosts the Pokémon's Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves.
+275,25,9,Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work.
+276,25,9,Powers up Rock-type moves.
+277,25,9,"The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses."
+278,25,9,The Pokémon transforms into its Hero Form when it switches out.
+279,25,9,"When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there."
+280,25,9,"The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses."
+281,25,9,Boosts the Pokémon's most proficient stat in harsh sunlight or if the Pokémon is holding Booster Energy.
+282,25,9,Boosts the Pokémon's most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.
+283,25,9,"A body of pure, solid gold gives the Pokémon full immunity to other Pokémon's status moves."
+284,25,9,The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.
+285,25,9,The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.
+286,25,9,The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.
+287,25,9,The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.
+288,25,9,Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight.
+289,25,9,Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain.
+290,25,9,"If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself."
+291,25,9,"When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time."
+292,25,9,Powers up slicing moves.
+293,25,9,"When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated."
+294,25,9,"When the Pokémon enters a battle, it copies an ally's stat changes."
+295,25,9,Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.
+296,25,9,The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.
+297,25,9,"If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage."
+298,25,9,"The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target."
 299,26,9,"The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal-type and Fighting-type moves"
-300,26,9,Lowers the evasion of opposing Pok�mon by 1 stage when first sent into battle
-301,26,9,"When the Pok�mon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP"
-302,26,9,The power of the Pok�mon's toxic chain may badly poison any target the Pok�mon hits with a move
+300,26,9,Lowers the evasion of opposing Pokémon by 1 stage when first sent into battle
+301,26,9,"When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP"
+302,26,9,The power of the Pokémon's toxic chain may badly poison any target the Pokémon hits with a move
+303,26,9,"The Pokémon's heart fills with memories, causing the Mask to shine and one of the Pokémon's stats to be boosted."
+304,27,9,"When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form."
+305,27,9,The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.
+306,27,9,"When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero."
+307,27,9,Pokémon poisoned by Pecharunt's moves will also become confused.

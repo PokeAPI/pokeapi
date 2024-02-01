@@ -1,29 +1,45 @@
-name: Deploy Kustomize k8s cluster
+name: Build Docker image and create k8s with it
 
 on:
-  workflow_run:
-    workflows: ["Build and Push Docker image"]
-    branches: [master, staging]
-    types: 
-      - completed
-  schedule:
-    - cron: '0 0 1 * *'
+  pull_request:
 
 jobs:
-  create-kustomize-cluster:
+  docker:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Lint
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: pokeapi/pokeapi
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build
+        id: docker_build
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Resources/docker/app/Dockerfile
+          push: false
+          load: true
+          platforms: local
+          tags: pokeapi/pokeapi:local
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Lint k8s
         run: (cd Resources/k8s/kustomize && yamllint .)
       - name: Create k8s Kind Cluster
-        uses: helm/kind-action@v1.1.0
+        uses: helm/kind-action@v1.5.0
         with:
-          version: v0.11.1
+          kubectl_version: v1.26.13
       - name: Create deployment configuration
         run: |
           cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
@@ -31,19 +47,19 @@ jobs:
           cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
       - name: K8s Apply
         run: |
-          if [ ${GITHUB_REF#refs/heads/} = 'master' ]; then make kustomize-apply; else make kustomize-staging-apply; fi 
+          make kustomize-local-apply
           kubectl proxy &
-          kubectl describe deployment
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
-      - name: Set default namespace
+      - name: Set default namespace and print info
         run: |
           kubectl config set-context --current --namespace pokeapi
+          kubectl describe deployment
       - name: Migrate and build data
         run: |
           make k8s-migrate
           make k8s-build-db
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
-      - name: K8s Apply
+      - name: K8s wait for job
         run: |
           kubectl wait --timeout=120s --for=condition=complete job/load-graphql
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)

@@ -83,9 +83,9 @@ make docker-setup
 If you don't have `make` on your machine you can use the following commands
 
 ```sh
-docker-compose up -d
-docker-compose exec -T app python manage.py migrate --settings=config.docker-compose
-docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+docker compose up -d
+docker compose exec -T app python manage.py migrate --settings=config.docker-compose
+docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
 ```
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.

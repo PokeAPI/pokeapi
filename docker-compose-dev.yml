@@ -6,4 +6,4 @@ services:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
 
-# docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+# docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d

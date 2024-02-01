@@ -9,7 +9,7 @@ DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    os.environ.get("ADMINS", "Paul Hallett,paulandrewhallett@gmail.com").split(","),
+    os.environ.get("ADMINS", "Pokeapi,team@pokeapi.co").split(","),
 )
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

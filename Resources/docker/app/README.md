@@ -35,7 +35,7 @@ The container connects to a Redis cache via the environment variable `REDIS_CONN
 
 ### Run the container
 
-The container exposes port `80`. It needs a PostgreSQL and a Redis instance to connect to. Refer to the section [How to use this image](./how-to-use-this-image) for mapping the environment variables.
+The container exposes port `80`. It needs a PostgreSQL and a Redis instance to connect to. Refer to the section [How to use this image](#how-to-use-this-image) for mapping the environment variables.
 
 It's recommended to use the provided [docker-compose.yml](https://github.com/PokeAPI/pokeapi/blob/master/docker-compose.yml) to start a container from this image.
 

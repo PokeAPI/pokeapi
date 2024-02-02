@@ -2345,7 +2345,6 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         ).data
         effect_entries = data[0]
         for i, k in enumerate(effect_entries):
-            print(i, k)
             if '$effect_chance%' in effect_entries[k]:
                 data[0][k] = effect_entries[k].replace('$effect_chance', f'{obj.move_effect_chance}')
     

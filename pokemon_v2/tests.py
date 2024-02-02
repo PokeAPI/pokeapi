@@ -1724,17 +1724,18 @@ class APIData:
         pokemon_sprites.save()
 
         return pokemon_sprites
-    
+
     @classmethod
     def setup_pokemon_cries_data(cls, pokemon, latest=True, legacy=False):
-        cries_path = "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/%s.ogg"
+        cries_path = (
+            "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/%s.ogg"
+        )
         cries = {
             "latest": cries_path % f"latest/{pokemon.id}" if latest else None,
             "legacy": cries_path % f"legacy/{pokemon.id}" if legacy else None,
         }
         pokemon_cries = PokemonCries.objects.create(
-            pokemon=pokemon,
-            cries=json.dumps(cries)
+            pokemon=pokemon, cries=json.dumps(cries)
         )
         pokemon_cries.save()
         return pokemon_cries
@@ -5097,7 +5098,6 @@ class APITests(APIData, APITestCase):
             cries_data["legacy"],
             "{}".format(cries_data["legacy"]),
         )
-
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

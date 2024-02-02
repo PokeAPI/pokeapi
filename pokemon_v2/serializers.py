@@ -2752,7 +2752,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         return sprites_object.sprites
-    
+
     def get_pokemon_cries(self, obj):
         cries_object = PokemonCries.objects.get(pokemon_id=obj)
         return cries_object.cries

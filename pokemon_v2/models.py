@@ -1800,4 +1800,3 @@ class PokemonSprites(HasPokemon):
 
 class PokemonCries(HasPokemon):
     cries = models.JSONField()
-

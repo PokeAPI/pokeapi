@@ -63,7 +63,9 @@ for root, dirs, files in os.walk(CRIES_DIR):
 def file_path_or_none(file_name, image_file=True):
     if not image_file:
         return (
-            SOUND_DIR.format(file_name=file_name) if file_name in RESOURCE_CRIES else None
+            SOUND_DIR.format(file_name=file_name)
+            if file_name in RESOURCE_CRIES
+            else None
         )
     return (
         MEDIA_DIR.format(file_name=file_name) if file_name in RESOURCE_IMAGES else None

@@ -153,9 +153,7 @@ This move cannot be copied by []{move:mimic} or []{move:mirror-move}, nor select
 The user takes damage instead of being healed if the target has []{ability:liquid-ooze}.
 
 []{move:rapid-spin} will remove this effect.
-
-This effect is passed on by []{move:baton-pass}."
-86,9,Does nothing.,"Does nothing.
+7,9,Has a $e.
 
 This move cannot be used while []{move:gravity} is in effect."
 87,9,Disables the target's last used move for 1-8 turns.,"Disables the target's last used move, preventing its use for 4–7 turns, selected at random, or until the target leaves the [field]{mechanic:field}.  If the target hasn't used a move since entering the [field]{mechanic:field}, if it tried to use a move this turn and [failed]{mechanic:failed},  if its last used move has 0 PP remaining, or if it already has a move disabled, this move will fail."

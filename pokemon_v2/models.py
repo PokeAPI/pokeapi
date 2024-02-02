@@ -1796,3 +1796,8 @@ class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 
 class PokemonSprites(HasPokemon):
     sprites = models.JSONField()
+
+
+class PokemonCries(HasPokemon):
+    cries = models.JSONField()
+

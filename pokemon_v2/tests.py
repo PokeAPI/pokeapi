@@ -1724,6 +1724,20 @@ class APIData:
         pokemon_sprites.save()
 
         return pokemon_sprites
+    
+    @classmethod
+    def setup_pokemon_cries_data(cls, pokemon, latest=True, legacy=False):
+        cries_path = "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/%s.ogg"
+        cries = {
+            "latest": cries_path % f"latest/{pokemon.id}" if latest else None,
+            "legacy": cries_path % f"legacy/{pokemon.id}" if legacy else None,
+        }
+        pokemon_cries = PokemonCries.objects.create(
+            pokemon=pokemon,
+            cries=json.dumps(cries)
+        )
+        pokemon_cries.save()
+        return pokemon_cries
 
     # Evolution Data
     @classmethod
@@ -4596,6 +4610,7 @@ class APITests(APIData, APITestCase):
             pokemon_species=pokemon_species, name="pkm for base pkmn spcs"
         )
         self.setup_pokemon_sprites_data(pokemon)
+        self.setup_pokemon_cries_data(pokemon)
 
         response = self.client.get(
             "{}/pokemon-species/{}/".format(API_V2, pokemon_species.pk),
@@ -4816,6 +4831,7 @@ class APITests(APIData, APITestCase):
         )
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
         pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
+        pokemon_cries = self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
         pokemon_game_index = self.setup_pokemon_game_index_data(
             pokemon=pokemon, game_index=10
         )
@@ -5052,7 +5068,9 @@ class APITests(APIData, APITestCase):
         )
 
         sprites_data = json.loads(pokemon_sprites.sprites)
+        cries_data = json.loads(pokemon_cries.cries)
         response_sprites_data = json.loads(response.data["sprites"])
+        response_cries_data = json.loads(response.data["cries"])
 
         # sprite params
         self.assertEqual(
@@ -5069,6 +5087,17 @@ class APITests(APIData, APITestCase):
             sprites_data["other"]["showdown"]["back_default"],
             response_sprites_data["other"]["showdown"]["back_default"],
         )
+
+        # cries params
+        self.assertEqual(
+            cries_data["latest"],
+            "{}".format(cries_data["latest"]),
+        )
+        self.assertEqual(
+            cries_data["legacy"],
+            "{}".format(cries_data["legacy"]),
+        )
+
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

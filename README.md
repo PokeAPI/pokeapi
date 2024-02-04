@@ -37,7 +37,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make setup
     ```
 
-- Run the server using the following command:
+- Run the server on port `8000` using the following command:
 
     ```sh
     make serve
@@ -45,34 +45,34 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ### Database setup
 
-Start the Django shell by
+To build or rebuild the database by applying any CSV file update, run
 
 ```sh
-python manage.py shell --settings=config.local
+make build-db
 ```
 
-Run the build script with
+Visit [localhost:8000/api/v2/](http://localhost:8000/api/v2/) to see the running API!
 
-```py
-from data.v2.build import build_all
-build_all()
-```
-
-Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
-
-Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
-
-The option to build individual portions of the database was removed in order to increase performance of the build script.
+Each time the `build-db` script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
 If you ever need to wipe the database use this command:
 
 ```sh
-make wipe_db
+make wipe-sqlite-db
 ```
+
+If the database schema has changed, generate any outstanding migrations and apply them
+
+```sh
+make make-migrations
+make migrate
+```
+
+Run `make help` to see all tasks.
 
 ## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
-There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokéAPI.
+There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.
 
 Start everything by
 
@@ -90,13 +90,26 @@ docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; bui
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
+To rebuild the database and apply any CSV file updates, run
+
+```sh
+make docker-build-db
+```
+
+If the database schema has changed, generate the migrations and apply those
+
+```sh
+make docker-make-migrations
+make docker-migrate
+```
+
 ## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above docker-compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
 ```sh
 # hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
-# hasura cli's version has to be v2.0.8
+# hasura cli's version has to greater than v2.0.8
 make hasura-apply
 ```
 
@@ -104,7 +117,7 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
 ## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
 
@@ -156,7 +169,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 
 ## Donations
 
-Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 60 million requests a month!
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 330 million requests a month!
 
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
@@ -164,10 +177,13 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 
 ## Join Us On Slack!
 
-Have a question or just want to discuss new ideas and improvements? Hit us up on slack. Consider talking with us here before creating new issue.
+> **Warning**
+> Currently no maintainer has enough free time to support the community on Slack. Our Slack is in an unmaintained status.
+
+Have a question or just want to discuss new ideas and improvements? Hit us up on Slack. ~~Consider talking with us here before creating a new issue.~~
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-1l4vpwa8k-muQmMrFfv7TIFGrVWzjzcw) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-2ampo6her-_tHSI3uOS65WzGypt7Y96w) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 
@@ -177,7 +193,7 @@ This project exists thanks to all the people who [contribute](https://github.com
 
 <a href="graphs/contributors"><img src="https://opencollective.com/pokeapi/contributors.svg?width=890" /></a>
 
-All contributions are welcome: bug fixes, data contributions, recommendations.
+All contributions are welcome: bug fixes, data contributions, and recommendations.
 
 Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 

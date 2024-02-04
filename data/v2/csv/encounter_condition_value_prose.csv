@@ -1,92 +1,163 @@
 encounter_condition_value_id,local_language_id,name
 1,6,Während eines Schwarms
 1,9,During a swarm
+1,5,Pendant une tempête
 2,6,Außerhalb eines Schwarms
 2,9,Not during a swarm
+2,5,Pas pendant une tempête
 3,6,Am Morgen
 3,9,In the morning
+3,5,Le matin
 4,6,Am Tag
 4,9,During the day
+4,5,La journée
 5,6,In der Nacht
 5,9,At night
+5,5,La nuit
 6,6,Durch Benutzung des Pokéradars
 6,9,Using PokéRadar
+6,5,En utilisant le PokéRadar
 7,6,Ohne Benutzung des Pokéradars
 7,9,Not using PokéRadar
+7,5,Sans utiliser le PokéRadar
 8,6,Kein Spiel in Slot 2
 8,9,No game in slot 2
+8,5,Sans jeu dans le slot 2
 9,6,Rubin in Slot 2
 9,9,Ruby in slot 2
+9,5,Rubis dans le slot 2
 10,6,Saphir in Slot 2
 10,9,Sapphire in slot 2
+10,5,Saphir dans le slot 2
 11,6,Smaragd in Slot 2
 11,9,Emerald in slot 2
+11,5,Émeraude dans le slot 2
 12,6,Feuerrot in slot 2
 12,9,FireRed in slot 2
+12,5,Rouge Feu dans le slot 2
 13,6,Blattgrün in slot 2
 13,9,LeafGreen in slot 2
+13,5,Vert Feuille dans le slot 2
 14,6,Radio aus
 14,9,Radio off
+14,5,Radio éteinte
 15,6,Hoenn-Sound im Radio
 15,9,Hoenn radio
+15,5,En écoutant Radio Hoenn
 16,6,Sinnoh-Sound im Radio
 16,9,Sinnoh radio
+16,5,En écoutant Radio Sinnoh
 17,6,Im Frühling
 17,9,During Spring
+17,5,Au printemps
 18,6,Im Sommer
 18,9,During Summer
+18,5,En été
 19,6,Im Herbst
 19,9,During Autumn
+19,5,En automne
 20,6,Im Winter
 20,9,During Winter
+20,5,En hiver
 21,9,Bulbasaur as starter
+21,5,Bulbizarre en starter
 22,9,Squirtle as starter
+22,5,Carapuce en starter
 23,9,Charmander as starter
+23,5,Salamèche en starter
 24,9,Chespin as starter
+24,5,Marisson en starter
 25,9,Fennekin as starter
+25,5,Feunnec en starter
 26,9,Froakie as starter
+26,5,Grenousse en starter
 27,9,Chose ‘Blue’ on the TV news report
+27,5,Choisi « bleu » à la télé
 28,9,Chose ‘Red’ on the TV news report
+28,5,Choisi « rouge » à la télé
 29,9,Awakened the legendary beasts at Burned Tower
+29,5,En ayant réveillé les légendaires à la Tour Cendrée
 30,9,Visited Lake Verity after defeating Team Galactic at Mt. Coronet
+30,5,En ayant visité le Lac Vérité après avoir vaincu la Team Galaxie au Mont Couronné
 31,9,Talked to Professor Oak at Eterna City
+31,5,Après avoir parlé au Prof. Chen à Vestigion
 32,9,Visited the Pokémon Fan Club with Copycat’s doll
+32,5,Après avoir visité le Fan Club Pokémon avec la poupée de Copieuse
 33,9,Met Tornadus or Thundurus in a cutscene
+33,5,Après avoir rencontré Boréas ou Fulguris lors d’une cinématique
 34,9,Beat the Elite 4 for the second time
+34,5,Après deux victoires sur le Conseil 4
 35,9,Enter the Hall of Fame
+35,5,Après l’entrée au Panthéon
 36,9,None
+36,5,Aucune
 37,9,Acquired National Pokédex
+37,5,En ayant le Pokédex National
 38,9,None
+38,5,Aucune
 39,9,Beat the Pokémon league after knocking out Snorlax at Route 11
+39,5,"Après avoir mis Ronflex KO sur la route 11, puis avoir battu la Ligue"
 40,9,Playing on the Virtual Console Release
+40,5,En jouant sur la version Virtual Console
 41,9,Cure the nightmares of Eldritch’s Son
+41,5,Après avoir soigné les cauchemars du fils d’Edern
 42,9,Talk to Cynthia’s grandmother
+42,5,Après avoir parlé à la grand-mère de Cynthia
 43,9,No item requirement
+43,5,Sans objet particulier
 44,9,Have Adamant Orb in bag
+44,5,En ayant un Orbe Adamant dans le sac
 45,9,Have Lustrous Orb in bag
+45,5,En ayant un Orbe Perlé dans le sac
 46,9,Have Helix Fossil in bag
+46,5,En ayant un Nautile dans le sac
 47,9,Have Dome Fossil in bag
+47,5,En ayant un Fossile Dôme dans le sac
 48,9,Have Old Amber in bag
+48,5,En ayant un Vieil Ambre dans le sac
 49,9,Have Root Fossil in bag
+49,5,En ayant un Fossile Racine dans le sac
 50,9,Have Claw Fossil in bag
+50,5,En ayant un Fossile Griffe dans le sac
 51,9,Defeat Jupiter
+51,5,Après avoir vaincu Jupiter
 52,9,Defeat Team Galactic at Iron Island
+52,5,Après avoir vaincu la Team Galaxie sur l’Île de Fer
 53,9,Input correct password
+53,5,Après avoir saisi le bon mot de passe
 54,9,Obtained Zephyr badge
+54,5,En ayant obtenu le badge Zéphir
 55,9,Defeat Red
+55,5,Après avoir vaincu Red
 56,9,Received a Kanto Starter
+56,5,Après avoir recu un starter de Kanto
 57,9,Received TM59 From Claire
+57,5,Après avoir reçu la CT59 de Claire
 58,9,"Have Regirock, Regice and Registeel in the party"
+58,5,"En ayant Regirock, Regice et Registeel dans l’équipe"
 59,9,Sunday
+59,5,Le dimanche
 60,9,Monday
+60,5,Le lundi
 61,9,Tuesday
+61,5,Le mardi
 62,9,Wednesday
+62,5,Le mercredi
 63,9,Thursday
+63,5,Le jeudi
 64,9,Friday
+64,5,Le vendredi
 65,9,Saturday
+65,5,Le samedi
 66,9,The first Pokémon in the player’s party has a high friendship stat
+66,5,Si le premier Pokémon de l’équipe a une stat d’amitié élevée
 67,9,Beat Mars for the first time
+67,5,Après deux victoires face à Mars
 68,9,Have Odd Keystone in bag
+68,5,En ayant une Clé de Voûte dans le sac
 69,9,Has talked to at least 32 people in the underground
+69,5,Après avoir parlé à 32 personnes dans les souterrains
 70,9,Returned Machine Part to Power Plant
+70,5,Après avoir rapporté la pièce de machine à la centrale
 10,9,Have an Event Arceus in the party
+10,5,En ayant un Arceus événementiel dans l’équipe

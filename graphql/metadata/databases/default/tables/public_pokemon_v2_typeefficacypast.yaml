@@ -2,12 +2,12 @@ table:
   name: pokemon_v2_typeefficacypast
   schema: public
 object_relationships:
-- name: pokemonV2TypeByTargetTypeId
-  using:
-    foreign_key_constraint_on: target_type_id
-- name: pokemon_v2_generation
-  using:
-    foreign_key_constraint_on: generation_id
-- name: pokemon_v2_type
-  using:
-    foreign_key_constraint_on: damage_type_id
+  - name: pokemonV2TypeByTargetTypeId
+    using:
+      foreign_key_constraint_on: target_type_id
+  - name: pokemon_v2_generation
+    using:
+      foreign_key_constraint_on: generation_id
+  - name: pokemon_v2_type
+    using:
+      foreign_key_constraint_on: damage_type_id

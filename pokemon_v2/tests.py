@@ -6,7 +6,6 @@ from pokemon_v2.models import *
 # pylint: disable=redefined-builtin
 
 TEST_HOST = "http://testserver"
-MEDIA_HOST = "https://raw.githubusercontent.com/PokeAPI/sprites/master/"
 API_V2 = "/api/v2"
 
 
@@ -16,7 +15,6 @@ class APIData:
     # Gender Data
     @classmethod
     def setup_gender_data(cls, name="gndr"):
-
         gender = Gender.objects.create(
             name=name,
         )
@@ -27,7 +25,6 @@ class APIData:
     # Language Data
     @classmethod
     def setup_language_data(cls, name="lang"):
-
         language = Language.objects.create(
             iso639="ts",
             iso3166="tt",
@@ -41,7 +38,6 @@ class APIData:
 
     @classmethod
     def setup_language_name_data(cls, language, name="lang nm"):
-
         local_language = cls.setup_language_data(name="lang for " + name)
 
         language_name = LanguageName.objects.create(
@@ -54,7 +50,6 @@ class APIData:
     # Region Data
     @classmethod
     def setup_region_data(cls, name="reg"):
-
         region = Region.objects.create(name=name)
         region.save()
 
@@ -62,7 +57,6 @@ class APIData:
 
     @classmethod
     def setup_region_name_data(cls, region, name="reg nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         region_name = RegionName.objects.create(
@@ -75,7 +69,6 @@ class APIData:
     # Generation Data
     @classmethod
     def setup_generation_data(cls, region=None, name="gen"):
-
         region = region or cls.setup_region_data(name="reg for " + name)
 
         generation = Generation.objects.create(region=region, name=name)
@@ -85,7 +78,6 @@ class APIData:
 
     @classmethod
     def setup_generation_name_data(cls, generation, name="gen nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         generation_name = GenerationName.objects.create(
@@ -98,7 +90,6 @@ class APIData:
     # Version Data
     @classmethod
     def setup_version_group_data(cls, name="ver grp", generation=None):
-
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
         version_group = VersionGroup.objects.create(
@@ -110,7 +101,6 @@ class APIData:
 
     @classmethod
     def setup_version_group_region_data(cls, version_group=None, region=None):
-
         version_group_region = VersionGroupRegion.objects.create(
             version_group=version_group, region=region
         )
@@ -120,7 +110,6 @@ class APIData:
 
     @classmethod
     def setup_version_data(cls, version_group=None, name="ver"):
-
         version = Version.objects.create(
             name=name,
             version_group=version_group,
@@ -131,7 +120,6 @@ class APIData:
 
     @classmethod
     def setup_version_name_data(cls, version, name="ver nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         version_name = VersionName.objects.create(
@@ -144,7 +132,6 @@ class APIData:
     # Ability Data
     @classmethod
     def setup_ability_data(cls, name="ablty", generation=None):
-
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
         ability = Ability.objects.create(
@@ -156,7 +143,6 @@ class APIData:
 
     @classmethod
     def setup_ability_name_data(cls, ability, name="ablty nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         ability_name = AbilityName.objects.create(
@@ -170,7 +156,6 @@ class APIData:
     def setup_ability_effect_text_data(
         cls, ability, short_effect="ablty shrt efct", effect="ablty efct"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         ability_effect_text = AbilityEffectText.objects.create(
@@ -182,7 +167,6 @@ class APIData:
 
     @classmethod
     def setup_ability_change_data(cls, ability):
-
         version_group = cls.setup_version_group_data(name="ver grp for ablty chng")
 
         ability_change = AbilityChange.objects.create(
@@ -196,7 +180,6 @@ class APIData:
     def setup_ability_change_effect_text_data(
         cls, ability_change, effect="ablty change efct"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         ability_change_effect_text = AbilityChangeEffectText.objects.create(
@@ -208,7 +191,6 @@ class APIData:
 
     @classmethod
     def setup_ability_flavor_text_data(cls, ability, flavor_text="ablty flvr txt"):
-
         version_group = cls.setup_version_group_data(name="ver grp for " + flavor_text)
 
         language = cls.setup_language_data(name="lang for " + flavor_text)
@@ -226,7 +208,6 @@ class APIData:
     # Item Data
     @classmethod
     def setup_item_attribute_data(cls, name="itm attr"):
-
         item_attribute = ItemAttribute.objects.create(
             name=name,
         )
@@ -236,7 +217,6 @@ class APIData:
 
     @classmethod
     def setup_item_attribute_name_data(cls, item_attribute, name="itm attr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         item_attribute_name = ItemAttributeName.objects.create(
@@ -250,7 +230,6 @@ class APIData:
     def setup_item_attribute_description_data(
         cls, item_attribute, description="itm attr desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         item_attribute_description = ItemAttributeDescription.objects.create(
@@ -262,7 +241,6 @@ class APIData:
 
     @classmethod
     def setup_item_attribute_map_data(cls, item, item_attribute):
-
         item_attribute_map = ItemAttributeMap(item=item, item_attribute=item_attribute)
         item_attribute_map.save()
 
@@ -270,7 +248,6 @@ class APIData:
 
     @classmethod
     def setup_item_fling_effect_data(cls, name="itm flng efct"):
-
         item_fling_effect = ItemFlingEffect.objects.create(
             name=name,
         )
@@ -282,7 +259,6 @@ class APIData:
     def setup_item_fling_effect_effect_text_data(
         cls, item_fling_effect, effect="itm flng efct efct txt"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         item_fling_effect_effect_text = ItemFlingEffectEffectText.objects.create(
@@ -294,7 +270,6 @@ class APIData:
 
     @classmethod
     def setup_item_pocket_data(cls, name="itm pkt"):
-
         item_pocket = ItemPocket.objects.create(
             name=name,
         )
@@ -304,7 +279,6 @@ class APIData:
 
     @classmethod
     def setup_item_pocket_name_data(cls, item_pocket, name="itm pkt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         item_pocket_name = ItemPocketName.objects.create(
@@ -316,7 +290,6 @@ class APIData:
 
     @classmethod
     def setup_item_category_data(cls, name="itm ctgry", item_pocket=None):
-
         item_pocket = item_pocket or cls.setup_item_pocket_data(
             name="itm pkt for " + name
         )
@@ -328,7 +301,6 @@ class APIData:
 
     @classmethod
     def setup_item_category_name_data(cls, item_category, name="itm ctgry nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         item_category_name = ItemCategoryName.objects.create(
@@ -340,8 +312,7 @@ class APIData:
 
     @classmethod
     def setup_item_sprites_data(cls, item, default=True):
-
-        sprite_path = "/media/sprites/items/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
         sprites = {
             "default": sprite_path % item.id if default else None,
@@ -363,7 +334,6 @@ class APIData:
         cost=100,
         fling_power=100,
     ):
-
         item = Item.objects.create(
             name=name,
             item_category=item_category,
@@ -377,7 +347,6 @@ class APIData:
 
     @classmethod
     def setup_item_name_data(cls, item, name="itm nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         item_name = ItemName.objects.create(item=item, name=name, language=language)
@@ -389,7 +358,6 @@ class APIData:
     def setup_item_effect_text_data(
         cls, item, short_effect="ablty shrt efct", effect="ablty efct"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         item_effect_text = ItemEffectText.objects.create(
@@ -401,7 +369,6 @@ class APIData:
 
     @classmethod
     def setup_item_flavor_text_data(cls, item, flavor_text="itm flvr txt"):
-
         version_group = cls.setup_version_group_data(name="ver grp for " + flavor_text)
 
         language = cls.setup_language_data(name="lang for " + flavor_text)
@@ -418,7 +385,6 @@ class APIData:
 
     @classmethod
     def setup_item_game_index_data(cls, item, game_index=0):
-
         generation = cls.setup_generation_data(name="gen for itm gm indx")
 
         item_game_index = ItemGameIndex.objects.create(
@@ -431,7 +397,6 @@ class APIData:
     # Contest Data
     @classmethod
     def setup_contest_type_data(cls, name="cntst tp"):
-
         contest_type = ContestType.objects.create(
             name=name,
         )
@@ -441,7 +406,6 @@ class APIData:
 
     @classmethod
     def setup_contest_type_name_data(cls, contest_type, name="cntst tp nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         contest_type_name = ContestTypeName.objects.create(
@@ -453,7 +417,6 @@ class APIData:
 
     @classmethod
     def setup_contest_effect_data(cls, appeal=2, jam=0):
-
         contest_effect = ContestEffect.objects.create(appeal=appeal, jam=jam)
         contest_effect.save()
 
@@ -463,7 +426,6 @@ class APIData:
     def setup_contest_effect_flavor_text_data(
         cls, contest_effect, flavor_text="cntst efct flvr txt"
     ):
-
         language = cls.setup_language_data(name="lang for " + flavor_text)
 
         contest_effect_flavor_text = ContestEffectFlavorText.objects.create(
@@ -477,7 +439,6 @@ class APIData:
     def setup_contest_effect_effect_text_data(
         cls, contest_effect, effect="cntst efct efct txt"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         contest_effect_effect_text = ContestEffectEffectText.objects.create(
@@ -489,7 +450,6 @@ class APIData:
 
     @classmethod
     def setup_super_contest_effect_data(cls, appeal=2):
-
         super_contest_effect = SuperContestEffect.objects.create(
             appeal=appeal,
         )
@@ -501,7 +461,6 @@ class APIData:
     def setup_super_contest_effect_flavor_text_data(
         cls, super_contest_effect, flavor_text="spr cntst efct flvr txt"
     ):
-
         language = cls.setup_language_data(name="lang for " + flavor_text)
 
         super_contest_effect_flavor_text = SuperContestEffectFlavorText.objects.create(
@@ -516,7 +475,6 @@ class APIData:
     # Berry Data
     @classmethod
     def setup_berry_flavor_data(cls, contest_type=None, name="bry flvr"):
-
         contest_type = contest_type or cls.setup_contest_type_data(
             name="cntst tp for bry flvr"
         )
@@ -528,7 +486,6 @@ class APIData:
 
     @classmethod
     def setup_berry_flavor_name_data(cls, berry_flavor, name="bry flvr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         berry_flavor_name = BerryFlavorName.objects.create(
@@ -540,7 +497,6 @@ class APIData:
 
     @classmethod
     def setup_berry_firmness_data(cls, name="bry frmns"):
-
         berry_firmness = BerryFirmness.objects.create(
             name=name,
         )
@@ -550,7 +506,6 @@ class APIData:
 
     @classmethod
     def setup_berry_firmness_name_data(cls, berry_firmness, name="bry frmns nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         berry_firmness_name = BerryFirmnessName.objects.create(
@@ -562,7 +517,6 @@ class APIData:
 
     @classmethod
     def setup_berry_flavor_map_data(cls, berry, berry_flavor, potency=20):
-
         berry_flavor_map = BerryFlavorMap(
             berry=berry, berry_flavor=berry_flavor, potency=potency
         )
@@ -584,7 +538,6 @@ class APIData:
         soil_dryness=15,
         smoothness=25,
     ):
-
         item = item or cls.setup_item_data(name="itm for " + name)
 
         berry_firmness = berry_firmness or cls.setup_berry_firmness_data(
@@ -610,7 +563,6 @@ class APIData:
     # Egg Group Data
     @classmethod
     def setup_egg_group_data(cls, name="egg grp"):
-
         egg_group = EggGroup.objects.create(
             name=name,
         )
@@ -620,7 +572,6 @@ class APIData:
 
     @classmethod
     def setup_egg_group_name_data(cls, egg_group, name="ntr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         egg_group_name = EggGroupName.objects.create(
@@ -633,7 +584,6 @@ class APIData:
     # Growth Rate Data
     @classmethod
     def setup_growth_rate_data(cls, name="grth rt", formula="pie*1000"):
-
         growth_rate = GrowthRate(name=name, formula=formula)
         growth_rate.save()
 
@@ -643,7 +593,6 @@ class APIData:
     def setup_growth_rate_description_data(
         cls, growth_rate, description="grth rt desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         growth_rate_description = GrowthRateDescription.objects.create(
@@ -656,7 +605,6 @@ class APIData:
     # Location Data
     @classmethod
     def setup_location_data(cls, region=None, name="lctn"):
-
         region = region or cls.setup_region_data(name="rgn for " + name)
 
         location = Location(name=name, region=region)
@@ -666,7 +614,6 @@ class APIData:
 
     @classmethod
     def setup_location_game_index_data(cls, location, game_index=0):
-
         generation = cls.setup_generation_data(name="gen for itm gm indx")
 
         location_game_index = LocationGameIndex.objects.create(
@@ -678,7 +625,6 @@ class APIData:
 
     @classmethod
     def setup_location_name_data(cls, location, name="lctn nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         location_name = LocationName.objects.create(
@@ -690,7 +636,6 @@ class APIData:
 
     @classmethod
     def setup_location_area_data(cls, location=None, name="lctn area", game_index=0):
-
         location = location or cls.setup_location_data(name="lctn for " + name)
 
         location_area = LocationArea(
@@ -702,7 +647,6 @@ class APIData:
 
     @classmethod
     def setup_location_area_name_data(cls, location_area, name="lctn area nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         location_area_name = LocationAreaName.objects.create(
@@ -715,7 +659,6 @@ class APIData:
     # Type Data
     @classmethod
     def setup_type_data(cls, name="tp", move_damage_class=None, generation=None):
-
         move_damage_class = move_damage_class or cls.setup_move_damage_class_data(
             name="mv dmg cls for " + name
         )
@@ -731,7 +674,6 @@ class APIData:
 
     @classmethod
     def setup_type_name_data(cls, type, name="tp nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         type_name = TypeName.objects.create(language=language, name=name, type=type)
@@ -741,7 +683,6 @@ class APIData:
 
     @classmethod
     def setup_type_game_index_data(cls, type, game_index=0):
-
         generation = cls.setup_generation_data(name="gen for tp gm indx")
 
         type_game_index = TypeGameIndex.objects.create(
@@ -754,7 +695,6 @@ class APIData:
     # Move Data
     @classmethod
     def setup_move_ailment_data(cls, name="mv almnt"):
-
         move_ailment = MoveMetaAilment.objects.create(name=name)
         move_ailment.save()
 
@@ -762,7 +702,6 @@ class APIData:
 
     @classmethod
     def setup_move_ailment_name_data(cls, move_ailment, name="mv almnt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_ailment_name = MoveMetaAilmentName.objects.create(
@@ -774,7 +713,6 @@ class APIData:
 
     @classmethod
     def setup_move_battle_style_data(cls, name="mv btl stl"):
-
         move_battle_style = MoveBattleStyle.objects.create(name=name)
         move_battle_style.save()
 
@@ -782,7 +720,6 @@ class APIData:
 
     @classmethod
     def setup_move_battle_style_name_data(cls, move_battle_style, name="mv almnt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_battle_style_name = MoveBattleStyleName.objects.create(
@@ -794,7 +731,6 @@ class APIData:
 
     @classmethod
     def setup_move_category_data(cls, name="mv ctgry"):
-
         move_category = MoveMetaCategory.objects.create(name=name)
         move_category.save()
 
@@ -804,7 +740,6 @@ class APIData:
     def setup_move_category_description_data(
         cls, move_category, description="mv ctgry desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         move_category_description = MoveMetaCategoryDescription.objects.create(
@@ -816,7 +751,6 @@ class APIData:
 
     @classmethod
     def setup_move_effect_data(cls):
-
         move_effect = MoveEffect.objects.create()
         move_effect.save()
 
@@ -829,7 +763,6 @@ class APIData:
         effect="mv efct efct txt",
         short_effect="mv efct shrt efct txt",
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         effect_effect_text = MoveEffectEffectText.objects.create(
@@ -844,7 +777,6 @@ class APIData:
 
     @classmethod
     def setup_move_damage_class_data(cls, name="mv dmg cls"):
-
         move_damage_class = MoveDamageClass.objects.create(name=name)
         move_damage_class.save()
 
@@ -852,7 +784,6 @@ class APIData:
 
     @classmethod
     def setup_move_damage_class_name_data(cls, move_damage_class, name="mv dmg cls nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_damage_class_name = MoveDamageClassName.objects.create(
@@ -866,7 +797,6 @@ class APIData:
     def setup_move_damage_class_description_data(
         cls, move_damage_class, description="mv dmg cls desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         move_damage_class_description = MoveDamageClassDescription.objects.create(
@@ -880,7 +810,6 @@ class APIData:
 
     @classmethod
     def setup_move_learn_method_data(cls, name="mv lrn mthd"):
-
         move_learn_method = MoveLearnMethod.objects.create(name=name)
         move_learn_method.save()
 
@@ -890,7 +819,6 @@ class APIData:
     def setup_move_learn_method_name_data(
         cls, move_learn_method, name="mv lrn mthd nm"
     ):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_learn_method_name = MoveLearnMethodName.objects.create(
@@ -904,7 +832,6 @@ class APIData:
     def setup_move_learn_method_description_data(
         cls, move_learn_method, description="mv lrn mthd desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         move_learn_method_description = MoveLearnMethodDescription.objects.create(
@@ -918,7 +845,6 @@ class APIData:
 
     @classmethod
     def setup_move_target_data(cls, name="mv trgt"):
-
         move_target = MoveTarget.objects.create(name=name)
         move_target.save()
 
@@ -926,7 +852,6 @@ class APIData:
 
     @classmethod
     def setup_move_target_name_data(cls, move_target, name="mv trgt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_target_name = MoveTargetName.objects.create(
@@ -940,7 +865,6 @@ class APIData:
     def setup_move_target_description_data(
         cls, move_target, description="mv trgt desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         move_target_description = MoveTargetDescription.objects.create(
@@ -952,7 +876,6 @@ class APIData:
 
     @classmethod
     def setup_contest_combo_data(cls, first_move, second_move):
-
         contest_combo = ContestCombo.objects.create(
             first_move=first_move, second_move=second_move
         )
@@ -964,7 +887,6 @@ class APIData:
     def setup_version_group_move_learn_method_data(
         cls, version_group=None, move_learn_method=None
     ):
-
         version_group_move_learn_method = VersionGroupMoveLearnMethod.objects.create(
             version_group=version_group, move_learn_method=move_learn_method
         )
@@ -974,7 +896,6 @@ class APIData:
 
     @classmethod
     def setup_super_contest_combo_data(cls, first_move, second_move):
-
         super_contest_combo = SuperContestCombo.objects.create(
             first_move=first_move, second_move=second_move
         )
@@ -1016,7 +937,6 @@ class APIData:
         priority=0,
         effect_chance=50,
     ):
-
         contest_type = contest_type or cls.setup_contest_type_data(
             name="cntst tp for " + name
         )
@@ -1061,7 +981,6 @@ class APIData:
 
     @classmethod
     def setup_move_name_data(cls, move, name="mv nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         move_name = MoveName.objects.create(move=move, language=language, name=name)
@@ -1086,7 +1005,6 @@ class APIData:
         flinch_chance=0,
         stat_chance=0,
     ):
-
         move_ailment = move_ailment or cls.setup_move_ailment_data()
 
         move_category = move_category or cls.setup_move_category_data()
@@ -1122,7 +1040,6 @@ class APIData:
         accuracy=80,
         effect_chance=50,
     ):
-
         version_group = version_group or cls.setup_version_group_data(
             name="ver grp for mv chng"
         )
@@ -1143,7 +1060,6 @@ class APIData:
 
     @classmethod
     def setup_move_effect_change_data(cls, move_effect=None):
-
         version_group = cls.setup_version_group_data(name="ver grp for mv chng")
 
         move_effect_change = MoveEffectChange.objects.create(
@@ -1157,7 +1073,6 @@ class APIData:
     def setup_move_effect_change_effect_text_data(
         cls, move_effect_change=None, effect="mv efct chng efct txt"
     ):
-
         language = cls.setup_language_data(name="lang for " + effect)
 
         move_effect_change_effect_text = MoveEffectChangeEffectText.objects.create(
@@ -1170,7 +1085,6 @@ class APIData:
     # Stat Data
     @classmethod
     def setup_stat_data(cls, name="stt", is_battle_only=True, game_index=1):
-
         move_damage_class = cls.setup_move_damage_class_data(
             name="mv dmg cls for " + name
         )
@@ -1187,7 +1101,6 @@ class APIData:
 
     @classmethod
     def setup_stat_name_data(cls, stat, name="stt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         stat_name = StatName.objects.create(stat=stat, language=language, name=name)
@@ -1197,7 +1110,6 @@ class APIData:
 
     @classmethod
     def setup_move_stat_change_data(cls, move, stat=None, change=1):
-
         stat = stat or cls.setup_stat_data(name="stt for mv")
 
         move_stat_change = MoveMetaStatChange.objects.create(
@@ -1209,7 +1121,6 @@ class APIData:
 
     @classmethod
     def setup_pokeathlon_stat_data(cls, name="pkathln stt"):
-
         pokeathlon_stat = PokeathlonStat.objects.create(name=name)
         pokeathlon_stat.save()
 
@@ -1217,7 +1128,6 @@ class APIData:
 
     @classmethod
     def setup_pokeathlon_stat_name_data(cls, pokeathlon_stat, name="pkathln stt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokeathlon_stat_name = PokeathlonStatName.objects.create(
@@ -1230,7 +1140,6 @@ class APIData:
     # Characteristic Data
     @classmethod
     def setup_characteristic_data(cls, gene_mod_5=0, stat=None):
-
         stat = stat or cls.setup_stat_data(name="stt for char")
 
         characteristic = Characteristic.objects.create(stat=stat, gene_mod_5=gene_mod_5)
@@ -1242,7 +1151,6 @@ class APIData:
     def setup_characteristic_description_data(
         cls, characteristic, description="char desc"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         characteristic_description = CharacteristicDescription.objects.create(
@@ -1263,7 +1171,6 @@ class APIData:
         name="ntr",
         game_index=1,
     ):
-
         nature = Nature.objects.create(
             name=name,
             decreased_stat=decreased_stat,
@@ -1278,7 +1185,6 @@ class APIData:
 
     @classmethod
     def setup_nature_name_data(cls, nature, name="ntr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         nature_name = NatureName.objects.create(
@@ -1292,7 +1198,6 @@ class APIData:
     def setup_nature_pokeathlon_stat_data(
         cls, nature=None, pokeathlon_stat=None, max_change=1
     ):
-
         nature_pokeathlon_stat = NaturePokeathlonStat.objects.create(
             nature=nature,
             pokeathlon_stat=pokeathlon_stat,
@@ -1310,7 +1215,6 @@ class APIData:
         low_hp_preference=10,
         high_hp_preference=20,
     ):
-
         nature_battle_style_preference = NatureBattleStylePreference.objects.create(
             nature=nature,
             move_battle_style=move_battle_style,
@@ -1324,7 +1228,6 @@ class APIData:
     # Pokedex Data
     @classmethod
     def setup_pokedex_data(cls, region=None, name="pkdx"):
-
         region = region or cls.setup_region_data(name="rgn for " + name)
 
         pokedex = Pokedex.objects.create(
@@ -1337,7 +1240,6 @@ class APIData:
 
     @classmethod
     def setup_pokedex_name_data(cls, pokedex, name="pkdx nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokedex_name = PokedexName.objects.create(
@@ -1349,7 +1251,6 @@ class APIData:
 
     @classmethod
     def setup_pokedex_description_data(cls, pokedex, description="pkdx desc"):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         pokedex_description = PokedexDescription.objects.create(
@@ -1361,7 +1262,6 @@ class APIData:
 
     @classmethod
     def setup_pokedex_version_group_data(cls, pokedex, version_group=None):
-
         version_group = version_group or cls.setup_language_data(
             name="ver grp for pkdx"
         )
@@ -1376,7 +1276,6 @@ class APIData:
     # Pokemon Data
     @classmethod
     def setup_pokemon_habitat_data(cls, name="pkm hbtt"):
-
         pokemon_habitat = PokemonHabitat.objects.create(
             name=name,
         )
@@ -1386,7 +1285,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_habitat_name_data(cls, pokemon_habitat, name="pkm hbtt nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokemon_habitat_name = PokemonHabitatName.objects.create(
@@ -1398,7 +1296,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_color_data(cls, name="pkm clr"):
-
         pokemon_color = PokemonColor.objects.create(
             name=name,
         )
@@ -1408,7 +1305,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_color_name_data(cls, pokemon_color, name="pkm clr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokemon_color_name = PokemonColorName.objects.create(
@@ -1420,7 +1316,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_shape_data(cls, name="pkm shp"):
-
         pokemon_shape = PokemonShape.objects.create(
             name=name,
         )
@@ -1432,7 +1327,6 @@ class APIData:
     def setup_pokemon_shape_name_data(
         cls, pokemon_shape, name="pkm shp nm", awesome_name="pkm shp awsm nm"
     ):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokemon_shape_name = PokemonShapeName.objects.create(
@@ -1449,7 +1343,6 @@ class APIData:
     def setup_pokemon_species_form_description_data(
         cls, pokemon_species=None, description="pkm spcs frm dscr"
     ):
-
         language = cls.setup_language_data(name="lang for " + description)
 
         pokemon_species_form_description = PokemonSpeciesDescription.objects.create(
@@ -1463,7 +1356,6 @@ class APIData:
     def setup_pokemon_species_flavor_text_data(
         cls, pokemon_species, flavor_text="pkmn spcs flvr txt"
     ):
-
         version = cls.setup_version_data(name="ver for " + flavor_text)
 
         language = cls.setup_language_data(name="lang for " + flavor_text)
@@ -1500,7 +1392,6 @@ class APIData:
         is_mythical=False,
         order=1,
     ):
-
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
         growth_rate = growth_rate or cls.setup_growth_rate_data(
@@ -1547,7 +1438,6 @@ class APIData:
     def setup_pokemon_species_name_data(
         cls, pokemon_species, name="pkmn spcs nm", genus="pkmn spcs gns"
     ):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pokemon_species_name = PokemonSpeciesName.objects.create(
@@ -1559,7 +1449,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_dex_entry_data(cls, pokemon_species, pokedex, entry_number=100):
-
         dex_number = PokemonDexNumber(
             pokemon_species=pokemon_species,
             pokedex=pokedex,
@@ -1571,7 +1460,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_egg_group_data(cls, pokemon_species, egg_group):
-
         pokemon_egg_group = PokemonEggGroup(
             pokemon_species=pokemon_species, egg_group=egg_group
         )
@@ -1590,7 +1478,6 @@ class APIData:
         order=1,
         is_default=False,
     ):
-
         pokemon_species = pokemon_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for " + name
         )
@@ -1610,7 +1497,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_game_index_data(cls, pokemon, game_index=0):
-
         version = cls.setup_version_data(name="ver for pkmn gm indx")
 
         pokemon_game_index = PokemonGameIndex.objects.create(
@@ -1629,8 +1515,7 @@ class APIData:
         back_default=False,
         back_shiny=False,
     ):
-
-        sprite_path = "/media/sprites/pokemon/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
         sprites = {
             "front_default": sprite_path % pokemon_form.id if front_default else None,
@@ -1648,7 +1533,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_form_type_data(cls, pokemon_form, type=None, slot=1):
-
         type = type or cls.setup_type_data(name="tp for pkmn frm")
 
         form_type = PokemonFormType(pokemon_form=pokemon_form, type=type, slot=slot)
@@ -1668,7 +1552,6 @@ class APIData:
         form_order=1,
         is_mega=False,
     ):
-
         version_group = cls.setup_version_group_data(name="ver grp for " + name)
 
         pokemon_form = PokemonForm(
@@ -1688,7 +1571,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_ability_data(cls, pokemon, ability=None, is_hidden=False, slot=1):
-
         ability = ability or cls.setup_ability_data(name="ablty for pkmn")
 
         pokemon_ability = PokemonAbility(
@@ -1699,8 +1581,24 @@ class APIData:
         return pokemon_ability
 
     @classmethod
-    def setup_pokemon_stat_data(cls, pokemon, base_stat=10, effort=10):
+    def setup_pokemon_past_ability_data(
+        cls, pokemon, generation, ability=None, is_hidden=False, slot=1
+    ):
+        ability = ability or cls.setup_ability_data(name="ablty for pkmn")
 
+        pokemon_ability_past = PokemonAbilityPast(
+            pokemon=pokemon,
+            generation=generation,
+            ability=ability,
+            is_hidden=is_hidden,
+            slot=slot,
+        )
+        pokemon_ability_past.save()
+
+        return pokemon_ability_past
+
+    @classmethod
+    def setup_pokemon_stat_data(cls, pokemon, base_stat=10, effort=10):
         stat = cls.setup_stat_data(name="stt for pkmn")
 
         pokemon_stat = PokemonStat(
@@ -1712,7 +1610,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):
-
         type = type or cls.setup_type_data(name="tp for pkmn")
 
         pokemon_type = PokemonType(pokemon=pokemon, type=type, slot=slot)
@@ -1722,7 +1619,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_past_type_data(cls, pokemon, generation, type=None, slot=1):
-
         type = type or cls.setup_type_data(name="tp for pkmn")
 
         pokemon_type_past = PokemonTypePast(
@@ -1734,7 +1630,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_item_data(cls, pokemon=None, item=None, version=None, rarity=50):
-
         item = item or cls.setup_item_data(name="itm for pkmn")
 
         pokemon = pokemon or cls.setup_pokemon_data(name="pkmn for pkmn")
@@ -1750,7 +1645,6 @@ class APIData:
 
     @classmethod
     def setup_pokemon_move_data(cls, pokemon, move, version_group, level=0, order=1):
-
         move_learn_method = cls.setup_move_learn_method_data(
             name="mv lrn mthd for pkmn"
         )
@@ -1780,8 +1674,33 @@ class APIData:
         back_shiny=False,
         back_shiny_female=False,
     ):
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
+        showdown_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/%s.png"
 
-        sprite_path = "/media/sprites/pokemon/%s.png"
+        showdown = {
+            "front_default": showdown_path % pokemon.id if front_default else None,
+            "front_female": showdown_path % f"female/{pokemon.id}"
+            if front_female
+            else None,
+            "front_shiny": showdown_path % f"shiny/{pokemon.id}"
+            if front_shiny
+            else None,
+            "front_shiny_female": showdown_path % f"shiny/female/{pokemon.id}"
+            if front_shiny_female
+            else None,
+            "back_default": showdown_path % f"back/{pokemon.id}"
+            if back_default
+            else None,
+            "back_female": showdown_path % f"back/female/{pokemon.id}"
+            if back_female
+            else None,
+            "back_shiny": showdown_path % f"back/shiny/{pokemon.id}"
+            if back_shiny
+            else None,
+            "back_shiny_female": showdown_path % f"back/shiny/female/{pokemon.id}"
+            if back_shiny_female
+            else None,
+        }
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
@@ -1799,7 +1718,8 @@ class APIData:
         }
 
         pokemon_sprites = PokemonSprites.objects.create(
-            pokemon=pokemon, sprites=json.dumps(sprites)
+            pokemon=pokemon,
+            sprites=json.dumps(sprites | {"other": {"showdown": showdown}}),
         )
         pokemon_sprites.save()
 
@@ -1808,7 +1728,6 @@ class APIData:
     # Evolution Data
     @classmethod
     def setup_evolution_trigger_data(cls, name="evltn trgr"):
-
         evolution_trigger = EvolutionTrigger.objects.create(
             name=name,
         )
@@ -1818,7 +1737,6 @@ class APIData:
 
     @classmethod
     def setup_evolution_trigger_name_data(cls, evolution_trigger, name="evltn trgr nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         evolution_trigger_name = EvolutionTriggerName.objects.create(
@@ -1830,7 +1748,6 @@ class APIData:
 
     @classmethod
     def setup_evolution_chain_data(cls, baby_trigger_item=None):
-
         evolution_chain = EvolutionChain.objects.create(
             baby_trigger_item=baby_trigger_item,
         )
@@ -1861,7 +1778,6 @@ class APIData:
         needs_overworld_rain=False,
         turn_upside_down=False,
     ):
-
         evolved_species = evolved_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for pkmn evltn"
         )
@@ -1898,7 +1814,6 @@ class APIData:
     # Encounter Data
     @classmethod
     def setup_encounter_method_data(cls, name="encntr mthd", order=0):
-
         encounter_method = EncounterMethod.objects.create(name=name, order=order)
         encounter_method.save()
 
@@ -1906,7 +1821,6 @@ class APIData:
 
     @classmethod
     def setup_encounter_method_name_data(cls, encounter_method, name="encntr mthd nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         encounter_method_name = EncounterMethodName.objects.create(
@@ -1918,7 +1832,6 @@ class APIData:
 
     @classmethod
     def setup_encounter_condition_data(cls, name="encntr cndtn"):
-
         encounter_condition = EncounterCondition.objects.create(name=name)
         encounter_condition.save()
 
@@ -1928,7 +1841,6 @@ class APIData:
     def setup_encounter_condition_name_data(
         cls, encounter_condition, name="encntr cndtn nm"
     ):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         encounter_condition_name = EncounterConditionName.objects.create(
@@ -1942,7 +1854,6 @@ class APIData:
     def setup_encounter_condition_value_data(
         cls, encounter_condition, name="encntr cndtn vlu", is_default=False
     ):
-
         encounter_condition_value = EncounterConditionValue.objects.create(
             encounter_condition=encounter_condition, name=name, is_default=is_default
         )
@@ -1954,7 +1865,6 @@ class APIData:
     def setup_encounter_condition_value_name_data(
         cls, encounter_condition_value, name="encntr cndtn vlu nm"
     ):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         encounter_condition_value_name = EncounterConditionValueName.objects.create(
@@ -1970,7 +1880,6 @@ class APIData:
     def setup_encounter_condition_value_map_data(
         cls, encounter, encounter_condition_value
     ):
-
         encounter_condition_value_map = EncounterConditionValue.objects.create(
             encounter=encounter, encounter_condition_value=encounter_condition_value
         )
@@ -1980,7 +1889,6 @@ class APIData:
 
     @classmethod
     def setup_encounter_slot_data(cls, encounter_method=None, slot=0, rarity=0):
-
         encounter_method = encounter_method or cls.setup_encounter_method_data(
             name="encntr mthd for encntr slt"
         )
@@ -2001,7 +1909,6 @@ class APIData:
     def setup_location_area_encounter_rate_data(
         cls, location_area, encounter_method, rate=0
     ):
-
         version = cls.setup_version_data(name="ver for lctn area")
 
         location_area_encounter_rate = LocationAreaEncounterRate.objects.create(
@@ -2024,7 +1931,6 @@ class APIData:
         min_level=10,
         max_level=15,
     ):
-
         location_area = location_area or cls.setup_location_area_data(
             name="ver for encntr"
         )
@@ -2050,7 +1956,6 @@ class APIData:
     # Pal Park Data
     @classmethod
     def setup_pal_park_area_data(cls, name="pl prk area"):
-
         pal_park_area = PalParkArea.objects.create(name=name)
         pal_park_area.save()
 
@@ -2058,7 +1963,6 @@ class APIData:
 
     @classmethod
     def setup_pal_park_area_name_data(cls, pal_park_area, name="pl prk area nm"):
-
         language = cls.setup_language_data(name="lang for " + name)
 
         pal_park_area_name = PalParkAreaName.objects.create(
@@ -2072,7 +1976,6 @@ class APIData:
     def setup_pal_park_data(
         cls, pokemon_species=None, pal_park_area=None, base_score=10, rate=10
     ):
-
         pal_park_area = pal_park_area or cls.setup_pal_park_area_data(
             name="pl prk area"
         )
@@ -2092,7 +1995,6 @@ class APIData:
 class APITests(APIData, APITestCase):
     # Gender Tests
     def test_gender_api(self):
-
         gender = self.setup_gender_data(name="female")
         pokemon_species = self.setup_pokemon_species_data(
             name="pkmn spcs for gndr", gender_rate=8
@@ -2134,7 +2036,6 @@ class APITests(APIData, APITestCase):
 
     # Language Tests
     def test_language_api(self):
-
         language = self.setup_language_data(name="base lang")
         language_name = self.setup_language_name_data(language, name="base lang name")
 
@@ -2163,7 +2064,6 @@ class APITests(APIData, APITestCase):
 
     # Region Tests
     def test_region_api(self):
-
         region = self.setup_region_data(name="base reg")
         region_name = self.setup_region_name_data(region, name="base reg name")
         location = self.setup_location_data(region=region, name="lctn for base rgn")
@@ -2217,7 +2117,6 @@ class APITests(APIData, APITestCase):
 
     # Generation Tests
     def test_generation_api(self):
-
         generation = self.setup_generation_data(name="base gen")
         generation_name = self.setup_generation_name_data(
             generation, name="base reg name"
@@ -2289,7 +2188,6 @@ class APITests(APIData, APITestCase):
 
     # Version Tests
     def test_version_api(self):
-
         version_group = self.setup_version_group_data(name="ver grp for ver")
         version = self.setup_version_data(name="base ver", version_group=version_group)
         version_name = self.setup_version_name_data(version, name="base ver name")
@@ -2320,7 +2218,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_version_group_api(self):
-
         version_group = self.setup_version_group_data(name="base ver grp")
         move_learn_method = self.setup_move_learn_method_data(name="mv lrn mthd for ")
         self.setup_version_group_move_learn_method_data(
@@ -2385,7 +2282,6 @@ class APITests(APIData, APITestCase):
 
     # Egg Group Tests
     def test_egg_group_api(self):
-
         egg_group = self.setup_egg_group_data(name="base egg grp")
         egg_group_name = self.setup_egg_group_name_data(
             egg_group, name="base egg grp name"
@@ -2422,7 +2318,6 @@ class APITests(APIData, APITestCase):
 
     # Ability Tests
     def test_ability_api(self):
-
         ability = self.setup_ability_data(name="base ablty")
         ability_name = self.setup_ability_name_data(ability, name="base ablty name")
         ability_effect_text = self.setup_ability_effect_text_data(
@@ -2536,7 +2431,6 @@ class APITests(APIData, APITestCase):
 
     # Item Tests
     def test_item_attribute_api(self):
-
         # item attribute data
         item_attribute = self.setup_item_attribute_data(name="base itm attr")
         item_attribute_name = self.setup_item_attribute_name_data(
@@ -2590,7 +2484,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_item_category_api(self):
-
         # item category data
         item_category = self.setup_item_category_data(name="base itm ctgry")
         item_category_name = self.setup_item_category_name_data(
@@ -2637,7 +2530,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_item_fling_effect_api(self):
-
         # item category data
         item_fling_effect = self.setup_item_fling_effect_data(name="base itm flng efct")
         item_fling_effect_effect_text = self.setup_item_fling_effect_effect_text_data(
@@ -2677,7 +2569,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_item_pocket_api(self):
-
         # item pocket data
         item_pocket = self.setup_item_pocket_data(name="base itm pkt")
         item_pocket_name = self.setup_item_pocket_name_data(
@@ -2701,7 +2592,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_item_api(self):
-
         item_category = self.setup_item_category_data(name="itm ctgry for base itm")
         item_fling_effect = self.setup_item_fling_effect_data(
             name="itm flng efct for base itm"
@@ -2724,8 +2614,6 @@ class APITests(APIData, APITestCase):
         # map item attribute to item
         item_attribute_map = ItemAttributeMap(item=item, item_attribute=item_attribute)
         item_attribute_map.save()
-
-        sprites_data = json.loads(item_sprites.sprites)
 
         response = self.client.get(
             "{}/item/{}/".format(API_V2, item.pk), HTTP_HOST="testserver"
@@ -2845,15 +2733,17 @@ class APITests(APIData, APITestCase):
             response.data["baby_trigger_for"]["url"],
             "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
         )
+
+        sprites_data = json.loads(response.data["sprites"])
+
         # sprites
         self.assertEqual(
-            response.data["sprites"]["default"],
-            "{}{}".format(MEDIA_HOST, sprites_data["default"].replace("/media/", "")),
+            sprites_data["default"],
+            "{}".format(sprites_data["default"]),
         )
 
     # Berry Tests
     def test_berry_firmness_api(self):
-
         berry_firmness = self.setup_berry_firmness_data(name="base bry frmns")
         berry_firmness_name = self.setup_berry_firmness_name_data(
             berry_firmness, name="base bry frmns nm"
@@ -2889,7 +2779,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_berry_flavor_api(self):
-
         berry_flavor = self.setup_berry_flavor_data(name="base bry flvr")
         berry_flavor_name = self.setup_berry_flavor_name_data(
             berry_flavor, name="base bry flvr nm"
@@ -2939,7 +2828,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_berry_api(self):
-
         type = self.setup_type_data(name="tp fr base bry")
         berry = self.setup_berry_data(name="base bry", natural_gift_type=type)
         berry_flavor = self.setup_berry_flavor_data(name="bry flvr for base bry")
@@ -2992,7 +2880,6 @@ class APITests(APIData, APITestCase):
 
     # Growth Rate Tests
     def test_growth_rate_api(self):
-
         # item pocket data
         growth_rate = self.setup_growth_rate_data(name="base grth rt")
         growth_rate_description = self.setup_growth_rate_description_data(
@@ -3043,7 +2930,6 @@ class APITests(APIData, APITestCase):
 
     # Location Tests
     def test_location_api(self):
-
         location = self.setup_location_data(name="base lctn")
         location_name = self.setup_location_name_data(location, name="base lctn name")
         location_game_index = self.setup_location_game_index_data(
@@ -3089,7 +2975,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_location_area_api(self):
-
         location = self.setup_location_data(name="lctn for base lctn area")
         location_area = self.setup_location_area_data(location, name="base lctn area")
         location_area_name = self.setup_location_area_name_data(
@@ -3279,7 +3164,6 @@ class APITests(APIData, APITestCase):
 
     # Contest Tests
     def test_contest_type_api(self):
-
         contest_type = self.setup_contest_type_data(name="base cntst tp")
         contest_type_name = self.setup_contest_type_name_data(
             contest_type, name="base cntst tp name"
@@ -3317,7 +3201,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_contest_effect_api(self):
-
         contest_effect = self.setup_contest_effect_data(appeal=10, jam=20)
         contest_effect_flavor_text = self.setup_contest_effect_flavor_text_data(
             contest_effect, flavor_text="base cntst efct flvr txt"
@@ -3368,7 +3251,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_super_contest_effect_api(self):
-
         super_contest_effect = self.setup_super_contest_effect_data(appeal=10)
         super_contest_effect_flavor_text = (
             self.setup_super_contest_effect_flavor_text_data(
@@ -3412,7 +3294,6 @@ class APITests(APIData, APITestCase):
 
     # Type Tests
     def test_type_api(self):
-
         type = self.setup_type_data(name="base tp")
         type_name = self.setup_type_name_data(type, name="base tp nm")
         type_game_index = self.setup_type_game_index_data(type, game_index=10)
@@ -3672,7 +3553,6 @@ class APITests(APIData, APITestCase):
 
     # Pokedex Tests
     def test_pokedex_api(self):
-
         pokedex = self.setup_pokedex_data(name="base pkdx")
         pokedex_name = self.setup_pokedex_name_data(pokedex, name="base pkdx name")
         pokedex_description = self.setup_pokedex_description_data(
@@ -3739,7 +3619,6 @@ class APITests(APIData, APITestCase):
 
     # Move Tests
     def test_move_ailment_api(self):
-
         move_ailment = self.setup_move_ailment_data(name="base mv almnt")
         move_ailment_name = self.setup_move_ailment_name_data(
             move_ailment, name="base mv almnt name"
@@ -3776,7 +3655,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_battle_style_api(self):
-
         move_battle_style = self.setup_move_battle_style_data(name="base mv btl stl")
         move_battle_style_name = self.setup_move_battle_style_name_data(
             move_battle_style, name="base mv btl stl name"
@@ -3805,7 +3683,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_category_api(self):
-
         move_category = self.setup_move_category_data(name="base mv ctgry")
         move_category_description = self.setup_move_category_description_data(
             move_category, description="base mv ctgry description"
@@ -3845,7 +3722,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_damage_class_api(self):
-
         move_damage_class = self.setup_move_damage_class_data(name="base mv dmg cls")
         move_damage_class_name = self.setup_move_damage_class_name_data(
             move_damage_class, name="base mv dmg cls nm"
@@ -3901,7 +3777,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_learn_method_api(self):
-
         move_learn_method = self.setup_move_learn_method_data(name="base mv lrn mthd")
         move_learn_method_name = self.setup_move_learn_method_name_data(
             move_learn_method, name="base mv lrn mthd nm"
@@ -3960,7 +3835,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_target_api(self):
-
         move_target = self.setup_move_target_data(name="base mv trgt")
         move_target_name = self.setup_move_target_name_data(
             move_target, name="base mv trgt nm"
@@ -4010,7 +3884,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_move_api(self):
-
         move_effect = self.setup_move_effect_data()
         move_effect_effect_text = self.setup_move_effect_effect_text_data(move_effect)
         move = self.setup_move_data(name="base mv", move_effect=move_effect)
@@ -4275,7 +4148,6 @@ class APITests(APIData, APITestCase):
 
     # Stat Tests
     def test_stat_api(self):
-
         stat = self.setup_stat_data(name="base stt")
         stat_name = self.setup_stat_name_data(stat, name="base stt name")
         increase_move = self.setup_move_data(name="incrs mv for base stt")
@@ -4371,7 +4243,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokeathlon_stat_api(self):
-
         pokeathlon_stat = self.setup_pokeathlon_stat_data(name="base pkathln stt")
         pokeathlon_stat_name = self.setup_pokeathlon_stat_name_data(
             pokeathlon_stat, name="base pkathln stt name"
@@ -4401,7 +4272,6 @@ class APITests(APIData, APITestCase):
 
     # Characteristic Tests
     def test_characteristic_api(self):
-
         characteristic = self.setup_characteristic_data(gene_mod_5=5)
         characteristic_description = self.setup_characteristic_description_data(
             characteristic, description="base char desc"
@@ -4456,7 +4326,6 @@ class APITests(APIData, APITestCase):
 
     # Nature Tests
     def test_nature_api(self):
-
         hates_flavor = self.setup_berry_flavor_data(name="hts flvr for base ntr")
         likes_flavor = self.setup_berry_flavor_data(name="lks flvr for base ntr")
         decreased_stat = self.setup_stat_data(name="dcrs stt for base ntr")
@@ -4561,7 +4430,6 @@ class APITests(APIData, APITestCase):
 
     # Pokemon Tests
     def test_pokemon_habitat_api(self):
-
         pokemon_habitat = self.setup_pokemon_habitat_data(name="base pkmn hbtt trgr")
         pokemon_habitat_name = self.setup_pokemon_habitat_name_data(
             pokemon_habitat, name="base pkmn hbtt name"
@@ -4601,7 +4469,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokemon_color_api(self):
-
         pokemon_color = self.setup_pokemon_color_data(name="base pkmn clr trgr")
         pokemon_color_name = self.setup_pokemon_color_name_data(
             pokemon_color, name="base pkmn clr name"
@@ -4641,7 +4508,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokemon_shape_api(self):
-
         pokemon_shape = self.setup_pokemon_shape_data(name="base pkmn shp trgr")
         pokemon_shape_name = self.setup_pokemon_shape_name_data(
             pokemon_shape, name="base pkmn shp name"
@@ -4696,7 +4562,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokemon_species_api(self):
-
         evolves_from_species = self.setup_pokemon_species_data(
             name="evolves from pkmn spcs"
         )
@@ -4930,7 +4795,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokemon_api(self):
-
         pokemon_species = self.setup_pokemon_species_data(
             name="pkmn spcs for base pkmn"
         )
@@ -4940,10 +4804,13 @@ class APITests(APIData, APITestCase):
         pokemon_form = self.setup_pokemon_form_data(
             pokemon=pokemon, name="pkm form for base pkmn"
         )
+        generation = self.setup_generation_data(name="base gen")
         pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
+        pokemon_past_ability = self.setup_pokemon_past_ability_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
-        generation = self.setup_generation_data(name="base gen")
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
         )
@@ -4998,8 +4865,6 @@ class APITests(APIData, APITestCase):
             "{}/pokemon/{}/".format(API_V2, pokemon.pk), HTTP_HOST="testserver"
         )
 
-        sprites_data = json.loads(pokemon_sprites.sprites)
-
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         # base params
@@ -5028,6 +4893,36 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["abilities"][0]["ability"]["url"],
             "{}{}/ability/{}/".format(TEST_HOST, API_V2, pokemon_ability.ability.pk),
+        )
+        # past abilities params
+        past_abilities_obj = response.data["past_abilities"][0]
+        self.assertEqual(
+            past_abilities_obj["generation"]["name"],
+            pokemon_past_ability.generation.name,
+        )
+        self.assertEqual(
+            past_abilities_obj["generation"]["url"],
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_ability.generation.pk
+            ),
+        )
+
+        past_abilities_abilities_obj = past_abilities_obj["abilities"][0]
+        self.assertEqual(
+            past_abilities_abilities_obj["is_hidden"], pokemon_past_ability.is_hidden
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["slot"], pokemon_past_ability.slot
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["ability"]["name"],
+            pokemon_past_ability.ability.name,
+        )
+        self.assertEqual(
+            past_abilities_abilities_obj["ability"]["url"],
+            "{}{}/ability/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_ability.ability.pk
+            ),
         )
         # stat params
         self.assertEqual(response.data["stats"][0]["base_stat"], pokemon_stat.base_stat)
@@ -5155,17 +5050,27 @@ class APITests(APIData, APITestCase):
             response.data["forms"][0]["url"],
             "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, pokemon_form.pk),
         )
+
+        sprites_data = json.loads(pokemon_sprites.sprites)
+        response_sprites_data = json.loads(response.data["sprites"])
+
         # sprite params
         self.assertEqual(
-            response.data["sprites"]["front_default"],
-            "{}{}".format(
-                MEDIA_HOST, sprites_data["front_default"].replace("/media/", "")
-            ),
+            sprites_data["front_default"],
+            "{}".format(sprites_data["front_default"]),
         )
-        self.assertEqual(response.data["sprites"]["back_default"], None)
+        self.assertEqual(sprites_data["back_default"], None)
+
+        self.assertEqual(
+            sprites_data["other"]["showdown"]["front_default"],
+            response_sprites_data["other"]["showdown"]["front_default"],
+        )
+        self.assertEqual(
+            sprites_data["other"]["showdown"]["back_default"],
+            response_sprites_data["other"]["showdown"]["back_default"],
+        )
 
     def test_pokemon_form_api(self):
-
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)
         pokemon_form = self.setup_pokemon_form_data(
@@ -5173,8 +5078,6 @@ class APITests(APIData, APITestCase):
         )
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
         pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
-
-        sprites_data = json.loads(pokemon_form_sprites.sprites)
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
@@ -5208,14 +5111,15 @@ class APITests(APIData, APITestCase):
                 TEST_HOST, API_V2, pokemon_form.version_group.pk
             ),
         )
+
+        sprites_data = json.loads(pokemon_form_sprites.sprites)
+
         # sprite params
         self.assertEqual(
-            response.data["sprites"]["front_default"],
-            "{}{}".format(
-                MEDIA_HOST, sprites_data["front_default"].replace("/media/", "")
-            ),
+            sprites_data["front_default"],
+            "{}".format(sprites_data["front_default"]),
         )
-        self.assertEqual(response.data["sprites"]["back_default"], None)
+        self.assertEqual(sprites_data["back_default"], None)
         # type params
         self.assertEqual(response.data["types"][0]["slot"], pokemon_form_type.slot)
         self.assertEqual(
@@ -5228,7 +5132,6 @@ class APITests(APIData, APITestCase):
 
     # Evolution test
     def test_evolution_trigger_api(self):
-
         evolution_trigger = self.setup_evolution_trigger_data(name="base evltn trgr")
         evolution_trigger_name = self.setup_evolution_trigger_name_data(
             evolution_trigger, name="base evltn trgr name"
@@ -5271,7 +5174,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_evolution_chain_api(self):
-
         baby_trigger_item = self.setup_item_data(name="bby itm for evo chn")
         evolution_chain = self.setup_evolution_chain_data(
             baby_trigger_item=baby_trigger_item
@@ -5433,7 +5335,6 @@ class APITests(APIData, APITestCase):
 
     # verifies that the wurmple evolution chain is serialized correctly
     def test_evolution_chain_api_wurmple_bugfix(self):
-
         # set up wurmple-like evolution chain
         evolution_chain = self.setup_evolution_chain_data()
 
@@ -5499,7 +5400,6 @@ class APITests(APIData, APITestCase):
 
     # Encounter Tests
     def test_encounter_method_api(self):
-
         encounter_method = self.setup_encounter_method_data(name="base encntr mthd")
         encounter_method_name = self.setup_encounter_method_name_data(
             encounter_method, name="base encntr mthd name"
@@ -5529,7 +5429,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_encounter_condition_value_api(self):
-
         encounter_condition = self.setup_encounter_condition_data(
             name="encntr cndtn for base encntr cndtn vlu"
         )
@@ -5575,7 +5474,6 @@ class APITests(APIData, APITestCase):
         )
 
     def test_encounter_condition_api(self):
-
         encounter_condition = self.setup_encounter_condition_data(
             name="base encntr cndtn"
         )
@@ -5624,7 +5522,6 @@ class APITests(APIData, APITestCase):
 
     # Pal Park Tests
     def test_pal_park_area_api(self):
-
         pal_park_area = self.setup_pal_park_area_data(name="base pl prk area")
         pal_park_area_name = self.setup_pal_park_area_name_data(
             pal_park_area, name="base pl prk area nm"
@@ -5674,7 +5571,6 @@ class APITests(APIData, APITestCase):
 
     # ID Range Tests
     def test_id_range_api(self):
-
         response = self.client.get("{}/pokemon/{}/".format(API_V2, 2147483648))
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)

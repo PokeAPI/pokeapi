@@ -2,7 +2,6 @@ from django.db import models, migrations
 
 
 class Migration(migrations.Migration):
-
     # replaces = [(b'pokemon_v2', '0001_squashed_0006_pokemonformsprites'), (b'pokemon_v2', '0002_auto_20160301_1408')]
 
     # dependencies = [

@@ -1,7 +1,6 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-HASURA_GRAPHQL_ADMIN_SECRET=pokemon
 
 .PHONY: help
 .SILENT:
@@ -70,6 +69,9 @@ docker-stop:  # (Docker) Stop containers
 docker-down:  # (Docker) Stop and removes containers and networks
 	docker-compose down
 
+docker-test:  # (Docker) Run tests
+	docker-compose exec -T app python manage.py test ${local_config}
+
 docker-prod:
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
@@ -98,11 +100,11 @@ sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 # read-env-file:  # Exports ./.env into shell environment variables
 # 	export `egrep -v '^#' .env | xargs`
 
-hasura-export:  # Export Hasura configuration
-	hasura md export --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+hasura-export:  # Export Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
+	hasura md export --project graphql
 
-hasura-apply:  # Apply local Hasura configuration
-	hasura md apply --project graphql --admin-secret ${HASURA_GRAPHQL_ADMIN_SECRET}
+hasura-apply:  # Apply local Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
+	hasura md apply --project graphql
 
 hasura-get-anon-schema:  # Dumps GraphQL schema
 	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql
@@ -125,17 +127,25 @@ k8s-delete:  # (k8s) Delete pokeapi namespace
 start-graphql-prod:
 	git pull origin master
 	git submodule update --init
-	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker compose stop app
+
+down-graphql-prod:
+	docker container rm $(docker container ls -aq) -f
+	docker system prune --all --volumes --force
+	sync; echo 3 > /proc/sys/vm/drop_caches
 
 update-graphql-data-prod:
 	git pull origin master
 	git submodule update --init
-	docker stop pokeapi_graphql-engine_1
+	docker compose stop graphql-engine
 	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
+	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
 	make docker-migrate
 	make docker-build-db
-	docker stop pokeapi_app_1
+	docker compose stop app
 	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker exec pokeapi_web_1 sh -c 'rm -rf /tmp/cache/*'
-	docker start pokeapi_graphql-engine_1
+	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
+	docker compose start graphql-engine
+	sleep 120
+	make hasura-apply

@@ -6,7 +6,6 @@ from django.db import models
 
 
 class HasAbility(models.Model):
-
     ability = models.ForeignKey(
         "Ability",
         blank=True,
@@ -20,7 +19,6 @@ class HasAbility(models.Model):
 
 
 class HasCharacteristic(models.Model):
-
     characteristic = models.ForeignKey(
         "Characteristic",
         blank=True,
@@ -34,7 +32,6 @@ class HasCharacteristic(models.Model):
 
 
 class HasContestType(models.Model):
-
     contest_type = models.ForeignKey(
         "ContestType",
         blank=True,
@@ -48,7 +45,6 @@ class HasContestType(models.Model):
 
 
 class HasContestEffect(models.Model):
-
     contest_effect = models.ForeignKey(
         "ContestEffect",
         blank=True,
@@ -62,7 +58,6 @@ class HasContestEffect(models.Model):
 
 
 class HasSuperContestEffect(models.Model):
-
     super_contest_effect = models.ForeignKey(
         "SuperContestEffect",
         blank=True,
@@ -76,7 +71,6 @@ class HasSuperContestEffect(models.Model):
 
 
 class HasDescription(models.Model):
-
     description = models.CharField(max_length=1000, default="")
 
     class Meta:
@@ -84,7 +78,6 @@ class HasDescription(models.Model):
 
 
 class HasGender(models.Model):
-
     gender = models.ForeignKey(
         "Gender",
         blank=True,
@@ -98,7 +91,6 @@ class HasGender(models.Model):
 
 
 class HasEffect(models.Model):
-
     effect = models.CharField(max_length=6000)
 
     class Meta:
@@ -106,7 +98,6 @@ class HasEffect(models.Model):
 
 
 class HasEggGroup(models.Model):
-
     egg_group = models.ForeignKey(
         "EggGroup",
         blank=True,
@@ -120,7 +111,6 @@ class HasEggGroup(models.Model):
 
 
 class HasEncounterMethod(models.Model):
-
     encounter_method = models.ForeignKey(
         "EncounterMethod",
         blank=True,
@@ -134,7 +124,6 @@ class HasEncounterMethod(models.Model):
 
 
 class HasEncounterCondition(models.Model):
-
     encounter_condition = models.ForeignKey(
         "EncounterCondition",
         blank=True,
@@ -148,7 +137,6 @@ class HasEncounterCondition(models.Model):
 
 
 class HasEvolutionTrigger(models.Model):
-
     evolution_trigger = models.ForeignKey(
         "EvolutionTrigger",
         blank=True,
@@ -162,7 +150,6 @@ class HasEvolutionTrigger(models.Model):
 
 
 class HasFlavorText(models.Model):
-
     flavor_text = models.CharField(max_length=500)
 
     class Meta:
@@ -170,7 +157,6 @@ class HasFlavorText(models.Model):
 
 
 class HasFlingEffect(models.Model):
-
     item_fling_effect = models.ForeignKey(
         "ItemFlingEffect",
         blank=True,
@@ -184,7 +170,6 @@ class HasFlingEffect(models.Model):
 
 
 class HasGameIndex(models.Model):
-
     game_index = models.IntegerField()
 
     class Meta:
@@ -192,7 +177,6 @@ class HasGameIndex(models.Model):
 
 
 class HasGeneration(models.Model):
-
     generation = models.ForeignKey(
         "Generation",
         blank=True,
@@ -206,7 +190,6 @@ class HasGeneration(models.Model):
 
 
 class HasGrowthRate(models.Model):
-
     growth_rate = models.ForeignKey(
         "GrowthRate",
         blank=True,
@@ -220,7 +203,6 @@ class HasGrowthRate(models.Model):
 
 
 class HasItem(models.Model):
-
     item = models.ForeignKey(
         "Item",
         blank=True,
@@ -234,7 +216,6 @@ class HasItem(models.Model):
 
 
 class HasItemAttribute(models.Model):
-
     item_attribute = models.ForeignKey(
         "ItemAttribute",
         blank=True,
@@ -248,7 +229,6 @@ class HasItemAttribute(models.Model):
 
 
 class HasItemCategory(models.Model):
-
     item_category = models.ForeignKey(
         "ItemCategory",
         blank=True,
@@ -262,7 +242,6 @@ class HasItemCategory(models.Model):
 
 
 class HasItemPocket(models.Model):
-
     item_pocket = models.ForeignKey(
         "ItemPocket",
         blank=True,
@@ -276,7 +255,6 @@ class HasItemPocket(models.Model):
 
 
 class HasLanguage(models.Model):
-
     language = models.ForeignKey(
         "Language",
         blank=True,
@@ -290,7 +268,6 @@ class HasLanguage(models.Model):
 
 
 class HasLocation(models.Model):
-
     location = models.ForeignKey(
         "Location",
         blank=True,
@@ -304,7 +281,6 @@ class HasLocation(models.Model):
 
 
 class HasLocationArea(models.Model):
-
     location_area = models.ForeignKey(
         "LocationArea",
         blank=True,
@@ -318,7 +294,6 @@ class HasLocationArea(models.Model):
 
 
 class HasMetaAilment(models.Model):
-
     move_meta_ailment = models.ForeignKey(
         "MoveMetaAilment",
         blank=True,
@@ -332,7 +307,6 @@ class HasMetaAilment(models.Model):
 
 
 class HasMetaCategory(models.Model):
-
     move_meta_category = models.ForeignKey(
         "MoveMetaCategory",
         blank=True,
@@ -346,7 +320,6 @@ class HasMetaCategory(models.Model):
 
 
 class HasMove(models.Model):
-
     move = models.ForeignKey(
         "Move",
         blank=True,
@@ -360,7 +333,6 @@ class HasMove(models.Model):
 
 
 class HasMoveDamageClass(models.Model):
-
     move_damage_class = models.ForeignKey(
         "MoveDamageClass",
         blank=True,
@@ -374,7 +346,6 @@ class HasMoveDamageClass(models.Model):
 
 
 class HasMoveEffect(models.Model):
-
     move_effect = models.ForeignKey(
         "MoveEffect", blank=True, null=True, on_delete=models.CASCADE
     )
@@ -384,7 +355,6 @@ class HasMoveEffect(models.Model):
 
 
 class HasMoveAttribute(models.Model):
-
     move_attribute = models.ForeignKey(
         "MoveAttribute", blank=True, null=True, on_delete=models.CASCADE
     )
@@ -394,7 +364,6 @@ class HasMoveAttribute(models.Model):
 
 
 class HasMoveTarget(models.Model):
-
     move_target = models.ForeignKey(
         "MoveTarget",
         blank=True,
@@ -408,7 +377,6 @@ class HasMoveTarget(models.Model):
 
 
 class HasName(models.Model):
-
     name = models.CharField(max_length=100, db_index=True)
 
     class Meta:
@@ -416,7 +384,6 @@ class HasName(models.Model):
 
 
 class HasNature(models.Model):
-
     nature = models.ForeignKey(
         "Nature",
         blank=True,
@@ -430,7 +397,6 @@ class HasNature(models.Model):
 
 
 class HasOrder(models.Model):
-
     order = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -438,7 +404,6 @@ class HasOrder(models.Model):
 
 
 class HasPokeathlonStat(models.Model):
-
     pokeathlon_stat = models.ForeignKey(
         "PokeathlonStat",
         blank=True,
@@ -452,7 +417,6 @@ class HasPokeathlonStat(models.Model):
 
 
 class HasPokedex(models.Model):
-
     pokedex = models.ForeignKey(
         "Pokedex",
         blank=True,
@@ -466,7 +430,6 @@ class HasPokedex(models.Model):
 
 
 class HasPokemon(models.Model):
-
     pokemon = models.ForeignKey(
         "Pokemon",
         blank=True,
@@ -480,7 +443,6 @@ class HasPokemon(models.Model):
 
 
 class HasPokemonColor(models.Model):
-
     pokemon_color = models.ForeignKey(
         "PokemonColor",
         blank=True,
@@ -494,7 +456,6 @@ class HasPokemonColor(models.Model):
 
 
 class HasPokemonForm(models.Model):
-
     pokemon_form = models.ForeignKey(
         "PokemonForm",
         blank=True,
@@ -508,7 +469,6 @@ class HasPokemonForm(models.Model):
 
 
 class HasPokemonHabitat(models.Model):
-
     pokemon_habitat = models.ForeignKey(
         "PokemonHabitat",
         blank=True,
@@ -523,7 +483,6 @@ class HasPokemonHabitat(models.Model):
 
 # HasPokemonMoveMethod
 class HasMoveLearnMethod(models.Model):
-
     move_learn_method = models.ForeignKey(
         "MoveLearnMethod",
         blank=True,
@@ -537,7 +496,6 @@ class HasMoveLearnMethod(models.Model):
 
 
 class HasPokemonShape(models.Model):
-
     pokemon_shape = models.ForeignKey(
         "PokemonShape",
         blank=True,
@@ -551,7 +509,6 @@ class HasPokemonShape(models.Model):
 
 
 class HasPokemonSpecies(models.Model):
-
     pokemon_species = models.ForeignKey(
         "PokemonSpecies",
         blank=True,
@@ -565,7 +522,6 @@ class HasPokemonSpecies(models.Model):
 
 
 class HasRegion(models.Model):
-
     region = models.ForeignKey(
         "Region",
         blank=True,
@@ -579,7 +535,6 @@ class HasRegion(models.Model):
 
 
 class HasShortEffect(models.Model):
-
     short_effect = models.CharField(max_length=300)
 
     class Meta:
@@ -587,7 +542,6 @@ class HasShortEffect(models.Model):
 
 
 class HasStat(models.Model):
-
     stat = models.ForeignKey(
         "Stat",
         blank=True,
@@ -601,7 +555,6 @@ class HasStat(models.Model):
 
 
 class HasType(models.Model):
-
     type = models.ForeignKey(
         "Type",
         blank=True,
@@ -615,7 +568,6 @@ class HasType(models.Model):
 
 
 class HasTypeEfficacy(models.Model):
-
     damage_type = models.ForeignKey(
         "Type",
         blank=True,
@@ -639,7 +591,6 @@ class HasTypeEfficacy(models.Model):
 
 
 class HasVersion(models.Model):
-
     version = models.ForeignKey(
         "Version",
         blank=True,
@@ -653,7 +604,6 @@ class HasVersion(models.Model):
 
 
 class HasVersionGroup(models.Model):
-
     version_group = models.ForeignKey(
         "VersionGroup",
         blank=True,
@@ -713,7 +663,6 @@ class VersionGroupMoveLearnMethod(HasVersionGroup, HasMoveLearnMethod):
 
 
 class Language(HasName, HasOrder):
-
     iso639 = models.CharField(max_length=10)
 
     iso3166 = models.CharField(max_length=2)
@@ -722,7 +671,6 @@ class Language(HasName, HasOrder):
 
 
 class LanguageName(IsName):
-
     local_language = models.ForeignKey(
         "Language",
         blank=True,
@@ -738,7 +686,6 @@ class LanguageName(IsName):
 
 
 class Generation(HasName):
-
     region = models.OneToOneField(
         "Region",
         blank=True,
@@ -771,7 +718,6 @@ class RegionName(IsName, HasRegion):
 
 
 class Ability(HasName, HasGeneration):
-
     is_main_series = models.BooleanField(default=False)
 
 
@@ -792,7 +738,6 @@ class AbilityChange(HasAbility, HasVersionGroup):
 
 
 class AbilityChangeEffectText(HasLanguage, HasEffect):
-
     ability_change = models.ForeignKey(
         AbilityChange,
         blank=True,
@@ -834,7 +779,6 @@ class TypeEfficacyPast(HasTypeEfficacy, HasGeneration):
 
 
 class Stat(HasName, HasMoveDamageClass):
-
     is_battle_only = models.BooleanField(default=False)
 
     game_index = models.IntegerField()
@@ -850,7 +794,6 @@ class StatName(IsName, HasStat):
 
 
 class Characteristic(HasStat):
-
     gene_mod_5 = models.IntegerField()
 
 
@@ -901,7 +844,6 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-
     cost = models.IntegerField(blank=True, null=True)
 
     fling_power = models.IntegerField(blank=True, null=True)
@@ -940,8 +882,7 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 
 
 class ItemSprites(HasItem):
-
-    sprites = models.CharField(max_length=1000)
+    sprites = models.JSONField()
 
 
 ####################
@@ -954,14 +895,12 @@ class ContestType(HasName):
 
 
 class ContestTypeName(HasContestType, IsName):
-
     flavor = models.CharField(max_length=10)
 
     color = models.CharField(max_length=10)
 
 
 class ContestEffect(models.Model):
-
     appeal = models.IntegerField()
 
     jam = models.IntegerField()
@@ -976,7 +915,6 @@ class ContestEffectFlavorText(HasLanguage, HasFlavorText, HasContestEffect):
 
 
 class ContestCombo(models.Model):
-
     first_move = models.ForeignKey(
         "Move",
         blank=True,
@@ -1004,7 +942,6 @@ class BerryFirmness(HasName):
 
 
 class BerryFirmnessName(IsName):
-
     berry_firmness = models.ForeignKey(
         BerryFirmness,
         blank=True,
@@ -1015,7 +952,6 @@ class BerryFirmnessName(IsName):
 
 
 class Berry(HasName, HasItem):
-
     berry_firmness = models.ForeignKey(
         BerryFirmness,
         blank=True,
@@ -1049,7 +985,6 @@ class Berry(HasName, HasItem):
 
 
 class BerryFlavor(HasName):
-
     contest_type = models.OneToOneField(
         "ContestType",
         blank=True,
@@ -1060,7 +995,6 @@ class BerryFlavor(HasName):
 
 
 class BerryFlavorName(IsName):
-
     berry_flavor = models.ForeignKey(
         BerryFlavor,
         blank=True,
@@ -1071,7 +1005,6 @@ class BerryFlavorName(IsName):
 
 
 class BerryFlavorMap(models.Model):
-
     berry = models.ForeignKey(
         Berry, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE
     )
@@ -1093,7 +1026,6 @@ class BerryFlavorMap(models.Model):
 
 
 class GrowthRate(HasName):
-
     formula = models.CharField(max_length=500)
 
 
@@ -1107,7 +1039,6 @@ class GrowthRateDescription(HasGrowthRate, IsDescription):
 
 
 class Nature(HasName):
-
     decreased_stat = models.ForeignKey(
         Stat, blank=True, null=True, related_name="decreased", on_delete=models.CASCADE
     )
@@ -1140,12 +1071,10 @@ class NatureName(IsName, HasNature):
 
 
 class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
-
     max_change = models.IntegerField()
 
 
 class NatureBattleStylePreference(HasNature):
-
     move_battle_style = models.ForeignKey(
         "MoveBattleStyle",
         blank=True,
@@ -1185,7 +1114,6 @@ class LocationAreaName(IsName, HasLocationArea):
 
 
 class LocationAreaEncounterRate(HasEncounterMethod, HasLocationArea, HasVersion):
-
     rate = models.IntegerField()
 
 
@@ -1203,14 +1131,12 @@ class EncounterMethodName(HasEncounterMethod, IsName):
 
 
 class EncounterSlot(HasVersionGroup, HasEncounterMethod):
-
     slot = models.IntegerField(blank=True, null=True)
 
     rarity = models.IntegerField()
 
 
 class Encounter(HasVersion, HasLocationArea, HasPokemon):
-
     encounter_slot = models.ForeignKey(
         EncounterSlot, blank=True, null=True, on_delete=models.CASCADE
     )
@@ -1229,12 +1155,10 @@ class EncounterConditionName(HasEncounterCondition, IsName):
 
 
 class EncounterConditionValue(HasEncounterCondition, HasName):
-
     is_default = models.BooleanField(default=False)
 
 
 class EncounterConditionValueName(IsName):
-
     encounter_condition_value = models.ForeignKey(
         EncounterConditionValue,
         blank=True,
@@ -1245,7 +1169,6 @@ class EncounterConditionValueName(IsName):
 
 
 class EncounterConditionValueMap(models.Model):
-
     encounter = models.ForeignKey(
         Encounter, blank=True, null=True, on_delete=models.CASCADE
     )
@@ -1271,7 +1194,6 @@ class Move(
     HasContestEffect,
     HasSuperContestEffect,
 ):
-
     power = models.IntegerField(blank=True, null=True)
 
     pp = models.IntegerField(blank=True, null=True)
@@ -1292,7 +1214,6 @@ class MoveFlavorText(HasMove, HasVersionGroup, IsFlavorText):
 
 
 class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
-
     power = models.IntegerField(blank=True, null=True)
 
     pp = models.IntegerField(blank=True, null=True)
@@ -1329,7 +1250,6 @@ class MoveBattleStyle(HasName):
 
 
 class MoveBattleStyleName(IsName):
-
     move_battle_style = models.ForeignKey(
         MoveBattleStyle,
         blank=True,
@@ -1357,7 +1277,6 @@ class MoveEffectChange(HasMoveEffect, HasVersionGroup):
 
 
 class MoveEffectChangeEffectText(HasLanguage, HasEffect):
-
     move_effect_change = models.ForeignKey(
         "MoveEffectChange",
         blank=True,
@@ -1411,7 +1330,6 @@ class MoveTargetDescription(HasMoveTarget, IsDescription):
 
 
 class MoveMeta(HasMetaAilment, HasMetaCategory):
-
     move = models.OneToOneField(
         Move,
         blank=False,
@@ -1458,7 +1376,6 @@ class MoveMetaCategoryDescription(HasMetaCategory, IsDescription):
 
 
 class MoveMetaStatChange(HasMove, HasStat):
-
     change = models.IntegerField()
 
 
@@ -1468,7 +1385,6 @@ class MoveMetaStatChange(HasMove, HasStat):
 
 
 class Experience(HasGrowthRate):
-
     level = models.IntegerField()
 
     experience = models.IntegerField()
@@ -1489,7 +1405,6 @@ class Gender(HasName):
 
 
 class Machine(HasGrowthRate, HasItem):
-
     machine_number = models.IntegerField()
 
     version_group = models.ForeignKey(
@@ -1522,7 +1437,6 @@ class PalParkArea(HasName):
 
 
 class PalParkAreaName(IsName):
-
     pal_park_area = models.ForeignKey(
         PalParkArea,
         blank=True,
@@ -1533,7 +1447,6 @@ class PalParkAreaName(IsName):
 
 
 class PalPark(HasPokemonSpecies):
-
     pal_park_area = models.ForeignKey(
         PalParkArea,
         blank=True,
@@ -1553,7 +1466,6 @@ class PalPark(HasPokemonSpecies):
 
 
 class SuperContestEffect(models.Model):
-
     appeal = models.IntegerField()
 
 
@@ -1562,7 +1474,6 @@ class SuperContestEffectFlavorText(IsFlavorText, HasSuperContestEffect):
 
 
 class SuperContestCombo(models.Model):
-
     first_move = models.ForeignKey(
         Move, blank=True, null=True, related_name="first", on_delete=models.CASCADE
     )
@@ -1578,7 +1489,6 @@ class SuperContestCombo(models.Model):
 
 
 class EvolutionChain(models.Model):
-
     baby_trigger_item = models.ForeignKey(
         Item, blank=True, null=True, on_delete=models.CASCADE
     )
@@ -1598,7 +1508,6 @@ class EvolutionTriggerName(HasEvolutionTrigger, IsName):
 
 
 class Pokedex(HasName, HasRegion):
-
     is_main_series = models.BooleanField(default=False)
 
 
@@ -1622,7 +1531,6 @@ class PokedexVersionGroup(HasPokedex, HasVersionGroup):
 class PokemonSpecies(
     HasName, HasGeneration, HasPokemonColor, HasPokemonShape, HasGrowthRate, HasOrder
 ):
-
     evolves_from_species = models.ForeignKey(
         "self", blank=True, null=True, on_delete=models.CASCADE
     )
@@ -1659,7 +1567,6 @@ class PokemonSpecies(
 
 
 class PokemonSpeciesName(IsName, HasPokemonSpecies):
-
     genus = models.CharField(max_length=30)
 
 
@@ -1672,7 +1579,6 @@ class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
 
 
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
-
     height = models.IntegerField(blank=True, null=True)
 
     weight = models.IntegerField(blank=True, null=True)
@@ -1683,7 +1589,13 @@ class Pokemon(HasName, HasPokemonSpecies, HasOrder):
 
 
 class PokemonAbility(HasPokemon, HasAbility):
+    is_hidden = models.BooleanField(default=False)
 
+    slot = models.IntegerField()
+
+
+# model for a Pokemon's abilities that were used until a given generation
+class PokemonAbilityPast(HasPokemon, HasAbility, HasGeneration):
     is_hidden = models.BooleanField(default=False)
 
     slot = models.IntegerField()
@@ -1698,7 +1610,6 @@ class PokemonColorName(HasPokemonColor, IsName):
 
 
 class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
-
     pokedex_number = models.IntegerField()
 
 
@@ -1707,7 +1618,6 @@ class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
 
 
 class PokemonEvolution(HasEvolutionTrigger, HasGender):
-
     evolution_item = models.ForeignKey(
         Item,
         blank=True,
@@ -1782,7 +1692,6 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
 
 class PokemonForm(HasName, HasPokemon, HasOrder):
-
     form_name = models.CharField(max_length=30)
 
     version_group = models.ForeignKey(
@@ -1803,13 +1712,11 @@ class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
 
 
 class PokemonFormName(HasPokemonForm, IsName):
-
     pokemon_name = models.CharField(max_length=60)
 
 
 class PokemonFormSprites(HasPokemonForm):
-
-    sprites = models.CharField(max_length=1000)
+    sprites = models.JSONField()
 
 
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
@@ -1821,7 +1728,6 @@ class PokemonHabitat(HasName):
 
 
 class PokemonHabitatName(IsName):
-
     pokemon_habitat = models.ForeignKey(
         PokemonHabitat,
         blank=True,
@@ -1832,7 +1738,6 @@ class PokemonHabitatName(IsName):
 
 
 class PokemonItem(HasPokemon, HasVersion, HasItem):
-
     rarity = models.IntegerField()
 
 
@@ -1851,7 +1756,6 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
-
     level = models.IntegerField()
 
 
@@ -1860,7 +1764,6 @@ class PokemonShape(HasName):
 
 
 class PokemonShapeName(IsName):
-
     awesome_name = models.CharField(max_length=30)
 
     pokemon_shape = models.ForeignKey(
@@ -1873,28 +1776,23 @@ class PokemonShapeName(IsName):
 
 
 class PokemonStat(HasPokemon, HasStat):
-
     base_stat = models.IntegerField()
 
     effort = models.IntegerField()
 
 
 class PokemonType(HasPokemon, HasType):
-
     slot = models.IntegerField()
 
 
 class PokemonFormType(HasPokemonForm, HasType):
-
     slot = models.IntegerField()
 
 
 # model for a Pokemon's types that were used until a given generation
 class PokemonTypePast(HasPokemon, HasType, HasGeneration):
-
     slot = models.IntegerField()
 
 
 class PokemonSprites(HasPokemon):
-
-    sprites = models.CharField(max_length=20000)
+    sprites = models.JSONField()

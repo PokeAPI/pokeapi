@@ -107,6 +107,7 @@
 - "!include public_pokemon_v2_pokedexversiongroup.yaml"
 - "!include public_pokemon_v2_pokemon.yaml"
 - "!include public_pokemon_v2_pokemonability.yaml"
+- "!include public_pokemon_v2_pokemonabilitypast.yaml"
 - "!include public_pokemon_v2_pokemoncolor.yaml"
 - "!include public_pokemon_v2_pokemoncolorname.yaml"
 - "!include public_pokemon_v2_pokemondexnumber.yaml"

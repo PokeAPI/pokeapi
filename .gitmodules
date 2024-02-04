@@ -1,3 +1,6 @@
 [submodule "data/v2/sprites"]
 	path = data/v2/sprites
 	url = https://github.com/PokeAPI/sprites.git
+[submodule "data/v2/cries"]
+	path = data/v2/cries
+	url = https://github.com/PokeAPI/cries.git

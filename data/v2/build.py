@@ -31,7 +31,10 @@ DB_VENDOR = connection.vendor
 
 
 MEDIA_DIR = "{prefix}{{file_name}}".format(
-    prefix=os.environ.get("POKEAPI_SPRITES_PREFIX", "/media/sprites/")
+    prefix=os.environ.get(
+        "POKEAPI_SPRITES_PREFIX",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/",
+    )
 )
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 RESOURCE_IMAGES = []
@@ -496,9 +499,7 @@ def _build_items():
 
         item_sprites = "items/{0}"
         sprites = {"default": file_path_or_none(item_sprites.format(file_name))}
-        yield ItemSprites(
-            id=int(info[0]), item_id=int(info[0]), sprites=json.dumps(sprites)
-        )
+        yield ItemSprites(id=int(info[0]), item_id=int(info[0]), sprites=sprites)
 
     build_generic((ItemSprites,), "items.csv", csv_record_to_objects)
 
@@ -1387,6 +1388,7 @@ def _build_pokemons():
         dream_world = "other/dream-world/"
         home = "other/home/"
         official_art = "other/official-artwork/"
+        showdown = "other/showdown/"
         gen_i = "versions/generation-i/"
         gen_ii = "versions/generation-ii/"
         gen_iii = "versions/generation-iii/"
@@ -1435,6 +1437,32 @@ def _build_pokemons():
                     ),
                     "front_shiny": try_image_names(
                         poke_sprites + official_art + "shiny/", info, "png"
+                    ),
+                },
+                "showdown": {
+                    "front_default": try_image_names(
+                        poke_sprites + showdown, info, "gif"
+                    ),
+                    "front_shiny": try_image_names(
+                        poke_sprites + showdown + "shiny/", info, "gif"
+                    ),
+                    "front_female": try_image_names(
+                        poke_sprites + showdown + "female/", info, "gif"
+                    ),
+                    "front_shiny_female": try_image_names(
+                        poke_sprites + showdown + "shiny/female/", info, "gif"
+                    ),
+                    "back_default": try_image_names(
+                        poke_sprites + showdown + "back/", info, "gif"
+                    ),
+                    "back_shiny": try_image_names(
+                        poke_sprites + showdown + "back/shiny/", info, "gif"
+                    ),
+                    "back_female": try_image_names(
+                        poke_sprites + showdown + "back/female/", info, "gif"
+                    ),
+                    "back_shiny_female": try_image_names(
+                        poke_sprites + showdown + "back/shiny/female", info, "gif"
                     ),
                 },
             },
@@ -1898,7 +1926,7 @@ def _build_pokemons():
         yield PokemonSprites(
             id=int(info[0]),
             pokemon=Pokemon.objects.get(pk=int(info[0])),
-            sprites=json.dumps(sprites),
+            sprites=sprites,
         )
 
     build_generic((PokemonSprites,), "pokemon.csv", csv_record_to_objects)
@@ -1912,6 +1940,19 @@ def _build_pokemons():
         )
 
     build_generic((PokemonAbility,), "pokemon_abilities.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield PokemonAbilityPast(
+            pokemon_id=int(info[0]),
+            generation_id=int(info[1]),
+            ability_id=int(info[2]),
+            is_hidden=bool(int(info[3])),
+            slot=int(info[4]),
+        )
+
+    build_generic(
+        (PokemonAbilityPast,), "pokemon_abilities_past.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield PokemonDexNumber(
@@ -2008,7 +2049,7 @@ def _build_pokemons():
             ),
         }
         yield PokemonFormSprites(
-            id=int(info[0]), pokemon_form_id=int(info[0]), sprites=json.dumps(sprites)
+            id=int(info[0]), pokemon_form_id=int(info[0]), sprites=sprites
         )
 
     build_generic((PokemonFormSprites,), "pokemon_forms.csv", csv_record_to_objects)

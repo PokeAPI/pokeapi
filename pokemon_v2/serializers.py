@@ -2722,6 +2722,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     held_items = serializers.SerializerMethodField("get_pokemon_held_items")
     location_area_encounters = serializers.SerializerMethodField("get_encounters")
     sprites = serializers.SerializerMethodField("get_pokemon_sprites")
+    cries = serializers.SerializerMethodField("get_pokemon_cries")
 
     class Meta:
         model = Pokemon
@@ -2742,6 +2743,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "moves",
             "species",
             "sprites",
+            "cries",
             "stats",
             "types",
             "past_types",
@@ -2750,6 +2752,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         return sprites_object.sprites
+
+    def get_pokemon_cries(self, obj):
+        cries_object = PokemonCries.objects.get(pokemon_id=obj)
+        return cries_object.cries
 
     def get_pokemon_moves(self, obj):
         version_objects = VersionGroup.objects.all()

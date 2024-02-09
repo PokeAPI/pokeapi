@@ -13,6 +13,8 @@ services:
   web:
     volumes:
       - graphiql:/public-console:ro
+    logging:
+      driver: gcplogs
 
   graphql-engine:
     cpus: 0.7

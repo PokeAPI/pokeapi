@@ -110,6 +110,7 @@
 - "!include public_pokemon_v2_pokemonabilitypast.yaml"
 - "!include public_pokemon_v2_pokemoncolor.yaml"
 - "!include public_pokemon_v2_pokemoncolorname.yaml"
+- "!include public_pokemon_v2_pokemoncries.yaml"
 - "!include public_pokemon_v2_pokemondexnumber.yaml"
 - "!include public_pokemon_v2_pokemonegggroup.yaml"
 - "!include public_pokemon_v2_pokemonevolution.yaml"

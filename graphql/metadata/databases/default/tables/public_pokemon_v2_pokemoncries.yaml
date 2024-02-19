@@ -1,13 +1,7 @@
 table:
-  name: pokemon_v2_pokemonabilitypast
+  name: pokemon_v2_pokemoncries
   schema: public
 object_relationships:
-  - name: pokemon_v2_ability
-    using:
-      foreign_key_constraint_on: ability_id
-  - name: pokemon_v2_generation
-    using:
-      foreign_key_constraint_on: generation_id
   - name: pokemon_v2_pokemon
     using:
       foreign_key_constraint_on: pokemon_id

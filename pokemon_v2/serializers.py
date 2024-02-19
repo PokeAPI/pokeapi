@@ -2343,6 +2343,12 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         data = MoveEffectEffectTextSerializer(
             effect_texts, many=True, context=self.context
         ).data
+        if len(data) > 0:
+            for key, value in data[0].items():
+                if "$effect_chance%" in value:
+                    data[0][key] = value.replace(
+                        "$effect_chance", f"{obj.move_effect_chance}"
+                    )
 
         return data
 

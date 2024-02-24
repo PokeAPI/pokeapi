@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 SPECTACULAR_SETTINGS = {
     'TITLE': 'pokeapi',
     'DESCRIPTION': 'A RESTful API for Pokémon.',
-    'SERVERS': [{'url': 'https://pokeapi.co/api/v2'}],
+    'SERVERS': [{'url': 'https://pokeapi.co'}],
     'EXTERNAL_DOCS': {'url': 'https://pokeapi.co/docs/v2'},
     'VERSION': '2.7.0',
     'SERVE_INCLUDE_SCHEMA': False,

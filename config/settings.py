@@ -120,10 +120,13 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
-# TODO: setting metadata
 SPECTACULAR_SETTINGS = {
-    "TITLE": "The RESTful Pokémon API",
-    "VERSION": "2.7.0",
+    "TITLE": "Pokémon API",
+    "DESCRIPTION": (
+        "All the Pokémon data you'll ever need in one place,"
+        "easily accessible through a modern free open-source RESTful API."
+    ),
+    "VERSION": "2.8.0",
 }
 
 

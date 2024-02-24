@@ -140,10 +140,12 @@ TEMPLATES = [
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
-    'VERSION': '1.0.0',
+    'TITLE': 'pokeapi',
+    'DESCRIPTION': 'A RESTful API for Pokémon.',
+    'SERVERS': [{'url': 'https://pokeapi.co/api/v2'}],
+    'EXTERNAL_DOCS': {'url': 'https://pokeapi.co/docs/v2'},
+    'VERSION': '2.7.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS
+    'OAS_VERSION': '3.1.0',
 }
 

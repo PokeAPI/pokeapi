@@ -4,6 +4,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from drf_spectacular.utils import extend_schema, OpenApiParameter
+from drf_spectacular.types import OpenApiTypes
 
 from .models import *
 from .serializers import *
@@ -75,11 +77,37 @@ class AbilityResource(PokeapiCommonViewset):
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class BerryResource(PokeapiCommonViewset):
     queryset = Berry.objects.all()
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class BerryFirmnessResource(PokeapiCommonViewset):
@@ -87,11 +115,37 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class BerryFlavorResource(PokeapiCommonViewset):
     queryset = BerryFlavor.objects.all()
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class CharacteristicResource(PokeapiCommonViewset):
@@ -117,11 +171,37 @@ class EggGroupResource(PokeapiCommonViewset):
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class EncounterConditionValueResource(PokeapiCommonViewset):
@@ -129,11 +209,37 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -147,11 +253,37 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class GenderResource(PokeapiCommonViewset):
@@ -159,17 +291,56 @@ class GenderResource(PokeapiCommonViewset):
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class ItemCategoryResource(PokeapiCommonViewset):

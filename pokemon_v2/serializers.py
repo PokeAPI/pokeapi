@@ -2,6 +2,8 @@ from collections import OrderedDict
 import json
 from django.urls import reverse
 from rest_framework import serializers
+from drf_spectacular.utils import extend_schema_field
+from drf_spectacular.types import OpenApiTypes
 
 # pylint: disable=redefined-builtin
 
@@ -477,6 +479,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
             "descriptions",
         )
 
+    @extend_schema_field({"type": "array", "items": {"type": "integer"}})
     def get_values(self, obj):
         mod = obj.gene_mod_5
         values = []
@@ -638,6 +641,7 @@ class GenerationNameSerializer(serializers.ModelSerializer):
 class GenerationDetailSerializer(serializers.ModelSerializer):
     main_region = RegionSummarySerializer(source="region")
     names = GenerationNameSerializer(many=True, read_only=True, source="generationname")
+    # TODO: 空配列か確認必要
     abilities = AbilitySummarySerializer(many=True, read_only=True, source="ability")
     moves = MoveSummarySerializer(many=True, read_only=True, source="move")
     pokemon_species = PokemonSpeciesSummarySerializer(
@@ -676,6 +680,22 @@ class GenderDetailSerializer(serializers.ModelSerializer):
         model = Gender
         fields = ("id", "name", "pokemon_species_details", "required_for_evolution")
 
+    @extend_schema_field({
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "rate": {"type": "integer"},
+                "pokemon_species": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+            },
+        },
+    })
     def get_species(self, obj):
         species_objects = []
 
@@ -698,6 +718,7 @@ class GenderDetailSerializer(serializers.ModelSerializer):
 
         return details
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_required(self, obj):
         evo_objects = PokemonEvolution.objects.filter(gender=obj)
         species_list = []
@@ -1119,6 +1140,8 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             "pokemon",
         )
 
+    # TODO: "ability"が不要のため、レスポンス用のシリアライザを定義するかは検討
+    @extend_schema_field(PokemonAbilitySerializer(many=True))
     def get_ability_pokemon(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
         data = PokemonAbilitySerializer(
@@ -1395,6 +1418,22 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "machines",
         )
 
+    @extend_schema_field({
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "machine": {"type": "string"},
+                "version_group": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+            },
+        }
+    })
     def get_item_machines(self, obj):
         machine_objects = Machine.objects.filter(item=obj)
 
@@ -1415,10 +1454,17 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
+    @extend_schema_field({
+        "type": "object",
+        "properties": {
+            "default": {"type": "string"},
+        },
+    })
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         return sprites_object.sprites
 
+    @extend_schema_field(ItemAttributeSummarySerializer(many=True))
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
         serializer = ItemAttributeMapSerializer(
@@ -1436,6 +1482,37 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return attributes
 
+    @extend_schema_field({
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "pokemon": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "version_details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "rarity": {"type": "integer"},
+                            "version": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+    })
     def get_held_by_pokemon(self, obj):
         pokemon_items = PokemonItem.objects.filter(item=obj).order_by("pokemon_id")
         pokemon_ids = pokemon_items.values("pokemon_id").distinct()
@@ -1468,6 +1545,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
+    @extend_schema_field(EvolutionChainSummarySerializer(many=False))
     def get_baby_trigger_for(self, obj):
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)
@@ -1587,6 +1665,8 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
         model = BerryFlavor
         fields = ("id", "name", "berries", "contest_type", "names")
 
+    # TODO: "flavor"が不要のため、レスポンス用のシリアライザを定義するかは検討
+    @extend_schema_field(BerryFlavorMapSerializer(many=True))
     def get_berries_with_flavor(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(
             berry_flavor=obj, potency__gt=0
@@ -1624,6 +1704,8 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             "natural_gift_type",
         )
 
+    # TODO: "berry"が不要のため、レスポンス用のシリアらいざを定義するかは検討
+    @extend_schema_field(BerryFlavorMapSerializer(many=True))
     def get_berry_flavors(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(berry=obj)
         flavor_maps = BerryFlavorMapSerializer(
@@ -1666,6 +1748,7 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
         model = EggGroup
         fields = ("id", "name", "names", "pokemon_species")
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_species(self, obj):
         results = PokemonEggGroup.objects.filter(egg_group=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -2966,6 +3049,7 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionTrigger
         fields = ("id", "name", "names", "pokemon_species")
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_species(self, obj):
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
@@ -3179,6 +3263,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
 
 
 class EvolutionChainDetailSerializer(serializers.ModelSerializer):
+    # TODO: baby_trigger_itemが常にnullなのかは確認
     baby_trigger_item = ItemSummarySerializer()
     chain = serializers.SerializerMethodField("build_chain")
 
@@ -3186,6 +3271,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         model = EvolutionChain
         fields = ("id", "baby_trigger_item", "chain")
 
+    # TODO: 定義追加。シリアライザを定義するか、オブジェクトを一から定義するかは検討
     def build_chain(self, obj):
         chain_id = obj.id
 

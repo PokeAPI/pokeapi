@@ -7,9 +7,10 @@ paths:
   /api/v2/ability/:
     get:
       operationId: ability_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Abilities provide passive effects for Pokémon in battle or in the
+        overworld. Pokémon have multiple possible abilities but can have only one
+        ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -39,9 +40,10 @@ paths:
   /api/v2/ability/{id}/:
     get:
       operationId: ability_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Abilities provide passive effects for Pokémon in battle or in the
+        overworld. Pokémon have multiple possible abilities but can have only one
+        ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -65,9 +67,10 @@ paths:
   /api/v2/berry/:
     get:
       operationId: berry_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Berries are small fruits that can provide HP and status condition
+        restoration, stat enhancement, and even damage negation when eaten by Pokémon.
+        Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
+        detail.
       parameters:
       - name: limit
         required: false
@@ -97,9 +100,8 @@ paths:
   /api/v2/berry-firmness/:
     get:
       operationId: berry_firmness_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -129,9 +131,8 @@ paths:
   /api/v2/berry-firmness/{id}/:
     get:
       operationId: berry_firmness_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -155,9 +156,9 @@ paths:
   /api/v2/berry-flavor/:
     get:
       operationId: berry_flavor_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Flavors determine whether a Pokémon will benefit or suffer from
+        eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -187,9 +188,9 @@ paths:
   /api/v2/berry-flavor/{id}/:
     get:
       operationId: berry_flavor_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Flavors determine whether a Pokémon will benefit or suffer from
+        eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -213,9 +214,10 @@ paths:
   /api/v2/berry/{id}/:
     get:
       operationId: berry_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Berries are small fruits that can provide HP and status condition
+        restoration, stat enhancement, and even damage negation when eaten by Pokémon.
+        Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
+        detail.
       parameters:
       - in: path
         name: id
@@ -239,9 +241,10 @@ paths:
   /api/v2/characteristic/:
     get:
       operationId: characteristic_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Characteristics indicate which stat contains a Pokémon's highest
+        IV. A Pokémon's Characteristic is determined by the remainder of its highest
+        IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -271,9 +274,10 @@ paths:
   /api/v2/characteristic/{id}/:
     get:
       operationId: characteristic_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Characteristics indicate which stat contains a Pokémon's highest
+        IV. A Pokémon's Characteristic is determined by the remainder of its highest
+        IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -297,9 +301,7 @@ paths:
   /api/v2/contest-effect/:
     get:
       operationId: contest_effect_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Contest effects refer to the effects of moves when used in contests.
       parameters:
       - name: limit
         required: false
@@ -329,9 +331,7 @@ paths:
   /api/v2/contest-effect/{id}/:
     get:
       operationId: contest_effect_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Contest effects refer to the effects of moves when used in contests.
       parameters:
       - in: path
         name: id
@@ -355,9 +355,9 @@ paths:
   /api/v2/contest-type/:
     get:
       operationId: contest_type_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Contest types are categories judges used to weigh a Pokémon's condition
+        in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -387,9 +387,9 @@ paths:
   /api/v2/contest-type/{id}/:
     get:
       operationId: contest_type_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Contest types are categories judges used to weigh a Pokémon's condition
+        in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -413,9 +413,10 @@ paths:
   /api/v2/egg-group/:
     get:
       operationId: egg_group_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Egg Groups are categories which determine which Pokémon are able
+        to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
+        [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
+        detail.
       parameters:
       - name: limit
         required: false
@@ -445,9 +446,10 @@ paths:
   /api/v2/egg-group/{id}/:
     get:
       operationId: egg_group_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Egg Groups are categories which determine which Pokémon are able
+        to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
+        [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
+        detail.
       parameters:
       - in: path
         name: id
@@ -471,9 +473,8 @@ paths:
   /api/v2/encounter-condition/:
     get:
       operationId: encounter_condition_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Conditions which affect what pokemon might appear in the wild,
+        e.g., day or night.
       parameters:
       - name: limit
         required: false
@@ -503,9 +504,8 @@ paths:
   /api/v2/encounter-condition-value/:
     get:
       operationId: encounter_condition_value_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Encounter condition values are the various states that an encounter
+        condition can have, i.e., time of day can be either day or night.
       parameters:
       - name: limit
         required: false
@@ -535,9 +535,8 @@ paths:
   /api/v2/encounter-condition-value/{id}/:
     get:
       operationId: encounter_condition_value_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Encounter condition values are the various states that an encounter
+        condition can have, i.e., time of day can be either day or night.
       parameters:
       - in: path
         name: id
@@ -561,9 +560,8 @@ paths:
   /api/v2/encounter-condition/{id}/:
     get:
       operationId: encounter_condition_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Conditions which affect what pokemon might appear in the wild,
+        e.g., day or night.
       parameters:
       - in: path
         name: id
@@ -587,9 +585,8 @@ paths:
   /api/v2/encounter-method/:
     get:
       operationId: encounter_method_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Methods by which the player might can encounter Pokémon in the
+        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
       parameters:
       - name: limit
         required: false
@@ -619,9 +616,8 @@ paths:
   /api/v2/encounter-method/{id}/:
     get:
       operationId: encounter_method_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Methods by which the player might can encounter Pokémon in the
+        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
       parameters:
       - in: path
         name: id
@@ -645,9 +641,9 @@ paths:
   /api/v2/evolution-chain/:
     get:
       operationId: evolution_chain_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Evolution chains are essentially family trees. They start with
+        the lowest stage within a family and detail evolution conditions for each
+        as well as Pokémon they can evolve into up through the hierarchy.
       parameters:
       - name: limit
         required: false
@@ -677,9 +673,9 @@ paths:
   /api/v2/evolution-chain/{id}/:
     get:
       operationId: evolution_chain_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Evolution chains are essentially family trees. They start with
+        the lowest stage within a family and detail evolution conditions for each
+        as well as Pokémon they can evolve into up through the hierarchy.
       parameters:
       - in: path
         name: id
@@ -703,9 +699,9 @@ paths:
   /api/v2/evolution-trigger/:
     get:
       operationId: evolution_trigger_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Evolution triggers are the events and conditions that cause a Pokémon
+        to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -735,9 +731,9 @@ paths:
   /api/v2/evolution-trigger/{id}/:
     get:
       operationId: evolution_trigger_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Evolution triggers are the events and conditions that cause a Pokémon
+        to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -761,9 +757,10 @@ paths:
   /api/v2/gender/:
     get:
       operationId: gender_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Genders were introduced in Generation II for the purposes of breeding
+        Pokémon but can also result in visual differences or even different evolutionary
+        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -793,9 +790,10 @@ paths:
   /api/v2/gender/{id}/:
     get:
       operationId: gender_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Genders were introduced in Generation II for the purposes of breeding
+        Pokémon but can also result in visual differences or even different evolutionary
+        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -819,9 +817,10 @@ paths:
   /api/v2/generation/:
     get:
       operationId: generation_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A generation is a grouping of the Pokémon games that separates
+        them based on the Pokémon they include. In each generation, a new set of Pokémon,
+        Moves, Abilities and Types that did not exist in the previous generation are
+        released.
       parameters:
       - name: limit
         required: false
@@ -851,9 +850,10 @@ paths:
   /api/v2/generation/{id}/:
     get:
       operationId: generation_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A generation is a grouping of the Pokémon games that separates
+        them based on the Pokémon they include. In each generation, a new set of Pokémon,
+        Moves, Abilities and Types that did not exist in the previous generation are
+        released.
       parameters:
       - in: path
         name: id
@@ -877,9 +877,9 @@ paths:
   /api/v2/growth-rate/:
     get:
       operationId: growth_rate_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Growth rates are the speed with which Pokémon gain levels through
+        experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -909,9 +909,9 @@ paths:
   /api/v2/growth-rate/{id}/:
     get:
       operationId: growth_rate_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Growth rates are the speed with which Pokémon gain levels through
+        experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -935,9 +935,9 @@ paths:
   /api/v2/item/:
     get:
       operationId: item_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: An item is an object in the games which the player can pick up,
+        keep in their bag, and use in some manner. They have various uses, including
+        healing, powering up, helping catch Pokémon, or to access a new area.
       parameters:
       - name: limit
         required: false
@@ -967,9 +967,8 @@ paths:
   /api/v2/item-attribute/:
     get:
       operationId: item_attribute_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Item attributes define particular aspects of items, e.g."usable
+        in battle" or "consumable".
       parameters:
       - name: limit
         required: false
@@ -999,9 +998,8 @@ paths:
   /api/v2/item-attribute/{id}/:
     get:
       operationId: item_attribute_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Item attributes define particular aspects of items, e.g."usable
+        in battle" or "consumable".
       parameters:
       - in: path
         name: id
@@ -1025,9 +1023,8 @@ paths:
   /api/v2/item-category/:
     get:
       operationId: item_category_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Item categories determine where items will be placed in the players
+        bag.
       parameters:
       - name: limit
         required: false
@@ -1057,9 +1054,8 @@ paths:
   /api/v2/item-category/{id}/:
     get:
       operationId: item_category_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Item categories determine where items will be placed in the players
+        bag.
       parameters:
       - in: path
         name: id
@@ -1083,9 +1079,8 @@ paths:
   /api/v2/item-fling-effect/:
     get:
       operationId: item_fling_effect_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: The various effects of the move"Fling" when used with different
+        items.
       parameters:
       - name: limit
         required: false
@@ -1115,9 +1110,8 @@ paths:
   /api/v2/item-fling-effect/{id}/:
     get:
       operationId: item_fling_effect_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: The various effects of the move"Fling" when used with different
+        items.
       parameters:
       - in: path
         name: id
@@ -1141,9 +1135,7 @@ paths:
   /api/v2/item-pocket/:
     get:
       operationId: item_pocket_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pockets within the players bag used for storing items by category.
       parameters:
       - name: limit
         required: false
@@ -1173,9 +1165,7 @@ paths:
   /api/v2/item-pocket/{id}/:
     get:
       operationId: item_pocket_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pockets within the players bag used for storing items by category.
       parameters:
       - in: path
         name: id
@@ -1199,9 +1189,9 @@ paths:
   /api/v2/item/{id}/:
     get:
       operationId: item_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: An item is an object in the games which the player can pick up,
+        keep in their bag, and use in some manner. They have various uses, including
+        healing, powering up, helping catch Pokémon, or to access a new area.
       parameters:
       - in: path
         name: id
@@ -1225,9 +1215,7 @@ paths:
   /api/v2/language/:
     get:
       operationId: language_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Languages for translations of API resource information.
       parameters:
       - name: limit
         required: false
@@ -1257,9 +1245,7 @@ paths:
   /api/v2/language/{id}/:
     get:
       operationId: language_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Languages for translations of API resource information.
       parameters:
       - in: path
         name: id
@@ -1283,9 +1269,8 @@ paths:
   /api/v2/location/:
     get:
       operationId: location_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Locations that can be visited within the games. Locations make
+        up sizable portions of regions, like cities or routes.
       parameters:
       - name: limit
         required: false
@@ -1315,9 +1300,8 @@ paths:
   /api/v2/location-area/:
     get:
       operationId: location_area_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Location areas are sections of areas, such as floors in a building
+        or cave. Each area has its own set of possible Pokémon encounters.
       parameters:
       - name: limit
         required: false
@@ -1347,9 +1331,8 @@ paths:
   /api/v2/location-area/{id}/:
     get:
       operationId: location_area_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Location areas are sections of areas, such as floors in a building
+        or cave. Each area has its own set of possible Pokémon encounters.
       parameters:
       - in: path
         name: id
@@ -1373,9 +1356,8 @@ paths:
   /api/v2/location/{id}/:
     get:
       operationId: location_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Locations that can be visited within the games. Locations make
+        up sizable portions of regions, like cities or routes.
       parameters:
       - in: path
         name: id
@@ -1399,9 +1381,9 @@ paths:
   /api/v2/machine/:
     get:
       operationId: machine_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Machines are the representation of items that teach moves to Pokémon.
+        They vary from version to version, so it is not certain that one specific
+        TM or HM corresponds to a single Machine.
       parameters:
       - name: limit
         required: false
@@ -1431,9 +1413,9 @@ paths:
   /api/v2/machine/{id}/:
     get:
       operationId: machine_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Machines are the representation of items that teach moves to Pokémon.
+        They vary from version to version, so it is not certain that one specific
+        TM or HM corresponds to a single Machine.
       parameters:
       - in: path
         name: id
@@ -1457,9 +1439,10 @@ paths:
   /api/v2/move/:
     get:
       operationId: move_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
+        uses one move each turn. Some moves (including those learned by Hidden Machine)
+        can be used outside of battle as well, usually for the purpose of removing
+        obstacles or exploring new areas.
       parameters:
       - name: limit
         required: false
@@ -1489,9 +1472,9 @@ paths:
   /api/v2/move-ailment/:
     get:
       operationId: move_ailment_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Move Ailments are status conditions caused by moves used during
+        battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -1521,9 +1504,9 @@ paths:
   /api/v2/move-ailment/{id}/:
     get:
       operationId: move_ailment_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Move Ailments are status conditions caused by moves used during
+        battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -1547,9 +1530,8 @@ paths:
   /api/v2/move-battle-style/:
     get:
       operationId: move_battle_style_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -1579,9 +1561,8 @@ paths:
   /api/v2/move-battle-style/{id}/:
     get:
       operationId: move_battle_style_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -1605,9 +1586,7 @@ paths:
   /api/v2/move-category/:
     get:
       operationId: move_category_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Very general categories that loosely group move effects.
       parameters:
       - name: limit
         required: false
@@ -1637,9 +1616,7 @@ paths:
   /api/v2/move-category/{id}/:
     get:
       operationId: move_category_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Very general categories that loosely group move effects.
       parameters:
       - in: path
         name: id
@@ -1663,9 +1640,7 @@ paths:
   /api/v2/move-damage-class/:
     get:
       operationId: move_damage_class_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Damage classes moves can have, e.g. physical, special, or non-damaging.
       parameters:
       - name: limit
         required: false
@@ -1695,9 +1670,7 @@ paths:
   /api/v2/move-damage-class/{id}/:
     get:
       operationId: move_damage_class_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Damage classes moves can have, e.g. physical, special, or non-damaging.
       parameters:
       - in: path
         name: id
@@ -1721,9 +1694,7 @@ paths:
   /api/v2/move-learn-method/:
     get:
       operationId: move_learn_method_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Methods by which Pokémon can learn moves.
       parameters:
       - name: limit
         required: false
@@ -1753,9 +1724,7 @@ paths:
   /api/v2/move-learn-method/{id}/:
     get:
       operationId: move_learn_method_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Methods by which Pokémon can learn moves.
       parameters:
       - in: path
         name: id
@@ -1779,9 +1748,8 @@ paths:
   /api/v2/move-target/:
     get:
       operationId: move_target_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Targets moves can be directed at during battle. Targets can be
+        Pokémon, environments or even other moves.
       parameters:
       - name: limit
         required: false
@@ -1811,9 +1779,8 @@ paths:
   /api/v2/move-target/{id}/:
     get:
       operationId: move_target_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Targets moves can be directed at during battle. Targets can be
+        Pokémon, environments or even other moves.
       parameters:
       - in: path
         name: id
@@ -1837,9 +1804,10 @@ paths:
   /api/v2/move/{id}/:
     get:
       operationId: move_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
+        uses one move each turn. Some moves (including those learned by Hidden Machine)
+        can be used outside of battle as well, usually for the purpose of removing
+        obstacles or exploring new areas.
       parameters:
       - in: path
         name: id
@@ -1863,9 +1831,8 @@ paths:
   /api/v2/nature/:
     get:
       operationId: nature_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -1895,9 +1862,8 @@ paths:
   /api/v2/nature/{id}/:
     get:
       operationId: nature_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -1921,9 +1887,8 @@ paths:
   /api/v2/pal-park-area/:
     get:
       operationId: pal_park_area_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Areas used for grouping Pokémon encounters in Pal Park. They're
+        like habitats that are specific to Pal Park.
       parameters:
       - name: limit
         required: false
@@ -1953,9 +1918,8 @@ paths:
   /api/v2/pal-park-area/{id}/:
     get:
       operationId: pal_park_area_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Areas used for grouping Pokémon encounters in Pal Park. They're
+        like habitats that are specific to Pal Park.
       parameters:
       - in: path
         name: id
@@ -1979,9 +1943,10 @@ paths:
   /api/v2/pokeathlon-stat/:
     get:
       operationId: pokeathlon_stat_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pokeathlon Stats are different attributes of a Pokémon's performance
+        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
+        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -2011,9 +1976,10 @@ paths:
   /api/v2/pokeathlon-stat/{id}/:
     get:
       operationId: pokeathlon_stat_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pokeathlon Stats are different attributes of a Pokémon's performance
+        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
+        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -2037,9 +2003,11 @@ paths:
   /api/v2/pokedex/:
     get:
       operationId: pokedex_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A Pokédex is a handheld electronic encyclopedia device; one which
+        is capable of recording and retaining information of the various Pokémon in
+        a given region with the exception of the national dex and some smaller dexes
+        related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex)
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -2069,9 +2037,11 @@ paths:
   /api/v2/pokedex/{id}/:
     get:
       operationId: pokedex_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A Pokédex is a handheld electronic encyclopedia device; one which
+        is capable of recording and retaining information of the various Pokémon in
+        a given region with the exception of the national dex and some smaller dexes
+        related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex)
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -2095,9 +2065,12 @@ paths:
   /api/v2/pokemon/:
     get:
       operationId: pokemon_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pokémon are the creatures that inhabit the world of the Pokémon
+        games. They can be caught using Pokéballs and trained by battling with other
+        Pokémon. Each Pokémon belongs to a specific species but may take on a variant
+        which makes it differ from other Pokémon of the same species, such as base
+        stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
+        for greater detail.
       parameters:
       - name: limit
         required: false
@@ -2127,9 +2100,10 @@ paths:
   /api/v2/pokemon-color/:
     get:
       operationId: pokemon_color_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Colors used for sorting Pokémon in a Pokédex. The color listed
+        in the Pokédex is usually the color most apparent or covering each Pokémon's
+        body. No orange category exists; Pokémon that are primarily orange are listed
+        as red or brown.
       parameters:
       - name: limit
         required: false
@@ -2159,9 +2133,10 @@ paths:
   /api/v2/pokemon-color/{id}/:
     get:
       operationId: pokemon_color_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Colors used for sorting Pokémon in a Pokédex. The color listed
+        in the Pokédex is usually the color most apparent or covering each Pokémon's
+        body. No orange category exists; Pokémon that are primarily orange are listed
+        as red or brown.
       parameters:
       - in: path
         name: id
@@ -2185,9 +2160,10 @@ paths:
   /api/v2/pokemon-form/:
     get:
       operationId: pokemon_form_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Some Pokémon may appear in one of multiple, visually different
+        forms. These differences are purely cosmetic. For variations within a Pokémon
+        species, which do differ in more than just visuals, the 'Pokémon' entity is
+        used to represent such a variety.
       parameters:
       - name: limit
         required: false
@@ -2217,9 +2193,10 @@ paths:
   /api/v2/pokemon-form/{id}/:
     get:
       operationId: pokemon_form_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Some Pokémon may appear in one of multiple, visually different
+        forms. These differences are purely cosmetic. For variations within a Pokémon
+        species, which do differ in more than just visuals, the 'Pokémon' entity is
+        used to represent such a variety.
       parameters:
       - in: path
         name: id
@@ -2243,9 +2220,8 @@ paths:
   /api/v2/pokemon-habitat/:
     get:
       operationId: pokemon_habitat_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Habitats are generally different terrain Pokémon can be found in
+        but can also be areas designated for rare or legendary Pokémon.
       parameters:
       - name: limit
         required: false
@@ -2275,9 +2251,8 @@ paths:
   /api/v2/pokemon-habitat/{id}/:
     get:
       operationId: pokemon_habitat_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Habitats are generally different terrain Pokémon can be found in
+        but can also be areas designated for rare or legendary Pokémon.
       parameters:
       - in: path
         name: id
@@ -2301,9 +2276,7 @@ paths:
   /api/v2/pokemon-shape/:
     get:
       operationId: pokemon_shape_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Shapes used for sorting Pokémon in a Pokédex.
       parameters:
       - name: limit
         required: false
@@ -2333,9 +2306,7 @@ paths:
   /api/v2/pokemon-shape/{id}/:
     get:
       operationId: pokemon_shape_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Shapes used for sorting Pokémon in a Pokédex.
       parameters:
       - in: path
         name: id
@@ -2359,9 +2330,10 @@ paths:
   /api/v2/pokemon-species/:
     get:
       operationId: pokemon_species_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A Pokémon Species forms the basis for at least one Pokémon. Attributes
+        of a Pokémon species are shared across all varieties of Pokémon within the
+        species. A good example is Wormadam; Wormadam is the species which can be
+        found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
       parameters:
       - name: limit
         required: false
@@ -2391,9 +2363,10 @@ paths:
   /api/v2/pokemon-species/{id}/:
     get:
       operationId: pokemon_species_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A Pokémon Species forms the basis for at least one Pokémon. Attributes
+        of a Pokémon species are shared across all varieties of Pokémon within the
+        species. A good example is Wormadam; Wormadam is the species which can be
+        found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
       parameters:
       - in: path
         name: id
@@ -2417,9 +2390,12 @@ paths:
   /api/v2/pokemon/{id}/:
     get:
       operationId: pokemon_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Pokémon are the creatures that inhabit the world of the Pokémon
+        games. They can be caught using Pokéballs and trained by battling with other
+        Pokémon. Each Pokémon belongs to a specific species but may take on a variant
+        which makes it differ from other Pokémon of the same species, such as base
+        stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
+        for greater detail.
       parameters:
       - in: path
         name: id
@@ -2463,9 +2439,9 @@ paths:
   /api/v2/region/:
     get:
       operationId: region_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A region is an organized area of the Pokémon world. Most often,
+        the main difference between regions is the species of Pokémon that can be
+        encountered within them.
       parameters:
       - name: limit
         required: false
@@ -2495,9 +2471,9 @@ paths:
   /api/v2/region/{id}/:
     get:
       operationId: region_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: A region is an organized area of the Pokémon world. Most often,
+        the main difference between regions is the species of Pokémon that can be
+        encountered within them.
       parameters:
       - in: path
         name: id
@@ -2521,9 +2497,9 @@ paths:
   /api/v2/stat/:
     get:
       operationId: stat_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Stats determine certain aspects of battles. Each Pokémon has a
+        value for each stat which grows as they gain levels and can be altered momentarily
+        by effects in battles.
       parameters:
       - name: limit
         required: false
@@ -2553,9 +2529,9 @@ paths:
   /api/v2/stat/{id}/:
     get:
       operationId: stat_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Stats determine certain aspects of battles. Each Pokémon has a
+        value for each stat which grows as they gain levels and can be altered momentarily
+        by effects in battles.
       parameters:
       - in: path
         name: id
@@ -2579,9 +2555,8 @@ paths:
   /api/v2/super-contest-effect/:
     get:
       operationId: super_contest_effect_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Super contest effects refer to the effects of moves when used in
+        super contests.
       parameters:
       - name: limit
         required: false
@@ -2611,9 +2586,8 @@ paths:
   /api/v2/super-contest-effect/{id}/:
     get:
       operationId: super_contest_effect_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Super contest effects refer to the effects of moves when used in
+        super contests.
       parameters:
       - in: path
         name: id
@@ -2637,9 +2611,10 @@ paths:
   /api/v2/type/:
     get:
       operationId: type_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: 'Types are properties for Pokémon and their moves. Each type has
+        three properties: which types of Pokémon it is super effective against, which
+        types of Pokémon it is not very effective against, and which types of Pokémon
+        it is completely ineffective against.'
       parameters:
       - name: limit
         required: false
@@ -2669,9 +2644,10 @@ paths:
   /api/v2/type/{id}/:
     get:
       operationId: type_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: 'Types are properties for Pokémon and their moves. Each type has
+        three properties: which types of Pokémon it is super effective against, which
+        types of Pokémon it is not very effective against, and which types of Pokémon
+        it is completely ineffective against.'
       parameters:
       - in: path
         name: id
@@ -2695,9 +2671,7 @@ paths:
   /api/v2/version/:
     get:
       operationId: version_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Versions of the games, e.g., Red, Blue or Yellow.
       parameters:
       - name: limit
         required: false
@@ -2727,9 +2701,7 @@ paths:
   /api/v2/version-group/:
     get:
       operationId: version_group_list
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Version groups categorize highly similar versions of the games.
       parameters:
       - name: limit
         required: false
@@ -2759,9 +2731,7 @@ paths:
   /api/v2/version-group/{id}/:
     get:
       operationId: version_group_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Version groups categorize highly similar versions of the games.
       parameters:
       - in: path
         name: id
@@ -2785,9 +2755,7 @@ paths:
   /api/v2/version/{id}/:
     get:
       operationId: version_retrieve
-      description: |-
-        Mixin to allow association with separate serializers
-        for list or detail view.
+      description: Versions of the games, e.g., Red, Blue or Yellow.
       parameters:
       - in: path
         name: id

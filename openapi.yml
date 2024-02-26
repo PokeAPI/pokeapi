@@ -25,7 +25,7 @@ paths:
         schema:
           type: integer
       tags:
-      - ability
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -52,7 +52,7 @@ paths:
         description: A unique integer value identifying this ability.
         required: true
       tags:
-      - ability
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -85,7 +85,7 @@ paths:
         schema:
           type: integer
       tags:
-      - berry
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -116,7 +116,7 @@ paths:
         schema:
           type: integer
       tags:
-      - berry-firmness
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -141,7 +141,7 @@ paths:
         description: A unique integer value identifying this berry firmness.
         required: true
       tags:
-      - berry-firmness
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -173,7 +173,7 @@ paths:
         schema:
           type: integer
       tags:
-      - berry-flavor
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -199,7 +199,7 @@ paths:
         description: A unique integer value identifying this berry flavor.
         required: true
       tags:
-      - berry-flavor
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -226,7 +226,7 @@ paths:
         description: A unique integer value identifying this berry.
         required: true
       tags:
-      - berry
+      - berries
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -259,7 +259,7 @@ paths:
         schema:
           type: integer
       tags:
-      - characteristic
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -286,7 +286,7 @@ paths:
         description: A unique integer value identifying this characteristic.
         required: true
       tags:
-      - characteristic
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -316,7 +316,7 @@ paths:
         schema:
           type: integer
       tags:
-      - contest-effect
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -340,7 +340,7 @@ paths:
         description: A unique integer value identifying this contest effect.
         required: true
       tags:
-      - contest-effect
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -372,7 +372,7 @@ paths:
         schema:
           type: integer
       tags:
-      - contest-type
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -398,7 +398,7 @@ paths:
         description: A unique integer value identifying this contest type.
         required: true
       tags:
-      - contest-type
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -431,7 +431,7 @@ paths:
         schema:
           type: integer
       tags:
-      - egg-group
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -458,7 +458,7 @@ paths:
         description: A unique integer value identifying this egg group.
         required: true
       tags:
-      - egg-group
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -489,7 +489,7 @@ paths:
         schema:
           type: integer
       tags:
-      - encounter-condition
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -520,7 +520,7 @@ paths:
         schema:
           type: integer
       tags:
-      - encounter-condition-value
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -545,7 +545,7 @@ paths:
         description: A unique integer value identifying this encounter condition value.
         required: true
       tags:
-      - encounter-condition-value
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -570,7 +570,7 @@ paths:
         description: A unique integer value identifying this encounter condition.
         required: true
       tags:
-      - encounter-condition
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -601,7 +601,7 @@ paths:
         schema:
           type: integer
       tags:
-      - encounter-method
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -626,7 +626,7 @@ paths:
         description: A unique integer value identifying this encounter method.
         required: true
       tags:
-      - encounter-method
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -658,7 +658,7 @@ paths:
         schema:
           type: integer
       tags:
-      - evolution-chain
+      - evolution
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -684,7 +684,7 @@ paths:
         description: A unique integer value identifying this evolution chain.
         required: true
       tags:
-      - evolution-chain
+      - evolution
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -716,7 +716,7 @@ paths:
         schema:
           type: integer
       tags:
-      - evolution-trigger
+      - evolution
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -742,7 +742,7 @@ paths:
         description: A unique integer value identifying this evolution trigger.
         required: true
       tags:
-      - evolution-trigger
+      - evolution
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -775,7 +775,7 @@ paths:
         schema:
           type: integer
       tags:
-      - gender
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -802,7 +802,7 @@ paths:
         description: A unique integer value identifying this gender.
         required: true
       tags:
-      - gender
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -835,7 +835,7 @@ paths:
         schema:
           type: integer
       tags:
-      - generation
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -862,7 +862,7 @@ paths:
         description: A unique integer value identifying this generation.
         required: true
       tags:
-      - generation
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -894,7 +894,7 @@ paths:
         schema:
           type: integer
       tags:
-      - growth-rate
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -920,7 +920,7 @@ paths:
         description: A unique integer value identifying this growth rate.
         required: true
       tags:
-      - growth-rate
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -952,7 +952,7 @@ paths:
         schema:
           type: integer
       tags:
-      - item
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -983,7 +983,7 @@ paths:
         schema:
           type: integer
       tags:
-      - item-attribute
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1008,7 +1008,7 @@ paths:
         description: A unique integer value identifying this item attribute.
         required: true
       tags:
-      - item-attribute
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1039,7 +1039,7 @@ paths:
         schema:
           type: integer
       tags:
-      - item-category
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1064,7 +1064,7 @@ paths:
         description: A unique integer value identifying this item category.
         required: true
       tags:
-      - item-category
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1095,7 +1095,7 @@ paths:
         schema:
           type: integer
       tags:
-      - item-fling-effect
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1120,7 +1120,7 @@ paths:
         description: A unique integer value identifying this item fling effect.
         required: true
       tags:
-      - item-fling-effect
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1150,7 +1150,7 @@ paths:
         schema:
           type: integer
       tags:
-      - item-pocket
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1174,7 +1174,7 @@ paths:
         description: A unique integer value identifying this item pocket.
         required: true
       tags:
-      - item-pocket
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1200,7 +1200,7 @@ paths:
         description: A unique integer value identifying this item.
         required: true
       tags:
-      - item
+      - items
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1230,7 +1230,7 @@ paths:
         schema:
           type: integer
       tags:
-      - language
+      - utility
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1254,7 +1254,7 @@ paths:
         description: A unique integer value identifying this language.
         required: true
       tags:
-      - language
+      - utility
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1316,7 +1316,7 @@ paths:
         schema:
           type: integer
       tags:
-      - location-area
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1341,7 +1341,7 @@ paths:
         description: A unique integer value identifying this location area.
         required: true
       tags:
-      - location-area
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1398,7 +1398,7 @@ paths:
         schema:
           type: integer
       tags:
-      - machine
+      - machines
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1424,7 +1424,7 @@ paths:
         description: A unique integer value identifying this machine.
         required: true
       tags:
-      - machine
+      - machines
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1457,7 +1457,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1489,7 +1489,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-ailment
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1515,7 +1515,7 @@ paths:
         description: A unique integer value identifying this move meta ailment.
         required: true
       tags:
-      - move-ailment
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1546,7 +1546,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-battle-style
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1571,7 +1571,7 @@ paths:
         description: A unique integer value identifying this move battle style.
         required: true
       tags:
-      - move-battle-style
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1601,7 +1601,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-category
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1625,7 +1625,7 @@ paths:
         description: A unique integer value identifying this move meta category.
         required: true
       tags:
-      - move-category
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1655,7 +1655,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-damage-class
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1679,7 +1679,7 @@ paths:
         description: A unique integer value identifying this move damage class.
         required: true
       tags:
-      - move-damage-class
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1709,7 +1709,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-learn-method
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1733,7 +1733,7 @@ paths:
         description: A unique integer value identifying this move learn method.
         required: true
       tags:
-      - move-learn-method
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1764,7 +1764,7 @@ paths:
         schema:
           type: integer
       tags:
-      - move-target
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1789,7 +1789,7 @@ paths:
         description: A unique integer value identifying this move target.
         required: true
       tags:
-      - move-target
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1816,7 +1816,7 @@ paths:
         description: A unique integer value identifying this move.
         required: true
       tags:
-      - move
+      - moves
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1847,7 +1847,7 @@ paths:
         schema:
           type: integer
       tags:
-      - nature
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1872,7 +1872,7 @@ paths:
         description: A unique integer value identifying this nature.
         required: true
       tags:
-      - nature
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1903,7 +1903,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pal-park-area
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1928,7 +1928,7 @@ paths:
         description: A unique integer value identifying this pal park area.
         required: true
       tags:
-      - pal-park-area
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1961,7 +1961,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokeathlon-stat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -1988,7 +1988,7 @@ paths:
         description: A unique integer value identifying this pokeathlon stat.
         required: true
       tags:
-      - pokeathlon-stat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2022,7 +2022,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokedex
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2050,7 +2050,7 @@ paths:
         description: A unique integer value identifying this pokedex.
         required: true
       tags:
-      - pokedex
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2118,7 +2118,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokemon-color
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2145,7 +2145,7 @@ paths:
         description: A unique integer value identifying this pokemon color.
         required: true
       tags:
-      - pokemon-color
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2178,7 +2178,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokemon-form
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2205,7 +2205,7 @@ paths:
         description: A unique integer value identifying this pokemon form.
         required: true
       tags:
-      - pokemon-form
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2236,7 +2236,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokemon-habitat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2261,7 +2261,7 @@ paths:
         description: A unique integer value identifying this pokemon habitat.
         required: true
       tags:
-      - pokemon-habitat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2291,7 +2291,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokemon-shape
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2315,7 +2315,7 @@ paths:
         description: A unique integer value identifying this pokemon shape.
         required: true
       tags:
-      - pokemon-shape
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2348,7 +2348,7 @@ paths:
         schema:
           type: integer
       tags:
-      - pokemon-species
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2375,7 +2375,7 @@ paths:
         description: A unique integer value identifying this pokemon species.
         required: true
       tags:
-      - pokemon-species
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2428,7 +2428,7 @@ paths:
           pattern: ^\d+$
         required: true
       tags:
-      - pokemon
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2456,7 +2456,7 @@ paths:
         schema:
           type: integer
       tags:
-      - region
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2482,7 +2482,7 @@ paths:
         description: A unique integer value identifying this region.
         required: true
       tags:
-      - region
+      - location
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2514,7 +2514,7 @@ paths:
         schema:
           type: integer
       tags:
-      - stat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2540,7 +2540,7 @@ paths:
         description: A unique integer value identifying this stat.
         required: true
       tags:
-      - stat
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2571,7 +2571,7 @@ paths:
         schema:
           type: integer
       tags:
-      - super-contest-effect
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2596,7 +2596,7 @@ paths:
         description: A unique integer value identifying this super contest effect.
         required: true
       tags:
-      - super-contest-effect
+      - contests
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2629,7 +2629,7 @@ paths:
         schema:
           type: integer
       tags:
-      - type
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2656,7 +2656,7 @@ paths:
         description: A unique integer value identifying this type.
         required: true
       tags:
-      - type
+      - pokemon
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2686,7 +2686,7 @@ paths:
         schema:
           type: integer
       tags:
-      - version
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2716,7 +2716,7 @@ paths:
         schema:
           type: integer
       tags:
-      - version-group
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2740,7 +2740,7 @@ paths:
         description: A unique integer value identifying this version group.
         required: true
       tags:
-      - version-group
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -2764,7 +2764,7 @@ paths:
         description: A unique integer value identifying this version.
         required: true
       tags:
-      - version
+      - games
       security:
       - cookieAuth: []
       - basicAuth: []

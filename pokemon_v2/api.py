@@ -71,343 +71,490 @@ class PokeapiCommonViewset(
 ##########
 
 
-@extend_schema(description='Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.')
+@extend_schema(
+               description='Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
 
-@extend_schema(description='Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.')
+@extend_schema(
+               description='Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.',
+               tags=[ 'berries' ]
+               )
 class BerryResource(PokeapiCommonViewset):
     queryset = Berry.objects.all()
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
 
 
-@extend_schema(description='Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.')
+@extend_schema(
+               description='Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.',
+               tags=[ 'berries' ]
+               )
 class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
 
 
-@extend_schema(description='Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.')
+@extend_schema(
+               description='Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.',
+               tags=[ 'berries' ]
+               )
 class BerryFlavorResource(PokeapiCommonViewset):
     queryset = BerryFlavor.objects.all()
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
 
 
-@extend_schema(description='Characteristics indicate which stat contains a Pokémon\'s highest IV. A Pokémon\'s Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.')
+@extend_schema(
+               description='Characteristics indicate which stat contains a Pokémon\'s highest IV. A Pokémon\'s Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class CharacteristicResource(PokeapiCommonViewset):
     queryset = Characteristic.objects.all()
     serializer_class = CharacteristicDetailSerializer
     list_serializer_class = CharacteristicSummarySerializer
 
 
-@extend_schema(description='Contest effects refer to the effects of moves when used in contests.')
+@extend_schema(
+               description='Contest effects refer to the effects of moves when used in contests.',
+               tags=[ 'contests' ]
+               )
 class ContestEffectResource(PokeapiCommonViewset):
     queryset = ContestEffect.objects.all()
     serializer_class = ContestEffectDetailSerializer
     list_serializer_class = ContestEffectSummarySerializer
 
 
-@extend_schema(description='Contest types are categories judges used to weigh a Pokémon\'s condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.')
+@extend_schema(
+               description='Contest types are categories judges used to weigh a Pokémon\'s condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.',
+               tags=[ 'contests' ]
+               )
 class ContestTypeResource(PokeapiCommonViewset):
     queryset = ContestType.objects.all()
     serializer_class = ContestTypeDetailSerializer
     list_serializer_class = ContestTypeSummarySerializer
 
 
-@extend_schema(description='Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.')
+@extend_schema(
+               description='Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class EggGroupResource(PokeapiCommonViewset):
     queryset = EggGroup.objects.all()
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
 
 
-@extend_schema(description='Conditions which affect what pokemon might appear in the wild, e.g., day or night.')
+@extend_schema(
+               description='Conditions which affect what pokemon might appear in the wild, e.g., day or night.',
+               tags=[ 'encounters' ]
+               )
 class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
 
 
-@extend_schema(description='Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.')
+@extend_schema(
+               description='Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.',
+               tags=[ 'encounters' ]
+               )
 class EncounterConditionValueResource(PokeapiCommonViewset):
     queryset = EncounterConditionValue.objects.all()
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
 
 
-@extend_schema(description='Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.')
+@extend_schema(
+               description='Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.',
+               tags=[ 'encounters' ]
+               )
 class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
 
 
-@extend_schema(description='Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.')
+@extend_schema(
+               description='Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.',
+               tags=[ 'evolution' ]
+               )
 class EvolutionChainResource(PokeapiCommonViewset):
     queryset = EvolutionChain.objects.all()
     serializer_class = EvolutionChainDetailSerializer
     list_serializer_class = EvolutionChainSummarySerializer
 
 
-@extend_schema(description='Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.')
+@extend_schema(
+               description='Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.',
+               tags=[ 'evolution' ]
+               )
 class EvolutionTriggerResource(PokeapiCommonViewset):
     queryset = EvolutionTrigger.objects.all()
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
 
 
-@extend_schema(description='A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.')
+@extend_schema(
+               description='A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.',
+               tags=[ 'games' ]
+               )
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
 
 
-@extend_schema(description='Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.')
+@extend_schema(
+               description='Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class GenderResource(PokeapiCommonViewset):
     queryset = Gender.objects.all()
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
 
 
-@extend_schema(description='Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.')
+@extend_schema(
+               description='Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
 
 
-@extend_schema(description='An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.')
+@extend_schema(
+               description='An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.',
+               tags=[ 'items' ]
+               )
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
 
 
-@extend_schema(description='Item categories determine where items will be placed in the players bag.')
+@extend_schema(
+               description='Item categories determine where items will be placed in the players bag.',
+               tags=[ 'items' ]
+               )
 class ItemCategoryResource(PokeapiCommonViewset):
     queryset = ItemCategory.objects.all()
     serializer_class = ItemCategoryDetailSerializer
     list_serializer_class = ItemCategorySummarySerializer
 
 
-@extend_schema(description='Item attributes define particular aspects of items, e.g."usable in battle" or "consumable".')
+@extend_schema(
+               description='Item attributes define particular aspects of items, e.g."usable in battle" or "consumable".',
+               tags=[ 'items' ]
+               )
 class ItemAttributeResource(PokeapiCommonViewset):
     queryset = ItemAttribute.objects.all()
     serializer_class = ItemAttributeDetailSerializer
     list_serializer_class = ItemAttributeSummarySerializer
 
 
-@extend_schema(description='The various effects of the move"Fling" when used with different items.')
+@extend_schema(
+               description='The various effects of the move"Fling" when used with different items.',
+               tags=[ 'items' ]
+               )
 class ItemFlingEffectResource(PokeapiCommonViewset):
     queryset = ItemFlingEffect.objects.all()
     serializer_class = ItemFlingEffectDetailSerializer
     list_serializer_class = ItemFlingEffectSummarySerializer
 
 
-@extend_schema(description='Pockets within the players bag used for storing items by category.')
+@extend_schema(
+               description='Pockets within the players bag used for storing items by category.',
+               tags=[ 'items' ]
+               )
 class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
 
 
-@extend_schema(description='Languages for translations of API resource information.')
+@extend_schema(
+               description='Languages for translations of API resource information.',
+               tags=[ 'utility' ]
+               )
 class LanguageResource(PokeapiCommonViewset):
     queryset = Language.objects.all()
     serializer_class = LanguageDetailSerializer
     list_serializer_class = LanguageSummarySerializer
 
 
-@extend_schema(description='Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.')
+@extend_schema(
+               description='Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.',
+               tags=[ 'location' ]
+               )
 class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
     serializer_class = LocationDetailSerializer
     list_serializer_class = LocationSummarySerializer
 
 
-@extend_schema(description='Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.')
+@extend_schema(
+               description='Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.',
+               tags=[ 'location' ]
+               )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer
 
 
-@extend_schema(description='Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.')
+@extend_schema(
+               description='Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.',
+               tags=[ 'machines' ]
+               )
 class MachineResource(PokeapiCommonViewset):
     queryset = Machine.objects.all()
     serializer_class = MachineDetailSerializer
     list_serializer_class = MachineSummarySerializer
 
 
-@extend_schema(description='Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.')
+@extend_schema(
+               description='Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.',
+               tags=[ 'moves' ]
+               )
 class MoveResource(PokeapiCommonViewset):
     queryset = Move.objects.all()
     serializer_class = MoveDetailSerializer
     list_serializer_class = MoveSummarySerializer
 
 
-@extend_schema(description='Damage classes moves can have, e.g. physical, special, or non-damaging.')
+@extend_schema(
+               description='Damage classes moves can have, e.g. physical, special, or non-damaging.',
+               tags=[ 'pokemon' ]
+               )
 class MoveDamageClassResource(PokeapiCommonViewset):
     queryset = MoveDamageClass.objects.all()
     serializer_class = MoveDamageClassDetailSerializer
     list_serializer_class = MoveDamageClassSummarySerializer
 
 
-@extend_schema(description='Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.')
+@extend_schema(
+               description='Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.',
+               tags=[ 'moves' ]
+               )
 class MoveMetaAilmentResource(PokeapiCommonViewset):
     queryset = MoveMetaAilment.objects.all()
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
 
 
-@extend_schema(description='Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.')
+@extend_schema(
+               description='Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.',
+               tags=[ 'moves' ]
+               )
 class MoveBattleStyleResource(PokeapiCommonViewset):
     queryset = MoveBattleStyle.objects.all()
     serializer_class = MoveBattleStyleDetailSerializer
     list_serializer_class = MoveBattleStyleSummarySerializer
 
 
-@extend_schema(description='Very general categories that loosely group move effects.')
+@extend_schema(
+               description='Very general categories that loosely group move effects.',
+               tags=[ 'moves' ]
+               )
 class MoveMetaCategoryResource(PokeapiCommonViewset):
     queryset = MoveMetaCategory.objects.all()
     serializer_class = MoveMetaCategoryDetailSerializer
     list_serializer_class = MoveMetaCategorySummarySerializer
 
 
-@extend_schema(description='Methods by which Pokémon can learn moves.')
+@extend_schema(
+               description='Methods by which Pokémon can learn moves.',
+               tags=[ 'moves' ]
+               )
 class MoveLearnMethodResource(PokeapiCommonViewset):
     queryset = MoveLearnMethod.objects.all()
     serializer_class = MoveLearnMethodDetailSerializer
     list_serializer_class = MoveLearnMethodSummarySerializer
 
 
-@extend_schema(description='Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.')
+@extend_schema(
+               description='Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.',
+               tags=[ 'moves' ]
+               )
 class MoveTargetResource(PokeapiCommonViewset):
     queryset = MoveTarget.objects.all()
     serializer_class = MoveTargetDetailSerializer
     list_serializer_class = MoveTargetSummarySerializer
 
 
-@extend_schema(description='Natures influence how a Pokémon\'s stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.')
+@extend_schema(
+               description='Natures influence how a Pokémon\'s stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
 
 
-@extend_schema(description='Areas used for grouping Pokémon encounters in Pal Park. They\'re like habitats that are specific to Pal Park.')
+@extend_schema(
+               description='Areas used for grouping Pokémon encounters in Pal Park. They\'re like habitats that are specific to Pal Park.',
+               tags=[ 'location' ]
+               )
 class PalParkAreaResource(PokeapiCommonViewset):
     queryset = PalParkArea.objects.all()
     serializer_class = PalParkAreaDetailSerializer
     list_serializer_class = PalParkAreaSummarySerializer
 
 
-@extend_schema(description='Pokeathlon Stats are different attributes of a Pokémon\'s performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.')
+@extend_schema(
+               description='Pokeathlon Stats are different attributes of a Pokémon\'s performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class PokeathlonStatResource(PokeapiCommonViewset):
     queryset = PokeathlonStat.objects.all()
     serializer_class = PokeathlonStatDetailSerializer
     list_serializer_class = PokeathlonStatSummarySerializer
 
 
-@extend_schema(description='A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.')
+@extend_schema(
+               description='A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.',
+               tags=[ 'games' ]
+               )
 class PokedexResource(PokeapiCommonViewset):
     queryset = Pokedex.objects.all()
     serializer_class = PokedexDetailSerializer
     list_serializer_class = PokedexSummarySerializer
 
 
-@extend_schema(description='Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon\'s body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.')
+@extend_schema(
+               description='Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon\'s body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
 
 
-@extend_schema(description='Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the \'Pokémon\' entity is used to represent such a variety.')
+@extend_schema(
+               description='Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the \'Pokémon\' entity is used to represent such a variety.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonFormResource(PokeapiCommonViewset):
     queryset = PokemonForm.objects.all()
     serializer_class = PokemonFormDetailSerializer
     list_serializer_class = PokemonFormSummarySerializer
 
 
-@extend_schema(description='Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.')
+@extend_schema(
+               description='Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonHabitatResource(PokeapiCommonViewset):
     queryset = PokemonHabitat.objects.all()
     serializer_class = PokemonHabitatDetailSerializer
     list_serializer_class = PokemonHabitatSummarySerializer
 
 
-@extend_schema(description='Shapes used for sorting Pokémon in a Pokédex.')
+@extend_schema(
+               description='Shapes used for sorting Pokémon in a Pokédex.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonShapeResource(PokeapiCommonViewset):
     queryset = PokemonShape.objects.all()
     serializer_class = PokemonShapeDetailSerializer
     list_serializer_class = PokemonShapeSummarySerializer
 
 
-@extend_schema(description='Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.')
+@extend_schema(
+               description='Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
 
 
-@extend_schema(description='A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.')
+@extend_schema(
+               description='A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.',
+               tags=[ 'pokemon' ]
+               )
 class PokemonSpeciesResource(PokeapiCommonViewset):
     queryset = PokemonSpecies.objects.all().order_by("id")
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 
 
-@extend_schema(description='A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.')
+@extend_schema(
+               description='A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.',
+               tags=[ 'location' ]
+               )
 class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
 
 
-@extend_schema(description='Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.')
+@extend_schema(
+               description='Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.',
+               tags=[ 'pokemon' ]
+               )
 class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
 
 
-@extend_schema(description='Super contest effects refer to the effects of moves when used in super contests.')
+@extend_schema(
+               description='Super contest effects refer to the effects of moves when used in super contests.',
+               tags=[ 'contests' ]
+               )
 class SuperContestEffectResource(PokeapiCommonViewset):
     queryset = SuperContestEffect.objects.all()
     serializer_class = SuperContestEffectDetailSerializer
     list_serializer_class = SuperContestEffectSummarySerializer
 
 
-@extend_schema(description='Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.')
+@extend_schema(
+               description='Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.',
+               tags=[ 'pokemon' ]
+               )
 class TypeResource(PokeapiCommonViewset):
     queryset = Type.objects.all()
     serializer_class = TypeDetailSerializer
     list_serializer_class = TypeSummarySerializer
 
 
-@extend_schema(description='Versions of the games, e.g., Red, Blue or Yellow.')
+@extend_schema(
+               description='Versions of the games, e.g., Red, Blue or Yellow.',
+               tags=[ 'games' ]
+               )
 class VersionResource(PokeapiCommonViewset):
     queryset = Version.objects.all()
     serializer_class = VersionDetailSerializer
     list_serializer_class = VersionSummarySerializer
 
 
-@extend_schema(description='Version groups categorize highly similar versions of the games.')
+@extend_schema(
+               description='Version groups categorize highly similar versions of the games.',
+               tags=[ 'games' ]
+               )
 class VersionGroupResource(PokeapiCommonViewset):
     queryset = VersionGroup.objects.all()
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
 
 
-@extend_schema(description='Handles Pokemon Encounters as a sub-resource.')
+@extend_schema(
+               description='Handles Pokemon Encounters as a sub-resource.',
+               tags=[ 'encounters' ]
+               )
 class PokemonEncounterView(APIView):
 
     def get(self, request, pokemon_id):

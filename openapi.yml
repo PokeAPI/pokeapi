@@ -71,6 +71,7 @@ paths:
         restoration, stat enhancement, and even damage negation when eaten by Pokémon.
         Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
         detail.
+      summary: List berries
       parameters:
       - name: limit
         required: false
@@ -102,6 +103,7 @@ paths:
       operationId: berry_firmness_list
       description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
         for greater detail.
+      summary: List berry firmness
       parameters:
       - name: limit
         required: false
@@ -133,6 +135,7 @@ paths:
       operationId: berry_firmness_retrieve
       description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
         for greater detail.
+      summary: Get berry by firmness
       parameters:
       - in: path
         name: id
@@ -159,6 +162,7 @@ paths:
       description: Flavors determine whether a Pokémon will benefit or suffer from
         eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
         for greater detail.
+      summary: List berry flavors
       parameters:
       - name: limit
         required: false
@@ -191,6 +195,7 @@ paths:
       description: Flavors determine whether a Pokémon will benefit or suffer from
         eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
         for greater detail.
+      summary: Get berries by flavor
       parameters:
       - in: path
         name: id
@@ -218,6 +223,7 @@ paths:
         restoration, stat enhancement, and even damage negation when eaten by Pokémon.
         Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
         detail.
+      summary: Get a berry
       parameters:
       - in: path
         name: id
@@ -245,6 +251,7 @@ paths:
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
         for greater detail.
+      summary: List charecterictics
       parameters:
       - name: limit
         required: false
@@ -278,6 +285,7 @@ paths:
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
         for greater detail.
+      summary: Get charecterictic
       parameters:
       - in: path
         name: id
@@ -302,6 +310,7 @@ paths:
     get:
       operationId: contest_effect_list
       description: Contest effects refer to the effects of moves when used in contests.
+      summary: List contest effects
       parameters:
       - name: limit
         required: false
@@ -332,6 +341,7 @@ paths:
     get:
       operationId: contest_effect_retrieve
       description: Contest effects refer to the effects of moves when used in contests.
+      summary: Get contest effect
       parameters:
       - in: path
         name: id
@@ -358,6 +368,7 @@ paths:
       description: Contest types are categories judges used to weigh a Pokémon's condition
         in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
         for greater detail.
+      summary: List contest types
       parameters:
       - name: limit
         required: false
@@ -390,6 +401,7 @@ paths:
       description: Contest types are categories judges used to weigh a Pokémon's condition
         in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
         for greater detail.
+      summary: Get contest type
       parameters:
       - in: path
         name: id
@@ -417,6 +429,7 @@ paths:
         to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
         [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
         detail.
+      summary: List egg groups
       parameters:
       - name: limit
         required: false
@@ -450,6 +463,7 @@ paths:
         to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
         [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
         detail.
+      summary: Get egg group
       parameters:
       - in: path
         name: id
@@ -475,6 +489,7 @@ paths:
       operationId: encounter_condition_list
       description: Conditions which affect what pokemon might appear in the wild,
         e.g., day or night.
+      summary: List encounter conditions
       parameters:
       - name: limit
         required: false
@@ -506,6 +521,7 @@ paths:
       operationId: encounter_condition_value_list
       description: Encounter condition values are the various states that an encounter
         condition can have, i.e., time of day can be either day or night.
+      summary: List encounter condition values
       parameters:
       - name: limit
         required: false
@@ -537,6 +553,7 @@ paths:
       operationId: encounter_condition_value_retrieve
       description: Encounter condition values are the various states that an encounter
         condition can have, i.e., time of day can be either day or night.
+      summary: Get encounter condition value
       parameters:
       - in: path
         name: id
@@ -562,6 +579,7 @@ paths:
       operationId: encounter_condition_retrieve
       description: Conditions which affect what pokemon might appear in the wild,
         e.g., day or night.
+      summary: Get encounter condition
       parameters:
       - in: path
         name: id
@@ -587,6 +605,7 @@ paths:
       operationId: encounter_method_list
       description: Methods by which the player might can encounter Pokémon in the
         wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
+      summary: List encounter methods
       parameters:
       - name: limit
         required: false
@@ -618,6 +637,7 @@ paths:
       operationId: encounter_method_retrieve
       description: Methods by which the player might can encounter Pokémon in the
         wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
+      summary: Get encounter method
       parameters:
       - in: path
         name: id
@@ -644,6 +664,7 @@ paths:
       description: Evolution chains are essentially family trees. They start with
         the lowest stage within a family and detail evolution conditions for each
         as well as Pokémon they can evolve into up through the hierarchy.
+      summary: List evolution chains
       parameters:
       - name: limit
         required: false
@@ -676,6 +697,7 @@ paths:
       description: Evolution chains are essentially family trees. They start with
         the lowest stage within a family and detail evolution conditions for each
         as well as Pokémon they can evolve into up through the hierarchy.
+      summary: Get evolution chain
       parameters:
       - in: path
         name: id
@@ -702,6 +724,7 @@ paths:
       description: Evolution triggers are the events and conditions that cause a Pokémon
         to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
         for greater detail.
+      summary: List evolution triggers
       parameters:
       - name: limit
         required: false
@@ -734,6 +757,7 @@ paths:
       description: Evolution triggers are the events and conditions that cause a Pokémon
         to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
         for greater detail.
+      summary: Get evolution trigger
       parameters:
       - in: path
         name: id
@@ -761,6 +785,7 @@ paths:
         Pokémon but can also result in visual differences or even different evolutionary
         lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
         for greater detail.
+      summary: List genders
       parameters:
       - name: limit
         required: false
@@ -794,6 +819,7 @@ paths:
         Pokémon but can also result in visual differences or even different evolutionary
         lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
         for greater detail.
+      summary: Get gender
       parameters:
       - in: path
         name: id
@@ -821,6 +847,7 @@ paths:
         them based on the Pokémon they include. In each generation, a new set of Pokémon,
         Moves, Abilities and Types that did not exist in the previous generation are
         released.
+      summary: List genrations
       parameters:
       - name: limit
         required: false
@@ -854,6 +881,7 @@ paths:
         them based on the Pokémon they include. In each generation, a new set of Pokémon,
         Moves, Abilities and Types that did not exist in the previous generation are
         released.
+      summary: Get genration
       parameters:
       - in: path
         name: id
@@ -880,6 +908,7 @@ paths:
       description: Growth rates are the speed with which Pokémon gain levels through
         experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
         for greater detail.
+      summary: List growth rates
       parameters:
       - name: limit
         required: false
@@ -912,6 +941,7 @@ paths:
       description: Growth rates are the speed with which Pokémon gain levels through
         experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
         for greater detail.
+      summary: Get growth rate
       parameters:
       - in: path
         name: id
@@ -938,6 +968,7 @@ paths:
       description: An item is an object in the games which the player can pick up,
         keep in their bag, and use in some manner. They have various uses, including
         healing, powering up, helping catch Pokémon, or to access a new area.
+      summary: List items
       parameters:
       - name: limit
         required: false
@@ -969,6 +1000,7 @@ paths:
       operationId: item_attribute_list
       description: Item attributes define particular aspects of items, e.g."usable
         in battle" or "consumable".
+      summary: List item attributes
       parameters:
       - name: limit
         required: false
@@ -1000,6 +1032,7 @@ paths:
       operationId: item_attribute_retrieve
       description: Item attributes define particular aspects of items, e.g."usable
         in battle" or "consumable".
+      summary: Get item attribute
       parameters:
       - in: path
         name: id
@@ -1025,6 +1058,7 @@ paths:
       operationId: item_category_list
       description: Item categories determine where items will be placed in the players
         bag.
+      summary: List item categories
       parameters:
       - name: limit
         required: false
@@ -1056,6 +1090,7 @@ paths:
       operationId: item_category_retrieve
       description: Item categories determine where items will be placed in the players
         bag.
+      summary: Get item category
       parameters:
       - in: path
         name: id
@@ -1081,6 +1116,7 @@ paths:
       operationId: item_fling_effect_list
       description: The various effects of the move"Fling" when used with different
         items.
+      summary: List item fling effects
       parameters:
       - name: limit
         required: false
@@ -1112,6 +1148,7 @@ paths:
       operationId: item_fling_effect_retrieve
       description: The various effects of the move"Fling" when used with different
         items.
+      summary: Get item fling effect
       parameters:
       - in: path
         name: id
@@ -1136,6 +1173,7 @@ paths:
     get:
       operationId: item_pocket_list
       description: Pockets within the players bag used for storing items by category.
+      summary: List item pockets
       parameters:
       - name: limit
         required: false
@@ -1166,6 +1204,7 @@ paths:
     get:
       operationId: item_pocket_retrieve
       description: Pockets within the players bag used for storing items by category.
+      summary: Get item pocket
       parameters:
       - in: path
         name: id
@@ -1192,6 +1231,7 @@ paths:
       description: An item is an object in the games which the player can pick up,
         keep in their bag, and use in some manner. They have various uses, including
         healing, powering up, helping catch Pokémon, or to access a new area.
+      summary: Get item
       parameters:
       - in: path
         name: id
@@ -1216,6 +1256,7 @@ paths:
     get:
       operationId: language_list
       description: Languages for translations of API resource information.
+      summary: List languages
       parameters:
       - name: limit
         required: false
@@ -1246,6 +1287,7 @@ paths:
     get:
       operationId: language_retrieve
       description: Languages for translations of API resource information.
+      summary: Get language
       parameters:
       - in: path
         name: id
@@ -1271,6 +1313,7 @@ paths:
       operationId: location_list
       description: Locations that can be visited within the games. Locations make
         up sizable portions of regions, like cities or routes.
+      summary: List locations
       parameters:
       - name: limit
         required: false
@@ -1302,6 +1345,7 @@ paths:
       operationId: location_area_list
       description: Location areas are sections of areas, such as floors in a building
         or cave. Each area has its own set of possible Pokémon encounters.
+      summary: List location areas
       parameters:
       - name: limit
         required: false
@@ -1333,6 +1377,7 @@ paths:
       operationId: location_area_retrieve
       description: Location areas are sections of areas, such as floors in a building
         or cave. Each area has its own set of possible Pokémon encounters.
+      summary: Get location area
       parameters:
       - in: path
         name: id
@@ -1358,6 +1403,7 @@ paths:
       operationId: location_retrieve
       description: Locations that can be visited within the games. Locations make
         up sizable portions of regions, like cities or routes.
+      summary: Get location
       parameters:
       - in: path
         name: id
@@ -1384,6 +1430,7 @@ paths:
       description: Machines are the representation of items that teach moves to Pokémon.
         They vary from version to version, so it is not certain that one specific
         TM or HM corresponds to a single Machine.
+      summary: List machines
       parameters:
       - name: limit
         required: false
@@ -1416,6 +1463,7 @@ paths:
       description: Machines are the representation of items that teach moves to Pokémon.
         They vary from version to version, so it is not certain that one specific
         TM or HM corresponds to a single Machine.
+      summary: Get machine
       parameters:
       - in: path
         name: id
@@ -1443,6 +1491,7 @@ paths:
         uses one move each turn. Some moves (including those learned by Hidden Machine)
         can be used outside of battle as well, usually for the purpose of removing
         obstacles or exploring new areas.
+      summary: List moves
       parameters:
       - name: limit
         required: false
@@ -1475,6 +1524,7 @@ paths:
       description: Move Ailments are status conditions caused by moves used during
         battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
         for greater detail.
+      summary: List move meta ailments
       parameters:
       - name: limit
         required: false
@@ -1507,6 +1557,7 @@ paths:
       description: Move Ailments are status conditions caused by moves used during
         battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
         for greater detail.
+      summary: Get move meta ailment
       parameters:
       - in: path
         name: id
@@ -1532,6 +1583,7 @@ paths:
       operationId: move_battle_style_list
       description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
         for greater detail.
+      summary: List move battle styles
       parameters:
       - name: limit
         required: false
@@ -1563,6 +1615,7 @@ paths:
       operationId: move_battle_style_retrieve
       description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
         for greater detail.
+      summary: Get move battle style
       parameters:
       - in: path
         name: id
@@ -1587,6 +1640,7 @@ paths:
     get:
       operationId: move_category_list
       description: Very general categories that loosely group move effects.
+      summary: List move meta categories
       parameters:
       - name: limit
         required: false
@@ -1617,6 +1671,7 @@ paths:
     get:
       operationId: move_category_retrieve
       description: Very general categories that loosely group move effects.
+      summary: Get move meta category
       parameters:
       - in: path
         name: id
@@ -1641,6 +1696,7 @@ paths:
     get:
       operationId: move_damage_class_list
       description: Damage classes moves can have, e.g. physical, special, or non-damaging.
+      summary: List move damage classes
       parameters:
       - name: limit
         required: false
@@ -1671,6 +1727,7 @@ paths:
     get:
       operationId: move_damage_class_retrieve
       description: Damage classes moves can have, e.g. physical, special, or non-damaging.
+      summary: Get move damage class
       parameters:
       - in: path
         name: id
@@ -1695,6 +1752,7 @@ paths:
     get:
       operationId: move_learn_method_list
       description: Methods by which Pokémon can learn moves.
+      summary: List move learn methods
       parameters:
       - name: limit
         required: false
@@ -1725,6 +1783,7 @@ paths:
     get:
       operationId: move_learn_method_retrieve
       description: Methods by which Pokémon can learn moves.
+      summary: Get move learn method
       parameters:
       - in: path
         name: id
@@ -1750,6 +1809,7 @@ paths:
       operationId: move_target_list
       description: Targets moves can be directed at during battle. Targets can be
         Pokémon, environments or even other moves.
+      summary: List move targets
       parameters:
       - name: limit
         required: false
@@ -1781,6 +1841,7 @@ paths:
       operationId: move_target_retrieve
       description: Targets moves can be directed at during battle. Targets can be
         Pokémon, environments or even other moves.
+      summary: Get move target
       parameters:
       - in: path
         name: id
@@ -1808,6 +1869,7 @@ paths:
         uses one move each turn. Some moves (including those learned by Hidden Machine)
         can be used outside of battle as well, usually for the purpose of removing
         obstacles or exploring new areas.
+      summary: Get move
       parameters:
       - in: path
         name: id
@@ -1833,6 +1895,7 @@ paths:
       operationId: nature_list
       description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
         for greater detail.
+      summary: List natures
       parameters:
       - name: limit
         required: false
@@ -1864,6 +1927,7 @@ paths:
       operationId: nature_retrieve
       description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
         for greater detail.
+      summary: Get nature
       parameters:
       - in: path
         name: id
@@ -1889,6 +1953,7 @@ paths:
       operationId: pal_park_area_list
       description: Areas used for grouping Pokémon encounters in Pal Park. They're
         like habitats that are specific to Pal Park.
+      summary: List pal park areas
       parameters:
       - name: limit
         required: false
@@ -1920,6 +1985,7 @@ paths:
       operationId: pal_park_area_retrieve
       description: Areas used for grouping Pokémon encounters in Pal Park. They're
         like habitats that are specific to Pal Park.
+      summary: Get pal park area
       parameters:
       - in: path
         name: id
@@ -1947,6 +2013,7 @@ paths:
         in Pokéathlons. In Pokéathlons, competitions happen on different courses;
         one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
         for greater detail.
+      summary: List pokeathlon stats
       parameters:
       - name: limit
         required: false
@@ -1980,6 +2047,7 @@ paths:
         in Pokéathlons. In Pokéathlons, competitions happen on different courses;
         one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
         for greater detail.
+      summary: Get pokeathlon stat
       parameters:
       - in: path
         name: id
@@ -2008,6 +2076,7 @@ paths:
         a given region with the exception of the national dex and some smaller dexes
         related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex)
         for greater detail.
+      summary: List pokedex
       parameters:
       - name: limit
         required: false
@@ -2042,6 +2111,7 @@ paths:
         a given region with the exception of the national dex and some smaller dexes
         related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex)
         for greater detail.
+      summary: Get pokedex
       parameters:
       - in: path
         name: id
@@ -2071,6 +2141,7 @@ paths:
         which makes it differ from other Pokémon of the same species, such as base
         stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
         for greater detail.
+      summary: List pokemon
       parameters:
       - name: limit
         required: false
@@ -2104,6 +2175,7 @@ paths:
         in the Pokédex is usually the color most apparent or covering each Pokémon's
         body. No orange category exists; Pokémon that are primarily orange are listed
         as red or brown.
+      summary: List pokemon colors
       parameters:
       - name: limit
         required: false
@@ -2137,6 +2209,7 @@ paths:
         in the Pokédex is usually the color most apparent or covering each Pokémon's
         body. No orange category exists; Pokémon that are primarily orange are listed
         as red or brown.
+      summary: Get pokemon color
       parameters:
       - in: path
         name: id
@@ -2164,6 +2237,7 @@ paths:
         forms. These differences are purely cosmetic. For variations within a Pokémon
         species, which do differ in more than just visuals, the 'Pokémon' entity is
         used to represent such a variety.
+      summary: List pokemon forms
       parameters:
       - name: limit
         required: false
@@ -2197,6 +2271,7 @@ paths:
         forms. These differences are purely cosmetic. For variations within a Pokémon
         species, which do differ in more than just visuals, the 'Pokémon' entity is
         used to represent such a variety.
+      summary: Get pokemon form
       parameters:
       - in: path
         name: id
@@ -2222,6 +2297,7 @@ paths:
       operationId: pokemon_habitat_list
       description: Habitats are generally different terrain Pokémon can be found in
         but can also be areas designated for rare or legendary Pokémon.
+      summary: List pokemom habitas
       parameters:
       - name: limit
         required: false
@@ -2253,6 +2329,7 @@ paths:
       operationId: pokemon_habitat_retrieve
       description: Habitats are generally different terrain Pokémon can be found in
         but can also be areas designated for rare or legendary Pokémon.
+      summary: Get pokemom habita
       parameters:
       - in: path
         name: id
@@ -2277,6 +2354,7 @@ paths:
     get:
       operationId: pokemon_shape_list
       description: Shapes used for sorting Pokémon in a Pokédex.
+      summary: List pokemon shapes
       parameters:
       - name: limit
         required: false
@@ -2307,6 +2385,7 @@ paths:
     get:
       operationId: pokemon_shape_retrieve
       description: Shapes used for sorting Pokémon in a Pokédex.
+      summary: Get pokemon shape
       parameters:
       - in: path
         name: id
@@ -2334,6 +2413,7 @@ paths:
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
         found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
+      summary: List pokemon specs
       parameters:
       - name: limit
         required: false
@@ -2367,6 +2447,7 @@ paths:
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
         found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
+      summary: Get pokemon spec
       parameters:
       - in: path
         name: id
@@ -2396,6 +2477,7 @@ paths:
         which makes it differ from other Pokémon of the same species, such as base
         stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
         for greater detail.
+      summary: Get pokemon
       parameters:
       - in: path
         name: id
@@ -2420,6 +2502,7 @@ paths:
     get:
       operationId: pokemon_encounters_retrieve
       description: Handles Pokemon Encounters as a sub-resource.
+      summary: Get pokemon encounter
       parameters:
       - in: path
         name: pokemon_id
@@ -2442,6 +2525,7 @@ paths:
       description: A region is an organized area of the Pokémon world. Most often,
         the main difference between regions is the species of Pokémon that can be
         encountered within them.
+      summary: List regions
       parameters:
       - name: limit
         required: false
@@ -2474,6 +2558,7 @@ paths:
       description: A region is an organized area of the Pokémon world. Most often,
         the main difference between regions is the species of Pokémon that can be
         encountered within them.
+      summary: Get region
       parameters:
       - in: path
         name: id
@@ -2500,6 +2585,7 @@ paths:
       description: Stats determine certain aspects of battles. Each Pokémon has a
         value for each stat which grows as they gain levels and can be altered momentarily
         by effects in battles.
+      summary: List stats
       parameters:
       - name: limit
         required: false
@@ -2532,6 +2618,7 @@ paths:
       description: Stats determine certain aspects of battles. Each Pokémon has a
         value for each stat which grows as they gain levels and can be altered momentarily
         by effects in battles.
+      summary: Get stat
       parameters:
       - in: path
         name: id
@@ -2557,6 +2644,7 @@ paths:
       operationId: super_contest_effect_list
       description: Super contest effects refer to the effects of moves when used in
         super contests.
+      summary: List super contest effects
       parameters:
       - name: limit
         required: false
@@ -2588,6 +2676,7 @@ paths:
       operationId: super_contest_effect_retrieve
       description: Super contest effects refer to the effects of moves when used in
         super contests.
+      summary: Get super contest effect
       parameters:
       - in: path
         name: id
@@ -2615,6 +2704,7 @@ paths:
         three properties: which types of Pokémon it is super effective against, which
         types of Pokémon it is not very effective against, and which types of Pokémon
         it is completely ineffective against.'
+      summary: List types
       parameters:
       - name: limit
         required: false
@@ -2648,6 +2738,7 @@ paths:
         three properties: which types of Pokémon it is super effective against, which
         types of Pokémon it is not very effective against, and which types of Pokémon
         it is completely ineffective against.'
+      summary: List types
       parameters:
       - in: path
         name: id
@@ -2672,6 +2763,7 @@ paths:
     get:
       operationId: version_list
       description: Versions of the games, e.g., Red, Blue or Yellow.
+      summary: List versions
       parameters:
       - name: limit
         required: false
@@ -2702,6 +2794,7 @@ paths:
     get:
       operationId: version_group_list
       description: Version groups categorize highly similar versions of the games.
+      summary: List version groups
       parameters:
       - name: limit
         required: false
@@ -2732,6 +2825,7 @@ paths:
     get:
       operationId: version_group_retrieve
       description: Version groups categorize highly similar versions of the games.
+      summary: Get version group
       parameters:
       - in: path
         name: id
@@ -2756,6 +2850,7 @@ paths:
     get:
       operationId: version_retrieve
       description: Versions of the games, e.g., Red, Blue or Yellow.
+      summary: Get version
       parameters:
       - in: path
         name: id

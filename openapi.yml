@@ -2738,7 +2738,7 @@ paths:
         three properties: which types of Pokémon it is super effective against, which
         types of Pokémon it is not very effective against, and which types of Pokémon
         it is completely ineffective against.'
-      summary: List types
+      summary: Get types
       parameters:
       - in: path
         name: id
@@ -2931,7 +2931,8 @@ components:
             $ref: '#/components/schemas/AbilityFlavorText'
           readOnly: true
         pokemon:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - effect_changes
@@ -3030,7 +3031,31 @@ components:
         firmness:
           $ref: '#/components/schemas/BerryFirmnessSummary'
         flavors:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - potency
+            - flavor
+            properties:
+              potency:
+                type: integer
+                example: 10
+              flavor:
+                type: object
+                require:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    description: The name of the flavor
+                    example: spicy
+                  url:
+                    type: string
+                    format: uri
+                    description: The URL to get more information about the flavor
+                    example: https://pokeapi.co/api/v2/berry-flavor/1/
           readOnly: true
         item:
           $ref: '#/components/schemas/ItemSummary'
@@ -3107,7 +3132,31 @@ components:
           type: string
           maxLength: 100
         berries:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - potency
+            - berry
+            properties:
+              potency:
+                type: integer
+                example: 10
+              berry:
+                type: object
+                require:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    description: The name of the berry
+                    example: rowap
+                  url:
+                    type: string
+                    format: uri
+                    description: The URL to get more information about the berry
+                    example: https://pokeapi.co/api/v2/berry/64/
           readOnly: true
         contest_type:
           $ref: '#/components/schemas/ContestTypeSummary'
@@ -3178,7 +3227,8 @@ components:
         gene_modulo:
           type: integer
         possible_values:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         highest_stat:
           $ref: '#/components/schemas/StatSummary'
@@ -3329,7 +3379,22 @@ components:
             $ref: '#/components/schemas/EggGroupName'
           readOnly: true
         pokemon_species:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - potency
+            - flavor
+            properties:
+              name:
+                type: string
+                description: Pokemon species name.
+                example: bulbasaur
+              url:
+                type: string
+                format: uri
+                description: The URL to get more information about the species
+                example: https://pokeapi.co/api/v2/pokemon-species/1/
           readOnly: true
       required:
       - id
@@ -3510,7 +3575,8 @@ components:
         baby_trigger_item:
           $ref: '#/components/schemas/ItemSummary'
         chain:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - baby_trigger_item
@@ -3540,7 +3606,8 @@ components:
             $ref: '#/components/schemas/EvolutionTriggerName'
           readOnly: true
         pokemon_species:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - id
@@ -3595,10 +3662,12 @@ components:
           type: string
           maxLength: 100
         pokemon_species_details:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         required_for_evolution:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - id
@@ -3775,7 +3844,8 @@ components:
             $ref: '#/components/schemas/ItemAttributeDescription'
           readOnly: true
         items:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         names:
           type: array
@@ -3887,7 +3957,8 @@ components:
         fling_effect:
           $ref: '#/components/schemas/ItemFlingEffectSummary'
         attributes:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         category:
           $ref: '#/components/schemas/ItemCategorySummary'
@@ -3912,16 +3983,20 @@ components:
             $ref: '#/components/schemas/ItemName'
           readOnly: true
         held_by_pokemon:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         sprites:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         baby_trigger_for:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         machines:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - attributes
@@ -4163,7 +4238,8 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         encounter_method_rates:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         location:
           $ref: '#/components/schemas/LocationSummary'
@@ -4173,7 +4249,8 @@ components:
             $ref: '#/components/schemas/LocationAreaName'
           readOnly: true
         pokemon_encounters:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - encounter_method_rates
@@ -4368,7 +4445,33 @@ components:
         effect_chance:
           type: integer
         effect_entries:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - effect
+            - short_effect
+            - language
+            properties:
+              effect:
+                type: string
+                example: Inflicts [regular damage]{mechanic:regular-damage}.
+              short_effect:
+                type: string
+                example: Inflicts regular damage with no additional effect.
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
           readOnly: true
         type:
           $ref: '#/components/schemas/TypeSummary'
@@ -4479,7 +4582,87 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         contest_combos:
-          type: string
+          type: object
+          properties:
+            required:
+            - normal
+            - super
+            normal:
+              type: object
+              required:
+              - use_before
+              - use_after
+              properties:
+                use_before:
+                  type: array
+                  nullable: true
+                  items:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: fire-punch
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/move/7/
+                use_after:
+                  type: array
+                  nullable: true
+                  items:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: ice-punch
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/move/8/
+            super:
+              type: object
+              required:
+              - use_before
+              - use_after
+              properties:
+                use_before:
+                  type: array
+                  nullable: true
+                  items:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: night-slash
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/move/400/
+                use_after:
+                  type: array
+                  nullable: true
+                  items:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: focus-energy
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/move/116/
           readOnly: true
         contest_type:
           $ref: '#/components/schemas/ContestTypeSummary'
@@ -4488,10 +4671,79 @@ components:
         damage_class:
           $ref: '#/components/schemas/MoveDamageClassSummary'
         effect_entries:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - effect
+            - short_effect
+            - language
+            properties:
+              effect:
+                type: string
+                example: Inflicts [regular damage]{mechanic:regular-damage}.
+              short_effect:
+                type: string
+                example: Inflicts regular damage with no additional effect.
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
           readOnly: true
         effect_changes:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - effect_entries
+            - version_group
+            properties:
+              effect_entries:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - effect
+                  - language
+                  properties:
+                    effect:
+                      type: string
+                      example: Hits Pokémon under the effects of dig and fly.
+                    language:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: en
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/language/9/
+              version_group:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: gold-silver
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/version-group/3/
           readOnly: true
         generation:
           $ref: '#/components/schemas/GenerationSummary'
@@ -4510,7 +4762,8 @@ components:
             $ref: '#/components/schemas/MoveChange'
           readOnly: true
         stat_changes:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         super_contest_effect:
           $ref: '#/components/schemas/SuperContestEffectSummary'
@@ -4519,7 +4772,35 @@ components:
         type:
           $ref: '#/components/schemas/TypeSummary'
         machines:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - machine
+            - version_group
+            properties:
+              machine:
+                type: object
+                required:
+                - url
+                properties:
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/machine/1/
+              version_group:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: sword-shield
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
         flavor_text_entries:
           type: array
@@ -4527,7 +4808,20 @@ components:
             $ref: '#/components/schemas/MoveFlavorText'
           readOnly: true
         learned_by_pokemon:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: clefairy
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/pokemon/35/
           readOnly: true
       required:
       - contest_combos
@@ -4593,7 +4887,8 @@ components:
             $ref: '#/components/schemas/MoveLearnMethodDescription'
           readOnly: true
         version_groups:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - descriptions
@@ -4705,7 +5000,20 @@ components:
           type: string
           maxLength: 100
         moves:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: thunder-punch
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/move/9/
           readOnly: true
         names:
           type: array
@@ -4766,7 +5074,20 @@ components:
             $ref: '#/components/schemas/MoveMetaCategoryDescription'
           readOnly: true
         moves:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: sing
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/move/47/
           readOnly: true
       required:
       - descriptions
@@ -4914,7 +5235,8 @@ components:
             $ref: '#/components/schemas/BerrySummary'
           readOnly: true
         pokeathlon_stat_changes:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         move_battle_style_preferences:
           type: array
@@ -5936,7 +6258,8 @@ components:
             $ref: '#/components/schemas/PalParkAreaName'
           readOnly: true
         pokemon_encounters:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - id
@@ -5977,7 +6300,8 @@ components:
           type: string
           maxLength: 100
         affecting_natures:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         names:
           type: array
@@ -6045,12 +6369,14 @@ components:
             $ref: '#/components/schemas/PokedexName'
           readOnly: true
         pokemon_entries:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         region:
           $ref: '#/components/schemas/RegionSummary'
         version_groups:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - descriptions
@@ -6168,10 +6494,12 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         abilities:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         past_abilities:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         forms:
           type: array
@@ -6184,21 +6512,26 @@ components:
             $ref: '#/components/schemas/PokemonGameIndex'
           readOnly: true
         held_items:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         location_area_encounters:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         moves:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         species:
           $ref: '#/components/schemas/PokemonSpeciesSummary'
         sprites:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         cries:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         stats:
           type: array
@@ -6206,10 +6539,12 @@ components:
             $ref: '#/components/schemas/PokemonStat'
           readOnly: true
         types:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         past_types:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - abilities
@@ -6270,18 +6605,22 @@ components:
         pokemon:
           $ref: '#/components/schemas/PokemonSummary'
         sprites:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
         form_names:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         names:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         types:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - form_name
@@ -6376,10 +6715,12 @@ components:
           type: string
           maxLength: 100
         awesome_names:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         names:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         pokemon_species:
           type: array
@@ -6472,7 +6813,8 @@ components:
             $ref: '#/components/schemas/PokemonDexEntry'
           readOnly: true
         egg_groups:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         color:
           $ref: '#/components/schemas/PokemonColorSummary'
@@ -6487,10 +6829,12 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         names:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         pal_park_encounters:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         form_descriptions:
           type: array
@@ -6503,10 +6847,12 @@ components:
             $ref: '#/components/schemas/PokemonSpeciesFlavorText'
           readOnly: true
         genera:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         varieties:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - color
@@ -6611,7 +6957,8 @@ components:
             $ref: '#/components/schemas/PokedexSummary'
           readOnly: true
         version_groups:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
       required:
       - id
@@ -6661,10 +7008,12 @@ components:
         is_battle_only:
           type: boolean
         affecting_moves:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         affecting_natures:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         characteristics:
           type: array
@@ -6767,10 +7116,227 @@ components:
           type: string
           maxLength: 100
         damage_relations:
-          type: string
+          type: object
+          required:
+          - no_damage_to
+          - half_damage_to
+          - double_damage_to
+          - no_damage_from
+          - half_damage_from
+          - double_damage_from
+          properties:
+            no_damage_to:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: flying
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/3/
+            half_damage_to:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: bug
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/7/
+            double_damage_to:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: poison
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/4/
+            no_damage_from:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: electric
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/13/
+            half_damage_from:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: poison
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/4/
+            double_damage_from:
+              type: array
+              items:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: water
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/11/
           readOnly: true
         past_damage_relations:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - generation
+            - damage_relations
+            properties:
+              generation:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: generation-v
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/generation/5/
+              damage_relations:
+                type: object
+                required:
+                - no_damage_to
+                - half_damage_to
+                - double_damage_to
+                - no_damage_from
+                - half_damage_from
+                - double_damage_from
+                properties:
+                  no_damage_to:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: flying
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/3/
+                  half_damage_to:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: bug
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/7/
+                  double_damage_to:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: poison
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/4/
+                  no_damage_from:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: electric
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/13/
+                  half_damage_from:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: poison
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/4/
+                  double_damage_from:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: water
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/type/11/
           readOnly: true
         game_indices:
           type: array
@@ -6787,7 +7353,31 @@ components:
             $ref: '#/components/schemas/AbilityName'
           readOnly: true
         pokemon:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - potency
+            - flavor
+            properties:
+              slot:
+                type: integer
+                example: 1
+              pokemon:
+                type: object
+                require:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    description: The name of the pokemon
+                    example: sandshrew
+                  url:
+                    type: string
+                    format: uri
+                    description: The URL to get more information about the pokemon
+                    example: https://pokeapi.co/api/v2/pokemon/27/
           readOnly: true
         moves:
           type: array
@@ -6873,13 +7463,16 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         move_learn_methods:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         pokedexes:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         regions:
-          type: string
+          type: object
+          additionalProperties: {}
           readOnly: true
         versions:
           type: array

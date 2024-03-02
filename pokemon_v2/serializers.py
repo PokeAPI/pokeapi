@@ -479,7 +479,12 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
             "descriptions",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'number',
+                         },
+                         'example': [ 0, 5, 10, 15, 20, 25, 30 ]
+                         })
     def get_values(self, obj):
         mod = obj.gene_mod_5
         values = []
@@ -612,7 +617,23 @@ class RegionDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'red-blue'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/version-group/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_region_version_groups(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(region=obj)
         data = VersionGroupRegionSerializer(
@@ -680,7 +701,33 @@ class GenderDetailSerializer(serializers.ModelSerializer):
         model = Gender
         fields = ("id", "name", "pokemon_species_details", "required_for_evolution")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'rate', 'pokemon_species' ],
+                             'properties': {
+                                 'rate': {
+                                     'type': 'number',
+                                     'example': 1
+                                 },
+                                 'pokemon_species': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bulbasaur'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_species(self, obj):
         species_objects = []
 
@@ -703,7 +750,23 @@ class GenderDetailSerializer(serializers.ModelSerializer):
 
         return details
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'wormadam'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/413/'
+                                 }
+                             }
+                         }
+                         })
     def get_required(self, obj):
         evo_objects = PokemonEvolution.objects.filter(gender=obj)
         species_list = []
@@ -863,6 +926,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             "condition_values",
         )
 
+    # no response at the moment
     @extend_schema_field(OpenApiTypes.OBJECT)
     def get_encounter_conditions(self, obj):
         condition_values = EncounterConditionValueMap.objects.filter(encounter=obj)
@@ -914,7 +978,57 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             "pokemon_encounters",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'encounter_method', 'version_details' ],
+                             'properties': {
+                                 'encounter_method': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'old-rod'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/encounter-method/2/'
+                                         }
+                                     }
+                                 },
+                                 'version_details': {
+                                     'type': 'array',
+                                     'items': {
+                                         'type': 'object',
+                                         'required': [ 'rate', 'version' ],
+                                         'properties': {
+                                             'rate': {
+                                                 'type': 'number',
+                                                 'example': 5
+                                             },
+                                             'version': {
+                                                 'type': 'object',
+                                                 'required': [ 'name', 'url' ],
+                                                 'properties': {
+                                                     'name': {
+                                                         'type': 'string',
+                                                         'example': 'platinum'
+                                                     },
+                                                     'url': {
+                                                         'type': 'string',
+                                                         'format': 'uri',
+                                                         'example': 'https://pokeapi.co/api/v2/version/14/'
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_method_rates(self, obj):
         # Get encounters related to this area and pull out unique encounter methods
         encounter_rates = LocationAreaEncounterRate.objects.filter(
@@ -956,7 +1070,111 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
 
         return encounter_rate_list
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'pokemon', 'version_details' ],
+                             'properties': {
+                                 'pokemon': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'tentacool'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'ttps://pokeapi.co/api/v2/pokemon/72/'
+                                         }
+                                     }
+                                 },
+                                 'version_details': {
+                                     'type': 'array',
+                                     'items': {
+                                         'type': 'object',
+                                         'required': [ 'version', 'max_chance', 'encounter_details' ],
+                                         'properties': {
+                                             'version': {
+                                                 'type': 'object',
+                                                 'required': [ 'name', 'url' ],
+                                                 'properties': {
+                                                     'name': {
+                                                         'type': 'string',
+                                                         'example': 'diamond'
+                                                     },
+                                                     'url': {
+                                                         'type': 'string',
+                                                         'format': 'uri',
+                                                         'example': 'https://pokeapi.co/api/v2/version/12/'
+                                                     }
+                                                 }
+                                             },
+                                             'max_chance': {
+                                                 'type': 'number',
+                                                 'example': 60
+                                             },
+                                             'encounter_details': {
+                                                 'type': 'object',
+                                                 'required': [ 
+                                                     'min_level',
+                                                     'max_level',
+                                                     'condition_value',
+                                                     'chance',
+                                                     'method'
+                                                 ],
+                                                 'properties': {
+                                                     'min_level': {
+                                                         'type': 'number',
+                                                         'example': 20
+                                                     },
+                                                     'max_level': {
+                                                         'type': 'number',
+                                                         'example': 30
+                                                     },
+                                                     'condition_values': {
+                                                         'type': 'object',
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                                 'example': 'slot2-sapphire'
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                                 'example': 'https://pokeapi.co/api/v2/encounter-condition-value/10/'
+                                                             }
+                                                         }
+                                                     },
+                                                     'chance': {
+                                                         'type': 'number',
+                                                         'example': 60
+                                                     },
+                                                     'method': {
+                                                         'type': 'object',
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                                 'example': 'surf'
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                                 'example': 'https://pokeapi.co/api/v2/encounter-method/5/'
+                                                             }
+                                                         }
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_encounters(self, obj):
         # get versions for later use
         version_objects = Version.objects.all()
@@ -1128,7 +1346,37 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             "pokemon",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'is_hidden', 'slot', 'pokemon' ],
+                             'properties': {
+                                 'is_hidden': {
+                                     'type': 'boolean',
+                                     'example': True
+                                 },
+                                 'slot': {
+                                     'type': 'number',
+                                     'example': 3
+                                 },
+                                 'pokemon': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'gloom'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon/44/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_ability_pokemon(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
         data = PokemonAbilitySerializer(
@@ -1179,6 +1427,67 @@ class StatDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
+    @extend_schema_field(field={'type': 'object',
+                         'required': [ 'decrease', 'increase' ],
+                         'properties': {
+                             'increase': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'change', 'move' ],
+                                     'properties': {
+                                         'change': {
+                                             'type': 'number',
+                                             'example': -1
+                                         },
+                                         'move': {
+                                             'type': 'object',
+                                             'required': [ 'name', 'url' ],
+                                             'properties': {
+                                                 'name': {
+                                                     'type': 'string',
+                                                     'example': 'swords-dance'
+                                                 },
+                                                 'url': {
+                                                     'type': 'string',
+                                                     'format': 'uri',
+                                                     'example': 'https://pokeapi.co/api/v2/move/14/'
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             },
+                             'decrease': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'change', 'move' ],
+                                     'properties': {
+                                         'change': {
+                                             'type': 'number',
+                                             'example': 5
+                                         },
+                                         'move': {
+                                             'type': 'object',
+                                             'required': [ 'name', 'url' ],
+                                             'properties': {
+                                                 'name': {
+                                                     'type': 'string',
+                                                     'example': 'growl'
+                                                 },
+                                                 'url': {
+                                                     'type': 'string',
+                                                     'format': 'uri',
+                                                     'example': 'https://pokeapi.co/api/v2/move/45/'
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     @extend_schema_field(OpenApiTypes.OBJECT)
     def get_moves_that_affect(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
@@ -1196,7 +1505,47 @@ class StatDetailSerializer(serializers.ModelSerializer):
 
         return changes
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'object',
+                         'required': [ 'increase', 'decrease' ],
+                         'properties': {
+                             'increase': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'lonely'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/nature/6/'
+                                         }
+                                     }
+                                 }
+                             },
+                             'decrease': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bold'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/nature/2/'
+                                         }
+                                     }
+                                 }
+                             },
+                         }
+                         })
     def get_natures_that_affect(self, obj):
         increase_objects = Nature.objects.filter(increased_stat=obj)
         increases = NatureSummarySerializer(

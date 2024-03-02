@@ -153,19 +153,20 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 | Python 2/3 | [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_ |
 | Python 3 | [PokeAPI/pokebase](https://github.com/PokeAPI/pokebase) | _Auto caching_, _Image caching_ |
 
-| Wrapper | Repository | Features |
-| --- | --- | --- |
-| PHP | [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_ |
-| Ruby | [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2) | |
-| .Net Standard | [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_ |
-| Go | [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_ |
-| Dart | [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart) | |
-| Rust | [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_ |
-| Spring Boot | [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_ |
-| Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
-| Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
-| Python | [beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi) | _Auto caching, asynchronous_
-| Scala | [juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala) | _Auto caching_ |
+|Wrapper                           |Repository                                                                                 |Features                   |
+|----------------------------------|-------------------------------------------------------------------------------------------|---------------------------|
+|.Net Standard                     |[mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet)                              |Auto caching               |
+|Dart                              |[prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)                            |                           |
+|Go                                |[mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go)                                  |Auto caching               |
+|PHP                               |[lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi)                                |Auto caching, lazy loading |
+|PowerShell                        |[Celerium/PokeAPI-PowerShellWrapper](https://github.com/Celerium/PokeAPI-PowerShellWrapper)|                           |
+|Python                            |[beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi)                        |Auto caching, asynchronous |
+|Ruby                              |[rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)                        |                           |
+|Rust                              |[lunik1/pokerust](https://gitlab.com/lunik1/pokerust)                                      |Auto caching               |
+|Scala                             |[juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala)                          |Auto caching               |
+|Spring Boot                       |[dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi)                  |Auto caching               |
+|Swift                             |[kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)                              |                           |
+|Typescript server-side/client-side|[Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts)                                |Auto caching               |
 
 ## Donations
 

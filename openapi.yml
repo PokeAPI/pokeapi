@@ -5204,8 +5204,20 @@ components:
             $ref: '#/components/schemas/MoveLearnMethodDescription'
           readOnly: true
         version_groups:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: red-blue
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
       required:
       - descriptions

@@ -3952,7 +3952,28 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
         model = MoveLearnMethod
         fields = ("id", "name", "names", "descriptions", "version_groups")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+          # "version_groups": [
+          #   {
+          #     "name": "red-blue",
+          #     "url": "https://pokeapi.co/api/v2/version-group/1/"
+          #   },
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'red-blue'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/version-group/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_method_version_groups(self, obj):
         version_group_objects = VersionGroupMoveLearnMethod.objects.filter(
             move_learn_method=obj

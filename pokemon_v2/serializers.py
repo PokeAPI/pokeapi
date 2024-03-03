@@ -3728,7 +3728,33 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "types",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'language', 'name' ],
+                             'properties': {
+                                 'language': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'en'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/language/9/'
+                                         }
+                                     }
+                                 },
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'Plant Cloak'
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_form_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, name__regex=".+"
@@ -3744,7 +3770,33 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'language', 'name' ],
+                             'properties': {
+                                 'language': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'en'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/language/9/'
+                                         }
+                                     }
+                                 },
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'Plant Cloak'
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_form_pokemon_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, pokemon_name__regex=".+"
@@ -3761,12 +3813,62 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'object',
+                         'properties': {
+                             'default': {
+                                 'type': 'string',
+                                 'format': 'uri',
+                                 'example': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png',
+                             }
+                         },
+                         'additionalProperties': { # Stoplight Elements doesn't render this well
+                             'type': 'string',
+                             'format': 'uri',
+                             'nullable': True,
+                             'example': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png'
+                         },
+                         'example': {
+                            'back_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png',
+                            'back_female': None,
+                            'back_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png',
+                            'back_shiny_female': None,
+                            'front_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png',
+                            'front_female': None,
+                            'front_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/412.png',
+                            'front_shiny_female': None
+                         }
+                         })
     def get_pokemon_form_sprites(self, obj):
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
         return sprites_object.sprites
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'slot', 'type' ],
+                             'properties': {
+                                 'slot': {
+                                     'type': 'number',
+                                     'example': 1
+                                 },
+                                 'type': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bug'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/type/7/'
+                                         }
+                                     }
+                                 },
+                             }
+                         }
+                         })
     def get_pokemon_form_types(self, obj):
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
         form_types = PokemonFormTypeSerializer(

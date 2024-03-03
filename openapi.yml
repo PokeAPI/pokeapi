@@ -6969,21 +6969,102 @@ components:
           $ref: '#/components/schemas/PokemonSummary'
         sprites:
           type: object
-          additionalProperties: {}
+          properties:
+            default:
+              type: string
+              format: uri
+              example: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
+          additionalProperties:
+            type: string
+            format: uri
+            nullable: true
+            example: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png
+          example:
+            back_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
+            back_female: null
+            back_shiny: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png
+            back_shiny_female: null
+            front_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png
+            front_female: null
+            front_shiny: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/412.png
+            front_shiny_female: null
           readOnly: true
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
         form_names:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - language
+            - name
+            properties:
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
+              name:
+                type: string
+                example: Plant Cloak
           readOnly: true
         names:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - language
+            - name
+            properties:
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
+              name:
+                type: string
+                example: Plant Cloak
           readOnly: true
         types:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - slot
+            - type
+            properties:
+              slot:
+                type: number
+                example: 1
+              type:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: bug
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/type/7/
           readOnly: true
       required:
       - form_name

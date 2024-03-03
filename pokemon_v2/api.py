@@ -1,11 +1,12 @@
 import re
+
+from django.http import Http404
+from django.shortcuts import get_object_or_404
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from django.http import Http404
-from drf_spectacular.utils import extend_schema, OpenApiParameter
-from drf_spectacular.types import OpenApiTypes
 
 from .models import *
 from .serializers import *
@@ -917,25 +918,15 @@ class PokemonEncounterView(APIView):
                                         "items": {
                                             "type": "object",
                                             "properties": {
-                                                "min_level": {
-                                                    "type": "integer"
-                                                },
-                                                "max_level": {
-                                                    "type": "integer"
-                                                },
+                                                "min_level": {"type": "integer"},
+                                                "max_level": {"type": "integer"},
                                                 "condition_values": {
                                                     "type": "array",
                                                     "items": {
                                                         "type": "object",
                                                         "properties": {
-                                                            "name": {
-                                                                "type":
-                                                                    "string"
-                                                            },
-                                                            "url": {
-                                                                "type":
-                                                                    "string"
-                                                            },
+                                                            "name": {"type": "string"},
+                                                            "url": {"type": "string"},
                                                         },
                                                     },
                                                 },
@@ -943,12 +934,8 @@ class PokemonEncounterView(APIView):
                                                 "method": {
                                                     "type": "object",
                                                     "properties": {
-                                                        "name": {
-                                                            "type": "string"
-                                                        },
-                                                        "url": {
-                                                            "type": "string"
-                                                        },
+                                                        "name": {"type": "string"},
+                                                        "url": {"type": "string"},
                                                     },
                                                 },
                                             },

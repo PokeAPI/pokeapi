@@ -3911,8 +3911,20 @@ components:
             $ref: '#/components/schemas/ItemAttributeDescription'
           readOnly: true
         items:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: master-ball
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/item/1/
           readOnly: true
         names:
           type: array
@@ -4024,8 +4036,20 @@ components:
         fling_effect:
           $ref: '#/components/schemas/ItemFlingEffectSummary'
         attributes:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: countable
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/item-attribute/1/
           readOnly: true
         category:
           $ref: '#/components/schemas/ItemCategorySummary'
@@ -4050,20 +4074,96 @@ components:
             $ref: '#/components/schemas/ItemName'
           readOnly: true
         held_by_pokemon:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - pokemon
+            - version-details
+            properties:
+              pokemon:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: farfetchd
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pokemon/83/
+              version-details:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - rarity
+                  - version
+                  properties:
+                    rarity:
+                      type: number
+                      example: 5
+                    version:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: ruby
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/version/7/
           readOnly: true
         sprites:
           type: object
-          additionalProperties: {}
+          required:
+          - default
+          properties:
+            default:
+              type: string
+              format: uri
+              example: https://pokeapi.co/media/sprites/items/master-ball.png
           readOnly: true
         baby_trigger_for:
           type: object
-          additionalProperties: {}
+          required:
+          - url
+          properties:
+            url:
+              type: string
+              format: uri
+              example: '"https://pokeapi.co/api/v2/evolution-chain/51/'
           readOnly: true
         machines:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - machine
+            - version_group
+            properties:
+              machine:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/machine/1/
+              version_group:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: sword-shield
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/version-group/20/
           readOnly: true
       required:
       - attributes

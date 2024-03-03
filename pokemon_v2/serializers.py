@@ -1488,7 +1488,6 @@ class StatDetailSerializer(serializers.ModelSerializer):
                              }
                          }
                          })
-    @extend_schema_field(OpenApiTypes.OBJECT)
     def get_moves_that_affect(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
         stat_changes = MoveMetaStatChangeSerializer(
@@ -1640,7 +1639,23 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
         model = ItemAttribute
         fields = ("id", "name", "descriptions", "items", "names")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'master-ball'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/item/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_attribute_items(self, obj):
         item_map_objects = ItemAttributeMap.objects.filter(item_attribute=obj)
         items = []
@@ -1757,7 +1772,34 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "machines",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'machine', 'version_group' ],
+                             'properties': {
+                                 'machine': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/machine/1/'
+                                 },
+                                 'version_group': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'sword-shield'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/version-group/20/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_item_machines(self, obj):
         machine_objects = Machine.objects.filter(item=obj)
 
@@ -1778,12 +1820,37 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'object',
+                         'required': [ 'default' ],
+                         'properties': {
+                             'default': {
+                                 'type': 'string',
+                                 'format': 'uri',
+                                 'example': 'https://pokeapi.co/media/sprites/items/master-ball.png'
+                             }
+                         }
+                         })
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         return sprites_object.sprites
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'countable'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/item-attribute/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
         serializer = ItemAttributeMapSerializer(
@@ -1801,7 +1868,57 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return attributes
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'pokemon', 'version-details' ],
+                             'properties': {
+                                 'pokemon': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'farfetchd'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon/83/'
+                                         }
+                                     }
+                                 },
+                                 'version-details': {
+                                     'type': 'array',
+                                     'items': {
+                                         'type': 'object',
+                                         'required': [ 'rarity', 'version' ],
+                                         'properties': {
+                                             'rarity': {
+                                                 'type': 'number',
+                                                 'example': 5
+                                             },
+                                             'version': {
+                                                 'type': 'object',
+                                                 'required': [ 'name', 'url' ],
+                                                 'properties': {
+                                                     'name': {
+                                                         'type': 'string',
+                                                         'example': 'ruby'
+                                                     },
+                                                     'url': {
+                                                         'type': 'string',
+                                                         'format': 'uri',
+                                                         'example': 'https://pokeapi.co/api/v2/version/7/'
+                                                     }
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_held_by_pokemon(self, obj):
         pokemon_items = PokemonItem.objects.filter(item=obj).order_by("pokemon_id")
         pokemon_ids = pokemon_items.values("pokemon_id").distinct()
@@ -1834,7 +1951,16 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'object',
+                         'required': [ 'url' ],
+                         'properties': {
+                             'url': {
+                                 'type': 'string',
+                                 'format': 'uri',
+                                 'example': '"https://pokeapi.co/api/v2/evolution-chain/51/'
+                             }
+                         }
+                         })
     def get_baby_trigger_for(self, obj):
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)

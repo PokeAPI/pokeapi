@@ -7171,12 +7171,45 @@ components:
           type: string
           maxLength: 100
         awesome_names:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - awesome_name
+            - language
+            properties:
+              awesome_name:
+                type: string
+                example: Pomaceous
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
           readOnly: true
         names:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - url
+            - name
+            properties:
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/language/9/
+              name:
+                type: string
+                example: Ball
           readOnly: true
         pokemon_species:
           type: array

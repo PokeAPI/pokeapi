@@ -4018,7 +4018,23 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
         model = PokemonShape
         fields = ("id", "name", "awesome_names", "names", "pokemon_species")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'url', 'name' ],
+                             'properties': {
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/language/9/'
+                                 },
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'Ball'
+                                 }
+                             }
+                         }
+                         })
     def get_shape_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(
@@ -4031,7 +4047,49 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+      # "awesome_names": [
+      #   {
+      #     "awesome_name": "Pomacé",
+      #     "language": {
+      #       "name": "fr",
+      #       "url": "https://pokeapi.co/api/v2/language/5/"
+      #     }
+      #   },
+      #   {
+      #     "awesome_name": "Pomaceous",
+      #     "language": {
+      #       "name": "en",
+      #       "url": "https://pokeapi.co/api/v2/language/9/"
+      #     }
+      #   }
+      # ],
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'awesome_name', 'language' ],
+                             'properties': {
+                                 'awesome_name': {
+                                     'type': 'string',
+                                     'example': 'Pomaceous'
+                                 },
+                                 'language': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'en'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/language/9/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_shape_awesome_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(

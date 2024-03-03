@@ -885,6 +885,83 @@ class PokemonEncounterView(APIView):
     Handles Pokemon Encounters as a sub-resource.
     """
 
+    @extend_schema(
+        responses={
+            200: {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "location_area": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"},
+                            },
+                        },
+                        "version_details": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "version": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {"type": "string"},
+                                            "url": {"type": "string"},
+                                        },
+                                    },
+                                    "max_chance": {"type": "integer"},
+                                    "encounter_details": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "min_level": {
+                                                    "type": "integer"
+                                                },
+                                                "max_level": {
+                                                    "type": "integer"
+                                                },
+                                                "condition_values": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "name": {
+                                                                "type":
+                                                                    "string"
+                                                            },
+                                                            "url": {
+                                                                "type":
+                                                                    "string"
+                                                            },
+                                                        },
+                                                    },
+                                                },
+                                                "chance": {"type": "integer"},
+                                                "method": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "url": {
+                                                            "type": "string"
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get(self, request, pokemon_id):
         self.context = dict(request=request)
 

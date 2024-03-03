@@ -3542,7 +3542,33 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'change', 'stat' ],
+                             'properties': {
+                                 'change': {
+                                     'type': 'number',
+                                     'example': 2
+                                 },
+                                 'stat': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'attack'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/stat/1/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_move_stat_change(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(move=obj)
         stat_changes = MoveMetaStatChangeSerializer(

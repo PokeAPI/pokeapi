@@ -5531,8 +5531,29 @@ components:
             $ref: '#/components/schemas/BerrySummary'
           readOnly: true
         pokeathlon_stat_changes:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - max_change
+            - pokeathlon_stat
+            properties:
+              max_change:
+                type: number
+                example: 1
+              pokeathlon_stat:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: power
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pokeathlon-stat/2/
           readOnly: true
         move_battle_style_preferences:
           type: array

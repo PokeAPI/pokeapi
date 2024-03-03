@@ -2025,7 +2025,33 @@ class NatureDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'max_change', 'pokeathlon_stat' ],
+                             'properties': {
+                                 'max_change': {
+                                     'type': 'number',
+                                     'example': 1
+                                 },
+                                 'pokeathlon_stat': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'power'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokeathlon-stat/2/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_pokeathlon_stats(self, obj):
         pokeathlon_stat_objects = NaturePokeathlonStat.objects.filter(nature=obj)
         pokeathlon_stats = NaturePokeathlonStatSerializer(

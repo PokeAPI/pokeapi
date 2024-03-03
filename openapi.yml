@@ -5058,8 +5058,29 @@ components:
             $ref: '#/components/schemas/MoveChange'
           readOnly: true
         stat_changes:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - change
+            - stat
+            properties:
+              change:
+                type: number
+                example: 2
+              stat:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: attack
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/stat/1/
           readOnly: true
         super_contest_effect:
           $ref: '#/components/schemas/SuperContestEffectSummary'
@@ -6575,8 +6596,33 @@ components:
             $ref: '#/components/schemas/PalParkAreaName'
           readOnly: true
         pokemon_encounters:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - base_score
+            - pokemon-species
+            - rate
+            properties:
+              base_score:
+                type: number
+                example: 50
+              pokemon-species:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: bulbasaur
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pokemon-species/1/
+              rate:
+                type: number
+                example: 30
           readOnly: true
       required:
       - id

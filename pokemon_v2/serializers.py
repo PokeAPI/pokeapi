@@ -3613,7 +3613,37 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
         model = PalParkArea
         fields = ("id", "name", "names", "pokemon_encounters")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'base_score', 'pokemon-species', 'rate' ],
+                             'properties': {
+                                 'base_score': {
+                                     'type': 'number',
+                                     'example': 50
+                                 },
+                                 'pokemon-species': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bulbasaur'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
+                                         }
+                                     }
+                                 },
+                                 'rate': {
+                                     'type': 'number',
+                                     'example': 30
+                                 },
+                             }
+                         }
+                         })
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pal_park_area=obj)
         parks = PalParkSerializer(

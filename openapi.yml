@@ -3640,8 +3640,20 @@ components:
             $ref: '#/components/schemas/EvolutionTriggerName'
           readOnly: true
         pokemon_species:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: ivysaur
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/pokemon-species/2/
           readOnly: true
       required:
       - id
@@ -7561,8 +7573,20 @@ components:
             $ref: '#/components/schemas/PokemonDexEntry'
           readOnly: true
         egg_groups:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: monster
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/egg-group/1/
           readOnly: true
         color:
           $ref: '#/components/schemas/PokemonColorSummary'
@@ -7577,12 +7601,58 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         names:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - language
+            - name
+            properties:
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
+              name:
+                type: string
+                example: bulbasaur
           readOnly: true
         pal_park_encounters:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - area
+            - base_score
+            - rate
+            properties:
+              area:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: field
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pal-park-area/2/
+              base_score:
+                type: number
+                example: 50
+              rate:
+                type: number
+                example: 30
           readOnly: true
         form_descriptions:
           type: array
@@ -7595,12 +7665,54 @@ components:
             $ref: '#/components/schemas/PokemonSpeciesFlavorText'
           readOnly: true
         genera:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - genus
+            - language
+            properties:
+              genus:
+                type: string
+                example: Seed Pokémon
+              language:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: en
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/language/9/
           readOnly: true
         varieties:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - is_default
+            - pokemon
+            properties:
+              is_default:
+                type: boolean
+                example: true
+              pokemon:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: bulbasaur
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pokemon/1/
           readOnly: true
       required:
       - color

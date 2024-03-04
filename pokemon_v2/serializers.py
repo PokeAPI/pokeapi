@@ -5044,7 +5044,24 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionTrigger
         fields = ("id", "name", "names", "pokemon_species")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={
+                         'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'ivysaur'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/2/'
+                                 }
+                             }
+                         }
+                         })
     def get_species(self, obj):
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
@@ -5152,7 +5169,33 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "varieties",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'language', 'name' ],
+                             'properties': {
+                                 'language': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'en'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/language/9/'
+                                         }
+                                     }
+                                 },
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'bulbasaur'
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_names(self, obj):
         species_results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         species_serializer = PokemonSpeciesNameSerializer(
@@ -5166,7 +5209,40 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    # {
+    #   "genus": "Seed Pokémon",
+    #   "language": {
+    #     "name": "en",
+    #     "url": "https://pokeapi.co/api/v2/language/9/"
+    #   }
+    # },
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'genus', 'language' ],
+                             'properties': {
+                                 'genus': {
+                                     'type': 'string',
+                                     'example': 'Seed Pokémon'
+                                 },
+                                 'language': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'en'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/language/9/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_genera(self, obj):
         results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         serializer = PokemonSpeciesNameSerializer(
@@ -5182,7 +5258,23 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return genera
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'monster'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/egg-group/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_egg_groups(self, obj):
         results = PokemonEggGroup.objects.filter(pokemon_species=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -5192,7 +5284,33 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return groups
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'is_default', 'pokemon' ],
+                             'properties': {
+                                 'is_default': {
+                                     'type': 'boolean',
+                                     'example': True
+                                 },
+                                 'pokemon': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bulbasaur'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon/1/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_pokemon_varieties(self, obj):
         results = Pokemon.objects.filter(pokemon_species=obj)
         summary_data = PokemonSummarySerializer(
@@ -5212,7 +5330,37 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return varieties
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'area', 'base_score', 'rate' ],
+                             'properties': {
+                                 'area': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'field'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pal-park-area/2/'
+                                         }
+                                     }
+                                 },
+                                 'base_score': {
+                                     'type': 'number',
+                                     'example': 50
+                                 },
+                                 'rate': {
+                                     'type': 'number',
+                                     'example': 30
+                                 }
+                             }
+                         }
+                         })
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pokemon_species=obj)
         parks = PalParkSerializer(

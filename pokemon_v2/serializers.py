@@ -5418,7 +5418,229 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         model = EvolutionChain
         fields = ("id", "baby_trigger_item", "chain")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    # TODO: Revisit Schema
+    @extend_schema_field(field={'type': 'object',
+                         'required': [
+                             'evolution_details',
+                             'evolves_to',
+                             'is_baby',
+                             'species'
+                         ],
+                         'properties': {
+                             'evolution_details': {
+                                 'type': 'array',
+                                 'items': {
+                                 },
+                                 'example': []
+                             },
+                             'evolves_to': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [
+                                         'evolution_details',
+                                         'evolves_to',
+                                         'is_baby',
+                                         'species'
+                                     ],
+                                     'properties': {
+                                         'evolution_details': {
+                                             'type': 'array',
+                                             'items': {
+                                                 'type': 'object',
+                                                 'required': [
+                                                     'gender',
+                                                     'held_item',
+                                                     'item',
+                                                     'known_move',
+                                                     'known_move_type',
+                                                     'location',
+                                                     'min_affection',
+                                                     'min_beauty',
+                                                     'min_happiness',
+                                                     'min_level',
+                                                     'needs_overworld_rain',
+                                                     'party_species',
+                                                     'party_type',
+                                                     'relative_physical_stats',
+                                                     'time_of_day',
+                                                     'trade_species',
+                                                     'trigger',
+                                                     'turn_upside_down'
+                                                 ],
+                                                 'properties': {
+                                                     'gender': {
+                                                         'type': '',
+                                                         'nullable': True,
+                                                         'type': 'object',
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                                 'example': 1
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                                 'example': 2
+                                                             }
+                                                         }
+                                                     },
+                                                     'held_item': {
+                                                         'type': 'object',
+                                                         'nullable': True,
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                                 'example': 1
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                                 'example': 2
+                                                             }
+                                                         }
+                                                     },
+                                                     'item': {
+                                                         'type': 'object',
+                                                         'nullable': True,
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                                 'example': 1
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                                 'example': 2
+                                                             }
+                                                         }
+                                                     },
+                                                     'known_move': {
+                                                         'type': '',
+                                                         'nullable': True,
+                                                     },
+                                                     'known_move_type': {
+                                                         'type': '',
+                                                         'nullable': True,
+                                                     },
+                                                     'location': {
+                                                         'type': 'object',
+                                                         'nullable': True,
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri',
+                                                             }
+                                                         }
+                                                     },
+                                                     'min_affection': {
+                                                         'type': 'number',
+                                                         'nullable': True
+                                                     },
+                                                     'min_beauty': {
+                                                         'type': 'number',
+                                                         'nullable': True
+                                                     },
+                                                     'min_happiness': {
+                                                         'type': 'number',
+                                                         'nullable': True
+                                                     },
+                                                     'min_level': {
+                                                         'type': 'number',
+                                                         'nullable': True
+                                                     },
+                                                     'needs_overworld_rain': {
+                                                         'type': 'boolean',
+                                                         'nullable': True
+                                                     },
+                                                     'party_species': {
+                                                         'type': 'string',
+                                                         'nullable': True
+                                                     },
+                                                     'party_type': {
+                                                         'type': 'string',
+                                                         'nullable': True
+                                                     },
+                                                     'relative_physical_stats': {
+                                                         'type': 'string',
+                                                         'nullable': True
+                                                     },
+                                                     'time_of_day': {
+                                                         'type': 'string'
+                                                     },
+                                                     'trade_species': {
+                                                         'type': 'string',
+                                                         'nullable': True
+                                                     },
+                                                     'trigger': {
+                                                         'type': 'object',
+                                                         'required': [ 'name', 'url' ],
+                                                         'properties': {
+                                                             'name': {
+                                                                 'type': 'string',
+                                                             },
+                                                             'url': {
+                                                                 'type': 'string',
+                                                                 'format': 'uri'
+                                                             }
+                                                         }
+                                                     },
+                                                     'turn_upside_down': {
+                                                         'type': 'boolean'
+                                                     }
+                                                 }
+                                             }
+                                         },
+                                         'is_baby': {
+                                             'type': 'boolean',
+                                             'example': True
+                                         },
+                                         'species': {
+                                             'type': 'object',
+                                             'required': [ 'name', 'url' ],
+                                             'properties': {
+                                                 'name': {
+                                                     'type': 'string',
+                                                     'example': 'happiny'
+                                                 },
+                                                 'url': {
+                                                     'type': 'string',
+                                                     'format': 'uri',
+                                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/440/'
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             },
+                             'is_baby': {
+                                 'type': 'boolean',
+                                 'example': True
+                             },
+                             'species': {
+                                 'type': 'object',
+                                 'required': [ 'name', 'url' ],
+                                 'properties': {
+                                     'name': {
+                                         'type': 'string',
+                                         'example': 'happiny'
+                                     },
+                                     'url': {
+                                         'type': 'string',
+                                         'format': 'uri',
+                                         'example': 'https://pokeapi.co/api/v2/pokemon-species/440/'
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def build_chain(self, obj):
         chain_id = obj.id
 

@@ -1030,7 +1030,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                         "url": {"type": "string"},
                                     },
                                 },
-                                "max_chance": {"type": "integet"},
+                                "max_chance": {"type": "integer"},
                                 "encounter_details": {
                                     "type": "array",
                                     "items": {
@@ -3910,8 +3910,11 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                 "properties": {
                     "name": {"type": "string"},
                     "language": {
-                        "name": {"type": "string"},
-                        "url": {"type": "string"},
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
                     },
                 },
             },
@@ -4030,8 +4033,11 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                     "base_score": {"type": "integer"},
                     "rate": {"type": "integer"},
                     "area": {
-                        "name": {"type": "string"},
-                        "url": {"type": "string"},
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
                     },
                 },
             },

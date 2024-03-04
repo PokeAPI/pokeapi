@@ -147,6 +147,19 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '2.7.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'OAS_VERSION': '3.1.0',
-    'COMPONENT_SPLIT_REQUEST': True
+    'COMPONENT_SPLIT_REQUEST': True,
+    'TAGS': [
+        'pokemon',
+        'evolution',
+        'berries',
+        'items',
+        'machines',
+        'location',
+        'contest',
+        'moves',
+        'encounters',
+        'games',
+        'utility'
+    ]
 }
 

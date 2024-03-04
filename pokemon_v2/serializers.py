@@ -926,8 +926,6 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             "condition_values",
         )
 
-    # no response at the moment
-    @extend_schema_field(OpenApiTypes.OBJECT)
     def get_encounter_conditions(self, obj):
         condition_values = EncounterConditionValueMap.objects.filter(encounter=obj)
         data = EncounterConditionValueMapSerializer(

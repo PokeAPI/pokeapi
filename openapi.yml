@@ -2518,7 +2518,103 @@ paths:
       - {}
       responses:
         '200':
-          description: No response body
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - location_area
+                  - version_details
+                  properties:
+                    location_area:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: cerulean-city-area
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/location-area/281/
+                    version_details:
+                      type: array
+                      items:
+                        type: object
+                        required:
+                        - encounter_details
+                        - max_chance
+                        - version
+                        properties:
+                          encounter_details:
+                            type: array
+                            items:
+                              type: object
+                              required:
+                              - chance
+                              - condition_values
+                              - max_level
+                              - method
+                              - min_level
+                              properties:
+                                chance:
+                                  type: number
+                                  example: 100
+                                condition_values:
+                                  type: array
+                                  items:
+                                    type: object
+                                    required:
+                                    - name
+                                    - url
+                                    properties:
+                                      name:
+                                        type: string
+                                        example: story-progress-beat-red
+                                      url:
+                                        type: string
+                                        format: uri
+                                        example: https://pokeapi.co/api/v2/encounter-condition-value/55/
+                                max_level:
+                                  type: number
+                                  example: 10
+                                method:
+                                  type: object
+                                  required:
+                                  - name
+                                  - url
+                                  properties:
+                                    name:
+                                      type: string
+                                      example: gift
+                                    url:
+                                      type: string
+                                      format: uri
+                                      example: https://pokeapi.co/api/v2/encounter-method/18/
+                                min_level:
+                                  type: number
+                                  example: 10
+                          max_chance:
+                            type: number
+                            example: 100
+                          version:
+                            type: object
+                            required:
+                            - name
+                            - url
+                            properties:
+                              name:
+                                type: string
+                                example: red
+                              url:
+                                type: string
+                                format: uri
+                                example: https://pokeapi.co/api/v2/version/1/
+          description: ''
   /api/v2/region/:
     get:
       operationId: region_list

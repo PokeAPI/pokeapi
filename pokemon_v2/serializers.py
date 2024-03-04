@@ -5753,7 +5753,69 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = PokeathlonStat
         fields = ("id", "name", "affecting_natures", "names")
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'object',
+                         'required': [ 'decrease', 'increase' ],
+                         'properties': {
+                             'decrease': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'max_change', 'nature' ],
+                                     'properties': {
+                                         'max_change': {
+                                             'type': 'number',
+                                             'maximum': -1,
+                                             'example': -1
+                                         },
+                                         'nature': {
+                                             'type': 'object',
+                                             'required': [ 'name', 'url' ],
+                                             'properties': {
+                                                 'name': {
+                                                     'type': 'string',
+                                                     'example': 'hardy'
+                                                 },
+                                                 'url': {
+                                                     'type': 'string',
+                                                     'format': 'uri',
+                                                     'example': 'https://pokeapi.co/api/v2/nature/1/'
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             },
+                             'increase': {
+                                 'type': 'array',
+                                 'items': {
+                                     'type': 'object',
+                                     'required': [ 'max_change', 'nature' ],
+                                     'properties': {
+                                         'max_change': {
+                                             'type': 'number',
+                                             'minimum': 1,
+                                             'example': 2
+                                         },
+                                         'nature': {
+                                             'type': 'object',
+                                             'required': [ 'name', 'url' ],
+                                             'properties': {
+                                                 'name': {
+                                                     'type': 'string',
+                                                     'example': 'hardy'
+                                                 },
+                                                 'url': {
+                                                     'type': 'string',
+                                                     'format': 'uri',
+                                                     'example': 'https://pokeapi.co/api/v2/nature/1/'
+                                                 }
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_natures_that_affect(self, obj):
         stat_change_objects = NaturePokeathlonStat.objects.filter(pokeathlon_stat=obj)
         stat_changes = NaturePokeathlonStatSerializer(

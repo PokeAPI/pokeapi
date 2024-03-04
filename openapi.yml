@@ -6865,7 +6865,60 @@ components:
           maxLength: 100
         affecting_natures:
           type: object
-          additionalProperties: {}
+          required:
+          - decrease
+          - increase
+          properties:
+            decrease:
+              type: array
+              items:
+                type: object
+                required:
+                - max_change
+                - nature
+                properties:
+                  max_change:
+                    type: number
+                    maximum: -1
+                    example: -1
+                  nature:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: hardy
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/nature/1/
+            increase:
+              type: array
+              items:
+                type: object
+                required:
+                - max_change
+                - nature
+                properties:
+                  max_change:
+                    type: number
+                    minimum: 1
+                    example: 2
+                  nature:
+                    type: object
+                    required:
+                    - name
+                    - url
+                    properties:
+                      name:
+                        type: string
+                        example: hardy
+                      url:
+                        type: string
+                        format: uri
+                        example: https://pokeapi.co/api/v2/nature/1/
           readOnly: true
         names:
           type: array

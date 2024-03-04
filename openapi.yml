@@ -8885,5 +8885,17 @@ components:
       name: sessionid
 servers:
 - url: https://pokeapi.co
+tags:
+- pokemon
+- evolution
+- berries
+- items
+- machines
+- location
+- contest
+- moves
+- encounters
+- games
+- utility
 externalDocs:
   url: https://pokeapi.co/docs/v2

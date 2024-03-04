@@ -5991,7 +5991,24 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
             "versions",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={
+                         'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'kanto'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/region/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_version_group_regions(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(version_group=obj)
         data = VersionGroupRegionSerializer(
@@ -6004,7 +6021,26 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return regions
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+      # "name": "level-up",
+      # "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+    @extend_schema_field(field={
+                         'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'level-up'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/move-learn-method/1/'
+                                 }
+                             }
+                         }
+                         })
     def get_learn_methods(self, obj):
         learn_method_objects = VersionGroupMoveLearnMethod.objects.filter(
             version_group=obj
@@ -6019,7 +6055,24 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return methods
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={
+                         'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'kanto'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/pokedex/2/'
+                                 }
+                             }
+                         }
+                         })
     def get_version_groups_pokedexes(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(version_group=obj)
         dex_groups = PokedexVersionGroupSerializer(

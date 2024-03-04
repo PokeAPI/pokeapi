@@ -8682,16 +8682,52 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         move_learn_methods:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: level-up
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/move-learn-method/1/
           readOnly: true
         pokedexes:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: kanto
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/pokedex/2/
           readOnly: true
         regions:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: kanto
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/region/1/
           readOnly: true
         versions:
           type: array

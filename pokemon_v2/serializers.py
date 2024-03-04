@@ -5874,7 +5874,33 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'entry_number', 'pokemon_species' ],
+                             'properties': {
+                                 'entry_number': {
+                                     'type': 'number',
+                                     'example': 1
+                                 },
+                                 'pokemon_species': {
+                                     'type': 'object',
+                                     'required': [ 'name', 'url' ],
+                                     'properties': {
+                                         'name': {
+                                             'type': 'string',
+                                             'example': 'bulbasaur'
+                                         },
+                                         'url': {
+                                             'type': 'string',
+                                             'format': 'uri',
+                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         })
     def get_pokedex_entries(self, obj):
         results = PokemonDexNumber.objects.filter(pokedex=obj).order_by(
             "pokedex_number"
@@ -5889,7 +5915,23 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(OpenApiTypes.OBJECT)
+    @extend_schema_field(field={'type': 'array',
+                         'items': {
+                             'type': 'object',
+                             'required': [ 'name', 'url' ],
+                             'properties': {
+                                 'name': {
+                                     'type': 'string',
+                                     'example': 'the-teal-mask'
+                                 },
+                                 'url': {
+                                     'type': 'string',
+                                     'format': 'uri',
+                                     'example': 'https://pokeapi.co/api/v2/version-group/26/'
+                                 }
+                             }
+                         }
+                         })
     def get_pokedex_version_groups(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(pokedex=obj)
         dex_groups = PokedexVersionGroupSerializer(

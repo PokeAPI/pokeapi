@@ -6986,14 +6986,47 @@ components:
             $ref: '#/components/schemas/PokedexName'
           readOnly: true
         pokemon_entries:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - entry_number
+            - pokemon_species
+            properties:
+              entry_number:
+                type: number
+                example: 1
+              pokemon_species:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    example: bulbasaur
+                  url:
+                    type: string
+                    format: uri
+                    example: https://pokeapi.co/api/v2/pokemon-species/1/
           readOnly: true
         region:
           $ref: '#/components/schemas/RegionSummary'
         version_groups:
-          type: object
-          additionalProperties: {}
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                example: the-teal-mask
+              url:
+                type: string
+                format: uri
+                example: https://pokeapi.co/api/v2/version-group/26/
           readOnly: true
       required:
       - descriptions

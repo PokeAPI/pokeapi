@@ -18,6 +18,7 @@ in pkgs.mkShell rec {
     # python310Packages.django-cors-headers
 
     # Required dependancies 
+    black
     taglib
     openssl
     git

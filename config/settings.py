@@ -99,7 +99,7 @@ INSTALLED_APPS = (
     "corsheaders",
     "rest_framework",
     "cachalot",
-    'drf_spectacular',
+    "drf_spectacular",
 ) + CUSTOM_APPS
 
 
@@ -117,7 +117,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
     "PAGINATE_BY": 20,
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 
@@ -140,26 +140,25 @@ TEMPLATES = [
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'pokeapi',
-    'DESCRIPTION': 'A RESTful API for Pokémon.',
-    'SERVERS': [{'url': 'https://pokeapi.co'}],
-    'EXTERNAL_DOCS': {'url': 'https://pokeapi.co/docs/v2'},
-    'VERSION': '2.7.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-    'OAS_VERSION': '3.1.0',
-    'COMPONENT_SPLIT_REQUEST': True,
-    'TAGS': [
-        'pokemon',
-        'evolution',
-        'berries',
-        'items',
-        'machines',
-        'location',
-        'contest',
-        'moves',
-        'encounters',
-        'games',
-        'utility',
+    "TITLE": "pokeapi",
+    "DESCRIPTION": "A RESTful API for Pokémon.",
+    "SERVERS": [{"url": "https://pokeapi.co"}],
+    "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
+    "VERSION": "2.7.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "OAS_VERSION": "3.1.0",
+    "COMPONENT_SPLIT_REQUEST": True,
+    "TAGS": [
+        "pokemon",
+        "evolution",
+        "berries",
+        "items",
+        "machines",
+        "location",
+        "contest",
+        "moves",
+        "encounters",
+        "games",
+        "utility",
     ],
 }
-

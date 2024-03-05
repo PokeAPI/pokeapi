@@ -478,12 +478,15 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
             "descriptions",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'number',
-                         },
-                         'example': [ 0, 5, 10, 15, 20, 25, 30 ]
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "number",
+            },
+            "example": [0, 5, 10, 15, 20, 25, 30],
+        }
+    )
     def get_values(self, obj):
         mod = obj.gene_mod_5
         values = []
@@ -616,23 +619,23 @@ class RegionDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'red-blue'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/version-group/1/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "red-blue"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/version-group/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_region_version_groups(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(region=obj)
         data = VersionGroupRegionSerializer(
@@ -700,33 +703,30 @@ class GenderDetailSerializer(serializers.ModelSerializer):
         model = Gender
         fields = ("id", "name", "pokemon_species_details", "required_for_evolution")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'rate', 'pokemon_species' ],
-                             'properties': {
-                                 'rate': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                                 'pokemon_species': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bulbasaur'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["rate", "pokemon_species"],
+                "properties": {
+                    "rate": {"type": "number", "example": 1},
+                    "pokemon_species": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bulbasaur"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_species(self, obj):
         species_objects = []
 
@@ -749,23 +749,23 @@ class GenderDetailSerializer(serializers.ModelSerializer):
 
         return details
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'wormadam'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/413/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "wormadam"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/pokemon-species/413/",
+                    },
+                },
+            },
+        }
+    )
     def get_required(self, obj):
         evo_objects = PokemonEvolution.objects.filter(gender=obj)
         species_list = []
@@ -975,57 +975,54 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             "pokemon_encounters",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'encounter_method', 'version_details' ],
-                             'properties': {
-                                 'encounter_method': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'old-rod'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/encounter-method/2/'
-                                         }
-                                     }
-                                 },
-                                 'version_details': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'rate', 'version' ],
-                                         'properties': {
-                                             'rate': {
-                                                 'type': 'number',
-                                                 'example': 5
-                                             },
-                                             'version': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'platinum'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/version/14/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["encounter_method", "version_details"],
+                "properties": {
+                    "encounter_method": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "old-rod"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/encounter-method/2/",
+                            },
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["rate", "version"],
+                            "properties": {
+                                "rate": {"type": "number", "example": 5},
+                                "version": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "platinum",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/version/14/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_method_rates(self, obj):
         # Get encounters related to this area and pull out unique encounter methods
         encounter_rates = LocationAreaEncounterRate.objects.filter(
@@ -1067,111 +1064,99 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
 
         return encounter_rate_list
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'pokemon', 'version_details' ],
-                             'properties': {
-                                 'pokemon': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'tentacool'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'ttps://pokeapi.co/api/v2/pokemon/72/'
-                                         }
-                                     }
-                                 },
-                                 'version_details': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'version', 'max_chance', 'encounter_details' ],
-                                         'properties': {
-                                             'version': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'diamond'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/version/12/'
-                                                     }
-                                                 }
-                                             },
-                                             'max_chance': {
-                                                 'type': 'number',
-                                                 'example': 60
-                                             },
-                                             'encounter_details': {
-                                                 'type': 'object',
-                                                 'required': [
-                                                     'min_level',
-                                                     'max_level',
-                                                     'condition_value',
-                                                     'chance',
-                                                     'method'
-                                                 ],
-                                                 'properties': {
-                                                     'min_level': {
-                                                         'type': 'number',
-                                                         'example': 20
-                                                     },
-                                                     'max_level': {
-                                                         'type': 'number',
-                                                         'example': 30
-                                                     },
-                                                     'condition_values': {
-                                                         'type': 'object',
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                                 'example': 'slot2-sapphire'
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                                 'example': 'https://pokeapi.co/api/v2/encounter-condition-value/10/'
-                                                             }
-                                                         }
-                                                     },
-                                                     'chance': {
-                                                         'type': 'number',
-                                                         'example': 60
-                                                     },
-                                                     'method': {
-                                                         'type': 'object',
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                                 'example': 'surf'
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                                 'example': 'https://pokeapi.co/api/v2/encounter-method/5/'
-                                                             }
-                                                         }
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["pokemon", "version_details"],
+                "properties": {
+                    "pokemon": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "tentacool"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "ttps://pokeapi.co/api/v2/pokemon/72/",
+                            },
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["version", "max_chance", "encounter_details"],
+                            "properties": {
+                                "version": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "diamond",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/version/12/",
+                                        },
+                                    },
+                                },
+                                "max_chance": {"type": "number", "example": 60},
+                                "encounter_details": {
+                                    "type": "object",
+                                    "required": [
+                                        "min_level",
+                                        "max_level",
+                                        "condition_value",
+                                        "chance",
+                                        "method",
+                                    ],
+                                    "properties": {
+                                        "min_level": {"type": "number", "example": 20},
+                                        "max_level": {"type": "number", "example": 30},
+                                        "condition_values": {
+                                            "type": "object",
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "slot2-sapphire",
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "example": "https://pokeapi.co/api/v2/encounter-condition-value/10/",
+                                                },
+                                            },
+                                        },
+                                        "chance": {"type": "number", "example": 60},
+                                        "method": {
+                                            "type": "object",
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "surf",
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "example": "https://pokeapi.co/api/v2/encounter-method/5/",
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         # get versions for later use
         version_objects = Version.objects.all()
@@ -1343,37 +1328,31 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             "pokemon",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'is_hidden', 'slot', 'pokemon' ],
-                             'properties': {
-                                 'is_hidden': {
-                                     'type': 'boolean',
-                                     'example': True
-                                 },
-                                 'slot': {
-                                     'type': 'number',
-                                     'example': 3
-                                 },
-                                 'pokemon': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'gloom'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon/44/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["is_hidden", "slot", "pokemon"],
+                "properties": {
+                    "is_hidden": {"type": "boolean", "example": True},
+                    "slot": {"type": "number", "example": 3},
+                    "pokemon": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "gloom"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon/44/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_ability_pokemon(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
         data = PokemonAbilitySerializer(
@@ -1424,67 +1403,61 @@ class StatDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'decrease', 'increase' ],
-                         'properties': {
-                             'increase': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'change', 'move' ],
-                                     'properties': {
-                                         'change': {
-                                             'type': 'number',
-                                             'example': -1
-                                         },
-                                         'move': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'swords-dance'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/14/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                             'decrease': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'change', 'move' ],
-                                     'properties': {
-                                         'change': {
-                                             'type': 'number',
-                                             'example': 5
-                                         },
-                                         'move': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'growl'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/45/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["decrease", "increase"],
+            "properties": {
+                "increase": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["change", "move"],
+                        "properties": {
+                            "change": {"type": "number", "example": -1},
+                            "move": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "swords-dance",
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/14/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                "decrease": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["change", "move"],
+                        "properties": {
+                            "change": {"type": "number", "example": 5},
+                            "move": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "growl"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/45/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_moves_that_affect(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
         stat_changes = MoveMetaStatChangeSerializer(
@@ -1501,47 +1474,44 @@ class StatDetailSerializer(serializers.ModelSerializer):
 
         return changes
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'increase', 'decrease' ],
-                         'properties': {
-                             'increase': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'lonely'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/nature/6/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'decrease': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bold'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/nature/2/'
-                                         }
-                                     }
-                                 }
-                             },
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["increase", "decrease"],
+            "properties": {
+                "increase": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "lonely"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/nature/6/",
+                            },
+                        },
+                    },
+                },
+                "decrease": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bold"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/nature/2/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_natures_that_affect(self, obj):
         increase_objects = Nature.objects.filter(increased_stat=obj)
         increases = NatureSummarySerializer(
@@ -1636,23 +1606,23 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
         model = ItemAttribute
         fields = ("id", "name", "descriptions", "items", "names")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'master-ball'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/item/1/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "master-ball"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/item/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_attribute_items(self, obj):
         item_map_objects = ItemAttributeMap.objects.filter(item_attribute=obj)
         items = []
@@ -1769,34 +1739,34 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "machines",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'machine', 'version_group' ],
-                             'properties': {
-                                 'machine': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/machine/1/'
-                                 },
-                                 'version_group': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'sword-shield'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/version-group/20/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["machine", "version_group"],
+                "properties": {
+                    "machine": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/machine/1/",
+                    },
+                    "version_group": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "sword-shield"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/version-group/20/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_item_machines(self, obj):
         machine_objects = Machine.objects.filter(item=obj)
 
@@ -1817,37 +1787,40 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'default' ],
-                         'properties': {
-                             'default': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'example': 'https://pokeapi.co/media/sprites/items/master-ball.png'
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["default"],
+            "properties": {
+                "default": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": "https://pokeapi.co/media/sprites/items/master-ball.png",
+                }
+            },
+        }
+    )
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         return sprites_object.sprites
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'countable'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/item-attribute/1/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "countable"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/item-attribute/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
         serializer = ItemAttributeMapSerializer(
@@ -1865,57 +1838,51 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return attributes
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'pokemon', 'version-details' ],
-                             'properties': {
-                                 'pokemon': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'farfetchd'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon/83/'
-                                         }
-                                     }
-                                 },
-                                 'version-details': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'rarity', 'version' ],
-                                         'properties': {
-                                             'rarity': {
-                                                 'type': 'number',
-                                                 'example': 5
-                                             },
-                                             'version': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'ruby'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/version/7/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["pokemon", "version-details"],
+                "properties": {
+                    "pokemon": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "farfetchd"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon/83/",
+                            },
+                        },
+                    },
+                    "version-details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["rarity", "version"],
+                            "properties": {
+                                "rarity": {"type": "number", "example": 5},
+                                "version": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "ruby"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/version/7/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_held_by_pokemon(self, obj):
         pokemon_items = PokemonItem.objects.filter(item=obj).order_by("pokemon_id")
         pokemon_ids = pokemon_items.values("pokemon_id").distinct()
@@ -1948,16 +1915,19 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'url' ],
-                         'properties': {
-                             'url': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'example': '"https://pokeapi.co/api/v2/evolution-chain/51/'
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["url"],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": '"https://pokeapi.co/api/v2/evolution-chain/51/',
+                }
+            },
+        }
+    )
     def get_baby_trigger_for(self, obj):
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)
@@ -2022,33 +1992,30 @@ class NatureDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'max_change', 'pokeathlon_stat' ],
-                             'properties': {
-                                 'max_change': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                                 'pokeathlon_stat': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'power'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokeathlon-stat/2/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["max_change", "pokeathlon_stat"],
+                "properties": {
+                    "max_change": {"type": "number", "example": 1},
+                    "pokeathlon_stat": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "power"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokeathlon-stat/2/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokeathlon_stats(self, obj):
         pokeathlon_stat_objects = NaturePokeathlonStat.objects.filter(nature=obj)
         pokeathlon_stats = NaturePokeathlonStatSerializer(
@@ -2104,35 +2071,35 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
         model = BerryFlavor
         fields = ("id", "name", "berries", "contest_type", "names")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'potency', 'berry' ],
-                             'properties': {
-                                 'potency':  {
-                                     'type': 'integer',
-                                     'example': 10
-                                 },
-                                 'berry': {
-                                     'type': 'object',
-                                     'require': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'description': 'The name of the berry',
-                                             'example': 'rowap'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'description': 'The URL to get more information about the berry',
-                                             'example': 'https://pokeapi.co/api/v2/berry/64/'
-                                         }
-                                     }
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["potency", "berry"],
+                "properties": {
+                    "potency": {"type": "integer", "example": 10},
+                    "berry": {
+                        "type": "object",
+                        "require": ["name", "url"],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the berry",
+                                "example": "rowap",
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL to get more information about the berry",
+                                "example": "https://pokeapi.co/api/v2/berry/64/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_berries_with_flavor(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(
             berry_flavor=obj, potency__gt=0
@@ -2170,35 +2137,35 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             "natural_gift_type",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'potency', 'flavor' ],
-                             'properties': {
-                                 'potency':  {
-                                     'type': 'integer',
-                                     'example': 10
-                                 },
-                                 'flavor': {
-                                     'type': 'object',
-                                     'require': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'description': 'The name of the flavor',
-                                             'example': 'spicy'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'description': 'The URL to get more information about the flavor',
-                                             'example': 'https://pokeapi.co/api/v2/berry-flavor/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["potency", "flavor"],
+                "properties": {
+                    "potency": {"type": "integer", "example": 10},
+                    "flavor": {
+                        "type": "object",
+                        "require": ["name", "url"],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the flavor",
+                                "example": "spicy",
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL to get more information about the flavor",
+                                "example": "https://pokeapi.co/api/v2/berry-flavor/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_berry_flavors(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(berry=obj)
         flavor_maps = BerryFlavorMapSerializer(
@@ -2241,25 +2208,28 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
         model = EggGroup
         fields = ("id", "name", "names", "pokemon_species")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'potency', 'flavor' ],
-                             'properties': {
-                                 'name':  {
-                                     'type': 'string',
-                                     'description': 'Pokemon species name.',
-                                     'example': 'bulbasaur'
-                                 },
-                                 'url':  {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'description': 'The URL to get more information about the species',
-                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
-                                 },
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["potency", "flavor"],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Pokemon species name.",
+                        "example": "bulbasaur",
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "The URL to get more information about the species",
+                        "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_species(self, obj):
         results = PokemonEggGroup.objects.filter(egg_group=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -2354,126 +2324,111 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                 TypeSummarySerializer(type, context=self.context).data
             )
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [
-                             'no_damage_to',
-                             'half_damage_to',
-                             'double_damage_to',
-                             'no_damage_from',
-                             'half_damage_from',
-                             'double_damage_from'
-                         ],
-                         'properties': {
-                             'no_damage_to': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'flying'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/3/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'half_damage_to': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bug'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/7/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'double_damage_to': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'poison'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/4/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'no_damage_from': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'electric'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/13/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'half_damage_from': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'poison'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/4/'
-                                         }
-                                     }
-                                 }
-                             },
-                             'double_damage_from': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'water'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/11/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": [
+                "no_damage_to",
+                "half_damage_to",
+                "double_damage_to",
+                "no_damage_from",
+                "half_damage_from",
+                "double_damage_from",
+            ],
+            "properties": {
+                "no_damage_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "flying"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/3/",
+                            },
+                        },
+                    },
+                },
+                "half_damage_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bug"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/7/",
+                            },
+                        },
+                    },
+                },
+                "double_damage_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "poison"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/4/",
+                            },
+                        },
+                    },
+                },
+                "no_damage_from": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "electric"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/13/",
+                            },
+                        },
+                    },
+                },
+                "half_damage_from": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "poison"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/4/",
+                            },
+                        },
+                    },
+                },
+                "double_damage_from": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "water"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/11/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_type_relationships(self, obj):
         relations = OrderedDict()
         relations["no_damage_to"] = []
@@ -2538,150 +2493,135 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                     return
 
     # returns past type relationships for the given type object
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'generation', 'damage_relations' ],
-                             'properties': {
-                                 'generation':  {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'generation-v'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/generation/5/'
-                                         }
-                                     }
-                                 },
-                                 'damage_relations': {
-                                    'type': 'object',
-                                     'required': [
-                                         'no_damage_to',
-                                         'half_damage_to',
-                                         'double_damage_to',
-                                         'no_damage_from',
-                                         'half_damage_from',
-                                         'double_damage_from'
-                                     ],
-                                     'properties': {
-                                         'no_damage_to': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'flying'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/3/'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'half_damage_to': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'bug'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/7/'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'double_damage_to': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'poison'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/4/'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'no_damage_from': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'electric'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/13/'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'half_damage_from': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'poison'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/4/'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'double_damage_from': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'water'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/11/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["generation", "damage_relations"],
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "generation-v"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/generation/5/",
+                            },
+                        },
+                    },
+                    "damage_relations": {
+                        "type": "object",
+                        "required": [
+                            "no_damage_to",
+                            "half_damage_to",
+                            "double_damage_to",
+                            "no_damage_from",
+                            "half_damage_from",
+                            "double_damage_from",
+                        ],
+                        "properties": {
+                            "no_damage_to": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "flying"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/3/",
+                                        },
+                                    },
+                                },
+                            },
+                            "half_damage_to": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "bug"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/7/",
+                                        },
+                                    },
+                                },
+                            },
+                            "double_damage_to": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "poison"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/4/",
+                                        },
+                                    },
+                                },
+                            },
+                            "no_damage_from": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "electric",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/13/",
+                                        },
+                                    },
+                                },
+                            },
+                            "half_damage_from": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "poison"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/4/",
+                                        },
+                                    },
+                                },
+                            },
+                            "double_damage_from": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "water"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/11/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_type_past_relationships(self, obj):
         # collect data from DB
         damage_type_results = list(TypeEfficacyPast.objects.filter(damage_type=obj))
@@ -2776,35 +2716,35 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         gen_introduced = Generation.objects.get(pk=type_obj.generation.id)
         return gen_introduced.id <= current_gen.id
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'potency', 'flavor' ],
-                             'properties': {
-                                 'slot':  {
-                                     'type': 'integer',
-                                     'example': 1
-                                 },
-                                 'pokemon': {
-                                     'type': 'object',
-                                     'require': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'description': 'The name of the pokemon',
-                                             'example': 'sandshrew'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'description': 'The URL to get more information about the pokemon',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon/27/'
-                                         }
-                                     }
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["potency", "flavor"],
+                "properties": {
+                    "slot": {"type": "integer", "example": 1},
+                    "pokemon": {
+                        "type": "object",
+                        "require": ["name", "url"],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the pokemon",
+                                "example": "sandshrew",
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "The URL to get more information about the pokemon",
+                                "example": "https://pokeapi.co/api/v2/pokemon/27/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_type_pokemon(self, obj):
         poke_type_objects = PokemonType.objects.filter(type=obj)
         poke_types = PokemonTypeSerializer(
@@ -2911,23 +2851,23 @@ class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer):
         model = MoveMetaAilment
         fields = ("id", "name", "moves", "names")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name':  {
-                                     'type': 'string',
-                                     'example': 'thunder-punch'
-                                 },
-                                 'url':  {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/move/9/'
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "thunder-punch"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/move/9/",
+                    },
+                },
+            },
+        }
+    )
     def get_ailment_moves(self, obj):
         move_meta_objects = MoveMeta.objects.filter(move_meta_ailment=obj)
         moves = []
@@ -2958,23 +2898,23 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
         model = MoveMetaCategory
         fields = ("id", "name", "descriptions", "moves")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name':  {
-                                     'type': 'string',
-                                     'example': 'sing'
-                                 },
-                                 'url':  {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/move/47/'
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "sing"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/move/47/",
+                    },
+                },
+            },
+        }
+    )
     def get_category_moves(self, obj):
         move_meta_objects = MoveMeta.objects.filter(move_meta_category=obj)
         moves = []
@@ -3069,37 +3009,37 @@ class MoveChangeSerializer(serializers.ModelSerializer):
             "version_group",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'effect', 'short_effect', 'language' ],
-                             'properties': {
-                                 'effect': {
-                                     'type': 'string',
-                                     'example': 'Inflicts [regular damage]{mechanic:regular-damage}.'
-                                 },
-                                 'short_effect': {
-                                     'type': 'string',
-                                     'example': 'Inflicts regular damage with no additional effect.'
-                                 },
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name':  {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url':  {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 }
-                             },
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["effect", "short_effect", "language"],
+                "properties": {
+                    "effect": {
+                        "type": "string",
+                        "example": "Inflicts [regular damage]{mechanic:regular-damage}.",
+                    },
+                    "short_effect": {
+                        "type": "string",
+                        "example": "Inflicts regular damage with no additional effect.",
+                    },
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_effects(self, obj):
         effect_texts = MoveEffectEffectText.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectEffectTextSerializer(
@@ -3197,23 +3137,23 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "learned_by_pokemon",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name':  {
-                                     'type': 'string',
-                                     'example': 'clefairy'
-                                 },
-                                 'url':  {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/pokemon/35/'
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "clefairy"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/pokemon/35/",
+                    },
+                },
+            },
+        }
+    )
     def get_learned_by_pokemon(self, obj):
         pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
 
@@ -3231,40 +3171,40 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'machine', 'version_group' ],
-                             'properties': {
-                                 'machine':  {
-                                     'type': 'object',
-                                     'required': [ 'url' ],
-                                     'properties': {
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/machine/1/'
-                                         }
-                                     }
-                                 },
-                                 'version_group':  {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'sword-shield'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/version-group/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["machine", "version_group"],
+                "properties": {
+                    "machine": {
+                        "type": "object",
+                        "required": ["url"],
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/machine/1/",
+                            }
+                        },
+                    },
+                    "version_group": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "sword-shield"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/version-group/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_move_machines(self, obj):
         machine_objects = Machine.objects.filter(move=obj)
 
@@ -3285,99 +3225,96 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
-    @extend_schema_field(field={'type': 'object',
-                         'properties': {
-                             'required': [ 'normal', 'super' ],
-                             'normal': {
-                                 'type': 'object',
-                                 'required': [ 'use_before', 'use_after' ],
-                                 'properties': {
-                                     'use_before': {
-                                         'type': 'array',
-                                         'nullable': True,
-                                         'items': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'fire-punch'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/7/'
-                                                 }
-                                             }
-                                         }
-                                     },
-                                     'use_after': {
-                                         'type': 'array',
-                                         'nullable': True,
-                                         'items': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'ice-punch'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/8/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                             'super': {
-                                 'type': 'object',
-                                 'required': [ 'use_before', 'use_after' ],
-                                 'properties': {
-                                     'use_before': {
-                                         'type': 'array',
-                                         'nullable': True,
-                                         'items': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'night-slash'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/400/'
-                                                 }
-                                             }
-                                         }
-                                     },
-                                     'use_after': {
-                                         'type': 'array',
-                                         'nullable': True,
-                                         'items': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'focus-energy'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/move/116/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "properties": {
+                "required": ["normal", "super"],
+                "normal": {
+                    "type": "object",
+                    "required": ["use_before", "use_after"],
+                    "properties": {
+                        "use_before": {
+                            "type": "array",
+                            "nullable": True,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "fire-punch"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/7/",
+                                    },
+                                },
+                            },
+                        },
+                        "use_after": {
+                            "type": "array",
+                            "nullable": True,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "ice-punch"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/8/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                "super": {
+                    "type": "object",
+                    "required": ["use_before", "use_after"],
+                    "properties": {
+                        "use_before": {
+                            "type": "array",
+                            "nullable": True,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "night-slash",
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/400/",
+                                    },
+                                },
+                            },
+                        },
+                        "use_after": {
+                            "type": "array",
+                            "nullable": True,
+                            "items": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "focus-energy",
+                                    },
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/move/116/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_combos(self, obj):
         normal_before_objects = ContestCombo.objects.filter(first_move=obj)
         normal_before_data = ContestComboSerializer(
@@ -3435,37 +3372,37 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return details
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'effect', 'short_effect', 'language' ],
-                             'properties': {
-                                 'effect': {
-                                     'type': 'string',
-                                     'example': 'Inflicts [regular damage]{mechanic:regular-damage}.'
-                                 },
-                                 'short_effect': {
-                                     'type': 'string',
-                                     'example': 'Inflicts regular damage with no additional effect.'
-                                 },
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name':  {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url':  {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 }
-                             },
-                         },
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["effect", "short_effect", "language"],
+                "properties": {
+                    "effect": {
+                        "type": "string",
+                        "example": "Inflicts [regular damage]{mechanic:regular-damage}.",
+                    },
+                    "short_effect": {
+                        "type": "string",
+                        "example": "Inflicts regular damage with no additional effect.",
+                    },
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_effect_text(self, obj):
         effect_texts = MoveEffectEffectText.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectEffectTextSerializer(
@@ -3480,57 +3417,54 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'effect_entries', 'version_group' ],
-                             'properties': {
-                                 'effect_entries':  {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'effect', 'language' ],
-                                         'properties': {
-                                             'effect': {
-                                                 'type': 'string',
-                                                 'example': 'Hits Pokémon under the effects of dig and fly.'
-                                             },
-                                             'language': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'en'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/language/9/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                         }
-                                     },
-                                 'version_group': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'gold-silver'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/version-group/3/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["effect_entries", "version_group"],
+                "properties": {
+                    "effect_entries": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["effect", "language"],
+                            "properties": {
+                                "effect": {
+                                    "type": "string",
+                                    "example": "Hits Pokémon under the effects of dig and fly.",
+                                },
+                                "language": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "en"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/language/9/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    "version_group": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "gold-silver"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/version-group/3/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_effect_change_text(self, obj):
         effect_changes = MoveEffectChange.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectChangeSerializer(
@@ -3539,33 +3473,30 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'change', 'stat' ],
-                             'properties': {
-                                 'change': {
-                                     'type': 'number',
-                                     'example': 2
-                                 },
-                                 'stat': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'attack'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/stat/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["change", "stat"],
+                "properties": {
+                    "change": {"type": "number", "example": 2},
+                    "stat": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "attack"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/stat/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_move_stat_change(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(move=obj)
         stat_changes = MoveMetaStatChangeSerializer(
@@ -3610,37 +3541,31 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
         model = PalParkArea
         fields = ("id", "name", "names", "pokemon_encounters")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'base_score', 'pokemon-species', 'rate' ],
-                             'properties': {
-                                 'base_score': {
-                                     'type': 'number',
-                                     'example': 50
-                                 },
-                                 'pokemon-species': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bulbasaur'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
-                                         }
-                                     }
-                                 },
-                                 'rate': {
-                                     'type': 'number',
-                                     'example': 30
-                                 },
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["base_score", "pokemon-species", "rate"],
+                "properties": {
+                    "base_score": {"type": "number", "example": 50},
+                    "pokemon-species": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bulbasaur"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                            },
+                        },
+                    },
+                    "rate": {"type": "number", "example": 30},
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pal_park_area=obj)
         parks = PalParkSerializer(
@@ -3725,33 +3650,30 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "types",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'language', 'name' ],
-                             'properties': {
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 },
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'Plant Cloak'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["language", "name"],
+                "properties": {
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                    "name": {"type": "string", "example": "Plant Cloak"},
+                },
+            },
+        }
+    )
     def get_pokemon_form_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, name__regex=".+"
@@ -3767,33 +3689,30 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'language', 'name' ],
-                             'properties': {
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 },
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'Plant Cloak'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["language", "name"],
+                "properties": {
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                    "name": {"type": "string", "example": "Plant Cloak"},
+                },
+            },
+        }
+    )
     def get_pokemon_form_pokemon_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, pokemon_name__regex=".+"
@@ -3810,62 +3729,62 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(field={'type': 'object',
-                         'properties': {
-                             'default': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'example': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png',
-                             }
-                         },
-                         'additionalProperties': { # Stoplight Elements doesn't render this well
-                             'type': 'string',
-                             'format': 'uri',
-                             'nullable': True,
-                             'example': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png'
-                         },
-                         'example': {
-                            'back_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png',
-                            'back_female': None,
-                            'back_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png',
-                            'back_shiny_female': None,
-                            'front_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png',
-                            'front_female': None,
-                            'front_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/412.png',
-                            'front_shiny_female': None
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "properties": {
+                "default": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png",
+                }
+            },
+            "additionalProperties": {  # Stoplight Elements doesn't render this well
+                "type": "string",
+                "format": "uri",
+                "nullable": True,
+                "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png",
+            },
+            "example": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png",
+                "back_female": None,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png",
+                "back_shiny_female": None,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png",
+                "front_female": None,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/412.png",
+                "front_shiny_female": None,
+            },
+        }
+    )
     def get_pokemon_form_sprites(self, obj):
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
         return sprites_object.sprites
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'slot', 'type' ],
-                             'properties': {
-                                 'slot': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                                 'type': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bug'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/7/'
-                                         }
-                                     }
-                                 },
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["slot", "type"],
+                "properties": {
+                    "slot": {"type": "number", "example": 1},
+                    "type": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bug"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/7/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_form_types(self, obj):
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
         form_types = PokemonFormTypeSerializer(
@@ -3949,28 +3868,29 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
         model = MoveLearnMethod
         fields = ("id", "name", "names", "descriptions", "version_groups")
 
-          # "version_groups": [
-          #   {
-          #     "name": "red-blue",
-          #     "url": "https://pokeapi.co/api/v2/version-group/1/"
-          #   },
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'red-blue'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/version-group/1/'
-                                 }
-                             }
-                         }
-                         })
+        # "version_groups": [
+        #   {
+        #     "name": "red-blue",
+        #     "url": "https://pokeapi.co/api/v2/version-group/1/"
+        #   },
+
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "red-blue"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/version-group/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_method_version_groups(self, obj):
         version_group_objects = VersionGroupMoveLearnMethod.objects.filter(
             move_learn_method=obj
@@ -4015,23 +3935,23 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
         model = PokemonShape
         fields = ("id", "name", "awesome_names", "names", "pokemon_species")
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'url', 'name' ],
-                             'properties': {
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/language/9/'
-                                 },
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'Ball'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["url", "name"],
+                "properties": {
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/language/9/",
+                    },
+                    "name": {"type": "string", "example": "Ball"},
+                },
+            },
+        }
+    )
     def get_shape_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(
@@ -4044,49 +3964,46 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-      # "awesome_names": [
-      #   {
-      #     "awesome_name": "Pomacé",
-      #     "language": {
-      #       "name": "fr",
-      #       "url": "https://pokeapi.co/api/v2/language/5/"
-      #     }
-      #   },
-      #   {
-      #     "awesome_name": "Pomaceous",
-      #     "language": {
-      #       "name": "en",
-      #       "url": "https://pokeapi.co/api/v2/language/9/"
-      #     }
-      #   }
-      # ],
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'awesome_name', 'language' ],
-                             'properties': {
-                                 'awesome_name': {
-                                     'type': 'string',
-                                     'example': 'Pomaceous'
-                                 },
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    # "awesome_names": [
+    #   {
+    #     "awesome_name": "Pomacé",
+    #     "language": {
+    #       "name": "fr",
+    #       "url": "https://pokeapi.co/api/v2/language/5/"
+    #     }
+    #   },
+    #   {
+    #     "awesome_name": "Pomaceous",
+    #     "language": {
+    #       "name": "en",
+    #       "url": "https://pokeapi.co/api/v2/language/9/"
+    #     }
+    #   }
+    # ],
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["awesome_name", "language"],
+                "properties": {
+                    "awesome_name": {"type": "string", "example": "Pomaceous"},
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_shape_awesome_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(
@@ -4180,50 +4097,56 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "past_types",
         )
 
-    @extend_schema_field(field={'type': 'object',
-                         'properties': {
-                             'front_default': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'exmaple': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png',
-                             }
-                         },
-                         'additionalProperties': { # Stoplight Elements doesn't render this well
-                             'type': 'string',
-                             'format': 'uri',
-                             'nullable': True,
-                             'example': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png'
-                         },
-                         'example': {
-                            'back_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png',
-                            'back_female': None,
-                            'back_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png',
-                            'back_shiny_female': None,
-                            'front_default': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-                            'front_female': None,
-                            'front_shiny': 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png',
-                            'front_shiny_female': None,
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "properties": {
+                "front_default": {
+                    "type": "string",
+                    "format": "uri",
+                    "exmaple": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+                }
+            },
+            "additionalProperties": {  # Stoplight Elements doesn't render this well
+                "type": "string",
+                "format": "uri",
+                "nullable": True,
+                "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+            },
+            "example": {
+                "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+                "back_female": None,
+                "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+                "back_shiny_female": None,
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+                "front_female": None,
+                "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
+                "front_shiny_female": None,
+            },
+        }
+    )
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         return sprites_object.sprites
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'latest', 'legacy' ],
-                         'properties': {
-                             'latest': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'example': 'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg'
-                             },
-                             'legacy': {
-                                 'type': 'string',
-                                 'format': 'uri',
-                                 'example': 'https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg'
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["latest", "legacy"],
+            "properties": {
+                "latest": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg",
+                },
+                "legacy": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg",
+                },
+            },
+        }
+    )
     def get_pokemon_cries(self, obj):
         cries_object = PokemonCries.objects.get(pokemon_id=obj)
         return cries_object.cries
@@ -4495,72 +4418,73 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #         "url": "https://pokeapi.co/api/v2/version-group/1/"
     #       }
     #     },
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'move', 'version_group_details' ],
-                             'properties': {
-                                 'move': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'scratch'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/move/10/'
-                                         }
-                                     }
-                                 },
-                                 'version_group_details': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'level_learned_at', 'move_learn_method', 'version_group' ],
-                                         'properties': {
-                                             'level_learned_at': {
-                                                 'type': 'number',
-                                                 'example': 1
-                                             },
-                                             'move_learn_method': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'level-up'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/move-learn-method/1/'
-                                                     }
-                                                 }
-                                             },
-                                             'version_group': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'red-blue'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/version-group/1/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["move", "version_group_details"],
+                "properties": {
+                    "move": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "scratch"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/move/10/",
+                            },
+                        },
+                    },
+                    "version_group_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "level_learned_at",
+                                "move_learn_method",
+                                "version_group",
+                            ],
+                            "properties": {
+                                "level_learned_at": {"type": "number", "example": 1},
+                                "move_learn_method": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "level-up",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/move-learn-method/1/",
+                                        },
+                                    },
+                                },
+                                "version_group": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "red-blue",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/version-group/1/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_moves(self, obj):
         version_objects = VersionGroup.objects.all()
         version_data = VersionGroupSummarySerializer(
@@ -4625,54 +4549,48 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #         "url": "https://pokeapi.co/api/v2/version/12/"
     #       }
     #     },
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'item', 'version_details' ],
-                         'properties': {
-                             'item': {
-                                 'type': 'object',
-                                 'required': [ 'name', 'url' ],
-                                 'properties': {
-                                     'name': {
-                                         'type': 'string',
-                                         'example': 'soft-sand'
-                                     },
-                                     'url': {
-                                         'type': 'string',
-                                         'format': 'uri',
-                                         'example': 'https://pokeapi.co/api/v2/item/214/'
-                                     }
-                                 }
-                             },
-                             'version_details': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'rarity', 'version' ],
-                                     'properties': {
-                                         'rarity': {
-                                             'type': 'number',
-                                             'example': 5
-                                         },
-                                         'version': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'diamond'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/version/12/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["item", "version_details"],
+            "properties": {
+                "item": {
+                    "type": "object",
+                    "required": ["name", "url"],
+                    "properties": {
+                        "name": {"type": "string", "example": "soft-sand"},
+                        "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "example": "https://pokeapi.co/api/v2/item/214/",
+                        },
+                    },
+                },
+                "version_details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["rarity", "version"],
+                        "properties": {
+                            "rarity": {"type": "number", "example": 5},
+                            "version": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "diamond"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/version/12/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_held_items(self, obj):
         # Get items related to this pokemon and pull out unique Item IDs
         pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by("item_id")
@@ -4714,37 +4632,31 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #   "is_hidden": false,
     #   "slot": 1
     # },
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'ability', 'is_hidden', 'slot' ],
-                             'properties': {
-                                 'ability': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'sand-veil'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/ability/8/'
-                                         }
-                                     }
-                                 },
-                                 'is_hidden': {
-                                     'type': 'boolean',
-                                     'example': False
-                                 },
-                                 'slot': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["ability", "is_hidden", "slot"],
+                "properties": {
+                    "ability": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "sand-veil"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/ability/8/",
+                            },
+                        },
+                    },
+                    "is_hidden": {"type": "boolean", "example": False},
+                    "slot": {"type": "number", "example": 1},
+                },
+            },
+        }
+    )
     def get_pokemon_abilities(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(pokemon=obj)
         data = PokemonAbilitySerializer(
@@ -4774,61 +4686,55 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #     "url": "https://pokeapi.co/api/v2/generation/6/"
     #   }
     # }
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'abilities', 'generation' ],
-                             'properties': {
-                                 'abilities': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'ability', 'is_hidden', 'slot' ],
-                                         'properties': {
-                                             'ability': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'levitate'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/ability/26/'
-                                                     }
-                                                 }
-                                             },
-                                             'is_hidden': {
-                                                 'type': 'boolean',
-                                                 'example': False
-                                             },
-                                             'slot': {
-                                                 'type': 'number',
-                                                 'example': 1
-                                             }
-                                         }
-                                     }
-                                 },
-                                 'generation': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'generation-vi'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/generation/6/'
-                                         }
-                                     }
-                                 },
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["abilities", "generation"],
+                "properties": {
+                    "abilities": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["ability", "is_hidden", "slot"],
+                            "properties": {
+                                "ability": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "example": "levitate",
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/ability/26/",
+                                        },
+                                    },
+                                },
+                                "is_hidden": {"type": "boolean", "example": False},
+                                "slot": {"type": "number", "example": 1},
+                            },
+                        },
+                    },
+                    "generation": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "generation-vi"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/generation/6/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_past_pokemon_abilities(self, obj):
         pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
         pokemon_past_abilities = PokemonAbilityPastSerializer(
@@ -4871,33 +4777,30 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #     "url": "https://pokeapi.co/api/v2/type/8/"
     #   }
     # },
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'slot', 'type' ],
-                             'properties': {
-                                 'slot': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                                 'type': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'ghost'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/type/8/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["slot", "type"],
+                "properties": {
+                    "slot": {"type": "number", "example": 1},
+                    "type": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "ghost"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/type/8/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_types(self, obj):
         poke_type_objects = PokemonType.objects.filter(pokemon=obj)
         poke_types = PokemonTypeSerializer(
@@ -4909,74 +4812,68 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return poke_types
 
-      # "past_types": [
-      #   {
-      #     "generation": {
-      #       "name": "generation-v",
-      #       "url": "https://pokeapi.co/api/v2/generation/5/"
-      #     },
-      #     "types": [
-      #       {
-      #         "slot": 1,
-      #         "type": {
-      #           "name": "normal",
-      #           "url": "https://pokeapi.co/api/v2/type/1/"
-      #         }
-      #       }
-      #     ]
-      #   }
-      # ],
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'generation', 'types' ],
-                             'properties':{
-                                 'generation': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'generation-v'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/generation/5/'
-                                         }
-                                     }
-                                 },
-                                 'types': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [ 'slot', 'type' ],
-                                         'properties': {
-                                             'slot': {
-                                                 'type': 'number',
-                                                 'example': 1
-                                             },
-                                             'type': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'normal'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/type/1/'
-                                                     }
-                                                 }
-                                             },
-                                         }
-                                     }
-                                 },
-                             }
-                         }
-                         })
+    # "past_types": [
+    #   {
+    #     "generation": {
+    #       "name": "generation-v",
+    #       "url": "https://pokeapi.co/api/v2/generation/5/"
+    #     },
+    #     "types": [
+    #       {
+    #         "slot": 1,
+    #         "type": {
+    #           "name": "normal",
+    #           "url": "https://pokeapi.co/api/v2/type/1/"
+    #         }
+    #       }
+    #     ]
+    #   }
+    # ],
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["generation", "types"],
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "generation-v"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/generation/5/",
+                            },
+                        },
+                    },
+                    "types": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["slot", "type"],
+                            "properties": {
+                                "slot": {"type": "number", "example": 1},
+                                "type": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "normal"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/type/1/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_past_pokemon_types(self, obj):
         poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
         poke_past_types = PokemonTypePastSerializer(
@@ -5012,10 +4909,12 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return final_data
 
-    @extend_schema_field(field={
-                         'type': 'string',
-                         'example': 'https://pokeapi.co/api/v2/pokemon/1/encounters'
-                         })
+    @extend_schema_field(
+        field={
+            "type": "string",
+            "example": "https://pokeapi.co/api/v2/pokemon/1/encounters",
+        }
+    )
     def get_encounters(self, obj):
         return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
 
@@ -5041,24 +4940,23 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionTrigger
         fields = ("id", "name", "names", "pokemon_species")
 
-    @extend_schema_field(field={
-                         'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'ivysaur'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/2/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "ivysaur"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/pokemon-species/2/",
+                    },
+                },
+            },
+        }
+    )
     def get_species(self, obj):
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
@@ -5166,33 +5064,30 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "varieties",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'language', 'name' ],
-                             'properties': {
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 },
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'bulbasaur'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["language", "name"],
+                "properties": {
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                    "name": {"type": "string", "example": "bulbasaur"},
+                },
+            },
+        }
+    )
     def get_pokemon_names(self, obj):
         species_results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         species_serializer = PokemonSpeciesNameSerializer(
@@ -5213,33 +5108,30 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
     #     "url": "https://pokeapi.co/api/v2/language/9/"
     #   }
     # },
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'genus', 'language' ],
-                             'properties': {
-                                 'genus': {
-                                     'type': 'string',
-                                     'example': 'Seed Pokémon'
-                                 },
-                                 'language': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'en'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/language/9/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["genus", "language"],
+                "properties": {
+                    "genus": {"type": "string", "example": "Seed Pokémon"},
+                    "language": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "en"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/language/9/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_genera(self, obj):
         results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         serializer = PokemonSpeciesNameSerializer(
@@ -5255,23 +5147,23 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return genera
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'monster'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/egg-group/1/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "monster"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/egg-group/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_egg_groups(self, obj):
         results = PokemonEggGroup.objects.filter(pokemon_species=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -5281,33 +5173,30 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return groups
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'is_default', 'pokemon' ],
-                             'properties': {
-                                 'is_default': {
-                                     'type': 'boolean',
-                                     'example': True
-                                 },
-                                 'pokemon': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bulbasaur'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["is_default", "pokemon"],
+                "properties": {
+                    "is_default": {"type": "boolean", "example": True},
+                    "pokemon": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bulbasaur"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_varieties(self, obj):
         results = Pokemon.objects.filter(pokemon_species=obj)
         summary_data = PokemonSummarySerializer(
@@ -5327,37 +5216,31 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return varieties
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'area', 'base_score', 'rate' ],
-                             'properties': {
-                                 'area': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'field'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pal-park-area/2/'
-                                         }
-                                     }
-                                 },
-                                 'base_score': {
-                                     'type': 'number',
-                                     'example': 50
-                                 },
-                                 'rate': {
-                                     'type': 'number',
-                                     'example': 30
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["area", "base_score", "rate"],
+                "properties": {
+                    "area": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "field"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pal-park-area/2/",
+                            },
+                        },
+                    },
+                    "base_score": {"type": "number", "example": 50},
+                    "rate": {"type": "number", "example": 30},
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pokemon_species=obj)
         parks = PalParkSerializer(
@@ -5416,228 +5299,205 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         fields = ("id", "baby_trigger_item", "chain")
 
     # TODO: Revisit Schema
-    @extend_schema_field(field={'type': 'object',
-                         'required': [
-                             'evolution_details',
-                             'evolves_to',
-                             'is_baby',
-                             'species'
-                         ],
-                         'properties': {
-                             'evolution_details': {
-                                 'type': 'array',
-                                 'items': {
-                                 },
-                                 'example': []
-                             },
-                             'evolves_to': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [
-                                         'evolution_details',
-                                         'evolves_to',
-                                         'is_baby',
-                                         'species'
-                                     ],
-                                     'properties': {
-                                         'evolution_details': {
-                                             'type': 'array',
-                                             'items': {
-                                                 'type': 'object',
-                                                 'required': [
-                                                     'gender',
-                                                     'held_item',
-                                                     'item',
-                                                     'known_move',
-                                                     'known_move_type',
-                                                     'location',
-                                                     'min_affection',
-                                                     'min_beauty',
-                                                     'min_happiness',
-                                                     'min_level',
-                                                     'needs_overworld_rain',
-                                                     'party_species',
-                                                     'party_type',
-                                                     'relative_physical_stats',
-                                                     'time_of_day',
-                                                     'trade_species',
-                                                     'trigger',
-                                                     'turn_upside_down'
-                                                 ],
-                                                 'properties': {
-                                                     'gender': {
-                                                         'type': '',
-                                                         'nullable': True,
-                                                         'type': 'object',
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                                 'example': 1
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                                 'example': 2
-                                                             }
-                                                         }
-                                                     },
-                                                     'held_item': {
-                                                         'type': 'object',
-                                                         'nullable': True,
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                                 'example': 1
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                                 'example': 2
-                                                             }
-                                                         }
-                                                     },
-                                                     'item': {
-                                                         'type': 'object',
-                                                         'nullable': True,
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                                 'example': 1
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                                 'example': 2
-                                                             }
-                                                         }
-                                                     },
-                                                     'known_move': {
-                                                         'type': '',
-                                                         'nullable': True,
-                                                     },
-                                                     'known_move_type': {
-                                                         'type': '',
-                                                         'nullable': True,
-                                                     },
-                                                     'location': {
-                                                         'type': 'object',
-                                                         'nullable': True,
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri',
-                                                             }
-                                                         }
-                                                     },
-                                                     'min_affection': {
-                                                         'type': 'number',
-                                                         'nullable': True
-                                                     },
-                                                     'min_beauty': {
-                                                         'type': 'number',
-                                                         'nullable': True
-                                                     },
-                                                     'min_happiness': {
-                                                         'type': 'number',
-                                                         'nullable': True
-                                                     },
-                                                     'min_level': {
-                                                         'type': 'number',
-                                                         'nullable': True
-                                                     },
-                                                     'needs_overworld_rain': {
-                                                         'type': 'boolean',
-                                                         'nullable': True
-                                                     },
-                                                     'party_species': {
-                                                         'type': 'string',
-                                                         'nullable': True
-                                                     },
-                                                     'party_type': {
-                                                         'type': 'string',
-                                                         'nullable': True
-                                                     },
-                                                     'relative_physical_stats': {
-                                                         'type': 'string',
-                                                         'nullable': True
-                                                     },
-                                                     'time_of_day': {
-                                                         'type': 'string'
-                                                     },
-                                                     'trade_species': {
-                                                         'type': 'string',
-                                                         'nullable': True
-                                                     },
-                                                     'trigger': {
-                                                         'type': 'object',
-                                                         'required': [ 'name', 'url' ],
-                                                         'properties': {
-                                                             'name': {
-                                                                 'type': 'string',
-                                                             },
-                                                             'url': {
-                                                                 'type': 'string',
-                                                                 'format': 'uri'
-                                                             }
-                                                         }
-                                                     },
-                                                     'turn_upside_down': {
-                                                         'type': 'boolean'
-                                                     }
-                                                 }
-                                             }
-                                         },
-                                         'is_baby': {
-                                             'type': 'boolean',
-                                             'example': True
-                                         },
-                                         'species': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'happiny'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/pokemon-species/440/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                             'is_baby': {
-                                 'type': 'boolean',
-                                 'example': True
-                             },
-                             'species': {
-                                 'type': 'object',
-                                 'required': [ 'name', 'url' ],
-                                 'properties': {
-                                     'name': {
-                                         'type': 'string',
-                                         'example': 'happiny'
-                                     },
-                                     'url': {
-                                         'type': 'string',
-                                         'format': 'uri',
-                                         'example': 'https://pokeapi.co/api/v2/pokemon-species/440/'
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["evolution_details", "evolves_to", "is_baby", "species"],
+            "properties": {
+                "evolution_details": {"type": "array", "items": {}, "example": []},
+                "evolves_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "evolution_details",
+                            "evolves_to",
+                            "is_baby",
+                            "species",
+                        ],
+                        "properties": {
+                            "evolution_details": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "gender",
+                                        "held_item",
+                                        "item",
+                                        "known_move",
+                                        "known_move_type",
+                                        "location",
+                                        "min_affection",
+                                        "min_beauty",
+                                        "min_happiness",
+                                        "min_level",
+                                        "needs_overworld_rain",
+                                        "party_species",
+                                        "party_type",
+                                        "relative_physical_stats",
+                                        "time_of_day",
+                                        "trade_species",
+                                        "trigger",
+                                        "turn_upside_down",
+                                    ],
+                                    "properties": {
+                                        "gender": {
+                                            "type": "",
+                                            "nullable": True,
+                                            "type": "object",
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": 1,
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "example": 2,
+                                                },
+                                            },
+                                        },
+                                        "held_item": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": 1,
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "example": 2,
+                                                },
+                                            },
+                                        },
+                                        "item": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": 1,
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "example": 2,
+                                                },
+                                            },
+                                        },
+                                        "known_move": {
+                                            "type": "",
+                                            "nullable": True,
+                                        },
+                                        "known_move_type": {
+                                            "type": "",
+                                            "nullable": True,
+                                        },
+                                        "location": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
+                                        "min_affection": {
+                                            "type": "number",
+                                            "nullable": True,
+                                        },
+                                        "min_beauty": {
+                                            "type": "number",
+                                            "nullable": True,
+                                        },
+                                        "min_happiness": {
+                                            "type": "number",
+                                            "nullable": True,
+                                        },
+                                        "min_level": {
+                                            "type": "number",
+                                            "nullable": True,
+                                        },
+                                        "needs_overworld_rain": {
+                                            "type": "boolean",
+                                            "nullable": True,
+                                        },
+                                        "party_species": {
+                                            "type": "string",
+                                            "nullable": True,
+                                        },
+                                        "party_type": {
+                                            "type": "string",
+                                            "nullable": True,
+                                        },
+                                        "relative_physical_stats": {
+                                            "type": "string",
+                                            "nullable": True,
+                                        },
+                                        "time_of_day": {"type": "string"},
+                                        "trade_species": {
+                                            "type": "string",
+                                            "nullable": True,
+                                        },
+                                        "trigger": {
+                                            "type": "object",
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
+                                        "turn_upside_down": {"type": "boolean"},
+                                    },
+                                },
+                            },
+                            "is_baby": {"type": "boolean", "example": True},
+                            "species": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "happiny"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/pokemon-species/440/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                "is_baby": {"type": "boolean", "example": True},
+                "species": {
+                    "type": "object",
+                    "required": ["name", "url"],
+                    "properties": {
+                        "name": {"type": "string", "example": "happiny"},
+                        "url": {
+                            "type": "string",
+                            "format": "uri",
+                            "example": "https://pokeapi.co/api/v2/pokemon-species/440/",
+                        },
+                    },
+                },
+            },
+        }
+    )
     def build_chain(self, obj):
         chain_id = obj.id
 
@@ -5750,69 +5610,66 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = PokeathlonStat
         fields = ("id", "name", "affecting_natures", "names")
 
-    @extend_schema_field(field={'type': 'object',
-                         'required': [ 'decrease', 'increase' ],
-                         'properties': {
-                             'decrease': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'max_change', 'nature' ],
-                                     'properties': {
-                                         'max_change': {
-                                             'type': 'number',
-                                             'maximum': -1,
-                                             'example': -1
-                                         },
-                                         'nature': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'hardy'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/nature/1/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             },
-                             'increase': {
-                                 'type': 'array',
-                                 'items': {
-                                     'type': 'object',
-                                     'required': [ 'max_change', 'nature' ],
-                                     'properties': {
-                                         'max_change': {
-                                             'type': 'number',
-                                             'minimum': 1,
-                                             'example': 2
-                                         },
-                                         'nature': {
-                                             'type': 'object',
-                                             'required': [ 'name', 'url' ],
-                                             'properties': {
-                                                 'name': {
-                                                     'type': 'string',
-                                                     'example': 'hardy'
-                                                 },
-                                                 'url': {
-                                                     'type': 'string',
-                                                     'format': 'uri',
-                                                     'example': 'https://pokeapi.co/api/v2/nature/1/'
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "required": ["decrease", "increase"],
+            "properties": {
+                "decrease": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["max_change", "nature"],
+                        "properties": {
+                            "max_change": {
+                                "type": "number",
+                                "maximum": -1,
+                                "example": -1,
+                            },
+                            "nature": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "hardy"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/nature/1/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                "increase": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["max_change", "nature"],
+                        "properties": {
+                            "max_change": {
+                                "type": "number",
+                                "minimum": 1,
+                                "example": 2,
+                            },
+                            "nature": {
+                                "type": "object",
+                                "required": ["name", "url"],
+                                "properties": {
+                                    "name": {"type": "string", "example": "hardy"},
+                                    "url": {
+                                        "type": "string",
+                                        "format": "uri",
+                                        "example": "https://pokeapi.co/api/v2/nature/1/",
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_natures_that_affect(self, obj):
         stat_change_objects = NaturePokeathlonStat.objects.filter(pokeathlon_stat=obj)
         stat_changes = NaturePokeathlonStatSerializer(
@@ -5871,33 +5728,30 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'entry_number', 'pokemon_species' ],
-                             'properties': {
-                                 'entry_number': {
-                                     'type': 'number',
-                                     'example': 1
-                                 },
-                                 'pokemon_species': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'bulbasaur'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/pokemon-species/1/'
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["entry_number", "pokemon_species"],
+                "properties": {
+                    "entry_number": {"type": "number", "example": 1},
+                    "pokemon_species": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "bulbasaur"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokedex_entries(self, obj):
         results = PokemonDexNumber.objects.filter(pokedex=obj).order_by(
             "pokedex_number"
@@ -5912,23 +5766,23 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
         return data
 
-    @extend_schema_field(field={'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'the-teal-mask'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/version-group/26/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "the-teal-mask"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/version-group/26/",
+                    },
+                },
+            },
+        }
+    )
     def get_pokedex_version_groups(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(pokedex=obj)
         dex_groups = PokedexVersionGroupSerializer(
@@ -5988,24 +5842,23 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
             "versions",
         )
 
-    @extend_schema_field(field={
-                         'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'kanto'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/region/1/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "kanto"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/region/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_version_group_regions(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(version_group=obj)
         data = VersionGroupRegionSerializer(
@@ -6018,26 +5871,25 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return regions
 
-      # "name": "level-up",
-      # "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
-    @extend_schema_field(field={
-                         'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'level-up'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/move-learn-method/1/'
-                                 }
-                             }
-                         }
-                         })
+    # "name": "level-up",
+    # "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "level-up"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/move-learn-method/1/",
+                    },
+                },
+            },
+        }
+    )
     def get_learn_methods(self, obj):
         learn_method_objects = VersionGroupMoveLearnMethod.objects.filter(
             version_group=obj
@@ -6052,24 +5904,23 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return methods
 
-    @extend_schema_field(field={
-                         'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'name', 'url' ],
-                             'properties': {
-                                 'name': {
-                                     'type': 'string',
-                                     'example': 'kanto'
-                                 },
-                                 'url': {
-                                     'type': 'string',
-                                     'format': 'uri',
-                                     'example': 'https://pokeapi.co/api/v2/pokedex/2/'
-                                 }
-                             }
-                         }
-                         })
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["name", "url"],
+                "properties": {
+                    "name": {"type": "string", "example": "kanto"},
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "example": "https://pokeapi.co/api/v2/pokedex/2/",
+                    },
+                },
+            },
+        }
+    )
     def get_version_groups_pokedexes(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(version_group=obj)
         dex_groups = PokedexVersionGroupSerializer(

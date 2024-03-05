@@ -72,9 +72,9 @@ class PokeapiCommonViewset(
 
 
 @extend_schema(
-               description='Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.',
-               tags=[ 'pokemon' ],
-               )
+    description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
+    tags=["pokemon"],
+)
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer
@@ -82,14 +82,14 @@ class AbilityResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.',
-               tags=[ 'berries' ],
-               summary='Get a berry',
-               )
+    description="Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
+    tags=["berries"],
+    summary="Get a berry",
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List berries',
-                       )
+        summary="List berries",
+    )
 )
 class BerryResource(PokeapiCommonViewset):
     queryset = Berry.objects.all()
@@ -98,14 +98,14 @@ class BerryResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.',
-               tags=[ 'berries' ],
-               summary='Get berry by firmness',
-               )
+    description="Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
+    tags=["berries"],
+    summary="Get berry by firmness",
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List berry firmness',
-                       )
+        summary="List berry firmness",
+    )
 )
 class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
@@ -114,14 +114,14 @@ class BerryFirmnessResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.',
-               summary='Get berries by flavor',
-               tags=[ 'berries' ],
-               )
+    description="Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.",
+    summary="Get berries by flavor",
+    tags=["berries"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List berry flavors',
-                       )
+        summary="List berry flavors",
+    )
 )
 class BerryFlavorResource(PokeapiCommonViewset):
     queryset = BerryFlavor.objects.all()
@@ -130,14 +130,14 @@ class BerryFlavorResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Characteristics indicate which stat contains a Pokémon\'s highest IV. A Pokémon\'s Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.',
-               summary='Get charecterictic',
-               tags=[ 'pokemon' ],
-               )
+    description="Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.",
+    summary="Get charecterictic",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List charecterictics',
-                       )
+        summary="List charecterictics",
+    )
 )
 class CharacteristicResource(PokeapiCommonViewset):
     queryset = Characteristic.objects.all()
@@ -146,14 +146,14 @@ class CharacteristicResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Contest effects refer to the effects of moves when used in contests.',
-               tags=[ 'contests' ],
-               summary='Get contest effect',
-               )
+    description="Contest effects refer to the effects of moves when used in contests.",
+    tags=["contests"],
+    summary="Get contest effect",
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List contest effects',
-                       )
+        summary="List contest effects",
+    )
 )
 class ContestEffectResource(PokeapiCommonViewset):
     queryset = ContestEffect.objects.all()
@@ -162,14 +162,14 @@ class ContestEffectResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Contest types are categories judges used to weigh a Pokémon\'s condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.',
-               summary='Get contest type',
-               tags=[ 'contests' ],
-               )
+    description="Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
+    summary="Get contest type",
+    tags=["contests"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List contest types',
-                       )
+        summary="List contest types",
+    )
 )
 class ContestTypeResource(PokeapiCommonViewset):
     queryset = ContestType.objects.all()
@@ -178,14 +178,14 @@ class ContestTypeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.',
-               summary='Get egg group',
-               tags=[ 'pokemon' ],
-               )
+    description="Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.",
+    summary="Get egg group",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List egg groups',
-                       )
+        summary="List egg groups",
+    )
 )
 class EggGroupResource(PokeapiCommonViewset):
     queryset = EggGroup.objects.all()
@@ -194,14 +194,14 @@ class EggGroupResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Conditions which affect what pokemon might appear in the wild, e.g., day or night.',
-               summary='Get encounter condition',
-               tags=[ 'encounters' ],
-               )
+    description="Conditions which affect what pokemon might appear in the wild, e.g., day or night.",
+    summary="Get encounter condition",
+    tags=["encounters"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List encounter conditions',
-                       )
+        summary="List encounter conditions",
+    )
 )
 class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
@@ -210,14 +210,14 @@ class EncounterConditionResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.',
-               summary='Get encounter condition value',
-               tags=[ 'encounters' ],
-               )
+    description="Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.",
+    summary="Get encounter condition value",
+    tags=["encounters"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List encounter condition values',
-                       )
+        summary="List encounter condition values",
+    )
 )
 class EncounterConditionValueResource(PokeapiCommonViewset):
     queryset = EncounterConditionValue.objects.all()
@@ -226,14 +226,14 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.',
-               summary='Get encounter method',
-               tags=[ 'encounters' ],
-               )
+    description="Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.",
+    summary="Get encounter method",
+    tags=["encounters"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List encounter methods',
-                       )
+        summary="List encounter methods",
+    )
 )
 class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
@@ -242,14 +242,14 @@ class EncounterMethodResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.',
-               summary='Get evolution chain',
-               tags=[ 'evolution' ],
-               )
+    description="Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.",
+    summary="Get evolution chain",
+    tags=["evolution"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List evolution chains',
-                       )
+        summary="List evolution chains",
+    )
 )
 class EvolutionChainResource(PokeapiCommonViewset):
     queryset = EvolutionChain.objects.all()
@@ -258,14 +258,14 @@ class EvolutionChainResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.',
-               summary='Get evolution trigger',
-               tags=[ 'evolution' ],
-               )
+    description="Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.",
+    summary="Get evolution trigger",
+    tags=["evolution"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List evolution triggers',
-                       )
+        summary="List evolution triggers",
+    )
 )
 class EvolutionTriggerResource(PokeapiCommonViewset):
     queryset = EvolutionTrigger.objects.all()
@@ -274,14 +274,14 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.',
-               summary='Get genration',
-               tags=[ 'games' ],
-               )
+    description="A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.",
+    summary="Get genration",
+    tags=["games"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List genrations',
-                       )
+        summary="List genrations",
+    )
 )
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
@@ -290,14 +290,14 @@ class GenerationResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.',
-               summary='Get gender',
-               tags=[ 'pokemon' ],
-               )
+    description="Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.",
+    summary="Get gender",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List genders',
-                       )
+        summary="List genders",
+    )
 )
 class GenderResource(PokeapiCommonViewset):
     queryset = Gender.objects.all()
@@ -306,14 +306,14 @@ class GenderResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.',
-               summary='Get growth rate',
-               tags=[ 'pokemon' ],
-               )
+    description="Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.",
+    summary="Get growth rate",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List growth rates',
-                       )
+        summary="List growth rates",
+    )
 )
 class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
@@ -322,14 +322,14 @@ class GrowthRateResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.',
-               summary='Get item',
-               tags=[ 'items' ],
-               )
+    description="An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
+    summary="Get item",
+    tags=["items"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List items',
-                       )
+        summary="List items",
+    )
 )
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
@@ -338,14 +338,14 @@ class ItemResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Item categories determine where items will be placed in the players bag.',
-               summary='Get item category',
-               tags=[ 'items' ],
-               )
+    description="Item categories determine where items will be placed in the players bag.",
+    summary="Get item category",
+    tags=["items"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List item categories',
-                       )
+        summary="List item categories",
+    )
 )
 class ItemCategoryResource(PokeapiCommonViewset):
     queryset = ItemCategory.objects.all()
@@ -354,14 +354,14 @@ class ItemCategoryResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Item attributes define particular aspects of items, e.g."usable in battle" or "consumable".',
-               summary='Get item attribute',
-               tags=[ 'items' ],
-               )
+    description='Item attributes define particular aspects of items, e.g."usable in battle" or "consumable".',
+    summary="Get item attribute",
+    tags=["items"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List item attributes',
-                       )
+        summary="List item attributes",
+    )
 )
 class ItemAttributeResource(PokeapiCommonViewset):
     queryset = ItemAttribute.objects.all()
@@ -370,14 +370,14 @@ class ItemAttributeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='The various effects of the move"Fling" when used with different items.',
-               summary='Get item fling effect',
-               tags=[ 'items' ],
-               )
+    description='The various effects of the move"Fling" when used with different items.',
+    summary="Get item fling effect",
+    tags=["items"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List item fling effects',
-                       )
+        summary="List item fling effects",
+    )
 )
 class ItemFlingEffectResource(PokeapiCommonViewset):
     queryset = ItemFlingEffect.objects.all()
@@ -386,14 +386,14 @@ class ItemFlingEffectResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Pockets within the players bag used for storing items by category.',
-               summary='Get item pocket',
-               tags=[ 'items' ],
-               )
+    description="Pockets within the players bag used for storing items by category.",
+    summary="Get item pocket",
+    tags=["items"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List item pockets',
-                       )
+        summary="List item pockets",
+    )
 )
 class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
@@ -402,14 +402,14 @@ class ItemPocketResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Languages for translations of API resource information.',
-               summary='Get language',
-               tags=[ 'utility' ],
-               )
+    description="Languages for translations of API resource information.",
+    summary="Get language",
+    tags=["utility"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List languages',
-                       )
+        summary="List languages",
+    )
 )
 class LanguageResource(PokeapiCommonViewset):
     queryset = Language.objects.all()
@@ -418,14 +418,14 @@ class LanguageResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.',
-               summary='Get location',
-               tags=[ 'location' ],
-               )
+    description="Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
+    summary="Get location",
+    tags=["location"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List locations',
-                       )
+        summary="List locations",
+    )
 )
 class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
@@ -434,14 +434,14 @@ class LocationResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.',
-               summary='Get location area',
-               tags=[ 'location' ],
-               )
+    description="Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.",
+    summary="Get location area",
+    tags=["location"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List location areas',
-                       )
+        summary="List location areas",
+    )
 )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
     queryset = LocationArea.objects.all()
@@ -450,14 +450,14 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
 
 
 @extend_schema(
-               description='Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.',
-               summary='Get machine',
-               tags=[ 'machines' ],
-               )
+    description="Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
+    summary="Get machine",
+    tags=["machines"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List machines',
-                       )
+        summary="List machines",
+    )
 )
 class MachineResource(PokeapiCommonViewset):
     queryset = Machine.objects.all()
@@ -466,14 +466,14 @@ class MachineResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.',
-               summary='Get move',
-               tags=[ 'moves' ],
-               )
+    description="Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
+    summary="Get move",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List moves',
-                       )
+        summary="List moves",
+    )
 )
 class MoveResource(PokeapiCommonViewset):
     queryset = Move.objects.all()
@@ -482,14 +482,14 @@ class MoveResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Damage classes moves can have, e.g. physical, special, or non-damaging.',
-                       summary='Get move damage class',
-               tags=[ 'pokemon' ],
-               )
+    description="Damage classes moves can have, e.g. physical, special, or non-damaging.",
+    summary="Get move damage class",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move damage classes',
-                       )
+        summary="List move damage classes",
+    )
 )
 class MoveDamageClassResource(PokeapiCommonViewset):
     queryset = MoveDamageClass.objects.all()
@@ -498,14 +498,14 @@ class MoveDamageClassResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.',
-                       summary='Get move meta ailment',
-               tags=[ 'moves' ],
-               )
+    description="Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.",
+    summary="Get move meta ailment",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move meta ailments',
-                       )
+        summary="List move meta ailments",
+    )
 )
 class MoveMetaAilmentResource(PokeapiCommonViewset):
     queryset = MoveMetaAilment.objects.all()
@@ -514,14 +514,14 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.',
-                       summary='Get move battle style',
-               tags=[ 'moves' ],
-               )
+    description="Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
+    summary="Get move battle style",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move battle styles',
-                       )
+        summary="List move battle styles",
+    )
 )
 class MoveBattleStyleResource(PokeapiCommonViewset):
     queryset = MoveBattleStyle.objects.all()
@@ -530,14 +530,14 @@ class MoveBattleStyleResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Very general categories that loosely group move effects.',
-                       summary='Get move meta category',
-               tags=[ 'moves' ],
-               )
+    description="Very general categories that loosely group move effects.",
+    summary="Get move meta category",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move meta categories',
-                       )
+        summary="List move meta categories",
+    )
 )
 class MoveMetaCategoryResource(PokeapiCommonViewset):
     queryset = MoveMetaCategory.objects.all()
@@ -546,14 +546,14 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Methods by which Pokémon can learn moves.',
-               summary='Get move learn method',
-               tags=[ 'moves' ],
-               )
+    description="Methods by which Pokémon can learn moves.",
+    summary="Get move learn method",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move learn methods',
-                       )
+        summary="List move learn methods",
+    )
 )
 class MoveLearnMethodResource(PokeapiCommonViewset):
     queryset = MoveLearnMethod.objects.all()
@@ -562,14 +562,14 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.',
-               summary='Get move target',
-               tags=[ 'moves' ],
-               )
+    description="Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.",
+    summary="Get move target",
+    tags=["moves"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List move targets',
-                       )
+        summary="List move targets",
+    )
 )
 class MoveTargetResource(PokeapiCommonViewset):
     queryset = MoveTarget.objects.all()
@@ -578,14 +578,14 @@ class MoveTargetResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Natures influence how a Pokémon\'s stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.',
-               summary='Get nature',
-               tags=[ 'pokemon' ],
-               )
+    description="Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.",
+    summary="Get nature",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List natures',
-                       )
+        summary="List natures",
+    )
 )
 class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
@@ -594,14 +594,14 @@ class NatureResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Areas used for grouping Pokémon encounters in Pal Park. They\'re like habitats that are specific to Pal Park.',
-               summary='Get pal park area',
-               tags=[ 'location' ],
-               )
+    description="Areas used for grouping Pokémon encounters in Pal Park. They're like habitats that are specific to Pal Park.",
+    summary="Get pal park area",
+    tags=["location"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pal park areas',
-                       )
+        summary="List pal park areas",
+    )
 )
 class PalParkAreaResource(PokeapiCommonViewset):
     queryset = PalParkArea.objects.all()
@@ -610,14 +610,14 @@ class PalParkAreaResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Pokeathlon Stats are different attributes of a Pokémon\'s performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.',
-                       summary='Get pokeathlon stat',
-               tags=[ 'pokemon' ],
-               )
+    description="Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.",
+    summary="Get pokeathlon stat",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokeathlon stats',
-                       )
+        summary="List pokeathlon stats",
+    )
 )
 class PokeathlonStatResource(PokeapiCommonViewset):
     queryset = PokeathlonStat.objects.all()
@@ -626,14 +626,14 @@ class PokeathlonStatResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.',
-               summary='Get pokedex',
-               tags=[ 'games' ],
-               )
+    description="A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.",
+    summary="Get pokedex",
+    tags=["games"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokedex',
-                       )
+        summary="List pokedex",
+    )
 )
 class PokedexResource(PokeapiCommonViewset):
     queryset = Pokedex.objects.all()
@@ -642,14 +642,14 @@ class PokedexResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon\'s body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.',
-               summary='Get pokemon color',
-               tags=[ 'pokemon' ],
-               )
+    description="Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.",
+    summary="Get pokemon color",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemon colors',
-                       )
+        summary="List pokemon colors",
+    )
 )
 class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
@@ -658,14 +658,14 @@ class PokemonColorResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the \'Pokémon\' entity is used to represent such a variety.',
-               summary='Get pokemon form',
-               tags=[ 'pokemon' ],
-               )
+    description="Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the 'Pokémon' entity is used to represent such a variety.",
+    summary="Get pokemon form",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemon forms',
-                       )
+        summary="List pokemon forms",
+    )
 )
 class PokemonFormResource(PokeapiCommonViewset):
     queryset = PokemonForm.objects.all()
@@ -674,14 +674,14 @@ class PokemonFormResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.',
-                       summary='Get pokemom habita',
-               tags=[ 'pokemon' ],
-               )
+    description="Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.",
+    summary="Get pokemom habita",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemom habitas',
-                       )
+        summary="List pokemom habitas",
+    )
 )
 class PokemonHabitatResource(PokeapiCommonViewset):
     queryset = PokemonHabitat.objects.all()
@@ -690,14 +690,14 @@ class PokemonHabitatResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Shapes used for sorting Pokémon in a Pokédex.',
-               summary='Get pokemon shape',
-               tags=[ 'pokemon' ],
-               )
+    description="Shapes used for sorting Pokémon in a Pokédex.",
+    summary="Get pokemon shape",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemon shapes',
-                       )
+        summary="List pokemon shapes",
+    )
 )
 class PokemonShapeResource(PokeapiCommonViewset):
     queryset = PokemonShape.objects.all()
@@ -706,14 +706,14 @@ class PokemonShapeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.',
-               summary='Get pokemon',
-               tags=[ 'pokemon' ],
-               )
+    description="Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
+    summary="Get pokemon",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemon',
-                       )
+        summary="List pokemon",
+    )
 )
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
@@ -722,14 +722,14 @@ class PokemonResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.',
-               summary='Get pokemon species',
-               tags=[ 'pokemon' ],
-               )
+    description="A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.",
+    summary="Get pokemon species",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List pokemon species',
-                       )
+        summary="List pokemon species",
+    )
 )
 class PokemonSpeciesResource(PokeapiCommonViewset):
     queryset = PokemonSpecies.objects.all().order_by("id")
@@ -738,14 +738,14 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.',
-               summary='Get region',
-               tags=[ 'location' ],
-               )
+    description="A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.",
+    summary="Get region",
+    tags=["location"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List regions',
-                       )
+        summary="List regions",
+    )
 )
 class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
@@ -754,14 +754,14 @@ class RegionResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.',
-               summary='Get stat',
-               tags=[ 'pokemon' ],
-               )
+    description="Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.",
+    summary="Get stat",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List stats',
-                       )
+        summary="List stats",
+    )
 )
 class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
@@ -770,14 +770,14 @@ class StatResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Super contest effects refer to the effects of moves when used in super contests.',
-               summary='Get super contest effect',
-               tags=[ 'contests' ],
-               )
+    description="Super contest effects refer to the effects of moves when used in super contests.",
+    summary="Get super contest effect",
+    tags=["contests"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List super contest effects',
-                       )
+        summary="List super contest effects",
+    )
 )
 class SuperContestEffectResource(PokeapiCommonViewset):
     queryset = SuperContestEffect.objects.all()
@@ -786,14 +786,14 @@ class SuperContestEffectResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.',
-               summary='Get types',
-               tags=[ 'pokemon' ],
-               )
+    description="Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.",
+    summary="Get types",
+    tags=["pokemon"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List types',
-                       )
+        summary="List types",
+    )
 )
 class TypeResource(PokeapiCommonViewset):
     queryset = Type.objects.all()
@@ -802,14 +802,14 @@ class TypeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Versions of the games, e.g., Red, Blue or Yellow.',
-               summary='Get version',
-               tags=[ 'games' ],
-               )
+    description="Versions of the games, e.g., Red, Blue or Yellow.",
+    summary="Get version",
+    tags=["games"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List versions',
-                       )
+        summary="List versions",
+    )
 )
 class VersionResource(PokeapiCommonViewset):
     queryset = Version.objects.all()
@@ -818,14 +818,14 @@ class VersionResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Version groups categorize highly similar versions of the games.',
-               summary='Get version group',
-               tags=[ 'games' ],
-               )
+    description="Version groups categorize highly similar versions of the games.",
+    summary="Get version group",
+    tags=["games"],
+)
 @extend_schema_view(
     list=extend_schema(
-                       summary='List version groups',
-                       )
+        summary="List version groups",
+    )
 )
 class VersionGroupResource(PokeapiCommonViewset):
     queryset = VersionGroup.objects.all()
@@ -834,128 +834,116 @@ class VersionGroupResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-               description='Handles Pokemon Encounters as a sub-resource.',
-                       summary='Get pokemon encounter',
-               tags=[ 'encounters' ],
-               responses={'200': {
-                   'type': 'array',
-                         'items': {
-                             'type': 'object',
-                             'required': [ 'location_area', 'version_details' ],
-                             'properties': {
-                                 'location_area': {
-                                     'type': 'object',
-                                     'required': [ 'name', 'url' ],
-                                     'properties': {
-                                         'name': {
-                                             'type': 'string',
-                                             'example': 'cerulean-city-area'
-                                         },
-                                         'url': {
-                                             'type': 'string',
-                                             'format': 'uri',
-                                             'example': 'https://pokeapi.co/api/v2/location-area/281/'
-                                         }
-                                     }
-                                 },
-                                 'version_details': {
-                                     'type': 'array',
-                                     'items': {
-                                         'type': 'object',
-                                         'required': [
-                                             'encounter_details',
-                                             'max_chance',
-                                             'version'
-                                         ],
-                                         'properties': {
-                                             'encounter_details': {
-                                                 'type': 'array',
-                                                 'items': {
-                                                     'type': 'object',
-                                                     'required': [
-                                                         'chance',
-                                                         'condition_values',
-                                                         'max_level',
-                                                         'method',
-                                                         'min_level'
-                                                     ],
-                                                     'properties': {
-                                                         'chance': {
-                                                             'type': 'number',
-                                                             'example': 100
-                                                         },
-                                                         'condition_values': {
-                                                             'type': 'array',
-                                                             'items': {
-                                                                 'type': 'object',
-                                                                 'required': [ 'name', 'url' ],
-                                                                 'properties': {
-                                                                     'name': {
-                                                                         'type': 'string',
-                                                                         'example': 'story-progress-beat-red'
-                                                                     },
-                                                                     'url': {
-                                                                         'type': 'string',
-                                                                         'format': 'uri',
-                                                                         'example': 'https://pokeapi.co/api/v2/encounter-condition-value/55/'
-                                                                     }
-                                                                 }
-                                                             }
-                                                         },
-                                                         'max_level': {
-                                                             'type': 'number',
-                                                             'example': 10
-                                                         },
-                                                         'method': {
-                                                             'type': 'object',
-                                                             'required': [ 'name', 'url' ],
-                                                             'properties': {
-                                                                 'name': {
-                                                                     'type': 'string',
-                                                                     'example': 'gift'
-                                                                 },
-                                                                 'url': {
-                                                                     'type': 'string',
-                                                                     'format': 'uri',
-                                                                     'example': 'https://pokeapi.co/api/v2/encounter-method/18/'
-                                                                 }
-                                                             }
-                                                         },
-                                                         'min_level': {
-                                                             'type': 'number',
-                                                             'example': 10
-                                                         }
-                                                     }
-                                                 }
-                                             },
-                                             'max_chance': {
-                                                 'type': 'number',
-                                                 'example': 100
-                                             },
-                                             'version': {
-                                                 'type': 'object',
-                                                 'required': [ 'name', 'url' ],
-                                                 'properties': {
-                                                     'name': {
-                                                         'type': 'string',
-                                                         'example': 'red'
-                                                     },
-                                                     'url': {
-                                                         'type': 'string',
-                                                         'format': 'uri',
-                                                         'example': 'https://pokeapi.co/api/v2/version/1/'
-                                                     }
-                                                 }
-                                             }
-                                         }
-                                     }
-                                 }
-                             }
-                         }
-               }}
-               )
+    description="Handles Pokemon Encounters as a sub-resource.",
+    summary="Get pokemon encounter",
+    tags=["encounters"],
+    responses={
+        "200": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["location_area", "version_details"],
+                "properties": {
+                    "location_area": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "example": "cerulean-city-area"},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "example": "https://pokeapi.co/api/v2/location-area/281/",
+                            },
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["encounter_details", "max_chance", "version"],
+                            "properties": {
+                                "encounter_details": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "chance",
+                                            "condition_values",
+                                            "max_level",
+                                            "method",
+                                            "min_level",
+                                        ],
+                                        "properties": {
+                                            "chance": {
+                                                "type": "number",
+                                                "example": 100,
+                                            },
+                                            "condition_values": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "required": ["name", "url"],
+                                                    "properties": {
+                                                        "name": {
+                                                            "type": "string",
+                                                            "example": "story-progress-beat-red",
+                                                        },
+                                                        "url": {
+                                                            "type": "string",
+                                                            "format": "uri",
+                                                            "example": "https://pokeapi.co/api/v2/encounter-condition-value/55/",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                            "max_level": {
+                                                "type": "number",
+                                                "example": 10,
+                                            },
+                                            "method": {
+                                                "type": "object",
+                                                "required": ["name", "url"],
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "gift",
+                                                    },
+                                                    "url": {
+                                                        "type": "string",
+                                                        "format": "uri",
+                                                        "example": "https://pokeapi.co/api/v2/encounter-method/18/",
+                                                    },
+                                                },
+                                            },
+                                            "min_level": {
+                                                "type": "number",
+                                                "example": 10,
+                                            },
+                                        },
+                                    },
+                                },
+                                "max_chance": {"type": "number", "example": 100},
+                                "version": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "example": "red"},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "example": "https://pokeapi.co/api/v2/version/1/",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    },
+)
 class PokemonEncounterView(APIView):
-
     def get(self, request, pokemon_id):
         self.context = dict(request=request)
 

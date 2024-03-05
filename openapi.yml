@@ -2413,7 +2413,7 @@ paths:
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
         found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
-      summary: List pokemon specs
+      summary: List pokemon species
       parameters:
       - name: limit
         required: false
@@ -2447,7 +2447,7 @@ paths:
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
         found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.
-      summary: Get pokemon spec
+      summary: Get pokemon species
       parameters:
       - in: path
         name: id

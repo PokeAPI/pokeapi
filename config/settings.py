@@ -159,7 +159,7 @@ SPECTACULAR_SETTINGS = {
         'moves',
         'encounters',
         'games',
-        'utility'
-    ]
+        'utility',
+    ],
 }
 

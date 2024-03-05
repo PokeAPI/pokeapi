@@ -2,8 +2,7 @@ from collections import OrderedDict
 import json
 from django.urls import reverse
 from rest_framework import serializers
-from drf_spectacular.types import OpenApiTypes
-from drf_spectacular.utils import extend_schema_field, extend_schema, OpenApiParameter, OpenApiExample, extend_schema_serializer
+from drf_spectacular.utils import extend_schema_field
 
 # pylint: disable=redefined-builtin
 
@@ -1115,7 +1114,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                              },
                                              'encounter_details': {
                                                  'type': 'object',
-                                                 'required': [ 
+                                                 'required': [
                                                      'min_level',
                                                      'max_level',
                                                      'condition_value',
@@ -2106,13 +2105,13 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "berries", "contest_type", "names")
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'potency', 'berry' ],
                              'properties': {
                                  'potency':  {
                                      'type': 'integer',
-                                     'example': 10  
+                                     'example': 10
                                  },
                                  'berry': {
                                      'type': 'object',
@@ -2172,13 +2171,13 @@ class BerryDetailSerializer(serializers.ModelSerializer):
         )
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'potency', 'flavor' ],
                              'properties': {
                                  'potency':  {
                                      'type': 'integer',
-                                     'example': 10  
+                                     'example': 10
                                  },
                                  'flavor': {
                                      'type': 'object',
@@ -2243,14 +2242,14 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "names", "pokemon_species")
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'potency', 'flavor' ],
                              'properties': {
                                  'name':  {
                                      'type': 'string',
                                      'description': 'Pokemon species name.',
-                                     'example': 'bulbasaur'  
+                                     'example': 'bulbasaur'
                                  },
                                  'url':  {
                                      'type': 'string',
@@ -2364,7 +2363,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                              'half_damage_from',
                              'double_damage_from'
                          ],
-                         'properties': { 
+                         'properties': {
                              'no_damage_to': {
                                  'type': 'array',
                                  'items': {
@@ -2540,7 +2539,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
 
     # returns past type relationships for the given type object
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'generation', 'damage_relations' ],
                              'properties': {
@@ -2569,7 +2568,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                          'half_damage_from',
                                          'double_damage_from'
                                      ],
-                                     'properties': { 
+                                     'properties': {
                                          'no_damage_to': {
                                              'type': 'array',
                                              'items': {
@@ -2778,13 +2777,13 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         return gen_introduced.id <= current_gen.id
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'potency', 'flavor' ],
                              'properties': {
                                  'slot':  {
                                      'type': 'integer',
-                                     'example': 1  
+                                     'example': 1
                                  },
                                  'pokemon': {
                                      'type': 'object',
@@ -2913,7 +2912,7 @@ class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "moves", "names")
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'name', 'url' ],
                              'properties': {
@@ -2960,7 +2959,7 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "descriptions", "moves")
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'name', 'url' ],
                              'properties': {
@@ -3071,7 +3070,7 @@ class MoveChangeSerializer(serializers.ModelSerializer):
         )
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'effect', 'short_effect', 'language' ],
                              'properties': {
@@ -3199,7 +3198,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         )
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'name', 'url' ],
                              'properties': {
@@ -3233,7 +3232,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         return pokemon_list
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'machine', 'version_group' ],
                              'properties': {
@@ -3287,7 +3286,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         return machines
 
     @extend_schema_field(field={'type': 'object',
-                         'properties': { 
+                         'properties': {
                              'required': [ 'normal', 'super' ],
                              'normal': {
                                  'type': 'object',
@@ -3437,7 +3436,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         return details
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'effect', 'short_effect', 'language' ],
                              'properties': {
@@ -3482,7 +3481,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
         return data
 
     @extend_schema_field(field={'type': 'array',
-                         'items': { 
+                         'items': {
                              'type': 'object',
                              'required': [ 'effect_entries', 'version_group' ],
                              'properties': {

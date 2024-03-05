@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
-from drf_spectacular.utils import extend_schema, extend_schema_serializer, extend_schema_view 
+from drf_spectacular.utils import extend_schema, extend_schema_view
 
 from .models import *
 from .serializers import *
@@ -862,7 +862,7 @@ class VersionGroupResource(PokeapiCommonViewset):
                                      'type': 'array',
                                      'items': {
                                          'type': 'object',
-                                         'required': [ 
+                                         'required': [
                                              'encounter_details',
                                              'max_chance',
                                              'version'

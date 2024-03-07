@@ -3228,8 +3228,8 @@ class MoveDetailSerializer(serializers.ModelSerializer):
     @extend_schema_field(
         field={
             "type": "object",
+            "required": ["normal", "super"],
             "properties": {
-                "required": ["normal", "super"],
                 "normal": {
                     "type": "object",
                     "required": ["use_before", "use_after"],

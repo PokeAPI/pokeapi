@@ -1,8 +1,18 @@
 openapi: 3.1.0
 info:
-  title: pokeapi
+  title: PokéAPI
   version: 2.7.0
-  description: A RESTful API for Pokémon.
+  description: "All the Pokémon data you'll ever need in one place, easily accessible\
+    \ through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is\
+    \ a full RESTful API linked to an extensive database detailing everything about\
+    \ the Pokémon main game series.\n\nWe've covered everything from Pokémon to Berry\
+    \ Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2)\
+    \ on how to use this API. It takes minutes to get started.\n\nThis API will always\
+    \ be publicly available and will never require any extensive setup process to\
+    \ consume.\n\nCreated by [**Paul Hallett**(]https://github.com/phalt) and other\
+    \ [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing)\
+    \ around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n\
+    \    "
 paths:
   /api/v2/ability/:
     get:

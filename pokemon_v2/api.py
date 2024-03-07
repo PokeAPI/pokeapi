@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
-from drf_spectacular.utils import extend_schema, extend_schema_view
+from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
+from drf_spectacular.types import OpenApiTypes
 
 from .models import *
 from .serializers import *
@@ -39,6 +40,16 @@ class NameOrIdRetrieval:
     idPattern = re.compile(r"^-?[0-9]+$")
     namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="This parameter can be a string or an integer.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
     def get_object(self):
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)

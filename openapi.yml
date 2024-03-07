@@ -5164,10 +5164,10 @@ components:
           minimum: -2147483648
         contest_combos:
           type: object
+          required:
+          - normal
+          - super
           properties:
-            required:
-            - normal
-            - super
             normal:
               type: object
               required:

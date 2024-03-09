@@ -1,4 +1,5 @@
 from django.conf.urls import include, url
+from django.urls import path
 
 #####################################
 #
@@ -7,6 +8,12 @@ from django.conf.urls import include, url
 #####################################
 
 from rest_framework import routers
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
+)
+
 from pokemon_v2.api import *
 
 # pylint: disable=invalid-name
@@ -75,5 +82,20 @@ urlpatterns = [
         r"^api/v2/pokemon/(?P<pokemon_id>\d+)/encounters",
         PokemonEncounterView.as_view(),
         name="pokemon_encounters",
+    ),
+    path(
+        "api/v2/schema/",
+        SpectacularAPIView.as_view(),
+        name="schema",
+    ),
+    path(
+        "api/v2/schema/swagger-ui/",
+        SpectacularSwaggerView.as_view(url_name="schema"),
+        name="swagger-ui",
+    ),
+    path(
+        "api/v2/schema/redoc/",
+        SpectacularRedocView.as_view(url_name="schema"),
+        name="redoc",
     ),
 ]

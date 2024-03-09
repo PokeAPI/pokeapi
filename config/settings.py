@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     "corsheaders",
     "rest_framework",
     "cachalot",
+    "drf_spectacular",
 ) + CUSTOM_APPS
 
 
@@ -116,6 +117,16 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
     "PAGINATE_BY": 20,
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Pokémon API",
+    "DESCRIPTION": (
+        "All the Pokémon data you'll ever need in one place,"
+        "easily accessible through a modern free open-source RESTful API."
+    ),
+    "VERSION": "2.7.0",
 }
 
 

@@ -1,9 +1,12 @@
 import re
+
+from django.http import Http404
+from django.shortcuts import get_object_or_404
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from django.http import Http404
 
 from .models import *
 from .serializers import *
@@ -69,11 +72,23 @@ class PokeapiCommonViewset(
 #  APIS  #
 ##########
 
+retrieve_path_parameter = OpenApiParameter(
+    name="id",
+    description="This parameter can be a string or an integer.",
+    location=OpenApiParameter.PATH,
+    type=OpenApiTypes.STR,
+    required=True,
+)
+
 
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class BerryResource(PokeapiCommonViewset):
@@ -81,17 +96,29 @@ class BerryResource(PokeapiCommonViewset):
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class BerryFlavorResource(PokeapiCommonViewset):
     queryset = BerryFlavor.objects.all()
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class CharacteristicResource(PokeapiCommonViewset):
@@ -117,11 +144,19 @@ class EggGroupResource(PokeapiCommonViewset):
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class EncounterConditionValueResource(PokeapiCommonViewset):
@@ -129,11 +164,19 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -147,11 +190,19 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class GenderResource(PokeapiCommonViewset):
@@ -159,11 +210,19 @@ class GenderResource(PokeapiCommonViewset):
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class ItemResource(PokeapiCommonViewset):
@@ -171,11 +230,19 @@ class ItemResource(PokeapiCommonViewset):
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class ItemCategoryResource(PokeapiCommonViewset):
     queryset = ItemCategory.objects.all()
     serializer_class = ItemCategoryDetailSerializer
     list_serializer_class = ItemCategorySummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class ItemAttributeResource(PokeapiCommonViewset):
@@ -183,11 +250,19 @@ class ItemAttributeResource(PokeapiCommonViewset):
     serializer_class = ItemAttributeDetailSerializer
     list_serializer_class = ItemAttributeSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class ItemFlingEffectResource(PokeapiCommonViewset):
     queryset = ItemFlingEffect.objects.all()
     serializer_class = ItemFlingEffectDetailSerializer
     list_serializer_class = ItemFlingEffectSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class ItemPocketResource(PokeapiCommonViewset):
@@ -195,11 +270,19 @@ class ItemPocketResource(PokeapiCommonViewset):
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class LanguageResource(PokeapiCommonViewset):
     queryset = Language.objects.all()
     serializer_class = LanguageDetailSerializer
     list_serializer_class = LanguageSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class LocationResource(PokeapiCommonViewset):
@@ -225,11 +308,19 @@ class MoveResource(PokeapiCommonViewset):
     serializer_class = MoveDetailSerializer
     list_serializer_class = MoveSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class MoveDamageClassResource(PokeapiCommonViewset):
     queryset = MoveDamageClass.objects.all()
     serializer_class = MoveDamageClassDetailSerializer
     list_serializer_class = MoveDamageClassSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class MoveMetaAilmentResource(PokeapiCommonViewset):
@@ -237,11 +328,19 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class MoveBattleStyleResource(PokeapiCommonViewset):
     queryset = MoveBattleStyle.objects.all()
     serializer_class = MoveBattleStyleDetailSerializer
     list_serializer_class = MoveBattleStyleSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class MoveMetaCategoryResource(PokeapiCommonViewset):
@@ -249,11 +348,19 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
     serializer_class = MoveMetaCategoryDetailSerializer
     list_serializer_class = MoveMetaCategorySummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class MoveLearnMethodResource(PokeapiCommonViewset):
     queryset = MoveLearnMethod.objects.all()
     serializer_class = MoveLearnMethodDetailSerializer
     list_serializer_class = MoveLearnMethodSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class MoveTargetResource(PokeapiCommonViewset):
@@ -261,11 +368,19 @@ class MoveTargetResource(PokeapiCommonViewset):
     serializer_class = MoveTargetDetailSerializer
     list_serializer_class = MoveTargetSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class PalParkAreaResource(PokeapiCommonViewset):
@@ -273,11 +388,19 @@ class PalParkAreaResource(PokeapiCommonViewset):
     serializer_class = PalParkAreaDetailSerializer
     list_serializer_class = PalParkAreaSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class PokeathlonStatResource(PokeapiCommonViewset):
     queryset = PokeathlonStat.objects.all()
     serializer_class = PokeathlonStatDetailSerializer
     list_serializer_class = PokeathlonStatSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class PokedexResource(PokeapiCommonViewset):
@@ -285,11 +408,19 @@ class PokedexResource(PokeapiCommonViewset):
     serializer_class = PokedexDetailSerializer
     list_serializer_class = PokedexSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class PokemonFormResource(PokeapiCommonViewset):
@@ -297,11 +428,19 @@ class PokemonFormResource(PokeapiCommonViewset):
     serializer_class = PokemonFormDetailSerializer
     list_serializer_class = PokemonFormSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class PokemonHabitatResource(PokeapiCommonViewset):
     queryset = PokemonHabitat.objects.all()
     serializer_class = PokemonHabitatDetailSerializer
     list_serializer_class = PokemonHabitatSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class PokemonShapeResource(PokeapiCommonViewset):
@@ -309,11 +448,19 @@ class PokemonShapeResource(PokeapiCommonViewset):
     serializer_class = PokemonShapeDetailSerializer
     list_serializer_class = PokemonShapeSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class PokemonSpeciesResource(PokeapiCommonViewset):
@@ -321,17 +468,29 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class SuperContestEffectResource(PokeapiCommonViewset):
@@ -345,11 +504,19 @@ class TypeResource(PokeapiCommonViewset):
     serializer_class = TypeDetailSerializer
     list_serializer_class = TypeSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class VersionResource(PokeapiCommonViewset):
     queryset = Version.objects.all()
     serializer_class = VersionDetailSerializer
     list_serializer_class = VersionSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 class VersionGroupResource(PokeapiCommonViewset):
@@ -357,12 +524,79 @@ class VersionGroupResource(PokeapiCommonViewset):
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 class PokemonEncounterView(APIView):
     """
     Handles Pokemon Encounters as a sub-resource.
     """
 
+    @extend_schema(
+        responses={
+            200: {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "location_area": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"},
+                            },
+                        },
+                        "version_details": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "version": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {"type": "string"},
+                                            "url": {"type": "string"},
+                                        },
+                                    },
+                                    "max_chance": {"type": "integer"},
+                                    "encounter_details": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "min_level": {"type": "integer"},
+                                                "max_level": {"type": "integer"},
+                                                "condition_values": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "name": {"type": "string"},
+                                                            "url": {"type": "string"},
+                                                        },
+                                                    },
+                                                },
+                                                "chance": {"type": "integer"},
+                                                "method": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {"type": "string"},
+                                                        "url": {"type": "string"},
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get(self, request, pokemon_id):
         self.context = dict(request=request)
 

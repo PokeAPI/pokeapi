@@ -1,13 +1,16 @@
-from collections import OrderedDict
 import json
+from collections import OrderedDict
+
 from django.urls import reverse
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
+
+from .models import *
 
 # pylint: disable=redefined-builtin
 
 # PokeAPI v2 serializers in order of dependency
-
-from .models import *
 
 
 #########################
@@ -361,6 +364,15 @@ class PokemonAbilitySerializer(serializers.ModelSerializer):
         fields = ("is_hidden", "slot", "ability", "pokemon")
 
 
+# TODO: sample code
+class GetAbilityPokemonSerializer(serializers.ModelSerializer):
+    pokemon = PokemonSummarySerializer()
+
+    class Meta:
+        model = PokemonAbility
+        fields = ("is_hidden", "slot", "pokemon")
+
+
 class PokemonAbilityPastSerializer(serializers.ModelSerializer):
     generation = GenerationSummarySerializer()
     ability = AbilitySummarySerializer()
@@ -477,6 +489,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
             "descriptions",
         )
 
+    @extend_schema_field({"type": "array", "items": {"type": "integer"}})
     def get_values(self, obj):
         mod = obj.gene_mod_5
         values = []
@@ -609,6 +622,7 @@ class RegionDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
+    @extend_schema_field(VersionGroupSummarySerializer(many=True))
     def get_region_version_groups(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(region=obj)
         data = VersionGroupRegionSerializer(
@@ -676,6 +690,24 @@ class GenderDetailSerializer(serializers.ModelSerializer):
         model = Gender
         fields = ("id", "name", "pokemon_species_details", "required_for_evolution")
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "rate": {"type": "integer"},
+                    "pokemon_species": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_species(self, obj):
         species_objects = []
 
@@ -698,6 +730,7 @@ class GenderDetailSerializer(serializers.ModelSerializer):
 
         return details
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_required(self, obj):
         evo_objects = PokemonEvolution.objects.filter(gender=obj)
         species_list = []
@@ -907,6 +940,39 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             "pokemon_encounters",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "encounter_method": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rate": {"type": "integer"},
+                                "version": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_method_rates(self, obj):
         # Get encounters related to this area and pull out unique encounter methods
         encounter_rates = LocationAreaEncounterRate.objects.filter(
@@ -948,6 +1014,67 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
 
         return encounter_rate_list
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "pokemon": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "version": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                                "max_chance": {"type": "integer"},
+                                "encounter_details": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "min_level": {"type": "integer"},
+                                            "max_level": {"type": "integer"},
+                                            "condition_values": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": {"type": "string"},
+                                                        "url": {"type": "string"},
+                                                    },
+                                                },
+                                            },
+                                            "chance": {"type": "integer"},
+                                            "method": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {"type": "string"},
+                                                    "url": {"type": "string"},
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         # get versions for later use
         version_objects = Version.objects.all()
@@ -1119,18 +1246,20 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             "pokemon",
         )
 
+    @extend_schema_field(GetAbilityPokemonSerializer(many=True))
     def get_ability_pokemon(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
-        data = PokemonAbilitySerializer(
+        # TODO: sample code
+        return GetAbilityPokemonSerializer(
             pokemon_ability_objects, many=True, context=self.context
         ).data
-        pokemon = []
+        # pokemon = []
 
-        for poke in data:
-            del poke["ability"]
-            pokemon.append(poke)
+        # for poke in data:
+        #     del poke["ability"]
+        #     pokemon.append(poke)
 
-        return pokemon
+        # return pokemon
 
 
 ######################
@@ -1169,6 +1298,39 @@ class StatDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "increase": {
+                    "type": "object",
+                    "properties": {
+                        "change": {"type": "integer"},
+                        "move": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"},
+                            },
+                        },
+                    },
+                },
+                "decrease": {
+                    "type": "object",
+                    "properties": {
+                        "change": {"type": "integer"},
+                        "move": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"},
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_moves_that_affect(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
         stat_changes = MoveMetaStatChangeSerializer(
@@ -1185,6 +1347,33 @@ class StatDetailSerializer(serializers.ModelSerializer):
 
         return changes
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "increase": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+                "decrease": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_natures_that_affect(self, obj):
         increase_objects = Nature.objects.filter(increased_stat=obj)
         increases = NatureSummarySerializer(
@@ -1279,6 +1468,7 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
         model = ItemAttribute
         fields = ("id", "name", "descriptions", "items", "names")
 
+    @extend_schema_field(ItemSummarySerializer(many=True))
     def get_attribute_items(self, obj):
         item_map_objects = ItemAttributeMap.objects.filter(item_attribute=obj)
         items = []
@@ -1395,6 +1585,24 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "machines",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "machine": {"type": "string"},
+                    "version_group": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_item_machines(self, obj):
         machine_objects = Machine.objects.filter(item=obj)
 
@@ -1415,10 +1623,19 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "default": {"type": "string"},
+            },
+        }
+    )
     def get_item_sprites(self, obj):
         sprites_object = ItemSprites.objects.get(item_id=obj)
         return sprites_object.sprites
 
+    @extend_schema_field(ItemAttributeSummarySerializer(many=True))
     def get_item_attributes(self, obj):
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
         serializer = ItemAttributeMapSerializer(
@@ -1436,6 +1653,39 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return attributes
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "pokemon": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rarity": {"type": "integer"},
+                                "version": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_held_by_pokemon(self, obj):
         pokemon_items = PokemonItem.objects.filter(item=obj).order_by("pokemon_id")
         pokemon_ids = pokemon_items.values("pokemon_id").distinct()
@@ -1468,6 +1718,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
+    @extend_schema_field(EvolutionChainSummarySerializer(many=False))
     def get_baby_trigger_for(self, obj):
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)
@@ -1532,6 +1783,24 @@ class NatureDetailSerializer(serializers.ModelSerializer):
             "names",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "max_change": {"type": "integer"},
+                    "pokeathlon_stat": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokeathlon_stats(self, obj):
         pokeathlon_stat_objects = NaturePokeathlonStat.objects.filter(nature=obj)
         pokeathlon_stats = NaturePokeathlonStatSerializer(
@@ -1587,6 +1856,24 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
         model = BerryFlavor
         fields = ("id", "name", "berries", "contest_type", "names")
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "potency": {"type": "integer"},
+                    "berry": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_berries_with_flavor(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(
             berry_flavor=obj, potency__gt=0
@@ -1624,6 +1911,24 @@ class BerryDetailSerializer(serializers.ModelSerializer):
             "natural_gift_type",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "potency": {"type": "integer"},
+                    "flavor": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_berry_flavors(self, obj):
         flavor_map_objects = BerryFlavorMap.objects.filter(berry=obj)
         flavor_maps = BerryFlavorMapSerializer(
@@ -1666,6 +1971,7 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
         model = EggGroup
         fields = ("id", "name", "names", "pokemon_species")
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_species(self, obj):
         results = PokemonEggGroup.objects.filter(egg_group=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -1759,6 +2065,55 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                 TypeSummarySerializer(type, context=self.context).data
             )
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "no_damage_to": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "half_damage_to": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "double_damage_to": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "no_damage_from": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "half_damage_from": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "double_damage_from": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+            },
+        }
+    )
     def get_type_relationships(self, obj):
         relations = OrderedDict()
         relations["no_damage_to"] = []
@@ -1822,8 +2177,72 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                     del rel_list[i]
                     return
 
-    # returns past type relationships for the given type object
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "damage_relations": {
+                        "type": "object",
+                        "properties": {
+                            "no_damage_to": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "half_damage_to": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "double_damage_to": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "no_damage_from": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "half_damage_from": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "double_damage_from": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_type_past_relationships(self, obj):
+        """returns past type relationships for the given type object"""
         # collect data from DB
         damage_type_results = list(TypeEfficacyPast.objects.filter(damage_type=obj))
         target_type_results = list(TypeEfficacyPast.objects.filter(target_type=obj))
@@ -1917,6 +2336,24 @@ class TypeDetailSerializer(serializers.ModelSerializer):
         gen_introduced = Generation.objects.get(pk=type_obj.generation.id)
         return gen_introduced.id <= current_gen.id
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "slot": {"type": "integer"},
+                    "pokemon": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_type_pokemon(self, obj):
         poke_type_objects = PokemonType.objects.filter(type=obj)
         poke_types = PokemonTypeSerializer(
@@ -2023,6 +2460,7 @@ class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer):
         model = MoveMetaAilment
         fields = ("id", "name", "moves", "names")
 
+    @extend_schema_field(MoveSummarySerializer(many=True))
     def get_ailment_moves(self, obj):
         move_meta_objects = MoveMeta.objects.filter(move_meta_ailment=obj)
         moves = []
@@ -2053,6 +2491,7 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
         model = MoveMetaCategory
         fields = ("id", "name", "descriptions", "moves")
 
+    @extend_schema_field(MoveSummarySerializer(many=True))
     def get_category_moves(self, obj):
         move_meta_objects = MoveMeta.objects.filter(move_meta_category=obj)
         moves = []
@@ -2244,6 +2683,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
             "learned_by_pokemon",
         )
 
+    @extend_schema_field(PokemonSummarySerializer(many=True))
     def get_learned_by_pokemon(self, obj):
         pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
 
@@ -2261,6 +2701,29 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return pokemon_list
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "machine": {
+                        "type": "object",
+                        "properties": {
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_group": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_move_machines(self, obj):
         machine_objects = Machine.objects.filter(move=obj)
 
@@ -2281,6 +2744,63 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return machines
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "normal": {
+                    "type": "object",
+                    "properties": {
+                        "use_before": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                        "use_after": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                    },
+                },
+                "super": {
+                    "type": "object",
+                    "properties": {
+                        "use_before": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                        "use_after": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_combos(self, obj):
         normal_before_objects = ContestCombo.objects.filter(first_move=obj)
         normal_before_data = ContestComboSerializer(
@@ -2338,6 +2858,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return details
 
+    @extend_schema_field(MoveEffectEffectTextSerializer(many=True))
     def get_effect_text(self, obj):
         effect_texts = MoveEffectEffectText.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectEffectTextSerializer(
@@ -2352,6 +2873,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(MoveEffectChangeSerializer(many=True))
     def get_effect_change_text(self, obj):
         effect_changes = MoveEffectChange.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectChangeSerializer(
@@ -2360,6 +2882,24 @@ class MoveDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "change": {"type": "integer"},
+                    "stat": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_move_stat_change(self, obj):
         stat_change_objects = MoveMetaStatChange.objects.filter(move=obj)
         stat_changes = MoveMetaStatChangeSerializer(
@@ -2404,6 +2944,25 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
         model = PalParkArea
         fields = ("id", "name", "names", "pokemon_encounters")
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "base_score": {"type": "integer"},
+                    "rate": {"type": "integer"},
+                    "pokemon_species": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pal_park_area=obj)
         parks = PalParkSerializer(
@@ -2488,6 +3047,24 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "types",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_form_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, name__regex=".+"
@@ -2503,6 +3080,24 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_form_pokemon_names(self, obj):
         form_results = PokemonFormName.objects.filter(
             pokemon_form=obj, pokemon_name__regex=".+"
@@ -2523,6 +3118,24 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
         return sprites_object.sprites
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "slot": {"type": "string"},
+                    "type": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_form_types(self, obj):
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
         form_types = PokemonFormTypeSerializer(
@@ -2606,6 +3219,7 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
         model = MoveLearnMethod
         fields = ("id", "name", "names", "descriptions", "version_groups")
 
+    @extend_schema_field(VersionGroupSummarySerializer(many=True))
     def get_method_version_groups(self, obj):
         version_group_objects = VersionGroupMoveLearnMethod.objects.filter(
             move_learn_method=obj
@@ -2650,6 +3264,24 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
         model = PokemonShape
         fields = ("id", "name", "awesome_names", "names", "pokemon_species")
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_shape_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(
@@ -2662,6 +3294,24 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "awesome_name": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_shape_awesome_names(self, obj):
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(
@@ -2763,6 +3413,46 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         cries_object = PokemonCries.objects.get(pokemon_id=obj)
         return cries_object.cries
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "move": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_group_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "level_learned_at": {"type": "integer"},
+                                "version_group": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                                "move_learn_method": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_moves(self, obj):
         version_objects = VersionGroup.objects.all()
         version_data = VersionGroupSummarySerializer(
@@ -2814,6 +3504,39 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return move_list
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "item": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rarity": {"type": "integer"},
+                                "version": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_held_items(self, obj):
         # Get items related to this pokemon and pull out unique Item IDs
         pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by("item_id")
@@ -2847,6 +3570,25 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return item_list
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "is_hidden": {"type": "boolean"},
+                    "slot": {"type": "integer"},
+                    "ability": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_abilities(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(pokemon=obj)
         data = PokemonAbilitySerializer(
@@ -2860,6 +3602,33 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return abilities
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "abilities": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string"},
+                                "url": {"type": "string"},
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_past_pokemon_abilities(self, obj):
         pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
         pokemon_past_abilities = PokemonAbilityPastSerializer(
@@ -2895,6 +3664,24 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return final_data
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "slot": {"type": "integer"},
+                    "type": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_types(self, obj):
         poke_type_objects = PokemonType.objects.filter(pokemon=obj)
         poke_types = PokemonTypeSerializer(
@@ -2906,6 +3693,39 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return poke_types
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                    "types": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "slot": {"type": "integer"},
+                                "type": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_past_pokemon_types(self, obj):
         poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
         poke_past_types = PokemonTypePastSerializer(
@@ -2966,6 +3786,7 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = EvolutionTrigger
         fields = ("id", "name", "names", "pokemon_species")
 
+    @extend_schema_field(PokemonSpeciesSummarySerializer(many=True))
     def get_species(self, obj):
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
@@ -3073,6 +3894,24 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "varieties",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_names(self, obj):
         species_results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         species_serializer = PokemonSpeciesNameSerializer(
@@ -3086,6 +3925,24 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "genus": {"type": "string"},
+                    "language": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_genera(self, obj):
         results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         serializer = PokemonSpeciesNameSerializer(
@@ -3101,6 +3958,18 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return genera
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "url": {"type": "string"},
+                },
+            },
+        }
+    )
     def get_pokemon_egg_groups(self, obj):
         results = PokemonEggGroup.objects.filter(pokemon_species=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
@@ -3110,6 +3979,24 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return groups
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "is_default": {"type": "boolean"},
+                    "pokemon": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokemon_varieties(self, obj):
         results = Pokemon.objects.filter(pokemon_species=obj)
         summary_data = PokemonSummarySerializer(
@@ -3129,6 +4016,25 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
         return varieties
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "base_score": {"type": "integer"},
+                    "rate": {"type": "integer"},
+                    "area": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_encounters(self, obj):
         pal_park_objects = PalPark.objects.filter(pokemon_species=obj)
         parks = PalParkSerializer(
@@ -3186,6 +4092,111 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
         model = EvolutionChain
         fields = ("id", "baby_trigger_item", "chain")
 
+    @extend_schema_field(
+        {
+            "type": "object",
+            "properties": {
+                "is_baby": {"type": "boolean"},
+                "species": {
+                    "type": "object",
+                    "properties": {
+                        "name": {"type": "string"},
+                        "url": {"type": "string"},
+                    },
+                },
+                "evolution_details": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "item": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "trigger": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "gender": {},
+                            "held_item": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "known_move": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "known_move_type": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "location": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "min_level": {"type": "integer"},
+                            "min_happiness": {"type": "integer"},
+                            "min_beauty": {"type": "integer"},
+                            "min_affection": {"type": "integer"},
+                            "needs_overworld_rain": {"type": "boolean"},
+                            "party_species": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "party_type": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "relative_physical_stats": {"type": "integer"},
+                            "time_of_day": {"type": "string"},
+                            "trade_species": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {"type": "string"},
+                                    "url": {"type": "string"},
+                                },
+                            },
+                            "turn_upside_down": {"type": "boolean"},
+                        },
+                    },
+                },
+                "evolves_to": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def build_chain(self, obj):
         chain_id = obj.id
 
@@ -3298,6 +4309,48 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
         model = PokeathlonStat
         fields = ("id", "name", "affecting_natures", "names")
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "increase": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "max_change": {"type": "integer"},
+                                "nature": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    "decrease": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "max_change": {"type": "integer"},
+                                "nature": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {"type": "string"},
+                                        "url": {"type": "string"},
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_natures_that_affect(self, obj):
         stat_change_objects = NaturePokeathlonStat.objects.filter(pokeathlon_stat=obj)
         stat_changes = NaturePokeathlonStatSerializer(
@@ -3356,6 +4409,24 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
             "version_groups",
         )
 
+    @extend_schema_field(
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "entry_number": {"type": "integer"},
+                    "pokemon_species": {
+                        "type": "object",
+                        "properties": {
+                            "name": {"type": "string"},
+                            "url": {"type": "string"},
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_pokedex_entries(self, obj):
         results = PokemonDexNumber.objects.filter(pokedex=obj).order_by(
             "pokedex_number"
@@ -3370,6 +4441,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
 
         return data
 
+    @extend_schema_field(VersionGroupSummarySerializer(many=True))
     def get_pokedex_version_groups(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(pokedex=obj)
         dex_groups = PokedexVersionGroupSerializer(
@@ -3429,6 +4501,7 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
             "versions",
         )
 
+    @extend_schema_field(RegionSummarySerializer(many=True))
     def get_version_group_regions(self, obj):
         vg_regions = VersionGroupRegion.objects.filter(version_group=obj)
         data = VersionGroupRegionSerializer(
@@ -3441,6 +4514,7 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return regions
 
+    @extend_schema_field(MoveLearnMethodSummarySerializer(many=True))
     def get_learn_methods(self, obj):
         learn_method_objects = VersionGroupMoveLearnMethod.objects.filter(
             version_group=obj
@@ -3455,6 +4529,7 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
 
         return methods
 
+    @extend_schema_field(PokedexSummarySerializer(many=True))
     def get_version_groups_pokedexes(self, obj):
         dex_group_objects = PokedexVersionGroup.objects.filter(version_group=obj)
         dex_groups = PokedexVersionGroupSerializer(

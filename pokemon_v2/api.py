@@ -72,22 +72,21 @@ class PokeapiCommonViewset(
 #  APIS  #
 ##########
 
+retrieve_path_parameter = OpenApiParameter(
+    name="id",
+    description="This parameter can be a string or an integer.",
+    location=OpenApiParameter.PATH,
+    type=OpenApiTypes.STR,
+    required=True,
+)
+
 
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -97,16 +96,7 @@ class BerryResource(PokeapiCommonViewset):
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -116,16 +106,7 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -135,16 +116,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -172,16 +144,7 @@ class EggGroupResource(PokeapiCommonViewset):
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -191,16 +154,7 @@ class EncounterConditionResource(PokeapiCommonViewset):
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -210,16 +164,7 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -229,16 +174,7 @@ class EncounterMethodResource(PokeapiCommonViewset):
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -254,16 +190,7 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -273,16 +200,7 @@ class GenerationResource(PokeapiCommonViewset):
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -292,16 +210,7 @@ class GenderResource(PokeapiCommonViewset):
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -311,16 +220,7 @@ class GrowthRateResource(PokeapiCommonViewset):
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -330,16 +230,7 @@ class ItemResource(PokeapiCommonViewset):
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -349,16 +240,7 @@ class ItemCategoryResource(PokeapiCommonViewset):
     serializer_class = ItemCategoryDetailSerializer
     list_serializer_class = ItemCategorySummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -368,16 +250,7 @@ class ItemAttributeResource(PokeapiCommonViewset):
     serializer_class = ItemAttributeDetailSerializer
     list_serializer_class = ItemAttributeSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -387,16 +260,7 @@ class ItemFlingEffectResource(PokeapiCommonViewset):
     serializer_class = ItemFlingEffectDetailSerializer
     list_serializer_class = ItemFlingEffectSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -406,16 +270,7 @@ class ItemPocketResource(PokeapiCommonViewset):
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -425,16 +280,7 @@ class LanguageResource(PokeapiCommonViewset):
     serializer_class = LanguageDetailSerializer
     list_serializer_class = LanguageSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -462,16 +308,7 @@ class MoveResource(PokeapiCommonViewset):
     serializer_class = MoveDetailSerializer
     list_serializer_class = MoveSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -481,16 +318,7 @@ class MoveDamageClassResource(PokeapiCommonViewset):
     serializer_class = MoveDamageClassDetailSerializer
     list_serializer_class = MoveDamageClassSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -500,16 +328,7 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -519,16 +338,7 @@ class MoveBattleStyleResource(PokeapiCommonViewset):
     serializer_class = MoveBattleStyleDetailSerializer
     list_serializer_class = MoveBattleStyleSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -538,16 +348,7 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
     serializer_class = MoveMetaCategoryDetailSerializer
     list_serializer_class = MoveMetaCategorySummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -557,16 +358,7 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
     serializer_class = MoveLearnMethodDetailSerializer
     list_serializer_class = MoveLearnMethodSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -576,16 +368,7 @@ class MoveTargetResource(PokeapiCommonViewset):
     serializer_class = MoveTargetDetailSerializer
     list_serializer_class = MoveTargetSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -595,16 +378,7 @@ class NatureResource(PokeapiCommonViewset):
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -614,16 +388,7 @@ class PalParkAreaResource(PokeapiCommonViewset):
     serializer_class = PalParkAreaDetailSerializer
     list_serializer_class = PalParkAreaSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -633,16 +398,7 @@ class PokeathlonStatResource(PokeapiCommonViewset):
     serializer_class = PokeathlonStatDetailSerializer
     list_serializer_class = PokeathlonStatSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -652,16 +408,7 @@ class PokedexResource(PokeapiCommonViewset):
     serializer_class = PokedexDetailSerializer
     list_serializer_class = PokedexSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -671,16 +418,7 @@ class PokemonColorResource(PokeapiCommonViewset):
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -690,16 +428,7 @@ class PokemonFormResource(PokeapiCommonViewset):
     serializer_class = PokemonFormDetailSerializer
     list_serializer_class = PokemonFormSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -709,16 +438,7 @@ class PokemonHabitatResource(PokeapiCommonViewset):
     serializer_class = PokemonHabitatDetailSerializer
     list_serializer_class = PokemonHabitatSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -728,16 +448,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
     serializer_class = PokemonShapeDetailSerializer
     list_serializer_class = PokemonShapeSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -747,16 +458,7 @@ class PokemonResource(PokeapiCommonViewset):
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -766,16 +468,7 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -785,16 +478,7 @@ class RegionResource(PokeapiCommonViewset):
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -804,16 +488,7 @@ class StatResource(PokeapiCommonViewset):
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -829,16 +504,7 @@ class TypeResource(PokeapiCommonViewset):
     serializer_class = TypeDetailSerializer
     list_serializer_class = TypeSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -848,16 +514,7 @@ class VersionResource(PokeapiCommonViewset):
     serializer_class = VersionDetailSerializer
     list_serializer_class = VersionSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 
@@ -867,16 +524,7 @@ class VersionGroupResource(PokeapiCommonViewset):
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
+    @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
 

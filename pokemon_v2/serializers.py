@@ -364,6 +364,15 @@ class PokemonAbilitySerializer(serializers.ModelSerializer):
         fields = ("is_hidden", "slot", "ability", "pokemon")
 
 
+# TODO: sample code
+class GetAbilityPokemonSerializer(serializers.ModelSerializer):
+    pokemon = PokemonSummarySerializer()
+
+    class Meta:
+        model = PokemonAbility
+        fields = ("is_hidden", "slot", "pokemon")
+
+
 class PokemonAbilityPastSerializer(serializers.ModelSerializer):
     generation = GenerationSummarySerializer()
     ability = AbilitySummarySerializer()
@@ -1237,37 +1246,20 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
             "pokemon",
         )
 
-    @extend_schema_field(
-        {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "is_hidden": {"type": "boolean"},
-                    "slot": {"type": "integer"},
-                    "pokemon": {
-                        "type": "object",
-                        "properties": {
-                            "name": {"type": "string"},
-                            "url": {"type": "string"},
-                        },
-                    },
-                },
-            },
-        }
-    )
+    @extend_schema_field(GetAbilityPokemonSerializer(many=True))
     def get_ability_pokemon(self, obj):
         pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
-        data = PokemonAbilitySerializer(
+        # TODO: sample code
+        return GetAbilityPokemonSerializer(
             pokemon_ability_objects, many=True, context=self.context
         ).data
-        pokemon = []
+        # pokemon = []
 
-        for poke in data:
-            del poke["ability"]
-            pokemon.append(poke)
+        # for poke in data:
+        #     del poke["ability"]
+        #     pokemon.append(poke)
 
-        return pokemon
+        # return pokemon
 
 
 ######################

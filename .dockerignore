@@ -18,7 +18,7 @@ graphql
 .vscode
 .github
 .circleci
-docker-compose.yml
+docker-compose*
 .dockerignore
 /*.md
 /*.js

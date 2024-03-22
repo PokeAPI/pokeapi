@@ -42,38 +42,38 @@ shell:  # Load a shell
 	python manage.py shell ${local_config}
 
 docker-up:  # (Docker) Create services/volumes/networks
-	docker-compose up -d
+	docker compose up -d
 
 docker-migrate:  # (Docker) Run any pending migrations
-	docker-compose exec -T app python manage.py migrate ${docker_config}
+	docker compose exec -T app python manage.py migrate ${docker_config}
 
 docker-build-db:  # (Docker) Build the database
-	docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
 
 docker-make-migrations:  # (Docker) Create migrations files if schema has changed
-	docker-compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
+	docker compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
 
 docker-flush-db:  # (Docker) Removes all the data present in the database but preserves tables and migrations
-	docker-compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
+	docker compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
 
 docker-destroy-db:  # (Docker) Removes the volume where the database is installed on, alongside to the container itself
 	docker rm -f pokeapi_db_1
 	docker volume rm pokeapi_pg_data
 
 docker-shell:  # (Docker) Launch an interative shell for the pokeapi container
-	docker-compose exec app sh -l
+	docker compose exec app sh -l
 
 docker-stop:  # (Docker) Stop containers
-	docker-compose stop
+	docker compose stop
 
 docker-down:  # (Docker) Stop and removes containers and networks
-	docker-compose down
+	docker compose down
 
 docker-test:  # (Docker) Run tests
-	docker-compose exec -T app python manage.py test ${local_config}
+	docker compose exec -T app python manage.py test ${local_config}
 
 docker-prod:
-	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 

@@ -6,32 +6,67 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pokemon_v2', '0015_pokemoncries'),
+        ("pokemon_v2", "0015_pokemoncries"),
     ]
 
     operations = [
         migrations.AlterUniqueTogether(
-            name='machine',
-            unique_together={('machine_number', 'version_group')},
+            name="machine",
+            unique_together={("machine_number", "version_group")},
         ),
         migrations.CreateModel(
-            name='MachineVersionLocations',
+            name="MachineVersionLocations",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('machine_number', models.IntegerField()),
-                ('version_group_id', models.IntegerField()),
-                ('location', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='machineversionlocations', to='pokemon_v2.location')),
-                ('machine', compositefk.fields.CompositeForeignKey(null_if_equal=[], on_delete=django.db.models.deletion.CASCADE, to='pokemon_v2.machine', to_fields={'machine_number': compositefk.fields.LocalFieldValue('machine_number'), 'version_group_id': compositefk.fields.LocalFieldValue('version_group_id')})),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("machine_number", models.IntegerField()),
+                ("version_group_id", models.IntegerField()),
+                (
+                    "location",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="machineversionlocations",
+                        to="pokemon_v2.location",
+                    ),
+                ),
+                (
+                    "machine",
+                    compositefk.fields.CompositeForeignKey(
+                        null_if_equal=[],
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="pokemon_v2.machine",
+                        to_fields={
+                            "machine_number": compositefk.fields.LocalFieldValue(
+                                "machine_number"
+                            ),
+                            "version_group_id": compositefk.fields.LocalFieldValue(
+                                "version_group_id"
+                            ),
+                        },
+                    ),
+                ),
             ],
             options={
-                'abstract': False,
+                "abstract": False,
             },
         ),
         migrations.AddField(
-            model_name='machine',
-            name='locations',
-            field=models.ManyToManyField(blank=True, through='pokemon_v2.MachineVersionLocations', to='pokemon_v2.Location'),
+            model_name="machine",
+            name="locations",
+            field=models.ManyToManyField(
+                blank=True,
+                through="pokemon_v2.MachineVersionLocations",
+                to="pokemon_v2.Location",
+            ),
         ),
     ]

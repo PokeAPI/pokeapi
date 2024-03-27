@@ -1147,8 +1147,11 @@ def _build_machine_version_locations():
             # location_area_id=int(info[3]) if info[3] != "" else None
         )
 
-    build_generic((MachineVersionLocations,),
-                  "machine_version_locations.csv", csv_record_to_objects)
+    build_generic(
+        (MachineVersionLocations,),
+        "machine_version_locations.csv",
+        csv_record_to_objects,
+    )
 
 
 ###############

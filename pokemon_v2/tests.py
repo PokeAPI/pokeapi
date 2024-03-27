@@ -1122,7 +1122,7 @@ class APIData:
     @classmethod
     def setup_machine_data(
         cls,
-        name="mchn01",
+        name="mchn",
         machine_number=1,
         version_group=None,
         move=None,
@@ -1143,7 +1143,7 @@ class APIData:
             name="grth rt for " + name
         )
         item = item or cls.setup_item_data(
-            name="itm for " + name, fling_power=None # type: ignore
+            name="itm for " + name, fling_power=None  # type: ignore
         )
 
         machine = Machine.objects.create(
@@ -1157,6 +1157,25 @@ class APIData:
         machine.save()
 
         return machine
+
+    @classmethod
+    def setup_machine_version_locations_data(
+        cls, name="mchn ver lctns", machine=None, location=None
+    ):
+        location = location or cls.setup_location_data(name="lctn for " + name)
+        machine = machine or cls.setup_machine_data(
+            name="mchn for " + name,
+            locations=[
+                location,
+            ],
+        )
+
+        machine_version_location = MachineVersionLocation(
+            machine=machine, location=location
+        )
+        machine_version_location.save()
+
+        return machine_version_location
 
     @classmethod
     def setup_pokeathlon_stat_data(cls, name="pkathln stt"):

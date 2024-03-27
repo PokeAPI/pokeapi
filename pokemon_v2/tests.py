@@ -5604,33 +5604,16 @@ class APITests(APIData, APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
+    def test_machine_version_locations(self):
 
-class MachineTestCase:
-    def setUp(self):
-        # Create test data
-        self.version_group = VersionGroup.objects.create(name="Test Version Group")
-        self.move = Move.objects.create(name="Test Move")
-        self.location = Location.objects.create(name="Test Location")
-        self.machine = Machine.objects.create(
-            machine_number=1,
-            version_group=self.version_group,
-            move=self.move,
-        )
-        self.machine_location = MachineVersionLocations.objects.create(
-            machine_number=1,
-            version_group_id=self.version_group.id,
-            location=self.location,
-            machine=self.machine,
+        # Creating a machine version location object
+        machine_version_location = MachineVersionLocations.objects.create(
+            machine_number=2,
+            version_group_id=self.setup_version_data().version_group,
+            location=self.setup_location_area_data().location
         )
 
-    def test_machine_creation(self):
-        # Test Machine object creation
-        machine = Machine.objects.get(machine_number=1)
-        self.assertEqual(machine.version_group, self.version_group)
-        self.assertEqual(machine.move, self.move)
-
-    def test_machine_version_locations_creation(self):
-        # Test MachineVersionLocations object creation
-        machine_location = MachineVersionLocations.objects.get(machine_number=1)
-        self.assertEqual(machine_location.location, self.location)
-        self.assertEqual(machine_location.machine, self.machine)
+        # Assertions to test the created machine version location
+        self.assertEqual(machine_version_location.machine_number, 2)
+        self.assertEqual(machine_version_location.version_group_id, self.setup_version_data().version_group)
+        self.assertEqual(machine_version_location.location, self.setup_location_area_data().location)

@@ -16,8 +16,10 @@ import os
 import os.path
 import re
 import json
+from typing import Any, Callable, Generator
 from django.db import connection
 from pokemon_v2.models import *
+from pokemon_v2.models import MachineVersionLocations
 
 
 # why this way? how about use `__file__`
@@ -1134,6 +1136,19 @@ def _build_machines():
         )
 
     build_generic((Machine,), "machines.csv", csv_record_to_objects)
+
+
+def _build_machine_version_locations():
+    def csv_record_to_objects(info):
+        yield MachineVersionLocations(
+            machine_number=int(info[0]),
+            version_group_id=int(info[1]),
+            location_id=int(info[2]) if info[2] != "" else None,
+            # location_area_id=int(info[3]) if info[3] != "" else None
+        )
+
+    build_generic((MachineVersionLocations,),
+                  "machine_version_locations.csv", csv_record_to_objects)
 
 
 ###############
@@ -2357,6 +2372,7 @@ def build_all():
     _build_evolutions()
     _build_pokedexes()
     _build_locations()
+    _build_machine_version_locations()
     _build_pokemons()
     _build_encounters()
     _build_pal_parks()

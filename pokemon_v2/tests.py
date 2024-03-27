@@ -5645,7 +5645,7 @@ class APITests(APIData, APITestCase):
 
     def test_machine_version_locations(self):
         # Creating a machine version location object
-        machine_version_location = MachineVersionLocations.objects.create(
+        machine_version_location = MachineVersionLocation.objects.create(
             machine_number=2,
             version_group_id=self.setup_version_data().version_group,
             location_id=self.setup_location_area_data().location,

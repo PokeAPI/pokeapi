@@ -19,7 +19,7 @@ import json
 from typing import Any, Callable, Generator
 from django.db import connection
 from pokemon_v2.models import *
-from pokemon_v2.models import MachineVersionLocations
+from pokemon_v2.models import MachineVersionLocation
 
 
 # why this way? how about use `__file__`
@@ -1140,7 +1140,7 @@ def _build_machines():
 
 def _build_machine_version_locations():
     def csv_record_to_objects(info):
-        yield MachineVersionLocations(
+        yield MachineVersionLocation(
             machine_number=int(info[0]),
             version_group_id=int(info[1]),
             location_id=int(info[2]) if info[2] != "" else None,
@@ -1148,7 +1148,7 @@ def _build_machine_version_locations():
         )
 
     build_generic(
-        (MachineVersionLocations,),
+        (MachineVersionLocation,),
         "machine_version_locations.csv",
         csv_record_to_objects,
     )

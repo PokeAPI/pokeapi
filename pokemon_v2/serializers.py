@@ -482,7 +482,7 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
         field={
             "type": "array",
             "items": {
-                "type": "number",
+                "type": "integer", "format": "int32",
             },
             "example": [0, 5, 10, 15, 20, 25, 30],
         }
@@ -710,7 +710,7 @@ class GenderDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["rate", "pokemon_species"],
                 "properties": {
-                    "rate": {"type": "number", "example": 1},
+                    "rate": {"type": "integer", "format": "int32", "example": 1},
                     "pokemon_species": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -1000,7 +1000,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["rate", "version"],
                             "properties": {
-                                "rate": {"type": "number", "example": 5},
+                                "rate": {"type": "integer", "format": "int32", "example": 5},
                                 "version": {
                                     "type": "object",
                                     "required": ["name", "url"],
@@ -1104,7 +1104,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                         },
                                     },
                                 },
-                                "max_chance": {"type": "number", "example": 60},
+                                "max_chance": {"type": "integer", "format": "int32", "example": 60},
                                 "encounter_details": {
                                     "type": "object",
                                     "required": [
@@ -1115,8 +1115,8 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                         "method",
                                     ],
                                     "properties": {
-                                        "min_level": {"type": "number", "example": 20},
-                                        "max_level": {"type": "number", "example": 30},
+                                        "min_level": {"type": "integer", "format": "int32", "example": 20},
+                                        "max_level": {"type": "integer", "format": "int32", "example": 30},
                                         "condition_values": {
                                             "type": "object",
                                             "required": ["name", "url"],
@@ -1132,7 +1132,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                                 },
                                             },
                                         },
-                                        "chance": {"type": "number", "example": 60},
+                                        "chance": {"type": "integer", "format": "int32", "example": 60},
                                         "method": {
                                             "type": "object",
                                             "required": ["name", "url"],
@@ -1336,7 +1336,7 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
                 "required": ["is_hidden", "slot", "pokemon"],
                 "properties": {
                     "is_hidden": {"type": "boolean", "example": True},
-                    "slot": {"type": "number", "example": 3},
+                    "slot": {"type": "integer", "format": "int32", "example": 3},
                     "pokemon": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -1414,7 +1414,7 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["change", "move"],
                         "properties": {
-                            "change": {"type": "number", "example": -1},
+                            "change": {"type": "integer", "format": "int32", "example": -1},
                             "move": {
                                 "type": "object",
                                 "required": ["name", "url"],
@@ -1439,7 +1439,7 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["change", "move"],
                         "properties": {
-                            "change": {"type": "number", "example": 5},
+                            "change": {"type": "integer", "format": "int32", "example": 5},
                             "move": {
                                 "type": "object",
                                 "required": ["name", "url"],
@@ -1863,7 +1863,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["rarity", "version"],
                             "properties": {
-                                "rarity": {"type": "number", "example": 5},
+                                "rarity": {"type": "integer", "format": "int32", "example": 5},
                                 "version": {
                                     "type": "object",
                                     "required": ["name", "url"],
@@ -1999,7 +1999,7 @@ class NatureDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["max_change", "pokeathlon_stat"],
                 "properties": {
-                    "max_change": {"type": "number", "example": 1},
+                    "max_change": {"type": "integer", "format": "int32", "example": 1},
                     "pokeathlon_stat": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -3480,7 +3480,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["change", "stat"],
                 "properties": {
-                    "change": {"type": "number", "example": 2},
+                    "change": {"type": "integer", "format": "int32", "example": 2},
                     "stat": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -3548,7 +3548,7 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["base_score", "pokemon-species", "rate"],
                 "properties": {
-                    "base_score": {"type": "number", "example": 50},
+                    "base_score": {"type": "integer", "format": "int32", "example": 50},
                     "pokemon-species": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -3561,7 +3561,7 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
                             },
                         },
                     },
-                    "rate": {"type": "number", "example": 30},
+                    "rate": {"type": "integer", "format": "int32", "example": 30},
                 },
             },
         }
@@ -3768,7 +3768,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["slot", "type"],
                 "properties": {
-                    "slot": {"type": "number", "example": 1},
+                    "slot": {"type": "integer", "format": "int32", "example": 1},
                     "type": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -4447,7 +4447,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                 "version_group",
                             ],
                             "properties": {
-                                "level_learned_at": {"type": "number", "example": 1},
+                                "level_learned_at": {"type": "integer", "format": "int32", "example": 1},
                                 "move_learn_method": {
                                     "type": "object",
                                     "required": ["name", "url"],
@@ -4572,7 +4572,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["rarity", "version"],
                         "properties": {
-                            "rarity": {"type": "number", "example": 5},
+                            "rarity": {"type": "integer", "format": "int32", "example": 5},
                             "version": {
                                 "type": "object",
                                 "required": ["name", "url"],
@@ -4652,7 +4652,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         },
                     },
                     "is_hidden": {"type": "boolean", "example": False},
-                    "slot": {"type": "number", "example": 1},
+                    "slot": {"type": "integer", "format": "int32", "example": 1},
                 },
             },
         }
@@ -4715,7 +4715,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                     },
                                 },
                                 "is_hidden": {"type": "boolean", "example": False},
-                                "slot": {"type": "number", "example": 1},
+                                "slot": {"type": "integer", "format": "int32", "example": 1},
                             },
                         },
                     },
@@ -4784,7 +4784,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["slot", "type"],
                 "properties": {
-                    "slot": {"type": "number", "example": 1},
+                    "slot": {"type": "integer", "format": "int32", "example": 1},
                     "type": {
                         "type": "object",
                         "required": ["name", "url"],
@@ -4854,7 +4854,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["slot", "type"],
                             "properties": {
-                                "slot": {"type": "number", "example": 1},
+                                "slot": {"type": "integer", "format": "int32", "example": 1},
                                 "type": {
                                     "type": "object",
                                     "required": ["name", "url"],
@@ -5235,8 +5235,8 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                             },
                         },
                     },
-                    "base_score": {"type": "number", "example": 50},
-                    "rate": {"type": "number", "example": 30},
+                    "base_score": {"type": "integer", "format": "int32", "example": 50},
+                    "rate": {"type": "integer", "format": "int32", "example": 30},
                 },
             },
         }
@@ -5413,19 +5413,19 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "min_affection": {
-                                            "type": "number",
+                                            "type": "integer", "format": "int32",
                                             "nullable": True,
                                         },
                                         "min_beauty": {
-                                            "type": "number",
+                                            "type": "integer", "format": "int32",
                                             "nullable": True,
                                         },
                                         "min_happiness": {
-                                            "type": "number",
+                                            "type": "integer", "format": "int32",
                                             "nullable": True,
                                         },
                                         "min_level": {
-                                            "type": "number",
+                                            "type": "integer", "format": "int32",
                                             "nullable": True,
                                         },
                                         "needs_overworld_rain": {
@@ -5622,7 +5622,7 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
                         "required": ["max_change", "nature"],
                         "properties": {
                             "max_change": {
-                                "type": "number",
+                                "type": "integer", "format": "int32",
                                 "maximum": -1,
                                 "example": -1,
                             },
@@ -5648,7 +5648,7 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
                         "required": ["max_change", "nature"],
                         "properties": {
                             "max_change": {
-                                "type": "number",
+                                "type": "integer", "format": "int32",
                                 "minimum": 1,
                                 "example": 2,
                             },
@@ -5735,7 +5735,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["entry_number", "pokemon_species"],
                 "properties": {
-                    "entry_number": {"type": "number", "example": 1},
+                    "entry_number": {"type": "integer", "format": "int32", "example": 1},
                     "pokemon_species": {
                         "type": "object",
                         "required": ["name", "url"],

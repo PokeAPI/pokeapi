@@ -3049,7 +3049,8 @@ components:
                 type: boolean
                 example: true
               slot:
-                type: number
+                type: integer
+                format: int32
                 example: 3
               pokemon:
                 type: object
@@ -3360,7 +3361,8 @@ components:
         possible_values:
           type: array
           items:
-            type: number
+            type: integer
+            format: int32
           example:
           - 0
           - 5
@@ -3821,16 +3823,20 @@ components:
                               type: string
                               format: uri
                         min_affection:
-                          type: number
+                          type: integer
+                          format: int32
                           nullable: true
                         min_beauty:
-                          type: number
+                          type: integer
+                          format: int32
                           nullable: true
                         min_happiness:
-                          type: number
+                          type: integer
+                          format: int32
                           nullable: true
                         min_level:
-                          type: number
+                          type: integer
+                          format: int32
                           nullable: true
                         needs_overworld_rain:
                           type: boolean
@@ -3999,7 +4005,8 @@ components:
             - pokemon_species
             properties:
               rate:
-                type: number
+                type: integer
+                format: int32
                 example: 1
               pokemon_species:
                 type: object
@@ -4398,7 +4405,8 @@ components:
                   - version
                   properties:
                     rarity:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 5
                     version:
                       type: object
@@ -4729,7 +4737,8 @@ components:
                   - version
                   properties:
                     rate:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 5
                     version:
                       type: object
@@ -4796,7 +4805,8 @@ components:
                           format: uri
                           example: https://pokeapi.co/api/v2/version/12/
                     max_chance:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 60
                     encounter_details:
                       type: object
@@ -4808,10 +4818,12 @@ components:
                       - method
                       properties:
                         min_level:
-                          type: number
+                          type: integer
+                          format: int32
                           example: 20
                         max_level:
-                          type: number
+                          type: integer
+                          format: int32
                           example: 30
                         condition_values:
                           type: object
@@ -4827,7 +4839,8 @@ components:
                               format: uri
                               example: https://pokeapi.co/api/v2/encounter-condition-value/10/
                         chance:
-                          type: number
+                          type: integer
+                          format: int32
                           example: 60
                         method:
                           type: object
@@ -5361,7 +5374,8 @@ components:
             - stat
             properties:
               change:
-                type: number
+                type: integer
+                format: int32
                 example: 2
               stat:
                 type: object
@@ -5867,7 +5881,8 @@ components:
             - pokeathlon_stat
             properties:
               max_change:
-                type: number
+                type: integer
+                format: int32
                 example: 1
               pokeathlon_stat:
                 type: object
@@ -6912,7 +6927,8 @@ components:
             - rate
             properties:
               base_score:
-                type: number
+                type: integer
+                format: int32
                 example: 50
               pokemon-species:
                 type: object
@@ -6928,7 +6944,8 @@ components:
                     format: uri
                     example: https://pokeapi.co/api/v2/pokemon-species/1/
               rate:
-                type: number
+                type: integer
+                format: int32
                 example: 30
           readOnly: true
       required:
@@ -6984,7 +7001,8 @@ components:
                 - nature
                 properties:
                   max_change:
-                    type: number
+                    type: integer
+                    format: int32
                     maximum: -1
                     example: -1
                   nature:
@@ -7009,7 +7027,8 @@ components:
                 - nature
                 properties:
                   max_change:
-                    type: number
+                    type: integer
+                    format: int32
                     minimum: 1
                     example: 2
                   nature:
@@ -7100,7 +7119,8 @@ components:
             - pokemon_species
             properties:
               entry_number:
-                type: number
+                type: integer
+                format: int32
                 example: 1
               pokemon_species:
                 type: object
@@ -7275,7 +7295,8 @@ components:
                 type: boolean
                 example: false
               slot:
-                type: number
+                type: integer
+                format: int32
                 example: 1
           readOnly: true
         past_abilities:
@@ -7312,7 +7333,8 @@ components:
                       type: boolean
                       example: false
                     slot:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 1
               generation:
                 type: object
@@ -7366,7 +7388,8 @@ components:
                 - version
                 properties:
                   rarity:
-                    type: number
+                    type: integer
+                    format: int32
                     example: 5
                   version:
                     type: object
@@ -7417,7 +7440,8 @@ components:
                   - version_group
                   properties:
                     level_learned_at:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 1
                     move_learn_method:
                       type: object
@@ -7499,7 +7523,8 @@ components:
             - type
             properties:
               slot:
-                type: number
+                type: integer
+                format: int32
                 example: 1
               type:
                 type: object
@@ -7545,7 +7570,8 @@ components:
                   - type
                   properties:
                     slot:
-                      type: number
+                      type: integer
+                      format: int32
                       example: 1
                     type:
                       type: object
@@ -7702,7 +7728,8 @@ components:
             - type
             properties:
               slot:
-                type: number
+                type: integer
+                format: int32
                 example: 1
               type:
                 type: object
@@ -8017,10 +8044,12 @@ components:
                     format: uri
                     example: https://pokeapi.co/api/v2/pal-park-area/2/
               base_score:
-                type: number
+                type: integer
+                format: int32
                 example: 50
               rate:
-                type: number
+                type: integer
+                format: int32
                 example: 30
           readOnly: true
         form_descriptions:
@@ -8263,7 +8292,8 @@ components:
                 - move
                 properties:
                   change:
-                    type: number
+                    type: integer
+                    format: int32
                     example: -1
                   move:
                     type: object
@@ -8287,7 +8317,8 @@ components:
                 - move
                 properties:
                   change:
-                    type: number
+                    type: integer
+                    format: int32
                     example: 5
                   move:
                     type: object

@@ -1936,10 +1936,25 @@ class MachineDetailSerializer(serializers.ModelSerializer):
     item = ItemSummarySerializer()
     version_group = VersionGroupSummarySerializer()
     move = MoveSummarySerializer()
+    locations = LocationSummarySerializer(many=True, read_only=True)
 
     class Meta:
         model = Machine
-        fields = ("id", "item", "version_group", "move")
+        fields = ("id", "item", "version_group", "move", "locations")
+
+    def get_machine_locations(self, obj):
+        location_objects = Location.objects.filter(location=obj)
+
+        locations = []
+
+        for location_object in location_objects:
+            location_data = LocationSummarySerializer(
+                location_object, context=self.context
+            ).data
+
+            locations.append(location_data)
+
+        return locations
 
 
 ###################################

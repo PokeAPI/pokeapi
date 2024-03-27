@@ -154,7 +154,7 @@ class APIData:
 
     @classmethod
     def setup_ability_effect_text_data(
-            cls, ability, short_effect="ablty shrt efct", effect="ablty efct"
+        cls, ability, short_effect="ablty shrt efct", effect="ablty efct"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -178,7 +178,7 @@ class APIData:
 
     @classmethod
     def setup_ability_change_effect_text_data(
-            cls, ability_change, effect="ablty change efct"
+        cls, ability_change, effect="ablty change efct"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -228,7 +228,7 @@ class APIData:
 
     @classmethod
     def setup_item_attribute_description_data(
-            cls, item_attribute, description="itm attr desc"
+        cls, item_attribute, description="itm attr desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -257,7 +257,7 @@ class APIData:
 
     @classmethod
     def setup_item_fling_effect_effect_text_data(
-            cls, item_fling_effect, effect="itm flng efct efct txt"
+        cls, item_fling_effect, effect="itm flng efct efct txt"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -327,12 +327,12 @@ class APIData:
 
     @classmethod
     def setup_item_data(
-            cls,
-            item_category=None,
-            item_fling_effect=None,
-            name="itm",
-            cost=100,
-            fling_power=100,
+        cls,
+        item_category=None,
+        item_fling_effect=None,
+        name="itm",
+        cost=100,
+        fling_power=100,
     ):
         item = Item.objects.create(
             name=name,
@@ -356,7 +356,7 @@ class APIData:
 
     @classmethod
     def setup_item_effect_text_data(
-            cls, item, short_effect="ablty shrt efct", effect="ablty efct"
+        cls, item, short_effect="ablty shrt efct", effect="ablty efct"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -424,7 +424,7 @@ class APIData:
 
     @classmethod
     def setup_contest_effect_flavor_text_data(
-            cls, contest_effect, flavor_text="cntst efct flvr txt"
+        cls, contest_effect, flavor_text="cntst efct flvr txt"
     ):
         language = cls.setup_language_data(name="lang for " + flavor_text)
 
@@ -437,7 +437,7 @@ class APIData:
 
     @classmethod
     def setup_contest_effect_effect_text_data(
-            cls, contest_effect, effect="cntst efct efct txt"
+        cls, contest_effect, effect="cntst efct efct txt"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -459,7 +459,7 @@ class APIData:
 
     @classmethod
     def setup_super_contest_effect_flavor_text_data(
-            cls, super_contest_effect, flavor_text="spr cntst efct flvr txt"
+        cls, super_contest_effect, flavor_text="spr cntst efct flvr txt"
     ):
         language = cls.setup_language_data(name="lang for " + flavor_text)
 
@@ -526,17 +526,17 @@ class APIData:
 
     @classmethod
     def setup_berry_data(
-            cls,
-            berry_firmness=None,
-            item=None,
-            natural_gift_type=None,
-            name="bry",
-            natural_gift_power=50,
-            size=20,
-            max_harvest=5,
-            growth_time=2,
-            soil_dryness=15,
-            smoothness=25,
+        cls,
+        berry_firmness=None,
+        item=None,
+        natural_gift_type=None,
+        name="bry",
+        natural_gift_power=50,
+        size=20,
+        max_harvest=5,
+        growth_time=2,
+        soil_dryness=15,
+        smoothness=25,
     ):
         item = item or cls.setup_item_data(name="itm for " + name)
 
@@ -591,7 +591,7 @@ class APIData:
 
     @classmethod
     def setup_growth_rate_description_data(
-            cls, growth_rate, description="grth rt desc"
+        cls, growth_rate, description="grth rt desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -738,7 +738,7 @@ class APIData:
 
     @classmethod
     def setup_move_category_description_data(
-            cls, move_category, description="mv ctgry desc"
+        cls, move_category, description="mv ctgry desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -758,10 +758,10 @@ class APIData:
 
     @classmethod
     def setup_move_effect_effect_text_data(
-            cls,
-            move_effect,
-            effect="mv efct efct txt",
-            short_effect="mv efct shrt efct txt",
+        cls,
+        move_effect,
+        effect="mv efct efct txt",
+        short_effect="mv efct shrt efct txt",
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -795,7 +795,7 @@ class APIData:
 
     @classmethod
     def setup_move_damage_class_description_data(
-            cls, move_damage_class, description="mv dmg cls desc"
+        cls, move_damage_class, description="mv dmg cls desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -817,7 +817,7 @@ class APIData:
 
     @classmethod
     def setup_move_learn_method_name_data(
-            cls, move_learn_method, name="mv lrn mthd nm"
+        cls, move_learn_method, name="mv lrn mthd nm"
     ):
         language = cls.setup_language_data(name="lang for " + name)
 
@@ -830,7 +830,7 @@ class APIData:
 
     @classmethod
     def setup_move_learn_method_description_data(
-            cls, move_learn_method, description="mv lrn mthd desc"
+        cls, move_learn_method, description="mv lrn mthd desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -863,7 +863,7 @@ class APIData:
 
     @classmethod
     def setup_move_target_description_data(
-            cls, move_target, description="mv trgt desc"
+        cls, move_target, description="mv trgt desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -885,7 +885,7 @@ class APIData:
 
     @classmethod
     def setup_version_group_move_learn_method_data(
-            cls, version_group=None, move_learn_method=None
+        cls, version_group=None, move_learn_method=None
     ):
         version_group_move_learn_method = VersionGroupMoveLearnMethod.objects.create(
             version_group=version_group, move_learn_method=move_learn_method
@@ -921,21 +921,21 @@ class APIData:
 
     @classmethod
     def setup_move_data(
-            cls,
-            contest_type=None,
-            contest_effect=None,
-            super_contest_effect=None,
-            generation=None,
-            move_damage_class=None,
-            move_effect=None,
-            move_target=None,
-            type=None,
-            name="mv",
-            power=20,
-            pp=20,
-            accuracy=80,
-            priority=0,
-            effect_chance=50,
+        cls,
+        contest_type=None,
+        contest_effect=None,
+        super_contest_effect=None,
+        generation=None,
+        move_damage_class=None,
+        move_effect=None,
+        move_target=None,
+        type=None,
+        name="mv",
+        power=20,
+        pp=20,
+        accuracy=80,
+        priority=0,
+        effect_chance=50,
     ):
         contest_type = contest_type or cls.setup_contest_type_data(
             name="cntst tp for " + name
@@ -944,7 +944,7 @@ class APIData:
         contest_effect = contest_effect or cls.setup_contest_effect_data()
 
         super_contest_effect = (
-                super_contest_effect or cls.setup_super_contest_effect_data()
+            super_contest_effect or cls.setup_super_contest_effect_data()
         )
 
         generation = generation or cls.setup_generation_data(name="gen for " + name)
@@ -990,20 +990,20 @@ class APIData:
 
     @classmethod
     def setup_move_meta_data(
-            cls,
-            move,
-            move_ailment=None,
-            move_category=None,
-            min_hits=1,
-            max_hits=1,
-            min_turns=1,
-            max_turns=1,
-            drain=0,
-            healing=0,
-            crit_rate=0,
-            ailment_chance=0,
-            flinch_chance=0,
-            stat_chance=0,
+        cls,
+        move,
+        move_ailment=None,
+        move_category=None,
+        min_hits=1,
+        max_hits=1,
+        min_turns=1,
+        max_turns=1,
+        drain=0,
+        healing=0,
+        crit_rate=0,
+        ailment_chance=0,
+        flinch_chance=0,
+        stat_chance=0,
     ):
         move_ailment = move_ailment or cls.setup_move_ailment_data()
 
@@ -1030,15 +1030,15 @@ class APIData:
 
     @classmethod
     def setup_move_change_data(
-            cls,
-            move=None,
-            type=None,
-            move_effect=None,
-            version_group=None,
-            power=20,
-            pp=20,
-            accuracy=80,
-            effect_chance=50,
+        cls,
+        move=None,
+        type=None,
+        move_effect=None,
+        version_group=None,
+        power=20,
+        pp=20,
+        accuracy=80,
+        effect_chance=50,
     ):
         version_group = version_group or cls.setup_version_group_data(
             name="ver grp for mv chng"
@@ -1071,7 +1071,7 @@ class APIData:
 
     @classmethod
     def setup_move_effect_change_effect_text_data(
-            cls, move_effect_change=None, effect="mv efct chng efct txt"
+        cls, move_effect_change=None, effect="mv efct chng efct txt"
     ):
         language = cls.setup_language_data(name="lang for " + effect)
 
@@ -1120,6 +1120,45 @@ class APIData:
         return move_stat_change
 
     @classmethod
+    def setup_machine_data(
+        cls,
+        name="mchn01",
+        machine_number=1,
+        version_group=None,
+        move=None,
+        locations=None,
+        growth_rate=None,
+        item=None,
+    ):
+        version_group = version_group or cls.setup_version_group_data(
+            "ver grp for " + name
+        )
+        move = move or cls.setup_move_data(
+            name="mv for " + name, generation=version_group.generation
+        )
+        locations = locations or [
+            cls.setup_location_data(name="lctn for " + name),
+        ]
+        growth_rate = growth_rate or cls.setup_growth_rate_data(
+            name="grth rt for " + name
+        )
+        item = item or cls.setup_item_data(
+            name="itm for " + name, fling_power=None # type: ignore
+        )
+
+        machine = Machine.objects.create(
+            machine_number=machine_number,
+            version_group=version_group,
+            move=move,
+            locations=locations,
+            growth_rate=growth_rate,
+            item=item,
+        )
+        machine.save()
+
+        return machine
+
+    @classmethod
     def setup_pokeathlon_stat_data(cls, name="pkathln stt"):
         pokeathlon_stat = PokeathlonStat.objects.create(name=name)
         pokeathlon_stat.save()
@@ -1149,7 +1188,7 @@ class APIData:
 
     @classmethod
     def setup_characteristic_description_data(
-            cls, characteristic, description="char desc"
+        cls, characteristic, description="char desc"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -1163,13 +1202,13 @@ class APIData:
     # Nature Data
     @classmethod
     def setup_nature_data(
-            cls,
-            decreased_stat=None,
-            increased_stat=None,
-            likes_flavor=None,
-            hates_flavor=None,
-            name="ntr",
-            game_index=1,
+        cls,
+        decreased_stat=None,
+        increased_stat=None,
+        likes_flavor=None,
+        hates_flavor=None,
+        name="ntr",
+        game_index=1,
     ):
         nature = Nature.objects.create(
             name=name,
@@ -1196,7 +1235,7 @@ class APIData:
 
     @classmethod
     def setup_nature_pokeathlon_stat_data(
-            cls, nature=None, pokeathlon_stat=None, max_change=1
+        cls, nature=None, pokeathlon_stat=None, max_change=1
     ):
         nature_pokeathlon_stat = NaturePokeathlonStat.objects.create(
             nature=nature,
@@ -1209,11 +1248,11 @@ class APIData:
 
     @classmethod
     def setup_nature_battle_style_preference_data(
-            cls,
-            nature=None,
-            move_battle_style=None,
-            low_hp_preference=10,
-            high_hp_preference=20,
+        cls,
+        nature=None,
+        move_battle_style=None,
+        low_hp_preference=10,
+        high_hp_preference=20,
     ):
         nature_battle_style_preference = NatureBattleStylePreference.objects.create(
             nature=nature,
@@ -1325,7 +1364,7 @@ class APIData:
 
     @classmethod
     def setup_pokemon_shape_name_data(
-            cls, pokemon_shape, name="pkm shp nm", awesome_name="pkm shp awsm nm"
+        cls, pokemon_shape, name="pkm shp nm", awesome_name="pkm shp awsm nm"
     ):
         language = cls.setup_language_data(name="lang for " + name)
 
@@ -1341,7 +1380,7 @@ class APIData:
 
     @classmethod
     def setup_pokemon_species_form_description_data(
-            cls, pokemon_species=None, description="pkm spcs frm dscr"
+        cls, pokemon_species=None, description="pkm spcs frm dscr"
     ):
         language = cls.setup_language_data(name="lang for " + description)
 
@@ -1354,7 +1393,7 @@ class APIData:
 
     @classmethod
     def setup_pokemon_species_flavor_text_data(
-            cls, pokemon_species, flavor_text="pkmn spcs flvr txt"
+        cls, pokemon_species, flavor_text="pkmn spcs flvr txt"
     ):
         version = cls.setup_version_data(name="ver for " + flavor_text)
 
@@ -1372,25 +1411,25 @@ class APIData:
 
     @classmethod
     def setup_pokemon_species_data(
-            cls,
-            generation=None,
-            evolves_from_species=None,
-            evolution_chain=None,
-            growth_rate=None,
-            pokemon_color=None,
-            pokemon_habitat=None,
-            pokemon_shape=None,
-            name="pkm spcs",
-            gender_rate=50,
-            capture_rate=20,
-            base_happiness=20,
-            is_baby=False,
-            hatch_counter=10,
-            has_gender_differences=True,
-            forms_switchable=False,
-            is_legendary=False,
-            is_mythical=False,
-            order=1,
+        cls,
+        generation=None,
+        evolves_from_species=None,
+        evolution_chain=None,
+        growth_rate=None,
+        pokemon_color=None,
+        pokemon_habitat=None,
+        pokemon_shape=None,
+        name="pkm spcs",
+        gender_rate=50,
+        capture_rate=20,
+        base_happiness=20,
+        is_baby=False,
+        hatch_counter=10,
+        has_gender_differences=True,
+        forms_switchable=False,
+        is_legendary=False,
+        is_mythical=False,
+        order=1,
     ):
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
@@ -1436,7 +1475,7 @@ class APIData:
 
     @classmethod
     def setup_pokemon_species_name_data(
-            cls, pokemon_species, name="pkmn spcs nm", genus="pkmn spcs gns"
+        cls, pokemon_species, name="pkmn spcs nm", genus="pkmn spcs gns"
     ):
         language = cls.setup_language_data(name="lang for " + name)
 
@@ -1469,14 +1508,14 @@ class APIData:
 
     @classmethod
     def setup_pokemon_data(
-            cls,
-            pokemon_species=None,
-            name="pkmn",
-            height=100,
-            weight=100,
-            base_experience=0,
-            order=1,
-            is_default=False,
+        cls,
+        pokemon_species=None,
+        name="pkmn",
+        height=100,
+        weight=100,
+        base_experience=0,
+        order=1,
+        is_default=False,
     ):
         pokemon_species = pokemon_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for " + name
@@ -1508,12 +1547,12 @@ class APIData:
 
     @classmethod
     def setup_pokemon_form_sprites_data(
-            cls,
-            pokemon_form,
-            front_default=True,
-            front_shiny=False,
-            back_default=False,
-            back_shiny=False,
+        cls,
+        pokemon_form,
+        front_default=True,
+        front_shiny=False,
+        back_default=False,
+        back_shiny=False,
     ):
         sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
 
@@ -1542,15 +1581,15 @@ class APIData:
 
     @classmethod
     def setup_pokemon_form_data(
-            cls,
-            pokemon,
-            name="pkmn nrml frm",
-            form_name="nrml",
-            order=1,
-            is_default=True,
-            is_battle_only=True,
-            form_order=1,
-            is_mega=False,
+        cls,
+        pokemon,
+        name="pkmn nrml frm",
+        form_name="nrml",
+        order=1,
+        is_default=True,
+        is_battle_only=True,
+        form_order=1,
+        is_mega=False,
     ):
         version_group = cls.setup_version_group_data(name="ver grp for " + name)
 
@@ -1582,7 +1621,7 @@ class APIData:
 
     @classmethod
     def setup_pokemon_past_ability_data(
-            cls, pokemon, generation, ability=None, is_hidden=False, slot=1
+        cls, pokemon, generation, ability=None, is_hidden=False, slot=1
     ):
         ability = ability or cls.setup_ability_data(name="ablty for pkmn")
 
@@ -1663,16 +1702,16 @@ class APIData:
 
     @classmethod
     def setup_pokemon_sprites_data(
-            cls,
-            pokemon,
-            front_default=True,
-            front_female=False,
-            front_shiny=False,
-            front_shiny_female=False,
-            back_default=False,
-            back_female=False,
-            back_shiny=False,
-            back_shiny_female=False,
+        cls,
+        pokemon,
+        front_default=True,
+        front_female=False,
+        front_shiny=False,
+        front_shiny_female=False,
+        back_default=False,
+        back_female=False,
+        back_shiny=False,
+        back_shiny_female=False,
     ):
         sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
         showdown_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/%s.png"
@@ -1772,26 +1811,26 @@ class APIData:
 
     @classmethod
     def setup_pokemon_evolution_data(
-            cls,
-            evolved_species=None,
-            evolution_trigger=None,
-            party_species=None,
-            trade_species=None,
-            evolution_item=None,
-            party_type=None,
-            min_level=0,
-            gender=None,
-            location=None,
-            held_item=None,
-            time_of_day="",
-            known_move=None,
-            known_move_type=None,
-            min_happiness=0,
-            min_beauty=0,
-            min_affection=0,
-            relative_physical_stats=0,
-            needs_overworld_rain=False,
-            turn_upside_down=False,
+        cls,
+        evolved_species=None,
+        evolution_trigger=None,
+        party_species=None,
+        trade_species=None,
+        evolution_item=None,
+        party_type=None,
+        min_level=0,
+        gender=None,
+        location=None,
+        held_item=None,
+        time_of_day="",
+        known_move=None,
+        known_move_type=None,
+        min_happiness=0,
+        min_beauty=0,
+        min_affection=0,
+        relative_physical_stats=0,
+        needs_overworld_rain=False,
+        turn_upside_down=False,
     ):
         evolved_species = evolved_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for pkmn evltn"
@@ -1854,7 +1893,7 @@ class APIData:
 
     @classmethod
     def setup_encounter_condition_name_data(
-            cls, encounter_condition, name="encntr cndtn nm"
+        cls, encounter_condition, name="encntr cndtn nm"
     ):
         language = cls.setup_language_data(name="lang for " + name)
 
@@ -1867,7 +1906,7 @@ class APIData:
 
     @classmethod
     def setup_encounter_condition_value_data(
-            cls, encounter_condition, name="encntr cndtn vlu", is_default=False
+        cls, encounter_condition, name="encntr cndtn vlu", is_default=False
     ):
         encounter_condition_value = EncounterConditionValue.objects.create(
             encounter_condition=encounter_condition, name=name, is_default=is_default
@@ -1878,7 +1917,7 @@ class APIData:
 
     @classmethod
     def setup_encounter_condition_value_name_data(
-            cls, encounter_condition_value, name="encntr cndtn vlu nm"
+        cls, encounter_condition_value, name="encntr cndtn vlu nm"
     ):
         language = cls.setup_language_data(name="lang for " + name)
 
@@ -1893,7 +1932,7 @@ class APIData:
 
     @classmethod
     def setup_encounter_condition_value_map_data(
-            cls, encounter, encounter_condition_value
+        cls, encounter, encounter_condition_value
     ):
         encounter_condition_value_map = EncounterConditionValue.objects.create(
             encounter=encounter, encounter_condition_value=encounter_condition_value
@@ -1922,7 +1961,7 @@ class APIData:
 
     @classmethod
     def setup_location_area_encounter_rate_data(
-            cls, location_area, encounter_method, rate=0
+        cls, location_area, encounter_method, rate=0
     ):
         version = cls.setup_version_data(name="ver for lctn area")
 
@@ -1938,13 +1977,13 @@ class APIData:
 
     @classmethod
     def setup_encounter_data(
-            cls,
-            location_area=None,
-            encounter_slot=None,
-            pokemon=None,
-            version=None,
-            min_level=10,
-            max_level=15,
+        cls,
+        location_area=None,
+        encounter_slot=None,
+        pokemon=None,
+        version=None,
+        min_level=10,
+        max_level=15,
     ):
         location_area = location_area or cls.setup_location_area_data(
             name="ver for encntr"
@@ -1989,7 +2028,7 @@ class APIData:
 
     @classmethod
     def setup_pal_park_data(
-            cls, pokemon_species=None, pal_park_area=None, base_score=10, rate=10
+        cls, pokemon_species=None, pal_park_area=None, base_score=10, rate=10
     ):
         pal_park_area = pal_park_area or cls.setup_pal_park_area_data(
             name="pl prk area"
@@ -5605,15 +5644,19 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_machine_version_locations(self):
-
         # Creating a machine version location object
         machine_version_location = MachineVersionLocations.objects.create(
             machine_number=2,
             version_group_id=self.setup_version_data().version_group,
-            location=self.setup_location_area_data().location
+            location_id=self.setup_location_area_data().location,
         )
 
         # Assertions to test the created machine version location
         self.assertEqual(machine_version_location.machine_number, 2)
-        self.assertEqual(machine_version_location.version_group_id, self.setup_version_data().version_group)
-        self.assertEqual(machine_version_location.location, self.setup_location_area_data().location)
+        self.assertEqual(
+            machine_version_location.version_group_id,
+            self.setup_version_data().version_group,
+        )
+        self.assertEqual(
+            machine_version_location.location, self.setup_location_area_data().location
+        )

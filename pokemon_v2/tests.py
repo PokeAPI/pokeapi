@@ -1126,7 +1126,6 @@ class APIData:
         machine_number=1,
         version_group=None,
         move=None,
-        locations=[],
         growth_rate=None,
         item=None,
     ):
@@ -1150,8 +1149,6 @@ class APIData:
             growth_rate=growth_rate,
             item=item,
         )
-        if len(locations) > 0:
-            machine.locations.set(locations)
         machine.save()
 
         return machine
@@ -5663,7 +5660,7 @@ class APITests(APIData, APITestCase):
     # Machine Tests
     def test_machine_api(self):
         # Setup machine with no locations
-        base_machine = self.setup_machine_data(name="base mchn", locations=[])
+        base_machine = self.setup_machine_data(name="base mchn")
 
         response = self.client.get("{}/machine/{}/".format(API_V2, base_machine.pk))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -5693,3 +5690,23 @@ class APITests(APIData, APITestCase):
         )
 
         self.assertListEqual(response.data["locations"], [])
+
+        # Test machine with single location
+        single_location = self.setup_location_data(name="lctn for mchn with 1 lctn")
+        machine_with_single_location = self.setup_machine_data(name="mchn with 1 lctn")
+        single_machine_ver_loc = self.setup_machine_version_locations_data(
+            machine=machine_with_single_location, location=single_location
+        )
+
+        response = self.client.get(
+            "{}/machine/{}/".format(API_V2, machine_with_single_location.pk)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(len(response.data["locations"]), 1)
+
+        self.assertEqual(response.data["locations"][0]["name"], single_location.name)
+        self.assertEqual(
+            response.data["locations"][0]["url"],
+            "{}{}/location/{}/".format(TEST_HOST, API_V2, single_location.pk),
+        )

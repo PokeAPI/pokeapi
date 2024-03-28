@@ -1120,6 +1120,59 @@ class APIData:
         return move_stat_change
 
     @classmethod
+    def setup_machine_data(
+        cls,
+        name="mchn",
+        machine_number=1,
+        version_group=None,
+        move=None,
+        growth_rate=None,
+        item=None,
+    ):
+        version_group = version_group or cls.setup_version_group_data(
+            "ver grp for " + name
+        )
+        move = move or cls.setup_move_data(
+            name="mv for " + name, generation=version_group.generation
+        )
+        growth_rate = growth_rate or cls.setup_growth_rate_data(
+            name="grth rt for " + name
+        )
+        item = item or cls.setup_item_data(
+            name="itm for " + name, fling_power=None  # type: ignore
+        )
+
+        machine = Machine.objects.create(
+            machine_number=machine_number,
+            version_group=version_group,
+            move=move,
+            growth_rate=growth_rate,
+            item=item,
+        )
+        machine.save()
+
+        return machine
+
+    @classmethod
+    def setup_machine_version_locations_data(
+        cls, name="mchn ver lctns", machine=None, location=None
+    ):
+        location = location or cls.setup_location_data(name="lctn for " + name)
+        machine = machine or cls.setup_machine_data(
+            name="mchn for " + name,
+            locations=[
+                location,
+            ],
+        )
+
+        machine_version_location = MachineVersionLocation(
+            machine=machine, location=location
+        )
+        machine_version_location.save()
+
+        return machine_version_location
+
+    @classmethod
     def setup_pokeathlon_stat_data(cls, name="pkathln stt"):
         pokeathlon_stat = PokeathlonStat.objects.create(name=name)
         pokeathlon_stat.save()
@@ -5603,3 +5656,87 @@ class APITests(APIData, APITestCase):
         response = self.client.get("{}/pokemon/{}/".format(API_V2, 2147483648))
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    # Machine Tests
+    def test_machine_api(self):
+        # Setup machine with no locations
+        base_machine = self.setup_machine_data(name="base mchn")
+
+        response = self.client.get("{}/machine/{}/".format(API_V2, base_machine.pk))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(response.data["id"], base_machine.pk)
+
+        self.assertEqual(response.data["item"]["name"], base_machine.item.name)
+        self.assertEqual(
+            response.data["item"]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, base_machine.item.pk),
+        )
+
+        self.assertEqual(
+            response.data["version_group"]["name"], base_machine.version_group.name
+        )
+        self.assertEqual(
+            response.data["version_group"]["url"],
+            "{}{}/version-group/{}/".format(
+                TEST_HOST, API_V2, base_machine.version_group.pk
+            ),
+        )
+
+        self.assertEqual(response.data["move"]["name"], base_machine.move.name)
+        self.assertEqual(
+            response.data["move"]["url"],
+            "{}{}/move/{}/".format(TEST_HOST, API_V2, base_machine.move.pk),
+        )
+
+        self.assertListEqual(response.data["locations"], [])
+
+        # Test machine with single location
+        single_location = self.setup_location_data(name="lctn for mchn with 1 lctn")
+        machine_with_single_location = self.setup_machine_data(name="mchn with 1 lctn")
+        single_machine_ver_loc = self.setup_machine_version_locations_data(
+            machine=machine_with_single_location, location=single_location
+        )
+
+        response = self.client.get(
+            "{}/machine/{}/".format(API_V2, machine_with_single_location.pk)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(response.data["id"], machine_with_single_location.pk)
+        self.assertEqual(len(response.data["locations"]), 1)
+
+        self.assertEqual(response.data["locations"][0]["name"], single_location.name)
+        self.assertEqual(
+            response.data["locations"][0]["url"],
+            "{}{}/location/{}/".format(TEST_HOST, API_V2, single_location.pk),
+        )
+
+        # Test Machine with multiple locations
+        machine_with_many_locations = self.setup_machine_data(name="mchn with 10 lcts")
+        many_locations = [
+            self.setup_location_data(name=f"lctn {i} for mchn with 10 lctns")
+            for i in range(1, 11)
+        ]
+        many_machine_ver_locs = [
+            self.setup_machine_version_locations_data(
+                machine=machine_with_many_locations, location=location
+            )
+            for location in many_locations
+        ]
+
+        response = self.client.get(
+            "{}/machine/{}/".format(API_V2, machine_with_many_locations.pk)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(len(response.data["locations"]), len(many_locations))
+
+        for i in range(0, len(many_locations)):
+            self.assertEqual(
+                response.data["locations"][i]["name"], many_locations[i].name
+            )
+            self.assertEqual(
+                response.data["locations"][i]["url"],
+                "{}{}/location/{}/".format(TEST_HOST, API_V2, many_locations[i].pk),
+            )

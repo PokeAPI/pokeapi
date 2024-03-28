@@ -1,5 +1,7 @@
 from django.db import models
 
+from compositefk.fields import CompositeForeignKey
+
 #####################
 #  ABSTRACT MODELS  #
 #####################
@@ -1412,6 +1414,21 @@ class Machine(HasGrowthRate, HasItem):
     )
 
     move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
+
+    locations = models.ManyToManyField(
+        Location, through="MachineVersionLocation", blank=True
+    )
+
+    # location_areas = models.ManyToManyField(LocationArea, through='MachineVersionLocations', blank=True)
+
+    class Meta:
+        unique_together = ("machine_number", "version_group")
+
+
+class MachineVersionLocation(HasLocation):
+    machine_number = models.IntegerField()
+    version_group_id = models.IntegerField()
+    machine = CompositeForeignKey(Machine, null=False, to_fields={"machine_number", "version_group_id"}, on_delete=models.CASCADE)  # type: ignore
 
 
 #######################

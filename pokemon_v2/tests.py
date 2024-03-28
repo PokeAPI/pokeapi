@@ -5703,6 +5703,7 @@ class APITests(APIData, APITestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+        self.assertEqual(response.data["id"], machine_with_single_location.pk)
         self.assertEqual(len(response.data["locations"]), 1)
 
         self.assertEqual(response.data["locations"][0]["name"], single_location.name)

@@ -1126,7 +1126,7 @@ class APIData:
         machine_number=1,
         version_group=None,
         move=None,
-        locations=None,
+        locations=[],
         growth_rate=None,
         item=None,
     ):
@@ -1136,9 +1136,6 @@ class APIData:
         move = move or cls.setup_move_data(
             name="mv for " + name, generation=version_group.generation
         )
-        locations = locations or [
-            cls.setup_location_data(name="lctn for " + name),
-        ]
         growth_rate = growth_rate or cls.setup_growth_rate_data(
             name="grth rt for " + name
         )
@@ -1150,10 +1147,11 @@ class APIData:
             machine_number=machine_number,
             version_group=version_group,
             move=move,
-            locations=locations,
             growth_rate=growth_rate,
             item=item,
         )
+        if len(locations) > 0:
+            machine.locations.set(locations)
         machine.save()
 
         return machine
@@ -5662,20 +5660,36 @@ class APITests(APIData, APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
-    def test_machine_version_locations(self):
-        # Creating a machine version location object
-        machine_version_location = MachineVersionLocation.objects.create(
-            machine_number=2,
-            version_group_id=self.setup_version_data().version_group,
-            location_id=self.setup_location_area_data().location,
+    # Machine Tests
+    def test_machine_api(self):
+        # Setup machine with no locations
+        base_machine = self.setup_machine_data(name="base mchn", locations=[])
+
+        response = self.client.get("{}/machine/{}/".format(API_V2, base_machine.pk))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(response.data["id"], base_machine.pk)
+
+        self.assertEqual(response.data["item"]["name"], base_machine.item.name)
+        self.assertEqual(
+            response.data["item"]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, base_machine.item.pk),
         )
 
-        # Assertions to test the created machine version location
-        self.assertEqual(machine_version_location.machine_number, 2)
         self.assertEqual(
-            machine_version_location.version_group_id,
-            self.setup_version_data().version_group,
+            response.data["version_group"]["name"], base_machine.version_group.name
         )
         self.assertEqual(
-            machine_version_location.location, self.setup_location_area_data().location
+            response.data["version_group"]["url"],
+            "{}{}/version-group/{}/".format(
+                TEST_HOST, API_V2, base_machine.version_group.pk
+            ),
         )
+
+        self.assertEqual(response.data["move"]["name"], base_machine.move.name)
+        self.assertEqual(
+            response.data["move"]["url"],
+            "{}{}/move/{}/".format(TEST_HOST, API_V2, base_machine.move.pk),
+        )
+
+        self.assertListEqual(response.data["locations"], [])

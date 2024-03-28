@@ -5711,3 +5711,32 @@ class APITests(APIData, APITestCase):
             response.data["locations"][0]["url"],
             "{}{}/location/{}/".format(TEST_HOST, API_V2, single_location.pk),
         )
+
+        # Test Machine with multiple locations
+        machine_with_many_locations = self.setup_machine_data(name="mchn with 10 lcts")
+        many_locations = [
+            self.setup_location_data(name=f"lctn {i} for mchn with 10 lctns")
+            for i in range(1, 11)
+        ]
+        many_machine_ver_locs = [
+            self.setup_machine_version_locations_data(
+                machine=machine_with_many_locations, location=location
+            )
+            for location in many_locations
+        ]
+
+        response = self.client.get(
+            "{}/machine/{}/".format(API_V2, machine_with_many_locations.pk)
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(len(response.data["locations"]), len(many_locations))
+
+        for i in range(0, len(many_locations)):
+            self.assertEqual(
+                response.data["locations"][i]["name"], many_locations[i].name
+            )
+            self.assertEqual(
+                response.data["locations"][i]["url"],
+                "{}{}/location/{}/".format(TEST_HOST, API_V2, many_locations[i].pk),
+            )

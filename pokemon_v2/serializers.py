@@ -484,7 +484,9 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer):
             "items": {
                 "type": "integer", "format": "int32",
             },
-            "example": [0, 5, 10, 15, 20, 25, 30],
+            "examples": [
+                [0, 5, 10, 15, 20, 25, 30]
+            ]
         }
     )
     def get_values(self, obj):
@@ -626,11 +628,11 @@ class RegionDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "red-blue"},
+                    "name": {"type": "string", "examples": [ "red-blue" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/version-group/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/version-group/1/" ],
                     },
                 },
             },
@@ -710,16 +712,16 @@ class GenderDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["rate", "pokemon_species"],
                 "properties": {
-                    "rate": {"type": "integer", "format": "int32", "example": 1},
+                    "rate": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                     "pokemon_species": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bulbasaur"},
+                            "name": {"type": "string", "examples": [ "bulbasaur" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon-species/1/" ],
                             },
                         },
                     },
@@ -756,11 +758,11 @@ class GenderDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "wormadam"},
+                    "name": {"type": "string", "examples": [ "wormadam" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/pokemon-species/413/",
+                        "examples": [ "https://pokeapi.co/api/v2/pokemon-species/413/" ],
                     },
                 },
             },
@@ -986,11 +988,11 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "old-rod"},
+                            "name": {"type": "string", "examples": [ "old-rod" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/encounter-method/2/",
+                                "examples": [ "https://pokeapi.co/api/v2/encounter-method/2/" ],
                             },
                         },
                     },
@@ -1000,19 +1002,19 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["rate", "version"],
                             "properties": {
-                                "rate": {"type": "integer", "format": "int32", "example": 5},
+                                "rate": {"type": "integer", "format": "int32", "examples": [ 5 ]},
                                 "version": {
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "platinum",
+                                            "examples": [ "platinum" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/version/14/",
+                                            "examples": [ "https://pokeapi.co/api/v2/version/14/" ],
                                         },
                                     },
                                 },
@@ -1075,11 +1077,11 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "tentacool"},
+                            "name": {"type": "string", "examples": [ "tentacool" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "ttps://pokeapi.co/api/v2/pokemon/72/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon/72/" ],
                             },
                         },
                     },
@@ -1095,16 +1097,16 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "diamond",
+                                            "examples": [ "diamond" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/version/12/",
+                                            "examples": [ "https://pokeapi.co/api/v2/version/12/" ],
                                         },
                                     },
                                 },
-                                "max_chance": {"type": "integer", "format": "int32", "example": 60},
+                                "max_chance": {"type": "integer", "format": "int32", "examples": [ 60 ]},
                                 "encounter_details": {
                                     "type": "object",
                                     "required": [
@@ -1115,36 +1117,36 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
                                         "method",
                                     ],
                                     "properties": {
-                                        "min_level": {"type": "integer", "format": "int32", "example": 20},
-                                        "max_level": {"type": "integer", "format": "int32", "example": 30},
+                                        "min_level": {"type": "integer", "format": "int32", "examples": [ 20 ]},
+                                        "max_level": {"type": "integer", "format": "int32", "examples": [ 30 ]},
                                         "condition_values": {
                                             "type": "object",
                                             "required": ["name", "url"],
                                             "properties": {
                                                 "name": {
                                                     "type": "string",
-                                                    "example": "slot2-sapphire",
+                                                    "examples": [ "slot2-sapphire" ],
                                                 },
                                                 "url": {
                                                     "type": "string",
                                                     "format": "uri",
-                                                    "example": "https://pokeapi.co/api/v2/encounter-condition-value/10/",
+                                                    "examples": [ "https://pokeapi.co/api/v2/encounter-condition-value/10/" ],
                                                 },
                                             },
                                         },
-                                        "chance": {"type": "integer", "format": "int32", "example": 60},
+                                        "chance": {"type": "integer", "format": "int32", "examples": [ 60 ]},
                                         "method": {
                                             "type": "object",
                                             "required": ["name", "url"],
                                             "properties": {
                                                 "name": {
                                                     "type": "string",
-                                                    "example": "surf",
+                                                    "examples": [ "surf" ],
                                                 },
                                                 "url": {
                                                     "type": "string",
                                                     "format": "uri",
-                                                    "example": "https://pokeapi.co/api/v2/encounter-method/5/",
+                                                    "examples": [ "https://pokeapi.co/api/v2/encounter-method/5/" ],
                                                 },
                                             },
                                         },
@@ -1335,17 +1337,17 @@ class AbilityDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["is_hidden", "slot", "pokemon"],
                 "properties": {
-                    "is_hidden": {"type": "boolean", "example": True},
-                    "slot": {"type": "integer", "format": "int32", "example": 3},
+                    "is_hidden": {"type": "boolean"},
+                    "slot": {"type": "integer", "format": "int32", "examples": [ 3 ]},
                     "pokemon": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "gloom"},
+                            "name": {"type": "string", "examples": [ "gloom" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon/44/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon/44/" ],
                             },
                         },
                     },
@@ -1414,19 +1416,19 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["change", "move"],
                         "properties": {
-                            "change": {"type": "integer", "format": "int32", "example": -1},
+                            "change": {"type": "integer", "format": "int32", "examples": [ -1 ]},
                             "move": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
                                     "name": {
                                         "type": "string",
-                                        "example": "swords-dance",
+                                        "examples": [ "swords-dance" ],
                                     },
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/14/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/14/" ],
                                     },
                                 },
                             },
@@ -1439,16 +1441,16 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["change", "move"],
                         "properties": {
-                            "change": {"type": "integer", "format": "int32", "example": 5},
+                            "change": {"type": "integer", "format": "int32", "examples": [ 5 ]},
                             "move": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "growl"},
+                                    "name": {"type": "string", "examples": [ "growl" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/45/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/45/" ],
                                     },
                                 },
                             },
@@ -1485,11 +1487,11 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "lonely"},
+                            "name": {"type": "string", "examples": [ "lonely" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/nature/6/",
+                                "examples": [ "https://pokeapi.co/api/v2/nature/6/" ],
                             },
                         },
                     },
@@ -1500,11 +1502,11 @@ class StatDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bold"},
+                            "name": {"type": "string", "examples": [ "bold" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/nature/2/",
+                                "examples": [ "https://pokeapi.co/api/v2/nature/2/" ],
                             },
                         },
                     },
@@ -1613,11 +1615,11 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "master-ball"},
+                    "name": {"type": "string", "examples": [ "master-ball" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/item/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/item/1/" ],
                     },
                 },
             },
@@ -1749,17 +1751,17 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                     "machine": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/machine/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/machine/1/" ],
                     },
                     "version_group": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "sword-shield"},
+                            "name": {"type": "string", "examples": [ "sword-shield" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/version-group/20/",
+                                "examples": [ "https://pokeapi.co/api/v2/version-group/20/" ],
                             },
                         },
                     },
@@ -1795,7 +1797,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                 "default": {
                     "type": "string",
                     "format": "uri",
-                    "example": "https://pokeapi.co/media/sprites/items/master-ball.png",
+                    "examples": [ "https://pokeapi.co/media/sprites/items/master-ball.png" ],
                 }
             },
         }
@@ -1811,11 +1813,11 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "countable"},
+                    "name": {"type": "string", "examples": [ "countable" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/item-attribute/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/item-attribute/1/" ],
                     },
                 },
             },
@@ -1849,11 +1851,11 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "farfetchd"},
+                            "name": {"type": "string", "examples": [ "farfetchd" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon/83/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon/83/" ],
                             },
                         },
                     },
@@ -1863,16 +1865,16 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["rarity", "version"],
                             "properties": {
-                                "rarity": {"type": "integer", "format": "int32", "example": 5},
+                                "rarity": {"type": "integer", "format": "int32", "examples": [ 5 ]},
                                 "version": {
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "ruby"},
+                                        "name": {"type": "string", "examples": [ "ruby" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/version/7/",
+                                            "examples": [ "https://pokeapi.co/api/v2/version/7/" ],
                                         },
                                     },
                                 },
@@ -1923,7 +1925,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
                 "url": {
                     "type": "string",
                     "format": "uri",
-                    "example": '"https://pokeapi.co/api/v2/evolution-chain/51/',
+                    "examples": [ "https://pokeapi.co/api/v2/evolution-chain/51/" ],
                 }
             },
         }
@@ -1999,16 +2001,16 @@ class NatureDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["max_change", "pokeathlon_stat"],
                 "properties": {
-                    "max_change": {"type": "integer", "format": "int32", "example": 1},
+                    "max_change": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                     "pokeathlon_stat": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "power"},
+                            "name": {"type": "string", "examples": [ "power" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokeathlon-stat/2/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokeathlon-stat/2/" ],
                             },
                         },
                     },
@@ -2078,7 +2080,7 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["potency", "berry"],
                 "properties": {
-                    "potency": {"type": "integer", "example": 10},
+                    "potency": {"type": "integer", "examples": [ 10 ]},
                     "berry": {
                         "type": "object",
                         "require": ["name", "url"],
@@ -2086,13 +2088,13 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer):
                             "name": {
                                 "type": "string",
                                 "description": "The name of the berry",
-                                "example": "rowap",
+                                "examples": [ "rowap" ],
                             },
                             "url": {
                                 "type": "string",
                                 "format": "uri",
                                 "description": "The URL to get more information about the berry",
-                                "example": "https://pokeapi.co/api/v2/berry/64/",
+                                "examples": [ "https://pokeapi.co/api/v2/berry/64/" ],
                             },
                         },
                     },
@@ -2144,7 +2146,7 @@ class BerryDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["potency", "flavor"],
                 "properties": {
-                    "potency": {"type": "integer", "example": 10},
+                    "potency": {"type": "integer", "examples": [ 10 ]},
                     "flavor": {
                         "type": "object",
                         "require": ["name", "url"],
@@ -2152,13 +2154,13 @@ class BerryDetailSerializer(serializers.ModelSerializer):
                             "name": {
                                 "type": "string",
                                 "description": "The name of the flavor",
-                                "example": "spicy",
+                                "examples": [ "spicy" ],
                             },
                             "url": {
                                 "type": "string",
                                 "format": "uri",
                                 "description": "The URL to get more information about the flavor",
-                                "example": "https://pokeapi.co/api/v2/berry-flavor/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/berry-flavor/1/" ],
                             },
                         },
                     },
@@ -2218,13 +2220,13 @@ class EggGroupDetailSerializer(serializers.ModelSerializer):
                     "name": {
                         "type": "string",
                         "description": "Pokemon species name.",
-                        "example": "bulbasaur",
+                        "examples": [ "bulbasaur" ],
                     },
                     "url": {
                         "type": "string",
                         "format": "uri",
                         "description": "The URL to get more information about the species",
-                        "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/pokemon-species/1/" ],
                     },
                 },
             },
@@ -2342,11 +2344,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "flying"},
+                            "name": {"type": "string", "examples": [ "flying" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/3/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/3/" ],
                             },
                         },
                     },
@@ -2357,11 +2359,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bug"},
+                            "name": {"type": "string", "examples": [ "bug" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/7/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/7/" ],
                             },
                         },
                     },
@@ -2372,11 +2374,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "poison"},
+                            "name": {"type": "string", "examples": [ "poison" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/4/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/4/" ],
                             },
                         },
                     },
@@ -2387,11 +2389,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "electric"},
+                            "name": {"type": "string", "examples": [ "electric" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/13/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/13/" ],
                             },
                         },
                     },
@@ -2402,11 +2404,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "poison"},
+                            "name": {"type": "string", "examples": [ "poison" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/4/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/4/" ],
                             },
                         },
                     },
@@ -2417,11 +2419,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "water"},
+                            "name": {"type": "string", "examples": [ "water" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/11/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/11/" ],
                             },
                         },
                     },
@@ -2504,11 +2506,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "generation-v"},
+                            "name": {"type": "string", "examples": [ "generation-v" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/generation/5/",
+                                "examples": [ "https://pokeapi.co/api/v2/generation/5/" ],
                             },
                         },
                     },
@@ -2529,11 +2531,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "flying"},
+                                        "name": {"type": "string", "examples": [ "flying" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/3/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/3/" ],
                                         },
                                     },
                                 },
@@ -2544,11 +2546,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "bug"},
+                                        "name": {"type": "string", "examples": [ "bug" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/7/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/7/" ],
                                         },
                                     },
                                 },
@@ -2559,11 +2561,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "poison"},
+                                        "name": {"type": "string", "examples": [ "poison" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/4/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/4/" ],
                                         },
                                     },
                                 },
@@ -2576,12 +2578,12 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "electric",
+                                            "examples": [ "electric" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/13/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/13/" ],
                                         },
                                     },
                                 },
@@ -2592,11 +2594,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "poison"},
+                                        "name": {"type": "string", "examples": [ "poison" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/4/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/4/" ],
                                         },
                                     },
                                 },
@@ -2607,11 +2609,11 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "water"},
+                                        "name": {"type": "string", "examples": [ "water" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/11/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/11/" ],
                                         },
                                     },
                                 },
@@ -2723,7 +2725,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["potency", "flavor"],
                 "properties": {
-                    "slot": {"type": "integer", "example": 1},
+                    "slot": {"type": "integer", "examples": [ 1 ]},
                     "pokemon": {
                         "type": "object",
                         "require": ["name", "url"],
@@ -2731,13 +2733,13 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                             "name": {
                                 "type": "string",
                                 "description": "The name of the pokemon",
-                                "example": "sandshrew",
+                                "examples": [ "sandshrew" ],
                             },
                             "url": {
                                 "type": "string",
                                 "format": "uri",
                                 "description": "The URL to get more information about the pokemon",
-                                "example": "https://pokeapi.co/api/v2/pokemon/27/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon/27/" ],
                             },
                         },
                     },
@@ -2858,11 +2860,11 @@ class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "thunder-punch"},
+                    "name": {"type": "string", "examples": [ "thunder-punch" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/move/9/",
+                        "examples": [ "https://pokeapi.co/api/v2/move/9/" ],
                     },
                 },
             },
@@ -2905,11 +2907,11 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "sing"},
+                    "name": {"type": "string", "examples": [ "sing" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/move/47/",
+                        "examples": [ "https://pokeapi.co/api/v2/move/47/" ],
                     },
                 },
             },
@@ -3018,21 +3020,21 @@ class MoveChangeSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "example": "Inflicts [regular damage]{mechanic:regular-damage}.",
+                        "examples": [ "Inflicts [regular damage]{mechanic:regular-damage}." ],
                     },
                     "short_effect": {
                         "type": "string",
-                        "example": "Inflicts regular damage with no additional effect.",
+                        "examples": [ "Inflicts regular damage with no additional effect." ],
                     },
                     "language": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
@@ -3144,11 +3146,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "clefairy"},
+                    "name": {"type": "string", "examples": [ "clefairy" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/pokemon/35/",
+                        "examples": [ "https://pokeapi.co/api/v2/pokemon/35/" ],
                     },
                 },
             },
@@ -3185,7 +3187,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/machine/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/machine/1/" ],
                             }
                         },
                     },
@@ -3193,11 +3195,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "sword-shield"},
+                            "name": {"type": "string", "examples": [ "sword-shield" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/version-group/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/version-group/1/" ],
                             },
                         },
                     },
@@ -3241,11 +3243,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "fire-punch"},
+                                    "name": {"type": "string", "examples": [ "fire-punch" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/7/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/7/" ],
                                     },
                                 },
                             },
@@ -3257,11 +3259,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "ice-punch"},
+                                    "name": {"type": "string", "examples": [ "ice-punch" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/8/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/8/" ],
                                     },
                                 },
                             },
@@ -3281,12 +3283,12 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                                 "properties": {
                                     "name": {
                                         "type": "string",
-                                        "example": "night-slash",
+                                        "examples": [ "night-slash" ],
                                     },
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/400/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/400/" ],
                                     },
                                 },
                             },
@@ -3300,12 +3302,12 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                                 "properties": {
                                     "name": {
                                         "type": "string",
-                                        "example": "focus-energy",
+                                        "examples": [ "focus-energy" ],
                                     },
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/move/116/",
+                                        "examples": [ "https://pokeapi.co/api/v2/move/116/" ],
                                     },
                                 },
                             },
@@ -3381,21 +3383,21 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "example": "Inflicts [regular damage]{mechanic:regular-damage}.",
+                        "examples": [ "Inflicts [regular damage]{mechanic:regular-damage}." ],
                     },
                     "short_effect": {
                         "type": "string",
-                        "example": "Inflicts regular damage with no additional effect.",
+                        "examples": [ "Inflicts regular damage with no additional effect." ],
                     },
                     "language": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
@@ -3432,17 +3434,17 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                             "properties": {
                                 "effect": {
                                     "type": "string",
-                                    "example": "Hits Pokémon under the effects of dig and fly.",
+                                    "examples": [ "Hits Pokémon under the effects of dig and fly." ],
                                 },
                                 "language": {
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "en"},
+                                        "name": {"type": "string", "examples": [ "en" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/language/9/",
+                                            "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                                         },
                                     },
                                 },
@@ -3453,11 +3455,11 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "gold-silver"},
+                            "name": {"type": "string", "examples": [ "gold-silver" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/version-group/3/",
+                                "examples": [ "https://pokeapi.co/api/v2/version-group/3/" ],
                             },
                         },
                     },
@@ -3480,16 +3482,16 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["change", "stat"],
                 "properties": {
-                    "change": {"type": "integer", "format": "int32", "example": 2},
+                    "change": {"type": "integer", "format": "int32", "examples": [ 2 ]},
                     "stat": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "attack"},
+                            "name": {"type": "string", "examples": [ "attack" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/stat/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/stat/1/" ],
                             },
                         },
                     },
@@ -3548,20 +3550,20 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["base_score", "pokemon-species", "rate"],
                 "properties": {
-                    "base_score": {"type": "integer", "format": "int32", "example": 50},
+                    "base_score": {"type": "integer", "format": "int32", "examples": [ 50 ]},
                     "pokemon-species": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bulbasaur"},
+                            "name": {"type": "string", "examples": [ "bulbasaur" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon-species/1/" ],
                             },
                         },
                     },
-                    "rate": {"type": "integer", "format": "int32", "example": 30},
+                    "rate": {"type": "integer", "format": "int32", "examples": [ 30 ]},
                 },
             },
         }
@@ -3661,15 +3663,15 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
-                    "name": {"type": "string", "example": "Plant Cloak"},
+                    "name": {"type": "string", "examples": [ "Plant Cloak" ]},
                 },
             },
         }
@@ -3700,15 +3702,15 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
-                    "name": {"type": "string", "example": "Plant Cloak"},
+                    "name": {"type": "string", "examples": [ "Plant Cloak" ]},
                 },
             },
         }
@@ -3736,16 +3738,16 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 "default": {
                     "type": "string",
                     "format": "uri",
-                    "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png",
+                    "examples": [ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png" ],
                 }
             },
             "additionalProperties": {  # Stoplight Elements doesn't render this well
                 "type": "string",
                 "format": "uri",
                 "nullable": True,
-                "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png",
+                "examples": [ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png" ],
             },
-            "example": {
+            "examples": [ {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png",
                 "back_female": None,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png",
@@ -3754,7 +3756,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 "front_female": None,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/412.png",
                 "front_shiny_female": None,
-            },
+            } ],
         }
     )
     def get_pokemon_form_sprites(self, obj):
@@ -3768,16 +3770,16 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["slot", "type"],
                 "properties": {
-                    "slot": {"type": "integer", "format": "int32", "example": 1},
+                    "slot": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                     "type": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bug"},
+                            "name": {"type": "string", "examples": [ "bug" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/7/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/7/" ],
                             },
                         },
                     },
@@ -3881,11 +3883,11 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "red-blue"},
+                    "name": {"type": "string", "examples": [ "red-blue" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/version-group/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/version-group/1/" ],
                     },
                 },
             },
@@ -3945,9 +3947,9 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/language/9/",
+                        "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                     },
-                    "name": {"type": "string", "example": "Ball"},
+                    "name": {"type": "string", "examples": [ "Ball" ]},
                 },
             },
         }
@@ -3987,16 +3989,16 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["awesome_name", "language"],
                 "properties": {
-                    "awesome_name": {"type": "string", "example": "Pomaceous"},
+                    "awesome_name": {"type": "string", "examples": [ "Pomaceous" ]},
                     "language": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
@@ -4111,9 +4113,9 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 "type": "string",
                 "format": "uri",
                 "nullable": True,
-                "example": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
+                "examples": [ "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png" ],
             },
-            "example": {
+            "examples": [ {
                 "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
                 "back_female": None,
                 "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png",
@@ -4122,7 +4124,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 "front_female": None,
                 "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
                 "front_shiny_female": None,
-            },
+            } ],
         }
     )
     def get_pokemon_sprites(self, obj):
@@ -4137,12 +4139,12 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 "latest": {
                     "type": "string",
                     "format": "uri",
-                    "example": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg",
+                    "examples": [ "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg" ],
                 },
                 "legacy": {
                     "type": "string",
                     "format": "uri",
-                    "example": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg",
+                    "examples": [ "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg" ],
                 },
             },
         }
@@ -4429,11 +4431,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "scratch"},
+                            "name": {"type": "string", "examples": [ "scratch" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/move/10/",
+                                "examples": [ "https://pokeapi.co/api/v2/move/10/" ],
                             },
                         },
                     },
@@ -4447,19 +4449,19 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                 "version_group",
                             ],
                             "properties": {
-                                "level_learned_at": {"type": "integer", "format": "int32", "example": 1},
+                                "level_learned_at": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                                 "move_learn_method": {
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "level-up",
+                                            "examples": [ "level-up" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/move-learn-method/1/",
+                                            "examples": [ "https://pokeapi.co/api/v2/move-learn-method/1/" ],
                                         },
                                     },
                                 },
@@ -4469,12 +4471,12 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "red-blue",
+                                            "examples": [ "red-blue" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/version-group/1/",
+                                            "examples": [ "https://pokeapi.co/api/v2/version-group/1/" ],
                                         },
                                     },
                                 },
@@ -4558,11 +4560,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                     "type": "object",
                     "required": ["name", "url"],
                     "properties": {
-                        "name": {"type": "string", "example": "soft-sand"},
+                        "name": {"type": "string", "examples": [ "soft-sand" ]},
                         "url": {
                             "type": "string",
                             "format": "uri",
-                            "example": "https://pokeapi.co/api/v2/item/214/",
+                            "examples": [ "https://pokeapi.co/api/v2/item/214/" ],
                         },
                     },
                 },
@@ -4572,16 +4574,16 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["rarity", "version"],
                         "properties": {
-                            "rarity": {"type": "integer", "format": "int32", "example": 5},
+                            "rarity": {"type": "integer", "format": "int32", "examples": [ 5 ]},
                             "version": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "diamond"},
+                                    "name": {"type": "string", "examples": [ "diamond" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/version/12/",
+                                        "examples": [ "https://pokeapi.co/api/v2/version/12/" ],
                                     },
                                 },
                             },
@@ -4643,16 +4645,16 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "sand-veil"},
+                            "name": {"type": "string", "examples": [ "sand-veil" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/ability/8/",
+                                "examples": [ "https://pokeapi.co/api/v2/ability/8/" ],
                             },
                         },
                     },
-                    "is_hidden": {"type": "boolean", "example": False},
-                    "slot": {"type": "integer", "format": "int32", "example": 1},
+                    "is_hidden": {"type": "boolean"},
+                    "slot": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                 },
             },
         }
@@ -4705,17 +4707,17 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                     "properties": {
                                         "name": {
                                             "type": "string",
-                                            "example": "levitate",
+                                            "examples": [ "levitate" ],
                                         },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/ability/26/",
+                                            "examples": [ "https://pokeapi.co/api/v2/ability/26/" ],
                                         },
                                     },
                                 },
-                                "is_hidden": {"type": "boolean", "example": False},
-                                "slot": {"type": "integer", "format": "int32", "example": 1},
+                                "is_hidden": {"type": "boolean"},
+                                "slot": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                             },
                         },
                     },
@@ -4723,11 +4725,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "generation-vi"},
+                            "name": {"type": "string", "examples": [ "generation-vi" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/generation/6/",
+                                "examples": [ "https://pokeapi.co/api/v2/generation/6/" ],
                             },
                         },
                     },
@@ -4784,16 +4786,16 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["slot", "type"],
                 "properties": {
-                    "slot": {"type": "integer", "format": "int32", "example": 1},
+                    "slot": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                     "type": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "ghost"},
+                            "name": {"type": "string", "examples": [ "ghost" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/type/8/",
+                                "examples": [ "https://pokeapi.co/api/v2/type/8/" ],
                             },
                         },
                     },
@@ -4840,11 +4842,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "generation-v"},
+                            "name": {"type": "string", "examples": [ "generation-v" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/generation/5/",
+                                "examples": [ "https://pokeapi.co/api/v2/generation/5/" ],
                             },
                         },
                     },
@@ -4854,16 +4856,16 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                             "type": "object",
                             "required": ["slot", "type"],
                             "properties": {
-                                "slot": {"type": "integer", "format": "int32", "example": 1},
+                                "slot": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                                 "type": {
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "example": "normal"},
+                                        "name": {"type": "string", "examples": [ "normal" ]},
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/type/1/",
+                                            "examples": [ "https://pokeapi.co/api/v2/type/1/" ],
                                         },
                                     },
                                 },
@@ -4912,7 +4914,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     @extend_schema_field(
         field={
             "type": "string",
-            "example": "https://pokeapi.co/api/v2/pokemon/1/encounters",
+            "examples": [ "https://pokeapi.co/api/v2/pokemon/1/encounters" ],
         }
     )
     def get_encounters(self, obj):
@@ -4947,11 +4949,11 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "ivysaur"},
+                    "name": {"type": "string", "examples": [ "ivysaur" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/pokemon-species/2/",
+                        "examples": [ "https://pokeapi.co/api/v2/pokemon-species/2/" ],
                     },
                 },
             },
@@ -5075,15 +5077,15 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
-                    "name": {"type": "string", "example": "bulbasaur"},
+                    "name": {"type": "string", "examples": [ "bulbasaur" ]},
                 },
             },
         }
@@ -5115,16 +5117,16 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["genus", "language"],
                 "properties": {
-                    "genus": {"type": "string", "example": "Seed Pokémon"},
+                    "genus": {"type": "string", "examples": [ "Seed Pokémon" ]},
                     "language": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "en"},
+                            "name": {"type": "string", "examples": [ "en" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/language/9/",
+                                "examples": [ "https://pokeapi.co/api/v2/language/9/" ],
                             },
                         },
                     },
@@ -5154,11 +5156,11 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "monster"},
+                    "name": {"type": "string", "examples": [ "monster" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/egg-group/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/egg-group/1/" ],
                     },
                 },
             },
@@ -5180,16 +5182,16 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["is_default", "pokemon"],
                 "properties": {
-                    "is_default": {"type": "boolean", "example": True},
+                    "is_default": {"type": "boolean"},
                     "pokemon": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bulbasaur"},
+                            "name": {"type": "string", "examples": [ "bulbasaur" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon/1/" ],
                             },
                         },
                     },
@@ -5227,16 +5229,16 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "field"},
+                            "name": {"type": "string", "examples": [ "field" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pal-park-area/2/",
+                                "examples": [ "https://pokeapi.co/api/v2/pal-park-area/2/" ],
                             },
                         },
                     },
-                    "base_score": {"type": "integer", "format": "int32", "example": 50},
-                    "rate": {"type": "integer", "format": "int32", "example": 30},
+                    "base_score": {"type": "integer", "format": "int32", "examples": [ 50 ]},
+                    "rate": {"type": "integer", "format": "int32", "examples": [ 30 ]},
                 },
             },
         }
@@ -5304,7 +5306,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
             "type": "object",
             "required": ["evolution_details", "evolves_to", "is_baby", "species"],
             "properties": {
-                "evolution_details": {"type": "array", "items": {}, "example": []},
+                "evolution_details": {"type": "array", "items": {}, "examples": []},
                 "evolves_to": {
                     "type": "array",
                     "items": {
@@ -5349,12 +5351,12 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "properties": {
                                                 "name": {
                                                     "type": "string",
-                                                    "example": 1,
+                                                    "examples": [ 1 ],
                                                 },
                                                 "url": {
                                                     "type": "string",
                                                     "format": "uri",
-                                                    "example": 2,
+                                                    "examples": [ 2 ],
                                                 },
                                             },
                                         },
@@ -5365,12 +5367,12 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "properties": {
                                                 "name": {
                                                     "type": "string",
-                                                    "example": 1,
+                                                    "examples": [ 1 ],
                                                 },
                                                 "url": {
                                                     "type": "string",
                                                     "format": "uri",
-                                                    "example": 2,
+                                                    "examples": [ 2 ],
                                                 },
                                             },
                                         },
@@ -5381,12 +5383,12 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "properties": {
                                                 "name": {
                                                     "type": "string",
-                                                    "example": 1,
+                                                    "examples": [ 1 ],
                                                 },
                                                 "url": {
                                                     "type": "string",
                                                     "format": "uri",
-                                                    "example": 2,
+                                                    "examples": [ 2 ],
                                                 },
                                             },
                                         },
@@ -5466,32 +5468,32 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                     },
                                 },
                             },
-                            "is_baby": {"type": "boolean", "example": True},
+                            "is_baby": {"type": "boolean"},
                             "species": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "happiny"},
+                                    "name": {"type": "string", "examples": [ "happiny" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/pokemon-species/440/",
+                                        "examples": [ "https://pokeapi.co/api/v2/pokemon-species/440/" ],
                                     },
                                 },
                             },
                         },
                     },
                 },
-                "is_baby": {"type": "boolean", "example": True},
+                "is_baby": {"type": "boolean"},
                 "species": {
                     "type": "object",
                     "required": ["name", "url"],
                     "properties": {
-                        "name": {"type": "string", "example": "happiny"},
+                        "name": {"type": "string", "examples": [ "happiny" ]},
                         "url": {
                             "type": "string",
                             "format": "uri",
-                            "example": "https://pokeapi.co/api/v2/pokemon-species/440/",
+                            "examples": [ "https://pokeapi.co/api/v2/pokemon-species/440/" ],
                         },
                     },
                 },
@@ -5624,17 +5626,17 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
                             "max_change": {
                                 "type": "integer", "format": "int32",
                                 "maximum": -1,
-                                "example": -1,
+                                "examples": [ -1 ],
                             },
                             "nature": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "hardy"},
+                                    "name": {"type": "string", "examples": [ "hardy" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/nature/1/",
+                                        "examples": [ "https://pokeapi.co/api/v2/nature/1/" ],
                                     },
                                 },
                             },
@@ -5650,17 +5652,17 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer):
                             "max_change": {
                                 "type": "integer", "format": "int32",
                                 "minimum": 1,
-                                "example": 2,
+                                "examples": [ 2 ],
                             },
                             "nature": {
                                 "type": "object",
                                 "required": ["name", "url"],
                                 "properties": {
-                                    "name": {"type": "string", "example": "hardy"},
+                                    "name": {"type": "string", "examples": [ "hardy" ]},
                                     "url": {
                                         "type": "string",
                                         "format": "uri",
-                                        "example": "https://pokeapi.co/api/v2/nature/1/",
+                                        "examples": [ "https://pokeapi.co/api/v2/nature/1/" ],
                                     },
                                 },
                             },
@@ -5735,16 +5737,16 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["entry_number", "pokemon_species"],
                 "properties": {
-                    "entry_number": {"type": "integer", "format": "int32", "example": 1},
+                    "entry_number": {"type": "integer", "format": "int32", "examples": [ 1 ]},
                     "pokemon_species": {
                         "type": "object",
                         "required": ["name", "url"],
                         "properties": {
-                            "name": {"type": "string", "example": "bulbasaur"},
+                            "name": {"type": "string", "examples": [ "bulbasaur" ]},
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/pokemon-species/1/",
+                                "examples": [ "https://pokeapi.co/api/v2/pokemon-species/1/" ],
                             },
                         },
                     },
@@ -5773,11 +5775,11 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "the-teal-mask"},
+                    "name": {"type": "string", "examples": [ "the-teal-mask" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/version-group/26/",
+                        "examples": [ "https://pokeapi.co/api/v2/version-group/26/" ],
                     },
                 },
             },
@@ -5849,11 +5851,11 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "kanto"},
+                    "name": {"type": "string", "examples": [ "kanto" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/region/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/region/1/" ],
                     },
                 },
             },
@@ -5880,11 +5882,11 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "level-up"},
+                    "name": {"type": "string", "examples": [ "level-up" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/move-learn-method/1/",
+                        "examples": [ "https://pokeapi.co/api/v2/move-learn-method/1/" ],
                     },
                 },
             },
@@ -5911,11 +5913,11 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
                 "type": "object",
                 "required": ["name", "url"],
                 "properties": {
-                    "name": {"type": "string", "example": "kanto"},
+                    "name": {"type": "string", "examples": [ "kanto" ]},
                     "url": {
                         "type": "string",
                         "format": "uri",
-                        "example": "https://pokeapi.co/api/v2/pokedex/2/",
+                        "examples": [ "https://pokeapi.co/api/v2/pokedex/2/" ],
                     },
                 },
             },

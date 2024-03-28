@@ -142,7 +142,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 
 @extend_schema(
     description="Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.",
-    summary="Get charecterictic",
+    summary="Get characteristic",
     tags=["pokemon"],
 )
 @extend_schema_view(

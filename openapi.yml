@@ -295,7 +295,7 @@ paths:
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
         for greater detail.
-      summary: Get charecterictic
+      summary: Get characteristic
       parameters:
       - in: path
         name: id
@@ -3047,11 +3047,11 @@ components:
             properties:
               is_hidden:
                 type: boolean
-                example: true
               slot:
                 type: integer
                 format: int32
-                example: 3
+                examples:
+                - 3
               pokemon:
                 type: object
                 required:
@@ -3060,11 +3060,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: gloom
+                    examples:
+                    - gloom
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon/44/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/44/
           readOnly: true
       required:
       - effect_changes
@@ -3172,7 +3174,8 @@ components:
             properties:
               potency:
                 type: integer
-                example: 10
+                examples:
+                - 10
               flavor:
                 type: object
                 require:
@@ -3182,12 +3185,14 @@ components:
                   name:
                     type: string
                     description: The name of the flavor
-                    example: spicy
+                    examples:
+                    - spicy
                   url:
                     type: string
                     format: uri
                     description: The URL to get more information about the flavor
-                    example: https://pokeapi.co/api/v2/berry-flavor/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/berry-flavor/1/
           readOnly: true
         item:
           $ref: '#/components/schemas/ItemSummary'
@@ -3273,7 +3278,8 @@ components:
             properties:
               potency:
                 type: integer
-                example: 10
+                examples:
+                - 10
               berry:
                 type: object
                 require:
@@ -3283,12 +3289,14 @@ components:
                   name:
                     type: string
                     description: The name of the berry
-                    example: rowap
+                    examples:
+                    - rowap
                   url:
                     type: string
                     format: uri
                     description: The URL to get more information about the berry
-                    example: https://pokeapi.co/api/v2/berry/64/
+                    examples:
+                    - https://pokeapi.co/api/v2/berry/64/
           readOnly: true
         contest_type:
           $ref: '#/components/schemas/ContestTypeSummary'
@@ -3363,14 +3371,14 @@ components:
           items:
             type: integer
             format: int32
-          example:
-          - 0
-          - 5
-          - 10
-          - 15
-          - 20
-          - 25
-          - 30
+          examples:
+          - - 0
+            - 5
+            - 10
+            - 15
+            - 20
+            - 25
+            - 30
           readOnly: true
         highest_stat:
           $ref: '#/components/schemas/StatSummary'
@@ -3531,12 +3539,14 @@ components:
               name:
                 type: string
                 description: Pokemon species name.
-                example: bulbasaur
+                examples:
+                - bulbasaur
               url:
                 type: string
                 format: uri
                 description: The URL to get more information about the species
-                example: https://pokeapi.co/api/v2/pokemon-species/1/
+                examples:
+                - https://pokeapi.co/api/v2/pokemon-species/1/
           readOnly: true
       required:
       - id
@@ -3727,7 +3737,7 @@ components:
             evolution_details:
               type: array
               items: {}
-              example: []
+              examples: []
             evolves_to:
               type: array
               items:
@@ -3771,11 +3781,13 @@ components:
                           properties:
                             name:
                               type: string
-                              example: 1
+                              examples:
+                              - 1
                             url:
                               type: string
                               format: uri
-                              example: 2
+                              examples:
+                              - 2
                         held_item:
                           type: object
                           nullable: true
@@ -3785,11 +3797,13 @@ components:
                           properties:
                             name:
                               type: string
-                              example: 1
+                              examples:
+                              - 1
                             url:
                               type: string
                               format: uri
-                              example: 2
+                              examples:
+                              - 2
                         item:
                           type: object
                           nullable: true
@@ -3799,11 +3813,13 @@ components:
                           properties:
                             name:
                               type: string
-                              example: 1
+                              examples:
+                              - 1
                             url:
                               type: string
                               format: uri
-                              example: 2
+                              examples:
+                              - 2
                         known_move:
                           type: ''
                           nullable: true
@@ -3870,7 +3886,6 @@ components:
                           type: boolean
                   is_baby:
                     type: boolean
-                    example: true
                   species:
                     type: object
                     required:
@@ -3879,14 +3894,15 @@ components:
                     properties:
                       name:
                         type: string
-                        example: happiny
+                        examples:
+                        - happiny
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/pokemon-species/440/
+                        examples:
+                        - https://pokeapi.co/api/v2/pokemon-species/440/
             is_baby:
               type: boolean
-              example: true
             species:
               type: object
               required:
@@ -3895,11 +3911,13 @@ components:
               properties:
                 name:
                   type: string
-                  example: happiny
+                  examples:
+                  - happiny
                 url:
                   type: string
                   format: uri
-                  example: https://pokeapi.co/api/v2/pokemon-species/440/
+                  examples:
+                  - https://pokeapi.co/api/v2/pokemon-species/440/
           readOnly: true
       required:
       - baby_trigger_item
@@ -3938,11 +3956,13 @@ components:
             properties:
               name:
                 type: string
-                example: ivysaur
+                examples:
+                - ivysaur
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/pokemon-species/2/
+                examples:
+                - https://pokeapi.co/api/v2/pokemon-species/2/
           readOnly: true
       required:
       - id
@@ -4007,7 +4027,8 @@ components:
               rate:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
               pokemon_species:
                 type: object
                 required:
@@ -4016,11 +4037,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bulbasaur
+                    examples:
+                    - bulbasaur
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon-species/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon-species/1/
           readOnly: true
         required_for_evolution:
           type: array
@@ -4032,11 +4055,13 @@ components:
             properties:
               name:
                 type: string
-                example: wormadam
+                examples:
+                - wormadam
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/pokemon-species/413/
+                examples:
+                - https://pokeapi.co/api/v2/pokemon-species/413/
           readOnly: true
       required:
       - id
@@ -4222,11 +4247,13 @@ components:
             properties:
               name:
                 type: string
-                example: master-ball
+                examples:
+                - master-ball
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/item/1/
+                examples:
+                - https://pokeapi.co/api/v2/item/1/
           readOnly: true
         names:
           type: array
@@ -4347,11 +4374,13 @@ components:
             properties:
               name:
                 type: string
-                example: countable
+                examples:
+                - countable
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/item-attribute/1/
+                examples:
+                - https://pokeapi.co/api/v2/item-attribute/1/
           readOnly: true
         category:
           $ref: '#/components/schemas/ItemCategorySummary'
@@ -4391,11 +4420,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: farfetchd
+                    examples:
+                    - farfetchd
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon/83/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/83/
               version-details:
                 type: array
                 items:
@@ -4407,7 +4438,8 @@ components:
                     rarity:
                       type: integer
                       format: int32
-                      example: 5
+                      examples:
+                      - 5
                     version:
                       type: object
                       required:
@@ -4416,11 +4448,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: ruby
+                          examples:
+                          - ruby
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/version/7/
+                          examples:
+                          - https://pokeapi.co/api/v2/version/7/
           readOnly: true
         sprites:
           type: object
@@ -4430,7 +4464,8 @@ components:
             default:
               type: string
               format: uri
-              example: https://pokeapi.co/media/sprites/items/master-ball.png
+              examples:
+              - https://pokeapi.co/media/sprites/items/master-ball.png
           readOnly: true
         baby_trigger_for:
           type: object
@@ -4440,7 +4475,8 @@ components:
             url:
               type: string
               format: uri
-              example: '"https://pokeapi.co/api/v2/evolution-chain/51/'
+              examples:
+              - https://pokeapi.co/api/v2/evolution-chain/51/
           readOnly: true
         machines:
           type: array
@@ -4453,7 +4489,8 @@ components:
               machine:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/machine/1/
+                examples:
+                - https://pokeapi.co/api/v2/machine/1/
               version_group:
                 type: object
                 required:
@@ -4462,11 +4499,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: sword-shield
+                    examples:
+                    - sword-shield
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/version-group/20/
+                    examples:
+                    - https://pokeapi.co/api/v2/version-group/20/
           readOnly: true
       required:
       - attributes
@@ -4723,11 +4762,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: old-rod
+                    examples:
+                    - old-rod
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/encounter-method/2/
+                    examples:
+                    - https://pokeapi.co/api/v2/encounter-method/2/
               version_details:
                 type: array
                 items:
@@ -4739,7 +4780,8 @@ components:
                     rate:
                       type: integer
                       format: int32
-                      example: 5
+                      examples:
+                      - 5
                     version:
                       type: object
                       required:
@@ -4748,11 +4790,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: platinum
+                          examples:
+                          - platinum
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/version/14/
+                          examples:
+                          - https://pokeapi.co/api/v2/version/14/
           readOnly: true
         location:
           $ref: '#/components/schemas/LocationSummary'
@@ -4777,11 +4821,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: tentacool
+                    examples:
+                    - tentacool
                   url:
                     type: string
                     format: uri
-                    example: ttps://pokeapi.co/api/v2/pokemon/72/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/72/
               version_details:
                 type: array
                 items:
@@ -4799,15 +4845,18 @@ components:
                       properties:
                         name:
                           type: string
-                          example: diamond
+                          examples:
+                          - diamond
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/version/12/
+                          examples:
+                          - https://pokeapi.co/api/v2/version/12/
                     max_chance:
                       type: integer
                       format: int32
-                      example: 60
+                      examples:
+                      - 60
                     encounter_details:
                       type: object
                       required:
@@ -4820,11 +4869,13 @@ components:
                         min_level:
                           type: integer
                           format: int32
-                          example: 20
+                          examples:
+                          - 20
                         max_level:
                           type: integer
                           format: int32
-                          example: 30
+                          examples:
+                          - 30
                         condition_values:
                           type: object
                           required:
@@ -4833,15 +4884,18 @@ components:
                           properties:
                             name:
                               type: string
-                              example: slot2-sapphire
+                              examples:
+                              - slot2-sapphire
                             url:
                               type: string
                               format: uri
-                              example: https://pokeapi.co/api/v2/encounter-condition-value/10/
+                              examples:
+                              - https://pokeapi.co/api/v2/encounter-condition-value/10/
                         chance:
                           type: integer
                           format: int32
-                          example: 60
+                          examples:
+                          - 60
                         method:
                           type: object
                           required:
@@ -4850,11 +4904,13 @@ components:
                           properties:
                             name:
                               type: string
-                              example: surf
+                              examples:
+                              - surf
                             url:
                               type: string
                               format: uri
-                              example: https://pokeapi.co/api/v2/encounter-method/5/
+                              examples:
+                              - https://pokeapi.co/api/v2/encounter-method/5/
           readOnly: true
       required:
       - encounter_method_rates
@@ -5059,10 +5115,12 @@ components:
             properties:
               effect:
                 type: string
-                example: Inflicts [regular damage]{mechanic:regular-damage}.
+                examples:
+                - Inflicts [regular damage]{mechanic:regular-damage}.
               short_effect:
                 type: string
-                example: Inflicts regular damage with no additional effect.
+                examples:
+                - Inflicts regular damage with no additional effect.
               language:
                 type: object
                 required:
@@ -5071,11 +5129,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
           readOnly: true
         type:
           $ref: '#/components/schemas/TypeSummary'
@@ -5208,11 +5268,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: fire-punch
+                        examples:
+                        - fire-punch
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/7/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/7/
                 use_after:
                   type: array
                   nullable: true
@@ -5224,11 +5286,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: ice-punch
+                        examples:
+                        - ice-punch
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/8/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/8/
             super:
               type: object
               required:
@@ -5246,11 +5310,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: night-slash
+                        examples:
+                        - night-slash
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/400/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/400/
                 use_after:
                   type: array
                   nullable: true
@@ -5262,11 +5328,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: focus-energy
+                        examples:
+                        - focus-energy
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/116/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/116/
           readOnly: true
         contest_type:
           $ref: '#/components/schemas/ContestTypeSummary'
@@ -5285,10 +5353,12 @@ components:
             properties:
               effect:
                 type: string
-                example: Inflicts [regular damage]{mechanic:regular-damage}.
+                examples:
+                - Inflicts [regular damage]{mechanic:regular-damage}.
               short_effect:
                 type: string
-                example: Inflicts regular damage with no additional effect.
+                examples:
+                - Inflicts regular damage with no additional effect.
               language:
                 type: object
                 required:
@@ -5297,11 +5367,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
           readOnly: true
         effect_changes:
           type: array
@@ -5321,7 +5393,8 @@ components:
                   properties:
                     effect:
                       type: string
-                      example: Hits Pokémon under the effects of dig and fly.
+                      examples:
+                      - Hits Pokémon under the effects of dig and fly.
                     language:
                       type: object
                       required:
@@ -5330,11 +5403,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: en
+                          examples:
+                          - en
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/language/9/
+                          examples:
+                          - https://pokeapi.co/api/v2/language/9/
               version_group:
                 type: object
                 required:
@@ -5343,11 +5418,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: gold-silver
+                    examples:
+                    - gold-silver
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/version-group/3/
+                    examples:
+                    - https://pokeapi.co/api/v2/version-group/3/
           readOnly: true
         generation:
           $ref: '#/components/schemas/GenerationSummary'
@@ -5376,7 +5453,8 @@ components:
               change:
                 type: integer
                 format: int32
-                example: 2
+                examples:
+                - 2
               stat:
                 type: object
                 required:
@@ -5385,11 +5463,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: attack
+                    examples:
+                    - attack
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/stat/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/stat/1/
           readOnly: true
         super_contest_effect:
           $ref: '#/components/schemas/SuperContestEffectSummary'
@@ -5413,7 +5493,8 @@ components:
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/machine/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/machine/1/
               version_group:
                 type: object
                 required:
@@ -5422,11 +5503,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: sword-shield
+                    examples:
+                    - sword-shield
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/version-group/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
         flavor_text_entries:
           type: array
@@ -5443,11 +5526,13 @@ components:
             properties:
               name:
                 type: string
-                example: clefairy
+                examples:
+                - clefairy
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/pokemon/35/
+                examples:
+                - https://pokeapi.co/api/v2/pokemon/35/
           readOnly: true
       required:
       - contest_combos
@@ -5522,11 +5607,13 @@ components:
             properties:
               name:
                 type: string
-                example: red-blue
+                examples:
+                - red-blue
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/version-group/1/
+                examples:
+                - https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
       required:
       - descriptions
@@ -5647,11 +5734,13 @@ components:
             properties:
               name:
                 type: string
-                example: thunder-punch
+                examples:
+                - thunder-punch
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/move/9/
+                examples:
+                - https://pokeapi.co/api/v2/move/9/
           readOnly: true
         names:
           type: array
@@ -5721,11 +5810,13 @@ components:
             properties:
               name:
                 type: string
-                example: sing
+                examples:
+                - sing
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/move/47/
+                examples:
+                - https://pokeapi.co/api/v2/move/47/
           readOnly: true
       required:
       - descriptions
@@ -5883,7 +5974,8 @@ components:
               max_change:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
               pokeathlon_stat:
                 type: object
                 required:
@@ -5892,11 +5984,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: power
+                    examples:
+                    - power
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokeathlon-stat/2/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokeathlon-stat/2/
           readOnly: true
         move_battle_style_preferences:
           type: array
@@ -6929,7 +7023,8 @@ components:
               base_score:
                 type: integer
                 format: int32
-                example: 50
+                examples:
+                - 50
               pokemon-species:
                 type: object
                 required:
@@ -6938,15 +7033,18 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bulbasaur
+                    examples:
+                    - bulbasaur
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon-species/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon-species/1/
               rate:
                 type: integer
                 format: int32
-                example: 30
+                examples:
+                - 30
           readOnly: true
       required:
       - id
@@ -7004,7 +7102,8 @@ components:
                     type: integer
                     format: int32
                     maximum: -1
-                    example: -1
+                    examples:
+                    - -1
                   nature:
                     type: object
                     required:
@@ -7013,11 +7112,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: hardy
+                        examples:
+                        - hardy
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/nature/1/
+                        examples:
+                        - https://pokeapi.co/api/v2/nature/1/
             increase:
               type: array
               items:
@@ -7030,7 +7131,8 @@ components:
                     type: integer
                     format: int32
                     minimum: 1
-                    example: 2
+                    examples:
+                    - 2
                   nature:
                     type: object
                     required:
@@ -7039,11 +7141,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: hardy
+                        examples:
+                        - hardy
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/nature/1/
+                        examples:
+                        - https://pokeapi.co/api/v2/nature/1/
           readOnly: true
         names:
           type: array
@@ -7121,7 +7225,8 @@ components:
               entry_number:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
               pokemon_species:
                 type: object
                 required:
@@ -7130,11 +7235,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bulbasaur
+                    examples:
+                    - bulbasaur
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon-species/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon-species/1/
           readOnly: true
         region:
           $ref: '#/components/schemas/RegionSummary'
@@ -7148,11 +7255,13 @@ components:
             properties:
               name:
                 type: string
-                example: the-teal-mask
+                examples:
+                - the-teal-mask
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/version-group/26/
+                examples:
+                - https://pokeapi.co/api/v2/version-group/26/
           readOnly: true
       required:
       - descriptions
@@ -7286,18 +7395,20 @@ components:
                 properties:
                   name:
                     type: string
-                    example: sand-veil
+                    examples:
+                    - sand-veil
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/ability/8/
+                    examples:
+                    - https://pokeapi.co/api/v2/ability/8/
               is_hidden:
                 type: boolean
-                example: false
               slot:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
           readOnly: true
         past_abilities:
           type: array
@@ -7324,18 +7435,20 @@ components:
                       properties:
                         name:
                           type: string
-                          example: levitate
+                          examples:
+                          - levitate
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/ability/26/
+                          examples:
+                          - https://pokeapi.co/api/v2/ability/26/
                     is_hidden:
                       type: boolean
-                      example: false
                     slot:
                       type: integer
                       format: int32
-                      example: 1
+                      examples:
+                      - 1
               generation:
                 type: object
                 required:
@@ -7344,11 +7457,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: generation-vi
+                    examples:
+                    - generation-vi
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/generation/6/
+                    examples:
+                    - https://pokeapi.co/api/v2/generation/6/
           readOnly: true
         forms:
           type: array
@@ -7374,11 +7489,13 @@ components:
               properties:
                 name:
                   type: string
-                  example: soft-sand
+                  examples:
+                  - soft-sand
                 url:
                   type: string
                   format: uri
-                  example: https://pokeapi.co/api/v2/item/214/
+                  examples:
+                  - https://pokeapi.co/api/v2/item/214/
             version_details:
               type: array
               items:
@@ -7390,7 +7507,8 @@ components:
                   rarity:
                     type: integer
                     format: int32
-                    example: 5
+                    examples:
+                    - 5
                   version:
                     type: object
                     required:
@@ -7399,15 +7517,18 @@ components:
                     properties:
                       name:
                         type: string
-                        example: diamond
+                        examples:
+                        - diamond
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/version/12/
+                        examples:
+                        - https://pokeapi.co/api/v2/version/12/
           readOnly: true
         location_area_encounters:
           type: string
-          example: https://pokeapi.co/api/v2/pokemon/1/encounters
+          examples:
+          - https://pokeapi.co/api/v2/pokemon/1/encounters
           readOnly: true
         moves:
           type: array
@@ -7425,11 +7546,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: scratch
+                    examples:
+                    - scratch
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/move/10/
+                    examples:
+                    - https://pokeapi.co/api/v2/move/10/
               version_group_details:
                 type: array
                 items:
@@ -7442,7 +7565,8 @@ components:
                     level_learned_at:
                       type: integer
                       format: int32
-                      example: 1
+                      examples:
+                      - 1
                     move_learn_method:
                       type: object
                       required:
@@ -7451,11 +7575,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: level-up
+                          examples:
+                          - level-up
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/move-learn-method/1/
+                          examples:
+                          - https://pokeapi.co/api/v2/move-learn-method/1/
                     version_group:
                       type: object
                       required:
@@ -7464,11 +7590,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: red-blue
+                          examples:
+                          - red-blue
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/version-group/1/
+                          examples:
+                          - https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
         species:
           $ref: '#/components/schemas/PokemonSpeciesSummary'
@@ -7483,9 +7611,10 @@ components:
             type: string
             format: uri
             nullable: true
-            example: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png
-          example:
-            back_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png
+            examples:
+            - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png
+          examples:
+          - back_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png
             back_female: null
             back_shiny: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png
             back_shiny_female: null
@@ -7503,11 +7632,13 @@ components:
             latest:
               type: string
               format: uri
-              example: https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg
+              examples:
+              - https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/50.ogg
             legacy:
               type: string
               format: uri
-              example: https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg
+              examples:
+              - https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/50.ogg
           readOnly: true
         stats:
           type: array
@@ -7525,7 +7656,8 @@ components:
               slot:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
               type:
                 type: object
                 required:
@@ -7534,11 +7666,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: ghost
+                    examples:
+                    - ghost
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/8/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/8/
           readOnly: true
         past_types:
           type: array
@@ -7556,11 +7690,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: generation-v
+                    examples:
+                    - generation-v
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/generation/5/
+                    examples:
+                    - https://pokeapi.co/api/v2/generation/5/
               types:
                 type: array
                 items:
@@ -7572,7 +7708,8 @@ components:
                     slot:
                       type: integer
                       format: int32
-                      example: 1
+                      examples:
+                      - 1
                     type:
                       type: object
                       required:
@@ -7581,11 +7718,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: normal
+                          examples:
+                          - normal
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/1/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/1/
           readOnly: true
       required:
       - abilities
@@ -7651,14 +7790,16 @@ components:
             default:
               type: string
               format: uri
-              example: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
+              examples:
+              - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
           additionalProperties:
             type: string
             format: uri
             nullable: true
-            example: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png
-          example:
-            back_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
+            examples:
+            - https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png
+          examples:
+          - back_default: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/412.png
             back_female: null
             back_shiny: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/412.png
             back_shiny_female: null
@@ -7685,14 +7826,17 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
               name:
                 type: string
-                example: Plant Cloak
+                examples:
+                - Plant Cloak
           readOnly: true
         names:
           type: array
@@ -7710,14 +7854,17 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
               name:
                 type: string
-                example: Plant Cloak
+                examples:
+                - Plant Cloak
           readOnly: true
         types:
           type: array
@@ -7730,7 +7877,8 @@ components:
               slot:
                 type: integer
                 format: int32
-                example: 1
+                examples:
+                - 1
               type:
                 type: object
                 required:
@@ -7739,11 +7887,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bug
+                    examples:
+                    - bug
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/7/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/7/
           readOnly: true
       required:
       - form_name
@@ -7847,7 +7997,8 @@ components:
             properties:
               awesome_name:
                 type: string
-                example: Pomaceous
+                examples:
+                - Pomaceous
               language:
                 type: object
                 required:
@@ -7856,11 +8007,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
           readOnly: true
         names:
           type: array
@@ -7873,10 +8026,12 @@ components:
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/language/9/
+                examples:
+                - https://pokeapi.co/api/v2/language/9/
               name:
                 type: string
-                example: Ball
+                examples:
+                - Ball
           readOnly: true
         pokemon_species:
           type: array
@@ -7978,11 +8133,13 @@ components:
             properties:
               name:
                 type: string
-                example: monster
+                examples:
+                - monster
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/egg-group/1/
+                examples:
+                - https://pokeapi.co/api/v2/egg-group/1/
           readOnly: true
         color:
           $ref: '#/components/schemas/PokemonColorSummary'
@@ -8012,14 +8169,17 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
               name:
                 type: string
-                example: bulbasaur
+                examples:
+                - bulbasaur
           readOnly: true
         pal_park_encounters:
           type: array
@@ -8038,19 +8198,23 @@ components:
                 properties:
                   name:
                     type: string
-                    example: field
+                    examples:
+                    - field
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pal-park-area/2/
+                    examples:
+                    - https://pokeapi.co/api/v2/pal-park-area/2/
               base_score:
                 type: integer
                 format: int32
-                example: 50
+                examples:
+                - 50
               rate:
                 type: integer
                 format: int32
-                example: 30
+                examples:
+                - 30
           readOnly: true
         form_descriptions:
           type: array
@@ -8072,7 +8236,8 @@ components:
             properties:
               genus:
                 type: string
-                example: Seed Pokémon
+                examples:
+                - Seed Pokémon
               language:
                 type: object
                 required:
@@ -8081,11 +8246,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: en
+                    examples:
+                    - en
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/language/9/
+                    examples:
+                    - https://pokeapi.co/api/v2/language/9/
           readOnly: true
         varieties:
           type: array
@@ -8097,7 +8264,6 @@ components:
             properties:
               is_default:
                 type: boolean
-                example: true
               pokemon:
                 type: object
                 required:
@@ -8106,11 +8272,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bulbasaur
+                    examples:
+                    - bulbasaur
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/pokemon/1/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/1/
           readOnly: true
       required:
       - color
@@ -8224,11 +8392,13 @@ components:
             properties:
               name:
                 type: string
-                example: red-blue
+                examples:
+                - red-blue
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/version-group/1/
+                examples:
+                - https://pokeapi.co/api/v2/version-group/1/
           readOnly: true
       required:
       - id
@@ -8294,7 +8464,8 @@ components:
                   change:
                     type: integer
                     format: int32
-                    example: -1
+                    examples:
+                    - -1
                   move:
                     type: object
                     required:
@@ -8303,11 +8474,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: swords-dance
+                        examples:
+                        - swords-dance
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/14/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/14/
             decrease:
               type: array
               items:
@@ -8319,7 +8492,8 @@ components:
                   change:
                     type: integer
                     format: int32
-                    example: 5
+                    examples:
+                    - 5
                   move:
                     type: object
                     required:
@@ -8328,11 +8502,13 @@ components:
                     properties:
                       name:
                         type: string
-                        example: growl
+                        examples:
+                        - growl
                       url:
                         type: string
                         format: uri
-                        example: https://pokeapi.co/api/v2/move/45/
+                        examples:
+                        - https://pokeapi.co/api/v2/move/45/
           readOnly: true
         affecting_natures:
           type: object
@@ -8350,11 +8526,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: lonely
+                    examples:
+                    - lonely
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/nature/6/
+                    examples:
+                    - https://pokeapi.co/api/v2/nature/6/
             decrease:
               type: array
               items:
@@ -8365,11 +8543,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bold
+                    examples:
+                    - bold
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/nature/2/
+                    examples:
+                    - https://pokeapi.co/api/v2/nature/2/
           readOnly: true
         characteristics:
           type: array
@@ -8491,11 +8671,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: flying
+                    examples:
+                    - flying
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/3/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/3/
             half_damage_to:
               type: array
               items:
@@ -8506,11 +8688,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: bug
+                    examples:
+                    - bug
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/7/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/7/
             double_damage_to:
               type: array
               items:
@@ -8521,11 +8705,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: poison
+                    examples:
+                    - poison
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/4/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/4/
             no_damage_from:
               type: array
               items:
@@ -8536,11 +8722,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: electric
+                    examples:
+                    - electric
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/13/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/13/
             half_damage_from:
               type: array
               items:
@@ -8551,11 +8739,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: poison
+                    examples:
+                    - poison
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/4/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/4/
             double_damage_from:
               type: array
               items:
@@ -8566,11 +8756,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: water
+                    examples:
+                    - water
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/type/11/
+                    examples:
+                    - https://pokeapi.co/api/v2/type/11/
           readOnly: true
         past_damage_relations:
           type: array
@@ -8588,11 +8780,13 @@ components:
                 properties:
                   name:
                     type: string
-                    example: generation-v
+                    examples:
+                    - generation-v
                   url:
                     type: string
                     format: uri
-                    example: https://pokeapi.co/api/v2/generation/5/
+                    examples:
+                    - https://pokeapi.co/api/v2/generation/5/
               damage_relations:
                 type: object
                 required:
@@ -8613,11 +8807,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: flying
+                          examples:
+                          - flying
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/3/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/3/
                   half_damage_to:
                     type: array
                     items:
@@ -8628,11 +8824,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: bug
+                          examples:
+                          - bug
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/7/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/7/
                   double_damage_to:
                     type: array
                     items:
@@ -8643,11 +8841,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: poison
+                          examples:
+                          - poison
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/4/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/4/
                   no_damage_from:
                     type: array
                     items:
@@ -8658,11 +8858,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: electric
+                          examples:
+                          - electric
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/13/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/13/
                   half_damage_from:
                     type: array
                     items:
@@ -8673,11 +8875,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: poison
+                          examples:
+                          - poison
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/4/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/4/
                   double_damage_from:
                     type: array
                     items:
@@ -8688,11 +8892,13 @@ components:
                       properties:
                         name:
                           type: string
-                          example: water
+                          examples:
+                          - water
                         url:
                           type: string
                           format: uri
-                          example: https://pokeapi.co/api/v2/type/11/
+                          examples:
+                          - https://pokeapi.co/api/v2/type/11/
           readOnly: true
         game_indices:
           type: array
@@ -8718,7 +8924,8 @@ components:
             properties:
               slot:
                 type: integer
-                example: 1
+                examples:
+                - 1
               pokemon:
                 type: object
                 require:
@@ -8728,12 +8935,14 @@ components:
                   name:
                     type: string
                     description: The name of the pokemon
-                    example: sandshrew
+                    examples:
+                    - sandshrew
                   url:
                     type: string
                     format: uri
                     description: The URL to get more information about the pokemon
-                    example: https://pokeapi.co/api/v2/pokemon/27/
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/27/
           readOnly: true
         moves:
           type: array
@@ -8828,11 +9037,13 @@ components:
             properties:
               name:
                 type: string
-                example: level-up
+                examples:
+                - level-up
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/move-learn-method/1/
+                examples:
+                - https://pokeapi.co/api/v2/move-learn-method/1/
           readOnly: true
         pokedexes:
           type: array
@@ -8844,11 +9055,13 @@ components:
             properties:
               name:
                 type: string
-                example: kanto
+                examples:
+                - kanto
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/pokedex/2/
+                examples:
+                - https://pokeapi.co/api/v2/pokedex/2/
           readOnly: true
         regions:
           type: array
@@ -8860,11 +9073,13 @@ components:
             properties:
               name:
                 type: string
-                example: kanto
+                examples:
+                - kanto
               url:
                 type: string
                 format: uri
-                example: https://pokeapi.co/api/v2/region/1/
+                examples:
+                - https://pokeapi.co/api/v2/region/1/
           readOnly: true
         versions:
           type: array

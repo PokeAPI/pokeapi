@@ -140,10 +140,10 @@ update-graphql-data-prod:
 	git submodule update --init
 	docker compose stop graphql-engine
 	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
+	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app cache
 	make docker-migrate
 	make docker-build-db
-	docker compose stop app
+	docker compose stop app cache
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
 	docker compose start graphql-engine

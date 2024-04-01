@@ -1,5 +1,8 @@
 version: '2.4'
 services:
+  cache:
+    restart: "no"
+
   db:
     environment:
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"

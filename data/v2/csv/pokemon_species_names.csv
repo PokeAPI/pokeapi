@@ -11116,7 +11116,7 @@ pokemon_species_id,local_language_id,name,genus
 1011,6,Sirapfel,
 1011,7,Dipplin,
 1011,8,Dipplin,
-1011,9,Dipplin,
+1011,9,Dipplin,Candy Apple Pokémon
 1011,11,カミッチュ,
 1011,12,裹蜜虫,
 1012,1,チャデス,
@@ -11126,7 +11126,7 @@ pokemon_species_id,local_language_id,name,genus
 1012,6,Mortcha,
 1012,7,Poltchageist,
 1012,8,Poltchageist,
-1012,9,Poltchageist,
+1012,9,Poltchageist,Matcha Pokémon
 1012,11,チャデス,
 1012,12,斯魔茶,
 1013,1,ヤバソチャ,
@@ -11136,7 +11136,7 @@ pokemon_species_id,local_language_id,name,genus
 1013,6,Fatalitcha,
 1013,7,Sinistcha,
 1013,8,Sinistcha,
-1013,9,Sinistcha,
+1013,9,Sinistcha,Matcha Pokémon
 1013,11,ヤバソチャ,
 1013,12,来悲粗茶,
 1014,1,イイネイヌ,
@@ -11146,7 +11146,7 @@ pokemon_species_id,local_language_id,name,genus
 1014,6,Boninu,
 1014,7,Okidogi,
 1014,8,Okidogi,
-1014,9,Okidogi,
+1014,9,Okidogi,Retainer Pokémon
 1014,11,イイネイヌ,
 1014,12,够赞狗,
 1015,1,マシマシラ,
@@ -11156,7 +11156,7 @@ pokemon_species_id,local_language_id,name,genus
 1015,6,Benesaru,
 1015,7,Munkidori,
 1015,8,Munkidori,
-1015,9,Munkidori,
+1015,9,Munkidori,Retainer Pokémon
 1015,11,マシマシラ,
 1015,12,愿增猿,
 1016,1,キチキギス,
@@ -11166,7 +11166,7 @@ pokemon_species_id,local_language_id,name,genus
 1016,6,Beatori,
 1016,7,Fezandipiti,
 1016,8,Fezandipiti,
-1016,9,Fezandipiti,
+1016,9,Fezandipiti,Retainer Pokémon
 1016,11,キチキギス,
 1016,12,吉雉鸡,
 1017,1,オーガポン,
@@ -11176,7 +11176,7 @@ pokemon_species_id,local_language_id,name,genus
 1017,6,Ogerpon,
 1017,7,Ogerpon,
 1017,8,Ogerpon,
-1017,9,Ogerpon,
+1017,9,Ogerpon,Mask Pokémon
 1017,11,オーガポン,
 1017,12,厄诡椪,
 1018,1,ブリジュラス,ごうきんポケモン

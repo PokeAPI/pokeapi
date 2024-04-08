@@ -1679,42 +1679,46 @@ class APIData:
 
         showdown = {
             "front_default": showdown_path % pokemon.id if front_default else None,
-            "front_female": showdown_path % f"female/{pokemon.id}"
-            if front_female
-            else None,
-            "front_shiny": showdown_path % f"shiny/{pokemon.id}"
-            if front_shiny
-            else None,
-            "front_shiny_female": showdown_path % f"shiny/female/{pokemon.id}"
-            if front_shiny_female
-            else None,
-            "back_default": showdown_path % f"back/{pokemon.id}"
-            if back_default
-            else None,
-            "back_female": showdown_path % f"back/female/{pokemon.id}"
-            if back_female
-            else None,
-            "back_shiny": showdown_path % f"back/shiny/{pokemon.id}"
-            if back_shiny
-            else None,
-            "back_shiny_female": showdown_path % f"back/shiny/female/{pokemon.id}"
-            if back_shiny_female
-            else None,
+            "front_female": (
+                showdown_path % f"female/{pokemon.id}" if front_female else None
+            ),
+            "front_shiny": (
+                showdown_path % f"shiny/{pokemon.id}" if front_shiny else None
+            ),
+            "front_shiny_female": (
+                showdown_path % f"shiny/female/{pokemon.id}"
+                if front_shiny_female
+                else None
+            ),
+            "back_default": (
+                showdown_path % f"back/{pokemon.id}" if back_default else None
+            ),
+            "back_female": (
+                showdown_path % f"back/female/{pokemon.id}" if back_female else None
+            ),
+            "back_shiny": (
+                showdown_path % f"back/shiny/{pokemon.id}" if back_shiny else None
+            ),
+            "back_shiny_female": (
+                showdown_path % f"back/shiny/female/{pokemon.id}"
+                if back_shiny_female
+                else None
+            ),
         }
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
             "front_female": sprite_path % pokemon.id if front_female else None,
             "front_shiny": sprite_path % pokemon.id if front_shiny else None,
-            "front_shiny_female": sprite_path % pokemon.id
-            if front_shiny_female
-            else None,
+            "front_shiny_female": (
+                sprite_path % pokemon.id if front_shiny_female else None
+            ),
             "back_default": sprite_path % pokemon.id if back_default else None,
             "back_female": sprite_path % pokemon.id if back_female else None,
             "back_shiny": sprite_path % pokemon.id if back_shiny else None,
-            "back_shiny_female": sprite_path % pokemon.id
-            if back_shiny_female
-            else None,
+            "back_shiny_female": (
+                sprite_path % pokemon.id if back_shiny_female else None
+            ),
         }
 
         pokemon_sprites = PokemonSprites.objects.create(

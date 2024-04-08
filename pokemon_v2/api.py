@@ -41,7 +41,7 @@ class NameOrIdRetrieval:
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        filter = self.request.GET.get('q', '')
+        filter = self.request.GET.get("q", "")
 
         if filter:
             queryset = queryset.filter(Q(name__icontains=filter))
@@ -397,8 +397,7 @@ class PokemonEncounterView(APIView):
         for area_id in area_ids:
             location_area = location_area_objects.get(pk=area_id)
 
-            area_encounters = encounter_objects.filter(
-                location_area_id=area_id)
+            area_encounters = encounter_objects.filter(location_area_id=area_id)
 
             version_ids = (
                 area_encounters.order_by("version_id")
@@ -423,10 +422,8 @@ class PokemonEncounterView(APIView):
                 encounter_details_list = []
 
                 for encounter in encounters_data:
-                    slot = EncounterSlot.objects.get(
-                        pk=encounter["encounter_slot"])
-                    slot_data = EncounterSlotSerializer(
-                        slot, context=self.context).data
+                    slot = EncounterSlot.objects.get(pk=encounter["encounter_slot"])
+                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
 
                     del encounter["pokemon"]
                     del encounter["encounter_slot"]

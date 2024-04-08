@@ -5099,6 +5099,25 @@ class APITests(APIData, APITestCase):
             "{}".format(cries_data["legacy"]),
         )
 
+        # test search pokemon using search query param `q=partial_name`
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[:2]),
+            HTTP_HOST="testserver",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[-3:]),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
+
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)

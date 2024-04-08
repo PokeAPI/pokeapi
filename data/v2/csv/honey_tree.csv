@@ -1,0 +1,8 @@
+pokemon_id,rarity
+265,30%-chance
+415,20%-chance
+190,15%-chance
+412,15%-chance
+420,15%-chance
+214,5%-chance
+466,random-based-on-SID

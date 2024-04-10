@@ -2733,6 +2733,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     )
     moves = serializers.SerializerMethodField("get_pokemon_moves")
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
+    evolves_from_species = serializers.SerializerMethodField("get_evolves_from_species")
+    species_evolution_chain = serializers.SerializerMethodField("get_evolution_chain")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
     types = serializers.SerializerMethodField("get_pokemon_types")
     past_types = serializers.SerializerMethodField("get_past_pokemon_types")
@@ -2762,6 +2764,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "location_area_encounters",
             "moves",
             "species",
+            "evolves_from_species",
+            "species_evolution_chain",
             "sprites",
             "cries",
             "stats",
@@ -2957,6 +2961,14 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
     def get_encounters(self, obj):
         return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
+    
+    def get_evolves_from_species(self, obj):
+        serializer = PokemonSpeciesSummarySerializer(obj.pokemon_species.evolves_from_species, context=self.context)
+        return serializer.data
+    
+    def get_evolution_chain(self, obj):
+        serializer = EvolutionChainSummarySerializer(obj.pokemon_species.evolution_chain, context=self.context)
+        return serializer.data
 
 
 #################################

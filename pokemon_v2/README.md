@@ -600,6 +600,20 @@ Evolution chains are essentially family trees. They start with the lowest stage 
 | evolution_details | All details regarding the specific details of the referenced pokémon species evolution         | [EvolutionDetail](#evolutiondetail) |
 | evolves_to        | A List of chain objects.                                                                       | list [ChainLink](#chainlink) |
 
+#### ShortEvolutionChain
+
+| Name  | Description                                                                                                                                  | Data Type                         |
+|-------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| url   | The url of the pokémon species resource                                                                                                      | string                            |
+| chain | The base chain link object. Each link contains a pokémon in the chain. Each link references the next pokémon in the natural evolution order. | [ShortChainLink](#shortchainlink) |
+
+#### ShortChainLink
+
+| Name       | Description                                              | Data Type                                                                 |
+|------------|----------------------------------------------------------|---------------------------------------------------------------------------|
+| species    | The pokemon species at this point in the evolution chain | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemonspecies)) |
+| evolves_to | A List of chain objects.                                 | list [ShortChainLink](#shortchainlink)                                    |
+
 #### EvolutionDetail
 
 | Name | Description | Data Type |
@@ -2325,7 +2339,29 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 	}],
 	"species": {
 		"name": "clefairy",
-        "url": "https://pokeapi.co/api/v2/pokemon-species/35/"
+		"url": "http://pokeapi.co/api/v2/pokemon-species/35/",
+		"evolution_chain": {
+			"url": "http://pokeapi.co/api/v2/evolution-chain/14/",
+			"chain": {
+				"species": {
+					"name": "cleffa",
+					"url": "http://pokeapi.co/api/v2/pokemon-species/173/"
+				},
+				"evolves_to": [{
+					"species": {
+						"name": "clefairy",
+						"url": "http://pokeapi.co/api/v2/pokemon-species/35/"
+					},
+					"evolves_to": [{
+						"species": {
+							"name": "clefable",
+							"url": "http://pokeapi.co/api/v2/pokemon-species/36/"
+						},
+						"evolves_to": []
+					}]
+				}]
+			}
+		}
 	},
 	"stats": [{
 		"base_stat": 35,
@@ -2374,12 +2410,12 @@ Pokémon are the creatures that inhabit the world of the pokemon games. They can
 | order                    | Order for sorting. Almost national order, except families are grouped together.                  | integer |
 | weight                   | The mass of this pokémon                                                                         | integer |
 | abilities                | A list of abilities this pokémon could potentially have                                          | list [PokemonAbility](#pokemonability) |
-| forms                    | A list of forms this pokémon can take on                                                         | list [NamedAPIResource](#namedapiresource) ([PokemonForm](#pokemon-forms)) |
+| forms                    | A list of forms this pokémon can take on                                                         | list [NamedAPIResource](#namedapiresource) ([PokemonForm](#pokemonform)) |
 | game_indices             | A list of game indices relevent to pokémon item by generation                                    | list [VersionGameIndex](#versiongameindex) |
 | held_items               | A list of items this pokémon may be holding when encountered                                     | list [NamedAPIResource](#namedapiresource) ([Item](#items)) |
 | location_area_encounters | A list of location areas as well as encounter details pertaining to specific versions            | list [LocationAreaEncounter](#locationareaencounter) |
 | moves                    | A list of moves along with learn methods and level details pertaining to specific version groups | list [NamedAPIResource](#namedapiresource) ([Move](#moves)) |
-| species                  | The species this pokémon belongs to                                                              | [NamedAPIResource](#namedapiresource) ([PokemonSpecies](#pokemon-species)) |
+| species                  | The species this pokémon belongs to                                                              | [ShortPokemonSpecies](#shortpokemonspecies) |
 | stats                    | A list of base stat values for this pokémon                                                      | list [NamedAPIResource](#namedapiresource) ([Stat](#stats)) |
 | types                    | A list of details showing types this pokémon has                                                 | list [PokemonType](#pokemontype) |
 | past_types               | A list of details showing types this pokémon had in previous generations                         | list [PokemonTypePast](#pokemontypepast) |
@@ -2728,6 +2764,14 @@ A Pokémon Species forms the basis for at least one pokémon. Attributes of a Po
 | form_descriptions      | Descriptions of different forms pokémon take on within the pokémon species		                                                                  | list [Description](#description) |
 | genera                 | The genus of this pokémon species listed in multiple languages                                                                                     | [Genus](#genus) |
 | varieties              | A list of the pokémon that exist within this pokémon species                                                                                       | list [NamedAPIResource](#namedapiresource) ([Pokemon](#pokemon)) |
+
+#### ShortPokemonSpecies
+
+| Name            | Description                                             | Data Type                                   |
+|-----------------|---------------------------------------------------------|---------------------------------------------|
+| name            | The name for this pokémon species                       | string                                      |
+| url             | The url of the pokémon species resource                 | string                                      |
+| evolution_chain | The evolution chain this pokémon species is a member of | [ShortEvolutionChain](#shortevolutionchain) |
 
 #### Genus
 

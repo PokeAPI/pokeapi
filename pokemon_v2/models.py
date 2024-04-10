@@ -2,6 +2,7 @@ from django.db import models
 
 from compositefk.fields import CompositeForeignKey
 
+
 #####################
 #  ABSTRACT MODELS  #
 #####################
@@ -1180,6 +1181,10 @@ class EncounterConditionValueMap(models.Model):
     )
 
 
+class HoneyTrees(HasPokemon):
+    rarity = models.CharField(max_length=30)
+
+
 #################
 #  MOVE MODELS  #
 #################
@@ -1428,7 +1433,8 @@ class Machine(HasGrowthRate, HasItem):
 class MachineVersionLocation(HasLocation):
     machine_number = models.IntegerField()
     version_group_id = models.IntegerField()
-    machine = CompositeForeignKey(Machine, null=False, to_fields={"machine_number", "version_group_id"}, on_delete=models.CASCADE)  # type: ignore
+    machine = CompositeForeignKey(Machine, null=False, to_fields={"machine_number", "version_group_id"},
+                                  on_delete=models.CASCADE)  # type: ignore
 
 
 #######################

@@ -21,7 +21,6 @@ from django.db import connection
 from pokemon_v2.models import *
 from pokemon_v2.models import MachineVersionLocation
 
-
 # why this way? how about use `__file__`
 DATA_LOCATION = "data/v2/csv/"
 DATA_LOCATION2 = os.path.join(os.path.dirname(__file__), "csv")
@@ -30,7 +29,6 @@ SUB_RGX = r"\[.*?\]\{.*?\}"
 
 DB_CURSOR = connection.cursor()
 DB_VENDOR = connection.vendor
-
 
 MEDIA_DIR = "{prefix}{{file_name}}".format(
     prefix=os.environ.get(
@@ -2323,6 +2321,13 @@ def _build_encounters():
     )
 
 
+def _build_honey_tree_encounters():
+    def csv_record_to_objects(info):
+        yield HoneyTrees(pokemon_id=int(info[0]), rarity=info[1])
+
+    build_generic((HoneyTrees,), "honey_tree.csv", csv_record_to_objects)
+
+
 ##############
 #  PAL PARK  #
 ##############
@@ -2379,6 +2384,7 @@ def build_all():
     _build_pokemons()
     _build_encounters()
     _build_pal_parks()
+    _build_honey_tree_encounters()
 
 
 if __name__ == "__main__":

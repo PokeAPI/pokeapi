@@ -1181,7 +1181,8 @@ class EncounterConditionValueMap(models.Model):
     )
 
 
-class HoneyTrees(HasPokemon):
+class HoneyTrees(HasPokemon, HasName):
+    name = models.CharField(max_length=30)
     rarity = models.CharField(max_length=30)
 
 

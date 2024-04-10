@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='HoneyTrees',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('rarity', models.IntegerField(max_length=30)),
+                ('rarity', models.CharField(max_length=30)),
                 ('pokemon', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='honeytrees', to='pokemon_v2.pokemon')),
             ],
             options={

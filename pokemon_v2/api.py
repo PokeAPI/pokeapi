@@ -165,6 +165,9 @@ class GrowthRateResource(PokeapiCommonViewset):
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
 
+class HoneyTreeResource(PokeapiCommonViewset):
+    queryset = HoneyTrees.objects.all()
+    serializer_class = HoneyTreeSerializer
 
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()

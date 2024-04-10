@@ -1,8 +1,8 @@
-pokemon_id,rarity
-265,30%-chance
-415,20%-chance
-190,15%-chance
-412,15%-chance
-420,15%-chance
-214,5%-chance
-466,random-based-on-SID
+pokemon_id,name,rarity
+265,wurmple,30%-chance
+415,combee,20%-chance
+190,aipom,15%-chance
+412,burmy,15%-chance
+420,cherubi,15%-chance
+214,heracross,5%-chance
+466,munchlax,random-based-on-SID

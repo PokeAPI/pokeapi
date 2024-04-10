@@ -2323,7 +2323,7 @@ def _build_encounters():
 
 def _build_honey_tree_encounters():
     def csv_record_to_objects(info):
-        yield HoneyTrees(pokemon_id=int(info[0]), rarity=info[1])
+        yield HoneyTrees(pokemon_id=int(info[0]), name=info[1], rarity=info[2])
 
     build_generic((HoneyTrees,), "honey_tree.csv", csv_record_to_objects)
 

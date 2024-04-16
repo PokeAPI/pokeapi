@@ -4864,8 +4864,20 @@ class APITests(APIData, APITestCase):
         )
 
     def test_pokemon_api(self):
+        evolution_chain = self.setup_evolution_chain_data()
+        ancestor_pokemon_species = self.setup_pokemon_species_data(
+            name="ancstr pkmn spcs for pkmn spcs for base pkmn",
+            evolution_chain=evolution_chain,
+        )
         pokemon_species = self.setup_pokemon_species_data(
-            name="pkmn spcs for base pkmn"
+            name="pkmn spcs for base pkmn",
+            evolves_from_species=ancestor_pokemon_species,
+            evolution_chain=evolution_chain,
+        )
+        descendant_pokemon_species = self.setup_pokemon_species_data(
+            name="dscndt pkmn spcs for pkmn spcs for base pkmn",
+            evolves_from_species=pokemon_species,
+            evolution_chain=evolution_chain,
         )
         pokemon = self.setup_pokemon_data(
             pokemon_species=pokemon_species, name="base pkm"
@@ -4950,6 +4962,46 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["species"]["url"],
             "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["url"],
+            "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["species"]["name"],
+            ancestor_pokemon_species.name,
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["species"]["url"],
+            "{}{}/pokemon-species/{}/".format(
+                TEST_HOST, API_V2, ancestor_pokemon_species.pk
+            ),
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["evolves_to"][0][
+                "species"
+            ]["name"],
+            pokemon_species.name,
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["evolves_to"][0][
+                "species"
+            ]["url"],
+            "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["evolves_to"][0][
+                "evolves_to"
+            ][0]["species"]["name"],
+            descendant_pokemon_species.name,
+        )
+        self.assertEqual(
+            response.data["species"]["evolution_chain"]["chain"]["evolves_to"][0][
+                "evolves_to"
+            ][0]["species"]["url"],
+            "{}{}/pokemon-species/{}/".format(
+                TEST_HOST, API_V2, descendant_pokemon_species.pk
+            ),
         )
         # abilities params
         self.assertEqual(

@@ -2718,253 +2718,6 @@ class PokemonStatSerializer(serializers.ModelSerializer):
         fields = ("base_stat", "effort", "stat")
 
 
-#########################
-#  POKEMON SERIALIZERS  #
-#########################
-
-
-class PokemonGameIndexSerializer(serializers.ModelSerializer):
-    version = VersionSummarySerializer()
-
-    class Meta:
-        model = PokemonGameIndex
-        fields = ("game_index", "version")
-
-
-class PokemonDetailSerializer(serializers.ModelSerializer):
-    abilities = serializers.SerializerMethodField("get_pokemon_abilities")
-    past_abilities = serializers.SerializerMethodField("get_past_pokemon_abilities")
-    game_indices = PokemonGameIndexSerializer(
-        many=True, read_only=True, source="pokemongameindex"
-    )
-    moves = serializers.SerializerMethodField("get_pokemon_moves")
-    species = PokemonSpeciesSummarySerializer(source="pokemon_species")
-    stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
-    types = serializers.SerializerMethodField("get_pokemon_types")
-    past_types = serializers.SerializerMethodField("get_past_pokemon_types")
-    forms = PokemonFormSummarySerializer(
-        many=True, read_only=True, source="pokemonform"
-    )
-    held_items = serializers.SerializerMethodField("get_pokemon_held_items")
-    location_area_encounters = serializers.SerializerMethodField("get_encounters")
-    sprites = serializers.SerializerMethodField("get_pokemon_sprites")
-    cries = serializers.SerializerMethodField("get_pokemon_cries")
-
-    class Meta:
-        model = Pokemon
-        fields = (
-            "id",
-            "name",
-            "base_experience",
-            "height",
-            "is_default",
-            "order",
-            "weight",
-            "abilities",
-            "past_abilities",
-            "forms",
-            "game_indices",
-            "held_items",
-            "location_area_encounters",
-            "moves",
-            "species",
-            "sprites",
-            "cries",
-            "stats",
-            "types",
-            "past_types",
-        )
-
-    def get_pokemon_sprites(self, obj):
-        sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
-        return sprites_object.sprites
-
-    def get_pokemon_cries(self, obj):
-        cries_object = PokemonCries.objects.get(pokemon_id=obj)
-        return cries_object.cries
-
-    def get_pokemon_moves(self, obj):
-        version_objects = VersionGroup.objects.all()
-        version_data = VersionGroupSummarySerializer(
-            version_objects, many=True, context=self.context
-        ).data
-        method_objects = MoveLearnMethod.objects.all()
-        method_data = MoveLearnMethodSummarySerializer(
-            method_objects, many=True, context=self.context
-        ).data
-
-        # Get moves related to this pokemon and pull out unique Move IDs.
-        # Note that it's important to order by the same column we're using to
-        # determine if the entries are unique.  Otherwise distinct() will
-        # return apparent duplicates.
-
-        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by("move_id")
-        move_ids = pokemon_moves.values("move_id").distinct()
-        move_list = []
-
-        for id in move_ids:
-            pokemon_move_details = OrderedDict()
-
-            # Get each Unique Move by ID
-            move_object = Move.objects.get(pk=id["move_id"])
-            move_data = MoveSummarySerializer(move_object, context=self.context).data
-            pokemon_move_details["move"] = move_data
-
-            # Get Versions and Move Methods associated with each unique move
-            pokemon_move_objects = pokemon_moves.filter(move_id=id["move_id"])
-            serializer = PokemonMoveSerializer(
-                pokemon_move_objects, many=True, context=self.context
-            )
-            pokemon_move_details["version_group_details"] = []
-
-            for move in serializer.data:
-                version_detail = OrderedDict()
-
-                version_detail["level_learned_at"] = move["level"]
-                version_detail["version_group"] = version_data[
-                    move["version_group"] - 1
-                    ]
-                version_detail["move_learn_method"] = method_data[
-                    move["move_learn_method"] - 1
-                    ]
-
-                pokemon_move_details["version_group_details"].append(version_detail)
-
-            move_list.append(pokemon_move_details)
-
-        return move_list
-
-    def get_pokemon_held_items(self, obj):
-        # Get items related to this pokemon and pull out unique Item IDs
-        pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by("item_id")
-        item_ids = pokemon_items.values("item_id").distinct()
-        item_list = []
-
-        for id in item_ids:
-            pokemon_item_details = OrderedDict()
-
-            # Get each Unique Item by ID
-            item_object = Item.objects.get(pk=id["item_id"])
-            item_data = ItemSummarySerializer(item_object, context=self.context).data
-            pokemon_item_details["item"] = item_data
-
-            # Get Versions associated with each unique item
-            pokemon_item_objects = pokemon_items.filter(item_id=id["item_id"])
-            serializer = PokemonItemSerializer(
-                pokemon_item_objects, many=True, context=self.context
-            )
-            pokemon_item_details["version_details"] = []
-
-            for item in serializer.data:
-                version_detail = OrderedDict()
-
-                version_detail["rarity"] = item["rarity"]
-                version_detail["version"] = item["version"]
-
-                pokemon_item_details["version_details"].append(version_detail)
-
-            item_list.append(pokemon_item_details)
-
-        return item_list
-
-    def get_pokemon_abilities(self, obj):
-        pokemon_ability_objects = PokemonAbility.objects.filter(pokemon=obj)
-        data = PokemonAbilitySerializer(
-            pokemon_ability_objects, many=True, context=self.context
-        ).data
-        abilities = []
-
-        for ability in data:
-            del ability["pokemon"]
-            abilities.append(ability)
-
-        return abilities
-
-    def get_past_pokemon_abilities(self, obj):
-        pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
-        pokemon_past_abilities = PokemonAbilityPastSerializer(
-            pokemon_past_ability_objects, many=True, context=self.context
-        ).data
-
-        # post-process to the form we want
-        current_generation = ""
-        past_obj = {}
-        final_data = []
-        for pokemon_past_ability in pokemon_past_abilities:
-            del pokemon_past_ability["pokemon"]
-
-            generation = pokemon_past_ability["generation"]["name"]
-            if generation != current_generation:
-                current_generation = generation
-                past_obj = {}
-
-                # create past abilities object for this generation
-                past_obj["generation"] = pokemon_past_ability["generation"]
-                del pokemon_past_ability["generation"]
-
-                # create abilities array
-                past_obj["abilities"] = [pokemon_past_ability]
-
-                # add to past abilities array
-                final_data.append(past_obj)
-
-            else:
-                # add to existing array for this generation
-                del pokemon_past_ability["generation"]
-                past_obj["abilities"].append(pokemon_past_ability)
-
-        return final_data
-
-    def get_pokemon_types(self, obj):
-        poke_type_objects = PokemonType.objects.filter(pokemon=obj)
-        poke_types = PokemonTypeSerializer(
-            poke_type_objects, many=True, context=self.context
-        ).data
-
-        for poke_type in poke_types:
-            del poke_type["pokemon"]
-
-        return poke_types
-
-    def get_past_pokemon_types(self, obj):
-        poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
-        poke_past_types = PokemonTypePastSerializer(
-            poke_past_type_objects, many=True, context=self.context
-        ).data
-
-        # post-process to the form we want
-        current_generation = ""
-        past_obj = {}
-        final_data = []
-        for poke_past_type in poke_past_types:
-            del poke_past_type["pokemon"]
-
-            generation = poke_past_type["generation"]["name"]
-            if generation != current_generation:
-                current_generation = generation
-                past_obj = {}
-
-                # create past types object for this generation
-                past_obj["generation"] = poke_past_type["generation"]
-                del poke_past_type["generation"]
-
-                # create types array
-                past_obj["types"] = [poke_past_type]
-
-                # add to past types array
-                final_data.append(past_obj)
-
-            else:
-                # add to existing array for this generation
-                del poke_past_type["generation"]
-                past_obj["types"].append(poke_past_type)
-
-        return final_data
-
-    def get_encounters(self, obj):
-        return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
-
-
 #################################
 #  POKEMON SPECIES SERIALIZERS  #
 #################################
@@ -3198,6 +2951,94 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
         )
 
 
+class EvolutionChainShortDetailSerializer(serializers.HyperlinkedModelSerializer):
+    chain = serializers.SerializerMethodField("build_chain")
+
+    class Meta:
+        model = EvolutionChain
+        fields = ("url", "chain")
+
+    def build_chain(self, obj):
+        chain_id = obj.id
+
+        pokemon_objects = PokemonSpecies.objects.filter(
+            evolution_chain_id=chain_id
+        ).order_by("order")
+        summary_data = PokemonSpeciesSummarySerializer(
+            pokemon_objects, many=True, context=self.context
+        ).data
+        ref_data = PokemonSpeciesEvolutionSerializer(
+            pokemon_objects, many=True, context=self.context
+        ).data
+
+        # convert evolution data list to tree
+        evolution_tree = self.build_evolution_tree(ref_data)
+
+        # serialize chain recursively from tree
+        chain = self.build_chain_link_entry(evolution_tree, summary_data)
+
+        return chain
+
+    # converts a list of Pokemon species evolution data into a tree representing the evolution chain
+    def build_evolution_tree(self, species_evolution_data):
+        evolution_tree = OrderedDict()
+        evolution_tree["species"] = species_evolution_data[0]
+        evolution_tree["children"] = []
+
+        for species in species_evolution_data[1:]:
+            chain_link = OrderedDict()
+            chain_link["species"] = species
+            chain_link["children"] = []
+
+            evolves_from_species_id = chain_link["species"]["evolves_from_species"]
+
+            # find parent link by DFS
+            parent_link = evolution_tree
+            search_stack = [parent_link]
+
+            while len(search_stack) > 0:
+                l = search_stack.pop()
+                if l["species"]["id"] == evolves_from_species_id:
+                    parent_link = l
+                    break
+
+                # "left" to "right" requires reversing the list of children
+                search_stack += reversed(l["children"])
+
+            parent_link["children"].append(chain_link)
+
+        return evolution_tree
+
+    # serializes an evolution chain link recursively
+    # chain_link is a tree representing an evolution chain
+    def build_chain_link_entry(self, chain_link, summary_data):
+        entry = OrderedDict()
+
+        species = chain_link["species"]
+        if species["evolves_from_species"]:
+            evolution_object = PokemonEvolution.objects.filter(
+                evolved_species=species["id"]
+            )
+
+        species_summary = next(x for x in summary_data if x["name"] == species["name"])
+        entry["species"] = species_summary
+
+        evolves_to = [
+            self.build_chain_link_entry(c, summary_data) for c in chain_link["children"]
+        ]
+        entry["evolves_to"] = evolves_to
+
+        return entry
+
+
+class PokemonSpeciesShortDetailSerializer(serializers.HyperlinkedModelSerializer):
+    evolution_chain = EvolutionChainShortDetailSerializer()
+
+    class Meta:
+        model = PokemonSpecies
+        fields = ("name", "url", "evolution_chain")
+
+
 class EvolutionChainDetailSerializer(serializers.ModelSerializer):
     baby_trigger_item = ItemSummarySerializer()
     chain = serializers.SerializerMethodField("build_chain")
@@ -3295,6 +3136,253 @@ class PokemonDexNumberSerializer(serializers.ModelSerializer):
     class Meta:
         model = PokemonDexNumber
         fields = ("pokedex", "entry_number", "pokemon_species")
+
+
+#########################
+#  POKEMON SERIALIZERS  #
+#########################
+
+
+class PokemonGameIndexSerializer(serializers.ModelSerializer):
+    version = VersionSummarySerializer()
+
+    class Meta:
+        model = PokemonGameIndex
+        fields = ("game_index", "version")
+
+
+class PokemonDetailSerializer(serializers.ModelSerializer):
+    abilities = serializers.SerializerMethodField("get_pokemon_abilities")
+    past_abilities = serializers.SerializerMethodField("get_past_pokemon_abilities")
+    game_indices = PokemonGameIndexSerializer(
+        many=True, read_only=True, source="pokemongameindex"
+    )
+    moves = serializers.SerializerMethodField("get_pokemon_moves")
+    species = PokemonSpeciesShortDetailSerializer(source="pokemon_species")
+    stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
+    types = serializers.SerializerMethodField("get_pokemon_types")
+    past_types = serializers.SerializerMethodField("get_past_pokemon_types")
+    forms = PokemonFormSummarySerializer(
+        many=True, read_only=True, source="pokemonform"
+    )
+    held_items = serializers.SerializerMethodField("get_pokemon_held_items")
+    location_area_encounters = serializers.SerializerMethodField("get_encounters")
+    sprites = serializers.SerializerMethodField("get_pokemon_sprites")
+    cries = serializers.SerializerMethodField("get_pokemon_cries")
+
+    class Meta:
+        model = Pokemon
+        fields = (
+            "id",
+            "name",
+            "base_experience",
+            "height",
+            "is_default",
+            "order",
+            "weight",
+            "abilities",
+            "past_abilities",
+            "forms",
+            "game_indices",
+            "held_items",
+            "location_area_encounters",
+            "moves",
+            "species",
+            "sprites",
+            "cries",
+            "stats",
+            "types",
+            "past_types",
+        )
+
+    def get_pokemon_sprites(self, obj):
+        sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
+        return sprites_object.sprites
+
+    def get_pokemon_cries(self, obj):
+        cries_object = PokemonCries.objects.get(pokemon_id=obj)
+        return cries_object.cries
+
+    def get_pokemon_moves(self, obj):
+        version_objects = VersionGroup.objects.all()
+        version_data = VersionGroupSummarySerializer(
+            version_objects, many=True, context=self.context
+        ).data
+        method_objects = MoveLearnMethod.objects.all()
+        method_data = MoveLearnMethodSummarySerializer(
+            method_objects, many=True, context=self.context
+        ).data
+
+        # Get moves related to this pokemon and pull out unique Move IDs.
+        # Note that it's important to order by the same column we're using to
+        # determine if the entries are unique.  Otherwise distinct() will
+        # return apparent duplicates.
+
+        pokemon_moves = PokemonMove.objects.filter(pokemon_id=obj).order_by("move_id")
+        move_ids = pokemon_moves.values("move_id").distinct()
+        move_list = []
+
+        for id in move_ids:
+            pokemon_move_details = OrderedDict()
+
+            # Get each Unique Move by ID
+            move_object = Move.objects.get(pk=id["move_id"])
+            move_data = MoveSummarySerializer(move_object, context=self.context).data
+            pokemon_move_details["move"] = move_data
+
+            # Get Versions and Move Methods associated with each unique move
+            pokemon_move_objects = pokemon_moves.filter(move_id=id["move_id"])
+            serializer = PokemonMoveSerializer(
+                pokemon_move_objects, many=True, context=self.context
+            )
+            pokemon_move_details["version_group_details"] = []
+
+            for move in serializer.data:
+                version_detail = OrderedDict()
+
+                version_detail["level_learned_at"] = move["level"]
+                version_detail["version_group"] = version_data[
+                    move["version_group"] - 1
+                ]
+                version_detail["move_learn_method"] = method_data[
+                    move["move_learn_method"] - 1
+                ]
+
+                pokemon_move_details["version_group_details"].append(version_detail)
+
+            move_list.append(pokemon_move_details)
+
+        return move_list
+
+    def get_pokemon_held_items(self, obj):
+        # Get items related to this pokemon and pull out unique Item IDs
+        pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by("item_id")
+        item_ids = pokemon_items.values("item_id").distinct()
+        item_list = []
+
+        for id in item_ids:
+            pokemon_item_details = OrderedDict()
+
+            # Get each Unique Item by ID
+            item_object = Item.objects.get(pk=id["item_id"])
+            item_data = ItemSummarySerializer(item_object, context=self.context).data
+            pokemon_item_details["item"] = item_data
+
+            # Get Versions associated with each unique item
+            pokemon_item_objects = pokemon_items.filter(item_id=id["item_id"])
+            serializer = PokemonItemSerializer(
+                pokemon_item_objects, many=True, context=self.context
+            )
+            pokemon_item_details["version_details"] = []
+
+            for item in serializer.data:
+                version_detail = OrderedDict()
+
+                version_detail["rarity"] = item["rarity"]
+                version_detail["version"] = item["version"]
+
+                pokemon_item_details["version_details"].append(version_detail)
+
+            item_list.append(pokemon_item_details)
+
+        return item_list
+
+    def get_pokemon_abilities(self, obj):
+        pokemon_ability_objects = PokemonAbility.objects.filter(pokemon=obj)
+        data = PokemonAbilitySerializer(
+            pokemon_ability_objects, many=True, context=self.context
+        ).data
+        abilities = []
+
+        for ability in data:
+            del ability["pokemon"]
+            abilities.append(ability)
+
+        return abilities
+
+    def get_past_pokemon_abilities(self, obj):
+        pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
+        pokemon_past_abilities = PokemonAbilityPastSerializer(
+            pokemon_past_ability_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for pokemon_past_ability in pokemon_past_abilities:
+            del pokemon_past_ability["pokemon"]
+
+            generation = pokemon_past_ability["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past abilities object for this generation
+                past_obj["generation"] = pokemon_past_ability["generation"]
+                del pokemon_past_ability["generation"]
+
+                # create abilities array
+                past_obj["abilities"] = [pokemon_past_ability]
+
+                # add to past abilities array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del pokemon_past_ability["generation"]
+                past_obj["abilities"].append(pokemon_past_ability)
+
+        return final_data
+
+    def get_pokemon_types(self, obj):
+        poke_type_objects = PokemonType.objects.filter(pokemon=obj)
+        poke_types = PokemonTypeSerializer(
+            poke_type_objects, many=True, context=self.context
+        ).data
+
+        for poke_type in poke_types:
+            del poke_type["pokemon"]
+
+        return poke_types
+
+    def get_past_pokemon_types(self, obj):
+        poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
+        poke_past_types = PokemonTypePastSerializer(
+            poke_past_type_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for poke_past_type in poke_past_types:
+            del poke_past_type["pokemon"]
+
+            generation = poke_past_type["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past types object for this generation
+                past_obj["generation"] = poke_past_type["generation"]
+                del poke_past_type["generation"]
+
+                # create types array
+                past_obj["types"] = [poke_past_type]
+
+                # add to past types array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del poke_past_type["generation"]
+                past_obj["types"].append(poke_past_type)
+
+        return final_data
+
+    def get_encounters(self, obj):
+        return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
 
 
 ############################

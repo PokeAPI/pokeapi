@@ -2205,10 +2205,6 @@ def _build_pokemons():
 
     build_generic((PokemonTypePast,), "pokemon_types_past.csv", csv_record_to_objects)
 
-    def csv_record_to_objects(info):
-        yield HoneyTrees(pokemon_id=int(info[0]), name=info[1], rarity=info[2])
-
-    build_generic((HoneyTrees,), "honey_tree.csv", csv_record_to_objects)
 
 
 ###############
@@ -2324,6 +2320,14 @@ def _build_encounters():
         "encounter_condition_value_map.csv",
         csv_record_to_objects,
     )
+
+
+def _build_honey_tree_encounters():
+    def csv_record_to_objects(info):
+        yield HoneyTrees(pokemon_id=int(info[0]), name=info[1], rarity=info[2])
+
+    build_generic((HoneyTrees,), "honey_tree.csv", csv_record_to_objects)
+
 
 ##############
 #  PAL PARK  #

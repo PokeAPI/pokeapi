@@ -1,4 +1,6 @@
 import json
+
+from django.core.files.uploadedfile import SimpleUploadedFile
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *
@@ -1172,6 +1174,7 @@ class APIData:
 
         return machine_version_location
 
+    @classmethod
     def setup_honey_tree_encounters_data(self, pokemon_id=int, name="pokemon", rarity="percentage"):
         tree = HoneyTrees.objects.create(
             pokemon_id= pokemon_id,
@@ -5803,14 +5806,9 @@ class APITests(APIData, APITestCase):
             )
 
     def test_honey_tree_encounters(self):
-        honey_tree = self.setup_honey_tree_encounters_data(pokemon_id=265, name="test tree", rarity="50%")
-
-        response = self.client.get("{}/honey_tree/{}/".format(API_V2, honey_tree.pk))
-
-        self.assertEqual(response.status_code, status.HTTP_404_OK)
-
-        # Check tree encounter data
-        self.assertEqual(response.data["id"], honey_tree.pk)
-        self.assertEqual(response.data["pokemon_id"], honey_tree.pokemon_id)
-        self.assertEqual(response.data["name"], honey_tree.name)
-        self.assertEqual(response.data["rarity"], honey_tree.rarity)
+        tree = self.setup_honey_tree_encounters_data(pokemon_id=1, name="Pikachu", rarity="20%")
+        response = self.client.get("{}/honey-tree/{}/".format(API_V2, tree.pk))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["pokemon_id"], 1)
+        self.assertEqual(response.data["name"], "Pikachu")
+        self.assertEqual(response.data["rarity"], "20%")

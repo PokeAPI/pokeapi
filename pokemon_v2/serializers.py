@@ -869,7 +869,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
         return values
 
 
-class HoneyTreeSerializer(serializers.HyperlinkedModelSerializer):
+class HoneyTreeSerializer(serializers.ModelSerializer):
     pokemon = PokemonSummarySerializer()
 
     class Meta:

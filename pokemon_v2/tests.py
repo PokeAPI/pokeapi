@@ -1179,7 +1179,7 @@ class APIData:
         pokemon = pokemon or cls.setup_pokemon_data(name="pkmn for hny tr encntr")
         tree = HoneyTrees.objects.create(
             pokemon= pokemon,
-            name=pokemon.name,
+            #name=pokemon.name,
             rarity=rarity
         )
         tree.save()
@@ -5807,10 +5807,10 @@ class APITests(APIData, APITestCase):
             )
 
     def test_honey_tree_encounters(self):
-        pokemon = self.setup_pokemon_data(name="pkmn for hny tr encntr")
+        pokemon = self.setup_pokemon_data()
         tree = self.setup_honey_tree_encounters_data(pokemon)
         response = self.client.get("{}/honey-trees/{}/".format(API_V2, tree.pk))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data["pokemon_id"], pokemon.pk)
-        self.assertEqual(response.data["name"], pokemon.name)
+        self.assertEqual(response.data["pokemon"],["url"],"{}{}/pokemon/{}/".format(TEST_HOST,API_V2,pokemon.pk))
         self.assertEqual(response.data["rarity"], tree.rarity)
+

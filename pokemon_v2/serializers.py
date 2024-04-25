@@ -307,12 +307,6 @@ class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
-class HoneyTreeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = HoneyTrees
-        fields = ("pokemon_id", "name", "rarity")
-
-
 #####################
 #  MAP SERIALIZERS  #
 #####################
@@ -873,6 +867,14 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             values.append(map["condition_value"])
 
         return values
+
+
+class HoneyTreeSerializer(serializers.HyperlinkedModelSerializer):
+    pokemon = PokemonSummarySerializer()
+
+    class Meta:
+        model = HoneyTrees
+        fields = ("pokemon", "rarity")
 
 
 class LocationAreaEncounterRateSerializer(serializers.ModelSerializer):
@@ -3243,10 +3245,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail["level_learned_at"] = move["level"]
                 version_detail["version_group"] = version_data[
                     move["version_group"] - 1
-                ]
+                    ]
                 version_detail["move_learn_method"] = method_data[
                     move["move_learn_method"] - 1
-                ]
+                    ]
 
                 pokemon_move_details["version_group_details"].append(version_detail)
 

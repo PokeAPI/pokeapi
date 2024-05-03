@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from django.db.models import Q
 from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
 from drf_spectacular.types import OpenApiTypes
 
@@ -39,6 +40,15 @@ class NameOrIdRetrieval:
 
     idPattern = re.compile(r"^-?[0-9]+$")
     namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        filter = self.request.GET.get("q", "")
+
+        if filter:
+            queryset = queryset.filter(Q(name__icontains=filter))
+
+        return queryset
 
     @extend_schema(
         parameters=[

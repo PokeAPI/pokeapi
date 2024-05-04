@@ -1242,9 +1242,11 @@ def _build_locations():
             id=int(info[0]),
             location_id=int(info[1]),
             game_index=int(info[2]),
-            name="{}-{}".format(location.name, info[3])
-            if info[3]
-            else "{}-{}".format(location.name, "area"),
+            name=(
+                "{}-{}".format(location.name, info[3])
+                if info[3]
+                else "{}-{}".format(location.name, "area")
+            ),
         )
 
     build_generic((LocationArea,), "location_areas.csv", csv_record_to_objects)

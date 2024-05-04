@@ -1679,42 +1679,46 @@ class APIData:
 
         showdown = {
             "front_default": showdown_path % pokemon.id if front_default else None,
-            "front_female": showdown_path % f"female/{pokemon.id}"
-            if front_female
-            else None,
-            "front_shiny": showdown_path % f"shiny/{pokemon.id}"
-            if front_shiny
-            else None,
-            "front_shiny_female": showdown_path % f"shiny/female/{pokemon.id}"
-            if front_shiny_female
-            else None,
-            "back_default": showdown_path % f"back/{pokemon.id}"
-            if back_default
-            else None,
-            "back_female": showdown_path % f"back/female/{pokemon.id}"
-            if back_female
-            else None,
-            "back_shiny": showdown_path % f"back/shiny/{pokemon.id}"
-            if back_shiny
-            else None,
-            "back_shiny_female": showdown_path % f"back/shiny/female/{pokemon.id}"
-            if back_shiny_female
-            else None,
+            "front_female": (
+                showdown_path % f"female/{pokemon.id}" if front_female else None
+            ),
+            "front_shiny": (
+                showdown_path % f"shiny/{pokemon.id}" if front_shiny else None
+            ),
+            "front_shiny_female": (
+                showdown_path % f"shiny/female/{pokemon.id}"
+                if front_shiny_female
+                else None
+            ),
+            "back_default": (
+                showdown_path % f"back/{pokemon.id}" if back_default else None
+            ),
+            "back_female": (
+                showdown_path % f"back/female/{pokemon.id}" if back_female else None
+            ),
+            "back_shiny": (
+                showdown_path % f"back/shiny/{pokemon.id}" if back_shiny else None
+            ),
+            "back_shiny_female": (
+                showdown_path % f"back/shiny/female/{pokemon.id}"
+                if back_shiny_female
+                else None
+            ),
         }
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
             "front_female": sprite_path % pokemon.id if front_female else None,
             "front_shiny": sprite_path % pokemon.id if front_shiny else None,
-            "front_shiny_female": sprite_path % pokemon.id
-            if front_shiny_female
-            else None,
+            "front_shiny_female": (
+                sprite_path % pokemon.id if front_shiny_female else None
+            ),
             "back_default": sprite_path % pokemon.id if back_default else None,
             "back_female": sprite_path % pokemon.id if back_female else None,
             "back_shiny": sprite_path % pokemon.id if back_shiny else None,
-            "back_shiny_female": sprite_path % pokemon.id
-            if back_shiny_female
-            else None,
+            "back_shiny_female": (
+                sprite_path % pokemon.id if back_shiny_female else None
+            ),
         }
 
         pokemon_sprites = PokemonSprites.objects.create(
@@ -5098,6 +5102,25 @@ class APITests(APIData, APITestCase):
             cries_data["legacy"],
             "{}".format(cries_data["legacy"]),
         )
+
+        # test search pokemon using search query param `q=partial_name`
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[:2]),
+            HTTP_HOST="testserver",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[-3:]),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

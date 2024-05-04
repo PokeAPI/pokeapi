@@ -7,11 +7,10 @@ RUN mkdir /code
 WORKDIR /code
 
 ADD requirements.txt /code/
-RUN \
-    apk add --no-cache postgresql-libs libstdc++ && \
-    apk add --no-cache --virtual .build-deps gcc g++ musl-dev postgresql-dev && \
-    python3 -m pip install -r requirements.txt --no-cache-dir && \
-    apk --purge del .build-deps
+RUN apk add --no-cache postgresql-libs libstdc++
+RUN apk add --no-cache --virtual .build-deps gcc g++ musl-dev postgresql-dev rust cargo
+RUN python3 -m pip install -r requirements.txt --no-cache-dir && \
+RUN apk --purge del .build-deps
 ADD . /code/
 
 RUN addgroup -g 1000 -S pokeapi && \

@@ -9,7 +9,7 @@ WORKDIR /code
 ADD requirements.txt /code/
 RUN apk add --no-cache postgresql-libs libstdc++
 RUN apk add --no-cache --virtual .build-deps gcc g++ musl-dev postgresql-dev rust cargo
-RUN python3 -m pip install -r requirements.txt --no-cache-dir && \
+RUN python3 -m pip install -r requirements.txt --no-cache-dir
 RUN apk --purge del .build-deps
 ADD . /code/
 

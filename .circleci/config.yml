@@ -20,6 +20,9 @@ jobs:
       - run:
           name: Run tests
           command: make test
+      - run:
+          name: Generate OpenAPI schema
+          command: make openapi-generate
   build:
     docker:
       - image: cimg/python:3.10.9

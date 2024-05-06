@@ -41,6 +41,16 @@ class NameOrIdRetrieval:
     idPattern = re.compile(r"^-?[0-9]+$")
     namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="q",
+                description="Case-insensitive query applied on the `name` property. Only available locally and not at pokeapi.co",
+                location=OpenApiParameter.QUERY,
+                type=OpenApiTypes.STR,
+            ),
+        ]
+    )
     def get_queryset(self):
         queryset = super().get_queryset()
         filter = self.request.GET.get("q", "")

@@ -1,10 +1,13 @@
 name: Deploy Kustomize k8s cluster
 
 on:
+  push:
+    branches:
+      - 'kustomize-test'
   workflow_run:
     workflows: ["Build and Push Docker image"]
     branches: [master, staging]
-    types: 
+    types:
       - completed
   schedule:
     - cron: '0 0 1 * *'
@@ -31,7 +34,7 @@ jobs:
           cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
       - name: K8s Apply
         run: |
-          if [ ${GITHUB_REF#refs/heads/} = 'master' ]; then make kustomize-apply; else make kustomize-staging-apply; fi 
+          if [ ${GITHUB_REF#refs/heads/} = 'master' ]; then make kustomize-apply; else make kustomize-staging-apply; fi
           kubectl proxy &
           kubectl describe deployment
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
@@ -45,6 +48,6 @@ jobs:
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
       - name: K8s Apply
         run: |
-          kubectl wait --timeout=120s --for=condition=complete job/load-graphql
+          kubectl wait --timeout=240s --for=condition=complete job/load-graphql
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
           test "$last_command" -eq 1

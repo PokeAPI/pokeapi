@@ -35,7 +35,7 @@ jobs:
           context: .
           file: ./Resources/docker/app/Dockerfile
           push: false
-          platforms: local,linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,windows/amd64
+          platforms: local,linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Image digest

@@ -41,6 +41,9 @@ make-migrations:  # Create migrations files if schema has changed
 shell:  # Load a shell
 	python manage.py shell ${local_config}
 
+openapi-generate:
+	python manage.py spectacular --color --file openapi.yml ${local_config}
+
 docker-up:  # (Docker) Create services/volumes/networks
 	docker-compose up -d
 

@@ -5,5 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
+    volumes:
+      - .:/code
 
 # docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d

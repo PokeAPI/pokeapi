@@ -22,8 +22,6 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
       POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
-    volumes:
-      - .:/code
     links:
       - db
       - cache

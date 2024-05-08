@@ -11116,7 +11116,7 @@ pokemon_species_id,local_language_id,name,genus
 1011,6,Sirapfel,
 1011,7,Dipplin,
 1011,8,Dipplin,
-1011,9,Dipplin,
+1011,9,Dipplin,Candy Apple Pokémon
 1011,11,カミッチュ,
 1011,12,裹蜜虫,
 1012,1,チャデス,
@@ -11126,7 +11126,7 @@ pokemon_species_id,local_language_id,name,genus
 1012,6,Mortcha,
 1012,7,Poltchageist,
 1012,8,Poltchageist,
-1012,9,Poltchageist,
+1012,9,Poltchageist,Matcha Pokémon
 1012,11,チャデス,
 1012,12,斯魔茶,
 1013,1,ヤバソチャ,
@@ -11136,7 +11136,7 @@ pokemon_species_id,local_language_id,name,genus
 1013,6,Fatalitcha,
 1013,7,Sinistcha,
 1013,8,Sinistcha,
-1013,9,Sinistcha,
+1013,9,Sinistcha,Matcha Pokémon
 1013,11,ヤバソチャ,
 1013,12,来悲粗茶,
 1014,1,イイネイヌ,
@@ -11146,7 +11146,7 @@ pokemon_species_id,local_language_id,name,genus
 1014,6,Boninu,
 1014,7,Okidogi,
 1014,8,Okidogi,
-1014,9,Okidogi,
+1014,9,Okidogi,Retainer Pokémon
 1014,11,イイネイヌ,
 1014,12,够赞狗,
 1015,1,マシマシラ,
@@ -11156,7 +11156,7 @@ pokemon_species_id,local_language_id,name,genus
 1015,6,Benesaru,
 1015,7,Munkidori,
 1015,8,Munkidori,
-1015,9,Munkidori,
+1015,9,Munkidori,Retainer Pokémon
 1015,11,マシマシラ,
 1015,12,愿增猿,
 1016,1,キチキギス,
@@ -11166,7 +11166,7 @@ pokemon_species_id,local_language_id,name,genus
 1016,6,Beatori,
 1016,7,Fezandipiti,
 1016,8,Fezandipiti,
-1016,9,Fezandipiti,
+1016,9,Fezandipiti,Retainer Pokémon
 1016,11,キチキギス,
 1016,12,吉雉鸡,
 1017,1,オーガポン,
@@ -11176,7 +11176,7 @@ pokemon_species_id,local_language_id,name,genus
 1017,6,Ogerpon,
 1017,7,Ogerpon,
 1017,8,Ogerpon,
-1017,9,Ogerpon,
+1017,9,Ogerpon,Mask Pokémon
 1017,11,オーガポン,
 1017,12,厄诡椪,
 1018,1,ブリジュラス,ごうきんポケモン
@@ -11206,7 +11206,7 @@ pokemon_species_id,local_language_id,name,genus
 1020,6,Keilflamme,
 1020,7,Flamariete,
 1020,8,Vampeaguzze,
-1020,9,Gouging Fire,Paladox Pokémon
+1020,9,Gouging Fire,Paradox Pokémon
 1020,11,ウガツホムラ,パラドックスポケモン
 1020,12,破空焰,
 1021,1,タケルライコ,パラドックスポケモン
@@ -11216,7 +11216,7 @@ pokemon_species_id,local_language_id,name,genus
 1021,6,Furienblitz,
 1021,7,Electrofuria,
 1021,8,Furiatonante,
-1021,9,Raging Bolt,Paladox Pokémon
+1021,9,Raging Bolt,Paradox Pokémon
 1021,11,タケルライコ,パラドックスポケモン
 1021,12,猛雷鼓,
 1022,1,テツノイワオ,パラドックスポケモン
@@ -11226,7 +11226,7 @@ pokemon_species_id,local_language_id,name,genus
 1022,6,Eisenfels,
 1022,7,Ferromole,
 1022,8,Massoferreo,
-1022,9,Iron Boulder,Paladox Pokémon
+1022,9,Iron Boulder,Paradox Pokémon
 1022,11,テツノイワオ,パラドックスポケモン
 1022,12,鐵磐岩,
 1023,1,テツノカシラ,パラドックスポケモン
@@ -11236,7 +11236,7 @@ pokemon_species_id,local_language_id,name,genus
 1023,6,Eisenhaupt,
 1023,7,Ferrotesta,
 1023,8,Capoferreo,
-1023,9,Iron Crown,Paladox Pokémon
+1023,9,Iron Crown,Paradox Pokémon
 1023,11,テツノカシラ,パラドックスポケモン
 1023,12,鐵頭殼,
 1024,1,テラパゴス,テラスタルポケモン

@@ -1,6 +1,7 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
+gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 
 .PHONY: help
 .SILENT:
@@ -119,10 +120,10 @@ kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8
 	kubectl apply -k Resources/k8s/kustomize/staging/
 
 k8s-migrate:  # (k8s) Run any pending migrations
-	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
+	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate ${docker_config}
 
 k8s-build-db:  # (k8s) Build the database
-	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi
@@ -138,17 +139,19 @@ down-graphql-prod:
 	docker system prune --all --volumes --force
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
+# Nginx doesn't start if upstream graphql-engine is down
 update-graphql-data-prod:
+	docker compose ${gql_compose_config} stop
 	git pull origin master
 	git submodule update --init
-	docker compose stop graphql-engine
+	docker compose ${gql_compose_config} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app cache
 	make docker-migrate
 	make docker-build-db
-	docker compose stop app cache
-	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
-	docker compose start graphql-engine
+	docker compose ${gql_compose_config} stop app cache
+	docker compose ${gql_compose_config} up --pull always -d graphql-engine graphiql
 	sleep 120
 	make hasura-apply
+	docker compose ${gql_compose_config} up --pull always -d web
+	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
+	sync; echo 3 > /proc/sys/vm/drop_caches

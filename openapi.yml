@@ -95,6 +95,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -127,6 +133,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -186,6 +198,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -275,6 +293,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -334,6 +358,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -392,6 +422,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -453,6 +489,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -513,6 +555,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -545,6 +593,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -629,6 +683,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -688,6 +748,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -748,6 +814,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -809,6 +881,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -871,6 +949,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -932,6 +1016,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -992,6 +1082,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1024,6 +1120,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1082,6 +1184,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1140,6 +1248,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1197,6 +1311,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1280,6 +1400,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - utility
       security:
@@ -1337,6 +1463,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -1369,6 +1501,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -1454,6 +1592,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - machines
       security:
@@ -1515,6 +1659,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1548,6 +1698,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1607,6 +1763,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1664,6 +1826,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1720,6 +1888,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1776,6 +1950,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1833,6 +2013,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1919,6 +2105,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1977,6 +2169,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2037,6 +2235,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2100,6 +2304,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2165,6 +2375,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2199,6 +2415,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2261,6 +2483,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2321,6 +2549,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2378,6 +2612,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2437,6 +2677,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2645,6 +2891,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2705,6 +2957,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2764,6 +3022,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -2824,6 +3088,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2883,6 +3153,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2914,6 +3190,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:

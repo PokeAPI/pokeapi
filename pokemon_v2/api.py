@@ -89,6 +89,14 @@ retrieve_path_parameter = OpenApiParameter(
     required=True,
 )
 
+q_query_string_parameter = OpenApiParameter(
+    name="q",
+    description="> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied on the `name` property. ",
+    location=OpenApiParameter.QUERY,
+    type=OpenApiTypes.STR,
+)
+
+
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
@@ -109,9 +117,7 @@ class AbilityResource(PokeapiCommonViewset):
     summary="Get a berry",
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List berries",
-    )
+    list=extend_schema(summary="List berries", parameters=[q_query_string_parameter])
 )
 class BerryResource(PokeapiCommonViewset):
     queryset = Berry.objects.all()
@@ -130,7 +136,7 @@ class BerryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List berry firmness",
+        summary="List berry firmness", parameters=[q_query_string_parameter]
     )
 )
 class BerryFirmnessResource(PokeapiCommonViewset):
@@ -150,7 +156,7 @@ class BerryFirmnessResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List berry flavors",
+        summary="List berry flavors", parameters=[q_query_string_parameter]
     )
 )
 class BerryFlavorResource(PokeapiCommonViewset):
@@ -170,7 +176,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List charecterictics",
+        summary="List charecterictics", parameters=[q_query_string_parameter]
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
@@ -190,7 +196,7 @@ class CharacteristicResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List contest effects",
+        summary="List contest effects", parameters=[q_query_string_parameter]
     )
 )
 class ContestEffectResource(PokeapiCommonViewset):
@@ -210,7 +216,7 @@ class ContestEffectResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List contest types",
+        summary="List contest types", parameters=[q_query_string_parameter]
     )
 )
 class ContestTypeResource(PokeapiCommonViewset):
@@ -229,9 +235,7 @@ class ContestTypeResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List egg groups",
-    )
+    list=extend_schema(summary="List egg groups", parameters=[q_query_string_parameter])
 )
 class EggGroupResource(PokeapiCommonViewset):
     queryset = EggGroup.objects.all()
@@ -250,7 +254,7 @@ class EggGroupResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter conditions",
+        summary="List encounter conditions", parameters=[q_query_string_parameter]
     )
 )
 class EncounterConditionResource(PokeapiCommonViewset):
@@ -270,7 +274,7 @@ class EncounterConditionResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter condition values",
+        summary="List encounter condition values", parameters=[q_query_string_parameter]
     )
 )
 class EncounterConditionValueResource(PokeapiCommonViewset):
@@ -290,7 +294,7 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter methods",
+        summary="List encounter methods", parameters=[q_query_string_parameter]
     )
 )
 class EncounterMethodResource(PokeapiCommonViewset):
@@ -310,7 +314,7 @@ class EncounterMethodResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List evolution chains",
+        summary="List evolution chains", parameters=[q_query_string_parameter]
     )
 )
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -330,7 +334,7 @@ class EvolutionChainResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List evolution triggers",
+        summary="List evolution triggers", parameters=[q_query_string_parameter]
     )
 )
 class EvolutionTriggerResource(PokeapiCommonViewset):
@@ -349,9 +353,7 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List genrations",
-    )
+    list=extend_schema(summary="List genrations", parameters=[q_query_string_parameter])
 )
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
@@ -369,9 +371,7 @@ class GenerationResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List genders",
-    )
+    list=extend_schema(summary="List genders", parameters=[q_query_string_parameter])
 )
 class GenderResource(PokeapiCommonViewset):
     queryset = Gender.objects.all()
@@ -390,7 +390,7 @@ class GenderResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List growth rates",
+        summary="List growth rates", parameters=[q_query_string_parameter]
     )
 )
 class GrowthRateResource(PokeapiCommonViewset):
@@ -409,9 +409,7 @@ class GrowthRateResource(PokeapiCommonViewset):
     tags=["items"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List items",
-    )
+    list=extend_schema(summary="List items", parameters=[q_query_string_parameter])
 )
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
@@ -430,7 +428,7 @@ class ItemResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item categories",
+        summary="List item categories", parameters=[q_query_string_parameter]
     )
 )
 class ItemCategoryResource(PokeapiCommonViewset):
@@ -450,7 +448,7 @@ class ItemCategoryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item attributes",
+        summary="List item attributes", parameters=[q_query_string_parameter]
     )
 )
 class ItemAttributeResource(PokeapiCommonViewset):
@@ -470,7 +468,7 @@ class ItemAttributeResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item fling effects",
+        summary="List item fling effects", parameters=[q_query_string_parameter]
     )
 )
 class ItemFlingEffectResource(PokeapiCommonViewset):
@@ -490,7 +488,7 @@ class ItemFlingEffectResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item pockets",
+        summary="List item pockets", parameters=[q_query_string_parameter]
     )
 )
 class ItemPocketResource(PokeapiCommonViewset):
@@ -509,9 +507,7 @@ class ItemPocketResource(PokeapiCommonViewset):
     tags=["utility"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List languages",
-    )
+    list=extend_schema(summary="List languages", parameters=[q_query_string_parameter])
 )
 class LanguageResource(PokeapiCommonViewset):
     queryset = Language.objects.all()
@@ -529,9 +525,7 @@ class LanguageResource(PokeapiCommonViewset):
     tags=["location"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List locations",
-    )
+    list=extend_schema(summary="List locations", parameters=[q_query_string_parameter])
 )
 class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
@@ -550,7 +544,7 @@ class LocationResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List location areas",
+        summary="List location areas", parameters=[q_query_string_parameter]
     )
 )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
@@ -569,9 +563,7 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
     tags=["machines"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List machines",
-    )
+    list=extend_schema(summary="List machines", parameters=[q_query_string_parameter])
 )
 class MachineResource(PokeapiCommonViewset):
     queryset = Machine.objects.all()
@@ -589,9 +581,7 @@ class MachineResource(PokeapiCommonViewset):
     tags=["moves"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List moves",
-    )
+    list=extend_schema(summary="List moves", parameters=[q_query_string_parameter])
 )
 class MoveResource(PokeapiCommonViewset):
     queryset = Move.objects.all()
@@ -610,7 +600,7 @@ class MoveResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move damage classes",
+        summary="List move damage classes", parameters=[q_query_string_parameter]
     )
 )
 class MoveDamageClassResource(PokeapiCommonViewset):
@@ -630,7 +620,7 @@ class MoveDamageClassResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move meta ailments",
+        summary="List move meta ailments", parameters=[q_query_string_parameter]
     )
 )
 class MoveMetaAilmentResource(PokeapiCommonViewset):
@@ -650,7 +640,7 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move battle styles",
+        summary="List move battle styles", parameters=[q_query_string_parameter]
     )
 )
 class MoveBattleStyleResource(PokeapiCommonViewset):
@@ -670,7 +660,7 @@ class MoveBattleStyleResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move meta categories",
+        summary="List move meta categories", parameters=[q_query_string_parameter]
     )
 )
 class MoveMetaCategoryResource(PokeapiCommonViewset):
@@ -690,7 +680,7 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move learn methods",
+        summary="List move learn methods", parameters=[q_query_string_parameter]
     )
 )
 class MoveLearnMethodResource(PokeapiCommonViewset):
@@ -710,7 +700,7 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move targets",
+        summary="List move targets", parameters=[q_query_string_parameter]
     )
 )
 class MoveTargetResource(PokeapiCommonViewset):
@@ -729,9 +719,7 @@ class MoveTargetResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List natures",
-    )
+    list=extend_schema(summary="List natures", parameters=[q_query_string_parameter])
 )
 class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
@@ -750,7 +738,7 @@ class NatureResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pal park areas",
+        summary="List pal park areas", parameters=[q_query_string_parameter]
     )
 )
 class PalParkAreaResource(PokeapiCommonViewset):
@@ -770,7 +758,7 @@ class PalParkAreaResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokeathlon stats",
+        summary="List pokeathlon stats", parameters=[q_query_string_parameter]
     )
 )
 class PokeathlonStatResource(PokeapiCommonViewset):
@@ -789,9 +777,7 @@ class PokeathlonStatResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List pokedex",
-    )
+    list=extend_schema(summary="List pokedex", parameters=[q_query_string_parameter])
 )
 class PokedexResource(PokeapiCommonViewset):
     queryset = Pokedex.objects.all()
@@ -810,7 +796,7 @@ class PokedexResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon colors",
+        summary="List pokemon colors", parameters=[q_query_string_parameter]
     )
 )
 class PokemonColorResource(PokeapiCommonViewset):
@@ -830,7 +816,7 @@ class PokemonColorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon forms",
+        summary="List pokemon forms", parameters=[q_query_string_parameter]
     )
 )
 class PokemonFormResource(PokeapiCommonViewset):
@@ -850,7 +836,7 @@ class PokemonFormResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemom habitas",
+        summary="List pokemom habitas", parameters=[q_query_string_parameter]
     )
 )
 class PokemonHabitatResource(PokeapiCommonViewset):
@@ -870,7 +856,7 @@ class PokemonHabitatResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon shapes",
+        summary="List pokemon shapes", parameters=[q_query_string_parameter]
     )
 )
 class PokemonShapeResource(PokeapiCommonViewset):
@@ -889,9 +875,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List pokemon",
-    )
+    list=extend_schema(summary="List pokemon", parameters=[q_query_string_parameter]),
 )
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
@@ -910,7 +894,7 @@ class PokemonResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon species",
+        summary="List pokemon species", parameters=[q_query_string_parameter]
     )
 )
 class PokemonSpeciesResource(PokeapiCommonViewset):
@@ -929,9 +913,7 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
     tags=["location"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List regions",
-    )
+    list=extend_schema(summary="List regions", parameters=[q_query_string_parameter])
 )
 class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
@@ -949,9 +931,7 @@ class RegionResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List stats",
-    )
+    list=extend_schema(summary="List stats", parameters=[q_query_string_parameter])
 )
 class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
@@ -970,7 +950,7 @@ class StatResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List super contest effects",
+        summary="List super contest effects", parameters=[q_query_string_parameter]
     )
 )
 class SuperContestEffectResource(PokeapiCommonViewset):
@@ -989,9 +969,7 @@ class SuperContestEffectResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List types",
-    )
+    list=extend_schema(summary="List types", parameters=[q_query_string_parameter])
 )
 class TypeResource(PokeapiCommonViewset):
     queryset = Type.objects.all()
@@ -1009,9 +987,7 @@ class TypeResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(
-        summary="List versions",
-    )
+    list=extend_schema(summary="List versions", parameters=[q_query_string_parameter])
 )
 class VersionResource(PokeapiCommonViewset):
     queryset = Version.objects.all()
@@ -1030,7 +1006,7 @@ class VersionResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List version groups",
+        summary="List version groups", parameters=[q_query_string_parameter]
     )
 )
 class VersionGroupResource(PokeapiCommonViewset):

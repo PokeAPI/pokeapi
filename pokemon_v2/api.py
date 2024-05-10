@@ -50,16 +50,6 @@ class NameOrIdRetrieval:
 
         return queryset
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
     def get_object(self):
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)
@@ -91,6 +81,13 @@ class PokeapiCommonViewset(
 #  APIS  #
 ##########
 
+retrieve_path_parameter = OpenApiParameter(
+    name="id",
+    description="This parameter can be a string or an integer.",
+    location=OpenApiParameter.PATH,
+    type=OpenApiTypes.STR,
+    required=True,
+)
 
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
@@ -100,6 +97,10 @@ class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -117,6 +118,10 @@ class BerryResource(PokeapiCommonViewset):
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
@@ -132,6 +137,10 @@ class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -149,6 +158,10 @@ class BerryFlavorResource(PokeapiCommonViewset):
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.",
@@ -164,6 +177,10 @@ class CharacteristicResource(PokeapiCommonViewset):
     queryset = Characteristic.objects.all()
     serializer_class = CharacteristicDetailSerializer
     list_serializer_class = CharacteristicSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -181,6 +198,10 @@ class ContestEffectResource(PokeapiCommonViewset):
     serializer_class = ContestEffectDetailSerializer
     list_serializer_class = ContestEffectSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
@@ -196,6 +217,10 @@ class ContestTypeResource(PokeapiCommonViewset):
     queryset = ContestType.objects.all()
     serializer_class = ContestTypeDetailSerializer
     list_serializer_class = ContestTypeSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -213,6 +238,10 @@ class EggGroupResource(PokeapiCommonViewset):
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Conditions which affect what pokemon might appear in the wild, e.g., day or night.",
@@ -228,6 +257,10 @@ class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -245,6 +278,10 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.",
@@ -260,6 +297,10 @@ class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -277,6 +318,10 @@ class EvolutionChainResource(PokeapiCommonViewset):
     serializer_class = EvolutionChainDetailSerializer
     list_serializer_class = EvolutionChainSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.",
@@ -292,6 +337,10 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     queryset = EvolutionTrigger.objects.all()
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -309,6 +358,10 @@ class GenerationResource(PokeapiCommonViewset):
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.",
@@ -324,6 +377,10 @@ class GenderResource(PokeapiCommonViewset):
     queryset = Gender.objects.all()
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -341,6 +398,10 @@ class GrowthRateResource(PokeapiCommonViewset):
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
@@ -356,6 +417,10 @@ class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -373,6 +438,10 @@ class ItemCategoryResource(PokeapiCommonViewset):
     serializer_class = ItemCategoryDetailSerializer
     list_serializer_class = ItemCategorySummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description='Item attributes define particular aspects of items, e.g."usable in battle" or "consumable".',
@@ -388,6 +457,10 @@ class ItemAttributeResource(PokeapiCommonViewset):
     queryset = ItemAttribute.objects.all()
     serializer_class = ItemAttributeDetailSerializer
     list_serializer_class = ItemAttributeSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -405,6 +478,10 @@ class ItemFlingEffectResource(PokeapiCommonViewset):
     serializer_class = ItemFlingEffectDetailSerializer
     list_serializer_class = ItemFlingEffectSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Pockets within the players bag used for storing items by category.",
@@ -420,6 +497,10 @@ class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -437,6 +518,10 @@ class LanguageResource(PokeapiCommonViewset):
     serializer_class = LanguageDetailSerializer
     list_serializer_class = LanguageSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
@@ -452,6 +537,10 @@ class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
     serializer_class = LocationDetailSerializer
     list_serializer_class = LocationSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -469,6 +558,10 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
@@ -484,6 +577,10 @@ class MachineResource(PokeapiCommonViewset):
     queryset = Machine.objects.all()
     serializer_class = MachineDetailSerializer
     list_serializer_class = MachineSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -501,6 +598,10 @@ class MoveResource(PokeapiCommonViewset):
     serializer_class = MoveDetailSerializer
     list_serializer_class = MoveSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Damage classes moves can have, e.g. physical, special, or non-damaging.",
@@ -516,6 +617,10 @@ class MoveDamageClassResource(PokeapiCommonViewset):
     queryset = MoveDamageClass.objects.all()
     serializer_class = MoveDamageClassDetailSerializer
     list_serializer_class = MoveDamageClassSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -533,6 +638,10 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
@@ -548,6 +657,10 @@ class MoveBattleStyleResource(PokeapiCommonViewset):
     queryset = MoveBattleStyle.objects.all()
     serializer_class = MoveBattleStyleDetailSerializer
     list_serializer_class = MoveBattleStyleSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -565,6 +678,10 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
     serializer_class = MoveMetaCategoryDetailSerializer
     list_serializer_class = MoveMetaCategorySummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Methods by which Pokémon can learn moves.",
@@ -580,6 +697,10 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
     queryset = MoveLearnMethod.objects.all()
     serializer_class = MoveLearnMethodDetailSerializer
     list_serializer_class = MoveLearnMethodSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -597,6 +718,10 @@ class MoveTargetResource(PokeapiCommonViewset):
     serializer_class = MoveTargetDetailSerializer
     list_serializer_class = MoveTargetSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.",
@@ -612,6 +737,10 @@ class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -629,6 +758,10 @@ class PalParkAreaResource(PokeapiCommonViewset):
     serializer_class = PalParkAreaDetailSerializer
     list_serializer_class = PalParkAreaSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.",
@@ -644,6 +777,10 @@ class PokeathlonStatResource(PokeapiCommonViewset):
     queryset = PokeathlonStat.objects.all()
     serializer_class = PokeathlonStatDetailSerializer
     list_serializer_class = PokeathlonStatSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -661,6 +798,10 @@ class PokedexResource(PokeapiCommonViewset):
     serializer_class = PokedexDetailSerializer
     list_serializer_class = PokedexSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.",
@@ -676,6 +817,10 @@ class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -693,6 +838,10 @@ class PokemonFormResource(PokeapiCommonViewset):
     serializer_class = PokemonFormDetailSerializer
     list_serializer_class = PokemonFormSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.",
@@ -708,6 +857,10 @@ class PokemonHabitatResource(PokeapiCommonViewset):
     queryset = PokemonHabitat.objects.all()
     serializer_class = PokemonHabitatDetailSerializer
     list_serializer_class = PokemonHabitatSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -725,6 +878,10 @@ class PokemonShapeResource(PokeapiCommonViewset):
     serializer_class = PokemonShapeDetailSerializer
     list_serializer_class = PokemonShapeSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
@@ -740,6 +897,10 @@ class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -757,6 +918,10 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.",
@@ -772,6 +937,10 @@ class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -789,6 +958,10 @@ class StatResource(PokeapiCommonViewset):
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Super contest effects refer to the effects of moves when used in super contests.",
@@ -804,6 +977,10 @@ class SuperContestEffectResource(PokeapiCommonViewset):
     queryset = SuperContestEffect.objects.all()
     serializer_class = SuperContestEffectDetailSerializer
     list_serializer_class = SuperContestEffectSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -821,6 +998,10 @@ class TypeResource(PokeapiCommonViewset):
     serializer_class = TypeDetailSerializer
     list_serializer_class = TypeSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Versions of the games, e.g., Red, Blue or Yellow.",
@@ -837,6 +1018,10 @@ class VersionResource(PokeapiCommonViewset):
     serializer_class = VersionDetailSerializer
     list_serializer_class = VersionSummarySerializer
 
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
 
 @extend_schema(
     description="Version groups categorize highly similar versions of the games.",
@@ -852,6 +1037,10 @@ class VersionGroupResource(PokeapiCommonViewset):
     queryset = VersionGroup.objects.all()
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
+
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
 
 
 @extend_schema(

@@ -71,15 +71,12 @@ class NameOrIdRetrieval:
         return resp
 
 
-class PokeapiCommonViewset(
-    ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
-):
-    pass
-
-
-##########
-#  APIS  #
-##########
+q_query_string_parameter = OpenApiParameter(
+    name="q",
+    description="> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied on the `name` property. ",
+    location=OpenApiParameter.QUERY,
+    type=OpenApiTypes.STR,
+)
 
 retrieve_path_parameter = OpenApiParameter(
     name="id",
@@ -89,12 +86,21 @@ retrieve_path_parameter = OpenApiParameter(
     required=True,
 )
 
-q_query_string_parameter = OpenApiParameter(
-    name="q",
-    description="> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied on the `name` property. ",
-    location=OpenApiParameter.QUERY,
-    type=OpenApiTypes.STR,
-)
+
+@extend_schema_view(list=extend_schema(parameters=[q_query_string_parameter]))
+class PokeapiCommonViewset(
+    ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
+):
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
+    pass
+
+
+##########
+#  APIS  #
+##########
 
 
 @extend_schema(
@@ -106,10 +112,6 @@ class AbilityResource(PokeapiCommonViewset):
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
-
 
 @extend_schema(
     description="Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
@@ -117,16 +119,14 @@ class AbilityResource(PokeapiCommonViewset):
     summary="Get a berry",
 )
 @extend_schema_view(
-    list=extend_schema(summary="List berries", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List berries",
+    )
 )
 class BerryResource(PokeapiCommonViewset):
     queryset = Berry.objects.all()
     serializer_class = BerryDetailSerializer
     list_serializer_class = BerrySummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -136,17 +136,13 @@ class BerryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List berry firmness", parameters=[q_query_string_parameter]
+        summary="List berry firmness",
     )
 )
 class BerryFirmnessResource(PokeapiCommonViewset):
     queryset = BerryFirmness.objects.all()
     serializer_class = BerryFirmnessDetailSerializer
     list_serializer_class = BerryFirmnessSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -156,17 +152,13 @@ class BerryFirmnessResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List berry flavors", parameters=[q_query_string_parameter]
+        summary="List berry flavors",
     )
 )
 class BerryFlavorResource(PokeapiCommonViewset):
     queryset = BerryFlavor.objects.all()
     serializer_class = BerryFlavorDetailSerializer
     list_serializer_class = BerryFlavorSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -176,17 +168,13 @@ class BerryFlavorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List charecterictics", parameters=[q_query_string_parameter]
+        summary="List charecterictics",
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
     queryset = Characteristic.objects.all()
     serializer_class = CharacteristicDetailSerializer
     list_serializer_class = CharacteristicSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -196,17 +184,13 @@ class CharacteristicResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List contest effects", parameters=[q_query_string_parameter]
+        summary="List contest effects",
     )
 )
 class ContestEffectResource(PokeapiCommonViewset):
     queryset = ContestEffect.objects.all()
     serializer_class = ContestEffectDetailSerializer
     list_serializer_class = ContestEffectSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -216,17 +200,13 @@ class ContestEffectResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List contest types", parameters=[q_query_string_parameter]
+        summary="List contest types",
     )
 )
 class ContestTypeResource(PokeapiCommonViewset):
     queryset = ContestType.objects.all()
     serializer_class = ContestTypeDetailSerializer
     list_serializer_class = ContestTypeSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -235,16 +215,14 @@ class ContestTypeResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List egg groups", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List egg groups",
+    )
 )
 class EggGroupResource(PokeapiCommonViewset):
     queryset = EggGroup.objects.all()
     serializer_class = EggGroupDetailSerializer
     list_serializer_class = EggGroupSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -254,17 +232,13 @@ class EggGroupResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter conditions", parameters=[q_query_string_parameter]
+        summary="List encounter conditions",
     )
 )
 class EncounterConditionResource(PokeapiCommonViewset):
     queryset = EncounterCondition.objects.all()
     serializer_class = EncounterConditionDetailSerializer
     list_serializer_class = EncounterConditionSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -274,17 +248,13 @@ class EncounterConditionResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter condition values", parameters=[q_query_string_parameter]
+        summary="List encounter condition values",
     )
 )
 class EncounterConditionValueResource(PokeapiCommonViewset):
     queryset = EncounterConditionValue.objects.all()
     serializer_class = EncounterConditionValueDetailSerializer
     list_serializer_class = EncounterConditionValueSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -294,17 +264,13 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List encounter methods", parameters=[q_query_string_parameter]
+        summary="List encounter methods",
     )
 )
 class EncounterMethodResource(PokeapiCommonViewset):
     queryset = EncounterMethod.objects.all()
     serializer_class = EncounterMethodDetailSerializer
     list_serializer_class = EncounterMethodSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -314,17 +280,13 @@ class EncounterMethodResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List evolution chains", parameters=[q_query_string_parameter]
+        summary="List evolution chains",
     )
 )
 class EvolutionChainResource(PokeapiCommonViewset):
     queryset = EvolutionChain.objects.all()
     serializer_class = EvolutionChainDetailSerializer
     list_serializer_class = EvolutionChainSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -334,17 +296,13 @@ class EvolutionChainResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List evolution triggers", parameters=[q_query_string_parameter]
+        summary="List evolution triggers",
     )
 )
 class EvolutionTriggerResource(PokeapiCommonViewset):
     queryset = EvolutionTrigger.objects.all()
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -353,16 +311,14 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List genrations", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List genrations",
+    )
 )
 class GenerationResource(PokeapiCommonViewset):
     queryset = Generation.objects.all()
     serializer_class = GenerationDetailSerializer
     list_serializer_class = GenerationSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -371,16 +327,14 @@ class GenerationResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List genders", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List genders",
+    )
 )
 class GenderResource(PokeapiCommonViewset):
     queryset = Gender.objects.all()
     serializer_class = GenderDetailSerializer
     list_serializer_class = GenderSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -390,17 +344,13 @@ class GenderResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List growth rates", parameters=[q_query_string_parameter]
+        summary="List growth rates",
     )
 )
 class GrowthRateResource(PokeapiCommonViewset):
     queryset = GrowthRate.objects.all()
     serializer_class = GrowthRateDetailSerializer
     list_serializer_class = GrowthRateSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -409,16 +359,14 @@ class GrowthRateResource(PokeapiCommonViewset):
     tags=["items"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List items", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List items",
+    )
 )
 class ItemResource(PokeapiCommonViewset):
     queryset = Item.objects.all()
     serializer_class = ItemDetailSerializer
     list_serializer_class = ItemSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -428,17 +376,13 @@ class ItemResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item categories", parameters=[q_query_string_parameter]
+        summary="List item categories",
     )
 )
 class ItemCategoryResource(PokeapiCommonViewset):
     queryset = ItemCategory.objects.all()
     serializer_class = ItemCategoryDetailSerializer
     list_serializer_class = ItemCategorySummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -448,17 +392,13 @@ class ItemCategoryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item attributes", parameters=[q_query_string_parameter]
+        summary="List item attributes",
     )
 )
 class ItemAttributeResource(PokeapiCommonViewset):
     queryset = ItemAttribute.objects.all()
     serializer_class = ItemAttributeDetailSerializer
     list_serializer_class = ItemAttributeSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -468,17 +408,13 @@ class ItemAttributeResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item fling effects", parameters=[q_query_string_parameter]
+        summary="List item fling effects",
     )
 )
 class ItemFlingEffectResource(PokeapiCommonViewset):
     queryset = ItemFlingEffect.objects.all()
     serializer_class = ItemFlingEffectDetailSerializer
     list_serializer_class = ItemFlingEffectSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -488,17 +424,13 @@ class ItemFlingEffectResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List item pockets", parameters=[q_query_string_parameter]
+        summary="List item pockets",
     )
 )
 class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -507,16 +439,14 @@ class ItemPocketResource(PokeapiCommonViewset):
     tags=["utility"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List languages", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List languages",
+    )
 )
 class LanguageResource(PokeapiCommonViewset):
     queryset = Language.objects.all()
     serializer_class = LanguageDetailSerializer
     list_serializer_class = LanguageSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -525,16 +455,14 @@ class LanguageResource(PokeapiCommonViewset):
     tags=["location"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List locations", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List locations",
+    )
 )
 class LocationResource(PokeapiCommonViewset):
     queryset = Location.objects.all()
     serializer_class = LocationDetailSerializer
     list_serializer_class = LocationSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -544,17 +472,13 @@ class LocationResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List location areas", parameters=[q_query_string_parameter]
+        summary="List location areas",
     )
 )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -563,16 +487,14 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
     tags=["machines"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List machines", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List machines",
+    )
 )
 class MachineResource(PokeapiCommonViewset):
     queryset = Machine.objects.all()
     serializer_class = MachineDetailSerializer
     list_serializer_class = MachineSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -581,16 +503,14 @@ class MachineResource(PokeapiCommonViewset):
     tags=["moves"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List moves", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List moves",
+    )
 )
 class MoveResource(PokeapiCommonViewset):
     queryset = Move.objects.all()
     serializer_class = MoveDetailSerializer
     list_serializer_class = MoveSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -600,17 +520,13 @@ class MoveResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move damage classes", parameters=[q_query_string_parameter]
+        summary="List move damage classes",
     )
 )
 class MoveDamageClassResource(PokeapiCommonViewset):
     queryset = MoveDamageClass.objects.all()
     serializer_class = MoveDamageClassDetailSerializer
     list_serializer_class = MoveDamageClassSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -620,17 +536,13 @@ class MoveDamageClassResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move meta ailments", parameters=[q_query_string_parameter]
+        summary="List move meta ailments",
     )
 )
 class MoveMetaAilmentResource(PokeapiCommonViewset):
     queryset = MoveMetaAilment.objects.all()
     serializer_class = MoveMetaAilmentDetailSerializer
     list_serializer_class = MoveMetaAilmentSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -640,17 +552,13 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move battle styles", parameters=[q_query_string_parameter]
+        summary="List move battle styles",
     )
 )
 class MoveBattleStyleResource(PokeapiCommonViewset):
     queryset = MoveBattleStyle.objects.all()
     serializer_class = MoveBattleStyleDetailSerializer
     list_serializer_class = MoveBattleStyleSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -660,17 +568,13 @@ class MoveBattleStyleResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move meta categories", parameters=[q_query_string_parameter]
+        summary="List move meta categories",
     )
 )
 class MoveMetaCategoryResource(PokeapiCommonViewset):
     queryset = MoveMetaCategory.objects.all()
     serializer_class = MoveMetaCategoryDetailSerializer
     list_serializer_class = MoveMetaCategorySummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -680,17 +584,13 @@ class MoveMetaCategoryResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move learn methods", parameters=[q_query_string_parameter]
+        summary="List move learn methods",
     )
 )
 class MoveLearnMethodResource(PokeapiCommonViewset):
     queryset = MoveLearnMethod.objects.all()
     serializer_class = MoveLearnMethodDetailSerializer
     list_serializer_class = MoveLearnMethodSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -700,17 +600,13 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List move targets", parameters=[q_query_string_parameter]
+        summary="List move targets",
     )
 )
 class MoveTargetResource(PokeapiCommonViewset):
     queryset = MoveTarget.objects.all()
     serializer_class = MoveTargetDetailSerializer
     list_serializer_class = MoveTargetSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -719,16 +615,14 @@ class MoveTargetResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List natures", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List natures",
+    )
 )
 class NatureResource(PokeapiCommonViewset):
     queryset = Nature.objects.all()
     serializer_class = NatureDetailSerializer
     list_serializer_class = NatureSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -738,17 +632,13 @@ class NatureResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pal park areas", parameters=[q_query_string_parameter]
+        summary="List pal park areas",
     )
 )
 class PalParkAreaResource(PokeapiCommonViewset):
     queryset = PalParkArea.objects.all()
     serializer_class = PalParkAreaDetailSerializer
     list_serializer_class = PalParkAreaSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -758,17 +648,13 @@ class PalParkAreaResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokeathlon stats", parameters=[q_query_string_parameter]
+        summary="List pokeathlon stats",
     )
 )
 class PokeathlonStatResource(PokeapiCommonViewset):
     queryset = PokeathlonStat.objects.all()
     serializer_class = PokeathlonStatDetailSerializer
     list_serializer_class = PokeathlonStatSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -777,16 +663,14 @@ class PokeathlonStatResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List pokedex", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List pokedex",
+    )
 )
 class PokedexResource(PokeapiCommonViewset):
     queryset = Pokedex.objects.all()
     serializer_class = PokedexDetailSerializer
     list_serializer_class = PokedexSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -796,17 +680,13 @@ class PokedexResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon colors", parameters=[q_query_string_parameter]
+        summary="List pokemon colors",
     )
 )
 class PokemonColorResource(PokeapiCommonViewset):
     queryset = PokemonColor.objects.all()
     serializer_class = PokemonColorDetailSerializer
     list_serializer_class = PokemonColorSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -816,17 +696,13 @@ class PokemonColorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon forms", parameters=[q_query_string_parameter]
+        summary="List pokemon forms",
     )
 )
 class PokemonFormResource(PokeapiCommonViewset):
     queryset = PokemonForm.objects.all()
     serializer_class = PokemonFormDetailSerializer
     list_serializer_class = PokemonFormSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -836,17 +712,13 @@ class PokemonFormResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemom habitas", parameters=[q_query_string_parameter]
+        summary="List pokemom habitas",
     )
 )
 class PokemonHabitatResource(PokeapiCommonViewset):
     queryset = PokemonHabitat.objects.all()
     serializer_class = PokemonHabitatDetailSerializer
     list_serializer_class = PokemonHabitatSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -856,17 +728,13 @@ class PokemonHabitatResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon shapes", parameters=[q_query_string_parameter]
+        summary="List pokemon shapes",
     )
 )
 class PokemonShapeResource(PokeapiCommonViewset):
     queryset = PokemonShape.objects.all()
     serializer_class = PokemonShapeDetailSerializer
     list_serializer_class = PokemonShapeSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -875,16 +743,14 @@ class PokemonShapeResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List pokemon", parameters=[q_query_string_parameter]),
+    list=extend_schema(
+        summary="List pokemon",
+    ),
 )
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -894,17 +760,13 @@ class PokemonResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List pokemon species", parameters=[q_query_string_parameter]
+        summary="List pokemon species",
     )
 )
 class PokemonSpeciesResource(PokeapiCommonViewset):
     queryset = PokemonSpecies.objects.all().order_by("id")
     serializer_class = PokemonSpeciesDetailSerializer
     list_serializer_class = PokemonSpeciesSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -913,16 +775,14 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
     tags=["location"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List regions", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List regions",
+    )
 )
 class RegionResource(PokeapiCommonViewset):
     queryset = Region.objects.all()
     serializer_class = RegionDetailSerializer
     list_serializer_class = RegionSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -931,16 +791,14 @@ class RegionResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List stats", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List stats",
+    )
 )
 class StatResource(PokeapiCommonViewset):
     queryset = Stat.objects.all()
     serializer_class = StatDetailSerializer
     list_serializer_class = StatSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -950,17 +808,13 @@ class StatResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List super contest effects", parameters=[q_query_string_parameter]
+        summary="List super contest effects",
     )
 )
 class SuperContestEffectResource(PokeapiCommonViewset):
     queryset = SuperContestEffect.objects.all()
     serializer_class = SuperContestEffectDetailSerializer
     list_serializer_class = SuperContestEffectSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -969,16 +823,14 @@ class SuperContestEffectResource(PokeapiCommonViewset):
     tags=["pokemon"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List types", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List types",
+    )
 )
 class TypeResource(PokeapiCommonViewset):
     queryset = Type.objects.all()
     serializer_class = TypeDetailSerializer
     list_serializer_class = TypeSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -987,16 +839,14 @@ class TypeResource(PokeapiCommonViewset):
     tags=["games"],
 )
 @extend_schema_view(
-    list=extend_schema(summary="List versions", parameters=[q_query_string_parameter])
+    list=extend_schema(
+        summary="List versions",
+    )
 )
 class VersionResource(PokeapiCommonViewset):
     queryset = Version.objects.all()
     serializer_class = VersionDetailSerializer
     list_serializer_class = VersionSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(
@@ -1006,17 +856,13 @@ class VersionResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List version groups", parameters=[q_query_string_parameter]
+        summary="List version groups",
     )
 )
 class VersionGroupResource(PokeapiCommonViewset):
     queryset = VersionGroup.objects.all()
     serializer_class = VersionGroupDetailSerializer
     list_serializer_class = VersionGroupSummarySerializer
-
-    @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
 
 
 @extend_schema(

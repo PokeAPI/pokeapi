@@ -34,6 +34,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1501,12 +1507,6 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -1530,8 +1530,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: string
-        description: This parameter can be a string or an integer.
+          type: integer
+        description: A unique integer value identifying this location area.
         required: true
       tags:
       - location

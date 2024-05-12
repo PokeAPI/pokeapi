@@ -34,6 +34,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -58,8 +64,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this ability.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -95,6 +101,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -127,6 +139,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -150,8 +168,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this berry firmness.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - berries
@@ -186,6 +204,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -210,8 +234,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this berry flavor.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - berries
@@ -238,8 +262,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this berry.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - berries
@@ -275,6 +299,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -300,8 +330,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this characteristic.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -334,6 +364,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -356,8 +392,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this contest effect.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - contests
@@ -392,6 +428,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -416,8 +458,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this contest type.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - contests
@@ -453,6 +495,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -478,8 +526,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this egg group.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -513,6 +561,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -545,6 +599,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -568,8 +628,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this encounter condition value.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - encounters
@@ -594,8 +654,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this encounter condition.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - encounters
@@ -629,6 +689,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -652,8 +718,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this encounter method.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - encounters
@@ -688,6 +754,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -712,8 +784,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this evolution chain.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - evolution
@@ -748,6 +820,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -772,8 +850,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this evolution trigger.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - evolution
@@ -809,6 +887,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -834,8 +918,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this gender.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -871,6 +955,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -896,8 +986,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this generation.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - games
@@ -932,6 +1022,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -956,8 +1052,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this growth rate.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -992,6 +1088,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1024,6 +1126,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1047,8 +1155,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this item attribute.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - items
@@ -1082,6 +1190,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1105,8 +1219,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this item category.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - items
@@ -1140,6 +1254,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1163,8 +1283,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this item fling effect.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - items
@@ -1197,6 +1317,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1219,8 +1345,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this item pocket.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - items
@@ -1246,8 +1372,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this item.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - items
@@ -1280,6 +1406,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - utility
       security:
@@ -1302,8 +1434,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this language.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - utility
@@ -1337,6 +1469,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -1418,8 +1556,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this location.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - location
@@ -1454,6 +1592,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - machines
       security:
@@ -1478,8 +1622,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this machine.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - machines
@@ -1515,6 +1659,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1548,6 +1698,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1572,8 +1728,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move meta ailment.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1607,6 +1763,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1630,8 +1792,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move battle style.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1664,6 +1826,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1686,8 +1854,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move meta category.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1720,6 +1888,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1742,8 +1916,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move damage class.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -1776,6 +1950,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1798,8 +1978,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move learn method.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1833,6 +2013,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1856,8 +2042,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move target.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1884,8 +2070,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this move.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - moves
@@ -1919,6 +2105,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1942,8 +2134,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this nature.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -1977,6 +2169,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2000,8 +2198,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pal park area.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - location
@@ -2037,6 +2235,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2062,8 +2266,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokeathlon stat.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2100,6 +2304,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2126,8 +2336,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokedex.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - games
@@ -2165,6 +2375,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2199,6 +2415,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2224,8 +2446,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon color.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2261,6 +2483,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2286,8 +2514,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon form.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2321,6 +2549,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2344,8 +2578,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon habitat.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2378,6 +2612,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2400,8 +2640,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon shape.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2437,6 +2677,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2462,8 +2708,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon species.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2492,8 +2738,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this pokemon.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2645,6 +2891,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2669,8 +2921,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this region.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - location
@@ -2705,6 +2957,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2729,8 +2987,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this stat.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2764,6 +3022,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -2787,8 +3051,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this super contest effect.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - contests
@@ -2824,6 +3088,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2849,8 +3119,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this type.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - pokemon
@@ -2883,6 +3153,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2914,6 +3190,12 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2936,8 +3218,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this version group.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - games
@@ -2961,8 +3243,8 @@ paths:
       - in: path
         name: id
         schema:
-          type: integer
-        description: A unique integer value identifying this version.
+          type: string
+        description: This parameter can be a string or an integer.
         required: true
       tags:
       - games
@@ -3140,28 +3422,16 @@ components:
           maxLength: 100
         growth_time:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         max_harvest:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         natural_gift_power:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         size:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         smoothness:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         soil_dryness:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         firmness:
           $ref: '#/components/schemas/BerryFirmnessSummary'
         flavors:
@@ -3410,12 +3680,8 @@ components:
           readOnly: true
         appeal:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         jam:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         effect_entries:
           type: array
           items:
@@ -3683,8 +3949,6 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         names:
           type: array
           items:
@@ -3998,12 +4262,8 @@ components:
       properties:
         level:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         experience:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
       required:
       - experience
       - level
@@ -4354,14 +4614,10 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         fling_power:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         fling_effect:
           $ref: '#/components/schemas/ItemFlingEffectSummary'
         attributes:
@@ -4602,8 +4858,6 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -4744,8 +4998,6 @@ components:
           maxLength: 100
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         encounter_method_rates:
           type: array
           items:
@@ -4982,8 +5234,6 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -5088,20 +5338,14 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         power:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         pp:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         effect_chance:
           type: integer
         effect_entries:
@@ -5223,28 +5467,20 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         effect_chance:
           type: integer
         pp:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         priority:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         power:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         contest_combos:
           type: object
           required:
@@ -5656,62 +5892,42 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         max_hits:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         min_turns:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         max_turns:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         drain:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         healing:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         crit_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         ailment_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         flinch_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         stat_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
       required:
       - ailment
       - category
@@ -5929,12 +6145,8 @@ components:
       properties:
         low_hp_preference:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         high_hp_preference:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         move_battle_style:
           $ref: '#/components/schemas/MoveBattleStyleSummary'
       required:
@@ -7356,28 +7568,20 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         height:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         is_default:
           type: boolean
         order:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         weight:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         abilities:
           type: array
           items:
@@ -7765,14 +7969,10 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         form_order:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         is_default:
           type: boolean
         is_battle_only:
@@ -7923,8 +8123,6 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         version:
           $ref: '#/components/schemas/VersionSummary'
       required:
@@ -8080,26 +8278,18 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         gender_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         capture_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         base_happiness:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         is_baby:
           type: boolean
         is_legendary:
@@ -8110,8 +8300,6 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         has_gender_differences:
           type: boolean
         forms_switchable:
@@ -8329,12 +8517,8 @@ components:
       properties:
         base_stat:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         effort:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         stat:
           $ref: '#/components/schemas/StatSummary'
       required:
@@ -8443,8 +8627,6 @@ components:
           maxLength: 100
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         is_battle_only:
           type: boolean
         affecting_moves:
@@ -8604,8 +8786,6 @@ components:
           readOnly: true
         appeal:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         flavor_text_entries:
           type: array
           items:
@@ -8965,8 +9145,6 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -9023,8 +9201,6 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         move_learn_methods:

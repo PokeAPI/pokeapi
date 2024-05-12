@@ -50,16 +50,6 @@ class NameOrIdRetrieval:
 
         return queryset
 
-    @extend_schema(
-        parameters=[
-            OpenApiParameter(
-                name="id",
-                description="This parameter can be a string or an integer.",
-                location=OpenApiParameter.PATH,
-                type=OpenApiTypes.STR,
-            ),
-        ]
-    )
     def get_object(self):
         queryset = self.get_queryset()
         queryset = self.filter_queryset(queryset)
@@ -81,9 +71,30 @@ class NameOrIdRetrieval:
         return resp
 
 
+q_query_string_parameter = OpenApiParameter(
+    name="q",
+    description="> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied on the `name` property. ",
+    location=OpenApiParameter.QUERY,
+    type=OpenApiTypes.STR,
+)
+
+retrieve_path_parameter = OpenApiParameter(
+    name="id",
+    description="This parameter can be a string or an integer.",
+    location=OpenApiParameter.PATH,
+    type=OpenApiTypes.STR,
+    required=True,
+)
+
+
+@extend_schema_view(list=extend_schema(parameters=[q_query_string_parameter]))
 class PokeapiCommonViewset(
     ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
 ):
+    @extend_schema(parameters=[retrieve_path_parameter])
+    def retrieve(self, request, pk=None):
+        return super().retrieve(request, pk)
+
     pass
 
 
@@ -734,7 +745,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List pokemon",
-    )
+    ),
 )
 class PokemonResource(PokeapiCommonViewset):
     queryset = Pokemon.objects.all()

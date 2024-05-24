@@ -120,6 +120,34 @@ paths:
               schema:
                 $ref: '#/components/schemas/PaginatedBerrySummaryList'
           description: ''
+  /api/v2/berry/{id}/:
+    get:
+      operationId: berry_retrieve
+      description: Berries are small fruits that can provide HP and status condition
+        restoration, stat enhancement, and even damage negation when eaten by Pokémon.
+        Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
+        detail.
+      summary: Get a berry
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - berries
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BerryDetail'
+          description: ''
   /api/v2/berry-firmness/:
     get:
       operationId: berry_firmness_list
@@ -250,34 +278,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/BerryFlavorDetail'
           description: ''
-  /api/v2/berry/{id}/:
-    get:
-      operationId: berry_retrieve
-      description: Berries are small fruits that can provide HP and status condition
-        restoration, stat enhancement, and even damage negation when eaten by Pokémon.
-        Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
-        detail.
-      summary: Get a berry
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - berries
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/BerryDetail'
-          description: ''
   /api/v2/characteristic/:
     get:
       operationId: characteristic_list
@@ -346,68 +346,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/CharacteristicDetail'
           description: ''
-  /api/v2/contest-effect/:
-    get:
-      operationId: contest_effect_list
-      description: Contest effects refer to the effects of moves when used in contests.
-      summary: List contest effects
-      parameters:
-      - name: limit
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: offset
-        required: false
-        in: query
-        description: The initial index from which to return the results.
-        schema:
-          type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
-      tags:
-      - contests
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedContestEffectSummaryList'
-          description: ''
-  /api/v2/contest-effect/{id}/:
-    get:
-      operationId: contest_effect_retrieve
-      description: Contest effects refer to the effects of moves when used in contests.
-      summary: Get contest effect
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - contests
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ContestEffectDetail'
-          description: ''
   /api/v2/contest-type/:
     get:
       operationId: contest_type_list
@@ -473,6 +411,68 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ContestTypeDetail'
+          description: ''
+  /api/v2/contest-effect/:
+    get:
+      operationId: contest_effect_list
+      description: Contest effects refer to the effects of moves when used in contests.
+      summary: List contest effects
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
+      tags:
+      - contests
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedContestEffectSummaryList'
+          description: ''
+  /api/v2/contest-effect/{id}/:
+    get:
+      operationId: contest_effect_retrieve
+      description: Contest effects refer to the effects of moves when used in contests.
+      summary: Get contest effect
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - contests
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContestEffectDetail'
           description: ''
   /api/v2/egg-group/:
     get:
@@ -542,6 +542,70 @@ paths:
               schema:
                 $ref: '#/components/schemas/EggGroupDetail'
           description: ''
+  /api/v2/encounter-method/:
+    get:
+      operationId: encounter_method_list
+      description: Methods by which the player might can encounter Pokémon in the
+        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
+      summary: List encounter methods
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
+      tags:
+      - encounters
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedEncounterMethodSummaryList'
+          description: ''
+  /api/v2/encounter-method/{id}/:
+    get:
+      operationId: encounter_method_retrieve
+      description: Methods by which the player might can encounter Pokémon in the
+        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
+      summary: Get encounter method
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - encounters
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EncounterMethodDetail'
+          description: ''
   /api/v2/encounter-condition/:
     get:
       operationId: encounter_condition_list
@@ -579,6 +643,32 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaginatedEncounterConditionSummaryList'
+          description: ''
+  /api/v2/encounter-condition/{id}/:
+    get:
+      operationId: encounter_condition_retrieve
+      description: Conditions which affect what pokemon might appear in the wild,
+        e.g., day or night.
+      summary: Get encounter condition
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - encounters
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EncounterConditionDetail'
           description: ''
   /api/v2/encounter-condition-value/:
     get:
@@ -643,96 +733,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EncounterConditionValueDetail'
-          description: ''
-  /api/v2/encounter-condition/{id}/:
-    get:
-      operationId: encounter_condition_retrieve
-      description: Conditions which affect what pokemon might appear in the wild,
-        e.g., day or night.
-      summary: Get encounter condition
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - encounters
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EncounterConditionDetail'
-          description: ''
-  /api/v2/encounter-method/:
-    get:
-      operationId: encounter_method_list
-      description: Methods by which the player might can encounter Pokémon in the
-        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
-      summary: List encounter methods
-      parameters:
-      - name: limit
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: offset
-        required: false
-        in: query
-        description: The initial index from which to return the results.
-        schema:
-          type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
-      tags:
-      - encounters
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedEncounterMethodSummaryList'
-          description: ''
-  /api/v2/encounter-method/{id}/:
-    get:
-      operationId: encounter_method_retrieve
-      description: Methods by which the player might can encounter Pokémon in the
-        wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
-      summary: Get encounter method
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - encounters
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EncounterMethodDetail'
           description: ''
   /api/v2/evolution-chain/:
     get:
@@ -866,74 +866,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/EvolutionTriggerDetail'
           description: ''
-  /api/v2/gender/:
-    get:
-      operationId: gender_list
-      description: Genders were introduced in Generation II for the purposes of breeding
-        Pokémon but can also result in visual differences or even different evolutionary
-        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
-        for greater detail.
-      summary: List genders
-      parameters:
-      - name: limit
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: offset
-        required: false
-        in: query
-        description: The initial index from which to return the results.
-        schema:
-          type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
-      tags:
-      - pokemon
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedGenderSummaryList'
-          description: ''
-  /api/v2/gender/{id}/:
-    get:
-      operationId: gender_retrieve
-      description: Genders were introduced in Generation II for the purposes of breeding
-        Pokémon but can also result in visual differences or even different evolutionary
-        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
-        for greater detail.
-      summary: Get gender
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - pokemon
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenderDetail'
-          description: ''
   /api/v2/generation/:
     get:
       operationId: generation_list
@@ -1001,6 +933,74 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/GenerationDetail'
+          description: ''
+  /api/v2/gender/:
+    get:
+      operationId: gender_list
+      description: Genders were introduced in Generation II for the purposes of breeding
+        Pokémon but can also result in visual differences or even different evolutionary
+        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
+        for greater detail.
+      summary: List genders
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
+      tags:
+      - pokemon
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedGenderSummaryList'
+          description: ''
+  /api/v2/gender/{id}/:
+    get:
+      operationId: gender_retrieve
+      description: Genders were introduced in Generation II for the purposes of breeding
+        Pokémon but can also result in visual differences or even different evolutionary
+        lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
+        for greater detail.
+      summary: Get gender
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - pokemon
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenderDetail'
           description: ''
   /api/v2/growth-rate/:
     get:
@@ -1107,50 +1107,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/PaginatedItemSummaryList'
           description: ''
-  /api/v2/item-attribute/:
+  /api/v2/item/{id}/:
     get:
-      operationId: item_attribute_list
-      description: Item attributes define particular aspects of items, e.g."usable
-        in battle" or "consumable".
-      summary: List item attributes
-      parameters:
-      - name: limit
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: offset
-        required: false
-        in: query
-        description: The initial index from which to return the results.
-        schema:
-          type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
-      tags:
-      - items
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedItemAttributeSummaryList'
-          description: ''
-  /api/v2/item-attribute/{id}/:
-    get:
-      operationId: item_attribute_retrieve
-      description: Item attributes define particular aspects of items, e.g."usable
-        in battle" or "consumable".
-      summary: Get item attribute
+      operationId: item_retrieve
+      description: An item is an object in the games which the player can pick up,
+        keep in their bag, and use in some manner. They have various uses, including
+        healing, powering up, helping catch Pokémon, or to access a new area.
+      summary: Get item
       parameters:
       - in: path
         name: id
@@ -1169,7 +1132,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ItemAttributeDetail'
+                $ref: '#/components/schemas/ItemDetail'
           description: ''
   /api/v2/item-category/:
     get:
@@ -1234,6 +1197,70 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ItemCategoryDetail'
+          description: ''
+  /api/v2/item-attribute/:
+    get:
+      operationId: item_attribute_list
+      description: Item attributes define particular aspects of items, e.g."usable
+        in battle" or "consumable".
+      summary: List item attributes
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
+      tags:
+      - items
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedItemAttributeSummaryList'
+          description: ''
+  /api/v2/item-attribute/{id}/:
+    get:
+      operationId: item_attribute_retrieve
+      description: Item attributes define particular aspects of items, e.g."usable
+        in battle" or "consumable".
+      summary: Get item attribute
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - items
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ItemAttributeDetail'
           description: ''
   /api/v2/item-fling-effect/:
     get:
@@ -1361,33 +1388,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/ItemPocketDetail'
           description: ''
-  /api/v2/item/{id}/:
-    get:
-      operationId: item_retrieve
-      description: An item is an object in the games which the player can pick up,
-        keep in their bag, and use in some manner. They have various uses, including
-        healing, powering up, helping catch Pokémon, or to access a new area.
-      summary: Get item
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - items
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ItemDetail'
-          description: ''
   /api/v2/language/:
     get:
       operationId: language_list
@@ -1488,6 +1488,32 @@ paths:
               schema:
                 $ref: '#/components/schemas/PaginatedLocationSummaryList'
           description: ''
+  /api/v2/location/{id}/:
+    get:
+      operationId: location_retrieve
+      description: Locations that can be visited within the games. Locations make
+        up sizable portions of regions, like cities or routes.
+      summary: Get location
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - location
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationDetail'
+          description: ''
   /api/v2/location-area/:
     get:
       operationId: location_area_list
@@ -1545,32 +1571,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LocationAreaDetail'
-          description: ''
-  /api/v2/location/{id}/:
-    get:
-      operationId: location_retrieve
-      description: Locations that can be visited within the games. Locations make
-        up sizable portions of regions, like cities or routes.
-      summary: Get location
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - location
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LocationDetail'
           description: ''
   /api/v2/machine/:
     get:
@@ -1677,6 +1677,34 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaginatedMoveSummaryList'
+          description: ''
+  /api/v2/move/{id}/:
+    get:
+      operationId: move_retrieve
+      description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
+        uses one move each turn. Some moves (including those learned by Hidden Machine)
+        can be used outside of battle as well, usually for the purpose of removing
+        obstacles or exploring new areas.
+      summary: Get move
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - moves
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MoveDetail'
           description: ''
   /api/v2/move-ailment/:
     get:
@@ -2058,34 +2086,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/MoveTargetDetail'
           description: ''
-  /api/v2/move/{id}/:
-    get:
-      operationId: move_retrieve
-      description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
-        uses one move each turn. Some moves (including those learned by Hidden Machine)
-        can be used outside of battle as well, usually for the purpose of removing
-        obstacles or exploring new areas.
-      summary: Get move
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - moves
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/MoveDetail'
-          description: ''
   /api/v2/nature/:
     get:
       operationId: nature_list
@@ -2214,74 +2214,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/PalParkAreaDetail'
           description: ''
-  /api/v2/pokeathlon-stat/:
-    get:
-      operationId: pokeathlon_stat_list
-      description: Pokeathlon Stats are different attributes of a Pokémon's performance
-        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
-        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
-        for greater detail.
-      summary: List pokeathlon stats
-      parameters:
-      - name: limit
-        required: false
-        in: query
-        description: Number of results to return per page.
-        schema:
-          type: integer
-      - name: offset
-        required: false
-        in: query
-        description: The initial index from which to return the results.
-        schema:
-          type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
-      tags:
-      - pokemon
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PaginatedPokeathlonStatSummaryList'
-          description: ''
-  /api/v2/pokeathlon-stat/{id}/:
-    get:
-      operationId: pokeathlon_stat_retrieve
-      description: Pokeathlon Stats are different attributes of a Pokémon's performance
-        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
-        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
-        for greater detail.
-      summary: Get pokeathlon stat
-      parameters:
-      - in: path
-        name: id
-        schema:
-          type: string
-        description: This parameter can be a string or an integer.
-        required: true
-      tags:
-      - pokemon
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PokeathlonStatDetail'
-          description: ''
   /api/v2/pokedex/:
     get:
       operationId: pokedex_list
@@ -2393,6 +2325,36 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PaginatedPokemonSummaryList'
+          description: ''
+  /api/v2/pokemon/{id}/:
+    get:
+      operationId: pokemon_retrieve
+      description: Pokémon are the creatures that inhabit the world of the Pokémon
+        games. They can be caught using Pokéballs and trained by battling with other
+        Pokémon. Each Pokémon belongs to a specific species but may take on a variant
+        which makes it differ from other Pokémon of the same species, such as base
+        stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
+        for greater detail.
+      summary: Get pokemon
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - pokemon
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonDetail'
           description: ''
   /api/v2/pokemon-color/:
     get:
@@ -2724,16 +2686,54 @@ paths:
               schema:
                 $ref: '#/components/schemas/PokemonSpeciesDetail'
           description: ''
-  /api/v2/pokemon/{id}/:
+  /api/v2/pokeathlon-stat/:
     get:
-      operationId: pokemon_retrieve
-      description: Pokémon are the creatures that inhabit the world of the Pokémon
-        games. They can be caught using Pokéballs and trained by battling with other
-        Pokémon. Each Pokémon belongs to a specific species but may take on a variant
-        which makes it differ from other Pokémon of the same species, such as base
-        stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species))
+      operationId: pokeathlon_stat_list
+      description: Pokeathlon Stats are different attributes of a Pokémon's performance
+        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
+        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
         for greater detail.
-      summary: Get pokemon
+      summary: List pokeathlon stats
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
+          Case-insensitive query applied on the `name` property. "
+      tags:
+      - pokemon
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedPokeathlonStatSummaryList'
+          description: ''
+  /api/v2/pokeathlon-stat/{id}/:
+    get:
+      operationId: pokeathlon_stat_retrieve
+      description: Pokeathlon Stats are different attributes of a Pokémon's performance
+        in Pokéathlons. In Pokéathlons, competitions happen on different courses;
+        one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
+        for greater detail.
+      summary: Get pokeathlon stat
       parameters:
       - in: path
         name: id
@@ -2752,124 +2752,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PokemonDetail'
-          description: ''
-  /api/v2/pokemon/{pokemon_id}/encounters:
-    get:
-      operationId: pokemon_encounters_retrieve
-      description: Handles Pokemon Encounters as a sub-resource.
-      summary: Get pokemon encounter
-      parameters:
-      - in: path
-        name: pokemon_id
-        schema:
-          type: string
-          pattern: ^\d+$
-        required: true
-      tags:
-      - encounters
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  required:
-                  - location_area
-                  - version_details
-                  properties:
-                    location_area:
-                      type: object
-                      required:
-                      - name
-                      - url
-                      properties:
-                        name:
-                          type: string
-                          example: cerulean-city-area
-                        url:
-                          type: string
-                          format: uri
-                          example: https://pokeapi.co/api/v2/location-area/281/
-                    version_details:
-                      type: array
-                      items:
-                        type: object
-                        required:
-                        - encounter_details
-                        - max_chance
-                        - version
-                        properties:
-                          encounter_details:
-                            type: array
-                            items:
-                              type: object
-                              required:
-                              - chance
-                              - condition_values
-                              - max_level
-                              - method
-                              - min_level
-                              properties:
-                                chance:
-                                  type: number
-                                  example: 100
-                                condition_values:
-                                  type: array
-                                  items:
-                                    type: object
-                                    required:
-                                    - name
-                                    - url
-                                    properties:
-                                      name:
-                                        type: string
-                                        example: story-progress-beat-red
-                                      url:
-                                        type: string
-                                        format: uri
-                                        example: https://pokeapi.co/api/v2/encounter-condition-value/55/
-                                max_level:
-                                  type: number
-                                  example: 10
-                                method:
-                                  type: object
-                                  required:
-                                  - name
-                                  - url
-                                  properties:
-                                    name:
-                                      type: string
-                                      example: gift
-                                    url:
-                                      type: string
-                                      format: uri
-                                      example: https://pokeapi.co/api/v2/encounter-method/18/
-                                min_level:
-                                  type: number
-                                  example: 10
-                          max_chance:
-                            type: number
-                            example: 100
-                          version:
-                            type: object
-                            required:
-                            - name
-                            - url
-                            properties:
-                              name:
-                                type: string
-                                example: red
-                              url:
-                                type: string
-                                format: uri
-                                example: https://pokeapi.co/api/v2/version/1/
+                $ref: '#/components/schemas/PokeathlonStatDetail'
           description: ''
   /api/v2/region/:
     get:
@@ -3172,6 +3055,31 @@ paths:
               schema:
                 $ref: '#/components/schemas/PaginatedVersionSummaryList'
           description: ''
+  /api/v2/version/{id}/:
+    get:
+      operationId: version_retrieve
+      description: Versions of the games, e.g., Red, Blue or Yellow.
+      summary: Get version
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - games
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VersionDetail'
+          description: ''
   /api/v2/version-group/:
     get:
       operationId: version_group_list
@@ -3234,20 +3142,20 @@ paths:
               schema:
                 $ref: '#/components/schemas/VersionGroupDetail'
           description: ''
-  /api/v2/version/{id}/:
+  /api/v2/pokemon/{pokemon_id}/encounters:
     get:
-      operationId: version_retrieve
-      description: Versions of the games, e.g., Red, Blue or Yellow.
-      summary: Get version
+      operationId: pokemon_encounters_retrieve
+      description: Handles Pokemon Encounters as a sub-resource.
+      summary: Get pokemon encounter
       parameters:
       - in: path
-        name: id
+        name: pokemon_id
         schema:
           type: string
-        description: This parameter can be a string or an integer.
+          pattern: ^\d+$
         required: true
       tags:
-      - games
+      - encounters
       security:
       - cookieAuth: []
       - basicAuth: []
@@ -3257,7 +3165,99 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/VersionDetail'
+                type: array
+                items:
+                  type: object
+                  required:
+                  - location_area
+                  - version_details
+                  properties:
+                    location_area:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          example: cerulean-city-area
+                        url:
+                          type: string
+                          format: uri
+                          example: https://pokeapi.co/api/v2/location-area/281/
+                    version_details:
+                      type: array
+                      items:
+                        type: object
+                        required:
+                        - encounter_details
+                        - max_chance
+                        - version
+                        properties:
+                          encounter_details:
+                            type: array
+                            items:
+                              type: object
+                              required:
+                              - chance
+                              - condition_values
+                              - max_level
+                              - method
+                              - min_level
+                              properties:
+                                chance:
+                                  type: number
+                                  example: 100
+                                condition_values:
+                                  type: array
+                                  items:
+                                    type: object
+                                    required:
+                                    - name
+                                    - url
+                                    properties:
+                                      name:
+                                        type: string
+                                        example: story-progress-beat-red
+                                      url:
+                                        type: string
+                                        format: uri
+                                        example: https://pokeapi.co/api/v2/encounter-condition-value/55/
+                                max_level:
+                                  type: number
+                                  example: 10
+                                method:
+                                  type: object
+                                  required:
+                                  - name
+                                  - url
+                                  properties:
+                                    name:
+                                      type: string
+                                      example: gift
+                                    url:
+                                      type: string
+                                      format: uri
+                                      example: https://pokeapi.co/api/v2/encounter-method/18/
+                                min_level:
+                                  type: number
+                                  example: 10
+                          max_chance:
+                            type: number
+                            example: 100
+                          version:
+                            type: object
+                            required:
+                            - name
+                            - url
+                            properties:
+                              name:
+                                type: string
+                                example: red
+                              url:
+                                type: string
+                                format: uri
+                                example: https://pokeapi.co/api/v2/version/1/
           description: ''
 components:
   schemas:
@@ -9318,16 +9318,59 @@ components:
 servers:
 - url: https://pokeapi.co
 tags:
-- pokemon
-- evolution
-- berries
-- items
-- machines
-- location
-- contest
-- moves
-- encounters
-- games
-- utility
+- name: pokemon
+  description: Pokémon are the creatures that inhabit the world of the Pokémon games
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon
+- name: evolution
+  description: 'Evolution (Japanese: 進化 evolution) is a process in which a Pokémon
+    changes into a different species of Pokémon.'
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Evolution
+- name: berries
+  description: 'Berries (Japanese: きのみ Tree Fruit) are small, juicy, fleshy fruit.
+    As in the real world, a large variety exists in the Pokémon world, with a large
+    range of flavors and effects'
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Berry
+- name: items
+  description: 'An item (Japanese: 道具 tool) is an object in the Pokémon games which
+    the player can pick up, keep in their Bag, and use in some manner'
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Item
+- name: machines
+  description: Machines are the representation of items that teach moves to Pokémon.
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/TM
+- name: location
+  description: Locations that can be visited within the games
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number
+- name: contest
+  description: 'Pokémon Contests (Japanese: ポケモンコンテスト Pokémon Contest) are a type
+    of competition often contrasted with Pokémon battles and held in Contest Halls'
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Contest
+- name: moves
+  description: 'A move (Japanese: わざ move), also known as an attack (Japanese: こうげきわざ
+    attack technique) or technique (Japanese: とくしゅわざ special technique), is the skill
+    Pokémon primarily use in battle.'
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_name
+- name: encounters
+- name: games
+  description: The Pokémon games are all video games in the Pokémon franchise.
+  externalDocs:
+    description: Fine more info here
+    url: https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_games
+- name: utility
 externalDocs:
   url: https://pokeapi.co/docs/v2

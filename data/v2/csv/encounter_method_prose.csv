@@ -61,9 +61,9 @@ encounter_method_id,local_language_id,name
 22,9,Headbutting a low encounter rate tree
 22,5,En utilisant Coup d’Boule sur un arbre à taux bas
 23,9,Headbutting a normal encounter rate tree
-22,5,En utilisant Coup d’Boule sur un arbre à taux normal
+23,5,En utilisant Coup d’Boule sur un arbre à taux normal
 24,9,Headbutting a high encounter rate tree
-22,5,En utilisant Coup d’Boule sur un arbre à taux élevé
+24,5,En utilisant Coup d’Boule sur un arbre à taux élevé
 25,9,Using the Squirt Bottle on a Sudowoodo
 25,5,En utilisant la Carapuce à O sur Simularbre
 26,9,Using the Wailmer Pail on a Sudowoodo

@@ -169,7 +169,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "pokemon",
             "description": "Pokémon are the creatures that inhabit the world of the Pokémon games",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon",
             },
         },
@@ -177,7 +177,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "evolution",
             "description": "Evolution (Japanese: 進化 evolution) is a process in which a Pokémon changes into a different species of Pokémon.",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Evolution",
             },
         },
@@ -185,7 +185,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "berries",
             "description": "Berries (Japanese: きのみ Tree Fruit) are small, juicy, fleshy fruit. As in the real world, a large variety exists in the Pokémon world, with a large range of flavors and effects",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Berry",
             },
         },
@@ -193,7 +193,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "items",
             "description": "An item (Japanese: 道具 tool) is an object in the Pokémon games which the player can pick up, keep in their Bag, and use in some manner",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Item",
             },
         },
@@ -201,7 +201,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "machines",
             "description": "Machines are the representation of items that teach moves to Pokémon.",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/TM",
             },
         },
@@ -209,7 +209,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "location",
             "description": "Locations that can be visited within the games",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number",
             },
         },
@@ -217,7 +217,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "contest",
             "description": "Pokémon Contests (Japanese: ポケモンコンテスト Pokémon Contest) are a type of competition often contrasted with Pokémon battles and held in Contest Halls",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Contest",
             },
         },
@@ -225,7 +225,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "moves",
             "description": "A move (Japanese: わざ move), also known as an attack (Japanese: こうげきわざ attack technique) or technique (Japanese: とくしゅわざ special technique), is the skill Pokémon primarily use in battle.",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_name",
             },
         },
@@ -234,7 +234,7 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
             "name": "games",
             "description": "The Pokémon games are all video games in the Pokémon franchise.",
             "externalDocs": {
-                "description": "Fine more info here",
+                "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_games",
             },
         },

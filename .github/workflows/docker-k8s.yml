@@ -74,6 +74,8 @@ jobs:
           cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
           cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
           cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
+      - name: Load local image to Kind
+        run: kind load docker-image pokeapi/pokeapi:local
       - name: K8s Apply
         run: |
           make kustomize-local-apply

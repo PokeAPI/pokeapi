@@ -42,6 +42,8 @@ jobs:
           submodules: recursive
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5

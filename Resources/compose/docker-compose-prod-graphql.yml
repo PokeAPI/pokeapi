@@ -1,5 +1,8 @@
 version: '2.4'
 services:
+  cache:
+    restart: "no"
+
   db:
     environment:
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
@@ -13,6 +16,8 @@ services:
   web:
     volumes:
       - graphiql:/public-console:ro
+    logging:
+      driver: gcplogs
 
   graphql-engine:
     cpus: 0.7

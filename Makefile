@@ -1,6 +1,7 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
+gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 
 .PHONY: help
 .SILENT:
@@ -41,39 +42,42 @@ make-migrations:  # Create migrations files if schema has changed
 shell:  # Load a shell
 	python manage.py shell ${local_config}
 
+openapi-generate:
+	python manage.py spectacular --color --file openapi.yml ${local_config}
+
 docker-up:  # (Docker) Create services/volumes/networks
-	docker-compose up -d
+	docker compose up -d
 
 docker-migrate:  # (Docker) Run any pending migrations
-	docker-compose exec -T app python manage.py migrate ${docker_config}
+	docker compose exec -T app python manage.py migrate ${docker_config}
 
 docker-build-db:  # (Docker) Build the database
-	docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
 
 docker-make-migrations:  # (Docker) Create migrations files if schema has changed
-	docker-compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
+	docker compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
 
 docker-flush-db:  # (Docker) Removes all the data present in the database but preserves tables and migrations
-	docker-compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
+	docker compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
 
 docker-destroy-db:  # (Docker) Removes the volume where the database is installed on, alongside to the container itself
 	docker rm -f pokeapi_db_1
 	docker volume rm pokeapi_pg_data
 
 docker-shell:  # (Docker) Launch an interative shell for the pokeapi container
-	docker-compose exec app sh -l
+	docker compose exec app sh -l
 
 docker-stop:  # (Docker) Stop containers
-	docker-compose stop
+	docker compose stop
 
 docker-down:  # (Docker) Stop and removes containers and networks
-	docker-compose down
+	docker compose down
 
 docker-test:  # (Docker) Run tests
-	docker-compose exec -T app python manage.py test ${local_config}
+	docker compose exec -T app python manage.py test ${local_config}
 
 docker-prod:
-	docker-compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
+	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
@@ -119,10 +123,10 @@ kustomize-local-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s 
 	kubectl apply -k Resources/k8s/kustomize/local/
 
 k8s-migrate:  # (k8s) Run any pending migrations
-	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose
+	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate ${docker_config}
 
 k8s-build-db:  # (k8s) Build the database
-	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi
@@ -138,17 +142,19 @@ down-graphql-prod:
 	docker system prune --all --volumes --force
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
+# Nginx doesn't start if upstream graphql-engine is down
 update-graphql-data-prod:
+	docker compose ${gql_compose_config} stop
 	git pull origin master
 	git submodule update --init
-	docker compose stop graphql-engine
+	docker compose ${gql_compose_config} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d app
 	make docker-migrate
 	make docker-build-db
-	docker compose stop app
-	sync; echo 3 > /proc/sys/vm/drop_caches
-	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
-	docker compose start graphql-engine
+	docker compose ${gql_compose_config} stop app cache
+	docker compose ${gql_compose_config} up --pull always -d graphql-engine graphiql
 	sleep 120
 	make hasura-apply
+	docker compose ${gql_compose_config} up --pull always -d web
+	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
+	sync; echo 3 > /proc/sys/vm/drop_caches

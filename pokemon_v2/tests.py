@@ -1679,42 +1679,46 @@ class APIData:
 
         showdown = {
             "front_default": showdown_path % pokemon.id if front_default else None,
-            "front_female": showdown_path % f"female/{pokemon.id}"
-            if front_female
-            else None,
-            "front_shiny": showdown_path % f"shiny/{pokemon.id}"
-            if front_shiny
-            else None,
-            "front_shiny_female": showdown_path % f"shiny/female/{pokemon.id}"
-            if front_shiny_female
-            else None,
-            "back_default": showdown_path % f"back/{pokemon.id}"
-            if back_default
-            else None,
-            "back_female": showdown_path % f"back/female/{pokemon.id}"
-            if back_female
-            else None,
-            "back_shiny": showdown_path % f"back/shiny/{pokemon.id}"
-            if back_shiny
-            else None,
-            "back_shiny_female": showdown_path % f"back/shiny/female/{pokemon.id}"
-            if back_shiny_female
-            else None,
+            "front_female": (
+                showdown_path % f"female/{pokemon.id}" if front_female else None
+            ),
+            "front_shiny": (
+                showdown_path % f"shiny/{pokemon.id}" if front_shiny else None
+            ),
+            "front_shiny_female": (
+                showdown_path % f"shiny/female/{pokemon.id}"
+                if front_shiny_female
+                else None
+            ),
+            "back_default": (
+                showdown_path % f"back/{pokemon.id}" if back_default else None
+            ),
+            "back_female": (
+                showdown_path % f"back/female/{pokemon.id}" if back_female else None
+            ),
+            "back_shiny": (
+                showdown_path % f"back/shiny/{pokemon.id}" if back_shiny else None
+            ),
+            "back_shiny_female": (
+                showdown_path % f"back/shiny/female/{pokemon.id}"
+                if back_shiny_female
+                else None
+            ),
         }
 
         sprites = {
             "front_default": sprite_path % pokemon.id if front_default else None,
             "front_female": sprite_path % pokemon.id if front_female else None,
             "front_shiny": sprite_path % pokemon.id if front_shiny else None,
-            "front_shiny_female": sprite_path % pokemon.id
-            if front_shiny_female
-            else None,
+            "front_shiny_female": (
+                sprite_path % pokemon.id if front_shiny_female else None
+            ),
             "back_default": sprite_path % pokemon.id if back_default else None,
             "back_female": sprite_path % pokemon.id if back_female else None,
             "back_shiny": sprite_path % pokemon.id if back_shiny else None,
-            "back_shiny_female": sprite_path % pokemon.id
-            if back_shiny_female
-            else None,
+            "back_shiny_female": (
+                sprite_path % pokemon.id if back_shiny_female else None
+            ),
         }
 
         pokemon_sprites = PokemonSprites.objects.create(
@@ -1724,6 +1728,21 @@ class APIData:
         pokemon_sprites.save()
 
         return pokemon_sprites
+
+    @classmethod
+    def setup_pokemon_cries_data(cls, pokemon, latest=True, legacy=False):
+        cries_path = (
+            "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/%s.ogg"
+        )
+        cries = {
+            "latest": cries_path % f"latest/{pokemon.id}" if latest else None,
+            "legacy": cries_path % f"legacy/{pokemon.id}" if legacy else None,
+        }
+        pokemon_cries = PokemonCries.objects.create(
+            pokemon=pokemon, cries=json.dumps(cries)
+        )
+        pokemon_cries.save()
+        return pokemon_cries
 
     # Evolution Data
     @classmethod
@@ -4596,6 +4615,7 @@ class APITests(APIData, APITestCase):
             pokemon_species=pokemon_species, name="pkm for base pkmn spcs"
         )
         self.setup_pokemon_sprites_data(pokemon)
+        self.setup_pokemon_cries_data(pokemon)
 
         response = self.client.get(
             "{}/pokemon-species/{}/".format(API_V2, pokemon_species.pk),
@@ -4816,6 +4836,7 @@ class APITests(APIData, APITestCase):
         )
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
         pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
+        pokemon_cries = self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
         pokemon_game_index = self.setup_pokemon_game_index_data(
             pokemon=pokemon, game_index=10
         )
@@ -5052,7 +5073,9 @@ class APITests(APIData, APITestCase):
         )
 
         sprites_data = json.loads(pokemon_sprites.sprites)
+        cries_data = json.loads(pokemon_cries.cries)
         response_sprites_data = json.loads(response.data["sprites"])
+        response_cries_data = json.loads(response.data["cries"])
 
         # sprite params
         self.assertEqual(
@@ -5069,6 +5092,35 @@ class APITests(APIData, APITestCase):
             sprites_data["other"]["showdown"]["back_default"],
             response_sprites_data["other"]["showdown"]["back_default"],
         )
+
+        # cries params
+        self.assertEqual(
+            cries_data["latest"],
+            "{}".format(cries_data["latest"]),
+        )
+        self.assertEqual(
+            cries_data["legacy"],
+            "{}".format(cries_data["legacy"]),
+        )
+
+        # test search pokemon using search query param `q=partial_name`
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[:2]),
+            HTTP_HOST="testserver",
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
+
+        response = self.client.get(
+            "{}/pokemon/?q={}".format(API_V2, pokemon.name[-3:]),
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["count"], 1)
+        self.assertEqual(response.data["results"][0]["name"], pokemon.name)
 
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()

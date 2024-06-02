@@ -30,7 +30,7 @@ spec:
             - apt-get update &&
               apt-get install -y git curl &&
               curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | bash &&
-              hasura update-cli --version v2.0.8 &&
+              hasura update-cli --version v2.36.4 &&
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&
               git checkout staging &&

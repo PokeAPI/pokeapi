@@ -29,7 +29,7 @@ jobs:
           file: ./Resources/docker/app/Dockerfile
           push: false
           load: true
-          platforms: local
+          platforms: local,linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
           tags: pokeapi/pokeapi:local
           labels: ${{ steps.meta.outputs.labels }}
       - name: Image digest

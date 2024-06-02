@@ -157,6 +157,7 @@ This API will always be publicly available and will never require any extensive 
 
 Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
     """,
+    "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
     "VERSION": "2.7.0",
@@ -164,16 +165,79 @@ Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI co
     "OAS_VERSION": "3.1.0",
     "COMPONENT_SPLIT_REQUEST": True,
     "TAGS": [
-        "pokemon",
-        "evolution",
-        "berries",
-        "items",
-        "machines",
-        "location",
-        "contest",
-        "moves",
-        "encounters",
-        "games",
-        "utility",
+        {
+            "name": "pokemon",
+            "description": "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon",
+            },
+        },
+        {
+            "name": "evolution",
+            "description": "Evolution is a process in which a Pokémon changes into a different species of Pokémon.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Evolution",
+            },
+        },
+        {
+            "name": "berries",
+            "description": "Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Berry",
+            },
+        },
+        {
+            "name": "items",
+            "description": "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Item",
+            },
+        },
+        {
+            "name": "machines",
+            "description": "Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/TM",
+            },
+        },
+        {
+            "name": "location",
+            "description": "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number",
+            },
+        },
+        {
+            "name": "contest",
+            "description": "Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in Contest Halls",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Contest",
+            },
+        },
+        {
+            "name": "moves",
+            "description": "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_name",
+            },
+        },
+        {"name": "encounters"},
+        {
+            "name": "games",
+            "description": "The Pokémon games are all video games in the Pokémon franchise.",
+            "externalDocs": {
+                "description": "Find more info here",
+                "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_games",
+            },
+        },
+        {"name": "utility"},
     ],
 }

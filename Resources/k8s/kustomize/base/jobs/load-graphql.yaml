@@ -35,6 +35,7 @@ spec:
             - apt-get update &&
               apt-get install -y git curl &&
               curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.36.4 bash &&
+              cd /tmp &&
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&
               git checkout $(POKEAPI_CHECKOUT_REF) | git checkout master &&

@@ -45,6 +45,10 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: pokeapi/pokeapi
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx

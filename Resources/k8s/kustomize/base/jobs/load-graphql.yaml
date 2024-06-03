@@ -33,7 +33,7 @@ spec:
           command: ["sh", "-c"]
           args:
             - apt-get update && apt-get install curl git &&
-              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.36.4 sh &&
+              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.36.4 bash &&
               cd /tmp &&
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&

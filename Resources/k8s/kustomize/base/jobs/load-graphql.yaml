@@ -19,6 +19,8 @@ spec:
       containers:
         - name: load-graphql
           image: curlimages/curl:latest
+          securityContext:
+            runAsUser: 0
           env:
             - name: HASURA_GRAPHQL_ADMIN_SECRET
               valueFrom:

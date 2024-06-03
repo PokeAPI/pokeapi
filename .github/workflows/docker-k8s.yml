@@ -101,3 +101,4 @@ jobs:
           kubectl wait --timeout=1020s --for=condition=complete job/load-graphql
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
           test "$last_command" -eq 1
+          kubectl logs jobs load-graphql

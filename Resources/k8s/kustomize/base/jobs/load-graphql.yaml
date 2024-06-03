@@ -18,9 +18,7 @@ spec:
               done;
       containers:
         - name: load-graphql
-          image: curlimages/curl:latest
-          securityContext:
-            runAsUser: 0
+          image: debian:buster
           env:
             - name: HASURA_GRAPHQL_ADMIN_SECRET
               valueFrom:
@@ -34,7 +32,7 @@ spec:
                   key: POKEAPI_CHECKOUT_REF
           command: ["sh", "-c"]
           args:
-            - apk update && apk add git &&
+            - apt-get update && apt-get install curl git &&
               curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.36.4 sh &&
               cd /tmp &&
               git clone https://github.com/PokeAPI/pokeapi.git &&

@@ -98,7 +98,7 @@ jobs:
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
       - name: K8s wait for job
         run: |
-          kubectl wait --timeout=600s --for=condition=complete job/load-graphql
+          kubectl wait --timeout=6000s --for=condition=complete job/load-graphql
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
           test "$last_command" -eq 1
       - name: Get GQL output

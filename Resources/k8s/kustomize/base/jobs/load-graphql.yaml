@@ -25,13 +25,17 @@ spec:
                 secretKeyRef:
                   name: graphql-env-secret
                   key: HASURA_GRAPHQL_ADMIN_SECRET
+            - name: POKEAPI_CHECKOUT_REF
+              valueFrom:
+                configMapKeyRef:
+                  name: pokeapi-configmap
+                  key: POKEAPI_CHECKOUT_REF
           command: ["sh", "-c"]
           args:
-            - apt-get update &&
-              apt-get install -y git curl &&
-              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | bash &&
-              hasura update-cli --version v2.0.8 &&
+            - apt-get update && apt-get install -y curl git &&
+              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.36.4 bash &&
+              cd /tmp &&
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&
-              git checkout staging &&
+              (git checkout $(POKEAPI_CHECKOUT_REF) || git checkout master) &&
               hasura md apply --endpoint http://graphql:8080 --project graphql --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)

@@ -1,0 +1,101 @@
+name: Build Docker image and create k8s with it
+
+on:
+  pull_request:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: pokeapi/pokeapi
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build
+        id: docker_build
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Resources/docker/app/Dockerfile
+          push: false
+          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
+          tags: pokeapi/pokeapi:local
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+  k8s:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: pokeapi/pokeapi
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build
+        id: docker_build
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Resources/docker/app/Dockerfile
+          push: false
+          load: true
+          platforms: local
+          tags: pokeapi/pokeapi:local
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Lint k8s
+        run: (cd Resources/k8s/kustomize && yamllint .)
+      - name: Create k8s Kind Cluster
+        uses: helm/kind-action@v1.10.0
+        with:
+          cluster_name: pokeapi
+          version: v0.21.0
+      - name: Create deployment configuration
+        run: |
+          cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env
+          cp Resources/k8s/kustomize/base/secrets/graphql.env.sample Resources/k8s/kustomize/base/secrets/graphql.env
+          cp Resources/k8s/kustomize/base/config/pokeapi.env.sample Resources/k8s/kustomize/base/config/pokeapi.env
+      - name: Load local image to Kind
+        run: kind load docker-image pokeapi/pokeapi:local --name pokeapi
+      - name: K8s Apply
+        run: |
+          make kustomize-local-apply
+          kubectl proxy &
+          sleep 1
+          bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
+      - name: Set default namespace and print info
+        run: |
+          kubectl config set-context --current --namespace pokeapi
+          kubectl describe deployment
+      - name: Migrate and build data
+        run: |
+          make k8s-migrate
+          make k8s-build-db
+          bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
+      - name: K8s wait for job
+        run: |
+          kubectl wait --timeout=600s --for=condition=complete job/load-graphql
+          last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
+          test "$last_command" -eq 1
+      - name: Get GQL output
+        run: kubectl logs jobs/load-graphql

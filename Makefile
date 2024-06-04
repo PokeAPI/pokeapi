@@ -116,8 +116,11 @@ hasura-get-anon-schema:  # Dumps GraphQL schema
 kustomize-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
 	kubectl apply -k Resources/k8s/kustomize/base/
 
-kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster
+kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster using pokeapi/pokeapi:staging
 	kubectl apply -k Resources/k8s/kustomize/staging/
+
+kustomize-local-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster using the locally available pokeapi/pokeapi:local
+	kubectl apply -k Resources/k8s/kustomize/local/
 
 k8s-migrate:  # (k8s) Run any pending migrations
 	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate ${docker_config}

@@ -85,7 +85,7 @@ format:  # Format the source code
 	black .
 
 format-check:  # Check the source code has been formatted
-	black . --check --exclude 'Resources/data.*'
+	black . --check --exclude 'Resources/scripts/.*'
 
 pull:
 	git checkout master

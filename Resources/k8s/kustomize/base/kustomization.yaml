@@ -5,7 +5,7 @@ namespace: pokeapi
 
 configMapGenerator:
   - name: pokeapi-configmap
-    files:
+    envs:
       - config/pokeapi.env
 
 secretGenerator:

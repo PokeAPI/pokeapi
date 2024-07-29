@@ -2340,6 +2340,12 @@ class TypeNameSerializer(serializers.ModelSerializer):
         fields = ("name", "language")
 
 
+class TypeSpriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TypeSprites
+        fields = ("sprites",)
+
+
 class TypeDetailSerializer(serializers.ModelSerializer):
     """
     Serializer for the Type resource
@@ -2357,6 +2363,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     )
     pokemon = serializers.SerializerMethodField("get_type_pokemon")
     moves = MoveSummarySerializer(many=True, read_only=True, source="move")
+    sprites = serializers.SerializerMethodField("get_type_sprites")
 
     class Meta:
         model = Type
@@ -2371,7 +2378,12 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             "names",
             "pokemon",
             "moves",
+            "sprites",
         )
+
+    def get_type_sprites(self, obj):
+        sprites_object = TypeSprites.objects.get(type_id=obj)
+        return sprites_object.sprites
 
     # adds an entry for the given type with the given damage
     # factor in the given direction to the set of relations

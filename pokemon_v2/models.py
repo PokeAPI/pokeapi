@@ -773,6 +773,10 @@ class TypeEfficacyPast(HasTypeEfficacy, HasGeneration):
     pass
 
 
+class TypeSprites(HasType):
+    sprites = models.JSONField()
+
+
 #################
 #  STAT MODELS  #
 #################

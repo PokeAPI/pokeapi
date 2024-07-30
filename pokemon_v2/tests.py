@@ -312,7 +312,7 @@ class APIData:
 
     @classmethod
     def setup_item_sprites_data(cls, item, default=True):
-        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/%s.png"
 
         sprites = {
             "default": sprite_path % item.id if default else None,
@@ -2801,9 +2801,14 @@ class APITests(APIData, APITestCase):
             "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
         )
 
-        sprites_data = json.loads(response.data["sprites"])
+        sprites_data = json.loads(item_sprites.sprites)
+        response_sprites_data = json.loads(response.data["sprites"])
 
         # sprites
+        self.assertEqual(
+            sprites_data["default"],
+            response_sprites_data["default"],
+        )
         self.assertEqual(
             sprites_data["default"],
             "{}".format(sprites_data["default"]),

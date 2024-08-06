@@ -146,7 +146,7 @@ down-graphql-prod:
 update-graphql-data-prod:
 	docker compose ${gql_compose_config} stop
 	git pull origin master
-	git submodule update --init
+	git submodule update --remote --merge
 	docker compose ${gql_compose_config} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	make docker-migrate

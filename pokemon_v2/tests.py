@@ -312,7 +312,7 @@ class APIData:
 
     @classmethod
     def setup_item_sprites_data(cls, item, default=True):
-        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%s.png"
+        sprite_path = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/%s.png"
 
         sprites = {
             "default": sprite_path % item.id if default else None,
@@ -691,6 +691,54 @@ class APIData:
         type_game_index.save()
 
         return type_game_index
+
+    def setup_type_sprites_data(cls, type):
+        game_map = {
+            "generation-iii": [
+                "colosseum",
+                "emerald",
+                "firered-leafgreen",
+                "ruby-saphire",
+                "xd",
+            ],
+            "generation-iv": ["diamond-pearl", "heartgold-soulsilver", "platinum"],
+            "generation-v": ["black-2-white-2", "black-white"],
+            "generation-vi": ["omega-ruby-alpha-sapphire", "x-y"],
+            "generation-vii": [
+                "lets-go-pikachu-lets-go-eevee",
+                "sun-moon",
+                "ultra-sun-ultra-moon",
+            ],
+            "generation-viii": [
+                "brilliant-diamond-and-shining-pearl",
+                "legends-arceus",
+                "sword-shield",
+            ],
+            "generation-ix": ["scarlet-violet"],
+        }
+        sprites = {}
+        for generation in game_map.keys():
+            for game in game_map[generation]:
+                if generation not in sprites:
+                    sprites[generation] = {}
+
+                if type.id == 18 and generation.endswith(("-iii", "-iv", "-v")):
+                    sprites[generation][game] = None
+                elif type.id == 19 and generation.endswith(
+                    ("-iii", "-iv", "-v", "-vi", "-vii", "-viii")
+                ):
+                    sprites[generation][game] = None
+                else:
+                    sprites[generation][game] = {
+                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png"
+                    }
+
+        type_sprites = TypeSprites.objects.create(
+            type=type, sprites=json.dumps(sprites)
+        )
+        type_sprites.save()
+
+        return type_sprites, game_map
 
     # Move Data
     @classmethod
@@ -2753,9 +2801,14 @@ class APITests(APIData, APITestCase):
             "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
         )
 
-        sprites_data = json.loads(response.data["sprites"])
+        sprites_data = json.loads(item_sprites.sprites)
+        response_sprites_data = json.loads(response.data["sprites"])
 
         # sprites
+        self.assertEqual(
+            sprites_data["default"],
+            response_sprites_data["default"],
+        )
         self.assertEqual(
             sprites_data["default"],
             "{}".format(sprites_data["default"]),
@@ -3313,12 +3366,12 @@ class APITests(APIData, APITestCase):
 
     # Type Tests
     def test_type_api(self):
-        type = self.setup_type_data(name="base tp")
-        type_name = self.setup_type_name_data(type, name="base tp nm")
-        type_game_index = self.setup_type_game_index_data(type, game_index=10)
-        move = self.setup_move_data(name="mv for base tp", type=type)
+        type_obj = self.setup_type_data(name="base tp")
+        type_name = self.setup_type_name_data(type_obj, name="base tp nm")
+        type_game_index = self.setup_type_game_index_data(type_obj, game_index=10)
+        move = self.setup_move_data(name="mv for base tp", type=type_obj)
         pokemon = self.setup_pokemon_data(name="pkmn for base tp")
-        pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon, type=type)
+        pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon, type=type_obj)
 
         generation = self.setup_generation_data(name="past gen")
 
@@ -3345,39 +3398,41 @@ class APITests(APIData, APITestCase):
 
         newer_type = self.setup_type_data(name="newer tp", generation=newer_generation)
 
+        type_sprites, game_map = self.setup_type_sprites_data(type=type_obj)
+
         # type relations
         no_damage_to_relation = TypeEfficacy(
-            damage_type=type, target_type=no_damage_to, damage_factor=0
+            damage_type=type_obj, target_type=no_damage_to, damage_factor=0
         )
         no_damage_to_relation.save()
 
         half_damage_to_type_relation = TypeEfficacy(
-            damage_type=type, target_type=half_damage_to, damage_factor=50
+            damage_type=type_obj, target_type=half_damage_to, damage_factor=50
         )
         half_damage_to_type_relation.save()
 
         double_damage_to_type_relation = TypeEfficacy(
-            damage_type=type, target_type=double_damage_to, damage_factor=200
+            damage_type=type_obj, target_type=double_damage_to, damage_factor=200
         )
         double_damage_to_type_relation.save()
 
         no_damage_from_relation = TypeEfficacy(
-            damage_type=no_damage_from, target_type=type, damage_factor=0
+            damage_type=no_damage_from, target_type=type_obj, damage_factor=0
         )
         no_damage_from_relation.save()
 
         half_damage_from_type_relation = TypeEfficacy(
-            damage_type=half_damage_from, target_type=type, damage_factor=50
+            damage_type=half_damage_from, target_type=type_obj, damage_factor=50
         )
         half_damage_from_type_relation.save()
 
         double_damage_from_type_relation = TypeEfficacy(
-            damage_type=double_damage_from, target_type=type, damage_factor=200
+            damage_type=double_damage_from, target_type=type_obj, damage_factor=200
         )
         double_damage_from_type_relation.save()
 
         double_damage_from_newer_type_relation = TypeEfficacy(
-            damage_type=newer_type, target_type=type, damage_factor=200
+            damage_type=newer_type, target_type=type_obj, damage_factor=200
         )
         double_damage_from_newer_type_relation.save()
 
@@ -3385,20 +3440,20 @@ class APITests(APIData, APITestCase):
 
         # type used to deal half damage rather than no damage
         past_no_damage_to_relation = TypeEfficacyPast(
-            damage_type=type,
+            damage_type=type_obj,
             target_type=no_damage_to,
             damage_factor=50,
             generation=generation,
         )
         past_no_damage_to_relation.save()
 
-        response = self.client.get("{}/type/{}/".format(API_V2, type.pk))
+        response = self.client.get("{}/type/{}/".format(API_V2, type_obj.pk))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         # base params
-        self.assertEqual(response.data["id"], type.pk)
-        self.assertEqual(response.data["name"], type.name)
+        self.assertEqual(response.data["id"], type_obj.pk)
+        self.assertEqual(response.data["name"], type_obj.name)
         # name params
         self.assertEqual(response.data["names"][0]["name"], type_name.name)
         self.assertEqual(
@@ -3409,19 +3464,19 @@ class APITests(APIData, APITestCase):
             "{}{}/language/{}/".format(TEST_HOST, API_V2, type_name.language.pk),
         )
         # generation params
-        self.assertEqual(response.data["generation"]["name"], type.generation.name)
+        self.assertEqual(response.data["generation"]["name"], type_obj.generation.name)
         self.assertEqual(
             response.data["generation"]["url"],
-            "{}{}/generation/{}/".format(TEST_HOST, API_V2, type.generation.pk),
+            "{}{}/generation/{}/".format(TEST_HOST, API_V2, type_obj.generation.pk),
         )
         # damage class params
         self.assertEqual(
-            response.data["move_damage_class"]["name"], type.move_damage_class.name
+            response.data["move_damage_class"]["name"], type_obj.move_damage_class.name
         )
         self.assertEqual(
             response.data["move_damage_class"]["url"],
             "{}{}/move-damage-class/{}/".format(
-                TEST_HOST, API_V2, type.move_damage_class.pk
+                TEST_HOST, API_V2, type_obj.move_damage_class.pk
             ),
         )
         # move params
@@ -3569,6 +3624,15 @@ class APITests(APIData, APITestCase):
                 TEST_HOST, API_V2, type_game_index.generation.pk
             ),
         )
+
+        sprites_data = json.loads(type_sprites.sprites)
+
+        for generation in game_map.keys():
+            for game in game_map[generation]:
+                self.assertEqual(
+                    json.loads(response.data["sprites"])[generation][game]["name_icon"],
+                    sprites_data[generation][game]["name_icon"],
+                )
 
     # Pokedex Tests
     def test_pokedex_api(self):

@@ -486,31 +486,31 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 905,11,けしんフォルム,
 916,1,オスのすがた,
 916,5,Mâle,Fragroin Mâle
-916,9,Male,
+916,9,Male,Male Oinkologne
 916,11,オスのすがた,
 925,1,４ひきかぞく,
 925,5,Famille de Quatre,Famignol Famille de Quatre
-925,9,Family of Four,
+925,9,Family of Four,Maushold (Family of Four)
 925,11,４ひきかぞく,
 931,1,グリーンフェザー,
 931,5,Plumage Vert,Tapatoès Plumage Vert
-931,9,Green Plumage,
+931,9,Green Plumage,Green Plumage Squawkabilly
 931,11,グリーンフェザー,
 964,1,ナイーブフォルム,
 964,5,Forme Ordinaire,Superdofin Forme Ordinaire
-964,9,Zero Form,
+964,9,Zero Form,Zero Form Palafin
 964,11,ナイーブフォルム,
 978,1,そったすがた,
 978,5,Forme Courbée,Nigirigon Forme Courbée
-978,9,Curly Form,
+978,9,Curly Form,Curly Form Tatsugiri
 978,11,そったすがた,
 982,1,ふたふしフォルム,
 982,5,Forme Double,Deusolourdo Forme Double
-982,9,Two-Segment Form,
+982,9,Two-Segment Form,Two-Segment Form Dudunsparce
 982,11,ふたふしフォルム,
 999,1,はこフォルム,
 999,5,Forme Coffre,Mordudor Forme Coffre
-999,9,Chest Form,
+999,9,Chest Form,Chest Form Gimmighoul
 999,11,はこフォルム,
 1007,1,かんぜんけいたい,
 1007,5,Forme Finale,Koraidon Forme Finale
@@ -527,7 +527,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1012,6,Imitationsform,
 1012,7,Forma Fraudulenta,
 1012,8,Forma Taroccata,
-1012,9,Counterfeit Form,
+1012,9,Counterfeit Form,Counterfeit Form Poltchageist
 1012,11,マガイモノのすがた,
 1012,12,高檔貨的樣子,
 1013,1,ボンサクのすがた,
@@ -537,7 +537,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1013,6,Simple Form,
 1013,7,Forma Mediocre,
 1013,8,Forma Dozzinale,
-1013,9,Unremarkable Form,
+1013,9,Unremarkable Form,Unremarkable Form Sinistcha
 1013,11,ボンサクのすがた,
 1013,12,凡作的样子,
 1017,1,みどりのめん,
@@ -547,14 +547,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1017,6,Türkisgrüne Maske,
 1017,7,Máscara Turquesa,
 1017,8,Maschera Turchese,
-1017,9,Teal Mask,
+1017,9,Teal Mask,Teal Mask Ogerpon
 1017,11,みどりのめん,
 1017,12,碧草面具,
 1024,1,ノーマルフォルム,
 1024,5,Forme Normale,Terapagos Forme Normale
 1024,7,Forma normal,
 1024,8,Forma Normale,
-1024,9,Normal Form,
+1024,9,Normal Form,Normal Form Terapagos
 1024,11,ノーマルフォルム,
 10001,1,Ｂ,
 10001,3,B,
@@ -3515,59 +3515,59 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10418,11,れいじゅうフォルム,
 10419,1,パルデアのすがた,
 10419,5,Forme de Paldéa,Tauros de Paldéa Race Combative
-10419,9,Paldean Form,
+10419,9,Paldean Form (Combat Breed),Paldean Tauros (Combat Breed)
 10419,11,パルデアのすがた,
 10420,1,パルデアのすがた,
 10420,5,Forme de Paldéa,Tauros de Paldéa Race Flamboyante
-10420,9,Paldean Form,
+10420,9,Paldean Form (Blaze Breed),Paldean Tauros (Blaze Breed)
 10420,11,パルデアのすがた,
 10421,1,パルデアのすがた,
 10421,5,Forme de Paldéa,Tauros de Paldéa Race Aquatique
-10421,9,Paldean Form,
+10421,9,Paldean Form (Aqua Breed),Paldean Tauros (Aqua Breed)
 10421,11,パルデアのすがた,
 10422,1,パルデアのすがた,
 10422,5,Forme de Paldéa,Axoloto de Paldéa
-10422,9,Paldean Form,
+10422,9,Paldean Form,Paldean Wooper
 10422,11,パルデアのすがた,
 10423,1,メスのすがた,
 10423,5,Femelle,Fragroin Femelle
-10423,9,Female,
+10423,9,Female,Female Oinkologne
 10423,11,メスのすがた,
 10424,1,みつふしフォルム,
 10424,5,Forme Triple,Deusolourdo Forme Triple
-10424,9,Three-Segment Form,
+10424,9,Three-Segment Form,Three-Segment Form Dudunsparce
 10424,11,みつふしフォルム,
 10425,1,マイティフォルム,
 10425,5,Forme Super,Superdofin Forme Super
-10425,9,Hero Form,
+10425,9,Hero Form,Hero Form Palafin
 10425,11,マイティフォルム,
 10426,1,３びきかぞく,
 10426,5,Famille de Trois,Famignol Famille de Trois
-10426,9,Family of Three,
+10426,9,Family of Three,Maushold (Family of Three)
 10426,11,３びきかぞく,
 10427,1,たれたすがた,
 10427,5,Forme Affalée,Nigirigon Forme Affalée
-10427,9,Droopy Form,
+10427,9,Droopy Form,Droopy Form Tatsugiri
 10427,11,たれたすがた,
 10428,1,のびたすがた,
 10428,5,Forme Raide,Nigirigon Forme Raide
-10428,9,Stretchy Form,
+10428,9,Stretchy Form,Stretchy Form Tatsugiri
 10428,11,のびたすがた,
 10429,1,ブルーフェザー,
 10429,5,Plumage Bleu,Tapatoès Plumage Bleu
-10429,9,Blue Plumage,
+10429,9,Blue Plumage,Blue Plumage Squawkabilly
 10429,11,ブルーフェザー,
 10430,1,イエローフェザー,
 10430,5,Plumage Jaune,Tapatoès Plumage Jaune
-10430,9,Yellow Plumage,
+10430,9,Yellow Plumage,Yellow Plumage Squawkabilly
 10430,11,イエローフェザー,
 10431,1,ホワイトフェザー,
 10431,5,Plumage Blanc,Tapatoès Plumage Blanc
-10431,9,White Plumage,
+10431,9,White Plumage,White Plumage Squawkabilly
 10431,11,ホワイトフェザー,
 10432,1,とほフォルム,
 10432,5,Forme Marche,Mordudor Forme Marche
-10432,9,Roaming Form,
+10432,9,Roaming Form,Roaming Form Gimmighoul
 10432,11,とほフォルム,
 10433,1,せいげんけいたい,
 10433,5,Forme Limitée,Koraidon Forme Limitée
@@ -3608,7 +3608,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10441,6,Blutmond,
 10441,7,Luna Carmesí,
 10441,8,Luna Cremisi,
-10441,9,Bloodmoon,
+10441,9,Bloodmoon,Bloodmoon Ursaluna
 10441,11,アカツキ,
 10441,12,赫月,
 10442,1,いどのめん,
@@ -3618,7 +3618,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10442,6,Brunnenmaske,
 10442,7,Máscara Fuente,
 10442,8,Maschera Pozzo,
-10442,9,Wellspring Mask,
+10442,9,Wellspring Mask,Wellspring Mask Ogerpon
 10442,11,いどのめん,
 10442,12,水井面具,
 10443,1,かまどのめん,
@@ -3628,7 +3628,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10443,6,Ofenmaske,
 10443,7,Máscara Horno,
 10443,8,Maschera Focolare,
-10443,9,Hearthflame Mask,
+10443,9,Hearthflame Mask,Hearthflame Mask Ogerpon
 10443,11,かまどのめん,
 10443,12,火灶面具,
 10444,1,いしずえのめん,
@@ -3638,7 +3638,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10444,6,Fundamentmaske,
 10444,7,Máscara Cimiento,
 10444,8,Maschera Fondamenta,
-10444,9,Cornerstone Mask,
+10444,9,Cornerstone Mask,Cornerstone Mask Ogerpon
 10444,11,いしずえのめん,
 10444,12,礎石面具,
 10445,1,テラスタルフォルム,
@@ -3646,13 +3646,13 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10445,6,Terakristall-Form,
 10445,7,Forma teracristal,
 10445,8,Forma Teracristal,
-10445,9,Terastal Form,
+10445,9,Terastal Form,Terastal Form Terapagos
 10445,11,テラスタルフォルム,
 10446,1,ステラフォルム,
 10446,5,Forme Stellaire,Terapagos Stellaire
 10446,6,Stellarform,
 10446,7,Forma astral,
-10446,9,Stellar Form,
+10446,9,Stellar Form,Stellar Form Terapagos
 10446,11,ステラフォルム,
 10447,1,タカイモノのすがた,
 10447,3,알짜배기의 모습,
@@ -3661,7 +3661,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10447,6,Kostbarkeitsform,
 10447,7,Forma Opulenta,
 10447,8,Forma Pregiata,
-10447,9,Artisan Form,
+10447,9,Artisan Form,Artisan Form Poltchageist
 10447,11,タカイモノのすがた,
 10447,12,高档货的样子,
 10448,1,ケッサクのすがた,
@@ -3671,6 +3671,6 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10448,6,Edle Form,
 10448,7,Forma Exquisita,
 10448,8,Forma Eccezionale,
-10448,9,Masterpiece Form,
+10448,9,Masterpiece Form,Masterpiece Form Sinistcha
 10448,11,ケッサクのすがた,
 10448,12,杰作的样子,

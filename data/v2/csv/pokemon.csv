@@ -914,7 +914,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 913,quaxwell,913,12,215,144,913,1
 914,quaquaval,914,18,619,265,914,1
 915,lechonk,915,5,102,51,915,1
-916,oinkologne,916,10,1200,171,916,1
+916,oinkologne-male,916,10,1200,171,916,1
 917,tarountula,917,3,40,42,918,1
 918,spidops,918,10,165,141,919,1
 919,nymble,919,2,10,42,920,1
@@ -923,13 +923,13 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 922,pawmo,922,4,65,123,955,1
 923,pawmot,923,9,410,245,956,1
 924,tandemaus,924,3,18,61,945,1
-925,maushold,925,3,23,165,946,1
+925,maushold-family-of-four,925,3,23,165,946,1
 926,fidough,926,3,109,62,970,1
 927,dachsbun,927,5,149,167,971,1
 928,smoliv,928,3,65,52,935,1
 929,dolliv,929,6,119,124,936,1
 930,arboliva,930,14,482,255,937,1
-931,squawkabilly,931,6,24,146,960,1
+931,squawkabilly-green-plumage,931,6,24,146,960,1
 932,nacli,932,4,160,56,963,1
 933,naclstack,933,6,1050,124,964,1
 934,garganacl,934,23,2400,250,965,1
@@ -962,7 +962,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 961,wugtrio,961,12,54,149,930,1
 962,bombirdier,962,15,429,243,959,1
 963,finizen,963,13,602,63,933,1
-964,palafin,964,13,602,160,934,1
+964,palafin-zero,964,13,602,160,934,1
 965,varoom,965,10,350,60,942,1
 966,revavroom,966,18,1200,175,943,1
 967,cyclizar,967,16,630,175,953,1
@@ -976,11 +976,11 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 975,cetitan,975,45,7000,182,948,1
 976,veluza,976,25,900,167,932,1
 977,dondozo,977,120,2200,265,931,1
-978,tatsugiri,978,3,80,166,952,1
+978,tatsugiri-curly,978,3,80,166,952,1
 979,annihilape,979,12,560,268,1010,1
 980,clodsire,980,18,2230,151,1009,1
 981,farigiraf,981,32,1600,260,928,1
-982,dudunsparce,982,36,392,182,917,1
+982,dudunsparce-two-segment,982,36,392,182,917,1
 983,kingambit,983,20,1200,275,1008,1
 984,great-tusk,984,22,3200,285,978,1
 985,scream-tail,985,12,80,285,982,1

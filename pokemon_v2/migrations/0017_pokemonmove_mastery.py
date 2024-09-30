@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='pokemonmove',
             name='mastery',
-            field=models.IntegerField(default=None),
+            field=models.IntegerField(blank=True, null=True),
         ),
     ]

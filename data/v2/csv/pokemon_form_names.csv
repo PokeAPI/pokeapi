@@ -402,7 +402,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 854,9,Phony Form,Phony Sinistea
 854,11,がんさくフォルム,
 855,1,がんさくフォルム,
-854,5,Forme Contrefaçon,Polthégeist Contrefaçon
+855,5,Forme Contrefaçon,Polthégeist Contrefaçon
 855,6,Fälschungsform,Mortipot (Fälschung)
 855,9,Phony Form,Phony Polteageist
 855,11,がんさくフォルム,
@@ -2047,21 +2047,27 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10181,9,Mega Rayquaza,Mega Rayquaza
 10181,11,メガレックウザ,
 10181,12,超级烈空坐,
+10182,1,ハードロック・ピカチュウ,
 10182,5,Pikachu Rockeur,Pikachu Rockeur
 10182,6,Cosplayform,Rock Star Pikachu
 10182,9,Pikachu Rock Star,Pikachu Rock Star
+10183,1,マダム・ピカチュウ,
 10183,5,Pikachu Lady,Pikachu Lady
 10183,6,Cosplayform,Lady Pikachu
 10183,9,Pikachu Belle,Pikachu Belle
+10184,1,アイドル・ピカチュウ,
 10184,5,Pikachu Star,Pikachu Star
 10184,6,Cosplayform,Pop Star Pikachu
 10184,9,Pikachu Pop Star,Pikachu Pop Star
+10185,1,ドクター・ピカチュウ,
 10185,5,Pikachu Docteur,Pikachu Docteur
 10185,6,Cosplayform,Dr. Pikachu
 10185,9,Pikachu Ph.D.,Pikachu Ph.D.
+10186,1,マスクド・ピカチュウ,
 10186,5,Pikachu Catcheur,Pikachu Catcheur
 10186,6,Cosplayform,Wrestling Pikachu
 10186,9,Pikachu Libre,Pikachu Libre
+10187,1,おきがえピカチュウ,
 10187,5,Pikachu Cosplayeur,Pikachu Cosplayeur
 10187,6,Cosplayform,Cosplay Pikachu
 10187,9,Cosplay Pikachu,Cosplay Pikachu
@@ -3574,15 +3580,15 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10433,9,Limited Build,
 10433,11,せいげんけいたい,
 10434,1,しっそうけいたい,
-10433,5,Forme de Course,Koraidon Forme de Course
+10434,5,Forme de Course,Koraidon Forme de Course
 10434,9,Sprinting Build,
 10434,11,しっそうけいたい,
 10435,1,ゆうえいけいたい,
-10433,5,Forme de Nage,Koraidon Forme de Nage
+10435,5,Forme de Nage,Koraidon Forme de Nage
 10435,9,Swimming Build,
 10435,11,ゆうえいけいたい,
 10436,1,かっくうけいたい,
-10433,5,Forme de Vol,Koraidon Forme de Vol
+10436,5,Forme de Vol,Koraidon Forme de Vol
 10436,9,Gliding Build,
 10436,11,かっくうけいたい,
 10437,1,リミテッドモード,

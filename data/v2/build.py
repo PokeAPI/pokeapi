@@ -36,8 +36,16 @@ MEDIA_DIR = "{prefix}{{file_name}}".format(
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/",
     )
 )
+SOUND_DIR = "{prefix}{{file_name}}".format(
+    prefix=os.environ.get(
+        "POKEAPI_CRIES_PREFIX",
+        "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/",
+    )
+)
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
+CRIES_DIR = os.getcwd() + "/data/v2/cries/cries/"
 RESOURCE_IMAGES = []
+RESOURCE_CRIES = []
 
 for root, dirs, files in os.walk(IMAGE_DIR):
     for file in files:
@@ -45,8 +53,20 @@ for root, dirs, files in os.walk(IMAGE_DIR):
         image_path = image_path.replace("\\", "/")  # convert Windows-style path to Unix
         RESOURCE_IMAGES.append(image_path)
 
+for root, dirs, files in os.walk(CRIES_DIR):
+    for file in files:
+        cry_path = os.path.join(root.replace(CRIES_DIR, ""), file)
+        cry_path = cry_path.replace("\\", "/")  # convert Windows-style path to Unix
+        RESOURCE_CRIES.append(cry_path)
 
-def file_path_or_none(file_name):
+
+def file_path_or_none(file_name, image_file=True):
+    if not image_file:
+        return (
+            SOUND_DIR.format(file_name=file_name)
+            if file_name in RESOURCE_CRIES
+            else None
+        )
     return (
         MEDIA_DIR.format(file_name=file_name) if file_name in RESOURCE_IMAGES else None
     )
@@ -608,6 +628,45 @@ def _build_types():
         )
 
     build_generic((TypeEfficacyPast,), "type_efficacy_past.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        game_map = {
+            "generation-iii": [
+                "colosseum",
+                "emerald",
+                "firered-leafgreen",
+                "ruby-saphire",
+                "xd",
+            ],
+            "generation-iv": ["diamond-pearl", "heartgold-soulsilver", "platinum"],
+            "generation-v": ["black-2-white-2", "black-white"],
+            "generation-vi": ["omega-ruby-alpha-sapphire", "x-y"],
+            "generation-vii": [
+                "lets-go-pikachu-lets-go-eevee",
+                "sun-moon",
+                "ultra-sun-ultra-moon",
+            ],
+            "generation-viii": [
+                "brilliant-diamond-and-shining-pearl",
+                "legends-arceus",
+                "sword-shield",
+            ],
+            "generation-ix": ["scarlet-violet"],
+        }
+        sprites = {}
+        for generation in game_map.keys():
+            for game in game_map[generation]:
+                if generation not in sprites:
+                    sprites[generation] = {}
+                sprites[generation][game] = {
+                    "name_icon": file_path_or_none(
+                        f"types/{generation}/{game}/{info[0]}.png"
+                    )
+                }
+
+        yield TypeSprites(type_id=int(info[0]), sprites=sprites)
+
+    build_generic((TypeSprites,), "types.csv", csv_record_to_objects)
 
 
 #############
@@ -1222,9 +1281,11 @@ def _build_locations():
             id=int(info[0]),
             location_id=int(info[1]),
             game_index=int(info[2]),
-            name="{}-{}".format(location.name, info[3])
-            if info[3]
-            else "{}-{}".format(location.name, "area"),
+            name=(
+                "{}-{}".format(location.name, info[3])
+                if info[3]
+                else "{}-{}".format(location.name, "area")
+            ),
         )
 
     build_generic((LocationArea,), "location_areas.csv", csv_record_to_objects)
@@ -1930,6 +1991,26 @@ def _build_pokemons():
         )
 
     build_generic((PokemonSprites,), "pokemon.csv", csv_record_to_objects)
+
+    def try_cry_names(path, info, extension):
+        file_name = "%s.%s" % (info[0], extension)
+        return file_path_or_none(path + file_name, image_file=False)
+
+    def csv_record_to_objects(info):
+        poke_cries = "pokemon"
+        latest = f"{poke_cries}/latest/"
+        legacy = f"{poke_cries}/legacy/"
+        cries = {
+            "latest": try_cry_names(latest, info, "ogg"),
+            "legacy": try_cry_names(legacy, info, "ogg"),
+        }
+        yield PokemonCries(
+            id=int(info[0]),
+            pokemon=Pokemon.objects.get(pk=int(info[0])),
+            cries=cries,
+        )
+
+    build_generic((PokemonCries,), "pokemon.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
         yield PokemonAbility(

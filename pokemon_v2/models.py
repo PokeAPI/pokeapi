@@ -773,6 +773,10 @@ class TypeEfficacyPast(HasTypeEfficacy, HasGeneration):
     pass
 
 
+class TypeSprites(HasType):
+    sprites = models.JSONField()
+
+
 #################
 #  STAT MODELS  #
 #################
@@ -1757,6 +1761,7 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
     level = models.IntegerField()
+    mastery = models.IntegerField(null=True, blank=True)
 
 
 class PokemonShape(HasName):
@@ -1796,3 +1801,7 @@ class PokemonTypePast(HasPokemon, HasType, HasGeneration):
 
 class PokemonSprites(HasPokemon):
     sprites = models.JSONField()
+
+
+class PokemonCries(HasPokemon):
+    cries = models.JSONField()

@@ -37,7 +37,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make setup
     ```
 
-- Run the server using the following command:
+- Run the server on port `8000` using the following command:
 
     ```sh
     make serve
@@ -45,25 +45,34 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ### Database setup
 
+To build or rebuild the database by applying any CSV file update, run
+
 ```sh
 make build-db
 ```
 
-Visit [localhost:80/api/v2/](localhost:80/api/v2/) to see the running API!
+Visit [localhost:8000/api/v2/](http://localhost:8000/api/v2/) to see the running API!
 
-Each time the build script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
-
-The option to build individual portions of the database was removed in order to increase performance of the build script.
+Each time the `build-db` script is run, it will iterate over each table in the database, wipe it, and rewrite each row using the data found in data/v2/csv.
 
 If you ever need to wipe the database use this command:
 
 ```sh
-make wipe_db
+make wipe-sqlite-db
 ```
+
+If the database schema has changed, generate any outstanding migrations and apply them
+
+```sh
+make make-migrations
+make migrate
+```
+
+Run `make help` to see all tasks.
 
 ## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
-There is also a multi-container setup, managed by [Docker Compose](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each services and is recommended if you need to simply spin up PokéAPI.
+There is also a multi-container setup, managed by [Docker Compose V2](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.
 
 Start everything by
 
@@ -74,16 +83,29 @@ make docker-setup
 If you don't have `make` on your machine you can use the following commands
 
 ```sh
-docker-compose up -d
-docker-compose exec -T app python manage.py migrate --settings=config.docker-compose
-docker-compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+docker compose up -d
+docker compose exec -T app python manage.py migrate --settings=config.docker-compose
+docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
 ```
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
 
+To rebuild the database and apply any CSV file updates, run
+
+```sh
+make docker-build-db
+```
+
+If the database schema has changed, generate the migrations and apply those
+
+```sh
+make docker-make-migrations
+make docker-migrate
+```
+
 ## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
-When you start PokéAPI with the above docker-compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
+When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
 ```sh
 # hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
@@ -95,9 +117,9 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples are provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
-## Kubernetes &nbsp; [![k8s status](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml/badge.svg?branch=master)](https://github.com/PokeAPI/pokeapi/actions/workflows/kustomize.yml)
+## Kubernetes &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 
 [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
 
@@ -131,23 +153,24 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 | Python 2/3 | [PokeAPI/pokepy](https://github.com/PokeAPI/pokepy) | _Auto caching_ |
 | Python 3 | [PokeAPI/pokebase](https://github.com/PokeAPI/pokebase) | _Auto caching_, _Image caching_ |
 
-| Wrapper | Repository | Features |
-| --- | --- | --- |
-| PHP | [lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi) | _Auto caching, lazy loading_ |
-| Ruby | [rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2) | |
-| .Net Standard | [mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet) | _Auto caching_ |
-| Go | [mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go) | _Auto caching_ |
-| Dart | [prathanbomb/pokedart](https://github.com/prathanbomb/pokedart) | |
-| Rust | [lunik1/pokerust](https://gitlab.com/lunik1/pokerust) | _Auto caching_ |
-| Spring Boot | [dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi) | _Auto caching_ |
-| Swift | [kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI) | |
-| Typescript server-side/client-side | [Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts) | _Auto caching_ |
-| Python | [beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi) | _Auto caching, asynchronous_
-| Scala | [juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala) | _Auto caching_ |
+|Wrapper|Repository|Features|
+|---|---|---|
+|.Net Standard |[mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet)|Auto caching |
+|Dart|[prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)| |
+|Go|[mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go)|Auto caching |
+|PHP |[lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi)|Auto caching, lazy loading |
+|PowerShell|[Celerium/PokeAPI-PowerShellWrapper](https://github.com/Celerium/PokeAPI-PowerShellWrapper)| |
+|Python|[beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi)|Auto caching, asynchronous |
+|Ruby|[rdavid1099/poke-api-v2](https://github.com/rdavid1099/poke-api-v2)| |
+|Rust|[lunik1/pokerust](https://gitlab.com/lunik1/pokerust)|Auto caching |
+|Scala |[juliano/pokeapi-scala](https://github.com/juliano/pokeapi-scala)|Auto caching |
+|Spring Boot |[dlfigueira/spring-pokeapi](https://github.com/dlfigueira/spring-pokeapi)|Auto caching |
+|Swift |[kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)| |
+|Typescript server-side/client-side|[Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts)|Auto caching |
 
 ## Donations
 
-Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a $10 donation to help keep the service up. We get 330 million requests a month!
+Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a donation to help keep the service up. We get 1+ billion requests a month!
 
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
@@ -161,7 +184,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 Have a question or just want to discuss new ideas and improvements? Hit us up on Slack. ~~Consider talking with us here before creating a new issue.~~
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-1l4vpwa8k-muQmMrFfv7TIFGrVWzjzcw) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-2ampo6her-_tHSI3uOS65WzGypt7Y96w) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 
@@ -171,7 +194,7 @@ This project exists thanks to all the people who [contribute](https://github.com
 
 <a href="graphs/contributors"><img src="https://opencollective.com/pokeapi/contributors.svg?width=890" /></a>
 
-All contributions are welcome: bug fixes, data contributions, recommendations.
+All contributions are welcome: bug fixes, data contributions, and recommendations.
 
 Please see the [issues on GitHub](https://github.com/PokeAPI/pokeapi/issues) before you submit a pull request or raise an issue, someone else might have beat you to it.
 

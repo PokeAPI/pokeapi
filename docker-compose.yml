@@ -44,7 +44,7 @@ services:
       - ./Resources/nginx/ssl:/ssl:ro
       - graphql_cache:/tmp/cache
   graphql-engine:
-    image: hasura/graphql-engine:v2.36.1-ce
+    image: hasura/graphql-engine:v2.36.4
     ports:
       - "8080:8080"
     depends_on:

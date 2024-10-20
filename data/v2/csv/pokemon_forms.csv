@@ -412,7 +412,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 411,bastiodon,,411,8,1,0,0,1,568
 412,burmy-plant,plant,412,8,1,0,0,1,569
 413,wormadam-plant,plant,413,8,1,0,0,1,572
-414,mothim-plant,plant,414,8,1,0,0,1,575
+414,mothim,,414,8,1,0,0,1,575
 415,combee,,415,8,1,0,0,1,578
 416,vespiquen,,416,8,1,0,0,1,579
 417,pachirisu,,417,8,1,0,0,1,580
@@ -1292,8 +1292,6 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10266,magearna-original,original,10147,17,1,0,0,2,1141
 10267,pikachu-partner-cap,partner-cap,10148,18,1,0,0,14,49
 10268,marowak-totem,totem,10149,18,1,0,0,3,167
-10269,mothim-sandy,sandy,414,18,0,0,0,2,576
-10270,mothim-trash,trash,414,18,0,0,0,3,577
 10271,scatterbug-polar,polar,664,18,0,0,0,2,860
 10272,scatterbug-tundra,tundra,664,18,0,0,0,3,861
 10273,scatterbug-continental,continental,664,18,0,0,0,4,862

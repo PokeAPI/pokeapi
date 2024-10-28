@@ -20,7 +20,23 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql--) for more info.
 
-## Setup &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
+
+## Table of Contents
+
+1. [Setup](#setup)
+2. [Database Setup](#database-setup)
+3. [Docker and Compose](#docker-and-compose)
+4. [GraphQL](#graphql)
+5. [Kubernetes](#kubernetes)
+6. [Wrappers](#wrappers)
+7. [Donations](#donations)
+8. [Join Us On Slack!](#join-us-on-slack)
+9. [Contributing](#contributing)
+10. [Deprecation](#deprecation)
+
+
+
+## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -43,7 +59,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make serve
     ```
 
-### Database setup
+## Database setup <a id="database-setup"></a>
 
 To build or rebuild the database by applying any CSV file update, run
 
@@ -70,7 +86,7 @@ make migrate
 
 Run `make help` to see all tasks.
 
-## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
+## Docker and Compose <a id="docker-and-compose"></a> &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
 There is also a multi-container setup, managed by [Docker Compose V2](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.
 
@@ -103,7 +119,7 @@ make docker-make-migrations
 make docker-migrate
 ```
 
-## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
+## GraphQL <a id="graphql"></a> &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
@@ -119,7 +135,7 @@ A free public GraphiQL console is browsable at the address https://beta.pokeapi.
 
 A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
-## Kubernetes &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
+## Kubernetes <a id="kubernetes"></a> &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 
 [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
 
@@ -143,7 +159,7 @@ kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/loa
 
 This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `kubectl delete namespace pokeapi` to delete them. It also creates a _Service_ of type `LoadBalancer` which is exposed on port `80` and `443`. Data is persisted on `12Gi` of `ReadWriteOnce` volumes.
 
-## Wrappers
+## Wrappers <a id="wrappers"></a>
 
 | Official wrapper | Repository | Features |
 | --- | --- | --- |
@@ -168,7 +184,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 |Swift |[kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)| |
 |Typescript server-side/client-side|[Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts)|Auto caching |
 
-## Donations
+## Donations <a id="donations"></a>
 
 Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a donation to help keep the service up. We get 1+ billion requests a month!
 
@@ -176,7 +192,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
 
-## Join Us On Slack!
+## Join Us On Slack! <a id="join-us-on-slack"></a>
 
 > **Warning**
 > Currently no maintainer has enough free time to support the community on Slack. Our Slack is in an unmaintained status.
@@ -188,7 +204,7 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 
-## Contributing
+## Contributing <a id="contributing"></a>
 
 This project exists thanks to all the people who [contribute](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md)
 
@@ -224,6 +240,6 @@ To contribute to this repository:
 
 Simple!
 
-## Deprecation
+## Deprecation <a id="deprecation"></a>
 
 As of October 2018, the v1 API has been removed from PokéAPI. For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).

@@ -23,18 +23,16 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ## Table of Contents
 
-1. [Setup](#setup)
-2. [Database Setup](#database-setup)
-3. [Docker and Compose](#docker-and-compose)
-4. [GraphQL](#graphql)
-5. [Kubernetes](#kubernetes)
-6. [Wrappers](#wrappers)
-7. [Donations](#donations)
-8. [Join Us On Slack!](#join-us-on-slack)
-9. [Contributing](#contributing)
-10. [Deprecation](#deprecation)
-
-
+- [Setup   ](#setup)
+- [Database setup](#database-setup)
+- [Docker and Compose   ](#docker-and-compose)
+- [GraphQL   ](#graphql)
+- [Kubernetes   ](#kubernetes)
+- [Wrappers](#wrappers)
+- [Donations](#donations)
+- [Join Us On Slack!](#join-us-on-slack)
+- [Contributing](#contributing)
+- [Deprecation](#deprecation)
 
 ## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
 
@@ -59,7 +57,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make serve
     ```
 
-## Database setup <a id="database-setup"></a>
+## Database setup
 
 To build or rebuild the database by applying any CSV file update, run
 
@@ -159,7 +157,7 @@ kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/loa
 
 This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `kubectl delete namespace pokeapi` to delete them. It also creates a _Service_ of type `LoadBalancer` which is exposed on port `80` and `443`. Data is persisted on `12Gi` of `ReadWriteOnce` volumes.
 
-## Wrappers <a id="wrappers"></a>
+## Wrappers
 
 | Official wrapper | Repository | Features |
 | --- | --- | --- |
@@ -184,7 +182,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 |Swift |[kinkofer/PokemonAPI](https://github.com/kinkofer/PokemonAPI)| |
 |Typescript server-side/client-side|[Gabb-c/Pokenode-ts](https://github.com/Gabb-c/pokenode-ts)|Auto caching |
 
-## Donations <a id="donations"></a>
+## Donations
 
 Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource or for a project, consider sending us a donation to help keep the service up. We get 1+ billion requests a month!
 
@@ -192,7 +190,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
 
-## Join Us On Slack! <a id="join-us-on-slack"></a>
+## Join Us On Slack!
 
 > **Warning**
 > Currently no maintainer has enough free time to support the community on Slack. Our Slack is in an unmaintained status.
@@ -204,7 +202,7 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 
-## Contributing <a id="contributing"></a>
+## Contributing
 
 This project exists thanks to all the people who [contribute](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md)
 
@@ -240,6 +238,6 @@ To contribute to this repository:
 
 Simple!
 
-## Deprecation <a id="deprecation"></a>
+## Deprecation
 
 As of October 2018, the v1 API has been removed from PokéAPI. For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).

@@ -664,7 +664,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 663,talonflame,,663,15,1,0,0,1,858
 664,scatterbug-icy-snow,icy-snow,664,15,1,0,0,1,859
 665,spewpa-icy-snow,icy-snow,665,15,1,0,0,1,879
-666,vivillon-meadow,meadow,666,15,0,0,0,7,905
+666,vivillon-meadow,meadow,666,15,1,0,0,7,905
 667,litleo,,667,15,1,0,0,1,919
 668,pyroar,,668,15,1,0,0,1,920
 669,flabebe-red,red,669,15,1,0,0,1,921
@@ -1109,7 +1109,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10083,kyurem-white,white,10023,14,1,0,0,2,832
 10084,keldeo-resolute,resolute,10024,14,1,0,0,2,835
 10085,arceus-fairy,fairy,493,15,0,0,0,18,660
-10086,vivillon-icy-snow,icy-snow,666,15,1,0,0,1,899
+10086,vivillon-icy-snow,icy-snow,666,15,0,0,0,1,899
 10087,vivillon-polar,polar,666,15,0,0,0,2,900
 10088,vivillon-tundra,tundra,666,15,0,0,0,3,901
 10089,vivillon-continental,continental,666,15,0,0,0,4,902

@@ -409,11 +409,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 869,1,ミルキィバニラ,
 869,3,밀키바닐라,
 869,4,奶香香草,
-869,5,Lait Vanille,Charmilly Lait Vanille
+869,5,Lait Vanille Fraise en Sucre,Charmilly Lait Vanille Fraise en Sucre
 869,6,Vanille-Creme,Pokusan (Vanille-Creme)
 869,7,Crema de Vainilla,
 869,8,Lattevaniglia,
-869,9,Vanilla Cream,Vanilla Cream Alcremie
+869,9,Vanilla Cream Strawberry Sweet,Vanilla Cream Strawberry Sweet Alcremie
 869,11,ミルキィバニラ,
 869,12,奶香香草,
 875,1,アイスフェイス,
@@ -3135,81 +3135,81 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10346,1,ミルキィルビー,
 10346,3,밀키루비,
 10346,4,奶香紅鑽,
-10346,5,Lait Ruby,Charmilly Lait Ruby
+10346,5,Lait Ruby Fraise en Sucre,Charmilly Lait Ruby Fraise en Sucre
 10346,6,Ruby-Creme,Pokusan (Ruby-Creme)
 10346,7,Crema Rosa,
 10346,8,Latterosa,
-10346,9,Ruby Cream,Ruby Cream Alcremie
+10346,9,Ruby Cream Strawberry Sweet,Ruby Cream Strawberry Sweet Alcremie
 10346,11,ミルキィルビー,
 10346,12,奶香红钻,
 10347,1,ミルキィまっちゃ,
 10347,3,밀키말차,
 10347,4,奶香抹茶,
-10347,5,Lait Matcha,Charmilly Lait Matcha
+10347,5,Lait Matcha Fraise en Sucre,Charmilly Lait Matcha Fraise en Sucre
 10347,6,Matcha-Creme,Pokusan (Matcha-Creme)
 10347,7,Crema de Té,
 10347,8,Lattematcha,
-10347,9,Matcha Cream,Matcha Cream Alcremie
+10347,9,Matcha Cream Strawberry Sweet,Matcha Cream Strawberry Sweet Alcremie
 10347,11,ミルキィまっちゃ,
 10347,12,奶香抹茶,
 10348,1,ミルキィミント,
 10348,3,밀키민트,
 10348,4,奶香薄荷,
-10348,5,Lait Menthe,Charmilly Lait Menthe
+10348,5,Lait Menthe Fraise en Sucre,Charmilly Lait Menthe Fraise en Sucre
 10348,6,Minz-Creme,Pokusan (Minz-Creme)
 10348,7,Crema de Menta,
 10348,8,Lattementa,
-10348,9,Mint Cream,Mint Cream Alcremie
+10348,9,Mint Cream Strawberry Sweet,Mint Cream Strawberry Sweet Alcremie
 10348,11,ミルキィミント,
 10348,12,奶香薄荷,
 10349,1,ミルキィレモン,
 10349,3,밀키레몬,
 10349,4,奶香檸檬,
-10349,5,Lait Citron,Charmilly Lait Citron
+10349,5,Lait Citron Fraise en Sucre,Charmilly Lait Citron Fraise en Sucre
 10349,6,Zitronen-Creme,Pokusan (Zitronen-Creme)
 10349,7,Crema de Limón,
 10349,8,Lattelimone,
-10349,9,Lemon Cream,Lemon Cream Alcremie
+10349,9,Lemon Cream Strawberry Sweet,Lemon Cream Strawberry Sweet Alcremie
 10349,11,ミルキィレモン,
 10349,12,奶香柠檬,
 10350,1,ミルキィソルト,
 10350,3,밀키솔트,
 10350,4,奶香雪鹽,
-10350,5,Lait Salé,Charmilly Lait Salé
+10350,5,Lait Salé Fraise en Sucre,Charmilly Lait Salé Fraise en Sucre
 10350,6,Salz-Creme,Pokusan (Salz-Creme)
 10350,7,Crema Salada,
 10350,8,Lattesale,
-10350,9,Salted Cream,Salted Cream Alcremie
+10350,9,Salted Cream Strawberry Sweet,Salted Cream Strawberry Sweet Alcremie
 10350,11,ミルキィソルト,
 10350,12,奶香雪盐,
 10351,1,ルビーミックス,
 10351,3,루비믹스,
 10351,4,紅鑽綜合,
-10351,5,Mélange Ruby,Charmilly Mélange Ruby
+10351,5,Mélange Ruby Fraise en Sucre,Charmilly Mélange Ruby Fraise en Sucre
 10351,6,Ruby-Mix,Pokusan (Ruby-Mix)
 10351,7,Mezcla Rosa,
 10351,8,Rosamix,
-10351,9,Ruby Swirl,Ruby Swirl Alcremie
+10351,9,Ruby Swirl Strawberry Sweet,Ruby Swirl Strawberry Sweet Alcremie
 10351,11,ルビーミックス,
 10351,12,红钻综合,
 10352,1,キャラメルミックス,
 10352,3,캐러멜믹스,
 10352,4,焦糖綜合,
-10352,5,Mélange Caramel,Charmilly Mélange Caramel
+10352,5,Mélange Caramel Fraise en Sucre,Charmilly Mélange Caramel Fraise en Sucre
 10352,6,Karamell-Mix,Pokusan (Karamell-Mix)
 10352,7,Mezcla Caramelo,
 10352,8,Caramelmix,
-10352,9,Caramel Swirl,Caramel Swirl Alcremie
+10352,9,Caramel Swirl Strawberry Sweet,Caramel Swirl Strawberry Sweet Alcremie
 10352,11,キャラメルミックス,
 10352,12,焦糖综合,
 10353,1,トリプルミックス,
 10353,3,트리플믹스,
 10353,4,三色綜合,
-10353,5,Mélange Tricolore,Charmilly Mélange Tricolore
+10353,5,Mélange Tricolore Fraise en Sucre,Charmilly Mélange Tricolore Fraise en Sucre
 10353,6,Trio-Mix,Pokusan (Trio-Mix)
 10353,7,Tres Sabores,
 10353,8,Triplomix,
-10353,9,Rainbow Swirl,Rainbow Swirl Alcremie
+10353,9,Rainbow Swirl Strawberry Sweet,Rainbow Swirl Strawberry Sweet Alcremie
 10353,11,トリプルミックス,
 10353,12,三色综合,
 10354,1,ナイスフェイス,
@@ -3680,3 +3680,111 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10448,9,Masterpiece Form,Masterpiece Form Sinistcha
 10448,11,ケッサクのすがた,
 10448,12,杰作的样子,
+10449,5,Lait Vanille Baie en Sucre,Charmilly Lait Vanille Baie en Sucre
+10449,9,Vanilla Cream Berry Sweet,Vanilla Cream Berry Sweet Alcremie
+10450,5,Lait Ruby Baie en Sucre,Charmilly Lait Ruby Baie en Sucre
+10450,9,Ruby Cream Berry Sweet,Ruby Cream Berry Sweet Alcremie
+10451,5,Lait Matcha Baie en Sucre,Charmilly Lait Matcha Baie en Sucre
+10451,9,Matcha Cream Berry Sweet,Matcha Cream Berry Sweet Alcremie
+10452,5,Lait Menthe Baie en Sucre,Charmilly Lait Menthe Baie en Sucre
+10452,9,Mint Cream Berry Sweet,Mint Cream Berry Sweet Alcremie
+10453,5,Lait Citron Baie en Sucre,Charmilly Lait Citron Baie en Sucre
+10453,9,Lemon Cream Berry Sweet,Lemon Cream Berry Sweet Alcremie
+10454,5,Lait Salé Baie en Sucre,Charmilly Lait Salé Baie en Sucre
+10454,9,Salted Cream Berry Sweet,Salted Cream Berry Sweet Alcremie
+10455,5,Mélange Ruby Baie en Sucre,Charmilly Mélange Ruby Baie en Sucre
+10455,9,Ruby Swirl Berry Sweet,Ruby Swirl Berry Sweet Alcremie
+10456,5,Mélange Caramel Baie en Sucre,Charmilly Mélange Caramel Baie en Sucre
+10456,9,Caramel Swirl Berry Sweet,Caramel Swirl Berry Sweet Alcremie
+10457,5,Mélange Tricolore Baie en Sucre,Charmilly Mélange Tricolore Baie en Sucre
+10457,9,Rainbow Swirl Berry Sweet,Rainbow Swirl Berry Sweet Alcremie
+10458,5,Lait Vanille Cœur en Sucre,Charmilly Lait Vanille Cœur en Sucre
+10458,9,Vanilla Cream Love Sweet,Vanilla Cream Love Sweet Alcremie
+10459,5,Lait Ruby Cœur en Sucre,Charmilly Lait Ruby Cœur en Sucre
+10459,9,Ruby Cream Love Sweet,Ruby Cream Love Sweet Alcremie
+10460,5,Lait Matcha Cœur en Sucre,Charmilly Lait Matcha Cœur en Sucre
+10460,9,Matcha Cream Love Sweet,Matcha Cream Love Sweet Alcremie
+10461,5,Lait Menthe Cœur en Sucre,Charmilly Lait Menthe Cœur en Sucre
+10461,9,Mint Cream Love Sweet,Mint Cream Love Sweet Alcremie
+10462,5,Lait Citron Cœur en Sucre,Charmilly Lait Citron Cœur en Sucre
+10462,9,Lemon Cream Love Sweet,Lemon Cream Love Sweet Alcremie
+10463,5,Lait Salé Cœur en Sucre,Charmilly Lait Salé Cœur en Sucre
+10463,9,Salted Cream Love Sweet,Salted Cream Love Sweet Alcremie
+10464,5,Mélange Ruby Cœur en Sucre,Charmilly Mélange Ruby Cœur en Sucre
+10464,9,Ruby Swirl Love Sweet,Ruby Swirl Love Sweet Alcremie
+10465,5,Mélange Caramel Cœur en Sucre,Charmilly Mélange Caramel Cœur en Sucre
+10465,9,Caramel Swirl Love Sweet,Caramel Swirl Love Sweet Alcremie
+10466,5,Mélange Tricolore Cœur en Sucre,Charmilly Mélange Tricolore Cœur en Sucre
+10466,9,Rainbow Swirl Love Sweet,Rainbow Swirl Love Sweet Alcremie
+10467,5,Lait Vanille Étoile en Sucre,Charmilly Lait Vanille Étoile en Sucre
+10467,9,Vanilla Cream Star Sweet,Vanilla Cream Star Sweet Alcremie
+10468,5,Lait Ruby Étoile en Sucre,Charmilly Lait Ruby Étoile en Sucre
+10468,9,Ruby Cream Star Sweet,Ruby Cream Star Sweet Alcremie
+10469,5,Lait Matcha Étoile en Sucre,Charmilly Lait Matcha Étoile en Sucre
+10469,9,Matcha Cream Star Sweet,Matcha Cream Star Sweet Alcremie
+10470,5,Lait Menthe Étoile en Sucre,Charmilly Lait Menthe Étoile en Sucre
+10470,9,Mint Cream Star Sweet,Mint Cream Star Sweet Alcremie
+10471,5,Lait Citron Étoile en Sucre,Charmilly Lait Citron Étoile en Sucre
+10471,9,Lemon Cream Star Sweet,Lemon Cream Star Sweet Alcremie
+10472,5,Lait Salé Étoile en Sucre,Charmilly Lait Salé Étoile en Sucre
+10472,9,Salted Cream Star Sweet,Salted Cream Star Sweet Alcremie
+10473,5,Mélange Ruby Étoile en Sucre,Charmilly Mélange Ruby Étoile en Sucre
+10473,9,Ruby Swirl Star Sweet,Ruby Swirl Star Sweet Alcremie
+10474,5,Mélange Caramel Étoile en Sucre,Charmilly Mélange Caramel Étoile en Sucre
+10474,9,Caramel Swirl Star Sweet,Caramel Swirl Star Sweet Alcremie
+10475,5,Mélange Tricolore Étoile en Sucre,Charmilly Mélange Tricolore Étoile en Sucre
+10475,9,Rainbow Swirl Star Sweet,Rainbow Swirl Star Sweet Alcremie
+10476,5,Lait Vanille Trèfle en Sucre,Charmilly Lait Vanille Trèfle en Sucre
+10476,9,Vanilla Cream Clover Sweet,Vanilla Cream Clover Sweet Alcremie
+10477,5,Lait Ruby Trèfle en Sucre,Charmilly Lait Ruby Trèfle en Sucre
+10477,9,Ruby Cream Clover Sweet,Ruby Cream Clover Sweet Alcremie
+10478,5,Lait Matcha Trèfle en Sucre,Charmilly Lait Matcha Trèfle en Sucre
+10478,9,Matcha Cream Clover Sweet,Matcha Cream Clover Sweet Alcremie
+10479,5,Lait Menthe Trèfle en Sucre,Charmilly Lait Menthe Trèfle en Sucre
+10479,9,Mint Cream Clover Sweet,Mint Cream Clover Sweet Alcremie
+10480,5,Lait Citron Trèfle en Sucre,Charmilly Lait Citron Trèfle en Sucre
+10480,9,Lemon Cream Clover Sweet,Lemon Cream Clover Sweet Alcremie
+10481,5,Lait Salé Trèfle en Sucre,Charmilly Lait Salé Trèfle en Sucre
+10481,9,Salted Cream Clover Sweet,Salted Cream Clover Sweet Alcremie
+10482,5,Mélange Ruby Trèfle en Sucre,Charmilly Mélange Ruby Trèfle en Sucre
+10482,9,Ruby Swirl Clover Sweet,Ruby Swirl Clover Sweet Alcremie
+10483,5,Mélange Caramel Trèfle en Sucre,Charmilly Mélange Caramel Trèfle en Sucre
+10483,9,Caramel Swirl Clover Sweet,Caramel Swirl Clover Sweet Alcremie
+10484,5,Mélange Tricolore Trèfle en Sucre,Charmilly Mélange Tricolore Trèfle en Sucre
+10484,9,Rainbow Swirl Clover Sweet,Rainbow Swirl Clover Sweet Alcremie
+10485,5,Lait Vanille Fleur en Sucre,Charmilly Lait Vanille Fleur en Sucre
+10485,9,Vanilla Cream Flower Sweet,Vanilla Cream Flower Sweet Alcremie
+10486,5,Lait Ruby Fleur en Sucre,Charmilly Lait Ruby Fleur en Sucre
+10486,9,Ruby Cream Flower Sweet,Ruby Cream Flower Sweet Alcremie
+10487,5,Lait Matcha Fleur en Sucre,Charmilly Lait Matcha Fleur en Sucre
+10487,9,Matcha Cream Flower Sweet,Matcha Cream Flower Sweet Alcremie
+10488,5,Lait Menthe Fleur en Sucre,Charmilly Lait Menthe Fleur en Sucre
+10488,9,Mint Cream Flower Sweet,Mint Cream Flower Sweet Alcremie
+10489,5,Lait Citron Fleur en Sucre,Charmilly Lait Citron Fleur en Sucre
+10489,9,Lemon Cream Flower Sweet,Lemon Cream Flower Sweet Alcremie
+10490,5,Lait Salé Fleur en Sucre,Charmilly Lait Salé Fleur en Sucre
+10490,9,Salted Cream Flower Sweet,Salted Cream Flower Sweet Alcremie
+10491,5,Mélange Ruby Fleur en Sucre,Charmilly Mélange Ruby Fleur en Sucre
+10491,9,Ruby Swirl Flower Sweet,Ruby Swirl Flower Sweet Alcremie
+10492,5,Mélange Caramel Fleur en Sucre,Charmilly Mélange Caramel Fleur en Sucre
+10492,9,Caramel Swirl Flower Sweet,Caramel Swirl Flower Sweet Alcremie
+10493,5,Mélange Tricolore Fleur en Sucre,Charmilly Mélange Tricolore Fleur en Sucre
+10493,9,Rainbow Swirl Flower Sweet,Rainbow Swirl Flower Sweet Alcremie
+10494,5,Lait Vanille Ruban en Sucre,Charmilly Lait Vanille Ruban en Sucre
+10494,9,Vanilla Cream Ribbon Sweet,Vanilla Cream Ribbon Sweet Alcremie
+10495,5,Lait Ruby Ruban en Sucre,Charmilly Lait Ruby Ruban en Sucre
+10495,9,Ruby Cream Ribbon Sweet,Ruby Cream Ribbon Sweet Alcremie
+10496,5,Lait Matcha Ruban en Sucre,Charmilly Lait Matcha Ruban en Sucre
+10496,9,Matcha Cream Ribbon Sweet,Matcha Cream Ribbon Sweet Alcremie
+10497,5,Lait Menthe Ruban en Sucre,Charmilly Lait Menthe Ruban en Sucre
+10497,9,Mint Cream Ribbon Sweet,Mint Cream Ribbon Sweet Alcremie
+10498,5,Lait Citron Ruban en Sucre,Charmilly Lait Citron Ruban en Sucre
+10498,9,Lemon Cream Ribbon Sweet,Lemon Cream Ribbon Sweet Alcremie
+10499,5,Lait Salé Ruban en Sucre,Charmilly Lait Salé Ruban en Sucre
+10499,9,Salted Cream Ribbon Sweet,Salted Cream Ribbon Sweet Alcremie
+10500,5,Mélange Ruby Ruban en Sucre,Charmilly Mélange Ruby Ruban en Sucre
+10500,9,Ruby Swirl Ribbon Sweet,Ruby Swirl Ribbon Sweet Alcremie
+10501,5,Mélange Caramel Ruban en Sucre,Charmilly Mélange Caramel Ruban en Sucre
+10501,9,Caramel Swirl Ribbon Sweet,Caramel Swirl Ribbon Sweet Alcremie
+10502,5,Mélange Tricolore Ruban en Sucre,Charmilly Mélange Tricolore Ruban en Sucre
+10502,9,Rainbow Swirl Ribbon Sweet,Rainbow Swirl Ribbon Sweet Alcremie

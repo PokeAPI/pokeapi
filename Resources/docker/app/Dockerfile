@@ -10,8 +10,8 @@ ADD requirements.txt /code/
 RUN pip install --no-cache-dir -r requirements.txt
 ADD . /code/
 
-RUN addgroup -g 1000 -S pokeapi && \
-    adduser -u 1000 -S pokeapi -G pokeapi
+RUN groupadd -g 1000 pokeapi && \
+    useradd -u 1000 -G pokeapi pokeapi
 
 USER pokeapi
 CMD gunicorn config.wsgi:application -c gunicorn.conf.py

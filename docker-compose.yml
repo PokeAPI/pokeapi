@@ -16,9 +16,9 @@ services:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
       test: pg_isready
-      interval: 1s
+      interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 5
     restart: always
 
   app:

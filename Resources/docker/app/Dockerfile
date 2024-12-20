@@ -1,4 +1,4 @@
-FROM python:3.10.16-alpine3.21
+FROM python:3.10.14-alpine
 
 ENV PYTHONUNBUFFERED 1
 ENV DJANGO_SETTINGS_MODULE 'config.docker-compose'

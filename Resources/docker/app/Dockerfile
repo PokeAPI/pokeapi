@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 ADD . /code/
 
 RUN groupadd -g 1000 pokeapi && \
-    useradd -u 1000 -G pokeapi pokeapi
+    useradd -u 1000 -g pokeapi pokeapi
 
 USER pokeapi
 CMD gunicorn config.wsgi:application -c gunicorn.conf.py

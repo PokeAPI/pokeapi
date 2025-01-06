@@ -19,7 +19,7 @@ ENV DJANGO_SETTINGS_MODULE='config.docker-compose'
 RUN mkdir /code
 WORKDIR /code
 
-COPY --from=builder /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 ADD . /code/

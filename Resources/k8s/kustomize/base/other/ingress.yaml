@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   name: pokeapi-ingress
   annotations:
-    kubernetes.io/ingress.class: "haproxy"
     ingress.kubernetes.io/config-backend: |
         compression algo gzip
         compression type application/json
@@ -13,6 +12,7 @@ spec:
       name: default-backend
       port:
         number: 8080
+  ingressClassName: haproxy
   rules:
     - http:
         paths:
@@ -29,7 +29,6 @@ kind: Ingress
 metadata:
   name: graphql-ingress
   annotations:
-    kubernetes.io/ingress.class: "haproxy"
     ingress.kubernetes.io/config-backend: |
       http-request replace-path /graphql(.*) \1
 spec:
@@ -38,6 +37,7 @@ spec:
       name: default-backend
       port:
         number: 8080
+  ingressClassName: haproxy
   rules:
     - http:
         paths:

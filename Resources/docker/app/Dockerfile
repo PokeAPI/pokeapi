@@ -1,4 +1,4 @@
-FROM python:3.10.16-alpine3.21 AS builder
+FROM python:3.11.11-alpine3.21 AS builder
 
 ENV PYTHONUNBUFFERED=1
 
@@ -11,7 +11,7 @@ RUN apk add --no-cache --virtual .build-deps gcc g++ musl-dev \
     postgresql-dev binutils rust cargo && \
     python3 -m pip install -r requirements.txt --no-cache-dir
 
-FROM python:3.10.16-alpine3.21
+FROM python:3.11.11-alpine3.21
 
 ENV PYTHONUNBUFFERED=1
 ENV DJANGO_SETTINGS_MODULE='config.docker-compose'

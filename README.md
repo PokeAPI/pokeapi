@@ -23,16 +23,15 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ## Table of Contents
 
-- [Setup   ](#setup)
+- [Setup](#setup)
 - [Database setup](#database-setup)
-- [Docker and Compose   ](#docker-and-compose)
-- [GraphQL   ](#graphql)
-- [Kubernetes   ](#kubernetes)
+- [Docker and Compose](#docker-and-compose)
+- [GraphQL](#graphql)
+- [Kubernetes](#kubernetes)
 - [Wrappers](#wrappers)
 - [Donations](#donations)
 - [Join Us On Slack!](#join-us-on-slack)
 - [Contributing](#contributing)
-- [Deprecation](#deprecation)
 
 ## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/download/releases/3.10/)
 
@@ -237,7 +236,3 @@ To contribute to this repository:
 - We'll accept your changes after review.
 
 Simple!
-
-## Deprecation
-
-As of October 2018, the v1 API has been removed from PokéAPI. For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).

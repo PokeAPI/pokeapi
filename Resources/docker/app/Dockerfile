@@ -3,7 +3,7 @@ FROM python:3.10.16-bookworm AS builder
 ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 
-RUN apt-get update && apt-get install rustc cargo
+RUN apt-get update && apt-get install -y rustc cargo
 ADD requirements.txt /code/
 RUN pip install --no-cache-dir -r requirements.txt
 

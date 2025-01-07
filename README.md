@@ -34,7 +34,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 - [Contributing](#contributing)
 - [Deprecation](#deprecation)
 
-## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
+## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/download/releases/3.10/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 

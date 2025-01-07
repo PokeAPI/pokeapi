@@ -17,7 +17,7 @@
 - [`master`](https://github.com/PokeAPI/pokeapi/blob/master/Resources/docker/app/Dockerfile)
 - [`staging`](https://github.com/PokeAPI/pokeapi/blob/staging/Resources/docker/app/Dockerfile)
 
-> `pokeapi` uses `python:3.10-alpine` as base image.
+> `pokeapi` uses `python:3.10-bookworm` as base image.
 
 ## What is PokeAPI?
 

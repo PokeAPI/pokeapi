@@ -24,6 +24,21 @@ spec:
               sleep 2;
               done;
       containers:
+        - name: data-download
+          image: alpine/git:2.47.1
+          command: ['/bin/sh']
+          args:
+            - -c
+            - >-
+              git clone --recurse-submodules https://github.com/PokeAPI/pokeapi.git &&
+              mv /git/pokeapi/data/v2/* /tmp
+          volumeMounts:
+            - mountPath: /tmp/cries
+              name: cries-data-share
+            - mountPath: /tmp/csv
+              name: csv-data-share
+            - mountPath: /tmp/sprites
+              name: sprites-data-share
         - name: pokeapi
           image: pokeapi/pokeapi:master
           imagePullPolicy: IfNotPresent
@@ -51,6 +66,13 @@ spec:
           envFrom:
             - configMapRef:
                 name: pokeapi-configmap
+          volumeMounts:
+            - mountPath: /code/data/v2/cries
+              name: cries-data-share
+            - mountPath: /code/data/v2/csv
+              name: csv-data-share
+            - mountPath: /code/data/v2/sprites
+              name: sprites-data-share
           resources: {}
           readinessProbe:
             periodSeconds: 5

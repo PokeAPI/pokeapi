@@ -24,13 +24,12 @@ spec:
               sleep 2;
               done;
         - name: data-download
-          image: alpine/git:2.47.1
-          command: ['/bin/sh']
+          image: alpine:3.21.2
+          command: ['sh', '-c']
           args:
-            - -c
-            - >-
-              git clone --recurse-submodules https://github.com/PokeAPI/pokeapi.git &&
-              mv /git/pokeapi/data/v2/* /tmp
+            - apk add --update git && git clone --recurse-submodules https://github.com/PokeAPI/pokeapi.git &&
+              mv /tmp/pokeapi/data/v2/* /tmp
+          workingDir: /tmp
           volumeMounts:
             - mountPath: /tmp/cries
               name: cries-data-share

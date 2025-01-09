@@ -23,7 +23,6 @@ spec:
               echo waiting for database;
               sleep 2;
               done;
-      containers:
         - name: data-download
           image: alpine/git:2.47.1
           command: ['/bin/sh']
@@ -39,6 +38,7 @@ spec:
               name: csv-data-share
             - mountPath: /tmp/sprites
               name: sprites-data-share
+      containers:
         - name: pokeapi
           image: pokeapi/pokeapi:master
           imagePullPolicy: IfNotPresent

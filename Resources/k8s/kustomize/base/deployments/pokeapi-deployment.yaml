@@ -86,3 +86,10 @@ spec:
             httpGet:
               path: /api/v2/
               port: 8080
+      volumes:
+        - name: cries-data-share
+          emptyDir: {}
+        - name: csv-data-share
+          emptyDir: {}
+        - name: sprites-data-share
+          emptyDir: {}

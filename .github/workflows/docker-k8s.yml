@@ -70,11 +70,6 @@ jobs:
         with:
           cluster_name: pokeapi
           version: v0.21.0
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        with:
-          detached: true
-          limit-access-to-actor: true
       - name: Create deployment configuration
         run: |
           cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env

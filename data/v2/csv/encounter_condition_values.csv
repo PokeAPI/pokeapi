@@ -76,7 +76,7 @@ id,encounter_condition_id,identifier,is_default
 75,9,story-progress-juniper-cave-of-being,0
 76,11,item-lunar-wing,0
 77,9,story-progress-quake-badge,0
-78,11,item-light-stone
-79,11,item-dark-stone
-80,10,other-captured-reshiram-or-zekrom
-81,9,defeated-ghetsis
+78,11,item-light-stone,0
+79,11,item-dark-stone,0
+80,10,other-captured-reshiram-or-zekrom,0
+81,9,defeated-ghetsis,0

@@ -70,3 +70,13 @@ id,encounter_condition_id,identifier,is_default
 69,10,other-talked-to-32-people-underground,0
 70,9,story-progress-returned-machine-part,0
 71,10,other-event-arceus-in-party,0
+72,14,special-encounter-couldnt-capture-before,0
+73,11,item-ice-key,0
+74,11,item-iron-key,0
+75,9,story-progress-juniper-cave-of-being,0
+76,11,item-lunar-wing,0
+77,9,story-progress-quake-badge,0
+78,11,item-light-stone
+79,11,item-dark-stone
+80,10,other-captured-reshiram-or-zekrom
+81,9,defeated-ghetsis

@@ -161,3 +161,13 @@ encounter_condition_value_id,local_language_id,name
 70,5,Après avoir rapporté la pièce de machine à la centrale
 71,9,Have an Event Arceus in the party
 71,5,En ayant un Arceus événementiel dans l’équipe
+72,9,This special Pokémon couldn't be captured in previous encounters (either fainted or ran from battle)
+73,9,Have Ice Key in bag
+74,9,Have Iron Key in bag
+75,9,Spoke to Professor Juniper in the Cave of Being
+76,9,Have Lunar Wing in bag
+77,9,Obtained Quake Badge
+78,9,Have Light Stone in bag
+79,9,Have Dark Stone in bag
+80,9,Captured Reshiram or Zekrom previously
+81,9,Defeated Ghetsis

@@ -983,7 +983,7 @@ location_area_id,local_language_id,name
 600,5,Route Victoire (zone inconnue 54)
 601,9,Victory Road (unknown area 55)
 601,5,Route Victoire (zone inconnue 55)
-602,9,Victory Road (unknown area 56)
+602,9,Victory Road (4f Middle Room)
 602,5,Route Victoire (zone inconnue 56)
 603,9,Victory Road (unknown area 57)
 603,5,Route Victoire (zone inconnue 57)
@@ -1463,3 +1463,5 @@ location_area_id,local_language_id,name
 841,5,Repaire Rocket d'Acajou
 842,9,Sinjoy Ruins
 842,5,Ruines Sinjoh
+1167,9,Ligthouse Basement
+1169,9,Rumination Field

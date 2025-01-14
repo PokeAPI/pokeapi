@@ -171,3 +171,27 @@ encounter_condition_value_id,local_language_id,name
 79,9,Have Dark Stone in bag
 80,9,Captured Reshiram or Zekrom previously
 81,9,Defeated Ghetsis
+82,9,Has been unsuccesfully battled 11 times before
+83,9,The current minute is between 00 and 19
+84,9,The current minute is between 20 and 39
+85,9,The current minute is between 40 and 59
+86,9,The current time is between 04:00 and 19:59
+87,9,The current time is between 20:00 and 21:59
+88,9,The current time is between 22:00 and 03:59
+89,9,Have Tidal Bell in bag
+90,9,Have Clear Bell in bag
+91,9,Defeated or captured Groudon or Kyogre
+92,9,"Have Uxie, Mesprit, and Azelf in the party"
+93,9,"After capturing the three regis in the game, have a nicknamed Regice holding a cold-based item, plus Regirock and Registeel in the party"
+94,9,Have Dialga or Palkia in the party
+95,9,Have Castform in party
+96,9,Have a Level 100 Pokémon in party
+97,9,Have Tornadus and Thundurus in party
+98,9,Have Reshiram and Zekrom in party
+99,9,Captured all Ultra Beasts
+100,9,Finished Looker's Sidequest
+101,9,After finishing Olivia's trial
+102,9,Have Raikou and Entei in party
+103,9,Have Groudon and Kyogre in party
+104,9,Have Dialga and Palkia in party
+105,9,Scan a specific QR Code

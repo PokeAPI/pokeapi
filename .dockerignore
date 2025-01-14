@@ -25,3 +25,6 @@ docker-compose*
 .env
 *pycache*
 target
+data/v2/cries
+data/v2/csv
+data/v2/sprites

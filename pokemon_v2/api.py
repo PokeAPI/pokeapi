@@ -39,7 +39,8 @@ class NameOrIdRetrieval:
     """
 
     idPattern = re.compile(r"^-?[0-9]+$")
-    namePattern = re.compile(r"^[0-9A-Za-z\-\+]+$")
+    # Allow alphanumeric, hyphen, plus, and space (Space added for test cases using name for lookup, ex: 'base pkm')
+    namePattern = re.compile(r"^[0-9A-Za-z\-\+ ]+$")
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -63,7 +64,7 @@ class NameOrIdRetrieval:
             resp = get_object_or_404(queryset, pk=lookup)
 
         elif self.namePattern.match(lookup):
-            resp = get_object_or_404(queryset, name=lookup)
+            resp = get_object_or_404(queryset, name__iexact=lookup)
 
         else:
             raise Http404

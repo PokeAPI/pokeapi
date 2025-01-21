@@ -5690,3 +5690,110 @@ class APITests(APIData, APITestCase):
         response = self.client.get("{}/pokemon/{}/".format(API_V2, 2147483648))
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    # Test if API endpoints are case-insensitive
+    def test_case_insensitive_api(self):
+        # Set up pokemon data
+        pokemon_species = self.setup_pokemon_species_data(
+            name="pkmn spcs for base pkmn"
+        )
+        pokemon = self.setup_pokemon_data(
+            pokemon_species=pokemon_species, name="base pkm"
+        )
+        pokemon_form = self.setup_pokemon_form_data(
+            pokemon=pokemon, name="pkm form for base pkmn"
+        )
+        generation = self.setup_generation_data(name="base gen")
+        pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
+        pokemon_past_ability = self.setup_pokemon_past_ability_data(
+            pokemon=pokemon, generation=generation
+        )
+        pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
+        pokemon_past_type = self.setup_pokemon_past_type_data(
+            pokemon=pokemon, generation=generation
+        )
+        pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
+        pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
+        pokemon_cries = self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+        pokemon_game_index = self.setup_pokemon_game_index_data(
+            pokemon=pokemon, game_index=10
+        )
+        # To test issue #85, we will create one move that has multiple
+        # learn levels in different version groups.  Later, we'll
+        # assert that we only got one move record back.
+        pokemon_move = self.setup_move_data(name="mv for pkmn")
+        pokemon_moves = []
+        for move in range(0, 4):
+            version_group = self.setup_version_group_data(
+                name="ver grp " + str(move) + " for pkmn"
+            )
+            new_move = self.setup_pokemon_move_data(
+                pokemon=pokemon,
+                move=pokemon_move,
+                version_group=version_group,
+                level=move,
+            )
+            pokemon_moves.append(new_move)
+
+        encounter_method = self.setup_encounter_method_data(
+            name="encntr mthd for lctn area"
+        )
+        location_area1 = self.setup_location_area_data(name="lctn1 area for base pkmn")
+        encounter_slot1 = self.setup_encounter_slot_data(
+            encounter_method, slot=1, rarity=30
+        )
+        self.setup_encounter_data(
+            location_area=location_area1,
+            pokemon=pokemon,
+            encounter_slot=encounter_slot1,
+            min_level=30,
+            max_level=35,
+        )
+        location_area2 = self.setup_location_area_data(name="lctn2 area for base pkmn")
+        encounter_slot2 = self.setup_encounter_slot_data(
+            encounter_method, slot=2, rarity=40
+        )
+        self.setup_encounter_data(
+            location_area=location_area2,
+            pokemon=pokemon,
+            encounter_slot=encounter_slot2,
+            min_level=32,
+            max_level=36,
+        )
+
+        lowercase_name = pokemon.name.lower()
+        uppercase_name = pokemon.name.upper()
+
+        # Test lowercase
+        lowercase_response = self.client.get(
+            "{}/pokemon/{}/".format(API_V2, lowercase_name), HTTP_HOST="testserver"
+        )
+        self.assertEqual(lowercase_response.status_code, status.HTTP_200_OK)
+
+        # Test uppercase
+        uppercase_response = self.client.get(
+            "{}/pokemon/{}/".format(API_V2, uppercase_name), HTTP_HOST="testserver"
+        )
+        self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+        # Same test with /language endpoint
+        language = self.setup_language_data(name="base-lang")
+        language_name = self.setup_language_name_data(language, name="base-lang-name")
+
+        lowercase_name = language.name.lower()
+        uppercase_name = language.name.upper()
+
+        lowercase_response = self.client.get(
+            "{}/language/{}/".format(API_V2, lowercase_name), HTTP_HOST="testserver"
+        )
+        self.assertEqual(lowercase_response.status_code, status.HTTP_200_OK)
+
+        uppercase_response = self.client.get(
+            "{}/language/{}/".format(API_V2, uppercase_name), HTTP_HOST="testserver"
+        )
+        self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
+
+        self.assertEqual(lowercase_response.data, uppercase_response.data)

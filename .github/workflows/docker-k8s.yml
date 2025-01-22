@@ -1,4 +1,4 @@
-name: Test Docker and k8s
+name: Test Docker, Compose and k8s
 
 on:
   pull_request:
@@ -99,3 +99,16 @@ jobs:
           test "$last_command" -eq 1
       - name: Get GQL output
         run: kubectl logs jobs/load-graphql
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build dev environment
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          sleep 30
+      - name: Assert containers running
+        run: |
+          last_command=$(docker ps | grep 'pokeapi-' | wc -l)
+          test "$last_command" -eq 5

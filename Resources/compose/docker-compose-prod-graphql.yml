@@ -16,6 +16,7 @@ services:
   web:
     depends_on:
       graphiql:
+        condition: service_started
       graphql-engine:
         condition: service_healthy
     logging:

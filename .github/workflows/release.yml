@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          make docker-migrate
+          make docker-build-db
+      - name: Dump DB
+        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash pokeapi | gzip > pokeapi.dump.zip"
+      - name: Copy dump
+        run: |
+          docker compose cp db:/tmp/pokeapi.dump.zip ./
+          ls -larth
+      - name: Release
+        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          draft: true
+          fail_on_unmatched_files: true
+          files: pokeapi.dump.zip
+          generate_release_notes: true

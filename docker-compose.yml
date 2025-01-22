@@ -55,7 +55,8 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - "db"
+      db:
+        condition: service_healthy
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://${POSTGRES_USER:-ash}:${POSTGRES_PASSWORD:-pokemon}@db:5432/${POSTGRES_DB:-pokeapi}

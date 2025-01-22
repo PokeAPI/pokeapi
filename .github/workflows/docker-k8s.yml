@@ -104,8 +104,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Build dev environment
         run: |
           docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d

@@ -14,8 +14,10 @@ services:
     restart: "no"
 
   web:
-    volumes:
-      - graphiql:/public-console:ro
+    depends_on:
+      graphiql:
+      graphql-engine:
+        condition: service_healthy
     logging:
       driver: gcplogs
 
@@ -30,10 +32,9 @@ services:
       HASURA_GRAPHQL_EVENTS_HTTP_POOL_SIZE: 10
 
   graphiql:
-    image: pokeapi/graphiql:1.0.1
-    command: sh -c 'cp -a /app/static/. /transfer/ && tail -f /etc/passwd'
-    volumes:
-      - graphiql:/transfer
+    image: pokeapi/graphiql:2.0.0
+    expose:
+      - 80
     depends_on:
       - graphql-engine
     restart: always

@@ -27,7 +27,7 @@ jobs:
         run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash pokeapi | gzip > pokeapi.dump.zip && ls -larth"
       - name: Copy dump
         run: |
-          docker compose cp db:/tmp pokeapi.dump.zip ./
+          docker compose cp db:/tmp/pokeapi.dump.zip ./
           ls -larth
       # - name: Release
       #   uses: softprops/action-gh-release@v2

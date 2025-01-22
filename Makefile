@@ -140,6 +140,7 @@ start-graphql-prod:
 down-graphql-prod:
 	docker container rm $(docker container ls -aq) -f
 	docker system prune --all --volumes --force
+	docker volume prune --all --force
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
 # Nginx doesn't start if upstream graphql-engine is down

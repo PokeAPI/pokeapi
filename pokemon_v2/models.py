@@ -377,7 +377,7 @@ class HasMoveTarget(models.Model):
 
 
 class HasName(models.Model):
-    name = models.CharField(max_length=100, db_index=True)
+    name = models.CharField(max_length=200, db_index=True)
 
     class Meta:
         abstract = True

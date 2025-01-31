@@ -2340,6 +2340,12 @@ class TypeNameSerializer(serializers.ModelSerializer):
         fields = ("name", "language")
 
 
+class TypeSpriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TypeSprites
+        fields = ("sprites",)
+
+
 class TypeDetailSerializer(serializers.ModelSerializer):
     """
     Serializer for the Type resource
@@ -2357,6 +2363,7 @@ class TypeDetailSerializer(serializers.ModelSerializer):
     )
     pokemon = serializers.SerializerMethodField("get_type_pokemon")
     moves = MoveSummarySerializer(many=True, read_only=True, source="move")
+    sprites = serializers.SerializerMethodField("get_type_sprites")
 
     class Meta:
         model = Type
@@ -2371,7 +2378,71 @@ class TypeDetailSerializer(serializers.ModelSerializer):
             "names",
             "pokemon",
             "moves",
+            "sprites",
         )
+
+    @extend_schema_field(
+        field={
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                        "name-icon": {
+                            "type": "string",
+                            "format": "uri",
+                            "examples": [
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/colosseum/1.png"
+                            ],
+                        }
+                    },
+                    "examples": [
+                        {
+                            "colosseum": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/colosseum/1.png"
+                            }
+                        }
+                    ],
+                },
+                "examples": [
+                    {
+                        "generation-ix": {
+                            "scarlet-violet": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/1.png"
+                            }
+                        }
+                    }
+                ],
+            },
+            "examples": [
+                {
+                    "sprites": {
+                        "generation-iii": {
+                            "colosseum": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/colosseum/1.png"
+                            },
+                            "emerald": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/emerald/1.png"
+                            },
+                            "firered-leafgreen": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/firered-leafgreen/1.png"
+                            },
+                            "ruby-saphire": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/ruby-saphire/1.png"
+                            },
+                            "xd": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/xd/1.png"
+                            },
+                        }
+                    }
+                }
+            ],
+        }
+    )
+    def get_type_sprites(self, obj):
+        sprites_object = TypeSprites.objects.get(type_id=obj)
+        return sprites_object.sprites
 
     # adds an entry for the given type with the given damage
     # factor in the given direction to the set of relations

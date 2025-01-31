@@ -3,11 +3,15 @@ pkgs.mkShell {
   name = "onix-shellder";
   venvDir = "./.venv";
   buildInputs = [
-    python310Packages.python
-    python310Packages.venvShellHook
+    python312Packages.python
+    python312Packages.venvShellHook
 
-    # Required dependancies 
-    black
+    # Required dependencies
+
+    # Python
+    python312Packages.black
+
+    # misc
     taglib
     openssl
     git
@@ -17,15 +21,15 @@ pkgs.mkShell {
     zlib
   ];
 
-  # Run this command, only after creating the virtual environment
+  # Runs after creating the virtual environment
   postVenvCreation = ''
     unset SOURCE_DATE_EPOCH
     pip install -r requirements.txt
   '';
 
   postShellHook = ''
-    # allow pip to install wheels
     unset SOURCE_DATE_EPOCH
+    # use z shell, run exit to get back to default bash
     zsh -l
   '';
 

@@ -1,19 +1,24 @@
 version: '2.4'
 services:
   cache:
-    image: redis:7.2.3-alpine
+    image: redis:7.4.2-alpine3.21
     volumes:
       - redis_data:/data
     restart: always
 
   db:
-    image: postgres:16.1
+    image: postgres:17.2-alpine3.21
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
       POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
     volumes:
       - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: pg_isready
+      interval: 10s
+      timeout: 5s
+      retries: 5
     restart: always
 
   app:
@@ -28,12 +33,14 @@ services:
       - db
       - cache
     depends_on:
-      - db
-      - cache
+      db:
+        condition: service_healthy
+      cache:
+        condition: service_started
     restart: always
 
   web:
-    image: nginx:1.25.3-alpine
+    image: nginx:1.27.3-alpine3.20
     ports:
       - "80:80"
       - "443:443"
@@ -44,11 +51,12 @@ services:
       - ./Resources/nginx/ssl:/ssl:ro
       - graphql_cache:/tmp/cache
   graphql-engine:
-    image: hasura/graphql-engine:v2.36.4
+    image: hasura/graphql-engine:v2.45.1
     ports:
       - "8080:8080"
     depends_on:
-      - "db"
+      db:
+        condition: service_healthy
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://${POSTGRES_USER:-ash}:${POSTGRES_PASSWORD:-pokemon}@db:5432/${POSTGRES_DB:-pokeapi}

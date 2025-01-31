@@ -629,6 +629,45 @@ def _build_types():
 
     build_generic((TypeEfficacyPast,), "type_efficacy_past.csv", csv_record_to_objects)
 
+    def csv_record_to_objects(info):
+        game_map = {
+            "generation-iii": [
+                "colosseum",
+                "emerald",
+                "firered-leafgreen",
+                "ruby-saphire",
+                "xd",
+            ],
+            "generation-iv": ["diamond-pearl", "heartgold-soulsilver", "platinum"],
+            "generation-v": ["black-2-white-2", "black-white"],
+            "generation-vi": ["omega-ruby-alpha-sapphire", "x-y"],
+            "generation-vii": [
+                "lets-go-pikachu-lets-go-eevee",
+                "sun-moon",
+                "ultra-sun-ultra-moon",
+            ],
+            "generation-viii": [
+                "brilliant-diamond-and-shining-pearl",
+                "legends-arceus",
+                "sword-shield",
+            ],
+            "generation-ix": ["scarlet-violet"],
+        }
+        sprites = {}
+        for generation in game_map.keys():
+            for game in game_map[generation]:
+                if generation not in sprites:
+                    sprites[generation] = {}
+                sprites[generation][game] = {
+                    "name_icon": file_path_or_none(
+                        f"types/{generation}/{game}/{info[0]}.png"
+                    )
+                }
+
+        yield TypeSprites(type_id=int(info[0]), sprites=sprites)
+
+    build_generic((TypeSprites,), "types.csv", csv_record_to_objects)
+
 
 #############
 #  CONTEST  #

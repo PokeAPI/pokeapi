@@ -16,7 +16,7 @@ spec:
       serviceAccountName: ingress-controller
       containers:
         - name: haproxy-ingress-controller
-          image: quay.io/jcmoraisjr/haproxy-ingress:v0.14.0
+          image: quay.io/jcmoraisjr/haproxy-ingress:v0.14.7
           resources:
             limits:
               memory: "256Mi"

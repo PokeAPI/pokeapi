@@ -140,13 +140,14 @@ start-graphql-prod:
 down-graphql-prod:
 	docker container rm $(docker container ls -aq) -f
 	docker system prune --all --volumes --force
+	docker volume prune --all --force
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
 # Nginx doesn't start if upstream graphql-engine is down
 update-graphql-data-prod:
 	docker compose ${gql_compose_config} stop
 	git pull origin master
-	git submodule update --init
+	git submodule update --remote --merge
 	docker compose ${gql_compose_config} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	make docker-migrate

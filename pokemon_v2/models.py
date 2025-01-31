@@ -377,7 +377,7 @@ class HasMoveTarget(models.Model):
 
 
 class HasName(models.Model):
-    name = models.CharField(max_length=100, db_index=True)
+    name = models.CharField(max_length=200, db_index=True)
 
     class Meta:
         abstract = True
@@ -771,6 +771,10 @@ class TypeEfficacy(HasTypeEfficacy):
 # model for a type's efficacy that was used until a given generation
 class TypeEfficacyPast(HasTypeEfficacy, HasGeneration):
     pass
+
+
+class TypeSprites(HasType):
+    sprites = models.JSONField()
 
 
 #################
@@ -1757,6 +1761,7 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
     level = models.IntegerField()
+    mastery = models.IntegerField(null=True, blank=True)
 
 
 class PokemonShape(HasName):

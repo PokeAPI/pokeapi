@@ -983,7 +983,7 @@ location_area_id,local_language_id,name
 600,5,Route Victoire (zone inconnue 54)
 601,9,Victory Road (unknown area 55)
 601,5,Route Victoire (zone inconnue 55)
-602,9,Victory Road (unknown area 56)
+602,9,Victory Road (4f Middle Room)
 602,5,Route Victoire (zone inconnue 56)
 603,9,Victory Road (unknown area 57)
 603,5,Route Victoire (zone inconnue 57)
@@ -1463,3 +1463,31 @@ location_area_id,local_language_id,name
 841,5,Repaire Rocket d'Acajou
 842,9,Sinjoy Ruins
 842,5,Ruines Sinjoh
+1167,9,Ligthouse Basement
+1169,9,Rumination Field
+754,9,Terminus Cave (1F)
+755,9,Terminus Cave (B1F left)
+756,9,Terminus Cave (B1F right)
+757,9,Terminus Cave (B2F)
+758,9,Terminus Cave (Zygarde's Chamber)
+1179,9,Sea Mauville (Outside)
+1180,9,Sea Mauville (Inside)
+1181,9,Mauville Space Center
+1182,9,Roaming Kalos
+1169,9,Roaming Unova
+1183,9,Nameless Cavern
+1184,9,Soaring in the Sky
+1185,9,Scorched Slab (1F)
+1186,9,Scorched Slab (B1F)
+1187,9,Scorched Slab (B2F)
+1188,9,Scorched Slab (B3F)
+1189,9,Crescent Isle
+1190,9,Pathless Plain
+1191,9,Fabled Cave
+1192,9,Gnarled Den
+1194,9,Trainers' School
+1195,9,Ultra Space Wilds Cliff World
+1196,9,Ultra Space Wilds Water World
+1197,9,Ultra Space Wilds Rocky World
+1198,9,Ultra Space Wilds Cave World
+1199,9,Mount Lanakila Peak

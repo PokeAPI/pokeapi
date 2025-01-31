@@ -749,7 +749,7 @@ id,region_id,identifier
 765,7,alola-route-14
 766,7,ulaula-meadow
 767,7,po-town
-768,7,malie-city
+768,7,malie-city-proper
 769,7,malie-garden
 770,7,mount-hokulani
 771,7,blush-mountain
@@ -1035,3 +1035,6 @@ id,region_id,identifier
 1051,7,ultra-space-wilds
 1052,7,poke-pelago
 1053,7,team-rockets-castle
+1054,5,roaming-unova
+1055,3,mauville-space-center
+1056,6,roaming-kalos

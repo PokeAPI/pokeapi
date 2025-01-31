@@ -20,7 +20,20 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 > Beta GraphQL support is rolling out! Check out the [GraphQL paragraph](#graphql--) for more info.
 
-## Setup &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/download/releases/3.10/)
+
+## Table of Contents
+
+- [Setup](#setup)
+- [Database setup](#database-setup)
+- [Docker and Compose](#docker-and-compose)
+- [GraphQL](#graphql)
+- [Kubernetes](#kubernetes)
+- [Wrappers](#wrappers)
+- [Donations](#donations)
+- [Join Us On Slack!](#join-us-on-slack)
+- [Contributing](#contributing)
+
+## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/download/releases/3.10/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -43,7 +56,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make serve
     ```
 
-### Database setup
+## Database setup
 
 To build or rebuild the database by applying any CSV file update, run
 
@@ -70,7 +83,7 @@ make migrate
 
 Run `make help` to see all tasks.
 
-## Docker and Compose &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
+## Docker and Compose <a id="docker-and-compose"></a> &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
 There is also a multi-container setup, managed by [Docker Compose V2](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.
 
@@ -103,7 +116,7 @@ make docker-make-migrations
 make docker-migrate
 ```
 
-## GraphQL &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
+## GraphQL <a id="graphql"></a> &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
@@ -119,7 +132,7 @@ A free public GraphiQL console is browsable at the address https://beta.pokeapi.
 
 A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
 
-## Kubernetes &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
+## Kubernetes <a id="kubernetes"></a> &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 
 [Kustomize](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/) files are provided in the folder https://github.com/PokeAPI/pokeapi/tree/master/Resources/k8s/kustomize/base/. Create and change your secrets:
 
@@ -223,7 +236,3 @@ To contribute to this repository:
 - We'll accept your changes after review.
 
 Simple!
-
-## Deprecation
-
-As of October 2018, the v1 API has been removed from PokéAPI. For more information, see [pokeapi.co/docs/v1.html](https://pokeapi.co/docs/v1.html).

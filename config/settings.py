@@ -155,7 +155,7 @@ We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this A
 
 This API will always be publicly available and will never require any extensive setup process to consume.
 
-Created by [**Paul Hallett**(]https://github.com/phalt) and other [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
+Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
     """,
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],

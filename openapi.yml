@@ -9,7 +9,7 @@ info:
     \ Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2)\
     \ on how to use this API. It takes minutes to get started.\n\nThis API will always\
     \ be publicly available and will never require any extensive setup process to\
-    \ consume.\n\nCreated by [**Paul Hallett**(]https://github.com/phalt) and other\
+    \ consume.\n\nCreated by [**Paul Hallett**](https://github.com/phalt) and other\
     \ [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing)\
     \ around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n\
     \    "
@@ -3293,7 +3293,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         is_main_series:
           type: boolean
         generation:
@@ -3392,7 +3392,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3403,7 +3403,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3419,7 +3419,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         growth_time:
           type: integer
         max_harvest:
@@ -3489,7 +3489,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         berries:
           type: array
           items:
@@ -3510,7 +3510,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3521,7 +3521,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3537,7 +3537,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         berries:
           type: array
           items:
@@ -3586,7 +3586,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3597,7 +3597,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3610,7 +3610,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3737,7 +3737,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         berry_flavor:
           allOf:
             - $ref: "#/components/schemas/BerryFlavorSummary"
@@ -3757,7 +3757,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         color:
           type: string
           maxLength: 10
@@ -3772,7 +3772,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3788,7 +3788,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -3824,7 +3824,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3835,7 +3835,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3851,7 +3851,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         values:
           type: array
           items:
@@ -3872,7 +3872,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3883,7 +3883,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3899,7 +3899,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         condition:
           $ref: "#/components/schemas/EncounterConditionSummary"
         names:
@@ -3917,7 +3917,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3928,7 +3928,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -3944,7 +3944,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         order:
           type:
             - integer
@@ -3963,7 +3963,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -3974,7 +3974,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4204,7 +4204,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -4238,7 +4238,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4249,7 +4249,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4275,7 +4275,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         pokemon_species_details:
           type: array
           items:
@@ -4333,7 +4333,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4349,7 +4349,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         abilities:
           type: array
           items:
@@ -4397,7 +4397,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4408,7 +4408,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4434,7 +4434,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         formula:
           type: string
           maxLength: 500
@@ -4465,7 +4465,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4491,7 +4491,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         descriptions:
           type: array
           items:
@@ -4531,7 +4531,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4542,7 +4542,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4558,7 +4558,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         items:
           type: array
           items:
@@ -4582,7 +4582,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4593,7 +4593,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4609,7 +4609,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         cost:
           type:
             - integer
@@ -4813,7 +4813,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         effect_entries:
           type: array
           items:
@@ -4845,7 +4845,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4868,7 +4868,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4882,7 +4882,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         categories:
           type: array
           items:
@@ -4903,7 +4903,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4914,7 +4914,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4927,7 +4927,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4943,7 +4943,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         official:
           type: boolean
         iso639:
@@ -4968,7 +4968,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -4979,7 +4979,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -4995,7 +4995,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         game_index:
           type: integer
         encounter_method_rates:
@@ -5177,7 +5177,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5188,7 +5188,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -5204,7 +5204,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         region:
           $ref: "#/components/schemas/RegionSummary"
         names:
@@ -5244,7 +5244,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5255,7 +5255,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -5297,7 +5297,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -5312,7 +5312,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5323,7 +5323,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -5408,7 +5408,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         descriptions:
           type: array
           items:
@@ -5435,7 +5435,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5446,7 +5446,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -5462,7 +5462,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         accuracy:
           type:
             - integer
@@ -5822,7 +5822,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -5862,7 +5862,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5873,7 +5873,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -5939,7 +5939,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         moves:
           type: array
           items:
@@ -5973,7 +5973,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -5984,7 +5984,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -6010,7 +6010,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         descriptions:
           type: array
           items:
@@ -6044,7 +6044,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -6057,7 +6057,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -6068,7 +6068,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -6094,7 +6094,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         descriptions:
           type: array
           items:
@@ -6121,7 +6121,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -6132,7 +6132,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -6161,7 +6161,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         decreased_stat:
           $ref: "#/components/schemas/StatSummary"
         increased_stat:
@@ -6230,7 +6230,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -6241,7 +6241,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -7217,7 +7217,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -7268,7 +7268,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -7279,7 +7279,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -7295,7 +7295,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         affecting_natures:
           type: object
           required:
@@ -7376,7 +7376,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -7387,7 +7387,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -7413,7 +7413,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         is_main_series:
           type: boolean
         descriptions:
@@ -7488,7 +7488,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -7499,7 +7499,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -7515,7 +7515,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -7536,7 +7536,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -7547,7 +7547,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -7563,7 +7563,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         base_experience:
           type:
             - integer
@@ -7964,7 +7964,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         order:
           type:
             - integer
@@ -8110,7 +8110,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8136,7 +8136,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -8157,7 +8157,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -8168,7 +8168,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8184,7 +8184,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         awesome_names:
           type: array
           items:
@@ -8247,7 +8247,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8273,7 +8273,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         order:
           type:
             - integer
@@ -8504,7 +8504,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8530,7 +8530,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8546,7 +8546,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         locations:
           type: array
           items:
@@ -8597,7 +8597,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -8608,7 +8608,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8624,7 +8624,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         game_index:
           type: integer
         is_battle_only:
@@ -8759,7 +8759,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -8770,7 +8770,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -8830,7 +8830,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         damage_relations:
           type: object
           required:
@@ -9189,7 +9189,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -9209,7 +9209,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         names:
           type: array
           items:
@@ -9230,7 +9230,7 @@ components:
           readOnly: true
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         order:
           type:
             - integer
@@ -9309,7 +9309,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri
@@ -9322,7 +9322,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         language:
           $ref: "#/components/schemas/LanguageSummary"
       required:
@@ -9333,7 +9333,7 @@ components:
       properties:
         name:
           type: string
-          maxLength: 100
+          maxLength: 200
         url:
           type: string
           format: uri

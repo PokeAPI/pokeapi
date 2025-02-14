@@ -1,4 +1,4 @@
-name: Test Docker, Compose and k8s
+name: Container
 
 on:
   pull_request:

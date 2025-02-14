@@ -1,0 +1,50 @@
+name: Database
+
+on:
+  pull_request:
+
+jobs:
+  sqlite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Start pokeapi
+        run: |
+          make install
+          make migrate
+          make build-db
+          nohup make serve &
+          sleep 3
+      - name: Dump DB
+        run: stat db.sqlite3
+      - name: Test data
+        run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+  postgres:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build
+        run: |
+          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          make docker-migrate
+          make docker-build-db
+      - name: Dump DB
+        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.dump"
+      - name: Copy dump
+        run: docker compose cp db:/tmp/pokeapi.dump ./
+      - name: Down services
+        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml down -v
+      - name: Start services
+        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+      - name: Import database
+        run: |
+          docker compose cp ./pokeapi.dump db:/tmp/
+          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
+      - name: Test data
+        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

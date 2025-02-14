@@ -25,7 +25,11 @@ jobs:
         run: docker compose -f docker-compose.yml -f docker-compose-dev.yml down -v
       - name: Start services
         run: docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: true
       - name: Import database
         run: |
           docker compose cp ./pokeapi.dump db:/tmp/
-          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -d pokeapi pokeapi.dump"
+          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"

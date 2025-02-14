@@ -17,7 +17,7 @@ jobs:
           make docker-migrate
           make docker-build-db
       - name: Dump DB
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash pokeapi > pokeapi.dump"
+        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.dump"
       - name: Copy dump
         run: |
           docker compose cp db:/tmp/pokeapi.dump ./
@@ -33,3 +33,5 @@ jobs:
         run: |
           docker compose cp ./pokeapi.dump db:/tmp/
           docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
+      - name: Test data
+        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

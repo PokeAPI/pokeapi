@@ -13,22 +13,31 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Build
+      - name: Start pokeapi (docker)
         run: |
           docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
           make docker-migrate
           make docker-build-db
-      - name: Dump DB
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash pokeapi | gzip > pokeapi.dump.zip"
-      - name: Copy dump
+      - name: Dump PG db
+        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.pgdump"
+      - name: Copy PG dump
         run: |
-          docker compose cp db:/tmp/pokeapi.dump.zip ./
+          docker compose cp db:/tmp/pokeapi.pgdump ./
           ls -larth
+      - name: Start pokeapi
+        run: |
+          make install
+          make migrate
+          make build-db
+          nohup make serve &
+          sleep 3
       - name: Release
         uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
           fail_on_unmatched_files: true
-          files: pokeapi.dump.zip
+          files: |
+            pokeapi.pgdump
+            db.sqlite3
           generate_release_notes: true

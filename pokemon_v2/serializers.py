@@ -4748,6 +4748,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail["move_learn_method"] = method_data[
                     move["move_learn_method"] - 1
                 ]
+                version_detail["order"] = move["order"]
 
                 pokemon_move_details["version_group_details"].append(version_detail)
 

@@ -14,6 +14,7 @@ jobs:
           set -e
           curl -sSL https://github.com/Clever/csvlint/releases/download/v0.3.0/csvlint-v0.3.0-linux-amd64.tar.gz | tar xz  --strip-components=1
           for filename in data/v2/csv/*.csv; do
+            echo "$filename"
             ./csvlint "$filename"
           done
   sqlite:

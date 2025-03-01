@@ -4,6 +4,18 @@ on:
   pull_request:
 
 jobs:
+  csv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lint
+        run: |
+          set -e
+          curl -sSOL https://github.com/Clever/csvlint/releases/download/v0.3.0/csvlint-v0.3.0-linux-amd64.tar.gz
+          for filename in data/v2/csv/*.csv; do
+            ./csvlint "$filename"
+          done
   sqlite:
     runs-on: ubuntu-latest
     steps:

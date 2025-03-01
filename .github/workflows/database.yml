@@ -12,7 +12,7 @@ jobs:
       - name: Lint
         run: |
           set -e
-          curl -sSOL https://github.com/Clever/csvlint/releases/download/v0.3.0/csvlint-v0.3.0-linux-amd64.tar.gz
+          curl -sSL https://github.com/Clever/csvlint/releases/download/v0.3.0/csvlint-v0.3.0-linux-amd64.tar.gz | tar xz  --strip-components=1
           for filename in data/v2/csv/*.csv; do
             ./csvlint "$filename"
           done

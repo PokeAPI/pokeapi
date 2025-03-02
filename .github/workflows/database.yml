@@ -4,6 +4,19 @@ on:
   pull_request:
 
 jobs:
+  csv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lint
+        run: |
+          set -e
+          curl -sSL https://github.com/Clever/csvlint/releases/download/v0.3.0/csvlint-v0.3.0-linux-amd64.tar.gz | tar xz  --strip-components=1
+          for filename in data/v2/csv/*.csv; do
+            echo "$filename"
+            ./csvlint -lazyquotes "$filename" # TODO: remove lazyquotes when https://github.com/Clever/csvlint/issues/45 will be addressed
+          done
   sqlite:
     runs-on: ubuntu-latest
     steps:

@@ -813,7 +813,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 812,flip-turn,8,11,60,20,100,0,10,2,1,,,,
 813,triple-axel,8,15,20,10,90,0,10,2,1,,,,
 814,dual-wingbeat,8,3,40,10,90,0,10,2,1,,,,
-815,scorching-sands,8,5,70,10,100,0,10,3,1,30,,,
+815,scorching-sands,8,5,70,10,100,0,10,3,5,30,,,
 816,jungle-healing,8,12,,10,,0,13,1,1,,,,
 817,wicked-blow,8,17,75,5,100,0,10,2,1,,,,
 818,surging-strikes,8,11,25,5,100,0,10,2,1,,,,

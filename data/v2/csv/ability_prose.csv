@@ -1245,3 +1245,147 @@ This ability cannot be nullified."
 
 This Ability is not bypassed by []{ability:mold-breaker}, []{ability:teravolt}, or []{ability:turboblaze}."
 233,9,Increases super-effective damage dealt to 1.25×.,Increases super-effective damage dealt to 1.25×.
+
+234,9,"Boosts the Pokémon’s Attack stat the first time the Pokémon enters a battle."
+
+235,9,"Boosts the Pokémon’s Defense stat the first time the Pokémon enters a battle."
+
+236,9,"Changes the Pokémon’s type to the type of the move it’s about to use. This works only once each time the Pokémon enters battle."
+
+237,9,"If the Pokémon is not holding an item, it will fetch the Poké Ball from the first failed throw of the battle."
+
+238,9,"When the Pokémon is hit by an attack, it scatters cotton fluff around and lowers the Speed stats of all Pokémon except itself."
+
+239,9,"Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves."
+
+240,9,"Bounces back only the stat-lowering effects that the Pokémon receives."
+
+241,9,"When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
+
+242,9,"Ignores the effects of opposing Pokémon’s Abilities and moves that draw in moves."
+
+243,9,"Boosts the Speed stat drastically when the Pokémon is hit by a Fire- or Water-type move."
+
+244,9,"Boosts the power of sound-based moves. The Pokémon also takes half the damage from these kinds of moves."
+
+245,9,"The Pokémon creates a sandstorm when it’s hit by an attack."
+
+246,9,"The Pokémon is protected by ice scales, which halve the damage taken from special moves."
+
+247,9,"Ripens Berries and doubles their effect."
+
+248,9,"The Pokémon’s ice head can take a physical attack as a substitute, but the attack also changes the Pokémon’s appearance. The ice will be restored when it snows."
+
+249,9,"Just being next to the Pokémon powers up moves."
+
+250,9,"Changes the Pokémon’s type depending on the terrain."
+
+251,9,"When the Pokémon enters a battle, the effects of Light Screen, Reflect, and Aurora Veil are nullified for both opposing and ally Pokémon."
+
+252,9,"Powers up the Steel-type moves of the Pokémon and its allies."
+
+253,9,"When hit by a move that makes direct contact, the Pokémon and the attacker will faint after three turns unless they switch out of battle."
+
+254,9,"The Pokémon exchanges Abilities with a Pokémon that hits it with a move that makes direct contact."
+
+255,9,"Boosts the Pokémon’s Attack stat but only allows the use of the first selected move."
+
+256,9,"While the Pokémon is in the battle, the effects of all other Pokémon’s Abilities will be nullified or will not be triggered."
+
+257,9,"Prevents the Pokémon and its allies from being poisoned."
+
+258,9,"The Pokémon changes its form, alternating between its Full Belly Mode and Hangry Mode after the end of every turn."
+
+259,9,"Enables the Pokémon to move first occasionally."
+
+260,9,"If the Pokémon uses moves that make direct contact, it can attack the target even if the target protects itself."
+
+261,9,"When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies."
+
+262,9,"Powers up Electric-type moves."
+
+263,9,"Powers up Dragon-type moves."
+
+264,9,"When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
+
+265,9,"When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
+
+268,9,"Contact with the Pokémon changes the attacker’s Ability to Lingering Aroma."
+
+269,9,"Turns the ground into Grassy Terrain when the Pokémon is hit by an attack."
+
+270,9,"Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned."
+
+271,9,"When an attack causes its HP to drop to half or less, the Pokémon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats."
+
+272,9,"The Pokémon’s pure salt protects it from status conditions and halves the damage taken from Ghost-type moves."
+
+273,9,"The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted."
+
+274,9,"Boosts the Pokémon’s Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves."
+
+275,9,"Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work."
+
+276,9,"Powers up Rock-type moves."
+
+277,9,"The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses."
+
+278,9,"The Pokémon transforms into its Hero Form when it switches out."
+
+279,9,"When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there."
+
+280,9,"The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses."
+
+281,9,"Boosts the Pokémon’s most proficient stat in harsh sunlight or if the Pokémon is holding Booster Energy."
+
+282,9,"Boosts the Pokémon’s most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy."
+
+283,9,"A body of pure, solid gold gives the Pokémon full immunity to other Pokémon’s status moves."
+
+284,9,"The power of the Pokémon’s ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself."
+
+285,9,"The power of the Pokémon’s ruinous sword lowers the Defense stats of all Pokémon except itself."
+
+286,9,"The power of the Pokémon’s ruinous wooden tablets lowers the Attack stats of all Pokémon except itself."
+
+287,9,"The power of the Pokémon’s ruinous beads lowers the Sp. Def stats of all Pokémon except itself."
+
+288,9,"Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight."
+
+289,9,"Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain."
+
+290,9,"If an opponent’s stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself."
+
+291,9,"When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time."
+
+292,9,"Increases the power of all 'slicing' moves by 50%."
+
+293,9,"When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated."
+
+294,9,"When the Pokémon enters a battle, it copies an ally’s stat changes."
+
+295,9,"Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves."
+
+296,9,"The mysterious tail covering the Pokémon’s head makes opponents unable to use priority moves against the Pokémon or its allies."
+
+297,9,"If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage."
+
+298,9,"The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target."
+
+299,9,"The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal- and Fighting-type moves."
+
+300,9,"A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon."
+
+301,9,"When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP."
+
+302,9,"May cause bad poisoning when the Pokémon hits an opponent with a move."
+
+303,9,"Embody Aspect boosts a particular stat, depending on the form of a Terastallized Ogerpon"
+
+304,9,"When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form."
+
+305,9,"The Pokémon’s shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective."
+
+306,9,"When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero."
+
+307,9,"Pokémon poisoned by Pecharunt’s moves will also become confused."

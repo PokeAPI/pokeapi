@@ -818,7 +818,7 @@ id,region_id,identifier
 834,10,south-paldean-sea
 835,10,poco-path
 836,10,inlet-grotto
-837,10,naranja-academy/uva-academy
+837,10,naranja-academy
 838,10,alfornada-cavern
 839,10,grasswither-shrine
 840,10,paldea-east-province-area-one
@@ -903,7 +903,7 @@ id,region_id,identifier
 919,8,motostoke-outskirts
 920,8,motostoke-riverbank
 921,8,north-lake-miloch
-922,8,old-cemetary
+922,8,old-cemetery
 923,8,path-to-the-peak
 924,8,postwick
 925,8,potbottom-desert
@@ -1038,3 +1038,4 @@ id,region_id,identifier
 1054,5,roaming-unova
 1055,3,mossdeep-space-center
 1056,6,roaming-kalos
+1057,9,uva-academy

@@ -2026,7 +2026,7 @@ def _build_pokemons():
         yield PokemonAbilityPast(
             pokemon_id=int(info[0]),
             generation_id=int(info[1]),
-            ability_id=int(info[2]),
+            ability_id=int(info[2]) if info[2] != "" else None,
             is_hidden=bool(int(info[3])),
             slot=int(info[4]),
         )

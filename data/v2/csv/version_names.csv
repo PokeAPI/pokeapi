@@ -8,7 +8,7 @@ version_id,local_language_id,name
 1,8,Rossa
 1,9,Red
 1,12,紅
-2,1,緑
+2,1,青
 2,3,블루
 2,4,藍
 2,5,Bleu
@@ -378,3 +378,24 @@ version_id,local_language_id,name
 43,8,Il disco indaco
 43,9,The indigo disk
 43,12,藍之圓盤
+44,1,赤
+44,3,레드
+44,5,Rouge
+44,6,Rot
+44,7,Rojo
+44,8,Rossa
+44,9,Red
+45,1,緑
+45,3,그린
+45,5,Vert
+45,6,Grüne
+45,7,Verde
+45,8,Verde
+45,9,Green
+46,1,青
+46,3,블루
+46,5,Bleu
+46,6,Blau
+46,7,Azul
+46,8,Blu
+46,9,Blue

@@ -1464,7 +1464,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10438,miraidon-drive-mode,drive-mode,10269,25,0,0,0,3,1324
 10439,miraidon-aquatic-mode,aquatic-mode,10270,25,0,0,0,4,1325
 10440,miraidon-glide-mode,glide-mode,10271,25,0,0,0,5,1326
-10441,ursaluna-bloodmoon,bloodmoon,10272,26,0,0,0,2,1372
+10441,ursaluna-bloodmoon,bloodmoon,10272,26,1,0,0,2,1372
 10442,ogerpon-wellspring-mask,wellspring-mask,10273,26,0,0,0,2,1382
 10443,ogerpon-hearthflame-mask,hearthflame-mask,10274,26,0,0,0,3,1383
 10444,ogerpon-cornerstone-mask,cornerstone-mask,10275,26,0,0,0,4,1384

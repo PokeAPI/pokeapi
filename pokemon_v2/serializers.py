@@ -4771,8 +4771,8 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #     },
     @extend_schema_field(
         field={
-            "type" : "array",
-            "items" : {
+            "type": "array",
+            "items": {
                 "type": "object",
                 "required": ["item", "version_details"],
                 "properties": {
@@ -4803,7 +4803,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                                     "type": "object",
                                     "required": ["name", "url"],
                                     "properties": {
-                                        "name": {"type": "string", "examples": ["diamond"]},
+                                        "name": {
+                                            "type": "string",
+                                            "examples": ["diamond"],
+                                        },
                                         "url": {
                                             "type": "string",
                                             "format": "uri",
@@ -4817,7 +4820,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                         },
                     },
                 },
-            }
+            },
         }
     )
     def get_pokemon_held_items(self, obj):

@@ -4771,50 +4771,53 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #     },
     @extend_schema_field(
         field={
-            "type": "object",
-            "required": ["item", "version_details"],
-            "properties": {
-                "item": {
-                    "type": "object",
-                    "required": ["name", "url"],
-                    "properties": {
-                        "name": {"type": "string", "examples": ["soft-sand"]},
-                        "url": {
-                            "type": "string",
-                            "format": "uri",
-                            "examples": ["https://pokeapi.co/api/v2/item/214/"],
+            "type" : "array",
+            "items" : {
+                "type": "object",
+                "required": ["item", "version_details"],
+                "properties": {
+                    "item": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "examples": ["soft-sand"]},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": ["https://pokeapi.co/api/v2/item/214/"],
+                            },
                         },
                     },
-                },
-                "version_details": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "required": ["rarity", "version"],
-                        "properties": {
-                            "rarity": {
-                                "type": "integer",
-                                "format": "int32",
-                                "examples": [5],
-                            },
-                            "version": {
-                                "type": "object",
-                                "required": ["name", "url"],
-                                "properties": {
-                                    "name": {"type": "string", "examples": ["diamond"]},
-                                    "url": {
-                                        "type": "string",
-                                        "format": "uri",
-                                        "examples": [
-                                            "https://pokeapi.co/api/v2/version/12/"
-                                        ],
+                    "version_details": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["rarity", "version"],
+                            "properties": {
+                                "rarity": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "examples": [5],
+                                },
+                                "version": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {"type": "string", "examples": ["diamond"]},
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "examples": [
+                                                "https://pokeapi.co/api/v2/version/12/"
+                                            ],
+                                        },
                                     },
                                 },
                             },
                         },
                     },
                 },
-            },
+            }
         }
     )
     def get_pokemon_held_items(self, obj):

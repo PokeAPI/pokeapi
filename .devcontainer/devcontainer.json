@@ -1,0 +1,76 @@
+{
+  "name": "PokeAPI",
+
+  // Use multiple docker-compose files for development and overrides
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "../docker-compose-dev.yml"
+  ],
+
+  // Target container service to attach VS Code workspace
+  "service": "app",
+
+  // Folder inside container where workspace is mounted
+  "workspaceFolder": "/code",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+
+        // Use bash as the default shell in the integrated terminal
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+
+        // Enable automatic formatting on save with Black for Python files
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true
+        }
+      },
+
+      // Extensions to install automatically in the container's VS Code instance
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter"
+      ]
+    }
+  },
+
+  // Post-create commands:
+  // - Install essential tools (bash, git, make)
+  // - Set Git line endings to input (avoid Windows-style CRLF issues)
+  // - Run Django migrations with custom settings
+  // - Run build data inside Django shell
+  "postCreateCommand": "apk add --no-cache bash git make && git config --global core.autocrlf input && pip install black && python manage.py migrate --settings=config.docker-compose && echo \"from data.v2.build import build_all; build_all()\" | python manage.py shell --settings=config.docker-compose",
+  
+  "remoteUser": "root",
+  "overrideCommand": false,
+
+  // Ports to forward from container to host for easy access
+  "forwardPorts": [80, 443, 8000, 8080],
+
+  // Custom port labels and auto-forward notification settings
+  "portsAttributes": {
+    "8000": {
+      "label": "App",
+      "onAutoForward": "notify"
+    },
+    "80": {
+      "label": "Web HTTP",
+      "onAutoForward": "notify"
+    },
+    "443": {
+      "label": "Web HTTPS",
+      "onAutoForward": "notify"
+    },
+    "8080": {
+      "label": "GraphQL",
+      "onAutoForward": "notify"
+    }
+  }
+}

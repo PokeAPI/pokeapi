@@ -17,6 +17,15 @@ jobs:
             echo "$filename"
             ./csvlint -lazyquotes "$filename" # TODO: remove lazyquotes when https://github.com/Clever/csvlint/issues/45 will be addressed
           done
+  openapi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Generate OpenAPI schema
+        run: |
+          make install
+          make openapi-generate
   sqlite:
     runs-on: ubuntu-latest
     steps:

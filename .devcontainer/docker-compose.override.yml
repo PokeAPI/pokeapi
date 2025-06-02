@@ -1,0 +1,6 @@
+version: '2.4'
+
+services:
+  app:
+    image: pokeapi/pokeapi:master
+    command: []

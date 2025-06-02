@@ -4,7 +4,7 @@
   // Use multiple docker-compose files for development and overrides
   "dockerComposeFile": [
     "../docker-compose.yml",
-    "../docker-compose-dev.yml"
+    "./docker-compose.override.yml"
   ],
 
   // Target container service to attach VS Code workspace
@@ -41,15 +41,19 @@
     }
   },
 
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+        "installZsh": "false",
+        "installOhMyZsh": "false",
+        "configureZshAsDefaultShell": "false"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+
   // Post-create commands:
-  // - Install essential tools (bash, git, make)
-  // - Set Git line endings to input (avoid Windows-style CRLF issues)
-  // - Run Django migrations with custom settings
-  // - Run build data inside Django shell
-  "postCreateCommand": "apk add --no-cache bash git make && git config --global core.autocrlf input && pip install black && python manage.py migrate --settings=config.docker-compose && echo \"from data.v2.build import build_all; build_all()\" | python manage.py shell --settings=config.docker-compose",
-  
+  "postCreateCommand": "apk add --no-cache make && git config --global core.autocrlf input",
+
   "remoteUser": "root",
-  "overrideCommand": false,
 
   // Ports to forward from container to host for easy access
   "forwardPorts": [80, 443, 8000, 8080],

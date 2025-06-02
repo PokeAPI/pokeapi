@@ -27,6 +27,9 @@ wipe-sqlite-db:  # Delete's the project database
 serve:  # Run the project locally
 	python manage.py runserver ${local_config}
 
+serve-gunicorn:  # Run the project using Gunicorn
+	gunicorn config.wsgi:application -c gunicorn.conf.py
+
 test:  # Run tests
 	python manage.py test ${local_config}
 
@@ -80,6 +83,23 @@ docker-prod:
 	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
+
+devcontainer-migrate:  # (Dev Container) Run any pending migrations
+	python manage.py migrate ${docker_config}
+
+devcontainer-build-db:  # (Dev Container) Build the database
+	sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+
+devcontainer-make-migrations:  # (Dev Container) Create migrations files if schema has changed
+	python manage.py makemigrations ${docker_config}
+
+devcontainer-flush-db:  # (Dev Container) Removes all the data present in the database but preserves tables and migrations
+	python manage.py flush --no-input ${docker_config}
+
+devcontainer-shell:  # (Dev Container) Launch an interative Django shell for the pokeapi app
+	python manage.py shell ${docker_config}
+
+devcontainer-setup: dev-install devcontainer-migrate devcontainer-build-db # (Dev Container) Install requirements, prepare the latest DB schema, populate the DB
 
 format:  # Format the source code
 	black .

@@ -47,13 +47,14 @@
         "installOhMyZsh": "false",
         "configureZshAsDefaultShell": "false"
     },
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker": {}
   },
 
   // Post-create commands:
-  "postCreateCommand": "apk add --no-cache make && git config --global core.autocrlf input",
+  "postCreateCommand": "git config --global core.autocrlf input && git config --global --add safe.directory /code",
 
-  "remoteUser": "root",
+  "remoteUser": "pokeapi",
 
   // Ports to forward from container to host for easy access
   "forwardPorts": [80, 443, 8000, 8080],

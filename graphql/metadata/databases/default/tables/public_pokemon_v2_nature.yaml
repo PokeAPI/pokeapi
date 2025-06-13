@@ -1,35 +1,40 @@
 table:
   name: pokemon_v2_nature
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: nature
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemonV2BerryflavorByLikesFlavorId
+  - name: BerryflavorByLikesFlavorId
     using:
       foreign_key_constraint_on: likes_flavor_id
-  - name: pokemonV2StatByIncreasedStatId
+  - name: StatByIncreasedStatId
     using:
       foreign_key_constraint_on: increased_stat_id
-  - name: pokemon_v2_berryflavor
+  - name: berryflavor
     using:
       foreign_key_constraint_on: hates_flavor_id
-  - name: pokemon_v2_stat
+  - name: stat
     using:
       foreign_key_constraint_on: decreased_stat_id
 array_relationships:
-  - name: pokemon_v2_naturebattlestylepreferences
+  - name: naturebattlestylepreferences
     using:
       foreign_key_constraint_on:
         column: nature_id
         table:
           name: pokemon_v2_naturebattlestylepreference
           schema: public
-  - name: pokemon_v2_naturenames
+  - name: naturenames
     using:
       foreign_key_constraint_on:
         column: nature_id
         table:
           name: pokemon_v2_naturename
           schema: public
-  - name: pokemon_v2_naturepokeathlonstats
+  - name: naturepokeathlonstats
     using:
       foreign_key_constraint_on:
         column: nature_id

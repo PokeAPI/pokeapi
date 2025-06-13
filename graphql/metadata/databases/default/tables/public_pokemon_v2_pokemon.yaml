@@ -1,89 +1,94 @@
 table:
   name: pokemon_v2_pokemon
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokemon
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_pokemonspecy
+  - name: pokemonspecy
     using:
       foreign_key_constraint_on: pokemon_species_id
 array_relationships:
-  - name: pokemon_v2_encounters
+  - name: encounters
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_encounter
           schema: public
-  - name: pokemon_v2_pokemonabilities
+  - name: pokemonabilities
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonability
           schema: public
-  - name: pokemon_v2_pokemonabilitypasts
+  - name: pokemonabilitypasts
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonabilitypast
           schema: public
-  - name: pokemon_v2_pokemoncries
+  - name: pokemoncries
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemoncries
           schema: public
-  - name: pokemon_v2_pokemonforms
+  - name: pokemonforms
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonform
           schema: public
-  - name: pokemon_v2_pokemongameindices
+  - name: pokemongameindices
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemongameindex
           schema: public
-  - name: pokemon_v2_pokemonitems
+  - name: pokemonitems
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonitem
           schema: public
-  - name: pokemon_v2_pokemonmoves
+  - name: pokemonmoves
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonmove
           schema: public
-  - name: pokemon_v2_pokemonsprites
+  - name: pokemonsprites
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonsprites
           schema: public
-  - name: pokemon_v2_pokemonstats
+  - name: pokemonstats
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemonstat
           schema: public
-  - name: pokemon_v2_pokemontypepasts
+  - name: pokemontypepasts
     using:
       foreign_key_constraint_on:
         column: pokemon_id
         table:
           name: pokemon_v2_pokemontypepast
           schema: public
-  - name: pokemon_v2_pokemontypes
+  - name: pokemontypes
     using:
       foreign_key_constraint_on:
         column: pokemon_id

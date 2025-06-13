@@ -23,57 +23,57 @@ var (
 		},
 		Query: `
 query pokemon_details($name: String) {
-	species: pokemon_v2_pokemonspecies(where: {name: {_eq: $name}}) {
+	species: pokemonspecies(where: {name: {_eq: $name}}) {
 	name
 	base_happiness
 	is_legendary
 	is_mythical
-	generation: pokemon_v2_generation {
+	generation: generation {
 		name
 	}
-	habitat: pokemon_v2_pokemonhabitat {
+	habitat: pokemonhabitat {
 		name
 	}
-	pokemon: pokemon_v2_pokemons_aggregate(limit: 1) {
+	pokemon: pokemons_aggregate(limit: 1) {
 		nodes {
 		height
 		name
 		id
 		weight
-		abilities: pokemon_v2_pokemonabilities_aggregate {
+		abilities: pokemonabilities_aggregate {
 			nodes {
-			ability: pokemon_v2_ability {
+			ability: ability {
 				name
 			}
 			}
 		}
-		stats: pokemon_v2_pokemonstats {
+		stats: pokemonstats {
 			base_stat
-			stat: pokemon_v2_stat {
+			stat: stat {
 			name
 			}
 		}
-		types: pokemon_v2_pokemontypes {
+		types: pokemontypes {
 			slot
-			type: pokemon_v2_type {
+			type: type {
 			name
 			}
 		}
-		levelUpMoves: pokemon_v2_pokemonmoves_aggregate(where: {pokemon_v2_movelearnmethod: {name: {_eq: "level-up"}}}, distinct_on: move_id) {
+		levelUpMoves: pokemonmoves_aggregate(where: {movelearnmethod: {name: {_eq: "level-up"}}}, distinct_on: move_id) {
 			nodes {
-			move: pokemon_v2_move {
+			move: move {
 				name
 			}
 			level
 			}
 		}
-		foundInAsManyPlaces: pokemon_v2_encounters_aggregate {
+		foundInAsManyPlaces: encounters_aggregate {
 			aggregate {
 			count
 			}
 		}
-		fireRedItems: pokemon_v2_pokemonitems(where: {pokemon_v2_version: {name: {_eq: "firered"}}}) {
-			pokemon_v2_item {
+		fireRedItems: pokemonitems(where: {version: {name: {_eq: "firered"}}}) {
+			item {
 			name
 			cost
 			}
@@ -81,7 +81,7 @@ query pokemon_details($name: String) {
 		}
 		}
 	}
-	flavorText: pokemon_v2_pokemonspeciesflavortexts(where: {pokemon_v2_language: {name: {_eq: "en"}}, pokemon_v2_version: {name: {_eq: "firered"}}}) {
+	flavorText: pokemonspeciesflavortexts(where: {language: {name: {_eq: "en"}}, version: {name: {_eq: "firered"}}}) {
 		flavor_text
 	}
 	}

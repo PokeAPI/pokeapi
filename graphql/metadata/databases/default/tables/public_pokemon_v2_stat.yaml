@@ -1,47 +1,52 @@
 table:
   name: pokemon_v2_stat
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: stat
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_movedamageclass
+  - name: movedamageclass
     using:
       foreign_key_constraint_on: move_damage_class_id
 array_relationships:
-  - name: pokemonV2NaturesByIncreasedStatId
+  - name: NaturesByIncreasedStatId
     using:
       foreign_key_constraint_on:
         column: increased_stat_id
         table:
           name: pokemon_v2_nature
           schema: public
-  - name: pokemon_v2_characteristics
+  - name: characteristics
     using:
       foreign_key_constraint_on:
         column: stat_id
         table:
           name: pokemon_v2_characteristic
           schema: public
-  - name: pokemon_v2_movemetastatchanges
+  - name: movemetastatchanges
     using:
       foreign_key_constraint_on:
         column: stat_id
         table:
           name: pokemon_v2_movemetastatchange
           schema: public
-  - name: pokemon_v2_natures
+  - name: natures
     using:
       foreign_key_constraint_on:
         column: decreased_stat_id
         table:
           name: pokemon_v2_nature
           schema: public
-  - name: pokemon_v2_pokemonstats
+  - name: pokemonstats
     using:
       foreign_key_constraint_on:
         column: stat_id
         table:
           name: pokemon_v2_pokemonstat
           schema: public
-  - name: pokemon_v2_statnames
+  - name: statnames
     using:
       foreign_key_constraint_on:
         column: stat_id

@@ -1,12 +1,17 @@
 table:
   name: pokemon_v2_characteristic
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: characteristic
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_stat
+  - name: stat
     using:
       foreign_key_constraint_on: stat_id
 array_relationships:
-  - name: pokemon_v2_characteristicdescriptions
+  - name: characteristicdescriptions
     using:
       foreign_key_constraint_on:
         column: characteristic_id

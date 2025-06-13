@@ -1,29 +1,34 @@
 table:
   name: pokemon_v2_movelearnmethod
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movelearnmethod
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_movelearnmethoddescriptions
+  - name: movelearnmethoddescriptions
     using:
       foreign_key_constraint_on:
         column: move_learn_method_id
         table:
           name: pokemon_v2_movelearnmethoddescription
           schema: public
-  - name: pokemon_v2_movelearnmethodnames
+  - name: movelearnmethodnames
     using:
       foreign_key_constraint_on:
         column: move_learn_method_id
         table:
           name: pokemon_v2_movelearnmethodname
           schema: public
-  - name: pokemon_v2_pokemonmoves
+  - name: pokemonmoves
     using:
       foreign_key_constraint_on:
         column: move_learn_method_id
         table:
           name: pokemon_v2_pokemonmove
           schema: public
-  - name: pokemon_v2_versiongroupmovelearnmethods
+  - name: versiongroupmovelearnmethods
     using:
       foreign_key_constraint_on:
         column: move_learn_method_id

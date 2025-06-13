@@ -1,29 +1,34 @@
 table:
   name: pokemon_v2_growthrate
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: growthrate
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_experiences
+  - name: experiences
     using:
       foreign_key_constraint_on:
         column: growth_rate_id
         table:
           name: pokemon_v2_experience
           schema: public
-  - name: pokemon_v2_growthratedescriptions
+  - name: growthratedescriptions
     using:
       foreign_key_constraint_on:
         column: growth_rate_id
         table:
           name: pokemon_v2_growthratedescription
           schema: public
-  - name: pokemon_v2_machines
+  - name: machines
     using:
       foreign_key_constraint_on:
         column: growth_rate_id
         table:
           name: pokemon_v2_machine
           schema: public
-  - name: pokemon_v2_pokemonspecies
+  - name: pokemonspecies
     using:
       foreign_key_constraint_on:
         column: growth_rate_id

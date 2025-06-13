@@ -1,36 +1,41 @@
 table:
   name: pokemon_v2_movedamageclass
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movedamageclass
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_movedamageclassdescriptions
+  - name: movedamageclassdescriptions
     using:
       foreign_key_constraint_on:
         column: move_damage_class_id
         table:
           name: pokemon_v2_movedamageclassdescription
           schema: public
-  - name: pokemon_v2_movedamageclassnames
+  - name: movedamageclassnames
     using:
       foreign_key_constraint_on:
         column: move_damage_class_id
         table:
           name: pokemon_v2_movedamageclassname
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: move_damage_class_id
         table:
           name: pokemon_v2_move
           schema: public
-  - name: pokemon_v2_stats
+  - name: stats
     using:
       foreign_key_constraint_on:
         column: move_damage_class_id
         table:
           name: pokemon_v2_stat
           schema: public
-  - name: pokemon_v2_types
+  - name: types
     using:
       foreign_key_constraint_on:
         column: move_damage_class_id

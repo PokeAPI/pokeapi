@@ -1,29 +1,34 @@
 table:
   name: pokemon_v2_moveeffect
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: moveeffect
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_movechanges
+  - name: movechanges
     using:
       foreign_key_constraint_on:
         column: move_effect_id
         table:
           name: pokemon_v2_movechange
           schema: public
-  - name: pokemon_v2_moveeffectchanges
+  - name: moveeffectchanges
     using:
       foreign_key_constraint_on:
         column: move_effect_id
         table:
           name: pokemon_v2_moveeffectchange
           schema: public
-  - name: pokemon_v2_moveeffecteffecttexts
+  - name: moveeffecteffecttexts
     using:
       foreign_key_constraint_on:
         column: move_effect_id
         table:
           name: pokemon_v2_moveeffecteffecttext
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: move_effect_id

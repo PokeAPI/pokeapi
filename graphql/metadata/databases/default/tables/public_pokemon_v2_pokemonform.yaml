@@ -1,36 +1,41 @@
 table:
   name: pokemon_v2_pokemonform
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokemonform
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_pokemon
+  - name: pokemon
     using:
       foreign_key_constraint_on: pokemon_id
-  - name: pokemon_v2_versiongroup
+  - name: versiongroup
     using:
       foreign_key_constraint_on: version_group_id
 array_relationships:
-  - name: pokemon_v2_pokemonformgenerations
+  - name: pokemonformgenerations
     using:
       foreign_key_constraint_on:
         column: pokemon_form_id
         table:
           name: pokemon_v2_pokemonformgeneration
           schema: public
-  - name: pokemon_v2_pokemonformnames
+  - name: pokemonformnames
     using:
       foreign_key_constraint_on:
         column: pokemon_form_id
         table:
           name: pokemon_v2_pokemonformname
           schema: public
-  - name: pokemon_v2_pokemonformsprites
+  - name: pokemonformsprites
     using:
       foreign_key_constraint_on:
         column: pokemon_form_id
         table:
           name: pokemon_v2_pokemonformsprites
           schema: public
-  - name: pokemon_v2_pokemonformtypes
+  - name: pokemonformtypes
     using:
       foreign_key_constraint_on:
         column: pokemon_form_id

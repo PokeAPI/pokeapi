@@ -1,18 +1,23 @@
 table:
   name: pokemon_v2_berry
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berry
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_berryfirmness
+  - name: berryfirmness
     using:
       foreign_key_constraint_on: berry_firmness_id
-  - name: pokemon_v2_item
+  - name: item
     using:
       foreign_key_constraint_on: item_id
-  - name: pokemon_v2_type
+  - name: type
     using:
       foreign_key_constraint_on: natural_gift_type_id
 array_relationships:
-  - name: pokemon_v2_berryflavormaps
+  - name: berryflavormaps
     using:
       foreign_key_constraint_on:
         column: berry_id

@@ -1,15 +1,20 @@
 table:
   name: pokemon_v2_evolutiontrigger
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: evolutiontrigger
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_evolutiontriggernames
+  - name: evolutiontriggernames
     using:
       foreign_key_constraint_on:
         column: evolution_trigger_id
         table:
           name: pokemon_v2_evolutiontriggername
           schema: public
-  - name: pokemon_v2_pokemonevolutions
+  - name: pokemonevolutions
     using:
       foreign_key_constraint_on:
         column: evolution_trigger_id

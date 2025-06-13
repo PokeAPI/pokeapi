@@ -1,22 +1,27 @@
 table:
   name: pokemon_v2_contesteffect
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: contesteffect
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_contesteffecteffecttexts
+  - name: contesteffecteffecttexts
     using:
       foreign_key_constraint_on:
         column: contest_effect_id
         table:
           name: pokemon_v2_contesteffecteffecttext
           schema: public
-  - name: pokemon_v2_contesteffectflavortexts
+  - name: contesteffectflavortexts
     using:
       foreign_key_constraint_on:
         column: contest_effect_id
         table:
           name: pokemon_v2_contesteffectflavortext
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: contest_effect_id

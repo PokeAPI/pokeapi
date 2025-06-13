@@ -1,96 +1,101 @@
 table:
   name: pokemon_v2_generation
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: generation
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_region
+  - name: region
     using:
       foreign_key_constraint_on: region_id
 array_relationships:
-  - name: pokemon_v2_abilities
+  - name: abilities
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_ability
           schema: public
-  - name: pokemon_v2_generationnames
+  - name: generationnames
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_generationname
           schema: public
-  - name: pokemon_v2_itemgameindices
+  - name: itemgameindices
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_itemgameindex
           schema: public
-  - name: pokemon_v2_locationgameindices
+  - name: locationgameindices
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_locationgameindex
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_move
           schema: public
-  - name: pokemon_v2_pokemonabilitypasts
+  - name: pokemonabilitypasts
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_pokemonabilitypast
           schema: public
-  - name: pokemon_v2_pokemonformgenerations
+  - name: pokemonformgenerations
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_pokemonformgeneration
           schema: public
-  - name: pokemon_v2_pokemonspecies
+  - name: pokemonspecies
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_pokemonspecies
           schema: public
-  - name: pokemon_v2_pokemontypepasts
+  - name: pokemontypepasts
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_pokemontypepast
           schema: public
-  - name: pokemon_v2_typeefficacypasts
+  - name: typeefficacypasts
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_typeefficacypast
           schema: public
-  - name: pokemon_v2_typegameindices
+  - name: typegameindices
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_typegameindex
           schema: public
-  - name: pokemon_v2_types
+  - name: types
     using:
       foreign_key_constraint_on:
         column: generation_id
         table:
           name: pokemon_v2_type
           schema: public
-  - name: pokemon_v2_versiongroups
+  - name: versiongroups
     using:
       foreign_key_constraint_on:
         column: generation_id

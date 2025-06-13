@@ -1,11 +1,16 @@
 table:
   name: pokemon_v2_berryflavormap
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berryflavormap
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_berry
+  - name: berry
     using:
       foreign_key_constraint_on: berry_id
-  - name: pokemon_v2_berryflavor
+  - name: berryflavor
     using:
       foreign_key_constraint_on: berry_flavor_id
 select_permissions:

@@ -1,8 +1,13 @@
 table:
   name: pokemon_v2_contesttype
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: contesttype
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_berryflavor
+  - name: berryflavor
     using:
       foreign_key_constraint_on:
         column: contest_type_id
@@ -10,21 +15,21 @@ object_relationships:
           name: pokemon_v2_berryflavor
           schema: public
 array_relationships:
-  - name: pokemon_v2_berryflavors
+  - name: berryflavors
     using:
       foreign_key_constraint_on:
         column: contest_type_id
         table:
           name: pokemon_v2_berryflavor
           schema: public
-  - name: pokemon_v2_contesttypenames
+  - name: contesttypenames
     using:
       foreign_key_constraint_on:
         column: contest_type_id
         table:
           name: pokemon_v2_contesttypename
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: contest_type_id

@@ -1,12 +1,17 @@
 table:
   name: pokemon_v2_evolutionchain
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: evolutionchain
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_item
+  - name: item
     using:
       foreign_key_constraint_on: baby_trigger_item_id
 array_relationships:
-  - name: pokemon_v2_pokemonspecies
+  - name: pokemonspecies
     using:
       foreign_key_constraint_on:
         column: evolution_chain_id

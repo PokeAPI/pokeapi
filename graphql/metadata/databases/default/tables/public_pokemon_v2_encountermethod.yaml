@@ -1,22 +1,27 @@
 table:
   name: pokemon_v2_encountermethod
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: encountermethod
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_encountermethodnames
+  - name: encountermethodnames
     using:
       foreign_key_constraint_on:
         column: encounter_method_id
         table:
           name: pokemon_v2_encountermethodname
           schema: public
-  - name: pokemon_v2_encounterslots
+  - name: encounterslots
     using:
       foreign_key_constraint_on:
         column: encounter_method_id
         table:
           name: pokemon_v2_encounterslot
           schema: public
-  - name: pokemon_v2_locationareaencounterrates
+  - name: locationareaencounterrates
     using:
       foreign_key_constraint_on:
         column: encounter_method_id

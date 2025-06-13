@@ -1,47 +1,52 @@
 table:
   name: pokemon_v2_ability
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: ability
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_generation
+  - name: generation
     using:
       foreign_key_constraint_on: generation_id
 array_relationships:
-  - name: pokemon_v2_abilitychanges
+  - name: abilitychanges
     using:
       foreign_key_constraint_on:
         column: ability_id
         table:
           name: pokemon_v2_abilitychange
           schema: public
-  - name: pokemon_v2_abilityeffecttexts
+  - name: abilityeffecttexts
     using:
       foreign_key_constraint_on:
         column: ability_id
         table:
           name: pokemon_v2_abilityeffecttext
           schema: public
-  - name: pokemon_v2_abilityflavortexts
+  - name: abilityflavortexts
     using:
       foreign_key_constraint_on:
         column: ability_id
         table:
           name: pokemon_v2_abilityflavortext
           schema: public
-  - name: pokemon_v2_abilitynames
+  - name: abilitynames
     using:
       foreign_key_constraint_on:
         column: ability_id
         table:
           name: pokemon_v2_abilityname
           schema: public
-  - name: pokemon_v2_pokemonabilities
+  - name: pokemonabilities
     using:
       foreign_key_constraint_on:
         column: ability_id
         table:
           name: pokemon_v2_pokemonability
           schema: public
-  - name: pokemon_v2_pokemonabilitypasts
+  - name: pokemonabilitypasts
     using:
       foreign_key_constraint_on:
         column: ability_id

@@ -1,15 +1,20 @@
 table:
   name: pokemon_v2_pokemonhabitat
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokemonhabitat
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_pokemonhabitatnames
+  - name: pokemonhabitatnames
     using:
       foreign_key_constraint_on:
         column: pokemon_habitat_id
         table:
           name: pokemon_v2_pokemonhabitatname
           schema: public
-  - name: pokemon_v2_pokemonspecies
+  - name: pokemonspecies
     using:
       foreign_key_constraint_on:
         column: pokemon_habitat_id

@@ -146,6 +146,7 @@
 - "!include public_pokemon_v2_typeefficacypast.yaml"
 - "!include public_pokemon_v2_typegameindex.yaml"
 - "!include public_pokemon_v2_typename.yaml"
+- "!include public_pokemon_v2_typesprites.yaml"
 - "!include public_pokemon_v2_version.yaml"
 - "!include public_pokemon_v2_versiongroup.yaml"
 - "!include public_pokemon_v2_versiongroupmovelearnmethod.yaml"

@@ -1,106 +1,118 @@
 table:
   name: pokemon_v2_type
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: type
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_generation
+  - name: generation
     using:
       foreign_key_constraint_on: generation_id
-  - name: pokemon_v2_movedamageclass
+  - name: movedamageclass
     using:
       foreign_key_constraint_on: move_damage_class_id
 array_relationships:
-  - name: pokemonV2PokemonevolutionsByPartyTypeId
+  - name: PokemonevolutionsByPartyTypeId
     using:
       foreign_key_constraint_on:
         column: party_type_id
         table:
           name: pokemon_v2_pokemonevolution
           schema: public
-  - name: pokemonV2TypeefficaciesByTargetTypeId
+  - name: TypeefficaciesByTargetTypeId
     using:
       foreign_key_constraint_on:
         column: target_type_id
         table:
           name: pokemon_v2_typeefficacy
           schema: public
-  - name: pokemonV2TypeefficacypastsByTargetTypeId
+  - name: TypeefficacypastsByTargetTypeId
     using:
       foreign_key_constraint_on:
         column: target_type_id
         table:
           name: pokemon_v2_typeefficacypast
           schema: public
-  - name: pokemon_v2_berries
+  - name: berries
     using:
       foreign_key_constraint_on:
         column: natural_gift_type_id
         table:
           name: pokemon_v2_berry
           schema: public
-  - name: pokemon_v2_movechanges
+  - name: movechanges
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_movechange
           schema: public
-  - name: pokemon_v2_moves
+  - name: moves
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_move
           schema: public
-  - name: pokemon_v2_pokemonevolutions
+  - name: pokemon_v2_typesprites
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_typesprites
+          schema: public
+  - name: pokemonevolutions
     using:
       foreign_key_constraint_on:
         column: known_move_type_id
         table:
           name: pokemon_v2_pokemonevolution
           schema: public
-  - name: pokemon_v2_pokemonformtypes
+  - name: pokemonformtypes
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_pokemonformtype
           schema: public
-  - name: pokemon_v2_pokemontypepasts
+  - name: pokemontypepasts
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_pokemontypepast
           schema: public
-  - name: pokemon_v2_pokemontypes
+  - name: pokemontypes
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_pokemontype
           schema: public
-  - name: pokemon_v2_typeefficacies
+  - name: typeefficacies
     using:
       foreign_key_constraint_on:
         column: damage_type_id
         table:
           name: pokemon_v2_typeefficacy
           schema: public
-  - name: pokemon_v2_typeefficacypasts
+  - name: typeefficacypasts
     using:
       foreign_key_constraint_on:
         column: damage_type_id
         table:
           name: pokemon_v2_typeefficacypast
           schema: public
-  - name: pokemon_v2_typegameindices
+  - name: typegameindices
     using:
       foreign_key_constraint_on:
         column: type_id
         table:
           name: pokemon_v2_typegameindex
           schema: public
-  - name: pokemon_v2_typenames
+  - name: typenames
     using:
       foreign_key_constraint_on:
         column: type_id

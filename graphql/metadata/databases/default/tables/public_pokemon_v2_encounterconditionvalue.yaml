@@ -1,19 +1,24 @@
 table:
   name: pokemon_v2_encounterconditionvalue
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: encounterconditionvalue
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_encountercondition
+  - name: encountercondition
     using:
       foreign_key_constraint_on: encounter_condition_id
 array_relationships:
-  - name: pokemon_v2_encounterconditionvaluemaps
+  - name: encounterconditionvaluemaps
     using:
       foreign_key_constraint_on:
         column: encounter_condition_value_id
         table:
           name: pokemon_v2_encounterconditionvaluemap
           schema: public
-  - name: pokemon_v2_encounterconditionvaluenames
+  - name: encounterconditionvaluenames
     using:
       foreign_key_constraint_on:
         column: encounter_condition_value_id

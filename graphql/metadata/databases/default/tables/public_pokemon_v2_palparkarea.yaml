@@ -1,15 +1,20 @@
 table:
   name: pokemon_v2_palparkarea
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: palparkarea
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_palparkareanames
+  - name: palparkareanames
     using:
       foreign_key_constraint_on:
         column: pal_park_area_id
         table:
           name: pokemon_v2_palparkareaname
           schema: public
-  - name: pokemon_v2_palparks
+  - name: palparks
     using:
       foreign_key_constraint_on:
         column: pal_park_area_id

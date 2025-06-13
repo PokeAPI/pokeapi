@@ -1,103 +1,108 @@
 table:
   name: pokemon_v2_versiongroup
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: versiongroup
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_generation
+  - name: generation
     using:
       foreign_key_constraint_on: generation_id
 array_relationships:
-  - name: pokemon_v2_abilitychanges
+  - name: abilitychanges
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_abilitychange
           schema: public
-  - name: pokemon_v2_abilityflavortexts
+  - name: abilityflavortexts
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_abilityflavortext
           schema: public
-  - name: pokemon_v2_encounterslots
+  - name: encounterslots
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_encounterslot
           schema: public
-  - name: pokemon_v2_itemflavortexts
+  - name: itemflavortexts
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_itemflavortext
           schema: public
-  - name: pokemon_v2_machines
+  - name: machines
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_machine
           schema: public
-  - name: pokemon_v2_movechanges
+  - name: movechanges
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_movechange
           schema: public
-  - name: pokemon_v2_moveeffectchanges
+  - name: moveeffectchanges
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_moveeffectchange
           schema: public
-  - name: pokemon_v2_moveflavortexts
+  - name: moveflavortexts
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_moveflavortext
           schema: public
-  - name: pokemon_v2_pokedexversiongroups
+  - name: pokedexversiongroups
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_pokedexversiongroup
           schema: public
-  - name: pokemon_v2_pokemonforms
+  - name: pokemonforms
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_pokemonform
           schema: public
-  - name: pokemon_v2_pokemonmoves
+  - name: pokemonmoves
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_pokemonmove
           schema: public
-  - name: pokemon_v2_versiongroupmovelearnmethods
+  - name: versiongroupmovelearnmethods
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_versiongroupmovelearnmethod
           schema: public
-  - name: pokemon_v2_versiongroupregions
+  - name: versiongroupregions
     using:
       foreign_key_constraint_on:
         column: version_group_id
         table:
           name: pokemon_v2_versiongroupregion
           schema: public
-  - name: pokemon_v2_versions
+  - name: versions
     using:
       foreign_key_constraint_on:
         column: version_group_id

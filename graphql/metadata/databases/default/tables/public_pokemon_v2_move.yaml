@@ -1,124 +1,129 @@
 table:
   name: pokemon_v2_move
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: move
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_contesteffect
+  - name: contesteffect
     using:
       foreign_key_constraint_on: contest_effect_id
-  - name: pokemon_v2_contesttype
+  - name: contesttype
     using:
       foreign_key_constraint_on: contest_type_id
-  - name: pokemon_v2_generation
+  - name: generation
     using:
       foreign_key_constraint_on: generation_id
-  - name: pokemon_v2_movedamageclass
+  - name: movedamageclass
     using:
       foreign_key_constraint_on: move_damage_class_id
-  - name: pokemon_v2_moveeffect
+  - name: moveeffect
     using:
       foreign_key_constraint_on: move_effect_id
-  - name: pokemon_v2_movemetum
+  - name: movemetum
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_movemeta
           schema: public
-  - name: pokemon_v2_movetarget
+  - name: movetarget
     using:
       foreign_key_constraint_on: move_target_id
-  - name: pokemon_v2_supercontesteffect
+  - name: supercontesteffect
     using:
       foreign_key_constraint_on: super_contest_effect_id
-  - name: pokemon_v2_type
+  - name: type
     using:
       foreign_key_constraint_on: type_id
 array_relationships:
-  - name: pokemonV2ContestcombosBySecondMoveId
+  - name: ContestcombosBySecondMoveId
     using:
       foreign_key_constraint_on:
         column: second_move_id
         table:
           name: pokemon_v2_contestcombo
           schema: public
-  - name: pokemonV2SupercontestcombosBySecondMoveId
+  - name: SupercontestcombosBySecondMoveId
     using:
       foreign_key_constraint_on:
         column: second_move_id
         table:
           name: pokemon_v2_supercontestcombo
           schema: public
-  - name: pokemon_v2_contestcombos
+  - name: contestcombos
     using:
       foreign_key_constraint_on:
         column: first_move_id
         table:
           name: pokemon_v2_contestcombo
           schema: public
-  - name: pokemon_v2_machines
+  - name: machines
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_machine
           schema: public
-  - name: pokemon_v2_moveattributemaps
+  - name: moveattributemaps
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_moveattributemap
           schema: public
-  - name: pokemon_v2_movechanges
+  - name: movechanges
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_movechange
           schema: public
-  - name: pokemon_v2_moveflavortexts
+  - name: moveflavortexts
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_moveflavortext
           schema: public
-  - name: pokemon_v2_movemeta
+  - name: movemeta
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_movemeta
           schema: public
-  - name: pokemon_v2_movemetastatchanges
+  - name: movemetastatchanges
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_movemetastatchange
           schema: public
-  - name: pokemon_v2_movenames
+  - name: movenames
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_movename
           schema: public
-  - name: pokemon_v2_pokemonevolutions
+  - name: pokemonevolutions
     using:
       foreign_key_constraint_on:
         column: known_move_id
         table:
           name: pokemon_v2_pokemonevolution
           schema: public
-  - name: pokemon_v2_pokemonmoves
+  - name: pokemonmoves
     using:
       foreign_key_constraint_on:
         column: move_id
         table:
           name: pokemon_v2_pokemonmove
           schema: public
-  - name: pokemon_v2_supercontestcombos
+  - name: supercontestcombos
     using:
       foreign_key_constraint_on:
         column: first_move_id

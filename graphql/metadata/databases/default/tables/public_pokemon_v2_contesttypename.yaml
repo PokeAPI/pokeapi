@@ -1,11 +1,16 @@
 table:
   name: pokemon_v2_contesttypename
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: contesttypename
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_contesttype
+  - name: contesttype
     using:
       foreign_key_constraint_on: contest_type_id
-  - name: pokemon_v2_language
+  - name: language
     using:
       foreign_key_constraint_on: language_id
 select_permissions:

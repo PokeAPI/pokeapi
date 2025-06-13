@@ -1,33 +1,38 @@
 table:
   name: pokemon_v2_berryflavor
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berryflavor
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_contesttype
+  - name: contesttype
     using:
       foreign_key_constraint_on: contest_type_id
 array_relationships:
-  - name: pokemonV2NaturesByLikesFlavorId
+  - name: NaturesByLikesFlavorId
     using:
       foreign_key_constraint_on:
         column: likes_flavor_id
         table:
           name: pokemon_v2_nature
           schema: public
-  - name: pokemon_v2_berryflavormaps
+  - name: berryflavormaps
     using:
       foreign_key_constraint_on:
         column: berry_flavor_id
         table:
           name: pokemon_v2_berryflavormap
           schema: public
-  - name: pokemon_v2_berryflavornames
+  - name: berryflavornames
     using:
       foreign_key_constraint_on:
         column: berry_flavor_id
         table:
           name: pokemon_v2_berryflavorname
           schema: public
-  - name: pokemon_v2_natures
+  - name: natures
     using:
       foreign_key_constraint_on:
         column: hates_flavor_id

@@ -1,22 +1,27 @@
 table:
   name: pokemon_v2_moveattribute
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: moveattribute
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_moveattributedescriptions
+  - name: moveattributedescriptions
     using:
       foreign_key_constraint_on:
         column: move_attribute_id
         table:
           name: pokemon_v2_moveattributedescription
           schema: public
-  - name: pokemon_v2_moveattributemaps
+  - name: moveattributemaps
     using:
       foreign_key_constraint_on:
         column: move_attribute_id
         table:
           name: pokemon_v2_moveattributemap
           schema: public
-  - name: pokemon_v2_moveattributenames
+  - name: moveattributenames
     using:
       foreign_key_constraint_on:
         column: move_attribute_id

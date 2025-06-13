@@ -1,26 +1,31 @@
 table:
   name: pokemon_v2_locationarea
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: locationarea
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_location
+  - name: location
     using:
       foreign_key_constraint_on: location_id
 array_relationships:
-  - name: pokemon_v2_encounters
+  - name: encounters
     using:
       foreign_key_constraint_on:
         column: location_area_id
         table:
           name: pokemon_v2_encounter
           schema: public
-  - name: pokemon_v2_locationareaencounterrates
+  - name: locationareaencounterrates
     using:
       foreign_key_constraint_on:
         column: location_area_id
         table:
           name: pokemon_v2_locationareaencounterrate
           schema: public
-  - name: pokemon_v2_locationareanames
+  - name: locationareanames
     using:
       foreign_key_constraint_on:
         column: location_area_id

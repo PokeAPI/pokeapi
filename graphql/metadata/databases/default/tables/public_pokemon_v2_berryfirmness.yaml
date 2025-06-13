@@ -1,15 +1,20 @@
 table:
   name: pokemon_v2_berryfirmness
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berryfirmness
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_berries
+  - name: berries
     using:
       foreign_key_constraint_on:
         column: berry_firmness_id
         table:
           name: pokemon_v2_berry
           schema: public
-  - name: pokemon_v2_berryfirmnessnames
+  - name: berryfirmnessnames
     using:
       foreign_key_constraint_on:
         column: berry_firmness_id

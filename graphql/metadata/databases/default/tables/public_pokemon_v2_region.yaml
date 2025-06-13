@@ -1,8 +1,13 @@
 table:
   name: pokemon_v2_region
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: region
+  custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_generation
+  - name: generation
     using:
       foreign_key_constraint_on:
         column: region_id
@@ -10,35 +15,35 @@ object_relationships:
           name: pokemon_v2_generation
           schema: public
 array_relationships:
-  - name: pokemon_v2_generations
+  - name: generations
     using:
       foreign_key_constraint_on:
         column: region_id
         table:
           name: pokemon_v2_generation
           schema: public
-  - name: pokemon_v2_locations
+  - name: locations
     using:
       foreign_key_constraint_on:
         column: region_id
         table:
           name: pokemon_v2_location
           schema: public
-  - name: pokemon_v2_pokedexes
+  - name: pokedexes
     using:
       foreign_key_constraint_on:
         column: region_id
         table:
           name: pokemon_v2_pokedex
           schema: public
-  - name: pokemon_v2_regionnames
+  - name: regionnames
     using:
       foreign_key_constraint_on:
         column: region_id
         table:
           name: pokemon_v2_regionname
           schema: public
-  - name: pokemon_v2_versiongroupregions
+  - name: versiongroupregions
     using:
       foreign_key_constraint_on:
         column: region_id

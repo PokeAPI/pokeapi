@@ -1,8 +1,13 @@
 table:
   name: pokemon_v2_gender
   schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: gender
+  custom_root_fields: {}
 array_relationships:
-  - name: pokemon_v2_pokemonevolutions
+  - name: pokemonevolutions
     using:
       foreign_key_constraint_on:
         column: gender_id

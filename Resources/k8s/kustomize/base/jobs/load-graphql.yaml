@@ -38,4 +38,4 @@ spec:
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&
               (git checkout $(POKEAPI_CHECKOUT_REF) || git checkout master) &&
-              hasura md apply --endpoint http://graphql:8080 --project graphql --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)
+              hasura md apply --endpoint http://graphql:8080 --project graphql/v1beta2 --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)

@@ -1,0 +1,110 @@
+table:
+  name: pokemon_v2_pokemonspecies
+  schema: public
+object_relationships:
+  - name: pokemon_v2_evolutionchain
+    using:
+      foreign_key_constraint_on: evolution_chain_id
+  - name: pokemon_v2_generation
+    using:
+      foreign_key_constraint_on: generation_id
+  - name: pokemon_v2_growthrate
+    using:
+      foreign_key_constraint_on: growth_rate_id
+  - name: pokemon_v2_pokemoncolor
+    using:
+      foreign_key_constraint_on: pokemon_color_id
+  - name: pokemon_v2_pokemonhabitat
+    using:
+      foreign_key_constraint_on: pokemon_habitat_id
+  - name: pokemon_v2_pokemonshape
+    using:
+      foreign_key_constraint_on: pokemon_shape_id
+  - name: pokemon_v2_pokemonspecy
+    using:
+      foreign_key_constraint_on: evolves_from_species_id
+array_relationships:
+  - name: pokemonV2PokemonevolutionsByPartySpeciesId
+    using:
+      foreign_key_constraint_on:
+        column: party_species_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonV2PokemonevolutionsByTradeSpeciesId
+    using:
+      foreign_key_constraint_on:
+        column: trade_species_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemon_v2_palparks
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_palpark
+          schema: public
+  - name: pokemon_v2_pokemondexnumbers
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemondexnumber
+          schema: public
+  - name: pokemon_v2_pokemonegggroups
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemonegggroup
+          schema: public
+  - name: pokemon_v2_pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: evolved_species_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemon_v2_pokemons
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemon
+          schema: public
+  - name: pokemon_v2_pokemonspecies
+    using:
+      foreign_key_constraint_on:
+        column: evolves_from_species_id
+        table:
+          name: pokemon_v2_pokemonspecies
+          schema: public
+  - name: pokemon_v2_pokemonspeciesdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemonspeciesdescription
+          schema: public
+  - name: pokemon_v2_pokemonspeciesflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemonspeciesflavortext
+          schema: public
+  - name: pokemon_v2_pokemonspeciesnames
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_species_id
+        table:
+          name: pokemon_v2_pokemonspeciesname
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

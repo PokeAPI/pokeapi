@@ -1,0 +1,18 @@
+table:
+  name: pokemon_v2_gender
+  schema: public
+array_relationships:
+  - name: pokemon_v2_pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: gender_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

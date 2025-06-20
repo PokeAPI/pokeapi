@@ -1,0 +1,32 @@
+query weakestPokemonAbleToBeatFireRedAlone {
+  pokemon: pokemon_v2_pokemon(
+    where: {
+      _and: {
+        pokemon_v2_pokemonspecy: {pokemon_v2_generation: {name: {_eq: "generation-i"}}}
+        pokemon_v2_pokemonmoves: {
+          pokemon_v2_move: {name: {_eq: "strength"}}
+        },
+        _and: {
+          pokemon_v2_pokemonmoves: {
+            pokemon_v2_move: {name: {_eq: "cut"}}
+          }
+          _and: {
+            pokemon_v2_pokemonmoves: {
+              pokemon_v2_move: {name: {_eq: "surf"}}
+            }
+          }
+        }
+      }
+    },
+    order_by:{
+      base_experience: asc
+    },
+    limit: 1
+  ) {
+    species: pokemon_v2_pokemonspecy {
+      englishName: pokemon_v2_pokemonspeciesnames(where: {pokemon_v2_language: {name: {_eq: "en"}}}) {
+        name
+      }
+    }
+  }
+}

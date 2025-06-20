@@ -1,0 +1,54 @@
+table:
+  name: pokemon_v2_region
+  schema: public
+object_relationships:
+  - name: pokemon_v2_generation
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_generation
+          schema: public
+array_relationships:
+  - name: pokemon_v2_generations
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_generation
+          schema: public
+  - name: pokemon_v2_locations
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_location
+          schema: public
+  - name: pokemon_v2_pokedexes
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_pokedex
+          schema: public
+  - name: pokemon_v2_regionnames
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_regionname
+          schema: public
+  - name: pokemon_v2_versiongroupregions
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_versiongroupregion
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

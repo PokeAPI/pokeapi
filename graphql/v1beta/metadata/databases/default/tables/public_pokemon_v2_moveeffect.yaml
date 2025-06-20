@@ -1,0 +1,39 @@
+table:
+  name: pokemon_v2_moveeffect
+  schema: public
+array_relationships:
+  - name: pokemon_v2_movechanges
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_movechange
+          schema: public
+  - name: pokemon_v2_moveeffectchanges
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_moveeffectchange
+          schema: public
+  - name: pokemon_v2_moveeffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_moveeffecteffecttext
+          schema: public
+  - name: pokemon_v2_moves
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_move
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

@@ -1,0 +1,25 @@
+table:
+  name: pokemon_v2_itemflingeffect
+  schema: public
+array_relationships:
+  - name: pokemon_v2_itemflingeffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: item_fling_effect_id
+        table:
+          name: pokemon_v2_itemflingeffecteffecttext
+          schema: public
+  - name: pokemon_v2_items
+    using:
+      foreign_key_constraint_on:
+        column: item_fling_effect_id
+        table:
+          name: pokemon_v2_item
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

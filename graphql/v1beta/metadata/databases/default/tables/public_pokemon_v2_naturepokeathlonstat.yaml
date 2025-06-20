@@ -1,0 +1,17 @@
+table:
+  name: pokemon_v2_naturepokeathlonstat
+  schema: public
+object_relationships:
+  - name: pokemon_v2_nature
+    using:
+      foreign_key_constraint_on: nature_id
+  - name: pokemon_v2_pokeathlonstat
+    using:
+      foreign_key_constraint_on: pokeathlon_stat_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

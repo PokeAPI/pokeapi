@@ -1,0 +1,46 @@
+table:
+  name: pokemon_v2_pokemonform
+  schema: public
+object_relationships:
+  - name: pokemon_v2_pokemon
+    using:
+      foreign_key_constraint_on: pokemon_id
+  - name: pokemon_v2_versiongroup
+    using:
+      foreign_key_constraint_on: version_group_id
+array_relationships:
+  - name: pokemon_v2_pokemonformgenerations
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonformgeneration
+          schema: public
+  - name: pokemon_v2_pokemonformnames
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonformname
+          schema: public
+  - name: pokemon_v2_pokemonformsprites
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonformsprites
+          schema: public
+  - name: pokemon_v2_pokemonformtypes
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonformtype
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

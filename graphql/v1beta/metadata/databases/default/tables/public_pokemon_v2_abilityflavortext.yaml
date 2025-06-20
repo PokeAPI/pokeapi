@@ -1,0 +1,20 @@
+table:
+  name: pokemon_v2_abilityflavortext
+  schema: public
+object_relationships:
+  - name: pokemon_v2_ability
+    using:
+      foreign_key_constraint_on: ability_id
+  - name: pokemon_v2_language
+    using:
+      foreign_key_constraint_on: language_id
+  - name: pokemon_v2_versiongroup
+    using:
+      foreign_key_constraint_on: version_group_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

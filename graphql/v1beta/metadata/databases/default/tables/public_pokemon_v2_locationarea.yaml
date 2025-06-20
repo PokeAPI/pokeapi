@@ -1,0 +1,36 @@
+table:
+  name: pokemon_v2_locationarea
+  schema: public
+object_relationships:
+  - name: pokemon_v2_location
+    using:
+      foreign_key_constraint_on: location_id
+array_relationships:
+  - name: pokemon_v2_encounters
+    using:
+      foreign_key_constraint_on:
+        column: location_area_id
+        table:
+          name: pokemon_v2_encounter
+          schema: public
+  - name: pokemon_v2_locationareaencounterrates
+    using:
+      foreign_key_constraint_on:
+        column: location_area_id
+        table:
+          name: pokemon_v2_locationareaencounterrate
+          schema: public
+  - name: pokemon_v2_locationareanames
+    using:
+      foreign_key_constraint_on:
+        column: location_area_id
+        table:
+          name: pokemon_v2_locationareaname
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

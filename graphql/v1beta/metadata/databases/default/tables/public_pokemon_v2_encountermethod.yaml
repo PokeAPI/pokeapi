@@ -1,0 +1,32 @@
+table:
+  name: pokemon_v2_encountermethod
+  schema: public
+array_relationships:
+  - name: pokemon_v2_encountermethodnames
+    using:
+      foreign_key_constraint_on:
+        column: encounter_method_id
+        table:
+          name: pokemon_v2_encountermethodname
+          schema: public
+  - name: pokemon_v2_encounterslots
+    using:
+      foreign_key_constraint_on:
+        column: encounter_method_id
+        table:
+          name: pokemon_v2_encounterslot
+          schema: public
+  - name: pokemon_v2_locationareaencounterrates
+    using:
+      foreign_key_constraint_on:
+        column: encounter_method_id
+        table:
+          name: pokemon_v2_locationareaencounterrate
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

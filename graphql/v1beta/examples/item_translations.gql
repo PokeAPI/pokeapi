@@ -1,0 +1,27 @@
+# for each language, list all items and the relative English translation
+query getItemsTranslation1 {
+  pokemon_v2_language {
+    name
+    iso639
+    iso3166
+    items: pokemon_v2_itemnames {
+      name
+      englishName: pokemon_v2_item {
+        name
+      }
+    }
+  }
+}
+
+# for each item, show the English name and get all its translations
+query getItemsTranslation2 {
+  items: pokemon_v2_item {
+    name
+    translations: pokemon_v2_itemnames {
+      foreignName: name
+      language: pokemon_v2_language {
+        name
+      }
+    }
+  }
+}

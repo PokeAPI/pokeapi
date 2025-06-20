@@ -1,0 +1,44 @@
+table:
+  name: pokemon_v2_pokemonevolution
+  schema: public
+object_relationships:
+  - name: pokemonV2ItemByHeldItemId
+    using:
+      foreign_key_constraint_on: held_item_id
+  - name: pokemonV2PokemonspecyByPartySpeciesId
+    using:
+      foreign_key_constraint_on: party_species_id
+  - name: pokemonV2PokemonspecyByTradeSpeciesId
+    using:
+      foreign_key_constraint_on: trade_species_id
+  - name: pokemonV2TypeByPartyTypeId
+    using:
+      foreign_key_constraint_on: party_type_id
+  - name: pokemon_v2_evolutiontrigger
+    using:
+      foreign_key_constraint_on: evolution_trigger_id
+  - name: pokemon_v2_gender
+    using:
+      foreign_key_constraint_on: gender_id
+  - name: pokemon_v2_item
+    using:
+      foreign_key_constraint_on: evolution_item_id
+  - name: pokemon_v2_location
+    using:
+      foreign_key_constraint_on: location_id
+  - name: pokemon_v2_move
+    using:
+      foreign_key_constraint_on: known_move_id
+  - name: pokemon_v2_pokemonspecy
+    using:
+      foreign_key_constraint_on: evolved_species_id
+  - name: pokemon_v2_type
+    using:
+      foreign_key_constraint_on: known_move_type_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

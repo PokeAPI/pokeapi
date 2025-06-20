@@ -1,0 +1,438 @@
+table:
+  name: pokemon_v2_language
+  schema: public
+array_relationships:
+  - name: pokemonV2LanguagenamesByLocalLanguageId
+    using:
+      foreign_key_constraint_on:
+        column: local_language_id
+        table:
+          name: pokemon_v2_languagename
+          schema: public
+  - name: pokemon_v2_abilitychangeeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_abilitychangeeffecttext
+          schema: public
+  - name: pokemon_v2_abilityeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_abilityeffecttext
+          schema: public
+  - name: pokemon_v2_abilityflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_abilityflavortext
+          schema: public
+  - name: pokemon_v2_abilitynames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_abilityname
+          schema: public
+  - name: pokemon_v2_berryfirmnessnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_berryfirmnessname
+          schema: public
+  - name: pokemon_v2_berryflavornames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_berryflavorname
+          schema: public
+  - name: pokemon_v2_characteristicdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_characteristicdescription
+          schema: public
+  - name: pokemon_v2_contesteffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_contesteffecteffecttext
+          schema: public
+  - name: pokemon_v2_contesteffectflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_contesteffectflavortext
+          schema: public
+  - name: pokemon_v2_contesttypenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_contesttypename
+          schema: public
+  - name: pokemon_v2_egggroupnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_egggroupname
+          schema: public
+  - name: pokemon_v2_encounterconditionnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_encounterconditionname
+          schema: public
+  - name: pokemon_v2_encounterconditionvaluenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_encounterconditionvaluename
+          schema: public
+  - name: pokemon_v2_encountermethodnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_encountermethodname
+          schema: public
+  - name: pokemon_v2_evolutiontriggernames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_evolutiontriggername
+          schema: public
+  - name: pokemon_v2_generationnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_generationname
+          schema: public
+  - name: pokemon_v2_growthratedescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_growthratedescription
+          schema: public
+  - name: pokemon_v2_itemattributedescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemattributedescription
+          schema: public
+  - name: pokemon_v2_itemattributenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemattributename
+          schema: public
+  - name: pokemon_v2_itemcategorynames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemcategoryname
+          schema: public
+  - name: pokemon_v2_itemeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemeffecttext
+          schema: public
+  - name: pokemon_v2_itemflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemflavortext
+          schema: public
+  - name: pokemon_v2_itemflingeffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemflingeffecteffecttext
+          schema: public
+  - name: pokemon_v2_itemnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itemname
+          schema: public
+  - name: pokemon_v2_itempocketnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_itempocketname
+          schema: public
+  - name: pokemon_v2_languagenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_languagename
+          schema: public
+  - name: pokemon_v2_locationareanames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_locationareaname
+          schema: public
+  - name: pokemon_v2_locationnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_locationname
+          schema: public
+  - name: pokemon_v2_moveattributedescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_moveattributedescription
+          schema: public
+  - name: pokemon_v2_moveattributenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_moveattributename
+          schema: public
+  - name: pokemon_v2_movebattlestylenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movebattlestylename
+          schema: public
+  - name: pokemon_v2_movedamageclassdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movedamageclassdescription
+          schema: public
+  - name: pokemon_v2_movedamageclassnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movedamageclassname
+          schema: public
+  - name: pokemon_v2_moveeffectchangeeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_moveeffectchangeeffecttext
+          schema: public
+  - name: pokemon_v2_moveeffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_moveeffecteffecttext
+          schema: public
+  - name: pokemon_v2_moveflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_moveflavortext
+          schema: public
+  - name: pokemon_v2_movelearnmethoddescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movelearnmethoddescription
+          schema: public
+  - name: pokemon_v2_movelearnmethodnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movelearnmethodname
+          schema: public
+  - name: pokemon_v2_movemetaailmentnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movemetaailmentname
+          schema: public
+  - name: pokemon_v2_movemetacategorydescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movemetacategorydescription
+          schema: public
+  - name: pokemon_v2_movenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movename
+          schema: public
+  - name: pokemon_v2_movetargetdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movetargetdescription
+          schema: public
+  - name: pokemon_v2_movetargetnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_movetargetname
+          schema: public
+  - name: pokemon_v2_naturenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_naturename
+          schema: public
+  - name: pokemon_v2_palparkareanames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_palparkareaname
+          schema: public
+  - name: pokemon_v2_pokeathlonstatnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokeathlonstatname
+          schema: public
+  - name: pokemon_v2_pokedexdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokedexdescription
+          schema: public
+  - name: pokemon_v2_pokedexnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokedexname
+          schema: public
+  - name: pokemon_v2_pokemoncolornames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemoncolorname
+          schema: public
+  - name: pokemon_v2_pokemonformnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonformname
+          schema: public
+  - name: pokemon_v2_pokemonhabitatnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonhabitatname
+          schema: public
+  - name: pokemon_v2_pokemonshapenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonshapename
+          schema: public
+  - name: pokemon_v2_pokemonspeciesdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonspeciesdescription
+          schema: public
+  - name: pokemon_v2_pokemonspeciesflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonspeciesflavortext
+          schema: public
+  - name: pokemon_v2_pokemonspeciesnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonspeciesname
+          schema: public
+  - name: pokemon_v2_regionnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_regionname
+          schema: public
+  - name: pokemon_v2_statnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_statname
+          schema: public
+  - name: pokemon_v2_supercontesteffectflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_supercontesteffectflavortext
+          schema: public
+  - name: pokemon_v2_typenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_typename
+          schema: public
+  - name: pokemon_v2_versionnames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_versionname
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

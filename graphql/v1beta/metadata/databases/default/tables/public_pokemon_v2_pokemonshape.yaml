@@ -1,0 +1,25 @@
+table:
+  name: pokemon_v2_pokemonshape
+  schema: public
+array_relationships:
+  - name: pokemon_v2_pokemonshapenames
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_shape_id
+        table:
+          name: pokemon_v2_pokemonshapename
+          schema: public
+  - name: pokemon_v2_pokemonspecies
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_shape_id
+        table:
+          name: pokemon_v2_pokemonspecies
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

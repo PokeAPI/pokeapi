@@ -1,0 +1,39 @@
+table:
+  name: pokemon_v2_movelearnmethod
+  schema: public
+array_relationships:
+  - name: pokemon_v2_movelearnmethoddescriptions
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_movelearnmethoddescription
+          schema: public
+  - name: pokemon_v2_movelearnmethodnames
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_movelearnmethodname
+          schema: public
+  - name: pokemon_v2_pokemonmoves
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_pokemonmove
+          schema: public
+  - name: pokemon_v2_versiongroupmovelearnmethods
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_versiongroupmovelearnmethod
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

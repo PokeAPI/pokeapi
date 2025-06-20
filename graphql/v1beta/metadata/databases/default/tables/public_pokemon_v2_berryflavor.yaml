@@ -1,0 +1,43 @@
+table:
+  name: pokemon_v2_berryflavor
+  schema: public
+object_relationships:
+  - name: pokemon_v2_contesttype
+    using:
+      foreign_key_constraint_on: contest_type_id
+array_relationships:
+  - name: pokemonV2NaturesByLikesFlavorId
+    using:
+      foreign_key_constraint_on:
+        column: likes_flavor_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+  - name: pokemon_v2_berryflavormaps
+    using:
+      foreign_key_constraint_on:
+        column: berry_flavor_id
+        table:
+          name: pokemon_v2_berryflavormap
+          schema: public
+  - name: pokemon_v2_berryflavornames
+    using:
+      foreign_key_constraint_on:
+        column: berry_flavor_id
+        table:
+          name: pokemon_v2_berryflavorname
+          schema: public
+  - name: pokemon_v2_natures
+    using:
+      foreign_key_constraint_on:
+        column: hates_flavor_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

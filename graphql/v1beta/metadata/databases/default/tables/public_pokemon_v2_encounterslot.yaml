@@ -1,0 +1,25 @@
+table:
+  name: pokemon_v2_encounterslot
+  schema: public
+object_relationships:
+  - name: pokemon_v2_encountermethod
+    using:
+      foreign_key_constraint_on: encounter_method_id
+  - name: pokemon_v2_versiongroup
+    using:
+      foreign_key_constraint_on: version_group_id
+array_relationships:
+  - name: pokemon_v2_encounters
+    using:
+      foreign_key_constraint_on:
+        column: encounter_slot_id
+        table:
+          name: pokemon_v2_encounter
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

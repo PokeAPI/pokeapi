@@ -1,0 +1,17 @@
+table:
+  name: pokemon_v2_palpark
+  schema: public
+object_relationships:
+  - name: pokemon_v2_palparkarea
+    using:
+      foreign_key_constraint_on: pal_park_area_id
+  - name: pokemon_v2_pokemonspecy
+    using:
+      foreign_key_constraint_on: pokemon_species_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

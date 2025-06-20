@@ -1,0 +1,57 @@
+table:
+  name: pokemon_v2_stat
+  schema: public
+object_relationships:
+  - name: pokemon_v2_movedamageclass
+    using:
+      foreign_key_constraint_on: move_damage_class_id
+array_relationships:
+  - name: pokemonV2NaturesByIncreasedStatId
+    using:
+      foreign_key_constraint_on:
+        column: increased_stat_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+  - name: pokemon_v2_characteristics
+    using:
+      foreign_key_constraint_on:
+        column: stat_id
+        table:
+          name: pokemon_v2_characteristic
+          schema: public
+  - name: pokemon_v2_movemetastatchanges
+    using:
+      foreign_key_constraint_on:
+        column: stat_id
+        table:
+          name: pokemon_v2_movemetastatchange
+          schema: public
+  - name: pokemon_v2_natures
+    using:
+      foreign_key_constraint_on:
+        column: decreased_stat_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+  - name: pokemon_v2_pokemonstats
+    using:
+      foreign_key_constraint_on:
+        column: stat_id
+        table:
+          name: pokemon_v2_pokemonstat
+          schema: public
+  - name: pokemon_v2_statnames
+    using:
+      foreign_key_constraint_on:
+        column: stat_id
+        table:
+          name: pokemon_v2_statname
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

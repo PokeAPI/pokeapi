@@ -1,0 +1,28 @@
+table:
+  name: pokemon_v2_berry
+  schema: public
+object_relationships:
+  - name: pokemon_v2_berryfirmness
+    using:
+      foreign_key_constraint_on: berry_firmness_id
+  - name: pokemon_v2_item
+    using:
+      foreign_key_constraint_on: item_id
+  - name: pokemon_v2_type
+    using:
+      foreign_key_constraint_on: natural_gift_type_id
+array_relationships:
+  - name: pokemon_v2_berryflavormaps
+    using:
+      foreign_key_constraint_on:
+        column: berry_id
+        table:
+          name: pokemon_v2_berryflavormap
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true

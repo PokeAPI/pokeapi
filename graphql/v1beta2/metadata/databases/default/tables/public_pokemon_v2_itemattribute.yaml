@@ -1,0 +1,41 @@
+table:
+  name: pokemon_v2_itemattribute
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: itemattribute
+  custom_root_fields: {}
+array_relationships:
+  - name: itemattributedescriptions
+    using:
+      foreign_key_constraint_on:
+        column: item_attribute_id
+        table:
+          name: pokemon_v2_itemattributedescription
+          schema: public
+  - name: itemattributemaps
+    using:
+      foreign_key_constraint_on:
+        column: item_attribute_id
+        table:
+          name: pokemon_v2_itemattributemap
+          schema: public
+  - name: itemattributenames
+    using:
+      foreign_key_constraint_on:
+        column: item_attribute_id
+        table:
+          name: pokemon_v2_itemattributename
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

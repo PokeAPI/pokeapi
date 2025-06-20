@@ -1,0 +1,48 @@
+table:
+  name: pokemon_v2_movelearnmethod
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movelearnmethod
+  custom_root_fields: {}
+array_relationships:
+  - name: movelearnmethoddescriptions
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_movelearnmethoddescription
+          schema: public
+  - name: movelearnmethodnames
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_movelearnmethodname
+          schema: public
+  - name: pokemonmoves
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_pokemonmove
+          schema: public
+  - name: versiongroupmovelearnmethods
+    using:
+      foreign_key_constraint_on:
+        column: move_learn_method_id
+        table:
+          name: pokemon_v2_versiongroupmovelearnmethod
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

@@ -1,0 +1,111 @@
+table:
+  name: pokemon_v2_item
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: item
+  custom_root_fields: {}
+object_relationships:
+  - name: itemcategory
+    using:
+      foreign_key_constraint_on: item_category_id
+  - name: itemflingeffect
+    using:
+      foreign_key_constraint_on: item_fling_effect_id
+array_relationships:
+  - name: PokemonevolutionsByHeldItemId
+    using:
+      foreign_key_constraint_on:
+        column: held_item_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: berries
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_berry
+          schema: public
+  - name: evolutionchains
+    using:
+      foreign_key_constraint_on:
+        column: baby_trigger_item_id
+        table:
+          name: pokemon_v2_evolutionchain
+          schema: public
+  - name: itemattributemaps
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemattributemap
+          schema: public
+  - name: itemeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemeffecttext
+          schema: public
+  - name: itemflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemflavortext
+          schema: public
+  - name: itemgameindices
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemgameindex
+          schema: public
+  - name: itemnames
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemname
+          schema: public
+  - name: itemsprites
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemsprites
+          schema: public
+  - name: machines
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_machine
+          schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: evolution_item_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonitems
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_pokemonitem
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

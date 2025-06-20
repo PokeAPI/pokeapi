@@ -2,6 +2,7 @@ veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
 gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
+gqlv1beta_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml -f Resources/compose/docker-compose-prod-graphql-v1beta.yml
 
 .PHONY: help
 .SILENT:
@@ -104,11 +105,17 @@ sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 # read-env-file:  # Exports ./.env into shell environment variables
 # 	export `egrep -v '^#' .env | xargs`
 
+hasura-export-v1beta:
+	hasura md export --project graphql/v1beta
+
+hasura-apply-v1beta:
+	hasura md apply --project graphql/v1beta
+
 hasura-export:  # Export Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
-	hasura md export --project graphql
+	hasura md export --project graphql/v1beta2
 
 hasura-apply:  # Apply local Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
-	hasura md apply --project graphql
+	hasura md apply --project graphql/v1beta2
 
 hasura-get-anon-schema:  # Dumps GraphQL schema
 	gq http://localhost:8080/v1/graphql --introspect > graphql/schema.graphql
@@ -141,6 +148,23 @@ down-graphql-prod:
 	docker container rm $(docker container ls -aq) -f
 	docker system prune --all --volumes --force
 	docker volume prune --all --force
+	sync; echo 3 > /proc/sys/vm/drop_caches
+
+update-graphql-v1beta-data-prod:
+	docker compose ${gqlv1beta_compose_config} stop
+	git pull origin master
+	git submodule update --remote --merge
+	docker compose ${gqlv1beta_compose_config} up --pull always -d app cache db
+	sync; echo 3 > /proc/sys/vm/drop_caches
+	make docker-migrate
+	make docker-build-db
+	docker compose ${gqlv1beta_compose_config} stop app cache
+	docker compose ${gqlv1beta_compose_config} up --pull always -d graphql-engine graphiql
+	sleep 120
+	make hasura-apply-v1beta
+	docker compose ${gqlv1beta_compose_config} up --pull always -d web
+	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
+	docker image prune -af
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
 # Nginx doesn't start if upstream graphql-engine is down

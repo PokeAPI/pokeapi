@@ -1,0 +1,52 @@
+table:
+  name: pokemon_v2_berryflavor
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berryflavor
+  custom_root_fields: {}
+object_relationships:
+  - name: contesttype
+    using:
+      foreign_key_constraint_on: contest_type_id
+array_relationships:
+  - name: NaturesByLikesFlavorId
+    using:
+      foreign_key_constraint_on:
+        column: likes_flavor_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+  - name: berryflavormaps
+    using:
+      foreign_key_constraint_on:
+        column: berry_flavor_id
+        table:
+          name: pokemon_v2_berryflavormap
+          schema: public
+  - name: berryflavornames
+    using:
+      foreign_key_constraint_on:
+        column: berry_flavor_id
+        table:
+          name: pokemon_v2_berryflavorname
+          schema: public
+  - name: natures
+    using:
+      foreign_key_constraint_on:
+        column: hates_flavor_id
+        table:
+          name: pokemon_v2_nature
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

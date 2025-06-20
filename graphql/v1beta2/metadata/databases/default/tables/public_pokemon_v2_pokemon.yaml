@@ -1,0 +1,108 @@
+table:
+  name: pokemon_v2_pokemon
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokemon
+  custom_root_fields: {}
+object_relationships:
+  - name: pokemonspecy
+    using:
+      foreign_key_constraint_on: pokemon_species_id
+array_relationships:
+  - name: encounters
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_encounter
+          schema: public
+  - name: pokemonabilities
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonability
+          schema: public
+  - name: pokemonabilitypasts
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonabilitypast
+          schema: public
+  - name: pokemoncries
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemoncries
+          schema: public
+  - name: pokemonforms
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonform
+          schema: public
+  - name: pokemongameindices
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemongameindex
+          schema: public
+  - name: pokemonitems
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonitem
+          schema: public
+  - name: pokemonmoves
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonmove
+          schema: public
+  - name: pokemonsprites
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonsprites
+          schema: public
+  - name: pokemonstats
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonstat
+          schema: public
+  - name: pokemontypepasts
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemontypepast
+          schema: public
+  - name: pokemontypes
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemontype
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

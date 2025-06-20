@@ -1,0 +1,41 @@
+table:
+  name: pokemon_v2_contesteffect
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: contesteffect
+  custom_root_fields: {}
+array_relationships:
+  - name: contesteffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: contest_effect_id
+        table:
+          name: pokemon_v2_contesteffecteffecttext
+          schema: public
+  - name: contesteffectflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: contest_effect_id
+        table:
+          name: pokemon_v2_contesteffectflavortext
+          schema: public
+  - name: moves
+    using:
+      foreign_key_constraint_on:
+        column: contest_effect_id
+        table:
+          name: pokemon_v2_move
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

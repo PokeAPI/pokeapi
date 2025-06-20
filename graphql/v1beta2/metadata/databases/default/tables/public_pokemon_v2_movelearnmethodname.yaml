@@ -1,0 +1,26 @@
+table:
+  name: pokemon_v2_movelearnmethodname
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movelearnmethodname
+  custom_root_fields: {}
+object_relationships:
+  - name: language
+    using:
+      foreign_key_constraint_on: language_id
+  - name: movelearnmethod
+    using:
+      foreign_key_constraint_on: move_learn_method_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

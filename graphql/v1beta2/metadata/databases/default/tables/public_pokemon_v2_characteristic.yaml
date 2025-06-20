@@ -1,0 +1,31 @@
+table:
+  name: pokemon_v2_characteristic
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: characteristic
+  custom_root_fields: {}
+object_relationships:
+  - name: stat
+    using:
+      foreign_key_constraint_on: stat_id
+array_relationships:
+  - name: characteristicdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: characteristic_id
+        table:
+          name: pokemon_v2_characteristicdescription
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

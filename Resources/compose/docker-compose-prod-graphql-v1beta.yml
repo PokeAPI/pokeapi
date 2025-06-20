@@ -1,0 +1,4 @@
+version: '2.4'
+services:
+  graphiql:
+    image: pokeapi/graphiql:2.0.0

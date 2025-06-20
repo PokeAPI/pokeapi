@@ -1,0 +1,35 @@
+"""
+Returns the strongest 3 grass and poison pokemon. It uses thier stats to compute their strenght.
+"""
+
+query best_grass_poison_pokemons {
+  pokemon: pokemon(
+    where: {
+      _and: [
+        {
+          pokemontypes: {
+            type: { name: { _eq: "grass" } }
+          }
+        }
+        {
+          pokemontypes: {
+            type: { name: { _eq: "poison" } }
+          }
+        }
+      ]
+    }
+    order_by: {
+      pokemonstats_aggregate: { sum: { base_stat: desc } }
+    }
+    limit: 3
+  ) {
+    name
+    stats: pokemonstats_aggregate(order_by: {}) {
+      aggregate {
+        sum {
+          base_stat
+        }
+      }
+    }
+  }
+}

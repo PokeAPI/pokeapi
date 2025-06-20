@@ -1,0 +1,26 @@
+table:
+  name: pokemon_v2_pokemongameindex
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokemongameindex
+  custom_root_fields: {}
+object_relationships:
+  - name: pokemon
+    using:
+      foreign_key_constraint_on: pokemon_id
+  - name: version
+    using:
+      foreign_key_constraint_on: version_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

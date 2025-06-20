@@ -1,0 +1,27 @@
+# for each language, list all items and the relative English translation
+query getItemsTranslation1 {
+  language {
+    name
+    iso639
+    iso3166
+    items: itemnames {
+      name
+      englishName: item {
+        name
+      }
+    }
+  }
+}
+
+# for each item, show the English name and get all its translations
+query getItemsTranslation2 {
+  items: item {
+    name
+    translations: itemnames {
+      foreignName: name
+      language: language {
+        name
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 version: '2.4'
 services:
   graphiql:
-    image: pokeapi/graphiql:2.0.0
+    image: pokeapi/graphiql:v1beta-2.1.0
   web:
     volumes:
       - ./Resources/nginx/nginx-gql-v1beta.conf:/etc/nginx/nginx.conf:ro

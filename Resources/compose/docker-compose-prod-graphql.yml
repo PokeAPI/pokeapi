@@ -33,7 +33,7 @@ services:
       HASURA_GRAPHQL_EVENTS_HTTP_POOL_SIZE: 10
 
   graphiql:
-    image: pokeapi/graphiql:2.0.1
+    image: pokeapi/graphiql:v1beta2-2.1.0
     expose:
       - 80
     depends_on:

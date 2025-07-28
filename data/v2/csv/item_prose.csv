@@ -248,10 +248,10 @@ Can be smeared on sweet-smelling trees to attract tree-dwelling Pokémon after s
 98,9,Berries regrow from dead plants an increased number of times.,"Used on a path of soil
 :   Plant will regrow after dying 25% more times."
 99,9,Can be revived into a Lileep.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:lileep}.
-100,9,Can be revived into an Anorith.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:anorith}.
-101,9,Can be revived into an Omanyte.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:omanyte}.
+100,9,Can be revived into an Anorith.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:anorith}.
+101,9,Can be revived into an Omanyte.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:omanyte}.
 102,9,Can be revived into a Kabuto.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:kabuto}.
-103,9,Can be revived into an Aerodactyl.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:aerodactyl}.
+103,9,Can be revived into an Aerodactyl.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:aerodactyl}.
 104,9,Can be revived into a Shieldon.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:shieldon}.
 105,9,Can be revived into a Cranidos.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:cranidos}.
 106,9,"Sell for 5000 Pokédollars, or to Bone Man for 10000 Pokédollars.",Vendor trash.
@@ -1113,7 +1113,7 @@ This effect does not activate if another effect prevents the holder from switchi
 :   Increases the target's [Speed]{mechanic:speed} [effort]{mechanic:effort} by 1."
 612,9,Sell for 100 Pokédollars.,Vendor trash.
 613,9,Can be revived into a []{pokemon:tirtouga}.,Give to a scientist in a museum to receive a []{pokemon:tirtouga}.
-614,9,Can be revived into a []{pokemon:archen}.,Give to a scientist in a museum to receive a []{pokemon:archen}.
+614,9,Can be revived into an []{pokemon:archen}.,Give to a scientist in a museum to receive an []{pokemon:archen}.
 615,9,Allows access to Liberty Garden and Victini.,"Allows passage on the []{location:castelia-city} ship, which leads to []{location:liberty-garden} and []{pokemon:victini}."
 616,9,Activates Pass Powers.,Acts as currency to activate Pass Powers in the Entralink.
 617,9,Catches Pokémon found in the Dream World.,"Can only be used in Entree Forest, to catch Pokémon encountered in the Dream World.

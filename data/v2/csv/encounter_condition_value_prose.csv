@@ -161,7 +161,7 @@ encounter_condition_value_id,local_language_id,name
 70,5,Après avoir rapporté la pièce de machine à la centrale
 71,9,Have an Event Arceus in the party
 71,5,En ayant un Arceus événementiel dans l’équipe
-72,9,This special Pokémon couldn't be captured in previous encounters (either fainted or ran from battle)
+72,9,This special Pokémon couldn’t be captured in previous encounters (either fainted or ran from battle)
 73,9,Have Ice Key in bag
 74,9,Have Iron Key in bag
 75,9,Spoke to Professor Juniper in the Cave of Being
@@ -189,8 +189,8 @@ encounter_condition_value_id,local_language_id,name
 97,9,Have Tornadus and Thundurus in party
 98,9,Have Reshiram and Zekrom in party
 99,9,Captured all Ultra Beasts
-100,9,Finished Looker's Sidequest
-101,9,After finishing Olivia's trial
+100,9,Finished Looker’s Sidequest
+101,9,After finishing Olivia’s trial
 102,9,Have Raikou and Entei in party
 103,9,Have Groudon and Kyogre in party
 104,9,Have Dialga and Palkia in party

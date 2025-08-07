@@ -1295,7 +1295,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10269,miraidon-drive-mode,1008,28,2400,335,,0
 10270,miraidon-aquatic-mode,1008,28,2400,335,,0
 10271,miraidon-glide-mode,1008,28,2400,335,,0
-10272,ursaluna-bloodmoon,901,24,2900,275,,1
+10272,ursaluna-bloodmoon,901,24,2900,275,,0
 10273,ogerpon-wellspring-mask,1017,12,398,275,,0
 10274,ogerpon-hearthflame-mask,1017,12,398,275,,0
 10275,ogerpon-cornerstone-mask,1017,12,398,275,,0

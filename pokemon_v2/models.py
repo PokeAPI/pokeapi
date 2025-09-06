@@ -1805,3 +1805,10 @@ class PokemonSprites(HasPokemon):
 
 class PokemonCries(HasPokemon):
     cries = models.JSONField()
+
+
+class PokemonSummary(HasPokemon, HasLanguage):
+    summary = models.TextField()
+    
+    class Meta:
+        unique_together = ('pokemon', 'language')

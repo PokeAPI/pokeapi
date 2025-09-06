@@ -20,12 +20,19 @@ class PokemonSummaryTestCase(TestCase):
             iso3166="us",
             official=True
         )
+        
+        # Create required foreign key objects
+        self.generation = Generation.objects.create(name="generation-i")
+        self.pokemon_color = PokemonColor.objects.create(name="yellow")
+        self.pokemon_shape = PokemonShape.objects.create(name="quadruped")
+        self.growth_rate = GrowthRate.objects.create(name="medium", formula="medium")
+        
         self.pokemon_species = PokemonSpecies.objects.create(
             name="pikachu",
-            generation_id=1,
-            pokemon_color_id=1,
-            pokemon_shape_id=1,
-            growth_rate_id=1
+            generation=self.generation,
+            pokemon_color=self.pokemon_color,
+            pokemon_shape=self.pokemon_shape,
+            growth_rate=self.growth_rate
         )
         self.pokemon = Pokemon.objects.create(
             name="pikachu",

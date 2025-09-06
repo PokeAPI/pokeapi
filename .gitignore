@@ -11,3 +11,7 @@ node_modules
 Resources/nginx/ssl/*
 !Resources/nginx/ssl/*.sample.*
 .idea*
+
+# Import scripts (contain sensitive database credentials)
+*import*.py
+*check*.py

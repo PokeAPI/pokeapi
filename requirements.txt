@@ -12,3 +12,4 @@ psycopg2-binary==2.9.10
 python-dateutil==2.8.2
 python-mimeparse==1.6.0
 drf-spectacular==0.28.0
+legacy-cgi; python_version >= '3.13'

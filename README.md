@@ -37,6 +37,8 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
+- Python version 3.12 or older will work only 
+
 - Install the requirements using pip:
 
     ```sh

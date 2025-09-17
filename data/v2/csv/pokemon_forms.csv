@@ -923,7 +923,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 922,pawmo,,922,25,1,0,0,1,1316
 923,pawmot,,923,25,1,0,0,1,1317
 924,tandemaus,,924,25,1,0,0,1,1306
-925,maushold-family-of-four,family-of-four,925,25,1,0,0,1,1307
+925,maushold-family-of-four,family-of-four,925,25,1,0,0,2,1307
 926,fidough,,926,25,1,0,0,1,1331
 927,dachsbun,,927,25,1,0,0,1,1332
 928,smoliv,,928,25,1,0,0,1,1296
@@ -1449,7 +1449,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10423,oinkologne-female,female,10254,25,1,0,0,2,1309
 10424,dudunsparce-three-segment,three-segment,10255,25,1,0,0,2,1310
 10425,palafin-hero,hero,10256,25,1,1,0,2,1311
-10426,maushold-family-of-three,family-of-three,10257,25,1,0,0,2,1312
+10426,maushold-family-of-three,family-of-three,10257,25,1,0,0,1,1312
 10427,tatsugiri-droopy,droopy,10258,25,1,0,0,2,1313
 10428,tatsugiri-stretchy,stretchy,10259,25,1,0,0,3,1314
 10429,squawkabilly-blue-plumage,blue-plumage,10260,25,1,0,0,2,1315

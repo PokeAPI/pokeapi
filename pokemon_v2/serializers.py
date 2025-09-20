@@ -263,7 +263,7 @@ class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
 
 class PokemonSummaryTextSerializer(serializers.ModelSerializer):
     language = LanguageSummarySerializer()
-    
+
     class Meta:
         model = PokemonSummary
         fields = ("summary", "language")

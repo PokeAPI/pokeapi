@@ -1827,6 +1827,6 @@ class PokemonCries(HasPokemon):
 
 class PokemonSummary(HasPokemon, HasLanguage):
     summary = models.TextField()
-    
+
     class Meta:
-        unique_together = ('pokemon', 'language')
+        unique_together = ("pokemon", "language")

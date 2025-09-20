@@ -22,10 +22,12 @@ from pokemon_v2.models import (
     Type,
 )
 
+
 def get_or_create_trigger(name):
     """Get or create an evolution trigger"""
     trigger, created = EvolutionTrigger.objects.get_or_create(name=name)
     return trigger
+
 
 def get_or_create_item(name):
     """Get or create an item"""
@@ -69,6 +71,7 @@ def get_or_create_species(name):
     except PokemonSpecies.DoesNotExist:
         print(f"⚠️  Pokemon species '{name}' not found")
         return None
+
 
 def import_regional_evolution_data(csv_file):
     """Import regional evolution data from CSV"""

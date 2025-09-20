@@ -261,14 +261,6 @@ class PokemonSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
-class PokemonSummaryTextSerializer(serializers.ModelSerializer):
-    language = LanguageSummarySerializer()
-
-    class Meta:
-        model = PokemonSummary
-        fields = ("summary", "language")
-
-
 class PokemonSpeciesSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = PokemonSpecies
@@ -4282,9 +4274,6 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     location_area_encounters = serializers.SerializerMethodField("get_encounters")
     sprites = serializers.SerializerMethodField("get_pokemon_sprites")
     cries = serializers.SerializerMethodField("get_pokemon_cries")
-    summaries = PokemonSummaryTextSerializer(
-        many=True, read_only=True, source="pokemonsummary"
-    )
 
     class Meta:
         model = Pokemon
@@ -4306,7 +4295,6 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "species",
             "sprites",
             "cries",
-            "summaries",
             "stats",
             "types",
             "past_types",

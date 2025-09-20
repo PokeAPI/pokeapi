@@ -1696,20 +1696,20 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     # Regional evolution fields
     region_restriction = models.ForeignKey(
-        'Region',
+        "Region",
         blank=True,
         null=True,
         on_delete=models.CASCADE,
-        help_text="Region where this evolution can occur (null = any region)"
+        help_text="Region where this evolution can occur (null = any region)",
     )
 
     base_form_required = models.ForeignKey(
-        'PokemonSpecies',
+        "PokemonSpecies",
         blank=True,
         null=True,
         related_name="base_form_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form required for evolution (null = any form)"
+        help_text="Specific form required for evolution (null = any form)",
     )
 
 

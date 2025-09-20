@@ -5518,6 +5518,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trade_species = PokemonSpeciesSummarySerializer()
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
+    region_restriction = RegionSummarySerializer()
+    base_form_required = PokemonSpeciesSummarySerializer()
 
     class Meta:
         model = PokemonEvolution
@@ -5540,6 +5542,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "time_of_day",
             "trade_species",
             "turn_upside_down",
+            "region_restriction",
+            "base_form_required",
         )
 
 

@@ -80,8 +80,6 @@ jobs:
       - name: K8s Apply
         run: |
           make kustomize-local-apply
-          echo "=== Verifying job creation ==="
-          kubectl get jobs -n pokeapi
           kubectl proxy &
           sleep 1
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
@@ -89,103 +87,14 @@ jobs:
         run: |
           kubectl config set-context --current --namespace pokeapi
           kubectl describe deployment
-          echo "=== All resources in namespace ==="
-          kubectl get all -n pokeapi
-          echo "=== Checking for job creation errors ==="
-          kubectl get events -n pokeapi --sort-by='.lastTimestamp' | tail -20
       - name: Migrate and build data
         run: |
-          echo "=== Starting database migration at $(date) ==="
           make k8s-migrate
-          echo "=== Starting database build at $(date) ==="
           make k8s-build-db
-          echo "=== Database build completed at $(date) ==="
-          echo "=== Testing endpoint availability ==="
-          echo "Testing basic PokeAPI endpoint:"
-          curl -f -s --max-time 10 -o /dev/null -w "HTTP Status: %{http_code}\n" http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pokemon/1/ || echo "Basic endpoint failed"
-          echo "Testing pal-park-area endpoint:"
-          curl -f -s --max-time 10 -o /dev/null -w "HTTP Status: %{http_code}\n" http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/ || echo "Pal-park-area endpoint failed"
-          echo "=== Waiting for pal-park-area endpoint ==="
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
-      - name: Debug pod status before GraphQL load
-        run: |
-          echo "=== Pod Status ==="
-          kubectl get pods -n pokeapi
-          echo "=== Service Status ==="
-          kubectl get svc -n pokeapi
-          echo "=== Job Status ==="
-          kubectl get jobs -n pokeapi
-          echo "=== PokeAPI Logs (last 10 lines) ==="
-          kubectl logs -l component=pokeapi -n pokeapi --tail=10 || echo "No PokeAPI logs yet"
-          echo "=== Checking if pal-park-area data exists ==="
-          kubectl exec -n pokeapi deployment/pokeapi -- python manage.py shell -c "from pokemon_v2.models import PalParkArea; print(f'PalParkArea count: {PalParkArea.objects.count()}')" || echo "Failed to check PalParkArea data"
-          echo "=== Checking for failed/error pods ==="
-          error_pods=$(kubectl get pods -n pokeapi -o jsonpath='{.items[?(@.status.phase=="Failed" || @.status.phase=="Error")].metadata.name}')
-          if [ -n "$error_pods" ]; then
-            echo "Found error/failed pods, showing logs:"
-            for pod in $error_pods; do
-              echo "=== Logs for $pod ==="
-              kubectl logs $pod -n pokeapi --tail=50 || echo "No logs available for $pod"
-            done
-          else
-            echo "No error/failed pods found"
-          fi
-
-      - name: Debug network connectivity
-        run: |
-          echo "=== Testing PokeAPI connectivity ==="
-          kubectl run debug-pod --image=curlimages/curl --rm -i --restart=Never -- curl -f -s --max-time 10 http://pokeapi:80/api/v2/pokemon/1/ || echo "PokeAPI not reachable"
-
-      - name: Create job manually if missing
-        run: |
-          echo "=== Checking if job exists before manual creation ==="
-          if ! kubectl get job load-graphql -n pokeapi >/dev/null 2>&1; then
-            echo "Job missing - attempting manual creation"
-            kubectl apply -f Resources/k8s/kustomize/base/jobs/load-graphql.yaml
-            echo "=== Job created, checking status ==="
-            kubectl get job load-graphql -n pokeapi
-          else
-            echo "Job already exists"
-          fi
-          echo "=== Testing endpoint from within cluster ==="
-          kubectl run test-endpoint --image=curlimages/curl --rm -i --restart=Never -- curl -f -s --max-time 10 -o /dev/null -w "HTTP Status: %{http_code}\n" http://pokeapi:80/api/v2/pal-park-area/5/ || echo "Endpoint not accessible from within cluster"
-
       - name: K8s wait for job
         run: |
-          echo "=== Starting job wait at $(date) ==="
-          echo "=== Job status before wait ==="
-          kubectl get job load-graphql -n pokeapi -o wide
-          echo "=== Pod status before wait ==="
-          kubectl get pods -n pokeapi -o wide
-          
-          # Check if job is already failed
-          job_status=$(kubectl get job load-graphql -n pokeapi -o jsonpath='{.status.conditions[?(@.type=="Failed")].status}' 2>/dev/null || echo "")
-          if [ "$job_status" = "True" ]; then
-            echo "=== Job already failed, getting debug info ==="
-            echo "Job status:"
-            kubectl get job load-graphql -n pokeapi -o yaml
-            echo "Pod status:"
-            kubectl get pods -n pokeapi
-            echo "Init container logs:"
-            kubectl logs job/load-graphql -n pokeapi -c pokeapi-last-built-resource-connection-checker --tail=20
-            echo "Main container logs:"
-            kubectl logs job/load-graphql -n pokeapi -c load-graphql --tail=20 || echo "Main container not started"
-            exit 1
-          fi
-          
-          kubectl wait --timeout=600s --for=condition=complete job/load-graphql || {
-            echo "=== JOB TIMEOUT DEBUG INFO at $(date) ==="
-            echo "Job status:"
-            kubectl get job load-graphql -n pokeapi -o yaml
-            echo "Pod status:"
-            kubectl get pods -n pokeapi
-            echo "Init container logs:"
-            kubectl logs job/load-graphql -n pokeapi -c pokeapi-last-built-resource-connection-checker --tail=20
-            echo "Main container logs:"
-            kubectl logs job/load-graphql -n pokeapi -c load-graphql --tail=20 || echo "Main container not started"
-            exit 1
-          }
-          echo "=== Job completed successfully at $(date) ==="
+          kubectl wait --timeout=600s --for=condition=complete job/load-graphql
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
           test "$last_command" -eq 1
       - name: Get GQL output

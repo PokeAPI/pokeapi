@@ -5732,8 +5732,11 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "required": ["name", "url"],
                                             "properties": {
                                                 "name": {"type": "string"},
-                                                "url": {"type": "string", "format": "uri"}
-                                            }
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
                                         },
                                         "base_form_required": {
                                             "type": "object",
@@ -5741,8 +5744,11 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "required": ["name", "url"],
                                             "properties": {
                                                 "name": {"type": "string"},
-                                                "url": {"type": "string", "format": "uri"}
-                                            }
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
                                         },
                                     },
                                 },

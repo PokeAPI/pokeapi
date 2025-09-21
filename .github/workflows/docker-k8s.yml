@@ -148,6 +148,22 @@ jobs:
           kubectl get job load-graphql -n pokeapi -o wide
           echo "=== Pod status before wait ==="
           kubectl get pods -n pokeapi -o wide
+          
+          # Check if job is already failed
+          job_status=$(kubectl get job load-graphql -n pokeapi -o jsonpath='{.status.conditions[?(@.type=="Failed")].status}' 2>/dev/null || echo "")
+          if [ "$job_status" = "True" ]; then
+            echo "=== Job already failed, getting debug info ==="
+            echo "Job status:"
+            kubectl get job load-graphql -n pokeapi -o yaml
+            echo "Pod status:"
+            kubectl get pods -n pokeapi
+            echo "Init container logs:"
+            kubectl logs job/load-graphql -n pokeapi -c pokeapi-last-built-resource-connection-checker --tail=20
+            echo "Main container logs:"
+            kubectl logs job/load-graphql -n pokeapi -c load-graphql --tail=20 || echo "Main container not started"
+            exit 1
+          fi
+          
           kubectl wait --timeout=600s --for=condition=complete job/load-graphql || {
             echo "=== JOB TIMEOUT DEBUG INFO at $(date) ==="
             echo "Job status:"

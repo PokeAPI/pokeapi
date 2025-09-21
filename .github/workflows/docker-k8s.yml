@@ -92,9 +92,36 @@ jobs:
           make k8s-migrate
           make k8s-build-db
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
+      - name: Debug pod status before GraphQL load
+        run: |
+          echo "=== Pod Status ==="
+          kubectl get pods -n pokeapi
+          echo "=== Service Status ==="
+          kubectl get svc -n pokeapi
+          echo "=== Job Status ==="
+          kubectl get jobs -n pokeapi
+          echo "=== PokeAPI Logs (last 10 lines) ==="
+          kubectl logs -l component=pokeapi -n pokeapi --tail=10 || echo "No PokeAPI logs yet"
+
+      - name: Debug network connectivity
+        run: |
+          echo "=== Testing PokeAPI connectivity ==="
+          kubectl run debug-pod --image=curlimages/curl --rm -i --restart=Never -- curl -f -s --max-time 10 http://pokeapi:80/api/v2/pokemon/1/ || echo "PokeAPI not reachable"
+
       - name: K8s wait for job
         run: |
-          kubectl wait --timeout=600s --for=condition=complete job/load-graphql
+          kubectl wait --timeout=1200s --for=condition=complete job/load-graphql || {
+            echo "=== JOB TIMEOUT DEBUG INFO ==="
+            echo "Job status:"
+            kubectl get job load-graphql -n pokeapi -o yaml
+            echo "Pod status:"
+            kubectl get pods -n pokeapi
+            echo "Init container logs:"
+            kubectl logs job/load-graphql -n pokeapi -c pokeapi-last-built-resource-connection-checker --tail=20
+            echo "Main container logs:"
+            kubectl logs job/load-graphql -n pokeapi -c load-graphql --tail=20 || echo "Main container not started"
+            exit 1
+          }
           last_command=$(kubectl get job -o jsonpath='{.status.succeeded}' load-graphql)
           test "$last_command" -eq 1
       - name: Get GQL output

@@ -82,8 +82,6 @@ jobs:
           make kustomize-local-apply
           echo "=== Verifying job creation ==="
           kubectl get jobs -n pokeapi
-          echo "=== Checking if load-graphql job exists ==="
-          kubectl get job load-graphql -n pokeapi || echo "Job not found - this is the problem!"
           kubectl proxy &
           sleep 1
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/
@@ -121,6 +119,17 @@ jobs:
           kubectl logs -l component=pokeapi -n pokeapi --tail=10 || echo "No PokeAPI logs yet"
           echo "=== Checking if pal-park-area data exists ==="
           kubectl exec -n pokeapi deployment/pokeapi -- python manage.py shell -c "from pokemon_v2.models import PalParkArea; print(f'PalParkArea count: {PalParkArea.objects.count()}')" || echo "Failed to check PalParkArea data"
+          echo "=== Checking for failed/error pods ==="
+          error_pods=$(kubectl get pods -n pokeapi -o jsonpath='{.items[?(@.status.phase=="Failed" || @.status.phase=="Error")].metadata.name}')
+          if [ -n "$error_pods" ]; then
+            echo "Found error/failed pods, showing logs:"
+            for pod in $error_pods; do
+              echo "=== Logs for $pod ==="
+              kubectl logs $pod -n pokeapi --tail=50 || echo "No logs available for $pod"
+            done
+          else
+            echo "No error/failed pods found"
+          fi
 
       - name: Debug network connectivity
         run: |

@@ -5596,6 +5596,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "trade_species",
                                         "trigger",
                                         "turn_upside_down",
+                                        "region_restriction",
+                                        "base_form_required",
                                     ],
                                     "properties": {
                                         "gender": {
@@ -5724,6 +5726,24 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "turn_upside_down": {"type": "boolean"},
+                                        "region_restriction": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {"type": "string", "format": "uri"}
+                                            }
+                                        },
+                                        "base_form_required": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {"type": "string", "format": "uri"}
+                                            }
+                                        },
                                     },
                                 },
                             },

@@ -1496,7 +1496,9 @@ class APIData:
         return pokemon_species_name
 
     @classmethod
-    def setup_pokemon_dex_entry_data(cls, pokemon_species, pokemon, pokedex, entry_number=100):
+    def setup_pokemon_dex_entry_data(
+        cls, pokemon_species, pokemon, pokedex, entry_number=100
+    ):
         dex_number = PokemonDexNumber(
             pokemon_species=pokemon_species,
             pokemon=pokemon,
@@ -3645,9 +3647,7 @@ class APITests(APIData, APITestCase):
         pokemon_species = self.setup_pokemon_species_data(
             name="pkmn spcs for base pkdx"
         )
-        pokemon = self.setup_pokemon_data(
-            name="pkmn for base pkdx"
-        )
+        pokemon = self.setup_pokemon_data(name="pkmn for base pkdx")
         dex_entry = self.setup_pokemon_dex_entry_data(
             pokedex=pokedex, pokemon=pokemon, pokemon_species=pokemon_species
         )
@@ -3712,7 +3712,6 @@ class APITests(APIData, APITestCase):
             response.data["pokemon_entries"][0]["pokemon"]["url"],
             "{}{}/pokemon/{}/".format(TEST_HOST, API_V2, pokemon.pk),
         )
-
 
     # Move Tests
     def test_move_ailment_api(self):
@@ -4690,7 +4689,10 @@ class APITests(APIData, APITestCase):
         )
 
         dex_number = self.setup_pokemon_dex_entry_data(
-            pokemon_species=pokemon_species, pokemon=pokemon, pokedex=pokedex, entry_number=44
+            pokemon_species=pokemon_species,
+            pokemon=pokemon,
+            pokedex=pokedex,
+            entry_number=44,
         )
 
         self.setup_pokemon_sprites_data(pokemon)
@@ -4905,7 +4907,10 @@ class APITests(APIData, APITestCase):
         )
         pokedex = self.setup_pokedex_data(name="pkdx for base pkmn")
         dex_number = self.setup_pokemon_dex_entry_data(
-            pokemon_species=pokemon_species, pokemon=pokemon, pokedex=pokedex, entry_number=44
+            pokemon_species=pokemon_species,
+            pokemon=pokemon,
+            pokedex=pokedex,
+            entry_number=44,
         )
         generation = self.setup_generation_data(name="base gen")
         pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)

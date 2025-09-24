@@ -6034,9 +6034,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
                             "url": {
                                 "type": "string",
                                 "format": "uri",
-                                "examples": [
-                                    "https://pokeapi.co/api/v2/pokemon/1/"
-                                ],
+                                "examples": ["https://pokeapi.co/api/v2/pokemon/1/"],
                             },
                         },
                     },

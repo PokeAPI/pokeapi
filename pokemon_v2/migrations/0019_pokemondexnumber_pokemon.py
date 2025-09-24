@@ -7,13 +7,19 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0018_auto_20250123_1838'),
+        ("pokemon_v2", "0018_auto_20250123_1838"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pokemondexnumber',
-            name='pokemon',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='pokemondexnumber', to='pokemon_v2.pokemon'),
+            model_name="pokemondexnumber",
+            name="pokemon",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="pokemondexnumber",
+                to="pokemon_v2.pokemon",
+            ),
         ),
     ]

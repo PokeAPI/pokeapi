@@ -1613,7 +1613,7 @@ class PokemonColorName(HasPokemonColor, IsName):
     pass
 
 
-class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
+class PokemonDexNumber(HasPokemonSpecies, HasPokemon, HasPokedex):
     pokedex_number = models.IntegerField()
 
 

@@ -1496,9 +1496,10 @@ class APIData:
         return pokemon_species_name
 
     @classmethod
-    def setup_pokemon_dex_entry_data(cls, pokemon_species, pokedex, entry_number=100):
+    def setup_pokemon_dex_entry_data(cls, pokemon_species, pokemon, pokedex, entry_number=100):
         dex_number = PokemonDexNumber(
             pokemon_species=pokemon_species,
+            pokemon=pokemon,
             pokedex=pokedex,
             pokedex_number=entry_number,
         )
@@ -3644,8 +3645,11 @@ class APITests(APIData, APITestCase):
         pokemon_species = self.setup_pokemon_species_data(
             name="pkmn spcs for base pkdx"
         )
+        pokemon = self.setup_pokemon_data(
+            name="pkmn for base pkdx"
+        )
         dex_entry = self.setup_pokemon_dex_entry_data(
-            pokedex=pokedex, pokemon_species=pokemon_species
+            pokedex=pokedex, pokemon=pokemon, pokemon_species=pokemon_species
         )
 
         response = self.client.get("{}/pokedex/{}/".format(API_V2, pokedex.pk))
@@ -3699,6 +3703,16 @@ class APITests(APIData, APITestCase):
             response.data["pokemon_entries"][0]["pokemon_species"]["url"],
             "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
         )
+        # pokemon params
+        self.assertEqual(
+            response.data["pokemon_entries"][0]["pokemon"]["name"],
+            pokemon.name,
+        )
+        self.assertEqual(
+            response.data["pokemon_entries"][0]["pokemon"]["url"],
+            "{}{}/pokemon/{}/".format(TEST_HOST, API_V2, pokemon.pk),
+        )
+
 
     # Move Tests
     def test_move_ailment_api(self):
@@ -4666,10 +4680,6 @@ class APITests(APIData, APITestCase):
 
         pal_park = self.setup_pal_park_data(pokemon_species=pokemon_species)
 
-        dex_number = self.setup_pokemon_dex_entry_data(
-            pokemon_species=pokemon_species, pokedex=pokedex, entry_number=44
-        )
-
         egg_group = self.setup_egg_group_data(name="egg grp for pkmn spcs")
         self.setup_pokemon_egg_group_data(
             pokemon_species=pokemon_species, egg_group=egg_group
@@ -4678,6 +4688,11 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data(
             pokemon_species=pokemon_species, name="pkm for base pkmn spcs"
         )
+
+        dex_number = self.setup_pokemon_dex_entry_data(
+            pokemon_species=pokemon_species, pokemon=pokemon, pokedex=pokedex, entry_number=44
+        )
+
         self.setup_pokemon_sprites_data(pokemon)
         self.setup_pokemon_cries_data(pokemon)
 
@@ -4887,6 +4902,10 @@ class APITests(APIData, APITestCase):
         )
         pokemon_form = self.setup_pokemon_form_data(
             pokemon=pokemon, name="pkm form for base pkmn"
+        )
+        pokedex = self.setup_pokedex_data(name="pkdx for base pkmn")
+        dex_number = self.setup_pokemon_dex_entry_data(
+            pokemon_species=pokemon_species, pokemon=pokemon, pokedex=pokedex, entry_number=44
         )
         generation = self.setup_generation_data(name="base gen")
         pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
@@ -5128,6 +5147,18 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["game_indices"][0]["version"]["url"],
             "{}{}/version/{}/".format(TEST_HOST, API_V2, pokemon_game_index.version.pk),
+        )
+        # dex number params
+        self.assertEqual(
+            response.data["pokedex_numbers"][0]["entry_number"],
+            dex_number.pokedex_number,
+        )
+        self.assertEqual(
+            response.data["pokedex_numbers"][0]["pokedex"]["name"], pokedex.name
+        )
+        self.assertEqual(
+            response.data["pokedex_numbers"][0]["pokedex"]["url"],
+            "{}{}/pokedex/{}/".format(TEST_HOST, API_V2, pokedex.pk),
         )
         # form params
         self.assertEqual(response.data["forms"][0]["name"], pokemon_form.name)

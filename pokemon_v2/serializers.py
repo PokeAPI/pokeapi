@@ -4262,6 +4262,9 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     game_indices = PokemonGameIndexSerializer(
         many=True, read_only=True, source="pokemongameindex"
     )
+    pokedex_numbers = PokemonDexEntrySerializer(
+        many=True, read_only=True, source="pokemondexnumber"
+    )
     moves = serializers.SerializerMethodField("get_pokemon_moves")
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
@@ -4289,6 +4292,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "past_abilities",
             "forms",
             "game_indices",
+            "pokedex_numbers",
             "held_items",
             "location_area_encounters",
             "moves",
@@ -5844,10 +5848,11 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
 class PokemonDexNumberSerializer(serializers.ModelSerializer):
     entry_number = serializers.IntegerField(source="pokedex_number")
     pokemon_species = PokemonSpeciesSummarySerializer()
+    pokemon = PokemonSummarySerializer()
 
     class Meta:
         model = PokemonDexNumber
-        fields = ("pokedex", "entry_number", "pokemon_species")
+        fields = ("pokedex", "entry_number", "pokemon_species", "pokemon")
 
 
 ############################
@@ -6000,7 +6005,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
             "type": "array",
             "items": {
                 "type": "object",
-                "required": ["entry_number", "pokemon_species"],
+                "required": ["entry_number", "pokemon_species", "pokemon"],
                 "properties": {
                     "entry_number": {
                         "type": "integer",
@@ -6017,6 +6022,20 @@ class PokedexDetailSerializer(serializers.ModelSerializer):
                                 "format": "uri",
                                 "examples": [
                                     "https://pokeapi.co/api/v2/pokemon-species/1/"
+                                ],
+                            },
+                        },
+                    },
+                    "pokemon": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "examples": ["bulbasaur"]},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": [
+                                    "https://pokeapi.co/api/v2/pokemon/1/"
                                 ],
                             },
                         },

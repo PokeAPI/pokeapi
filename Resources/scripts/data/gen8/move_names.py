@@ -5,18 +5,8 @@ from read_swsh import TextFile
 # data_path contains the countents of the `message` folder found in sword/shield's romfs:/bin/
 if __name__ == "__main__":
     path = os.path.abspath(os.path.dirname(__file__))
-    data_path = os.path.join(
-        os.path.abspath(os.path.dirname(__file__)), "..", "..", "..", "..", "data"
-    )
-    csv_path = os.path.join(
-        os.path.abspath(os.path.dirname(__file__)),
-        "..",
-        "..",
-        "..",
-        "pokedex",
-        "data",
-        "csv",
-    )
+    data_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "..", "..", "..", "data")
+    csv_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..", "..", "..", "pokedex", "data", "csv")
 
     languages = {
         "JPN": 1,
@@ -35,17 +25,13 @@ if __name__ == "__main__":
     entries = []
 
     # shadow moves
-    with open(
-        os.path.join(csv_path, "move_names.csv"), "r", encoding="utf-8", newline=""
-    ) as csv_file:
+    with open(os.path.join(csv_path, "move_names.csv"), "r", encoding="utf-8", newline="") as csv_file:
         reader = csv.reader(csv_file, delimiter=",")
         for row in reader:
             if row[0].isnumeric() and int(row[0]) > 10000:
                 entries.append([int(row[0]), int(row[1]), row[2]])
 
-    with open(
-        os.path.join(csv_path, "move_names.csv"), "w", encoding="utf-8", newline=""
-    ) as csv_file:
+    with open(os.path.join(csv_path, "move_names.csv"), "w", encoding="utf-8", newline="") as csv_file:
         writer = csv.writer(csv_file, delimiter=",", lineterminator="\n")
         for language_dir, language_id in languages.items():
             try:

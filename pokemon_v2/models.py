@@ -1695,7 +1695,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     turn_upside_down = models.BooleanField(default=False)
 
     # Regional evolution fields
-    region_restriction = models.ForeignKey(
+    region = models.ForeignKey(
         "Region",
         blank=True,
         null=True,
@@ -1703,7 +1703,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Region where this evolution can occur (null = any region)",
     )
 
-    base_form_required = models.ForeignKey(
+    base_form = models.ForeignKey(
         "PokemonSpecies",
         blank=True,
         null=True,

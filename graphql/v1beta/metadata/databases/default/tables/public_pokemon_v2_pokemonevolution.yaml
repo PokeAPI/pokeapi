@@ -37,10 +37,10 @@ object_relationships:
       foreign_key_constraint_on: known_move_type_id
   - name: pokemon_v2_region
     using:
-      foreign_key_constraint_on: region_restriction_id
-  - name: pokemon_v2_pokemonspecy_by_base_form_required
+      foreign_key_constraint_on: region_id
+  - name: pokemon_v2_pokemonspecy_by_base_form_id
     using:
-      foreign_key_constraint_on: base_form_required_id
+      foreign_key_constraint_on: base_form_id
 select_permissions:
   - role: anon
     permission:

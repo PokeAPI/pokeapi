@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name="pokemonevolution",
-            name="region_restriction",
+            name="region",
             field=models.ForeignKey(
                 blank=True,
                 null=True,
@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="pokemonevolution",
-            name="base_form_required",
+            name="base_form",
             field=models.ForeignKey(
                 blank=True,
                 null=True,

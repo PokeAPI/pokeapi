@@ -5518,8 +5518,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trade_species = PokemonSpeciesSummarySerializer()
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
-    region_restriction = RegionSummarySerializer()
-    base_form_required = PokemonSpeciesSummarySerializer()
+    region_id = RegionSummarySerializer(source="region")
+    base_form_id = PokemonSpeciesSummarySerializer(source="base_form")
 
     class Meta:
         model = PokemonEvolution
@@ -5542,8 +5542,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "time_of_day",
             "trade_species",
             "turn_upside_down",
-            "region_restriction",
-            "base_form_required",
+            "region_id",
+            "base_form_id",
         )
 
 
@@ -5596,8 +5596,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "trade_species",
                                         "trigger",
                                         "turn_upside_down",
-                                        "region_restriction",
-                                        "base_form_required",
+                                        "region_id",
+                                        "base_form_id",
                                     ],
                                     "properties": {
                                         "gender": {
@@ -5726,7 +5726,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "turn_upside_down": {"type": "boolean"},
-                                        "region_restriction": {
+                                        "region_id": {
                                             "type": "object",
                                             "nullable": True,
                                             "required": ["name", "url"],
@@ -5738,7 +5738,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                                 },
                                             },
                                         },
-                                        "base_form_required": {
+                                        "base_form_id": {
                                             "type": "object",
                                             "nullable": True,
                                             "required": ["name", "url"],

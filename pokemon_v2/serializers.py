@@ -5522,6 +5522,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trade_species = PokemonSpeciesSummarySerializer()
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
+    region_id = RegionSummarySerializer(source="region")
+    base_form_id = PokemonSpeciesSummarySerializer(source="base_form")
 
     class Meta:
         model = PokemonEvolution
@@ -5544,6 +5546,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "time_of_day",
             "trade_species",
             "turn_upside_down",
+            "region_id",
+            "base_form_id",
         )
 
 
@@ -5596,6 +5600,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "trade_species",
                                         "trigger",
                                         "turn_upside_down",
+                                        "region_id",
+                                        "base_form_id",
                                     ],
                                     "properties": {
                                         "gender": {
@@ -5724,6 +5730,30 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "turn_upside_down": {"type": "boolean"},
+                                        "region_id": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
+                                        "base_form_id": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
                                     },
                                 },
                             },

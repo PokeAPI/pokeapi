@@ -18,7 +18,7 @@ spec:
               done;
       containers:
         - name: load-graphql
-          image: debian:buster
+          image: debian:bullseye
           env:
             - name: HASURA_GRAPHQL_ADMIN_SECRET
               valueFrom:

@@ -5,7 +5,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("pokemon_v2", "0018_auto_20250123_1838"),
+        ("pokemon_v2", "0019_add_regional_evolution_fields"),
     ]
 
     operations = [

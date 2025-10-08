@@ -1704,7 +1704,6 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     )
 
 
-
 class PokemonForm(HasName, HasPokemon, HasOrder):
     form_name = models.CharField(max_length=30)
 

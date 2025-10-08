@@ -1703,14 +1703,6 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Region where this evolution can occur (null = any region)",
     )
 
-    base_form = models.ForeignKey(
-        "PokemonSpecies",
-        blank=True,
-        null=True,
-        related_name="base_form_evolutions",
-        on_delete=models.CASCADE,
-        help_text="Specific form required for evolution (null = any form)",
-    )
 
 
 class PokemonForm(HasName, HasPokemon, HasOrder):

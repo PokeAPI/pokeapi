@@ -26,6 +26,37 @@ git checkout -b my_new_branch
 
 Simple!
 
+## Development Environment
+Want to get started quickly? Use [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). They provide a consistent, pre-configured development environment, ensuring you're ready to go without lengthy setup.
+
+### Prerequisites:
+
+* [**Docker**](https://www.docker.com/) (ensure Docker Desktop or your Docker daemon is running)
+* [**Visual Studio Code**](https://code.visualstudio.com/)
+* [**VS Code Dev Containers Extension**]()
+
+### Getting Started:
+
+1.  **Open in Dev Container:** Open the project folder in VS Code. Click "Reopen in Container" when prompted (or use the Command Palette).
+
+2.  **Initial Setup:** Once the container is ready, open a terminal and run:
+    ```bash
+    make devcontainer-setup
+    ```
+    This command installs requirements, runs migrations, and populates the database.
+
+### Running Server (Inside the Dev Container):
+
+* Run Development Server (Django's built-in):
+    ```bash
+    make serve
+    ```
+
+* Run Development Server (Gunicorn):
+    ```bash
+    make serve-gunicorn
+    ```
+    
 ## Financial contributions
 
 We also welcome financial contributions in full transparency on our [open collective](https://opencollective.com/pokeapi).

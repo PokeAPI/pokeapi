@@ -2038,8 +2038,9 @@ def _build_pokemons():
     def csv_record_to_objects(info):
         yield PokemonDexNumber(
             pokemon_species_id=int(info[0]),
-            pokedex_id=int(info[1]),
-            pokedex_number=int(info[2]),
+            pokemon_id=int(info[1]),
+            pokedex_id=int(info[2]),
+            pokedex_number=int(info[3]),
         )
 
     build_generic((PokemonDexNumber,), "pokemon_dex_numbers.csv", csv_record_to_objects)

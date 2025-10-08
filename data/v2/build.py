@@ -2074,7 +2074,6 @@ def _build_pokemons():
             needs_overworld_rain=bool(int(info[18])),
             turn_upside_down=bool(int(info[19])),
             region_id=int(info[20]) if info[20] != "" else None,
-            base_form_id=int(info[21]) if info[21] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

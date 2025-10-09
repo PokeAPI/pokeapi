@@ -1192,10 +1192,15 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
     )
     def get_encounters(self, obj):
         # get versions for later use
-        version_objects = Version.objects.all()
+        version_objects = Version.objects.all().order_by("id")
         version_data = VersionSummarySerializer(
             version_objects, many=True, context=self.context
         ).data
+
+        # Create a mapping from version ID to serialized data
+        version_data_map = {
+            version_objects[i].id: version_data[i] for i in range(len(version_objects))
+        }
 
         # all encounters associated with location area
         all_encounters = Encounter.objects.filter(location_area=obj).order_by("pokemon")
@@ -1218,7 +1223,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             # each pokemon has multiple versions it could be encountered in
             for ver in poke_encounters.values("version").distinct():
                 version_detail = OrderedDict()
-                version_detail["version"] = version_data[ver["version"] - 1]
+                version_detail["version"] = version_data_map[ver["version"]]
                 version_detail["max_chance"] = 0
                 version_detail["encounter_details"] = []
 
@@ -4705,14 +4710,25 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         }
     )
     def get_pokemon_moves(self, obj):
-        version_objects = VersionGroup.objects.all()
+        version_objects = VersionGroup.objects.all().order_by("id")
         version_data = VersionGroupSummarySerializer(
             version_objects, many=True, context=self.context
         ).data
-        method_objects = MoveLearnMethod.objects.all()
+
+        # Create a mapping from version group ID to serialized data
+        version_data_map = {
+            version_objects[i].id: version_data[i] for i in range(len(version_objects))
+        }
+
+        method_objects = MoveLearnMethod.objects.all().order_by("id")
         method_data = MoveLearnMethodSummarySerializer(
             method_objects, many=True, context=self.context
         ).data
+
+        # Create a mapping from method ID to serialized data
+        method_data_map = {
+            method_objects[i].id: method_data[i] for i in range(len(method_objects))
+        }
 
         # Get moves related to this pokemon and pull out unique Move IDs.
         # Note that it's important to order by the same column we're using to
@@ -4742,11 +4758,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail = OrderedDict()
 
                 version_detail["level_learned_at"] = move["level"]
-                version_detail["version_group"] = version_data[
-                    move["version_group"] - 1
+                version_detail["version_group"] = version_data_map[
+                    move["version_group"]
                 ]
-                version_detail["move_learn_method"] = method_data[
-                    move["move_learn_method"] - 1
+                version_detail["move_learn_method"] = method_data_map[
+                    move["move_learn_method"]
                 ]
                 version_detail["order"] = move["order"]
 

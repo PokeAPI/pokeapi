@@ -5797,3 +5797,196 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    def test_location_area_api_with_non_sequential_version_ids(self):
+        """
+        Test that location area API works correctly with non-sequential version IDs.
+        This test reproduces the IndexError scenario that was fixed in issue #1313.
+        """
+        # Create versions with non-sequential IDs to trigger the original bug
+        # We'll create versions with IDs 1, 5, 10 to simulate non-sequential ordering
+        version_group = self.setup_version_group_data(name="test version group")
+
+        # Create versions with specific IDs by deleting and recreating with explicit IDs
+        Version.objects.all().delete()  # Clear existing versions
+        version1 = Version.objects.create(
+            id=1, name="version1", version_group=version_group
+        )
+        version5 = Version.objects.create(
+            id=5, name="version5", version_group=version_group
+        )
+        version10 = Version.objects.create(
+            id=10, name="version10", version_group=version_group
+        )
+
+        # Create location area and encounter data
+        location = self.setup_location_data(name="test location")
+        location_area = self.setup_location_area_data(
+            location, name="test location area"
+        )
+
+        encounter_method = self.setup_encounter_method_data(
+            name="test encounter method"
+        )
+        location_area_encounter_rate = self.setup_location_area_encounter_rate_data(
+            location_area, encounter_method, rate=20
+        )
+
+        pokemon_species = self.setup_pokemon_species_data(name="test pokemon species")
+        pokemon = self.setup_pokemon_data(
+            name="test pokemon", pokemon_species=pokemon_species
+        )
+        encounter_slot = self.setup_encounter_slot_data(
+            encounter_method, slot=1, rarity=30
+        )
+
+        # Create encounters with different versions (including the non-sequential IDs)
+        encounter1 = self.setup_encounter_data(
+            pokemon=pokemon,
+            location_area=location_area,
+            encounter_slot=encounter_slot,
+            version=version1,  # ID 1
+            min_level=30,
+            max_level=35,
+        )
+
+        encounter2 = self.setup_encounter_data(
+            pokemon=pokemon,
+            location_area=location_area,
+            encounter_slot=encounter_slot,
+            version=version5,  # ID 5
+            min_level=32,
+            max_level=38,
+        )
+
+        encounter3 = self.setup_encounter_data(
+            pokemon=pokemon,
+            location_area=location_area,
+            encounter_slot=encounter_slot,
+            version=version10,  # ID 10
+            min_level=35,
+            max_level=40,
+        )
+
+        # Test the API endpoint - this should not raise IndexError
+        response = self.client.get(f"{API_V2}/location-area/{location_area.pk}/")
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        # Verify the response contains the expected structure
+        self.assertIn("pokemon_encounters", response.data)
+        self.assertIsInstance(response.data["pokemon_encounters"], list)
+
+        # Verify that version data is correctly mapped (not using array indexing)
+        pokemon_encounters = response.data["pokemon_encounters"]
+        self.assertGreater(len(pokemon_encounters), 0)
+
+        # Check that version details are properly structured
+        for encounter in pokemon_encounters:
+            self.assertIn("version_details", encounter)
+            for version_detail in encounter["version_details"]:
+                self.assertIn("version", version_detail)
+                # The version should be a proper object, not None or malformed
+                self.assertIsInstance(version_detail["version"], dict)
+                self.assertIn("name", version_detail["version"])
+
+    def test_pokemon_api_with_non_sequential_ids(self):
+        """
+        Test that pokemon API works correctly with non-sequential version group and method IDs.
+        This test reproduces the IndexError scenario that was fixed in issue #1313.
+        """
+        # Create version groups with non-sequential IDs
+        VersionGroup.objects.all().delete()  # Clear existing version groups
+        MoveLearnMethod.objects.all().delete()  # Clear existing methods
+
+        generation = self.setup_generation_data(name="test generation")
+
+        # Create version groups with specific IDs
+        version_group1 = VersionGroup.objects.create(
+            id=1, name="version group 1", generation=generation, order=1
+        )
+        version_group5 = VersionGroup.objects.create(
+            id=5, name="version group 5", generation=generation, order=2
+        )
+        version_group10 = VersionGroup.objects.create(
+            id=10, name="version group 10", generation=generation, order=3
+        )
+
+        # Create move learn methods with specific IDs
+        method1 = MoveLearnMethod.objects.create(id=1, name="method 1")
+        method5 = MoveLearnMethod.objects.create(id=5, name="method 5")
+        method10 = MoveLearnMethod.objects.create(id=10, name="method 10")
+
+        # Create pokemon and move data with all required setup
+        pokemon_species = self.setup_pokemon_species_data(name="test pokemon species")
+        pokemon = self.setup_pokemon_data(
+            name="test pokemon", pokemon_species=pokemon_species
+        )
+        pokemon_form = self.setup_pokemon_form_data(
+            pokemon=pokemon, name="test pokemon form"
+        )
+        pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
+        pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
+        pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
+        pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
+        pokemon_cries = self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+        pokemon_game_index = self.setup_pokemon_game_index_data(
+            pokemon=pokemon, game_index=10
+        )
+        move = self.setup_move_data(name="test move")
+
+        # Create pokemon moves with different version groups
+        # Note: setup_pokemon_move_data creates its own move_learn_method, so we'll create the moves manually
+        pokemon_move1 = PokemonMove.objects.create(
+            pokemon=pokemon,
+            move=move,
+            version_group=version_group1,  # ID 1
+            move_learn_method=method1,  # ID 1
+            level=10,
+            order=1,
+        )
+
+        pokemon_move2 = PokemonMove.objects.create(
+            pokemon=pokemon,
+            move=move,
+            version_group=version_group5,  # ID 5
+            move_learn_method=method5,  # ID 5
+            level=15,
+            order=2,
+        )
+
+        pokemon_move3 = PokemonMove.objects.create(
+            pokemon=pokemon,
+            move=move,
+            version_group=version_group10,  # ID 10
+            move_learn_method=method10,  # ID 10
+            level=20,
+            order=3,
+        )
+
+        # Test the API endpoint - this should not raise IndexError
+        response = self.client.get(f"{API_V2}/pokemon/{pokemon.pk}/")
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        # Verify the response contains the expected structure
+        self.assertIn("moves", response.data)
+        self.assertIsInstance(response.data["moves"], list)
+
+        # Verify that move data is correctly structured
+        moves = response.data["moves"]
+        self.assertGreater(len(moves), 0)
+
+        # Check that version group details are properly structured
+        for move_data in moves:
+            self.assertIn("version_group_details", move_data)
+            for version_detail in move_data["version_group_details"]:
+                self.assertIn("version_group", version_detail)
+                self.assertIn("move_learn_method", version_detail)
+
+                # The version group and method should be proper objects, not None or malformed
+                self.assertIsInstance(version_detail["version_group"], dict)
+                self.assertIsInstance(version_detail["move_learn_method"], dict)
+                self.assertIn("name", version_detail["version_group"])
+                self.assertIn("name", version_detail["move_learn_method"])

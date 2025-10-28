@@ -2504,8 +2504,8 @@ class TypeDetailSerializer(serializers.ModelSerializer):
                             "firered-leafgreen": {
                                 "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/firered-leafgreen/1.png"
                             },
-                            "ruby-saphire": {
-                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/ruby-saphire/1.png"
+                            "ruby-sapphire": {
+                                "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/ruby-sapphire/1.png"
                             },
                             "xd": {
                                 "name_icon": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iii/xd/1.png"

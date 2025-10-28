@@ -635,7 +635,7 @@ def _build_types():
                 "colosseum",
                 "emerald",
                 "firered-leafgreen",
-                "ruby-saphire",
+                "ruby-sapphire",
                 "xd",
             ],
             "generation-iv": ["diamond-pearl", "heartgold-soulsilver", "platinum"],

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/soulsniper/pokeapi/logs/.2b13bdc2295a5e0767423fe64e3437af2e35de67-audit.json",
+    "files": [
+        {
+            "date": 1762659045560,
+            "name": "/Users/soulsniper/pokeapi/logs/mcp-puppeteer-2025-11-08.log",
+            "hash": "c00d0ad578feba819d4e3fbe86d0022d5d525679de8cfd47ba4aaf0fe568bb19"
+        }
+    ],
+    "hashType": "sha256"
+}

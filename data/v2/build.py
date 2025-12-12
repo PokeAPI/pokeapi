@@ -1983,16 +1983,34 @@ def _build_pokemons():
                         ),
                     },
                     "brilliant-diamond-shining-pearl": {
-                        "front_default": try_image_names(poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/female/", info, "png"),
-                    }
+                        "front_default": try_image_names(
+                            poke_sprites
+                            + gen_viii
+                            + "brilliant-diamond-shining-pearl/",
+                            info,
+                            "png",
+                        ),
+                        "front_female": try_image_names(
+                            poke_sprites
+                            + gen_viii
+                            + "brilliant-diamond-shining-pearl/female/",
+                            info,
+                            "png",
+                        ),
+                    },
                 },
                 "generation-ix": {
                     "scarlet-violet": {
-                        "front_default": try_image_names(poke_sprites + gen_ix + "scarlet-violet/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_ix + "scarlet-violet/female/", info, "png"),
+                        "front_default": try_image_names(
+                            poke_sprites + gen_ix + "scarlet-violet/", info, "png"
+                        ),
+                        "front_female": try_image_names(
+                            poke_sprites + gen_ix + "scarlet-violet/female/",
+                            info,
+                            "png",
+                        ),
                     }
-                }
+                },
             },
         }
         yield PokemonSprites(
@@ -2144,16 +2162,35 @@ def _build_pokemons():
             "versions": {
                 "generation-viii": {
                     "brilliant-diamond-shining-pearl": {
-                        "front_default": try_image_names(poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/female/", info, "png"),
+                        "front_default": try_image_names(
+                            poke_sprites
+                            + "versions/generation-viii/brilliant-diamond-shining-pearl/",
+                            info,
+                            "png",
+                        ),
+                        "front_female": try_image_names(
+                            poke_sprites
+                            + "versions/generation-viii/brilliant-diamond-shining-pearl/female/",
+                            info,
+                            "png",
+                        ),
                     }
                 },
                 "generation-ix": {
                     "scarlet-violet": {
-                        "front_default": try_image_names(poke_sprites + "versions/generation-ix/scarlet-violet/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + "versions/generation-ix/scarlet-violet/female/", info, "png"),
+                        "front_default": try_image_names(
+                            poke_sprites + "versions/generation-ix/scarlet-violet/",
+                            info,
+                            "png",
+                        ),
+                        "front_female": try_image_names(
+                            poke_sprites
+                            + "versions/generation-ix/scarlet-violet/female/",
+                            info,
+                            "png",
+                        ),
                     }
-                }
+                },
             },
         }
         yield PokemonFormSprites(

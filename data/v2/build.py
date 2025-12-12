@@ -1458,6 +1458,7 @@ def _build_pokemons():
         gen_vi = "versions/generation-vi/"
         gen_vii = "versions/generation-vii/"
         gen_viii = "versions/generation-viii/"
+        gen_ix = "versions/generation-ix/"
         sprites = {
             "front_default": try_image_names(poke_sprites, info, "png"),
             "front_female": try_image_names(poke_sprites + "female/", info, "png"),
@@ -1981,7 +1982,17 @@ def _build_pokemons():
                             poke_sprites + gen_viii + "icons/female/", info, "png"
                         ),
                     },
+                    "brilliant-diamond-shining-pearl": {
+                        "front_default": try_image_names(poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/", info, "png"),
+                        "front_female": try_image_names(poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/female/", info, "png"),
+                    }
                 },
+                "generation-ix": {
+                    "scarlet-violet": {
+                        "front_default": try_image_names(poke_sprites + gen_ix + "scarlet-violet/", info, "png"),
+                        "front_female": try_image_names(poke_sprites + gen_ix + "scarlet-violet/female/", info, "png"),
+                    }
+                }
             },
         }
         yield PokemonSprites(
@@ -2130,6 +2141,20 @@ def _build_pokemons():
             "back_shiny_female": try_image_names(
                 poke_sprites + "back/shiny/female/", info, "png"
             ),
+            "versions": {
+                "generation-viii": {
+                    "brilliant-diamond-shining-pearl": {
+                        "front_default": try_image_names(poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/", info, "png"),
+                        "front_female": try_image_names(poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/female/", info, "png"),
+                    }
+                },
+                "generation-ix": {
+                    "scarlet-violet": {
+                        "front_default": try_image_names(poke_sprites + "versions/generation-ix/scarlet-violet/", info, "png"),
+                        "front_female": try_image_names(poke_sprites + "versions/generation-ix/scarlet-violet/female/", info, "png"),
+                    }
+                }
+            },
         }
         yield PokemonFormSprites(
             id=int(info[0]), pokemon_form_id=int(info[0]), sprites=sprites

@@ -9,55 +9,87 @@ pokedex_id,local_language_id,name,description
 2,9,Kanto,Red/Blue/Yellow Kanto dex
 3,5,Johto initial,"Pokédex régional de Johto dans Or/Argent/Cristal, appellé ""Nouveau"" Pokédex dans le jeu"
 3,6,Original Johto,"Gold/Silber/Kristall Johto Dex — Auch der ""Neue"" Pokédex im Spiel genannt"
+3,7,Johto Original,Pokédex regional de Johto de Oro/Plata/Cristal
 3,9,Original Johto,"Gold/Silver/Crystal Johto dex—called the ""New"" Pokédex in-game"
 4,5,Hoenn initial,Pokédex régional d’Hoenn dans Rubis/Saphir/Émeraude
 4,6,Original Hoenn,Rubin/Saphir/Smaragd Hoenn Dex
+4,7,Hoenn Original,Pokédex regional de Hoenn de Rubí/Zafiro/Esmeralda 
 4,9,Original Hoenn,Ruby/Sapphire/Emerald Hoenn dex
 5,5,Sinnoh initial,Pokédex régional de Sinnoh dans Diamant/Perle
 5,6,Original Sinnoh,Diamant/Perl Sinnoh Dex
+5,7,Sinnoh Original,Pokédex regional de Sinnoh de Diamante/Perla
 5,9,Original Sinnoh,Diamond/Pearl Sinnoh dex
 6,5,Sinnoh étendu,Pokédex régional de Sinnoh dans Platine
 6,6,Erweitertes Sinnoh,Platin Sinnoh Dex — eine erweiterte Version von Diamant und Perl
+6,7,Sinnoh Extendido,Pokédex regional de Sinnoh de Platino
 6,9,Extended Sinnoh,Platinum Sinnoh dex—an extended version of Diamond and Pearl’s
 7,5,Johto amélioré,"Pokédex régional de Johto dans Or HeartGold/Argent SoulSilver, mis à jour pour la 4ème génération"
 7,6,Aktualisiertes Johto,HeartGold/SoulSilver Johto Dex — Dex aus Gold/Silber/Kristall um Fähigkeiten basierende Entwicklungen aus Generation IV erweitert
+7,7,Johto Actualizado,Pokédex regional de Johto de Oro HeartGold/Plata SoulSilver
 7,9,Updated Johto,"HeartGold/SoulSilver Johto dex—Gold/Silver/Crystal’s, extended to add move-based Generation IV evolutions"
 8,5,Unys initial,Pokédex régional d’Unys dans Noir/Blanc
 8,6,Original Einall,Schwarz/Weiß Einall Dex
+8,7,Teselia Original,Pokédex regional de Teselia de Negro/Blanco
 8,9,Original Unova,Black/White Unova dex
 9,5,Unys amélioré,Pokédex régional d’Unys dans Noir 2/Blanc 2
 9,6,Aktualisiertes Einall,Schwarz 2/Weiß 2 Einall Dex
+9,7,Teselia Actualizado,Pokédex regional de Teselia de Negro 2/Blanco 2
 9,9,Updated Unova,Black 2/White 2 Unova dex
 11,5,Galerie,Ordre de la Galerie dans Pokémon Conquest
 11,6,Gallerie,Pokémon Conquest Galerie Reihenfolge
+11,7,Galería,Orden de la Galería en Pokémon Conquest
 11,9,Gallery,Pokémon Conquest gallery order
 12,5,Kalos : Centre,
 12,6,Kalos-Zentral,
+12,7,Kalos Centro,
 12,9,Central Kalos,
 13,5,Kalos : Côtes,
 13,6,Kalos-Küste,
+13,7,Kalos Costa,
 13,9,Coastal Kalos,
 14,5,Kalos : Monts,
 14,6,Kalos-Gebirge,
+14,7,Kalos Montaña,
 14,9,Mountain Kalos,
 15,5,Hoenn amélioré,"Pokédex régional d’Hoenn dans Rubis Oméga/Saphir Alpha, mis à jour pour les nouvelles évolutions"
 15,6,Neue Hoenn,Omega Rubin/Alpha Saphir Hoenn Dex — Dex aus Rubin/Saphir/Smaragd um Neue Entwicklungen erweitert
+15,7,Hoenn Actualizado,Pokédex regional de Hoenn de Rubí Omega/Zafiro Alfa
 15,9,New Hoenn,"Omega Ruby/Alpha Sapphire Hoenn Dex—Ruby/Sapphire/Emerald’s, updated to add new evolutions"
+16,7,Alola Original,Pokédex regional de Alola de Sol/Luna
 16,9,Original Alola,Sun/Moon Alola dex
+17,7,Melemele Original,Pokédex regional de Melemele de Sol/Luna
 17,9,Original Melemele,Sun/Moon Melemele dex
+18,7,Akala Original,Pokédex regional de Akala de Sol/Luna
 18,9,Original Akala,Sun/Moon Akala dex
+19,7,Ula-Ula Original,Pokédex regional de Ula-Ula de Sol/Luna
 19,9,Original Ula’ula,Sun/Moon Ula’ula dex
+20,7,Poni Original,Pokédex regional de Poni de Sol/Luna
 20,9,Original Poni,Sun/Moon Poni dex
+21,7,Alola Actualizado,Pokédex regional de Alola de Ultra Sol/Ultra Luna
 21,9,Updated Alola,Ultra Sun/Ultra Moon Alola dex
+22,7,Melemele Actualizado,Pokédex regional de Melemele de Ultra Sol/Ultra Luna
 22,9,Updated Melemele,Ultra Sun/Ultra Moon Melemele dex
+23,7,Akala Actualizado,Pokédex regional de Akala de Ultra Sol/Ultra Luna
 23,9,Updated Akala,Ultra Sun/Ultra Moon Akala dex
+24,7,Ula-Ula Actualizado,Pokédex regional de Ula-Ula de Ultra Sol/Ultra Luna
 24,9,Updated Ula’ula,Ultra Sun/Ultra Moon Ula’ula dex
+25,7,Poni Actualizado,Pokédex regional de Poni de Ultra Sol/Ultra Luna
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
+26,7,Let’s Go Kanto,Pokédex regional de Let’s Go Pikachu/Eevee
 26,9,Let’s Go Kanto,Let’s Go: Pikachu/Let’s Go: Eevee Kanto dex
+27,7,Galar,Pokédex regional de Galar
 27,9,Galar,Sword/Shield Galar dex
+28,7,Isla de la Armadura,Pokédex regional de Isla de la Armadura 
 28,9,Isle of Armor,Isle of Armor dex
+29,7,Nieves de la Corona,Pokédex regional de Nieves de la Corona
 29,9,Crown Tundra,Crown Tundra dex
+30,7,Hisui,Pokédex regional de Hisui de Leyendas Pokémon Arceus
 30,9,Hisui,Hisui dex
+31,7,Paldea,Pokédex regional de Paldea de Escarlata/Púrpura
 31,9,Paldea,Paldea dex
+32,7,Kitakami,Pokédex regional de Kitakami de Escarlata/Púrpura
 32,9,Kitakami,Kitakami dex
+33,7,Arándano,Pokédex regional de la Academia Arándano de Escarlata/Púrpura
 33,9,Blueberry,Blueberry Academy dex
+34,7,Ciudad Luminalia,Pokédex regional de Ciudad Luminalia de Pokemon Leyendas Z-A
+35,7,Luminalia Dimensional,Pokédex regional de Luminalia Dimensional de Pokemon Leyendas Z-A

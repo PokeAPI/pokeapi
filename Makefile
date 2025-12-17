@@ -87,10 +87,10 @@ docker-prod:
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format:  # Format the source code
-	black .
+	black . --extend-exclude '.+/scripts/.+'
 
 format-check:  # Check the source code has been formatted
-	black . --check --exclude 'Resources/scripts/.*'
+	black . --check --extend-exclude '.+/scripts/.+'
 
 pull:
 	git checkout master

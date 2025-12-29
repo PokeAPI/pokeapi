@@ -172,6 +172,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 |Dart|[prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)| |
 |Go|[mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go)|Auto caching |
 |Go|[JoshGuarino/PokeGo](https://github.com/JoshGuarino/PokeGo) |Auto caching |
+|Haxe|[KinoCreatesGames/poke-api](https://github.com/KinoCreatesGames/poke-api) |Auto caching |
 |PHP |[lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi)|Auto caching, lazy loading |
 |PowerShell|[Celerium/PokeAPI-PowerShellWrapper](https://github.com/Celerium/PokeAPI-PowerShellWrapper)| |
 |Python|[beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi)|Auto caching, asynchronous |

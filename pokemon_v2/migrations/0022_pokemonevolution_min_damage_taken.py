@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0021_add_evolution_methods_and_fields'),
+        ("pokemon_v2", "0021_add_evolution_methods_and_fields"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pokemonevolution',
-            name='min_damage_taken',
+            model_name="pokemonevolution",
+            name="min_damage_taken",
             field=models.IntegerField(blank=True, null=True),
         ),
     ]

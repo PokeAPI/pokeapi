@@ -7,28 +7,34 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0020_add_regional_evolution_fields'),
+        ("pokemon_v2", "0020_add_regional_evolution_fields"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pokemonevolution',
-            name='min_move_count',
+            model_name="pokemonevolution",
+            name="min_move_count",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='pokemonevolution',
-            name='min_steps',
+            model_name="pokemonevolution",
+            name="min_steps",
             field=models.IntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='pokemonevolution',
-            name='needs_multiplayer',
+            model_name="pokemonevolution",
+            name="needs_multiplayer",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='pokemonevolution',
-            name='used_move',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='used_move', to='pokemon_v2.move'),
+            model_name="pokemonevolution",
+            name="used_move",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="used_move",
+                to="pokemon_v2.move",
+            ),
         ),
     ]

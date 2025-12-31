@@ -1848,6 +1848,7 @@ class APIData:
         used_move=None,
         min_move_count=None,
         min_steps=None,
+        min_damage_taken=None,
     ):
         evolved_species = evolved_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for pkmn evltn"
@@ -1881,6 +1882,7 @@ class APIData:
             used_move=used_move,
             min_move_count=min_move_count,
             min_steps=min_steps,
+            min_damage_taken=min_damage_taken,
         )
         pokemon_evolution.save()
 

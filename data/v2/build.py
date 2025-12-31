@@ -2108,6 +2108,7 @@ def _build_pokemons():
             used_move_id=int(info[23]) if info[23] != "" else None,
             min_move_count=int(info[24]) if info[24] != "" else None,
             min_steps=int(info[25]) if info[25] != "" else None,
+            min_damage_taken=int(info[26]) if info[26] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

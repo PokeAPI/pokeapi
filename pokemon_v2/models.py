@@ -1723,6 +1723,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     min_steps = models.IntegerField(blank=True, null=True)
 
+    min_damage_taken = models.IntegerField(blank=True, null=True)
+
 
 class PokemonForm(HasName, HasPokemon, HasOrder):
     form_name = models.CharField(max_length=30)

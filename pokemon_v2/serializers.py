@@ -5625,6 +5625,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "used_move",
             "min_move_count",
             "min_steps",
+            "min_damage_taken",
         )
 
 
@@ -5667,6 +5668,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "location",
                                         "min_affection",
                                         "min_beauty",
+                                        "min_damage_taken",
                                         "min_happiness",
                                         "min_level",
                                         "min_move_count",
@@ -5762,6 +5764,11 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "nullable": True,
                                         },
                                         "min_beauty": {
+                                            "type": "integer",
+                                            "format": "int32",
+                                            "nullable": True,
+                                        },
+                                        "min_damage_taken": {
                                             "type": "integer",
                                             "format": "int32",
                                             "nullable": True,

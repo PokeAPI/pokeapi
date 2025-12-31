@@ -1844,6 +1844,10 @@ class APIData:
         relative_physical_stats=0,
         needs_overworld_rain=False,
         turn_upside_down=False,
+        needs_multiplayer=False,
+        used_move=None,
+        min_move_count=None,
+        min_steps=None,
     ):
         evolved_species = evolved_species or cls.setup_pokemon_species_data(
             name="pkmn spcs for pkmn evltn"
@@ -1873,6 +1877,10 @@ class APIData:
             trade_species=trade_species,
             needs_overworld_rain=needs_overworld_rain,
             turn_upside_down=turn_upside_down,
+            needs_multiplayer=needs_multiplayer,
+            used_move=used_move,
+            min_move_count=min_move_count,
+            min_steps=min_steps,
         )
         pokemon_evolution.save()
 

@@ -5596,6 +5596,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
     region_id = RegionSummarySerializer(source="region")
     base_form_id = PokemonSpeciesSummarySerializer(source="base_form")
+    used_move = MoveSummarySerializer()
 
     class Meta:
         model = PokemonEvolution
@@ -5611,6 +5612,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "min_happiness",
             "min_beauty",
             "min_affection",
+            "needs_multiplayer",
             "needs_overworld_rain",
             "party_species",
             "party_type",
@@ -5620,6 +5622,9 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "turn_upside_down",
             "region_id",
             "base_form_id",
+            "used_move",
+            "min_move_count",
+            "min_steps",
         )
 
 
@@ -5664,6 +5669,9 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "min_beauty",
                                         "min_happiness",
                                         "min_level",
+                                        "min_move_count",
+                                        "min_steps",
+                                        "needs_multiplayer",
                                         "needs_overworld_rain",
                                         "party_species",
                                         "party_type",
@@ -5672,6 +5680,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "trade_species",
                                         "trigger",
                                         "turn_upside_down",
+                                        "used_move",
                                         "region_id",
                                         "base_form_id",
                                     ],
@@ -5767,6 +5776,20 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "format": "int32",
                                             "nullable": True,
                                         },
+                                        "min_move_count": {
+                                            "type": "integer",
+                                            "format": "int32",
+                                            "nullable": True,
+                                        },
+                                        "min_steps": {
+                                            "type": "integer",
+                                            "format": "int32",
+                                            "nullable": True,
+                                        },
+                                        "needs_multiplayer": {
+                                            "type": "boolean",
+                                            "nullable": True,
+                                        },
                                         "needs_overworld_rain": {
                                             "type": "boolean",
                                             "nullable": True,
@@ -5802,6 +5825,10 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "turn_upside_down": {"type": "boolean"},
+                                        "used_move": {
+                                            "type": "",
+                                            "nullable": True,
+                                        },
                                         "region_id": {
                                             "type": "object",
                                             "nullable": True,

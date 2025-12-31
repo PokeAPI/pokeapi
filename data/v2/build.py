@@ -2102,8 +2102,12 @@ def _build_pokemons():
             trade_species_id=int(info[17]) if info[17] != "" else None,
             needs_overworld_rain=bool(int(info[18])),
             turn_upside_down=bool(int(info[19])),
-            region_id=int(info[20]) if info[20] != "" else None,
-            base_form_id=int(info[21]) if info[21] != "" else None,
+            needs_multiplayer=bool(int(info[20])),
+            region_id=int(info[21]) if info[21] != "" else None,
+            base_form_id=int(info[22]) if info[22] != "" else None,
+            used_move_id=int(info[23]) if info[23] != "" else None,
+            min_move_count=int(info[24]) if info[24] != "" else None,
+            min_steps=int(info[25]) if info[25] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

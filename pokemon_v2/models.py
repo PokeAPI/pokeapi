@@ -1694,6 +1694,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     turn_upside_down = models.BooleanField(default=False)
 
+    needs_multiplayer = models.BooleanField(default=False)
+
     # Regional evolution fields
     region = models.ForeignKey(
         "Region",
@@ -1711,6 +1713,15 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE,
         help_text="Specific form required for evolution (null = any form)",
     )
+
+
+    used_move = models.ForeignKey(
+        Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE
+    )
+
+    min_move_count = models.IntegerField(blank=True, null=True)
+
+    min_steps = models.IntegerField(blank=True, null=True)
 
 
 class PokemonForm(HasName, HasPokemon, HasOrder):

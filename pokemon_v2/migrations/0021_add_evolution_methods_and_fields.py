@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0020_add_regional_evolution_fields"),
     ]

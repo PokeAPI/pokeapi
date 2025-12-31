@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0021_add_evolution_methods_and_fields"),
     ]

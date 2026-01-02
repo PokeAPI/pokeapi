@@ -710,7 +710,7 @@ class APIData:
                 "ultra-sun-ultra-moon",
             ],
             "generation-viii": [
-                "brilliant-diamond-and-shining-pearl",
+                "brilliant-diamond-shining-pearl",
                 "legends-arceus",
                 "sword-shield",
             ],

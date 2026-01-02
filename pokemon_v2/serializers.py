@@ -4671,7 +4671,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     #         "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
     #       },
     #       "version_group": {
-    #         "name": "brilliant-diamond-and-shining-pearl",
+    #         "name": "brilliant-diamond-shining-pearl",
     #         "url": "https://pokeapi.co/api/v2/version-group/23/"
     #       }
     #     },

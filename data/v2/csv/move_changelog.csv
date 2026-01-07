@@ -127,6 +127,7 @@ move_id,changed_in_version_group_id,type_id,power,pp,accuracy,priority,target_id
 282,15,,20,,,,,,
 291,8,,60,,,,,,
 294,11,,,,,,,54,
+296,25,,70,,,,,,
 305,15,,,,,,,,30
 309,15,,100,,85,,,,
 312,15,,,,,,4,,

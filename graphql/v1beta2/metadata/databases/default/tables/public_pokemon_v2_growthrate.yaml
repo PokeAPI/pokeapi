@@ -1,0 +1,48 @@
+table:
+  name: pokemon_v2_growthrate
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: growthrate
+  custom_root_fields: {}
+array_relationships:
+  - name: experiences
+    using:
+      foreign_key_constraint_on:
+        column: growth_rate_id
+        table:
+          name: pokemon_v2_experience
+          schema: public
+  - name: growthratedescriptions
+    using:
+      foreign_key_constraint_on:
+        column: growth_rate_id
+        table:
+          name: pokemon_v2_growthratedescription
+          schema: public
+  - name: machines
+    using:
+      foreign_key_constraint_on:
+        column: growth_rate_id
+        table:
+          name: pokemon_v2_machine
+          schema: public
+  - name: pokemonspecies
+    using:
+      foreign_key_constraint_on:
+        column: growth_rate_id
+        table:
+          name: pokemon_v2_pokemonspecies
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

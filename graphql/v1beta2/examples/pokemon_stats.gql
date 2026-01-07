@@ -1,0 +1,23 @@
+query tallest {
+  pokemon: pokemon(order_by: {height: desc}, limit: 3, where: {is_default: {_eq: true}}) {
+    name
+    height
+  }
+}
+
+query fattest {
+  pokemon: pokemon(order_by: {weight: desc}, limit: 3, where: {is_default: {_eq: true}}) {
+    name
+    weight
+  }
+}
+
+query avgHappiness {
+  species: pokemonspecies_aggregate {
+    aggregate {
+      avg {
+        base_happiness
+      }
+    }
+  }
+}

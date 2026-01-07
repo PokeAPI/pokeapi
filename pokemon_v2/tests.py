@@ -698,7 +698,7 @@ class APIData:
                 "colosseum",
                 "emerald",
                 "firered-leafgreen",
-                "ruby-saphire",
+                "ruby-sapphire",
                 "xd",
             ],
             "generation-iv": ["diamond-pearl", "heartgold-soulsilver", "platinum"],
@@ -710,7 +710,7 @@ class APIData:
                 "ultra-sun-ultra-moon",
             ],
             "generation-viii": [
-                "brilliant-diamond-and-shining-pearl",
+                "brilliant-diamond-shining-pearl",
                 "legends-arceus",
                 "sword-shield",
             ],

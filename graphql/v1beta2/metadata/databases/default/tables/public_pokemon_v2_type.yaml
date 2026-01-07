@@ -1,0 +1,132 @@
+table:
+  name: pokemon_v2_type
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: type
+  custom_root_fields: {}
+object_relationships:
+  - name: generation
+    using:
+      foreign_key_constraint_on: generation_id
+  - name: movedamageclass
+    using:
+      foreign_key_constraint_on: move_damage_class_id
+array_relationships:
+  - name: PokemonevolutionsByPartyTypeId
+    using:
+      foreign_key_constraint_on:
+        column: party_type_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: TypeefficaciesByTargetTypeId
+    using:
+      foreign_key_constraint_on:
+        column: target_type_id
+        table:
+          name: pokemon_v2_typeefficacy
+          schema: public
+  - name: TypeefficacypastsByTargetTypeId
+    using:
+      foreign_key_constraint_on:
+        column: target_type_id
+        table:
+          name: pokemon_v2_typeefficacypast
+          schema: public
+  - name: berries
+    using:
+      foreign_key_constraint_on:
+        column: natural_gift_type_id
+        table:
+          name: pokemon_v2_berry
+          schema: public
+  - name: movechanges
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_movechange
+          schema: public
+  - name: moves
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_move
+          schema: public
+  - name: pokemon_v2_typesprites
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_typesprites
+          schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: known_move_type_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonformtypes
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_pokemonformtype
+          schema: public
+  - name: pokemontypepasts
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_pokemontypepast
+          schema: public
+  - name: pokemontypes
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_pokemontype
+          schema: public
+  - name: typeefficacies
+    using:
+      foreign_key_constraint_on:
+        column: damage_type_id
+        table:
+          name: pokemon_v2_typeefficacy
+          schema: public
+  - name: typeefficacypasts
+    using:
+      foreign_key_constraint_on:
+        column: damage_type_id
+        table:
+          name: pokemon_v2_typeefficacypast
+          schema: public
+  - name: typegameindices
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_typegameindex
+          schema: public
+  - name: typenames
+    using:
+      foreign_key_constraint_on:
+        column: type_id
+        table:
+          name: pokemon_v2_typename
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

@@ -28,11 +28,11 @@ This item can only be used in the []{location:great-marsh} or []{location:kanto-
 
     If used in a trainer battle, nothing happens and the ball is lost."
 8,9,"Tries to catch a wild Pokémon.  Success rate is 3.9× for level 1 Pokémon, and drops steadily to 1× at level 30.","Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  Has a catch rate of given by `(40 - level) / 10`, where `level` is the wild Pokémon's level, to a maximum of 3.9× for level 1 Pokémon.  If the wild Pokémon's level is higher than 30, this ball has a catch rate of 1×.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  Has a catch rate of given by `(40 - level) / 10`, where `level` is the wild Pokémon’s level, to a maximum of 3.9× for level 1 Pokémon.  If the wild Pokémon’s level is higher than 30, this ball has a catch rate of 1×.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 9,9,Tries to catch a wild Pokémon.  Success rate is 3× for previously-caught Pokémon.,"Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If the wild Pokémon's species is marked as caught in the trainer's Pokédex, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If the wild Pokémon’s species is marked as caught in the trainer’s Pokédex, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 10,9,"Tries to catch a wild Pokémon. Success rate increases by 0.1× (Gen V: 0.3×) every turn, to a max of 4×.","Used in battle
@@ -40,7 +40,7 @@ This item can only be used in the []{location:great-marsh} or []{location:kanto-
 
     If used in a trainer battle, nothing happens and the ball is lost."
 11,9,Tries to catch a wild Pokémon.  Caught Pokémon start with 200 happiness.,"Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon, using a catch rate of 1×.  Whenever the caught Pokémon's [happiness]{mechanic:happiness} increases, it increases by one extra point.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon, using a catch rate of 1×.  Whenever the caught Pokémon’s [happiness]{mechanic:happiness} increases, it increases by one extra point.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 12,9,Tries to catch a wild Pokémon.,"Used in battle
@@ -48,11 +48,11 @@ This item can only be used in the []{location:great-marsh} or []{location:kanto-
 
     If used in a trainer battle, nothing happens and the ball is lost."
 13,9,Tries to catch a wild Pokémon.  Success rate is 3.5× at night and in caves.,"Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If it's currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If it’s currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 14,9,Tries to catch a wild Pokémon.  Caught Pokémon are immediately healed.,"Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon, using a catch rate of 1×.  The caught Pokémon's [HP]{mechanic:hp} is immediately restored, [PP]{mechanic:pp} for all its moves is restored, and any [status ailment]{mechanic:status-ailment} is cured.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon, using a catch rate of 1×.  The caught Pokémon’s [HP]{mechanic:hp} is immediately restored, [PP]{mechanic:pp} for all its moves is restored, and any [status ailment]{mechanic:status-ailment} is cured.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 15,9,"Tries to catch a wild Pokémon. Success rate is 4× (Gen V: 5×), but only on the first turn.","Used in battle
@@ -120,41 +120,41 @@ This item can only be used in the []{location:great-marsh} or []{location:kanto-
 44,9,Revives all fainted Pokémon with full HP.,"Used
 :   Revives all [fainted]{mechanic:faint} Pokémon in the party and restores their [HP]{mechanic:hp} to full."
 45,9,Raises HP effort and happiness.,"Used on a party Pokémon
-:   Increases [HP]{mechanic:hp} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [HP]{mechanic:hp} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 46,9,Raises Attack effort and happiness.,"Used on a party Pokémon
-:   Increases [Attack]{mechanic:attack} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [Attack]{mechanic:attack} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 47,9,Raises Defense effort and happiness.,"Used on a party Pokémon
-:   Increases [Defense]{mechanic:defense} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [Defense]{mechanic:defense} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 48,9,Raises Speed effort and happiness.,"Used on a party Pokémon
-:   Increases [Speed]{mechanic:speed} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [Speed]{mechanic:speed} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 49,9,Raises Special Attack effort and happiness.,"Used on a party Pokémon
-:   Increases [Special Attack]{mechanic:special-attack} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [Special Attack]{mechanic:special-attack} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 50,9,Causes a level-up and raises happiness.,"Used on a party Pokémon
 :   Increases level by 1.  Increases [happiness]{mechanic:happiness} by 5/3/2."
-51,9,Raises a move's max PP by 20%.,"Used on a party Pokémon
-:   Increases a selected move's max [PP]{mechanic:pp} by 20% its original max PP, to a maximum of 1.6×.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+51,9,Raises a move’s max PP by 20%.,"Used on a party Pokémon
+:   Increases a selected move’s max [PP]{mechanic:pp} by 20% its original max PP, to a maximum of 1.6×.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 52,9,Raises Special Defense and happiness.,"Used on a party Pokémon
-:   Increases [Special Defense]{mechanic:special-defense} [effort]{mechanic:effort} by 10, but won't increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
-53,9,Raises a move's max PP by 60%.,"Used on a party Pokémon
-:   Increases a selected move's max [PP]{mechanic:pp} to 1.6× its original max PP.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+:   Increases [Special Defense]{mechanic:special-defense} [effort]{mechanic:effort} by 10, but won’t increase it beyond 100.  Increases [happiness]{mechanic:happiness} by 5/3/2."
+53,9,Raises a move’s max PP by 60%.,"Used on a party Pokémon
+:   Increases a selected move’s max [PP]{mechanic:pp} to 1.6× its original max PP.  Increases [happiness]{mechanic:happiness} by 5/3/2."
 54,9,Cures any status ailment and confusion.,"Used on a party Pokémon
 :   Cures any [status ailment]{mechanic:status-ailment} and [confusion]{mechanic:confusion}."
 55,9,Prevents stat changes in battle for five turns in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   Protects the target's stats from being [lowered]{mechanic:lower} for the next five turns.  Increases happiness by 1/1/0."
+:   Protects the target’s stats from being [lowered]{mechanic:lower} for the next five turns.  Increases happiness by 1/1/0."
 56,9,Increases the chance of a critical hit in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   Increases the target's [critical hit chance]{mechanic:critical-hit-chance} by one stage until it leaves the field.  Increases happiness by 1/1/0."
+:   Increases the target’s [critical hit chance]{mechanic:critical-hit-chance} by one stage until it leaves the field.  Increases happiness by 1/1/0."
 57,9,Raises Attack by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [Attack]{mechanic:attack} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [Attack]{mechanic:attack} by one stage.  Increases happiness by 1/1/0."
 58,9,Raises Defense by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [Defense]{mechanic:defense} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [Defense]{mechanic:defense} by one stage.  Increases happiness by 1/1/0."
 59,9,Raises Speed by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [Speed]{mechanic:speed} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [Speed]{mechanic:speed} by one stage.  Increases happiness by 1/1/0."
 60,9,Raises accuracy by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [accuracy]{mechanic:accuracy} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [accuracy]{mechanic:accuracy} by one stage.  Increases happiness by 1/1/0."
 61,9,Raises Special Attack by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [Special Attack]{mechanic:special-attack} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [Special Attack]{mechanic:special-attack} by one stage.  Increases happiness by 1/1/0."
 62,9,Raises Special Defense by one stage in battle.  Raises happiness.,"Used on a party Pokémon in battle
-:   [Raises]{mechanic:raise} the target's [Special Defense]{mechanic:special-defense} by one stage.  Increases happiness by 1/1/0."
+:   [Raises]{mechanic:raise} the target’s [Special Defense]{mechanic:special-defense} by one stage.  Increases happiness by 1/1/0."
 63,9,Ends a wild battle.,"Used in battle
 :   Ends a wild battle.  Cannot be used in trainer battles."
 64,9,Ends a wild battle.,"Used in battle
@@ -207,13 +207,13 @@ In Platinum, trade to [move tutors]{mechanic:move-tutor} on []{location:sinnoh-r
 In HeartGold and SoulSilver, trade one for an []{item:aguav-berry}, a []{item:lum-berry}, and a []{item:rawst-berry} with the Juggler near the Pokémon Center in []{location:violet-city}.
 
 In HeartGold and SoulSilver, trade one for a []{item:durin-berry}, a []{item:hondew-berry}, and a []{item:wepear-berry} with the Juggler near the []{location:pal-park} entrance in []{location:fuchsia-city}."
-76,9,"For 200 steps, prevents wild encounters of level lower than your party's lead Pokémon.","Used outside of battle
+76,9,"For 200 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 200 steps."
-77,9,"For 250 steps, prevents wild encounters of level lower than your party's lead Pokémon.","Used outside of battle
+77,9,"For 250 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 250 steps."
 78,9,Transports user to the outside entrance of a cave.,"Used outside of battle
 :   Transports the trainer to the last-entered dungeon entrance.  Cannot be used outside, in buildings, or in []{location:distortion-world}, []{location:sinnoh-hall-of-origin-1}, []{location:spear-pillar}, or []{location:turnback-cave}."
-79,9,"For 100 steps, prevents wild encounters of level lower than your party's lead Pokémon.","Used outside of battle
+79,9,"For 100 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 100 steps."
 80,9,"Evolves a Cottonee into Whimsicott, a Gloom into Bellossom, a Petilil into Lilligant, or a Sunkern into Sunflora.","Used on a party Pokémon
 :   Evolves a []{pokemon:cottonee} into []{pokemon:whimsicott}, a []{pokemon:gloom} into []{pokemon:bellossom}, a []{pokemon:petilil} into []{pokemon:lilligant}, or a []{pokemon:sunkern} into []{pokemon:sunflora}."
@@ -240,18 +240,18 @@ In HeartGold and SoulSilver, trade one for a []{item:durin-berry}, a []{item:hon
 
 Can be smeared on sweet-smelling trees to attract tree-dwelling Pokémon after six hours."
 95,9,"Growing time of berries is reduced, but the soil dries out faster.","Used on a patch of soil
-:   Plant's growth stages will each last 25% less time.  Dries soil out more quickly."
+:   Plant’s growth stages will each last 25% less time.  Dries soil out more quickly."
 96,9,"Growing time of berries is increased, but the soil dries out slower.","Used on a patch of soil
-:   Plant's growth stages will each last 25% more time.  Dries soil out more slowly."
+:   Plant’s growth stages will each last 25% more time.  Dries soil out more slowly."
 97,9,Berries stay on the plant for longer than their usual time.,"Used on a patch of soil
 :   Fully-grown plant will last 25% longer before dying and possibly regrowing."
 98,9,Berries regrow from dead plants an increased number of times.,"Used on a path of soil
 :   Plant will regrow after dying 25% more times."
 99,9,Can be revived into a Lileep.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:lileep}.
-100,9,Can be revived into an Anorith.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:anorith}.
-101,9,Can be revived into an Omanyte.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:omanyte}.
+100,9,Can be revived into an Anorith.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:anorith}.
+101,9,Can be revived into an Omanyte.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:omanyte}.
 102,9,Can be revived into a Kabuto.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:kabuto}.
-103,9,Can be revived into an Aerodactyl.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:aerodactyl}.
+103,9,Can be revived into an Aerodactyl.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:aerodactyl}.
 104,9,Can be revived into a Shieldon.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:shieldon}.
 105,9,Can be revived into a Cranidos.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:cranidos}.
 106,9,"Sell for 5000 Pokédollars, or to Bone Man for 10000 Pokédollars.",Vendor trash.
@@ -263,56 +263,56 @@ Can be smeared on sweet-smelling trees to attract tree-dwelling Pokémon after s
 :   Evolves a male []{pokemon:kirlia} into []{pokemon:gallade} or a female []{pokemon:snorunt} into []{pokemon:froslass}."
 110,9,Level-up during Day on a Happiny: Holder evolves into Chansey.,"Held by []{pokemon:happiny}
 :   Holder evolves into []{pokemon:chansey} when it levels up during the daytime."
-111,9,Use on the tower on Route 209 to encounter Spiritomb if you have at least 32 Underground greetings.,"Place in the tower on []{location:sinnoh-route-209}.  Check the stone to encounter a []{pokemon:spiritomb}, as long as the trainer's Underground status card counts at least 32 greetings."
-112,9,Boosts the damage from Dialga's Dragon-type and Steel-type moves by 20%.,"Held by []{pokemon:dialga}
-:   Holder's []{type:dragon}- and []{type:steel}-type moves have 1.2× their usual power."
-113,9,Boosts the damage from Palkia's Dragon-type and Water-type moves by 20%.,"Held by []{pokemon:palkia}
-:   Holder's []{type:dragon}- and []{type:water}-type moves have 1.2× their usual power."
-114,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+111,9,Use on the tower on Route 209 to encounter Spiritomb if you have at least 32 Underground greetings.,"Place in the tower on []{location:sinnoh-route-209}.  Check the stone to encounter a []{pokemon:spiritomb}, as long as the trainer’s Underground status card counts at least 32 greetings."
+112,9,Boosts the damage from Dialga’s Dragon-type and Steel-type moves by 20%.,"Held by []{pokemon:dialga}
+:   Holder’s []{type:dragon}- and []{type:steel}-type moves have 1.2× their usual power."
+113,9,Boosts the damage from Palkia’s Dragon-type and Water-type moves by 20%.,"Held by []{pokemon:palkia}
+:   Holder’s []{type:dragon}- and []{type:water}-type moves have 1.2× their usual power."
+114,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-115,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+115,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-116,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+116,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-117,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+117,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-118,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+118,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-119,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+119,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-120,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+120,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-121,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+121,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-122,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+122,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-123,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+123,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-124,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+124,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-125,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+125,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
@@ -342,7 +342,7 @@ Used on a party Pokémon
 Used on a party Pokémon
 :   Cures [freezing]{mechanic:freezing}."
 131,9,Held: Consumed when a move runs out of PP to restore its PP by 10.,"Held in battle
-:   When the holder is out of [PP]{mechanic:pp} for one of its moves, it consumes this item to restore 10 of that move's PP.
+:   When the holder is out of [PP]{mechanic:pp} for one of its moves, it consumes this item to restore 10 of that move’s PP.
 
 Used on a party Pokémon
 :   Restores 10 [PP]{mechanic:pp} for a selected move."
@@ -365,7 +365,7 @@ Used on a party Pokémon
 :   When the holder has 1/2 its max [HP]{mechanic:hp} remaining or less, it consumes this item to restore 1/4 its max HP.
 
 Used on a party Pokémon
-:   Restores 1/4 the Pokémon's max [HP]{mechanic:hp}."
+:   Restores 1/4 the Pokémon’s max [HP]{mechanic:hp}."
 136,9,Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pokémon that dislike spicy flavor.,"Held in battle
 :   When the holder has 1/2 its max [HP]{mechanic:hp} remaining or less, it consumes this item to restore 1/8 its max HP.  If the holder dislikes spicy flavors (i.e., has a nature that lowers [Attack]{mechanic:attack}), it will also become [confused]{mechanic:confusion}."
 137,9,Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pokémon that dislike dry flavor.,"Held in battle
@@ -456,14 +456,14 @@ Used on a party Pokémon
 :   When the holder has 1/4 its max [HP]{mechanic:hp} remaining or less, it consumes this item, and its next used move has 1.2× its normal accuracy."
 187,9,Held: Consumed at 1/4 max HP when using a move to go first.,"Held in battle
 :   When the holder has 1/4 its max [HP]{mechanic:hp} remaining or less, it consumes this item.  On the following turn, the holder will act first among moves with the same [priority]{mechanic:priority}, regardless of [Speed]{mechanic:speed}."
-188,9,Held: Consumed to deal 1/8 attacker's max HP when holder is struck by a physical attack.,"Held in battle
+188,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a physical attack.,"Held in battle
 :   When the holder takes [physical]{mechanic:physical} damage, it consumes this item to damage the attacking Pokémon for 1/8 its max [HP]{mechanic:hp}."
-189,9,Held: Consumed to deal 1/8 attacker's max HP when holder is struck by a special attack.,"Held in battle
+189,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a special attack.,"Held in battle
 :   When the holder takes [special]{mechanic:special} damage, it consumes this item to damage the attacking Pokémon for 1/8 its max [HP]{mechanic:hp}."
-190,9,Held: Increases the holder's evasion by 1/9 (11 1/9%).,"Held in battle
+190,9,Held: Increases the holder’s evasion by 1/9 (11 1/9%).,"Held in battle
 :   Moves targeting the holder have 0.9× [chance to hit]{mechanic:chance-to-hit}."
 191,9,Held: Resets all lowered stats to normal at end of turn. Consumed after use.,"Held in battle
-:   At the end of each turn, if any of the holder's stats have a negative [stat modifier]{mechanic:stat-modifier}, the holder consumes this item to remove the modifiers from those stats."
+:   At the end of each turn, if any of the holder’s stats have a negative [stat modifier]{mechanic:stat-modifier}, the holder consumes this item to remove the modifiers from those stats."
 192,9,"Held: Holder gains double effort values from battles, but has halved Speed in battle.","Held
 :   When the holder would gain [effort]{mechanic:effort} due to battle, it gains double that effort instead.
 
@@ -486,143 +486,143 @@ ignored; thus, if a single Pokémon is holding this item and the only Pokémon w
     The restriction ends even if this item is swapped for another Choice item
 via []{move:trick} or []{move:switcheroo}."
 198,9,Held: Damaging moves gain a 10% chance to make their target flinch. Traded on a Poliwhirl: Holder evolves into Politoed. Traded on a Slowpoke: Holder evolves into Slowking.,"Held in battle
-:   Holder's damaging moves have a 10% chance to make their target [flinch]{mechanic:flinch}.  This chance applies independently to each hit of a multi-hit move.
+:   Holder’s damaging moves have a 10% chance to make their target [flinch]{mechanic:flinch}.  This chance applies independently to each hit of a multi-hit move.
 
-    This item's chance is rolled independently of any other move effects;
+    This item’s chance is rolled independently of any other move effects;
 e.g., a move with a 30% chance to flinch normally will have a 37% total chance to flinch when used with this item, because 3% of the time, both effects activate.
 
 Held by []{pokemon:poliwhirl} or []{pokemon:slowbro}
 :   Holder evolves into []{pokemon:politoed} or []{pokemon:slowking}, respectively, when traded."
 199,9,Held: Bug-Type moves from holder do 20% more damage.,"Held in battle
-:   Holder's []{type:bug}-type moves have 1.2× their power.
+:   Holder’s []{type:bug}-type moves have 1.2× their power.
 "
 200,9,Held: Doubles the money earned from a battle. Does not stack with Luck Incense.,"Held
 :   If the holder participated in a trainer battle, the trainer earns twice the usual prize money.  This effect applies even if the holder [fainted]{mechanic:fainted}.
 
     This effect does not stack with any other similar effect."
-201,9,Prevents wild encounters of level lower than your party's lead Pokémon.,Held by lead Pokémon: Prevents wild battles with Pokémon that are lower level than the holder.
-202,9,Raises Latias and Latios's Special Attack and Special Defense by 50%.,Held by Latias or Latios: Increases the holder's Special Attack and Special Defense by 50%.
-203,9,Doubles Clamperl's Special Attack. Traded on a Clamperl: Holder evolves into Huntail.,Held by Clamperl: Doubles the holder's Special Attack.  Evolves the holder into Huntail when traded.
-204,9,Doubles Clamperl's Special Defense. Traded on a Clamperl: Holder evolves into Gorebyss.,Held by Clamperl: Doubles the holder's Special Defense.  Evolves the holder into Gorebyss when traded.
-205,9,Held: Allows the Holder to escape from any wild battle.,"Held: In wild battles, attempts to run away on the holder's turn will always succeed."
+201,9,Prevents wild encounters of level lower than your party’s lead Pokémon.,Held by lead Pokémon: Prevents wild battles with Pokémon that are lower level than the holder.
+202,9,Raises Latias and Latios’s Special Attack and Special Defense by 50%.,Held by Latias or Latios: Increases the holder’s Special Attack and Special Defense by 50%.
+203,9,Doubles Clamperl’s Special Attack. Traded on a Clamperl: Holder evolves into Huntail.,Held by Clamperl: Doubles the holder’s Special Attack.  Evolves the holder into Huntail when traded.
+204,9,Doubles Clamperl’s Special Defense. Traded on a Clamperl: Holder evolves into Gorebyss.,Held by Clamperl: Doubles the holder’s Special Defense.  Evolves the holder into Gorebyss when traded.
+205,9,Held: Allows the Holder to escape from any wild battle.,"Held: In wild battles, attempts to run away on the holder’s turn will always succeed."
 206,9,Held: Prevents level-based evolution from occuring.,"Held: Prevents the holder from evolving naturally.  Evolution initiated by the trainer (Stones, etc) will still work."
-207,9,Held: Holder has 10% chance to survive attacks or self-inflicted damage at 1 HP.,"Held: If the holder is attacked for regular damage that would faint it, this item has a 10% chance to prevent the holder's HP from lowering below 1."
+207,9,Held: Holder has 10% chance to survive attacks or self-inflicted damage at 1 HP.,"Held: If the holder is attacked for regular damage that would faint it, this item has a 10% chance to prevent the holder’s HP from lowering below 1."
 208,9,Held: Increases EXP earned in battle by 50%.,Held: Increases any Exp the holder gains by 50%.
-209,9,Held: Raises the holder's critical hit ratio by one stage.,Held: Raises the holder's critical hit counter by 1.
-210,9,Held: Steel-Type moves from holder do 20% more damage.,"Held: Increases the power of the holder's Steel moves by 20%.
+209,9,Held: Raises the holder’s critical hit ratio by one stage.,Held: Raises the holder’s critical hit counter by 1.
+210,9,Held: Steel-Type moves from holder do 20% more damage.,"Held: Increases the power of the holder’s Steel moves by 20%.
 Held by Onix or Scyther: Evolves the holder into Steelix or Scizor when traded, respectively."
-211,9,Held: Restores 1/16 (6.25%) holder's max HP at the end of each turn.,Held: Heals the holder by 1/16 its max HP at the end of each turn.
+211,9,Held: Restores 1/16 (6.25%) holder’s max HP at the end of each turn.,Held: Heals the holder by 1/16 its max HP at the end of each turn.
 212,9,Traded on a Seadra: Holder evolves into Kingdra.,Held by Seadra: Evolves the holder into Kingdra when traded.
-213,9,Doubles Pikachu's Attack and Special Attack. Breed on Pikachu or Raichu: Pichu Egg will have Volt Tackle.,Held by Pikachu: Doubles the holder's initial Attack and Special Attack.
-214,9,Held: Ground-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Ground moves by 20%.
-215,9,Held: Rock-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Rock moves by 20%.
-216,9,Held: Grass-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Grass moves by 20%.
-217,9,Held: Dark-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Dark moves by 20%.
-218,9,Held: Fighting-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Fighting moves by 20%.
-219,9,Held: Electric-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Electric moves by 20%.
-220,9,Held: Water-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Water moves by 20%.
-221,9,Held: Flying-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Flying moves by 20%.
-222,9,Held: Poison-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Poison moves by 20%.
-223,9,Held: Ice-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Ice moves by 20%.
-224,9,Held: Ghost-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Ghost moves by 20%.
-225,9,Held: Psychic-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Psychic moves by 20%.
-226,9,Held: Fire-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Fire moves by 20%.
-227,9,Held: Dragon-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Dragon moves by 20%.
-228,9,Held: Normal-Type moves from holder do 20% more damage.,Held: Increases the power of the holder's Normal moves by 20%.
+213,9,Doubles Pikachu’s Attack and Special Attack. Breed on Pikachu or Raichu: Pichu Egg will have Volt Tackle.,Held by Pikachu: Doubles the holder’s initial Attack and Special Attack.
+214,9,Held: Ground-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Ground moves by 20%.
+215,9,Held: Rock-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Rock moves by 20%.
+216,9,Held: Grass-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Grass moves by 20%.
+217,9,Held: Dark-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Dark moves by 20%.
+218,9,Held: Fighting-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Fighting moves by 20%.
+219,9,Held: Electric-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Electric moves by 20%.
+220,9,Held: Water-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Water moves by 20%.
+221,9,Held: Flying-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Flying moves by 20%.
+222,9,Held: Poison-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Poison moves by 20%.
+223,9,Held: Ice-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Ice moves by 20%.
+224,9,Held: Ghost-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Ghost moves by 20%.
+225,9,Held: Psychic-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Psychic moves by 20%.
+226,9,Held: Fire-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Fire moves by 20%.
+227,9,Held: Dragon-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Dragon moves by 20%.
+228,9,Held: Normal-Type moves from holder do 20% more damage.,Held: Increases the power of the holder’s Normal moves by 20%.
 229,9,Traded on a Porygon: Holder evolves into Porygon2.,Held by Porygon: Evolves the holder into Porygon2 when traded.
 230,9,Held: Holder receives 1/8 of the damage it deals when attacking.,Held: Heals the holder by 1/8 of any damage it inflicts.
-231,9,Held: Water-Type moves from holder do 20% more damage. Breeding: Marill or Azumarill beget an Azurill Egg.,Held: Increases the power of the holder's Water moves by 20%.
-232,9,Held: Holder's evasion is increased by 5%. Breeding: Wobbuffet begets a Wynaut Egg.,Held: Increases the holder's Evasion by 5%.
-233,9,Raises Chansey's critical hit ratio by two stages.,Held by Chansey: Raises the holder's critical hit counter by 2.
-234,9,Raises Ditto's Defense and Special Defense by 50%. The boost is lost after transforming.,Held by Ditto: Increases the holder's initial Defense and Special Defense by 50%.
-235,9,Doubles Cubone or Marowak's Attack.,Held by Cubone or Marowak: Doubles the holder's Attack.
-236,9,Raises Farfetch'd's critical hit ratio by two stages.,Held by Farfetch'd: Raises the holder's critical hit counter by 2.
-237,9,Raises the holder's Coolness while in a contest.,Held: Increases the holder's Coolness during a Super Contest's Visual Competition.
-238,9,Raises the holder's Beauty while in a contest.,Held: Increases the holder's Beauty during a Super Contest's Visual Competition.
-239,9,Raises the holder's Cuteness while in a contest.,Held: Increases the holder's Cuteness during a Super Contest's Visual Competition.
-240,9,Raises the holder's Smartness while in a contest.,Held: Increases the holder's Smartness during a Super Contest's Visual Competition.
-241,9,Raises the holder's Toughness while in a contest.,Held: Increases the holder's Toughness during a Super Contest's Visual Competition.
+231,9,Held: Water-Type moves from holder do 20% more damage. Breeding: Marill or Azumarill beget an Azurill Egg.,Held: Increases the power of the holder’s Water moves by 20%.
+232,9,Held: Holder’s evasion is increased by 5%. Breeding: Wobbuffet begets a Wynaut Egg.,Held: Increases the holder’s Evasion by 5%.
+233,9,Raises Chansey’s critical hit ratio by two stages.,Held by Chansey: Raises the holder’s critical hit counter by 2.
+234,9,Raises Ditto’s Defense and Special Defense by 50%. The boost is lost after transforming.,Held by Ditto: Increases the holder’s initial Defense and Special Defense by 50%.
+235,9,Doubles Cubone or Marowak’s Attack.,Held by Cubone or Marowak: Doubles the holder’s Attack.
+236,9,Raises Farfetch’d’s critical hit ratio by two stages.,Held by Farfetch’d: Raises the holder’s critical hit counter by 2.
+237,9,Raises the holder’s Coolness while in a contest.,Held: Increases the holder’s Coolness during a Super Contest’s Visual Competition.
+238,9,Raises the holder’s Beauty while in a contest.,Held: Increases the holder’s Beauty during a Super Contest’s Visual Competition.
+239,9,Raises the holder’s Cuteness while in a contest.,Held: Increases the holder’s Cuteness during a Super Contest’s Visual Competition.
+240,9,Raises the holder’s Smartness while in a contest.,Held: Increases the holder’s Smartness during a Super Contest’s Visual Competition.
+241,9,Raises the holder’s Toughness while in a contest.,Held: Increases the holder’s Toughness during a Super Contest’s Visual Competition.
 242,9,Held: Provides a 1/10 (10%) boost in accuracy to the holder.,Held: Increases the accuracy of any move the holder uses by 10% (multiplied; i.e. 70% accuracy is increased to 77%).
-243,9,Held: Boosts the damage of physical moves used by the holder by 10%.,Held: Increases the power of the holder's physical moves by 10%.
-244,9,Held: Boosts the damage of special moves used by the holder by 1/10 (10%).,Held: Increases the power of the holder's special moves by 10%.
-245,9,Held: Holder's Super Effective moves do 20% extra damage.,"Held: When the holder hits with a super-effective move, its power is raised by 20%."
-246,9,Held: Light Screen and Reflect used by the holder last 8 rounds instead of 5.,"Held: The holder's Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
-247,9,"Held: Holder's moves inflict 30% extra damage, but cost 10% max HP.","Held: Damage from the holder's moves is increased by 30%.  On each turn the holder uses a damage-inflicting move, it takes 10% its max HP in damage."
+243,9,Held: Boosts the damage of physical moves used by the holder by 10%.,Held: Increases the power of the holder’s physical moves by 10%.
+244,9,Held: Boosts the damage of special moves used by the holder by 1/10 (10%).,Held: Increases the power of the holder’s special moves by 10%.
+245,9,Held: Holder’s Super Effective moves do 20% extra damage.,"Held: When the holder hits with a super-effective move, its power is raised by 20%."
+246,9,Held: Light Screen and Reflect used by the holder last 8 rounds instead of 5.,"Held: The holder’s Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
+247,9,"Held: Holder’s moves inflict 30% extra damage, but cost 10% max HP.","Held: Damage from the holder’s moves is increased by 30%.  On each turn the holder uses a damage-inflicting move, it takes 10% its max HP in damage."
 248,9,Held: Both turns of a two-turn charge move happen at once. Consumed upon use.,"Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
 249,9,Held: Inflicts Toxic on the holder at the end of the turn. Activates after Poison damage would occur.,Held: Badly poisons the holder at the end of each turn.
 250,9,Held: Inflicts Burn on the holder at the end of the turn. Activates after Burn damage would occur.,Held: Burns the holder at the end of each turn.
-251,9,Doubles Ditto's Speed when held. The boost is lost after transforming.,Held by Ditto: Doubles the holder's initial Speed.
-252,9,"Held: Holder survives any single-hit attack at 1 HP if at max HP, then the item is consumed.","Held: If the holder has full HP and is attacked for regular damage that would faint it, this item is consumed and prevents the holder's HP from lowering below 1.  This effect works against multi-hit attacks, but does not work against the effects of Doom Desire or Future Sight."
-253,9,Held: Provides a 1/5 (20%) boost in accuracy if the holder moves after the target.,"Held: Raises the holder's Accuracy by 20% when it goes last.
+251,9,Doubles Ditto’s Speed when held. The boost is lost after transforming.,Held by Ditto: Doubles the holder’s initial Speed.
+252,9,"Held: Holder survives any single-hit attack at 1 HP if at max HP, then the item is consumed.","Held: If the holder has full HP and is attacked for regular damage that would faint it, this item is consumed and prevents the holder’s HP from lowering below 1.  This effect works against multi-hit attacks, but does not work against the effects of Doom Desire or Future Sight."
+253,9,Held: Provides a 1/5 (20%) boost in accuracy if the holder moves after the target.,"Held: Raises the holder’s Accuracy by 20% when it goes last.
 Ingame description is incorrect."
 254,9,Held: Consectutive uses of the same attack have a cumulative damage boost of 10%. Maximum 100% boost.,"Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
-255,9,"Held: Holder's Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder.","Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
-256,9,Held: Holder moves last in its priority bracket.,"Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+255,9,"Held: Holder’s Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder.","Held: Decreases the holder’s Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
+256,9,Held: Holder moves last in its priority bracket.,"Held: The holder will go last within its move’s priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
 257,9,Held: Infatuates opposing Pokémon when holder is inflicted with infatuation.,"Held: When the holder becomes Attracted, the Pokémon it is Attracted to becomes Attracted back."
 258,9,Held: Poison-type holder recovers 1/16 (6.25%) max HP each turn. Non-Poison-Types take 1/8 (12.5%) max HP damage.,"Held: If the holder is Poison-type, restores 1/16 max HP at the end of each turn.  Otherwise, damages the holder by 1/16 its max HP at the end of each turn."
-259,9,Held: Hail by the holder lasts 8 rounds instead of 5.,"Held: The holder's Hail will create a hailstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
-260,9,Held: Sandstorm by the holder lasts 8 rounds instead of 5.,"Held: The holder's Sandstorm will create a sandstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
-261,9,Held: Sunny Day by the holder lasts 8 rounds instead of 5.,"Held: The holder's Sunny Day will create sunshine lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
-262,9,Held: Rain Dance by the holder lasts 8 rounds instead of 5.,"Held: The holder's Rain Dance will create rain lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
-263,9,Held: Holder's multi-turn trapping moves last 5 turns.,Held: Increases the duration of the holder's multiturn (2-5 turn) moves by three turns.
-264,9,"Held: Increases Speed by 50%, but restricts the holder to only one move.","Held: Increases the holder's Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.
+259,9,Held: Hail by the holder lasts 8 rounds instead of 5.,"Held: The holder’s Hail will create a hailstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+260,9,Held: Sandstorm by the holder lasts 8 rounds instead of 5.,"Held: The holder’s Sandstorm will create a sandstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+261,9,Held: Sunny Day by the holder lasts 8 rounds instead of 5.,"Held: The holder’s Sunny Day will create sunshine lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+262,9,Held: Rain Dance by the holder lasts 8 rounds instead of 5.,"Held: The holder’s Rain Dance will create rain lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+263,9,Held: Holder’s multi-turn trapping moves last 5 turns.,Held: Increases the duration of the holder’s multiturn (2-5 turn) moves by three turns.
+264,9,"Held: Increases Speed by 50%, but restricts the holder to only one move.","Held: Increases the holder’s Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder’s restriction is still lifted, but it will again be restricted to the next move it uses.
 (Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
 265,9,"Held: Holder takes 1/8 (12.5%) its max HP at the end of each turn. When the holder is hit by a contact move, the attacking Pokémon takes 1/8 its max HP in damage and receive the item if not holding one.","Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
-266,9,"Held: Holder gains 4 Attack effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Attack effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
-267,9,"Held: Holder gains 4 Defense effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Defense effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
-268,9,"Held: Holder gains 4 Special Attack effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Special Attack effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
-269,9,"Held: Holder gains 4 Special Defense effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Special Defense effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
-270,9,"Held: Holder gains 4 Speed effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains Speed effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
-271,9,"Held: Holder gains 4 HP effort values, but has halved Speed in battle.","Held: Decreases the holder's Speed by 50%.  Whenever the holder gains HP effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+266,9,"Held: Holder gains 4 Attack effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains Attack effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+267,9,"Held: Holder gains 4 Defense effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains Defense effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+268,9,"Held: Holder gains 4 Special Attack effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains Special Attack effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+269,9,"Held: Holder gains 4 Special Defense effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains Special Defense effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+270,9,"Held: Holder gains 4 Speed effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains Speed effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
+271,9,"Held: Holder gains 4 HP effort values, but has halved Speed in battle.","Held: Decreases the holder’s Speed by 50%.  Whenever the holder gains HP effort from battle, increases that effort by 4; this applies before the PokéRUS doubling effect."
 272,9,Held: Holder can bypass all trapping effects and switch out. Multi-turn moves still cannot be switched out of.,Held: The holder is unaffected by any moves or abilities that would prevent it from actively leaving battle.
 273,9,"Held: Increases HP recovered from draining moves, Ingrain, and Aqua Ring by 3/10 (30%).","Held: HP restored from Absorb, Aqua Ring, Drain Punch, Dream Eater, Giga Drain, Ingrain, Leech Life, Leech Seed, and Mega Drain is increased by 30%.  Damage inflicted is not affected."
-274,9,"Held: Increases Special Attack by 50%, but restricts the holder to only one move.","Held: Increases the holder's Special Attack by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.
+274,9,"Held: Increases Special Attack by 50%, but restricts the holder to only one move.","Held: Increases the holder’s Special Attack by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder’s restriction is still lifted, but it will again be restricted to the next move it uses.
 (Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
-275,9,Held: Fire-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fire.,"Held: Increases the power of the holder's Fire moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Fire."
-276,9,Held: Water-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Water.,"Held: Increases the power of the holder's Water moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Water."
-277,9,Held: Electric-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Electric.,"Held: Increases the power of the holder's Electric moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Electric."
-278,9,Held: Grass-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Grass.,"Held: Increases the power of the holder's Grass moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Grass."
-279,9,Held: Ice-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ice.,"Held: Increases the power of the holder's Ice moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Ice."
-280,9,Held: Fighting-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fighting.,"Held: Increases the power of the holder's Fighting moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Fighting."
-281,9,Held: Posion-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Posion.,"Held: Increases the power of the holder's Poison moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Poison."
-282,9,Held: Ground-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ground.,"Held: Increases the power of the holder's Ground moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Ground."
-283,9,Held: Flying-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Flying.,"Held: Increases the power of the holder's Flying moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Flying."
-284,9,Held: Psychic-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Psychic.,"Held: Increases the power of the holder's Psychic moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Psychic."
-285,9,Held: Bug-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Bug.,"Held: Increases the power of the holder's Bug moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Bug."
-286,9,Held: Rock-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Rock.,"Held: Increases the power of the holder's Rock moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Rock."
-287,9,Held: Ghost-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ghost.,"Held: Increases the power of the holder's Ghost moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Ghost."
-288,9,Held: Dragon-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Dragon.,"Held: Increases the power of the holder's Dragon moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Dragon."
-289,9,Held: Dark-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Dark.,"Held: Increases the power of the holder's Dark moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Dark."
-290,9,Held: Steel-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Steel.,"Held: Increases the power of the holder's Steel moves by 20%.
-Held by a Multitype Pokémon: Holder's type becomes Steel."
-291,9,Held: Psychic-Type moves from holder do 20% more damage. Breeding: Mr. Mime begets a Mime Jr. Egg.,Held: Increases the power of the holder's Psychic moves by 20%.
-292,9,Held: Rock-Type moves from holder do 20% more damage. Breeding: Sudowoodo begets a Bonsly Egg.,Held: Increases the power of the holder's Rock moves by 20%.
-293,9,Held: Holder moves last in its priority bracket. Breeding: Snorlax begets a Munchlax Egg.,"Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
-294,9,Held: Water-Type moves from holder do 20% more damage. Breeding: Mantine begets a Mantyke Egg.,Held: Increases the power of the holder's Water moves by 20%.
-295,9,Held: Grass-Type moves from holder do 20% more damage. Breeding: Roselia or Roserade beget a Budew Egg.,Held: Increases the power of the holder's Grass moves by 20%.
+275,9,Held: Fire-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Fire.,"Held: Increases the power of the holder’s Fire moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Fire."
+276,9,Held: Water-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Water.,"Held: Increases the power of the holder’s Water moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Water."
+277,9,Held: Electric-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Electric.,"Held: Increases the power of the holder’s Electric moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Electric."
+278,9,Held: Grass-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Grass.,"Held: Increases the power of the holder’s Grass moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Grass."
+279,9,Held: Ice-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Ice.,"Held: Increases the power of the holder’s Ice moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Ice."
+280,9,Held: Fighting-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Fighting.,"Held: Increases the power of the holder’s Fighting moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Fighting."
+281,9,Held: Posion-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Posion.,"Held: Increases the power of the holder’s Poison moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Poison."
+282,9,Held: Ground-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Ground.,"Held: Increases the power of the holder’s Ground moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Ground."
+283,9,Held: Flying-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Flying.,"Held: Increases the power of the holder’s Flying moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Flying."
+284,9,Held: Psychic-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Psychic.,"Held: Increases the power of the holder’s Psychic moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Psychic."
+285,9,Held: Bug-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Bug.,"Held: Increases the power of the holder’s Bug moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Bug."
+286,9,Held: Rock-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Rock.,"Held: Increases the power of the holder’s Rock moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Rock."
+287,9,Held: Ghost-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Ghost.,"Held: Increases the power of the holder’s Ghost moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Ghost."
+288,9,Held: Dragon-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Dragon.,"Held: Increases the power of the holder’s Dragon moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Dragon."
+289,9,Held: Dark-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Dark.,"Held: Increases the power of the holder’s Dark moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Dark."
+290,9,Held: Steel-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Steel.,"Held: Increases the power of the holder’s Steel moves by 20%.
+Held by a Multitype Pokémon: Holder’s type becomes Steel."
+291,9,Held: Psychic-Type moves from holder do 20% more damage. Breeding: Mr. Mime begets a Mime Jr. Egg.,Held: Increases the power of the holder’s Psychic moves by 20%.
+292,9,Held: Rock-Type moves from holder do 20% more damage. Breeding: Sudowoodo begets a Bonsly Egg.,Held: Increases the power of the holder’s Rock moves by 20%.
+293,9,Held: Holder moves last in its priority bracket. Breeding: Snorlax begets a Munchlax Egg.,"Held: The holder will go last within its move’s priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+294,9,Held: Water-Type moves from holder do 20% more damage. Breeding: Mantine begets a Mantyke Egg.,Held: Increases the power of the holder’s Water moves by 20%.
+295,9,Held: Grass-Type moves from holder do 20% more damage. Breeding: Roselia or Roserade beget a Budew Egg.,Held: Increases the power of the holder’s Grass moves by 20%.
 296,9,Held: Doubles the money earned from a battle. Does not stack with Amulet Coin. Breeding: Chansey and Blissey beget a Happiny Egg.,Held: Doubles the money the trainer receives after an in-game trainer battle.  This effect cannot apply more than once to the same battle.
-297,9,Prevents wild encounters of level lower than your party's lead Pokémon. Breeding: Chimecho begets a Chingling Egg.,Held by lead Pokémon: Prevents wild battles with Pokémon that are lower level than the holder.
+297,9,Prevents wild encounters of level lower than your party’s lead Pokémon. Breeding: Chimecho begets a Chingling Egg.,Held by lead Pokémon: Prevents wild battles with Pokémon that are lower level than the holder.
 298,9,Traded on a Rhydon: Holder evolves into Rhyperior.,Held by Rhydon: Evolves the holder into Rhyperior when traded.
 299,9,Traded on an Electabuzz: Holder evolves into Electivire.,Held by Electabuzz: Evolves the holder into Electivire when traded.
 300,9,Traded on a Magmar: Holder evolves into Magmortar.,Held by Magmar: Evolves the holder into Magmortar when traded.
 301,9,Traded on a Porygon2: Holder evolves into Porygon-Z.,Held by Porygon2: Evolves the holder into Porygon-Z when traded.
 302,9,Traded on a Dusclops: Holder evolves into Dusknoir.,Held by Dusclops: Evolves the holder into Dusknoir when traded.
-303,9,Held: Raises the holder's critical hit ratio by one stage. Held by a Sneasel while levelling up at night: Holder evolves into Weavile.,"Held: Raises the holder's critical hit counter by 1.
+303,9,Held: Raises the holder’s critical hit ratio by one stage. Held by a Sneasel while levelling up at night: Holder evolves into Weavile.,"Held: Raises the holder’s critical hit counter by 1.
 Held by Sneasel: Evolves the holder into Weavile when it levels up during the night."
 304,9,Held: Damaging moves gain a 10% chance to make their target flinch. Held by a Gligar while levelling up: Holder evolves into Gliscor.,"Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.
 Held by Gligar: Evolves the holder into Gliscor when it levels up."
@@ -731,16 +731,16 @@ Held by Gligar: Evolves the holder into Gliscor when it levels up."
 407,9,List of battle types and their rules.,Unused.
 408,9,Use to track down rare or shiny Pokémon. 50 steps to recharge.,"Designates several nearby patches of grass as containing Pokémon, some of which may be special radar-only Pokémon.  Successive uses in a certain way create chains of encounters with the same species; longer chains increase the chance that a shiny Pokémon of that species will appear."
 409,9,Keeps count of Battle Points earned.,Tracks Battle Points.
-410,9,Records prior significant activities the player took.,Records some of the trainer's activities for the day.
+410,9,Records prior significant activities the player took.,Records some of the trainer’s activities for the day.
 411,9,Stores Seals that can be applied to Poké Ball capsules.,Contains Seals used for decorating Pokéballs.
 412,9,Holds Pokémon Accessories for use in Contests.,Contains Pokémon Accessories.
 413,9,Holds ten Seals for Poké Balls.,Unused.
 414,9,Use to record Friend Codes and check your own.,"Contains friend codes for up to 32 other players, as well as their sprite, gender, and basic statistics for those that have been seen on WFC."
 415,9,Grants access to Valley Windworks.,Opens the front door of the Valley Windworks.  Reusable.
-416,9,Trade to Cynthia's grandmother in Celestic Town for HM04 (Surf).,Given to Cynthia's grandmother to get the Surf HM.
+416,9,Trade to Cynthia’s grandmother in Celestic Town for HM04 (Surf).,Given to Cynthia’s grandmother to get the Surf HM.
 417,9,Grants access to Galactic HQ in Veilstone City.,Grants access to Galactic HQ in Veilstone City.
 418,9,Used to bind Palkia and Dialga.,Unused.
-419,9,Use to see the overworld map.,"Displays a map of the region including the trainer's position, location names, visited towns, gym locations, and where the trainer has been walking recently."
+419,9,Use to see the overworld map.,"Displays a map of the region including the trainer’s position, location names, visited towns, gym locations, and where the trainer has been walking recently."
 420,9,Allows rebattling of on-screen trainers. 100 steps to recharge.,"Reveals trainers who want a rematch, by showing !! over their heads.  Each use drains the battery; requires 100 steps to charge."
 421,9,Holds coins for the Game Corner.,"Contains the Coins used by the Game Corner, to a maximum of 50,000."
 422,9,Used to catch Pokémon in bodies of water.,"Used to find Pokémon on the Old Rod list for an area, which are generally Magikarp or similar."
@@ -751,7 +751,7 @@ Held by Gligar: Evolves the holder into Gliscor when it levels up."
 427,9,Use for fast transit.,"Increases movement speed outside or in caves.  In high gear, allows the trainer to hop over some rocks and ascend muddy slopes."
 428,9,Opens a locked building in the Lakeside Resort.,Opens the locked building in the lakeside resort.
 429,9,"Allows access to Seabreak path, Flower Paradise, and Shaymin.",Grants access to Flower Paradise and Shaymin.
-430,9,Cures sailor's son of nightmares in Canalave City.,"Cures the sailor's son of his nightmares; no reward, only a side effect of seeing Cresselia."
+430,9,Cures sailor’s son of nightmares in Canalave City.,"Cures the sailor’s son of his nightmares; no reward, only a side effect of seeing Cresselia."
 431,9,Allows access to Newmoon Island and Darkrai.,Provides access to Newmoon Island and Darkrai.
 432,9,Allows entry into the Hall of Origin. Unreleased.,
 433,9,Ticket for a ship. (RSE: S.S. Tidal LF: S.S. Anne HG: S.S. Aqua),"Allows passage on a ferry.
@@ -761,14 +761,14 @@ The same item is used for different ferries between different games."
 435,9,Magma is sealed inside.,"Causes Heatran to appear at Reversal Mountain.
 
 Unused prior to Black and White 2."
-436,9,Given to the trainer's rival in Jubilife City. Contains Town Maps.,"Given to the trainer's rival in Jubilife City.  Contains two Town Maps, one of which is given to the trainer upon delivery."
+436,9,Given to the trainer’s rival in Jubilife City. Contains Town Maps.,"Given to the trainer’s rival in Jubilife City.  Contains two Town Maps, one of which is given to the trainer upon delivery."
 437,9,The first of three tickets used to obtain a Pokétch.,One of three coupons needed to receive a Pokétch.
 438,9,The second of three tickets used to obtain a Pokétch.,One of three coupons needed to receive a Pokétch.
 439,9,The last of three tickets used to obtain a Pokétch.,One of three coupons needed to receive a Pokétch.
 440,9,Grants access to the Team Galactic warehouse in Veilstone City.,Grants access to the Team Galactic warehouse in Veilstone City.
 441,9,Used to heal the Ampharos at the top of Olivine Lighthouse.,Required to cure the Psyducks blocking Route 210 of their chronic headaches.
-442,9,"Boosts the damage from Giratina's Dragon-type and Ghost-type moves by 20%, and transforms it into Origin Forme.","Held by []{pokemon:giratina}
-:   Holder's []{type:dragon} and []{type:ghost} moves have 1.2× their base power.
+442,9,"Boosts the damage from Giratina’s Dragon-type and Ghost-type moves by 20%, and transforms it into Origin Forme.","Held by []{pokemon:giratina}
+:   Holder’s []{type:dragon} and []{type:ghost} moves have 1.2× their base power.
 
     Holder is in Origin Forme.
 
@@ -780,8 +780,8 @@ Tracks Battle Points earned in the Battle Frontier, and stores commemorative pri
 :   Changes the target Shaymin from Land Forme to Sky Forme.
 
     This item cannot be used on a [frozen]{mechanic:freezing} Shaymin or at night.  Sky Forme Shaymin will revert to Land Forme overnight, when frozen, and upon entering a link battle.  This item must be used again to change it back."
-445,9,Gen IV: The key to Rotom's appliance room. Gen III: The key to Cinnabar Gym.,"Used by trainer in the Galactic Eterna Building, on the ground floor, to the left of the TV
-:   Unlocks the secret []{pokemon:rotom} room, in which there are five appliances which can change Rotom's form."
+445,9,Gen IV: The key to Rotom’s appliance room. Gen III: The key to Cinnabar Gym.,"Used by trainer in the Galactic Eterna Building, on the ground floor, to the left of the TV
+:   Unlocks the secret []{pokemon:rotom} room, in which there are five appliances which can change Rotom’s form."
 446,9,Holds Apricorns.,Stores Apricorns.
 447,9,Allows portable berry growing.,Contains four portable pots of soil suitable for growing berries.
 448,9,Use on Sudowoodo blocking the path on Route 36. Also waters berries.,"Required to water berries within the []{item:berry-pots}.
@@ -792,15 +792,15 @@ This item cannot be directly used from the bag."
 449,9,3× effectiveness while fishing. Made from Blu Apricorn.,"Used by trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-    If the wild Pokémon was encountered by fishing, the wild Pokémon's catch rate is 3× normal."
-450,9,Success rate based off of fraction target Pokémon is of user's Pokémon. Made from Red Apricorn.,"Used by trainer in battle
+    If the wild Pokémon was encountered by fishing, the wild Pokémon’s catch rate is 3× normal."
+450,9,Success rate based off of fraction target Pokémon is of user’s Pokémon. Made from Red Apricorn.,"Used by trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-    If the trainer's Pokémon's level is higher than:
+    If the trainer’s Pokémon’s level is higher than:
 
-    * four times the wild Pokémon's, the wild Pokémon's catch rate is 8× normal.
-    * than twice the wild Pokémon's, the wild Pokémon's catch rate is 4× normal.
-    * the wild Pokémon's, the wild Pokémon's catch rate is 2× normal."
+    * four times the wild Pokémon’s, the wild Pokémon’s catch rate is 8× normal.
+    * than twice the wild Pokémon’s, the wild Pokémon’s catch rate is 4× normal.
+    * the wild Pokémon’s, the wild Pokémon’s catch rate is 2× normal."
 451,9,4× effectiveness on familes of Pokémon with a Moon Stone evolution. Made from Ylw Apricorn.,"Used by trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
@@ -817,15 +817,15 @@ This item cannot be directly used from the bag."
 453,9,4× effectiveness on Pokémon with 100 or greater base speed. (Gen II: Roaming or Fleeing Pokémon). Made from Wht Apricorn.,"Used by a trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-:   If the wild Pokémon's base [speed]{mechanic:speed} is 100 or more, its catch rate is 4× normal."
+:   If the wild Pokémon’s base [speed]{mechanic:speed} is 100 or more, its catch rate is 4× normal."
 454,9,Caught Pokémon start with 200 happiness. Made from Grn Apricorn.,"Used by a trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-    If caught, the wild Pokémon's [happiness]{mechanic:happiness} starts at 200."
+    If caught, the wild Pokémon’s [happiness]{mechanic:happiness} starts at 200."
 455,9,"8× effectiveness on opposite sex, same species targets of the Active Pokémon. Made from Pnk Apricorn.","Used by a trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-    If the trainer's Pokémon and wild Pokémon are of the same species but opposite genders, the wild Pokémon's catch rate is 8× normal."
+    If the trainer’s Pokémon and wild Pokémon are of the same species but opposite genders, the wild Pokémon’s catch rate is 8× normal."
 456,9,Catches Pokémon in the Pal Park every time.,"Used by a trainer in battle
 :   [Catches]{mechanic:catch} a wild Pokémon.
 
@@ -833,7 +833,7 @@ This item can only be used in []{location:pal-park}."
 457,9,Tries to catch a Pokémon in the Bug-Catching contest in National Park. (Gen II: Park Ball),"Used by a trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.
 
-    The wild Pokémon's catch rate is 1.5× normal."
+    The wild Pokémon’s catch rate is 1.5× normal."
 458,9,Used to make a Level Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:level-ball}.
 459,9,Used to make a Lure Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:lure-ball}.
 460,9,Used to make a Moon Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:moon-ball}.
@@ -849,9 +849,9 @@ This item can only be used in []{location:pal-park}."
 469,9,Summons Rayquaza to the Embedded Tower.,Causes []{pokemon:rayquaza} to appear in the []{location:embedded-tower}.
 470,9,S: Summons Latias H: Summons Latios.,"When taken to the []{location:pewter-city} museum, causes []{pokemon:latias} or []{pokemon:latios} to attack the trainer.
 
-The Pokémon to appear will be whicher can't be encountered roaming in the wild."
+The Pokémon to appear will be whicher can’t be encountered roaming in the wild."
 471,9,Keeps track of Unown types caught.,Lists which []{pokemon:unown} forms the trainer has caught.
-472,9,Keeps track of points from Buena's show.,Allows the trainer to answer the daily question on Buena's radio show.  Records the points earned for correct answers.
+472,9,Keeps track of points from Buena’s show.,Allows the trainer to answer the daily question on Buena’s radio show.  Records the points earned for correct answers.
 473,9,A tasty tail that sells for a high price.,Does nothing.
 474,9,HS: Allows Kimono-girls to summon Ho-oh. C: Summons Suicune to the Tin Tower.,May be given to the Kimono Girls to summon []{pokemon:ho-oh} to the top of the []{location:bell-tower}.
 475,9,HS: Opens doors in the Radio Tower. Gen III: Unlocks Silph Co Doors.,"Used by trainer outside of battle
@@ -864,14 +864,14 @@ The Pokémon to appear will be whicher can't be encountered roaming in the wild.
 480,9,Must be replaced in the Power Plant to power the Magnet Train.,Must be replaced in the []{location:power-plant} to power the Magnet Train.
 481,9,Summons Lugia to the Whirl Islands.,Causes []{pokemon:lugia} to appear in the []{location:whirl-islands}.
 482,9,Summons Ho-Oh at the top of the Bell Tower.,Causes []{pokemon:ho-oh} to appear at the top of []{location:bell-tower}.
-483,9,Deliver to Professor Elm.,"Must be obtained to trigger the break-in at Professor Elm's lab, the first rival battle, and access to []{location:johto-route-31}."
+483,9,Deliver to Professor Elm.,"Must be obtained to trigger the break-in at Professor Elm’s lab, the first rival battle, and access to []{location:johto-route-31}."
 484,9,Use to listen to GameBoy era audio.,"Used by trainer outside of battle
 :   Changes the background music to the equivalent 8-bit music."
 485,9,Allows Kimono-girls to summon Lugia.,May be given to the Kimono Girls to summon []{pokemon:lugia} to the top of the []{location:bell-tower}.
 486,9,Records the number of times the trainer has come in first place overall in the Pokéathlon.,Records the number of times the trainer has come in first place overall in the Pokéathlon.
 487,9,Records the number of times the trainer has come in last place overall in the Pokéathlon.,Records the number of times the trainer has come in last place overall in the Pokéathlon.
-488,9,Records the number of times the trainer's Pokémon have dashed in the Pokéathlon.,Records the number of times the trainer's Pokémon have dashed in the Pokéathlon.
-489,9,Records the number of times the trainer's Pokémon have jumped in the Pokéathlon.,Records the number of times the trainer's Pokémon have jumped in the Pokéathlon.
+488,9,Records the number of times the trainer’s Pokémon have dashed in the Pokéathlon.,Records the number of times the trainer’s Pokémon have dashed in the Pokéathlon.
+489,9,Records the number of times the trainer’s Pokémon have jumped in the Pokéathlon.,Records the number of times the trainer’s Pokémon have jumped in the Pokéathlon.
 490,9,Records the number of times the trainer has come in first in the Pokéathlon Hurdle Dash.,Records the number of times the trainer has come in first in the Pokéathlon Hurdle Dash.
 491,9,Records the number of times the trainer has come in first in the Pokéathlon Relay Run.,Records the number of times the trainer has come in first in the Pokéathlon Relay Run.
 492,9,Records the number of times the trainer has come in first in the Pokéathlon Pennant Capture.,Records the number of times the trainer has come in first in the Pokéathlon Pennant Capture.
@@ -879,10 +879,10 @@ The Pokémon to appear will be whicher can't be encountered roaming in the wild.
 494,9,Records the number of times the trainer has come in first in the Pokéathlon Disc Catch.,Records the number of times the trainer has come in first in the Pokéathlon Disc Catch.
 495,9,Records the number of times the trainer has come in first in the Pokéathlon Snow Throw.,Records the number of times the trainer has come in first in the Pokéathlon Snow Throw.
 496,9,Records the number of points the trainer has earned in the Pokéathlon.,Records the number of points the trainer has earned in the Pokéathlon.
-497,9,Records the number of times the trainer's Pokémon have messed up in the Pokéathlon.,Records the number of times the trainer's Pokémon have messed up in the Pokéathlon.
-498,9,Records the number of times the trainer's Pokémon have defeated themselves in the Pokéathlon.,Records the number of times the trainer's Pokémon have defeated themselves in the Pokéathlon.
-499,9,Records the number of times the trainer's Pokémon have tackled in the Pokéathlon.,Records the number of times the trainer's Pokémon have tackled in the Pokéathlon.
-500,9,Records the number of times the trainer's Pokémon have fallen in the Pokéathlon.,Records the number of times the trainer's Pokémon have fallen in the Pokéathlon.
+497,9,Records the number of times the trainer’s Pokémon have messed up in the Pokéathlon.,Records the number of times the trainer’s Pokémon have messed up in the Pokéathlon.
+498,9,Records the number of times the trainer’s Pokémon have defeated themselves in the Pokéathlon.,Records the number of times the trainer’s Pokémon have defeated themselves in the Pokéathlon.
+499,9,Records the number of times the trainer’s Pokémon have tackled in the Pokéathlon.,Records the number of times the trainer’s Pokémon have tackled in the Pokéathlon.
+500,9,Records the number of times the trainer’s Pokémon have fallen in the Pokéathlon.,Records the number of times the trainer’s Pokémon have fallen in the Pokéathlon.
 501,9,Records the number of times the trainer has come in first in the Pokéathlon Ring Drop.,Records the number of times the trainer has come in first in the Pokéathlon Ring Drop.
 502,9,Records the number of times the trainer has come in first in the Pokéathlon Lamp Jump.,Records the number of times the trainer has come in first in the Pokéathlon Lamp Jump.
 503,9,Records the number of times the trainer has come in first in the Pokéathlon Circle Push.,Records the number of times the trainer has come in first in the Pokéathlon Circle Push.
@@ -892,56 +892,56 @@ The Pokémon to appear will be whicher can't be encountered roaming in the wild.
 507,9,Records the number of times the trainer has come in last across all Pokéathlon events.,Records the number of times the trainer has come in last across all Pokéathlon events.
 508,9,Records the number of times the trainer has switched Pokémon in the Pokéathlon.,Records the number of times the trainer has switched Pokémon in the Pokéathlon.
 509,9,Records the number of times the trainer has come in first in the Pokéathlon Goal Roll.,Records the number of times the trainer has come in first in the Pokéathlon Goal Roll.
-510,9,Records the number of times the trainer's Pokémon received prizes in the Pokéathlon.,Records the number of times the trainer's Pokémon received prizes in the Pokéathlon.
+510,9,Records the number of times the trainer’s Pokémon received prizes in the Pokéathlon.,Records the number of times the trainer’s Pokémon received prizes in the Pokéathlon.
 511,9,Records the number of times the trainer has instructed Pokémon in the Pokéathlon.,Records the number of times the trainer has instructed Pokémon in the Pokéathlon.
 512,9,Records the total time spent in the Pokéathlon.,Records the total time spent in the Pokéathlon.
 513,9,Contains TM95 (Snarl).,Does nothing.
 514,9,Stores photos from your adventure.,Does nothing.
-515,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+515,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-516,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+516,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-517,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+517,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-518,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+518,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-519,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+519,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-520,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+520,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-521,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+521,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-522,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+522,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-523,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+523,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-524,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+524,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-525,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+525,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-526,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+526,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
@@ -955,9 +955,9 @@ Held
 534,9,Provides access to Southern Island and Latias or Latios.,"Provides access to []{location:southern-island} and either []{pokemon:latias} or []{pokemon:latios}, whichever is not available roaming around Hoenn."
 535,9,Trade to Captain Stern for a DeepSeaTooth or DeepSeaScale.,May be traded to Captain Stern for a []{item:deep-sea-tooth} or a []{item:deep-sea-scale}.
 536,9,Allows passage through windy deserts.,Allows the trainer to enter the desert on []{location:hoenn-route-111}.
-537,9,FL: Deliver to Lostelle's father. RSE: Trade to Professor Cozmo for TM27 (Return).,"RSE: May be traded to Professor Cozmo for []{item:tm27}.
+537,9,FL: Deliver to Lostelle’s father. RSE: Trade to Professor Cozmo for TM27 (Return).,"RSE: May be traded to Professor Cozmo for []{item:tm27}.
 
-FRLG: A meteorite to be delivered to Lostelle's father."
+FRLG: A meteorite to be delivered to Lostelle’s father."
 538,9,Unlocks room 1 on the Abandoned Ship.,Unlocks room 1 on the []{location:abandoned-ship}.
 539,9,Unlocks room 2 on the Abandoned Ship.,Unlocks room 2 on the []{location:abandoned-ship}.
 540,9,Unlocks room 4 on the Abandoned Ship.,Unlocks room 4 on the []{location:abandoned-ship}.
@@ -966,8 +966,8 @@ FRLG: A meteorite to be delivered to Lostelle's father."
 543,9,Trade to Prof. Oak for a Pokédex.,A parcel to be delivered to Professor Oak for a Pokédex.
 544,9,"Use to awaken sleeping Pokémon, including Snorlax on roads.",Wakes up [sleeping]{mechanic:sleep} Pokémon.  Required to wake up sleeping []{pokemon:snorlax} on the overworld.
 545,9,Trade in Cerulean bike shop for a Bicycle.,May be traded for a []{item:bicycle}.
-546,9,The Safari Zone Warden's dentures. Trade for HM04 (Strength).,"The Safari Zone warden's teeth, to be returned to him for []{item:hm04}."
-547,9,Operates the elevator in Team Rocket's Celadon Hideout.,Operates the elevator in the Celadon Rocket Hideout.
+546,9,The Safari Zone Warden’s dentures. Trade for HM04 (Strength).,"The Safari Zone warden’s teeth, to be returned to him for []{item:hm04}."
+547,9,Operates the elevator in Team Rocket’s Celadon Hideout.,Operates the elevator in the Celadon Rocket Hideout.
 548,9,Used to identify the true forms of ghosts in Pokémon Tower.,Identifies ghosts in []{location:pokemon-tower}.
 549,9,Records information about NPCs.,Records information on various famous people.
 550,9,Holds TMs.,Stores TMs and HMs.
@@ -984,66 +984,66 @@ FRLG: A meteorite to be delivered to Lostelle's father."
 561,9,Provides access to the Team Magma Hideout in the Jagged Pass.,Provides access to the []{location:magma-hideout} in the []{location:jagged-pass}.
 562,9,Allows access to Faraway Island and Mew. Unreleased outside of Japan.,Provides access to Faraway Island and []{pokemon:mew}.
 563,9,"Grants Genesect a blue, Water-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder's buster is blue, and its []{move:techno-blast} is []{type:water}-type."
+:   Holder’s buster is blue, and its []{move:techno-blast} is []{type:water}-type."
 564,9,"Grants Genesect a yellow, Electric-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder's buster is yellow, and its []{move:techno-blast} is []{type:electric}-type."
+:   Holder’s buster is yellow, and its []{move:techno-blast} is []{type:electric}-type."
 565,9,"Grants Genesect a red, Fire-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder's buster is red, and its []{move:techno-blast} is []{type:fire}-type."
+:   Holder’s buster is red, and its []{move:techno-blast} is []{type:fire}-type."
 566,9,"Grants Genesect a white, Ice-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder's buster is white, and its []{move:techno-blast} becomes []{type:ice}-type."
+:   Holder’s buster is white, and its []{move:techno-blast} becomes []{type:ice}-type."
 567,9,Restores 20 HP.,"Used on a friendly Pokémon
 :   Restores 20 [HP]{mechanic:hp}."
-568,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+568,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-569,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+569,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-570,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+570,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-571,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+571,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-572,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+572,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-573,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+573,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-574,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+574,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-575,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+575,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-576,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+576,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-577,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+577,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-578,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+578,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-579,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer's PC.
+579,9,Lets a Trainer write a message and send it via Pokémon trade.,"Used to send short messages to other players via Pokémon trading.  Trainer may compose a message from a finite list of words when giving this item to a Pokémon.  Once taken and read, a message may be erased and this item can be reused, or the message may be stored in the trainer’s PC.
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
 580,9,Traded on a Feebas: Holder evolves into Milotic.,"Held by []{pokemon:feebas}
 :   Holder evolves into []{pokemon:milotic} when traded."
-581,9,"Held: Holder has 1.5× Defense and Special Defense, as long as it's not fully evolved.","Held by a Pokémon that is not fully evolved
+581,9,"Held: Holder has 1.5× Defense and Special Defense, as long as it’s not fully evolved.","Held by a Pokémon that is not fully evolved
 :   Holder has 1.5× [Defense]{mechanic:defense} and [Special Defense]{mechanic:special-defense}."
 582,9,Held: Holder has 0.5× weight.,"Held
 :   Holder has 0.5× weight."
@@ -1058,15 +1058,15 @@ Held
 585,9,"Held: When the holder takes damage from a move, the opponent switches out for another random party Pokémon. Consumed after use.","Held
 :   When the holder takes damage directly from a move and does not faint, it [switches out]{mechanic:switching-out} for another random, non-fainted Pokémon in its party.
 This effect does not activate if another effect prevents the holder from switching out."
-586,9,Held: Negates the holder's type immunities. Ability immunities are not removed.,"Held
-:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."
+586,9,Held: Negates the holder’s type immunities. Ability immunities are not removed.,"Held
+:   When one of the user’s types would render it immune to damage, that type is ignored for damage calculation."
 587,9,Held: Doubles the per-turn damage of multi-turn trapping moves.,"Held
 :   Moves used by the holder that trap and damage a target for multiple turns (e.g. []{move:bind}, []{move:fire-spin}) inflict twice their usual per-turn damage."
-588,9,Held: Raises the holder's Special Attack by one stage when it takes Water-type damage.,"Held
+588,9,Held: Raises the holder’s Special Attack by one stage when it takes Water-type damage.,"Held
 :   When the holder takes []{type:water}-type damage from a move, its [Special Attack]{mechanic:special-attack} rises by one [stage]{mechanic:stage} and this item is consumed."
-589,9,Held: Raises the holder's Attack by one stage when it takes Electric-type damage.,"Held
+589,9,Held: Raises the holder’s Attack by one stage when it takes Electric-type damage.,"Held
 :   When the holder takes []{type:electric}-type damage from a move, its [Attack]{mechanic:attack} rises by one [stage]{mechanic:stage} and this item is consumed."
-590,9,"Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer's choice.","Held
+590,9,"Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer’s choice.","Held
 :   When the holder takes damage directly from a move and does not faint, it [switches out]{mechanic:switching-out} for another non-fainted Pokémon in its party, as chosen by the Trainer.
 This effect does not activate if another effect prevents the holder from switching out."
 591,9,"Held: When the holder uses a damaging []{type:fire}-type move, the move has 1.5× power and this item is consumed.","Held
@@ -1100,20 +1100,20 @@ This effect does not activate if another effect prevents the holder from switchi
 605,9,"Held: When the holder uses a damaging []{type:steel}-type move, the move has 1.5× power and this item is consumed.","Held
 :   When the holder uses a damaging []{type:steel}-type move, the move has 1.5× power and this item is consumed."
 606,9,Increases [HP]{mechanic:hp} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [HP]{mechanic:hp} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [HP]{mechanic:hp} [effort]{mechanic:effort} by 1."
 607,9,Increases [Attack]{mechanic:attack} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [Attack]{mechanic:attack} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [Attack]{mechanic:attack} [effort]{mechanic:effort} by 1."
 608,9,Increases [Defense]{mechanic:defense} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [Defense]{mechanic:defense} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [Defense]{mechanic:defense} [effort]{mechanic:effort} by 1."
 609,9,Increases [Special Attack]{mechanic:special-attack} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [Special Attack]{mechanic:special-attack} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [Special Attack]{mechanic:special-attack} [effort]{mechanic:effort} by 1."
 610,9,Increases [Special Defense]{mechanic:special-defense} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [Special Defense]{mechanic:special-defense} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [Special Defense]{mechanic:special-defense} [effort]{mechanic:effort} by 1."
 611,9,Increases [Speed]{mechanic:speed} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
-:   Increases the target's [Speed]{mechanic:speed} [effort]{mechanic:effort} by 1."
+:   Increases the target’s [Speed]{mechanic:speed} [effort]{mechanic:effort} by 1."
 612,9,Sell for 100 Pokédollars.,Vendor trash.
 613,9,Can be revived into a []{pokemon:tirtouga}.,Give to a scientist in a museum to receive a []{pokemon:tirtouga}.
-614,9,Can be revived into a []{pokemon:archen}.,Give to a scientist in a museum to receive a []{pokemon:archen}.
+614,9,Can be revived into an []{pokemon:archen}.,Give to a scientist in a museum to receive an []{pokemon:archen}.
 615,9,Allows access to Liberty Garden and Victini.,"Allows passage on the []{location:castelia-city} ship, which leads to []{location:liberty-garden} and []{pokemon:victini}."
 616,9,Activates Pass Powers.,Acts as currency to activate Pass Powers in the Entralink.
 617,9,Catches Pokémon found in the Dream World.,"Can only be used in Entree Forest, to catch Pokémon encountered in the Dream World.
@@ -1138,82 +1138,82 @@ Used in battle
 632,9,Cures any status ailment and confusion.,"Used on a party Pokémon
 :   Cures any [status ailment]{mechanic:status-ailment} and [confusion]{mechanic:confusion}."
 633,9,Raises [critical hit]{mechanic:critical-hit} rate by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [critical hit]{mechanic:critical-hit} rate by two [stages]{mechanic:stage}.
+:   Raises the target’s [critical hit]{mechanic:critical-hit} rate by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 634,9,Raises [Speed]{mechanic:speed} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Speed]{mechanic:speed} by two [stages]{mechanic:stage}.
+:   Raises the target’s [Speed]{mechanic:speed} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 635,9,Raises [Special Attack]{mechanic:special-attack} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Attack]{mechanic:special-attack} by two [stages]{mechanic:stage}.
+:   Raises the target’s [Special Attack]{mechanic:special-attack} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 636,9,Raises [Special Defense]{mechanic:special-defense} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Defense]{mechanic:special-defense} by two [stages]{mechanic:stage}.
+:   Raises the target’s [Special Defense]{mechanic:special-defense} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 637,9,Raises [Defense]{mechanic:defense} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Defense]{mechanic:defense} by two [stages]{mechanic:stage}.
+:   Raises the target’s [Defense]{mechanic:defense} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 638,9,Raises [Attack]{mechanic:attack} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Attack]{mechanic:attack} by two [stages]{mechanic:stage}.
+:   Raises the target’s [Attack]{mechanic:attack} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 639,9,Raises [accuracy]{mechanic:accuracy} by two [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [accuracy]{mechanic:accuracy} by two [stages]{mechanic:stage}.
+:   Raises the target’s [accuracy]{mechanic:accuracy} by two [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 640,9,Raises [Speed]{mechanic:speed} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Speed]{mechanic:speed} by three [stages]{mechanic:stage}.
+:   Raises the target’s [Speed]{mechanic:speed} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 641,9,Raises [Special Attack]{mechanic:special-attack} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Attack]{mechanic:special-attack} by three [stages]{mechanic:stage}.
+:   Raises the target’s [Special Attack]{mechanic:special-attack} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 642,9,Raises [Special Defense]{mechanic:special-defense} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Defense]{mechanic:special-defense} by three [stages]{mechanic:stage}.
+:   Raises the target’s [Special Defense]{mechanic:special-defense} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 643,9,Raises [Defense]{mechanic:defense} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Defense]{mechanic:defense} by three [stages]{mechanic:stage}.
+:   Raises the target’s [Defense]{mechanic:defense} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 644,9,Raises [Attack]{mechanic:attack} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Attack]{mechanic:attack} by three [stages]{mechanic:stage}.
+:   Raises the target’s [Attack]{mechanic:attack} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 645,9,Raises [accuracy]{mechanic:accuracy} by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [accuracy]{mechanic:accuracy} by three [stages]{mechanic:stage}.
+:   Raises the target’s [accuracy]{mechanic:accuracy} by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 646,9,Raises [Speed]{mechanic:speed} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Speed]{mechanic:speed} by six [stages]{mechanic:stage}.
+:   Raises the target’s [Speed]{mechanic:speed} by six [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 647,9,Raises [Special Attack]{mechanic:special-attack} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Attack]{mechanic:special-attack} by six [stages]{mechanic:stage}.
+:   Raises the target’s [Special Attack]{mechanic:special-attack} by six [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 648,9,Raises [Special Defense]{mechanic:special-defense} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Special Defense]{mechanic:special-defense} by six [stages]{mechanic:stage}.
+:   Raises the target’s [Special Defense]{mechanic:special-defense} by six [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 649,9,Raises [Defense]{mechanic:defense} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Defense]{mechanic:defense} by six [stages]{mechanic:stage}.
+:   Raises the target’s [Defense]{mechanic:defense} by six [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 650,9,Raises [Attack]{mechanic:attack} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [Attack]{mechanic:attack} by six [stages]{mechanic:stage}.
+:   Raises the target’s [Attack]{mechanic:attack} by six [stages]{mechanic:stage}.
 
 This item can only be obtained or used via the Wonder Launcher."
 651,9,Raises [accuracy]{mechanic:accuracy} by six [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [accuracy]{mechanic:accuracy} by six [stages]{mechanic:stage}.
+:   Raises the target’s [accuracy]{mechanic:accuracy} by six [stages]{mechanic:stage}.
 
 This item can only be obtained or used via the Wonder Launcher."
-652,9,Forcibly activates a friendly Pokémon's ability.,"Used on a party Pokémon in battle
-:   Selects another friendly Pokémon at random.  If that Pokémon's ability is normally activated by some condition—i.e., is not continuous and passive—its effect is forcibly activated.
+652,9,Forcibly activates a friendly Pokémon’s ability.,"Used on a party Pokémon in battle
+:   Selects another friendly Pokémon at random.  If that Pokémon’s ability is normally activated by some condition—i.e., is not continuous and passive—its effect is forcibly activated.
 
 This item can only be obtained or used via the Wonder Launcher."
 653,9,Forces a friendly Pokémon to drop its held item.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  If that Pokémon is holding an item, that item is removed for the duration of the battle.
 
 This item can only be obtained or used via the Wonder Launcher."
-654,9,Forcibly activates a friendly Pokémon's held item.,"Used on a party Pokémon in battle
+654,9,Forcibly activates a friendly Pokémon’s held item.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  If that Pokémon is holding an item normally activated by some condition—i.e., not continuous and passive—its effect is forcibly activated.
 
 This item can only be obtained or used via the Wonder Launcher."
-655,9,Resets a friendly Pokémon's stat changes.,"Used on a party Pokémon in battle
-:   Selects another friendly Pokémon at random.  Removes all of that Pokémon's stat changes.
+655,9,Resets a friendly Pokémon’s stat changes.,"Used on a party Pokémon in battle
+:   Selects another friendly Pokémon at random.  Removes all of that Pokémon’s stat changes.
 
 This item can only be obtained or used via the Wonder Launcher."
 656,9,Raises [critical hit]{mechanic:critical-hit} rate by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
-:   Raises the target's [critical hit]{mechanic:critical-hit} rate by three [stages]{mechanic:stage}.
+:   Raises the target’s [critical hit]{mechanic:critical-hit} rate by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
 657,9,Summons Reshiram for the final battle against N.,Summons []{pokemon:reshiram} for the final battle against N.
 658,9,Summons Zekrom for the final battle against N.,Summons []{pokemon:zekrom} for the final battle against N.
@@ -1240,8 +1240,8 @@ This item can only be obtained or used via the Wonder Launcher."
 679,9,Returned to Curtis or Yancy as part of a sidequest.,
 681,9,"Switches Tornadus, Thundurus, and Landorus between Incarnate and Therian Forme.",
 682,9,"Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages.","Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."
-683,9,Raises the holder's Special Defense to 1.5×.  Prevents the holder from selecting a status move.,Raises the holder's Special Defense to 1.5×.  Prevents the holder from selecting a status move.
-684,9,Held: Fairy-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fairy.,Held: Fairy-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fairy.
+683,9,Raises the holder’s Special Defense to 1.5×.  Prevents the holder from selecting a status move.,Raises the holder’s Special Defense to 1.5×.  Prevents the holder from selecting a status move.
+684,9,Held: Fairy-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Fairy.,Held: Fairy-Type moves from holder do 20% more damage. Changes Arceus’s and Judgment’s type to Fairy.
 685,9,Switches a Pokémon between its two possible (non-Hidden) Abilities.,Switches a Pokémon between its two possible (non-Hidden) Abilities.
 686,9,Traded on a Swirlix: Holder evolves into Slurpuff.,Traded on a Swirlix: Holder evolves into Slurpuff.
 687,9,Traded on a Spritzee: Holder evolves into Aromatisse.,Traded on a Spritzee: Holder evolves into Aromatisse.
@@ -1296,9 +1296,9 @@ This item can only be obtained or used via the Wonder Launcher."
 736,9,"Trade for a Sun Stone in X and Y, or Pidgeotite in Omega Ruby and Alpha Sapphire.","Trade for a Sun Stone in X and Y, or Pidgeotite in Omega Ruby and Alpha Sapphire."
 737,9,Allows the player to change their eye color.,Allows the player to change their eye color.
 738,9,Advances the Looker postgame plot.,Advances the Looker postgame plot.
-739,9,Allows the player's Pokémon to Mega Evolve.,Allows the player's Pokémon to Mega Evolve.
+739,9,Allows the player’s Pokémon to Mega Evolve.,Allows the player’s Pokémon to Mega Evolve.
 740,9,Permits entry to the Kalos Power Plant.,Permits entry to the Kalos Power Plant.
-741,9,Traded to the player's mom for the Town Map and a Potion.,Traded to the player's mom for the Town Map and a Potion.
+741,9,Traded to the player’s mom for the Town Map and a Potion.,Traded to the player’s mom for the Town Map and a Potion.
 742,9,Allows the player to move quickly and off the grid.,Allows the player to move quickly and off the grid.
 743,9,Waters Berry plants.,Waters Berry plants.
 744,9,Permits access to Kiloude City.,Permits access to Kiloude City.
@@ -1313,8 +1313,8 @@ This item can only be obtained or used via the Wonder Launcher."
 763,9,Allows the player to change their lipstick color.,Allows the player to change their lipstick color.
 764,9,"Unobtainable, but allows the player to change clothes anywhere.","Unobtainable, but allows the player to change clothes anywhere."
 765,9,Cures any major status ailment and confusion.,Cures any major status ailment and confusion.
-768,9,Unused Key Stone.,"Unused.  This appears as the girlplayer's Mega Bracelet in Pokémon Contests, but it cannot actually be obtained."
-769,9,Unused NPC Key Stone.,"Unused.  This is Korrina's Key Stone in X and Y, but it cannot be obtained by the player."
+768,9,Unused Key Stone.,"Unused.  This appears as the girlplayer’s Mega Bracelet in Pokémon Contests, but it cannot actually be obtained."
+769,9,Unused NPC Key Stone.,"Unused.  This is Korrina’s Key Stone in X and Y, but it cannot be obtained by the player."
 770,9,Allows Captain Stern to set out on his expedition.,Allows Captain Stern to set out on his expedition.
 772,9,Creates and stores Pokéblocks.,Creates and stores Pokéblocks.
 773,9,Unlocks the door to Room 1 in Sea Mauville.,Unlocks the door to Room 1 in Sea Mauville.
@@ -1326,13 +1326,13 @@ This item can only be obtained or used via the Wonder Launcher."
 782,9,Allows the player to ride Groudon in the Cave of Origin.,Allows the player to ride Groudon in the Cave of Origin.
 783,9,Allows the player to ride Kyogre in the Cave of Origin.,Allows the player to ride Kyogre in the Cave of Origin.
 784,9,Allows the player and their mother to see the star show in the Mossdeep Space Center.,Allows the player and their mother to see the star show in the Mossdeep Space Center.
-785,9,Allows the player's Pokémon to Mega Evolve.,Allows the player's Pokémon to Mega Evolve.
-786,9,Unused NPC Key Stone.,"Unused.  This is Wally's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
-787,9,Unused NPC Key Stone.,"Unused.  This is Maxie's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
-788,9,Unused NPC Key Stone.,"Unused.  This is Archie's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
-789,9,Unused NPC Key Stone.,"Unused.  This is Steven's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
-790,9,Unused NPC Key Stone.,"Unused.  This is Lisia's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
-791,9,Unused NPC Key Stone.,"Unused.  This is Zinnia's Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+785,9,Allows the player’s Pokémon to Mega Evolve.,Allows the player’s Pokémon to Mega Evolve.
+786,9,Unused NPC Key Stone.,"Unused.  This is Wally’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+787,9,Unused NPC Key Stone.,"Unused.  This is Maxie’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+788,9,Unused NPC Key Stone.,"Unused.  This is Archie’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+789,9,Unused NPC Key Stone.,"Unused.  This is Steven’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+790,9,Unused NPC Key Stone.,"Unused.  This is Lisia’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
+791,9,Unused NPC Key Stone.,"Unused.  This is Zinnia’s Key Stone in Omega Ruby and Alpha Sapphire, but it cannot be obtained by the player."
 793,9,Held: Allows Swampert to Mega Evolve into Mega Swampert.,Held: Allows Swampert to Mega Evolve into Mega Swampert.
 794,9,Held: Allows Sceptile to Mega Evolve into Mega Sceptile.,Held: Allows Sceptile to Mega Evolve into Mega Sceptile.
 795,9,Held: Allows Sableye to Mega Evolve into Mega Sableye.,Held: Allows Sableye to Mega Evolve into Mega Sableye.
@@ -1347,12 +1347,12 @@ This item can only be obtained or used via the Wonder Launcher."
 804,9,Held: Allows Glalie to Mega Evolve into Mega Glalie.,Held: Allows Glalie to Mega Evolve into Mega Glalie.
 805,9,Held: Allows Diancie to Mega Evolve into Mega Diancie.,Held: Allows Diancie to Mega Evolve into Mega Diancie.
 806,9,Transforms Hoopa into its Unbound form for up to three days.,Transforms Hoopa into its Unbound form for up to three days.
-807,9,Unused Key Stone.,"Unused.  This appears as the boy player's Mega Bracelet in Pokémon Contests, but it cannot actually be obtained."
+807,9,Unused Key Stone.,"Unused.  This appears as the boy player’s Mega Bracelet in Pokémon Contests, but it cannot actually be obtained."
 808,9,Held: Allows Camerupt to Mega Evolve into Mega Camerupt.,Held: Allows Camerupt to Mega Evolve into Mega Camerupt.
 809,9,Held: Allows Lopunny to Mega Evolve into Mega Lopunny.,Held: Allows Lopunny to Mega Evolve into Mega Lopunny.
 810,9,Held: Allows Salamence to Mega Evolve into Mega Salamence.,Held: Allows Salamence to Mega Evolve into Mega Salamence.
 811,9,Held: Allows Beedrill to Mega Evolve into Mega Beedrill.,Held: Allows Beedrill to Mega Evolve into Mega Beedrill.
-814,9,Allows the player's Pokémon to Mega Evolve.,Allows the player's Pokémon to Mega Evolve.
+814,9,Allows the player’s Pokémon to Mega Evolve.,Allows the player’s Pokémon to Mega Evolve.
 815,9,"Causes the Meteorite to transform to its final form, allowing Rayquaza to Mega Evolve.","Causes the Meteorite to transform to its final form, allowing Rayquaza to Mega Evolve."
 816,9,Summons Latias or Latios for a ride.,Summons Latias or Latios for a ride.
 817,9,Held: Allows a Pokémon to use the Z-move equivalents of its Normal moves.,Held: Allows a Pokémon to use the Z-move equivalents of its Normal moves.
@@ -1374,25 +1374,25 @@ This item can only be obtained or used via the Wonder Launcher."
 833,9,Held: Allows a Pokémon to use the Z-move equivalents of its Steel moves.,Held: Allows a Pokémon to use the Z-move equivalents of its Steel moves.
 834,9,Held: Allows a Pokémon to use the Z-move equivalents of its Fairy moves.,Held: Allows a Pokémon to use the Z-move equivalents of its Fairy moves.
 835,9,Held: Allows Pikachu to upgrade Volt Tackle into Catastropika.,Held: Allows []{pokemon:pikachu} to upgrade []{move:volt-tackle} into []{move:catastropika}.
-836,9,Trade to Mr. Hyper to maximize one of a Pokémon's genes.,Trade to Mr. Hyper to set one of a Pokémon's genes to 31.
-837,9,Trade to Mr. Hyper to maximize all of a Pokémon's genes.,Trade to Mr. Hyper to set all of a Pokémon's genes to 31.
-838,9,Allows the player's Pokémon to use Z-moves.,Allows the player's Pokémon to use Z-moves.
+836,9,Trade to Mr. Hyper to maximize one of a Pokémon’s genes.,Trade to Mr. Hyper to set one of a Pokémon’s genes to 31.
+837,9,Trade to Mr. Hyper to maximize all of a Pokémon’s genes.,Trade to Mr. Hyper to set all of a Pokémon’s genes to 31.
+838,9,Allows the player’s Pokémon to use Z-moves.,Allows the player’s Pokémon to use Z-moves.
 839,9,Held: Allows Decidueye to upgrade Spirit Shackle into Sinister Arrow Raid.,Held: Allows []{pokemon:decidueye} to upgrade []{move:spirit-shackle} into []{move:sinister-arrow-raid}.
 840,9,Held: Allows Incineroar to upgrade Darkest Lariat into Malicious Moonsault.,Held: Allows []{pokemon:incineroar} to upgrade []{move:darkest-lariat} into []{move:malicious-moonsault}.
 841,9,Held: Allows Primarina to upgrade Sparkling Aria into Oceanic Operetta.,Held: Allows []{pokemon:primarina} to upgrade []{move:sparkling-aria} into []{move:oceanic-operetta}.
-842,9,Held: Allows the Tapus to upgrade Nature's Madness into Guardian of Alola.,"Held: Allows []{pokemon:tapu-koko}, []{pokemon:tapu-lele}, []{pokemon:tapu-bulu}, and []{pokemon:tapu-fini} to upgrade []{move:natures-madness} into []{move:guardian-of-alola}."
+842,9,Held: Allows the Tapus to upgrade Nature’s Madness into Guardian of Alola.,"Held: Allows []{pokemon:tapu-koko}, []{pokemon:tapu-lele}, []{pokemon:tapu-bulu}, and []{pokemon:tapu-fini} to upgrade []{move:natures-madness} into []{move:guardian-of-alola}."
 843,9,Held: Allows Marshadow to upgrade Spectral Thief into Soul-Stealing 7 Star Strike.,Held: Allows []{pokemon:marshadow} to upgrade []{move:spectral-thief} into []{move:soul-stealing-7-star-strike}.
 844,9,Held: Allows Alola Raichu to upgrade Thunderbolt into Stoked Sparksurfer.,Held: Allows Alola []{pokemon:raichu} to upgrade []{move:thunderbolt} into []{move:stoked-sparksurfer}.
 845,9,Held: Allows Snorlax to upgrade Giga Impact into Pulverizing Pancake.,Held: Allows []{pokemon:snorlax} to upgrade []{move:giga-impact} into []{move:pulverizing-pancake}.
 846,9,Held: Allows Eevee to upgrade Last Resort into Extreme Evoboost.,Held: Allows []{pokemon:eevee} to upgrade []{move:last-resort} into []{move:extreme-evoboost}.
 847,9,Held: Allows Mew to upgrade Psychic into Genesis Supernova.,Held: Allows []{pokemon:mew} to upgrade []{move:psychic} into []{move:genesis-supernova}.
 877,9,"Held: Allows cap-wearing Pikachu to upgrade Thunderbolt into 10,000,000 Volt Thunderbolt.",Held: Allows cap-wearing []{pokemon:pikachu} to upgrade []{move:thunderbolt} into []{move:10-000-000-volt-thunderbolt}.
-878,9,Holds ingredients during Mallow's trial.,Holds ingredients during Mallow's trial.
+878,9,Holds ingredients during Mallow’s trial.,Holds ingredients during Mallow’s trial.
 879,9,Allows the player to fish for Pokémon.,Allows the player to fish for Pokémon.
 880,9,Lost by Professor Kukui.,Lost by Professor Kukui.
 881,9,Hosts a mission in Festival Plaza.,Hosts a mission in Festival Plaza.
 882,9,Required to obtain a Z-Ring.,Required to obtain a Z-Ring.
-883,9,Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate.,Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate.
+883,9,Makes wild Pokémon more likely to summon allies.  Held: increases the holder’s Speed by one stage when affected by Intimidate.,Makes wild Pokémon more likely to summon allies.  Held: increases the holder’s Speed by one stage when affected by Intimidate.
 884,9,Contains collected Zygarde cells/cores.  Can teach Zygarde moves.,Contains collected Zygarde cells/cores.  Can teach Zygarde moves.
 885,9,Evolves an Alola Sandshrew into Alola Sandslash or an Alola Vulpix into Alola Ninetales.,"Used on a party Pokémon
 :   Evolves an Alola []{pokemon:sandshrew} into Alola []{pokemon:sandslash} or an Alola []{pokemon:vulpix} into Alola []{pokemon:ninetales}."
@@ -1408,30 +1408,30 @@ This item can only be obtained or used via the Wonder Launcher."
 892,9,Changes Oricorio to Sensu Style.,Changes Oricorio to Sensu Style.  Single-use and cannot be used in battle.
 893,9,Evolves Nebby into Solgaleo when used at the Altar of the Sunne.,Evolves Nebby into Solgaleo when used at the Altar of the Sunne.
 894,9,Evolves Nebby into Lunala when used at the Altar of the Moone.,Evolves Nebby into Lunala when used at the Altar of the Moone.
-895,9,Unlocks Looker's motel room on Route 8.,Unlocks Looker's motel room on Route 8.
-896,9,Held: Extends the holder's Terrain effects to 8 turns.,"Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
+895,9,Unlocks Looker’s motel room on Route 8.,Unlocks Looker’s motel room on Route 8.
+896,9,Held: Extends the holder’s Terrain effects to 8 turns.,"Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
 897,9,Held: Prevents side effects of contact moves used on the holder.,Held: Prevents side effects of contact moves used on the holder.
-898,9,Held: Consumed on Electric Terrain and raises the holder's Defense by one stage.,"Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
-899,9,Held: Consumed on Psychic Terrain and raises the holder's Special Defense by one stage.,"Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
-900,9,Held: Consumed on Misty Terrain and raises the holder's Special Defense by one stage.,"Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
-901,9,Held: Consumed on Grassy Terrain and raises the holder's Defense by one stage.,"Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
-902,9,Held: Changes Silvally to its Fighting form.  Changes Multi-Attack's type to Fighting.,Held: Changes Silvally to its Fighting form.  Changes Multi-Attack's type to Fighting.
-903,9,Held: Changes Silvally to its Flying form.  Changes Multi-Attack's type to Flying.,Held: Changes Silvally to its Flying form.  Changes Multi-Attack's type to Flying.
-904,9,Held: Changes Silvally to its Poison form.  Changes Multi-Attack's type to Poison.,Held: Changes Silvally to its Poison form.  Changes Multi-Attack's type to Poison.
-905,9,Held: Changes Silvally to its Ground form.  Changes Multi-Attack's type to Ground.,Held: Changes Silvally to its Ground form.  Changes Multi-Attack's type to Ground.
-906,9,Held: Changes Silvally to its Rock form.  Changes Multi-Attack's type to Rock.,Held: Changes Silvally to its Rock form.  Changes Multi-Attack's type to Rock.
-907,9,Held: Changes Silvally to its Bug form.  Changes Multi-Attack's type to Bug.,Held: Changes Silvally to its Bug form.  Changes Multi-Attack's type to Bug.
-908,9,Held: Changes Silvally to its Ghost form.  Changes Multi-Attack's type to Ghost.,Held: Changes Silvally to its Ghost form.  Changes Multi-Attack's type to Ghost.
-909,9,Held: Changes Silvally to its Steel form.  Changes Multi-Attack's type to Steel.,Held: Changes Silvally to its Steel form.  Changes Multi-Attack's type to Steel.
-910,9,Held: Changes Silvally to its Fire form.  Changes Multi-Attack's type to Fire.,Held: Changes Silvally to its Fire form.  Changes Multi-Attack's type to Fire.
-911,9,Held: Changes Silvally to its Water form.  Changes Multi-Attack's type to Water.,Held: Changes Silvally to its Water form.  Changes Multi-Attack's type to Water.
-912,9,Held: Changes Silvally to its Grass form.  Changes Multi-Attack's type to Grass.,Held: Changes Silvally to its Grass form.  Changes Multi-Attack's type to Grass.
-913,9,Held: Changes Silvally to its Electric form.  Changes Multi-Attack's type to Electric.,Held: Changes Silvally to its Electric form.  Changes Multi-Attack's type to Electric.
-914,9,Held: Changes Silvally to its Psychic form.  Changes Multi-Attack's type to Psychic.,Held: Changes Silvally to its Psychic form.  Changes Multi-Attack's type to Psychic.
-915,9,Held: Changes Silvally to its Ice form.  Changes Multi-Attack's type to Ice.,Held: Changes Silvally to its Ice form.  Changes Multi-Attack's type to Ice.
-916,9,Held: Changes Silvally to its Dragon form.  Changes Multi-Attack's type to Dragon.,Held: Changes Silvally to its Dragon form.  Changes Multi-Attack's type to Dragon.
-917,9,Held: Changes Silvally to its Dark form.  Changes Multi-Attack's type to Dark.,Held: Changes Silvally to its Dark form.  Changes Multi-Attack's type to Dark.
-918,9,Held: Changes Silvally to its Fairy form.  Changes Multi-Attack's type to Fairy.,Held: Changes Silvally to its Fairy form.  Changes Multi-Attack's type to Fairy.
+898,9,Held: Consumed on Electric Terrain and raises the holder’s Defense by one stage.,"Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder’s Defense raises by one stage."
+899,9,Held: Consumed on Psychic Terrain and raises the holder’s Special Defense by one stage.,"Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder’s Special Defense raises by one stage."
+900,9,Held: Consumed on Misty Terrain and raises the holder’s Special Defense by one stage.,"Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder’s Special Defense raises by one stage."
+901,9,Held: Consumed on Grassy Terrain and raises the holder’s Defense by one stage.,"Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder’s Defense raises by one stage."
+902,9,Held: Changes Silvally to its Fighting form.  Changes Multi-Attack’s type to Fighting.,Held: Changes Silvally to its Fighting form.  Changes Multi-Attack’s type to Fighting.
+903,9,Held: Changes Silvally to its Flying form.  Changes Multi-Attack’s type to Flying.,Held: Changes Silvally to its Flying form.  Changes Multi-Attack’s type to Flying.
+904,9,Held: Changes Silvally to its Poison form.  Changes Multi-Attack’s type to Poison.,Held: Changes Silvally to its Poison form.  Changes Multi-Attack’s type to Poison.
+905,9,Held: Changes Silvally to its Ground form.  Changes Multi-Attack’s type to Ground.,Held: Changes Silvally to its Ground form.  Changes Multi-Attack’s type to Ground.
+906,9,Held: Changes Silvally to its Rock form.  Changes Multi-Attack’s type to Rock.,Held: Changes Silvally to its Rock form.  Changes Multi-Attack’s type to Rock.
+907,9,Held: Changes Silvally to its Bug form.  Changes Multi-Attack’s type to Bug.,Held: Changes Silvally to its Bug form.  Changes Multi-Attack’s type to Bug.
+908,9,Held: Changes Silvally to its Ghost form.  Changes Multi-Attack’s type to Ghost.,Held: Changes Silvally to its Ghost form.  Changes Multi-Attack’s type to Ghost.
+909,9,Held: Changes Silvally to its Steel form.  Changes Multi-Attack’s type to Steel.,Held: Changes Silvally to its Steel form.  Changes Multi-Attack’s type to Steel.
+910,9,Held: Changes Silvally to its Fire form.  Changes Multi-Attack’s type to Fire.,Held: Changes Silvally to its Fire form.  Changes Multi-Attack’s type to Fire.
+911,9,Held: Changes Silvally to its Water form.  Changes Multi-Attack’s type to Water.,Held: Changes Silvally to its Water form.  Changes Multi-Attack’s type to Water.
+912,9,Held: Changes Silvally to its Grass form.  Changes Multi-Attack’s type to Grass.,Held: Changes Silvally to its Grass form.  Changes Multi-Attack’s type to Grass.
+913,9,Held: Changes Silvally to its Electric form.  Changes Multi-Attack’s type to Electric.,Held: Changes Silvally to its Electric form.  Changes Multi-Attack’s type to Electric.
+914,9,Held: Changes Silvally to its Psychic form.  Changes Multi-Attack’s type to Psychic.,Held: Changes Silvally to its Psychic form.  Changes Multi-Attack’s type to Psychic.
+915,9,Held: Changes Silvally to its Ice form.  Changes Multi-Attack’s type to Ice.,Held: Changes Silvally to its Ice form.  Changes Multi-Attack’s type to Ice.
+916,9,Held: Changes Silvally to its Dragon form.  Changes Multi-Attack’s type to Dragon.,Held: Changes Silvally to its Dragon form.  Changes Multi-Attack’s type to Dragon.
+917,9,Held: Changes Silvally to its Dark form.  Changes Multi-Attack’s type to Dark.,Held: Changes Silvally to its Dark form.  Changes Multi-Attack’s type to Dark.
+918,9,Held: Changes Silvally to its Fairy form.  Changes Multi-Attack’s type to Fairy.,Held: Changes Silvally to its Fairy form.  Changes Multi-Attack’s type to Fairy.
 919,9,XXX new effect for bike--green,XXX new effect for bike--green
 920,9,XXX new effect for storage-key--galactic-warehouse,XXX new effect for storage-key--galactic-warehouse
 921,9,XXX new effect for basement-key--goldenrod,XXX new effect for basement-key--goldenrod

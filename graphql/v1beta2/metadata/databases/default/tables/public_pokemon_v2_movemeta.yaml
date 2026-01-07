@@ -1,0 +1,29 @@
+table:
+  name: pokemon_v2_movemeta
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movemeta
+  custom_root_fields: {}
+object_relationships:
+  - name: move
+    using:
+      foreign_key_constraint_on: move_id
+  - name: movemetaailment
+    using:
+      foreign_key_constraint_on: move_meta_ailment_id
+  - name: movemetacategory
+    using:
+      foreign_key_constraint_on: move_meta_category_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

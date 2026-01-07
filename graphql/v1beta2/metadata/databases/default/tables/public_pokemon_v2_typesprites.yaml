@@ -1,0 +1,12 @@
+table:
+  name: pokemon_v2_typesprites
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: typesprites
+  custom_root_fields: {}
+object_relationships:
+  - name: pokemon_v2_type
+    using:
+      foreign_key_constraint_on: type_id

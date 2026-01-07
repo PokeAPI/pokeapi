@@ -1,0 +1,48 @@
+table:
+  name: pokemon_v2_moveeffect
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: moveeffect
+  custom_root_fields: {}
+array_relationships:
+  - name: movechanges
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_movechange
+          schema: public
+  - name: moveeffectchanges
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_moveeffectchange
+          schema: public
+  - name: moveeffecteffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_moveeffecteffecttext
+          schema: public
+  - name: moves
+    using:
+      foreign_key_constraint_on:
+        column: move_effect_id
+        table:
+          name: pokemon_v2_move
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

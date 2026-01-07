@@ -1,0 +1,38 @@
+table:
+  name: pokemon_v2_encounterconditionvalue
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: encounterconditionvalue
+  custom_root_fields: {}
+object_relationships:
+  - name: encountercondition
+    using:
+      foreign_key_constraint_on: encounter_condition_id
+array_relationships:
+  - name: encounterconditionvaluemaps
+    using:
+      foreign_key_constraint_on:
+        column: encounter_condition_value_id
+        table:
+          name: pokemon_v2_encounterconditionvaluemap
+          schema: public
+  - name: encounterconditionvaluenames
+    using:
+      foreign_key_constraint_on:
+        column: encounter_condition_value_id
+        table:
+          name: pokemon_v2_encounterconditionvaluename
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

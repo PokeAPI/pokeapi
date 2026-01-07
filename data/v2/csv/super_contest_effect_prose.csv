@@ -1,7 +1,7 @@
 super_contest_effect_id,local_language_id,flavor_text
 1,9,Enables the user to perform first in the next turn.
 2,9,Enables the user to perform last in the next turn.
-4,9,Earn +2 if the Judge's Voltage goes up.
+4,9,Earn +2 if the Judge’s Voltage goes up.
 5,9,A basic performance using a move known by the Pokémon.
 6,9,Earn +3 if no other Pokémon has chosen the same Judge.
 7,9,Allows performance of the same move twice in a row.

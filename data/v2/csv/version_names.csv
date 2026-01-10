@@ -265,31 +265,31 @@ version_id,local_language_id,name
 30,8,Ultraluna
 30,9,Ultra Moon
 30,12,究极之月
-31,1,Let's Go! ピカチュウ
+31,1,Let’s Go! ピカチュウ
 31,3,레츠고! 피카츄
-31,4,Let's Go！皮卡丘
-31,5,"Let's Go, Pikachu"
-31,6,"Let's Go, Pikachu!"
-31,7,"Let's Go, Pikachu!"
-31,8,"Let's Go, Pikachu!"
-31,9,"Let's Go, Pikachu!"
-31,12,Let's Go！皮卡丘
-32,1,Let's Go! イーブイ
+31,4,Let’s Go！皮卡丘
+31,5,"Let’s Go, Pikachu"
+31,6,"Let’s Go, Pikachu!"
+31,7,"Let’s Go, Pikachu!"
+31,8,"Let’s Go, Pikachu!"
+31,9,"Let’s Go, Pikachu!"
+31,12,Let’s Go！皮卡丘
+32,1,Let’s Go! イーブイ
 32,3,레츠고! 이브이
-32,4,Let's Go！伊布
-32,5,"Let's Go, Évoli"
-32,6,"Let's Go, Evoli!"
-32,8,"Let's Go, Eevee!"
-32,7,"Let's Go, Eevee!"
-32,9,"Let's Go, Eevee!"
-32,12,Let's Go！伊布
-33,1, ソード
+32,4,Let’s Go！伊布
+32,5,"Let’s Go, Évoli"
+32,6,"Let’s Go, Evoli!"
+32,8,"Let’s Go, Eevee!"
+32,7,"Let’s Go, Eevee!"
+32,9,"Let’s Go, Eevee!"
+32,12,Let’s Go！伊布
+33,1,ソード
 33,3,소드
 33,4,劍
 33,5,Épée
 33,6,Schwert
 33,7,Espada
-33,8,çSpada
+33,8,Spada
 33,9,Sword
 33,12,剑
 34,1,シールド
@@ -298,16 +298,16 @@ version_id,local_language_id,name
 34,5,Bouclier
 34,6,Schild
 34,7,Escudo
-34,8,Spada
+34,8,Scudo
 34,9,Shield
 34,12,盾
 35,1,鎧の孤島
 35,3,갑옷의 외딴섬
 35,4,鎧之孤島
-35,5,L'île solitaire de l'Armure
+35,5,L’île solitaire de l’Armure
 35,6,Die Insel der Rüstung
 35,7,La isla de la armadura
-35,8,L'isola solitaria dell'armatura
+35,8,L’isola solitaria dell’armatura
 35,9,The Isle of Armor
 35,12,铠之孤岛
 36,1,冠の雪原
@@ -364,19 +364,19 @@ version_id,local_language_id,name
 41,8,Violetto
 41,9,Violet
 41,12,紫
-42,1,みどりのかめん
-42,5,Le masque turquoise
-42,6,Die türkisgrüne maske
+42,1,碧の仮面
+42,5,Le Masque Turquoise
+42,6,Die Türkisgrüne Maske
 42,7,La máscara turquesa
 42,8,La maschera turchese
-42,9,The teal mask
+42,9,The Teal Mask
 42,12,碧之假面
-43,1,あおのえんばん
-43,5,Le disque indigo
-43,6,Die indigoblaue scheibe
+43,1,藍の円盤
+43,5,Le Disque Indigo
+43,6,Die Indigoblaue Scheibe
 43,7,El disco índigo
 43,8,Il disco indaco
-43,9,The indigo disk
+43,9,The Indigo Disk
 43,12,藍之圓盤
 44,1,赤
 44,3,레드
@@ -399,3 +399,5 @@ version_id,local_language_id,name
 46,7,Azul
 46,8,Blu
 46,9,Blue
+47,9,Legends: ZA
+48,9,Mega Dimension

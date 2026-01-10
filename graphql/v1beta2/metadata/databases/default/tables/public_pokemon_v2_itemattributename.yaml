@@ -1,0 +1,26 @@
+table:
+  name: pokemon_v2_itemattributename
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: itemattributename
+  custom_root_fields: {}
+object_relationships:
+  - name: itemattribute
+    using:
+      foreign_key_constraint_on: item_attribute_id
+  - name: language
+    using:
+      foreign_key_constraint_on: language_id
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

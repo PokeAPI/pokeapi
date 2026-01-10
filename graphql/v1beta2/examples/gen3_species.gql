@@ -1,0 +1,17 @@
+query samplePokeAPIquery {
+  # Gets all the pokemon belonging to generation 3
+  gen3_species: pokemonspecies(where: {generation: {name: {_eq: "generation-iii"}}}, order_by: {id: asc}) {
+    name
+    id
+  }
+  # You can run multiple queries at the same time
+  # Counts how many pokemon where release for each generation
+  generations: generation {
+    name
+    pokemon_species: pokemonspecies_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }
+}

@@ -3,13 +3,13 @@ pkgs.mkShell {
   name = "onix-shellder";
   venvDir = "./.venv";
   buildInputs = [
-    python312Packages.python
-    python312Packages.venvShellHook
+    python313Packages.python
+    python313Packages.venvShellHook
 
     # Required dependencies
 
     # Python
-    python312Packages.black
+    python313Packages.black
 
     # misc
     taglib

@@ -1,0 +1,52 @@
+table:
+  name: pokemon_v2_pokedex
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: pokedex
+  custom_root_fields: {}
+object_relationships:
+  - name: region
+    using:
+      foreign_key_constraint_on: region_id
+array_relationships:
+  - name: pokedexdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: pokedex_id
+        table:
+          name: pokemon_v2_pokedexdescription
+          schema: public
+  - name: pokedexnames
+    using:
+      foreign_key_constraint_on:
+        column: pokedex_id
+        table:
+          name: pokemon_v2_pokedexname
+          schema: public
+  - name: pokedexversiongroups
+    using:
+      foreign_key_constraint_on:
+        column: pokedex_id
+        table:
+          name: pokemon_v2_pokedexversiongroup
+          schema: public
+  - name: pokemondexnumbers
+    using:
+      foreign_key_constraint_on:
+        column: pokedex_id
+        table:
+          name: pokemon_v2_pokemondexnumber
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

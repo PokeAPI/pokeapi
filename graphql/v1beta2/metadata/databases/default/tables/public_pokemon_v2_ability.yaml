@@ -1,0 +1,66 @@
+table:
+  name: pokemon_v2_ability
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: ability
+  custom_root_fields: {}
+object_relationships:
+  - name: generation
+    using:
+      foreign_key_constraint_on: generation_id
+array_relationships:
+  - name: abilitychanges
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_abilitychange
+          schema: public
+  - name: abilityeffecttexts
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_abilityeffecttext
+          schema: public
+  - name: abilityflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_abilityflavortext
+          schema: public
+  - name: abilitynames
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_abilityname
+          schema: public
+  - name: pokemonabilities
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_pokemonability
+          schema: public
+  - name: pokemonabilitypasts
+    using:
+      foreign_key_constraint_on:
+        column: ability_id
+        table:
+          name: pokemon_v2_pokemonabilitypast
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

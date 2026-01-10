@@ -33,7 +33,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 - [Join Us On Slack!](#join-us-on-slack)
 - [Contributing](#contributing)
 
-## Setup <a id="setup"></a> &nbsp; [![pyVersion310](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/download/releases/3.10/)
+## Setup <a id="setup"></a> &nbsp; [![pyVersion313](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3137/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
@@ -122,7 +122,7 @@ When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](
 
 ```sh
 # hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
-# hasura cli's version has to greater than v2.0.8
+# hasura cli's version has to greater than v2.48.1
 make hasura-apply
 ```
 
@@ -171,6 +171,8 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 |.Net Standard |[mtrdp642/PokeApiNet](https://github.com/mtrdp642/PokeApiNet)|Auto caching |
 |Dart|[prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)| |
 |Go|[mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go)|Auto caching |
+|Go|[JoshGuarino/PokeGo](https://github.com/JoshGuarino/PokeGo) |Auto caching |
+|Haxe|[KinoCreatesGames/poke-api](https://github.com/KinoCreatesGames/poke-api) |Auto caching |
 |PHP |[lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi)|Auto caching, lazy loading |
 |PowerShell|[Celerium/PokeAPI-PowerShellWrapper](https://github.com/Celerium/PokeAPI-PowerShellWrapper)| |
 |Python|[beastmatser/aiopokeapi](https://github.com/beastmatser/aiopokeapi)|Auto caching, asynchronous |
@@ -197,7 +199,7 @@ Thank you to all our backers! [Become a backer](https://opencollective.com/pokea
 Have a question or just want to discuss new ideas and improvements? Hit us up on Slack. ~~Consider talking with us here before creating a new issue.~~
 This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
 
-[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-2ampo6her-_tHSI3uOS65WzGypt7Y96w) easily!
+[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-38w145rww-I_ROYnZME2n1c7mQXppEAQ) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
 

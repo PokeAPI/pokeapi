@@ -1,16 +1,17 @@
 #!/bin/bash
 # Execute in cloud shell
 ACCESS_TOKEN=$(gcloud auth print-access-token)
+GOOGLE_CLOUD_PROJECT='pokeapi-215911'
 CREATE_SLO_POST_BODY=$(cat <<EOF
 {
-  "displayName": "99% - Good/Bad Ratio - Rolling 30 days",
+  "displayName": "99% - Total/Bad Ratio - Rolling 30 days",
   "goal": 0.99,
   "rollingPeriod": "86400s",
   "serviceLevelIndicator": {
     "requestBased": {
       "goodTotalRatio": {
-        "goodServiceFilter": "metric.type=\"logging.googleapis.com/user/200-functions\" resource.type=\"cloud_function\"",
-        "badServiceFilter": "metric.type=\"logging.googleapis.com/user/errored-functions\" resource.type=\"cloud_function\""
+        "totalServiceFilter": "metric.type=\"logging.googleapis.com/user/function-executions\" resource.type=\"cloud_function\"",
+        "badServiceFilter": "metric.type=\"logging.googleapis.com/user/function-crash\" resource.type=\"cloud_function\""
       }
     }
   }

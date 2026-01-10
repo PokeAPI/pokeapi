@@ -1,0 +1,143 @@
+table:
+  name: pokemon_v2_move
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: move
+  custom_root_fields: {}
+object_relationships:
+  - name: contesteffect
+    using:
+      foreign_key_constraint_on: contest_effect_id
+  - name: contesttype
+    using:
+      foreign_key_constraint_on: contest_type_id
+  - name: generation
+    using:
+      foreign_key_constraint_on: generation_id
+  - name: movedamageclass
+    using:
+      foreign_key_constraint_on: move_damage_class_id
+  - name: moveeffect
+    using:
+      foreign_key_constraint_on: move_effect_id
+  - name: movemetum
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_movemeta
+          schema: public
+  - name: movetarget
+    using:
+      foreign_key_constraint_on: move_target_id
+  - name: supercontesteffect
+    using:
+      foreign_key_constraint_on: super_contest_effect_id
+  - name: type
+    using:
+      foreign_key_constraint_on: type_id
+array_relationships:
+  - name: ContestcombosBySecondMoveId
+    using:
+      foreign_key_constraint_on:
+        column: second_move_id
+        table:
+          name: pokemon_v2_contestcombo
+          schema: public
+  - name: SupercontestcombosBySecondMoveId
+    using:
+      foreign_key_constraint_on:
+        column: second_move_id
+        table:
+          name: pokemon_v2_supercontestcombo
+          schema: public
+  - name: contestcombos
+    using:
+      foreign_key_constraint_on:
+        column: first_move_id
+        table:
+          name: pokemon_v2_contestcombo
+          schema: public
+  - name: machines
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_machine
+          schema: public
+  - name: moveattributemaps
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_moveattributemap
+          schema: public
+  - name: movechanges
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_movechange
+          schema: public
+  - name: moveflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_moveflavortext
+          schema: public
+  - name: movemeta
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_movemeta
+          schema: public
+  - name: movemetastatchanges
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_movemetastatchange
+          schema: public
+  - name: movenames
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_movename
+          schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: known_move_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonmoves
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_pokemonmove
+          schema: public
+  - name: supercontestcombos
+    using:
+      foreign_key_constraint_on:
+        column: first_move_id
+        table:
+          name: pokemon_v2_supercontestcombo
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

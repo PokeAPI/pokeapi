@@ -1,0 +1,55 @@
+table:
+  name: pokemon_v2_movedamageclass
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: movedamageclass
+  custom_root_fields: {}
+array_relationships:
+  - name: movedamageclassdescriptions
+    using:
+      foreign_key_constraint_on:
+        column: move_damage_class_id
+        table:
+          name: pokemon_v2_movedamageclassdescription
+          schema: public
+  - name: movedamageclassnames
+    using:
+      foreign_key_constraint_on:
+        column: move_damage_class_id
+        table:
+          name: pokemon_v2_movedamageclassname
+          schema: public
+  - name: moves
+    using:
+      foreign_key_constraint_on:
+        column: move_damage_class_id
+        table:
+          name: pokemon_v2_move
+          schema: public
+  - name: stats
+    using:
+      foreign_key_constraint_on:
+        column: move_damage_class_id
+        table:
+          name: pokemon_v2_stat
+          schema: public
+  - name: types
+    using:
+      foreign_key_constraint_on:
+        column: move_damage_class_id
+        table:
+          name: pokemon_v2_type
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

@@ -1,0 +1,26 @@
+"""
+Finds Pokemons in Alola that evolve when you are in a particular location.
+
+Variables:
+{
+  "region": "alola"
+}
+"""
+
+query location_evolutions_in_alola($region: String) {
+  region: region(where: {name: {_eq: $region}}) {
+    name
+    location: locations_aggregate(where: {pokemonevolutions: {id: {_is_null: false}}}) {
+      nodes {
+        name
+        evolutions: pokemonevolutions_aggregate {
+          nodes {
+            species: pokemonspecy {
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}

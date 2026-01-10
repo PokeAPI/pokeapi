@@ -33,12 +33,9 @@ services:
       HASURA_GRAPHQL_EVENTS_HTTP_POOL_SIZE: 10
 
   graphiql:
-    image: pokeapi/graphiql:2.0.0
+    image: pokeapi/graphiql:v1beta2-2.1.0
     expose:
       - 80
     depends_on:
       - graphql-engine
     restart: always
-
-volumes:
-  graphiql:

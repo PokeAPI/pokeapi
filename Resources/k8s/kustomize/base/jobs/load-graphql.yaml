@@ -18,7 +18,7 @@ spec:
               done;
       containers:
         - name: load-graphql
-          image: debian:buster
+          image: debian:bullseye
           env:
             - name: HASURA_GRAPHQL_ADMIN_SECRET
               valueFrom:
@@ -33,9 +33,9 @@ spec:
           command: ["sh", "-c"]
           args:
             - apt-get update && apt-get install -y curl git &&
-              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.45.1 bash &&
+              curl -L https://github.com/hasura/graphql-engine/raw/stable/cli/get.sh | VERSION=v2.48.1 bash &&
               cd /tmp &&
               git clone https://github.com/PokeAPI/pokeapi.git &&
               cd pokeapi &&
               (git checkout $(POKEAPI_CHECKOUT_REF) || git checkout master) &&
-              hasura md apply --endpoint http://graphql:8080 --project graphql --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)
+              hasura md apply --endpoint http://graphql:8080 --project graphql/v1beta2 --admin-secret $(HASURA_GRAPHQL_ADMIN_SECRET)

@@ -1,0 +1,37 @@
+table:
+  name: pokemon_v2_berry
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: berry
+  custom_root_fields: {}
+object_relationships:
+  - name: berryfirmness
+    using:
+      foreign_key_constraint_on: berry_firmness_id
+  - name: item
+    using:
+      foreign_key_constraint_on: item_id
+  - name: type
+    using:
+      foreign_key_constraint_on: natural_gift_type_id
+array_relationships:
+  - name: berryflavormaps
+    using:
+      foreign_key_constraint_on:
+        column: berry_id
+        table:
+          name: pokemon_v2_berryflavormap
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

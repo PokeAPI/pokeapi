@@ -26,6 +26,18 @@ git checkout -b my_new_branch
 
 Simple!
 
+## AI assisted coding
+
+Using AI assisted coding tools for auto complete, test generation, etc is allowed so long as a human is the overall primary author of a pull request.
+
+Contributions from supervised AI assisted coding agents who build the majority (or all of) a change, such as [co pilot tasks](https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks/), will be accepted only on the following basis:
+
+1. A human can verifiably prove they have reviewed and checked that the contribution does what it says it does.
+2. The human author provides evidence of the prompt given to the AI agent, and the logs of it producing the change. (For example - co pilot tasks produces a public log).
+3. The human author explicitly calls out that an supervised AI agent created the change when they make a pull request.
+4. The human author is prepared to own the change (just like any other change they make) and fix any issues that arise from it.
+
+
 ## Financial contributions
 
 We also welcome financial contributions in full transparency on our [open collective](https://opencollective.com/pokeapi).

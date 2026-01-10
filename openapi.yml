@@ -4025,8 +4025,12 @@ components:
                       - location
                       - min_affection
                       - min_beauty
+                      - min_damage_taken
                       - min_happiness
                       - min_level
+                      - min_move_count
+                      - min_steps
+                      - needs_multiplayer
                       - needs_overworld_rain
                       - party_species
                       - party_type
@@ -4035,6 +4039,9 @@ components:
                       - trade_species
                       - trigger
                       - turn_upside_down
+                      - used_move
+                      - region_id
+                      - base_form_id
                       properties:
                         gender:
                           type: object
@@ -4110,6 +4117,10 @@ components:
                           type: integer
                           format: int32
                           nullable: true
+                        min_damage_taken:
+                          type: integer
+                          format: int32
+                          nullable: true
                         min_happiness:
                           type: integer
                           format: int32
@@ -4117,6 +4128,17 @@ components:
                         min_level:
                           type: integer
                           format: int32
+                          nullable: true
+                        min_move_count:
+                          type: integer
+                          format: int32
+                          nullable: true
+                        min_steps:
+                          type: integer
+                          format: int32
+                          nullable: true
+                        needs_multiplayer:
+                          type: boolean
                           nullable: true
                         needs_overworld_rain:
                           type: boolean
@@ -4148,6 +4170,33 @@ components:
                               format: uri
                         turn_upside_down:
                           type: boolean
+                        used_move:
+                          type: ''
+                          nullable: true
+                        region_id:
+                          type: object
+                          nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
+                        base_form_id:
+                          type: object
+                          nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
                   is_baby:
                     type: boolean
                   species:

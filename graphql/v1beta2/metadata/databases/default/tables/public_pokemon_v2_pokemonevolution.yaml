@@ -46,6 +46,9 @@ object_relationships:
   - name: baseformid
     using:
       foreign_key_constraint_on: base_form_id
+  - name: usedmove
+    using:
+      foreign_key_constraint_on: used_move_id
 select_permissions:
   - role: anon
     permission:

@@ -1,29 +1,57 @@
 move_effect_changelog_id,local_language_id,effect
+1,5,"Réduit de moitié la [Defense]{mechanic:defense} pour le calcul des dommages, ce qui équivaut à doubler la de l’attaque [power]{mechanic:power}."
 1,9,"Halves the target’s [Defense]{mechanic:defense} for damage calculation, which is similar to doubling the attack’s [power]{mechanic:power}."
+2,5,Touche les Pokémon sous les effets de []{move:dig} et []{move:fly}.
 2,9,Hits Pokémon under the effects of []{move:dig} and []{move:fly}.
+3,5,Sans effet en combat de dresseurs.
 3,9,Does nothing in trainer battles.
+4,5,Fonctionne pendant le sommeil grâce à []{move:sleep-talk} si les PV ne sont pas au maximum.
 4,9,Works while asleep through []{move:sleep-talk} if not at full health.
+5,5,"Si cette capacité échoue, le lanceur reçoit 1 point de dommage de recul."
 5,9,"If this move misses, the user takes 1 point of damage in recoil."
+6,5,"Si cette capacité échoue, le lanceur reçoit des dommages égaux à la moitié de ses PV max arrondis à l’inférieur."
 6,9,"If this move misses, the user takes damage equal to half of its max HP rounded down."
+7,5,"Si cette capacité échoue, le lanceur reçoit des dommages égaux à la moitié de ses PV max arrondis à l’inférieur."
 7,9,"Locks the user into this move.  Due to a bug, if this move misses, its [accuracy]{mechanic:accuracy} drops to 1/256 as long as the user is still locked in."
+8,5,Peut utiliser n’importe quelle capacité à l’exception de []{move:struggle} et elle-même.
 8,9,Can call any move except for []{move:struggle} and itself.
+9,5,N’interagit pas avec []{move:stomp}.
 9,9,Does not interact with []{move:stomp}.
+10,5,Augmente l'[evasion]{mechanic:evasion} de 1.
 10,9,Raises [evasion]{mechanic:evasion} by one stage.
+11,5,N’augmente pas la [Defense]{mechanic:defense}.
 11,9,Does not raise [Defense]{mechanic:defense}.
+12,5,Ne touche pas les Pokémon sous les effets de []{move:dig}.
 12,9,Does not hit Pokémon under the effects of []{move:dig}.
+13,5,Ne touche pas les Pokémon sous les effets de []{move:fly}.
 13,9,Does not hit Pokémon under the effects of []{move:fly}.
+14,5,N’interagit pas avec []{move:minimize}.
 14,9,Does not interact with []{move:minimize}.
+15,5,Ne touche pas les Pokémon sous les effets de []{move:fly}.
 15,9,Does not hit Pokémon under the effects of []{move:fly}.
+16,5,Détermine les dommages en utilisant l’[Attack]{mechanic:attack} de base du lanceur et de ses alliés et la [Defense]{mechanic:defense} de base de l’adversaire à la place des stats calculées.
 16,9,Determines damage using each participant’s base [Attack]{mechanic:attack} and the opponent’s base [Defense]{mechanic:defense} in place of calculated stats.
+17,5,"[]{move:swift} peut toucher le lanceur lorsqu’il est dans les airs, contrairement aux autres capacités. En raison d’un bug, si l’utilisateur ne parvient pas à effectuer le deuxième tour de la capacité, par exemple à cause d’une [paralysis]{mechanic:paralysis}, il reste en l’air jusqu’à ce qu’il soit rappelé ou qu’il utilise à nouveau Vol avec succès. Il peut agir comme s’il était au sol pendant ce temps, mais les capacités continuent de ne pas le toucher."
 17,9,"[]{move:swift} can hit the user while in the air, and no other moves can.  Due to a bug, if the user fails to carry out the move’s second turn, e.g. due to [paralysis]{mechanic:paralysis}, it remains in the air until it switches out or uses Fly again successfully.  It can act as if it were on the ground in the meantime, but moves still miss it."
+18,5,N’augmente ni la [Defense]{mechanic:defense} ni la [Special Defense]{mechanic:special-defense}.
 18,9,Does not raise [Defense]{mechanic:defense} or [Special Defense]{mechanic:special-defense}.
+19,5,N’augmente pas la [Special Defense]{mechanic:special-defense} du lanceur.
 19,9,Does not raise the user’s [Special Defense]{mechanic:special-defense}.
+20,5,Soigne la moitié des PV max du Pokémon remplaçant.
 20,9,Heals replacement Pokémon by half of their max HP.
+21,5,Inflige des dommages de type []{type:normal}.
 21,9,Inflicts []{type:normal}-type damage.
+22,5,"[]{move:swift} peut toucher le lanceur lorsqu’il est sous terre, contrairement aux autres capacités. A cause d’un bug, si le lanceur ne parvient pas à effectuer le deuxième tour de la capcité, par exemple à cause d’une [paralysis]{mechanic:paralysis}, il reste sous terre jusqu’à ce qu’il soit rappelé ou utilise à nouveau Tunnel avec succès. Il peut agir comme s’il était à la surface pendant ce temps, mais les capacités continuent de ne pas le toucher."
 22,9,"[]{move:swift} can hit the user while underground, and no other moves can.  Due to a bug, if the user fails to carry out the move’s second turn, e.g. due to [paralysis]{mechanic:paralysis}, it remains underground until it switches out or uses Dig again successfully.  It can act as if it were aboveground in the meantime, but moves still miss it."
+23,5,N’interagit pas avec []{move:hail}.
 23,9,Does not interact with []{move:hail}.
+24,5,Ignore []{ability:wonder-guard}.
 24,9,Ignores []{ability:wonder-guard}.
+25,5,Dure deux ou trois tours.
 25,9,Lasts either two or three turns.
+26,5,Cette capacité échoue si la cible n’est pas sous l’effet de []{move:detect} ou []{move:protect}.
 26,9,"If the target is not under the effect of []{move:detect} or []{move:protect}, this move will fail."
+27,5,Le lanceur reçoit la moitié des dommages infligés en recul.
 27,9,The user receieves 1/2 of the damage dealt in recoil.
+28,5,Les barrières sont détruites même si cette capacité a [no effect]{mechanic:no-effect}.
 28,9,The barriers are destroyed even if this move has [no effect]{mechanic:no-effect}.

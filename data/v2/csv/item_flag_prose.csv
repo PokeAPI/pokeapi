@@ -1,9 +1,17 @@
 item_flag_id,local_language_id,name,description
+1,5,Comptable,Est comptable dans le sac
 1,9,Countable,Has a count in the bag
+2,5,Consommable,Consommé quand utilisé
 2,9,Consumable,Consumed when used
+3,5,Utilisable_hors_combat,Utilisable hors combat
 3,9,Usable_overworld,Usable outside battle
+4,5,Utilisable_en_combat,Utilisable en combat
 4,9,Usable_in_battle,Usable in battle
+5,5,Tenable,Peut être tenu par un Pokémon
 5,9,Holdable,Can be held by a Pokémon
+6,5,Tenable_passif,Fonctionne passivement lorsqu’il est tenu
 6,9,Holdable_passive,Works passively when held
+7,5,Tenable_actif,Utilisable par un Pokémon lorsqu’il est tenu
 7,9,Holdable_active,Usable by a Pokémon when held
+8,5,Souterrain,Apparaît dans les souterrains de Sinnoh
 8,9,Underground,Appears in Sinnoh Underground

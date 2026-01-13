@@ -1,6 +1,6 @@
 contest_effect_id,local_language_id,flavor_text,effect
 1,5,Une démonstration qui plaît énormément,Donne un grand nombre de points de charme sans aucun autre effet.
-1,9,A highly appealing move.,Gives a high number of appeal points wth no other effects.
+1,9,A highly appealing move.,Gives a high number of appeal points with no other effects.
 2,5,Le score dépend du résultat des démonstrations précédentes.,"Si le Pokémon qui fait sa démonstration avant le lanceur a obtenu moins de trois points de charme, le lanceur en obtient six; s’il en a obtenu trois, le lanceur en obtient trois; s’il en a obtenu plus de trois, le lanceur n’en obtient aucun."
 2,9,Affected by how well the appeal in front goes.,"If the Pokémon that appealed before the user earned less than three appeal points, user earns six; if three, user earns three; if more than three, user earns none."
 3,5,Le lanceur est plus facilement nerveux après cette démonstration.,"Si le lanceur est bloqué ce tour après avoir utilisé cette capacité, il recevra deux fois plus de points de blocage."

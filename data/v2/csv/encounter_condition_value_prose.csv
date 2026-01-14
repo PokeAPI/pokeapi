@@ -162,36 +162,70 @@ encounter_condition_value_id,local_language_id,name
 71,9,Have an Event Arceus in the party
 71,5,En ayant un Arceus événementiel dans l’équipe
 72,9,This special Pokémon couldn’t be captured in previous encounters (either fainted or ran from battle)
+72,5,Ce Pokémon spécial ne pouvait pas être capturé auparavant (doit avoir été vaincu ou avoir fui le combat)
 73,9,Have Ice Key in bag
+73,5,Avoir la Clé Iceberg dans le sac
 74,9,Have Iron Key in bag
+74,5,Avoir la Clé Fer dans le sac
 75,9,Spoke to Professor Juniper in the Cave of Being
+75,5,Parler au Professeur Keteleeria dans la Caverne des Esprits
 76,9,Have Lunar Wing in bag
+76,5,Avoir la Plume Lune dans le sac
 77,9,Obtained Quake Badge
+77,5,Obtenir le Badge Sismique
 78,9,Have Light Stone in bag
+78,5,Avoir le Galet Blanc dans le sac
 79,9,Have Dark Stone in bag
+79,5,Avoir le Galet Noir dans le sac
 80,9,Captured Reshiram or Zekrom previously
+80,5,Avoir capturé Reshiram ou Zekrom précédemment
 81,9,Defeated Ghetsis
+81,5,Avoir battu Ghetis
 82,9,Has been unsuccesfully battled 11 times before
+82,5,A été combattu 11 fois avant sans succès
 83,9,The current minute is between 00 and 19
+83,5,La minute actuelle est entre 00 et 19
 84,9,The current minute is between 20 and 39
+84,5,La minute actuelle est entre 20 et 39
 85,9,The current minute is between 40 and 59
+85,5,La minute actuelle est entre 40 et 59
 86,9,The current time is between 04:00 and 19:59
+86,5,L'heure actuelle est entre 04:00 et 19:59
 87,9,The current time is between 20:00 and 21:59
+87,5,L'heure actuelle est entre 20:00 et 21:59
 88,9,The current time is between 22:00 and 03:59
+88,5,L'heure actuelle est entre 22:00 et 03:59
 89,9,Have Tidal Bell in bag
+89,5,Avoir le Glas Tempête dans le sac
 90,9,Have Clear Bell in bag
+90,5,Avoir le Glas Transparent dans le sac
 91,9,Defeated or captured Groudon or Kyogre
+91,5,Avoir battu ou capturé Groudon ou Kyogre
 92,9,"Have Uxie, Mesprit, and Azelf in the party"
+92,5,"Avoir Créhelf, Créfollet et Créfadet dans l'équipe"
 93,9,"After capturing the three regis in the game, have a nicknamed Regice holding a cold-based item, plus Regirock and Registeel in the party"
+93,5,"Après avoir capturé les trois Régis du jeu, avoir un Regice surnommé portant un objet relatif à la glace, plus Regirock et Registeel dans l'équipe"
 94,9,Have Dialga or Palkia in the party
+94,5,Avoir Dialga ou Palkia dans l'équipe
 95,9,Have Castform in party
+95,5,Avoir Morphéo dans l'équipe
 96,9,Have a Level 100 Pokémon in party
+96,5,Avoir un Pokémon Niveau 100 dans l'équipe
 97,9,Have Tornadus and Thundurus in party
+97,5,Avoir Boréas et Fulguris dans l'équipe
 98,9,Have Reshiram and Zekrom in party
+98,5,Avoir Reshiram et Zekrom dans l'équipe
 99,9,Captured all Ultra Beasts
+99,5,Avoir capturé toutes les Ultra-Chimères
 100,9,Finished Looker’s Sidequest
+100,5,Avoir fini la quête secondaire de Beladonis
 101,9,After finishing Olivia’s trial
+101,5,Après avoir fini l'Épreuve d'Alyxia
 102,9,Have Raikou and Entei in party
+102,5,Avoir Raikou et Entei dans l'équipe
 103,9,Have Groudon and Kyogre in party
+103,5,Avoir Groudon et Kyogre dans l'équipe
 104,9,Have Dialga and Palkia in party
+104,5,Avoir Dialga et Palkia dans l'équipe
 105,9,Scan a specific QR Code
+105,5,Scanner un code QR spécifique

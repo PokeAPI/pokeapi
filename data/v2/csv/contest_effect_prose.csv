@@ -1,34 +1,67 @@
 contest_effect_id,local_language_id,flavor_text,effect
-1,9,A highly appealing move.,Gives a high number of appeal points wth no other effects.
+1,5,Une démonstration qui plaît énormément,Donne un grand nombre de points de charme sans aucun autre effet.
+1,9,A highly appealing move.,Gives a high number of appeal points with no other effects.
+2,5,Le score dépend du résultat des démonstrations précédentes.,"Si le Pokémon qui fait sa démonstration avant le lanceur a obtenu moins de trois points de charme, le lanceur en obtient six; s’il en a obtenu trois, le lanceur en obtient trois; s’il en a obtenu plus de trois, le lanceur n’en obtient aucun."
 2,9,Affected by how well the appeal in front goes.,"If the Pokémon that appealed before the user earned less than three appeal points, user earns six; if three, user earns three; if more than three, user earns none."
+3,5,Le lanceur est plus facilement nerveux après cette démonstration.,"Si le lanceur est bloqué ce tour après avoir utilisé cette capacité, il recevra deux fois plus de points de blocage."
 3,9,"After this move, the user is more easily startled.","If the user is jammed this turn after using this move, it will receive twice as many jam points."
+4,5,Bloque le Pokémon de tête.,Tente de bloquer le Pokémon qui a fait sa démonstration avant le lanceur.
 4,9,Badly startles the Pokémon in front.,Attempts to jam the Pokémon that appealed before the user.
+5,5,Rend nerveux les Pokémon ayant déjà fait leur démonstration.,Tente de bloquer tous les Pokémon qui ont déjà fait leur démonstration ce tour.
 5,9,Badly startles those that have made appeals.,Attempts to jam all Pokémon that have appealed this turn.
+6,5,Bloque les autres mais perd un tour de démonstration.,"Tente de bloquer tous les autres Pokémon. Le lanceur ne peut pas faire de démonstration le prochain tour, mais ne peut pas non plus être bloqué."
 6,9,"Jams the others, and misses one turn of appeals.","Attempts to jam the other Pokémon.  The user cannot make an appeal on the next turn, but it cannot be jammed either."
+7,5,Plaît énormément mais ne permet plus de faire quoi que ce soit.,Le lanceur ne peut plus faire de démonstration pour le reste du concours.
 7,9,"Makes a great appeal, but allows no more to the end.",User cannot make any more appeals for the remainder of the contest.
+8,5,Baisse la condition de ceux ayant déjà fait leur démonstration.,Tente de bloquer tous les Pokémon qui ont déjà fait leur démonstration ce tour.
 8,9,Startles all Pokémon that have done their appeals.,Attempts to jam all Pokémon that have appealed this turn.
+9,5,Bloque le Pokémon précédent.,Bloque le Pokémon qui a fait sa démonstration avant le lanceur.
 9,9,Startles the Pokémon that appealed before the user.,Attempts to jam the Pokémon that appealed before the user.
+10,5,Rend nerveux le Pokémon qui a l’attention du juge.,"Tente de bloquer tous les Pokémon qui ont déjà fait leur démonstration ce tour. Si un Pokémon est en combo de standby, il reçoit 5 points de blocage au lieu d’1."
 10,9,Startles the Pokémon that has the judge’s attention.,"Attempts to jam all Pokémon that have appealed this turn.  If a Pokémon is in combo standby status, it is jammed 5 points instead of 1."
+11,5,Score élevé si le public est enthousiaste.,"Si la jauge d’applaudissements est vide ou à un, gagne un point; si à deux, gagne trois points; si à trois, gagne quatre points; si à 4, gagne six points."
 11,9,The appeal works best the more the crowd is excited.,"If the Applause meter is empty or at one, earns one point; if two, earns three points; if three, earns four points; if four, earns six points."
+12,5,Fonctionne mieux si du même type que la précédente.,"Si la démonstration du Pokémon précédent est du même type que cette capacité, le lanceur gagne six points au lieu de deux."
 12,9,Works well if it’s the same type as the one before.,"If the last Pokémon’s appeal is the same type as this move, user earns six points instead of two."
+13,5,"Fait monter le voltage, peu importe le type de la démonstration.","Ajoute toujours un point à la jauge d’applaudissements, peu importe si la capacité correspond au concours ou non, et peut également bénéficier du bonus d’applaudissements."
 13,9,An appeal that excites the audience in any contest.,"Always adds a point to the applause meter, regardless of whether the move matches the contest, and can likewise gain the applause bonus."
+14,5,Baisse la condition de ceux ayant déjà fait leur démonstration.,Tente de bloquer tous les Pokémon qui ont déjà fait leur démonstration ce tour d’un total de la moitié de leurs points de charme (minimum 1).
 14,9,Badly startles all Pokémon that made good appeals.,Attempts to jam all Pokémon that have appealed this turn for half their appeal points (minimum 1).
+15,5,Protège des Blocages des Pokémon suivants.,Empêche le blocage pour le reste de ce tour.
 15,9,Can avoid being startled by others.,Prevents jamming for the rest of this turn.
+16,5,Empêche une fois d’être nerveux.,Empêche le prochain blocage de ce tour.
 16,9,Can avoid being startled by others once.,Prevents the next jam on this turn.
+17,5,Peut être répété plusieurs fois sans ennuyer le juge.,Un utilisation répétée n’entraîne pas de penalité.
 17,9,Can be repeatedly used without boring the judge.,Repeated use does not incur a penalty.
+18,5,Rend nerveux tous les Pokémon suivants.,Tente de rendre nerveux tous les prochains Pokémon (et les rend ainsi incapable de réaliser leur démonstration).
 18,9,Makes all Pokémon after the user nervous.,Attempts to make all following Pokémon nervous (and thus unable to appeal).
+19,5,La démonstration est aussi bonne que la précédente.,Le lanceur gagne autant de points de charme que le précédent Pokémon plus un.
 19,9,Makes the appeal as good as the one before it.,User earns appeal points equal to the points the previous Pokémon earned plus one.
+20,5,Le score sera le même que celui du Pokémon précédent.,Le lanceur gagne un nombre de points de charme égal à la moitié des points de TOUS les Pokémon précédents plus un.
 20,9,Makes the appeal as good as those before it.,User earns appeal points equal to half the points ALL the previous Pokémon earned plus one.
+21,5,Change l’ordre de passage au tour suivant.,Mélange les ordres de passage au tour suivant.
 21,9,Scrambles up the order of appeals on the next turn.,Shuffles the next turn’s turn order.
+22,5,Attire l’attention du juge.,Annule les statuts de combo standby de tous les autres Pokémon qui ont fait leur démonstration ce tour.
 22,9,Shifts the judge’s attention from others.,Cancels combo standby status for all Pokémon that have appealed this turn.
+23,5,Rend nerveux un Pokémon ayant déjà fait sa démonstration.,"Tente de bloquer tous les Pokémon qui ont déjà fait leur démonstration ce tour. Si un Pokémon a utilisé une capacité du même type que celle-ci, il reçoit 4 points de blocage au lieu d’1."
 23,9,Startles Pokémon that made a same-type appeal.,"Attempts to jam all Pokémon that have appealed this turn.  If a Pokémon used the same type move as this one, it is jammed for 4 points instead of 1."
+24,5,Empêche la foule de s’exciter davantage.,Empêche la jauge d’applaudissements d’augmenter pour le reste du tour.
 24,9,Temporarily stops the crowd from getting excited.,Prevents the Applause Meter from rising for the rest of the turn.
+25,5,La qualité de la dméonstration dépend du timing.,"Donne au hasard un, deux, quatre ou huit points."
 25,9,The appeal’s quality depends on its timing.,"Randomly earns one, two, four, or eight points."
+26,5,Fonctionne mieux si passe en dernier.,"Si le lanceur fait sa démonstration en premier ce tour, il gagne un point; deux points si en deuxième; quatre points si en troisième; six points si en dernier."
 26,9,The appeal works better the later it is performed.,"If user appeals first this turn, earns one point; if second, two points; if third, four points; if last, six points."
+27,5,Fonctionne mieux si passe en premier.,"Si le lanceur fait sa démonstration en premier ce tour, il gagne six points au lieu de deux."
 27,9,The appeal works great if performed first.,"If user appeals first this turn, earns six points instead of two."
+28,5,Fonctionne mieux si passe en dernier.,"Si le lanceur fait sa démonstration en dernier ce tour, il gagne six points au lieu de deux."
 28,9,The appeal works great if performed last.,"If user appeals last this turn, earns six points instead of two."
+29,5,Le score augmente si la condition du lanceur est bonne.,"Si le lanceur n'a aucune étoile, il gagne un point ; s'il en a une, trois points ; s'il en a deux, cinq points ; s'il en a trois, sept points.  Cela n'inclut pas le bonus de points de charme que donnent les étoiles."
 29,9,The appeal works well if the user’s condition is good.,"If user has no stars, earns one point; if one, three points; if two, five points; if three, seven points.  This does not include the appeal point bonus the stars give."
+30,5,Passe en premier le tour suivant.,Le lanceur passera en premier au prochain tour.
 30,9,The next appeal can be made earlier next turn.,User will go first next turn.
+31,5,Permet de passer plus tard au tour suivant.,Le lanceur passera en dernier au prochain tour.
 31,9,The next appeal can be made later next turn.,User will go last next turn.
+32,5,"Monte la condition, empêche d’être nerveux.",Le lanceur gagne une étoile.
 32,9,Ups the user’s condition.  Helps prevent nervousness.,User gains one star.
+33,5,Baisse la condition de ceux ayant déjà fait leur démonstration.,Supprime toutes les étoiles de tous les Pokémon qui ont déjà fait leur démonstration ce tour.
 33,9,Worsens the condition of those that made appeals.,Removes all stars from all Pokémon that have appealed this turn.

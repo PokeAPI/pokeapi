@@ -55,40 +55,58 @@ pokedex_id,local_language_id,name,description
 15,6,Neue Hoenn,Omega Rubin/Alpha Saphir Hoenn Dex — Dex aus Rubin/Saphir/Smaragd um Neue Entwicklungen erweitert
 15,7,Hoenn Actualizado,Pokédex regional de Hoenn de Rubí Omega/Zafiro Alfa
 15,9,New Hoenn,"Omega Ruby/Alpha Sapphire Hoenn Dex—Ruby/Sapphire/Emerald’s, updated to add new evolutions"
+16,5,Alola original,Pokédex d'Alola dans Soleil/Lune
 16,7,Alola Original,Pokédex regional de Alola de Sol/Luna
 16,9,Original Alola,Sun/Moon Alola dex
+17,5,Mele-Mele original,Pokédex de Mele-Mele dans Soleil/Lune
 17,7,Melemele Original,Pokédex regional de Melemele de Sol/Luna
 17,9,Original Melemele,Sun/Moon Melemele dex
+18,5,Akala original,Pokédex d'Akala dans Soleil/Lune
 18,7,Akala Original,Pokédex regional de Akala de Sol/Luna
 18,9,Original Akala,Sun/Moon Akala dex
+19,5,Ula-Ula original,Pokédex d'Ula-Ula dans Soleil/Lune
 19,7,Ula-Ula Original,Pokédex regional de Ula-Ula de Sol/Luna
 19,9,Original Ula’ula,Sun/Moon Ula’ula dex
+20,5,Poni original,Pokédex de Poni dans Soleil/Lune
 20,7,Poni Original,Pokédex regional de Poni de Sol/Luna
 20,9,Original Poni,Sun/Moon Poni dex
+21,5,Alola mis à jour,Pokédex d'Alola dans Ultra Soleil/Ultra Lune
 21,7,Alola Actualizado,Pokédex regional de Alola de Ultra Sol/Ultra Luna
 21,9,Updated Alola,Ultra Sun/Ultra Moon Alola dex
+22,5,Mele-Mele mis à jour,Pokédex de Mele-Mele dans Ultra Soleil/Ultra Lune
 22,7,Melemele Actualizado,Pokédex regional de Melemele de Ultra Sol/Ultra Luna
 22,9,Updated Melemele,Ultra Sun/Ultra Moon Melemele dex
+23,5,Akala mis à jour,Pokédex d'Akala dans Ultra Soleil/Ultra Lune
 23,7,Akala Actualizado,Pokédex regional de Akala de Ultra Sol/Ultra Luna
 23,9,Updated Akala,Ultra Sun/Ultra Moon Akala dex
+24,5,Ula-Ula mis à jour,Pokédex d'Ula-Ula dans Ultra Soleil/Ultra Lune
 24,7,Ula-Ula Actualizado,Pokédex regional de Ula-Ula de Ultra Sol/Ultra Luna
 24,9,Updated Ula’ula,Ultra Sun/Ultra Moon Ula’ula dex
+25,5,Poni mis à jour,Pokédex de Poni dans Ultra Soleil/Ultra Lune
 25,7,Poni Actualizado,Pokédex regional de Poni de Ultra Sol/Ultra Luna
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
+26,5,Let's Go Kanto,Pokédex de Kanto dans Let's Go: Pikachu/Let's Go: Évoli
 26,7,Let’s Go Kanto,Pokédex regional de Let’s Go Pikachu/Eevee
 26,9,Let’s Go Kanto,Let’s Go: Pikachu/Let’s Go: Eevee Kanto dex
+27,5,Galar,Pokédex de Galar dans Épée/Bouclier
 27,7,Galar,Pokédex regional de Galar
 27,9,Galar,Sword/Shield Galar dex
+28,5,Isolarmure,Pokédex d'Isolarmure
 28,7,Isla de la Armadura,Pokédex regional de Isla de la Armadura 
 28,9,Isle of Armor,Isle of Armor dex
+29,5,Couronneige,Pokédex de Couronneige
 29,7,Nieves de la Corona,Pokédex regional de Nieves de la Corona
 29,9,Crown Tundra,Crown Tundra dex
+30,5,Hisui,Pokédex d'Hisui
 30,7,Hisui,Pokédex regional de Hisui de Leyendas Pokémon Arceus
 30,9,Hisui,Hisui dex
+31,5,Paldea,Pokédex de Paldea
 31,7,Paldea,Pokédex regional de Paldea de Escarlata/Púrpura
 31,9,Paldea,Paldea dex
+32,5,Septentria,Pokédex de Septentria
 32,7,Kitakami,Pokédex regional de Kitakami de Escarlata/Púrpura
 32,9,Kitakami,Kitakami dex
+33,5,Myrtille,Pokédex de l'Institut Myrtille
 33,7,Arándano,Pokédex regional de la Academia Arándano de Escarlata/Púrpura
 33,9,Blueberry,Blueberry Academy dex
 34,7,Ciudad Luminalia,Pokédex regional de Ciudad Luminalia de Pokemon Leyendas Z-A

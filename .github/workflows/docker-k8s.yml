@@ -84,7 +84,7 @@ jobs:
         run: kind load docker-image pokeapi/pokeapi:local --name pokeapi
       - name: K8s Apply
         run: |
-          make kustomize-local-apply
+          make kustomize-ga-apply
           kubectl proxy &
           sleep 1
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/

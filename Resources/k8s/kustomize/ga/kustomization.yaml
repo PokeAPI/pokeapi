@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../local
+
+patches:
+  - path: pokeapi.yaml
+    target:
+      kind: Deployment
+      labelSelector: component=pokeapi

@@ -5,7 +5,7 @@ metadata:
   labels:
     component: pokeapi
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       component: pokeapi
@@ -23,17 +23,17 @@ spec:
               echo waiting for database;
               sleep 2;
               done;
-        # - name: data-download
-        #   image: alpine:3.21.2
-        #   command: ['sh', '-c']
-        #   args:
-        #     - apk add --update git &&
-        #       git clone --depth=1 --single-branch --branch=master --recurse-submodules --shallow-submodules https://github.com/PokeAPI/pokeapi.git &&
-        #       mv /code/pokeapi/data/v2/* /tmp/
-        #   workingDir: /code
-        #   volumeMounts:
-        #     - mountPath: /tmp/
-        #       name: data-share
+        - name: data-download
+          image: alpine:3.21.2
+          command: ['sh', '-c']
+          args:
+            - apk add --update git &&
+              git clone --depth=1 --single-branch --branch=master --recurse-submodules --shallow-submodules https://github.com/PokeAPI/pokeapi.git &&
+              mv /code/pokeapi/data/v2/* /tmp/
+          workingDir: /code
+          volumeMounts:
+            - mountPath: /tmp/
+              name: data-share
       containers:
         - name: pokeapi
           image: pokeapi/pokeapi:master

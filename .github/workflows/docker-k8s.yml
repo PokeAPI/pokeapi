@@ -63,10 +63,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        with:
-          detached: true
       - name: Lint k8s
         run: (pwd; ls -la; cd Resources/k8s/kustomize && yamllint .)
       - name: Create k8s Kind Cluster

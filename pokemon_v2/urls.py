@@ -1,4 +1,4 @@
-from django.conf.urls import include, url
+from django.urls import include, path, re_path
 
 #####################################
 #
@@ -70,8 +70,8 @@ router.register(r"version-group", VersionGroupResource)
 ###########################
 
 urlpatterns = [
-    url(r"^api/v2/", include(router.urls)),
-    url(
+    path("api/v2/", include(router.urls)),
+    re_path(
         r"^api/v2/pokemon/(?P<pokemon_id>\d+)/encounters",
         PokemonEncounterView.as_view(),
         name="pokemon_encounters",

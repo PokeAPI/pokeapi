@@ -2683,7 +2683,7 @@ class APITests(APIData, APITestCase):
         item_attribute_map.save()
 
         response = self.client.get(
-            "{}/item/{}/".format(API_V2, item.pk), HTTP_HOST="testserver"
+            "{}/item/{}/".format(API_V2, item.pk), headers={"host": "testserver"}
         )
 
         # base params
@@ -4683,7 +4683,7 @@ class APITests(APIData, APITestCase):
 
         response = self.client.get(
             "{}/pokemon-species/{}/".format(API_V2, pokemon_species.pk),
-            HTTP_HOST="testserver",
+            headers={"host": "testserver"}
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -4947,7 +4947,7 @@ class APITests(APIData, APITestCase):
             max_level=36,
         )
         response = self.client.get(
-            "{}/pokemon/{}/".format(API_V2, pokemon.pk), HTTP_HOST="testserver"
+            "{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"}
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -5171,7 +5171,7 @@ class APITests(APIData, APITestCase):
 
         response = self.client.get(
             "{}/pokemon/?q={}".format(API_V2, pokemon.name[:2]),
-            HTTP_HOST="testserver",
+            headers={"host": "testserver"}
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -5197,7 +5197,7 @@ class APITests(APIData, APITestCase):
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
-            HTTP_HOST="testserver",
+            headers={"host": "testserver"}
         )
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -5767,13 +5767,13 @@ class APITests(APIData, APITestCase):
 
         # Test lowercase
         lowercase_response = self.client.get(
-            "{}/pokemon/{}/".format(API_V2, lowercase_name), HTTP_HOST="testserver"
+            "{}/pokemon/{}/".format(API_V2, lowercase_name), headers={"host": "testserver"}
         )
         self.assertEqual(lowercase_response.status_code, status.HTTP_200_OK)
 
         # Test uppercase
         uppercase_response = self.client.get(
-            "{}/pokemon/{}/".format(API_V2, uppercase_name), HTTP_HOST="testserver"
+            "{}/pokemon/{}/".format(API_V2, uppercase_name), headers={"host": "testserver"}
         )
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
@@ -5787,12 +5787,12 @@ class APITests(APIData, APITestCase):
         uppercase_name = language.name.upper()
 
         lowercase_response = self.client.get(
-            "{}/language/{}/".format(API_V2, lowercase_name), HTTP_HOST="testserver"
+            "{}/language/{}/".format(API_V2, lowercase_name), headers={"host": "testserver"}
         )
         self.assertEqual(lowercase_response.status_code, status.HTTP_200_OK)
 
         uppercase_response = self.client.get(
-            "{}/language/{}/".format(API_V2, uppercase_name), HTTP_HOST="testserver"
+            "{}/language/{}/".format(API_V2, uppercase_name), headers={"host": "testserver"}
         )
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 

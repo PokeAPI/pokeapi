@@ -9,7 +9,7 @@ spec:
         - name: data-download
           image: alpine:3.21.2
           command: ['ls']
-          args: ['csv']
+          args: ['/tmp/csv']
       containers:
         - name: pokeapi
           volumeMounts:

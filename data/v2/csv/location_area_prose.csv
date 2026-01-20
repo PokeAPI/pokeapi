@@ -2124,7 +2124,7 @@ location_area_id,local_language_id,name
 816,5,Parc Safari - Champ de fleurs
 817,9,Safari Zone Forest
 817,6,Safari-Zone Wald
-817,5,Parc Safari - Bois 
+817,5,Parc Safari - Bois
 818,9,Safari Zone Swamp
 818,6,Safari-Zone Sumpf
 818,5,Parc Safari - Bois et lacs
@@ -2200,7 +2200,7 @@ location_area_id,local_language_id,name
 842,9,Sinjoy Ruins
 842,6,Sinjoh-Ruinen
 842,5,Ruines Sinjoh
-1167,9,Ligthouse Basement
+1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
 1167,5,Phare de la Liberté
 1169,9,Rumination Field

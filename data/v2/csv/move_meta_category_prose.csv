@@ -1,15 +1,29 @@
 move_meta_category_id,local_language_id,description
+0,5,Inflige des dégâts
 0,9,Inflicts damage
+1,5,Pas de dégât; inflige une altération de statut
 1,9,No damage; inflicts status ailment
+2,5,Pas de dégât; diminue les stats de la cible ou augmente les stats du lanceur
 2,9,No damage; lowers target’s stats or raises user’s stats
+3,5,Pas de dégât; soigne l’utilisateur
 3,9,No damage; heals the user
+4,5,Inflige des dégâts; inflige une altération de statut
 4,9,Inflicts damage; inflicts status ailment
+5,5,Pas de dégât; inflige une altération de statut; augmente les stats de la cible
 5,9,No damage; inflicts status ailment; raises target’s stats
+6,5,Inflige des dégâts; diminue les stats de la cible
 6,9,Inflicts damage; lowers target’s stats
+7,5,Inflige des dégâts; augmente les stats du lanceur
 7,9,Inflicts damage; raises user’s stats
+8,5,Inflige des dégâts; absorbe les dégâts infligés pour soigner l’utilisateur
 8,9,Inflicts damage; absorbs damage done to heal the user
+9,5,K.O. en un coup
 9,9,One-hit KO
+10,5,Affecte tout le terrain
 10,9,Effect on the whole field
+11,5,Affecte un côté du terrain
 11,9,Effect on one side of the field
+12,5,Oblige la cible à être remplacée
 12,9,Forces target to switch out
+13,5,Effet unique
 13,9,Unique effect

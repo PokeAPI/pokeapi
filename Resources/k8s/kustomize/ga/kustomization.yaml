@@ -5,7 +5,7 @@ resources:
   - ../local
 
 patches:
-  - path: pokeapi.yaml
+  - path: pokeapi-deployment-patch.yaml
     target:
       kind: Deployment
       labelSelector: component=pokeapi

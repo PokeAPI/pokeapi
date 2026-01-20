@@ -133,7 +133,7 @@ kustomize-staging-apply:  # (Kustomize) Run kubectl apply -k on the connected k8
 kustomize-local-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster using the locally available pokeapi/pokeapi:local
 	kubectl apply -k Resources/k8s/kustomize/local/
 
-kustomize-ga-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster using the Github Actions config
+kustomize-ga-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s cluster using the Github Actions config (share host data with the cluster)
 	kubectl apply -k Resources/k8s/kustomize/ga/
 
 k8s-migrate:  # (k8s) Run any pending migrations

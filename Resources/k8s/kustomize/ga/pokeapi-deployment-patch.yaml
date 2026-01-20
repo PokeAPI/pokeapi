@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokeapi
+spec:
+  template:
+    spec:
+      initContainers:
+        - name: data-download
+          image: alpine:3.21.2
+          command: ['ls']
+          args: ['/tmp/csv']
+      containers:
+        - name: pokeapi
+          volumeMounts:
+            - mountPath: /code/data/v2/
+              name: data-share
+      volumes:
+        - name: data-share
+          hostPath:
+            path: /code/pokeapi/data/v2/
+          emptyDir:
+            $patch: delete

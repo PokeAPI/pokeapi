@@ -10,7 +10,6 @@ from drf_spectacular.utils import extend_schema_field
 
 from .models import *
 
-
 #########################
 #  SUMMARY SERIALIZERS  #
 #########################

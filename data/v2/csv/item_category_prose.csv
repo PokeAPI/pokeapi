@@ -1,55 +1,109 @@
 item_category_id,local_language_id,name
+1,5,Augmentations de stats
 1,9,Stat boosts
+2,5,Diminution d'effort
 2,9,Effort drop
+3,5,Médicament
 3,9,Medicine
+4,5,Autre
 4,9,Other
+5,5,En cas de besoin
 5,9,In a pinch
+6,5,Soin difficile
 6,9,Picky healing
+7,5,Protection à un type
 7,9,Type protection
+8,5,Cuisine uniquement
 8,9,Baking only
+9,5,Monnaie d'échange
 9,9,Collectibles
+10,5,Évolution
 10,9,Evolution
+11,5,Spéléologie
 11,9,Spelunking
+12,5,Objets tenus
 12,9,Held items
+13,5,Choix
 13,9,Choice
+14,5,Augmentation d'effort
 14,9,Effort training
+15,5,Mauvais objets tenus
 15,9,Bad held items
+16,5,Entraînement
 16,9,Training
+17,5,Plaques
 17,9,Plates
+18,5,Propre à une espèce
 18,9,Species-specific
+19,5,Amélioration de type
 19,9,Type enhancement
+20,5,Objets d’événement
 20,9,Event items
+21,5,Gameplay
 21,9,Gameplay
+22,5,Avancement dans le jeu
 22,9,Plot advancement
+23,5,Non utilisé
 23,9,Unused
+24,5,Butin
 24,9,Loot
+25,5,Toutes les lettres
 25,9,All mail
+26,5,Vitamines
 26,9,Vitamins
+27,5,Soin
 27,9,Healing
+28,5,Récupération de PP
 28,9,PP recovery
+29,5,Renaissance
 29,9,Revival
+30,5,Soin de statut
 30,9,Status cures
+32,5,Engrais
 32,9,Mulch
+33,5,Balls spéciales
 33,9,Special balls
+34,5,Balls standard
 34,9,Standard balls
+35,5,Remplissage du Dex
 35,9,Dex completion
+36,5,Foulards
 36,9,Scarves
+37,5,Toutes les capsules
 37,9,All machines
+38,5,Flûtes
 38,9,Flutes
+39,5,Noigrume balls
 39,9,Apricorn balls
+40,5,Boîte Noigrume
 40,9,Apricorn box
+41,5,Cartes Mémo
 41,9,Data cards
+42,5,Joyaux
 42,9,Jewels
+43,5,Shooter Miracle
 43,9,Miracle shooter
+44,5,Méga-Gemmes
 44,9,Mega Stones
+45,5,ROMs
 45,9,Memories
+46,5,Cristaux Z
 46,9,Z-Crystals
+47,5,Bonbons propres à une espèce
 47,9,Species candies
+48,5,Bonus de capture
 48,9,Catching bonus
+49,5,Cristaux Géants
 49,9,Dynamax crystals
+50,5,Aromates
 50,9,Nature mints
+51,5,Ingrédients pour le curry
 51,9,Curry ingredients
+52,5,Téra-Éclat
 52,9,Tera Shard
+53,5,Ingrédients pour les sandwichs
 53,9,Sandwich ingredients
+54,5,Échantillons
 54,9,TM materials
+55,5,Pique-nique
 55,9,Picnic

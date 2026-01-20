@@ -2124,7 +2124,7 @@ location_area_id,local_language_id,name
 816,5,Parc Safari - Champ de fleurs
 817,9,Safari Zone Forest
 817,6,Safari-Zone Wald
-817,5,Parc Safari - Bois 
+817,5,Parc Safari - Bois
 818,9,Safari Zone Swamp
 818,6,Safari-Zone Sumpf
 818,5,Parc Safari - Bois et lacs
@@ -2200,49 +2200,72 @@ location_area_id,local_language_id,name
 842,9,Sinjoy Ruins
 842,6,Sinjoh-Ruinen
 842,5,Ruines Sinjoh
-1167,9,Ligthouse Basement
+1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
+1167,5,Phare de la Liberté
 1169,9,Rumination Field
-1169,9,Wandert durch Unova
+1169,6,Wandert durch Unova
+1169,5,Clairière Réflexion
 1169,6,Feld der Besinnung
-1169,6,Roaming Unova
+1169,9,Roaming Unova
+1169,5,Erre dans Unys
 1179,9,Sea Mauville (Outside)
 1179,6,Seewoge Malvenfroh (außen)
+1179,5,Lavandia Sea (Surface)
 1180,9,Sea Mauville (Inside)
 1180,6,Seewoge Malvenfroh (innen)
+1180,5,Lavandia Sea (Intérieur)
 1181,9,Mossdeep Space Center
 1181,6,Moosbach City Raumfahrtzentrum
+1181,5,Centre Spatial d’Algatia
 1182,9,Roaming Kalos
 1182,6,Wandert durch Kalos
+1182,5,Erre dans Kalos
 1183,9,Nameless Cavern
 1183,6,Unerforschte Höhle
+1183,5,Grotte Oubliée
 1184,9,Soaring in the Sky
 1184,6,Luftraum
+1184,5,Grand Envol
 1185,9,Scorched Slab (1F)
 1185,6,Sonnengrotte (EG)
+1185,5,Grotte Zénith (RdC)
 1186,9,Scorched Slab (B1F)
 1186,6,Sonnengrotte (1.UG)
+1186,5,Grotte Zénith (-1)
 1187,9,Scorched Slab (B2F)
 1187,6,Sonnengrotte (2.UG)
+1187,5,Grotte Zénith (-2)
 1188,9,Scorched Slab (B3F)
 1188,6,Sonnengrotte (3.UG)
+1188,5,Grotte Zénith (-3)
 1189,9,Crescent Isle
 1189,6,Sichelinsel
+1189,5,Île de l’Arc
 1190,9,Pathless Plain
 1190,6,Namenlose Ebene
+1190,5,Plaine Sans Nom
 1191,9,Fabled Cave
 1191,6,Rätselhafte Höhle
+1191,5,Grotte Évanescente
 1192,9,Gnarled Den
 1192,6,Höhle der Spaltung
+1192,5,Gouffre Informe
 1194,9,Trainers' School
 1194,6,Trainerschule
+1194,5,École des Dresseurs
 1195,9,Ultra Space Wilds Cliff World
 1195,6,Ultradimension Klippenwelt
+1195,5,Ultra-Dimension Zéro Monde Falaise
 1196,9,Ultra Space Wilds Water World
 1196,6,Ultradimension Wasserwelt
+1196,5,Ultra-Dimension Zéro Monde Eau
 1197,9,Ultra Space Wilds Rocky World
 1197,6,Ultradimension Felsenwelt
+1197,5,Ultra-Dimension Zéro Monde Rocheux
 1198,9,Ultra Space Wilds Cave World
 1198,6,Ultradimension Höhlenwelt
+1198,5,Ultra-Dimension Zéro Monde Grotte
 1199,9,Mount Lanakila Crater
 1199,6,Mount Lanakila Krater
+1199,5,Mont Lanakila Cratère

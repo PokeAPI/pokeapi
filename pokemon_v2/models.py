@@ -71,7 +71,7 @@ class HasSuperContestEffect(models.Model):
 
 
 class HasDescription(models.Model):
-    description = models.CharField(max_length=1000, default="")
+    description = models.CharField(max_length=2000, default="")
 
     class Meta:
         abstract = True

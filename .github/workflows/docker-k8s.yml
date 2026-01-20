@@ -64,7 +64,7 @@ jobs:
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
       - name: Lint k8s
-        run: (pwd; ls -la; cd Resources/k8s/kustomize && yamllint .)
+        run: (cd Resources/k8s/kustomize && yamllint .)
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.13.0
         with:

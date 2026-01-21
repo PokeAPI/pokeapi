@@ -19,7 +19,6 @@ import json
 from django.db import connection
 from pokemon_v2.models import *
 
-
 # why this way? how about use `__file__`
 DATA_LOCATION = "data/v2/csv/"
 DATA_LOCATION2 = os.path.join(os.path.dirname(__file__), "csv")

@@ -987,7 +987,11 @@ class PokemonEncounterView(APIView):
 
         encounter_objects = Encounter.objects.filter(pokemon=pokemon)
 
-        area_ids = encounter_objects.values_list("location_area", flat=True).distinct().order_by("location_area")
+        area_ids = (
+            encounter_objects.values_list("location_area", flat=True)
+            .distinct()
+            .order_by("location_area")
+        )
 
         location_area_objects = LocationArea.objects.filter(pk__in=area_ids)
         version_objects = Version.objects
@@ -999,9 +1003,11 @@ class PokemonEncounterView(APIView):
 
             area_encounters = encounter_objects.filter(location_area_id=area_id)
 
-            version_ids = area_encounters.values_list(
-                "version_id", flat=True
-            ).distinct().order_by("version_id")
+            version_ids = (
+                area_encounters.values_list("version_id", flat=True)
+                .distinct()
+                .order_by("version_id")
+            )
             version_details_list = []
 
             for version_id in version_ids:

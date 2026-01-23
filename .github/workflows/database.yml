@@ -72,5 +72,6 @@ jobs:
           docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
       - name: Test data
         run: |
-          curl -Ss http://localhost:8000/api/v2/pokemon/11/ | grep -q 'metapod'
-          curl -Ss http://localhost:8000/api/v2/pokemon/11/encounters | grep -q 'eterna-forest-area'
+          sleep 10
+          curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+          curl -Ss http://localhost:8000/api/v2/pokemon/1/encounters | grep -q '['

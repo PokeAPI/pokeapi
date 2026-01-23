@@ -43,7 +43,9 @@ jobs:
       - name: Dump DB
         run: stat db.sqlite3
       - name: Test data
-        run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+        run: |
+          curl -Ss http://localhost:8000/api/v2/pokemon/11/ | grep -q 'metapod'
+          curl -Ss http://localhost:8000/api/v2/pokemon/11/encounters | grep -q 'eterna-forest-area'
   postgres:
     runs-on: ubuntu-latest
     steps:
@@ -69,4 +71,6 @@ jobs:
           docker compose cp ./pokeapi.dump db:/tmp/
           docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
       - name: Test data
-        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+        run: |
+          curl -Ss http://localhost:8000/api/v2/pokemon/11/ | grep -q 'metapod'
+          curl -Ss http://localhost:8000/api/v2/pokemon/11/encounters | grep -q 'eterna-forest-area'

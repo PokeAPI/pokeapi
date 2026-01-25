@@ -1672,6 +1672,19 @@ class APIData:
         return pokemon_stat_past
 
     @classmethod
+    def setup_pokemon_original_stat_data(cls, pokemon, base_stat=10):
+        stat = cls.setup_stat_data(name="stt for pkmn")
+
+        pokemon_stat_original = PokemonStatOriginal(
+            pokemon=pokemon,
+            stat=stat,
+            base_stat=base_stat,
+        )
+        pokemon_stat_original.save()
+
+        return pokemon_stat_original
+
+    @classmethod
     def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):
         type = type or cls.setup_type_data(name="tp for pkmn")
 
@@ -4922,6 +4935,7 @@ class APITests(APIData, APITestCase):
         pokemon_past_stat = self.setup_pokemon_past_stat_data(
             pokemon=pokemon, generation=generation
         )
+        pokemon_original_stat = self.setup_pokemon_original_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
@@ -5069,6 +5083,19 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             past_stats_stats_obj["stat"]["url"],
             "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_past_stat.stat.pk),
+        )
+        # original stat params
+        self.assertEqual(
+            response.data["original_stats"][0]["base_stat"],
+            pokemon_original_stat.base_stat,
+        )
+        self.assertEqual(
+            response.data["original_stats"][0]["stat"]["name"],
+            pokemon_original_stat.stat.name,
+        )
+        self.assertEqual(
+            response.data["original_stats"][0]["stat"]["url"],
+            "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_original_stat.stat.pk),
         )
         # type params
         self.assertEqual(response.data["types"][0]["slot"], pokemon_type.slot)
@@ -5763,6 +5790,7 @@ class APITests(APIData, APITestCase):
         pokemon_past_stat = self.setup_pokemon_past_stat_data(
             pokemon=pokemon, generation=generation
         )
+        pokemon_original_stat = self.setup_pokemon_original_stat_data(pokemon=pokemon)
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation

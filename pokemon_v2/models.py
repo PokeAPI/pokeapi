@@ -1822,6 +1822,10 @@ class PokemonStatPast(HasPokemon, HasStat, HasGeneration):
     effort = models.IntegerField()
 
 
+class PokemonStatOriginal(HasPokemon, HasStat):
+    base_stat = models.IntegerField()
+
+
 class PokemonType(HasPokemon, HasType):
     slot = models.IntegerField()
 

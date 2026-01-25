@@ -1657,6 +1657,21 @@ class APIData:
         return pokemon_stat
 
     @classmethod
+    def setup_pokemon_past_stat_data(cls, pokemon, generation, base_stat=10, effort=10):
+        stat = cls.setup_stat_data(name="stt for pkmn")
+
+        pokemon_stat_past = PokemonStatPast(
+            pokemon=pokemon,
+            generation=generation,
+            stat=stat,
+            base_stat=base_stat,
+            effort=effort,
+        )
+        pokemon_stat_past.save()
+
+        return pokemon_stat_past
+
+    @classmethod
     def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):
         type = type or cls.setup_type_data(name="tp for pkmn")
 
@@ -4904,6 +4919,9 @@ class APITests(APIData, APITestCase):
             pokemon=pokemon, generation=generation
         )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_past_stat = self.setup_pokemon_past_stat_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
@@ -5028,6 +5046,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["stats"][0]["stat"]["url"],
             "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_stat.stat.pk),
+        )
+        # past stat params
+        past_stats_obj = response.data["past_stats"][0]
+        self.assertEqual(
+            past_stats_obj["generation"]["name"],
+            pokemon_past_stat.generation.name,
+        )
+        self.assertEqual(
+            past_stats_obj["generation"]["url"],
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_stat.generation.pk
+            ),
+        )
+
+        past_stats_stats_obj = past_stats_obj["stats"][0]
+        self.assertEqual(past_stats_stats_obj["base_stat"], pokemon_past_stat.base_stat)
+        self.assertEqual(past_stats_stats_obj["effort"], pokemon_past_stat.effort)
+        self.assertEqual(
+            past_stats_stats_obj["stat"]["name"], pokemon_past_stat.stat.name
+        )
+        self.assertEqual(
+            past_stats_stats_obj["stat"]["url"],
+            "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_past_stat.stat.pk),
         )
         # type params
         self.assertEqual(response.data["types"][0]["slot"], pokemon_type.slot)
@@ -5719,6 +5760,9 @@ class APITests(APIData, APITestCase):
             pokemon=pokemon, generation=generation
         )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_past_stat = self.setup_pokemon_past_stat_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation

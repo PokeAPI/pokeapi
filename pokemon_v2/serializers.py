@@ -4318,6 +4318,15 @@ class PokemonStatSerializer(serializers.ModelSerializer):
         fields = ("base_stat", "effort", "stat")
 
 
+class PokemonStatPastSerializer(serializers.ModelSerializer):
+    generation = GenerationSummarySerializer()
+    stat = StatSummarySerializer()
+
+    class Meta:
+        model = PokemonStatPast
+        fields = ("base_stat", "effort", "generation", "stat")
+
+
 #########################
 #  POKEMON SERIALIZERS  #
 #########################
@@ -4340,6 +4349,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     moves = serializers.SerializerMethodField("get_pokemon_moves")
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
+    past_stats = serializers.SerializerMethodField("get_past_pokemon_stats")
     types = serializers.SerializerMethodField("get_pokemon_types")
     past_types = serializers.SerializerMethodField("get_past_pokemon_types")
     forms = PokemonFormSummarySerializer(
@@ -4371,6 +4381,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "sprites",
             "cries",
             "stats",
+            "past_stats",
             "types",
             "past_types",
         )
@@ -5080,6 +5091,39 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 # add to existing array for this generation
                 del pokemon_past_ability["generation"]
                 past_obj["abilities"].append(pokemon_past_ability)
+
+        return final_data
+
+    def get_past_pokemon_stats(self, obj):
+        pokemon_past_stat_objects = PokemonStatPast.objects.filter(pokemon=obj)
+        pokemon_past_stats = PokemonStatPastSerializer(
+            pokemon_past_stat_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for pokemon_past_stat in pokemon_past_stats:
+            generation = pokemon_past_stat["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past stats object for this generation
+                past_obj["generation"] = pokemon_past_stat["generation"]
+                del pokemon_past_stat["generation"]
+
+                # create stats array
+                past_obj["stats"] = [pokemon_past_stat]
+
+                # add to past stats array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del pokemon_past_stat["generation"]
+                past_obj["stats"].append(pokemon_past_stat)
 
         return final_data
 

@@ -4327,14 +4327,6 @@ class PokemonStatPastSerializer(serializers.ModelSerializer):
         fields = ("base_stat", "effort", "generation", "stat")
 
 
-class PokemonStatOriginalSerializer(serializers.ModelSerializer):
-    stat = StatSummarySerializer()
-
-    class Meta:
-        model = PokemonStatOriginal
-        fields = ("base_stat", "stat")
-
-
 #########################
 #  POKEMON SERIALIZERS  #
 #########################
@@ -4358,9 +4350,6 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
     past_stats = serializers.SerializerMethodField("get_past_pokemon_stats")
-    original_stats = PokemonStatOriginalSerializer(
-        many=True, read_only=True, source="pokemonstatoriginal"
-    )
     types = serializers.SerializerMethodField("get_pokemon_types")
     past_types = serializers.SerializerMethodField("get_past_pokemon_types")
     forms = PokemonFormSummarySerializer(
@@ -4393,7 +4382,6 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "cries",
             "stats",
             "past_stats",
-            "original_stats",
             "types",
             "past_types",
         )

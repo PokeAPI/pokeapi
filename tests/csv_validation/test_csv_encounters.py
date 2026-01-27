@@ -44,9 +44,10 @@ class TestCsvStructure:
             for e in encounters_data
             if e["encounter_slot_id"] not in encounter_slots_lookup
         ]
-        assert not invalid, (
-            f"{len(invalid)} encounters reference missing slots:\n"
-            + "\n".join(invalid[:10])
+        assert (
+            not invalid
+        ), f"{len(invalid)} encounters reference missing slots:\n" + "\n".join(
+            invalid[:10]
         )
 
     def test_encounters_reference_valid_location_areas(
@@ -70,9 +71,7 @@ class TestCsvStructure:
             for s in encounter_slots_data
             if s["encounter_method_id"] not in encounter_methods_lookup
         ]
-        assert not invalid, (
-            f"Slots reference missing methods:\n" + "\n".join(invalid)
-        )
+        assert not invalid, f"Slots reference missing methods:\n" + "\n".join(invalid)
 
     def test_no_duplicate_encounter_ids(self, encounters_data):
         ids = [e["id"] for e in encounters_data]
@@ -96,9 +95,7 @@ class TestGameEncounters:
     def test_has_encounter_data(self, game_config: GameConfig, game_encounters):
         assert game_encounters, f"No encounters found for {game_config.name}"
 
-    def test_pokemon_ids_valid_for_game(
-        self, game_config: GameConfig, game_encounters
-    ):
+    def test_pokemon_ids_valid_for_game(self, game_config: GameConfig, game_encounters):
         invalid = [
             f"id={e['id']} pokemon={e['pokemon_id']}"
             for e in game_encounters
@@ -134,9 +131,7 @@ class TestGameEncounters:
         ]
         assert not invalid, "min_level > max_level:\n" + "\n".join(invalid)
 
-    def test_version_exclusives_correct(
-        self, game_config: GameConfig, game_encounters
-    ):
+    def test_version_exclusives_correct(self, game_config: GameConfig, game_encounters):
         if not game_config.version_exclusives:
             pytest.skip("No version exclusives defined")
         wrong = []
@@ -155,9 +150,7 @@ class TestGameEncounters:
             + (f"\n... and {len(wrong) - 10} more" if len(wrong) > 10 else "")
         )
 
-    def test_no_duplicate_encounters(
-        self, game_config: GameConfig, game_encounters
-    ):
+    def test_no_duplicate_encounters(self, game_config: GameConfig, game_encounters):
         seen = set()
         dupes = []
         for e in game_encounters:
@@ -178,9 +171,7 @@ class TestGameEncounters:
             + (f"\n... and {len(dupes) - 10} more" if len(dupes) > 10 else "")
         )
 
-    def test_version_ids_valid_for_game(
-        self, game_config: GameConfig, game_encounters
-    ):
+    def test_version_ids_valid_for_game(self, game_config: GameConfig, game_encounters):
         invalid_versions = set()
         for e in game_encounters:
             vid = parse_int(e["version_id"])

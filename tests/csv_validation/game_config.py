@@ -74,7 +74,6 @@ LGPE_VERSION_EXCLUSIVES = {
     89: LGPE_VERSION_PIKACHU,
     # Scyther
     123: LGPE_VERSION_PIKACHU,
-
     # Eevee exclusives
     # Ekans, Arbok
     23: LGPE_VERSION_EEVEE,

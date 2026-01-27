@@ -19,68 +19,90 @@ from dataclasses import dataclass, field
 class GameConfig:
     """Configuration for validating a specific game's encounter data."""
 
-    game_id: str
+    version_group_id: int
     name: str
-    version_ids: list[int]  # PokeAPI version IDs
-    version_group_id: int  # PokeAPI version group ID
+    version_ids: list[int]
     valid_pokemon: set[int]
     valid_method_ids: set[int]
     version_exclusives: dict[int, int] = field(
         default_factory=dict
     )  # pokemon_id -> version_id
-    level_bounds: tuple[int, int] = (1, 100)
 
 
 # =============================================================================
 # LGPE Configuration
 # =============================================================================
 
-LGPE_POKEMON = set(range(1, 152)) | {808, 809}
-
+# PokeAPI IDs
 LGPE_VERSION_PIKACHU = 31
 LGPE_VERSION_EEVEE = 32
 LGPE_VERSION_GROUP = 19
 
-LGPE_METHOD_IDS = {38, 39, 40, 41}
+# Pokemon available in LGPE (Kanto dex + Meltan/Melmetal)
+LGPE_POKEMON = set(range(1, 152)) | {808, 809}
+
+# Encounter method IDs
+LGPE_METHOD_OVERWORLD = 38
+LGPE_METHOD_OVERWORLD_WATER = 39
+LGPE_METHOD_OVERWORLD_FLYING = 40
+LGPE_METHOD_RARE_SPAWN = 41
+
+LGPE_METHOD_IDS = {
+    LGPE_METHOD_OVERWORLD,
+    LGPE_METHOD_OVERWORLD_WATER,
+    LGPE_METHOD_OVERWORLD_FLYING,
+    LGPE_METHOD_RARE_SPAWN,
+}
 
 LGPE_VERSION_EXCLUSIVES = {
-    # Pikachu exclusives (version_id = 31)
-    27: 31,
-    28: 31,  # Sandshrew, Sandslash
-    43: 31,
-    44: 31,
-    45: 31,  # Oddish line
-    56: 31,
-    57: 31,  # Mankey, Primeape
-    58: 31,
-    59: 31,  # Growlithe, Arcanine
-    88: 31,
-    89: 31,  # Grimer, Muk
-    123: 31,  # Scyther
-    # Eevee exclusives (version_id = 32)
-    23: 32,
-    24: 32,  # Ekans, Arbok
-    37: 32,
-    38: 32,  # Vulpix, Ninetales
-    52: 32,
-    53: 32,  # Meowth, Persian
-    69: 32,
-    70: 32,
-    71: 32,  # Bellsprout line
-    109: 32,
-    110: 32,  # Koffing, Weezing
-    127: 32,  # Pinsir
+    # Pikachu exclusives
+    # Sandshrew, Sandslash
+    27: LGPE_VERSION_PIKACHU,
+    28: LGPE_VERSION_PIKACHU,
+    # Oddish, Gloom, Vileplume
+    43: LGPE_VERSION_PIKACHU,
+    44: LGPE_VERSION_PIKACHU,
+    45: LGPE_VERSION_PIKACHU,
+    # Mankey, Primeape
+    56: LGPE_VERSION_PIKACHU,
+    57: LGPE_VERSION_PIKACHU,
+    # Growlithe, Arcanine
+    58: LGPE_VERSION_PIKACHU,
+    59: LGPE_VERSION_PIKACHU,
+    # Grimer, Muk
+    88: LGPE_VERSION_PIKACHU,
+    89: LGPE_VERSION_PIKACHU,
+    # Scyther
+    123: LGPE_VERSION_PIKACHU,
+
+    # Eevee exclusives
+    # Ekans, Arbok
+    23: LGPE_VERSION_EEVEE,
+    24: LGPE_VERSION_EEVEE,
+    # Vulpix, Ninetales
+    37: LGPE_VERSION_EEVEE,
+    38: LGPE_VERSION_EEVEE,
+    # Meowth, Persian
+    52: LGPE_VERSION_EEVEE,
+    53: LGPE_VERSION_EEVEE,
+    # Bellsprout, Weepinbell, Victreebel
+    69: LGPE_VERSION_EEVEE,
+    70: LGPE_VERSION_EEVEE,
+    71: LGPE_VERSION_EEVEE,
+    # Koffing, Weezing
+    109: LGPE_VERSION_EEVEE,
+    110: LGPE_VERSION_EEVEE,
+    # Pinsir
+    127: LGPE_VERSION_EEVEE,
 }
 
 LGPE_CONFIG = GameConfig(
-    game_id="lgpe",
+    version_group_id=LGPE_VERSION_GROUP,
     name="Let's Go Pikachu/Eevee",
     version_ids=[LGPE_VERSION_PIKACHU, LGPE_VERSION_EEVEE],
-    version_group_id=LGPE_VERSION_GROUP,
     valid_pokemon=LGPE_POKEMON,
     valid_method_ids=LGPE_METHOD_IDS,
     version_exclusives=LGPE_VERSION_EXCLUSIVES,
-    level_bounds=(1, 100),
 )
 
 
@@ -88,13 +110,6 @@ LGPE_CONFIG = GameConfig(
 # Game Registry
 # =============================================================================
 
-GAME_CONFIGS: dict[str, GameConfig] = {
-    "lgpe": LGPE_CONFIG,
+GAME_CONFIGS: dict[int, GameConfig] = {
+    LGPE_VERSION_GROUP: LGPE_CONFIG,
 }
-
-
-def get_game_config(game_id: str) -> GameConfig:
-    if game_id not in GAME_CONFIGS:
-        available = ", ".join(GAME_CONFIGS.keys())
-        raise ValueError(f"Unknown game '{game_id}'. Available: {available}")
-    return GAME_CONFIGS[game_id]

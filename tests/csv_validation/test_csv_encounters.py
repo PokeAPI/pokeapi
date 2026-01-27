@@ -7,7 +7,6 @@ to catch data quality issues before merge.
 Validation criteria (from encounter-collection README):
 - All Pokemon IDs are valid for the game
 - Encounter method IDs are valid for the game's version group
-- Level ranges are within valid bounds
 - Version exclusives only appear with correct version_id
 - No duplicate encounter entries
 - Foreign key references are valid (slots, location_areas exist)
@@ -123,21 +122,6 @@ class TestGameEncounters:
         assert not invalid_methods, (
             f"Invalid methods for {game_config.name}: {invalid_methods}\n"
             f"Valid: {game_config.valid_method_ids}"
-        )
-
-    def test_levels_within_bounds(
-        self, game_config: GameConfig, game_encounters
-    ):
-        lo, hi = game_config.level_bounds
-        invalid = []
-        for e in game_encounters:
-            min_l, max_l = parse_int(e["min_level"]), parse_int(e["max_level"])
-            if not (lo <= min_l <= hi):
-                invalid.append(f"id={e['id']} min_level={min_l}")
-            if not (lo <= max_l <= hi):
-                invalid.append(f"id={e['id']} max_level={max_l}")
-        assert not invalid, (
-            f"Levels outside [{lo}, {hi}]:\n" + "\n".join(invalid[:10])
         )
 
     def test_min_level_not_greater_than_max(

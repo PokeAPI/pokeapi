@@ -77,7 +77,7 @@ def get_encounters_for_version_group(
 @pytest.fixture(
     scope="session",
     params=list(GAME_CONFIGS.values()),
-    ids=list(GAME_CONFIGS.keys()),
+    ids=[c.name for c in GAME_CONFIGS.values()],
 )
 def game_config(request) -> GameConfig:
     """Parametrized fixture that yields each game config once per session."""

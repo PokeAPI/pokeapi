@@ -2282,6 +2282,17 @@ def _build_pokemons():
     build_generic((PokemonStat,), "pokemon_stats.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        yield PokemonStatPast(
+            pokemon_id=int(info[0]),
+            generation_id=int(info[1]),
+            stat_id=int(info[2]),
+            base_stat=int(info[3]),
+            effort=int(info[4]),
+        )
+
+    build_generic((PokemonStatPast,), "pokemon_stats_past.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield PokemonType(
             pokemon_id=int(info[0]), type_id=int(info[1]), slot=int(info[2])
         )

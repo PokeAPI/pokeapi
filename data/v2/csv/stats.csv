@@ -7,3 +7,4 @@ id,damage_class_id,identifier,is_battle_only,game_index
 6,,speed,0,4
 7,,accuracy,1,
 8,,evasion,1,
+9,3,special,0,7

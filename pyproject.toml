@@ -17,3 +17,18 @@ dependencies = [
     "ruff>=0.14.14",
     "ty>=0.0.14",
 ]
+
+[tool.ruff]
+line-length = 120
+exclude = ["data/v2/sprites/**", "data/v2/cries/**"]
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001",
+]

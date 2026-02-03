@@ -1,7 +1,6 @@
 from django.urls import include, path
-from pokemon_v2 import urls as pokemon_v2_urls
 
-# pylint: disable=invalid-name
+from pokemon_v2 import urls as pokemon_v2_urls
 
 urlpatterns = [
     path("", include(pokemon_v2_urls)),

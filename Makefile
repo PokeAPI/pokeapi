@@ -83,7 +83,7 @@ format:  # Format the source code
 	uv run ruff check . --fix --extend-exclude '.+/scripts/.+'
 
 format-check:  # Check the source code has been formatted
-	black . --check --extend-exclude '.+/scripts/.+'
+	uv run ruff check . --extend-exclude '.+/scripts/.+'
 
 pull:
 	git checkout master

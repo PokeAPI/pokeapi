@@ -4,10 +4,6 @@ docker_config = --settings=config.docker-compose
 gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 gqlv1beta_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml -f Resources/compose/docker-compose-prod-graphql-v1beta.yml
 
-# Auto-detect Python and pip commands
-PYTHON := $(shell which python3 2>/dev/null || which python 2>/dev/null || echo python3)
-PIP := $(shell which pip3 2>/dev/null || which pip 2>/dev/null || echo pip3)
-
 .PHONY: help
 .SILENT:
 
@@ -15,40 +11,37 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install:  # Install base requirements to run project
-	$(PIP) install -r requirements.txt
-
-dev-install:  # Install developer requirements + base requirements
-	$(PIP) install -r test-requirements.txt
+	uv sync
 
 setup:  # Set up the project database
-	$(PYTHON) manage.py migrate ${local_config}
+	uv run manage.py migrate ${local_config}
 
 build-db:  # Build database
-	echo "from data.v2.build import build_all; build_all()" | $(PYTHON) manage.py shell ${local_config}
+	echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${local_config}
 
 wipe-sqlite-db:  # Delete's the project database
 	rm -rf db.sqlite3
 
 serve:  # Run the project locally
-	$(PYTHON) manage.py runserver ${local_config}
+	uv run manage.py runserver ${local_config}
 
 test:  # Run tests
-	$(PYTHON) manage.py test ${local_config}
+	uv run manage.py test ${local_config}
 
 clean:  # Remove any pyc files
 	find . -type f -name '*.pyc' -delete
 
 migrate:  # Run any outstanding migrations
-	$(PYTHON) manage.py migrate ${local_config}
+	uv run manage.py migrate ${local_config}
 
 make-migrations:  # Create migrations files if schema has changed
-	$(PYTHON) manage.py makemigrations ${local_config}
+	uv run manage.py makemigrations ${local_config}
 
 shell:  # Load a shell
-	$(PYTHON) manage.py shell ${local_config}
+	uv run manage.py shell ${local_config}
 
 openapi-generate:
-	$(PYTHON) manage.py spectacular --color --file openapi.yml ${local_config}
+	uv run manage.py spectacular --color --file openapi.yml ${local_config}
 
 docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d

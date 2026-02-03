@@ -15,7 +15,6 @@ import csv
 import os
 import os.path
 import re
-import json
 from django.db import connection
 from pokemon_v2.models import *
 

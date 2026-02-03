@@ -1,7 +1,6 @@
 import copy
 import os
 import struct
-import sys
 
 class TextLine():
 	offset = None
@@ -142,7 +141,7 @@ class TextFile():
 			# Cast 2 bytes to figure out what to do next
 			value = struct.unpack_from("<H", data, i)[0]
 			if (value == this.__KEY_TERMINATOR):
-				break;
+				break
 			i += 2
 
 			if (value == this.__KEY_TERMINATOR):

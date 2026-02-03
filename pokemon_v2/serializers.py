@@ -1,5 +1,4 @@
 from collections import OrderedDict
-import json
 from django.urls import reverse
 from rest_framework import serializers
 from drf_spectacular.utils import extend_schema_field

@@ -78,4 +78,10 @@ encounter_method_id,local_language_id,name
 30,5,En utilisant le Devon Scope
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
-38,9,"Walking in grass, flowers, terrain, or in a cave"
+38,9,Walking in the overworld
+39,9,Surfing in the overworld
+40,9,Flying Pokemon in the sky
+41,9,Rare spawn in grass with lure or catch combo
+42,9,Rare spawn in the sky with lure or catch combo
+43,9,Rare spawn in water with lure or catch combo
+44,9,"Walking in grass, flowers, terrain, or in a cave"

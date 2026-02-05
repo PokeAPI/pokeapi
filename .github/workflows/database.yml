@@ -1,4 +1,6 @@
 name: Database
+# These workflows are intended to check that various actions related to the database
+# (such as building, exporting, and importing) work as expected.
 
 on:
   pull_request:
@@ -52,6 +54,20 @@ jobs:
         run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
   postgres:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: pokeapi
+          POSTGRES_PASSWORD: pokeapi
+          POSTGRES_DB: pokeapi
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -59,22 +75,29 @@ jobs:
           submodules: recursive
       - name: Install uv
         uses: astral-sh/setup-uv@v7
-      - name: Build
-        run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-          make docker-migrate
-          make docker-build-db
+      - name: Install dependencies
+        run: make install
+      - name: Run migrations
+        run: uv run manage.py migrate --settings=config.local
+      - name: Build database
+        run: uv run manage.py shell --settings=config.local -c "from data.v2.build import build_all; build_all(); exit()"
       - name: Dump DB
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.dump"
-      - name: Copy dump
-        run: docker compose cp db:/tmp/pokeapi.dump ./
-      - name: Down services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml down -v
-      - name: Start services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-      - name: Import database
+        run: pg_dump -h localhost -U pokeapi -Fc -N 'hdb_*' pokeapi > pokeapi.dump
+        env:
+          PGPASSWORD: pokeapi
+      - name: Drop and recreate database
         run: |
-          docker compose cp ./pokeapi.dump db:/tmp/
-          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
+          psql -h localhost -U pokeapi -d postgres -c "DROP DATABASE pokeapi;"
+          psql -h localhost -U pokeapi -d postgres -c "CREATE DATABASE pokeapi;"
+        env:
+          PGPASSWORD: pokeapi
+      - name: Import database
+        run: pg_restore -h localhost -U pokeapi -d pokeapi pokeapi.dump
+        env:
+          PGPASSWORD: pokeapi
+      - name: Start server
+        run: |
+          nohup uv run manage.py runserver 0.0.0.0:8000 --settings=config.local &
+          sleep 5
       - name: Test data
-        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+        run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'

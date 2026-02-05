@@ -1,4 +1,6 @@
 name: Container
+# These workflows are intended to check that the Docker and Kubernetes
+# configurations work as expected in a local development environment.
 
 on:
   pull_request:

@@ -47,16 +47,16 @@ docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d
 
 docker-migrate:  # (Docker) Run any pending migrations
-	docker compose exec -T app python manage.py migrate ${docker_config}
+	docker compose --verbose exec -T app uv run manage.py migrate ${docker_config}
 
 docker-build-db:  # (Docker) Build the database
-	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${docker_config}'
 
 docker-make-migrations:  # (Docker) Create migrations files if schema has changed
-	docker compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
+	docker compose exec -T app sh -c 'uv run manage.py makemigrations ${docker_config}'
 
 docker-flush-db:  # (Docker) Removes all the data present in the database but preserves tables and migrations
-	docker compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
+	docker compose exec -T app sh -c 'uv run manage.py flush --no-input ${docker_config}'
 
 docker-destroy-db:  # (Docker) Removes the volume where the database is installed on, alongside to the container itself
 	docker rm -f pokeapi_db_1
@@ -72,7 +72,7 @@ docker-down:  # (Docker) Stop and removes containers and networks
 	docker compose down
 
 docker-test:  # (Docker) Run tests
-	docker compose exec -T app python manage.py test ${local_config}
+	docker compose exec -T app uv run manage.py test ${local_config}
 
 docker-prod:
 	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
@@ -130,10 +130,10 @@ kustomize-ga-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s clu
 	kubectl apply -k Resources/k8s/kustomize/ga/
 
 k8s-migrate:  # (k8s) Run any pending migrations
-	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate ${docker_config}
+	kubectl exec --namespace pokeapi deployment/pokeapi -- uv run manage.py migrate ${docker_config}
 
 k8s-build-db:  # (k8s) Build the database
-	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${docker_config}'
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi

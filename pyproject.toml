@@ -14,6 +14,7 @@ dependencies = [
     "drf-spectacular==0.29.0",
     "gunicorn==23.0.0",
     "psycopg==3.3.2",
+    "psycopg2-binary>=2.9.11",
     "ruff>=0.14.14",
     "ty>=0.0.14",
 ]

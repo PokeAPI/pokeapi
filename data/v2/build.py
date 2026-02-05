@@ -1,6 +1,6 @@
 #  To build out the data you'll need to jump into the Django shell
 #
-#     $ python manage.py shell
+#     $ uv run manage.py shell
 #
 #  and run the build script with
 #

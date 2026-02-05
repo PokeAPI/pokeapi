@@ -1,5 +1,6 @@
 from django.test import TestCase
-from pokemon_v2.models import *
+
+from pokemon_v2.models import Ability
 
 
 class AbilityTestCase(TestCase):

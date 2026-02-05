@@ -1,2 +1,0 @@
--r requirements.txt
-black==26.1.0

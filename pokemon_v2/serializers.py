@@ -5637,8 +5637,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trade_species = PokemonSpeciesSummarySerializer()
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
-    region_id = RegionSummarySerializer(source="region")
-    base_form_id = PokemonSpeciesSummarySerializer(source="base_form")
+    region = RegionSummarySerializer(source="region")
+    base_form = PokemonSummarySerializer(source="base_form")
     used_move = MoveSummarySerializer()
 
     class Meta:

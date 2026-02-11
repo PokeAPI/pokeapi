@@ -37,7 +37,9 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
-- Install the requirements using pip:
+- Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python environment management.
+
+- Install the requirements using the Makefile commands:
 
     ```sh
     make install
@@ -97,8 +99,8 @@ If you don't have `make` on your machine you can use the following commands
 
 ```sh
 docker compose up -d
-docker compose exec -T app python manage.py migrate --settings=config.docker-compose
-docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose'
+docker compose exec -T app uv run manage.py migrate --settings=config.docker-compose
+docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell --settings=config.docker-compose'
 ```
 
 Browse [localhost/api/v2/](http://localhost/api/v2/) or [localhost/api/v2/pokemon/bulbasaur/](http://localhost/api/v2/pokemon/bulbasaur/) on port `80`.
@@ -149,8 +151,8 @@ Configure `kubectl` to point to a cluster and then run the following commands to
 kubectl apply -k Resources/k8s/kustomize/base/
 kubectl config set-context --current --namespace pokeapi # (Optional) Set pokeapi ns as the working ns
 # Wait for the cluster to spin up
-kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate --settings=config.docker-compose # Migrate the DB
-kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell --settings=config.docker-compose' # Build the db
+kubectl exec --namespace pokeapi deployment/pokeapi -- uv run manage.py migrate --settings=config.docker-compose # Migrate the DB
+kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell --settings=config.docker-compose' # Build the db
 kubectl wait --namespace pokeapi --timeout=120s --for=condition=complete job/load-graphql # Wait for Graphql configuration job to finish
 ```
 

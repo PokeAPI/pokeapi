@@ -25,3 +25,11 @@ encounter_condition_id,local_language_id,name
 9,9,Story Progress
 10,5,Divers
 10,9,Miscellaneous
+11,5,Objet
+11,9,Item
+12,5,Jour de la semaine
+12,9,Weekday
+13,5,Premier Pokemon de l'équipe
+13,9,First party Pokemon
+14,5,Rencontre spéciale
+14,9,Special encounter

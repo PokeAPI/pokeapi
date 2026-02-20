@@ -3788,51 +3788,99 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10501,9,Caramel Swirl Ribbon Sweet,Caramel Swirl Ribbon Sweet Alcremie
 10502,5,Mélange Tricolore Ruban en Sucre,Charmilly Mélange Tricolore Ruban en Sucre
 10502,9,Rainbow Swirl Ribbon Sweet,Rainbow Swirl Ribbon Sweet Alcremie
+10503,5,Méga-Mélodelfe,Méga-Mélodelfe
 10503,9,Mega Clefable,Mega Clefable
+10504,5,Méga-Empiflor,Méga-Empiflor
 10504,9,Mega Victreebel,Mega Victreebel
+10505,5,Méga-Staross,Méga-Staross
 10505,9,Mega Starmie,Mega Starmie
+10506,5,Méga-Dracolosse,Méga-Dracolosse
 10506,9,Mega Dragonite,Mega Dragonite
+10507,5,Méga-Méganium,Méga-Méganium
 10507,9,Mega Meganium,Mega Meganium
+10508,5,Méga-Aligatueur,Méga-Aligatueur
 10508,9,Mega Feraligatr,Mega Feraligatr
+10509,5,Méga-Airmure,Méga-Airmure
 10509,9,Mega Skarmory,Mega Skarmory
+10510,5,Méga-Momartik,Méga-Momartik
 10510,9,Mega Froslass,Mega Froslass
+10511,5,Méga-Roitiflam,Méga-Roitiflam
 10511,9,Mega Emboar,Mega Emboar
+10512,5,Méga-Minotaupe,Méga-Minotaupe
 10512,9,Mega Excadrill,Mega Excadrill
+10513,5,Méga-Brutapode,Méga-Brutapode
 10513,9,Mega Scolipede,Mega Scolipede
+10514,5,Méga-Baggaïd,Méga-Baggaïd
 10514,9,Mega Scrafty,Mega Scrafty
+10515,5,Méga-Ohmassacre,Méga-Ohmassacre
 10515,9,Mega Eelektross,Mega Eelektross
+10516,5,Méga-Lugulabre,Méga-Lugulabre
 10516,9,Mega Chandelure,Mega Chandelure
+10517,5,Méga-Blindépique,Méga-Blindépique
 10517,9,Mega Chesnaught,Mega Chesnaught
+10518,5,Méga-Goupelin,Méga-Goupelin
 10518,9,Mega Delphox,Mega Delphox
+10519,5,Méga-Amphinobi,Méga-Amphinobi
 10519,9,Mega Greninja,Mega Greninja
+10520,5,Méga-Némélios,Méga-Némélios
 10520,9,Mega Pyroar,Mega Pyroar
+10521,5,Méga-Floette,Méga-Floette
 10521,9,Mega Floette,Mega Floette
+10522,5,Méga-Sepiatroce,Méga-Sepiatroce
 10522,9,Mega Malamar,Mega Malamar
+10523,5,Méga-Golgopathe,Méga-Golgopathe
 10523,9,Mega Barbaracle,Mega Barbaracle
+10524,5,Méga-Kravarech,Méga-Kravarech
 10524,9,Mega Dragalge,Mega Dragalge
+10525,5,Méga-Brutalibré,Méga-Brutalibré
 10525,9,Mega Hawlucha,Mega Hawlucha
+10526,5,Méga-Zygarde,Méga-Zygarde
 10526,9,Mega Zygarde,Mega Zygarde
+10527,5,Méga-Draïeul,Méga-Draïeul
 10527,9,Mega Drampa,Mega Drampa
+10528,5,Méga-Hexadron,Méga-Hexadron
 10528,9,Mega Falinks,Mega Falinks
+10529,5,Méga-Raichu X,Méga-Raichu X
 10529,9,Mega Raichu X,Mega Raichu X
+10530,5,Méga-Raichu Y,Méga-Raichu Y
 10530,9,Mega Raichu Y,Mega Raichu Y
+10531,5,Méga-Éoko,Méga-Éoko
 10531,9,Mega Chimecho,Mega Chimecho
+10532,5,Méga-Absol Z,Méga-Absol Z
 10532,9,Mega Absol Z,Mega Absol Z
+10533,5,Méga-Étouraptor,Méga-Étouraptor
 10533,9,Mega Staraptor,Mega Staraptor
+10534,5,Méga-Carchacrok Z,Méga-Carchacrok Z
 10534,9,Mega Garchomp Z,Mega Garchomp Z
+10535,5,Méga-Lucario Z,Méga-Lucario Z
 10535,9,Mega Lucario Z,Mega Lucario Z
+10536,5,Méga-Heatran,Méga-Heatran
 10536,9,Mega Heatran,Mega Heatran
+10537,5,Méga-Darkrai,Méga-Darkrai
 10537,9,Mega Darkrai,Mega Darkrai
+10538,5,Méga-Golemastoc,Méga-Golemastoc
 10538,9,Mega Golurk,Mega Golurk
+10539,5,Méga-Mistigrix,Méga-Mistigrix
 10539,9,Mega Meowstic,Mega Meowstic
+10540,5,Méga-Crabominable,Méga-Crabominable
 10540,9,Mega Crabominable,Mega Crabominable
+10541,5,Méga-Sarmuraï,Méga-Sarmuraï
 10541,9,Mega Golisopod,Mega Golisopod
+10542,5,Méga-Magearna,Méga-Magearna
 10542,9,Mega Magearna,Mega Magearna
+10543,5,Méga-Magearna Couleur du Passé,Méga-Magearna Couleur du Passé
 10543,9,Mega Original Magearna,Mega Original Magearna
+10544,5,Méga-Zeraora,Méga-Zeraora
 10544,9,Mega Zeraora,Mega Zeraora
+10545,5,Méga-Scovilain,Méga-Scovilain
 10545,9,Mega Scovillain,Mega Scovillain
+10546,5,Méga-Floréclat,Méga-Floréclat
 10546,9,Mega Glimmora,Mega Glimmora
+10547,5,Méga-Nigirigon Forme Courbée,Méga-Nigirigon Forme Courbée
 10547,9,Mega Curly Tatsugiri,Mega Curly Tatsugiri
+10548,5,Méga-Nigirigon Forme Affalée,Méga-Nigirigon Forme Affalée
 10548,9,Mega Droopy Tatsugiri,Mega Droopy Tatsugiri
+10549,5,Méga-Nigirigon Forme Raide,Méga-Nigirigon Forme Raide
 10549,9,Mega Stretchy Tatsugiri,Mega Stretchy Tatsugiri
+10550,5,Méga-Glaivodo,Méga-Glaivodo
 10550,9,Mega Baxcalibur,Mega Baxcalibur

@@ -79,9 +79,15 @@ encounter_method_id,local_language_id,name
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
 38,9,Walking in the overworld
+38,5,En marchant dans le monde extérieur
 39,9,Surfing in the overworld
+39,5,En surfant dans le monde extérieur
 40,9,Flying Pokemon in the sky
+40,5,Pokemon volant dans le ciel
 41,9,Rare spawn in grass with lure or catch combo
+41,5,Apparition rare dans les herbes avec un parfum ou un combo capture
+42,5,Apparition rare dans le ciel avec un parfum ou un combo capture
 42,9,Rare spawn in the sky with lure or catch combo
+43,5,Apparition rare dans l'eau avec un parfum ou un combo capture
 43,9,Rare spawn in water with lure or catch combo
 44,9,"Walking in grass, flowers, terrain, or in a cave"

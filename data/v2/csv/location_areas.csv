@@ -339,8 +339,8 @@ id,location_id,game_index,identifier
 382,444,40,1f
 383,444,41,b1f
 384,444,42,b2f
-385,445,43,main cave
-386,445,47,ice room
+385,445,43,
+386,445,47,bf1
 387,446,48,entrance
 388,446,49,
 389,447,50,
@@ -1092,8 +1092,10 @@ id,location_id,game_index,identifier
 1201,232,0,
 1202,233,0,
 1203,234,0,
-1204,445,0,high tide cave
-1205,445,0,low tide cave
-1206,445,0,low tide ice room
-1207,452,0,north
-1208,452,0,south
+1204,445,0,high-tide-cave
+1205,445,0,low-tide-cave
+1206,445,0,low-tide-cave-bf1
+1207,445,0,low-tide-cave-bf2
+1208,445,0,low-tide-cave-bf3
+1209,452,0,north-oras
+1210,452,0,south-oras

@@ -1543,7 +1543,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10517,chesnaught-mega,mega,10292,31,1,1,1,2,870
 10518,delphox-mega,mega,10293,31,1,1,1,2,874
 10519,greninja-mega,mega,10294,31,1,1,1,4,880
-10520,pyroar-mega,mega,10295,31,1,1,1,2,948
+10520,pyroar-mega,mega,10295,31,1,1,1,3,948
 10521,floette-mega,mega,10296,31,1,1,1,7,960
 10522,malamar-mega,mega,10297,31,1,1,1,2,994
 10523,barbaracle-mega,mega,10298,31,1,1,1,2,997
@@ -1574,3 +1574,6 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10548,tatsugiri-droopy-mega,mega,10323,31,1,1,1,5,1359
 10549,tatsugiri-stretchy-mega,mega,10324,31,1,1,1,6,1361
 10550,baxcalibur-mega,mega,10325,31,1,1,1,2,1356
+10551,pyroar-female,female,668,15,0,0,0,2,949
+10552,frillish-female,female,592,11,1,0,0,2,794
+10553,jellicent-female,female,593,11,1,0,0,2,795

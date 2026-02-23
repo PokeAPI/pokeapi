@@ -86,7 +86,8 @@ encounter_method_id,local_language_id,name
 40,5,Pokemon volant dans le ciel
 41,9,Rare spawn in grass with lure or catch combo
 41,5,Apparition rare dans les herbes avec un parfum ou un combo capture
-42,9,Rare spawn in the sky with lure or catch combo
 42,5,Apparition rare dans le ciel avec un parfum ou un combo capture
-43,9,Rare spawn in water with lure or catch combo
+42,9,Rare spawn in the sky with lure or catch combo
 43,5,Apparition rare dans l'eau avec un parfum ou un combo capture
+43,9,Rare spawn in water with lure or catch combo
+44,9,"Encountering 5 Pokemon within grass, flowers, or wthin a cave"

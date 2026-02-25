@@ -4,10 +4,6 @@ docker_config = --settings=config.docker-compose
 gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 gqlv1beta_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml -f Resources/compose/docker-compose-prod-graphql-v1beta.yml
 
-# Auto-detect Python and pip commands
-PYTHON := $(shell which python3 2>/dev/null || which python 2>/dev/null || echo python3)
-PIP := $(shell which pip3 2>/dev/null || which pip 2>/dev/null || echo pip3)
-
 .PHONY: help
 .SILENT:
 
@@ -15,55 +11,52 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install:  # Install base requirements to run project
-	$(PIP) install -r requirements.txt
-
-dev-install:  # Install developer requirements + base requirements
-	$(PIP) install -r test-requirements.txt
+	uv sync
 
 setup:  # Set up the project database
-	$(PYTHON) manage.py migrate ${local_config}
+	uv run manage.py migrate ${local_config}
 
 build-db:  # Build database
-	echo "from data.v2.build import build_all; build_all()" | $(PYTHON) manage.py shell ${local_config}
+	echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${local_config}
 
 wipe-sqlite-db:  # Delete's the project database
 	rm -rf db.sqlite3
 
 serve:  # Run the project locally
-	$(PYTHON) manage.py runserver ${local_config}
+	uv run manage.py runserver ${local_config}
 
 test:  # Run tests
-	$(PYTHON) manage.py test ${local_config}
+	uv run manage.py test ${local_config}
 
 clean:  # Remove any pyc files
 	find . -type f -name '*.pyc' -delete
 
 migrate:  # Run any outstanding migrations
-	$(PYTHON) manage.py migrate ${local_config}
+	uv run manage.py migrate ${local_config}
 
 make-migrations:  # Create migrations files if schema has changed
-	$(PYTHON) manage.py makemigrations ${local_config}
+	uv run manage.py makemigrations ${local_config}
 
 shell:  # Load a shell
-	$(PYTHON) manage.py shell ${local_config}
+	uv run manage.py shell ${local_config}
 
 openapi-generate:
-	$(PYTHON) manage.py spectacular --color --file openapi.yml ${local_config}
+	uv run manage.py spectacular --color --file openapi.yml ${local_config}
 
 docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d
 
 docker-migrate:  # (Docker) Run any pending migrations
-	docker compose exec -T app python manage.py migrate ${docker_config}
+	docker compose --verbose exec -T app uv run manage.py migrate ${docker_config}
 
 docker-build-db:  # (Docker) Build the database
-	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	docker compose exec -T app sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${docker_config}'
 
 docker-make-migrations:  # (Docker) Create migrations files if schema has changed
-	docker compose exec -T app sh -c 'python manage.py makemigrations ${docker_config}'
+	docker compose exec -T app sh -c 'uv run manage.py makemigrations ${docker_config}'
 
 docker-flush-db:  # (Docker) Removes all the data present in the database but preserves tables and migrations
-	docker compose exec -T app sh -c 'python manage.py flush --no-input ${docker_config}'
+	docker compose exec -T app sh -c 'uv run manage.py flush --no-input ${docker_config}'
 
 docker-destroy-db:  # (Docker) Removes the volume where the database is installed on, alongside to the container itself
 	docker rm -f pokeapi_db_1
@@ -79,7 +72,7 @@ docker-down:  # (Docker) Stop and removes containers and networks
 	docker compose down
 
 docker-test:  # (Docker) Run tests
-	docker compose exec -T app python manage.py test ${local_config}
+	docker compose exec -T app uv run manage.py test ${local_config}
 
 docker-prod:
 	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
@@ -87,10 +80,10 @@ docker-prod:
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format:  # Format the source code
-	black . --extend-exclude '.+/scripts/.+'
+	uv run ruff check . --fix --extend-exclude '.+/scripts/.+'
 
 format-check:  # Check the source code has been formatted
-	black . --check --extend-exclude '.+/scripts/.+'
+	uv run ruff check . --extend-exclude '.+/scripts/.+'
 
 pull:
 	git checkout master
@@ -137,10 +130,10 @@ kustomize-ga-apply:  # (Kustomize) Run kubectl apply -k on the connected k8s clu
 	kubectl apply -k Resources/k8s/kustomize/ga/
 
 k8s-migrate:  # (k8s) Run any pending migrations
-	kubectl exec --namespace pokeapi deployment/pokeapi -- python manage.py migrate ${docker_config}
+	kubectl exec --namespace pokeapi deployment/pokeapi -- uv run manage.py migrate ${docker_config}
 
 k8s-build-db:  # (k8s) Build the database
-	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | python manage.py shell ${docker_config}'
+	kubectl exec --namespace pokeapi deployment/pokeapi -- sh -c 'echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${docker_config}'
 
 k8s-delete:  # (k8s) Delete pokeapi namespace
 	kubectl delete namespace pokeapi

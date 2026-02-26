@@ -1,17 +1,19 @@
 language_id,local_language_id,name
 1,1,日本語 (仮名)
 1,3,일본어 히라가나와 가타카나
-1,5,Japonais hiragana et katakana
+1,5,Japonais Hiragana et Katakana
 1,6,Japanisch Hiragana und Katakana
-1,7,Japonés hiragana y katakana
-1,8,Giapponese hiragana e katakana
-1,9,Japanese hiragana and katakana
+1,7,Japonés Hiragana y Katakana
+1,8,Giapponese Hiragana e Katakana
+1,9,Japanese Hiragana and Katakana
+1,13,Japonês em Hiragana e Katakana
 2,1,ローマ字
 2,3,정식 로마자
 2,5,Romaji
 2,6,Rōmaji
-2,8,Giapponese rōmaji
-2,9,Japanese romaji
+2,8,Giapponese Rōmaji
+2,9,Japanese Romaji
+2,13,Japonês em Romaji
 3,1,韓国語
 3,3,한국어
 3,5,Coréen
@@ -19,13 +21,15 @@ language_id,local_language_id,name
 3,7,Coreano
 3,8,Coreano
 3,9,Korean
+3,13,Coreano
 4,1,中国語
 4,3,중국어
 4,5,Chinois
 4,6,Chinesisch
 4,7,Chino
-4,8,Cinese tradizionale
+4,8,Cinese Tradizionale
 4,9,Traditional Chinese
+4,13,Chinês Tradicional
 5,1,フランス語
 5,3,프랑스어
 5,5,Français
@@ -33,6 +37,7 @@ language_id,local_language_id,name
 5,7,Francés
 5,8,Francese
 5,9,French
+5,13,Francês
 6,1,ドイツ語
 6,3,도이치어
 6,5,Allemand
@@ -40,12 +45,14 @@ language_id,local_language_id,name
 6,7,Alemán
 6,8,Tedesco
 6,9,German
+6,13,Alemão
 7,1,スペイン語
 7,3,스페인어
 7,5,Espagnol
 7,6,Spanisch
 7,7,Español
 7,9,Spanish
+7,13,Espanhol
 8,1,イタリア語
 8,3,이탈리아어
 8,5,Italien
@@ -53,6 +60,7 @@ language_id,local_language_id,name
 8,7,Italiano
 8,8,Italiano
 8,9,Italian
+8,13,Italiano
 9,1,英語
 9,3,영어
 9,5,Anglais
@@ -60,6 +68,7 @@ language_id,local_language_id,name
 9,7,Inglés
 9,8,Inglese
 9,9,English
+9,13,Inglês
 10,1,チェコ語
 10,3,체코어
 10,5,Tchèque
@@ -67,9 +76,19 @@ language_id,local_language_id,name
 10,7,Checo
 10,8,Ceco
 10,9,Czech
+10,13,Tcheco
 11,8,Giapponese
 11,9,Japanese
-12,8,Cinese semplificato
+11,13,Japonês
+12,8,Cinese Semplificato
 12,9,Simplified Chinese
-13,8,Portoghese brasiliano
-13,9,Brazilian portuguese
+12,13,Chinês Simplificado
+13,2,Burajiru Porutogaru-go
+13,3,브라질 포르투갈어
+13,5,Portugais Brésilien
+13,6,Brasilianisches Portugiesisch
+13,7,Portugués Brasileño
+13,8,Portoghese Brasiliano
+13,9,Brazilian Portuguese
+13,10,Brazilská Portugalština
+13,13,Português Brasileiro

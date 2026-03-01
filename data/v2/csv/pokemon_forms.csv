@@ -590,8 +590,8 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 589,escavalier,,589,11,1,0,0,1,791
 590,foongus,,590,11,1,0,0,1,792
 591,amoonguss,,591,11,1,0,0,1,793
-592,frillish,,592,11,1,0,0,1,794
-593,jellicent,,593,11,1,0,0,1,795
+592,frillish-male,male,592,11,1,0,0,1,794
+593,jellicent-male,male,593,11,1,0,0,1,795
 594,alomomola,,594,11,1,0,0,1,796
 595,joltik,,595,11,1,0,0,1,797
 596,galvantula,,596,11,1,0,0,1,798
@@ -666,7 +666,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 665,spewpa-icy-snow,icy-snow,665,15,1,0,0,1,906
 666,vivillon-meadow,meadow,666,15,1,0,0,7,932
 667,litleo,,667,15,1,0,0,1,946
-668,pyroar,,668,15,1,0,0,1,947
+668,pyroar-male,male,668,15,1,0,0,1,947
 669,flabebe-red,red,669,15,1,0,0,1,949
 670,floette-red,red,670,15,1,0,0,1,954
 671,florges-red,red,671,15,1,0,0,1,961
@@ -1575,5 +1575,5 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10549,tatsugiri-stretchy-mega,mega,10324,31,1,1,1,6,1361
 10550,baxcalibur-mega,mega,10325,31,1,1,1,2,1356
 10551,pyroar-female,female,668,15,0,0,0,2,949
-10552,frillish-female,female,592,11,1,0,0,2,794
-10553,jellicent-female,female,593,11,1,0,0,2,795
+10552,frillish-female,female,592,11,0,0,0,2,794
+10553,jellicent-female,female,593,11,0,0,0,2,795

@@ -161,6 +161,26 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 586,7,Forma Primavera,
 586,8,Forma Primavera,
 586,9,Spring Form,Spring Sawsbuck
+592,1,オスのすがた,
+592,3,수컷의 모습,
+592,4,雄性的樣子,
+592,5,Mâle,
+592,6,Männlich,
+592,7,Macho,
+592,8,Maschio,
+592,9,Male,Male Frillish
+592,11,オスのすがた,
+592,12,雄性的样子,
+593,1,オスのすがた,
+593,3,수컷의 모습,
+593,4,雄性的樣子,
+593,5,Mâle,
+593,6,Männlich,
+593,7,Macho,
+593,8,Maschio,
+593,9,Male,Male Jellicent
+593,11,オスのすがた,
+593,12,雄性的样子,
 641,1,けしんフォルム,
 641,3,화신폼,
 641,4,化身形態,
@@ -228,6 +248,16 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 666,7,Motivo Floral,
 666,8,Motivo Giardinfiore,
 666,9,Meadow Pattern,Meadow Vivillon
+668,1,オスのすがた,
+668,3,수컷의 모습,
+668,4,雄性的樣子,
+668,5,Mâle,
+668,6,Männlich,
+668,7,Macho,
+668,8,Maschio,
+668,9,Male,Male Pyroar
+668,11,オスのすがた,
+668,12,雄性的样子,
 669,1,あかいはな,
 669,3,빨간 꽃,
 669,5,Fleur Rouge,Flabébé Rouge

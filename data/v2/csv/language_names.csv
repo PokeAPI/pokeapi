@@ -11,9 +11,9 @@ language_id,local_language_id,name
 2,3,정식 로마자
 2,5,Romaji
 2,6,Rōmaji
-2,8,Giapponese Rōmaji
-2,9,Japanese Romaji
-2,13,Japonês em Romaji
+2,8,Giapponese rōmaji
+2,9,Japanese romaji
+2,13,Japonês em romaji
 3,1,韓国語
 3,3,한국어
 3,5,Coréen
@@ -27,9 +27,9 @@ language_id,local_language_id,name
 4,5,Chinois
 4,6,Chinesisch
 4,7,Chino
-4,8,Cinese Tradizionale
-4,9,Traditional Chinese
-4,13,Chinês Tradicional
+4,8,Cinese tradizionale
+4,9,Traditional chinese
+4,13,Chinês tradicional
 5,1,フランス語
 5,3,프랑스어
 5,5,Français
@@ -80,15 +80,15 @@ language_id,local_language_id,name
 11,8,Giapponese
 11,9,Japanese
 11,13,Japonês
-12,8,Cinese Semplificato
-12,9,Simplified Chinese
-12,13,Chinês Simplificado
-13,2,Burajiru Porutogaru-go
+12,8,Cinese semplificato
+12,9,Simplified chinese
+12,13,Chinês simplificado
+13,2,Burajiru porutogaru-go
 13,3,브라질 포르투갈어
-13,5,Portugais Brésilien
-13,6,Brasilianisches Portugiesisch
-13,7,Portugués Brasileño
-13,8,Portoghese Brasiliano
-13,9,Brazilian Portuguese
-13,10,Brazilská Portugalština
-13,13,Português Brasileiro
+13,5,Portugais brésilien
+13,6,Brasilianisches portugiesisch
+13,7,Portugués brasileño
+13,8,Portoghese brasiliano
+13,9,Brazilian portuguese
+13,10,Brazilská portugalština
+13,13,Português brasileiro

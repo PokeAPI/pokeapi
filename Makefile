@@ -15,10 +15,10 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install:  # Install base requirements to run project
-	$(PIP) install -r requirements.txt
+	$(PIP) install -r requirements.txt --break-system-packages
 
 dev-install:  # Install developer requirements + base requirements
-	$(PIP) install -r test-requirements.txt
+	$(PIP) install -r test-requirements.txt --break-system-packages
 
 setup:  # Set up the project database
 	$(PYTHON) manage.py migrate ${local_config}

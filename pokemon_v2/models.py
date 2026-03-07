@@ -848,8 +848,6 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-    cost = models.IntegerField(blank=True, null=True)
-
     fling_power = models.IntegerField(blank=True, null=True)
 
 

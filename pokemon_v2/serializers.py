@@ -1853,7 +1853,6 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "name",
-            "cost",
             "fling_power",
             "fling_effect",
             "attributes",

@@ -51,6 +51,7 @@
 - "!include public_pokemon_v2_itemflingeffecteffecttext.yaml"
 - "!include public_pokemon_v2_itemgameindex.yaml"
 - "!include public_pokemon_v2_itemname.yaml"
+- "!include public_pokemon_v2_itemprice.yaml"
 - "!include public_pokemon_v2_itempocket.yaml"
 - "!include public_pokemon_v2_itempocketname.yaml"
 - "!include public_pokemon_v2_itemsprites.yaml"

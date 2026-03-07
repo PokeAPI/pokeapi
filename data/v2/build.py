@@ -548,8 +548,9 @@ def _build_items():
         yield ItemPrice(
             item_id=int(info[0]),
             version_group_id=int(info[1]),
-            purchase_price=int(info[2]),
-            sell_price=int(info[3]),
+            is_purchasable=bool(int(info[2])),
+            purchase_price=int(info[3]),
+            sell_price=int(info[4]),
         )
 
     build_generic((ItemPrice,), "item_prices.csv", csv_record_to_objects)

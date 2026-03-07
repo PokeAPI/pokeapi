@@ -1811,7 +1811,7 @@ class ItemPriceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ItemPrice
-        fields = ("purchase_price", "sell_price", "version_group")
+        fields = ("is_purchasable", "purchase_price", "sell_price", "version_group")
 
 
 class ItemNameSerializer(serializers.ModelSerializer):

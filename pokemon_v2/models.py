@@ -885,6 +885,11 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
     pass
 
 
+class ItemPrice(HasItem, HasVersionGroup):
+    purchase_price = models.IntegerField()
+    sell_price = models.IntegerField()
+
+
 class ItemSprites(HasItem):
     sprites = models.JSONField()
 

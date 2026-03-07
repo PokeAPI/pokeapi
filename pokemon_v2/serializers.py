@@ -1806,6 +1806,14 @@ class ItemGameIndexSerializer(serializers.ModelSerializer):
         fields = ("game_index", "generation")
 
 
+class ItemPriceSerializer(serializers.ModelSerializer):
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = ItemPrice
+        fields = ("is_purchasable", "purchase_price", "sell_price", "version_group")
+
+
 class ItemNameSerializer(serializers.ModelSerializer):
     language = LanguageSummarySerializer()
 
@@ -1825,6 +1833,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     game_indices = ItemGameIndexSerializer(
         many=True, read_only=True, source="itemgameindex"
     )
+    prices = ItemPriceSerializer(many=True, read_only=True, source="itemprice")
     effect_entries = ItemEffectTextSerializer(
         many=True, read_only=True, source="itemeffecttext"
     )
@@ -1844,7 +1853,6 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "name",
-            "cost",
             "fling_power",
             "fling_effect",
             "attributes",
@@ -1852,6 +1860,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "effect_entries",
             "flavor_text_entries",
             "game_indices",
+            "prices",
             "names",
             "held_by_pokemon",
             "sprites",

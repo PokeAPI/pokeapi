@@ -848,8 +848,6 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-    cost = models.IntegerField(blank=True, null=True)
-
     fling_power = models.IntegerField(blank=True, null=True)
 
 
@@ -883,6 +881,12 @@ class ItemAttributeMap(HasItem, HasItemAttribute):
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
     pass
+
+
+class ItemPrice(HasItem, HasVersionGroup):
+    is_purchasable = models.BooleanField()
+    purchase_price = models.IntegerField()
+    sell_price = models.IntegerField()
 
 
 class ItemSprites(HasItem):

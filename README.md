@@ -121,7 +121,7 @@ make docker-migrate
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
 ```sh
-# hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
+# hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/2.0/hasura-cli/install-hasura-cli
 # hasura cli's version has to greater than v2.48.1
 make hasura-apply
 ```

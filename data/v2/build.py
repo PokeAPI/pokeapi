@@ -545,6 +545,17 @@ def _build_items():
     build_generic((ItemGameIndex,), "item_game_indices.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        yield ItemPrice(
+            item_id=int(info[0]),
+            version_group_id=int(info[1]),
+            is_purchasable=bool(int(info[2])),
+            purchase_price=int(info[3]),
+            sell_price=int(info[4]),
+        )
+
+    build_generic((ItemPrice,), "item_prices.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield ItemFlavorText(
             item_id=int(info[0]),
             version_group_id=int(info[1]),

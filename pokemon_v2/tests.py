@@ -5855,3 +5855,11 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    # Meta Tests
+    def test_meta_api(self):
+        response = self.client.get("{}/meta".format(API_V2))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn("deploy_date", response.data)
+        self.assertIn("hash", response.data)
+        self.assertIn("tag", response.data)

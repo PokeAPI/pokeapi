@@ -76,4 +76,5 @@ urlpatterns = [
         PokemonEncounterView.as_view(),
         name="pokemon_encounters",
     ),
+    path("api/v2/meta", APIMetaView.as_view(), name="api_meta"),
 ]

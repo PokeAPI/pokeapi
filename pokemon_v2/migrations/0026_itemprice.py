@@ -24,8 +24,8 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("is_purchasable", models.BooleanField()),
-                ("purchase_price", models.IntegerField()),
-                ("sell_price", models.IntegerField()),
+                ("purchase_price", models.IntegerField(blank=True, null=True)),
+                ("sell_price", models.IntegerField(blank=True, null=True)),
                 (
                     "item",
                     models.ForeignKey(

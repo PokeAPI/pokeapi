@@ -499,7 +499,6 @@ def _build_items():
             id=int(info[0]),
             name=info[1],
             item_category_id=int(info[2]),
-            cost=int(info[3]),
             fling_power=int(info[4]) if info[4] != "" else None,
             item_fling_effect_id=int(info[5]) if info[5] != "" else None,
         )

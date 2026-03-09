@@ -3497,7 +3497,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("name", models.CharField(max_length=100)),
-                ("cost", models.IntegerField(null=True, blank=True)),
                 ("fling_power", models.IntegerField(null=True, blank=True)),
             ],
             options={

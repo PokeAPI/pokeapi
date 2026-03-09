@@ -4659,10 +4659,6 @@ components:
         name:
           type: string
           maxLength: 200
-        cost:
-          type:
-          - integer
-          - 'null'
         fling_power:
           type:
           - integer

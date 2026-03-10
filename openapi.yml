@@ -4700,6 +4700,11 @@ components:
           items:
             $ref: '#/components/schemas/ItemGameIndex'
           readOnly: true
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemPrice'
+          readOnly: true
         names:
           type: array
           items:
@@ -4919,6 +4924,24 @@ components:
       required:
       - language
       - name
+    ItemPrice:
+      type: object
+      properties:
+        is_purchasable:
+          type: boolean
+        purchase_price:
+          type:
+          - integer
+          - 'null'
+        sell_price:
+          type:
+          - integer
+          - 'null'
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+      required:
+      - is_purchasable
+      - version_group
     ItemPocketDetail:
       type: object
       properties:
@@ -7526,7 +7549,6 @@ components:
       - name
       - names
       - pokemon_entries
-      - region
       - version_groups
     PokedexName:
       type: object
@@ -8634,7 +8656,6 @@ components:
       required:
       - id
       - locations
-      - main_generation
       - name
       - names
       - pokedexes

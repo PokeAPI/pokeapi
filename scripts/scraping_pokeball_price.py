@@ -146,11 +146,10 @@ def get_ball_prices(ball_url):
             buy = cols[1].get_text(strip=True).replace("$", "").replace(",", "")
             sell = cols[2].get_text(strip=True).replace("$", "").replace(",", "")
 
-            buy = "" if buy.upper() == "N/A" else buy
-            sell = "" if sell.upper() == "N/A" else sell
+            buy = None if buy.upper() == "N/A" or not buy else buy
+            sell = None if sell.upper() == "N/A" or not sell else sell
 
-            # Skip if both are empty
-            if not buy and not sell:
+            if buy is None and sell is None:
                 continue
 
             # Cross-reference with GAME_MAP keys
@@ -205,17 +204,27 @@ def main():
     else:
         df_combined = df_new
 
-    # 1. Deduplicate (prevents repeating data if script is run twice)
-    # 2. Sort by item_id then version_group_id
+    df_combined["purchase_price"] = pd.to_numeric(
+        df_combined["purchase_price"], errors="coerce"
+    )
+    df_combined["sell_price"] = pd.to_numeric(
+        df_combined["sell_price"], errors="coerce"
+    )
+
+    # Deduplicate and Sort
     df_final = df_combined.drop_duplicates(
         subset=["item_id", "version_group_id"], keep="last"
     )
     df_final = df_final.sort_values(by=["item_id", "version_group_id"])
 
-    # Write back to CSV
-    df_final.to_csv(output_path, index=False)
+    df_final["purchase_price"] = df_final["purchase_price"].astype("Int64")
+    df_final["sell_price"] = df_final["sell_price"].astype("Int64")
 
-    print(f"\nSuccess! File updated and sorted at: {output_path}")
+    df_final["item_id"] = df_final["item_id"].astype(int)
+    df_final["version_group_id"] = df_final["version_group_id"].astype(int)
+
+    df_final.to_csv(output_path, index=False)
+    print(f"\nSuccess! File sorted and updated at: {output_path}")
 
 
 if __name__ == "__main__":

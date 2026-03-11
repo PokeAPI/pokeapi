@@ -23,7 +23,6 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("is_purchasable", models.BooleanField()),
                 ("purchase_price", models.IntegerField(blank=True, null=True)),
                 ("sell_price", models.IntegerField(blank=True, null=True)),
                 (

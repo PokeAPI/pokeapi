@@ -884,7 +884,6 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 
 
 class ItemPrice(HasItem, HasVersionGroup):
-    is_purchasable = models.BooleanField()
     purchase_price = models.IntegerField(blank=True, null=True)
     sell_price = models.IntegerField(blank=True, null=True)
 

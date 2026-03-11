@@ -4927,8 +4927,6 @@ components:
     ItemPrice:
       type: object
       properties:
-        is_purchasable:
-          type: boolean
         purchase_price:
           type:
           - integer
@@ -4940,7 +4938,6 @@ components:
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
       required:
-      - is_purchasable
       - version_group
     ItemPocketDetail:
       type: object

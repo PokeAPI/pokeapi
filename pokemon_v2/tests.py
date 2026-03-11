@@ -2839,6 +2839,61 @@ class APITests(APIData, APITestCase):
             "{}".format(sprites_data["default"]),
         )
 
+    def test_item_with_special_characters_api(self):
+        """Test that items with special characters in their names can be accessed by name"""
+        item_category = self.setup_item_category_data(name="special-char-category")
+
+        # Test with Unicode apostrophe (like kofu's-wallet)
+        item_apostrophe = self.setup_item_data(
+            item_category=item_category, name="kofu's-wallet"
+        )
+        self.setup_item_sprites_data(item_apostrophe)
+        response = self.client.get(
+            "{}/item/{}/".format(API_V2, "kofu's-wallet"),
+            headers={"host": "testserver"},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], item_apostrophe.name)
+        self.assertEqual(response.data["id"], item_apostrophe.pk)
+
+        # Test with Unicode letter (like jalapeño)
+        item_unicode = self.setup_item_data(
+            item_category=item_category, name="jalapeño"
+        )
+        self.setup_item_sprites_data(item_unicode)
+        response = self.client.get(
+            "{}/item/{}/".format(API_V2, "jalapeño"), headers={"host": "testserver"}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], item_unicode.name)
+        self.assertEqual(response.data["id"], item_unicode.pk)
+
+        # Test with parentheses (like steel-bottle-(r))
+        item_parens = self.setup_item_data(
+            item_category=item_category, name="steel-bottle-(r)"
+        )
+        self.setup_item_sprites_data(item_parens)
+        response = self.client.get(
+            "{}/item/{}/".format(API_V2, "steel-bottle-(r)"),
+            headers={"host": "testserver"},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], item_parens.name)
+        self.assertEqual(response.data["id"], item_parens.pk)
+
+        # Test with ampersand (like b&w-grass-tablecloth)
+        item_ampersand = self.setup_item_data(
+            item_category=item_category, name="b&w-grass-tablecloth"
+        )
+        self.setup_item_sprites_data(item_ampersand)
+        response = self.client.get(
+            "{}/item/{}/".format(API_V2, "b&w-grass-tablecloth"),
+            headers={"host": "testserver"},
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["name"], item_ampersand.name)
+        self.assertEqual(response.data["id"], item_ampersand.pk)
+
     # Berry Tests
     def test_berry_firmness_api(self):
         berry_firmness = self.setup_berry_firmness_data(name="base bry frmns")

@@ -39,8 +39,9 @@ class NameOrIdRetrieval:
     """
 
     idPattern = re.compile(r"^-?[0-9]+$")
-    # Allow alphanumeric, hyphen, plus, and space (Space added for test cases using name for lookup, ex: 'base pkm')
-    namePattern = re.compile(r"^[0-9A-Za-z\-\+ ]+$")
+    # Allow alphanumeric, hyphen, plus, space, parentheses, apostrophes, ampersand, and Unicode letters
+    # Includes U+0027 (') and U+2019 (') for apostrophes
+    namePattern = re.compile(r"^[\w\-\+\s\(\)&'\u2019]+$", re.UNICODE)
 
     def get_queryset(self):
         queryset = super().get_queryset()

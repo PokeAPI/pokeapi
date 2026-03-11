@@ -38,6 +38,7 @@ router.register(r"language", LanguageResource)
 router.register(r"location", LocationResource)
 router.register(r"location-area", LocationAreaResource)
 router.register(r"machine", MachineResource)
+router.register(r"meta", PokeapiMetaViewset, basename="meta")
 router.register(r"move", MoveResource)
 router.register(r"move-ailment", MoveMetaAilmentResource)
 router.register(r"move-battle-style", MoveBattleStyleResource)
@@ -76,5 +77,4 @@ urlpatterns = [
         PokemonEncounterView.as_view(),
         name="pokemon_encounters",
     ),
-    path("api/v2/meta", APIMetaView.as_view(), name="api_meta"),
 ]

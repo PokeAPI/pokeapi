@@ -1,6 +1,7 @@
 import csv
 import os
 import re
+from django.conf import settings
 from django.test import TestCase
 from pokemon_v2.models import *
 
@@ -27,68 +28,60 @@ class CSVResourceNameValidationTestCase(TestCase):
     # Pattern for valid resource identifiers: lowercase letters, numbers, and hyphens only
     VALID_IDENTIFIER_PATTERN = re.compile(r"^[a-z0-9-]+$")
 
-    # CSV files that contain an 'identifier' column to validate
-    # Format: (filename, identifier_column_name)
+    # CSV files with 'identifier' column to validate
     CSV_FILES_TO_VALIDATE = [
-        ("abilities.csv", "identifier"),
-        ("berry_firmness.csv", "identifier"),
-        ("conquest_episodes.csv", "identifier"),
-        ("conquest_kingdoms.csv", "identifier"),
-        ("conquest_move_displacements.csv", "identifier"),
-        ("conquest_move_ranges.csv", "identifier"),
-        ("conquest_stats.csv", "identifier"),
-        ("conquest_warrior_archetypes.csv", "identifier"),
-        ("conquest_warrior_skills.csv", "identifier"),
-        ("conquest_warrior_stats.csv", "identifier"),
-        ("conquest_warriors.csv", "identifier"),
-        ("contest_types.csv", "identifier"),
-        ("egg_groups.csv", "identifier"),
-        ("encounter_conditions.csv", "identifier"),
-        ("encounter_condition_values.csv", "identifier"),
-        ("encounter_methods.csv", "identifier"),
-        ("evolution_triggers.csv", "identifier"),
-        ("genders.csv", "identifier"),
-        ("generations.csv", "identifier"),
-        ("growth_rates.csv", "identifier"),
-        ("items.csv", "identifier"),
-        ("item_categories.csv", "identifier"),
-        ("item_flags.csv", "identifier"),
-        ("item_fling_effects.csv", "identifier"),
-        ("item_pockets.csv", "identifier"),
-        ("languages.csv", "identifier"),
-        ("locations.csv", "identifier"),
-        ("location_areas.csv", "identifier"),
-        ("moves.csv", "identifier"),
-        ("move_battle_styles.csv", "identifier"),
-        ("move_damage_classes.csv", "identifier"),
-        ("move_flags.csv", "identifier"),
-        ("move_meta_ailments.csv", "identifier"),
-        ("move_meta_categories.csv", "identifier"),
-        ("move_targets.csv", "identifier"),
-        ("natures.csv", "identifier"),
-        ("pal_park_areas.csv", "identifier"),
-        ("pokeathlon_stats.csv", "identifier"),
-        ("pokedexes.csv", "identifier"),
-        ("pokemon.csv", "identifier"),
-        ("pokemon_colors.csv", "identifier"),
-        ("pokemon_forms.csv", "identifier"),
-        ("pokemon_habitats.csv", "identifier"),
-        ("pokemon_move_methods.csv", "identifier"),
-        ("pokemon_shapes.csv", "identifier"),
-        ("pokemon_species.csv", "identifier"),
-        ("regions.csv", "identifier"),
-        ("stats.csv", "identifier"),
-        ("types.csv", "identifier"),
-        ("versions.csv", "identifier"),
-        ("version_groups.csv", "identifier"),
+        "abilities.csv",
+        "berry_firmness.csv",
+        "conquest_episodes.csv",
+        "conquest_kingdoms.csv",
+        "conquest_move_displacements.csv",
+        "conquest_move_ranges.csv",
+        "conquest_stats.csv",
+        "conquest_warrior_archetypes.csv",
+        "conquest_warrior_skills.csv",
+        "conquest_warrior_stats.csv",
+        "conquest_warriors.csv",
+        "contest_types.csv",
+        "egg_groups.csv",
+        "encounter_conditions.csv",
+        "encounter_condition_values.csv",
+        "encounter_methods.csv",
+        "evolution_triggers.csv",
+        "genders.csv",
+        "generations.csv",
+        "growth_rates.csv",
+        "items.csv",
+        "item_categories.csv",
+        "item_flags.csv",
+        "item_fling_effects.csv",
+        "item_pockets.csv",
+        "languages.csv",
+        "locations.csv",
+        "location_areas.csv",
+        "moves.csv",
+        "move_battle_styles.csv",
+        "move_damage_classes.csv",
+        "move_flags.csv",
+        "move_meta_ailments.csv",
+        "move_meta_categories.csv",
+        "move_targets.csv",
+        "natures.csv",
+        "pal_park_areas.csv",
+        "pokeathlon_stats.csv",
+        "pokedexes.csv",
+        "pokemon.csv",
+        "pokemon_colors.csv",
+        "pokemon_forms.csv",
+        "pokemon_habitats.csv",
+        "pokemon_move_methods.csv",
+        "pokemon_shapes.csv",
+        "pokemon_species.csv",
+        "regions.csv",
+        "stats.csv",
+        "types.csv",
+        "versions.csv",
+        "version_groups.csv",
     ]
-
-    def get_csv_path(self, filename):
-        """Get the absolute path to a CSV file in data/v2/csv/"""
-        from django.conf import settings
-
-        base_dir = settings.BASE_DIR
-        return os.path.join(base_dir, "data", "v2", "csv", filename)
 
     def test_all_csv_identifiers_are_ascii_slugs(self):
         """
@@ -108,8 +101,8 @@ class CSVResourceNameValidationTestCase(TestCase):
         violations = []
         missing_files = []
 
-        for filename, identifier_column in self.CSV_FILES_TO_VALIDATE:
-            csv_path = self.get_csv_path(filename)
+        for filename in self.CSV_FILES_TO_VALIDATE:
+            csv_path = os.path.join(settings.BASE_DIR, "data", "v2", "csv", filename)
 
             # Track missing files to report at the end
             if not os.path.exists(csv_path):
@@ -121,21 +114,19 @@ class CSVResourceNameValidationTestCase(TestCase):
                     reader = csv.DictReader(csvfile)
 
                     # Check if the identifier column exists
-                    if identifier_column not in reader.fieldnames:
+                    if "identifier" not in reader.fieldnames:
                         violations.append(
                             {
                                 "file": filename,
                                 "row": "N/A",
                                 "id": "N/A",
-                                "identifier": f"Column '{identifier_column}' not found",
+                                "identifier": "Column 'identifier' not found",
                             }
                         )
                         continue
 
-                    for row_num, row in enumerate(
-                        reader, start=2
-                    ):  # Start at 2 (after header)
-                        identifier = row.get(identifier_column, "").strip()
+                    for row_num, row in enumerate(reader, start=2):
+                        identifier = row.get("identifier", "").strip()
 
                         # Skip empty identifiers
                         if not identifier:

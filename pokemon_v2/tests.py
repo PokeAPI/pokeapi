@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *
@@ -5855,3 +5856,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    # Meta Tests
+    def test_meta_api(self):
+        response = self.client.get("{}/meta/".format(API_V2))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(datetime.fromisoformat(response.data["deploy_date"]))
+        self.assertEqual(25, len(response.data["deploy_date"]))
+        self.assertEqual(40, len(response.data["hash"]))
+        self.assertIn("tag", response.data)

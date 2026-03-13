@@ -5862,6 +5862,6 @@ class APITests(APIData, APITestCase):
         response = self.client.get("{}/meta/".format(API_V2))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertTrue(datetime.fromisoformat(response.data["deploy_date"]))
-        self.assertEqual(25, len(response.data["deploy_date"]))
+        self.assertEqual(10, len(response.data["deploy_date"]))
         self.assertEqual(40, len(response.data["hash"]))
         self.assertIn("tag", response.data)

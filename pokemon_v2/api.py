@@ -1091,7 +1091,7 @@ class PokeapiMetaViewset(viewsets.ViewSet):
         try:
             deploy_date = (
                 subprocess.check_output(
-                    ["git", "log", "-1", "--format=%cI"], stderr=subprocess.DEVNULL
+                    ["git", "log", "-1", "--format=%ct"], stderr=subprocess.DEVNULL
                 )
                 .decode()
                 .strip()

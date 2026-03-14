@@ -18,6 +18,8 @@
 - "!include public_pokemon_v2_contesteffectflavortext.yaml"
 - "!include public_pokemon_v2_contesttype.yaml"
 - "!include public_pokemon_v2_contesttypename.yaml"
+- "!include public_pokemon_v2_currency.yaml"
+- "!include public_pokemon_v2_currencyname.yaml"
 - "!include public_pokemon_v2_egggroup.yaml"
 - "!include public_pokemon_v2_egggroupname.yaml"
 - "!include public_pokemon_v2_encounter.yaml"

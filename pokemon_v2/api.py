@@ -435,6 +435,22 @@ class ItemPocketResource(PokeapiCommonViewset):
 
 
 @extend_schema(
+    description="Currencies used to buy items.",
+    summary="Get currency",
+    tags=["items"],
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List currencies",
+    )
+)
+class CurrencyResource(PokeapiCommonViewset):
+    queryset = Currency.objects.all()
+    serializer_class = CurrencyDetailSerializer
+    list_serializer_class = CurrencySummarySerializer
+
+
+@extend_schema(
     description="Languages for translations of API resource information.",
     summary="Get language",
     tags=["utility"],

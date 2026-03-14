@@ -5,12 +5,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("pokemon_v2", "0025_pokemonstatpast"),
     ]
 
     operations = [
+        migrations.CreateModel(
+            name="Currency",
+            fields=[
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(db_index=True, max_length=200)),
+            ],
+            options={
+                "abstract": False,
+            },
+        ),
         migrations.CreateModel(
             name="ItemPrice",
             fields=[
@@ -25,6 +42,16 @@ class Migration(migrations.Migration):
                 ),
                 ("purchase_price", models.IntegerField(blank=True, null=True)),
                 ("sell_price", models.IntegerField(blank=True, null=True)),
+                (
+                    "currency",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="%(class)s",
+                        to="pokemon_v2.currency",
+                    ),
+                ),
                 (
                     "item",
                     models.ForeignKey(
@@ -43,6 +70,44 @@ class Migration(migrations.Migration):
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="%(class)s",
                         to="pokemon_v2.versiongroup",
+                    ),
+                ),
+            ],
+            options={
+                "abstract": False,
+            },
+        ),
+        migrations.CreateModel(
+            name="CurrencyName",
+            fields=[
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(db_index=True, max_length=200)),
+                (
+                    "currency",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="%(class)s",
+                        to="pokemon_v2.currency",
+                    ),
+                ),
+                (
+                    "language",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="%(class)s_language",
+                        to="pokemon_v2.language",
                     ),
                 ),
             ],

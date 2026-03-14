@@ -453,6 +453,18 @@ def _build_growth_rates():
 
 def _build_items():
     def csv_record_to_objects(info):
+        yield Currency(id=int(info[0]), name=info[1])
+
+    build_generic((Currency,), "currencies.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield CurrencyName(
+            currency_id=int(info[0]), language_id=int(info[1]), name=info[2]
+        )
+
+    build_generic((CurrencyName,), "currency_names.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield ItemPocket(id=int(info[0]), name=info[1])
 
     build_generic((ItemPocket,), "item_pockets.csv", csv_record_to_objects)
@@ -544,11 +556,19 @@ def _build_items():
     build_generic((ItemGameIndex,), "item_game_indices.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        # Keep backward compatibility with 4-column files (no currency_id).
+        has_currency_id = len(info) >= 5
+        purchase_price_index = 3 if has_currency_id else 2
+        sell_price_index = 4 if has_currency_id else 3
+
         yield ItemPrice(
             item_id=int(info[0]),
             version_group_id=int(info[1]),
-            purchase_price=int(info[2]) if info[2] else None,
-            sell_price=int(info[3]) if info[3] else None,
+            currency_id=int(info[2]) if has_currency_id and info[2] else 1,
+            purchase_price=(
+                int(info[purchase_price_index]) if info[purchase_price_index] else None
+            ),
+            sell_price=int(info[sell_price_index]) if info[sell_price_index] else None,
         )
 
     build_generic((ItemPrice,), "item_prices.csv", csv_record_to_objects)

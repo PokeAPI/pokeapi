@@ -116,6 +116,12 @@ class GrowthRateSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
+class CurrencySummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Currency
+        fields = ("name", "url")
+
+
 class ItemPocketSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ItemPocket
@@ -1755,6 +1761,27 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
         return items
 
 
+###########################
+#  CURRENCY SERIALIZERS  #
+###########################
+
+
+class CurrencyNameSerializer(serializers.ModelSerializer):
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = CurrencyName
+        fields = ("name", "language")
+
+
+class CurrencyDetailSerializer(serializers.ModelSerializer):
+    names = CurrencyNameSerializer(many=True, read_only=True, source="currencyname")
+
+    class Meta:
+        model = Currency
+        fields = ("id", "name", "names")
+
+
 ###################################
 #  ITEM FLING EFFECT SERIALIZERS  #
 ###################################
@@ -1807,11 +1834,17 @@ class ItemGameIndexSerializer(serializers.ModelSerializer):
 
 
 class ItemPriceSerializer(serializers.ModelSerializer):
+    currency = CurrencySummarySerializer()
     version_group = VersionGroupSummarySerializer()
 
     class Meta:
         model = ItemPrice
-        fields = ("purchase_price", "sell_price", "version_group")
+        fields = (
+            "purchase_price",
+            "sell_price",
+            "currency",
+            "version_group",
+        )
 
 
 class ItemNameSerializer(serializers.ModelSerializer):

@@ -1,21 +1,18 @@
 table:
-  name: pokemon_v2_itemprice
+  name: pokemon_v2_currencyname
   schema: public
 configuration:
   column_config: {}
   custom_column_names: {}
-  custom_name: itemprice
+  custom_name: currencyname
   custom_root_fields: {}
 object_relationships:
-  - name: item
-    using:
-      foreign_key_constraint_on: item_id
   - name: currency
     using:
       foreign_key_constraint_on: currency_id
-  - name: versiongroup
+  - name: language
     using:
-      foreign_key_constraint_on: version_group_id
+      foreign_key_constraint_on: language_id
 select_permissions:
   - role: anon
     permission:
@@ -23,3 +20,7 @@ select_permissions:
       filter: {}
       limit: 100000
       allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

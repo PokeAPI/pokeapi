@@ -661,7 +661,7 @@ def _build_types():
                     "name_icon": file_path_or_none(
                         f"types/{generation}/{game}/{info[0]}.png"
                     ),
-                    "logo": file_path_or_none(
+                    "symbol_icon": file_path_or_none(
                         f"types/{generation}/{game}/small/{info[0]}.png"
                     ),
                 }

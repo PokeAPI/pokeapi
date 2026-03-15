@@ -732,7 +732,7 @@ class APIData:
                 else:
                     sprites[generation][game] = {
                         "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png",
-                        "logo": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/small/{type.id}.png",
+                        "symbol_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/small/{type.id}.png",
                     }
 
         type_sprites = TypeSprites.objects.create(
@@ -3661,8 +3661,8 @@ class APITests(APIData, APITestCase):
                     sprites_data[generation][game]["name_icon"],
                 )
                 self.assertEqual(
-                    json.loads(response.data["sprites"])[generation][game]["logo"],
-                    sprites_data[generation][game]["logo"],
+                    json.loads(response.data["sprites"])[generation][game]["symbol_icon"],
+                    sprites_data[generation][game]["symbol_icon"],
                 )
 
     # Pokedex Tests

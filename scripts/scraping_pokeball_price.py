@@ -5,6 +5,13 @@ import time
 import re
 from pathlib import Path
 
+CURRENCY_MAP = {
+    "poke-dollar": 1,
+    # "battle-point": 6,
+    # "league-point": 18,
+    # "blueberry-point": 19,
+}
+
 # 1. Object Map for Item IDs (from PokeAPI's items.csv)
 ITEM_MAP = {
     "master-ball": 1,
@@ -183,6 +190,7 @@ def main():
                         # "name": b["name"], # enable this if you wanna keep the name in the output for easier debugging
                         "item_id": b["item_id"],
                         "version_group_id": p["vg_id"],
+                        "currency_id": CURRENCY_MAP["poke-dollar"],
                         "purchase_price": p["buy"],
                         "sell_price": p["sell"],
                     }
@@ -213,15 +221,16 @@ def main():
 
     # Deduplicate and Sort
     df_final = df_combined.drop_duplicates(
-        subset=["item_id", "version_group_id"], keep="last"
+        subset=["item_id", "version_group_id", "currency_id"], keep="last"
     )
-    df_final = df_final.sort_values(by=["item_id", "version_group_id"])
+    df_final = df_final.sort_values(by=["item_id", "version_group_id", "currency_id"])
 
     df_final["purchase_price"] = df_final["purchase_price"].astype("Int64")
     df_final["sell_price"] = df_final["sell_price"].astype("Int64")
 
     df_final["item_id"] = df_final["item_id"].astype(int)
     df_final["version_group_id"] = df_final["version_group_id"].astype(int)
+    df_final["currency_id"] = df_final["currency_id"].astype(int)
 
     df_final.to_csv(output_path, index=False)
     print(f"\nSuccess! File sorted and updated at: {output_path}")

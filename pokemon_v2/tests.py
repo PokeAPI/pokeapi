@@ -3661,7 +3661,9 @@ class APITests(APIData, APITestCase):
                     sprites_data[generation][game]["name_icon"],
                 )
                 self.assertEqual(
-                    json.loads(response.data["sprites"])[generation][game]["symbol_icon"],
+                    json.loads(response.data["sprites"])[generation][game][
+                        "symbol_icon"
+                    ],
                     sprites_data[generation][game]["symbol_icon"],
                 )
 

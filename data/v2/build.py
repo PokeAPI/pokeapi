@@ -660,7 +660,10 @@ def _build_types():
                 sprites[generation][game] = {
                     "name_icon": file_path_or_none(
                         f"types/{generation}/{game}/{info[0]}.png"
-                    )
+                    ),
+                    "symbol_icon": file_path_or_none(
+                        f"types/{generation}/{game}/small/{info[0]}.png"
+                    ),
                 }
 
         yield TypeSprites(type_id=int(info[0]), sprites=sprites)

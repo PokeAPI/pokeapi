@@ -12,6 +12,8 @@ RUN apk add --no-cache --virtual .build-deps gcc g++ musl-dev \
     python3 -m pip install -r requirements.txt --no-cache-dir
 
 FROM python:3.13.7-alpine
+# git is a dependency for the meta endpoint
+RUN apk add --no-cache git
 
 ENV PYTHONUNBUFFERED=1
 ENV DJANGO_SETTINGS_MODULE='config.docker-compose'

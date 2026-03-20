@@ -1130,14 +1130,14 @@ id,location_id,game_index,identifier
 1239,1099,0,duel-square
 1240,1099,0,entrance
 1241,1100,0,1f
-1242,1101,0,miror's-hideout
+1242,1101,0,mirors-hideout
 1243,1100,0,4f
 1244,1101,0,outside
 1245,1101,0,south-sewers
 1246,1101,0,bf1
 1247,1101,0,bf1-post-sewers
 1248,1102,0,
-1249,1099,0,miror's-hideout
+1249,1096,0,colosseum
 1250,1099,0,dukings-house
 1251,1098,0,bf1
 1252,1103,0,relic-forest

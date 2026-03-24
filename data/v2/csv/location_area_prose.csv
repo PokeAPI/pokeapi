@@ -354,10 +354,10 @@ location_area_id,local_language_id,name
 157,6,"Route 210 (Süden, Richtung Trostu)"
 157,5,"Route 210 (sud, vers Bonville)"
 158,9,"Road 210 (west, towards Celestic Town)"
-158,6,"Route 210 "(Westen, Richtung Elyses)"
+158,6,"Route 210 (Westen, Richtung Elyses)"
 158,5,"Route 210 (ouest, vers Celestia)"
 159,9,"Road 211 (west, towards Eterna City)"
-159,6,"Route 211 (Westen, Richtung Ewigenau)""
+159,6,"Route 211 (Westen, Richtung Ewigenau)"
 159,5,"Route 211 (ouest, vers Vestigion)"
 160,9,"Road 211 (east, towards Celestic Town)"
 160,6,"Route 211 (Osten, Richtung Elyses)"
@@ -2269,3 +2269,51 @@ location_area_id,local_language_id,name
 1199,9,Mount Lanakila Crater
 1199,6,Mount Lanakila Krater
 1199,5,Mont Lanakila Cratère
+1215,9,Mirage Island (West Of Dewford Town)
+1216,9,Mirage Island (West Of Route 104)
+1217,9,Mirage Island (Route 114)
+1218,9,Mirage Island (Route 124)
+1219,9,Mirage Island (Route 132)
+1220,9,Mirage Island (South of Route 134)
+1221,9,Mirage Island (South of Pacofidlog)
+1222,9,Mirage Island (East of Shoal Cave)
+1223,9,Mirage Island
+1224,9,Mirage Forest (North of Lilycove)
+1225,9,Mirage Forest (South of Route 132)
+1226,9,Mirage Forest (East of Mossdeep)
+1227,9,Mirage Forest (South of Route 109)
+1228,9,Mirage Forest (North of Route 124)
+1229,9,Mirage Forest (West of Route 114)
+1230,9,Mirage Forest (West of Route 105)
+1231,9,Mirage Forest (South of Route 111)
+1232,9,Outskirt Stand (Outside)
+1233,9,Phenac City (Mayor's House)
+1234,9,Snagem Hideout 1F
+1235,9,Shadow Pokémon Lab B2F
+1236,9,Phenac City (West Exit)
+1237,9,Phenac City (East Exit)
+1238,9,Phenac City (South Exit)
+1239,9,Pyrite Town (Duel Square)
+1240,9,Pyrite Town (Entrance)
+1241,9,Pyrite Bldg 1F
+1242,9,Pyrite Cave (Miror's Hideout)
+1243,9,Pyrite Bldg 4F
+1244,9,Pyrite Cave (Outside)
+1245,9,Pyrite Cave (South Sewers)
+1246,9,Pyrite Cave B1F
+1247,9,Pyrite Cave B1F (Post Sewers)
+1248,9,Realgam Tower
+1249,9,Phenac City Colosseum
+1250,9,Pyrite Town (Duking's House)
+1251,9,Shadow Pokémon Lab B1F
+1252,9,Agate Village (Relic Forest)
+1253,9,The Under Colosseum
+1254,9,Mt. Battle 10F
+1255,9,The Under
+1256,9,The Under (TV Studio)
+1257,9,The Under (Subway)
+1258,9,Snagem Hideout 2F
+1259,9,Realgam Tower Colosseum
+1260,9,The Under (Deep Colosseum)
+1261,9,Mt. Battle 100F
+1262,9,Phenac City (Card E Room)

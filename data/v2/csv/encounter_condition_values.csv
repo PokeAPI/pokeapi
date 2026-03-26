@@ -107,9 +107,9 @@ id,encounter_condition_id,identifier,is_default
 106,10,other-caught-articuno,0
 107,10,other-caught-zapdos,0
 108,10,other-caught-moltres,0
-109,15,trade-danny-togepi,0
-110,15,trade-duking-trapinch,0
-111,15,trade-duking-surskit,0
-112,15,trade-duking-wooper,0
+109,15,trade-togepi,1
+110,15,trade-trapinch,1
+111,15,trade-surskit,1
+112,15,trade-wooper,1
 113,9,story-progress-catch-all-shadow-pokemon,0
 114,9,other-complete-mt-battle,0

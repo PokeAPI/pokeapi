@@ -1137,7 +1137,7 @@ id,location_id,game_index,identifier
 1246,1101,0,bf1
 1247,1101,0,bf1-post-sewers
 1248,1102,0,
-1249,1096,0,colosseum
+1249,1096,0,stadium
 1250,1099,0,dukings-house
 1251,1098,0,bf1
 1252,1103,0,relic-forest
@@ -1187,4 +1187,4 @@ id,location_id,game_index,identifier
 1296,1105,0,lobby
 1297,1095,0,inside
 1298,1099,0,colosseum
-1299,1096,0,colosseum-outside
+1299,1096,0,stadium-outside

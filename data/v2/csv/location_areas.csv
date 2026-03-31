@@ -1158,7 +1158,7 @@ id,location_id,game_index,identifier
 1267,1108,0,outside
 1268,1108,0,bf2
 1269,1108,0,bf1
-1270,1109,0,
+1270,1109,0,cave
 1271,1110,0,2f
 1272,1110,0,3f
 1273,1110,0,roof
@@ -1182,8 +1182,8 @@ id,location_id,game_index,identifier
 1291,1112,0,dome-1f
 1292,1112,0,dome-2f
 1293,1107,0,
-1294,1113,0,
-1295,1114,0,
+1294,1109,0,rock
+1295,1109,0,oasis
 1296,1105,0,lobby
 1297,1095,0,inside
 1298,1099,0,colosseum

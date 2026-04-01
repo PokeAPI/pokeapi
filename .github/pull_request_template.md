@@ -4,17 +4,17 @@
 * Consider adding the `no-deploy` label if this PR shouldn't be deployed and does not alter the data served by the API.
 -->
 
-## Change description
+# Change description
 
-<!--> Add your change description here <!-->
+<!-- Add your change description here -->
 
 ## AI coding assistance disclosure
 
-<!--> Provide details on how you used AI coding to assist you in this change <!-->
+<!-- Provide details on how you used AI coding to assist you in this change -->
 
 ## Contributor check list
 
-<!-- > Your PR will not be reviewed until you have completed all these steps: <!-->
+<!-- Your PR will not be reviewed until you have completed all these steps: -->
 
 - [ ] I have written a description of the issue and explained why the fix solves the problem.
 - [ ] I have written tests for my code changes.

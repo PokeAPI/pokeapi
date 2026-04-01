@@ -31,7 +31,7 @@ Simple!
 The types of AI-assisted coding that will be accepted:
 
 - Scaffolding for common framework patterns
-- Scaffolding for test patternstest generation
+- Scaffolding for test patterns/test generation
 - Mass file editing for tedious repetitive changes
 
 The types of AI changes that will **NOT** be accepted:

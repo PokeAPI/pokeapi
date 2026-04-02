@@ -1,4 +1,7 @@
+from django.core.validators import RegexValidator
 from django.db import models
+
+IDENTIFIER_PATTERN = r"^[a-z0-9-]+$"
 
 #####################
 #  ABSTRACT MODELS  #
@@ -377,7 +380,11 @@ class HasMoveTarget(models.Model):
 
 
 class HasName(models.Model):
-    name = models.CharField(max_length=200, db_index=True)
+    name = models.CharField(
+        max_length=200,
+        db_index=True,
+        validators=[RegexValidator(IDENTIFIER_PATTERN)],
+    )
 
     class Meta:
         abstract = True

@@ -168,6 +168,69 @@ class HasFlingEffect(models.Model):
     class Meta:
         abstract = True
 
+class HasItemMechanicTrigger(models.Model):
+    item_mechanic_trigger = models.ForeignKey(
+        "ItemMechanicTrigger",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicContext(models.Model):
+    item_mechanic_context = models.ForeignKey(
+        "ItemMechanicContext",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicEffectType(models.Model):
+    item_mechanic_effect_type = models.ForeignKey(
+        "ItemMechanicEffectType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicTarget(models.Model):
+    item_mechanic_target = models.ForeignKey(
+        "ItemMechanicTarget",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanic(models.Model):
+    item_mechanic = models.ForeignKey(
+        "ItemMechanic",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
 
 class HasGameIndex(models.Model):
     game_index = models.IntegerField()
@@ -888,6 +951,45 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 class ItemSprites(HasItem):
     sprites = models.JSONField()
 
+# 1. Triggers
+class ItemMechanicTrigger(HasName):
+    pass
+
+class ItemMechanicTriggerProse(IsDescription, HasItemMechanicTrigger):
+    pass
+
+class ItemMechanicContext(HasName):
+    pass
+
+class ItemMechanicContextProse(IsDescription, HasItemMechanicContext):
+    pass
+
+class ItemMechanicEffectType(HasName):
+    pass
+
+class ItemMechanicEffectTypeProse(IsDescription, HasItemMechanicEffectType):
+    pass
+
+class ItemMechanicTarget(HasName):
+    pass
+
+class ItemMechanicTargetProse(IsDescription, HasItemMechanicTarget):
+    pass
+
+class ItemMechanic(HasItem, HasVersionGroup, HasItemMechanicTrigger, HasItemMechanicContext):
+    operation_order = models.IntegerField(default=0)
+
+class ItemMechanicCondition(HasItemMechanic):
+    condition_type = models.CharField(max_length=50)
+    operator = models.CharField(max_length=10)
+    value = models.CharField(max_length=50)
+    condition_group = models.IntegerField(default=1)
+
+class ItemMechanicEffect(HasItemMechanic, HasItemMechanicEffectType, HasItemMechanicTarget):
+    value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    value_type = models.CharField(max_length=50, null=True, blank=True)
+    probability = models.IntegerField(default=100)
+    is_consumed = models.BooleanField(default=False)
 
 ####################
 #  CONTEST MODELS  #
@@ -1562,6 +1664,8 @@ class PokemonSpecies(
     is_legendary = models.BooleanField(default=False)
 
     is_mythical = models.BooleanField(default=False)
+
+    is_ultra_beast = models.BooleanField(default=False)
 
     hatch_counter = models.IntegerField(blank=True, null=True)
 

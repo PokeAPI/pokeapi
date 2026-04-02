@@ -580,6 +580,54 @@ def _build_items():
 
     build_generic((ItemAttributeMap,), "item_flag_map.csv", csv_record_to_objects)
 
+    def csv_record_to_objects(info):
+        yield ItemMechanicTrigger(id=int(info[0]), name=info[1])
+    build_generic((ItemMechanicTrigger,), "item_mechanic_trigger.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanicContext(id=int(info[0]), name=info[1])
+    build_generic((ItemMechanicContext,), "item_mechanic_context.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanicEffectType(id=int(info[0]), name=info[1])
+    build_generic((ItemMechanicEffectType,), "item_mechanic_effect_type.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanicTarget(id=int(info[0]), name=info[1])
+    build_generic((ItemMechanicTarget,), "item_mechanic_target.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanic(
+            id=int(info[0]),
+            item_id=int(info[1]),
+            version_group_id=int(info[2]),
+            item_mechanic_trigger_id=int(info[3]),
+            item_mechanic_context_id=int(info[4]),
+            operation_order=int(info[5]),
+        )
+    build_generic((ItemMechanic,), "item_mechanic.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanicCondition(
+            item_mechanic_id=int(info[0]),
+            condition_type=info[1],
+            operator=info[2],
+            value=info[3],
+            condition_group=int(info[4])
+        )
+    build_generic((ItemMechanicCondition,), "item_mechanic_condition.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield ItemMechanicEffect(
+            item_mechanic_id=int(info[0]),
+            item_mechanic_effect_type_id=int(info[1]),
+            item_mechanic_target_id=int(info[2]),
+            value=info[3] if info[3] != "" else None,
+            value_type=info[4] if info[4] != "" else None,
+            probability=int(info[5]),
+            is_consumed=info[6].lower() == 'true'
+        )
+    build_generic((ItemMechanicEffect,), "item_mechanic_effect.csv", csv_record_to_objects)
 
 ###########
 #  TYPES  #
@@ -1358,7 +1406,8 @@ def _build_pokemons():
             forms_switchable=bool(int(info[15])) if info[15] != "" else None,
             is_legendary=bool(int(info[16])) if info[16] != "" else None,
             is_mythical=bool(int(info[17])) if info[17] != "" else None,
-            order=int(info[18]) if info[18] != "" else None,
+            is_ultra_beast=bool(int(info[18])) if info[18] != "" else None,
+            order=int(info[19]) if info[19] != "" else None,
         )
 
     build_generic((PokemonSpecies,), "pokemon_species.csv", csv_record_to_objects)

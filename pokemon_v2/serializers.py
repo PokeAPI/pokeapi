@@ -145,6 +145,50 @@ class ItemSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Item
         fields = ("name", "url")
 
+class ItemMechanicTriggerSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ItemMechanicTrigger
+        fields = ("name", "url")
+
+
+class ItemMechanicContextSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ItemMechanicContext
+        fields = ("name", "url")
+
+
+class ItemMechanicEffectTypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ItemMechanicEffectType
+        fields = ("name", "url")
+
+
+class ItemMechanicTargetSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ItemMechanicTarget
+        fields = ("name", "url")
+class ItemMechanicTriggerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemMechanicTrigger
+        fields = ("id", "name")
+
+
+class ItemMechanicContextSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemMechanicContext
+        fields = ("id", "name")
+
+
+class ItemMechanicEffectTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemMechanicEffectType
+        fields = ("id", "name")
+
+
+class ItemMechanicTargetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemMechanicTarget
+        fields = ("id", "name")
 
 class LanguageSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -333,6 +377,47 @@ class ItemAttributeMapSerializer(serializers.ModelSerializer):
             "attribute",
         )
 
+class ItemMechanicConditionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ItemMechanicCondition
+        fields = (
+            "condition_type",
+            "operator",
+            "value",
+            "condition_group",
+        )
+
+class ItemMechanicEffectSerializer(serializers.ModelSerializer):
+    effect_type = ItemMechanicEffectTypeSummarySerializer(source="item_mechanic_effect_type")
+    target = ItemMechanicTargetSummarySerializer(source="item_mechanic_target")
+
+    class Meta:
+        model = ItemMechanicEffect
+        fields = (
+            "effect_type",
+            "target",
+            "value",
+            "value_type",
+            "probability",
+            "is_consumed",
+        )
+
+class ItemMechanicSerializer(serializers.ModelSerializer):
+    trigger = ItemMechanicTriggerSummarySerializer(source="item_mechanic_trigger", read_only=True)
+    context = ItemMechanicContextSummarySerializer(source="item_mechanic_context", read_only=True)
+    conditions = ItemMechanicConditionSerializer(source="itemmechaniccondition", many=True, read_only=True)
+    effects = ItemMechanicEffectSerializer(source="itemmechaniceffect", many=True, read_only=True)
+
+    class Meta:
+        model = ItemMechanic
+        fields = (
+            "version_group",
+            "trigger",
+            "context",
+            "operation_order",
+            "conditions",
+            "effects",
+        )
 
 class MoveMetaStatChangeSerializer(serializers.ModelSerializer):
     stat = StatSummarySerializer()
@@ -1838,6 +1923,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
     baby_trigger_for = serializers.SerializerMethodField(source="get_baby_trigger_for")
     sprites = serializers.SerializerMethodField("get_item_sprites")
     machines = serializers.SerializerMethodField("get_item_machines")
+    mechanics = ItemMechanicSerializer(source="itemmechanic", many=True, read_only=True)
 
     class Meta:
         model = Item
@@ -1857,6 +1943,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "sprites",
             "baby_trigger_for",
             "machines",
+            "mechanics",
         )
 
     @extend_schema_field(
@@ -5410,6 +5497,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
             "is_baby",
             "is_legendary",
             "is_mythical",
+            "is_ultra_beast",
             "hatch_counter",
             "has_gender_differences",
             "forms_switchable",

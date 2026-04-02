@@ -1,0 +1,224 @@
+"mechanics": [
+    {
+        "version_group": 5,
+        "trigger": {
+            "name": "manual_use_bag",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/3/"
+        },
+        "context": {
+            "name": "bag-use-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/2/"
+        },
+        "operation_order": 0,
+        "conditions": [
+            {
+                "condition_type": "target-type-id",
+                "operator": "EQUALS",
+                "value": "11",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "EQUALS",
+                "value": "7",
+                "condition_group": 2
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "catch-bonus",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/2/"
+                },
+                "target": {
+                    "name": "target",
+                    "url": "http://localhost/api/v2/item-mechanic-target/2/"
+                },
+                "value": "3.00",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": true
+            }
+        ]
+    },
+    {
+        "version_group": 5,
+        "trigger": {
+            "name": "manual_use_bag",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/3/"
+        },
+        "context": {
+            "name": "bag-use-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/2/"
+        },
+        "operation_order": 1,
+        "conditions": [
+            {
+                "condition_type": "target-type-id",
+                "operator": "NOT_EQUAL",
+                "value": "11",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "NOT_EQUAL",
+                "value": "7",
+                "condition_group": 1
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "catch-bonus",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/2/"
+                },
+                "target": {
+                    "name": "target",
+                    "url": "http://localhost/api/v2/item-mechanic-target/2/"
+                },
+                "value": "1.00",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": true
+            }
+        ]
+    },
+    {
+        "version_group": 17,
+        "trigger": {
+            "name": "manual_use_bag",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/3/"
+        },
+        "context": {
+            "name": "bag-use-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/2/"
+        },
+        "operation_order": 0,
+        "conditions": [
+            {
+                "condition_type": "is_ultra_beast",
+                "operator": "EQUALS",
+                "value": "true",
+                "condition_group": 1
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "catch-bonus",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/2/"
+                },
+                "target": {
+                    "name": "target",
+                    "url": "http://localhost/api/v2/item-mechanic-target/2/"
+                },
+                "value": "0.10",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": true
+            }
+        ]
+    },
+    {
+        "version_group": 17,
+        "trigger": {
+            "name": "manual_use_bag",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/3/"
+        },
+        "context": {
+            "name": "bag-use-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/2/"
+        },
+        "operation_order": 1,
+        "conditions": [
+            {
+                "condition_type": "is_ultra_beast",
+                "operator": "EQUALS",
+                "value": "false",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "EQUALS",
+                "value": "11",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "is_ultra_beast",
+                "operator": "EQUALS",
+                "value": "false",
+                "condition_group": 2
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "EQUALS",
+                "value": "7",
+                "condition_group": 2
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "catch-bonus",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/2/"
+                },
+                "target": {
+                    "name": "target",
+                    "url": "http://localhost/api/v2/item-mechanic-target/2/"
+                },
+                "value": "3.50",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": true
+            }
+        ]
+    },
+    {
+        "version_group": 17,
+        "trigger": {
+            "name": "manual_use_bag",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/3/"
+        },
+        "context": {
+            "name": "bag-use-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/2/"
+        },
+        "operation_order": 2,
+        "conditions": [
+            {
+                "condition_type": "is_ultra_beast",
+                "operator": "EQUALS",
+                "value": "false",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "NOT_EQUAL",
+                "value": "11",
+                "condition_group": 1
+            },
+            {
+                "condition_type": "target-type-id",
+                "operator": "NOT_EQUAL",
+                "value": "7",
+                "condition_group": 1
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "catch-bonus",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/2/"
+                },
+                "target": {
+                    "name": "target",
+                    "url": "http://localhost/api/v2/item-mechanic-target/2/"
+                },
+                "value": "1.00",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": true
+            }
+        ]
+    }
+]

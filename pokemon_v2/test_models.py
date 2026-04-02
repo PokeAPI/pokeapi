@@ -28,61 +28,6 @@ class CSVResourceNameValidationTestCase(TestCase):
     # Pattern for valid resource identifiers: lowercase letters, numbers, and hyphens only
     VALID_IDENTIFIER_PATTERN = re.compile(r"^[a-z0-9-]+$")
 
-    # CSV files with 'identifier' column to validate
-    CSV_FILES_TO_VALIDATE = [
-        "abilities.csv",
-        "berry_firmness.csv",
-        "conquest_episodes.csv",
-        "conquest_kingdoms.csv",
-        "conquest_move_displacements.csv",
-        "conquest_move_ranges.csv",
-        "conquest_stats.csv",
-        "conquest_warrior_archetypes.csv",
-        "conquest_warrior_skills.csv",
-        "conquest_warrior_stats.csv",
-        "conquest_warriors.csv",
-        "contest_types.csv",
-        "egg_groups.csv",
-        "encounter_conditions.csv",
-        "encounter_condition_values.csv",
-        "encounter_methods.csv",
-        "evolution_triggers.csv",
-        "genders.csv",
-        "generations.csv",
-        "growth_rates.csv",
-        "items.csv",
-        "item_categories.csv",
-        "item_flags.csv",
-        "item_fling_effects.csv",
-        "item_pockets.csv",
-        "languages.csv",
-        "locations.csv",
-        "location_areas.csv",
-        "moves.csv",
-        "move_battle_styles.csv",
-        "move_damage_classes.csv",
-        "move_flags.csv",
-        "move_meta_ailments.csv",
-        "move_meta_categories.csv",
-        "move_targets.csv",
-        "natures.csv",
-        "pal_park_areas.csv",
-        "pokeathlon_stats.csv",
-        "pokedexes.csv",
-        "pokemon.csv",
-        "pokemon_colors.csv",
-        "pokemon_forms.csv",
-        "pokemon_habitats.csv",
-        "pokemon_move_methods.csv",
-        "pokemon_shapes.csv",
-        "pokemon_species.csv",
-        "regions.csv",
-        "stats.csv",
-        "types.csv",
-        "versions.csv",
-        "version_groups.csv",
-    ]
-
     def test_all_csv_identifiers_are_ascii_slugs(self):
         """
         Validate that all resource identifiers in CSV files follow the ASCII slug format.
@@ -99,30 +44,19 @@ class CSVResourceNameValidationTestCase(TestCase):
         - Special characters (&, (), ', etc.)
         """
         violations = []
-        missing_files = []
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
 
-        for filename in self.CSV_FILES_TO_VALIDATE:
-            csv_path = os.path.join(settings.BASE_DIR, "data", "v2", "csv", filename)
-
-            # Track missing files to report at the end
-            if not os.path.exists(csv_path):
-                missing_files.append(filename)
+        for filename in sorted(os.listdir(csv_dir)):
+            if not filename.endswith(".csv"):
                 continue
+
+            csv_path = os.path.join(csv_dir, filename)
 
             try:
                 with open(csv_path, "r", encoding="utf-8") as csvfile:
                     reader = csv.DictReader(csvfile)
 
-                    # Check if the identifier column exists
                     if "identifier" not in reader.fieldnames:
-                        violations.append(
-                            {
-                                "file": filename,
-                                "row": "N/A",
-                                "id": "N/A",
-                                "identifier": "Column 'identifier' not found",
-                            }
-                        )
                         continue
 
                     for row_num, row in enumerate(reader, start=2):
@@ -153,49 +87,36 @@ class CSVResourceNameValidationTestCase(TestCase):
                     }
                 )
 
-        # If there are violations or missing files, create a detailed error message
-        if violations or missing_files:
-            error_lines = []
+        error_lines = []
 
-            # Report missing files first
-            if missing_files:
-                error_lines.append("\n\nMissing CSV files:")
-                for filename in missing_files:
-                    error_lines.append(f"  - {filename}")
+        # Report violations
+        if violations:
+            error_lines.append(
+                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(
+                    len(violations)
+                )
+            )
+            error_lines.append("\nIdentifiers must match pattern: ^[a-z0-9-]+$")
+            error_lines.append("\nInvalid identifiers found in CSV files:")
+
+            for v in violations:
                 error_lines.append(
-                    "\nAll CSV files listed in CSV_FILES_TO_VALIDATE must exist."
+                    "  - {file} (row {row}, id={id}): {identifier}".format(**v)
                 )
 
-            # Report violations
-            if violations:
-                error_lines.append(
-                    "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(
-                        len(violations)
-                    )
-                )
-                error_lines.append("\nIdentifiers must match pattern: ^[a-z0-9-]+$")
-                error_lines.append("\nInvalid identifiers found in CSV files:")
-
-                for v in violations:
-                    error_lines.append(
-                        "  - {file} (row {row}, id={id}): {identifier}".format(**v)
-                    )
-
-                error_lines.append(
-                    "\nThese identifiers contain invalid characters and must be normalized."
-                )
-                error_lines.append(
-                    "Update the CSV files in data/v2/csv/ to fix these identifiers."
-                )
-                error_lines.append("\nSuggested fixes:")
-                error_lines.append(
-                    "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove"
-                )
-                error_lines.append("  - Remove Unicode letters (ñ → n)")
-                error_lines.append(
-                    "  - Remove parentheses and other special characters"
-                )
-                error_lines.append("  - Convert to lowercase")
+            error_lines.append(
+                "\nThese identifiers contain invalid characters and must be normalized."
+            )
+            error_lines.append(
+                "Update the CSV files in data/v2/csv/ to fix these identifiers."
+            )
+            error_lines.append("\nSuggested fixes:")
+            error_lines.append(
+                "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove"
+            )
+            error_lines.append("  - Remove Unicode letters (ñ → n)")
+            error_lines.append("  - Remove parentheses and other special characters")
+            error_lines.append("  - Convert to lowercase")
 
             self.fail("\n".join(error_lines))
 

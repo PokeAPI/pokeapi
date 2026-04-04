@@ -16,7 +16,7 @@
 
 <!-- Your PR will not be reviewed until you have completed all these steps: -->
 
-- [ ] I have written a description of the issue and explained why the fix solves the problem.
-- [ ] I have written tests for my code changes.
+- [ ] I have written a description of the contribution and explained its motivation.
+- [ ] I have written tests for my code changes (if applicable).
 - [ ] I have read and understood the [AI Assisted Contribution guidelines](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md#ai-assisted-coding).
 - [ ] I will own this change in production, and I am prepared to fix any bugs caused by my code change.

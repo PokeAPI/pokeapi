@@ -2,3 +2,7 @@ id,identifier
 1,hp-recovery
 2,catch-bonus
 3,guarantee-capture
+4,modify-friendship-gain
+5,restore-pp-all
+6,remove-ailment
+7,restore-pp-single

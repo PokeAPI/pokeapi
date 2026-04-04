@@ -382,7 +382,7 @@ class ItemMechanicConditionSerializer(serializers.ModelSerializer):
         model = ItemMechanicCondition
         fields = (
             "condition_type",
-            "operator",
+            "logic_operator",
             "value",
             "condition_group",
         )

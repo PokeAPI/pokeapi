@@ -611,7 +611,7 @@ def _build_items():
         yield ItemMechanicCondition(
             item_mechanic_id=int(info[0]),
             condition_type=info[1],
-            operator=info[2],
+            logic_operator=info[2],
             value=info[3],
             condition_group=int(info[4])
         )

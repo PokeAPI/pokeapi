@@ -980,13 +980,13 @@ class ItemMechanic(HasItem, HasVersionGroup, HasItemMechanicTrigger, HasItemMech
     operation_order = models.IntegerField(default=0)
 
 class ItemMechanicCondition(HasItemMechanic):
-    condition_type = models.CharField(max_length=50)
-    operator = models.CharField(max_length=10)
-    value = models.CharField(max_length=50)
+    condition_type = models.CharField(max_length=255)
+    logic_operator = models.CharField(max_length=255)
+    value = models.CharField(max_length=255)
     condition_group = models.IntegerField(default=1)
 
 class ItemMechanicEffect(HasItemMechanic, HasItemMechanicEffectType, HasItemMechanicTarget):
-    value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    value = models.CharField(max_length=255, null=True, blank=True)
     value_type = models.CharField(max_length=50, null=True, blank=True)
     probability = models.IntegerField(default=100)
     is_consumed = models.BooleanField(default=False)

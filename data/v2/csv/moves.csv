@@ -918,6 +918,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 917,psychic-noise,9,14,75,10,100,0,10,3,,,,,
 918,upper-hand,9,2,65,15,100,3,10,2,,,,,
 919,malignant-chain,9,4,100,5,100,0,10,3,,,,,
+920,nihil-light,9,16,200,10,100,0,11,3,,,,,
 10001,shadow-rush,3,10002,55,,100,0,10,2,10001,,,,
 10002,shadow-blast,3,10002,80,,100,0,10,2,44,,,,
 10003,shadow-blitz,3,10002,40,,100,0,10,2,1,,,,

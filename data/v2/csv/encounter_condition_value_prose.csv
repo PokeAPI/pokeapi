@@ -229,10 +229,10 @@ encounter_condition_value_id,local_language_id,name
 104,5,Avoir Dialga et Palkia dans l'équipe
 105,9,Scan a specific QR Code
 105,5,Scanner un code QR spécifique
-109,9,Trade Danny the Purified Shadow Togepi or Togetic for an Elekid
-110,9,Trade Duking a Trapinch for a Meditite from a Pokespot
-111,9,Trade Duking a Surskit for a Shuckle from a Pokespot
-112,9,Trade Duking a Wooper for a Larvitar from a Pokespot
+109,9,Give Togepi or Togetic in a Trade
+110,9,Give Trapunch in a Trade
+111,9,Give Surskit in a Trade
+112,9,Give Wooper in a Trade
 113,9,Catch all 82 Shadow Pokemon and Mirror B will appear in Gateon with a Shadow Dragonite
 114,9,Complete Mt. Battle to receive a special prize Pokemon
 115,9,Have at least 180 coins in your Coin Case
@@ -265,3 +265,19 @@ encounter_condition_value_id,local_language_id,name
 142,9,Have at least 2880 coins in your Coin Case
 143,9,Have at least 5400 coins in your Coin Case
 144,9,Have at least 8300 coins in your Coin Case
+145,9,Give Abra in a Trade
+146,9,Give Nidoran-M in a Trade
+147,9,Give Nidorino in a Trade
+148,9,Give Slowbro in a Trade
+149,9,Give Poliwhirl in a Trade
+150,9,Give Spearow in a Trade
+151,9,Give Raichu in a Trade
+152,9,Give Venonat in a Trade
+153,9,Give Ponyta in a Trade
+154,9,Give Clefairy in a Trade
+155,9,Give Cubone in a Trade
+156,9,Give Lickitung in a Trade
+157,9,Give Tangela in a Trade
+158,9,Give Golduck in a Trade
+159,9,Give Growlithe in a Trade
+160,9,Give Kangaskhan in a Trade

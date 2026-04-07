@@ -1187,33 +1187,9 @@ location_area_id,local_language_id,name
 440,9,Artisan Cave
 440,6,Höhlenatelier
 440,5,Grotte Atelier
-441,9,Altering Cave (A)
-441,6,Wandelhöhle (A)
-441,5,Grotte Métamo (A)
-442,9,Altering Cave (B)
-442,6,Wandelhöhle (B)
-442,5,Grotte Métamo (B)
-443,9,Altering Cave (C)
-443,6,Wandelhöhle (C)
-443,5,Grotte Métamo (C)
-444,9,Altering Cave (D)
-444,6,Wandelhöhle (D)
-444,5,Grotte Métamo (D)
-445,9,Altering Cave (E)
-445,6,Wandelhöhle (E)
-445,5,Grotte Métamo (E)
-446,9,Altering Cave (F)
-446,6,Wandelhöhle (F)
-446,5,Grotte Métamo (F)
-447,9,Altering Cave (G)
-447,6,Wandelhöhle (G)
-447,5,Grotte Métamo (G)
-448,9,Altering Cave (H)
-448,6,Wandelhöhle (H)
-448,5,Grotte Métamo (H)
-449,9,Altering Cave (I)
-449,6,Wandelhöhle (I)
-449,5,Grotte Métamo (I)
+441,9,Altering cave
+441,6,Wandelhöhle
+441,5,Grotte Métamo
 450,9,Monean Chamber
 450,6,Einamon-Kammer
 450,5,Chambre Anemune
@@ -2359,3 +2335,4 @@ location_area_id,local_language_id,name
 1302,9,Kanto Underground Path
 1303,9,Violet City (Southwest House)
 1304,9,Goldenrod City Department Store 5F
+1305,9,Foretree City

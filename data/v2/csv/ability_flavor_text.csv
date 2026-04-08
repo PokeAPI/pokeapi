@@ -29859,3 +29859,7 @@ Unnerve Ability and Spectrier’s Grim Neigh Ability."
 306,27,9,"When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero."
 307,27,5,"Lorsque Pêchaminus empoisonne un Pokémon grâce\nà l’une de ses capacités, ce dernier devient également\nconfus."
 307,27,9,Pokémon poisoned by Pecharunt's moves will also become confused.
+308,32,9,"When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered."
+309,32,9,"The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
+310,32,9,"Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight."
+311,32,9,"When the Pokémon takes damage from a move, it burns the attacker."

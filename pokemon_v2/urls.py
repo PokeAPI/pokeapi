@@ -13,6 +13,8 @@ from pokemon_v2.api import *
 
 router = routers.DefaultRouter()
 
+router.register(r"mechanic-condition", MechanicConditionTypeViewSet)
+router.register(r"logic-operator", LogicOperatorTypeViewSet)
 router.register(r"ability", AbilityResource)
 router.register(r"berry", BerryResource)
 router.register(r"berry-firmness", BerryFirmnessResource)

@@ -5,6 +5,32 @@ from django.db import models
 #####################
 
 
+class HasMechanicConditionType(models.Model):
+    condition_type = models.ForeignKey(
+        "MechanicConditionType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasLogicOperatorType(models.Model):
+    logic_operator = models.ForeignKey(
+        "LogicOperatorType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
 class HasAbility(models.Model):
     ability = models.ForeignKey(
         "Ability",
@@ -168,6 +194,7 @@ class HasFlingEffect(models.Model):
     class Meta:
         abstract = True
 
+
 class HasItemMechanicTrigger(models.Model):
     item_mechanic_trigger = models.ForeignKey(
         "ItemMechanicTrigger",
@@ -231,6 +258,7 @@ class HasItemMechanic(models.Model):
 
     class Meta:
         abstract = True
+
 
 class HasGameIndex(models.Model):
     game_index = models.IntegerField()
@@ -951,45 +979,68 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 class ItemSprites(HasItem):
     sprites = models.JSONField()
 
-# 1. Triggers
+
 class ItemMechanicTrigger(HasName):
     pass
+
 
 class ItemMechanicTriggerProse(IsDescription, HasItemMechanicTrigger):
     pass
 
+
 class ItemMechanicContext(HasName):
     pass
+
 
 class ItemMechanicContextProse(IsDescription, HasItemMechanicContext):
     pass
 
+
 class ItemMechanicEffectType(HasName):
     pass
+
 
 class ItemMechanicEffectTypeProse(IsDescription, HasItemMechanicEffectType):
     pass
 
+
 class ItemMechanicTarget(HasName):
     pass
+
 
 class ItemMechanicTargetProse(IsDescription, HasItemMechanicTarget):
     pass
 
-class ItemMechanic(HasItem, HasVersionGroup, HasItemMechanicTrigger, HasItemMechanicContext):
+
+class ItemMechanic(
+    HasItem, HasVersionGroup, HasItemMechanicTrigger, HasItemMechanicContext
+):
     operation_order = models.IntegerField(default=0)
 
-class ItemMechanicCondition(HasItemMechanic):
-    condition_type = models.CharField(max_length=255)
-    logic_operator = models.CharField(max_length=255)
+
+class MechanicConditionType(HasName):
+    pass
+
+
+class LogicOperatorType(HasName):
+    pass
+
+
+class ItemMechanicCondition(
+    HasItemMechanic, HasMechanicConditionType, HasLogicOperatorType
+):
     value = models.CharField(max_length=255)
     condition_group = models.IntegerField(default=1)
 
-class ItemMechanicEffect(HasItemMechanic, HasItemMechanicEffectType, HasItemMechanicTarget):
+
+class ItemMechanicEffect(
+    HasItemMechanic, HasItemMechanicEffectType, HasItemMechanicTarget
+):
     value = models.CharField(max_length=255, null=True, blank=True)
     value_type = models.CharField(max_length=50, null=True, blank=True)
     probability = models.IntegerField(default=100)
     is_consumed = models.BooleanField(default=False)
+
 
 ####################
 #  CONTEST MODELS  #

@@ -13,6 +13,18 @@ API_V2 = "/api/v2"
 class APIData:
     """Data Initializers"""
 
+    @classmethod
+    def setup_mechanic_condition_type_data(cls, name="test-condition"):
+        condition = MechanicConditionType.objects.create(name=name)
+        condition.save()
+        return condition
+
+    @classmethod
+    def setup_logic_operator_type_data(cls, name="test-operator"):
+        operator = LogicOperatorType.objects.create(name=name)
+        operator.save()
+        return operator
+
     # Gender Data
     @classmethod
     def setup_gender_data(cls, name="gndr"):
@@ -421,10 +433,17 @@ class APIData:
 
     @classmethod
     def setup_item_mechanic_data(
-        cls, item=None, version_group=None, trigger=None, context=None, operation_order=0
+        cls,
+        item=None,
+        version_group=None,
+        trigger=None,
+        context=None,
+        operation_order=0,
     ):
         item = item or cls.setup_item_data(name="mech test itm")
-        version_group = version_group or cls.setup_version_group_data(name="mech test vg")
+        version_group = version_group or cls.setup_version_group_data(
+            name="mech test vg"
+        )
         trigger = trigger or cls.setup_item_mechanic_trigger_data()
         context = context or cls.setup_item_mechanic_context_data()
 
@@ -433,30 +452,42 @@ class APIData:
             version_group=version_group,
             item_mechanic_trigger=trigger,
             item_mechanic_context=context,
-            operation_order=operation_order
+            operation_order=operation_order,
         )
         mechanic.save()
         return mechanic
 
     @classmethod
     def setup_item_mechanic_condition_data(
-        cls, mechanic=None, condition_type="hp-threshold", logic_operator="LESS_THAN", value="50", condition_group=1
+        cls,
+        mechanic=None,
+        condition_type="hp-threshold",
+        logic_operator="LESS_THAN",
+        value="50",
+        condition_group=1,
     ):
         mechanic = mechanic or cls.setup_item_mechanic_data()
-        
+
         condition = ItemMechanicCondition.objects.create(
             item_mechanic=mechanic,
             condition_type=condition_type,
             logic_operator=logic_operator,
             value=value,
-            condition_group=condition_group
+            condition_group=condition_group,
         )
         condition.save()
         return condition
 
     @classmethod
     def setup_item_mechanic_effect_data(
-        cls, mechanic=None, effect_type=None, target=None, value="1.5", value_type="multiplier", probability=100, is_consumed=True
+        cls,
+        mechanic=None,
+        effect_type=None,
+        target=None,
+        value="1.5",
+        value_type="multiplier",
+        probability=100,
+        is_consumed=True,
     ):
         mechanic = mechanic or cls.setup_item_mechanic_data()
         effect_type = effect_type or cls.setup_item_mechanic_effect_type_data()
@@ -469,7 +500,7 @@ class APIData:
             value=value,
             value_type=value_type,
             probability=probability,
-            is_consumed=is_consumed
+            is_consumed=is_consumed,
         )
         effect.save()
         return effect
@@ -2168,6 +2199,39 @@ class APIData:
 
 # Tests
 class APITests(APIData, APITestCase):
+
+    def test_mechanic_condition_api(self):
+        condition = self.setup_mechanic_condition_type_data(name="hp-percent-max")
+
+        list_response = self.client.get("{}/mechanic-condition/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        results = list_response.data.get("results", list_response.data)
+        self.assertTrue(len(results) > 0)
+        self.assertEqual(results[0]["name"], "hp-percent-max")
+
+        detail_response = self.client.get(
+            "{}/mechanic-condition/{}/".format(API_V2, condition.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "hp-percent-max")
+
+    def test_logic_operator_api(self):
+        operator = self.setup_logic_operator_type_data(name="LESS_THAN_OR_EQUAL_TO")
+
+        list_response = self.client.get("{}/logic-operator/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        results = list_response.data.get("results", list_response.data)
+        self.assertTrue(len(results) > 0)
+        self.assertEqual(results[0]["name"], "LESS_THAN_OR_EQUAL_TO")
+
+        detail_response = self.client.get(
+            "{}/logic-operator/{}/".format(API_V2, operator.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "LESS_THAN_OR_EQUAL_TO")
+
     # Gender Tests
     def test_gender_api(self):
         gender = self.setup_gender_data(name="female")
@@ -2913,24 +2977,60 @@ class APITests(APIData, APITestCase):
         )
 
         self.assertEqual(len(response.data["mechanics"]), 1)
-        
-        self.assertEqual(response.data["mechanics"][0]["operation_order"], mechanic.operation_order)
-        self.assertEqual(response.data["mechanics"][0]["trigger"]["name"], mechanic.item_mechanic_trigger.name)
-        self.assertEqual(response.data["mechanics"][0]["context"]["name"], mechanic.item_mechanic_context.name)
-        self.assertEqual(response.data["mechanics"][0]["version_group"], mechanic.version_group.pk)
-        
-        self.assertEqual(response.data["mechanics"][0]["conditions"][0]["condition_type"], condition.condition_type)
-        self.assertEqual(response.data["mechanics"][0]["conditions"][0]["logic_operator"], condition.logic_operator)
-        self.assertEqual(response.data["mechanics"][0]["conditions"][0]["value"], condition.value)
-        self.assertEqual(response.data["mechanics"][0]["conditions"][0]["condition_group"], condition.condition_group)
-        
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["value"], effect.value)
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["value_type"], effect.value_type)
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["is_consumed"], effect.is_consumed)
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["probability"], effect.probability)
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["effect_type"]["name"], effect.item_mechanic_effect_type.name)
-        self.assertEqual(response.data["mechanics"][0]["effects"][0]["target"]["name"], effect.item_mechanic_target.name)
 
+        self.assertEqual(
+            response.data["mechanics"][0]["operation_order"], mechanic.operation_order
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["trigger"]["name"],
+            mechanic.item_mechanic_trigger.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["context"]["name"],
+            mechanic.item_mechanic_context.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["version_group"], mechanic.version_group.pk
+        )
+
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["condition_type"],
+            condition.condition_type,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["logic_operator"],
+            condition.logic_operator,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["value"], condition.value
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["condition_group"],
+            condition.condition_group,
+        )
+
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["value"], effect.value
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["value_type"], effect.value_type
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["is_consumed"],
+            effect.is_consumed,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["probability"],
+            effect.probability,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["effect_type"]["name"],
+            effect.item_mechanic_effect_type.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["target"]["name"],
+            effect.item_mechanic_target.name,
+        )
 
         sprites_data = json.loads(item_sprites.sprites)
         response_sprites_data = json.loads(response.data["sprites"])
@@ -4837,7 +4937,9 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["is_baby"], pokemon_species.is_baby)
         self.assertEqual(response.data["is_legendary"], pokemon_species.is_legendary)
         self.assertEqual(response.data["is_mythical"], pokemon_species.is_mythical)
-        self.assertEqual(response.data["is_ultra_beast"], pokemon_species.is_ultra_beast)
+        self.assertEqual(
+            response.data["is_ultra_beast"], pokemon_species.is_ultra_beast
+        )
 
         self.assertEqual(response.data["hatch_counter"], pokemon_species.hatch_counter)
         self.assertEqual(

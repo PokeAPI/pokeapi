@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0029_remove_itemmechaniccondition_operator_and_more'),
+        ("pokemon_v2", "0029_remove_itemmechaniccondition_operator_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='itemmechaniceffect',
-            name='value',
+            model_name="itemmechaniceffect",
+            name="value",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]

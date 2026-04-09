@@ -452,6 +452,21 @@ def _build_growth_rates():
 
 
 def _build_items():
+
+    def csv_record_to_objects(info):
+        yield MechanicConditionType(id=int(info[0]), name=info[1])
+
+    build_generic(
+        (MechanicConditionType,), "mechanic_condition_type.csv", csv_record_to_objects
+    )
+
+    def csv_record_to_objects(info):
+        yield LogicOperatorType(id=int(info[0]), name=info[1])
+
+    build_generic(
+        (LogicOperatorType,), "logic_operator_type.csv", csv_record_to_objects
+    )
+
     def csv_record_to_objects(info):
         yield ItemPocket(id=int(info[0]), name=info[1])
 
@@ -582,19 +597,33 @@ def _build_items():
 
     def csv_record_to_objects(info):
         yield ItemMechanicTrigger(id=int(info[0]), name=info[1])
-    build_generic((ItemMechanicTrigger,), "item_mechanic_trigger.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicTrigger,), "item_mechanic_trigger.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield ItemMechanicContext(id=int(info[0]), name=info[1])
-    build_generic((ItemMechanicContext,), "item_mechanic_context.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicContext,), "item_mechanic_context.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield ItemMechanicEffectType(id=int(info[0]), name=info[1])
-    build_generic((ItemMechanicEffectType,), "item_mechanic_effect_type.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicEffectType,),
+        "item_mechanic_effect_type.csv",
+        csv_record_to_objects,
+    )
 
     def csv_record_to_objects(info):
         yield ItemMechanicTarget(id=int(info[0]), name=info[1])
-    build_generic((ItemMechanicTarget,), "item_mechanic_target.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicTarget,), "item_mechanic_target.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield ItemMechanic(
@@ -605,17 +634,21 @@ def _build_items():
             item_mechanic_context_id=int(info[4]),
             operation_order=int(info[5]),
         )
+
     build_generic((ItemMechanic,), "item_mechanic.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
         yield ItemMechanicCondition(
             item_mechanic_id=int(info[0]),
-            condition_type=info[1],
-            logic_operator=info[2],
+            condition_type_id=int(info[1]),
+            logic_operator_id=int(info[2]),
             value=info[3],
-            condition_group=int(info[4])
+            condition_group=int(info[4]),
         )
-    build_generic((ItemMechanicCondition,), "item_mechanic_condition.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicCondition,), "item_mechanic_condition.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield ItemMechanicEffect(
@@ -625,9 +658,13 @@ def _build_items():
             value=info[3] if info[3] != "" else None,
             value_type=info[4] if info[4] != "" else None,
             probability=int(info[5]),
-            is_consumed=info[6].lower() == 'true'
+            is_consumed=info[6].lower() == "true",
         )
-    build_generic((ItemMechanicEffect,), "item_mechanic_effect.csv", csv_record_to_objects)
+
+    build_generic(
+        (ItemMechanicEffect,), "item_mechanic_effect.csv", csv_record_to_objects
+    )
+
 
 ###########
 #  TYPES  #

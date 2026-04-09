@@ -105,6 +105,40 @@ class PokeapiCommonViewset(
 ##########
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="List mechanic conditions",
+        description="Mechanic conditions are shared vocabulary used to determine if a specific battle engine mechanic is allowed to trigger.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a mechanic condition",
+        description="Get a specific mechanic condition by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class MechanicConditionTypeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = MechanicConditionType.objects.all()
+    serializer_class = MechanicConditionTypeSerializer
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List logic operators",
+        description="Logic operators are shared vocabulary used to evaluate mechanic conditions mathematically.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a logic operator",
+        description="Get a specific logic operator by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class LogicOperatorTypeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = LogicOperatorType.objects.all()
+    serializer_class = LogicOperatorTypeSerializer
+
+
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
@@ -434,6 +468,7 @@ class ItemPocketResource(PokeapiCommonViewset):
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
 
+
 @extend_schema(
     description="Item mechanic triggers define the timing or event window when an item's effect is evaluated by the game engine (e.g., end-of-turn, on-damage-taken).",
     summary="Get item mechanic trigger",
@@ -477,6 +512,7 @@ class ItemMechanicTargetResource(PokeapiCommonViewset):
     serializer_class = ItemMechanicTargetSerializer
     list_serializer_class = ItemMechanicTargetSummarySerializer
 
+
 @extend_schema(
     description="Item mechanics define the complete programmatic instructions (triggers, conditions, and effect payloads) for how an item functions in the game engine.",
     summary="Get item mechanic",
@@ -485,6 +521,7 @@ class ItemMechanicTargetResource(PokeapiCommonViewset):
 class ItemMechanicResource(PokeapiCommonViewset):
     queryset = ItemMechanic.objects.all()
     serializer_class = ItemMechanicSerializer
+
 
 @extend_schema(
     description="Languages for translations of API resource information.",

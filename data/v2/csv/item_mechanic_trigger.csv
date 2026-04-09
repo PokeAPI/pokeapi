@@ -1,6 +1,9 @@
 id,identifier
 1,on-damage-taken
-2,hp-change
+2,on-hp-lower
 3,manual_use_bag
 4,on-friendship-increase
 5,on-catch-success
+6,passive
+7,on-ailment-recive
+8,move-lose-all-pp

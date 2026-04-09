@@ -145,6 +145,19 @@ class ItemSummarySerializer(serializers.HyperlinkedModelSerializer):
         model = Item
         fields = ("name", "url")
 
+
+class MechanicConditionTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MechanicConditionType
+        fields = ("id", "name")
+
+
+class LogicOperatorTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LogicOperatorType
+        fields = ("id", "name")
+
+
 class ItemMechanicTriggerSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ItemMechanicTrigger
@@ -167,6 +180,8 @@ class ItemMechanicTargetSummarySerializer(serializers.HyperlinkedModelSerializer
     class Meta:
         model = ItemMechanicTarget
         fields = ("name", "url")
+
+
 class ItemMechanicTriggerSerializer(serializers.ModelSerializer):
     class Meta:
         model = ItemMechanicTrigger
@@ -189,6 +204,7 @@ class ItemMechanicTargetSerializer(serializers.ModelSerializer):
     class Meta:
         model = ItemMechanicTarget
         fields = ("id", "name")
+
 
 class LanguageSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -377,6 +393,7 @@ class ItemAttributeMapSerializer(serializers.ModelSerializer):
             "attribute",
         )
 
+
 class ItemMechanicConditionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ItemMechanicCondition
@@ -387,8 +404,11 @@ class ItemMechanicConditionSerializer(serializers.ModelSerializer):
             "condition_group",
         )
 
+
 class ItemMechanicEffectSerializer(serializers.ModelSerializer):
-    effect_type = ItemMechanicEffectTypeSummarySerializer(source="item_mechanic_effect_type")
+    effect_type = ItemMechanicEffectTypeSummarySerializer(
+        source="item_mechanic_effect_type"
+    )
     target = ItemMechanicTargetSummarySerializer(source="item_mechanic_target")
 
     class Meta:
@@ -402,11 +422,20 @@ class ItemMechanicEffectSerializer(serializers.ModelSerializer):
             "is_consumed",
         )
 
+
 class ItemMechanicSerializer(serializers.ModelSerializer):
-    trigger = ItemMechanicTriggerSummarySerializer(source="item_mechanic_trigger", read_only=True)
-    context = ItemMechanicContextSummarySerializer(source="item_mechanic_context", read_only=True)
-    conditions = ItemMechanicConditionSerializer(source="itemmechaniccondition", many=True, read_only=True)
-    effects = ItemMechanicEffectSerializer(source="itemmechaniceffect", many=True, read_only=True)
+    trigger = ItemMechanicTriggerSummarySerializer(
+        source="item_mechanic_trigger", read_only=True
+    )
+    context = ItemMechanicContextSummarySerializer(
+        source="item_mechanic_context", read_only=True
+    )
+    conditions = ItemMechanicConditionSerializer(
+        source="itemmechaniccondition", many=True, read_only=True
+    )
+    effects = ItemMechanicEffectSerializer(
+        source="itemmechaniceffect", many=True, read_only=True
+    )
 
     class Meta:
         model = ItemMechanic
@@ -418,6 +447,7 @@ class ItemMechanicSerializer(serializers.ModelSerializer):
             "conditions",
             "effects",
         )
+
 
 class MoveMetaStatChangeSerializer(serializers.ModelSerializer):
     stat = StatSummarySerializer()

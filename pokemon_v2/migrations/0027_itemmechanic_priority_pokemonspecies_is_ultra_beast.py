@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0026_itemmechaniccontext_itemmechaniceffecttype_and_more'),
+        ("pokemon_v2", "0026_itemmechaniccontext_itemmechaniceffecttype_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='itemmechanic',
-            name='priority',
+            model_name="itemmechanic",
+            name="priority",
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='pokemonspecies',
-            name='is_ultra_beast',
+            model_name="pokemonspecies",
+            name="is_ultra_beast",
             field=models.BooleanField(default=False),
         ),
     ]

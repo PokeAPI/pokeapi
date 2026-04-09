@@ -6,28 +6,28 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pokemon_v2', '0028_rename_priority_itemmechanic_operation_order_and_more'),
+        ("pokemon_v2", "0028_rename_priority_itemmechanic_operation_order_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='itemmechaniccondition',
-            name='operator',
+            model_name="itemmechaniccondition",
+            name="operator",
         ),
         migrations.AddField(
-            model_name='itemmechaniccondition',
-            name='logic_operator',
-            field=models.CharField(default='EQUAL_TO', max_length=255),
+            model_name="itemmechaniccondition",
+            name="logic_operator",
+            field=models.CharField(default="EQUAL_TO", max_length=255),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='itemmechaniccondition',
-            name='condition_type',
+            model_name="itemmechaniccondition",
+            name="condition_type",
             field=models.CharField(max_length=255),
         ),
         migrations.AlterField(
-            model_name='itemmechaniccondition',
-            name='value',
+            model_name="itemmechaniccondition",
+            name="value",
             field=models.CharField(max_length=255),
         ),
     ]

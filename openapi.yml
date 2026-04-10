@@ -4659,10 +4659,6 @@ components:
         name:
           type: string
           maxLength: 200
-        cost:
-          type:
-          - integer
-          - 'null'
         fling_power:
           type:
           - integer
@@ -4703,6 +4699,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ItemGameIndex'
+          readOnly: true
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemPrice'
           readOnly: true
         names:
           type: array
@@ -4923,6 +4924,21 @@ components:
       required:
       - language
       - name
+    ItemPrice:
+      type: object
+      properties:
+        purchase_price:
+          type:
+          - integer
+          - 'null'
+        sell_price:
+          type:
+          - integer
+          - 'null'
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+      required:
+      - version_group
     ItemPocketDetail:
       type: object
       properties:
@@ -7530,7 +7546,6 @@ components:
       - name
       - names
       - pokemon_entries
-      - region
       - version_groups
     PokedexName:
       type: object
@@ -8638,7 +8653,6 @@ components:
       required:
       - id
       - locations
-      - main_generation
       - name
       - names
       - pokedexes

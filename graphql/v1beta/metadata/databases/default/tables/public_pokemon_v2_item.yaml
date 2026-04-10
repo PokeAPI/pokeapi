@@ -65,6 +65,13 @@ array_relationships:
         table:
           name: pokemon_v2_itemname
           schema: public
+  - name: pokemon_v2_itemprices
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_itemprice
+          schema: public
   - name: pokemon_v2_itemsprites
     using:
       foreign_key_constraint_on:

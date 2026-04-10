@@ -13,7 +13,7 @@ jobs:
             git submodule update --remote
       - run:
           name: Install deps
-          command: make dev-install
+          command: make install
       - run:
           name: Linting
           command: make format-check

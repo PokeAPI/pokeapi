@@ -460,13 +460,16 @@ class APIData:
     @classmethod
     def setup_item_mechanic_condition_data(
         cls,
-        mechanic=None,
-        condition_type="hp-threshold",
-        logic_operator="LESS_THAN",
-        value="50",
+        mechanic,
+        condition_type_name="hp-threshold",
+        logic_operator_name="EQUAL",
+        value="10",
         condition_group=1,
     ):
-        mechanic = mechanic or cls.setup_item_mechanic_data()
+        condition_type = cls.setup_mechanic_condition_type_data(
+            name=condition_type_name
+        )
+        logic_operator = cls.setup_logic_operator_type_data(name=logic_operator_name)
 
         condition = ItemMechanicCondition.objects.create(
             item_mechanic=mechanic,
@@ -2196,6 +2199,18 @@ class APIData:
 
         return pal_park
 
+    @classmethod
+    def setup_battle_condition_scope_data(cls, name="pokemon-scope"):
+        scope = BattleConditionScope.objects.create(name=name)
+        scope.save()
+        return scope
+
+    @classmethod
+    def setup_battle_condition_data(cls, scope, name="focus-energy"):
+        condition = BattleCondition.objects.create(scope=scope, name=name)
+        condition.save()
+        return condition
+
 
 # Tests
 class APITests(APIData, APITestCase):
@@ -2995,11 +3010,11 @@ class APITests(APIData, APITestCase):
 
         self.assertEqual(
             response.data["mechanics"][0]["conditions"][0]["condition_type"],
-            condition.condition_type,
+            condition.condition_type.id,
         )
         self.assertEqual(
             response.data["mechanics"][0]["conditions"][0]["logic_operator"],
-            condition.logic_operator,
+            condition.logic_operator.id,
         )
         self.assertEqual(
             response.data["mechanics"][0]["conditions"][0]["value"], condition.value
@@ -6079,3 +6094,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(10, len(response.data["deploy_date"]))
         self.assertEqual(40, len(response.data["hash"]))
         self.assertIn("tag", response.data)
+
+    def test_battle_condition_scope_api(self):
+        scope = self.setup_battle_condition_scope_data(name="field")
+
+        list_response = self.client.get("{}/battle-condition-scope/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        detail_response = self.client.get(
+            "{}/battle-condition-scope/{}/".format(API_V2, scope.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "field")
+
+    def test_battle_condition_api(self):
+        scope = self.setup_battle_condition_scope_data(name="pokemon")
+        condition = self.setup_battle_condition_data(scope=scope, name="micle-volatile")
+
+        list_response = self.client.get("{}/battle-condition/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        detail_response = self.client.get(
+            "{}/battle-condition/{}/".format(API_V2, condition.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "micle-volatile")
+        self.assertEqual(detail_response.data["scope"]["name"], "pokemon")

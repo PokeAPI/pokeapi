@@ -368,6 +368,18 @@ class VersionGroupSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
+class MechanicConditionTypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = MechanicConditionType
+        fields = ("name", "url")
+
+
+class LogicOperatorTypeSummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = LogicOperatorType
+        fields = ("name", "url")
+
+
 #####################
 #  MAP SERIALIZERS  #
 #####################
@@ -395,6 +407,9 @@ class ItemAttributeMapSerializer(serializers.ModelSerializer):
 
 
 class ItemMechanicConditionSerializer(serializers.ModelSerializer):
+    condition_type = MechanicConditionTypeSummarySerializer()
+    logic_operator = LogicOperatorTypeSummarySerializer()
+
     class Meta:
         model = ItemMechanicCondition
         fields = (
@@ -6506,3 +6521,17 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer):
             results.append(dex_group["pokedex"])
 
         return results
+
+
+class BattleConditionScopeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BattleConditionScope
+        fields = ("id", "name")
+
+
+class BattleConditionSerializer(serializers.ModelSerializer):
+    scope = BattleConditionScopeSerializer(read_only=True)
+
+    class Meta:
+        model = BattleCondition
+        fields = ("id", "name", "scope")

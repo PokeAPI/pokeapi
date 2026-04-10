@@ -1996,3 +1996,17 @@ class PokemonSprites(HasPokemon):
 
 class PokemonCries(HasPokemon):
     cries = models.JSONField()
+
+
+class BattleConditionScope(HasName):
+    pass
+
+
+class BattleCondition(HasName):
+    scope = models.ForeignKey(
+        "BattleConditionScope",
+        blank=True,
+        null=True,
+        related_name="conditions",
+        on_delete=models.CASCADE,
+    )

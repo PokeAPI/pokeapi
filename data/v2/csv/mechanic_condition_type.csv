@@ -32,3 +32,15 @@ id,identifier
 31,escapeable-location
 32,holder-species
 33,nature-id
+34,incoming-move-type
+35,incoming-move-effectiveness
+36,outgoing-move-type
+37,target-battle-condition-id
+38,incoming-move-damage-class
+39,incoming-move-category
+40,lowest-stat-stage
+41,outgoing-move-damage-class
+42,outgoing-move-flinch-chance
+43,outgoing-move-ailment-id
+44,outgoing-move-has-secondary-effect
+45,has-raisable-stat

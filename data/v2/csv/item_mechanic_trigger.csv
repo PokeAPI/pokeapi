@@ -7,3 +7,13 @@ id,identifier
 6,passive
 7,on-ailment-recive
 8,move-lose-all-pp
+9,on-damage-calculation
+10,on-turn-start
+11,on-accuracy-calculation
+12,on-stat-stage-lower
+13,on-ev-gain-calculation
+14,on-experience-calculation
+15,on-move-hit
+16,on-prize-money-calculation
+17,on-fatal-damage
+18,on-turn-end

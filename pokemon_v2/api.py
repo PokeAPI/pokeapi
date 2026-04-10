@@ -1206,3 +1206,37 @@ class PokeapiMetaViewset(viewsets.ViewSet):
                 "tag": tag,
             }
         )
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List battle condition scopes",
+        description="Scopes define whether a battle condition affects a specific pokemon, a side of the field, or the entire field.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a battle condition scope",
+        description="Get a battle condition scope by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class BattleConditionScopeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = BattleConditionScope.objects.all()
+    serializer_class = BattleConditionScopeSerializer
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List battle conditions",
+        description="Battle conditions are positive or neutral volatile states, side effects, or field effects.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a battle condition",
+        description="Get a battle condition by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class BattleConditionViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = BattleCondition.objects.all()
+    serializer_class = BattleConditionSerializer

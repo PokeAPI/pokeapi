@@ -2543,6 +2543,20 @@ def _build_pal_parks():
     build_generic((PalPark,), "pal_park.csv", csv_record_to_objects)
 
 
+def _build_battle_conditions():
+    def csv_record_to_objects(info):
+        yield BattleConditionScope(id=int(info[0]), name=info[1])
+
+    build_generic(
+        (BattleConditionScope,), "battle_condition_scope.csv", csv_record_to_objects
+    )
+
+    def csv_record_to_objects(info):
+        yield BattleCondition(id=int(info[0]), scope_id=int(info[1]), name=info[2])
+
+    build_generic((BattleCondition,), "battle_condition.csv", csv_record_to_objects)
+
+
 def build_all():
     _build_languages()
     _build_regions()
@@ -2569,6 +2583,7 @@ def build_all():
     _build_pokemons()
     _build_encounters()
     _build_pal_parks()
+    _build_battle_conditions()
 
 
 if __name__ == "__main__":

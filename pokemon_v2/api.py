@@ -105,6 +105,40 @@ class PokeapiCommonViewset(
 ##########
 
 
+@extend_schema_view(
+    list=extend_schema(
+        summary="List mechanic conditions",
+        description="Mechanic conditions are shared vocabulary used to determine if a specific battle engine mechanic is allowed to trigger.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a mechanic condition",
+        description="Get a specific mechanic condition by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class MechanicConditionTypeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = MechanicConditionType.objects.all()
+    serializer_class = MechanicConditionTypeSerializer
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List logic operators",
+        description="Logic operators are shared vocabulary used to evaluate mechanic conditions mathematically.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a logic operator",
+        description="Get a specific logic operator by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class LogicOperatorTypeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = LogicOperatorType.objects.all()
+    serializer_class = LogicOperatorTypeSerializer
+
+
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
@@ -433,6 +467,60 @@ class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
+
+
+@extend_schema(
+    description="Item mechanic triggers define the timing or event window when an item's effect is evaluated by the game engine (e.g., end-of-turn, on-damage-taken).",
+    summary="Get item mechanic trigger",
+    tags=["items"],
+)
+class ItemMechanicTriggerResource(PokeapiCommonViewset):
+    queryset = ItemMechanicTrigger.objects.all()
+    serializer_class = ItemMechanicTriggerSerializer
+    list_serializer_class = ItemMechanicTriggerSummarySerializer
+
+
+@extend_schema(
+    description="Item mechanic contexts define the location or game state required for an item to be used or evaluated (e.g., held-in-battle, overworld-menu).",
+    summary="Get item mechanic context",
+    tags=["items"],
+)
+class ItemMechanicContextResource(PokeapiCommonViewset):
+    queryset = ItemMechanicContext.objects.all()
+    serializer_class = ItemMechanicContextSerializer
+    list_serializer_class = ItemMechanicContextSummarySerializer
+
+
+@extend_schema(
+    description="Item mechanic effect types define the specific action or mathematical state change an item performs (e.g., hp-recovery, stat-multiplier).",
+    summary="Get item mechanic effect type",
+    tags=["items"],
+)
+class ItemMechanicEffectTypeResource(PokeapiCommonViewset):
+    queryset = ItemMechanicEffectType.objects.all()
+    serializer_class = ItemMechanicEffectTypeSerializer
+    list_serializer_class = ItemMechanicEffectTypeSummarySerializer
+
+
+@extend_schema(
+    description="Item mechanic targets define who or what receives the payload of the item's effect (e.g., self, attacker, field-global).",
+    summary="Get item mechanic target",
+    tags=["items"],
+)
+class ItemMechanicTargetResource(PokeapiCommonViewset):
+    queryset = ItemMechanicTarget.objects.all()
+    serializer_class = ItemMechanicTargetSerializer
+    list_serializer_class = ItemMechanicTargetSummarySerializer
+
+
+@extend_schema(
+    description="Item mechanics define the complete programmatic instructions (triggers, conditions, and effect payloads) for how an item functions in the game engine.",
+    summary="Get item mechanic",
+    tags=["items"],
+)
+class ItemMechanicResource(PokeapiCommonViewset):
+    queryset = ItemMechanic.objects.all()
+    serializer_class = ItemMechanicSerializer
 
 
 @extend_schema(
@@ -1118,3 +1206,37 @@ class PokeapiMetaViewset(viewsets.ViewSet):
                 "tag": tag,
             }
         )
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List battle condition scopes",
+        description="Scopes define whether a battle condition affects a specific pokemon, a side of the field, or the entire field.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a battle condition scope",
+        description="Get a battle condition scope by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class BattleConditionScopeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = BattleConditionScope.objects.all()
+    serializer_class = BattleConditionScopeSerializer
+
+
+@extend_schema_view(
+    list=extend_schema(
+        summary="List battle conditions",
+        description="Battle conditions are positive or neutral volatile states, side effects, or field effects.",
+        tags=["Utility"],
+    ),
+    retrieve=extend_schema(
+        summary="Get a battle condition",
+        description="Get a battle condition by its ID or name.",
+        tags=["Utility"],
+    ),
+)
+class BattleConditionViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = BattleCondition.objects.all()
+    serializer_class = BattleConditionSerializer

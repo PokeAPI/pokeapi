@@ -13,6 +13,18 @@ API_V2 = "/api/v2"
 class APIData:
     """Data Initializers"""
 
+    @classmethod
+    def setup_mechanic_condition_type_data(cls, name="test-condition"):
+        condition = MechanicConditionType.objects.create(name=name)
+        condition.save()
+        return condition
+
+    @classmethod
+    def setup_logic_operator_type_data(cls, name="test-operator"):
+        operator = LogicOperatorType.objects.create(name=name)
+        operator.save()
+        return operator
+
     # Gender Data
     @classmethod
     def setup_gender_data(cls, name="gndr"):
@@ -394,6 +406,107 @@ class APIData:
         item_game_index.save()
 
         return item_game_index
+
+    @classmethod
+    def setup_item_mechanic_trigger_data(cls, name="test-trigger"):
+        trigger = ItemMechanicTrigger.objects.create(name=name)
+        trigger.save()
+        return trigger
+
+    @classmethod
+    def setup_item_mechanic_context_data(cls, name="test-context"):
+        context = ItemMechanicContext.objects.create(name=name)
+        context.save()
+        return context
+
+    @classmethod
+    def setup_item_mechanic_effect_type_data(cls, name="test-effect-type"):
+        effect_type = ItemMechanicEffectType.objects.create(name=name)
+        effect_type.save()
+        return effect_type
+
+    @classmethod
+    def setup_item_mechanic_target_data(cls, name="test-target"):
+        target = ItemMechanicTarget.objects.create(name=name)
+        target.save()
+        return target
+
+    @classmethod
+    def setup_item_mechanic_data(
+        cls,
+        item=None,
+        version_group=None,
+        trigger=None,
+        context=None,
+        operation_order=0,
+    ):
+        item = item or cls.setup_item_data(name="mech test itm")
+        version_group = version_group or cls.setup_version_group_data(
+            name="mech test vg"
+        )
+        trigger = trigger or cls.setup_item_mechanic_trigger_data()
+        context = context or cls.setup_item_mechanic_context_data()
+
+        mechanic = ItemMechanic.objects.create(
+            item=item,
+            version_group=version_group,
+            item_mechanic_trigger=trigger,
+            item_mechanic_context=context,
+            operation_order=operation_order,
+        )
+        mechanic.save()
+        return mechanic
+
+    @classmethod
+    def setup_item_mechanic_condition_data(
+        cls,
+        mechanic,
+        condition_type_name="hp-threshold",
+        logic_operator_name="EQUAL",
+        value="10",
+        condition_group=1,
+    ):
+        condition_type = cls.setup_mechanic_condition_type_data(
+            name=condition_type_name
+        )
+        logic_operator = cls.setup_logic_operator_type_data(name=logic_operator_name)
+
+        condition = ItemMechanicCondition.objects.create(
+            item_mechanic=mechanic,
+            condition_type=condition_type,
+            logic_operator=logic_operator,
+            value=value,
+            condition_group=condition_group,
+        )
+        condition.save()
+        return condition
+
+    @classmethod
+    def setup_item_mechanic_effect_data(
+        cls,
+        mechanic=None,
+        effect_type=None,
+        target=None,
+        value="1.5",
+        value_type="multiplier",
+        probability=100,
+        is_consumed=True,
+    ):
+        mechanic = mechanic or cls.setup_item_mechanic_data()
+        effect_type = effect_type or cls.setup_item_mechanic_effect_type_data()
+        target = target or cls.setup_item_mechanic_target_data()
+
+        effect = ItemMechanicEffect.objects.create(
+            item_mechanic=mechanic,
+            item_mechanic_effect_type=effect_type,
+            item_mechanic_target=target,
+            value=value,
+            value_type=value_type,
+            probability=probability,
+            is_consumed=is_consumed,
+        )
+        effect.save()
+        return effect
 
     # Contest Data
     @classmethod
@@ -1440,6 +1553,7 @@ class APIData:
         forms_switchable=False,
         is_legendary=False,
         is_mythical=False,
+        is_ultra_beast=False,
         order=1,
     ):
         generation = generation or cls.setup_generation_data(name="gen for " + name)
@@ -1478,6 +1592,7 @@ class APIData:
             forms_switchable=forms_switchable,
             is_legendary=is_legendary,
             is_mythical=is_mythical,
+            is_ultra_beast=is_ultra_beast,
             order=order,
         )
         pokemon_species.save()
@@ -2084,9 +2199,54 @@ class APIData:
 
         return pal_park
 
+    @classmethod
+    def setup_battle_condition_scope_data(cls, name="pokemon-scope"):
+        scope = BattleConditionScope.objects.create(name=name)
+        scope.save()
+        return scope
+
+    @classmethod
+    def setup_battle_condition_data(cls, scope, name="focus-energy"):
+        condition = BattleCondition.objects.create(scope=scope, name=name)
+        condition.save()
+        return condition
+
 
 # Tests
 class APITests(APIData, APITestCase):
+
+    def test_mechanic_condition_api(self):
+        condition = self.setup_mechanic_condition_type_data(name="hp-percent-max")
+
+        list_response = self.client.get("{}/mechanic-condition/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        results = list_response.data.get("results", list_response.data)
+        self.assertTrue(len(results) > 0)
+        self.assertEqual(results[0]["name"], "hp-percent-max")
+
+        detail_response = self.client.get(
+            "{}/mechanic-condition/{}/".format(API_V2, condition.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "hp-percent-max")
+
+    def test_logic_operator_api(self):
+        operator = self.setup_logic_operator_type_data(name="LESS_THAN_OR_EQUAL_TO")
+
+        list_response = self.client.get("{}/logic-operator/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        results = list_response.data.get("results", list_response.data)
+        self.assertTrue(len(results) > 0)
+        self.assertEqual(results[0]["name"], "LESS_THAN_OR_EQUAL_TO")
+
+        detail_response = self.client.get(
+            "{}/logic-operator/{}/".format(API_V2, operator.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "LESS_THAN_OR_EQUAL_TO")
+
     # Gender Tests
     def test_gender_api(self):
         gender = self.setup_gender_data(name="female")
@@ -2704,7 +2864,10 @@ class APITests(APIData, APITestCase):
         pokemon = self.setup_pokemon_data(name="pkmn for base itm")
         pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon, item=item)
         evolution_chain = self.setup_evolution_chain_data(baby_trigger_item=item)
-
+        version_group = self.setup_version_group_data(name="mech vg")
+        mechanic = self.setup_item_mechanic_data(item=item, version_group=version_group)
+        condition = self.setup_item_mechanic_condition_data(mechanic=mechanic)
+        effect = self.setup_item_mechanic_effect_data(mechanic=mechanic)
         # map item attribute to item
         item_attribute_map = ItemAttributeMap(item=item, item_attribute=item_attribute)
         item_attribute_map.save()
@@ -2826,6 +2989,62 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["baby_trigger_for"]["url"],
             "{}{}/evolution-chain/{}/".format(TEST_HOST, API_V2, evolution_chain.pk),
+        )
+
+        self.assertEqual(len(response.data["mechanics"]), 1)
+
+        self.assertEqual(
+            response.data["mechanics"][0]["operation_order"], mechanic.operation_order
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["trigger"]["name"],
+            mechanic.item_mechanic_trigger.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["context"]["name"],
+            mechanic.item_mechanic_context.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["version_group"], mechanic.version_group.pk
+        )
+
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["condition_type"],
+            condition.condition_type.id,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["logic_operator"],
+            condition.logic_operator.id,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["value"], condition.value
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["conditions"][0]["condition_group"],
+            condition.condition_group,
+        )
+
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["value"], effect.value
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["value_type"], effect.value_type
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["is_consumed"],
+            effect.is_consumed,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["probability"],
+            effect.probability,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["effect_type"]["name"],
+            effect.item_mechanic_effect_type.name,
+        )
+        self.assertEqual(
+            response.data["mechanics"][0]["effects"][0]["target"]["name"],
+            effect.item_mechanic_target.name,
         )
 
         sprites_data = json.loads(item_sprites.sprites)
@@ -4733,6 +4952,9 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["is_baby"], pokemon_species.is_baby)
         self.assertEqual(response.data["is_legendary"], pokemon_species.is_legendary)
         self.assertEqual(response.data["is_mythical"], pokemon_species.is_mythical)
+        self.assertEqual(
+            response.data["is_ultra_beast"], pokemon_species.is_ultra_beast
+        )
 
         self.assertEqual(response.data["hatch_counter"], pokemon_species.hatch_counter)
         self.assertEqual(
@@ -5872,3 +6094,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(10, len(response.data["deploy_date"]))
         self.assertEqual(40, len(response.data["hash"]))
         self.assertIn("tag", response.data)
+
+    def test_battle_condition_scope_api(self):
+        scope = self.setup_battle_condition_scope_data(name="field")
+
+        list_response = self.client.get("{}/battle-condition-scope/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        detail_response = self.client.get(
+            "{}/battle-condition-scope/{}/".format(API_V2, scope.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "field")
+
+    def test_battle_condition_api(self):
+        scope = self.setup_battle_condition_scope_data(name="pokemon")
+        condition = self.setup_battle_condition_data(scope=scope, name="micle-volatile")
+
+        list_response = self.client.get("{}/battle-condition/".format(API_V2))
+        self.assertEqual(list_response.status_code, status.HTTP_200_OK)
+
+        detail_response = self.client.get(
+            "{}/battle-condition/{}/".format(API_V2, condition.id)
+        )
+        self.assertEqual(detail_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(detail_response.data["name"], "micle-volatile")
+        self.assertEqual(detail_response.data["scope"]["name"], "pokemon")

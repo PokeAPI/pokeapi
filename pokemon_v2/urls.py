@@ -13,6 +13,8 @@ from pokemon_v2.api import *
 
 router = routers.DefaultRouter()
 
+router.register(r"mechanic-condition", MechanicConditionTypeViewSet)
+router.register(r"logic-operator", LogicOperatorTypeViewSet)
 router.register(r"ability", AbilityResource)
 router.register(r"berry", BerryResource)
 router.register(r"berry-firmness", BerryFirmnessResource)
@@ -34,6 +36,11 @@ router.register(r"item-category", ItemCategoryResource)
 router.register(r"item-attribute", ItemAttributeResource)
 router.register(r"item-fling-effect", ItemFlingEffectResource)
 router.register(r"item-pocket", ItemPocketResource)
+router.register(r"item-mechanic-trigger", ItemMechanicTriggerResource)
+router.register(r"item-mechanic-context", ItemMechanicContextResource)
+router.register(r"item-mechanic-effect-type", ItemMechanicEffectTypeResource)
+router.register(r"item-mechanic-target", ItemMechanicTargetResource)
+router.register(r"item-mechanic", ItemMechanicResource)
 router.register(r"language", LanguageResource)
 router.register(r"location", LocationResource)
 router.register(r"location-area", LocationAreaResource)
@@ -62,6 +69,8 @@ router.register(r"super-contest-effect", SuperContestEffectResource)
 router.register(r"type", TypeResource)
 router.register(r"version", VersionResource)
 router.register(r"version-group", VersionGroupResource)
+router.register(r"battle-condition-scope", BattleConditionScopeViewSet)
+router.register(r"battle-condition", BattleConditionViewSet)
 
 
 ###########################

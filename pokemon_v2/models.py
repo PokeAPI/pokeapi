@@ -5,6 +5,32 @@ from django.db import models
 #####################
 
 
+class HasMechanicConditionType(models.Model):
+    condition_type = models.ForeignKey(
+        "MechanicConditionType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasLogicOperatorType(models.Model):
+    logic_operator = models.ForeignKey(
+        "LogicOperatorType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
 class HasAbility(models.Model):
     ability = models.ForeignKey(
         "Ability",
@@ -159,6 +185,71 @@ class HasFlavorText(models.Model):
 class HasFlingEffect(models.Model):
     item_fling_effect = models.ForeignKey(
         "ItemFlingEffect",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicTrigger(models.Model):
+    item_mechanic_trigger = models.ForeignKey(
+        "ItemMechanicTrigger",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicContext(models.Model):
+    item_mechanic_context = models.ForeignKey(
+        "ItemMechanicContext",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicEffectType(models.Model):
+    item_mechanic_effect_type = models.ForeignKey(
+        "ItemMechanicEffectType",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanicTarget(models.Model):
+    item_mechanic_target = models.ForeignKey(
+        "ItemMechanicTarget",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasItemMechanic(models.Model):
+    item_mechanic = models.ForeignKey(
+        "ItemMechanic",
         blank=True,
         null=True,
         related_name="%(class)s",
@@ -889,6 +980,68 @@ class ItemSprites(HasItem):
     sprites = models.JSONField()
 
 
+class ItemMechanicTrigger(HasName):
+    pass
+
+
+class ItemMechanicTriggerProse(IsDescription, HasItemMechanicTrigger):
+    pass
+
+
+class ItemMechanicContext(HasName):
+    pass
+
+
+class ItemMechanicContextProse(IsDescription, HasItemMechanicContext):
+    pass
+
+
+class ItemMechanicEffectType(HasName):
+    pass
+
+
+class ItemMechanicEffectTypeProse(IsDescription, HasItemMechanicEffectType):
+    pass
+
+
+class ItemMechanicTarget(HasName):
+    pass
+
+
+class ItemMechanicTargetProse(IsDescription, HasItemMechanicTarget):
+    pass
+
+
+class ItemMechanic(
+    HasItem, HasVersionGroup, HasItemMechanicTrigger, HasItemMechanicContext
+):
+    operation_order = models.IntegerField(default=0)
+
+
+class MechanicConditionType(HasName):
+    pass
+
+
+class LogicOperatorType(HasName):
+    pass
+
+
+class ItemMechanicCondition(
+    HasItemMechanic, HasMechanicConditionType, HasLogicOperatorType
+):
+    value = models.CharField(max_length=255)
+    condition_group = models.IntegerField(default=1)
+
+
+class ItemMechanicEffect(
+    HasItemMechanic, HasItemMechanicEffectType, HasItemMechanicTarget
+):
+    value = models.CharField(max_length=255, null=True, blank=True)
+    value_type = models.CharField(max_length=50, null=True, blank=True)
+    probability = models.IntegerField(default=100)
+    is_consumed = models.BooleanField(default=False)
+
+
 ####################
 #  CONTEST MODELS  #
 ####################
@@ -1563,6 +1716,8 @@ class PokemonSpecies(
 
     is_mythical = models.BooleanField(default=False)
 
+    is_ultra_beast = models.BooleanField(default=False)
+
     hatch_counter = models.IntegerField(blank=True, null=True)
 
     has_gender_differences = models.BooleanField(default=False)
@@ -1841,3 +1996,17 @@ class PokemonSprites(HasPokemon):
 
 class PokemonCries(HasPokemon):
     cries = models.JSONField()
+
+
+class BattleConditionScope(HasName):
+    pass
+
+
+class BattleCondition(HasName):
+    scope = models.ForeignKey(
+        "BattleConditionScope",
+        blank=True,
+        null=True,
+        related_name="conditions",
+        on_delete=models.CASCADE,
+    )

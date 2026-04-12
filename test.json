@@ -1,0 +1,197 @@
+"mechanics": [
+    {
+        "version_group": 5,
+        "trigger": {
+            "name": "passive",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/6/"
+        },
+        "context": {
+            "name": "held-in-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/1/"
+        },
+        "operation_order": 0,
+        "conditions": [
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latios",
+                "condition_group": 1
+            },
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latias",
+                "condition_group": 2
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "modify-special-attack-stat",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/29/"
+                },
+                "target": {
+                    "name": "self",
+                    "url": "http://localhost/api/v2/item-mechanic-target/1/"
+                },
+                "value": "1.5",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": false
+            },
+            {
+                "effect_type": {
+                    "name": "modify-special-defence-stat",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/37/"
+                },
+                "target": {
+                    "name": "self",
+                    "url": "http://localhost/api/v2/item-mechanic-target/1/"
+                },
+                "value": "1.5",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": false
+            }
+        ]
+    },
+    {
+        "version_group": 17,
+        "trigger": {
+            "name": "passive",
+            "url": "http://localhost/api/v2/item-mechanic-trigger/6/"
+        },
+        "context": {
+            "name": "held-in-battle",
+            "url": "http://localhost/api/v2/item-mechanic-context/1/"
+        },
+        "operation_order": 0,
+        "conditions": [
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latios",
+                "condition_group": 1
+            },
+            {
+                "condition_type": {
+                    "name": "outgoing-move-type",
+                    "url": "http://localhost/api/v2/mechanic-condition/36/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "dragon",
+                "condition_group": 1
+            },
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latios",
+                "condition_group": 2
+            },
+            {
+                "condition_type": {
+                    "name": "outgoing-move-type",
+                    "url": "http://localhost/api/v2/mechanic-condition/36/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "psychic",
+                "condition_group": 2
+            },
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latias",
+                "condition_group": 3
+            },
+            {
+                "condition_type": {
+                    "name": "outgoing-move-type",
+                    "url": "http://localhost/api/v2/mechanic-condition/36/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "dragon",
+                "condition_group": 3
+            },
+            {
+                "condition_type": {
+                    "name": "holder-species",
+                    "url": "http://localhost/api/v2/mechanic-condition/32/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "latias",
+                "condition_group": 4
+            },
+            {
+                "condition_type": {
+                    "name": "outgoing-move-type",
+                    "url": "http://localhost/api/v2/mechanic-condition/36/"
+                },
+                "logic_operator": {
+                    "name": "EQUAL_TO",
+                    "url": "http://localhost/api/v2/logic-operator/3/"
+                },
+                "value": "psychic",
+                "condition_group": 4
+            }
+        ],
+        "effects": [
+            {
+                "effect_type": {
+                    "name": "modify-damage",
+                    "url": "http://localhost/api/v2/item-mechanic-effect-type/30/"
+                },
+                "target": {
+                    "name": "self",
+                    "url": "http://localhost/api/v2/item-mechanic-target/1/"
+                },
+                "value": "4915/4096",
+                "value_type": "multiplier",
+                "probability": 100,
+                "is_consumed": false
+            }
+        ]
+    }
+]
+}

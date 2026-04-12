@@ -62,3 +62,5 @@ move_meta_ailment_id,local_language_id,name
 24,9,Silence
 42,5,Vulnérable au feu
 42,9,Tar shot
+43,9,Mist
+44,9,Dire Hit

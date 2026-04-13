@@ -25,7 +25,8 @@ class CSVResourceNameValidationTestCase(TestCase):
     This test validates the data source (CSV files) before it's loaded into the database.
     """
 
-    VALID_IDENTIFIER_PATTERN = re.compile(IDENTIFIER_PATTERN)
+    # Pattern for valid resource identifiers: lowercase letters, numbers, and hyphens only
+    VALID_IDENTIFIER_PATTERN = re.compile(r"^[a-z0-9-]+$")
 
     def test_all_csv_identifiers_are_ascii_slugs(self):
         """

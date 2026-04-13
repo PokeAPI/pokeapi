@@ -35,3 +35,4 @@ encounter_condition_id,local_language_id,name
 14,9,Special encounter
 15,9,Trade a specific Pokemon to an NPC
 16,9,Redeem Coins for a Pokemon at the Prize Corner or Game Corner
+17,9,Friend Safari Slot assignment at a 25% chance

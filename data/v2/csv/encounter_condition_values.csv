@@ -174,3 +174,6 @@ id,encounter_condition_id,identifier,is_default
 173,15,trade-volbeat,1
 174,15,trade-bagon,1
 175,15,trade-skitty,1
+176,17,friend-safari-slot-1,1
+177,17,friend-safari-slot-2,1
+178,17,friend-safari-slot-3,1

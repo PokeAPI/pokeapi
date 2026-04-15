@@ -378,13 +378,13 @@ version_id,local_language_id,name
 43,8,Il disco indaco
 43,9,The Indigo Disk
 43,12,藍之圓盤
-44,1,赤
-44,3,레드
-44,5,Rouge
-44,6,Rot
-44,7,Rojo
-44,8,Rossa
-44,9,Red
+44,1,赤 (ja)
+44,3,레드 (ja)
+44,5,Rouge (ja)
+44,6,Rot (ja)
+44,7,Rojo (ja)
+44,8,Rossa (ja)
+44,9,Red (ja)
 45,1,緑
 45,3,그린
 45,5,Vert
@@ -392,13 +392,13 @@ version_id,local_language_id,name
 45,7,Verde
 45,8,Verde
 45,9,Green
-46,1,青
-46,3,블루
-46,5,Bleu
-46,6,Blau
-46,7,Azul
-46,8,Blu
-46,9,Blue
+46,1,青 (ja)
+46,3,블루 (ja)
+46,5,Bleu (ja)
+46,6,Blau (ja)
+46,7,Azul (ja)
+46,8,Blu (ja)
+46,9,Blue (ja)
 47,1,レジェンズ Z-A
 47,2,Legends Z-A
 47,3,LEGENDS Z-A

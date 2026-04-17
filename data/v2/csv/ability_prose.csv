@@ -2038,3 +2038,7 @@ This Ability is not bypassed by []{ability:mold-breaker}, []{ability:teravolt}, 
 306,9,"As soon as Terapagos assumes its Stellar Form, it will immediately neutralize weather and terrain effects. ","When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero."
 307,5,Un Pokémon empoisonné par les capacités de Pêchaminus sera aussi confus.,"Quand un Pokémon est empoisonné par n'importe quelle capacité de Pêchaminus, il sera aussi confus."
 307,9,"Pokémon poisoned by Pecharunt's moves will also become confused.","When a Pokémon is poisoned by any of Pecharunt's moves, it will also become confused."
+308,9,"When the Pokémon uses contact moves, it can hit even targets that are protecting themselves.","When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered."
+309,9,"The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.","The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
+310,9,"The Pokémon can use its moves as if the weather were harsh sunlight.","Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight."
+311,9,"When the Pokémon takes damage from a move, it burns the attacker.","When the Pokémon takes damage from a move, it burns the attacker."

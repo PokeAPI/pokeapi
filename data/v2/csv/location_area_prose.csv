@@ -354,10 +354,10 @@ location_area_id,local_language_id,name
 157,6,"Route 210 (Süden, Richtung Trostu)"
 157,5,"Route 210 (sud, vers Bonville)"
 158,9,"Road 210 (west, towards Celestic Town)"
-158,6,"Route 210 "(Westen, Richtung Elyses)"
+158,6,"Route 210 (Westen, Richtung Elyses)"
 158,5,"Route 210 (ouest, vers Celestia)"
 159,9,"Road 211 (west, towards Eterna City)"
-159,6,"Route 211 (Westen, Richtung Ewigenau)""
+159,6,"Route 211 (Westen, Richtung Ewigenau)"
 159,5,"Route 211 (ouest, vers Vestigion)"
 160,9,"Road 211 (east, towards Celestic Town)"
 160,6,"Route 211 (Osten, Richtung Elyses)"
@@ -1187,33 +1187,9 @@ location_area_id,local_language_id,name
 440,9,Artisan Cave
 440,6,Höhlenatelier
 440,5,Grotte Atelier
-441,9,Altering Cave (A)
-441,6,Wandelhöhle (A)
-441,5,Grotte Métamo (A)
-442,9,Altering Cave (B)
-442,6,Wandelhöhle (B)
-442,5,Grotte Métamo (B)
-443,9,Altering Cave (C)
-443,6,Wandelhöhle (C)
-443,5,Grotte Métamo (C)
-444,9,Altering Cave (D)
-444,6,Wandelhöhle (D)
-444,5,Grotte Métamo (D)
-445,9,Altering Cave (E)
-445,6,Wandelhöhle (E)
-445,5,Grotte Métamo (E)
-446,9,Altering Cave (F)
-446,6,Wandelhöhle (F)
-446,5,Grotte Métamo (F)
-447,9,Altering Cave (G)
-447,6,Wandelhöhle (G)
-447,5,Grotte Métamo (G)
-448,9,Altering Cave (H)
-448,6,Wandelhöhle (H)
-448,5,Grotte Métamo (H)
-449,9,Altering Cave (I)
-449,6,Wandelhöhle (I)
-449,5,Grotte Métamo (I)
+441,9,Altering Cave
+441,6,Wandelhöhle
+441,5,Grotte Métamo
 450,9,Monean Chamber
 450,6,Einamon-Kammer
 450,5,Chambre Anemune
@@ -2269,3 +2245,110 @@ location_area_id,local_language_id,name
 1199,9,Mount Lanakila Crater
 1199,6,Mount Lanakila Krater
 1199,5,Mont Lanakila Cratère
+1215,9,Mirage Island (West Of Dewford Town)
+1216,9,Mirage Island (West Of Route 104)
+1217,9,Mirage Island (Route 114)
+1218,9,Mirage Island (Route 124)
+1219,9,Mirage Island (Route 132)
+1220,9,Mirage Island (South of Route 134)
+1221,9,Mirage Island (South of Pacofidlog)
+1222,9,Mirage Island (East of Shoal Cave)
+1223,9,Mirage Island
+1224,9,Mirage Forest (North of Lilycove)
+1225,9,Mirage Forest (South of Route 132)
+1226,9,Mirage Forest (East of Mossdeep)
+1227,9,Mirage Forest (South of Route 109)
+1228,9,Mirage Forest (North of Route 124)
+1229,9,Mirage Forest (West of Route 114)
+1230,9,Mirage Forest (West of Route 105)
+1231,9,Mirage Forest (South of Route 111)
+1232,9,Outskirt Stand (Outside)
+1233,9,Phenac City (Mayor's House)
+1234,9,Snagem Hideout 1F
+1235,9,Shadow Pokémon Lab B2F
+1236,9,Phenac City (West Exit)
+1237,9,Phenac City (East Exit)
+1238,9,Phenac City (South Exit)
+1239,9,Pyrite Town (Duel Square)
+1240,9,Pyrite Town (Entrance)
+1241,9,Pyrite Bldg 1F
+1242,9,Pyrite Cave (Miror's Hideout)
+1243,9,Pyrite Bldg 4F
+1244,9,Pyrite Cave (Outside)
+1245,9,Pyrite Cave (South Sewers)
+1246,9,Pyrite Cave B1F
+1247,9,Pyrite Cave B1F (Post Sewers)
+1248,9,Realgam Tower
+1249,9,Phenac City Stadium
+1250,9,Pyrite Town (Duking's House)
+1251,9,Shadow Pokémon Lab B1F
+1252,9,Agate Village (Relic Forest)
+1253,9,The Under Colosseum
+1254,9,Mt. Battle 10F
+1255,9,The Under
+1256,9,The Under (TV Studio)
+1257,9,The Under (Subway)
+1258,9,Snagem Hideout 2F
+1259,9,Realgam Tower Colosseum
+1260,9,The Under (Deep Colosseum)
+1261,9,Mt. Battle 100F
+1262,9,Phenac City (Card E Room)
+1263,9,Pokemon HQ Lab 
+1264,9,Pokemon HQ Lab (Outside)
+1265,9,Gateon Port (Across Bridge)
+1266,9,Gateon Port (Lighthouse Top)
+1267,9,Cipher Lab (Outside)
+1268,9,Cipher Lab B2F
+1269,9,Cipher Lab B1F
+1270,9,Cave Pokespot 
+1271,9,ONBS 2F
+1272,9,ONBS 3F
+1273,9,ONBS Roof
+1274,9,ONBS 4F
+1275,9,Phenac City Prestige Precept Center
+1276,9,Cipher Key Lair (Outside)
+1277,9,Cipher Key Lair 1F
+1278,9,Cipher Key Lair 2F
+1279,9,Cipher Key Lair 3F
+1280,9,Cipher Key Lair 4F
+1281,9,Cipher Key Lair Roof
+1282,9,Cipher Key Lair 5F
+1283,9,Citadark Isle (Outside)
+1284,9,Citadark Isle 1F
+1285,9,Citadark Isle B1F
+1286,9,Citadark Isle 2F
+1287,9,Citadark Isle 3F
+1288,9,Citadark Isle 6F
+1289,9,Citadark Isle Dome Exterior
+1290,9,Citadark Isle Dome B1F
+1291,9,Citadark Isle Dome 1F
+1292,9,Citadark Isle Dome 2F
+1293,9,Gateon Port 
+1294,9,Rock Pokespot 
+1295,9,Oasis Pokespot 
+1296,9,Mt. Battle Lobby
+1297,9,Outskirt Stand (Inside)
+1298,9,Pyrite Town Colosseum
+1299,9,Phenac City Stadium (Outside)
+1300,9,Celadon City Prize Corner
+1301,9,Goldenrod City Game Corner
+1302,9,Kanto Underground Path
+1303,9,Violet City (Southwest House)
+1304,9,Goldenrod City Department Store 5F
+1305,9,Mirage Cave (South of Pacifidlog)
+1306,9,Mirage Cave (North of Route 132)
+1307,9,Mirage Cave (North of Fallarbor)
+1308,9,Mirage Cave (North of Fortree)
+1309,9,Mirage Cave (South East of Route 129)
+1310,9,Mirage Cave (South of Route 107)
+1311,9,Mirage Cave (North of Route 124)
+1312,9,Mirage Cave (West of Rustboro)
+1313,9,Mirage Mountain (East of Mossdeep)
+1314,9,Mirage Mountain (North of Mossdeep)
+1315,9,Mirage Mountain (South East of Route 129)
+1316,9,Mirage Mountain (North of Lilycove)
+1317,9,Mirage Mountain (West of Route 104)
+1318,9,Mirage Mountain (South of Route 129)
+1319,9,Mirage Mountain (South of Route 131)
+1320,9,Mirage Mountain (North East of Route 125)
+1321,9,Fortree City

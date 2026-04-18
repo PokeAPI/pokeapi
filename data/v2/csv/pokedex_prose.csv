@@ -13,7 +13,7 @@ pokedex_id,local_language_id,name,description
 3,9,Original Johto,"Gold/Silver/Crystal Johto dex—called the ""New"" Pokédex in-game"
 4,5,Hoenn initial,Pokédex régional d’Hoenn dans Rubis/Saphir/Émeraude
 4,6,Original Hoenn,Rubin/Saphir/Smaragd Hoenn Dex
-4,7,Hoenn Original,Pokédex regional de Hoenn de Rubí/Zafiro/Esmeralda 
+4,7,Hoenn Original,Pokédex regional de Hoenn de Rubí/Zafiro/Esmeralda
 4,9,Original Hoenn,Ruby/Sapphire/Emerald Hoenn dex
 5,5,Sinnoh initial,Pokédex régional de Sinnoh dans Diamant/Perle
 5,6,Original Sinnoh,Diamant/Perl Sinnoh Dex
@@ -86,31 +86,40 @@ pokedex_id,local_language_id,name,description
 25,7,Poni Actualizado,Pokédex regional de Poni de Ultra Sol/Ultra Luna
 25,9,Updated Poni,Ultra Sun/Ultra Moon Poni dex
 26,5,Let's Go Kanto,Pokédex de Kanto dans Let's Go: Pikachu/Let's Go: Évoli
+26,6,Let's Go Kanto,Kanto Pokédex aus Let's Go: Pikachu/Let's Go: Evoli
 26,7,Let’s Go Kanto,Pokédex regional de Let’s Go Pikachu/Eevee
 26,9,Let’s Go Kanto,Let’s Go: Pikachu/Let’s Go: Eevee Kanto dex
 27,5,Galar,Pokédex de Galar dans Épée/Bouclier
+27,6,Galar,Galar Dex
 27,7,Galar,Pokédex regional de Galar
 27,9,Galar,Sword/Shield Galar dex
 28,5,Isolarmure,Pokédex d'Isolarmure
-28,7,Isla de la Armadura,Pokédex regional de Isla de la Armadura 
+28,6,Die Insel der Rüstung,Die Insel der Rüstung Dex
+28,7,Isla de la Armadura,Pokédex regional de Isla de la Armadura
 28,9,Isle of Armor,Isle of Armor dex
 29,5,Couronneige,Pokédex de Couronneige
+29,6,Kronen-Schneelande,Kronen-Schneelande Dex
 29,7,Nieves de la Corona,Pokédex regional de Nieves de la Corona
 29,9,Crown Tundra,Crown Tundra dex
 30,5,Hisui,Pokédex d'Hisui
+30,6,Hisui,Hisui Dex — Dex aus Pokémon Legenden Arceus
 30,7,Hisui,Pokédex regional de Hisui de Leyendas Pokémon Arceus
 30,9,Hisui,Hisui dex
 31,5,Paldea,Pokédex de Paldea
+31,6,Paldea,Paldea Dex
 31,7,Paldea,Pokédex regional de Paldea de Escarlata/Púrpura
 31,9,Paldea,Paldea dex
 32,5,Septentria,Pokédex de Septentria
 32,7,Kitakami,Pokédex regional de Kitakami de Escarlata/Púrpura
 32,9,Kitakami,Kitakami dex
 33,5,Myrtille,Pokédex de l'Institut Myrtille
+33,6,Blaubeer-Akademie,Blaubeer-Akademie Dex
 33,7,Arándano,Pokédex regional de la Academia Arándano de Escarlata/Púrpura
 33,9,Blueberry,Blueberry Academy dex
+34,6,Illumina City,Illumina City Dex - Dex aus Pokémon Legenden Z-A
 34,7,Ciudad Luminalia,Pokédex regional de Ciudad Luminalia de Pokemon Leyendas Z-A
 34,9,Lumiose,Lumiose City dex
+35,6,Dimensions-Illumina,Dimensions-Illumina Dex
 35,7,Luminalia Dimensional,Pokédex regional de Luminalia Dimensional de Pokemon Leyendas Z-A
 35,9,Hyperspace,Hyperspace dex
 36,9,Champions,Champions dex

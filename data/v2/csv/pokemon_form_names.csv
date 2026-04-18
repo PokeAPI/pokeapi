@@ -3456,108 +3456,176 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10363,9,Shadow Rider,Shadow Calyrex
 10363,11,こくばじょうのすがた,
 10363,12,骑黑马的样子,
+10364,1,キョダイマックスのすがた,
 10364,5,Forme Gigamax,Florizarre Gigamax
 10364,6,Gigadynamax-Form,Gigadynamax-Bisaflor
 10364,9,Gigantamax Form,Gigantamax Venusaur
+10364,11,キョダイマックスのすがた,
+10365,1,キョダイマックスのすがた,
 10365,5,Forme Gigamax,Dracaufeu Gigamax
 10365,6,Gigadynamax-Form,Gigadynamax-Glurak
 10365,9,Gigantamax Form,Gigantamax Charizard
+10365,11,キョダイマックスのすがた,
+10366,1,キョダイマックスのすがた,
 10366,5,Forme Gigamax,Tortank Gigamax
 10366,6,Gigadynamax-Form,Gigadynamax-Turtok
 10366,9,Gigantamax Form,Gigantamax Blastoise
+10366,11,キョダイマックスのすがた,
+10367,1,キョダイマックスのすがた,
 10367,5,Forme Gigamax,Papilusion Gigamax
 10367,6,Gigadynamax-Form,Gigadynamax-Smettbo
 10367,9,Gigantamax Form,Gigantamax Butterfree
+10367,11,キョダイマックスのすがた,
+10368,1,キョダイマックスのすがた,
 10368,5,Forme Gigamax,Pikachu Gigamax
 10368,6,Gigadynamax-Form,Gigadynamax-Pikachu
 10368,9,Gigantamax Form,Gigantamax Pikachu
+10368,11,キョダイマックスのすがた,
+10369,1,キョダイマックスのすがた,
 10369,5,Forme Gigamax,Miaouss Gigamax
 10369,6,Gigadynamax-Form,Gigadynamax-Mauzi
 10369,9,Gigantamax Form,Gigantamax Meowth
+10369,11,キョダイマックスのすがた,
+10370,1,キョダイマックスのすがた,
 10370,5,Forme Gigamax,Mackogneur Gigamax
 10370,6,Gigadynamax-Form,Gigadynamax-Machomei
 10370,9,Gigantamax Form,Gigantamax Machamp
+10370,11,キョダイマックスのすがた,
+10371,1,キョダイマックスのすがた,
 10371,5,Forme Gigamax,Ectoplasma Gigamax
 10371,6,Gigadynamax-Form,Gigadynamax-Gengar
 10371,9,Gigantamax Form,Gigantamax Gengar
+10371,11,キョダイマックスのすがた,
+10372,1,キョダイマックスのすがた,
 10372,5,Forme Gigamax,Krabboss Gigamax
 10372,6,Gigadynamax-Form,Gigadynamax-Kingler
 10372,9,Gigantamax Form,Gigantamax Kingler
+10372,11,キョダイマックスのすがた,
+10373,1,キョダイマックスのすがた,
 10373,5,Forme Gigamax,Lokhlass Gigamax
 10373,6,Gigadynamax-Form,Gigadynamax-Lapras
 10373,9,Gigantamax Form,Gigantamax Lapras
+10373,11,キョダイマックスのすがた,
+10374,1,キョダイマックスのすがた,
 10374,5,Forme Gigamax,Évoli Gigamax
 10374,6,Gigadynamax-Form,Gigadynamax-Evoli
 10374,9,Gigantamax Form,Gigantamax Eevee
+10374,11,キョダイマックスのすがた,
+10375,1,キョダイマックスのすがた,
 10375,5,Forme Gigamax,Ronflex Gigamax
 10375,6,Gigadynamax-Form,Gigadynamax-Relaxo
 10375,9,Gigantamax Form,Gigantamax Snorlax
+10375,11,キョダイマックスのすがた,
+10376,1,キョダイマックスのすがた,
 10376,5,Forme Gigamax,Miasmax Gigamax
 10376,6,Gigadynamax-Form,Gigadynamax-Deponitox
 10376,9,Gigantamax Form,Gigantamax Garbodor
+10376,11,キョダイマックスのすがた,
+10377,1,キョダイマックスのすがた,
 10377,5,Forme Gigamax,Melmetal Gigamax
 10377,6,Gigadynamax-Form,Gigadynamax-Melmetal
 10377,9,Gigantamax Form,Gigantamax Melmetal
+10377,11,キョダイマックスのすがた,
+10378,1,キョダイマックスのすがた,
 10378,5,Forme Gigamax,Gorythmic Gigamax
 10378,6,Gigadynamax-Form,Gigadynamax-Gortrom
 10378,9,Gigantamax Form,Gigantamax Rillaboom
+10378,11,キョダイマックスのすがた,
+10379,1,キョダイマックスのすがた,
 10379,5,Forme Gigamax,Pyrobut Gigamax
 10379,6,Gigadynamax-Form,Gigadynamax-Liberlo
 10379,9,Gigantamax Form,Gigantamax Cinderace
+10379,11,キョダイマックスのすがた,
+10380,1,キョダイマックスのすがた,
 10380,5,Forme Gigamax,Lézargus Gigamax
 10380,6,Gigadynamax-Form,Gigadynamax-Intelleon
 10380,9,Gigantamax Form,Gigantamax Inteleon
+10380,11,キョダイマックスのすがた,
+10381,1,キョダイマックスのすがた,
 10381,5,Forme Gigamax,Corvaillus Gigamax
 10381,6,Gigadynamax-Form,Gigadynamax-Krarmor
 10381,9,Gigantamax Form,Gigantamax Corviknight
+10381,11,キョダイマックスのすがた,
+10382,1,キョダイマックスのすがた,
 10382,5,Forme Gigamax,Astronelle Gigamax
 10382,6,Gigadynamax-Form,Gigadynamax-Maritellit
 10382,9,Gigantamax Form,Gigantamax Orbeetle
+10382,11,キョダイマックスのすがた,
+10383,1,キョダイマックスのすがた,
 10383,5,Forme Gigamax,Torgamord Gigamax
 10383,6,Gigadynamax-Form,Gigadynamax-Kamalm
 10383,9,Gigantamax Form,Gigantamax Drednaw
+10383,11,キョダイマックスのすがた,
+10384,1,キョダイマックスのすがた,
 10384,5,Forme Gigamax,Monthracite Gigamax
 10384,6,Gigadynamax-Form,Gigadynamax-Montecarbo
 10384,9,Gigantamax Form,Gigantamax Coalossal
+10384,11,キョダイマックスのすがた,
+10385,1,キョダイマックスのすがた,
 10385,5,Forme Gigamax,Pomdrapi Gigamax
 10385,6,Gigadynamax-Form,Gigadynamax-Drapfel
 10385,9,Gigantamax Form,Gigantamax Flapple
+10385,11,キョダイマックスのすがた,
+10386,1,キョダイマックスのすがた,
 10386,5,Forme Gigamax,Dratatin Gigamax
 10386,6,Gigadynamax-Form,Gigadynamax-Schlapfel
 10386,9,Gigantamax Form,Gigantamax Appletun
+10386,11,キョダイマックスのすがた,
+10387,1,キョダイマックスのすがた,
 10387,5,Forme Gigamax,Dunaconda Gigamax
 10387,6,Gigadynamax-Form,Gigadynamax-Sanaconda
 10387,9,Gigantamax Form,Gigantamax Sandaconda
+10387,11,キョダイマックスのすがた,
+10388,1,キョダイマックスのすがた,
 10388,5,Forme Gigamax,Salarsen Forme Aigüe Gigamax
 10388,6,Gigadynamax-Form,Gigadynamax-Riffex (Hochform)
 10388,9,Gigantamax Form,Gigantamax Amped Toxtricity
+10388,11,キョダイマックスのすがた,
+10389,1,キョダイマックスのすがた,
 10389,5,Forme Gigamax,Scolocendre Gigamax
 10389,6,Gigadynamax-Form,Gigadynamax-Infernopod
 10389,9,Gigantamax Form,Gigantamax Centiskorch
+10389,11,キョダイマックスのすがた,
+10390,1,キョダイマックスのすがた,
 10390,5,Forme Gigamax,Sorcilence Gigamax
 10390,6,Gigadynamax-Form,Gigadynamax-Silembrim
 10390,9,Gigantamax Form,Gigantamax Hatterene
+10390,11,キョダイマックスのすがた,
+10391,1,キョダイマックスのすがた,
 10391,5,Forme Gigamax,Angoliath Gigamax
 10391,6,Gigadynamax-Form,Gigadynamax-Olangaar
 10391,9,Gigantamax Form,Gigantamax Grimmsnarl
+10391,11,キョダイマックスのすがた,
+10392,1,キョダイマックスのすがた,
 10392,5,Forme Gigamax,Charmilly Gigamax
 10392,6,Gigadynamax-Form,Gigadynamax-Pokusan
 10392,9,Gigantamax Form,Gigantamax Alcremie
+10392,11,キョダイマックスのすがた,
+10393,1,キョダイマックスのすがた,
 10393,5,Forme Gigamax,Pachyradjah Gigamax
 10393,6,Gigadynamax-Form,Gigadynamax-Patinaraja
 10393,9,Gigantamax Form,Gigantamax Copperajah
+10393,11,キョダイマックスのすがた,
+10394,1,キョダイマックスのすがた,
 10394,5,Forme Gigamax,Duralugon Gigamax
 10394,6,Gigadynamax-Form,Gigadynamax-Duraludon
 10394,9,Gigantamax Form,Gigantamax Duraludon
+10394,11,キョダイマックスのすがた,
+10395,1,キョダイマックスのすがた,
 10395,5,Forme Gigamax,Shifours Style Poing Final Gigamax
 10395,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fokussiert)
 10395,9,Gigantamax Form,Gigantamax Single Strike Urshifu
+10395,11,キョダイマックスのすがた,
+10396,1,キョダイマックスのすがた,
 10396,5,Forme Gigamax,Shifours Style Mille Poings Gigamax
 10396,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fließend)
 10396,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu
+10396,11,キョダイマックスのすがた,
+10397,1,キョダイマックスのすがた,
 10397,5,Gigantamax Form,Salarsen Forme Grave Gigamax
 10397,6,Gigadynamax-Form,Gigadynamax-Riffex (Tiefform)
 10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
+10397,11,キョダイマックスのすがた,
 10398,1,ヒスイのすがた,
 10398,5,Forme de Hisui,Caninos de Hisui
 10398,6,Hisui-Form,Hisui Fukano
@@ -3932,102 +4000,198 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10501,9,Caramel Swirl Ribbon Sweet,Caramel Swirl Ribbon Sweet Alcremie
 10502,5,Mélange Tricolore Ruban en Sucre,Charmilly Mélange Tricolore Ruban en Sucre
 10502,9,Rainbow Swirl Ribbon Sweet,Rainbow Swirl Ribbon Sweet Alcremie
+10503,1,メガピクシー,
 10503,5,Méga-Mélodelfe,Méga-Mélodelfe
 10503,9,Mega Clefable,Mega Clefable
+10503,11,メガピクシー,
+10504,1,メガウツボット,
 10504,5,Méga-Empiflor,Méga-Empiflor
 10504,9,Mega Victreebel,Mega Victreebel
+10504,11,メガウツボット,
+10505,1,メガスターミー,
 10505,5,Méga-Staross,Méga-Staross
 10505,9,Mega Starmie,Mega Starmie
+10505,11,メガスターミー,
+10506,1,メガカイリュー,
 10506,5,Méga-Dracolosse,Méga-Dracolosse
 10506,9,Mega Dragonite,Mega Dragonite
+10506,11,メガカイリュー,
+10507,1,メガメガニウム,
 10507,5,Méga-Méganium,Méga-Méganium
 10507,9,Mega Meganium,Mega Meganium
+10507,11,メガメガニウム,
+10508,1,メガオーダイル,
 10508,5,Méga-Aligatueur,Méga-Aligatueur
 10508,9,Mega Feraligatr,Mega Feraligatr
+10508,11,メガオーダイル,
+10509,1,メガエアームド,
 10509,5,Méga-Airmure,Méga-Airmure
 10509,9,Mega Skarmory,Mega Skarmory
+10509,11,メガエアームド,
+10510,1,メガユキメノコ,
 10510,5,Méga-Momartik,Méga-Momartik
 10510,9,Mega Froslass,Mega Froslass
+10510,11,メガユキメノコ,
+10511,1,メガエンブオー,
 10511,5,Méga-Roitiflam,Méga-Roitiflam
 10511,9,Mega Emboar,Mega Emboar
+10511,11,メガエンブオー,
+10512,1,メガドリュウズ,
 10512,5,Méga-Minotaupe,Méga-Minotaupe
 10512,9,Mega Excadrill,Mega Excadrill
+10512,11,メガドリュウズ,
+10513,1,メガペンドラー,
 10513,5,Méga-Brutapode,Méga-Brutapode
 10513,9,Mega Scolipede,Mega Scolipede
+10513,11,メガペンドラー,
+10514,1,メガズルズキン,
 10514,5,Méga-Baggaïd,Méga-Baggaïd
 10514,9,Mega Scrafty,Mega Scrafty
+10514,11,メガズルズキン,
+10515,1,メガシビルドン,
 10515,5,Méga-Ohmassacre,Méga-Ohmassacre
 10515,9,Mega Eelektross,Mega Eelektross
+10515,11,メガシビルドン,
+10516,1,メガシャンデラ,
 10516,5,Méga-Lugulabre,Méga-Lugulabre
 10516,9,Mega Chandelure,Mega Chandelure
+10516,11,メガシャンデラ,
+10517,1,メガブリガロン,
 10517,5,Méga-Blindépique,Méga-Blindépique
 10517,9,Mega Chesnaught,Mega Chesnaught
+10517,11,メガブリガロン,
+10518,1,メガマフォクシー,
 10518,5,Méga-Goupelin,Méga-Goupelin
 10518,9,Mega Delphox,Mega Delphox
+10518,11,メガマフォクシー,
+10519,1,メガゲッコウガ,
 10519,5,Méga-Amphinobi,Méga-Amphinobi
 10519,9,Mega Greninja,Mega Greninja
+10519,11,メガゲッコウガ,
+10520,1,メガカエンジシ,
 10520,5,Méga-Némélios,Méga-Némélios
 10520,9,Mega Pyroar,Mega Pyroar
+10520,11,メガカエンジシ,
+10521,1,メガフラエッテ,
 10521,5,Méga-Floette,Méga-Floette
 10521,9,Mega Floette,Mega Floette
+10521,11,メガフラエッテ,
+10522,1,メガカラマネロ,
 10522,5,Méga-Sepiatroce,Méga-Sepiatroce
 10522,9,Mega Malamar,Mega Malamar
+10522,11,メガカラマネロ,
+10523,1,メガガメノデス,
 10523,5,Méga-Golgopathe,Méga-Golgopathe
 10523,9,Mega Barbaracle,Mega Barbaracle
+10523,11,メガガメノデス,
+10524,1,メガドラミドロ,
 10524,5,Méga-Kravarech,Méga-Kravarech
 10524,9,Mega Dragalge,Mega Dragalge
+10524,11,メガドラミドロ,
+10525,1,メガルチャブル,
 10525,5,Méga-Brutalibré,Méga-Brutalibré
 10525,9,Mega Hawlucha,Mega Hawlucha
+10525,11,メガルチャブル,
+10526,1,メガジガルデ,
 10526,5,Méga-Zygarde,Méga-Zygarde
 10526,9,Mega Zygarde,Mega Zygarde
+10526,11,メガジガルデ,
+10527,1,メガジジーロン,
 10527,5,Méga-Draïeul,Méga-Draïeul
 10527,9,Mega Drampa,Mega Drampa
+10527,11,メガジジーロン,
+10528,1,メガタイレーツ,
 10528,5,Méga-Hexadron,Méga-Hexadron
 10528,9,Mega Falinks,Mega Falinks
+10528,11,メガタイレーツ,
+10529,1,メガライチュウX,
 10529,5,Méga-Raichu X,Méga-Raichu X
 10529,9,Mega Raichu X,Mega Raichu X
+10529,11,メガライチュウX,
+10530,1,メガライチュウY,
 10530,5,Méga-Raichu Y,Méga-Raichu Y
 10530,9,Mega Raichu Y,Mega Raichu Y
+10530,11,メガライチュウY,
+10531,1,メガチリーン,
 10531,5,Méga-Éoko,Méga-Éoko
 10531,9,Mega Chimecho,Mega Chimecho
+10531,11,メガチリーン,
+10532,1,メガアブソルZ,
 10532,5,Méga-Absol Z,Méga-Absol Z
 10532,9,Mega Absol Z,Mega Absol Z
+10532,11,メガアブソルZ,
+10533,1,メガムクホーク,
 10533,5,Méga-Étouraptor,Méga-Étouraptor
 10533,9,Mega Staraptor,Mega Staraptor
+10533,11,メガムクホーク,
+10534,1,メガガブリアスZ,
 10534,5,Méga-Carchacrok Z,Méga-Carchacrok Z
 10534,9,Mega Garchomp Z,Mega Garchomp Z
+10534,11,メガガブリアスZ,
+10535,1,メガルカリオZ,
 10535,5,Méga-Lucario Z,Méga-Lucario Z
 10535,9,Mega Lucario Z,Mega Lucario Z
+10535,11,メガルカリオZ,
+10536,1,メガヒードラン,
 10536,5,Méga-Heatran,Méga-Heatran
 10536,9,Mega Heatran,Mega Heatran
+10536,11,メガヒードラン,
+10537,1,メガダークライ,
 10537,5,Méga-Darkrai,Méga-Darkrai
 10537,9,Mega Darkrai,Mega Darkrai
+10537,11,メガダークライ,
+10538,1,メガゴルーグ,
 10538,5,Méga-Golemastoc,Méga-Golemastoc
 10538,9,Mega Golurk,Mega Golurk
+10538,11,メガゴルーグ,
+10539,1,メガニャオニクス,
 10539,5,Méga-Mistigrix,Méga-Mistigrix
 10539,9,Mega Meowstic,Mega Meowstic
+10539,11,メガニャオニクス,
+10540,1,メガケケンカニ,
 10540,5,Méga-Crabominable,Méga-Crabominable
 10540,9,Mega Crabominable,Mega Crabominable
+10540,11,メガケケンカニ,
+10541,1,メガグソクムシャ,
 10541,5,Méga-Sarmuraï,Méga-Sarmuraï
 10541,9,Mega Golisopod,Mega Golisopod
+10541,11,メガグソクムシャ,
+10542,1,メガマギアナ,
 10542,5,Méga-Magearna,Méga-Magearna
 10542,9,Mega Magearna,Mega Magearna
+10542,11,メガマギアナ,
+10543,1,メガマギアナ,
 10543,5,Méga-Magearna Couleur du Passé,Méga-Magearna Couleur du Passé
 10543,9,Mega Original Magearna,Mega Original Magearna
+10543,11,メガマギアナ,
+10544,1,メガゼラオラ,
 10544,5,Méga-Zeraora,Méga-Zeraora
 10544,9,Mega Zeraora,Mega Zeraora
+10544,11,メガゼラオラ,
+10545,1,メガスコヴィラン,
 10545,5,Méga-Scovilain,Méga-Scovilain
 10545,9,Mega Scovillain,Mega Scovillain
+10545,11,メガスコヴィラン,
+10546,1,メガキラフロル,
 10546,5,Méga-Floréclat,Méga-Floréclat
 10546,9,Mega Glimmora,Mega Glimmora
+10546,11,メガキラフロル,
+10547,1,メガシャリタツ,
 10547,5,Méga-Nigirigon Forme Courbée,Méga-Nigirigon Forme Courbée
 10547,9,Mega Curly Tatsugiri,Mega Curly Tatsugiri
+10547,11,メガシャリタツ,
+10548,1,メガシャリタツ,
 10548,5,Méga-Nigirigon Forme Affalée,Méga-Nigirigon Forme Affalée
 10548,9,Mega Droopy Tatsugiri,Mega Droopy Tatsugiri
+10548,11,メガシャリタツ,
+10549,1,メガシャリタツ,
 10549,5,Méga-Nigirigon Forme Raide,Méga-Nigirigon Forme Raide
 10549,9,Mega Stretchy Tatsugiri,Mega Stretchy Tatsugiri
+10549,11,メガシャリタツ,
+10550,1,メガセグレイブ,
 10550,5,Méga-Glaivodo,Méga-Glaivodo
 10550,9,Mega Baxcalibur,Mega Baxcalibur
+10550,11,メガセグレイブ,
 10551,1,メスのすがた,
 10551,3,암컷의 모습,
 10551,4,雌性的樣子,

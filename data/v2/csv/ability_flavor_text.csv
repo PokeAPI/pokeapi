@@ -29779,87 +29779,321 @@ Unnerve Ability and Spectrier’s Grim Neigh Ability."
 267,20,12,"兼备蕾冠王的紧张感和
 灵幽马的漆黑嘶鸣这两种特性。"
 267,25,9,This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability.
+268,25,1,"相手に　触られると
+とれないにおいが
+相手に　うつってしまう。"
 268,25,5,"Lorsque le Pokémon subit une attaque directe, le talent\nde l’attaquant est remplacé par Odeur Tenace."
 268,25,9,Contact with the Pokémon changes the attacker's Ability to Lingering Aroma.
+268,25,11,"相手に　触られると
+とれないにおいが
+相手に　うつってしまう。"
+269,25,1,"攻撃を　受けると
+グラスフィールドに　する。"
 269,25,5,Le Pokémon crée un champ herbu quand\nil subit une attaque.
 269,25,9,Turns the ground into Grassy Terrain when the Pokémon is hit by an attack.
+269,25,11,"攻撃を　受けると
+グラスフィールドに　する。"
+270,25,1,"ほのおタイプの　技を　受けると
+攻撃が　上がる。
+やけど状態に　ならない。"
 270,25,5,"Lorsque le Pokémon est touché par une capacité de type\nFeu, son Attaque augmente. Il ne peut pas être brûlé."
 270,25,9,Boosts the Attack stat when the Pokémon is hit by a Fire-type move. The Pokémon also cannot be burned.
+270,25,11,"ほのおタイプの　技を　受けると
+攻撃が　上がる。
+やけど状態に　ならない。"
+271,25,1,"相手の攻撃で　HPが　半分に　なると
+怒りで　防御と　特防が　下がるが
+攻撃　特攻　素早さが　上がる。"
 271,25,5,"Le Pokémon enrage s’il a moins de la moitié de ses PV\naprès avoir subi une attaque. Sa Déf. et sa Déf. Spé.\nbaissent, et son Atq., son Atq. Spé. et sa Vit. augmentent."
 271,25,9,"When an attack causes its HP to drop to half or less, the Pokémon gets angry. This lowers its Defense and Sp. Def stats but boosts its Attack, Sp. Atk, and Speed stats."
+271,25,11,"相手の攻撃で　HPが　半分に　なると
+怒りで　防御と　特防が　下がるが
+攻撃　特攻　素早さが　上がる。"
+272,25,1,"清らかな塩で　状態異常に　ならない。
+ゴーストタイプの　技の
+ダメージを　半減させる。"
 272,25,5,"Le sel pur immunise le Pokémon contre les altérations\nde statut, et diminue de moitié les dégâts des capacités\nde type Spectre."
 272,25,9,The Pokémon's pure salt protects it from status conditions and halves the damage taken from Ghost-type moves.
+272,25,11,"清らかな塩で　状態異常に　ならない。
+ゴーストタイプの　技の
+ダメージを　半減させる。"
+273,25,1,"ほのおタイプの　技を　受けると
+ダメージを　受けずに
+防御が　ぐーんと　上がる。"
 273,25,5,"Si le Pokémon est touché par une capacité de type Feu,\nil ne subit aucun dégât et sa Défense augmente\nbeaucoup."
 273,25,9,"The Pokémon takes no damage when hit by Fire-type moves. Instead, its Defense stat is sharply boosted."
+273,25,11,"ほのおタイプの　技を　受けると
+ダメージを　受けずに
+防御が　ぐーんと　上がる。"
+274,25,1,"おいかぜが　吹いたり　風技を　受けると
+ダメージを　受けずに
+攻撃が　上がる。"
 274,25,5,"L’Attaque du Pokémon augmente si un vent arrière souffle\nou s’il est touché par une capacité faisant appel au vent.\nDans ce dernier cas, il ne subit aucun dégât."
 274,25,9,Boosts the Pokémon's Attack stat if Tailwind takes effect or if the Pokémon is hit by a wind move. The Pokémon also takes no damage from wind moves.
+274,25,11,"おいかぜが　吹いたり　風技を　受けると
+ダメージを　受けずに
+攻撃が　上がる。"
+275,25,1,"いかく　されると　攻撃が　上がる。
+ポケモンを　入れ替えさせる
+技や　道具が　効かない。"
 275,25,5,L’Attaque du Pokémon augmente s’il subit l’effet du\ntalent Intimidation. Les capacités ou objets qui font\nchanger de Pokémon n’ont aucun effet sur lui.
 275,25,9,Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work.
+275,25,11,"いかく　されると　攻撃が　上がる。
+ポケモンを　入れ替えさせる
+技や　道具が　効かない。"
+276,25,1,"いわタイプの　技の
+威力が　上がる。"
 276,25,5,Augmente la puissance des capacités de type Roche.
 276,25,9,Powers up Rock-type moves.
+276,25,11,"いわタイプの　技の
+威力が　上がる。"
+277,25,1,"風技を　受けると
+じゅうでん　状態に　なる。"
 277,25,5,"Si le Pokémon est touché par une capacité faisant appel\nau vent, il se charge en électricité."
 277,25,9,"The Pokémon becomes charged when it is hit by a wind move, boosting the power of the next Electric-type move the Pokémon uses."
+277,25,11,"風技を　受けると
+じゅうでん　状態に　なる。"
+278,25,1,"手持ちに　ひっこむと
+マイティフォルムに　変化する。"
 278,25,5,Le Pokémon prend sa Forme Super en quittant\nle combat.
 278,25,9,The Pokémon transforms into its Hero Form when it switches out.
+278,25,11,"手持ちに　ひっこむと
+マイティフォルムに　変化する。"
+279,25,1,"登場したとき　味方に
+ヘイラッシャが　いると　口の中に
+入って　そこから　指令を　だす。"
 279,25,5,"Si un Oyacata allié est sur le terrain quand ce Pokémon\nrejoint le combat, ce dernier entre dans sa bouche et\ndevient son commandant."
 279,25,9,"When the Pokémon enters a battle, it goes inside the mouth of an ally Dondozo if one is on the field. The Pokémon then issues commands from there."
+279,25,11,"登場したとき　味方に
+ヘイラッシャが　いると　口の中に
+入って　そこから　指令を　だす。"
+280,25,1,"ダメージを　受けると
+じゅうでん　状態に　なる。"
 280,25,5,"Si le Pokémon subit des dégâts, il se charge\nen électricité."
 280,25,9,"The Pokémon becomes charged when it takes damage, boosting the power of the next Electric-type move the Pokémon uses."
+280,25,11,"ダメージを　受けると
+じゅうでん　状態に　なる。"
+281,25,1,"ブーストエナジーを　持たせるか
+天気が　晴れのとき
+いちばん　高い能力が　上がる。"
 281,25,5,"Quand le soleil brille ou que le Pokémon tient\nune capsule d’Énergie Booster, sa stat la plus élevée\naugmente."
 281,25,9,Boosts the Pokémon's most proficient stat in harsh sunlight or if the Pokémon is holding Booster Energy.
+281,25,11,"ブーストエナジーを　持たせるか
+天気が　晴れのとき
+いちばん　高い能力が　上がる。"
+282,25,1,"ブーストエナジーを　持たせるか
+エレキフィールドのとき
+いちばん　高い能力が　上がる。"
 282,25,5,"Quand un champ électrifié est actif ou que le Pokémon\ntient une capsule d’Énergie Booster, sa stat la plus élevée\naugmente."
 282,25,9,Boosts the Pokémon's most proficient stat on Electric Terrain or if the Pokémon is holding Booster Energy.
+282,25,11,"ブーストエナジーを　持たせるか
+エレキフィールドのとき
+いちばん　高い能力が　上がる。"
+283,25,1,"酸化せず　丈夫な　黄金の体は
+相手からの　変化技を　受けない。"
 283,25,5,Le corps en or pur et robuste du Pokémon l’immunise\ncontre les capacités de statut des autres Pokémon.
 283,25,9,"A body of pure, solid gold gives the Pokémon full immunity to other Pokémon's status moves."
+283,25,11,"酸化せず　丈夫な　黄金の体は
+相手からの　変化技を　受けない。"
+284,25,1,"災厄を　呼ぶ　器の力で
+自分以外の　特攻が　弱くなる。"
 284,25,5,Le pouvoir de l’urne qui appelle le fléau affaiblit\nl’Attaque Spéciale de tous les autres Pokémon.
 284,25,9,The power of the Pokémon's ruinous vessel lowers the Sp. Atk stats of all Pokémon except itself.
+284,25,11,"災厄を　呼ぶ　器の力で
+自分以外の　特攻が　弱くなる。"
+285,25,1,"災厄を　呼ぶ　剣の力で
+自分以外の　防御が　弱くなる。"
 285,25,5,Le pouvoir de l’épée qui appelle le fléau affaiblit\nla Défense de tous les autres Pokémon.
 285,25,9,The power of the Pokémon's ruinous sword lowers the Defense stats of all Pokémon except itself.
+285,25,11,"災厄を　呼ぶ　剣の力で
+自分以外の　防御が　弱くなる。"
+286,25,1,"災厄を　呼ぶ　木札の力で
+自分以外の　攻撃が　弱くなる。"
 286,25,5,Le pouvoir du bois qui appelle le fléau affaiblit\nl’Attaque de tous les autres Pokémon.
 286,25,9,The power of the Pokémon's ruinous wooden tablets lowers the Attack stats of all Pokémon except itself.
+286,25,11,"災厄を　呼ぶ　木札の力で
+自分以外の　攻撃が　弱くなる。"
+287,25,1,"災厄を　呼ぶ　勾玉の力で
+自分以外の　特防が　弱くなる。"
 287,25,5,Le pouvoir des perles qui appellent le fléau affaiblit\nla Défense Spéciale de tous les autres Pokémon.
 287,25,9,The power of the Pokémon's ruinous beads lowers the Sp. Def stats of all Pokémon except itself.
+287,25,11,"災厄を　呼ぶ　勾玉の力で
+自分以外の　特防が　弱くなる。"
+288,25,1,"登場したとき　天気を　晴れにする。
+日差しが　強いと　古代の
+鼓動により　攻撃が　高まる。"
 288,25,5,"Le Pokémon invoque le soleil quand il rejoint le combat.\nQuand le soleil brille, une pulsation primitive augmente\nson Attaque."
 288,25,9,Turns the sunlight harsh when the Pokémon enters a battle. The ancient pulse thrumming through the Pokémon also boosts its Attack stat in harsh sunlight.
+288,25,11,"登場したとき　天気を　晴れにする。
+日差しが　強いと　古代の
+鼓動により　攻撃が　高まる。"
+289,25,1,"登場したとき　エレキフィールドを　はる。
+エレキフィールドだと　未来の
+機関により　特攻が　高まる。"
 289,25,5,Le Pokémon crée un champ électrifié quand il rejoint\nle combat. Une machine du futur fait monter son Attaque\nSpéciale si un champ électrifié est actif.
 289,25,9,Turns the ground into Electric Terrain when the Pokémon enters a battle. The futuristic engine within the Pokémon also boosts its Sp. Atk stat on Electric Terrain.
+289,25,11,"登場したとき　エレキフィールドを　はる。
+エレキフィールドだと　未来の
+機関により　特攻が　高まる。"
+290,25,1,"相手の　能力が　上がったとき
+自分も　便乗して
+同じように　能力を　上げる。"
 290,25,5,"Quand les stats de l’ennemi augmentent, le Pokémon\nen profite pour augmenter ses stats de la même manière."
 290,25,9,"If an opponent's stat is boosted, the Pokémon seizes the opportunity to boost the same stat for itself."
+290,25,11,"相手の　能力が　上がったとき
+自分も　便乗して
+同じように　能力を　上げる。"
+291,25,1,"きのみを　食べると
+次のターンの　終わりに　胃から
+出して　もう1回だけ　食べる。"
 291,25,5,"Quand le Pokémon mange une Baie, il la régurgite\nà la fin du tour suivant et la mange une nouvelle fois."
 291,25,9,"When the Pokémon eats a Berry, it will regurgitate that Berry at the end of the next turn and eat it one more time."
+291,25,11,"きのみを　食べると
+次のターンの　終わりに　胃から
+出して　もう1回だけ　食べる。"
+292,25,1,"相手を　切る技の
+威力が　上がる。"
 292,25,5,Augmente la puissance des capacités tranchantes.
 292,25,9,Powers up slicing moves.
+292,25,11,"相手を　切る技の
+威力が　上がる。"
+293,25,1,"登場したとき　今まで　倒された
+味方の　数が　多いほど
+少しずつ　攻撃と　特攻が　上がる。"
 293,25,5,"Quand le Pokémon entre sur le terrain, son Attaque\net son Attaque Spéciale augmentent légèrement\npour chaque allié mis K.O. auparavant."
 293,25,9,"When the Pokémon enters a battle, its Attack and Sp. Atk stats are slightly boosted for each of the allies in its party that have already been defeated."
+293,25,11,"登場したとき　今まで　倒された
+味方の　数が　多いほど
+少しずつ　攻撃と　特攻が　上がる。"
+294,25,1,"登場　したときに
+味方の　能力変化を　コピーする。"
 294,25,5,"Quand le Pokémon entre sur le terrain, il copie\nles changements de stats de son allié."
 294,25,9,"When the Pokémon enters a battle, it copies an ally's stat changes."
+294,25,11,"登場　したときに
+味方の　能力変化を　コピーする。"
+295,25,1,"物理技で　ダメージを　受けると
+相手の　足下に
+どくびしが　ちらばる。"
 295,25,5,"Quand le Pokémon est touché par une capacité\nphysique, il répand des pics toxiques dans le camp\nadverse."
 295,25,9,Scatters poison spikes at the feet of the opposing team when the Pokémon takes damage from physical moves.
+295,25,11,"物理技で　ダメージを　受けると
+相手の　足下に
+どくびしが　ちらばる。"
+296,25,1,"頭を包む　謎のしっぽが
+こちらに　むかって　先制技を
+出せない　ようにする。"
 296,25,5,"Une étrange queue recouvre la tête du Pokémon,\nce qui empêche ce dernier et ses alliés d’être visés\npar une capacité prioritaire."
 296,25,9,The mysterious tail covering the Pokémon's head makes opponents unable to use priority moves against the Pokémon or its allies.
+296,25,11,"頭を包む　謎のしっぽが
+こちらに　むかって　先制技を
+出せない　ようにする。"
+297,25,1,"じめんタイプの　技を　受けると
+ダメージを　受けずに　回復する。"
 297,25,5,"Si le Pokémon est touché par une capacité de type Sol,\nil regagne des PV au lieu de subir des dégâts."
 297,25,9,"If hit by a Ground-type move, the Pokémon has its HP restored instead of taking damage."
+297,25,11,"じめんタイプの　技を　受けると
+ダメージを　受けずに　回復する。"
+298,25,1,"変化技を　出すとき
+必ず　行動が　遅くなるが
+相手の　特性に　ジャマされない。"
 298,25,5,"Le Pokémon agit toujours plus lentement quand il utilise\nune capacité de statut, mais il ignore les talents adverses."
 298,25,9,"The Pokémon will always act more slowly when using status moves, but these moves will be unimpeded by the Ability of the target."
+298,25,11,"変化技を　出すとき
+必ず　行動が　遅くなるが
+相手の　特性に　ジャマされない。"
+299,26,1,"ノーマル　かくとうタイプの技を　ゴーストタイプに
+当てることが　できる。　相手の　回避率の
+変化を　無視し　命中率も　下げられない。"
 299,26,5,Le Pokémon ignore les changements d’Esquive des cibles\net peut toucher les Pokémon Spectre avec des capacités\nNormal ou Combat. Sa Précision ne peut pas baisser.
 299,26,9,"The Pokémon ignores changes to opponents' evasiveness, its accuracy can't be lowered, and it can hit Ghost types with Normal-type and Fighting-type moves"
+299,26,11,"ノーマル　かくとうタイプの技を　ゴーストタイプに
+当てることが　できる。　相手の　回避率の
+変化を　無視し　命中率も　下げられない。"
+300,26,1,"最初に　登場　したとき
+甘ったるい　蜜の香りを　ふりまいて
+相手の　回避率を　下げる。"
 300,26,5,"La première fois que le Pokémon entre au combat,\nune odeur de nectar sucré se répand sur le terrain,\nce qui baisse l’Esquive de l’adversaire."
 300,26,9,Lowers the evasion of opposing Pokémon by 1 stage when first sent into battle
+300,26,11,"最初に　登場　したとき
+甘ったるい　蜜の香りを　ふりまいて
+相手の　回避率を　下げる。"
+301,26,1,"登場したとき　味方を　もてなして
+HPを　少しだけ　回復してあげる。"
 301,26,5,"Quand il rejoint le combat, ce Pokémon est aux petits\nsoins avec son allié et restaure quelques PV."
 301,26,9,"When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP"
+301,26,11,"登場したとき　味方を　もてなして
+HPを　少しだけ　回復してあげる。"
 302,25,5,"Grâce aux pouvoirs de sa chaîne imprégnée de toxines,\nle Pokémon peut empoisonner gravement sa cible\nen la touchant avec une capacité."
+302,26,1,"毒素を　ふくんだ　鎖の力で
+技を　当てた　相手を
+猛毒の状態に　することが　ある。"
 302,26,9,The power of the Pokémon's toxic chain may badly poison any target the Pokémon hits with a move
+302,26,11,"毒素を　ふくんだ　鎖の力で
+技を　当てた　相手を
+猛毒の状態に　することが　ある。"
 303,25,5,"Le Pokémon fait briller le Masque en puisant dans ses souvenirs, ce qui augmente ses stats."
+303,26,1,"思い出を 心に 宿すことで
+おめんを かがやかせ
+自分の 能力を 上げる。"
 303,26,9,"The Pokémon's heart fills with memories, causing the Mask to shine and one of the Pokémon's stats to be boosted."
+303,26,11,"思い出を 心に 宿すことで
+おめんを かがやかせ
+自分の 能力を 上げる。"
+304,27,1,"登場したとき　周囲の
+エネルギーを　吸収し
+テラスタルフォルムに　変化する。"
 304,27,5,"Quand le Pokémon rejoint le combat, il absorbe\nl’énergie alentour et prend sa Forme Téracristal."
 304,27,9,"When the Pokémon enters a battle, it absorbs the energy around itself and transforms into its Terastal Form."
+304,27,11,"登場したとき　周囲の
+エネルギーを　吸収し
+テラスタルフォルムに　変化する。"
+305,27,1,"全タイプの力を　秘めた甲羅は
+HPが　満タンの　ときに　受ける
+ダメージを　すべて　今ひとつに　する。"
 305,27,5,"Grâce à sa carapace qui renferme l’énergie de tous\nles types, les capacités subies par ce Pokémon quand\nses PV sont au maximum ne sont pas très efficaces."
 305,27,9,The Pokémon's shell contains the powers of each type. All damage-dealing moves that hit the Pokémon when its HP is full will not be very effective.
+305,27,11,"全タイプの力を　秘めた甲羅は
+HPが　満タンの　ときに　受ける
+ダメージを　すべて　今ひとつに　する。"
+306,27,1,"テラパゴスが　ステラフォルムに　なったとき
+秘められた力で　天気と　フィールドの
+影響を　すべて　ゼロにする。"
 306,27,5,"Lorsque Terapagos prend sa Forme Stellaire, il utilise\nson pouvoir enfoui pour annuler les effets de la météo\net des champs actifs."
 306,27,9,"When Terapagos changes into its Stellar Form, it uses its hidden powers to eliminate all effects of weather and terrain, reducing them to zero."
+306,27,11,"テラパゴスが　ステラフォルムに　なったとき
+秘められた力で　天気と　フィールドの
+影響を　すべて　ゼロにする。"
+307,27,1,"モモワロウの　技によって
+どく状態に　なった　相手は
+こんらん状態にも　なってしまう。"
 307,27,5,"Lorsque Pêchaminus empoisonne un Pokémon grâce\nà l’une de ses capacités, ce dernier devient également\nconfus."
 307,27,9,Pokémon poisoned by Pecharunt's moves will also become confused.
+307,27,11,"モモワロウの　技によって
+どく状態に　なった　相手は
+こんらん状態にも　なってしまう。"
+308,32,1,"接触技を使う時
+相手の守りの効果を無視して
+本来の1/4のダメージを与える。
+相手の守りの効果以外は発動される。"
 308,32,9,"When the Pokémon uses contact moves, it can hit even targets that are protecting themselves, dealing 1/4 of the damage that the move would otherwise deal. Everything aside from the target's protective effects is still triggered."
-309,32,9,"The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%."
+308,32,11,"接触技を使う時
+相手の守りの効果を無視して
+本来の1/4のダメージを与える。
+相手の守りの効果以外は発動される。"
+309,32,1,"ノーマルタイプの技がドラゴンタイプになり
+威力が1.2倍になる。"
+309,32,9,The Pokémon's Normal-type moves become Dragon-type moves and their power is boosted by 20%.
+309,32,11,"ノーマルタイプの技がドラゴンタイプになり
+威力が1.2倍になる。"
+310,32,1,"天気が　にほんばれ状態でなくても
+にほんばれ状態として
+技を使うことができる。"
 310,32,9,"Even when the sunlight has not turned harsh, the Pokémon can use its moves as if the weather were harsh sunlight."
+310,32,11,"天気が　にほんばれ状態でなくても
+にほんばれ状態として
+技を使うことができる。"
+311,32,1,"技のダメージを受けると
+相手をやけど状態にする。"
 311,32,9,"When the Pokémon takes damage from a move, it burns the attacker."
+311,32,11,"技のダメージを受けると
+相手をやけど状態にする。"

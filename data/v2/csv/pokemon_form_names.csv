@@ -3576,11 +3576,11 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10387,6,Gigadynamax-Form,Gigadynamax-Sanaconda
 10387,9,Gigantamax Form,Gigantamax Sandaconda
 10387,11,キョダイマックスのすがた,
-10388,1,キョダイマックスのすがた,
+10388,1,ハイなすがた・キョダイマックスのすがた,
 10388,5,Forme Gigamax,Salarsen Forme Aigüe Gigamax
 10388,6,Gigadynamax-Form,Gigadynamax-Riffex (Hochform)
 10388,9,Gigantamax Form,Gigantamax Amped Toxtricity
-10388,11,キョダイマックスのすがた,
+10388,11,ハイなすがた・キョダイマックスのすがた,
 10389,1,キョダイマックスのすがた,
 10389,5,Forme Gigamax,Scolocendre Gigamax
 10389,6,Gigadynamax-Form,Gigadynamax-Infernopod
@@ -3611,21 +3611,21 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10394,6,Gigadynamax-Form,Gigadynamax-Duraludon
 10394,9,Gigantamax Form,Gigantamax Duraludon
 10394,11,キョダイマックスのすがた,
-10395,1,キョダイマックスのすがた,
+10395,1,いちげきのかた・キョダイマックスのすがた,
 10395,5,Forme Gigamax,Shifours Style Poing Final Gigamax
 10395,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fokussiert)
 10395,9,Gigantamax Form,Gigantamax Single Strike Urshifu
-10395,11,キョダイマックスのすがた,
-10396,1,キョダイマックスのすがた,
+10395,11,いちげきのかた・キョダイマックスのすがた,
+10396,1,れんげきのかた・キョダイマックスのすがた,
 10396,5,Forme Gigamax,Shifours Style Mille Poings Gigamax
 10396,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fließend)
 10396,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu
-10396,11,キョダイマックスのすがた,
-10397,1,キョダイマックスのすがた,
+10396,11,れんげきのかた・キョダイマックスのすがた,
+10397,1,ローなすがた・キョダイマックスのすがた,
 10397,5,Gigantamax Form,Salarsen Forme Grave Gigamax
 10397,6,Gigadynamax-Form,Gigadynamax-Riffex (Tiefform)
 10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
-10397,11,キョダイマックスのすがた,
+10397,11,ローなすがた・キョダイマックスのすがた,
 10398,1,ヒスイのすがた,
 10398,5,Forme de Hisui,Caninos de Hisui
 10398,6,Hisui-Form,Hisui Fukano

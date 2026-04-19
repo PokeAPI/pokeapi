@@ -1,5 +1,6 @@
 import csv
 import os
+
 from read_swsh import TextFile
 
 # data_path contains the countents of the `message` folder found in sword/shield's romfs:/bin/

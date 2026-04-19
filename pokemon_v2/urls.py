@@ -5,11 +5,59 @@ from django.urls import include, path, re_path
 #   V2 API setup using Django Rest
 #
 #####################################
-
 from rest_framework import routers
-from pokemon_v2.api import *
 
-# pylint: disable=invalid-name
+from pokemon_v2.api import (
+    AbilityResource,
+    BerryFirmnessResource,
+    BerryFlavorResource,
+    BerryResource,
+    CharacteristicResource,
+    ContestEffectResource,
+    ContestTypeResource,
+    EggGroupResource,
+    EncounterConditionResource,
+    EncounterConditionValueResource,
+    EncounterMethodResource,
+    EvolutionChainResource,
+    EvolutionTriggerResource,
+    GenderResource,
+    GenerationResource,
+    GrowthRateResource,
+    ItemAttributeResource,
+    ItemCategoryResource,
+    ItemFlingEffectResource,
+    ItemPocketResource,
+    ItemResource,
+    LanguageResource,
+    LocationAreaResource,
+    LocationResource,
+    MachineResource,
+    MoveBattleStyleResource,
+    MoveDamageClassResource,
+    MoveLearnMethodResource,
+    MoveMetaAilmentResource,
+    MoveMetaCategoryResource,
+    MoveResource,
+    MoveTargetResource,
+    NatureResource,
+    PalParkAreaResource,
+    PokeathlonStatResource,
+    PokedexResource,
+    PokemonColorResource,
+    PokemonEncounterView,
+    PokemonFormResource,
+    PokemonHabitatResource,
+    PokemonResource,
+    PokemonShapeResource,
+    PokemonSpeciesResource,
+    RegionResource,
+    StatResource,
+    SuperContestEffectResource,
+    TypeResource,
+    VersionGroupResource,
+    VersionResource,
+)
 
 router = routers.DefaultRouter()
 

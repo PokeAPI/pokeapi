@@ -332,13 +332,11 @@ class APIData:
         item_category=None,
         item_fling_effect=None,
         name="itm",
-        cost=100,
         fling_power=100,
     ):
         item = Item.objects.create(
             name=name,
             item_category=item_category,
-            cost=cost,
             fling_power=fling_power,
             item_fling_effect=item_fling_effect,
         )
@@ -2716,7 +2714,6 @@ class APITests(APIData, APITestCase):
         # base params
         self.assertEqual(response.data["id"], item.pk)
         self.assertEqual(response.data["name"], item.name)
-        self.assertEqual(response.data["cost"], item.cost)
         self.assertEqual(response.data["fling_power"], item.fling_power)
         # name params
         self.assertEqual(response.data["names"][0]["name"], item_name.name)

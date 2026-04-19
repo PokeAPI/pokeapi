@@ -177,3 +177,6 @@ id,encounter_condition_id,identifier,is_default
 176,17,friend-safari-slot-1,1
 177,17,friend-safari-slot-2,1
 178,17,friend-safari-slot-3,1
+179,18,honey-tree-group-a,0
+180,18,honey-tree-group-b,0
+181,18,honey-tree-group-c,0

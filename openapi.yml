@@ -4040,8 +4040,8 @@ components:
                       - trigger
                       - turn_upside_down
                       - used_move
-                      - region_id
-                      - base_form_id
+                      - region
+                      - base_form
                       properties:
                         gender:
                           type: object
@@ -4173,7 +4173,7 @@ components:
                         used_move:
                           type: ''
                           nullable: true
-                        region_id:
+                        region:
                           type: object
                           nullable: true
                           required:
@@ -4185,7 +4185,7 @@ components:
                             url:
                               type: string
                               format: uri
-                        base_form_id:
+                        base_form:
                           type: object
                           nullable: true
                           required:

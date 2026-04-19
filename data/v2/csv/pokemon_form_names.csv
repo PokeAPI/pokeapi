@@ -6,6 +6,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 201,7,A,
 201,8,A,
 201,9,A,Unown A
+201,11,Ａ,
 351,1,ポワルンのすがた,
 351,3,캐스퐁의 모습,
 351,4,飄浮泡泡的樣子,
@@ -51,6 +52,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 412,7,Tronco Planta,
 412,8,Manto Pianta,
 412,9,Plant Cloak,Plant Burmy
+412,11,くさきのミノ,
 413,1,くさきのミノ,
 413,3,초목도롱,
 413,4,草木蓑衣,
@@ -127,6 +129,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 493,7,Tipo Normal,
 493,8,Tipo Normale,
 493,9,Normal Type,Normal Arceus
+493,11,ノーマルタイプ,
 550,1,あかすじのすがた,
 550,3,적색근의 모습,
 550,4,紅條紋的樣子,
@@ -154,6 +157,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 585,7,Forma Primavera,
 585,8,Forma Primavera,
 585,9,Spring Form,Spring Deerling
+585,11,はるのすがた,
 586,1,はるのすがた,
 586,3,봄의 모습,
 586,5,Forme Printemps,Haydaim Printemps
@@ -161,6 +165,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 586,7,Forma Primavera,
 586,8,Forma Primavera,
 586,9,Spring Form,Spring Sawsbuck
+586,11,はるのすがた,
 592,1,オスのすがた,
 592,3,수컷의 모습,
 592,4,雄性的樣子,
@@ -248,6 +253,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 666,7,Motivo Floral,
 666,8,Motivo Giardinfiore,
 666,9,Meadow Pattern,Meadow Vivillon
+666,11,はなぞののもよう,
 668,1,オスのすがた,
 668,3,수컷의 모습,
 668,4,雄性的樣子,
@@ -265,6 +271,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 669,7,Flor Roja,
 669,8,Fiore Rosso,
 669,9,Red Flower,Red Flabébé
+669,11,あかいはな,
 670,1,あかいはな,
 670,3,빨간 꽃,
 670,5,Fleur Rouge,Floette Rouge
@@ -272,6 +279,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 670,7,Flor Roja,
 670,8,Fiore Rosso,
 670,9,Red Flower,Red Floette
+670,11,あかいはな,
 671,1,あかいはな,
 671,3,빨간 꽃,
 671,5,Fleur Rouge,Florges Rouge
@@ -279,6 +287,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 671,7,Flor Roja,
 671,8,Fiore Rosso,
 671,9,Red Flower,Red Florges
+671,11,あかいはな,
 676,1,やせいのすがた,
 676,3,야생의 모습,
 676,5,Forme Sauvage,Couafarel Sauvage
@@ -286,6 +295,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 676,7,Forma Salvaje,
 676,8,Forma Selvatica,
 676,9,Natural Form,Natural Furfrou
+676,11,やせいのすがた,
 678,1,オスのすがた,
 678,3,수컷의 모습,
 678,4,雄性的樣子,
@@ -593,6 +603,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10001,7,B,
 10001,8,B,
 10001,9,B,Unown B
+10001,11,Ｂ,
 10002,1,Ｃ,
 10002,3,C,
 10002,5,C,Zarbi C
@@ -600,6 +611,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10002,7,C,
 10002,8,C,
 10002,9,C,Unown C
+10002,11,Ｃ,
 10003,1,Ｄ,
 10003,3,D,
 10003,5,D,Zarbi D
@@ -607,6 +619,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10003,7,D,
 10003,8,D,
 10003,9,D,Unown D
+10003,11,Ｄ,
 10004,1,Ｅ,
 10004,3,E,
 10004,5,E,Zarbi E
@@ -614,6 +627,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10004,7,E,
 10004,8,E,
 10004,9,E,Unown E
+10004,11,Ｅ,
 10005,1,Ｆ,
 10005,3,F,
 10005,5,F,Zarbi F
@@ -621,6 +635,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10005,7,F,
 10005,8,F,
 10005,9,F,Unown F
+10005,11,Ｆ,
 10006,1,Ｇ,
 10006,3,G,
 10006,5,G,Zarbi G
@@ -628,6 +643,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10006,7,G,
 10006,8,G,
 10006,9,G,Unown G
+10006,11,Ｇ,
 10007,1,Ｈ,
 10007,3,H,
 10007,5,H,Zarbi H
@@ -635,6 +651,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10007,7,H,
 10007,8,H,
 10007,9,H,Unown H
+10007,11,Ｈ,
 10008,1,Ｉ,
 10008,3,I,
 10008,5,I,Zarbi I
@@ -642,6 +659,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10008,7,I,
 10008,8,I,
 10008,9,I,Unown I
+10008,11,Ｉ,
 10009,1,Ｊ,
 10009,3,J,
 10009,5,J,Zarbi J
@@ -649,6 +667,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10009,7,J,
 10009,8,J,
 10009,9,J,Unown J
+10009,11,Ｊ,
 10010,1,Ｋ,
 10010,3,K,
 10010,5,K,Zarbi K
@@ -656,6 +675,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10010,7,K,
 10010,8,K,
 10010,9,K,Unown K
+10010,11,Ｋ,
 10011,1,Ｌ,
 10011,3,L,
 10011,5,L,Zarbi L
@@ -663,6 +683,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10011,7,L,
 10011,8,L,
 10011,9,L,Unown L
+10011,11,Ｌ,
 10012,1,Ｍ,
 10012,3,M,
 10012,5,M,Zarbi M
@@ -670,6 +691,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10012,7,M,
 10012,8,M,
 10012,9,M,Unown M
+10012,11,Ｍ,
 10013,1,Ｎ,
 10013,3,N,
 10013,5,N,Zarbi N
@@ -677,6 +699,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10013,7,N,
 10013,8,N,
 10013,9,N,Unown N
+10013,11,Ｎ,
 10014,1,Ｏ,
 10014,3,O,
 10014,5,O,Zarbi O
@@ -684,6 +707,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10014,7,O,
 10014,8,O,
 10014,9,O,Unown O
+10014,11,Ｏ,
 10015,1,Ｐ,
 10015,3,P,
 10015,5,P,Zarbi P
@@ -691,6 +715,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10015,7,P,
 10015,8,P,
 10015,9,P,Unown P
+10015,11,Ｐ,
 10016,1,Ｑ,
 10016,3,Q,
 10016,5,Q,Zarbi Q
@@ -698,6 +723,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10016,7,Q,
 10016,8,Q,
 10016,9,Q,Unown Q
+10016,11,Ｑ,
 10017,1,Ｒ,
 10017,3,R,
 10017,5,R,Zarbi R
@@ -705,6 +731,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10017,7,R,
 10017,8,R,
 10017,9,R,Unown R
+10017,11,Ｒ,
 10018,1,Ｓ,
 10018,3,S,
 10018,5,S,Zarbi S
@@ -712,6 +739,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10018,7,S,
 10018,8,S,
 10018,9,S,Unown S
+10018,11,Ｓ,
 10019,1,Ｔ,
 10019,3,T,
 10019,5,T,Zarbi T
@@ -719,6 +747,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10019,7,T,
 10019,8,T,
 10019,9,T,Unown T
+10019,11,Ｔ,
 10020,1,Ｕ,
 10020,3,U,
 10020,5,U,Zarbi U
@@ -726,6 +755,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10020,7,U,
 10020,8,U,
 10020,9,U,Unown U
+10020,11,Ｕ,
 10021,1,Ｖ,
 10021,3,V,
 10021,5,V,Zarbi V
@@ -733,6 +763,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10021,7,V,
 10021,8,V,
 10021,9,V,Unown V
+10021,11,Ｖ,
 10022,1,Ｗ,
 10022,3,W,
 10022,5,W,Zarbi W
@@ -740,6 +771,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10022,7,W,
 10022,8,W,
 10022,9,W,Unown W
+10022,11,Ｗ,
 10023,1,Ｘ,
 10023,3,X,
 10023,5,X,Zarbi X
@@ -747,6 +779,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10023,7,X,
 10023,8,X,
 10023,9,X,Unown X
+10023,11,Ｘ,
 10024,1,Ｙ,
 10024,3,Y,
 10024,5,Y,Zarbi Y
@@ -754,6 +787,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10024,7,Y,
 10024,8,Y,
 10024,9,Y,Unown Y
+10024,11,Ｙ,
 10025,1,Ｚ,
 10025,3,Z,
 10025,5,Z,Zarbi Z
@@ -761,6 +795,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10025,7,Z,
 10025,8,Z,
 10025,9,Z,Unown Z
+10025,11,Ｚ,
 10026,1,!,
 10026,3,!,
 10026,5,!,Zarbi !
@@ -768,6 +803,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10026,7,!,
 10026,8,!,
 10026,9,!,Unown !
+10026,11,!,
 10027,1,?,
 10027,3,?,
 10027,5,?,Zarbi ?
@@ -775,6 +811,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10027,7,?,
 10027,8,?,
 10027,9,?,Unown ?
+10027,11,?,
 10028,1,たいようのすがた,
 10028,3,태양의 모습,
 10028,4,太陽的樣子,
@@ -842,6 +879,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10034,7,Tronco Arena,
 10034,8,Manto Sabbia,
 10034,9,Sandy Cloak,Sandy Burmy
+10034,11,すなちのミノ,
 10035,1,ゴミのミノ,
 10035,3,슈레도롱,
 10035,5,Cape Déchet,Cheniti Déchet
@@ -849,6 +887,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10035,7,Tronco Basura,
 10035,8,Manto Scarti,
 10035,9,Trash Cloak,Trash Burmy
+10035,11,ゴミのミノ,
 10036,1,すなちのミノ,
 10036,3,모래땅도롱,
 10036,4,砂土蓑衣,
@@ -905,102 +944,119 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10041,7,Tipo Bicho,
 10041,8,Tipo Coleottero,
 10041,9,Bug Type,Bug Arceus
+10041,11,むしタイプ,
 10042,1,あくタイプ,
 10042,5,Ténèbres,Arceus Ténèbres
 10042,6,Unlicht,Arceus (Unlicht)
 10042,7,Tipo Siniestro,
 10042,8,Tipo Buio,
 10042,9,Dark Type,Dark Arceus
+10042,11,あくタイプ,
 10043,1,ドラゴンタイプ,
 10043,5,Dragon,Arceus Dragon
 10043,6,Drache,Arceus (Drache)
 10043,7,Tipo Dragón,
 10043,8,Tipo Drago,
 10043,9,Dragon Type,Dragon Arceus
+10043,11,ドラゴンタイプ,
 10044,1,でんきタイプ,
 10044,5,Électrik,Arceus Électrik
 10044,6,Elektro,Arceus (Elektro)
 10044,7,Tipo Eléctrico,
 10044,8,Tipo Elettro,
 10044,9,Electric Type,Electric Arceus
+10044,11,でんきタイプ,
 10045,1,かくとうタイプ,
 10045,5,Combat,Arceus Combat
 10045,6,Kampf,Arceus (Kampf)
 10045,7,Tipo Lucha,
 10045,8,Tipo Lotta,
 10045,9,Fighting Type,Fighting Arceus
+10045,11,かくとうタイプ,
 10046,1,ほのおタイプ,
 10046,5,Feu,Arceus Feu
 10046,6,Feuer,Arceus (Feuer)
 10046,7,Tipo Fuego,
 10046,8,Tipo Fuoco,
 10046,9,Fire Type,Fire Arceus
+10046,11,ほのおタイプ,
 10047,1,ひこうタイプ,
 10047,5,Vol,Arceus Vol
 10047,6,Flug,Arceus (Flug)
 10047,7,Tipo Volador,
 10047,8,Tipo Volante,
 10047,9,Flying Type,Flying Arceus
+10047,11,ひこうタイプ,
 10048,1,ゴーストタイプ,
 10048,5,Spectre,Arceus Spectre
 10048,6,Geist,Arceus (Geist)
 10048,7,Tipo Fantasma,
 10048,8,Tipo Spettro,
 10048,9,Ghost Type,Ghost Arceus
+10048,11,ゴーストタイプ,
 10049,1,くさタイプ,
 10049,5,Plante,Arceus Plante
 10049,6,Pflanze,Arceus (Pflanze)
 10049,7,Tipo Planta,
 10049,8,Tipo Erba,
 10049,9,Grass Type,Grass Arceus
+10049,11,くさタイプ,
 10050,1,じめんタイプ,
 10050,5,Sol,Arceus Sol
 10050,6,Boden,Arceus (Boden)
 10050,7,Tipo Tierra,
 10050,8,Tipo Terra,
 10050,9,Ground Type,Ground Arceus
+10050,11,じめんタイプ,
 10051,1,こおりタイプ,
 10051,5,Glace,Arceus Glace
 10051,6,Eis,Arceus (Eis)
 10051,7,Tipo Hielo,
 10051,8,Tipo Ghiaccio,
 10051,9,Ice Type,Ice Arceus
+10051,11,こおりタイプ,
 10052,1,どくタイプ,
 10052,5,Poison,Arceus Poison
 10052,6,Gift,Arceus (Gift)
 10052,7,Tipo Veneno,
 10052,8,Tipo Veleno,
 10052,9,Poison Type,Poison Arceus
+10052,11,どくタイプ,
 10053,1,エスパータイプ,
 10053,5,Psy,Arceus Psy
 10053,6,Psycho,Arceus (Psycho)
 10053,7,Tipo Psíquico,
 10053,8,Tipo Psico,
 10053,9,Psychic Type,Psychic Arceus
+10053,11,エスパータイプ,
 10054,1,いわタイプ,
 10054,5,Roche,Arceus Roche
 10054,6,Gestein,Arceus (Gestein)
 10054,7,Tipo Roca,
 10054,8,Tipo Roccia,
 10054,9,Rock Type,Rock Arceus
+10054,11,いわタイプ,
 10055,1,はがねタイプ,
 10055,5,Acier,Arceus Acier
 10055,6,Stahl,Arceus (Stahl)
 10055,7,Tipo Acero,
 10055,8,Tipo Acciaio,
 10055,9,Steel Type,Steel Arceus
+10055,11,はがねタイプ,
 10056,1,みずタイプ,
 10056,5,Eau,Arceus Eau
 10056,6,Wasser,Arceus (Wasser)
 10056,7,Tipo Agua,
 10056,8,Tipo Acqua,
 10056,9,Water Type,Water Arceus
+10056,11,みずタイプ,
 10057,1,？？？タイプ,
 10057,5,???,Arceus ???
 10057,6,???,Arceus (???)
 10057,7,Tipo ???,
 10057,8,Tipo ???,
 10057,9,??? Type,??? Arceus
+10057,11,？？？タイプ,
 10058,1,ヒートロトム,
 10058,3,히트로토무,
 10058,4,加熱洛托姆,
@@ -1101,6 +1157,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10068,7,Forma Verano,
 10068,8,Forma Estate,
 10068,9,Summer Form,Summer Deerling
+10068,11,なつのすがた,
 10069,1,あきのすがた,
 10069,3,가을의 모습,
 10069,5,Forme Automne,Vivaldaim Automne
@@ -1108,6 +1165,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10069,7,Forma Otoño,
 10069,8,Forma Autunno,
 10069,9,Autumn Form,Autumn Deerling
+10069,11,あきのすがた,
 10070,1,ふゆのすがた,
 10070,3,겨울의 모습,
 10070,5,Forme Hiver,Vivaldaim Hiver
@@ -1115,6 +1173,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10070,7,Forma Invierno,
 10070,8,Forma Inverno,
 10070,9,Winter Form,Winter Deerling
+10070,11,ふゆのすがた,
 10071,1,なつのすがた,
 10071,3,여름의 모습,
 10071,5,Forme Été,Haydaim Été
@@ -1122,6 +1181,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10071,7,Forma Verano,
 10071,8,Forma Estate,
 10071,9,Summer Form,Summer Sawsbuck
+10071,11,なつのすがた,
 10072,1,あきのすがた,
 10072,3,가을의 모습,
 10072,5,Forme Automne,Haydaim Automne
@@ -1129,6 +1189,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10072,7,Forma Otoño,
 10072,8,Forma Autunno,
 10072,9,Autumn Form,Autumn Sawsbuck
+10072,11,あきのすがた,
 10073,1,ふゆのすがた,
 10073,3,겨울의 모습,
 10073,5,Forme Hiver,Haydaim Hiver
@@ -1136,6 +1197,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10073,7,Forma Invierno,
 10073,8,Forma Inverno,
 10073,9,Winter Form,Winter Sawsbuck
+10073,11,ふゆのすがた,
 10074,1,ステップフォルム,
 10074,3,스텝폼,
 10074,4,舞步形態,
@@ -1153,6 +1215,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10075,7,HidroROM,
 10075,8,Idromodulo,
 10075,9,Douse Drive,Douse Genesect
+10075,11,アクアカセット,
 10076,1,イナズマカセット,
 10076,3,번개카세트,
 10076,5,Module Choc,Genesect Choc
@@ -1160,6 +1223,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10076,7,FulgoROM,
 10076,8,Voltmodulo,
 10076,9,Shock Drive,Shock Genesect
+10076,11,イナズマカセット,
 10077,1,ブレイズカセット,
 10077,3,블레이즈카세트,
 10077,5,Module Pyro,Genesect Pyro
@@ -1167,6 +1231,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10077,7,PiroROM,
 10077,8,Piromodulo,
 10077,9,Burn Drive,Burn Genesect
+10077,11,ブレイズカセット,
 10078,1,フリーズカセット,
 10078,3,프리즈카세트,
 10078,5,Module Cryo,Genesect Cryo
@@ -1174,6 +1239,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10078,7,CrioROM,
 10078,8,Gelomodulo,
 10078,9,Chill Drive,Chill Genesect
+10078,11,フリーズカセット,
 10079,1,れいじゅうフォルム,
 10079,3,영물폼,
 10079,4,靈獸形態,
@@ -1240,6 +1306,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10085,7,Tipo Hada,
 10085,8,Tipo Folletto,
 10085,9,Fairy Type,Fairy Arceus
+10085,11,フェアリータイプ,
 10086,1,ひょうせつのもよう,
 10086,3,빙설의 모양,
 10086,5,Motif Blizzard,Prismillon Blizzard
@@ -1247,6 +1314,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10086,7,Motivo Polar,
 10086,8,Motivo Nevi Perenni,
 10086,9,Icy Snow Pattern,Icy Snow Vivillon
+10086,11,ひょうせつのもよう,
 10087,1,ゆきぐにのもよう,
 10087,3,설국의 모양,
 10087,5,Motif Banquise,Prismillon Banquise
@@ -1254,6 +1322,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10087,7,Motivo Taiga,
 10087,8,Motivo Nordico,
 10087,9,Polar Pattern,Polar Vivillon
+10087,11,ゆきぐにのもよう,
 10088,1,せつげんのもよう,
 10088,3,설원의 모양,
 10088,5,Motif Glace,Prismillon Glace
@@ -1261,6 +1330,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10088,7,Motivo Tundra,
 10088,8,Motivo Manto di Neve,
 10088,9,Tundra Pattern,Tundra Vivillon
+10088,11,せつげんのもよう,
 10089,1,たいりくのもよう,
 10089,3,대륙의 모양,
 10089,5,Motif Continent,Prismillon Continent
@@ -1268,6 +1338,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10089,7,Motivo Continental,
 10089,8,Motivo Continentale,
 10089,9,Continental Pattern,Continental Vivillon
+10089,11,たいりくのもよう,
 10090,1,ていえんのもよう,
 10090,3,정원의 모양,
 10090,5,Motif Verdure,Prismillon Verdure
@@ -1275,6 +1346,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10090,7,Motivo Vergel,
 10090,8,Motivo Prato,
 10090,9,Garden Pattern,Garden Vivillon
+10090,11,ていえんのもよう,
 10091,1,みやびなもよう,
 10091,3,우아한 모양,
 10091,5,Motif Monarchie,Prismillon Monarchie
@@ -1282,6 +1354,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10091,7,Motivo Oriental,
 10091,8,Motivo Eleganza,
 10091,9,Elegant Pattern,Elegant Vivillon
+10091,11,みやびなもよう,
 10092,1,モダンなもよう,
 10092,3,모던한 모양,
 10092,5,Motif Métropole,Prismillon Métropole
@@ -1289,6 +1362,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10092,7,Motivo Moderno,
 10092,8,Motivo Trendy,
 10092,9,Modern Pattern,Modern Vivillon
+10092,11,モダンなもよう,
 10093,1,マリンのもよう,
 10093,3,마린의 모양,
 10093,5,Motif Rivage,Prismillon Rivage
@@ -1296,6 +1370,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10093,7,Motivo Marino,
 10093,8,Motivo Marino,
 10093,9,Marine Pattern,Marine Vivillon
+10093,11,マリンのもよう,
 10094,1,ぐんとうのもよう,
 10094,3,군도의 모양,
 10094,5,Motif Archipel,Prismillon Archipel
@@ -1303,6 +1378,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10094,7,Motivo Isleño,
 10094,8,Motivo Arcipelago,
 10094,9,Archipelago Pattern,Archipelago Vivillon
+10094,11,ぐんとうのもよう,
 10095,1,こうやのもよう,
 10095,3,황야의 모양,
 10095,5,Motif Sécheresse,Prismillon Sécheresse
@@ -1310,6 +1386,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10095,7,Motivo Estepa,
 10095,8,Motivo Deserto,
 10095,9,High Plains Pattern,High Plains Vivillon
+10095,11,こうやのもよう,
 10096,1,さじんのもよう,
 10096,3,사진의 모양,
 10096,5,Motif Sable,Prismillon Sable
@@ -1317,6 +1394,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10096,7,Motivo Desierto,
 10096,8,Motivo Sabbia,
 10096,9,Sandstorm Pattern,Sandstorm Vivillon
+10096,11,さじんのもよう,
 10097,1,たいがのもよう,
 10097,3,대하의 모양,
 10097,5,Motif Delta,Prismillon Delta
@@ -1324,6 +1402,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10097,7,Motivo Oasis,
 10097,8,Motivo Fluviale,
 10097,9,River Pattern,River Vivillon
+10097,11,たいがのもよう,
 10098,1,スコールのもよう,
 10098,3,스콜의 모양,
 10098,5,Motif Cyclone,Prismillon Cyclone
@@ -1331,6 +1410,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10098,7,Motivo Monzón,
 10098,8,Motivo Pluviale,
 10098,9,Monsoon Pattern,Monsoon Vivillon
+10098,11,スコールのもよう,
 10099,1,サバンナのもよう,
 10099,3,사바나의 모양,
 10099,5,Motif Mangrove,Prismillon Mangrove
@@ -1338,6 +1418,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10099,7,Motivo Pantano,
 10099,8,Motivo Savana,
 10099,9,Savanna Pattern,Savanna Vivillon
+10099,11,サバンナのもよう,
 10100,1,たいようのもよう,
 10100,3,태양의 모양,
 10100,5,Motif Zénith,Prismillon Zénith
@@ -1345,6 +1426,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10100,7,Motivo Solar,
 10100,8,Motivo Solare,
 10100,9,Sun Pattern,Sun Vivillon
+10100,11,たいようのもよう,
 10101,1,オーシャンのもよう,
 10101,3,오션의 모양,
 10101,5,Motif Soleil Levant,Prismillon Soleil Levant
@@ -1352,6 +1434,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10101,7,Motivo Océano,
 10101,8,Motivo Oceanico,
 10101,9,Ocean Pattern,Ocean Vivillon
+10101,11,オーシャンのもよう,
 10102,1,ジャングルのもよう,
 10102,3,정글의 모양,
 10102,5,Motif Jungle,Prismillon Jungle
@@ -1359,6 +1442,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10102,7,Motivo Jungla,
 10102,8,Motivo Giungla,
 10102,9,Jungle Pattern,Jungle Vivillon
+10102,11,ジャングルのもよう,
 10103,1,きいろのはな,
 10103,3,노란 꽃,
 10103,5,Fleur Jaune,Flabébé Jaune
@@ -1366,6 +1450,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10103,7,Flor Amarilla,
 10103,8,Fiore Giallo,
 10103,9,Yellow Flower,Yellow Flabébé
+10103,11,きいろのはな,
 10104,1,オレンジいろのはな,
 10104,3,오렌지색 꽃,
 10104,5,Fleur Orange,Flabébé Orange
@@ -1373,6 +1458,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10104,7,Flor Naranja,
 10104,8,Fiore Arancione,
 10104,9,Orange Flower,Orange Flabébé
+10104,11,オレンジいろのはな,
 10105,1,あおいはな,
 10105,3,파란 꽃,
 10105,5,Fleur Bleue,Flabébé Bleu
@@ -1380,6 +1466,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10105,7,Flor Azul,
 10105,8,Fiore Blu,
 10105,9,Blue Flower,Blue Flabébé
+10105,11,あおいはな,
 10106,1,しろいはな,
 10106,3,하얀 꽃,
 10106,5,Fleur Blanche,Flabébé Blanc
@@ -1387,6 +1474,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10106,7,Flor Blanca,
 10106,8,Fiore Bianco,
 10106,9,White Flower,White Flabébé
+10106,11,しろいはな,
 10107,1,きいろのはな,
 10107,3,노란 꽃,
 10107,5,Fleur Jaune,Floette Jaune
@@ -1394,6 +1482,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10107,7,Flor Amarilla,
 10107,8,Fiore Giallo,
 10107,9,Yellow Flower,Yellow Floette
+10107,11,きいろのはな,
 10108,1,オレンジいろのはな,
 10108,3,오렌지색 꽃,
 10108,5,Fleur Orange,Floette Orange
@@ -1401,6 +1490,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10108,7,Flor Naranja,
 10108,8,Fiore Arancione,
 10108,9,Orange Flower,Orange Floette
+10108,11,オレンジいろのはな,
 10109,1,あおいはな,
 10109,3,파란 꽃,
 10109,5,Fleur Bleue,Floette Bleu
@@ -1408,6 +1498,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10109,7,Flor Azul,
 10109,8,Fiore Blu,
 10109,9,Blue Flower,Blue Floette
+10109,11,あおいはな,
 10110,1,しろいはな,
 10110,3,하얀 꽃,
 10110,5,Fleur Blanche,Floette Blanc
@@ -1415,6 +1506,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10110,7,Flor Blanca,
 10110,8,Fiore Bianco,
 10110,9,White Flower,White Floette
+10110,11,しろいはな,
 10111,1,きいろのはな,
 10111,3,노란 꽃,
 10111,5,Fleur Jaune,Florges Jaune
@@ -1422,6 +1514,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10111,7,Flor Amarilla,
 10111,8,Fiore Giallo,
 10111,9,Yellow Flower,Yellow Florges
+10111,11,きいろのはな,
 10112,1,オレンジいろのはな,
 10112,3,오렌지색 꽃,
 10112,5,Fleur Orange,Florges Orange
@@ -1429,6 +1522,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10112,7,Flor Naranja,
 10112,8,Fiore Arancione,
 10112,9,Orange Flower,Orange Florges
+10112,11,オレンジいろのはな,
 10113,1,あおいはな,
 10113,3,파란 꽃,
 10113,5,Fleur Bleue,Florges Bleu
@@ -1436,6 +1530,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10113,7,Flor Azul,
 10113,8,Fiore Blu,
 10113,9,Blue Flower,Blue Florges
+10113,11,あおいはな,
 10114,1,しろいはな,
 10114,3,하얀 꽃,
 10114,5,Fleur Blanche,Florges Blanc
@@ -1443,6 +1538,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10114,7,Flor Blanca,
 10114,8,Fiore Bianco,
 10114,9,White Flower,White Florges
+10114,11,しろいはな,
 10115,1,ハートカット,
 10115,3,하트컷,
 10115,5,Coupe Cœur,Couafarel Cœur
@@ -1450,6 +1546,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10115,7,Corte Corazón,
 10115,8,Taglio Cuore,
 10115,9,Heart Trim,Heart Furfrou
+10115,11,ハートカット,
 10116,1,スターカット,
 10116,3,스타컷,
 10116,5,Coupe Étoile,Couafarel Étoile
@@ -1457,6 +1554,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10116,7,Corte Estrella,
 10116,8,Taglio Stella,
 10116,9,Star Trim,Star Furfrou
+10116,11,スターカット,
 10117,1,ダイヤカット,
 10117,3,다이아컷,
 10117,5,Coupe Diamant,Couafarel Diamant
@@ -1464,6 +1562,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10117,7,Corte Rombo,
 10117,8,Taglio Diamante,
 10117,9,Diamond Trim,Diamond Furfrou
+10117,11,ダイヤカット,
 10118,1,レディカット,
 10118,3,레이디컷,
 10118,5,Coupe Demoiselle,Couafarel Demoiselle
@@ -1471,6 +1570,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10118,7,Corte Señorita,
 10118,8,Taglio Signorina,
 10118,9,Debutante Trim,Debutante Furfrou
+10118,11,レディカット,
 10119,1,マダムカット,
 10119,3,마담컷,
 10119,5,Coupe Madame,Couafarel Madame
@@ -1478,6 +1578,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10119,7,Corte Dama,
 10119,8,Taglio Gentildonna,
 10119,9,Matron Trim,Matron Furfrou
+10119,11,マダムカット,
 10120,1,ジェントルカット,
 10120,3,젠틀컷,
 10120,5,Coupe Monsieur,Couafarel Monsieur
@@ -1485,6 +1586,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10120,7,Corte Caballero,
 10120,8,Taglio Gentiluomo,
 10120,9,Dandy Trim,Dandy Furfrou
+10120,11,ジェントルカット,
 10121,1,クイーンカット,
 10121,3,퀸컷,
 10121,5,Coupe Reine,Couafarel Reine
@@ -1492,6 +1594,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10121,7,Corte Aristocrático,
 10121,8,Taglio Regina,
 10121,9,La Reine Trim,La Reine Furfrou
+10121,11,クイーンカット,
 10122,1,カブキカット,
 10122,3,가부키컷,
 10122,5,Coupe Kabuki,Couafarel Kabuki
@@ -1499,6 +1602,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10122,7,Corte Kabuki,
 10122,8,Taglio Kabuki,
 10122,9,Kabuki Trim,Kabuki Furfrou
+10122,11,カブキカット,
 10123,1,キングダムカット,
 10123,3,킹덤컷,
 10123,5,Coupe Pharaon,Couafarel Pharaon
@@ -1506,6 +1610,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10123,7,Corte Faraónico,
 10123,8,Taglio Faraone,
 10123,9,Pharaoh Trim,Pharaoh Furfrou
+10123,11,キングダムカット,
 10124,1,メスのすがた,
 10124,3,암컷의 모습,
 10124,4,雌性的樣子,
@@ -1883,6 +1988,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10161,7,Motivo Fantasía,
 10161,8,Motivo Sbarazzino,
 10161,9,Fancy Pattern,Fancy Vivillon
+10161,11,ファンシーなもよう,
 10162,1,ボールのもよう,
 10162,3,볼의 모양,
 10162,5,Motif Poké Ball,Prismillon Poké Ball
@@ -1890,6 +1996,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10162,7,Motivo Poké Ball,
 10162,8,Motivo Poké Ball,
 10162,9,Poké Ball Pattern,Poké Ball Vivillon
+10162,11,ボールのもよう,
 10163,1,えいえんのはな,
 10163,3,영원의 꽃,
 10163,5,Fleur Éternelle,Floette Éternel
@@ -1897,6 +2004,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10163,7,Flor Eterna,
 10163,8,Fiore Eterno,
 10163,9,Eternal Flower,Eternal Floette
+10163,11,えいえんのはな,
 10164,1,メガラティアス,
 10164,3,메가라티아스,
 10164,4,超級拉帝亞斯,
@@ -2081,26 +2189,32 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10182,5,Pikachu Rockeur,Pikachu Rockeur
 10182,6,Cosplayform,Rock Star Pikachu
 10182,9,Pikachu Rock Star,Pikachu Rock Star
+10182,11,ハードロック・ピカチュウ,
 10183,1,マダム・ピカチュウ,
 10183,5,Pikachu Lady,Pikachu Lady
 10183,6,Cosplayform,Lady Pikachu
 10183,9,Pikachu Belle,Pikachu Belle
+10183,11,マダム・ピカチュウ,
 10184,1,アイドル・ピカチュウ,
 10184,5,Pikachu Star,Pikachu Star
 10184,6,Cosplayform,Pop Star Pikachu
 10184,9,Pikachu Pop Star,Pikachu Pop Star
+10184,11,アイドル・ピカチュウ,
 10185,1,ドクター・ピカチュウ,
 10185,5,Pikachu Docteur,Pikachu Docteur
 10185,6,Cosplayform,Dr. Pikachu
 10185,9,Pikachu Ph.D.,Pikachu Ph.D.
+10185,11,ドクター・ピカチュウ,
 10186,1,マスクド・ピカチュウ,
 10186,5,Pikachu Catcheur,Pikachu Catcheur
 10186,6,Cosplayform,Wrestling Pikachu
 10186,9,Pikachu Libre,Pikachu Libre
+10186,11,マスクド・ピカチュウ,
 10187,1,おきがえピカチュウ,
 10187,5,Pikachu Cosplayeur,Pikachu Cosplayeur
 10187,6,Cosplayform,Cosplay Pikachu
 10187,9,Cosplay Pikachu,Cosplay Pikachu
+10187,11,おきがえピカチュウ,
 10188,1,ときはなたれしフーパ,
 10188,3,굴레를 벗어난 후파,
 10188,4,解放胡帕,
@@ -3342,108 +3456,176 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10363,9,Shadow Rider,Shadow Calyrex
 10363,11,こくばじょうのすがた,
 10363,12,骑黑马的样子,
+10364,1,キョダイマックスのすがた,
 10364,5,Forme Gigamax,Florizarre Gigamax
 10364,6,Gigadynamax-Form,Gigadynamax-Bisaflor
 10364,9,Gigantamax Form,Gigantamax Venusaur
+10364,11,キョダイマックスのすがた,
+10365,1,キョダイマックスのすがた,
 10365,5,Forme Gigamax,Dracaufeu Gigamax
 10365,6,Gigadynamax-Form,Gigadynamax-Glurak
 10365,9,Gigantamax Form,Gigantamax Charizard
+10365,11,キョダイマックスのすがた,
+10366,1,キョダイマックスのすがた,
 10366,5,Forme Gigamax,Tortank Gigamax
 10366,6,Gigadynamax-Form,Gigadynamax-Turtok
 10366,9,Gigantamax Form,Gigantamax Blastoise
+10366,11,キョダイマックスのすがた,
+10367,1,キョダイマックスのすがた,
 10367,5,Forme Gigamax,Papilusion Gigamax
 10367,6,Gigadynamax-Form,Gigadynamax-Smettbo
 10367,9,Gigantamax Form,Gigantamax Butterfree
+10367,11,キョダイマックスのすがた,
+10368,1,キョダイマックスのすがた,
 10368,5,Forme Gigamax,Pikachu Gigamax
 10368,6,Gigadynamax-Form,Gigadynamax-Pikachu
 10368,9,Gigantamax Form,Gigantamax Pikachu
+10368,11,キョダイマックスのすがた,
+10369,1,キョダイマックスのすがた,
 10369,5,Forme Gigamax,Miaouss Gigamax
 10369,6,Gigadynamax-Form,Gigadynamax-Mauzi
 10369,9,Gigantamax Form,Gigantamax Meowth
+10369,11,キョダイマックスのすがた,
+10370,1,キョダイマックスのすがた,
 10370,5,Forme Gigamax,Mackogneur Gigamax
 10370,6,Gigadynamax-Form,Gigadynamax-Machomei
 10370,9,Gigantamax Form,Gigantamax Machamp
+10370,11,キョダイマックスのすがた,
+10371,1,キョダイマックスのすがた,
 10371,5,Forme Gigamax,Ectoplasma Gigamax
 10371,6,Gigadynamax-Form,Gigadynamax-Gengar
 10371,9,Gigantamax Form,Gigantamax Gengar
+10371,11,キョダイマックスのすがた,
+10372,1,キョダイマックスのすがた,
 10372,5,Forme Gigamax,Krabboss Gigamax
 10372,6,Gigadynamax-Form,Gigadynamax-Kingler
 10372,9,Gigantamax Form,Gigantamax Kingler
+10372,11,キョダイマックスのすがた,
+10373,1,キョダイマックスのすがた,
 10373,5,Forme Gigamax,Lokhlass Gigamax
 10373,6,Gigadynamax-Form,Gigadynamax-Lapras
 10373,9,Gigantamax Form,Gigantamax Lapras
+10373,11,キョダイマックスのすがた,
+10374,1,キョダイマックスのすがた,
 10374,5,Forme Gigamax,Évoli Gigamax
 10374,6,Gigadynamax-Form,Gigadynamax-Evoli
 10374,9,Gigantamax Form,Gigantamax Eevee
+10374,11,キョダイマックスのすがた,
+10375,1,キョダイマックスのすがた,
 10375,5,Forme Gigamax,Ronflex Gigamax
 10375,6,Gigadynamax-Form,Gigadynamax-Relaxo
 10375,9,Gigantamax Form,Gigantamax Snorlax
+10375,11,キョダイマックスのすがた,
+10376,1,キョダイマックスのすがた,
 10376,5,Forme Gigamax,Miasmax Gigamax
 10376,6,Gigadynamax-Form,Gigadynamax-Deponitox
 10376,9,Gigantamax Form,Gigantamax Garbodor
+10376,11,キョダイマックスのすがた,
+10377,1,キョダイマックスのすがた,
 10377,5,Forme Gigamax,Melmetal Gigamax
 10377,6,Gigadynamax-Form,Gigadynamax-Melmetal
 10377,9,Gigantamax Form,Gigantamax Melmetal
+10377,11,キョダイマックスのすがた,
+10378,1,キョダイマックスのすがた,
 10378,5,Forme Gigamax,Gorythmic Gigamax
 10378,6,Gigadynamax-Form,Gigadynamax-Gortrom
 10378,9,Gigantamax Form,Gigantamax Rillaboom
+10378,11,キョダイマックスのすがた,
+10379,1,キョダイマックスのすがた,
 10379,5,Forme Gigamax,Pyrobut Gigamax
 10379,6,Gigadynamax-Form,Gigadynamax-Liberlo
 10379,9,Gigantamax Form,Gigantamax Cinderace
+10379,11,キョダイマックスのすがた,
+10380,1,キョダイマックスのすがた,
 10380,5,Forme Gigamax,Lézargus Gigamax
 10380,6,Gigadynamax-Form,Gigadynamax-Intelleon
 10380,9,Gigantamax Form,Gigantamax Inteleon
+10380,11,キョダイマックスのすがた,
+10381,1,キョダイマックスのすがた,
 10381,5,Forme Gigamax,Corvaillus Gigamax
 10381,6,Gigadynamax-Form,Gigadynamax-Krarmor
 10381,9,Gigantamax Form,Gigantamax Corviknight
+10381,11,キョダイマックスのすがた,
+10382,1,キョダイマックスのすがた,
 10382,5,Forme Gigamax,Astronelle Gigamax
 10382,6,Gigadynamax-Form,Gigadynamax-Maritellit
 10382,9,Gigantamax Form,Gigantamax Orbeetle
+10382,11,キョダイマックスのすがた,
+10383,1,キョダイマックスのすがた,
 10383,5,Forme Gigamax,Torgamord Gigamax
 10383,6,Gigadynamax-Form,Gigadynamax-Kamalm
 10383,9,Gigantamax Form,Gigantamax Drednaw
+10383,11,キョダイマックスのすがた,
+10384,1,キョダイマックスのすがた,
 10384,5,Forme Gigamax,Monthracite Gigamax
 10384,6,Gigadynamax-Form,Gigadynamax-Montecarbo
 10384,9,Gigantamax Form,Gigantamax Coalossal
+10384,11,キョダイマックスのすがた,
+10385,1,キョダイマックスのすがた,
 10385,5,Forme Gigamax,Pomdrapi Gigamax
 10385,6,Gigadynamax-Form,Gigadynamax-Drapfel
 10385,9,Gigantamax Form,Gigantamax Flapple
+10385,11,キョダイマックスのすがた,
+10386,1,キョダイマックスのすがた,
 10386,5,Forme Gigamax,Dratatin Gigamax
 10386,6,Gigadynamax-Form,Gigadynamax-Schlapfel
 10386,9,Gigantamax Form,Gigantamax Appletun
+10386,11,キョダイマックスのすがた,
+10387,1,キョダイマックスのすがた,
 10387,5,Forme Gigamax,Dunaconda Gigamax
 10387,6,Gigadynamax-Form,Gigadynamax-Sanaconda
 10387,9,Gigantamax Form,Gigantamax Sandaconda
+10387,11,キョダイマックスのすがた,
+10388,1,ハイなすがた・キョダイマックスのすがた,
 10388,5,Forme Gigamax,Salarsen Forme Aigüe Gigamax
 10388,6,Gigadynamax-Form,Gigadynamax-Riffex (Hochform)
 10388,9,Gigantamax Form,Gigantamax Amped Toxtricity
+10388,11,ハイなすがた・キョダイマックスのすがた,
+10389,1,キョダイマックスのすがた,
 10389,5,Forme Gigamax,Scolocendre Gigamax
 10389,6,Gigadynamax-Form,Gigadynamax-Infernopod
 10389,9,Gigantamax Form,Gigantamax Centiskorch
+10389,11,キョダイマックスのすがた,
+10390,1,キョダイマックスのすがた,
 10390,5,Forme Gigamax,Sorcilence Gigamax
 10390,6,Gigadynamax-Form,Gigadynamax-Silembrim
 10390,9,Gigantamax Form,Gigantamax Hatterene
+10390,11,キョダイマックスのすがた,
+10391,1,キョダイマックスのすがた,
 10391,5,Forme Gigamax,Angoliath Gigamax
 10391,6,Gigadynamax-Form,Gigadynamax-Olangaar
 10391,9,Gigantamax Form,Gigantamax Grimmsnarl
+10391,11,キョダイマックスのすがた,
+10392,1,キョダイマックスのすがた,
 10392,5,Forme Gigamax,Charmilly Gigamax
 10392,6,Gigadynamax-Form,Gigadynamax-Pokusan
 10392,9,Gigantamax Form,Gigantamax Alcremie
+10392,11,キョダイマックスのすがた,
+10393,1,キョダイマックスのすがた,
 10393,5,Forme Gigamax,Pachyradjah Gigamax
 10393,6,Gigadynamax-Form,Gigadynamax-Patinaraja
 10393,9,Gigantamax Form,Gigantamax Copperajah
+10393,11,キョダイマックスのすがた,
+10394,1,キョダイマックスのすがた,
 10394,5,Forme Gigamax,Duralugon Gigamax
 10394,6,Gigadynamax-Form,Gigadynamax-Duraludon
 10394,9,Gigantamax Form,Gigantamax Duraludon
+10394,11,キョダイマックスのすがた,
+10395,1,いちげきのかた・キョダイマックスのすがた,
 10395,5,Forme Gigamax,Shifours Style Poing Final Gigamax
 10395,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fokussiert)
 10395,9,Gigantamax Form,Gigantamax Single Strike Urshifu
+10395,11,いちげきのかた・キョダイマックスのすがた,
+10396,1,れんげきのかた・キョダイマックスのすがた,
 10396,5,Forme Gigamax,Shifours Style Mille Poings Gigamax
 10396,6,Gigadynamax-Form,Gigadynamax-Wulaosu (Fließend)
 10396,9,Gigantamax Form,Gigantamax Rapid Strike Urshifu
+10396,11,れんげきのかた・キョダイマックスのすがた,
+10397,1,ローなすがた・キョダイマックスのすがた,
 10397,5,Gigantamax Form,Salarsen Forme Grave Gigamax
 10397,6,Gigadynamax-Form,Gigadynamax-Riffex (Tiefform)
 10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
+10397,11,ローなすがた・キョダイマックスのすがた,
 10398,1,ヒスイのすがた,
 10398,5,Forme de Hisui,Caninos de Hisui
 10398,6,Hisui-Form,Hisui Fukano
@@ -3818,102 +4000,198 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10501,9,Caramel Swirl Ribbon Sweet,Caramel Swirl Ribbon Sweet Alcremie
 10502,5,Mélange Tricolore Ruban en Sucre,Charmilly Mélange Tricolore Ruban en Sucre
 10502,9,Rainbow Swirl Ribbon Sweet,Rainbow Swirl Ribbon Sweet Alcremie
+10503,1,メガピクシー,
 10503,5,Méga-Mélodelfe,Méga-Mélodelfe
 10503,9,Mega Clefable,Mega Clefable
+10503,11,メガピクシー,
+10504,1,メガウツボット,
 10504,5,Méga-Empiflor,Méga-Empiflor
 10504,9,Mega Victreebel,Mega Victreebel
+10504,11,メガウツボット,
+10505,1,メガスターミー,
 10505,5,Méga-Staross,Méga-Staross
 10505,9,Mega Starmie,Mega Starmie
+10505,11,メガスターミー,
+10506,1,メガカイリュー,
 10506,5,Méga-Dracolosse,Méga-Dracolosse
 10506,9,Mega Dragonite,Mega Dragonite
+10506,11,メガカイリュー,
+10507,1,メガメガニウム,
 10507,5,Méga-Méganium,Méga-Méganium
 10507,9,Mega Meganium,Mega Meganium
+10507,11,メガメガニウム,
+10508,1,メガオーダイル,
 10508,5,Méga-Aligatueur,Méga-Aligatueur
 10508,9,Mega Feraligatr,Mega Feraligatr
+10508,11,メガオーダイル,
+10509,1,メガエアームド,
 10509,5,Méga-Airmure,Méga-Airmure
 10509,9,Mega Skarmory,Mega Skarmory
+10509,11,メガエアームド,
+10510,1,メガユキメノコ,
 10510,5,Méga-Momartik,Méga-Momartik
 10510,9,Mega Froslass,Mega Froslass
+10510,11,メガユキメノコ,
+10511,1,メガエンブオー,
 10511,5,Méga-Roitiflam,Méga-Roitiflam
 10511,9,Mega Emboar,Mega Emboar
+10511,11,メガエンブオー,
+10512,1,メガドリュウズ,
 10512,5,Méga-Minotaupe,Méga-Minotaupe
 10512,9,Mega Excadrill,Mega Excadrill
+10512,11,メガドリュウズ,
+10513,1,メガペンドラー,
 10513,5,Méga-Brutapode,Méga-Brutapode
 10513,9,Mega Scolipede,Mega Scolipede
+10513,11,メガペンドラー,
+10514,1,メガズルズキン,
 10514,5,Méga-Baggaïd,Méga-Baggaïd
 10514,9,Mega Scrafty,Mega Scrafty
+10514,11,メガズルズキン,
+10515,1,メガシビルドン,
 10515,5,Méga-Ohmassacre,Méga-Ohmassacre
 10515,9,Mega Eelektross,Mega Eelektross
+10515,11,メガシビルドン,
+10516,1,メガシャンデラ,
 10516,5,Méga-Lugulabre,Méga-Lugulabre
 10516,9,Mega Chandelure,Mega Chandelure
+10516,11,メガシャンデラ,
+10517,1,メガブリガロン,
 10517,5,Méga-Blindépique,Méga-Blindépique
 10517,9,Mega Chesnaught,Mega Chesnaught
+10517,11,メガブリガロン,
+10518,1,メガマフォクシー,
 10518,5,Méga-Goupelin,Méga-Goupelin
 10518,9,Mega Delphox,Mega Delphox
+10518,11,メガマフォクシー,
+10519,1,メガゲッコウガ,
 10519,5,Méga-Amphinobi,Méga-Amphinobi
 10519,9,Mega Greninja,Mega Greninja
+10519,11,メガゲッコウガ,
+10520,1,メガカエンジシ,
 10520,5,Méga-Némélios,Méga-Némélios
 10520,9,Mega Pyroar,Mega Pyroar
+10520,11,メガカエンジシ,
+10521,1,メガフラエッテ,
 10521,5,Méga-Floette,Méga-Floette
 10521,9,Mega Floette,Mega Floette
+10521,11,メガフラエッテ,
+10522,1,メガカラマネロ,
 10522,5,Méga-Sepiatroce,Méga-Sepiatroce
 10522,9,Mega Malamar,Mega Malamar
+10522,11,メガカラマネロ,
+10523,1,メガガメノデス,
 10523,5,Méga-Golgopathe,Méga-Golgopathe
 10523,9,Mega Barbaracle,Mega Barbaracle
+10523,11,メガガメノデス,
+10524,1,メガドラミドロ,
 10524,5,Méga-Kravarech,Méga-Kravarech
 10524,9,Mega Dragalge,Mega Dragalge
+10524,11,メガドラミドロ,
+10525,1,メガルチャブル,
 10525,5,Méga-Brutalibré,Méga-Brutalibré
 10525,9,Mega Hawlucha,Mega Hawlucha
+10525,11,メガルチャブル,
+10526,1,メガジガルデ,
 10526,5,Méga-Zygarde,Méga-Zygarde
 10526,9,Mega Zygarde,Mega Zygarde
+10526,11,メガジガルデ,
+10527,1,メガジジーロン,
 10527,5,Méga-Draïeul,Méga-Draïeul
 10527,9,Mega Drampa,Mega Drampa
+10527,11,メガジジーロン,
+10528,1,メガタイレーツ,
 10528,5,Méga-Hexadron,Méga-Hexadron
 10528,9,Mega Falinks,Mega Falinks
+10528,11,メガタイレーツ,
+10529,1,メガライチュウX,
 10529,5,Méga-Raichu X,Méga-Raichu X
 10529,9,Mega Raichu X,Mega Raichu X
+10529,11,メガライチュウX,
+10530,1,メガライチュウY,
 10530,5,Méga-Raichu Y,Méga-Raichu Y
 10530,9,Mega Raichu Y,Mega Raichu Y
+10530,11,メガライチュウY,
+10531,1,メガチリーン,
 10531,5,Méga-Éoko,Méga-Éoko
 10531,9,Mega Chimecho,Mega Chimecho
+10531,11,メガチリーン,
+10532,1,メガアブソルZ,
 10532,5,Méga-Absol Z,Méga-Absol Z
 10532,9,Mega Absol Z,Mega Absol Z
+10532,11,メガアブソルZ,
+10533,1,メガムクホーク,
 10533,5,Méga-Étouraptor,Méga-Étouraptor
 10533,9,Mega Staraptor,Mega Staraptor
+10533,11,メガムクホーク,
+10534,1,メガガブリアスZ,
 10534,5,Méga-Carchacrok Z,Méga-Carchacrok Z
 10534,9,Mega Garchomp Z,Mega Garchomp Z
+10534,11,メガガブリアスZ,
+10535,1,メガルカリオZ,
 10535,5,Méga-Lucario Z,Méga-Lucario Z
 10535,9,Mega Lucario Z,Mega Lucario Z
+10535,11,メガルカリオZ,
+10536,1,メガヒードラン,
 10536,5,Méga-Heatran,Méga-Heatran
 10536,9,Mega Heatran,Mega Heatran
+10536,11,メガヒードラン,
+10537,1,メガダークライ,
 10537,5,Méga-Darkrai,Méga-Darkrai
 10537,9,Mega Darkrai,Mega Darkrai
+10537,11,メガダークライ,
+10538,1,メガゴルーグ,
 10538,5,Méga-Golemastoc,Méga-Golemastoc
 10538,9,Mega Golurk,Mega Golurk
+10538,11,メガゴルーグ,
+10539,1,メガニャオニクス,
 10539,5,Méga-Mistigrix,Méga-Mistigrix
 10539,9,Mega Meowstic,Mega Meowstic
+10539,11,メガニャオニクス,
+10540,1,メガケケンカニ,
 10540,5,Méga-Crabominable,Méga-Crabominable
 10540,9,Mega Crabominable,Mega Crabominable
+10540,11,メガケケンカニ,
+10541,1,メガグソクムシャ,
 10541,5,Méga-Sarmuraï,Méga-Sarmuraï
 10541,9,Mega Golisopod,Mega Golisopod
+10541,11,メガグソクムシャ,
+10542,1,メガマギアナ,
 10542,5,Méga-Magearna,Méga-Magearna
 10542,9,Mega Magearna,Mega Magearna
+10542,11,メガマギアナ,
+10543,1,メガマギアナ,
 10543,5,Méga-Magearna Couleur du Passé,Méga-Magearna Couleur du Passé
 10543,9,Mega Original Magearna,Mega Original Magearna
+10543,11,メガマギアナ,
+10544,1,メガゼラオラ,
 10544,5,Méga-Zeraora,Méga-Zeraora
 10544,9,Mega Zeraora,Mega Zeraora
+10544,11,メガゼラオラ,
+10545,1,メガスコヴィラン,
 10545,5,Méga-Scovilain,Méga-Scovilain
 10545,9,Mega Scovillain,Mega Scovillain
+10545,11,メガスコヴィラン,
+10546,1,メガキラフロル,
 10546,5,Méga-Floréclat,Méga-Floréclat
 10546,9,Mega Glimmora,Mega Glimmora
+10546,11,メガキラフロル,
+10547,1,メガシャリタツ,
 10547,5,Méga-Nigirigon Forme Courbée,Méga-Nigirigon Forme Courbée
 10547,9,Mega Curly Tatsugiri,Mega Curly Tatsugiri
+10547,11,メガシャリタツ,
+10548,1,メガシャリタツ,
 10548,5,Méga-Nigirigon Forme Affalée,Méga-Nigirigon Forme Affalée
 10548,9,Mega Droopy Tatsugiri,Mega Droopy Tatsugiri
+10548,11,メガシャリタツ,
+10549,1,メガシャリタツ,
 10549,5,Méga-Nigirigon Forme Raide,Méga-Nigirigon Forme Raide
 10549,9,Mega Stretchy Tatsugiri,Mega Stretchy Tatsugiri
+10549,11,メガシャリタツ,
+10550,1,メガセグレイブ,
 10550,5,Méga-Glaivodo,Méga-Glaivodo
 10550,9,Mega Baxcalibur,Mega Baxcalibur
+10550,11,メガセグレイブ,
 10551,1,メスのすがた,
 10551,3,암컷의 모습,
 10551,4,雌性的樣子,

@@ -118,6 +118,8 @@ encounter_condition_value_id,local_language_id,name
 49,9,Have Root Fossil in bag
 49,5,En ayant un Fossile Racine dans le sac
 50,9,Have Claw Fossil in bag
+179,9,Have Skull Fossil in bag
+180,9,Have Armor Fossil in bag
 50,5,En ayant un Fossile Griffe dans le sac
 51,9,Defeat Jupiter
 51,5,Après avoir vaincu Jupiter

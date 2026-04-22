@@ -2,21 +2,21 @@ ability_changelog_id,local_language_id,effect
 1,5,N'a aucun effet en combat.
 1,6,Hat im Kampf keinen Effekt.
 1,9,Has no effect in battle.
-2,5,N'empêche pas les KO réguliers en ayant tous ses []{mechanic:hp}.
-2,6,Verhindert keine regulären K.O. bei vollen []{mechanic:hp}.
+2,5,N'empêche pas les KO réguliers en ayant tous ses [PV]{mechanic:hp}.
+2,6,Verhindert keine regulären K.O. bei vollen [KP]{mechanic:hp}.
 2,9,Does not prevent regular KOs from full [HP]{mechanic:hp}.
 3,5,N'a pas d'effet en dehors du combat.
 3,6,Hat außerhalb vom Kampf keinen Effekt.
 3,9,Has no overworld effect.
-4,5,"N'absorbe pas les capacités []{type:electric} non-offensives, i.e. []{move:thunder-wave}."
-4,6,"[]{type:electric}-Attacken die keinen Schaden anrichten, wie []{move:thunder-wave}, werden nicht absorbiert."
-4,9,"Does not absorb non-damaging []{type:electric} moves, i.e. []{move:thunder-wave}."
+4,5,"N'absorbe pas les capacités [Électrik]{type:electric} non-offensives, i.e. [Cage Éclair]{move:thunder-wave}."
+4,6,"[Elektro]{type:electric}-Attacken die keinen Schaden anrichten, wie [Donnerwelle]{move:thunder-wave}, werden nicht absorbiert."
+4,9,"Does not absorb non-damaging [Electric]{type:electric} moves, i.e. [Thunder Wave]{move:thunder-wave}."
 5,5,Se déclenche à chaque coup d'une capacité multi-coups.
 5,6,Löst bei Attacken die mehrmals Treffen bei jedem Treffer aus.
 5,9,Triggers on every hit of multiple-hit moves.
-6,5,[]{move:will-o-wisp} ne déclenche pas ce talent pour un Pokémon immunisé à []{mechanic:burn}.
-6,6,[]{move:will-o-wisp} triggert die Fähigkeit nicht bei Pokémon die immun gegen []{mechanic:burn} sind.
-6,9,[]{move:will-o-wisp} does not trigger this ability for Pokémon immune to [burns]{mechanic:burn}.
+6,5,[Feu Follet]{move:will-o-wisp} ne déclenche pas ce talent pour un Pokémon immunisé à []{mechanic:burn}.
+6,6,[Irrlicht]{move:will-o-wisp} triggert die Fähigkeit nicht bei Pokémon die immun gegen []{mechanic:burn} sind.
+6,9,[Will-O-Wisp]{move:will-o-wisp} does not trigger this ability for Pokémon immune to [burns]{mechanic:burn}.
 7,5,N'a pas d'effet en dehors du combat.
 7,6,Hat außerhalb vom Kampf keinen Effekt.
 7,9,Has no overworld effect.
@@ -29,12 +29,12 @@ ability_changelog_id,local_language_id,effect
 10,5,Affecte les autres Pokémon avec ce talent.
 10,6,Betrifft andere Pokémon mit dieser Fähigkeit.
 10,9,Affects other Pokémon with this ability.
-11,5,Inflige seulement 1/16 des []{mechanic:hp} maximum du lanceur en dégâts.
-11,6,Verursacht nur 1/16 der maximalen []{mechanic:hp} des Angreifers Schaden.
+11,5,Inflige seulement 1/16 des [PV]{mechanic:hp} maximum du lanceur en dégâts.
+11,6,Verursacht nur 1/16 der maximalen [KP]{mechanic:hp} des Angreifers Schaden.
 11,9,Inflicts only 1/16 of the attacker's maximum [HP]{mechanic:hp} in damage.
-12,5,[]{move:fire-fang} et les capacités qui infligent des []{mechanic:typeless-damage} ignorent ce talent peu importe le type.
-12,6,"[]{move:fire-fang} und Attacken die [typenlosen Schaden]{mechanic:typeless-damage} verursachen, ignorieren diese Fähigkeit unabhängig von ihrem Typ."
-12,9,[]{move:fire-fang} and moves that inflict [typeless damage]{mechanic:typeless-damage} ignore this ability regardless of type.
+12,5,[Crocs Feu]{move:fire-fang} et les capacités qui infligent des []{mechanic:typeless-damage} ignorent ce talent peu importe le type.
+12,6,"[Feuerzahn]{move:fire-fang} und Attacken die [typenlosen Schaden]{mechanic:typeless-damage} verursachen, ignorieren diese Fähigkeit unabhängig von ihrem Typ."
+12,9,[Fire Fang]{move:fire-fang} and moves that inflict [typeless damage]{mechanic:typeless-damage} ignore this ability regardless of type.
 13,5,N'a pas d'effet en dehors du combat.
 13,6,Hat außerhalb vom Kampf keinen Effekt.
 13,9,Has no overworld effect.
@@ -47,21 +47,21 @@ ability_changelog_id,local_language_id,effect
 16,5,N'a pas d'effet en dehors du combat.
 16,6,Hat außerhalb vom Kampf keinen Effekt.
 16,9,Has no overworld effect.
-17,5,"N'affecte pas les capacités []{type:electric} non-offensives, i.e. []{move:thunder-wave}. Augmente la fréquence des revanches dans le monde extérieur si un Pokémon de l'équipe a ce talent."
-17,6,"Betrifft keine []{type:electric}-Attacken die keinen Schaden anrichten, wie []{move:thunder-wave}. Erhöht die Anzahl an Trainer-Anrufen wenn irgendein Pokémon im Team diese Fähigkeit hat."
-17,9,"Does not affect non-damaging []{type:electric} moves, i.e. []{move:thunder-wave}.  Increases the frequency of Match Call calls on the overworld if any party Pokémon has this ability."
-18,5,Redirige les capacités []{type:electric} sans les annuler ou garantir aucun boost d'[]{mechanic:special-attack}. Ne redirige pas []{move:hidden-power}.
-18,6,"Leitet []{type:electric}-Attacken um, ohne ihre Effekte zu deaktivieren oder einen []{mechanic:special-attack} Bonus zu gewähren. Leitet []{move:hidden-power} nicht um."
-18,9,Redirects []{type:electric} moves without negating them or granting any [Special Attack]{mechanic:special-attack} boost.  Does not redirect []{move:hidden-power}.
+17,5,"N'affecte pas les capacités [Électrik]{type:electric} non-offensives, i.e. [Cage Éclair]{move:thunder-wave}. Augmente la fréquence des revanches dans le monde extérieur si un Pokémon de l'équipe a ce talent."
+17,6,"Betrifft keine [Elektro]{type:electric}-Attacken die keinen Schaden anrichten, wie [Donnerwelle]{move:thunder-wave}. Erhöht die Anzahl an Trainer-Anrufen wenn irgendein Pokémon im Team diese Fähigkeit hat."
+17,9,"Does not affect non-damaging [Electric]{type:electric} moves, i.e. [Thunder Wave]{move:thunder-wave}.  Increases the frequency of Match Call calls on the overworld if any party Pokémon has this ability."
+18,5,Redirige les capacités [Électrik]{type:electric} sans les annuler ou garantir aucun boost d'[Attaque Spéciale]{mechanic:special-attack}. Ne redirige pas [Puissance Cachée]{move:hidden-power}.
+18,6,"Leitet [Elektro]{type:electric}-Attacken um, ohne ihre Effekte zu deaktivieren oder einen [Spezialangriff]{mechanic:special-attack} Bonus zu gewähren. Leitet [Kraftreserve]{move:hidden-power} nicht um."
+18,9,Redirects [Electric]{type:electric} moves without negating them or granting any [Special Attack]{mechanic:special-attack} boost.  Does not redirect [Hidden Power]{move:hidden-power}.
 19,5,N'a pas d'effet en dehors du combat.
 19,6,Hat außerhalb vom Kampf keinen Effekt.
 19,9,Has no overworld effect.
 20,5,N'a pas d'effet en dehors du combat.
 20,6,Hat außerhalb vom Kampf keinen Effekt.
 20,9,Has no overworld effect.
-21,5,"Empêche []{move:heal-bell} de soigner le Pokémon, que ce soit en combat ou non."
-21,6,"Hindert []{move:heal-bell} daran, das Pokémon zu heilen, auch außerhalb vom Kampf."
-21,9,"Prevents []{move:heal-bell} from curing the Pokémon, whether or not it is in battle."
+21,5,"Empêche [Glas de Soin]{move:heal-bell} de soigner le Pokémon, que ce soit en combat ou non."
+21,6,"Hindert [Vitalglocke]{move:heal-bell} daran, das Pokémon zu heilen, auch außerhalb vom Kampf."
+21,9,"Prevents [Heal Bell]{move:heal-bell} from curing the Pokémon, whether or not it is in battle."
 22,5,N'a pas d'effet en dehors du combat.
 22,6,Hat außerhalb vom Kampf keinen Effekt.
 22,9,Has no overworld effect.
@@ -77,9 +77,9 @@ ability_changelog_id,local_language_id,effect
 26,5,N'a pas d'effet en dehors du combat.
 26,6,Hat außerhalb vom Kampf keinen Effekt.
 26,9,Has no overworld effect.
-27,5,Double le rayon d'action de []{move:cut} dans le monde extérieur si un Pokémon de l'équipe a ce talent.
-27,6,"Verdoppelt den Radius in dem []{move:cut} Gras entfernt, wenn irgendein Pokémon im Team diese Fähigkeit hat."
-27,9,Doubles []{move:cut}'s grass-cutting radius on the overworld if any party Pokémon has this ability.
+27,5,Double le rayon d'action de [Coupe]{move:cut} dans le monde extérieur si un Pokémon de l'équipe a ce talent.
+27,6,"Verdoppelt den Radius in dem [Zerschneider]{move:cut} Gras entfernt, wenn irgendein Pokémon im Team diese Fähigkeit hat."
+27,9,Doubles [Cut]{move:cut}'s grass-cutting radius on the overworld if any party Pokémon has this ability.
 28,5,N'a aucun effet en combat.
 28,6,Hat im Kampf keinen Effekt.
 28,9,Has no effect in battle.
@@ -113,42 +113,42 @@ ability_changelog_id,local_language_id,effect
 38,5,Le []{mechanic:poison} continue d'infliger des dégâts au Pokémon en dehors du combat.
 38,6,[]{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf.
 38,9,[Poison]{mechanic:poison} still damages the Pokémon outside of battle.
-39,5,"La []{mechanic:paralysis} ne peut pas empêcher le Pokémon de bouger, mais le malus de []{mechanic:speed} est appliqué. Le []{mechanic:poison} continue d'infliger des dommages au Pokémon en dehors du combat."
-39,6,"[]{mechanic:paralysis} hindert das Pokémon nicht daran sich zu bewegen, aber der []{mechanic:speed} Malus bleibt. []{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf."
+39,5,"La []{mechanic:paralysis} ne peut pas empêcher le Pokémon de bouger, mais le malus de [Vitesse]{mechanic:speed} est appliqué. Le []{mechanic:poison} continue d'infliger des dommages au Pokémon en dehors du combat."
+39,6,"[]{mechanic:paralysis} hindert das Pokémon nicht daran sich zu bewegen, aber der [Initiative]{mechanic:speed} Malus bleibt. []{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf."
 39,9,"[Paralysis]{mechanic:paralysis} cannot prevent the Pokémon from moving, though the [Speed]{mechanic:speed} cut is unaffected.  [Poison]{mechanic:poison} still damages the Pokémon outside of battle."
-40,5,"À cause d'un glitch, les capacités affectées par ce talent ont (100 - accuracy)% de chance de transpercer []{move:detect} ou []{move:protect}."
-40,6,Wegen eines Glitches haben Attacken die von dieser Fähigkeit beeinflusst sind eine (100 - Genauigkeit)% Chance durch den []{move:detect} oder []{move:protect} zu treffen.
-40,9,"Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through []{move:detect} or []{move:protect}."
-41,5,[]{move:rest} fonctionne de manière habituelle sous le []{mechanic:strong-sunlight}.
-41,6,[]{move:rest} funktioniert normal bei [starkem Sonnenlicht]{mechanic:strong-sunlight}.
-41,9,[]{move:rest} works as usual during [strong sunlight]{mechanic:strong-sunlight}.
-42,5,[]{move:fling} peut être utilisé de manière habituelle.
-42,6,[]{move:fling} kann normal benutzt werden.
-42,9,[]{move:fling} can be used as usual.
-43,5,Redirige les capacités []{type:water} sans les annuler ou garantir aucun boost d'[]{mechanic:special-attack}. Ne redirige pas []{move:hidden-power}.
-43,6,Leitet []{type:water}-Attacken um ohne den []{mechanic:special-attack} Bonus zu gewähren. Leitet []{move:hidden-power} nicht um.
-43,9,Redirects []{type:water} moves without negating them or granting any [Special Attack]{mechanic:special-attack} boost.  Does not redirect []{move:hidden-power}.
-44,5,Peut copier []{ability:flower-gift} et []{ability:wonder-guard}.
-44,6,Kann []{ability:flower-gift} und []{ability:wonder-guard} kopieren.
-44,9,Can copy []{ability:flower-gift} and []{ability:wonder-guard}.
-45,5,Peut copier []{ability:forecast} et []{ability:trace}.
-45,6,Kann []{ability:forecast} und []{ability:trace} kopieren.
-45,9,Can copy []{ability:forecast} and []{ability:trace}.
-46,5,Fonctionne uniquement quand associé à []{ability:minus}.
-46,6,Funktioniert nur wenn es mit []{ability:minus} kombiniert wird.
-46,9,Powers up only when paired with []{ability:minus}.
-47,5,Fonctionne uniquement quand associé à []{ability:plus}.
-47,6,Funktioniert nur wenn es mit []{ability:plus} kombiniert wird.
-47,9,Powers up only when paired with []{ability:plus}.
+40,5,"À cause d'un glitch, les capacités affectées par ce talent ont (100 - accuracy)% de chance de transpercer [Détection]{move:detect} ou [Abri]{move:protect}."
+40,6,Wegen eines Glitches haben Attacken die von dieser Fähigkeit beeinflusst sind eine (100 - Genauigkeit)% Chance durch den [Scanner]{move:detect} oder [Schutzschild]{move:protect} zu treffen.
+40,9,"Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through [Detect]{move:detect} or [Protect]{move:protect}."
+41,5,[Repos]{move:rest} fonctionne de manière habituelle sous le []{mechanic:strong-sunlight}.
+41,6,[Erholung]{move:rest} funktioniert normal bei [starkem Sonnenlicht]{mechanic:strong-sunlight}.
+41,9,[Rest]{move:rest} works as usual during [strong sunlight]{mechanic:strong-sunlight}.
+42,5,[Dégommage]{move:fling} peut être utilisé de manière habituelle.
+42,6,[Schleuder]{move:fling} kann normal benutzt werden.
+42,9,[Fling]{move:fling} can be used as usual.
+43,5,Redirige les capacités [Eau]{type:water} sans les annuler ou garantir aucun boost d'[Attaque Spéciale]{mechanic:special-attack}. Ne redirige pas [Puissance Cachée]{move:hidden-power}.
+43,6,Leitet [Wasser]{type:water}-Attacken um ohne den [Spezialangriff]{mechanic:special-attack} Bonus zu gewähren. Leitet [Kraftreserve]{move:hidden-power} nicht um.
+43,9,Redirects [Water]{type:water} moves without negating them or granting any [Special Attack]{mechanic:special-attack} boost.  Does not redirect [Hidden Power]{move:hidden-power}.
+44,5,Peut copier [Don Floral]{ability:flower-gift} et [Garde Mystik]{ability:wonder-guard}.
+44,6,Kann [Pflanzengabe]{ability:flower-gift} und [Wunderwache]{ability:wonder-guard} kopieren.
+44,9,Can copy [Flower Gift]{ability:flower-gift} and [Wonder Guard]{ability:wonder-guard}.
+45,5,Peut copier [Météo]{ability:forecast} et [Calque]{ability:trace}.
+45,6,Kann [Prognose]{ability:forecast} und [Erfassen]{ability:trace} kopieren.
+45,9,Can copy [Forecast]{ability:forecast} and [Trace]{ability:trace}.
+46,5,Fonctionne uniquement quand associé à [Moins]{ability:minus}.
+46,6,Funktioniert nur wenn es mit [Minus]{ability:minus} kombiniert wird.
+46,9,Powers up only when paired with [Minus]{ability:minus}.
+47,5,Fonctionne uniquement quand associé à [Plus]{ability:plus}.
+47,6,Funktioniert nur wenn es mit [Plus]{ability:plus} kombiniert wird.
+47,9,Powers up only when paired with [Plus]{ability:plus}.
 48,5,Les chances que l'effet s'active sont de 30%.
 48,6,"Die Chance, dass der Effekt eintritt, beträgt 30%."
 48,9,Chance of taking effect is 30%.
-49,5,[]{move:triple-kick} n'est pas affecté.
-49,6,[]{move:triple-kick} wird nicht beeinflusst.
-49,9,[]{move:triple-kick} is unaffected.
-50,5,[]{move:struggle} n'est pas affecté. []{move:helping-hand} et []{move:defense-curl} ne sont pas pris en compte.
-50,6,[]{move:struggle} wird nicht beeinflusst. []{move:helping-hand} und []{move:defense-curl} werden nicht beachtet.
-50,9,[]{move:struggle} is unaffected.  []{move:helping-hand} and []{move:defense-curl} are not taken into account.
+49,5,[Triple Pied]{move:triple-kick} n'est pas affecté.
+49,6,[Dreifachkick]{move:triple-kick} wird nicht beeinflusst.
+49,9,[Triple Kick]{move:triple-kick} is unaffected.
+50,5,[Lutte]{move:struggle} n'est pas affecté. [Coup d’Main]{move:helping-hand} et [Boul’Armure]{move:defense-curl} ne sont pas pris en compte.
+50,6,[Verzweifler]{move:struggle} wird nicht beeinflusst. [Rechte Hand]{move:helping-hand} und [Einigler]{move:defense-curl} werden nicht beachtet.
+50,9,[Struggle]{move:struggle} is unaffected.  [Helping Hand]{move:helping-hand} and [Defense Curl]{move:defense-curl} are not taken into account.
 51,5,N'a pas d'effet en dehors du combat.
 51,6,Hat außerhalb vom Kampf keinen Effekt.
 51,9,Has no overworld effect.

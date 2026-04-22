@@ -34,17 +34,17 @@ item_id,local_language_id,short_effect,effect
 5,5,Tente de capturer un Pokémon sauvage dans le Grand Marais ou le Parc Safari. Le taux de succès est 1.5x.,"Utilisé au combat
 :   Tente de [capturer]{mechanic:catch} un Pokémon sauvage, utilisant un taux de capture de 1.5x.
 
-Cet objet ne peut qu'être utilisé dans le []{location:great-marsh} ou []{location:kanto-safari-zone}."
+Cet objet ne peut qu'être utilisé dans le [Grand Marais]{location:great-marsh} ou [Parc Safari]{location:kanto-safari-zone}."
 5,9,Tries to catch a wild Pokémon in the Great Marsh or Safari Zone.  Success rate is 1.5×.,"Used in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon, using a catch rate of 1.5×.
 
-This item can only be used in the []{location:great-marsh} or []{location:kanto-safari-zone}."
+This item can only be used in the [Great Marsh]{location:great-marsh} or [Safari Zone]{location:kanto-safari-zone}."
 6,5,Tente de capturer un Pokémon sauvage. Le taux de succès est 3× pour les Pokémon eau et insecte.,"Utilisé au combat
-:   Tente de [capturer]{mechanic:catch} un Pokémon sauvage.  Si le Pokémon sauvage est de type []{type:water} ou []{type:bug}, cette ball a un taux de capture de 3x.  Sinon, elle a un taux de capture de 1x.
+:   Tente de [capturer]{mechanic:catch} un Pokémon sauvage.  Si le Pokémon sauvage est de type [Eau]{type:water} ou [Insecte]{type:bug}, cette ball a un taux de capture de 3x.  Sinon, elle a un taux de capture de 1x.
 
     Si utilisé pendant un combat de dresseurs, rien ne se passe et la ball est perdue."
 6,9,Tries to catch a wild Pokémon.  Success rate is 3× for water and bug Pokémon.,"Used in battle
-:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If the wild Pokémon is []{type:water}- or []{type:bug}-type, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.
+:   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If the wild Pokémon is [Water]{type:water}- or [Bug]{type:bug}-type, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.
 
     If used in a trainer battle, nothing happens and the ball is lost."
 7,5,"Tente de capturer un Pokémon sauvage. Le taux de succès est 3.5× sous l'eau, en pêchant ou en surfant.","Utilisé au combat
@@ -344,76 +344,76 @@ This item can only be used in the []{location:great-marsh} or []{location:kanto-
 71,9,No effect. Gen III: Trade four and four Shoal Salts for a Shell Bell.,No effect.
 72,5,Aucun effet. Peut être échangé pour des objets ou capacités.,"Aucun effet.
 
-Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm11} []{move:sunny-day} dans la maison située à mi-chemin dans la partie sud de []{location:sinnoh-route-212}.
+Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm11} [Zénith]{move:sunny-day} dans la maison située à mi-chemin dans la partie sud de la [Route 212]{location:sinnoh-route-212}.
 
-Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la []{location:sinnoh-route-212}, à []{location:snowpoint-city} et dans la []{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
+Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la [Route 212]{location:sinnoh-route-212}, à [Frimapic]{location:snowpoint-city} et dans la [Aire de Survie]{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:cheri-berry}, une []{item:leppa-berry} et une []{item:pecha-berry} auprès du Jongleur près du Centre Pokémon à []{location:violet-city}.
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Ceriz]{item:cheri-berry}, une [Baie Mepo]{item:leppa-berry} et une [Baie Pêcha]{item:pecha-berry} auprès du Jongleur près du Centre Pokémon à [Mauville]{location:violet-city}.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:persim-berry}, une []{item:pomeg-berry} et une []{item:razz-berry} auprès du Jongleur près de l'entrée du []{location:pal-park} à []{location:fuchsia-city}."
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Kika]{item:persim-berry}, une [Baie Grena]{item:pomeg-berry} et une [Baie Framby]{item:razz-berry} auprès du Jongleur près de l'entrée du [Parc des Amis]{location:pal-park} à [Parmanie]{location:fuchsia-city}."
 72,9,No effect. Can be traded for items or moves.,"No effect.
 
-In Diamond and Pearl, trade ten for a []{move:sunny-day} [TM]{item:tm11} in the house midway along the southern section of []{location:sinnoh-route-212}.
+In Diamond and Pearl, trade ten for a [Sunny Day]{move:sunny-day} [TM]{item:tm11} in the house midway along the southern section of [Route 212]{location:sinnoh-route-212}.
 
-In Platinum, trade to [move tutors]{mechanic:move-tutor} on []{location:sinnoh-route-212}, in []{location:snowpoint-city}, and in the []{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
+In Platinum, trade to [move tutors]{mechanic:move-tutor} on [Route 212]{location:sinnoh-route-212}, in [Snowpoint City]{location:snowpoint-city}, and in the [Survival Area]{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
 
-In HeartGold and SoulSilver, trade one for a []{item:cheri-berry}, a []{item:leppa-berry}, and a []{item:pecha-berry} with the Juggler near the Pokémon Center in []{location:violet-city}.
+In HeartGold and SoulSilver, trade one for a [Cheri Berry]{item:cheri-berry}, a [Leppa Berry]{item:leppa-berry}, and a [Pecha Berry]{item:pecha-berry} with the Juggler near the Pokémon Center in [Violet City]{location:violet-city}.
 
-In HeartGold and SoulSilver, trade one for a []{item:persim-berry}, a []{item:pomeg-berry}, and a []{item:razz-berry} with the Juggler near the []{location:pal-park} entrance in []{location:fuchsia-city}."
+In HeartGold and SoulSilver, trade one for a [Persim Berry]{item:persim-berry}, a [Pomeg Berry]{item:pomeg-berry}, and a [Razz Berry]{item:razz-berry} with the Juggler near the [Pal Park]{location:pal-park} entrance in [Fuchsia City]{location:fuchsia-city}."
 73,5,Aucun effet. Peut être échangé pour des objets ou capacités.,"Aucun effet.
 
-Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm18} []{move:rain-dance} dans la maison située à mi-chemin dans la partie sud de []{location:sinnoh-route-212}.
+Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm18} [Danse Pluie]{move:rain-dance} dans la maison située à mi-chemin dans la partie sud de [Route 212]{location:sinnoh-route-212}.
 
-Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la []{location:sinnoh-route-212}, à []{location:snowpoint-city} et dans la []{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
+Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la [Route 212]{location:sinnoh-route-212}, à [Frimapic]{location:snowpoint-city} et dans la [Aire de Survie]{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:chesto-berry}, une []{item:oran-berry} et une []{item:wiki-berry} auprès du Jongleur près du Centre Pokémon à []{location:violet-city}.
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Maron]{item:chesto-berry}, une [Baie Oran]{item:oran-berry} et une [Baie Wiki]{item:wiki-berry} auprès du Jongleur près du Centre Pokémon à [Mauville]{location:violet-city}.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:bluk-berry}, une []{item:cornn-berry} et une []{item:kelpsy-berry} auprès du Jongleur près de l'entrée du []{location:pal-park} à []{location:fuchsia-city}."
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Remu]{item:bluk-berry}, une [Baie Siam]{item:cornn-berry} et une [Baie Alga]{item:kelpsy-berry} auprès du Jongleur près de l'entrée du [Parc des Amis]{location:pal-park} à [Parmanie]{location:fuchsia-city}."
 73,9,No effect. Can be traded for items or moves.,"No effect.
 
-In Diamond and Pearl, trade ten for a []{move:rain-dance} [TM]{item:tm18} in the house midway along the southern section of []{location:sinnoh-route-212}.
+In Diamond and Pearl, trade ten for a [Rain Dance]{move:rain-dance} [TM]{item:tm18} in the house midway along the southern section of [Route 212]{location:sinnoh-route-212}.
 
-In Platinum, trade to [move tutors]{mechanic:move-tutor} on []{location:sinnoh-route-212}, in []{location:snowpoint-city}, and in the []{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
+In Platinum, trade to [move tutors]{mechanic:move-tutor} on [Route 212]{location:sinnoh-route-212}, in [Snowpoint City]{location:snowpoint-city}, and in the [Survival Area]{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
 
-In HeartGold and SoulSilver, trade one for a []{item:chesto-berry}, an []{item:oran-berry}, and a []{item:wiki-berry} with the Juggler near the Pokémon Center in []{location:violet-city}.
+In HeartGold and SoulSilver, trade one for a [Chesto Berry]{item:chesto-berry}, an [Oran Berry]{item:oran-berry}, and a [Wiki Berry]{item:wiki-berry} with the Juggler near the Pokémon Center in [Violet City]{location:violet-city}.
 
-In HeartGold and SoulSilver, trade one for a []{item:bluk-berry}, a []{item:cornn-berry}, and a []{item:kelpsy-berry} with the Juggler near the []{location:pal-park} entrance in []{location:fuchsia-city}."
+In HeartGold and SoulSilver, trade one for a [Bluk Berry]{item:bluk-berry}, a [Cornn Berry]{item:cornn-berry}, and a [Kelpsy Berry]{item:kelpsy-berry} with the Juggler near the [Pal Park]{location:pal-park} entrance in [Fuchsia City]{location:fuchsia-city}."
 74,5,Aucun effet. Peut être échangé pour des objets ou capacités.,"Aucun effet.
 
-Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm37} []{move:sandstorm} dans la maison située à mi-chemin dans la partie sud de []{location:sinnoh-route-212}.
+Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm37} [Tempête de Sable]{move:sandstorm} dans la maison située à mi-chemin dans la partie sud de [Route 212]{location:sinnoh-route-212}.
 
-Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la []{location:sinnoh-route-212}, à []{location:snowpoint-city} et dans la []{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
+Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la [Route 212]{location:sinnoh-route-212}, à [Frimapic]{location:snowpoint-city} et dans la [Aire de Survie]{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:aspear-berry}, une []{item:iapapa-berry} et une []{item:sitrus-berry} auprès du Jongleur près du Centre Pokémon à []{location:violet-city}.
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Willia]{item:aspear-berry}, une [Baie Papaya]{item:iapapa-berry} et une [Baie Sitrus]{item:sitrus-berry} auprès du Jongleur près du Centre Pokémon à [Mauville]{location:violet-city}.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:grepa-berry}, une []{item:nomel-berry} et une []{item:pinap-berry} auprès du Jongleur près de l'entrée du []{location:pal-park} à []{location:fuchsia-city}."
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Résin]{item:grepa-berry}, une [Baie Tronci]{item:nomel-berry} et une [Baie Nanana]{item:pinap-berry} auprès du Jongleur près de l'entrée du [Parc des Amis]{location:pal-park} à [Parmanie]{location:fuchsia-city}."
 74,9,No effect. Can be traded for items or moves.,"No effect.
 
-In Diamond and Pearl, trade ten for a []{move:sandstorm} [TM]{item:tm37} in the house midway along the southern section of []{location:sinnoh-route-212}.
+In Diamond and Pearl, trade ten for a [Sandstorm]{move:sandstorm} [TM]{item:tm37} in the house midway along the southern section of [Route 212]{location:sinnoh-route-212}.
 
-In Platinum, trade to [move tutors]{mechanic:move-tutor} on []{location:sinnoh-route-212}, in []{location:snowpoint-city}, and in the []{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
+In Platinum, trade to [move tutors]{mechanic:move-tutor} on [Route 212]{location:sinnoh-route-212}, in [Snowpoint City]{location:snowpoint-city}, and in the [Survival Area]{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
 
-In HeartGold and SoulSilver, trade one for an []{item:aspear-berry}, a []{item:iapapa-berry}, and a []{item:sitrus-berry} with the Juggler near the Pokémon Center in []{location:violet-city}.
+In HeartGold and SoulSilver, trade one for an [Aspear Berry]{item:aspear-berry}, a [Iapapa Berry]{item:iapapa-berry}, and a [Sitrus Berry]{item:sitrus-berry} with the Juggler near the Pokémon Center in [Violet City]{location:violet-city}.
 
-In HeartGold and SoulSilver, trade one for a []{item:grepa-berry}, a []{item:nomel-berry}, and a []{item:pinap-berry} with the Juggler near the []{location:pal-park} entrance in []{location:fuchsia-city}."
+In HeartGold and SoulSilver, trade one for a [Grepa Berry]{item:grepa-berry}, a [Nomel Berry]{item:nomel-berry}, and a [Pinap Berry]{item:pinap-berry} with the Juggler near the [Pal Park]{location:pal-park} entrance in [Fuchsia City]{location:fuchsia-city}."
 75,5,Aucun effet. Peut être échangé pour des objets ou capacités.,"Aucun effet.
 
-Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm07} []{move:hail} dans la maison située à mi-chemin dans la partie sud de []{location:sinnoh-route-212}.
+Dans Diamant et Perle, en échanger dix pour une [CT]{item:tm07} [Grêle]{move:hail} dans la maison située à mi-chemin dans la partie sud de [Route 212]{location:sinnoh-route-212}.
 
-Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la []{location:sinnoh-route-212}, à []{location:snowpoint-city} et dans la []{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
+Dans Platine, à échanger aux [maîtres de capacités]{mechanic:move-tutor} sur la [Route 212]{location:sinnoh-route-212}, à [Frimapic]{location:snowpoint-city} et dans la [Aire de Survie]{location:survival-area}.  Huit fragments au total sont nécessaires par tutorat, mais la combinaison particulière de couleurs varie selon la capacité.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:aguav-berry}, une []{item:lum-berry} et une []{item:rawst-berry} auprès du Jongleur près du Centre Pokémon à []{location:violet-city}.
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Gowav]{item:aguav-berry}, une [Baie Prine]{item:lum-berry} et une [Baie Fraive]{item:rawst-berry} auprès du Jongleur près du Centre Pokémon à [Mauville]{location:violet-city}.
 
-Dans HeartGold et SoulSilver, en échanger un pour une []{item:durin-berry}, une []{item:hondew-berry} et une []{item:wepear-berry} auprès du Jongleur près de l'entrée du []{location:pal-park} à []{location:fuchsia-city}."
+Dans HeartGold et SoulSilver, en échanger un pour une [Baie Durin]{item:durin-berry}, une [Baie Lonme]{item:hondew-berry} et une [Baie Repoi]{item:wepear-berry} auprès du Jongleur près de l'entrée du [Parc des Amis]{location:pal-park} à [Parmanie]{location:fuchsia-city}."
 75,9,No effect. Can be traded for items or moves.,"No effect.
 
-In Diamond and Pearl, trade ten for a []{move:hail} [TM]{item:tm07} in the house midway along the southern section of []{location:sinnoh-route-212}.
+In Diamond and Pearl, trade ten for a [Hail]{move:hail} [TM]{item:tm07} in the house midway along the southern section of [Route 212]{location:sinnoh-route-212}.
 
-In Platinum, trade to [move tutors]{mechanic:move-tutor} on []{location:sinnoh-route-212}, in []{location:snowpoint-city}, and in the []{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
+In Platinum, trade to [move tutors]{mechanic:move-tutor} on [Route 212]{location:sinnoh-route-212}, in [Snowpoint City]{location:snowpoint-city}, and in the [Survival Area]{location:survival-area}.  Eight shards total are required per tutelage, but the particular combination of colors varies by move.
 
-In HeartGold and SoulSilver, trade one for an []{item:aguav-berry}, a []{item:lum-berry}, and a []{item:rawst-berry} with the Juggler near the Pokémon Center in []{location:violet-city}.
+In HeartGold and SoulSilver, trade one for an [Aguav Berry]{item:aguav-berry}, a [Lum Berry]{item:lum-berry}, and a [Rawst Berry]{item:rawst-berry} with the Juggler near the Pokémon Center in [Violet City]{location:violet-city}.
 
-In HeartGold and SoulSilver, trade one for a []{item:durin-berry}, a []{item:hondew-berry}, and a []{item:wepear-berry} with the Juggler near the []{location:pal-park} entrance in []{location:fuchsia-city}."
+In HeartGold and SoulSilver, trade one for a [Durin Berry]{item:durin-berry}, a [Hondew Berry]{item:hondew-berry}, and a [Wepear Berry]{item:wepear-berry} with the Juggler near the [Pal Park]{location:pal-park} entrance in [Fuchsia City]{location:fuchsia-city}."
 76,5,"Pendant 200 pas, empêche les rencontres sauvages de niveau inférieur au Pokémon en tête de votre équipe.","Utilisé en dehors d'un combat 
 :   Le dresseur passe les rencontres avec les Pokémon sauvages d'un niveau inférieur à celui du Pokémon en tête d'équipe. Cet effet prend fin après que le dresseur marche 200 pas."
 76,9,"For 200 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
@@ -423,37 +423,37 @@ In HeartGold and SoulSilver, trade one for a []{item:durin-berry}, a []{item:hon
 77,9,"For 250 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 250 steps."
 78,5,Transporte l'utilisateur à l'entrée extérieure d'une grotte.,"Utilisé en dehors d'un combat
-:   Transporte le dresseur à l'entrée du dernier donjon visité.  Ne peut pas être utilisé à l'extérieur, dans les bâtiments, ou dans le []{location:distortion-world}, []{location:sinnoh-hall-of-origin-1}, []{location:spear-pillar}, ou []{location:turnback-cave}."
+:   Transporte le dresseur à l'entrée du dernier donjon visité.  Ne peut pas être utilisé à l'extérieur, dans les bâtiments, ou dans le [Monde Distorsion]{location:distortion-world}, [Salle Originelle]{location:sinnoh-hall-of-origin-1}, [Colonnes Lances]{location:spear-pillar}, ou [Grotte Retour]{location:turnback-cave}."
 78,9,Transports user to the outside entrance of a cave.,"Used outside of battle
-:   Transports the trainer to the last-entered dungeon entrance.  Cannot be used outside, in buildings, or in []{location:distortion-world}, []{location:sinnoh-hall-of-origin-1}, []{location:spear-pillar}, or []{location:turnback-cave}."
+:   Transports the trainer to the last-entered dungeon entrance.  Cannot be used outside, in buildings, or in [Distortion World]{location:distortion-world}, [Hall Of Origin]{location:sinnoh-hall-of-origin-1}, [Spear Pillar]{location:spear-pillar}, or [Turnback Cave]{location:turnback-cave}."
 79,5,"Pendant 100 pas, empêche les rencontres sauvages de niveau inférieur au Pokémon en tête de votre équipe.","Utilisé en dehors d'un combat
 :   Le dresseur passe les rencontres avec les Pokémon sauvages d'un niveau inférieur à celui du Pokémon en tête d'équipe. Cet effet prend fin après que le dresseur marche 100 pas."
 79,9,"For 100 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 100 steps."
 80,5,"Fait évoluer un Doudouvet en Farfaduvet, un Ortide en Joliflor, un Chlorobule en Farfaduvet ou un Tournegrin en Héliatronc.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:cottonee} en []{pokemon:whimsicott}, un []{pokemon:gloom} en []{pokemon:bellossom}, un []{pokemon:petilil} en []{pokemon:lilligant}, ou un []{pokemon:sunkern} en []{pokemon:sunflora}."
+:   Fait évoluer un [Doudouvet]{pokemon:cottonee} en [Farfaduvet]{pokemon:whimsicott}, un [Marshadow]{pokemon:gloom} en [Joliflor]{pokemon:bellossom}, un [Chlorobule]{pokemon:petilil} en [Fragilady]{pokemon:lilligant}, ou un [Tournegrin]{pokemon:sunkern} en [Héliatronc]{pokemon:sunflora}."
 80,9,"Evolves a Cottonee into Whimsicott, a Gloom into Bellossom, a Petilil into Lilligant, or a Sunkern into Sunflora.","Used on a party Pokémon
-:   Evolves a []{pokemon:cottonee} into []{pokemon:whimsicott}, a []{pokemon:gloom} into []{pokemon:bellossom}, a []{pokemon:petilil} into []{pokemon:lilligant}, or a []{pokemon:sunkern} into []{pokemon:sunflora}."
+:   Evolves a [Cottonee]{pokemon:cottonee} into [Whimsicott]{pokemon:whimsicott}, a [Gloom]{pokemon:gloom} into [Bellossom]{pokemon:bellossom}, a [Petilil]{pokemon:petilil} into [Lilligant]{pokemon:lilligant}, or a [Sunkern]{pokemon:sunkern} into [Sunflora]{pokemon:sunflora}."
 81,5,"Fait évoluer un Mélofée en Mélodelfe, un Rondoudou en Grodoudou, un Munna en Mushana, un Nidorina en Nidoqueen, un Nidorino en Nidoking, ou un Skitty en Delcatty.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:clefairy} en []{pokemon:clefable}, un []{pokemon:jigglypuff} en []{pokemon:wigglytuff}, un []{pokemon:munna} en []{pokemon:musharna}, un []{pokemon:nidorina} en []{pokemon:nidoqueen}, un []{pokemon:nidorino} en []{pokemon:nidoking}, ou un []{pokemon:skitty} en []{pokemon:delcatty}."
+:   Fait évoluer un [Mélofée]{pokemon:clefairy} en [Mélodelfe]{pokemon:clefable}, un [Rondoudou]{pokemon:jigglypuff} en [Grodoudou]{pokemon:wigglytuff}, un [Munna]{pokemon:munna} en [Mushana]{pokemon:musharna}, un [Nidorina]{pokemon:nidorina} en [Nidoqueen]{pokemon:nidoqueen}, un [Nidorino]{pokemon:nidorino} en [Nidoking]{pokemon:nidoking}, ou un [Skitty]{pokemon:skitty} en [Delcatty]{pokemon:delcatty}."
 81,9,"Evolves a Clefairy into Clefable, a Jigglypuff into Wigglytuff, a Munna into Musharna, a Nidorina into Nidoqueen, a Nidorino into Nidoking, or a Skitty into Delcatty.","Used on a party Pokémon
-:   Evolves a []{pokemon:clefairy} into []{pokemon:clefable}, a []{pokemon:jigglypuff} into []{pokemon:wigglytuff}, a []{pokemon:munna} into []{pokemon:musharna}, a []{pokemon:nidorina} into []{pokemon:nidoqueen}, a []{pokemon:nidorino} into []{pokemon:nidoking}, or a []{pokemon:skitty} into []{pokemon:delcatty}."
+:   Evolves a [Clefairy]{pokemon:clefairy} into [Clefable]{pokemon:clefable}, a [Jigglypuff]{pokemon:jigglypuff} into [Wigglytuff]{pokemon:wigglytuff}, a [Munna]{pokemon:munna} into [Musharna]{pokemon:musharna}, a [Nidorina]{pokemon:nidorina} into [Nidoqueen]{pokemon:nidoqueen}, a [Nidorino]{pokemon:nidorino} into [Nidoking]{pokemon:nidoking}, or a [Skitty]{pokemon:skitty} into [Delcatty]{pokemon:delcatty}."
 82,5,"Fait évoluer un Évoli en Pyroli, un Caninos en Arcanin, un Flamajou en Flamoutan, ou un Goupix en Feunard.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:eevee} en []{pokemon:flareon}, un []{pokemon:growlithe} en []{pokemon:arcanine}, un []{pokemon:pansear} en []{pokemon:simisear}, ou un []{pokemon:vulpix} en []{pokemon:ninetales}."
+:   Fait évoluer un [Évoli]{pokemon:eevee} en [Pyroli]{pokemon:flareon}, un [Caninos]{pokemon:growlithe} en [Arcanin]{pokemon:arcanine}, un [Flamajou]{pokemon:pansear} en [Flamoutan]{pokemon:simisear}, ou un [Goupix]{pokemon:vulpix} en [Feunard]{pokemon:ninetales}."
 82,9,"Evolves an Eevee into Flareon, a Growlithe into Arcanine, a Pansear into Simisear, or a Vulpix into Ninetales.","Used on a party Pokémon
-:   Evolves an []{pokemon:eevee} into []{pokemon:flareon}, a []{pokemon:growlithe} into []{pokemon:arcanine}, a []{pokemon:pansear} into []{pokemon:simisear}, or a []{pokemon:vulpix} into []{pokemon:ninetales}."
+:   Evolves an [Eevee]{pokemon:eevee} into [Flareon]{pokemon:flareon}, a [Growlithe]{pokemon:growlithe} into [Arcanine]{pokemon:arcanine}, a [Pansear]{pokemon:pansear} into [Simisear]{pokemon:simisear}, or a [Vulpix]{pokemon:vulpix} into [Ninetales]{pokemon:ninetales}."
 83,5,"Fait évoluer un Lampéroie en Ohmassacre, un Évoli en Voltali, ou un Pikachu en Raichu.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:eelektrik} en []{pokemon:eelektross}, un []{pokemon:eevee} en []{pokemon:jolteon}, ou un []{pokemon:pikachu} en []{pokemon:raichu}."
+:   Fait évoluer un [Lampéroie]{pokemon:eelektrik} en [Ohmassacre]{pokemon:eelektross}, un [Évoli]{pokemon:eevee} en [Voltali]{pokemon:jolteon}, ou un [Pikachu]{pokemon:pikachu} en [Raichu]{pokemon:raichu}."
 83,9,"Evolves an Eelektrik into Eelektross, an Eevee into Jolteon, or a Pikachu into Raichu.","Used on a party Pokémon
-:   Evolves an []{pokemon:eelektrik} into []{pokemon:eelektross}, an []{pokemon:eevee} into []{pokemon:jolteon}, or a []{pokemon:pikachu} into []{pokemon:raichu}."
+:   Evolves an [Eelektrik]{pokemon:eelektrik} into [Eelektross]{pokemon:eelektross}, an [Eevee]{pokemon:eevee} into [Jolteon]{pokemon:jolteon}, or a [Pikachu]{pokemon:pikachu} into [Raichu]{pokemon:raichu}."
 84,5,"Fait évoluer un Évoli en Aquali, un Lombre en Ludicolo, un Flotajou en Flotoutan, un Têtarte en Tartard, un Kokiyas en Crustabri, ou un Stari en Staross.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:eevee} en []{pokemon:vaporeon}, un []{pokemon:lombre} en []{pokemon:ludicolo}, un []{pokemon:panpour} en []{pokemon:simipour}, un []{pokemon:poliwhirl} en []{pokemon:poliwrath}, un []{pokemon:shellder} en []{pokemon:cloyster}, ou un []{pokemon:staryu} en []{pokemon:starmie}."
+:   Fait évoluer un [Évoli]{pokemon:eevee} en [Aquali]{pokemon:vaporeon}, un [Lombre]{pokemon:lombre} en [Ludicolo]{pokemon:ludicolo}, un [Flotajou]{pokemon:panpour} en [Flotoutan]{pokemon:simipour}, un [Têtarte]{pokemon:poliwhirl} en [Tartard]{pokemon:poliwrath}, un [Kokiyas]{pokemon:shellder} en [Crustabri]{pokemon:cloyster}, ou un [Stari]{pokemon:staryu} en [Staross]{pokemon:starmie}."
 84,9,"Evolves an Eevee into Vaporeon, a Lombre into Ludicolo, a Panpour into Simipour, a Poliwhirl into Poliwrath, a Shellder into Cloyster, or a Staryu into Starmie.","Used on a party Pokémon
-:   Evolves an []{pokemon:eevee} into []{pokemon:vaporeon}, a []{pokemon:lombre} into []{pokemon:ludicolo}, a []{pokemon:panpour} into []{pokemon:simipour}, a []{pokemon:poliwhirl} into []{pokemon:poliwrath}, a []{pokemon:shellder} into []{pokemon:cloyster}, or a []{pokemon:staryu} into []{pokemon:starmie}."
+:   Evolves an [Eevee]{pokemon:eevee} into [Vaporeon]{pokemon:vaporeon}, a [Lombre]{pokemon:lombre} into [Ludicolo]{pokemon:ludicolo}, a [Panpour]{pokemon:panpour} into [Simipour]{pokemon:simipour}, a [Poliwhirl]{pokemon:poliwhirl} into [Poliwrath]{pokemon:poliwrath}, a [Shellder]{pokemon:shellder} into [Cloyster]{pokemon:cloyster}, or a [Staryu]{pokemon:staryu} into [Starmie]{pokemon:starmie}."
 85,5,"Fait évoluer un Noeunoeuf en Noadkoko, un Ortide en Rafflesia, un Pifeuil en Tengalice, un Feuillajou en Feuiloutan, ou un Boustiflor en Empiflor.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:exeggcute} en []{pokemon:exeggutor}, un []{pokemon:gloom} en []{pokemon:vileplume}, un []{pokemon:nuzleaf} en []{pokemon:shiftry}, un []{pokemon:pansage} en []{pokemon:simisage}, ou un []{pokemon:weepinbell} en []{pokemon:victreebel}."
+:   Fait évoluer un [Noeunoeuf]{pokemon:exeggcute} en [Noadkoko]{pokemon:exeggutor}, un [Marshadow]{pokemon:gloom} en [Rafflesia]{pokemon:vileplume}, un [Pifeuil]{pokemon:nuzleaf} en [Tengalice]{pokemon:shiftry}, un [Feuillajou]{pokemon:pansage} en [Feuiloutan]{pokemon:simisage}, ou un [Boustiflor]{pokemon:weepinbell} en [Empiflor]{pokemon:victreebel}."
 85,9,"Evolves an Exeggcute into Exeggutor, a Gloom into Vileplume, a Nuzleaf into Shiftry, a Pansage into Simisage, or a Weepinbell into Victreebel.","Used on a party Pokémon
-:   Evolves an []{pokemon:exeggcute} into []{pokemon:exeggutor}, a []{pokemon:gloom} into []{pokemon:vileplume}, a []{pokemon:nuzleaf} into []{pokemon:shiftry}, a []{pokemon:pansage} into []{pokemon:simisage}, or a []{pokemon:weepinbell} into []{pokemon:victreebel}."
+:   Evolves an [Exeggcute]{pokemon:exeggcute} into [Exeggutor]{pokemon:exeggutor}, a [Gloom]{pokemon:gloom} into [Vileplume]{pokemon:vileplume}, a [Nuzleaf]{pokemon:nuzleaf} into [Shiftry]{pokemon:shiftry}, a [Pansage]{pokemon:pansage} into [Simisage]{pokemon:simisage}, or a [Weepinbell]{pokemon:weepinbell} into [Victreebel]{pokemon:victreebel}."
 86,5,"Rouge Feu et Vert Feuille : Échange deux pour réapprendre des capacités apprises par montée de niveau. À vendre pour 250 Pokédollars, ou à une servante pour 500 Pokédollars",Déchet.
 86,9,"Fire Red and Leaf Green: Trade two for prior Level-up moves. Sell for 250 Pokédollars, or to Hungry Maid for 500 Pokédollars.",Vendor trash.
 87,5,"Rouge Feu et Vert Feuille : Échange pour réapprendre des capacités apprises par montée de niveau. À vendre pour 2500 Pokédollars, ou à une servante pour 5000 Pokédollars",Déchet.
@@ -468,8 +468,8 @@ In HeartGold and SoulSilver, trade one for a []{item:durin-berry}, a []{item:hon
 91,9,"Platinum: Trade for one of each color Shard. Black and White: Trade for PP Up. Sell for 4900 Pokédollars, or to Ore Collector for 9800 Pokédollars.",Vendor trash.
 92,5,"À vendre pour 5000 Pokédollars, ou au collectionneur d'objets pour 10000 Pokédollars.",Déchet.
 92,9,"Sell for 5000 Pokédollars, or to Ore Collector for 10000 Pokédollars.",Vendor trash.
-93,5,Aucun effet. Peut être échangé pour réapprendre des capacités apprises par montée de niveau.,En échanger un au Maître des Capacités près du port à []{location:pastoria-city} ou à l'Effaceur de Capacités à []{location:blackthorn-city} pour apprendre une capacité anciennement apprise par montée de niveau à un Pokémon de l'équipe.
-93,9,No effect. Can be traded for prior Level-up moves.,Trade one to the Move Relearner near the shore in []{location:pastoria-city} or with the Move Deleter in []{location:blackthorn-city} to teach one party Pokémon a prior level-up move.
+93,5,Aucun effet. Peut être échangé pour réapprendre des capacités apprises par montée de niveau.,En échanger un au Maître des Capacités près du port à [Verchamps]{location:pastoria-city} ou à l'Effaceur de Capacités à [Ebènelle]{location:blackthorn-city} pour apprendre une capacité anciennement apprise par montée de niveau à un Pokémon de l'équipe.
+93,9,No effect. Can be traded for prior Level-up moves.,Trade one to the Move Relearner near the shore in [Pastoria City]{location:pastoria-city} or with the Move Deleter in [Blackthorn City]{location:blackthorn-city} to teach one party Pokémon a prior level-up move.
 94,5,,"Utilisé en dehors d'un combat
 : déclenche immédiatement un combat pour un Pokémon sauvage, à condition que le dresseur se trouve dans un endroit où vivent des Pokémon sauvages—i.e., dans les hautes herbes, dans une grotte ou en surfant.
 
@@ -498,48 +498,48 @@ Can be smeared on sweet-smelling trees to attract tree-dwelling Pokémon after s
 "
 98,9,Berries regrow from dead plants an increased number of times.,"Used on a path of soil
 :   Plant will regrow after dying 25% more times."
-99,5,Peut être ressuscité en Lilia.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:lileep}.
-99,9,Can be revived into a Lileep.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:lileep}.
-100,5,Peut être ressuscité en Anorith.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:anorith}.
-100,9,Can be revived into an Anorith.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:anorith}.
-101,5,Peut être ressuscité en Amonita.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:omanyte}.
-101,9,Can be revived into an Omanyte.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:omanyte}.
-102,5,Peut être ressuscité en Kabuto.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:kabuto}.
-102,9,Can be revived into a Kabuto.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:kabuto}.
-103,5,Peut être ressuscité en Ptéra.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:aerodactyl}.
-103,9,Can be revived into an Aerodactyl.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive an []{pokemon:aerodactyl}.
-104,5,Peut être ressuscité en Dinoclier.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:shieldon}.
-104,9,Can be revived into a Shieldon.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:shieldon}.
-105,5,Peut être ressuscité en Kranidos.,À donner au scientifique dans le []{location:mining-museum} à []{location:oreburgh-city} ou au Musée des Sciences à []{location:pewter-city} pour recevoir un []{pokemon:cranidos}.
-105,9,Can be revived into a Cranidos.,Give to a scientist in the []{location:mining-museum} in []{location:oreburgh-city} or the Museum of Science in []{location:pewter-city} to receive a []{pokemon:cranidos}.
+99,5,Peut être ressuscité en Lilia.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Lilia]{pokemon:lileep}.
+99,9,Can be revived into a Lileep.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive a [Lileep]{pokemon:lileep}.
+100,5,Peut être ressuscité en Anorith.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Anorith]{pokemon:anorith}.
+100,9,Can be revived into an Anorith.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive an [Anorith]{pokemon:anorith}.
+101,5,Peut être ressuscité en Amonita.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Amonita]{pokemon:omanyte}.
+101,9,Can be revived into an Omanyte.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive an [Omanyte]{pokemon:omanyte}.
+102,5,Peut être ressuscité en Kabuto.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Kabuto]{pokemon:kabuto}.
+102,9,Can be revived into a Kabuto.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive a [Kabuto]{pokemon:kabuto}.
+103,5,Peut être ressuscité en Ptéra.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Ptéra]{pokemon:aerodactyl}.
+103,9,Can be revived into an Aerodactyl.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive an [Aerodactyl]{pokemon:aerodactyl}.
+104,5,Peut être ressuscité en Dinoclier.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Dinoclier]{pokemon:shieldon}.
+104,9,Can be revived into a Shieldon.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive a [Shieldon]{pokemon:shieldon}.
+105,5,Peut être ressuscité en Kranidos.,À donner au scientifique dans le [Musée Minier]{location:mining-museum} à [Charbourg]{location:oreburgh-city} ou au Musée des Sciences à [Argenta]{location:pewter-city} pour recevoir un [Kranidos]{pokemon:cranidos}.
+105,9,Can be revived into a Cranidos.,Give to a scientist in the [Mining Museum]{location:mining-museum} in [Oreburgh City]{location:oreburgh-city} or the Museum of Science in [Pewter City]{location:pewter-city} to receive a [Cranidos]{pokemon:cranidos}.
 106,5,"À vendre pour 5000 Pokédollars, ou à un collectionneur pour 10000 Pokédollars.",Déchet.
 106,9,"Sell for 5000 Pokédollars, or to Bone Man for 10000 Pokédollars.",Vendor trash.
 107,5,"Fait évoluer un Chinchidou en Pashmilla, un Rosélia en Roserade, ou un Togetic en Togekiss.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:minccino} en []{pokemon:cinccino}, un []{pokemon:roselia} en []{pokemon:roserade}, ou un []{pokemon:togetic} en []{pokemon:togekiss}."
+:   Fait évoluer un [Chinchidou]{pokemon:minccino} en [Pashmilla]{pokemon:cinccino}, un [Rosélia]{pokemon:roselia} en [Roserade]{pokemon:roserade}, ou un [Togetic]{pokemon:togetic} en [Togekiss]{pokemon:togekiss}."
 107,9,"Evolves a Minccino into Cinccino, a Roselia into Roserade, or a Togetic into Togekiss.","Used on a party Pokémon
-:   Evolves a []{pokemon:minccino} into []{pokemon:cinccino}, a []{pokemon:roselia} into []{pokemon:roserade}, or a []{pokemon:togetic} into []{pokemon:togekiss}."
+:   Evolves a [Minccino]{pokemon:minccino} into [Cinccino]{pokemon:cinccino}, a [Roselia]{pokemon:roselia} into [Roserade]{pokemon:roserade}, or a [Togetic]{pokemon:togetic} into [Togekiss]{pokemon:togekiss}."
 108,5,"Fait évoluer un Mélancolux en Lugulabre, un Feuforêve en Magirêve, ou un Cornèbre en Corboss.","Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:lampent} en []{pokemon:chandelure}, un []{pokemon:misdreavus} en []{pokemon:mismagius}, ou un []{pokemon:murkrow} en []{pokemon:honchkrow}."
+:   Fait évoluer un [Mélancolux]{pokemon:lampent} en [Lugulabre]{pokemon:chandelure}, un [Feuforêve]{pokemon:misdreavus} en [Magirêve]{pokemon:mismagius}, ou un [Cornèbre]{pokemon:murkrow} en [Corboss]{pokemon:honchkrow}."
 108,9,"Evolves a Lampent into Chandelure, a Misdreavus into Mismagius, or a Murkrow into Honchkrow.","Used on a party Pokémon
-:   Evolves a []{pokemon:lampent} into []{pokemon:chandelure}, a []{pokemon:misdreavus} into []{pokemon:mismagius}, or a []{pokemon:murkrow} into []{pokemon:honchkrow}."
+:   Evolves a [Lampent]{pokemon:lampent} into [Chandelure]{pokemon:chandelure}, a [Misdreavus]{pokemon:misdreavus} into [Mismagius]{pokemon:mismagius}, or a [Murkrow]{pokemon:murkrow} into [Honchkrow]{pokemon:honchkrow}."
 109,5,Fait évoluer un Kirlia mâle en Gallame ou un Stalgamin femelle en Momartik.,"Utilisé sur un Pokémon de l'équipe
-:   Fait évoluer un []{pokemon:kirlia} mâle en []{pokemon:gallade} ou un []{pokemon:snorunt} femelle en []{pokemon:froslass}."
+:   Fait évoluer un [Kirlia]{pokemon:kirlia} mâle en [Gallame]{pokemon:gallade} ou un [Stalgamin]{pokemon:snorunt} femelle en [Momartik]{pokemon:froslass}."
 109,9,Evolves a male Kirlia into Gallade or a female Snorunt into Froslass.,"Used on a party Pokémon
-:   Evolves a male []{pokemon:kirlia} into []{pokemon:gallade} or a female []{pokemon:snorunt} into []{pokemon:froslass}."
-110,5,Montée de niveau pendant le Jour sur un Ptiravi : Le porteur évolue en Leveinard.,"Tenu par []{pokemon:happiny}
-:   Le porteur évolue en []{pokemon:chansey} quand il monte de niveau en journée."
-110,9,Level-up during Day on a Happiny: Holder evolves into Chansey.,"Held by []{pokemon:happiny}
-:   Holder evolves into []{pokemon:chansey} when it levels up during the daytime."
-111,5,À utiliser sur la tour de la Route 209 pour rencontrer Spiritomb si vous avez au moins 32 salutations dans le Souterrain.,"À placer sur la tour sur la []{location:sinnoh-route-209}.  Vérifie la pierre pour rencontrer un []{pokemon:spiritomb}, quand la carte de statut du Souterrain de Sinnoh du dresseur compte au moins 32 salutations."
-111,9,Use on the tower on Route 209 to encounter Spiritomb if you have at least 32 Underground greetings.,"Place in the tower on []{location:sinnoh-route-209}.  Check the stone to encounter a []{pokemon:spiritomb}, as long as the trainer’s Underground status card counts at least 32 greetings."
-112,5,Booste les dégâts des attaques Dragon et Acier de Dialga de 20%.,"Tenu par []{pokemon:dialga}
-:   Les capacités de type []{type:dragon} et []{type:steel} du porteur ont leur puissance augmentée de 20%."
-112,9,Boosts the damage from Dialga’s Dragon-type and Steel-type moves by 20%.,"Held by []{pokemon:dialga}
-:   Holder’s []{type:dragon}- and []{type:steel}-type moves have 1.2× their usual power."
-113,5,Booste les dégâts des attaques Dragon et Eau de Palkia de 20%.,"Tenu par []{pokemon:palkia}
-:   Les capacités de type []{type:dragon} et []{type:water} du porteur ont leur puissance augmentée de 20%."
-113,9,Boosts the damage from Palkia’s Dragon-type and Water-type moves by 20%.,"Held by []{pokemon:palkia}
-:   Holder’s []{type:dragon}- and []{type:water}-type moves have 1.2× their usual power."
+:   Evolves a male [Kirlia]{pokemon:kirlia} into [Gallade]{pokemon:gallade} or a female [Snorunt]{pokemon:snorunt} into [Froslass]{pokemon:froslass}."
+110,5,Montée de niveau pendant le Jour sur un Ptiravi : Le porteur évolue en Leveinard.,"Tenu par [Ptiravi]{pokemon:happiny}
+:   Le porteur évolue en [Leveinard]{pokemon:chansey} quand il monte de niveau en journée."
+110,9,Level-up during Day on a Happiny: Holder evolves into Chansey.,"Held by [Happiny]{pokemon:happiny}
+:   Holder evolves into [Chansey]{pokemon:chansey} when it levels up during the daytime."
+111,5,À utiliser sur la tour de la Route 209 pour rencontrer Spiritomb si vous avez au moins 32 salutations dans le Souterrain.,"À placer sur la tour sur la [Route 209]{location:sinnoh-route-209}.  Vérifie la pierre pour rencontrer un [Spiritomb]{pokemon:spiritomb}, quand la carte de statut du Souterrain de Sinnoh du dresseur compte au moins 32 salutations."
+111,9,Use on the tower on Route 209 to encounter Spiritomb if you have at least 32 Underground greetings.,"Place in the tower on [Route 209]{location:sinnoh-route-209}.  Check the stone to encounter a [Spiritomb]{pokemon:spiritomb}, as long as the trainer’s Underground status card counts at least 32 greetings."
+112,5,Booste les dégâts des attaques Dragon et Acier de Dialga de 20%.,"Tenu par [Dialga]{pokemon:dialga}
+:   Les capacités de type [Dragon]{type:dragon} et [Acier]{type:steel} du porteur ont leur puissance augmentée de 20%."
+112,9,Boosts the damage from Dialga’s Dragon-type and Steel-type moves by 20%.,"Held by [Dialga]{pokemon:dialga}
+:   Holder’s [Dragon]{type:dragon}- and [Steel]{type:steel}-type moves have 1.2× their usual power."
+113,5,Booste les dégâts des attaques Dragon et Eau de Palkia de 20%.,"Tenu par [Palkia]{pokemon:palkia}
+:   Les capacités de type [Dragon]{type:dragon} et [Eau]{type:water} du porteur ont leur puissance augmentée de 20%."
+113,9,Boosts the damage from Palkia’s Dragon-type and Water-type moves by 20%.,"Held by [Palkia]{pokemon:palkia}
+:   Holder’s [Dragon]{type:dragon}- and [Water]{type:water}-type moves have 1.2× their usual power."
 114,5,Permet à un Dresseur d'écrire un message et de l'envoyer via un échange Pokémon.,"Utilisé pour envoyer des messages courts aux autres joueurs via un échange Pokémon.  Les dresseurs peuvent composer un message à partir d'une liste finie de mot en donnant cet objet à un Pokémon.  Une fois prise et lue, un message peut être effacé et cet objet peut être réutilisé, ou le message peut être sauvegardé dans le PC du dresseur.
 
 Tenu
@@ -809,73 +809,73 @@ Used on a party Pokémon
 160,5,Utilisé pour créer des Pokéblocs et Poffins.,Aucun effet; seulement utilise pour planter et cuisiner.
 160,9,Used for creating PokéBlocks and Poffins.,No effect; only useful for planting and cooking.
 161,5,Tenu:  Consommé quand touché par une attaque Feu super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:fire}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Feu]{type:fire}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 161,9,Held: Consumed when struck by a super-effective Fire-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:fire}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Fire]{type:fire}-type damage, it consumes this item to halve the amount of damage taken."
 162,5,Tenu:  Consommé quand touché par une attaque Eau super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:water}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Eau]{type:water}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 162,9,Held: Consumed when struck by a super-effective Water-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:water}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Water]{type:water}-type damage, it consumes this item to halve the amount of damage taken."
 163,5,Tenu:  Consommé quand touché par une attaque Électrik super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:electric}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Électrik]{type:electric}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 163,9,Held: Consumed when struck by a super-effective Electric-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:electric}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Electric]{type:electric}-type damage, it consumes this item to halve the amount of damage taken."
 164,5,Tenu:  Consommé quand touché par une attaque Plante super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:grass}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Plante]{type:grass}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 164,9,Held: Consumed when struck by a super-effective Grass-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:grass}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Grass]{type:grass}-type damage, it consumes this item to halve the amount of damage taken."
 165,5,Tenu:  Consommé quand touché par une attaque Glace super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:ice}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Glace]{type:ice}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 165,9,Held: Consumed when struck by a super-effective Ice-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:ice}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Ice]{type:ice}-type damage, it consumes this item to halve the amount of damage taken."
 166,5,Tenu:  Consommé quand touché par une attaque Combat super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:fighting}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Combat]{type:fighting}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 166,9,Held: Consumed when struck by a super-effective Fighting-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:fighting}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Fighting]{type:fighting}-type damage, it consumes this item to halve the amount of damage taken."
 167,5,Tenu:  Consommé quand touché par une attaque Poison super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:poison}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Poison]{type:poison}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 167,9,Held: Consumed when struck by a super-effective Poison-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:poison}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Poison]{type:poison}-type damage, it consumes this item to halve the amount of damage taken."
 168,5,Tenu:  Consommé quand touché par une attaque Sol super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:ground}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Sol]{type:ground}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 168,9,Held: Consumed when struck by a super-effective Ground-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:ground}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Ground]{type:ground}-type damage, it consumes this item to halve the amount of damage taken."
 169,5,Tenu:  Consommé quand touché par une attaque Vol super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:flying}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Vol]{type:flying}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 169,9,Held: Consumed when struck by a super-effective Flying-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:flying}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Flying]{type:flying}-type damage, it consumes this item to halve the amount of damage taken."
 170,5,Tenu:  Consommé quand touché par une attaque Psy super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:psychic}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Psy]{type:psychic}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 170,9,Held: Consumed when struck by a super-effective Psychic-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:psychic}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Psychic]{type:psychic}-type damage, it consumes this item to halve the amount of damage taken."
 171,5,Tenu:  Consommé quand touché par une attaque Insecte super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:bug}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Insecte]{type:bug}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 171,9,Held: Consumed when struck by a super-effective Bug-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:bug}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Bug]{type:bug}-type damage, it consumes this item to halve the amount of damage taken."
 172,5,Tenu:  Consommé quand touché par une attaque Roche super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:rock}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Roche]{type:rock}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 172,9,Held: Consumed when struck by a super-effective Rock-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:rock}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Rock]{type:rock}-type damage, it consumes this item to halve the amount of damage taken."
 173,5,Tenu:  Consommé quand touché par une attaque Spectre super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:ghost}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Spectre]{type:ghost}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 173,9,Held: Consumed when struck by a super-effective Ghost-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:ghost}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Ghost]{type:ghost}-type damage, it consumes this item to halve the amount of damage taken."
 174,5,Tenu:  Consommé quand touché par une attaque Dragon super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:dragon}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Dragon]{type:dragon}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 174,9,Held: Consumed when struck by a super-effective Dragon-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:dragon}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Dragon]{type:dragon}-type damage, it consumes this item to halve the amount of damage taken."
 175,5,Tenu:  Consommé quand touché par une attaque Ténèbres super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:dark}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Ténèbres]{type:dark}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 175,9,Held: Consumed when struck by a super-effective Dark-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:dark}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Dark]{type:dark}-type damage, it consumes this item to halve the amount of damage taken."
 176,5,Tenu:  Consommé quand touché par une attaque Acier super efficace pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type []{type:steel}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts [super efficaces]{mechanic:super-effective} de type [Acier]{type:steel}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 176,9,Held: Consumed when struck by a super-effective Steel-type attack to halve the damage.,"Held in battle
-:   When the holder would take [super-effective]{mechanic:super-effective} []{type:steel}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [super-effective]{mechanic:super-effective} [Steel]{type:steel}-type damage, it consumes this item to halve the amount of damage taken."
 177,5,Tenu: Consommé quand touché par une attaque Normal pour diviser par deux les dégâts subis.,"Tenu au combat
-:   Quand le porteur devrait subir des dégâts de type []{type:normal}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
+:   Quand le porteur devrait subir des dégâts de type [Normal]{type:normal}, cela consomme cet objet pour diviser par deux la quantité de dégâts subis."
 177,9,Held: Consumed when struck by a Normal-type attack to halve the damage.,"Held in battle
-:   When the holder would take []{type:normal}-type damage, it consumes this item to halve the amount of damage taken."
+:   When the holder would take [Normal]{type:normal}-type damage, it consumes this item to halve the amount of damage taken."
 178,5,Tenu: Consommé à 1/4 des PV max pour booster l'Attaque.,"Tenu au combat
 :   Quand le porteur a 1/4 de ses [PV]{mechanic:hp} max restants ou moins, cela consomme cet objet pour [augmenter]{mechanic:raise} son [Attaque]{mechanic:attack} d'un niveau."
 178,9,Held: Consumed at 1/4 max HP to boost Attack.,"Held in battle
@@ -946,16 +946,16 @@ Held in battle
 :   L'[expérience]{mechanic:experience} est séparée entre deux groupes: Les Pokémon qui ont participé au combat, et les Pokémon qui portent cet objet.  Chaque Pokémon gagne de l’expérience comme s'il avait combattu seul, divisé par le nombre de Pokémon dans son groupe, ensuite divisé par le nombre de groupes. Les Pokémon portant cet objet qui ont aussi participé au combat gagne l'expérience en double.
 
     Les Pokémon [KO]{mechanic:fainted} ne gagnent jamais d'expérience, et les groupes vides sont 
-ignorés; ainsi, si un Pokémon seul qui porte cet objet et que le seul Pokémon qui a combattu est mis KO par []{move:explosion}, le porteur gagnera toute l'expérience."
+ignorés; ainsi, si un Pokémon seul qui porte cet objet et que le seul Pokémon qui a combattu est mis KO par [Explosion]{move:explosion}, le porteur gagnera toute l'expérience."
 193,9,Held: Half the experience from a battle is split between Pokémon holding this item.,"Held
 :   [Experience]{mechanic:experience} is split across two groups: Pokémon who participated in battle, and Pokémon holding this item.  Each Pokémon earns experience as though it had battled alone, divided by the number of Pokémon in its group, then divided by the number of groups. Pokémon holding this item who also participated in battle effectively earn experience twice.
 
     [Fainted]{mechanic:fainted} Pokémon never earn experience, and empty groups are
-ignored; thus, if a single Pokémon is holding this item and the only Pokémon who battled faints from []{move:explosion}, the holder will gain full experience."
+ignored; thus, if a single Pokémon is holding this item and the only Pokémon who battled faints from [Explosion]{move:explosion}, the holder will gain full experience."
 194,5,Tenu: Le porteur a 3/16 (18.75%) de chance d'attaquer en premier.,"Tenu au combat
-:   Quand le porteur tente d'utiliser une capacité, il y a 3/16 chances d'agir en premier parmi les capacités de même [priorité]{mechanic:priority}.  Si plusieurs Pokémon ont cet effet en même temps, la [Vitesse]{mechanic:speed} est utilisée pour départager comme normalement, mais l'effet de []{move:trick-room} est ignoré."
+:   Quand le porteur tente d'utiliser une capacité, il y a 3/16 chances d'agir en premier parmi les capacités de même [priorité]{mechanic:priority}.  Si plusieurs Pokémon ont cet effet en même temps, la [Vitesse]{mechanic:speed} est utilisée pour départager comme normalement, mais l'effet de [Distorsion]{move:trick-room} est ignoré."
 194,9,Held: Holder has a 3/16 (18.75%) chance to move first.,"Held in battle
-:   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same [priority]{mechanic:priority}.  If multiple Pokémon have this effect at the same time, [Speed]{mechanic:speed} is the tie-breaker as normal, but the effect of []{move:trick-room} is ignored."
+:   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same [priority]{mechanic:priority}.  If multiple Pokémon have this effect at the same time, [Speed]{mechanic:speed} is the tie-breaker as normal, but the effect of [Trick Room]{move:trick-room} is ignored."
 195,5,Tenu: Double le bonheur gagné par le porteur.,"Tenu 
 :   Quand le porteur devrait gagner du [bonheur]{mechanic:happiness} pour n'importe quelle raison, il gagne le double de ce montant à la place."
 195,9,Held: Doubles the happiness earned by the holder.,"Held
@@ -968,33 +968,33 @@ ignored; thus, if a single Pokémon is holding this item and the only Pokémon w
 :   Le porteur a 1.5× son [Attaque]{mechanic:attack}.  Quand le porteur tente d'utiliser une capacité, toutes ses autres capacités sont inutilisables jusqu'à ce qu'il quitte le terrain ou perde cet objet.
 
     La restriction prend fin même si cet objet est échangé avec un autre objet Choix
-via []{move:trick} ou []{move:switcheroo}."
+via [Tour de Magie]{move:trick} ou [Passe-Passe]{move:switcheroo}."
 197,9,"Held: Increases Attack by 50%, but restricts the holder to only one move.","Held in battle
 :   Holder has 1.5× its [Attack]{mechanic:attack}.  When the holder attempts to use a move, all its other moves are disabled until it leaves battle or loses this item.
 
     The restriction ends even if this item is swapped for another Choice item
-via []{move:trick} or []{move:switcheroo}."
+via [Trick]{move:trick} or [Switcheroo]{move:switcheroo}."
 198,5,Tenu: Les capacités offensives gagnent 10% de chance d'apeurer la cible. Échange sur un Têtarte: Le porteur évolue en Tarpaud. Échange sur un Ramoloss: Le porteur évolue en Roigada.,"Tenu au combat
 :   Les capacités offensives du porteur ont 10% de chances d'[apeurer]{mechanic:flinch} leur cible.  Cette probabilité s'applique indépendamment à chaque coup d'une capacité multi-coups.
 
     La probabilité de cet objet est tirée indépendamment des effets des autres capacités;
 e.g., une capacité avec 30% de chances d'apeurer normalement aura 37% de chance totale d'apeurer quand utilisée avec cet objet, car 3% du temps, les deux effets s'activent.
 
-Tenu par []{pokemon:poliwhirl} ou []{pokemon:slowbro}
-:   Le porteur évolue en []{pokemon:politoed} ou []{pokemon:slowking}, respectivement, quand échangé."
+Tenu par [Têtarte]{pokemon:poliwhirl} ou [Flagadoss]{pokemon:slowbro}
+:   Le porteur évolue en [Tarpaud]{pokemon:politoed} ou [Roigada]{pokemon:slowking}, respectivement, quand échangé."
 198,9,Held: Damaging moves gain a 10% chance to make their target flinch. Traded on a Poliwhirl: Holder evolves into Politoed. Traded on a Slowpoke: Holder evolves into Slowking.,"Held in battle
 :   Holder’s damaging moves have a 10% chance to make their target [flinch]{mechanic:flinch}.  This chance applies independently to each hit of a multi-hit move.
 
     This item’s chance is rolled independently of any other move effects;
 e.g., a move with a 30% chance to flinch normally will have a 37% total chance to flinch when used with this item, because 3% of the time, both effects activate.
 
-Held by []{pokemon:poliwhirl} or []{pokemon:slowbro}
-:   Holder evolves into []{pokemon:politoed} or []{pokemon:slowking}, respectively, when traded."
+Held by [Poliwhirl]{pokemon:poliwhirl} or [Slowbro]{pokemon:slowbro}
+:   Holder evolves into [Politoed]{pokemon:politoed} or [Slowking]{pokemon:slowking}, respectively, when traded."
 199,5,Tenu: Les capacités de type Insecte du porteur infligent 20% de dégâts supplémentaires.,"Tenu au combat
-:   La puissance des capacités de type []{type:bug} du porteur est augmentée de 20%.
+:   La puissance des capacités de type [Insecte]{type:bug} du porteur est augmentée de 20%.
 "
 199,9,Held: Bug-Type moves from holder do 20% more damage.,"Held in battle
-:   Holder’s []{type:bug}-type moves have 1.2× their power.
+:   Holder’s [Bug]{type:bug}-type moves have 1.2× their power.
 "
 200,5,Tenu: Double l'argent gagné en combat. Ne s'accumule pas avec l'Encens Veine.,"Tenu
 :   Si le porteur a participé à un combat de dresseurs, le dresseur gagne deux fois plus d'argent que normalement.  Cet effet s'applique même si le porteur a été [mis KO]{mechanic:fainted}.
@@ -1539,14 +1539,14 @@ Unused prior to Black and White 2."
 440,9,Grants access to the Team Galactic warehouse in Veilstone City.,Grants access to the Team Galactic warehouse in Veilstone City.
 441,5,Utilisé pour soigner le Pharamp au sommet du Phare d'Oliville.,Requis pour guérir les Psykokwak bloquant la Route 210 de leurs maux de tête chroniques.
 441,9,Used to heal the Ampharos at the top of Olivine Lighthouse.,Required to cure the Psyducks blocking Route 210 of their chronic headaches.
-442,5,"Booste les dégâts des capacités Dragon et Spectre de Giratina de 20%, et le transforme en Forme Originelle.","Tenu par []{pokemon:giratina}
-:   Les capacités []{type:dragon} et []{type:ghost} ont une puissance 1.2× celle de base.
+442,5,"Booste les dégâts des capacités Dragon et Spectre de Giratina de 20%, et le transforme en Forme Originelle.","Tenu par [Giratina]{pokemon:giratina}
+:   Les capacités [Dragon]{type:dragon} et [Spectre]{type:ghost} ont une puissance 1.2× celle de base.
 
     Le porteur est en Forme Originelle.
 
 Cet objet ne peut pas être porté par un autre Pokémon que Giratina.  Quand vous entrez dans la Salle Union ou vous connectez en Wi-Fi, cet objet retourne dans votre sac."
-442,9,"Boosts the damage from Giratina’s Dragon-type and Ghost-type moves by 20%, and transforms it into Origin Forme.","Held by []{pokemon:giratina}
-:   Holder’s []{type:dragon} and []{type:ghost} moves have 1.2× their base power.
+442,9,"Boosts the damage from Giratina’s Dragon-type and Ghost-type moves by 20%, and transforms it into Origin Forme.","Held by [Giratina]{pokemon:giratina}
+:   Holder’s [Dragon]{type:dragon} and [Ghost]{type:ghost} moves have 1.2× their base power.
 
     Holder is in Origin Forme.
 
@@ -1557,30 +1557,30 @@ Stocke les PCo gagnés à la Zone de Combat, et stocke les photos."
 443,9,"Records wireless, Wi-Fi, or Battle Frontier battles, and stores points.","Optionally records wireless, Wi-Fi, and Battle Frontier battles.
 
 Tracks Battle Points earned in the Battle Frontier, and stores commemorative prints."
-444,5,Change un Shaymin non gelé en Forme Céleste le jour.,"Utilisé par le dresseur sur un []{pokemon:shaymin}
+444,5,Change un Shaymin non gelé en Forme Céleste le jour.,"Utilisé par le dresseur sur un [Shaymin]{pokemon:shaymin}
 :   Change le Shaymin cible de la Forme Terrestre à la Forme Céleste.
 
     Cet objet ne peut pas être utilisé sur un Shamin [gelé]{mechanic:freezing} ou la nuit.  Shaymin Forme Céleste reprend la Forme Terreste la nuit, quand gelé, ou en entrant dans un combat link.  Cet objet doit être utilisé à nouveau pour rechanger."
-444,9,Changes an unfrozen Shaymin to Sky Forme in the day.,"Used by trainer on a []{pokemon:shaymin}
+444,9,Changes an unfrozen Shaymin to Sky Forme in the day.,"Used by trainer on a [Shaymin]{pokemon:shaymin}
 :   Changes the target Shaymin from Land Forme to Sky Forme.
 
     This item cannot be used on a [frozen]{mechanic:freezing} Shaymin or at night.  Sky Forme Shaymin will revert to Land Forme overnight, when frozen, and upon entering a link battle.  This item must be used again to change it back."
 445,5,Gén IV: La clé pour la pièce des appareils de Motisma. Gen III: La clé de l'arène de Cramois'Île.,"Utilisé par le dresseur dans le Centre Galactique de Vestigion, au rez-de-chaussée, à gauche de la télévision
-:   Débloque la salle secrète []{pokemon:rotom}, dans laquelle se trouvent cinq appareils permettant de changer la forme de Motisma."
+:   Débloque la salle secrète [Motisma]{pokemon:rotom}, dans laquelle se trouvent cinq appareils permettant de changer la forme de Motisma."
 445,9,Gen IV: The key to Rotom’s appliance room. Gen III: The key to Cinnabar Gym.,"Used by trainer in the Galactic Eterna Building, on the ground floor, to the left of the TV
-:   Unlocks the secret []{pokemon:rotom} room, in which there are five appliances which can change Rotom’s form."
+:   Unlocks the secret [Rotom]{pokemon:rotom} room, in which there are five appliances which can change Rotom’s form."
 446,5,Stocke les Noigrumes.,Stocke les Noigrumes.
 446,9,Holds Apricorns.,Stores Apricorns.
 447,5,Permet la culture portable des baies.,Contient quatre pots portables de terreau adaptés à la culture des baies.
 447,9,Allows portable berry growing.,Contains four portable pots of soil suitable for growing berries.
-448,5,À utiliser sur le Simularbre bloquant le chemin sur la Route 36. Arrose aussi les baies.,"Requis pour arroser les baies dans le []{item:berry-pots}.
+448,5,À utiliser sur le Simularbre bloquant le chemin sur la Route 36. Arrose aussi les baies.,"Requis pour arroser les baies dans le [Plante-Baies]{item:berry-pots}.
 
-Requis pour combattre le []{pokemon:sudowoodo} sur la []{location:johto-route-36}.
+Requis pour combattre le [Simularbre]{pokemon:sudowoodo} sur la [Route 36]{location:johto-route-36}.
 
 Cet objet ne peut pas être utilisé directement depuis le sac."
-448,9,Use on Sudowoodo blocking the path on Route 36. Also waters berries.,"Required to water berries within the []{item:berry-pots}.
+448,9,Use on Sudowoodo blocking the path on Route 36. Also waters berries.,"Required to water berries within the [Berry Pots]{item:berry-pots}.
 
-Required to battle the []{pokemon:sudowoodo} on []{location:johto-route-36}.
+Required to battle the [Sudowoodo]{pokemon:sudowoodo} on [Route 36]{location:johto-route-36}.
 
 This item cannot be directly used from the bag."
 449,5,3× plus efficace en pêchant. Fait à partir de Noigrume Blu.,"Utilisé par le dresseur en combat
@@ -1610,11 +1610,11 @@ Si le niveau du Pokémon du dresseur est plus grand de:
 451,5,4× plus efficace sur les familles de Pokémon qui contiennent une évolution avec une Pierre Lune. Fait à partir de Noigrume Jne.,"Utilisé par un dresseur en combat 
 :   Tente de [capturer]{mechanic:catch} un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
       
-Si le Pokémon sauvage est un []{pokemon:clefairy}, []{pokemon:nidoran-m}, []{pokemon:nidoran-f}, []{pokemon:jigglypuff}, []{pokemon:skitty}, ou une de leurs évolutions, le Pokémon sauvage a 4× son taux de capture."
+Si le Pokémon sauvage est un [Mélofée]{pokemon:clefairy}, [Nidoran♂]{pokemon:nidoran-m}, [Nidoran♀]{pokemon:nidoran-f}, [Rondoudou]{pokemon:jigglypuff}, [Skitty]{pokemon:skitty}, ou une de leurs évolutions, le Pokémon sauvage a 4× son taux de capture."
 451,9,4× effectiveness on familes of Pokémon with a Moon Stone evolution. Made from Ylw Apricorn.,"Used by trainer in battle
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
-    If the wild Pokémon is a []{pokemon:clefairy}, []{pokemon:nidoran-m}, []{pokemon:nidoran-f}, []{pokemon:jigglypuff}, []{pokemon:skitty}, or any evolution thereof, the wild Pokémon has 4× its catch rate."
+    If the wild Pokémon is a [Clefairy]{pokemon:clefairy}, [Nidoran♂]{pokemon:nidoran-m}, [Nidoran♀]{pokemon:nidoran-f}, [Jigglypuff]{pokemon:jigglypuff}, [Skitty]{pokemon:skitty}, or any evolution thereof, the wild Pokémon has 4× its catch rate."
 452,5,A un bonus ou une pénalité fixe sur le taux de capture selon la classe de poids de la cible. Fait à partir de Noigrume Noi.,"Utilisé par un dresseur en combat 
 :   Tente de [capturer]{mechanic:catch} un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
 
@@ -1660,11 +1660,11 @@ Si le Pokémon sauvage est un []{pokemon:clefairy}, []{pokemon:nidoran-m}, []{po
 456,5,Capture un Pokémon du Parc des Amis à coup sûr.,"Utilisé par un dresseur au combat
 :   [Capture]{mechanic:catch} un Pokémon sauvage.
 
-Cet objet ne peut être utilisé que dans le []{location:pal-park}."
+Cet objet ne peut être utilisé que dans le [Parc des Amis]{location:pal-park}."
 456,9,Catches Pokémon in the Pal Park every time.,"Used by a trainer in battle
 :   [Catches]{mechanic:catch} a wild Pokémon.
 
-This item can only be used in []{location:pal-park}."
+This item can only be used in [Pal Park]{location:pal-park}."
 457,5,Tente de capturer un Pokémon du Concours de Capture d'insecte du Parc Naturel. (Gén II: Parc Ball),"Utilisé par un dresseur au combat
 :   Tente de [capturer]{mechanic:catch} un Pokémon sauvage.
 
@@ -1673,74 +1673,74 @@ This item can only be used in []{location:pal-park}."
 :   Attempts to [catch]{mechanic:catch} a wild Pokémon.
 
     The wild Pokémon’s catch rate is 1.5× normal."
-458,5,Utilisé pour fabriquer une Niveau Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:level-ball}.
-458,9,Used to make a Level Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:level-ball}.
-459,5,Utilisé pour fabriquer une Appât Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:lure-ball}.
-459,9,Used to make a Lure Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:lure-ball}.
-460,5,Utilisé pour fabriquer une Lune Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:moon-ball}.
-460,9,Used to make a Moon Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:moon-ball}.
-461,5,Utilisé pour fabriquer une Copain Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:friend-ball}.
-461,9,Used to make a Friend Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:friend-ball}.
-462,5,Utilisé pour fabriquer une Love Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:love-ball}.
-462,9,Used to make a Love Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:love-ball}.
-463,5,Utilisé pour fabriquer une Speed Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:fast-ball}.
-463,9,Used to make a Fast Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:fast-ball}.
-464,5,Utilisé pour fabriquer une Masse Ball.,Peut être donné par Fargas à []{location:azalea-town} pour fabriquer une []{item:heavy-ball}.
-464,9,Used to make a Heavy Ball.,May be given to Kurt in []{location:azalea-town} to produce a []{item:heavy-ball}.
+458,5,Utilisé pour fabriquer une Niveau Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Niveau Ball]{item:level-ball}.
+458,9,Used to make a Level Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Level Ball]{item:level-ball}.
+459,5,Utilisé pour fabriquer une Appât Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Appât Ball]{item:lure-ball}.
+459,9,Used to make a Lure Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Lure Ball]{item:lure-ball}.
+460,5,Utilisé pour fabriquer une Lune Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Lune Ball]{item:moon-ball}.
+460,9,Used to make a Moon Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Moon Ball]{item:moon-ball}.
+461,5,Utilisé pour fabriquer une Copain Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Copain Ball]{item:friend-ball}.
+461,9,Used to make a Friend Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Friend Ball]{item:friend-ball}.
+462,5,Utilisé pour fabriquer une Love Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Love Ball]{item:love-ball}.
+462,9,Used to make a Love Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Love Ball]{item:love-ball}.
+463,5,Utilisé pour fabriquer une Speed Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Speed Ball]{item:fast-ball}.
+463,9,Used to make a Fast Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Fast Ball]{item:fast-ball}.
+464,5,Utilisé pour fabriquer une Masse Ball.,Peut être donné par Fargas à [Ecorcia]{location:azalea-town} pour fabriquer une [Masse Ball]{item:heavy-ball}.
+464,9,Used to make a Heavy Ball.,May be given to Kurt in [Azalea Town]{location:azalea-town} to produce a [Heavy Ball]{item:heavy-ball}.
 465,5,À utiliser pour trouver des objets cachés sur le sol. Aussi connu sous le nom de Cherch'Objet.,"Utilisé par un dresseur hors du combat
 :   Cherche les objets cachés."
 465,9,Use to find hidden items on the field. AKA Itemfinder.,"Used by trainer outside of battle
 :   Searches for hidden items."
-466,5,HS: échangé pour la CT64. Gén II & Gén V: Agit comme une Potion.,Peut être échangé pour une []{item:tm64} dans le Souterrain vertical.
-466,9,HS: Traded for TM64. Gen II & Gen V: Acts as a Potion.,May be traded for a []{item:tm64} in the vertical Underground Path.
-467,5,Invoque Groudon à la Tour Enfouie.,Fait apparaître []{pokemon:groudon} à la []{location:embedded-tower}.
-467,9,Summons Groudon to the Embedded Tower.,Causes []{pokemon:groudon} to appear in the []{location:embedded-tower}.
-468,5,Invoque Kyogre à la Tour Enfouie.,Fait apparaître []{pokemon:kyogre} à la []{location:embedded-tower}.
-468,9,Summons Kyogre to the Embedded Tower.,Causes []{pokemon:kyogre} to appear in the []{location:embedded-tower}.
-469,5,Invoque Rayquaza à la Tour Enfouie.,Fait apparaître []{pokemon:rayquaza} à la []{location:embedded-tower}.
-469,9,Summons Rayquaza to the Embedded Tower.,Causes []{pokemon:rayquaza} to appear in the []{location:embedded-tower}.
-470,5,S: Invoque Latias H: Invoque Latios.,"Quand amené au musée de []{location:pewter-city}, []{pokemon:latias} ou []{pokemon:latios} attaque le dresseur.  
+466,5,HS: échangé pour la CT64. Gén II & Gén V: Agit comme une Potion.,Peut être échangé pour une [CT64]{item:tm64} dans le Souterrain vertical.
+466,9,HS: Traded for TM64. Gen II & Gen V: Acts as a Potion.,May be traded for a [TM64]{item:tm64} in the vertical Underground Path.
+467,5,Invoque Groudon à la Tour Enfouie.,Fait apparaître [Groudon]{pokemon:groudon} à la [Tour Enfouie]{location:embedded-tower}.
+467,9,Summons Groudon to the Embedded Tower.,Causes [Groudon]{pokemon:groudon} to appear in the [Embedded Tower]{location:embedded-tower}.
+468,5,Invoque Kyogre à la Tour Enfouie.,Fait apparaître [Kyogre]{pokemon:kyogre} à la [Tour Enfouie]{location:embedded-tower}.
+468,9,Summons Kyogre to the Embedded Tower.,Causes [Kyogre]{pokemon:kyogre} to appear in the [Embedded Tower]{location:embedded-tower}.
+469,5,Invoque Rayquaza à la Tour Enfouie.,Fait apparaître [Rayquaza]{pokemon:rayquaza} à la [Tour Enfouie]{location:embedded-tower}.
+469,9,Summons Rayquaza to the Embedded Tower.,Causes [Rayquaza]{pokemon:rayquaza} to appear in the [Embedded Tower]{location:embedded-tower}.
+470,5,S: Invoque Latias H: Invoque Latios.,"Quand amené au musée de [Argenta]{location:pewter-city}, [Latias]{pokemon:latias} ou [Latios]{pokemon:latios} attaque le dresseur.  
 
 Le Pokémon qui apparaît sera celui que l'on ne peut pas rencontrer errant dans la nature."
-470,9,S: Summons Latias H: Summons Latios.,"When taken to the []{location:pewter-city} museum, causes []{pokemon:latias} or []{pokemon:latios} to attack the trainer.
+470,9,S: Summons Latias H: Summons Latios.,"When taken to the [Pewter City]{location:pewter-city} museum, causes [Latias]{pokemon:latias} or [Latios]{pokemon:latios} to attack the trainer.
 
 The Pokémon to appear will be whicher can’t be encountered roaming in the wild."
-471,5,Garde une trace des types de Zarbi capturés.,Listse quelles formes de []{pokemon:unown} le dresseur a capturé.
-471,9,Keeps track of Unown types caught.,Lists which []{pokemon:unown} forms the trainer has caught.
+471,5,Garde une trace des types de Zarbi capturés.,Listse quelles formes de [Zarbi]{pokemon:unown} le dresseur a capturé.
+471,9,Keeps track of Unown types caught.,Lists which [Unown]{pokemon:unown} forms the trainer has caught.
 472,5,Garde une trace des points du Mot de Passe de Buena.,Permet au dresseur de répondre à la question quotidienne du Mot de Passe de Buena.  Enregistre le nombre de points gagnés avec les réponses correctes.
 472,9,Keeps track of points from Buena’s show.,Allows the trainer to answer the daily question on Buena’s radio show.  Records the points earned for correct answers.
 473,5,Une queue savoureuse vendue très cher. ,Ne fait rien.
 473,9,A tasty tail that sells for a high price.,Does nothing.
-474,5,HS: Permet aux Kimono d'invoquer Ho-oh. C: Invoque Suicune à la Tour Carillon.,Peut être donné aux Kimono pour invoquer []{pokemon:ho-oh} au sommet de la []{location:bell-tower}.
-474,9,HS: Allows Kimono-girls to summon Ho-oh. C: Summons Suicune to the Tin Tower.,May be given to the Kimono Girls to summon []{pokemon:ho-oh} to the top of the []{location:bell-tower}.
+474,5,HS: Permet aux Kimono d'invoquer Ho-oh. C: Invoque Suicune à la Tour Carillon.,Peut être donné aux Kimono pour invoquer [Ho-Oh]{pokemon:ho-oh} au sommet de la [Tour Carillon]{location:bell-tower}.
+474,9,HS: Allows Kimono-girls to summon Ho-oh. C: Summons Suicune to the Tin Tower.,May be given to the Kimono Girls to summon [Ho-Oh]{pokemon:ho-oh} to the top of the [Bell Tower]{location:bell-tower}.
 475,5,HS: Ouvre les portes de la Tour Radio. Gén III: Déverouille les portes de la Sylphe SARL.,"Utilisé par un dresseur hors du combat
-:   Ouvre les portes de la Tour Radio à []{location:goldenrod-city}."
+:   Ouvre les portes de la Tour Radio à [Doublonville]{location:goldenrod-city}."
 475,9,HS: Opens doors in the Radio Tower. Gen III: Unlocks Silph Co Doors.,"Used by trainer outside of battle
-:   Opens doors in the []{location:goldenrod-city} Radio Tower."
+:   Opens doors in the [Goldenrod City]{location:goldenrod-city} Radio Tower."
 476,5,HS: Clé du tunnel sous Doublonville. Gén III: Clé pour New Lavandia.,"Utilisé par un dresseur hors du combat
-:   Ouvre les portes du tunnel sous []{location:goldenrod-city}."
+:   Ouvre les portes du tunnel sous [Doublonville]{location:goldenrod-city}."
 476,9,HS: Key to the tunnel under Goldenrod City. Gen III: Key to New Mauville.,"Used by trainer outside of battle
-:   Opens the door to the basement tunnel under []{location:goldenrod-city}."
-477,5,À échanger à M. Pokémon pour un Multi Exp.,Peut être échangé à M. Pokémon pour un []{item:exp-share}.
-477,9,Trade to Mr. Pokémon for an Exp. Share.,May be traded to Mr. Pokémon for an []{item:exp-share}.
-478,5,Une Poké Poupée perdue par la Copieuse qui vit à Safrania. À échanger pour un Pass.,Peut être échangé à la Copieuse pour un []{item:pass}.
-478,9,A Poké Doll lost by the Copycat who lives in Saffron City. Trade for a Pass.,May be traded to the Copycat for a []{item:pass}.
-479,5,Permet d'accéder et utiliser le Train Magnétique entre Doublonville et Safrania.,Permet au dresseur d'utiliser le Train Magnétique entre []{location:goldenrod-city} et []{location:saffron-city}.
-479,9,Grants access to ride the Magnet Train between Goldenrod City and Saffron City.,Allows the trainer to ride the Magnet Train between []{location:goldenrod-city} and []{location:saffron-city}.
-480,5,Doit être replacé dans la Centrale Abandonée pour alimenter le Train Magnétique.,Doit être replacé dans la []{location:power-plant} pour alimenter le Train Magnétique.
-480,9,Must be replaced in the Power Plant to power the Magnet Train.,Must be replaced in the []{location:power-plant} to power the Magnet Train.
-481,5,Invoque Lugia aux Tourb'Îles.,Fait apparaître []{pokemon:lugia} aux []{location:whirl-islands}.
-481,9,Summons Lugia to the Whirl Islands.,Causes []{pokemon:lugia} to appear in the []{location:whirl-islands}.
-482,5,Invoque Ho-Oh au sommet de la Tour Carillon.,Fait apparaître []{pokemon:ho-oh} au sommet de la []{location:bell-tower}.
-482,9,Summons Ho-Oh at the top of the Bell Tower.,Causes []{pokemon:ho-oh} to appear at the top of []{location:bell-tower}.
-483,5,À livrer au Professeur Orme.,"Doit être obtenu pour déclencher le cambriolage au labo du Professeur Orme, le premier combat avec le rival, et accéder à la []{location:johto-route-31}."
-483,9,Deliver to Professor Elm.,"Must be obtained to trigger the break-in at Professor Elm’s lab, the first rival battle, and access to []{location:johto-route-31}."
+:   Opens the door to the basement tunnel under [Goldenrod City]{location:goldenrod-city}."
+477,5,À échanger à M. Pokémon pour un Multi Exp.,Peut être échangé à M. Pokémon pour un [Multi Exp]{item:exp-share}.
+477,9,Trade to Mr. Pokémon for an Exp. Share.,May be traded to Mr. Pokémon for an [Exp. Share]{item:exp-share}.
+478,5,Une Poké Poupée perdue par la Copieuse qui vit à Safrania. À échanger pour un Pass.,Peut être échangé à la Copieuse pour un [Passe Train]{item:pass}.
+478,9,A Poké Doll lost by the Copycat who lives in Saffron City. Trade for a Pass.,May be traded to the Copycat for a [Pass]{item:pass}.
+479,5,Permet d'accéder et utiliser le Train Magnétique entre Doublonville et Safrania.,Permet au dresseur d'utiliser le Train Magnétique entre [Doublonville]{location:goldenrod-city} et [Safrania]{location:saffron-city}.
+479,9,Grants access to ride the Magnet Train between Goldenrod City and Saffron City.,Allows the trainer to ride the Magnet Train between [Goldenrod City]{location:goldenrod-city} and [Saffron City]{location:saffron-city}.
+480,5,Doit être replacé dans la Centrale Abandonée pour alimenter le Train Magnétique.,Doit être replacé dans la [Centrale]{location:kanto-power-plant} pour alimenter le Train Magnétique.
+480,9,Must be replaced in the Power Plant to power the Magnet Train.,Must be replaced in the [Kanto Power Plant]{location:kanto-power-plant} to power the Magnet Train.
+481,5,Invoque Lugia aux Tourb'Îles.,Fait apparaître [Lugia]{pokemon:lugia} aux [Tourb'Iles]{location:whirl-islands}.
+481,9,Summons Lugia to the Whirl Islands.,Causes [Lugia]{pokemon:lugia} to appear in the [Whirl Islands]{location:whirl-islands}.
+482,5,Invoque Ho-Oh au sommet de la Tour Carillon.,Fait apparaître [Ho-Oh]{pokemon:ho-oh} au sommet de la [Tour Carillon]{location:bell-tower}.
+482,9,Summons Ho-Oh at the top of the Bell Tower.,Causes [Ho-Oh]{pokemon:ho-oh} to appear at the top of [Bell Tower]{location:bell-tower}.
+483,5,À livrer au Professeur Orme.,"Doit être obtenu pour déclencher le cambriolage au labo du Professeur Orme, le premier combat avec le rival, et accéder à la [Route 31]{location:johto-route-31}."
+483,9,Deliver to Professor Elm.,"Must be obtained to trigger the break-in at Professor Elm’s lab, the first rival battle, and access to [Route 31]{location:johto-route-31}."
 484,5,À utiliser pour écouter les musiques GameBoy.,"Utilisé par le dresseur en dehors du combat
 :   Change la musique d'arrière-plan en son équivalent 8-bit."
 484,9,Use to listen to GameBoy era audio.,"Used by trainer outside of battle
 :   Changes the background music to the equivalent 8-bit music."
-485,5,Permet aux Kimono d'invoquer Lugia.,Peut être donné aux Kimono pour invoquer []{pokemon:lugia} au sommet de la []{location:bell-tower}.
-485,9,Allows Kimono-girls to summon Lugia.,May be given to the Kimono Girls to summon []{pokemon:lugia} to the top of the []{location:bell-tower}.
+485,5,Permet aux Kimono d'invoquer Lugia.,Peut être donné aux Kimono pour invoquer [Lugia]{pokemon:lugia} au sommet de la [Tour Carillon]{location:bell-tower}.
+485,9,Allows Kimono-girls to summon Lugia.,May be given to the Kimono Girls to summon [Lugia]{pokemon:lugia} to the top of the [Bell Tower]{location:bell-tower}.
 486,5,Enregistre le nombre de fois que le dresseur a terminé premier du Pokéathlon.,Enregistre le nombre de fois que le dresseur a terminé premier du Pokéathlon.
 486,9,Records the number of times the trainer has come in first place overall in the Pokéathlon.,Records the number of times the trainer has come in first place overall in the Pokéathlon.
 487,5,Enregistre le nombre de fois que le dresseur a terminé dernier du Pokéathlon.,Enregistre le nombre de fois que le dresseur a terminé dernier du Pokéathlon.
@@ -1895,54 +1895,54 @@ Tenu
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-527,5,"Plus rapide que le Vélo Cross, et peut gravir des pentes sablonneuses et rouler sur des sols fissurés.",Augmente la vitesse de déplacement à l'extérieur ou dans les grottes.  Plus rapide que le []{item:acro-bike}.  Permet au dresseur de gravir des pentes boueuses.
-527,9,"Faster than the Acro Bike, and can ride up sandy slopes and across cracked floors.",Increases movement speed outside or in caves.  Faster than the []{item:acro-bike}.  Allows the trainer to ascend muddy slopes.
-528,5,"Plus manœuvrable que le Vélo de Course, et permet de sauter le long des rails.","Augmente la vitesse de déplacement à l'extérieur ou dans les grottes.  Plus lent que le []{item:mach-bike}.  Permet d'effectuer diverses figures, permettant au dresseur d'atteindre certaines zones spéciales."
-528,9,"More maneuverable than the Mach Bike, and allows hopping along rails.","Increases movement speed outside or in caves.  Slower than the []{item:mach-bike}.  Can perform various tricks, allowing the trainer to reach certain special areas."
+527,5,"Plus rapide que le Vélo Cross, et peut gravir des pentes sablonneuses et rouler sur des sols fissurés.",Augmente la vitesse de déplacement à l'extérieur ou dans les grottes.  Plus rapide que le [Vélo Cross]{item:acro-bike}.  Permet au dresseur de gravir des pentes boueuses.
+527,9,"Faster than the Acro Bike, and can ride up sandy slopes and across cracked floors.",Increases movement speed outside or in caves.  Faster than the [Acro Bike]{item:acro-bike}.  Allows the trainer to ascend muddy slopes.
+528,5,"Plus manœuvrable que le Vélo de Course, et permet de sauter le long des rails.","Augmente la vitesse de déplacement à l'extérieur ou dans les grottes.  Plus lent que le [Vélo de Course]{item:mach-bike}.  Permet d'effectuer diverses figures, permettant au dresseur d'atteindre certaines zones spéciales."
+528,9,"More maneuverable than the Mach Bike, and allows hopping along rails.","Increases movement speed outside or in caves.  Slower than the [Mach Bike]{item:mach-bike}.  Can perform various tricks, allowing the trainer to reach certain special areas."
 529,5,Utilisé pour arroser les baies.,Arrose les plants de Baies.
 529,9,Used to water berries.,Waters Berry plants.
 530,5,Contient les pièces mécaniques à livrer au Capitaine Poupe.,Contient la partie de la machine à livrer au Capitaine Poupe.
 530,9,Contains mechanical parts to be delivered to Captain Stern.,Contains a machine part to be delivered to Captain Stern.
-531,5,Stocke les cendres volcaniques de la Route 113.,Collecte la suie en marchant dans les hautes herbes sur la []{location:hoenn-route-113}.
-531,9,Stores volcanic ash from Route 113.,Collects soot when walking through tall grass on []{location:hoenn-route-113}.
+531,5,Stocke les cendres volcaniques de la Route 113.,Collecte la suie en marchant dans les hautes herbes sur la [Route 113]{location:hoenn-route-113}.
+531,9,Stores volcanic ash from Route 113.,Collects soot when walking through tall grass on [Route 113]{location:hoenn-route-113}.
 532,5,Porte les Pokéblocs.,Stocke les Pokéblocs.
 532,9,Holds Pokéblocks.,Stores Pokéblocks.
 533,5,Une lettre pour Rochard de la part du président de la Devon SARL.,Contient une lettre à livrer à Rochard.
 533,9,A letter to Steven from the Devon Corp president.,Contains a letter to be delivered to Steven.
-534,5,Permet d'accéder à l'ïle du Sud et Latias ou Latios.,"Donne accès à l'[]{location:southern-island} et soit []{pokemon:latias} ou []{pokemon:latios}, celui qui ne sera pas disponible errant autour d'Hoenn."
-534,9,Provides access to Southern Island and Latias or Latios.,"Provides access to []{location:southern-island} and either []{pokemon:latias} or []{pokemon:latios}, whichever is not available roaming around Hoenn."
-535,5,À échanger au Capitaine Poupe pour une Dent Océan ou une Écaille Océan. ,Peut être échangé au Capitaine Poupe pour une []{item:deep-sea-tooth} ou une []{item:deep-sea-scale}.
-535,9,Trade to Captain Stern for a DeepSeaTooth or DeepSeaScale.,May be traded to Captain Stern for a []{item:deep-sea-tooth} or a []{item:deep-sea-scale}.
-536,5,Permet de traverser les déserts venteux.,Permet au dresseur d'entrer dans le désert sur la []{location:hoenn-route-111}.
-536,9,Allows passage through windy deserts.,Allows the trainer to enter the desert on []{location:hoenn-route-111}.
-537,5,FL: À livrer au père de Lostelle. RSE: À échanger au Professeur Kosmo contre la CT27 (Retour).,"RSE: Peut être échangé au Professeur Kosmo contre la []{item:tm27}.
+534,5,Permet d'accéder à l'ïle du Sud et Latias ou Latios.,"Donne accès à l'[Île du Sud]{location:southern-island} et soit [Latias]{pokemon:latias} ou [Latios]{pokemon:latios}, celui qui ne sera pas disponible errant autour d'Hoenn."
+534,9,Provides access to Southern Island and Latias or Latios.,"Provides access to [Southern Island]{location:southern-island} and either [Latias]{pokemon:latias} or [Latios]{pokemon:latios}, whichever is not available roaming around Hoenn."
+535,5,À échanger au Capitaine Poupe pour une Dent Océan ou une Écaille Océan. ,Peut être échangé au Capitaine Poupe pour une [Dent Océan]{item:deep-sea-tooth} ou une [Écaille Océan]{item:deep-sea-scale}.
+535,9,Trade to Captain Stern for a DeepSeaTooth or DeepSeaScale.,May be traded to Captain Stern for a [Deep Sea Tooth]{item:deep-sea-tooth} or a [Deep Sea Scale]{item:deep-sea-scale}.
+536,5,Permet de traverser les déserts venteux.,Permet au dresseur d'entrer dans le désert sur la [Route 111]{location:hoenn-route-111}.
+536,9,Allows passage through windy deserts.,Allows the trainer to enter the desert on [Route 111]{location:hoenn-route-111}.
+537,5,FL: À livrer au père de Lostelle. RSE: À échanger au Professeur Kosmo contre la CT27 (Retour).,"RSE: Peut être échangé au Professeur Kosmo contre la [CT27]{item:tm27}.
 
 FRLG: Une météorite à livrer au père de Lostelle."
-537,9,FL: Deliver to Lostelle’s father. RSE: Trade to Professor Cozmo for TM27 (Return).,"RSE: May be traded to Professor Cozmo for []{item:tm27}.
+537,9,FL: Deliver to Lostelle’s father. RSE: Trade to Professor Cozmo for TM27 (Return).,"RSE: May be traded to Professor Cozmo for [TM27]{item:tm27}.
 
 FRLG: A meteorite to be delivered to Lostelle’s father."
-538,5,Dévérouille la salle 1 du Lavandia Sea.,Déverouille la salle 1 du []{location:abandoned-ship}.
-538,9,Unlocks room 1 on the Abandoned Ship.,Unlocks room 1 on the []{location:abandoned-ship}.
-539,5,Dévérouille la salle 2 du Lavandia Sea.,Déverouille la salle 2 du []{location:abandoned-ship}.
-539,9,Unlocks room 2 on the Abandoned Ship.,Unlocks room 2 on the []{location:abandoned-ship}.
-540,5,Dévérouille la salle 4 du Lavandia Sea.,Déverouille la salle 4 du []{location:abandoned-ship}.
-540,9,Unlocks room 4 on the Abandoned Ship.,Unlocks room 4 on the []{location:abandoned-ship}.
-541,5,Dévérouille la salle 6 du Lavandia Sea.,Déverouille la salle 6 du []{location:abandoned-ship}.
-541,9,Unlocks room 6 on the Abandoned Ship.,Unlocks room 6 on the []{location:abandoned-ship}.
-542,5,Permet de détecter les Kecleon invisibles.,Révèle les []{pokemon:kecleon} invisibles du monde ouvert.
-542,9,Allows spotting of invisible Kecleon.,Reveals invisble []{pokemon:kecleon} on the overworld.
+538,5,Dévérouille la salle 1 du Lavandia Sea.,Déverouille la salle 1 du [Épave]{location:abandoned-ship}.
+538,9,Unlocks room 1 on the Abandoned Ship.,Unlocks room 1 on the [Abandoned Ship]{location:abandoned-ship}.
+539,5,Dévérouille la salle 2 du Lavandia Sea.,Déverouille la salle 2 du [Épave]{location:abandoned-ship}.
+539,9,Unlocks room 2 on the Abandoned Ship.,Unlocks room 2 on the [Abandoned Ship]{location:abandoned-ship}.
+540,5,Dévérouille la salle 4 du Lavandia Sea.,Déverouille la salle 4 du [Épave]{location:abandoned-ship}.
+540,9,Unlocks room 4 on the Abandoned Ship.,Unlocks room 4 on the [Abandoned Ship]{location:abandoned-ship}.
+541,5,Dévérouille la salle 6 du Lavandia Sea.,Déverouille la salle 6 du [Épave]{location:abandoned-ship}.
+541,9,Unlocks room 6 on the Abandoned Ship.,Unlocks room 6 on the [Abandoned Ship]{location:abandoned-ship}.
+542,5,Permet de détecter les Kecleon invisibles.,Révèle les [Kecleon]{pokemon:kecleon} invisibles du monde ouvert.
+542,9,Allows spotting of invisible Kecleon.,Reveals invisble [Kecleon]{pokemon:kecleon} on the overworld.
 543,5,À échanger au Professeur Chen pour un Pokédex.,Un colis à livrer au professeur Chen pour un Pokédex.
 543,9,Trade to Prof. Oak for a Pokédex.,A parcel to be delivered to Professor Oak for a Pokédex.
-544,5,"À utiliser pour réveiller un Pokémon endormi, incluant Ronflex sur les routes.",Réveille un Pokémon [endormi]{mechanic:sleep}.  Requis pour réveiller le []{pokemon:snorlax} endormi dans le monde ouvert.
-544,9,"Use to awaken sleeping Pokémon, including Snorlax on roads.",Wakes up [sleeping]{mechanic:sleep} Pokémon.  Required to wake up sleeping []{pokemon:snorlax} on the overworld.
-545,5,À échanger aux Cycles à Gogo à Azuria pour un Vélo.,Peut être échangé pour un []{item:bicycle}.
-545,9,Trade in Cerulean bike shop for a Bicycle.,May be traded for a []{item:bicycle}.
-546,5,Le dentier du Gardien du Parc Safari. À échanger contre la CS04 (Force).,"Les dents du gardien du Parc Safari, à lui redonner contre la []{item:hm04}."
-546,9,The Safari Zone Warden’s dentures. Trade for HM04 (Strength).,"The Safari Zone warden’s teeth, to be returned to him for []{item:hm04}."
+544,5,"À utiliser pour réveiller un Pokémon endormi, incluant Ronflex sur les routes.",Réveille un Pokémon [endormi]{mechanic:sleep}.  Requis pour réveiller le [Ronflex]{pokemon:snorlax} endormi dans le monde ouvert.
+544,9,"Use to awaken sleeping Pokémon, including Snorlax on roads.",Wakes up [sleeping]{mechanic:sleep} Pokémon.  Required to wake up sleeping [Snorlax]{pokemon:snorlax} on the overworld.
+545,5,À échanger aux Cycles à Gogo à Azuria pour un Vélo.,Peut être échangé pour un [Bicyclette]{item:bicycle}.
+545,9,Trade in Cerulean bike shop for a Bicycle.,May be traded for a [Bicycle]{item:bicycle}.
+546,5,Le dentier du Gardien du Parc Safari. À échanger contre la CS04 (Force).,"Les dents du gardien du Parc Safari, à lui redonner contre la [CS04]{item:hm04}."
+546,9,The Safari Zone Warden’s dentures. Trade for HM04 (Strength).,"The Safari Zone warden’s teeth, to be returned to him for [HM04]{item:hm04}."
 547,5,Met en marche l'ascenseur du Repaire Rocket de Céladopole.,Met en marche l'ascenseur du Repaire Rocket de Céladopole.
 547,9,Operates the elevator in Team Rocket’s Celadon Hideout.,Operates the elevator in the Celadon Rocket Hideout.
-548,5,Utilisé pour identifier les vraies formes des fantômes de la Tour Pokémon.,Identifie les fantômes dans la []{location:pokemon-tower}.
-548,9,Used to identify the true forms of ghosts in Pokémon Tower.,Identifies ghosts in []{location:pokemon-tower}.
+548,5,Utilisé pour identifier les vraies formes des fantômes de la Tour Pokémon.,Identifie les fantômes dans la [Tour Pokémon]{location:pokemon-tower}.
+548,9,Used to identify the true forms of ghosts in Pokémon Tower.,Identifies ghosts in [Pokémon Tower]{location:pokemon-tower}.
 549,5,Enregistre des informations sur les PNJs.,Enregistre des informations sur diverses personnalités célèbres.
 549,9,Records information about NPCs.,Records information on various famous people.
 550,5,Stocke les CTs.,Stocke les CTs et CSs.
@@ -1955,38 +1955,38 @@ FRLG: A meteorite to be delivered to Lostelle’s father."
 553,9,Grants access to the first three Sevii Islands.,Provides access to the first three Sevii Islands.
 554,5,Permet d'accéder à toutes les Îles Sevii.,Donne accès à toutes les Îles Sevii.
 554,9,Grants access to all of the Sevii Islands.,Provides access to the Sevii Islands.
-555,5,Permet d'accéder à Safrania.,Utilisé pour soudoyer les gardes de []{location:saffron-city} afin de pouvoir entrer dans la ville.
-555,9,Grants access to Saffron City.,Used to bribe the []{location:saffron-city} guards for entry to the city.
-556,5,Permet d'accéder au Roc Nombri et Lugia ou Ho-oh.,"Donne accès au Roc Nombri, []{pokemon:ho-oh}, and []{pokemon:lugia}."
-556,9,Allows access to Navel Rock and Lugia or Ho-oh.,"Provides access to Navel Rock, []{pokemon:ho-oh}, and []{pokemon:lugia}."
-557,5,Permet d'accéder à l'Île Aurore et Deoxys.,Donne accès à l'Île Aurore et []{pokemon:deoxys}.
-557,9,Allows access to Birth Island and Deoxys.,Provides access to Birth Island and []{pokemon:deoxys}.
+555,5,Permet d'accéder à Safrania.,Utilisé pour soudoyer les gardes de [Safrania]{location:saffron-city} afin de pouvoir entrer dans la ville.
+555,9,Grants access to Saffron City.,Used to bribe the [Saffron City]{location:saffron-city} guards for entry to the city.
+556,5,Permet d'accéder au Roc Nombri et Lugia ou Ho-oh.,"Donne accès au Roc Nombri, [Ho-Oh]{pokemon:ho-oh}, and [Lugia]{pokemon:lugia}."
+556,9,Allows access to Navel Rock and Lugia or Ho-oh.,"Provides access to Navel Rock, [Ho-Oh]{pokemon:ho-oh}, and [Lugia]{pokemon:lugia}."
+557,5,Permet d'accéder à l'Île Aurore et Deoxys.,Donne accès à l'Île Aurore et [deoxys]{pokemon:deoxys}.
+557,9,Allows access to Birth Island and Deoxys.,Provides access to Birth Island and [Deoxys]{pokemon:deoxys}.
 558,5,Stocke la Poudre de Baie faite grâce au Broyeur de Baies.,Porte la Poudre de Baie provenant du Broyeur de Baies.
 558,9,Stores Berry Powder made using a Berry Crusher.,Holds Berry Powder from Berry Crushing.
 559,5,À donner à Cliéo dans Saphir pour activer le Centre Réseau Pokémon et avoir le Passe Prisme.,À donner à Cliéo dans Saphir pour utilisation dans le Centre Réseau Pokémon.
 559,9,Give to Celio with Sapphire to activate Network Machine and get Rainbow Pass.,Deliver to Celio for use in the Network Machine.
 560,5,À donner à Cliéo dans Rubis pour activer le Centre Réseau Pokémon et avoir le Passe Prisme.,À donner à Cliéo dans Saphir pour utilisation dans le Centre Réseau Pokémon.
 560,9,Give to Celio with Ruby to activate Network Machine and get Rainbow Pass.,Deliver to Celio for use in the Network Machine.
-561,5,Permet d'accéder à la Planque Magma au Sentier Sinuroc.,Donne accès au []{location:magma-hideout} au []{location:jagged-pass}.
-561,9,Provides access to the Team Magma Hideout in the Jagged Pass.,Provides access to the []{location:magma-hideout} in the []{location:jagged-pass}.
-562,5,Permet d'accéder à l'ïle Lointaine et Mew. Jamais diffusé hors Japon.,Donne accès à l'ïle Lointaine et []{pokemon:mew}.
-562,9,Allows access to Faraway Island and Mew. Unreleased outside of Japan.,Provides access to Faraway Island and []{pokemon:mew}.
-563,5,"Donne à Genesect un Techno-Buster bleu, de type Eau.","Tenu par []{pokemon:genesect}
-:   Le buster du porteur est bleu, et son []{move:techno-blast} est de type []{type:water}."
-563,9,"Grants Genesect a blue, Water-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder’s buster is blue, and its []{move:techno-blast} is []{type:water}-type."
-564,5,"Donne à Genesect un Techno-Buster jaune, de type Électrik.","Tenu par []{pokemon:genesect}
-:   Le buster du porteur est jaune, et son []{move:techno-blast} est de type []{type:electric}."
-564,9,"Grants Genesect a yellow, Electric-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder’s buster is yellow, and its []{move:techno-blast} is []{type:electric}-type."
-565,5,"Donne à Genesect un Techno-Buster rouge, de type Feu.","Tenu par []{pokemon:genesect}
-:   Le buster du porteur est rouge, et son []{move:techno-blast} est de type []{type:fire}."
-565,9,"Grants Genesect a red, Fire-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder’s buster is red, and its []{move:techno-blast} is []{type:fire}-type."
-566,5,"Donne à Genesect un Techno-Buster blanc, de type Glace.","Tenu par []{pokemon:genesect}
-:   Le buster du porteur est blanc, et son []{move:techno-blast} est de type []{type:glace}."
-566,9,"Grants Genesect a white, Ice-type Techno Blast.","Held by []{pokemon:genesect}
-:   Holder’s buster is white, and its []{move:techno-blast} becomes []{type:ice}-type."
+561,5,Permet d'accéder à la Planque Magma au Sentier Sinuroc.,Donne accès au [Planque Magma]{location:magma-hideout} au [Sentier Sinuroc]{location:jagged-pass}.
+561,9,Provides access to the Team Magma Hideout in the Jagged Pass.,Provides access to the [Magma Hideout]{location:magma-hideout} in the [Jagged Pass]{location:jagged-pass}.
+562,5,Permet d'accéder à l'ïle Lointaine et Mew. Jamais diffusé hors Japon.,Donne accès à l'ïle Lointaine et [Mew]{pokemon:mew}.
+562,9,Allows access to Faraway Island and Mew. Unreleased outside of Japan.,Provides access to Faraway Island and [Mew]{pokemon:mew}.
+563,5,"Donne à Genesect un Techno-Buster bleu, de type Eau.","Tenu par [Genesect]{pokemon:genesect}
+:   Le buster du porteur est bleu, et son [Techno-Buster]{move:techno-blast} est de type [Eau]{type:water}."
+563,9,"Grants Genesect a blue, Water-type Techno Blast.","Held by [Genesect]{pokemon:genesect}
+:   Holder’s buster is blue, and its [Techno Blast]{move:techno-blast} is [Water]{type:water}-type."
+564,5,"Donne à Genesect un Techno-Buster jaune, de type Électrik.","Tenu par [Genesect]{pokemon:genesect}
+:   Le buster du porteur est jaune, et son [Techno-Buster]{move:techno-blast} est de type [Électrik]{type:electric}."
+564,9,"Grants Genesect a yellow, Electric-type Techno Blast.","Held by [Genesect]{pokemon:genesect}
+:   Holder’s buster is yellow, and its [Techno Blast]{move:techno-blast} is [Electric]{type:electric}-type."
+565,5,"Donne à Genesect un Techno-Buster rouge, de type Feu.","Tenu par [Genesect]{pokemon:genesect}
+:   Le buster du porteur est rouge, et son [Techno-Buster]{move:techno-blast} est de type [Feu]{type:fire}."
+565,9,"Grants Genesect a red, Fire-type Techno Blast.","Held by [Genesect]{pokemon:genesect}
+:   Holder’s buster is red, and its [Techno Blast]{move:techno-blast} is [Fire]{type:fire}-type."
+566,5,"Donne à Genesect un Techno-Buster blanc, de type Glace.","Tenu par [Genesect]{pokemon:genesect}
+:   Le buster du porteur est blanc, et son [Techno-Buster]{move:techno-blast} est de type [Glace]{type:ice}."
+566,9,"Grants Genesect a white, Ice-type Techno Blast.","Held by [Genesect]{pokemon:genesect}
+:   Holder’s buster is white, and its [Techno Blast]{move:techno-blast} becomes [Ice]{type:ice}-type."
 567,5,Restaure 20 PV.,"Utilisé sur un Pokémon allié
 :   Restaure 20 [PV]{mechanic:hp}."
 567,9,Restores 20 HP.,"Used on a friendly Pokémon
@@ -2087,10 +2087,10 @@ Tenu
 
 Held
 :   Holder cannot be placed in the PC.  Any move attempting to remove this item from the holder will fail."
-580,5,Échangé sur un Barpau: Le porteur évolue en Milobellus.,"Tenu par []{pokemon:feebas}
-:   Le porteur évolue en []{pokemon:milotic} quand échangé."
-580,9,Traded on a Feebas: Holder evolves into Milotic.,"Held by []{pokemon:feebas}
-:   Holder evolves into []{pokemon:milotic} when traded."
+580,5,Échangé sur un Barpau: Le porteur évolue en Milobellus.,"Tenu par [Barpau]{pokemon:feebas}
+:   Le porteur évolue en [Milobellus]{pokemon:milotic} quand échangé."
+580,9,Traded on a Feebas: Holder evolves into Milotic.,"Held by [Feebas]{pokemon:feebas}
+:   Holder evolves into [Milotic]{pokemon:milotic} when traded."
 581,5,"Tenu: La Défense et Défense Spéciale du porteur augmentent de 50%, tant qu'il n'est pas complètement évolué.","Tenu par un Pokémon qui n'est pas complètement évolué
 :   Le porteur a 1.5× sa [Défense]{mechanic:defense} et [Défense Spéciale]{mechanic:special-defense}."
 581,9,"Held: Holder has 1.5× Defense and Special Defense, as long as it’s not fully evolved.","Held by a Pokémon that is not fully evolved
@@ -2103,15 +2103,15 @@ Held
 :   Quand le porteur est touché par une capacité à [contact]{mechanic:contact}, le Pokémon attaquant subit 1/6 ses [PV]{mechanic:hp} max en dégâts."
 583,9,"Held: When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage.","Held
 :   When the holder is hit by a [contact]{mechanic:contact} move, the attacking Pokémon takes 1/6 its max [HP]{mechanic:hp} in damage."
-584,5,"Tenu: Donne l'immunité aux capacités de type Sol, Picots et Pics Toxik. Consommé quand le porteur prend des dégâts d'une capacité.","Tenu :   Le porteur est immunisé aux capacités de type []{type:ground}, []{move:spikes}, []{move:toxic-spikes}, et []{ability:arena-trap}.
+584,5,"Tenu: Donne l'immunité aux capacités de type Sol, Picots et Pics Toxik. Consommé quand le porteur prend des dégâts d'une capacité.","Tenu :   Le porteur est immunisé aux capacités de type [Sol]{type:ground}, [Picots]{move:spikes}, [Pics Toxik]{move:toxic-spikes}, et [Piège Sable]{ability:arena-trap}.
 
-    Cet effet ne s'applique pas sous []{move:gravity} ou []{move:ingrain}.
+    Cet effet ne s'applique pas sous [Gravité]{move:gravity} ou [Racines]{move:ingrain}.
 
     Quand le porteur subit des dégâts d'une capacité, cet objet est consommé."
 584,9,"Held: Grants immunity to Ground-type moves, Spikes, and Toxic Spikes. Consumed when the holder takes damage from a move.","Held
-:   Holder is immune to []{type:ground}-type moves, []{move:spikes}, []{move:toxic-spikes}, and []{ability:arena-trap}.
+:   Holder is immune to [Ground]{type:ground}-type moves, [Spikes]{move:spikes}, [Toxic Spikes]{move:toxic-spikes}, and [Arena Trap]{ability:arena-trap}.
 
-    This effect does not apply during []{move:gravity} or []{move:ingrain}.
+    This effect does not apply during [Gravity]{move:gravity} or [Ingrain]{move:ingrain}.
 
     When the holder takes damage from a move, this item is consumed."
 585,5,"Tenu: Quand le porteur subit des dégâts d'une capacité, l'adversaire se retire pour un autre Pokémon aléatoire de l'équipe. Consommé après utilisation.","Tenu 
@@ -2125,83 +2125,83 @@ This effect does not activate if another effect prevents the holder from switchi
 586,9,Held: Negates the holder’s type immunities. Ability immunities are not removed.,"Held
 :   When one of the user’s types would render it immune to damage, that type is ignored for damage calculation."
 587,5,Tenu: Double les dégâts par tour des capacités piégeantes multitours.,"Tenu
-:   Les capacités utilisées par le porteur qui piègent et infligent des dégâts à la cible sur plusieurs tours (e.g. []{move:bind}, []{move:fire-spin}) infligent le double des dégâts par tour habituels."
+:   Les capacités utilisées par le porteur qui piègent et infligent des dégâts à la cible sur plusieurs tours (e.g. [Étreinte]{move:bind}, [Danse Flammes]{move:fire-spin}) infligent le double des dégâts par tour habituels."
 587,9,Held: Doubles the per-turn damage of multi-turn trapping moves.,"Held
-:   Moves used by the holder that trap and damage a target for multiple turns (e.g. []{move:bind}, []{move:fire-spin}) inflict twice their usual per-turn damage."
+:   Moves used by the holder that trap and damage a target for multiple turns (e.g. [Bind]{move:bind}, [Fire Spin]{move:fire-spin}) inflict twice their usual per-turn damage."
 588,5,Tenu: Augmente l'Attaque Spéciale du porteur d'un niveau lorsqu'il subit des dégâts d'une capacité de type Eau.,"Tenu
-:   Quand le porteur subit des dégâts de type []{type:water} d'une capacité, son [Attaque Spéciale]{mechanic:special-attack} augmente d'un [niveau]{mechanic:stage} et cet objet est consommé."
+:   Quand le porteur subit des dégâts de type [Eau]{type:water} d'une capacité, son [Attaque Spéciale]{mechanic:special-attack} augmente d'un [niveau]{mechanic:stage} et cet objet est consommé."
 588,9,Held: Raises the holder’s Special Attack by one stage when it takes Water-type damage.,"Held
-:   When the holder takes []{type:water}-type damage from a move, its [Special Attack]{mechanic:special-attack} rises by one [stage]{mechanic:stage} and this item is consumed."
+:   When the holder takes [Water]{type:water}-type damage from a move, its [Special Attack]{mechanic:special-attack} rises by one [stage]{mechanic:stage} and this item is consumed."
 589,5,Tenu: Augmente l'Attaque du porteur d'un niveau lorsqu'il subit des dégâts d'une capacité de type Électrik.,"Tenu
-:   Quand le porteur subit des dégâts de type []{type:electric} d'une capacité, son [Attaque]{mechanic:attack} augmente d'un [niveau]{mechanic:stage} et cet objet est consommé."
+:   Quand le porteur subit des dégâts de type [Électrik]{type:electric} d'une capacité, son [Attaque]{mechanic:attack} augmente d'un [niveau]{mechanic:stage} et cet objet est consommé."
 589,9,Held: Raises the holder’s Attack by one stage when it takes Electric-type damage.,"Held
-:   When the holder takes []{type:electric}-type damage from a move, its [Attack]{mechanic:attack} rises by one [stage]{mechanic:stage} and this item is consumed."
+:   When the holder takes [Electric]{type:electric}-type damage from a move, its [Attack]{mechanic:attack} rises by one [stage]{mechanic:stage} and this item is consumed."
 590,5,"Tenu: Lorsque le porteur subit des dégâts d'une capacité, il se retire pour un Pokémon de l'équipe au choix du Dresseur.","Tenu 
 :   Quand le porteur subit des dommages directs d'une capacité et n'est pas mis KO, il est [retiré]{mechanic:switching-out} pour un autre Pokémon non KO de son équipe, choisi par le Dresseur. 
 Cet effet ne s'active pas si un autre effet empêche le porteur de se retirer."
 590,9,"Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer’s choice.","Held
 :   When the holder takes damage directly from a move and does not faint, it [switches out]{mechanic:switching-out} for another non-fainted Pokémon in its party, as chosen by the Trainer.
 This effect does not activate if another effect prevents the holder from switching out."
-591,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:fire}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:fire}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-591,9,"Held: When the holder uses a damaging []{type:fire}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:fire}-type move, the move has 1.5× power and this item is consumed."
-592,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:water}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:water}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-592,9,"Held: When the holder uses a damaging []{type:water}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:water}-type move, the move has 1.5× power and this item is consumed."
-593,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:eletric}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:electric}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-593,9,"Held: When the holder uses a damaging []{type:electric}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:electric}-type move, the move has 1.5× power and this item is consumed."
-594,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:grass}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:grass}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-594,9,"Held: When the holder uses a damaging []{type:grass}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:grass}-type move, the move has 1.5× power and this item is consumed."
-595,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:ice}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:ice}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-595,9,"Held: When the holder uses a damaging []{type:ice}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:ice}-type move, the move has 1.5× power and this item is consumed."
-596,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:fighting}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:fighting}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-596,9,"Held: When the holder uses a damaging []{type:fighting}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:fighting}-type move, the move has 1.5× power and this item is consumed."
-597,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:poison}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:poison}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-597,9,"Held: When the holder uses a damaging []{type:poison}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:poison}-type move, the move has 1.5× power and this item is consumed."
-598,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:ground}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:ground}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-598,9,"Held: When the holder uses a damaging []{type:ground}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:ground}-type move, the move has 1.5× power and this item is consumed."
-599,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:flying}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:flying}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-599,9,"Held: When the holder uses a damaging []{type:flying}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:flying}-type move, the move has 1.5× power and this item is consumed."
-600,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:psychic}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:psychic}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-600,9,"Held: When the holder uses a damaging []{type:psychic}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:psychic}-type move, the move has 1.5× power and this item is consumed."
-601,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:bug}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:bug}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-601,9,"Held: When the holder uses a damaging []{type:bug}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:bug}-type move, the move has 1.5× power and this item is consumed."
-602,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:rock}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:rock}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-602,9,"Held: When the holder uses a damaging []{type:rock}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:rock}-type move, the move has 1.5× power and this item is consumed."
-603,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:ghost}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:ghost}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-603,9,"Held: When the holder uses a damaging []{type:ghost}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:ghost}-type move, the move has 1.5× power and this item is consumed."
-604,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:dark}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:dark}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-604,9,"Held: When the holder uses a damaging []{type:dark}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:dark}-type move, the move has 1.5× power and this item is consumed."
-605,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type []{type:steel}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:steel}, la puissance de la capacité augmente de 50% et cet objet est consommé."
-605,9,"Held: When the holder uses a damaging []{type:steel}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:steel}-type move, the move has 1.5× power and this item is consumed."
+591,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Feu]{type:fire}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Feu]{type:fire}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+591,9,"Held: When the holder uses a damaging [Fire]{type:fire}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Fire]{type:fire}-type move, the move has 1.5× power and this item is consumed."
+592,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Eau]{type:water}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Eau]{type:water}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+592,9,"Held: When the holder uses a damaging [Water]{type:water}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Water]{type:water}-type move, the move has 1.5× power and this item is consumed."
+593,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Électrik]{type:electric}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Électrik]{type:electric}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+593,9,"Held: When the holder uses a damaging [Electric]{type:electric}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Electric]{type:electric}-type move, the move has 1.5× power and this item is consumed."
+594,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Plante]{type:grass}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Plante]{type:grass}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+594,9,"Held: When the holder uses a damaging [Grass]{type:grass}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Grass]{type:grass}-type move, the move has 1.5× power and this item is consumed."
+595,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Glace]{type:ice}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Glace]{type:ice}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+595,9,"Held: When the holder uses a damaging [Ice]{type:ice}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Ice]{type:ice}-type move, the move has 1.5× power and this item is consumed."
+596,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Combat]{type:fighting}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Combat]{type:fighting}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+596,9,"Held: When the holder uses a damaging [Fighting]{type:fighting}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Fighting]{type:fighting}-type move, the move has 1.5× power and this item is consumed."
+597,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Poison]{type:poison}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Poison]{type:poison}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+597,9,"Held: When the holder uses a damaging [Poison]{type:poison}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Poison]{type:poison}-type move, the move has 1.5× power and this item is consumed."
+598,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Sol]{type:ground}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Sol]{type:ground}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+598,9,"Held: When the holder uses a damaging [Ground]{type:ground}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Ground]{type:ground}-type move, the move has 1.5× power and this item is consumed."
+599,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Vol]{type:flying}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Vol]{type:flying}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+599,9,"Held: When the holder uses a damaging [Flying]{type:flying}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Flying]{type:flying}-type move, the move has 1.5× power and this item is consumed."
+600,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Psy]{type:psychic}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Psy]{type:psychic}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+600,9,"Held: When the holder uses a damaging [Psychic]{type:psychic}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Psychic]{type:psychic}-type move, the move has 1.5× power and this item is consumed."
+601,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Insecte]{type:bug}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Insecte]{type:bug}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+601,9,"Held: When the holder uses a damaging [Bug]{type:bug}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Bug]{type:bug}-type move, the move has 1.5× power and this item is consumed."
+602,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Roche]{type:rock}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Roche]{type:rock}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+602,9,"Held: When the holder uses a damaging [Rock]{type:rock}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Rock]{type:rock}-type move, the move has 1.5× power and this item is consumed."
+603,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Spectre]{type:ghost}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Spectre]{type:ghost}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+603,9,"Held: When the holder uses a damaging [Ghost]{type:ghost}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Ghost]{type:ghost}-type move, the move has 1.5× power and this item is consumed."
+604,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Ténèbres]{type:dark}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Ténèbres]{type:dark}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+604,9,"Held: When the holder uses a damaging [Dark]{type:dark}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Dark]{type:dark}-type move, the move has 1.5× power and this item is consumed."
+605,5,"Tenu: Lorsque le porteur utilise une capacité offensive de type [Acier]{type:steel}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Acier]{type:steel}, la puissance de la capacité augmente de 50% et cet objet est consommé."
+605,9,"Held: When the holder uses a damaging [Steel]{type:steel}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Steel]{type:steel}-type move, the move has 1.5× power and this item is consumed."
 606,5,Augmente les [EV]{mechanic:effort} de [PV]{mechanic:hp} de 1.,"Utilisé sur un Pokémon de l'équipe 
 :   Augmente les [EV]{mechanic:effort} de [PV]{mechanic:hp} de la cible de 1."
 606,9,Increases [HP]{mechanic:hp} [effort]{mechanic:effort} by 1.,"Used on a party Pokémon
@@ -2228,12 +2228,12 @@ This effect does not activate if another effect prevents the holder from switchi
 :   Increases the target’s [Speed]{mechanic:speed} [effort]{mechanic:effort} by 1."
 612,5,À vendre pour 100 Pokédollars.,Déchet.
 612,9,Sell for 100 Pokédollars.,Vendor trash.
-613,5,Peut être ressuscité en un []{pokemon:tirtouga}.,À donner au scientifique d'un musée pour recevoir un []{pokemon:tirtouga}.
-613,9,Can be revived into a []{pokemon:tirtouga}.,Give to a scientist in a museum to receive a []{pokemon:tirtouga}.
-614,5,Peut être ressuscité en un []{pokemon:archen}.,À donner au scientifique d'un musée pour recevoir un []{pokemon:archen}.
-614,9,Can be revived into an []{pokemon:archen}.,Give to a scientist in a museum to receive an []{pokemon:archen}.
-615,5,Permet d'accéder à l'Île Liberté et Victini.,"Permet de monter sur le bâteau de []{location:castelia-city}, qui mène à []{location:liberty-garden} et []{pokemon:victini}."
-615,9,Allows access to Liberty Garden and Victini.,"Allows passage on the []{location:castelia-city} ship, which leads to []{location:liberty-garden} and []{pokemon:victini}."
+613,5,Peut être ressuscité en un [Carapagos]{pokemon:tirtouga}.,À donner au scientifique d'un musée pour recevoir un [Carapagos]{pokemon:tirtouga}.
+613,9,Can be revived into a [Tirtouga]{pokemon:tirtouga}.,Give to a scientist in a museum to receive a [Tirtouga]{pokemon:tirtouga}.
+614,5,Peut être ressuscité en un [Arkéapti]{pokemon:archen}.,À donner au scientifique d'un musée pour recevoir un [Arkéapti]{pokemon:archen}.
+614,9,Can be revived into an [Archen]{pokemon:archen}.,Give to a scientist in a museum to receive an [Archen]{pokemon:archen}.
+615,5,Permet d'accéder à l'Île Liberté et Victini.,"Permet de monter sur le bâteau de [Volucité]{location:castelia-city}, qui mène à [Île Liberté]{location:liberty-garden} et [Victini]{pokemon:victini}."
+615,9,Allows access to Liberty Garden and Victini.,"Allows passage on the [Castelia City]{location:castelia-city} ship, which leads to [Liberty Garden]{location:liberty-garden} and [Victini]{pokemon:victini}."
 616,5,Active les Offri-Auras.,Sert de monnaie pour activer les Offri-Auras dans le Heylink.
 616,9,Activates Pass Powers.,Acts as currency to activate Pass Powers in the Entralink.
 617,5,Capture les Pokémon trouvés dans le Dream World.,"Ne peut être utilisé seulement dans la forêt du Heylink, pour capturer les Pokémon rencontrés dans le Dream World.
@@ -2434,34 +2434,34 @@ Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 656,9,Raises [critical hit]{mechanic:critical-hit} rate by three [stages]{mechanic:stage} in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s [critical hit]{mechanic:critical-hit} rate by three [stages]{mechanic:stage}.
 This item can only be obtained or used via the Wonder Launcher."
-657,5,Invoque Reshiram pour le combat final contre N.,Invoque []{pokemon:reshiram} pour le combat final contre N.
-657,9,Summons Reshiram for the final battle against N.,Summons []{pokemon:reshiram} for the final battle against N.
-658,5,Invoque Zekrom pour le combat final contre N.,Invoque []{pokemon:zekrom} pour le combat final contre N.
-658,9,Summons Zekrom for the final battle against N.,Summons []{pokemon:zekrom} for the final battle against N.
-659,5,Apprend Éclair Fou à un Pokémon compatible.,Apprend []{move:wild-charge} à un Pokémon compatible.
-659,9,Teaches Wild Charge to a compatible Pokémon.,Teaches []{move:wild-charge} to a compatible Pokémon.
-660,5,Apprend Éclate-Roc à un Pokémon compatible.,Apprend []{move:rock-smash} à un Pokémon compatible.
-660,9,Teaches Rock Smash to a compatible Pokémon.,Teaches []{move:rock-smash} to a compatible Pokémon.
-661,5,Apprend Aboiement à un Pokémon compatible.,Apprend []{move:snarl} à un Pokémon compatible.
-661,9,Teaches Snarl to a compatible Pokémon.,Teaches []{move:snarl} to a compatible Pokémon.
+657,5,Invoque Reshiram pour le combat final contre N.,Invoque [Reshiram]{pokemon:reshiram} pour le combat final contre N.
+657,9,Summons Reshiram for the final battle against N.,Summons [Reshiram]{pokemon:reshiram} for the final battle against N.
+658,5,Invoque Zekrom pour le combat final contre N.,Invoque [Zekrom]{pokemon:zekrom} pour le combat final contre N.
+658,9,Summons Zekrom for the final battle against N.,Summons [Zekrom]{pokemon:zekrom} for the final battle against N.
+659,5,Apprend Éclair Fou à un Pokémon compatible.,Apprend [Éclair Fou]{move:wild-charge} à un Pokémon compatible.
+659,9,Teaches Wild Charge to a compatible Pokémon.,Teaches [Wild Charge]{move:wild-charge} to a compatible Pokémon.
+660,5,Apprend Éclate-Roc à un Pokémon compatible.,Apprend [Éclate-Roc]{move:rock-smash} à un Pokémon compatible.
+660,9,Teaches Rock Smash to a compatible Pokémon.,Teaches [Rock Smash]{move:rock-smash} to a compatible Pokémon.
+661,5,Apprend Aboiement à un Pokémon compatible.,Apprend [Aboiement]{move:snarl} à un Pokémon compatible.
+661,9,Teaches Snarl to a compatible Pokémon.,Teaches [Snarl]{move:snarl} to a compatible Pokémon.
 662,5,Permet de passer des appels vidéos à quatre.,"Permet de passer des appels vidéos à quatre.  Utilisé pour faire avancer l'intrigue dans le jeu, mais fonctionne également avec d'autres joueurs via le C-Gear."
 662,9,Makes four-way video calls.,"Makes four-way video calls.  Used for plot advancement in-game, but also works with other players via the C-Gear."
 663,5,Inconnu.  Actuellement non utilisé.,Inconnu.  Actuellement non utilisé.
 663,9,Unknown.  Currently unused.,Unknown.  Currently unused.
-664,5,Partie de la quête secondaire pour obtenir []{item:tm89}.,"À donner au []{pokemon:wingull} sur la []{location:unova-route-13}, avec []{item:gram-2} et []{item:gram-3}, pour recevoir la []{item:tm89}."
-664,9,Part of a sidequest to obtain []{item:tm89}.,"Give to the []{pokemon:wingull} on []{location:unova-route-13}, along with []{item:gram-2} and []{item:gram-3}, to receive []{item:tm89}."
-665,5,Partie de la quête secondaire pour obtenir []{item:tm89}.,"À donner au []{pokemon:wingull} sur la []{location:unova-route-13}, avec []{item:gram-1} et []{item:gram-3}, pour recevoir la []{item:tm89}."
-665,9,Part of a sidequest to obtain []{item:tm89}.,"Give to the []{pokemon:wingull} on []{location:unova-route-13}, along with []{item:gram-1} and []{item:gram-3}, to receive []{item:tm89}."
-666,5,Partie de la quête secondaire pour obtenir []{item:tm89}.,"À donner au []{pokemon:wingull} sur la []{location:unova-route-13}, avec []{item:gram-1} et []{item:gram-2}, pour recevoir la []{item:tm89}."
-666,9,Part of a sidequest to obtain []{item:tm89}.,"Give to the []{pokemon:wingull} on []{location:unova-route-13}, along with []{item:gram-1} and []{item:gram-2}, to receive []{item:tm89}."
-668,5,"Tenu: Quand le porteur utilise une capacité offensive de type []{type:dragon}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:dragon}, la capacité a sa puissance 1.5× et cet objet est consommé."
-668,9,"Held: When the holder uses a damaging []{type:dragon}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:dragon}-type move, the move has 1.5× power and this item is consumed."
-669,5,"Tenu: Quand le porteur utilise une capacité offensive de type []{type:normal}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
-:   Lorsque le porteur utilise une capacité offensive de type []{type:normal}, la capacité a sa puissance 1.5× et cet objet est consommé."
-669,9,"Held: When the holder uses a damaging []{type:normal}-type move, the move has 1.5× power and this item is consumed.","Held
-:   When the holder uses a damaging []{type:normal}-type move, the move has 1.5× power and this item is consumed."
+664,5,Partie de la quête secondaire pour obtenir [CT89]{item:tm89}.,"À donner au [Goélise]{pokemon:wingull} sur la [Route 13]{location:unova-route-13}, avec [Courrier 2]{item:gram-2} et [Courrier 3]{item:gram-3}, pour recevoir la [CT89]{item:tm89}."
+664,9,Part of a sidequest to obtain [TM89]{item:tm89}.,"Give to the [Wingull]{pokemon:wingull} on [Route 13]{location:unova-route-13}, along with [Gram 2]{item:gram-2} and [Gram 3]{item:gram-3}, to receive [TM89]{item:tm89}."
+665,5,Partie de la quête secondaire pour obtenir [CT89]{item:tm89}.,"À donner au [Goélise]{pokemon:wingull} sur la [Route 13]{location:unova-route-13}, avec [Courrier 1]{item:gram-1} et [Courrier 3]{item:gram-3}, pour recevoir la [CT89]{item:tm89}."
+665,9,Part of a sidequest to obtain [TM89]{item:tm89}.,"Give to the [Wingull]{pokemon:wingull} on [Route 13]{location:unova-route-13}, along with [Gram 1]{item:gram-1} and [Gram 3]{item:gram-3}, to receive [TM89]{item:tm89}."
+666,5,Partie de la quête secondaire pour obtenir [CT89]{item:tm89}.,"À donner au [Goélise]{pokemon:wingull} sur la [Route 13]{location:unova-route-13}, avec [Courrier 1]{item:gram-1} et [Courrier 2]{item:gram-2}, pour recevoir la [CT89]{item:tm89}."
+666,9,Part of a sidequest to obtain [TM89]{item:tm89}.,"Give to the [Wingull]{pokemon:wingull} on [Route 13]{location:unova-route-13}, along with [Gram 1]{item:gram-1} and [Gram 2]{item:gram-2}, to receive [TM89]{item:tm89}."
+668,5,"Tenu: Quand le porteur utilise une capacité offensive de type [Dragon]{type:dragon}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Dragon]{type:dragon}, la capacité a sa puissance 1.5× et cet objet est consommé."
+668,9,"Held: When the holder uses a damaging [Dragon]{type:dragon}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Dragon]{type:dragon}-type move, the move has 1.5× power and this item is consumed."
+669,5,"Tenu: Quand le porteur utilise une capacité offensive de type [Normal]{type:normal}, la puissance de la capacité augmente de 50% et cet objet est consommé.","Tenu
+:   Lorsque le porteur utilise une capacité offensive de type [Normal]{type:normal}, la capacité a sa puissance 1.5× et cet objet est consommé."
+669,9,"Held: When the holder uses a damaging [Normal]{type:normal}-type move, the move has 1.5× power and this item is consumed.","Held
+:   When the holder uses a damaging [Normal]{type:normal}-type move, the move has 1.5× power and this item is consumed."
 670,5,Contient les médailles reçues dans la Chasse aux Médailles.,
 670,9,Holds medals recieved in the medal rally.,
 671,5,"Fusionne Kyurem avec Reshiram ou Zekrom, ou les sépare à nouveau.",
@@ -2750,34 +2750,34 @@ This item can only be obtained or used via the Wonder Launcher."
 833,9,Held: Allows a Pokémon to use the Z-move equivalents of its Steel moves.,Held: Allows a Pokémon to use the Z-move equivalents of its Steel moves.
 834,5,Tenu: Permet à un Pokémon d'utiliser les Capacités Z équivalentes à ses capacités Fée.,Tenu: Permet à un Pokémon d'utiliser les Capacités Z équivalentes à ses capacités Fée.
 834,9,Held: Allows a Pokémon to use the Z-move equivalents of its Fairy moves.,Held: Allows a Pokémon to use the Z-move equivalents of its Fairy moves.
-835,5,Tenu: Permet à Pikachu d'améliorer Électacle en Pikachute Foudroyante.,Tenu: Permet à []{pokemon:pikachu} d'améliorer []{move:volt-tackle} en []{move:catastropika}.
-835,9,Held: Allows Pikachu to upgrade Volt Tackle into Catastropika.,Held: Allows []{pokemon:pikachu} to upgrade []{move:volt-tackle} into []{move:catastropika}.
+835,5,Tenu: Permet à Pikachu d'améliorer Électacle en Pikachute Foudroyante.,Tenu: Permet à [Pikachu]{pokemon:pikachu} d'améliorer [Électacle]{move:volt-tackle} en [Pikachute Foudroyante]{move:catastropika}.
+835,9,Held: Allows Pikachu to upgrade Volt Tackle into Catastropika.,Held: Allows [Pikachu]{pokemon:pikachu} to upgrade [Volt Tackle]{move:volt-tackle} into [Catastropika]{move:catastropika}.
 836,5,À échanger à Papi Ultime pour maximiser un IV d'un Pokémon.,À échanger à Papi Ultime pour passer un IV d'un Pokémon à 31.
 836,9,Trade to Mr. Hyper to maximize one of a Pokémon’s genes.,Trade to Mr. Hyper to set one of a Pokémon’s genes to 31.
 837,5,À échanger à Papi Ultime pour maximiser tous les IV d'un Pokémon.,À échanger à Papi Ultime pour passer tous les IV d'un Pokémon à 31.
 837,9,Trade to Mr. Hyper to maximize all of a Pokémon’s genes.,Trade to Mr. Hyper to set all of a Pokémon’s genes to 31.
 838,5,Permet au joueur d'utiliser les Capacités Z.,Permet au joueur d'utiliser les Capacités Z.
 838,9,Allows the player’s Pokémon to use Z-moves.,Allows the player’s Pokémon to use Z-moves.
-839,5,Tenu: Permet à Archéduc d'améliorer Tisse Ombre en Fureur des Plumes Spectrales.,Tenu: Permet à []{pokemon:decidueye} d'améliorer []{move:spirit-shackle} en []{move:sinister-arrow-raid}.
-839,9,Held: Allows Decidueye to upgrade Spirit Shackle into Sinister Arrow Raid.,Held: Allows []{pokemon:decidueye} to upgrade []{move:spirit-shackle} into []{move:sinister-arrow-raid}.
-840,5,Tenu: Permet à Félinferno d'améliorer Dark Lariat en Dark Body Press.,Tenu: Permet à []{pokemon:incineroar} d'améliorer []{move:darkest-lariat} en []{move:malicious-moonsault}.
-840,9,Held: Allows Incineroar to upgrade Darkest Lariat into Malicious Moonsault.,Held: Allows []{pokemon:incineroar} to upgrade []{move:darkest-lariat} into []{move:malicious-moonsault}.
-841,5,Tenu: Permet à Oratoria d'améliorer Aria de l'Écume en Symphonie des Ondines.,Tenu: Allows []{pokemon:primarina} to upgrade []{move:sparkling-aria} en []{move:oceanic-operetta}.
-841,9,Held: Allows Primarina to upgrade Sparkling Aria into Oceanic Operetta.,Held: Allows []{pokemon:primarina} to upgrade []{move:sparkling-aria} into []{move:oceanic-operetta}.
-842,5,Tenu: Permet aux Tapus d'améliorer Ire de la Nature en Colère du Gardien d'Alola.,"Tenu: Permet à []{pokemon:tapu-koko}, []{pokemon:tapu-lele}, []{pokemon:tapu-bulu}, et []{pokemon:tapu-fini} d'améliorer []{move:natures-madness} en []{move:guardian-of-alola}."
-842,9,Held: Allows the Tapus to upgrade Nature’s Madness into Guardian of Alola.,"Held: Allows []{pokemon:tapu-koko}, []{pokemon:tapu-lele}, []{pokemon:tapu-bulu}, and []{pokemon:tapu-fini} to upgrade []{move:natures-madness} into []{move:guardian-of-alola}."
-843,5,Tenu: Permet à Marshadow d'améliorer Clepto-Mânes en Fauche-Âme des Sept Étoiles.,Tenu: Permet à []{pokemon:marshadow} d'améliorer []{move:spectral-thief} en []{move:soul-stealing-7-star-strike}.
-843,9,Held: Allows Marshadow to upgrade Spectral Thief into Soul-Stealing 7 Star Strike.,Held: Allows []{pokemon:marshadow} to upgrade []{move:spectral-thief} into []{move:soul-stealing-7-star-strike}.
-844,5,Tenu: Permet à Raichu d'Alola d'améliorer Tonnerre en Électro-Surf Survolté.,Tenu: Permet à []{pokemon:raichu} d'Alola d'améliorer []{move:thunderbolt} en []{move:stoked-sparksurfer}.
-844,9,Held: Allows Alola Raichu to upgrade Thunderbolt into Stoked Sparksurfer.,Held: Allows Alola []{pokemon:raichu} to upgrade []{move:thunderbolt} into []{move:stoked-sparksurfer}.
-845,5,Tenu: Permet à Ronflex d'améliorer Giga Impact en Gare au Ronflex.,Tenu: Permet à []{pokemon:snorlax} d'améliorer []{move:giga-impact} en []{move:pulverizing-pancake}.
-845,9,Held: Allows Snorlax to upgrade Giga Impact into Pulverizing Pancake.,Held: Allows []{pokemon:snorlax} to upgrade []{move:giga-impact} into []{move:pulverizing-pancake}.
-846,5,Tenu: Permet à Évoli d'améliorer Dernier Recours en Neuf pour Un.,Tenu: Permet à []{pokemon:eevee} d'améliorer []{move:last-resort} en []{move:extreme-evoboost}.
-846,9,Held: Allows Eevee to upgrade Last Resort into Extreme Evoboost.,Held: Allows []{pokemon:eevee} to upgrade []{move:last-resort} into []{move:extreme-evoboost}.
-847,5,Tenu: Permet à Mew d'améliorer Psyko en Supernova Originelle.,Tenu: Permet à []{pokemon:mew} d'améliorer []{move:psychic} en []{move:genesis-supernova}.
-847,9,Held: Allows Mew to upgrade Psychic into Genesis Supernova.,Held: Allows []{pokemon:mew} to upgrade []{move:psychic} into []{move:genesis-supernova}.
-877,5,Tenu: Permet à un Pikachu Casquette d'améliorer Tonnerre en Giga-Tonnerre.,Tenu: Permet aux []{pokemon:pikachu} à casquette d'améliorer []{move:thunderbolt} en []{move:10-000-000-volt-thunderbolt}.
-877,9,"Held: Allows cap-wearing Pikachu to upgrade Thunderbolt into 10,000,000 Volt Thunderbolt.",Held: Allows cap-wearing []{pokemon:pikachu} to upgrade []{move:thunderbolt} into []{move:10-000-000-volt-thunderbolt}.
+839,5,Tenu: Permet à Archéduc d'améliorer Tisse Ombre en Fureur des Plumes Spectrales.,Tenu: Permet à [Archéduc]{pokemon:decidueye} d'améliorer [Tisse Ombre]{move:spirit-shackle} en [Fureur des Plumes Spectrales]{move:sinister-arrow-raid}.
+839,9,Held: Allows Decidueye to upgrade Spirit Shackle into Sinister Arrow Raid.,Held: Allows [Decidueye]{pokemon:decidueye} to upgrade [Spirit Shackle]{move:spirit-shackle} into [Sinister Arrow Raid]{move:sinister-arrow-raid}.
+840,5,Tenu: Permet à Félinferno d'améliorer Dark Lariat en Dark Body Press.,Tenu: Permet à [Félinferno]{pokemon:incineroar} d'améliorer [Dark Lariat]{move:darkest-lariat} en [Dark Body Press]{move:malicious-moonsault}.
+840,9,Held: Allows Incineroar to upgrade Darkest Lariat into Malicious Moonsault.,Held: Allows [Incineroar]{pokemon:incineroar} to upgrade [Darkest Lariat]{move:darkest-lariat} into [Malicious Moonsault]{move:malicious-moonsault}.
+841,5,Tenu: Permet à Oratoria d'améliorer Aria de l'Écume en Symphonie des Ondines.,Tenu: Allows [Oratoria]{pokemon:primarina} to upgrade [Aria de l’Écume]{move:sparkling-aria} en [Symphonie des Ondines]{move:oceanic-operetta}.
+841,9,Held: Allows Primarina to upgrade Sparkling Aria into Oceanic Operetta.,Held: Allows [Primarina]{pokemon:primarina} to upgrade [Sparkling Aria]{move:sparkling-aria} into [Oceanic Operetta]{move:oceanic-operetta}.
+842,5,Tenu: Permet aux Tapus d'améliorer Ire de la Nature en Colère du Gardien d'Alola.,"Tenu: Permet à [Tokorico]{pokemon:tapu-koko}, [Tokopiyon]{pokemon:tapu-lele}, [Tokotoro]{pokemon:tapu-bulu}, et [Tokopisco]{pokemon:tapu-fini} d'améliorer [Ire de la Nature]{move:natures-madness} en [Colère du Gardien d’Alola]{move:guardian-of-alola}."
+842,9,Held: Allows the Tapus to upgrade Nature’s Madness into Guardian of Alola.,"Held: Allows [Tapu Koko]{pokemon:tapu-koko}, [Tapu Lele]{pokemon:tapu-lele}, [Tapu Bulu]{pokemon:tapu-bulu}, and [Tapu Fini]{pokemon:tapu-fini} to upgrade [Nature’s Madness]{move:natures-madness} into [Guardian of Alola]{move:guardian-of-alola}."
+843,5,Tenu: Permet à Marshadow d'améliorer Clepto-Mânes en Fauche-Âme des Sept Étoiles.,Tenu: Permet à [Marshadow]{pokemon:marshadow} d'améliorer [Clepto-Mânes]{move:spectral-thief} en [Fauche-Âme des Sept Étoiles]{move:soul-stealing-7-star-strike}.
+843,9,Held: Allows Marshadow to upgrade Spectral Thief into Soul-Stealing 7 Star Strike.,Held: Allows [Marshadow]{pokemon:marshadow} to upgrade [Spectral Thief]{move:spectral-thief} into [Soul-Stealing 7-Star Strike]{move:soul-stealing-7-star-strike}.
+844,5,Tenu: Permet à Raichu d'Alola d'améliorer Tonnerre en Électro-Surf Survolté.,Tenu: Permet à [Raichu]{pokemon:raichu} d'Alola d'améliorer [Tonnerre]{move:thunderbolt} en [Électro-Surf Survolté]{move:stoked-sparksurfer}.
+844,9,Held: Allows Alola Raichu to upgrade Thunderbolt into Stoked Sparksurfer.,Held: Allows Alola [Raichu]{pokemon:raichu} to upgrade [Thunderbolt]{move:thunderbolt} into [Stoked Sparksurfer]{move:stoked-sparksurfer}.
+845,5,Tenu: Permet à Ronflex d'améliorer Giga Impact en Gare au Ronflex.,Tenu: Permet à [Ronflex]{pokemon:snorlax} d'améliorer [Giga Impact]{move:giga-impact} en [Gare au Ronflex]{move:pulverizing-pancake}.
+845,9,Held: Allows Snorlax to upgrade Giga Impact into Pulverizing Pancake.,Held: Allows [Snorlax]{pokemon:snorlax} to upgrade [Giga Impact]{move:giga-impact} into [Pulverizing Pancake]{move:pulverizing-pancake}.
+846,5,Tenu: Permet à Évoli d'améliorer Dernier Recours en Neuf pour Un.,Tenu: Permet à [Évoli]{pokemon:eevee} d'améliorer [Dernier Recours]{move:last-resort} en [Neuf pour Un]{move:extreme-evoboost}.
+846,9,Held: Allows Eevee to upgrade Last Resort into Extreme Evoboost.,Held: Allows [Eevee]{pokemon:eevee} to upgrade [Last Resort]{move:last-resort} into [Extreme Evoboost]{move:extreme-evoboost}.
+847,5,Tenu: Permet à Mew d'améliorer Psyko en Supernova Originelle.,Tenu: Permet à [Mew]{pokemon:mew} d'améliorer [Psyko]{move:psychic} en [Supernova Originelle]{move:genesis-supernova}.
+847,9,Held: Allows Mew to upgrade Psychic into Genesis Supernova.,Held: Allows [Mew]{pokemon:mew} to upgrade [Psychic]{move:psychic} into [Genesis Supernova]{move:genesis-supernova}.
+877,5,Tenu: Permet à un Pikachu Casquette d'améliorer Tonnerre en Giga-Tonnerre.,Tenu: Permet aux [Pikachu]{pokemon:pikachu} à casquette d'améliorer [Tonnerre]{move:thunderbolt} en [Giga-Tonnerre]{move:10-000-000-volt-thunderbolt}.
+877,9,"Held: Allows cap-wearing Pikachu to upgrade Thunderbolt into 10,000,000 Volt Thunderbolt.",Held: Allows cap-wearing [Pikachu]{pokemon:pikachu} to upgrade [Thunderbolt]{move:thunderbolt} into [10,000,000 Volt Thunderbolt]{move:10-000-000-volt-thunderbolt}.
 878,5,Porte les ingrédients pendant l'épreuve de Barbara.,Porte les ingrédients pendant l'épreuve de Barbara.
 878,9,Holds ingredients during Mallow’s trial.,Holds ingredients during Mallow’s trial.
 879,5,Permet au joueur de pêcher des Pokémon.,Permet au joueur de pêcher des Pokémon.
@@ -2793,9 +2793,9 @@ This item can only be obtained or used via the Wonder Launcher."
 884,5,Contient les cellules/cœurs Zygarde collectés.  Permet d'apprendre des capacités à Zygarde.,Contient les cellules/cœurs Zygarde collectés.  Permet d'apprendre des capacités à Zygarde.
 884,9,Contains collected Zygarde cells/cores.  Can teach Zygarde moves.,Contains collected Zygarde cells/cores.  Can teach Zygarde moves.
 885,5,Fait évoluer un Sabelette d'Alola en Sablaireau d'Alola ou un Goupix d'Alola en Feunard d'Alola.,"Utilisé sur un Pokémon de l'équioe
-:   Fait évoler un []{pokemon:sandshrew} d'Alola en []{pokemon:sandslash} d'Alola ou un []{pokemon:vulpix} d'Alola en []{pokemon:ninetales} d'Alola."
+:   Fait évoler un [Sabelette]{pokemon:sandshrew} d'Alola en [Sablaireau]{pokemon:sandslash} d'Alola ou un [Goupix]{pokemon:vulpix} d'Alola en [Feunard]{pokemon:ninetales} d'Alola."
 885,9,Evolves an Alola Sandshrew into Alola Sandslash or an Alola Vulpix into Alola Ninetales.,"Used on a party Pokémon
-:   Evolves an Alola []{pokemon:sandshrew} into Alola []{pokemon:sandslash} or an Alola []{pokemon:vulpix} into Alola []{pokemon:ninetales}."
+:   Evolves an Alola [Sandshrew]{pokemon:sandshrew} into Alola [Sandslash]{pokemon:sandslash} or an Alola [Vulpix]{pokemon:vulpix} into Alola [Ninetales]{pokemon:ninetales}."
 886,5,Permet au joueur d'invoquer une Poké Monture.,"Permet au joueur d'invoquer une Poké Monture.  Inutilisé, comme cela peut être fait simplement en appuyant sur Y."
 886,9,Allows the player to summon a Ride Pokémon.,"Allows the player to summon a Ride Pokémon.  Unused, as this can be done simply by pressing Y."
 887,5,Tente de capturer un Pokémon sauvage.  Le taux de succès est 5× pour les Ultra-Chimères et 0.1× pour tous les autres Pokémon.,"Utilisé au combat

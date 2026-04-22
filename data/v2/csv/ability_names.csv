@@ -2907,6 +2907,7 @@ ability_id,local_language_id,name
 300,7,Néctar Dulce
 300,8,Sciroppo Sublime
 300,9,Supersweet Syrup
+300,11,かんろなミツ
 300,12,甘露之蜜
 301,1,おもてなし
 301,3,대접
@@ -2978,10 +2979,18 @@ ability_id,local_language_id,name
 307,9,Poison Puppeteer
 307,11,どくくぐつ
 307,12,毒傀儡
+308,1,かんつうドリル
 308,9,Piercing Drill
+308,11,かんつうドリル
+309,1,ドラゴンスキン
 309,9,Dragonize
+309,11,ドラゴンスキン
+310,1,メガソーラー
 310,9,Mega Sol
+310,11,メガソーラー
+311,1,とびだすハバネロ
 311,9,Spicy Spray
+311,11,とびだすハバネロ
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

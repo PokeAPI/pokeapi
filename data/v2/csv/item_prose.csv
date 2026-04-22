@@ -2777,7 +2777,7 @@ This item can only be obtained or used via the Wonder Launcher."
 847,5,Tenu: Permet à Mew d'améliorer Psyko en Supernova Originelle.,Tenu: Permet à [Mew]{pokemon:mew} d'améliorer [Psyko]{move:psychic} en [Supernova Originelle]{move:genesis-supernova}.
 847,9,Held: Allows Mew to upgrade Psychic into Genesis Supernova.,Held: Allows [Mew]{pokemon:mew} to upgrade [Psychic]{move:psychic} into [Genesis Supernova]{move:genesis-supernova}.
 877,5,Tenu: Permet à un Pikachu Casquette d'améliorer Tonnerre en Giga-Tonnerre.,Tenu: Permet aux [Pikachu]{pokemon:pikachu} à casquette d'améliorer [Tonnerre]{move:thunderbolt} en [Giga-Tonnerre]{move:10-000-000-volt-thunderbolt}.
-877,9,"Held: Allows cap-wearing Pikachu to upgrade Thunderbolt into 10,000,000 Volt Thunderbolt.",Held: Allows cap-wearing [Pikachu]{pokemon:pikachu} to upgrade [Thunderbolt]{move:thunderbolt} into [10,000,000 Volt Thunderbolt]{move:10-000-000-volt-thunderbolt}.
+877,9,"Held: Allows cap-wearing Pikachu to upgrade Thunderbolt into 10,000,000 Volt Thunderbolt.","Held: Allows cap-wearing [Pikachu]{pokemon:pikachu} to upgrade [Thunderbolt]{move:thunderbolt} into [10,000,000 Volt Thunderbolt]{move:10-000-000-volt-thunderbolt}."
 878,5,Porte les ingrédients pendant l'épreuve de Barbara.,Porte les ingrédients pendant l'épreuve de Barbara.
 878,9,Holds ingredients during Mallow’s trial.,Holds ingredients during Mallow’s trial.
 879,5,Permet au joueur de pêcher des Pokémon.,Permet au joueur de pêcher des Pokémon.

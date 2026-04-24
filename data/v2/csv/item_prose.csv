@@ -917,11 +917,11 @@ Used on a party Pokémon
 187,9,Held: Consumed at 1/4 max HP when using a move to go first.,"Held in battle
 :   When the holder has 1/4 its max [HP]{mechanic:hp} remaining or less, it consumes this item.  On the following turn, the holder will act first among moves with the same [priority]{mechanic:priority}, regardless of [Speed]{mechanic:speed}."
 188,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité physique.,"Tenu au combat 
-:   Quand le porteur suvit des dégâts [physiques]{mechanic:physic}, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses [PV}{mechanic:hp} max en dégâts."
+:   Quand le porteur suvit des dégâts [physiques]{mechanic:physic}, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses [PV]{mechanic:hp} max en dégâts."
 188,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a physical attack.,"Held in battle
 :   When the holder takes [physical]{mechanic:physical} damage, it consumes this item to damage the attacking Pokémon for 1/8 its max [HP]{mechanic:hp}."
 189,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité spéciale.,"Tenu au combat 
-:   Quand le porteur suvit des dégâts [spéciaux]{mechanic:special}, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses [PV}{mechanic:hp} max en dégâts."
+:   Quand le porteur suvit des dégâts [spéciaux]{mechanic:special}, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses [PV]{mechanic:hp} max en dégâts."
 189,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a special attack.,"Held in battle
 :   When the holder takes [special]{mechanic:special} damage, it consumes this item to damage the attacking Pokémon for 1/8 its max [HP]{mechanic:hp}."
 190,5,Tenu: Augmente l'esquive du porteur de 1/9 (11 1/9%).,"Tenu au combat 

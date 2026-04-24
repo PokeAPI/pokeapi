@@ -169,7 +169,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 592,1,オスのすがた,
 592,3,수컷의 모습,
 592,4,雄性的樣子,
-592,5,Mâle,
+592,5,Mâle,Viskuse Mâle
 592,6,Männlich,
 592,7,Macho,
 592,8,Maschio,
@@ -179,7 +179,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 593,1,オスのすがた,
 593,3,수컷의 모습,
 593,4,雄性的樣子,
-593,5,Mâle,
+593,5,Mâle,Moyade Mâle
 593,6,Männlich,
 593,7,Macho,
 593,8,Maschio,
@@ -257,7 +257,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 668,1,オスのすがた,
 668,3,수컷의 모습,
 668,4,雄性的樣子,
-668,5,Mâle,
+668,5,Mâle,Némélios Mâle
 668,6,Männlich,
 668,7,Macho,
 668,8,Maschio,

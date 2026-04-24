@@ -3255,7 +3255,7 @@ class MoveChangeSerializer(serializers.ModelSerializer):
                     "effect": {
                         "type": "string",
                         "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
+                            "Inflicts regular damage."
                         ],
                     },
                     "short_effect": {
@@ -3638,7 +3638,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                     "effect": {
                         "type": "string",
                         "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
+                            "Inflicts regular damage."
                         ],
                     },
                     "short_effect": {

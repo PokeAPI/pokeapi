@@ -1,63 +1,63 @@
 move_flag_id,local_language_id,name,description
-1,5,Contact,"Le lanceur touche la cible. Cela déclenche certaines capacités (e.g., [Statik]{ability:static}) et certains objets (e.g., [Piquants]{item:sticky-barb})."
-1,6,Kontakt,Der Anwender berührt das Ziel.  Dies löst mahcne Fähigkeiten aus (z.B. [Statik]{ability:static}) und Gegenstände (z.B. [Klettdorn]{item:sticky-barb}).
-1,9,Makes contact,"User touches the target.  This triggers some abilities (e.g., [Static]{ability:static}) and items (e.g., [Sticky Barb]{item:sticky-barb})."
-2,5,A un tour de chargement,Cette capacité nécessite un tour de chargement qui peut être passé avec une [Herbe Pouvoir]{item:power-herb}.
-2,6,Hat eine Aufladerunde,"Diese Fähigkeit hat eine Aufladerunde, welche mit einer [Energiekraut]{item:power-herb} übersprungen werden kann."
-2,9,Has a charging turn,This move has a charging turn that can be skipped with a [Power Herb]{item:power-herb}.
+1,5,Contact,"Le lanceur touche la cible. Cela déclenche certaines capacités (e.g., Statik) et certains objets (e.g., Piquants)."
+1,6,Kontakt,Der Anwender berührt das Ziel.  Dies löst mahcne Fähigkeiten aus (z.B. Statik) und Gegenstände (z.B. Klettdorn).
+1,9,Makes contact,"User touches the target.  This triggers some abilities (e.g., Static) and items (e.g., Sticky Barb)."
+2,5,A un tour de chargement,Cette capacité nécessite un tour de chargement qui peut être passé avec une Herbe Pouvoir.
+2,6,Hat eine Aufladerunde,"Diese Fähigkeit hat eine Aufladerunde, welche mit einer Energiekraut übersprungen werden kann."
+2,9,Has a charging turn,This move has a charging turn that can be skipped with a Power Herb.
 3,5,Doit recharger,"Au tour suivant l’utilisation de cette capacité, l’action du Pokémon est ignorée pour qu’il puisse se recharger."
 3,6,Muss aufladen,"Die Runde nach dieser Fähigkeit wird benötigt, damit das Pokémon sich aufladen kann."
 3,9,Must recharge,"The turn after this move is used, the Pokémon's action is skipped so it can recharge."
-4,5,Bloqué par Protection et Abri,Cette capacité ne fonctionnera pas si la cible a utilisé [Détection]{move:detect} ou [Abri]{move:protect} ce tour.
-4,6,Blockiert von Scanner and Schutzschild,"Diese Fähigkeit funktioniert nicht, wenn das Ziel [Scanner]{move:detect} oder [Schutzschild]{move:protect} diese Runde genutzt hat."
-4,9,Blocked by Detect and Protect,This move will not work if the target has used [Detect]{move:detect} or [Protect]{move:protect} this turn.
-5,5,Réflechissable,Cette capacité peut être réflechie sur le lanceur avec [Reflet Magik]{move:magic-coat} ou [Miroir Magik]{ability:magic-bounce}.
-5,6,Reflektierbar,Diese Fähigkeit könnte reflektiert mit [Magiemantel]{move:magic-coat} oder [Magiespiegel]{ability:magic-bounce} reflektiert werden.
-5,9,Reflectable,This move may be reflected back at the user with [Magic Coat]{move:magic-coat} or [Magic Bounce]{ability:magic-bounce}.
-6,5,Saisissable,Cette capacité peut être volée si un autre Pokémon a utilisé [Saisie]{move:snatch} ce tour.
-6,6,Übernehmbar,"Diese Fähigkeit kann übernommen werden, wenn ein anderes Pokémon [Übernahme]{move:snatch} diese Runde nutzt."
-6,9,Snatchable,This move will be stolen if another Pokémon has used [Snatch]{move:snatch} this turn.
-7,5,Copié par Mimique,Un Pokémon ciblé par cette capacité peut utiliser [Mimique]{move:mirror-move} pour la copier.
-7,6,Kopierbar von Spiegeltrick,Ein von dieser Fähigkeit getroffenes Pokémon kann [Spiegeltrick]{move:mirror-move} nutzen um diese Fähigkeit zu kopieren.
-7,9,Copied by Mirror Move,A Pokémon targeted by this move can use [Mirror Move]{move:mirror-move} to copy it.
-8,5,Basé sur un coup de poing,La puissance de cette capacité est multipliée par 1.2 lorsqu’elle est utilisée par un Pokémon avec [Poing de Fer]{ability:iron-fist}.
-8,6,Hieb basierend,"Diese Fähigkeit hat die 1.2× Kraft, wenn es von einem Pokémon mit [Eisenfaust]{ability:iron-fist} genutzt wird."
-8,9,Punch-based,This move has 1.2× its usual power when used by a Pokémon with [Iron Fist]{ability:iron-fist}.
-9,5,Capacité sonore,Les Pokémon avec [Anti-Bruit]{ability:soundproof} sont immunisés contre cette capacité.
-9,6,Sound basierend,Pokémon mit [Lärmschutz]{ability:soundproof} sind immun gegen diese Fähigkeit.
-9,9,Sound-based,Pokémon with [Soundproof]{ability:soundproof} are immune to this move.
-10,5,Inutilisable sous Gravité,Cette capacité ne peut pas être utilisé sous forte [Gravité]{move:gravity}.
-10,6,Nicht nutzbar bei hoher Erdanziehung,Diese Fähigkeit kann nicht bei hoher [Erdanziehung]{move:gravity} genutzt werden.
-10,9,Unusable during Gravity,This move cannot be used in high [Gravity]{move:gravity}.
+4,5,Bloqué par Protection et Abri,Cette capacité ne fonctionnera pas si la cible a utilisé Détection ou Abri ce tour.
+4,6,Blockiert von Scanner and Schutzschild,"Diese Fähigkeit funktioniert nicht, wenn das Ziel Scanner oder Schutzschild diese Runde genutzt hat."
+4,9,Blocked by Detect and Protect,This move will not work if the target has used Detect or Protect this turn.
+5,5,Réflechissable,Cette capacité peut être réflechie sur le lanceur avec Reflet Magik ou Miroir Magik.
+5,6,Reflektierbar,Diese Fähigkeit könnte reflektiert mit Magiemantel oder Magiespiegel reflektiert werden.
+5,9,Reflectable,This move may be reflected back at the user with Magic Coat or Magic Bounce.
+6,5,Saisissable,Cette capacité peut être volée si un autre Pokémon a utilisé Saisie ce tour.
+6,6,Übernehmbar,"Diese Fähigkeit kann übernommen werden, wenn ein anderes Pokémon Übernahme diese Runde nutzt."
+6,9,Snatchable,This move will be stolen if another Pokémon has used Snatch this turn.
+7,5,Copié par Mimique,Un Pokémon ciblé par cette capacité peut utiliser Mimique pour la copier.
+7,6,Kopierbar von Spiegeltrick,Ein von dieser Fähigkeit getroffenes Pokémon kann Spiegeltrick nutzen um diese Fähigkeit zu kopieren.
+7,9,Copied by Mirror Move,A Pokémon targeted by this move can use Mirror Move to copy it.
+8,5,Basé sur un coup de poing,La puissance de cette capacité est multipliée par 1.2 lorsqu’elle est utilisée par un Pokémon avec Poing de Fer.
+8,6,Hieb basierend,"Diese Fähigkeit hat die 1.2× Kraft, wenn es von einem Pokémon mit Eisenfaust genutzt wird."
+8,9,Punch-based,This move has 1.2× its usual power when used by a Pokémon with Iron Fist.
+9,5,Capacité sonore,Les Pokémon avec Anti-Bruit sont immunisés contre cette capacité.
+9,6,Sound basierend,Pokémon mit Lärmschutz sind immun gegen diese Fähigkeit.
+9,9,Sound-based,Pokémon with Soundproof are immune to this move.
+10,5,Inutilisable sous Gravité,Cette capacité ne peut pas être utilisé sous forte Gravité.
+10,6,Nicht nutzbar bei hoher Erdanziehung,Diese Fähigkeit kann nicht bei hoher Erdanziehung genutzt werden.
+10,9,Unusable during Gravity,This move cannot be used in high Gravity.
 11,5,Dégêle quand utilisé,Cette capacité peut être utilisée lorsque le Pokémon est gelé pour le forcer à se dégeler.
 11,6,Enteist bei benutzung,"Diese Fähigkeit kann genutzt werden, wenn das Pokémon vereist ist um es zu enteisen."
 11,9,Defrosts when used,This move can be used while frozen to force the Pokémon to defrost.
 12,5,Cible le côté opposé en combat triple,"En combat triple, cette capacité peut être utilisée pour toucher l’adversaire le plus éloigné."
 12,6,Trifft gegenüber liegende Seite in 3er Kämpfen,In 3er Kämpfen trifft diese Fähigkeit den entferntesten Gegner.
 12,9,Targets opposite side in triples,"In triple battles, this move can be used on either side to target the farthest away opposing Pokémon."
-13,5,Soigne,Cette capacité est bloquée par [Anti-Soin]{move:heal-block}.
-13,6,Heilt,Diese Fähigkeit wird von [Heilblockade]{move:heal-block} blockiert.
-13,9,Heals,This move is blocked by [Heal Block]{move:heal-block}.
-14,5,Ignore Clonage,Cette capacité ignore le [Clonage]{move:substitute} de la cible.
-14,6,Ignoriert Delegator,Diese Fähigkeit ignoriert den [Delegator]{move:substitute} des Ziels.
-14,9,Ignores Substitute,This move ignores the target's [Substitute]{move:substitute}.
-15,5,À base de poudre,Les Pokémon avec [Envelocape]{ability:overcoat} et le type [Plante]{type:grass} sont immunisés contre cette capacité.
-15,6,Pulver basierend,Pokémon mit [Partikelschutz]{ability:overcoat} und [Pflanze]{type:grass}-Pokémon sind immun gegen diese Fähigkeit.
-15,9,Powder-based,Pokémon with [Overcoat]{ability:overcoat} and [Grass]{type:grass}-type Pokémon are immune to this move.
-16,5,Utilise la mâchoire,La puissance de cette capacité est multipliée par 1.5 lorsqu’elle est utilisée par un Pokémon avec [Prognathe]{ability:strong-jaw}.
-16,6,Kiefer basierend,"Diese Fähigkeit hat die 1.5× Kraft, wenn sie von einem Pokémon mit [Titankiefer]{ability:strong-jaw} genutzt wird."
-16,9,Jaw-based,This move has 1.5× its usual power when used by a Pokémon with [Strong Jaw]{ability:strong-jaw}.
-17,5,À base de vibrations,La puissance de cette capacité est multipliée par 1.5 lorsqu’elle est utilisée par un Pokémon avec [Méga Blaster]{ability:mega-launcher}.
-17,6,Megawumme basierend,"Diese Fähigkeit hat die 1.5× Kraft, wenn sie von einem Pokémon mit [Megawumme]{ability:mega-launcher} genutzt wird."
-17,9,Pulse-based,This move has 1.5× its usual power when used by a Pokémon with [Mega Launcher]{ability:mega-launcher}.
-18,5,À base de ballistique,Cette capacité est bloquée par [Pare-Balles]{ability:bulletproof}.
-18,6,Ballistik basierend,Diese Fähigkeit wird von [Kugelsicher]{ability:bulletproof} blockiert.
-18,9,Ballistics-based,This move is blocked by [Bulletproof]{ability:bulletproof}.
-19,5,Effet mental,Cette capacité est bloquée par [Aroma-Voile]{ability:aroma-veil} et soigné par [Herbe Mental]{item:mental-herb}.
-19,6,Psychische Effekte,Diese Fähigkeit wird durch [Dufthülle]{ability:aroma-veil} blockiert und wird durch [Mentalkraut]{item:mental-herb} geheilt.
-19,9,Mental effects,This move is blocked by [Aroma Veil]{ability:aroma-veil} and cured by [Mental Herb]{item:mental-herb}.
+13,5,Soigne,Cette capacité est bloquée par Anti-Soin.
+13,6,Heilt,Diese Fähigkeit wird von Heilblockade blockiert.
+13,9,Heals,This move is blocked by Heal Block.
+14,5,Ignore Clonage,Cette capacité ignore le Clonage de la cible.
+14,6,Ignoriert Delegator,Diese Fähigkeit ignoriert den Delegator des Ziels.
+14,9,Ignores Substitute,This move ignores the target's Substitute.
+15,5,À base de poudre,Les Pokémon avec Envelocape et le type Plante sont immunisés contre cette capacité.
+15,6,Pulver basierend,Pokémon mit Partikelschutz und Pflanze-Pokémon sind immun gegen diese Fähigkeit.
+15,9,Powder-based,Pokémon with Overcoat and Grass-type Pokémon are immune to this move.
+16,5,Utilise la mâchoire,La puissance de cette capacité est multipliée par 1.5 lorsqu’elle est utilisée par un Pokémon avec Prognathe.
+16,6,Kiefer basierend,"Diese Fähigkeit hat die 1.5× Kraft, wenn sie von einem Pokémon mit Titankiefer genutzt wird."
+16,9,Jaw-based,This move has 1.5× its usual power when used by a Pokémon with Strong Jaw.
+17,5,À base de vibrations,La puissance de cette capacité est multipliée par 1.5 lorsqu’elle est utilisée par un Pokémon avec Méga Blaster.
+17,6,Megawumme basierend,"Diese Fähigkeit hat die 1.5× Kraft, wenn sie von einem Pokémon mit Megawumme genutzt wird."
+17,9,Pulse-based,This move has 1.5× its usual power when used by a Pokémon with Mega Launcher.
+18,5,À base de ballistique,Cette capacité est bloquée par Pare-Balles.
+18,6,Ballistik basierend,Diese Fähigkeit wird von Kugelsicher blockiert.
+18,9,Ballistics-based,This move is blocked by Bulletproof.
+19,5,Effet mental,Cette capacité est bloquée par Aroma-Voile et soigné par Herbe Mental.
+19,6,Psychische Effekte,Diese Fähigkeit wird durch Dufthülle blockiert und wird durch Mentalkraut geheilt.
+19,9,Mental effects,This move is blocked by Aroma Veil and cured by Mental Herb.
 20,5,Inutilisable en combat aérien,Cette capacité est inutilisable pendant les combats aériens.
 20,6,Nicht Nutzbar in Himmelskämpfen,Diese Fähigkeit ist in Himmelskämpfen nicht nutzbar.
 20,9,Unusable during Sky Battles,This move is unusable during Sky Battles.
-21,5,Danse,Cette capacité déclenche [Danseuse]{ability:dancer}.
-21,9,Dance,This move triggers [Dancer]{ability:dancer}.
+21,5,Danse,Cette capacité déclenche Danseuse.
+21,9,Dance,This move triggers Dancer.

@@ -1,10 +1,10 @@
 language_id,table,id,column,source_crc,string
 10,Ability,1,name,7482ade0,Smrad
-10,Ability,1,short_effect,9301d482,Má šanci nepřítele [zastrašit]{mechanic:flinch} během útočení.
+10,Ability,1,short_effect,9301d482,Má šanci nepřítele zastrašit během útočení.
 10,Ability,2,name,56942be0,Mrholení
-10,Ability,2,short_effect,0d8facc9,"Přivolá [déšť]{mechanic:rain}, který trvá až po ukončení zápasu."
+10,Ability,2,short_effect,0d8facc9,"Přivolá déšť, který trvá až po ukončení zápasu."
 10,Ability,3,name,dbbf77d4,Zrychlení
-10,Ability,3,short_effect,56aba85b,Zvýší [Rychlost]{mechanic:speed} o jeden [stupeň]{mechanic:stat-modifier} po každém kole.
+10,Ability,3,short_effect,56aba85b,Zvýší Rychlost o jeden stupeň po každém kole.
 10,Ability,4,name,8598e4a6,Bojové brnění
 10,Ability,5,name,1456165e,Robustnost
 10,Ability,6,name,fc71d5b7,Vlhkost
@@ -35,9 +35,9 @@ language_id,table,id,column,source_crc,string
 10,Ability,31,name,12f136d7,Hromosvod
 10,Ability,32,name,ff40d1b0,Ušlechtilost
 10,Ability,33,name,5ce14a2f,Hbitá plavba
-10,Ability,33,short_effect,21665f64,Během [deště]{mechanic:rain} zdvojnásobuje [Rychlost]{mechanic:speed}.
+10,Ability,33,short_effect,21665f64,Během deště zdvojnásobuje Rychlost.
 10,Ability,34,name,06f85388,Chlorofyl
-10,Ability,34,short_effect,ae2ff9cc,Během [slunečného počasí]{mechanic:strong-sunlight} zdvojnásobuje [Rychlost]{mechanic:speed}.
+10,Ability,34,short_effect,ae2ff9cc,Během slunečného počasí zdvojnásobuje Rychlost.
 10,Ability,35,name,c6497d6e,Osvětlení
 10,Ability,36,name,f09afaa5,Kopírování
 10,Ability,37,name,7cb6bfd7,Obrovská síla
@@ -83,7 +83,7 @@ language_id,table,id,column,source_crc,string
 10,AbilityChangelog,1,effect,a881640e,Nemá žádný účinek při zápasu.
 10,AbilityChangelog,2,effect,757e1dd8,"Funguje jen proti útokům, které vždy omráčí na jeden úder. (Ne proti těm, které jsou prostě příliš silné.)"
 10,AbilityChangelog,3,effect,46cb479e,Nemá žádný účinek v poli.
-10,AbilityChangelog,4,effect,8742fa05,"Neabsorbuje nezraňující [elektrické]{type:electric} útoky, např. [Blesková vlna]{move:thunder-wave}."
+10,AbilityChangelog,4,effect,8742fa05,"Neabsorbuje nezraňující elektrické útoky, např. Blesková vlna."
 10,AbilityChangelog,7,effect,46cb479e,Nemá žádný účinek v poli.
 10,AbilityChangelog,8,effect,46cb479e,Nemá žádný účinek v poli.
 10,AbilityChangelog,10,effect,46cb479e,Nemá žádný účinek v poli.
@@ -819,7 +819,7 @@ language_id,table,id,column,source_crc,string
 10,MoveDamageClass,2,name,d7293008,fyzické
 10,MoveDamageClass,3,name,4c6b3fe3,speciální
 10,MoveEffect,1,short_effect,23235a1b,"Normálně zraňuje, bez vedlejších účinků."
-10,MoveEffect,2,effect,7d461b9f,[Uspí]{mechanic:sleep} protivníka.
+10,MoveEffect,2,effect,7d461b9f,Uspí protivníka.
 10,MoveEffect,2,short_effect,fab4aadd,Uspí protivníka.
 10,MoveEffect,3,short_effect,18144c52,Má $effect_chance% šanci otrávit protivníka.
 10,MoveEffect,4,short_effect,fb3bd06d,Vyléčí uživatele o polovinu způsobeného zranění.
@@ -840,7 +840,7 @@ language_id,table,id,column,source_crc,string
 10,MoveEffect,29,short_effect,4ff5bbff,Okamžitě ukončí zápas s divokým pokémonem. Trenéry donutí vyměnit pokémona.
 10,MoveEffect,30,short_effect,e5e4180d,Zaútočí 2-5× za sebou.
 10,MoveEffect,32,short_effect,b2aff3a6,"Má $effect_chance% šanci, že se protivník zalekne."
-10,MoveEffect,34,effect,cc5f917e,[Těžce otráví]{mechanic:bad-poison} protivníka.
+10,MoveEffect,34,effect,cc5f917e,Těžce otráví protivníka.
 10,MoveEffect,34,short_effect,385d3c02,Vážně otráví protivníka; jed ubere každé kolo více zranění.
 10,MoveEffect,35,short_effect,9c649109,Rozsype peníze v hodnotě 5× úrovně uživatele.
 10,MoveEffect,36,short_effect,0feee880,Na pět kol sníží zranění ze speciálních útoků o 50%.
@@ -859,7 +859,7 @@ language_id,table,id,column,source_crc,string
 10,MoveEffect,61,short_effect,ad03d235,Sníží protivníkovi Obranu o dva stupně.
 10,MoveEffect,63,short_effect,5ec14f8a,Sníží protivníkovu Speciální obranu o dva stupně.
 10,MoveEffect,66,short_effect,a2bdb301,Na pět kol sníží zranění z fyzických útoků o 50%.
-10,MoveEffect,67,effect,22a71d53,[Otráví]{mechanic:poison} protivníka.
+10,MoveEffect,67,effect,22a71d53,Otráví protivníka.
 10,MoveEffect,67,short_effect,7b481e44,Otráví protivníka.
 10,MoveEffect,69,short_effect,c981b610,Má $effect_chance% šanci snížit protivníkův Útok o jeden stupeň.
 10,MoveEffect,70,short_effect,804b11f9,Má $effect_chance% šanci snížit protivníkovu Obranu o jeden stupeň.
@@ -964,27 +964,27 @@ language_id,table,id,column,source_crc,string
 10,MoveEffect,338,short_effect,11cd0067,Má $effect_chance% šanci zmást protivníka.
 10,MoveEffect,10004,short_effect,c028872e,Sníží protivníkovu Mrštnost o dva stupně.
 10,MoveEffect,10006,short_effect,b2988a39,Na pět kol zatemní oblohu.
-10,MoveFlag,1,description,66523335,Uživatel se dotkne cíle.  Toto zaktivuje některé schopnosti (např. [Statická elektřina]{ability:static}) a věci (např. [sticky-barb]{item:sticky-barb}).
+10,MoveFlag,1,description,66523335,Uživatel se dotkne cíle.  Toto zaktivuje některé schopnosti (např. Statická elektřina) a věci (např. sticky-barb).
 10,MoveFlag,1,name,e34fed78,Způsobí dotek
-10,MoveFlag,2,description,d88ae74f,"Tento útok má nabíjecí kolo, které lze přeskočit pomocí [power-herb]{item:power-herb}."
+10,MoveFlag,2,description,d88ae74f,"Tento útok má nabíjecí kolo, které lze přeskočit pomocí power-herb."
 10,MoveFlag,2,name,877244e9,Má nabíjecí kolo
 10,MoveFlag,3,description,6cea8671,"Kolo po použití tohoto útoku přeskočí Pokémon svůj tah, aby se mohl dobít."
 10,MoveFlag,3,name,80fd2238,Má dobíjecí kolo
-10,MoveFlag,4,description,102038da,"Tento útok nebude fungovat, použil-li cíl toto kolo [detect]{move:detect} či [protect]{move:protect}."
+10,MoveFlag,4,description,102038da,"Tento útok nebude fungovat, použil-li cíl toto kolo detect či protect."
 10,MoveFlag,4,name,d249c071,Blokované Detectem a Protectem
 10,MoveFlag,5,name,b343310a,Odrazitelný
-10,MoveFlag,6,description,6d5f5422,"Tento útok bude ukraden, pokud jiný Pokémon toto kolo použil [snatch]{move:snatch}"
+10,MoveFlag,6,description,6d5f5422,"Tento útok bude ukraden, pokud jiný Pokémon toto kolo použil snatch"
 10,MoveFlag,6,name,3a15243a,Ukradnutelný
-10,MoveFlag,7,description,25e3b9d0,Pokémon co je cílem tohoto útoku ho může zkopírovat pomocí [Zrcadlový let]{move:mirror-move}
+10,MoveFlag,7,description,25e3b9d0,Pokémon co je cílem tohoto útoku ho může zkopírovat pomocí Zrcadlový let
 10,MoveFlag,7,name,c4e8a756,Kopírovatelný Mirror Movem
 10,MoveFlag,8,name,ae7d93f1,Úderový
-10,MoveFlag,9,description,b34264c8,Pokémoni s [soundproof]{ability:soundproof} jsou proti tomuto útoku odolní.
+10,MoveFlag,9,description,b34264c8,Pokémoni s soundproof jsou proti tomuto útoku odolní.
 10,MoveFlag,9,name,752347d8,Zvukový
-10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při [zvýšené gravitaci]{move:gravity} 
+10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při zvýšené gravitaci 
 10,MoveFlag,10,name,05543fc0,Nepoužitelný s Gravitací
 10,MoveFlag,11,description,e68d87da,Tento útok může zmražený pokémon použít k rozmrznutí.
 10,MoveFlag,11,name,a2a771b1,Rozmrazí při použití
-10,MoveFlag,13,description,5660882a,Tento útok bude blokován pomocí [heal-block]{move:heal-block}.
+10,MoveFlag,13,description,5660882a,Tento útok bude blokován pomocí heal-block.
 10,MoveFlag,13,name,eb08469e,Léčí
 10,MoveMetaAilment,1,name,5134bb3b,Paralýza
 10,MoveMetaAilment,2,name,cef2eda8,Spánek

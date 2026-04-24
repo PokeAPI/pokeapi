@@ -128,32 +128,6 @@ def build_generic(model_classes, file_name, csv_record_to_objects):
         model_class.objects.bulk_create(batch)
 
 
-def scrub_str(string):
-    """
-    The purpose of this function is to scrub the weird template mark-up out of strings
-    that Veekun is using for their pokedex.
-    Example:
-        []{move:dragon-tail} will effect the opponents [HP]{mechanic:hp}.
-    Becomes:
-        dragon tail will effect the opponents HP.
-
-    If you find this results in weird strings please take a stab at improving or re-writing.
-    """
-    groups = re.findall(GROUP_RGX, string)
-    for group in groups:
-        if group[0]:
-            sub = group[0]
-        else:
-            sub = group[1].split(":")
-            if len(sub) >= 2:
-                sub = sub[1]
-            else:
-                sub = sub[0]
-            sub = sub.replace("-", " ")
-        string = re.sub(SUB_RGX, sub, string, 1)
-    return string
-
-
 ##############
 #  LANGUAGE  #
 ##############
@@ -351,8 +325,8 @@ def _build_abilities():
         yield AbilityEffectText(
             ability_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic((AbilityEffectText,), "ability_prose.csv", csv_record_to_objects)
@@ -361,7 +335,7 @@ def _build_abilities():
         yield AbilityChangeEffectText(
             ability_change_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -473,7 +447,7 @@ def _build_items():
         yield ItemFlingEffectEffectText(
             item_fling_effect_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -531,8 +505,8 @@ def _build_items():
         yield ItemEffectText(
             item_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic((ItemEffectText,), "item_prose.csv", csv_record_to_objects)
@@ -750,8 +724,8 @@ def _build_moves():
         yield MoveEffectEffectText(
             move_effect_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic(
@@ -771,7 +745,7 @@ def _build_moves():
         yield MoveEffectChangeEffectText(
             move_effect_change_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -920,7 +894,7 @@ def _build_moves():
         yield MoveAttributeDescription(
             move_attribute_id=int(info[0]),
             language_id=int(info[1]),
-            description=scrub_str(info[3]),
+            description=info[3],
         )
 
     build_generic(
@@ -1391,7 +1365,7 @@ def _build_pokemons():
         yield PokemonSpeciesDescription(
             pokemon_species_id=int(info[0]),
             language_id=int(info[1]),
-            description=scrub_str(info[2]),
+            description=info[2],
         )
 
     build_generic(

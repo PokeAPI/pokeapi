@@ -83,7 +83,7 @@ language_id,table,id,column,source_crc,string
 10,AbilityChangelog,1,effect,a881640e,Nemá žádný účinek při zápasu.
 10,AbilityChangelog,2,effect,757e1dd8,"Funguje jen proti útokům, které vždy omráčí na jeden úder. (Ne proti těm, které jsou prostě příliš silné.)"
 10,AbilityChangelog,3,effect,46cb479e,Nemá žádný účinek v poli.
-10,AbilityChangelog,4,effect,8742fa05,"Neabsorbuje nezraňující [elektrické]{type:electric} útoky, např. []{move:thunder-wave}."
+10,AbilityChangelog,4,effect,8742fa05,"Neabsorbuje nezraňující [elektrické]{type:electric} útoky, např. [Blesková vlna]{move:thunder-wave}."
 10,AbilityChangelog,7,effect,46cb479e,Nemá žádný účinek v poli.
 10,AbilityChangelog,8,effect,46cb479e,Nemá žádný účinek v poli.
 10,AbilityChangelog,10,effect,46cb479e,Nemá žádný účinek v poli.
@@ -964,27 +964,27 @@ language_id,table,id,column,source_crc,string
 10,MoveEffect,338,short_effect,11cd0067,Má $effect_chance% šanci zmást protivníka.
 10,MoveEffect,10004,short_effect,c028872e,Sníží protivníkovu Mrštnost o dva stupně.
 10,MoveEffect,10006,short_effect,b2988a39,Na pět kol zatemní oblohu.
-10,MoveFlag,1,description,66523335,Uživatel se dotkne cíle.  Toto zaktivuje některé schopnosti (např. []{ability:static}) a věci (např. []{item:sticky-barb}).
+10,MoveFlag,1,description,66523335,Uživatel se dotkne cíle.  Toto zaktivuje některé schopnosti (např. [Statická elektřina]{ability:static}) a věci (např. [sticky-barb]{item:sticky-barb}).
 10,MoveFlag,1,name,e34fed78,Způsobí dotek
-10,MoveFlag,2,description,d88ae74f,"Tento útok má nabíjecí kolo, které lze přeskočit pomocí []{item:power-herb}."
+10,MoveFlag,2,description,d88ae74f,"Tento útok má nabíjecí kolo, které lze přeskočit pomocí [power-herb]{item:power-herb}."
 10,MoveFlag,2,name,877244e9,Má nabíjecí kolo
 10,MoveFlag,3,description,6cea8671,"Kolo po použití tohoto útoku přeskočí Pokémon svůj tah, aby se mohl dobít."
 10,MoveFlag,3,name,80fd2238,Má dobíjecí kolo
-10,MoveFlag,4,description,102038da,"Tento útok nebude fungovat, použil-li cíl toto kolo []{move:detect} či [protect]{move:protect}."
+10,MoveFlag,4,description,102038da,"Tento útok nebude fungovat, použil-li cíl toto kolo [detect]{move:detect} či [protect]{move:protect}."
 10,MoveFlag,4,name,d249c071,Blokované Detectem a Protectem
 10,MoveFlag,5,name,b343310a,Odrazitelný
-10,MoveFlag,6,description,6d5f5422,"Tento útok bude ukraden, pokud jiný Pokémon toto kolo použil []{move:snatch}"
+10,MoveFlag,6,description,6d5f5422,"Tento útok bude ukraden, pokud jiný Pokémon toto kolo použil [snatch]{move:snatch}"
 10,MoveFlag,6,name,3a15243a,Ukradnutelný
-10,MoveFlag,7,description,25e3b9d0,Pokémon co je cílem tohoto útoku ho může zkopírovat pomocí []{move:mirror-move}
+10,MoveFlag,7,description,25e3b9d0,Pokémon co je cílem tohoto útoku ho může zkopírovat pomocí [Zrcadlový let]{move:mirror-move}
 10,MoveFlag,7,name,c4e8a756,Kopírovatelný Mirror Movem
 10,MoveFlag,8,name,ae7d93f1,Úderový
-10,MoveFlag,9,description,b34264c8,Pokémoni s []{ability:soundproof} jsou proti tomuto útoku odolní.
+10,MoveFlag,9,description,b34264c8,Pokémoni s [soundproof]{ability:soundproof} jsou proti tomuto útoku odolní.
 10,MoveFlag,9,name,752347d8,Zvukový
 10,MoveFlag,10,description,ee78fc04,Tento útok nelze použít při [zvýšené gravitaci]{move:gravity} 
 10,MoveFlag,10,name,05543fc0,Nepoužitelný s Gravitací
 10,MoveFlag,11,description,e68d87da,Tento útok může zmražený pokémon použít k rozmrznutí.
 10,MoveFlag,11,name,a2a771b1,Rozmrazí při použití
-10,MoveFlag,13,description,5660882a,Tento útok bude blokován pomocí []{move:heal-block}.
+10,MoveFlag,13,description,5660882a,Tento útok bude blokován pomocí [heal-block]{move:heal-block}.
 10,MoveFlag,13,name,eb08469e,Léčí
 10,MoveMetaAilment,1,name,5134bb3b,Paralýza
 10,MoveMetaAilment,2,name,cef2eda8,Spánek

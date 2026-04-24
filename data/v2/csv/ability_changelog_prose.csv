@@ -14,8 +14,8 @@ ability_changelog_id,local_language_id,effect
 5,5,Se déclenche à chaque coup d'une capacité multi-coups.
 5,6,Löst bei Attacken die mehrmals Treffen bei jedem Treffer aus.
 5,9,Triggers on every hit of multiple-hit moves.
-6,5,[Feu Follet]{move:will-o-wisp} ne déclenche pas ce talent pour un Pokémon immunisé à []{mechanic:burn}.
-6,6,[Irrlicht]{move:will-o-wisp} triggert die Fähigkeit nicht bei Pokémon die immun gegen []{mechanic:burn} sind.
+6,5,[Feu Follet]{move:will-o-wisp} ne déclenche pas ce talent pour un Pokémon immunisé à la [brûlure]{mechanic:burn}.
+6,6,[Irrlicht]{move:will-o-wisp} triggert die Fähigkeit nicht bei Pokémon die immun gegen [Verbrennung]{mechanic:burn} sind.
 6,9,[Will-O-Wisp]{move:will-o-wisp} does not trigger this ability for Pokémon immune to [burns]{mechanic:burn}.
 7,5,N'a pas d'effet en dehors du combat.
 7,6,Hat außerhalb vom Kampf keinen Effekt.
@@ -32,7 +32,7 @@ ability_changelog_id,local_language_id,effect
 11,5,Inflige seulement 1/16 des [PV]{mechanic:hp} maximum du lanceur en dégâts.
 11,6,Verursacht nur 1/16 der maximalen [KP]{mechanic:hp} des Angreifers Schaden.
 11,9,Inflicts only 1/16 of the attacker's maximum [HP]{mechanic:hp} in damage.
-12,5,[Crocs Feu]{move:fire-fang} et les capacités qui infligent des []{mechanic:typeless-damage} ignorent ce talent peu importe le type.
+12,5,[Crocs Feu]{move:fire-fang} et les capacités qui infligent des [dommages sans type]{mechanic:typeless-damage} ignorent ce talent peu importe le type.
 12,6,"[Feuerzahn]{move:fire-fang} und Attacken die [typenlosen Schaden]{mechanic:typeless-damage} verursachen, ignorieren diese Fähigkeit unabhängig von ihrem Typ."
 12,9,[Fire Fang]{move:fire-fang} and moves that inflict [typeless damage]{mechanic:typeless-damage} ignore this ability regardless of type.
 13,5,N'a pas d'effet en dehors du combat.
@@ -41,8 +41,8 @@ ability_changelog_id,local_language_id,effect
 14,5,Ne peut pas influencer les natures des Pokémon rencontrés en interagissant avec eux dans le monde extérieur.
 14,6,Kann das Wesen von Pokémon mit denen in der Spielwelt interagiert wird nicht verändern.
 14,9,Cannot influence the natures of Pokémon encountered by interacting with them on the overworld.
-15,5,Ne transmet pas le []{mechanic:poison} grave comme poison régulier.
-15,6,Gibt schwere []{mechanic:poison} als normale []{mechanic:poison} zurück.
+15,5,Ne transmet pas le [poison]{mechanic:poison} grave comme poison régulier.
+15,6,Gibt schwere [Vergiftung]{mechanic:poison} als normale [Vergiftung]{mechanic:poison} zurück.
 15,9,Passes back bad [poison]{mechanic:poison} as regular poison.
 16,5,N'a pas d'effet en dehors du combat.
 16,6,Hat außerhalb vom Kampf keinen Effekt.
@@ -92,7 +92,7 @@ ability_changelog_id,local_language_id,effect
 31,5,N'a pas d'effet en dehors du combat.
 31,6,Hat außerhalb vom Kampf keinen Effekt.
 31,9,Has no overworld effect.
-32,5,Ne prend pas effet pendant le []{mechanic:sleep}.
+32,5,Ne prend pas effet pendant le [sommeil]{mechanic:sleep}.
 32,6,Hat keinen Effekt während das Pokémon [schläft]{mechanic:sleep}.
 32,9,Does not take effect during [sleep]{mechanic:sleep}.
 33,5,N'a pas d'effet en dehors du combat.
@@ -110,16 +110,16 @@ ability_changelog_id,local_language_id,effect
 37,5,N'a pas d'effet en dehors du combat.
 37,6,Hat außerhalb vom Kampf keinen Effekt.
 37,9,Has no overworld effect.
-38,5,Le []{mechanic:poison} continue d'infliger des dégâts au Pokémon en dehors du combat.
-38,6,[]{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf.
+38,5,Le [poison]{mechanic:poison} continue d'infliger des dégâts au Pokémon en dehors du combat.
+38,6,[Vergiftung]{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf.
 38,9,[Poison]{mechanic:poison} still damages the Pokémon outside of battle.
-39,5,"La []{mechanic:paralysis} ne peut pas empêcher le Pokémon de bouger, mais le malus de [Vitesse]{mechanic:speed} est appliqué. Le []{mechanic:poison} continue d'infliger des dommages au Pokémon en dehors du combat."
-39,6,"[]{mechanic:paralysis} hindert das Pokémon nicht daran sich zu bewegen, aber der [Initiative]{mechanic:speed} Malus bleibt. []{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf."
+39,5,"La [paralysie]{mechanic:paralysis} ne peut pas empêcher le Pokémon de bouger, mais le malus de [Vitesse]{mechanic:speed} est appliqué. Le [poison]{mechanic:poison} continue d'infliger des dommages au Pokémon en dehors du combat."
+39,6,"[Paralyse]{mechanic:paralysis} hindert das Pokémon nicht daran sich zu bewegen, aber der [Initiative]{mechanic:speed} Malus bleibt. [Vergiftung]{mechanic:poison} schadet dem Pokémon außerhalb vom Kampf."
 39,9,"[Paralysis]{mechanic:paralysis} cannot prevent the Pokémon from moving, though the [Speed]{mechanic:speed} cut is unaffected.  [Poison]{mechanic:poison} still damages the Pokémon outside of battle."
 40,5,"À cause d'un glitch, les capacités affectées par ce talent ont (100 - accuracy)% de chance de transpercer [Détection]{move:detect} ou [Abri]{move:protect}."
 40,6,Wegen eines Glitches haben Attacken die von dieser Fähigkeit beeinflusst sind eine (100 - Genauigkeit)% Chance durch den [Scanner]{move:detect} oder [Schutzschild]{move:protect} zu treffen.
 40,9,"Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through [Detect]{move:detect} or [Protect]{move:protect}."
-41,5,[Repos]{move:rest} fonctionne de manière habituelle sous le []{mechanic:strong-sunlight}.
+41,5,[Repos]{move:rest} fonctionne de manière habituelle sous le [soleil intense]{mechanic:strong-sunlight}.
 41,6,[Erholung]{move:rest} funktioniert normal bei [starkem Sonnenlicht]{mechanic:strong-sunlight}.
 41,9,[Rest]{move:rest} works as usual during [strong sunlight]{mechanic:strong-sunlight}.
 42,5,[Dégommage]{move:fling} peut être utilisé de manière habituelle.

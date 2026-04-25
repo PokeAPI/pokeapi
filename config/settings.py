@@ -77,11 +77,7 @@ CACHES = {
     }
 }
 
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-"
-)
-
-CUSTOM_APPS = ("pokemon_v2",)
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-")
 
 INSTALLED_APPS = (
     "django.contrib.admin",
@@ -93,7 +89,8 @@ INSTALLED_APPS = (
     "rest_framework",
     "cachalot",
     "drf_spectacular",
-) + CUSTOM_APPS
+    "pokemon_v2.apps.Pokemon2Config",
+)
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -130,7 +127,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "PokéAPI",
-    "DESCRIPTION": """All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.
+    "DESCRIPTION": """All the Pokémon data you'll ever need in one place, easily accessible through a modern \
+free open-source RESTful API.
 
 ## What is this?
 
@@ -140,11 +138,14 @@ We've covered everything from Pokémon to Berry Flavors.
 
 ## Where do I start?
 
-We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.
+We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get \
+started.
 
 This API will always be publicly available and will never require any extensive setup process to consume.
 
-Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
+Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](\
+https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are \
+trademarks of Nintendo.
     """,
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
@@ -156,7 +157,13 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
     "TAGS": [
         {
             "name": "pokemon",
-            "description": "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
+            "description": (
+                "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using "
+                "Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species "
+                "but may take on a variant which makes it differ from other Pokémon of the same species, such as base "
+                "stats, available abilities and typings. See [Bulbapedia]("
+                "http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon",
@@ -172,7 +179,10 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "berries",
-            "description": "Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
+            "description": (
+                "Berries can be soft or hard. Check out [Bulbapedia]("
+                "http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Berry",
@@ -180,7 +190,11 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "items",
-            "description": "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
+            "description": (
+                "An item is an object in the games which the player can pick up, keep in their bag, and use in some "
+                "manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access "
+                "a new area."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Item",
@@ -188,7 +202,10 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "machines",
-            "description": "Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
+            "description": (
+                "Machines are the representation of items that teach moves to Pokémon. They vary from version to "
+                "version, so it is not certain that one specific TM or HM corresponds to a single Machine."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/TM",
@@ -196,7 +213,10 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "location",
-            "description": "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
+            "description": (
+                "Locations that can be visited within the games. Locations make up sizable portions of regions, "
+                "like cities or routes."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number",
@@ -204,7 +224,10 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "contest",
-            "description": "Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in Contest Halls",
+            "description": (
+                "Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in "
+                "Contest Halls"
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Contest",
@@ -212,7 +235,11 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
         },
         {
             "name": "moves",
-            "description": "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
+            "description": (
+                "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves "
+                "(including those learned by Hidden Machine) can be used outside of battle as well, usually for the "
+                "purpose of removing obstacles or exploring new areas."
+            ),
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_name",

@@ -346,18 +346,14 @@ class HasMoveDamageClass(models.Model):
 
 
 class HasMoveEffect(models.Model):
-    move_effect = models.ForeignKey(
-        "MoveEffect", blank=True, null=True, on_delete=models.CASCADE
-    )
+    move_effect = models.ForeignKey("MoveEffect", blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
 
 
 class HasMoveAttribute(models.Model):
-    move_attribute = models.ForeignKey(
-        "MoveAttribute", blank=True, null=True, on_delete=models.CASCADE
-    )
+    move_attribute = models.ForeignKey("MoveAttribute", blank=True, null=True, on_delete=models.CASCADE)
 
     class Meta:
         abstract = True
@@ -1009,9 +1005,7 @@ class BerryFlavorName(IsName):
 
 
 class BerryFlavorMap(models.Model):
-    berry = models.ForeignKey(
-        Berry, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE
-    )
+    berry = models.ForeignKey(Berry, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE)
 
     berry_flavor = models.ForeignKey(
         BerryFlavor,
@@ -1043,13 +1037,9 @@ class GrowthRateDescription(HasGrowthRate, IsDescription):
 
 
 class Nature(HasName):
-    decreased_stat = models.ForeignKey(
-        Stat, blank=True, null=True, related_name="decreased", on_delete=models.CASCADE
-    )
+    decreased_stat = models.ForeignKey(Stat, blank=True, null=True, related_name="decreased", on_delete=models.CASCADE)
 
-    increased_stat = models.ForeignKey(
-        Stat, blank=True, null=True, related_name="increased", on_delete=models.CASCADE
-    )
+    increased_stat = models.ForeignKey(Stat, blank=True, null=True, related_name="increased", on_delete=models.CASCADE)
 
     hates_flavor = models.ForeignKey(
         BerryFlavor,
@@ -1141,9 +1131,7 @@ class EncounterSlot(HasVersionGroup, HasEncounterMethod):
 
 
 class Encounter(HasVersion, HasLocationArea, HasPokemon):
-    encounter_slot = models.ForeignKey(
-        EncounterSlot, blank=True, null=True, on_delete=models.CASCADE
-    )
+    encounter_slot = models.ForeignKey(EncounterSlot, blank=True, null=True, on_delete=models.CASCADE)
 
     min_level = models.IntegerField()
 
@@ -1173,9 +1161,7 @@ class EncounterConditionValueName(IsName):
 
 
 class EncounterConditionValueMap(models.Model):
-    encounter = models.ForeignKey(
-        Encounter, blank=True, null=True, on_delete=models.CASCADE
-    )
+    encounter = models.ForeignKey(Encounter, blank=True, null=True, on_delete=models.CASCADE)
 
     encounter_condition_value = models.ForeignKey(
         EncounterConditionValue, blank=True, null=True, on_delete=models.CASCADE
@@ -1411,9 +1397,7 @@ class Gender(HasName):
 class Machine(HasGrowthRate, HasItem):
     machine_number = models.IntegerField()
 
-    version_group = models.ForeignKey(
-        VersionGroup, blank=True, null=True, on_delete=models.CASCADE
-    )
+    version_group = models.ForeignKey(VersionGroup, blank=True, null=True, on_delete=models.CASCADE)
 
     move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
 
@@ -1478,13 +1462,9 @@ class SuperContestEffectFlavorText(IsFlavorText, HasSuperContestEffect):
 
 
 class SuperContestCombo(models.Model):
-    first_move = models.ForeignKey(
-        Move, blank=True, null=True, related_name="first", on_delete=models.CASCADE
-    )
+    first_move = models.ForeignKey(Move, blank=True, null=True, related_name="first", on_delete=models.CASCADE)
 
-    second_move = models.ForeignKey(
-        Move, blank=True, null=True, related_name="second", on_delete=models.CASCADE
-    )
+    second_move = models.ForeignKey(Move, blank=True, null=True, related_name="second", on_delete=models.CASCADE)
 
 
 ######################
@@ -1493,9 +1473,7 @@ class SuperContestCombo(models.Model):
 
 
 class EvolutionChain(models.Model):
-    baby_trigger_item = models.ForeignKey(
-        Item, blank=True, null=True, on_delete=models.CASCADE
-    )
+    baby_trigger_item = models.ForeignKey(Item, blank=True, null=True, on_delete=models.CASCADE)
 
 
 class EvolutionTrigger(HasName):
@@ -1532,16 +1510,10 @@ class PokedexVersionGroup(HasPokedex, HasVersionGroup):
 ####################
 
 
-class PokemonSpecies(
-    HasName, HasGeneration, HasPokemonColor, HasPokemonShape, HasGrowthRate, HasOrder
-):
-    evolves_from_species = models.ForeignKey(
-        "self", blank=True, null=True, on_delete=models.CASCADE
-    )
+class PokemonSpecies(HasName, HasGeneration, HasPokemonColor, HasPokemonShape, HasGrowthRate, HasOrder):
+    evolves_from_species = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE)
 
-    evolution_chain = models.ForeignKey(
-        EvolutionChain, blank=True, null=True, on_delete=models.CASCADE
-    )
+    evolution_chain = models.ForeignKey(EvolutionChain, blank=True, null=True, on_delete=models.CASCADE)
 
     pokemon_habitat = models.ForeignKey(
         "PokemonHabitat",
@@ -1648,15 +1620,11 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE,
     )
 
-    held_item = models.ForeignKey(
-        Item, blank=True, null=True, related_name="held_item", on_delete=models.CASCADE
-    )
+    held_item = models.ForeignKey(Item, blank=True, null=True, related_name="held_item", on_delete=models.CASCADE)
 
     time_of_day = models.CharField(max_length=10, blank=True, null=True)
 
-    known_move = models.ForeignKey(
-        Move, blank=True, null=True, on_delete=models.CASCADE
-    )
+    known_move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
 
     known_move_type = models.ForeignKey(
         Type, related_name="known_move", blank=True, null=True, on_delete=models.CASCADE
@@ -1678,9 +1646,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE,
     )
 
-    party_type = models.ForeignKey(
-        Type, related_name="party_type", blank=True, null=True, on_delete=models.CASCADE
-    )
+    party_type = models.ForeignKey(Type, related_name="party_type", blank=True, null=True, on_delete=models.CASCADE)
 
     trade_species = models.ForeignKey(
         PokemonSpecies,
@@ -1714,9 +1680,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Specific form required for evolution (null = any form)",
     )
 
-    used_move = models.ForeignKey(
-        Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE
-    )
+    used_move = models.ForeignKey(Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE)
 
     min_move_count = models.IntegerField(blank=True, null=True)
 
@@ -1728,9 +1692,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 class PokemonForm(HasName, HasPokemon, HasOrder):
     form_name = models.CharField(max_length=30)
 
-    version_group = models.ForeignKey(
-        VersionGroup, blank=True, null=True, on_delete=models.CASCADE
-    )
+    version_group = models.ForeignKey(VersionGroup, blank=True, null=True, on_delete=models.CASCADE)
 
     is_default = models.BooleanField(default=False)
 

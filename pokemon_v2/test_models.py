@@ -3,7 +3,8 @@ import os
 import re
 from django.conf import settings
 from django.test import TestCase
-from pokemon_v2.models import *
+
+from pokemon_v2.models import Ability
 
 
 class AbilityTestCase(TestCase):

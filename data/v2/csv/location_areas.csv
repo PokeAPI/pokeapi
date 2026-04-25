@@ -1221,3 +1221,5 @@ id,location_id,game_index,identifier
 1338,680,0,steel
 1339,680,0,fairy
 1340,357,15,hidden-grotto
+1341,358,16,hidden-grotto-dark-grass
+1342,358,16,hidden-grotto-surf

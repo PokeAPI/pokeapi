@@ -5409,7 +5409,7 @@ components:
               effect:
                 type: string
                 examples:
-                - Inflicts [regular damage]{mechanic:regular-damage}.
+                - Inflicts regular damage.
               short_effect:
                 type: string
                 examples:
@@ -5639,7 +5639,7 @@ components:
               effect:
                 type: string
                 examples:
-                - Inflicts [regular damage]{mechanic:regular-damage}.
+                - Inflicts regular damage.
               short_effect:
                 type: string
                 examples:

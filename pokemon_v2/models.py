@@ -1706,7 +1706,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     )
 
     base_form = models.ForeignKey(
-        "PokemonSpecies",
+        "Pokemon",
         blank=True,
         null=True,
         related_name="base_form_evolutions",

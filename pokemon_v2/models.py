@@ -57,6 +57,19 @@ class HasContestEffect(models.Model):
         abstract = True
 
 
+class HasCurrency(models.Model):
+    currency = models.ForeignKey(
+        "Currency",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
 class HasSuperContestEffect(models.Model):
     super_contest_effect = models.ForeignKey(
         "SuperContestEffect",
@@ -823,6 +836,14 @@ class EggGroupName(IsName, HasEggGroup):
 #################
 
 
+class Currency(HasName):
+    pass
+
+
+class CurrencyName(IsName, HasCurrency, HasLanguage):
+    pass
+
+
 class ItemPocket(HasName):
     pass
 
@@ -848,8 +869,6 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-    cost = models.IntegerField(blank=True, null=True)
-
     fling_power = models.IntegerField(blank=True, null=True)
 
 
@@ -883,6 +902,11 @@ class ItemAttributeMap(HasItem, HasItemAttribute):
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
     pass
+
+
+class ItemPrice(HasItem, HasVersionGroup, HasCurrency):
+    purchase_price = models.IntegerField(blank=True, null=True)
+    sell_price = models.IntegerField(blank=True, null=True)
 
 
 class ItemSprites(HasItem):

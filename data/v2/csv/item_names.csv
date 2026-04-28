@@ -18096,6 +18096,7 @@ item_id,local_language_id,name
 2108,11,いしずえのめん
 2109,1,みついりりんご
 2109,5,Pomme Nectar
+2109,6,Saftiger Apfel
 2109,9,Syrupy Apple
 2109,11,みついりりんご
 2110,1,ボンサクのちゃわん
@@ -18497,3 +18498,10 @@ item_id,local_language_id,name
 2228,9,Jet Ball
 2229,5,Origine Ball
 2229,9,Origin Ball
+2230,6,Schwarzaugit
+2230,9,Black Augurite
+2231,6,Black Augurite
+2231,6,Torfblock
+2231,9,Peat Block
+2232,6,Legierungsmetall
+2232,6,Metal Alloy

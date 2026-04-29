@@ -2,21 +2,20 @@ openapi: 3.1.0
 info:
   title: PokéAPI
   version: 2.7.0
-  description: "All the Pokémon data you'll ever need in one place, easily accessible\
-    \ through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is\
-    \ a full RESTful API linked to an extensive database detailing everything about\
-    \ the Pokémon main game series.\n\nWe've covered everything from Pokémon to Berry\
-    \ Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2)\
-    \ on how to use this API. It takes minutes to get started.\n\nThis API will always\
-    \ be publicly available and will never require any extensive setup process to\
-    \ consume.\n\nCreated by [**Paul Hallett**](https://github.com/phalt) and other\
-    \ [**PokéAPI contributors***](https://github.com/PokeAPI/pokeapi#contributing)\
-    \ around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n\
-    \    "
+  description: "All the Pokémon data you'll ever need in one place, easily accessible
+    through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is
+    a full RESTful API linked to an extensive database detailing everything about
+    the Pokémon main game series.\n\nWe've covered everything from Pokémon to Berry
+    Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2)
+    on how to use this API. It takes minutes to get started.\n\nThis API will always
+    be publicly available and will never require any extensive setup process to consume.\n\nCreated
+    by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing)
+    around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n
+    \   "
 paths:
   /api/v2/ability/:
     get:
-      operationId: api_v2_ability_list
+      operationId: ability_list
       description: Abilities provide passive effects for Pokémon in battle or in the
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
@@ -38,8 +37,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -55,7 +54,7 @@ paths:
           description: ''
   /api/v2/ability/{id}/:
     get:
-      operationId: api_v2_ability_retrieve
+      operationId: ability_retrieve
       description: Abilities provide passive effects for Pokémon in battle or in the
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
@@ -82,7 +81,7 @@ paths:
           description: ''
   /api/v2/berry/:
     get:
-      operationId: api_v2_berry_list
+      operationId: berry_list
       description: Berries are small fruits that can provide HP and status condition
         restoration, stat enhancement, and even damage negation when eaten by Pokémon.
         Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
@@ -105,8 +104,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -122,7 +121,7 @@ paths:
           description: ''
   /api/v2/berry/{id}/:
     get:
-      operationId: api_v2_berry_retrieve
+      operationId: berry_retrieve
       description: Berries are small fruits that can provide HP and status condition
         restoration, stat enhancement, and even damage negation when eaten by Pokémon.
         Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater
@@ -150,7 +149,7 @@ paths:
           description: ''
   /api/v2/berry-firmness/:
     get:
-      operationId: api_v2_berry_firmness_list
+      operationId: berry_firmness_list
       description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
         for greater detail.
       summary: List berry firmness
@@ -171,8 +170,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -188,7 +187,7 @@ paths:
           description: ''
   /api/v2/berry-firmness/{id}/:
     get:
-      operationId: api_v2_berry_firmness_retrieve
+      operationId: berry_firmness_retrieve
       description: Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness)
         for greater detail.
       summary: Get berry by firmness
@@ -214,7 +213,7 @@ paths:
           description: ''
   /api/v2/berry-flavor/:
     get:
-      operationId: api_v2_berry_flavor_list
+      operationId: berry_flavor_list
       description: Flavors determine whether a Pokémon will benefit or suffer from
         eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
         for greater detail.
@@ -236,8 +235,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - berries
       security:
@@ -253,7 +252,7 @@ paths:
           description: ''
   /api/v2/berry-flavor/{id}/:
     get:
-      operationId: api_v2_berry_flavor_retrieve
+      operationId: berry_flavor_retrieve
       description: Flavors determine whether a Pokémon will benefit or suffer from
         eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor)
         for greater detail.
@@ -280,7 +279,7 @@ paths:
           description: ''
   /api/v2/characteristic/:
     get:
-      operationId: api_v2_characteristic_list
+      operationId: characteristic_list
       description: Characteristics indicate which stat contains a Pokémon's highest
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
@@ -303,8 +302,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -320,7 +319,7 @@ paths:
           description: ''
   /api/v2/characteristic/{id}/:
     get:
-      operationId: api_v2_characteristic_retrieve
+      operationId: characteristic_retrieve
       description: Characteristics indicate which stat contains a Pokémon's highest
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
@@ -348,7 +347,7 @@ paths:
           description: ''
   /api/v2/contest-type/:
     get:
-      operationId: api_v2_contest_type_list
+      operationId: contest_type_list
       description: Contest types are categories judges used to weigh a Pokémon's condition
         in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
         for greater detail.
@@ -370,8 +369,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -387,7 +386,7 @@ paths:
           description: ''
   /api/v2/contest-type/{id}/:
     get:
-      operationId: api_v2_contest_type_retrieve
+      operationId: contest_type_retrieve
       description: Contest types are categories judges used to weigh a Pokémon's condition
         in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition)
         for greater detail.
@@ -414,7 +413,7 @@ paths:
           description: ''
   /api/v2/contest-effect/:
     get:
-      operationId: api_v2_contest_effect_list
+      operationId: contest_effect_list
       description: Contest effects refer to the effects of moves when used in contests.
       summary: List contest effects
       parameters:
@@ -434,8 +433,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -451,7 +450,7 @@ paths:
           description: ''
   /api/v2/contest-effect/{id}/:
     get:
-      operationId: api_v2_contest_effect_retrieve
+      operationId: contest_effect_retrieve
       description: Contest effects refer to the effects of moves when used in contests.
       summary: Get contest effect
       parameters:
@@ -476,7 +475,7 @@ paths:
           description: ''
   /api/v2/egg-group/:
     get:
-      operationId: api_v2_egg_group_list
+      operationId: egg_group_list
       description: Egg Groups are categories which determine which Pokémon are able
         to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
         [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
@@ -499,8 +498,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -516,7 +515,7 @@ paths:
           description: ''
   /api/v2/egg-group/{id}/:
     get:
-      operationId: api_v2_egg_group_retrieve
+      operationId: egg_group_retrieve
       description: Egg Groups are categories which determine which Pokémon are able
         to interbreed. Pokémon may belong to either one or two Egg Groups. Check out
         [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater
@@ -544,7 +543,7 @@ paths:
           description: ''
   /api/v2/encounter-method/:
     get:
-      operationId: api_v2_encounter_method_list
+      operationId: encounter_method_list
       description: Methods by which the player might can encounter Pokémon in the
         wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
       summary: List encounter methods
@@ -565,8 +564,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -582,7 +581,7 @@ paths:
           description: ''
   /api/v2/encounter-method/{id}/:
     get:
-      operationId: api_v2_encounter_method_retrieve
+      operationId: encounter_method_retrieve
       description: Methods by which the player might can encounter Pokémon in the
         wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.
       summary: Get encounter method
@@ -608,7 +607,7 @@ paths:
           description: ''
   /api/v2/encounter-condition/:
     get:
-      operationId: api_v2_encounter_condition_list
+      operationId: encounter_condition_list
       description: Conditions which affect what pokemon might appear in the wild,
         e.g., day or night.
       summary: List encounter conditions
@@ -629,8 +628,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -646,7 +645,7 @@ paths:
           description: ''
   /api/v2/encounter-condition/{id}/:
     get:
-      operationId: api_v2_encounter_condition_retrieve
+      operationId: encounter_condition_retrieve
       description: Conditions which affect what pokemon might appear in the wild,
         e.g., day or night.
       summary: Get encounter condition
@@ -672,7 +671,7 @@ paths:
           description: ''
   /api/v2/encounter-condition-value/:
     get:
-      operationId: api_v2_encounter_condition_value_list
+      operationId: encounter_condition_value_list
       description: Encounter condition values are the various states that an encounter
         condition can have, i.e., time of day can be either day or night.
       summary: List encounter condition values
@@ -693,8 +692,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - encounters
       security:
@@ -710,7 +709,7 @@ paths:
           description: ''
   /api/v2/encounter-condition-value/{id}/:
     get:
-      operationId: api_v2_encounter_condition_value_retrieve
+      operationId: encounter_condition_value_retrieve
       description: Encounter condition values are the various states that an encounter
         condition can have, i.e., time of day can be either day or night.
       summary: Get encounter condition value
@@ -736,7 +735,7 @@ paths:
           description: ''
   /api/v2/evolution-chain/:
     get:
-      operationId: api_v2_evolution_chain_list
+      operationId: evolution_chain_list
       description: Evolution chains are essentially family trees. They start with
         the lowest stage within a family and detail evolution conditions for each
         as well as Pokémon they can evolve into up through the hierarchy.
@@ -758,8 +757,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -775,7 +774,7 @@ paths:
           description: ''
   /api/v2/evolution-chain/{id}/:
     get:
-      operationId: api_v2_evolution_chain_retrieve
+      operationId: evolution_chain_retrieve
       description: Evolution chains are essentially family trees. They start with
         the lowest stage within a family and detail evolution conditions for each
         as well as Pokémon they can evolve into up through the hierarchy.
@@ -802,7 +801,7 @@ paths:
           description: ''
   /api/v2/evolution-trigger/:
     get:
-      operationId: api_v2_evolution_trigger_list
+      operationId: evolution_trigger_list
       description: Evolution triggers are the events and conditions that cause a Pokémon
         to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
         for greater detail.
@@ -824,8 +823,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - evolution
       security:
@@ -841,7 +840,7 @@ paths:
           description: ''
   /api/v2/evolution-trigger/{id}/:
     get:
-      operationId: api_v2_evolution_trigger_retrieve
+      operationId: evolution_trigger_retrieve
       description: Evolution triggers are the events and conditions that cause a Pokémon
         to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution)
         for greater detail.
@@ -868,7 +867,7 @@ paths:
           description: ''
   /api/v2/generation/:
     get:
-      operationId: api_v2_generation_list
+      operationId: generation_list
       description: A generation is a grouping of the Pokémon games that separates
         them based on the Pokémon they include. In each generation, a new set of Pokémon,
         Moves, Abilities and Types that did not exist in the previous generation are
@@ -891,8 +890,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - games
       security:
@@ -908,7 +907,7 @@ paths:
           description: ''
   /api/v2/generation/{id}/:
     get:
-      operationId: api_v2_generation_retrieve
+      operationId: generation_retrieve
       description: A generation is a grouping of the Pokémon games that separates
         them based on the Pokémon they include. In each generation, a new set of Pokémon,
         Moves, Abilities and Types that did not exist in the previous generation are
@@ -936,7 +935,7 @@ paths:
           description: ''
   /api/v2/gender/:
     get:
-      operationId: api_v2_gender_list
+      operationId: gender_list
       description: Genders were introduced in Generation II for the purposes of breeding
         Pokémon but can also result in visual differences or even different evolutionary
         lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
@@ -959,8 +958,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -976,7 +975,7 @@ paths:
           description: ''
   /api/v2/gender/{id}/:
     get:
-      operationId: api_v2_gender_retrieve
+      operationId: gender_retrieve
       description: Genders were introduced in Generation II for the purposes of breeding
         Pokémon but can also result in visual differences or even different evolutionary
         lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender)
@@ -1004,7 +1003,7 @@ paths:
           description: ''
   /api/v2/growth-rate/:
     get:
-      operationId: api_v2_growth_rate_list
+      operationId: growth_rate_list
       description: Growth rates are the speed with which Pokémon gain levels through
         experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
         for greater detail.
@@ -1026,8 +1025,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1043,7 +1042,7 @@ paths:
           description: ''
   /api/v2/growth-rate/{id}/:
     get:
-      operationId: api_v2_growth_rate_retrieve
+      operationId: growth_rate_retrieve
       description: Growth rates are the speed with which Pokémon gain levels through
         experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience)
         for greater detail.
@@ -1070,7 +1069,7 @@ paths:
           description: ''
   /api/v2/item/:
     get:
-      operationId: api_v2_item_list
+      operationId: item_list
       description: An item is an object in the games which the player can pick up,
         keep in their bag, and use in some manner. They have various uses, including
         healing, powering up, helping catch Pokémon, or to access a new area.
@@ -1092,8 +1091,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1109,7 +1108,7 @@ paths:
           description: ''
   /api/v2/item/{id}/:
     get:
-      operationId: api_v2_item_retrieve
+      operationId: item_retrieve
       description: An item is an object in the games which the player can pick up,
         keep in their bag, and use in some manner. They have various uses, including
         healing, powering up, helping catch Pokémon, or to access a new area.
@@ -1136,7 +1135,7 @@ paths:
           description: ''
   /api/v2/item-category/:
     get:
-      operationId: api_v2_item_category_list
+      operationId: item_category_list
       description: Item categories determine where items will be placed in the players
         bag.
       summary: List item categories
@@ -1157,8 +1156,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1174,7 +1173,7 @@ paths:
           description: ''
   /api/v2/item-category/{id}/:
     get:
-      operationId: api_v2_item_category_retrieve
+      operationId: item_category_retrieve
       description: Item categories determine where items will be placed in the players
         bag.
       summary: Get item category
@@ -1200,7 +1199,7 @@ paths:
           description: ''
   /api/v2/item-attribute/:
     get:
-      operationId: api_v2_item_attribute_list
+      operationId: item_attribute_list
       description: Item attributes define particular aspects of items, e.g."usable
         in battle" or "consumable".
       summary: List item attributes
@@ -1221,8 +1220,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1238,7 +1237,7 @@ paths:
           description: ''
   /api/v2/item-attribute/{id}/:
     get:
-      operationId: api_v2_item_attribute_retrieve
+      operationId: item_attribute_retrieve
       description: Item attributes define particular aspects of items, e.g."usable
         in battle" or "consumable".
       summary: Get item attribute
@@ -1264,7 +1263,7 @@ paths:
           description: ''
   /api/v2/item-fling-effect/:
     get:
-      operationId: api_v2_item_fling_effect_list
+      operationId: item_fling_effect_list
       description: The various effects of the move"Fling" when used with different
         items.
       summary: List item fling effects
@@ -1285,8 +1284,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1302,7 +1301,7 @@ paths:
           description: ''
   /api/v2/item-fling-effect/{id}/:
     get:
-      operationId: api_v2_item_fling_effect_retrieve
+      operationId: item_fling_effect_retrieve
       description: The various effects of the move"Fling" when used with different
         items.
       summary: Get item fling effect
@@ -1328,7 +1327,7 @@ paths:
           description: ''
   /api/v2/item-pocket/:
     get:
-      operationId: api_v2_item_pocket_list
+      operationId: item_pocket_list
       description: Pockets within the players bag used for storing items by category.
       summary: List item pockets
       parameters:
@@ -1348,8 +1347,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - items
       security:
@@ -1365,7 +1364,7 @@ paths:
           description: ''
   /api/v2/item-pocket/{id}/:
     get:
-      operationId: api_v2_item_pocket_retrieve
+      operationId: item_pocket_retrieve
       description: Pockets within the players bag used for storing items by category.
       summary: Get item pocket
       parameters:
@@ -1390,7 +1389,7 @@ paths:
           description: ''
   /api/v2/language/:
     get:
-      operationId: api_v2_language_list
+      operationId: language_list
       description: Languages for translations of API resource information.
       summary: List languages
       parameters:
@@ -1410,8 +1409,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - utility
       security:
@@ -1427,7 +1426,7 @@ paths:
           description: ''
   /api/v2/language/{id}/:
     get:
-      operationId: api_v2_language_retrieve
+      operationId: language_retrieve
       description: Languages for translations of API resource information.
       summary: Get language
       parameters:
@@ -1452,7 +1451,7 @@ paths:
           description: ''
   /api/v2/location/:
     get:
-      operationId: api_v2_location_list
+      operationId: location_list
       description: Locations that can be visited within the games. Locations make
         up sizable portions of regions, like cities or routes.
       summary: List locations
@@ -1473,8 +1472,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - location
       security:
@@ -1490,7 +1489,7 @@ paths:
           description: ''
   /api/v2/location/{id}/:
     get:
-      operationId: api_v2_location_retrieve
+      operationId: location_retrieve
       description: Locations that can be visited within the games. Locations make
         up sizable portions of regions, like cities or routes.
       summary: Get location
@@ -1516,7 +1515,7 @@ paths:
           description: ''
   /api/v2/location-area/:
     get:
-      operationId: api_v2_location_area_list
+      operationId: location_area_list
       description: Location areas are sections of areas, such as floors in a building
         or cave. Each area has its own set of possible Pokémon encounters.
       summary: List location areas
@@ -1548,7 +1547,7 @@ paths:
           description: ''
   /api/v2/location-area/{id}/:
     get:
-      operationId: api_v2_location_area_retrieve
+      operationId: location_area_retrieve
       description: Location areas are sections of areas, such as floors in a building
         or cave. Each area has its own set of possible Pokémon encounters.
       summary: Get location area
@@ -1574,7 +1573,7 @@ paths:
           description: ''
   /api/v2/machine/:
     get:
-      operationId: api_v2_machine_list
+      operationId: machine_list
       description: Machines are the representation of items that teach moves to Pokémon.
         They vary from version to version, so it is not certain that one specific
         TM or HM corresponds to a single Machine.
@@ -1596,8 +1595,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - machines
       security:
@@ -1613,7 +1612,7 @@ paths:
           description: ''
   /api/v2/machine/{id}/:
     get:
-      operationId: api_v2_machine_retrieve
+      operationId: machine_retrieve
       description: Machines are the representation of items that teach moves to Pokémon.
         They vary from version to version, so it is not certain that one specific
         TM or HM corresponds to a single Machine.
@@ -1638,9 +1637,39 @@ paths:
               schema:
                 $ref: '#/components/schemas/MachineDetail'
           description: ''
+  /api/v2/meta/:
+    get:
+      operationId: meta_list
+      description: Returns metadata about the current deployed version of the API,
+        including the git commit hash, deploy date, and tag (if any).
+      tags:
+      - utility
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    deploy_date:
+                      type: string
+                      nullable: true
+                    hash:
+                      type: string
+                      nullable: true
+                    tag:
+                      type: string
+                      nullable: true
+          description: ''
   /api/v2/move/:
     get:
-      operationId: api_v2_move_list
+      operationId: move_list
       description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
         uses one move each turn. Some moves (including those learned by Hidden Machine)
         can be used outside of battle as well, usually for the purpose of removing
@@ -1663,8 +1692,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1680,7 +1709,7 @@ paths:
           description: ''
   /api/v2/move/{id}/:
     get:
-      operationId: api_v2_move_retrieve
+      operationId: move_retrieve
       description: Moves are the skills of Pokémon in battle. In battle, a Pokémon
         uses one move each turn. Some moves (including those learned by Hidden Machine)
         can be used outside of battle as well, usually for the purpose of removing
@@ -1708,7 +1737,7 @@ paths:
           description: ''
   /api/v2/move-ailment/:
     get:
-      operationId: api_v2_move_ailment_list
+      operationId: move_ailment_list
       description: Move Ailments are status conditions caused by moves used during
         battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
         for greater detail.
@@ -1730,8 +1759,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1747,7 +1776,7 @@ paths:
           description: ''
   /api/v2/move-ailment/{id}/:
     get:
-      operationId: api_v2_move_ailment_retrieve
+      operationId: move_ailment_retrieve
       description: Move Ailments are status conditions caused by moves used during
         battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition)
         for greater detail.
@@ -1774,7 +1803,7 @@ paths:
           description: ''
   /api/v2/move-battle-style/:
     get:
-      operationId: api_v2_move_battle_style_list
+      operationId: move_battle_style_list
       description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
         for greater detail.
       summary: List move battle styles
@@ -1795,8 +1824,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1812,7 +1841,7 @@ paths:
           description: ''
   /api/v2/move-battle-style/{id}/:
     get:
-      operationId: api_v2_move_battle_style_retrieve
+      operationId: move_battle_style_retrieve
       description: Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III))
         for greater detail.
       summary: Get move battle style
@@ -1838,7 +1867,7 @@ paths:
           description: ''
   /api/v2/move-category/:
     get:
-      operationId: api_v2_move_category_list
+      operationId: move_category_list
       description: Very general categories that loosely group move effects.
       summary: List move meta categories
       parameters:
@@ -1858,8 +1887,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1875,7 +1904,7 @@ paths:
           description: ''
   /api/v2/move-category/{id}/:
     get:
-      operationId: api_v2_move_category_retrieve
+      operationId: move_category_retrieve
       description: Very general categories that loosely group move effects.
       summary: Get move meta category
       parameters:
@@ -1900,7 +1929,7 @@ paths:
           description: ''
   /api/v2/move-damage-class/:
     get:
-      operationId: api_v2_move_damage_class_list
+      operationId: move_damage_class_list
       description: Damage classes moves can have, e.g. physical, special, or non-damaging.
       summary: List move damage classes
       parameters:
@@ -1920,8 +1949,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -1937,7 +1966,7 @@ paths:
           description: ''
   /api/v2/move-damage-class/{id}/:
     get:
-      operationId: api_v2_move_damage_class_retrieve
+      operationId: move_damage_class_retrieve
       description: Damage classes moves can have, e.g. physical, special, or non-damaging.
       summary: Get move damage class
       parameters:
@@ -1962,7 +1991,7 @@ paths:
           description: ''
   /api/v2/move-learn-method/:
     get:
-      operationId: api_v2_move_learn_method_list
+      operationId: move_learn_method_list
       description: Methods by which Pokémon can learn moves.
       summary: List move learn methods
       parameters:
@@ -1982,8 +2011,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -1999,7 +2028,7 @@ paths:
           description: ''
   /api/v2/move-learn-method/{id}/:
     get:
-      operationId: api_v2_move_learn_method_retrieve
+      operationId: move_learn_method_retrieve
       description: Methods by which Pokémon can learn moves.
       summary: Get move learn method
       parameters:
@@ -2024,7 +2053,7 @@ paths:
           description: ''
   /api/v2/move-target/:
     get:
-      operationId: api_v2_move_target_list
+      operationId: move_target_list
       description: Targets moves can be directed at during battle. Targets can be
         Pokémon, environments or even other moves.
       summary: List move targets
@@ -2045,8 +2074,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - moves
       security:
@@ -2062,7 +2091,7 @@ paths:
           description: ''
   /api/v2/move-target/{id}/:
     get:
-      operationId: api_v2_move_target_retrieve
+      operationId: move_target_retrieve
       description: Targets moves can be directed at during battle. Targets can be
         Pokémon, environments or even other moves.
       summary: Get move target
@@ -2088,7 +2117,7 @@ paths:
           description: ''
   /api/v2/nature/:
     get:
-      operationId: api_v2_nature_list
+      operationId: nature_list
       description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
         for greater detail.
       summary: List natures
@@ -2109,8 +2138,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2126,7 +2155,7 @@ paths:
           description: ''
   /api/v2/nature/{id}/:
     get:
-      operationId: api_v2_nature_retrieve
+      operationId: nature_retrieve
       description: Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)
         for greater detail.
       summary: Get nature
@@ -2152,7 +2181,7 @@ paths:
           description: ''
   /api/v2/pal-park-area/:
     get:
-      operationId: api_v2_pal_park_area_list
+      operationId: pal_park_area_list
       description: Areas used for grouping Pokémon encounters in Pal Park. They're
         like habitats that are specific to Pal Park.
       summary: List pal park areas
@@ -2173,8 +2202,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2190,7 +2219,7 @@ paths:
           description: ''
   /api/v2/pal-park-area/{id}/:
     get:
-      operationId: api_v2_pal_park_area_retrieve
+      operationId: pal_park_area_retrieve
       description: Areas used for grouping Pokémon encounters in Pal Park. They're
         like habitats that are specific to Pal Park.
       summary: Get pal park area
@@ -2216,7 +2245,7 @@ paths:
           description: ''
   /api/v2/pokedex/:
     get:
-      operationId: api_v2_pokedex_list
+      operationId: pokedex_list
       description: A Pokédex is a handheld electronic encyclopedia device; one which
         is capable of recording and retaining information of the various Pokémon in
         a given region with the exception of the national dex and some smaller dexes
@@ -2240,8 +2269,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - games
       security:
@@ -2257,7 +2286,7 @@ paths:
           description: ''
   /api/v2/pokedex/{id}/:
     get:
-      operationId: api_v2_pokedex_retrieve
+      operationId: pokedex_retrieve
       description: A Pokédex is a handheld electronic encyclopedia device; one which
         is capable of recording and retaining information of the various Pokémon in
         a given region with the exception of the national dex and some smaller dexes
@@ -2286,7 +2315,7 @@ paths:
           description: ''
   /api/v2/pokemon/:
     get:
-      operationId: api_v2_pokemon_list
+      operationId: pokemon_list
       description: Pokémon are the creatures that inhabit the world of the Pokémon
         games. They can be caught using Pokéballs and trained by battling with other
         Pokémon. Each Pokémon belongs to a specific species but may take on a variant
@@ -2311,8 +2340,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2328,7 +2357,7 @@ paths:
           description: ''
   /api/v2/pokemon/{id}/:
     get:
-      operationId: api_v2_pokemon_retrieve
+      operationId: pokemon_retrieve
       description: Pokémon are the creatures that inhabit the world of the Pokémon
         games. They can be caught using Pokéballs and trained by battling with other
         Pokémon. Each Pokémon belongs to a specific species but may take on a variant
@@ -2358,7 +2387,7 @@ paths:
           description: ''
   /api/v2/pokemon-color/:
     get:
-      operationId: api_v2_pokemon_color_list
+      operationId: pokemon_color_list
       description: Colors used for sorting Pokémon in a Pokédex. The color listed
         in the Pokédex is usually the color most apparent or covering each Pokémon's
         body. No orange category exists; Pokémon that are primarily orange are listed
@@ -2381,8 +2410,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2398,7 +2427,7 @@ paths:
           description: ''
   /api/v2/pokemon-color/{id}/:
     get:
-      operationId: api_v2_pokemon_color_retrieve
+      operationId: pokemon_color_retrieve
       description: Colors used for sorting Pokémon in a Pokédex. The color listed
         in the Pokédex is usually the color most apparent or covering each Pokémon's
         body. No orange category exists; Pokémon that are primarily orange are listed
@@ -2426,7 +2455,7 @@ paths:
           description: ''
   /api/v2/pokemon-form/:
     get:
-      operationId: api_v2_pokemon_form_list
+      operationId: pokemon_form_list
       description: Some Pokémon may appear in one of multiple, visually different
         forms. These differences are purely cosmetic. For variations within a Pokémon
         species, which do differ in more than just visuals, the 'Pokémon' entity is
@@ -2449,8 +2478,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2466,7 +2495,7 @@ paths:
           description: ''
   /api/v2/pokemon-form/{id}/:
     get:
-      operationId: api_v2_pokemon_form_retrieve
+      operationId: pokemon_form_retrieve
       description: Some Pokémon may appear in one of multiple, visually different
         forms. These differences are purely cosmetic. For variations within a Pokémon
         species, which do differ in more than just visuals, the 'Pokémon' entity is
@@ -2494,7 +2523,7 @@ paths:
           description: ''
   /api/v2/pokemon-habitat/:
     get:
-      operationId: api_v2_pokemon_habitat_list
+      operationId: pokemon_habitat_list
       description: Habitats are generally different terrain Pokémon can be found in
         but can also be areas designated for rare or legendary Pokémon.
       summary: List pokemom habitas
@@ -2515,8 +2544,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2532,7 +2561,7 @@ paths:
           description: ''
   /api/v2/pokemon-habitat/{id}/:
     get:
-      operationId: api_v2_pokemon_habitat_retrieve
+      operationId: pokemon_habitat_retrieve
       description: Habitats are generally different terrain Pokémon can be found in
         but can also be areas designated for rare or legendary Pokémon.
       summary: Get pokemom habita
@@ -2558,7 +2587,7 @@ paths:
           description: ''
   /api/v2/pokemon-shape/:
     get:
-      operationId: api_v2_pokemon_shape_list
+      operationId: pokemon_shape_list
       description: Shapes used for sorting Pokémon in a Pokédex.
       summary: List pokemon shapes
       parameters:
@@ -2578,8 +2607,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2595,7 +2624,7 @@ paths:
           description: ''
   /api/v2/pokemon-shape/{id}/:
     get:
-      operationId: api_v2_pokemon_shape_retrieve
+      operationId: pokemon_shape_retrieve
       description: Shapes used for sorting Pokémon in a Pokédex.
       summary: Get pokemon shape
       parameters:
@@ -2620,7 +2649,7 @@ paths:
           description: ''
   /api/v2/pokemon-species/:
     get:
-      operationId: api_v2_pokemon_species_list
+      operationId: pokemon_species_list
       description: A Pokémon Species forms the basis for at least one Pokémon. Attributes
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
@@ -2643,8 +2672,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2660,7 +2689,7 @@ paths:
           description: ''
   /api/v2/pokemon-species/{id}/:
     get:
-      operationId: api_v2_pokemon_species_retrieve
+      operationId: pokemon_species_retrieve
       description: A Pokémon Species forms the basis for at least one Pokémon. Attributes
         of a Pokémon species are shared across all varieties of Pokémon within the
         species. A good example is Wormadam; Wormadam is the species which can be
@@ -2688,7 +2717,7 @@ paths:
           description: ''
   /api/v2/pokeathlon-stat/:
     get:
-      operationId: api_v2_pokeathlon_stat_list
+      operationId: pokeathlon_stat_list
       description: Pokeathlon Stats are different attributes of a Pokémon's performance
         in Pokéathlons. In Pokéathlons, competitions happen on different courses;
         one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
@@ -2711,8 +2740,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2728,7 +2757,7 @@ paths:
           description: ''
   /api/v2/pokeathlon-stat/{id}/:
     get:
-      operationId: api_v2_pokeathlon_stat_retrieve
+      operationId: pokeathlon_stat_retrieve
       description: Pokeathlon Stats are different attributes of a Pokémon's performance
         in Pokéathlons. In Pokéathlons, competitions happen on different courses;
         one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon)
@@ -2756,7 +2785,7 @@ paths:
           description: ''
   /api/v2/region/:
     get:
-      operationId: api_v2_region_list
+      operationId: region_list
       description: A region is an organized area of the Pokémon world. Most often,
         the main difference between regions is the species of Pokémon that can be
         encountered within them.
@@ -2778,8 +2807,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - location
       security:
@@ -2795,7 +2824,7 @@ paths:
           description: ''
   /api/v2/region/{id}/:
     get:
-      operationId: api_v2_region_retrieve
+      operationId: region_retrieve
       description: A region is an organized area of the Pokémon world. Most often,
         the main difference between regions is the species of Pokémon that can be
         encountered within them.
@@ -2822,7 +2851,7 @@ paths:
           description: ''
   /api/v2/stat/:
     get:
-      operationId: api_v2_stat_list
+      operationId: stat_list
       description: Stats determine certain aspects of battles. Each Pokémon has a
         value for each stat which grows as they gain levels and can be altered momentarily
         by effects in battles.
@@ -2844,8 +2873,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2861,7 +2890,7 @@ paths:
           description: ''
   /api/v2/stat/{id}/:
     get:
-      operationId: api_v2_stat_retrieve
+      operationId: stat_retrieve
       description: Stats determine certain aspects of battles. Each Pokémon has a
         value for each stat which grows as they gain levels and can be altered momentarily
         by effects in battles.
@@ -2888,7 +2917,7 @@ paths:
           description: ''
   /api/v2/super-contest-effect/:
     get:
-      operationId: api_v2_super_contest_effect_list
+      operationId: super_contest_effect_list
       description: Super contest effects refer to the effects of moves when used in
         super contests.
       summary: List super contest effects
@@ -2909,8 +2938,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - contests
       security:
@@ -2926,7 +2955,7 @@ paths:
           description: ''
   /api/v2/super-contest-effect/{id}/:
     get:
-      operationId: api_v2_super_contest_effect_retrieve
+      operationId: super_contest_effect_retrieve
       description: Super contest effects refer to the effects of moves when used in
         super contests.
       summary: Get super contest effect
@@ -2952,7 +2981,7 @@ paths:
           description: ''
   /api/v2/type/:
     get:
-      operationId: api_v2_type_list
+      operationId: type_list
       description: 'Types are properties for Pokémon and their moves. Each type has
         three properties: which types of Pokémon it is super effective against, which
         types of Pokémon it is not very effective against, and which types of Pokémon
@@ -2975,8 +3004,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - pokemon
       security:
@@ -2992,7 +3021,7 @@ paths:
           description: ''
   /api/v2/type/{id}/:
     get:
-      operationId: api_v2_type_retrieve
+      operationId: type_retrieve
       description: 'Types are properties for Pokémon and their moves. Each type has
         three properties: which types of Pokémon it is super effective against, which
         types of Pokémon it is not very effective against, and which types of Pokémon
@@ -3020,7 +3049,7 @@ paths:
           description: ''
   /api/v2/version/:
     get:
-      operationId: api_v2_version_list
+      operationId: version_list
       description: Versions of the games, e.g., Red, Blue or Yellow.
       summary: List versions
       parameters:
@@ -3040,8 +3069,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - games
       security:
@@ -3057,7 +3086,7 @@ paths:
           description: ''
   /api/v2/version/{id}/:
     get:
-      operationId: api_v2_version_retrieve
+      operationId: version_retrieve
       description: Versions of the games, e.g., Red, Blue or Yellow.
       summary: Get version
       parameters:
@@ -3082,7 +3111,7 @@ paths:
           description: ''
   /api/v2/version-group/:
     get:
-      operationId: api_v2_version_group_list
+      operationId: version_group_list
       description: Version groups categorize highly similar versions of the games.
       summary: List version groups
       parameters:
@@ -3102,8 +3131,8 @@ paths:
         name: q
         schema:
           type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\n\
-          Case-insensitive query applied on the `name` property. "
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
       tags:
       - games
       security:
@@ -3119,7 +3148,7 @@ paths:
           description: ''
   /api/v2/version-group/{id}/:
     get:
-      operationId: api_v2_version_group_retrieve
+      operationId: version_group_retrieve
       description: Version groups categorize highly similar versions of the games.
       summary: Get version group
       parameters:
@@ -3144,7 +3173,7 @@ paths:
           description: ''
   /api/v2/pokemon/{pokemon_id}/encounters:
     get:
-      operationId: api_v2_pokemon_encounters_retrieve
+      operationId: pokemon_encounters_retrieve
       description: Handles Pokemon Encounters as a sub-resource.
       summary: Get pokemon encounter
       parameters:
@@ -3422,16 +3451,28 @@ components:
           maxLength: 200
         growth_time:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         max_harvest:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         natural_gift_power:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         size:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         smoothness:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         soil_dryness:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         firmness:
           $ref: '#/components/schemas/BerryFirmnessSummary'
         flavors:
@@ -3623,7 +3664,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -3680,8 +3721,12 @@ components:
           readOnly: true
         appeal:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         jam:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         effect_entries:
           type: array
           items:
@@ -3949,6 +3994,8 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         names:
           type: array
           items:
@@ -4311,8 +4358,12 @@ components:
       properties:
         level:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         experience:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
       required:
       - experience
       - level
@@ -4470,7 +4521,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -4527,7 +4578,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -4663,10 +4714,14 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         fling_power:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         fling_effect:
           $ref: '#/components/schemas/ItemFlingEffectSummary'
         attributes:
@@ -4907,6 +4962,8 @@ components:
       properties:
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -5047,6 +5104,8 @@ components:
           maxLength: 200
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         encounter_method_rates:
           type: array
           items:
@@ -5283,6 +5342,8 @@ components:
       properties:
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -5387,14 +5448,20 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         power:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         pp:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         effect_chance:
           type: integer
         effect_entries:
@@ -5444,7 +5511,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -5516,20 +5583,28 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         effect_chance:
           type: integer
         pp:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         priority:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         power:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         contest_combos:
           type: object
           required:
@@ -5858,7 +5933,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -5941,42 +6016,62 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         max_hits:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         min_turns:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         max_turns:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         drain:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         healing:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         crit_rate:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         ailment_chance:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         flinch_chance:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         stat_chance:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
       required:
       - ailment
       - category
@@ -6046,7 +6141,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -6130,7 +6225,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -6194,8 +6289,12 @@ components:
       properties:
         low_hp_preference:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         high_hp_preference:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         move_battle_style:
           $ref: '#/components/schemas/MoveBattleStyleSummary'
       required:
@@ -6300,6 +6399,9 @@ components:
       - url
     PaginatedAbilitySummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6320,6 +6422,9 @@ components:
             $ref: '#/components/schemas/AbilitySummary'
     PaginatedBerryFirmnessSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6340,6 +6445,9 @@ components:
             $ref: '#/components/schemas/BerryFirmnessSummary'
     PaginatedBerryFlavorSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6360,6 +6468,9 @@ components:
             $ref: '#/components/schemas/BerryFlavorSummary'
     PaginatedBerrySummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6380,6 +6491,9 @@ components:
             $ref: '#/components/schemas/BerrySummary'
     PaginatedCharacteristicSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6400,6 +6514,9 @@ components:
             $ref: '#/components/schemas/CharacteristicSummary'
     PaginatedContestEffectSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6420,6 +6537,9 @@ components:
             $ref: '#/components/schemas/ContestEffectSummary'
     PaginatedContestTypeSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6440,6 +6560,9 @@ components:
             $ref: '#/components/schemas/ContestTypeSummary'
     PaginatedEggGroupSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6460,6 +6583,9 @@ components:
             $ref: '#/components/schemas/EggGroupSummary'
     PaginatedEncounterConditionSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6480,6 +6606,9 @@ components:
             $ref: '#/components/schemas/EncounterConditionSummary'
     PaginatedEncounterConditionValueSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6500,6 +6629,9 @@ components:
             $ref: '#/components/schemas/EncounterConditionValueSummary'
     PaginatedEncounterMethodSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6520,6 +6652,9 @@ components:
             $ref: '#/components/schemas/EncounterMethodSummary'
     PaginatedEvolutionChainSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6540,6 +6675,9 @@ components:
             $ref: '#/components/schemas/EvolutionChainSummary'
     PaginatedEvolutionTriggerSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6560,6 +6698,9 @@ components:
             $ref: '#/components/schemas/EvolutionTriggerSummary'
     PaginatedGenderSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6580,6 +6721,9 @@ components:
             $ref: '#/components/schemas/GenderSummary'
     PaginatedGenerationSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6600,6 +6744,9 @@ components:
             $ref: '#/components/schemas/GenerationSummary'
     PaginatedGrowthRateSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6620,6 +6767,9 @@ components:
             $ref: '#/components/schemas/GrowthRateSummary'
     PaginatedItemAttributeSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6640,6 +6790,9 @@ components:
             $ref: '#/components/schemas/ItemAttributeSummary'
     PaginatedItemCategorySummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6660,6 +6813,9 @@ components:
             $ref: '#/components/schemas/ItemCategorySummary'
     PaginatedItemFlingEffectSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6680,6 +6836,9 @@ components:
             $ref: '#/components/schemas/ItemFlingEffectSummary'
     PaginatedItemPocketSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6700,6 +6859,9 @@ components:
             $ref: '#/components/schemas/ItemPocketSummary'
     PaginatedItemSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6720,6 +6882,9 @@ components:
             $ref: '#/components/schemas/ItemSummary'
     PaginatedLanguageSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6740,6 +6905,9 @@ components:
             $ref: '#/components/schemas/LanguageSummary'
     PaginatedLocationAreaSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6760,6 +6928,9 @@ components:
             $ref: '#/components/schemas/LocationAreaSummary'
     PaginatedLocationSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6780,6 +6951,9 @@ components:
             $ref: '#/components/schemas/LocationSummary'
     PaginatedMachineSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6800,6 +6974,9 @@ components:
             $ref: '#/components/schemas/MachineSummary'
     PaginatedMoveBattleStyleSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6820,6 +6997,9 @@ components:
             $ref: '#/components/schemas/MoveBattleStyleSummary'
     PaginatedMoveDamageClassSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6840,6 +7020,9 @@ components:
             $ref: '#/components/schemas/MoveDamageClassSummary'
     PaginatedMoveLearnMethodSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6860,6 +7043,9 @@ components:
             $ref: '#/components/schemas/MoveLearnMethodSummary'
     PaginatedMoveMetaAilmentSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6880,6 +7066,9 @@ components:
             $ref: '#/components/schemas/MoveMetaAilmentSummary'
     PaginatedMoveMetaCategorySummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6900,6 +7089,9 @@ components:
             $ref: '#/components/schemas/MoveMetaCategorySummary'
     PaginatedMoveSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6920,6 +7112,9 @@ components:
             $ref: '#/components/schemas/MoveSummary'
     PaginatedMoveTargetSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6940,6 +7135,9 @@ components:
             $ref: '#/components/schemas/MoveTargetSummary'
     PaginatedNatureSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6960,6 +7158,9 @@ components:
             $ref: '#/components/schemas/NatureSummary'
     PaginatedPalParkAreaSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -6980,6 +7181,9 @@ components:
             $ref: '#/components/schemas/PalParkAreaSummary'
     PaginatedPokeathlonStatSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7000,6 +7204,9 @@ components:
             $ref: '#/components/schemas/PokeathlonStatSummary'
     PaginatedPokedexSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7020,6 +7227,9 @@ components:
             $ref: '#/components/schemas/PokedexSummary'
     PaginatedPokemonColorSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7040,6 +7250,9 @@ components:
             $ref: '#/components/schemas/PokemonColorSummary'
     PaginatedPokemonFormSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7060,6 +7273,9 @@ components:
             $ref: '#/components/schemas/PokemonFormSummary'
     PaginatedPokemonHabitatSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7080,6 +7296,9 @@ components:
             $ref: '#/components/schemas/PokemonHabitatSummary'
     PaginatedPokemonShapeSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7100,6 +7319,9 @@ components:
             $ref: '#/components/schemas/PokemonShapeSummary'
     PaginatedPokemonSpeciesSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7120,6 +7342,9 @@ components:
             $ref: '#/components/schemas/PokemonSpeciesSummary'
     PaginatedPokemonSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7140,6 +7365,9 @@ components:
             $ref: '#/components/schemas/PokemonSummary'
     PaginatedRegionSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7160,6 +7388,9 @@ components:
             $ref: '#/components/schemas/RegionSummary'
     PaginatedStatSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7180,6 +7411,9 @@ components:
             $ref: '#/components/schemas/StatSummary'
     PaginatedSuperContestEffectSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7200,6 +7434,9 @@ components:
             $ref: '#/components/schemas/SuperContestEffectSummary'
     PaginatedTypeSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7220,6 +7457,9 @@ components:
             $ref: '#/components/schemas/TypeSummary'
     PaginatedVersionGroupSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7240,6 +7480,9 @@ components:
             $ref: '#/components/schemas/VersionGroupSummary'
     PaginatedVersionSummaryList:
       type: object
+      required:
+      - count
+      - results
       properties:
         count:
           type: integer
@@ -7449,7 +7692,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -7617,20 +7860,28 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         height:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         is_default:
           type: boolean
         order:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         weight:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         abilities:
           type: array
           items:
@@ -7900,6 +8151,9 @@ components:
           items:
             $ref: '#/components/schemas/PokemonStat'
           readOnly: true
+        past_stats:
+          type: string
+          readOnly: true
         types:
           type: array
           items:
@@ -7992,6 +8246,7 @@ components:
       - moves
       - name
       - past_abilities
+      - past_stats
       - past_types
       - species
       - sprites
@@ -8020,10 +8275,14 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         form_order:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         is_default:
           type: boolean
         is_battle_only:
@@ -8174,6 +8433,8 @@ components:
       properties:
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         version:
           $ref: '#/components/schemas/VersionSummary'
       required:
@@ -8311,7 +8572,7 @@ components:
       properties:
         description:
           type: string
-          maxLength: 1000
+          maxLength: 2000
         language:
           $ref: '#/components/schemas/LanguageSummary'
       required:
@@ -8329,18 +8590,26 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         gender_rate:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         capture_rate:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         base_happiness:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         is_baby:
           type: boolean
         is_legendary:
@@ -8351,6 +8620,8 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         has_gender_differences:
           type: boolean
         forms_switchable:
@@ -8568,8 +8839,12 @@ components:
       properties:
         base_stat:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         effort:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         stat:
           $ref: '#/components/schemas/StatSummary'
       required:
@@ -8604,8 +8879,9 @@ components:
             $ref: '#/components/schemas/LocationSummary'
           readOnly: true
         main_generation:
-          allOf:
+          oneOf:
           - $ref: '#/components/schemas/GenerationSummary'
+          - type: 'null'
           readOnly: true
         names:
           type: array
@@ -8678,6 +8954,8 @@ components:
           maxLength: 200
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         is_battle_only:
           type: boolean
         affecting_moves:
@@ -8784,6 +9062,25 @@ components:
                     examples:
                     - https://pokeapi.co/api/v2/nature/2/
           readOnly: true
+        affecting_items:
+          type: array
+          items:
+            type: object
+            required:
+            - name
+            - url
+            properties:
+              name:
+                type: string
+                examples:
+                - protein
+                - x-attack
+              url:
+                type: string
+                format: uri
+                examples:
+                - https://pokeapi.co/api/v2/item/46/
+          readOnly: true
         characteristics:
           type: array
           items:
@@ -8797,6 +9094,7 @@ components:
             $ref: '#/components/schemas/StatName'
           readOnly: true
       required:
+      - affecting_items
       - affecting_moves
       - affecting_natures
       - characteristics
@@ -8837,6 +9135,8 @@ components:
           readOnly: true
         appeal:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         flavor_text_entries:
           type: array
           items:
@@ -9230,6 +9530,8 @@ components:
       properties:
         game_index:
           type: integer
+          maximum: 2147483647
+          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
       required:
@@ -9286,6 +9588,8 @@ components:
           type:
           - integer
           - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         move_learn_methods:

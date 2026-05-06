@@ -923,7 +923,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 922,pawmo,922,4,65,123,955,1
 923,pawmot,923,9,410,245,956,1
 924,tandemaus,924,3,18,61,945,1
-925,maushold-family-of-four,925,3,23,165,946,1
+925,maushold-family-of-four,925,3,28,165,946,1
 926,fidough,926,3,109,62,970,1
 927,dachsbun,927,5,149,167,971,1
 928,smoliv,928,3,65,52,935,1
@@ -1280,7 +1280,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10254,oinkologne-female,916,10,1200,171,,0
 10255,dudunsparce-three-segment,982,45,474,182,,0
 10256,palafin-hero,964,18,974,160,,0
-10257,maushold-family-of-three,925,3,28,165,,0
+10257,maushold-family-of-three,925,3,23,165,,0
 10258,tatsugiri-droopy,978,3,80,166,,0
 10259,tatsugiri-stretchy,978,3,80,166,,0
 10260,squawkabilly-blue-plumage,931,6,24,146,,0

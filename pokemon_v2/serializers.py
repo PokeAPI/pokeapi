@@ -605,7 +605,9 @@ class RegionDetailSerializer(serializers.ModelSerializer):
     locations = LocationSummarySerializer(many=True, read_only=True, source="location")
     version_groups = serializers.SerializerMethodField("get_region_version_groups")
     pokedexes = PokedexSummarySerializer(many=True, read_only=True, source="pokedex")
-    main_generation = GenerationSummarySerializer(read_only=True, source="generation")
+    main_generation = GenerationSummarySerializer(
+        read_only=True, source="generation", allow_null=True
+    )
 
     class Meta:
         model = Region
@@ -3254,9 +3256,7 @@ class MoveChangeSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
-                        ],
+                        "examples": ["Inflicts regular damage."],
                     },
                     "short_effect": {
                         "type": "string",
@@ -3637,9 +3637,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
-                        ],
+                        "examples": ["Inflicts regular damage."],
                     },
                     "short_effect": {
                         "type": "string",

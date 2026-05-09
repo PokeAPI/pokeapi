@@ -179,3 +179,5 @@ id,encounter_condition_id,identifier,is_default
 178,17,friend-safari-slot-3,1
 179,11,item-skull-fossil,0
 180,11,item-armor-fossil,0
+181,18,backlot-not-mentioned,1
+182,18,backlot-mentioned,0

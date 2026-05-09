@@ -179,3 +179,5 @@ id,encounter_condition_id,identifier,is_default
 178,17,friend-safari-slot-3,1
 179,11,item-skull-fossil,0
 180,11,item-armor-fossil,0
+181,11,item-cover-fossil,0
+182,11,item-plume-fossil,0

@@ -301,6 +301,14 @@ encounter_condition_value_id,local_language_id,name
 178,9,Randomly assigned to Friend Safari Slot 3
 179,9,Have Skull Fossil in bag
 180,9,Have Armor Fossil in bag
-181,9,Honey Tree Group A (70% on normal trees / 20% on Munchlax trees)
-182,9,Honey Tree Group B (20% on normal trees / 70% on Munchlax trees)
-183,9,Honey Tree Group C (0% on normal trees / 1% on Munchlax trees)
+181,9,Great Marsh Daily Chance: None
+182,9,Great Marsh Daily Chance: 1 in 32
+183,9,Great Marsh Daily Chance: 2 in 32
+184,9,Great Marsh Daily Chance: 3 in 32
+185,9,Great Marsh Daily Chance: 5 in 32
+186,9,Before National Pokédex
+187,9,Great Marsh Daily Chance: 4 in 32
+188,9,Great Marsh Daily Chance: 15 in 32
+189,9,Honey Tree Group A (70% on normal trees / 20% on Munchlax trees)
+190,9,Honey Tree Group B (20% on normal trees / 70% on Munchlax trees)
+191,9,Honey Tree Group C (0% on normal trees / 1% on Munchlax trees)

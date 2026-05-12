@@ -98,7 +98,7 @@ class PokeapiCommonViewset(
     ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
 ):
     @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
+    def retrieve(self, request: Request, pk: Optional[str] = None) -> Response:
         return super().retrieve(request, pk)
 
     pass
@@ -982,7 +982,7 @@ class VersionGroupResource(PokeapiCommonViewset):
     },
 )
 class PokemonEncounterView(APIView):
-    def get(self, request, pokemon_id):
+    def get(self, request: Request, pokemon_id: str) -> Response:
         self.context = dict(request=request)
 
         try:
@@ -1080,7 +1080,7 @@ class PokemonEncounterView(APIView):
     },
 )
 class PokeapiMetaViewset(viewsets.ViewSet):
-    def list(self, request):
+    def list(self, request: Request) -> Response:
         try:
             git_hash = (
                 subprocess.check_output(

@@ -190,6 +190,6 @@ id,encounter_condition_id,identifier,is_default
 189,19,honey-tree-group-a,0
 190,19,honey-tree-group-b,0
 191,19,honey-tree-group-c,0
-192,20,headbutt-type-common,0
-193,20,headbutt-type-rare,0
-194,20,headbutt-type-secret,0
+192,20,headbutt-tree-common,0
+193,20,headbutt-tree-rare,0
+194,20,headbutt-tree-secret,0

@@ -312,6 +312,6 @@ encounter_condition_value_id,local_language_id,name
 189,9,Honey Tree Group A (70% on normal trees / 20% on Munchlax trees)
 190,9,Honey Tree Group B (20% on normal trees / 70% on Munchlax trees)
 191,9,Honey Tree Group C (0% on normal trees / 1% on Munchlax trees)
-192,9,Common tree
-193,9,Rare tree
-194,9,Secret tree
+192,9,Headbutt Tree (Common)
+193,9,Headbutt Tree (Rare)
+194,9,Headbutt Tree (Secret)

@@ -116,7 +116,7 @@ make docker-make-migrations
 make docker-migrate
 ```
 
-## GraphQL <a id="graphql"></a> &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
+## GraphQL <a id="graphql"></a> &nbsp; <a href="https://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 

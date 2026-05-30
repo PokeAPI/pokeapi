@@ -190,3 +190,13 @@ id,encounter_condition_id,identifier,is_default
 189,19,honey-tree-group-a,0
 190,19,honey-tree-group-b,0
 191,19,honey-tree-group-c,0
+192,20,headbutt-tree-common,0
+193,20,headbutt-tree-rare,0
+194,20,headbutt-tree-secret,0
+195,15,trade-cottonee,1
+196,15,trade-petilil,1
+197,15,trade-emolga,1
+198,15,trade-mantine,1
+199,15,trade-ditto,1
+200,15,trade-excadrill,1
+201,15,trade-hippowdon,1

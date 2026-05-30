@@ -1,4 +1,5 @@
 pokemon_move_method_id,local_language_id,name,description
+0,9,Null,Learned without any particular method.
 1,5,Montée de niveau,"Appris lorsqu’un Pokémon atteint un certain niveau."
 1,6,Level up,"Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht."
 1,7,Nivel,Se aprende cuando un pokemon alcanza un cierto nivel.

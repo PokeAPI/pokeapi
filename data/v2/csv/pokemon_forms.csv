@@ -1577,4 +1577,4 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10551,pyroar-female,female,668,15,0,0,0,2,949
 10552,frillish-female,female,592,11,0,0,0,2,794
 10553,jellicent-female,female,593,11,0,0,0,2,795
-10554,meowstic-mega-female,mega-female,10326,31,1,1,0,4,984
+10554,meowstic-mega-female,mega-female,10326,31,1,1,1,4,984

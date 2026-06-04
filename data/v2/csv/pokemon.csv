@@ -1337,7 +1337,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10311,heatran-mega,485,28,5700,,,0
 10312,darkrai-mega,491,30,2400,,,0
 10313,golurk-mega,623,40,3300,,,0
-10314,meowstic-mega,678,8,101,,,0
+10314,meowstic-mega-male,678,8,101,,,0
 10315,crabominable-mega,740,26,2528,,,0
 10316,golisopod-mega,768,23,1480,,,0
 10317,magearna-mega,801,13,2481,,,0
@@ -1349,3 +1349,4 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10323,tatsugiri-droopy-mega,978,6,240,,,0
 10324,tatsugiri-stretchy-mega,978,6,240,,,0
 10325,baxcalibur-mega,998,21,3150,,,0
+10326,meowstic-mega-female,678,8,101,,,0

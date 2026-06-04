@@ -5653,6 +5653,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "min_happiness",
             "min_beauty",
             "min_affection",
+            "near_special_rock",
             "needs_multiplayer",
             "needs_overworld_rain",
             "party_species",
@@ -5714,6 +5715,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "min_level",
                                         "min_move_count",
                                         "min_steps",
+                                        "near_special_rock",
                                         "needs_multiplayer",
                                         "needs_overworld_rain",
                                         "party_species",
@@ -5832,6 +5834,10 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "min_steps": {
                                             "type": "integer",
                                             "format": "int32",
+                                            "nullable": True,
+                                        },
+                                        "near_special_rock": {
+                                            "type": "boolean",
                                             "nullable": True,
                                         },
                                         "needs_multiplayer": {

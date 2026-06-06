@@ -20,7 +20,7 @@ type_id,local_language_id,name
 2,9,Fighting
 2,11,かくとう
 2,12,格斗
-2,14,Lucha
+2,14,Pelea
 3,1,ひこう
 3,3,비행
 3,4,飛行
@@ -75,7 +75,7 @@ type_id,local_language_id,name
 7,9,Bug
 7,11,むし
 7,12,虫
-7,14,Bicho
+7,14,Insecto
 8,1,ゴースト
 8,3,고스트
 8,4,幽靈

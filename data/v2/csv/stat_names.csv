@@ -8,6 +8,7 @@ stat_id,local_language_id,name
 1,8,PS
 1,9,HP
 1,12,HP
+1,14,PS
 2,1,こうげき
 2,3,공격
 2,4,攻擊
@@ -17,6 +18,7 @@ stat_id,local_language_id,name
 2,8,Attacco
 2,9,Attack
 2,12,攻击
+2,14,Ataque
 3,1,ぼうぎょ
 3,3,방어
 3,4,防禦
@@ -26,6 +28,7 @@ stat_id,local_language_id,name
 3,8,Difesa
 3,9,Defense
 3,12,防御
+3,14,Defensa
 4,1,とくこう
 4,3,특수공격
 4,4,特攻
@@ -35,6 +38,7 @@ stat_id,local_language_id,name
 4,8,Attacco Speciale
 4,9,Special Attack
 4,12,特攻
+4,14,Ataque Especial
 5,1,とくぼう
 5,3,특수방어
 5,4,特防
@@ -44,6 +48,7 @@ stat_id,local_language_id,name
 5,8,Difesa Speciale
 5,9,Special Defense
 5,12,特防
+5,14,Defensa Especial
 6,1,すばやさ
 6,3,스피드
 6,4,速度
@@ -53,6 +58,7 @@ stat_id,local_language_id,name
 6,8,Velocità
 6,9,Speed
 6,12,速度
+6,14,Velocidad
 7,1,めいちゅう
 7,3,명중률
 7,4,命中
@@ -62,6 +68,7 @@ stat_id,local_language_id,name
 7,8,precisione
 7,9,accuracy
 7,12,命中
+7,14,Precisión
 8,1,かいひ
 8,3,회피율
 8,4,閃避
@@ -71,3 +78,4 @@ stat_id,local_language_id,name
 8,8,elusione
 8,9,evasion
 8,12,闪避
+8,14,Evasión

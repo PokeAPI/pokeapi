@@ -9,6 +9,7 @@ type_id,local_language_id,name
 1,9,Normal
 1,11,ノーマル
 1,12,一般
+1,14,Normal
 2,1,かくとう
 2,3,격투
 2,4,格鬥
@@ -19,6 +20,7 @@ type_id,local_language_id,name
 2,9,Fighting
 2,11,かくとう
 2,12,格斗
+2,14,Lucha
 3,1,ひこう
 3,3,비행
 3,4,飛行
@@ -29,6 +31,7 @@ type_id,local_language_id,name
 3,9,Flying
 3,11,ひこう
 3,12,飞行
+3,14,Volador
 4,1,どく
 4,3,독
 4,4,毒
@@ -39,6 +42,7 @@ type_id,local_language_id,name
 4,9,Poison
 4,11,どく
 4,12,毒
+4,14,Veneno
 5,1,じめん
 5,3,땅
 5,4,地面
@@ -49,6 +53,7 @@ type_id,local_language_id,name
 5,9,Ground
 5,11,じめん
 5,12,地面
+5,14,Tierra
 6,1,いわ
 6,3,바위
 6,4,岩石
@@ -59,6 +64,7 @@ type_id,local_language_id,name
 6,9,Rock
 6,11,いわ
 6,12,岩石
+6,14,Roca
 7,1,むし
 7,3,벌레
 7,4,蟲
@@ -69,6 +75,7 @@ type_id,local_language_id,name
 7,9,Bug
 7,11,むし
 7,12,虫
+7,14,Bicho
 8,1,ゴースト
 8,3,고스트
 8,4,幽靈
@@ -79,6 +86,7 @@ type_id,local_language_id,name
 8,9,Ghost
 8,11,ゴースト
 8,12,幽灵
+8,14,Fantasma
 9,1,はがね
 9,3,강철
 9,4,鋼
@@ -89,6 +97,7 @@ type_id,local_language_id,name
 9,9,Steel
 9,11,はがね
 9,12,钢
+9,14,Acero
 10,1,ほのお
 10,3,불꽃
 10,4,火
@@ -99,6 +108,7 @@ type_id,local_language_id,name
 10,9,Fire
 10,11,ほのお
 10,12,火
+10,14,Fuego
 11,1,みず
 11,3,물
 11,4,水
@@ -109,6 +119,7 @@ type_id,local_language_id,name
 11,9,Water
 11,11,みず
 11,12,水
+11,14,Agua
 12,1,くさ
 12,3,풀
 12,4,草
@@ -119,6 +130,7 @@ type_id,local_language_id,name
 12,9,Grass
 12,11,くさ
 12,12,草
+12,14,Planta
 13,1,でんき
 13,3,전기
 13,4,電
@@ -129,6 +141,7 @@ type_id,local_language_id,name
 13,9,Electric
 13,11,でんき
 13,12,电
+13,14,Eléctrico
 14,1,エスパー
 14,3,에스퍼
 14,4,超能力
@@ -139,6 +152,7 @@ type_id,local_language_id,name
 14,9,Psychic
 14,11,エスパー
 14,12,超能力
+14,14,Psíquico
 15,1,こおり
 15,3,얼음
 15,4,冰
@@ -149,6 +163,7 @@ type_id,local_language_id,name
 15,9,Ice
 15,11,こおり
 15,12,冰
+15,14,Hielo
 16,1,ドラゴン
 16,3,드래곤
 16,4,龍
@@ -159,6 +174,7 @@ type_id,local_language_id,name
 16,9,Dragon
 16,11,ドラゴン
 16,12,龙
+16,14,Dragón
 17,1,あく
 17,3,악
 17,4,惡
@@ -169,6 +185,7 @@ type_id,local_language_id,name
 17,9,Dark
 17,11,あく
 17,12,恶
+17,14,Siniestro
 18,1,フェアリー
 18,3,페어리
 18,4,妖精
@@ -179,6 +196,7 @@ type_id,local_language_id,name
 18,9,Fairy
 18,11,フェアリー
 18,12,妖精
+18,14,Hada
 19,1,ステラ
 19,2, Stella
 19,3, 스텔라
@@ -190,6 +208,7 @@ type_id,local_language_id,name
 19,9,Stellar
 19,11,ステラ
 19,12,星晶
+19,14,Astral
 10001,1,？？？
 10001,3,???
 10001,4,???
@@ -200,6 +219,7 @@ type_id,local_language_id,name
 10001,9,???
 10001,11,？？？
 10001,12,???
+10001,14,???
 10002,1,ダーク
 10002,3,다크
 10002,4,暗

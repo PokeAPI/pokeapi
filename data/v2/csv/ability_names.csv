@@ -9,6 +9,7 @@ ability_id,local_language_id,name
 1,9,Stench
 1,11,あくしゅう
 1,12,恶臭
+1,14,Hedor
 2,1,あめふらし
 2,3,잔비
 2,4,降雨
@@ -19,6 +20,7 @@ ability_id,local_language_id,name
 2,9,Drizzle
 2,11,あめふらし
 2,12,降雨
+2,14,Llovizna
 3,1,かそく
 3,3,가속
 3,4,加速
@@ -29,6 +31,7 @@ ability_id,local_language_id,name
 3,9,Speed Boost
 3,11,かそく
 3,12,加速
+3,14,Impulso
 4,1,カブトアーマー
 4,3,전투무장
 4,4,戰鬥盔甲
@@ -39,6 +42,7 @@ ability_id,local_language_id,name
 4,9,Battle Armor
 4,11,カブトアーマー
 4,12,战斗盔甲
+4,14,Armadura Batalla
 5,1,がんじょう
 5,3,옹골참
 5,4,結實
@@ -49,6 +53,7 @@ ability_id,local_language_id,name
 5,9,Sturdy
 5,11,がんじょう
 5,12,结实
+5,14,Robustez
 6,1,しめりけ
 6,3,습기
 6,4,濕氣
@@ -59,6 +64,7 @@ ability_id,local_language_id,name
 6,9,Damp
 6,11,しめりけ
 6,12,湿气
+6,14,Humedad
 7,1,じゅうなん
 7,3,유연
 7,4,柔軟
@@ -69,6 +75,7 @@ ability_id,local_language_id,name
 7,9,Limber
 7,11,じゅうなん
 7,12,柔软
+7,14,Flexibilidad
 8,1,すながくれ
 8,3,모래숨기
 8,4,沙隱
@@ -79,6 +86,7 @@ ability_id,local_language_id,name
 8,9,Sand Veil
 8,11,すながくれ
 8,12,沙隐
+8,14,Velo Arena
 9,1,せいでんき
 9,3,정전기
 9,4,靜電
@@ -89,6 +97,7 @@ ability_id,local_language_id,name
 9,9,Static
 9,11,せいでんき
 9,12,静电
+9,14,Elec. Estática
 10,1,ちくでん
 10,3,축전
 10,4,蓄電
@@ -99,6 +108,7 @@ ability_id,local_language_id,name
 10,9,Volt Absorb
 10,11,ちくでん
 10,12,蓄电
+10,14,Absorbe Elec
 11,1,ちょすい
 11,3,저수
 11,4,儲水
@@ -109,6 +119,7 @@ ability_id,local_language_id,name
 11,9,Water Absorb
 11,11,ちょすい
 11,12,储水
+11,14,Absorbe Agua
 12,1,どんかん
 12,3,둔감
 12,4,遲鈍
@@ -119,6 +130,7 @@ ability_id,local_language_id,name
 12,9,Oblivious
 12,11,どんかん
 12,12,迟钝
+12,14,Despiste
 13,1,ノーてんき
 13,3,날씨부정
 13,4,無關天氣
@@ -129,6 +141,7 @@ ability_id,local_language_id,name
 13,9,Cloud Nine
 13,11,ノーてんき
 13,12,无关天气
+13,14,Aclimatación
 14,1,ふくがん
 14,3,복안
 14,4,複眼
@@ -139,6 +152,7 @@ ability_id,local_language_id,name
 14,9,Compound Eyes
 14,11,ふくがん
 14,12,复眼
+14,14,Ojo Compuesto
 15,1,ふみん
 15,3,불면
 15,4,不眠
@@ -149,6 +163,7 @@ ability_id,local_language_id,name
 15,9,Insomnia
 15,11,ふみん
 15,12,不眠
+15,14,Insomnio
 16,1,へんしょく
 16,3,변색
 16,4,變色
@@ -159,6 +174,7 @@ ability_id,local_language_id,name
 16,9,Color Change
 16,11,へんしょく
 16,12,变色
+16,14,Cambio Color
 17,1,めんえき
 17,3,면역
 17,4,免疫
@@ -169,6 +185,7 @@ ability_id,local_language_id,name
 17,9,Immunity
 17,11,めんえき
 17,12,免疫
+17,14,Inmunidad
 18,1,もらいび
 18,3,타오르는불꽃
 18,4,引火
@@ -179,6 +196,7 @@ ability_id,local_language_id,name
 18,9,Flash Fire
 18,11,もらいび
 18,12,引火
+18,14,Absorbe Fuego
 19,1,りんぷん
 19,3,인분
 19,4,鱗粉
@@ -189,6 +207,7 @@ ability_id,local_language_id,name
 19,9,Shield Dust
 19,11,りんぷん
 19,12,鳞粉
+19,14,Polvo Escudo
 20,1,マイペース
 20,3,마이페이스
 20,4,我行我素
@@ -199,6 +218,7 @@ ability_id,local_language_id,name
 20,9,Own Tempo
 20,11,マイペース
 20,12,我行我素
+20,14,Ritmo Propio
 21,1,きゅうばん
 21,3,흡반
 21,4,吸盤
@@ -209,6 +229,7 @@ ability_id,local_language_id,name
 21,9,Suction Cups
 21,11,きゅうばん
 21,12,吸盘
+21,14,Ventosas
 22,1,いかく
 22,3,위협
 22,4,威嚇
@@ -219,6 +240,7 @@ ability_id,local_language_id,name
 22,9,Intimidate
 22,11,いかく
 22,12,威吓
+22,14,Intimidación
 23,1,かげふみ
 23,3,그림자밟기
 23,4,踩影
@@ -229,6 +251,7 @@ ability_id,local_language_id,name
 23,9,Shadow Tag
 23,11,かげふみ
 23,12,踩影
+23,14,Sombra Trampa
 24,1,さめはだ
 24,3,까칠한피부
 24,4,粗糙皮膚
@@ -239,6 +262,7 @@ ability_id,local_language_id,name
 24,9,Rough Skin
 24,11,さめはだ
 24,12,粗糙皮肤
+24,14,Piel Tosca
 25,1,ふしぎなまもり
 25,3,불가사의부적
 25,4,神奇守護
@@ -249,6 +273,7 @@ ability_id,local_language_id,name
 25,9,Wonder Guard
 25,11,ふしぎなまもり
 25,12,神奇守护
+25,14,Superguarda
 26,1,ふゆう
 26,3,부유
 26,4,飄浮
@@ -259,6 +284,7 @@ ability_id,local_language_id,name
 26,9,Levitate
 26,11,ふゆう
 26,12,飘浮
+26,14,Levitación
 27,1,ほうし
 27,3,포자
 27,4,孢子
@@ -269,6 +295,7 @@ ability_id,local_language_id,name
 27,9,Effect Spore
 27,11,ほうし
 27,12,孢子
+27,14,Efecto Espora
 28,1,シンクロ
 28,3,싱크로
 28,4,同步
@@ -279,6 +306,7 @@ ability_id,local_language_id,name
 28,9,Synchronize
 28,11,シンクロ
 28,12,同步
+28,14,Sincronía
 29,1,クリアボディ
 29,3,클리어바디
 29,4,恆淨之軀
@@ -289,6 +317,7 @@ ability_id,local_language_id,name
 29,9,Clear Body
 29,11,クリアボディ
 29,12,恒净之躯
+29,14,Cuerpo Puro
 30,1,しぜんかいふく
 30,3,자연회복
 30,4,自然回復
@@ -299,6 +328,7 @@ ability_id,local_language_id,name
 30,9,Natural Cure
 30,11,しぜんかいふく
 30,12,自然回复
+30,14,Cura Natural
 31,1,ひらいしん
 31,3,피뢰침
 31,4,避雷針
@@ -309,6 +339,7 @@ ability_id,local_language_id,name
 31,9,Lightning Rod
 31,11,ひらいしん
 31,12,避雷针
+31,14,Pararrayos
 32,1,てんのめぐみ
 32,3,하늘의은총
 32,4,天恩
@@ -319,6 +350,7 @@ ability_id,local_language_id,name
 32,9,Serene Grace
 32,11,てんのめぐみ
 32,12,天恩
+32,14,Dicha
 33,1,すいすい
 33,3,쓱쓱
 33,4,悠游自如
@@ -329,6 +361,7 @@ ability_id,local_language_id,name
 33,9,Swift Swim
 33,11,すいすい
 33,12,悠游自如
+33,14,Nado Rápido
 34,1,ようりょくそ
 34,3,엽록소
 34,4,葉綠素
@@ -339,6 +372,7 @@ ability_id,local_language_id,name
 34,9,Chlorophyll
 34,11,ようりょくそ
 34,12,叶绿素
+34,14,Clorofila
 35,1,はっこう
 35,3,발광
 35,4,發光
@@ -349,6 +383,7 @@ ability_id,local_language_id,name
 35,9,Illuminate
 35,11,はっこう
 35,12,发光
+35,14,Iluminación
 36,1,トレース
 36,3,트레이스
 36,4,複製
@@ -359,6 +394,7 @@ ability_id,local_language_id,name
 36,9,Trace
 36,11,トレース
 36,12,复制
+36,14,Rastro
 37,1,ちからもち
 37,3,천하장사
 37,4,大力士
@@ -369,6 +405,7 @@ ability_id,local_language_id,name
 37,9,Huge Power
 37,11,ちからもち
 37,12,大力士
+37,14,Potencia
 38,1,どくのトゲ
 38,3,독가시
 38,4,毒刺
@@ -379,6 +416,7 @@ ability_id,local_language_id,name
 38,9,Poison Point
 38,11,どくのトゲ
 38,12,毒刺
+38,14,Punto Tóxico
 39,1,せいしんりょく
 39,3,정신력
 39,4,精神力
@@ -389,6 +427,7 @@ ability_id,local_language_id,name
 39,9,Inner Focus
 39,11,せいしんりょく
 39,12,精神力
+39,14,Foco Interno
 40,1,マグマのよろい
 40,3,마그마의무장
 40,4,熔岩鎧甲
@@ -399,6 +438,7 @@ ability_id,local_language_id,name
 40,9,Magma Armor
 40,11,マグマのよろい
 40,12,熔岩铠甲
+40,14,Escudo Magma
 41,1,みずのベール
 41,3,수의베일
 41,4,水幕
@@ -409,6 +449,7 @@ ability_id,local_language_id,name
 41,9,Water Veil
 41,11,みずのベール
 41,12,水幕
+41,14,Velo Agua
 42,1,じりょく
 42,3,자력
 42,4,磁力
@@ -419,6 +460,7 @@ ability_id,local_language_id,name
 42,9,Magnet Pull
 42,11,じりょく
 42,12,磁力
+42,14,Imán
 43,1,ぼうおん
 43,3,방음
 43,4,隔音
@@ -429,6 +471,7 @@ ability_id,local_language_id,name
 43,9,Soundproof
 43,11,ぼうおん
 43,12,隔音
+43,14,Insonorizar
 44,1,あめうけざら
 44,3,젖은접시
 44,4,雨盤
@@ -439,6 +482,7 @@ ability_id,local_language_id,name
 44,9,Rain Dish
 44,11,あめうけざら
 44,12,雨盘
+44,14,Cura Lluvia
 45,1,すなおこし
 45,3,모래날림
 45,4,揚沙
@@ -449,6 +493,7 @@ ability_id,local_language_id,name
 45,9,Sand Stream
 45,11,すなおこし
 45,12,扬沙
+45,14,Chorro Arena
 46,1,プレッシャー
 46,3,프레셔
 46,4,壓迫感
@@ -459,6 +504,7 @@ ability_id,local_language_id,name
 46,9,Pressure
 46,11,プレッシャー
 46,12,压迫感
+46,14,Presión
 47,1,あついしぼう
 47,3,두꺼운지방
 47,4,厚脂肪
@@ -469,6 +515,7 @@ ability_id,local_language_id,name
 47,9,Thick Fat
 47,11,あついしぼう
 47,12,厚脂肪
+47,14,Sebo
 48,1,はやおき
 48,3,일찍기상
 48,4,早起
@@ -479,6 +526,7 @@ ability_id,local_language_id,name
 48,9,Early Bird
 48,11,はやおき
 48,12,早起
+48,14,Madrugar
 49,1,ほのおのからだ
 49,3,불꽃몸
 49,4,火焰之軀
@@ -489,6 +537,7 @@ ability_id,local_language_id,name
 49,9,Flame Body
 49,11,ほのおのからだ
 49,12,火焰之躯
+49,14,Cuerpo Llama
 50,1,にげあし
 50,3,도주
 50,4,逃跑
@@ -499,6 +548,7 @@ ability_id,local_language_id,name
 50,9,Run Away
 50,11,にげあし
 50,12,逃跑
+50,14,Fuga
 51,1,するどいめ
 51,3,날카로운눈
 51,4,銳利目光
@@ -509,6 +559,7 @@ ability_id,local_language_id,name
 51,9,Keen Eye
 51,11,するどいめ
 51,12,锐利目光
+51,14,Vista Lince
 52,1,かいりきバサミ
 52,3,괴력집게
 52,4,怪力鉗
@@ -519,6 +570,7 @@ ability_id,local_language_id,name
 52,9,Hyper Cutter
 52,11,かいりきバサミ
 52,12,怪力钳
+52,14,Corte Fuerte
 53,1,ものひろい
 53,3,픽업
 53,4,撿拾
@@ -529,6 +581,7 @@ ability_id,local_language_id,name
 53,9,Pickup
 53,11,ものひろい
 53,12,捡拾
+53,14,Recogida
 54,1,なまけ
 54,3,게으름
 54,4,懶惰
@@ -539,6 +592,7 @@ ability_id,local_language_id,name
 54,9,Truant
 54,11,なまけ
 54,12,懒惰
+54,14,Ausente
 55,1,はりきり
 55,3,의욕
 55,4,活力
@@ -549,6 +603,7 @@ ability_id,local_language_id,name
 55,9,Hustle
 55,11,はりきり
 55,12,活力
+55,14,Entusiasmo
 56,1,メロメロボディ
 56,3,헤롱헤롱바디
 56,4,迷人之軀
@@ -559,6 +614,7 @@ ability_id,local_language_id,name
 56,9,Cute Charm
 56,11,メロメロボディ
 56,12,迷人之躯
+56,14,Gran Encanto
 57,1,プラス
 57,3,플러스
 57,4,正電
@@ -569,6 +625,7 @@ ability_id,local_language_id,name
 57,9,Plus
 57,11,プラス
 57,12,正电
+57,14,Más
 58,1,マイナス
 58,3,마이너스
 58,4,負電
@@ -579,6 +636,7 @@ ability_id,local_language_id,name
 58,9,Minus
 58,11,マイナス
 58,12,负电
+58,14,Menos
 59,1,てんきや
 59,3,기분파
 59,4,陰晴不定
@@ -589,6 +647,7 @@ ability_id,local_language_id,name
 59,9,Forecast
 59,11,てんきや
 59,12,阴晴不定
+59,14,Predicción
 60,1,ねんちゃく
 60,3,점착
 60,4,黏著
@@ -599,6 +658,7 @@ ability_id,local_language_id,name
 60,9,Sticky Hold
 60,11,ねんちゃく
 60,12,黏着
+60,14,Viscosidad
 61,1,だっぴ
 61,3,탈피
 61,4,蛻皮
@@ -609,6 +669,7 @@ ability_id,local_language_id,name
 61,9,Shed Skin
 61,11,だっぴ
 61,12,蜕皮
+61,14,Mudar
 62,1,こんじょう
 62,3,근성
 62,4,毅力
@@ -619,6 +680,7 @@ ability_id,local_language_id,name
 62,9,Guts
 62,11,こんじょう
 62,12,毅力
+62,14,Agallas
 63,1,ふしぎなうろこ
 63,3,이상한비늘
 63,4,神奇鱗片
@@ -629,6 +691,7 @@ ability_id,local_language_id,name
 63,9,Marvel Scale
 63,11,ふしぎなうろこ
 63,12,神奇鳞片
+63,14,Escama Especial
 64,1,ヘドロえき
 64,3,해감액
 64,4,污泥漿
@@ -639,6 +702,7 @@ ability_id,local_language_id,name
 64,9,Liquid Ooze
 64,11,ヘドロえき
 64,12,污泥浆
+64,14,Lodo Líquido
 65,1,しんりょく
 65,3,심록
 65,4,茂盛
@@ -649,6 +713,7 @@ ability_id,local_language_id,name
 65,9,Overgrow
 65,11,しんりょく
 65,12,茂盛
+65,14,Espesura
 66,1,もうか
 66,3,맹화
 66,4,猛火
@@ -659,6 +724,7 @@ ability_id,local_language_id,name
 66,9,Blaze
 66,11,もうか
 66,12,猛火
+66,14,Mar Llamas
 67,1,げきりゅう
 67,3,급류
 67,4,激流
@@ -669,6 +735,7 @@ ability_id,local_language_id,name
 67,9,Torrent
 67,11,げきりゅう
 67,12,激流
+67,14,Torrente
 68,1,むしのしらせ
 68,3,벌레의알림
 68,4,蟲之預感
@@ -679,6 +746,7 @@ ability_id,local_language_id,name
 68,9,Swarm
 68,11,むしのしらせ
 68,12,虫之预感
+68,14,Enjambre
 69,1,いしあたま
 69,3,돌머리
 69,4,堅硬腦袋
@@ -689,6 +757,7 @@ ability_id,local_language_id,name
 69,9,Rock Head
 69,11,いしあたま
 69,12,坚硬脑袋
+69,14,Cabeza Roca
 70,1,ひでり
 70,3,가뭄
 70,4,日照
@@ -699,6 +768,7 @@ ability_id,local_language_id,name
 70,9,Drought
 70,11,ひでり
 70,12,日照
+70,14,Sequía
 71,1,ありじごく
 71,3,개미지옥
 71,4,沙穴
@@ -709,6 +779,7 @@ ability_id,local_language_id,name
 71,9,Arena Trap
 71,11,ありじごく
 71,12,沙穴
+71,14,Trampa Arena
 72,1,やるき
 72,3,의기양양
 72,4,幹勁
@@ -719,6 +790,7 @@ ability_id,local_language_id,name
 72,9,Vital Spirit
 72,11,やるき
 72,12,干劲
+72,14,Espíritu Vital
 73,1,しろいけむり
 73,3,하얀연기
 73,4,白色煙霧
@@ -729,6 +801,7 @@ ability_id,local_language_id,name
 73,9,White Smoke
 73,11,しろいけむり
 73,12,白色烟雾
+73,14,Humo Blanco
 74,1,ヨガパワー
 74,3,순수한힘
 74,4,瑜伽之力
@@ -739,6 +812,7 @@ ability_id,local_language_id,name
 74,9,Pure Power
 74,11,ヨガパワー
 74,12,瑜伽之力
+74,14,Energía Pura
 75,1,シェルアーマー
 75,3,조가비갑옷
 75,4,硬殼盔甲
@@ -749,6 +823,7 @@ ability_id,local_language_id,name
 75,9,Shell Armor
 75,11,シェルアーマー
 75,12,硬壳盔甲
+75,14,Caparazón
 76,1,エアロック
 76,3,에어록
 76,4,氣閘
@@ -759,6 +834,7 @@ ability_id,local_language_id,name
 76,9,Air Lock
 76,11,エアロック
 76,12,气闸
+76,14,Bucle Aire
 77,1,ちどりあし
 77,3,갈지자걸음
 77,4,蹣跚
@@ -769,6 +845,7 @@ ability_id,local_language_id,name
 77,9,Tangled Feet
 77,11,ちどりあし
 77,12,蹒跚
+77,14,Tumbos
 78,1,でんきエンジン
 78,3,전기엔진
 78,4,電氣引擎
@@ -779,6 +856,7 @@ ability_id,local_language_id,name
 78,9,Motor Drive
 78,11,でんきエンジン
 78,12,电气引擎
+78,14,Electromotor
 79,1,とうそうしん
 79,3,투쟁심
 79,4,鬥爭心
@@ -789,6 +867,7 @@ ability_id,local_language_id,name
 79,9,Rivalry
 79,11,とうそうしん
 79,12,斗争心
+79,14,Rivalidad
 80,1,ふくつのこころ
 80,3,불굴의마음
 80,4,不屈之心
@@ -799,6 +878,7 @@ ability_id,local_language_id,name
 80,9,Steadfast
 80,11,ふくつのこころ
 80,12,不屈之心
+80,14,Impasible
 81,1,ゆきがくれ
 81,3,눈숨기
 81,4,雪隱
@@ -809,6 +889,7 @@ ability_id,local_language_id,name
 81,9,Snow Cloak
 81,11,ゆきがくれ
 81,12,雪隐
+81,14,Manto Níveo
 82,1,くいしんぼう
 82,3,먹보
 82,4,貪吃鬼
@@ -819,6 +900,7 @@ ability_id,local_language_id,name
 82,9,Gluttony
 82,11,くいしんぼう
 82,12,贪吃鬼
+82,14,Gula
 83,1,いかりのつぼ
 83,3,분노의경혈
 83,4,憤怒穴位
@@ -829,6 +911,7 @@ ability_id,local_language_id,name
 83,9,Anger Point
 83,11,いかりのつぼ
 83,12,愤怒穴位
+83,14,Irascible
 84,1,かるわざ
 84,3,곡예
 84,4,輕裝
@@ -839,6 +922,7 @@ ability_id,local_language_id,name
 84,9,Unburden
 84,11,かるわざ
 84,12,轻装
+84,14,Liviano
 85,1,たいねつ
 85,3,내열
 85,4,耐熱
@@ -849,6 +933,7 @@ ability_id,local_language_id,name
 85,9,Heatproof
 85,11,たいねつ
 85,12,耐热
+85,14,Ignífugo
 86,1,たんじゅん
 86,3,단순
 86,4,單純
@@ -859,6 +944,7 @@ ability_id,local_language_id,name
 86,9,Simple
 86,11,たんじゅん
 86,12,单纯
+86,14,Simple
 87,1,かんそうはだ
 87,3,건조피부
 87,4,乾燥皮膚
@@ -869,6 +955,7 @@ ability_id,local_language_id,name
 87,9,Dry Skin
 87,11,かんそうはだ
 87,12,干燥皮肤
+87,14,Piel Seca
 88,1,ダウンロード
 88,3,다운로드
 88,4,下載
@@ -879,6 +966,7 @@ ability_id,local_language_id,name
 88,9,Download
 88,11,ダウンロード
 88,12,下载
+88,14,Descarga
 89,1,てつのこぶし
 89,3,철주먹
 89,4,鐵拳
@@ -889,6 +977,7 @@ ability_id,local_language_id,name
 89,9,Iron Fist
 89,11,てつのこぶし
 89,12,铁拳
+89,14,Puño Férreo
 90,1,ポイズンヒール
 90,3,포이즌힐
 90,4,毒療
@@ -899,6 +988,7 @@ ability_id,local_language_id,name
 90,9,Poison Heal
 90,11,ポイズンヒール
 90,12,毒疗
+90,14,Antídoto
 91,1,てきおうりょく
 91,3,적응력
 91,4,適應力
@@ -909,6 +999,7 @@ ability_id,local_language_id,name
 91,9,Adaptability
 91,11,てきおうりょく
 91,12,适应力
+91,14,Adaptable
 92,1,スキルリンク
 92,3,스킬링크
 92,4,連續攻擊
@@ -919,6 +1010,7 @@ ability_id,local_language_id,name
 92,9,Skill Link
 92,11,スキルリンク
 92,12,连续攻击
+92,14,Encadenado
 93,1,うるおいボディ
 93,3,촉촉바디
 93,4,濕潤之軀
@@ -929,6 +1021,7 @@ ability_id,local_language_id,name
 93,9,Hydration
 93,11,うるおいボディ
 93,12,湿润之躯
+93,14,Hidratación
 94,1,サンパワー
 94,3,선파워
 94,4,太陽之力
@@ -939,6 +1032,7 @@ ability_id,local_language_id,name
 94,9,Solar Power
 94,11,サンパワー
 94,12,太阳之力
+94,14,Poder Solar
 95,1,はやあし
 95,3,속보
 95,4,飛毛腿
@@ -949,6 +1043,7 @@ ability_id,local_language_id,name
 95,9,Quick Feet
 95,11,はやあし
 95,12,飞毛腿
+95,14,Pies Rápidos
 96,1,ノーマルスキン
 96,3,노말스킨
 96,4,一般皮膚
@@ -959,6 +1054,7 @@ ability_id,local_language_id,name
 96,9,Normalize
 96,11,ノーマルスキン
 96,12,一般皮肤
+96,14,Normalidad
 97,1,スナイパー
 97,3,스나이퍼
 97,4,狙擊手
@@ -969,6 +1065,7 @@ ability_id,local_language_id,name
 97,9,Sniper
 97,11,スナイパー
 97,12,狙击手
+97,14,Francotirador
 98,1,マジックガード
 98,3,매직가드
 98,4,魔法防守
@@ -979,6 +1076,7 @@ ability_id,local_language_id,name
 98,9,Magic Guard
 98,11,マジックガード
 98,12,魔法防守
+98,14,Muro Mágico
 99,1,ノーガード
 99,3,노가드
 99,4,無防守
@@ -989,6 +1087,7 @@ ability_id,local_language_id,name
 99,9,No Guard
 99,11,ノーガード
 99,12,无防守
+99,14,Indefenso
 100,1,あとだし
 100,3,시간벌기
 100,4,慢出
@@ -999,6 +1098,7 @@ ability_id,local_language_id,name
 100,9,Stall
 100,11,あとだし
 100,12,慢出
+100,14,Rezagado
 101,1,テクニシャン
 101,3,테크니션
 101,4,技術高手
@@ -1009,6 +1109,7 @@ ability_id,local_language_id,name
 101,9,Technician
 101,11,テクニシャン
 101,12,技术高手
+101,14,Experto
 102,1,リーフガード
 102,3,리프가드
 102,4,葉子防守
@@ -1019,6 +1120,7 @@ ability_id,local_language_id,name
 102,9,Leaf Guard
 102,11,リーフガード
 102,12,叶子防守
+102,14,Defensa Hoja
 103,1,ぶきよう
 103,3,서투름
 103,4,笨拙
@@ -1029,6 +1131,7 @@ ability_id,local_language_id,name
 103,9,Klutz
 103,11,ぶきよう
 103,12,笨拙
+103,14,Zoquete
 104,1,かたやぶり
 104,3,틀깨기
 104,4,破格
@@ -1039,6 +1142,7 @@ ability_id,local_language_id,name
 104,9,Mold Breaker
 104,11,かたやぶり
 104,12,破格
+104,14,Rompemoldes
 105,1,きょううん
 105,3,대운
 105,4,超幸運
@@ -1049,6 +1153,7 @@ ability_id,local_language_id,name
 105,9,Super Luck
 105,11,きょううん
 105,12,超幸运
+105,14,Afortunado
 106,1,ゆうばく
 106,3,유폭
 106,4,引爆
@@ -1059,6 +1164,7 @@ ability_id,local_language_id,name
 106,9,Aftermath
 106,11,ゆうばく
 106,12,引爆
+106,14,Detonación
 107,1,きけんよち
 107,3,위험예지
 107,4,危險預知
@@ -1069,6 +1175,7 @@ ability_id,local_language_id,name
 107,9,Anticipation
 107,11,きけんよち
 107,12,危险预知
+107,14,Anticipación
 108,1,よちむ
 108,3,예지몽
 108,4,預知夢
@@ -1079,6 +1186,7 @@ ability_id,local_language_id,name
 108,9,Forewarn
 108,11,よちむ
 108,12,预知梦
+108,14,Alerta
 109,1,てんねん
 109,3,천진
 109,4,純樸
@@ -1089,6 +1197,7 @@ ability_id,local_language_id,name
 109,9,Unaware
 109,11,てんねん
 109,12,纯朴
+109,14,Ignorante
 110,1,いろめがね
 110,3,색안경
 110,4,有色眼鏡
@@ -1099,6 +1208,7 @@ ability_id,local_language_id,name
 110,9,Tinted Lens
 110,11,いろめがね
 110,12,有色眼镜
+110,14,Cromolente
 111,1,フィルター
 111,3,필터
 111,4,過濾
@@ -1109,6 +1219,7 @@ ability_id,local_language_id,name
 111,9,Filter
 111,11,フィルター
 111,12,过滤
+111,14,Filtro
 112,1,スロースタート
 112,3,슬로스타트
 112,4,慢啟動
@@ -1119,6 +1230,7 @@ ability_id,local_language_id,name
 112,9,Slow Start
 112,11,スロースタート
 112,12,慢启动
+112,14,Inicio Lento
 113,1,きもったま
 113,3,배짱
 113,4,膽量
@@ -1129,6 +1241,7 @@ ability_id,local_language_id,name
 113,9,Scrappy
 113,11,きもったま
 113,12,胆量
+113,14,Intrépido
 114,1,よびみず
 114,3,마중물
 114,4,引水
@@ -1139,6 +1252,7 @@ ability_id,local_language_id,name
 114,9,Storm Drain
 114,11,よびみず
 114,12,引水
+114,14,Colector
 115,1,アイスボディ
 115,3,아이스바디
 115,4,冰凍之軀
@@ -1149,6 +1263,7 @@ ability_id,local_language_id,name
 115,9,Ice Body
 115,11,アイスボディ
 115,12,冰冻之躯
+115,14,Gélido
 116,1,ハードロック
 116,3,하드록
 116,4,堅硬岩石
@@ -1159,6 +1274,7 @@ ability_id,local_language_id,name
 116,9,Solid Rock
 116,11,ハードロック
 116,12,坚硬岩石
+116,14,Roca Sólida
 117,1,ゆきふらし
 117,3,눈퍼뜨리기
 117,4,降雪
@@ -1169,6 +1285,7 @@ ability_id,local_language_id,name
 117,9,Snow Warning
 117,11,ゆきふらし
 117,12,降雪
+117,14,Nevada
 118,1,みつあつめ
 118,3,꿀모으기
 118,4,採蜜
@@ -1179,6 +1296,7 @@ ability_id,local_language_id,name
 118,9,Honey Gather
 118,11,みつあつめ
 118,12,采蜜
+118,14,Recogemiel
 119,1,おみとおし
 119,3,통찰
 119,4,察覺
@@ -1189,6 +1307,7 @@ ability_id,local_language_id,name
 119,9,Frisk
 119,11,おみとおし
 119,12,察觉
+119,14,Cacheo
 120,1,すてみ
 120,3,이판사판
 120,4,捨身
@@ -1199,6 +1318,7 @@ ability_id,local_language_id,name
 120,9,Reckless
 120,11,すてみ
 120,12,舍身
+120,14,Audaz
 121,1,マルチタイプ
 121,3,멀티타입
 121,4,多屬性
@@ -1209,6 +1329,7 @@ ability_id,local_language_id,name
 121,9,Multitype
 121,11,マルチタイプ
 121,12,多属性
+121,14,Multitipo
 122,1,フラワーギフト
 122,3,플라워기프트
 122,4,花之禮
@@ -1219,6 +1340,7 @@ ability_id,local_language_id,name
 122,9,Flower Gift
 122,11,フラワーギフト
 122,12,花之礼
+122,14,Don Floral
 123,1,ナイトメア
 123,3,나이트메어
 123,4,夢魘
@@ -1229,6 +1351,7 @@ ability_id,local_language_id,name
 123,9,Bad Dreams
 123,11,ナイトメア
 123,12,梦魇
+123,14,Mal Sueño
 124,1,わるいてぐせ
 124,3,나쁜손버릇
 124,4,順手牽羊
@@ -1239,6 +1362,7 @@ ability_id,local_language_id,name
 124,9,Pickpocket
 124,11,わるいてぐせ
 124,12,顺手牵羊
+124,14,Hurto
 125,1,ちからずく
 125,3,우격다짐
 125,4,強行
@@ -1249,6 +1373,7 @@ ability_id,local_language_id,name
 125,9,Sheer Force
 125,11,ちからずく
 125,12,强行
+125,14,Potencia Bruta
 126,1,あまのじゃく
 126,3,심술꾸러기
 126,4,唱反調
@@ -1259,6 +1384,7 @@ ability_id,local_language_id,name
 126,9,Contrary
 126,11,あまのじゃく
 126,12,唱反调
+126,14,Respondón
 127,1,きんちょうかん
 127,3,긴장감
 127,4,緊張感
@@ -1269,6 +1395,7 @@ ability_id,local_language_id,name
 127,9,Unnerve
 127,11,きんちょうかん
 127,12,紧张感
+127,14,Nerviosismo
 128,1,まけんき
 128,3,오기
 128,4,不服輸
@@ -1279,6 +1406,7 @@ ability_id,local_language_id,name
 128,9,Defiant
 128,11,まけんき
 128,12,不服输
+128,14,Competitivo
 129,1,よわき
 129,3,무기력
 129,4,軟弱
@@ -1289,6 +1417,7 @@ ability_id,local_language_id,name
 129,9,Defeatist
 129,11,よわき
 129,12,软弱
+129,14,Flaqueza
 130,1,のろわれボディ
 130,3,저주받은바디
 130,4,詛咒之軀
@@ -1299,6 +1428,7 @@ ability_id,local_language_id,name
 130,9,Cursed Body
 130,11,のろわれボディ
 130,12,诅咒之躯
+130,14,Cuerpo Maldito
 131,1,いやしのこころ
 131,3,치유의마음
 131,4,治癒之心
@@ -1309,6 +1439,7 @@ ability_id,local_language_id,name
 131,9,Healer
 131,11,いやしのこころ
 131,12,治愈之心
+131,14,Alma Cura
 132,1,フレンドガード
 132,3,프렌드가드
 132,4,友情防守
@@ -1319,6 +1450,7 @@ ability_id,local_language_id,name
 132,9,Friend Guard
 132,11,フレンドガード
 132,12,友情防守
+132,14,Compiescolta
 133,1,くだけるよろい
 133,3,깨어진갑옷
 133,4,碎裂鎧甲
@@ -1329,6 +1461,7 @@ ability_id,local_language_id,name
 133,9,Weak Armor
 133,11,くだけるよろい
 133,12,碎裂铠甲
+133,14,Armadura Frágil
 134,1,ヘヴィメタル
 134,3,헤비메탈
 134,4,重金屬
@@ -1339,6 +1472,7 @@ ability_id,local_language_id,name
 134,9,Heavy Metal
 134,11,ヘヴィメタル
 134,12,重金属
+134,14,Metal Pesado
 135,1,ライトメタル
 135,3,라이트메탈
 135,4,輕金屬
@@ -1349,6 +1483,7 @@ ability_id,local_language_id,name
 135,9,Light Metal
 135,11,ライトメタル
 135,12,轻金属
+135,14,Metal Liviano
 136,1,マルチスケイル
 136,3,멀티스케일
 136,4,多重鱗片
@@ -1359,6 +1494,7 @@ ability_id,local_language_id,name
 136,9,Multiscale
 136,11,マルチスケイル
 136,12,多重鳞片
+136,14,Multiescamas
 137,1,どくぼうそう
 137,3,독폭주
 137,4,中毒激升
@@ -1369,6 +1505,7 @@ ability_id,local_language_id,name
 137,9,Toxic Boost
 137,11,どくぼうそう
 137,12,中毒激升
+137,14,Ímpetu Tóxico
 138,1,ねつぼうそう
 138,3,열폭주
 138,4,受熱激升
@@ -1379,6 +1516,7 @@ ability_id,local_language_id,name
 138,9,Flare Boost
 138,11,ねつぼうそう
 138,12,受热激升
+138,14,Ímpetu Ardiente
 139,1,しゅうかく
 139,3,수확
 139,4,收穫
@@ -1389,6 +1527,7 @@ ability_id,local_language_id,name
 139,9,Harvest
 139,11,しゅうかく
 139,12,收获
+139,14,Cosecha
 140,1,テレパシー
 140,3,텔레파시
 140,4,心靈感應
@@ -1399,6 +1538,7 @@ ability_id,local_language_id,name
 140,9,Telepathy
 140,11,テレパシー
 140,12,心灵感应
+140,14,Telepatía
 141,1,ムラっけ
 141,3,변덕쟁이
 141,4,心情不定
@@ -1409,6 +1549,7 @@ ability_id,local_language_id,name
 141,9,Moody
 141,11,ムラっけ
 141,12,心情不定
+141,14,Veleta
 142,1,ぼうじん
 142,3,방진
 142,4,防塵
@@ -1419,6 +1560,7 @@ ability_id,local_language_id,name
 142,9,Overcoat
 142,11,ぼうじん
 142,12,防尘
+142,14,Funda
 143,1,どくしゅ
 143,3,독수
 143,4,毒手
@@ -1429,6 +1571,7 @@ ability_id,local_language_id,name
 143,9,Poison Touch
 143,11,どくしゅ
 143,12,毒手
+143,14,Toque Tóxico
 144,1,さいせいりょく
 144,3,재생력
 144,4,再生力
@@ -1439,6 +1582,7 @@ ability_id,local_language_id,name
 144,9,Regenerator
 144,11,さいせいりょく
 144,12,再生力
+144,14,Regeneración
 145,1,はとむね
 145,3,부풀린가슴
 145,4,健壯胸肌
@@ -1449,6 +1593,7 @@ ability_id,local_language_id,name
 145,9,Big Pecks
 145,11,はとむね
 145,12,健壮胸肌
+145,14,Sacapecho
 146,1,すなかき
 146,3,모래헤치기
 146,4,撥沙
@@ -1459,6 +1604,7 @@ ability_id,local_language_id,name
 146,9,Sand Rush
 146,11,すなかき
 146,12,拨沙
+146,14,Ímpetu Arena
 147,1,ミラクルスキン
 147,3,미라클스킨
 147,4,奇跡皮膚
@@ -1469,6 +1615,7 @@ ability_id,local_language_id,name
 147,9,Wonder Skin
 147,11,ミラクルスキン
 147,12,奇迹皮肤
+147,14,Piel Milagro
 148,1,アナライズ
 148,3,애널라이즈
 148,4,分析
@@ -1479,6 +1626,7 @@ ability_id,local_language_id,name
 148,9,Analytic
 148,11,アナライズ
 148,12,分析
+148,14,Cálculo Final
 149,1,イリュージョン
 149,3,일루전
 149,4,幻覺
@@ -1489,6 +1637,7 @@ ability_id,local_language_id,name
 149,9,Illusion
 149,11,イリュージョン
 149,12,幻觉
+149,14,Ilusión
 150,1,かわりもの
 150,3,괴짜
 150,4,變身者
@@ -1499,6 +1648,7 @@ ability_id,local_language_id,name
 150,9,Imposter
 150,11,かわりもの
 150,12,变身者
+150,14,Impostor
 151,1,すりぬけ
 151,3,틈새포착
 151,4,穿透
@@ -1509,6 +1659,7 @@ ability_id,local_language_id,name
 151,9,Infiltrator
 151,11,すりぬけ
 151,12,穿透
+151,14,Allanamiento
 152,1,ミイラ
 152,3,미라
 152,4,木乃伊
@@ -1519,6 +1670,7 @@ ability_id,local_language_id,name
 152,9,Mummy
 152,11,ミイラ
 152,12,木乃伊
+152,14,Momia
 153,1,じしんかじょう
 153,3,자기과신
 153,4,自信過度
@@ -1529,6 +1681,7 @@ ability_id,local_language_id,name
 153,9,Moxie
 153,11,じしんかじょう
 153,12,自信过度
+153,14,Autoestima
 154,1,せいぎのこころ
 154,3,정의의마음
 154,4,正義之心
@@ -1539,6 +1692,7 @@ ability_id,local_language_id,name
 154,9,Justified
 154,11,せいぎのこころ
 154,12,正义之心
+154,14,Justiciero
 155,1,びびり
 155,3,주눅
 155,4,膽怯
@@ -1549,6 +1703,7 @@ ability_id,local_language_id,name
 155,9,Rattled
 155,11,びびり
 155,12,胆怯
+155,14,Cobardía
 156,1,マジックミラー
 156,3,매직미러
 156,4,魔法鏡
@@ -1559,6 +1714,7 @@ ability_id,local_language_id,name
 156,9,Magic Bounce
 156,11,マジックミラー
 156,12,魔法镜
+156,14,Espejo Mágico
 157,1,そうしょく
 157,3,초식
 157,4,食草
@@ -1569,6 +1725,7 @@ ability_id,local_language_id,name
 157,9,Sap Sipper
 157,11,そうしょく
 157,12,食草
+157,14,Herbívoro
 158,1,いたずらごころ
 158,3,짓궂은마음
 158,4,惡作劇之心
@@ -1579,6 +1736,7 @@ ability_id,local_language_id,name
 158,9,Prankster
 158,11,いたずらごころ
 158,12,恶作剧之心
+158,14,Bromista
 159,1,すなのちから
 159,3,모래의힘
 159,4,沙之力
@@ -1589,6 +1747,7 @@ ability_id,local_language_id,name
 159,9,Sand Force
 159,11,すなのちから
 159,12,沙之力
+159,14,Poder Arena
 160,1,てつのトゲ
 160,3,철가시
 160,4,鐵刺
@@ -1599,6 +1758,7 @@ ability_id,local_language_id,name
 160,9,Iron Barbs
 160,11,てつのトゲ
 160,12,铁刺
+160,14,Punta Acero
 161,1,ダルマモード
 161,3,달마모드
 161,4,達摩模式
@@ -1609,6 +1769,7 @@ ability_id,local_language_id,name
 161,9,Zen Mode
 161,11,ダルマモード
 161,12,达摩模式
+161,14,Modo Daruma
 162,1,しょうりのほし
 162,3,승리의별
 162,4,勝利之星
@@ -1619,6 +1780,7 @@ ability_id,local_language_id,name
 162,9,Victory Star
 162,11,しょうりのほし
 162,12,胜利之星
+162,14,Tinovictoria
 163,1,ターボブレイズ
 163,3,터보블레이즈
 163,4,渦輪火焰
@@ -1629,6 +1791,7 @@ ability_id,local_language_id,name
 163,9,Turboblaze
 163,11,ターボブレイズ
 163,12,涡轮火焰
+163,14,Turbollama
 164,1,テラボルテージ
 164,3,테라볼티지
 164,4,兆級電壓
@@ -1639,6 +1802,7 @@ ability_id,local_language_id,name
 164,9,Teravolt
 164,11,テラボルテージ
 164,12,兆级电压
+164,14,Terravoltaje
 165,1,アロマベール
 165,3,아로마베일
 165,4,芳香幕
@@ -1649,6 +1813,7 @@ ability_id,local_language_id,name
 165,9,Aroma Veil
 165,11,アロマベール
 165,12,芳香幕
+165,14,Velo Aroma
 166,1,フラワーベール
 166,3,플라워베일
 166,4,花幕
@@ -1659,6 +1824,7 @@ ability_id,local_language_id,name
 166,9,Flower Veil
 166,11,フラワーベール
 166,12,花幕
+166,14,Velo Flor
 167,1,ほおぶくろ
 167,3,볼주머니
 167,4,頰囊
@@ -1669,6 +1835,7 @@ ability_id,local_language_id,name
 167,9,Cheek Pouch
 167,11,ほおぶくろ
 167,12,颊囊
+167,14,Carrillo
 168,1,へんげんじざい
 168,3,변환자재
 168,4,變幻自如
@@ -1679,6 +1846,7 @@ ability_id,local_language_id,name
 168,9,Protean
 168,11,へんげんじざい
 168,12,变幻自如
+168,14,Mutatipo
 169,1,ファーコート
 169,3,퍼코트
 169,4,毛皮大衣
@@ -1689,6 +1857,7 @@ ability_id,local_language_id,name
 169,9,Fur Coat
 169,11,ファーコート
 169,12,毛皮大衣
+169,14,Pelaje Recio
 170,1,マジシャン
 170,3,매지션
 170,4,魔術師
@@ -1699,6 +1868,7 @@ ability_id,local_language_id,name
 170,9,Magician
 170,11,マジシャン
 170,12,魔术师
+170,14,Prestidigitador
 171,1,ぼうだん
 171,3,방탄
 171,4,防彈
@@ -1709,6 +1879,7 @@ ability_id,local_language_id,name
 171,9,Bulletproof
 171,11,ぼうだん
 171,12,防弹
+171,14,Antibalas
 172,1,かちき
 172,3,승기
 172,4,好勝
@@ -1719,6 +1890,7 @@ ability_id,local_language_id,name
 172,9,Competitive
 172,11,かちき
 172,12,好胜
+172,14,Tenacidad
 173,1,がんじょうあご
 173,3,옹골찬턱
 173,4,強壯之顎
@@ -1729,6 +1901,7 @@ ability_id,local_language_id,name
 173,9,Strong Jaw
 173,11,がんじょうあご
 173,12,强壮之颚
+173,14,Mandíbula Fuerte
 174,1,フリーズスキン
 174,3,프리즈스킨
 174,4,冰凍皮膚
@@ -1739,6 +1912,7 @@ ability_id,local_language_id,name
 174,9,Refrigerate
 174,11,フリーズスキン
 174,12,冰冻皮肤
+174,14,Piel Helada
 175,1,スイートベール
 175,3,스위트베일
 175,4,甜幕
@@ -1749,6 +1923,7 @@ ability_id,local_language_id,name
 175,9,Sweet Veil
 175,11,スイートベール
 175,12,甜幕
+175,14,Velo Dulce
 176,1,バトルスイッチ
 176,3,배틀스위치
 176,4,戰鬥切換
@@ -1759,6 +1934,7 @@ ability_id,local_language_id,name
 176,9,Stance Change
 176,11,バトルスイッチ
 176,12,战斗切换
+176,14,Cambio Táctico
 177,1,はやてのつばさ
 177,3,질풍날개
 177,4,疾風之翼
@@ -1769,6 +1945,7 @@ ability_id,local_language_id,name
 177,9,Gale Wings
 177,11,はやてのつばさ
 177,12,疾风之翼
+177,14,Alas Vendaval
 178,1,メガランチャー
 178,3,메가런처
 178,4,超級發射器
@@ -1779,6 +1956,7 @@ ability_id,local_language_id,name
 178,9,Mega Launcher
 178,11,メガランチャー
 178,12,超级发射器
+178,14,Megadisparador
 179,1,くさのけがわ
 179,3,풀모피
 179,4,草之毛皮
@@ -1789,6 +1967,7 @@ ability_id,local_language_id,name
 179,9,Grass Pelt
 179,11,くさのけがわ
 179,12,草之毛皮
+179,14,Manto Frondoso
 180,1,きょうせい
 180,3,공생
 180,4,共生
@@ -1799,6 +1978,7 @@ ability_id,local_language_id,name
 180,9,Symbiosis
 180,11,きょうせい
 180,12,共生
+180,14,Simbiosis
 181,1,かたいツメ
 181,3,단단한발톱
 181,4,硬爪
@@ -1809,6 +1989,7 @@ ability_id,local_language_id,name
 181,9,Tough Claws
 181,11,かたいツメ
 181,12,硬爪
+181,14,Garra Dura
 182,1,フェアリースキン
 182,3,페어리스킨
 182,4,妖精皮膚
@@ -1819,6 +2000,7 @@ ability_id,local_language_id,name
 182,9,Pixilate
 182,11,フェアリースキン
 182,12,妖精皮肤
+182,14,Piel Feérica
 183,1,ぬめぬめ
 183,3,미끈미끈
 183,4,黏滑
@@ -1829,6 +2011,7 @@ ability_id,local_language_id,name
 183,9,Gooey
 183,11,ぬめぬめ
 183,12,黏滑
+183,14,Baba
 184,1,スカイスキン
 184,3,스카이스킨
 184,4,飛行皮膚
@@ -1839,6 +2022,7 @@ ability_id,local_language_id,name
 184,9,Aerilate
 184,11,スカイスキン
 184,12,飞行皮肤
+184,14,Piel Celeste
 185,1,おやこあい
 185,3,부자유친
 185,4,親子愛
@@ -1849,6 +2033,7 @@ ability_id,local_language_id,name
 185,9,Parental Bond
 185,11,おやこあい
 185,12,亲子爱
+185,14,Amor Filial
 186,1,ダークオーラ
 186,3,다크오라
 186,4,暗黑氣場
@@ -1859,6 +2044,7 @@ ability_id,local_language_id,name
 186,9,Dark Aura
 186,11,ダークオーラ
 186,12,暗黑气场
+186,14,Aura Oscura
 187,1,フェアリーオーラ
 187,3,페어리오라
 187,4,妖精氣場
@@ -1869,6 +2055,7 @@ ability_id,local_language_id,name
 187,9,Fairy Aura
 187,11,フェアリーオーラ
 187,12,妖精气场
+187,14,Aura Feérica
 188,1,オーラブレイク
 188,3,오라브레이크
 188,4,氣場破壞
@@ -1879,6 +2066,7 @@ ability_id,local_language_id,name
 188,9,Aura Break
 188,11,オーラブレイク
 188,12,气场破坏
+188,14,Rompeaura
 189,1,はじまりのうみ
 189,3,시작의바다
 189,4,始源之海
@@ -1889,6 +2077,7 @@ ability_id,local_language_id,name
 189,9,Primordial Sea
 189,11,はじまりのうみ
 189,12,始源之海
+189,14,Mar del Albor
 190,1,おわりのだいち
 190,3,끝의대지
 190,4,終結之地
@@ -1899,6 +2088,7 @@ ability_id,local_language_id,name
 190,9,Desolate Land
 190,11,おわりのだいち
 190,12,终结之地
+190,14,Tierra del Ocaso
 191,1,デルタストリーム
 191,3,델타스트림
 191,4,德爾塔氣流
@@ -1909,6 +2099,7 @@ ability_id,local_language_id,name
 191,9,Delta Stream
 191,11,デルタストリーム
 191,12,德尔塔气流
+191,14,Ráfaga Delta
 192,1,じきゅうりょく
 192,3,지구력
 192,4,持久力
@@ -1919,6 +2110,7 @@ ability_id,local_language_id,name
 192,9,Stamina
 192,11,じきゅうりょく
 192,12,持久力
+192,14,Firmeza
 193,1,にげごし
 193,3,도망태세
 193,4,躍躍欲逃
@@ -1929,6 +2121,7 @@ ability_id,local_language_id,name
 193,9,Wimp Out
 193,11,にげごし
 193,12,跃跃欲逃
+193,14,Huida
 194,1,ききかいひ
 194,3,위기회피
 194,4,危險迴避
@@ -1939,6 +2132,7 @@ ability_id,local_language_id,name
 194,9,Emergency Exit
 194,11,ききかいひ
 194,12,危险回避
+194,14,Retirada
 195,1,みずがため
 195,3,꾸덕꾸덕굳기
 195,4,遇水凝固
@@ -1949,6 +2143,7 @@ ability_id,local_language_id,name
 195,9,Water Compaction
 195,11,みずがため
 195,12,遇水凝固
+195,14,Hidrorrefuerzo
 196,1,ひとでなし
 196,3,무도한행동
 196,4,不仁不義
@@ -1959,6 +2154,7 @@ ability_id,local_language_id,name
 196,9,Merciless
 196,11,ひとでなし
 196,12,不仁不义
+196,14,Ensañamiento
 197,1,リミットシールド
 197,3,리밋실드
 197,4,界限盾殼
@@ -1969,6 +2165,7 @@ ability_id,local_language_id,name
 197,9,Shields Down
 197,11,リミットシールド
 197,12,界限盾壳
+197,14,Escudo Limitado
 198,1,はりこみ
 198,3,잠복
 198,4,監視
@@ -1979,6 +2176,7 @@ ability_id,local_language_id,name
 198,9,Stakeout
 198,11,はりこみ
 198,12,蹲守
+198,14,Vigilante
 199,1,すいほう
 199,3,수포
 199,4,水泡
@@ -1989,6 +2187,7 @@ ability_id,local_language_id,name
 199,9,Water Bubble
 199,11,すいほう
 199,12,水泡
+199,14,Pompa
 200,1,はがねつかい
 200,3,강철술사
 200,4,鋼能力者
@@ -1999,6 +2198,7 @@ ability_id,local_language_id,name
 200,9,Steelworker
 200,11,はがねつかい
 200,12,钢能力者
+200,14,Acero Templado
 201,1,ぎゃくじょう
 201,3,발끈
 201,4,怒火沖天
@@ -2009,6 +2209,7 @@ ability_id,local_language_id,name
 201,9,Berserk
 201,11,ぎゃくじょう
 201,12,怒火冲天
+201,14,Cólera
 202,1,ゆきかき
 202,3,눈치우기
 202,4,撥雪
@@ -2019,6 +2220,7 @@ ability_id,local_language_id,name
 202,9,Slush Rush
 202,11,ゆきかき
 202,12,拨雪
+202,14,Quitanieves
 203,1,えんかく
 203,3,원격
 203,4,遠隔
@@ -2029,6 +2231,7 @@ ability_id,local_language_id,name
 203,9,Long Reach
 203,11,えんかく
 203,12,远隔
+203,14,Remoto
 204,1,うるおいボイス
 204,3,촉촉보이스
 204,4,濕潤之聲
@@ -2039,6 +2242,7 @@ ability_id,local_language_id,name
 204,9,Liquid Voice
 204,11,うるおいボイス
 204,12,湿润之声
+204,14,Voz Fluida
 205,1,ヒーリングシフト
 205,3,힐링시프트
 205,4,先行治療
@@ -2049,6 +2253,7 @@ ability_id,local_language_id,name
 205,9,Triage
 205,11,ヒーリングシフト
 205,12,先行治疗
+205,14,Primer Auxilio
 206,1,エレキスキン
 206,3,일렉트릭스킨
 206,4,電氣皮膚
@@ -2059,6 +2264,7 @@ ability_id,local_language_id,name
 206,9,Galvanize
 206,11,エレキスキン
 206,12,电气皮肤
+206,14,Piel Eléctrica
 207,1,サーフテール
 207,3,서핑테일
 207,4,衝浪之尾
@@ -2069,6 +2275,7 @@ ability_id,local_language_id,name
 207,9,Surge Surfer
 207,11,サーフテール
 207,12,冲浪之尾
+207,14,Cola Surf
 208,1,ぎょぐん
 208,3,어군
 208,4,魚群
@@ -2079,6 +2286,7 @@ ability_id,local_language_id,name
 208,9,Schooling
 208,11,ぎょぐん
 208,12,鱼群
+208,14,Banco
 209,1,ばけのかわ
 209,3,탈
 209,4,畫皮
@@ -2089,6 +2297,7 @@ ability_id,local_language_id,name
 209,9,Disguise
 209,11,ばけのかわ
 209,12,画皮
+209,14,Disfraz
 210,1,きずなへんげ
 210,3,유대변화
 210,4,牽絆變身
@@ -2099,6 +2308,7 @@ ability_id,local_language_id,name
 210,9,Battle Bond
 210,11,きずなへんげ
 210,12,牵绊变身
+210,14,Fuerte Afecto
 211,1,スワームチェンジ
 211,3,스웜체인지
 211,4,群聚變形
@@ -2109,6 +2319,7 @@ ability_id,local_language_id,name
 211,9,Power Construct
 211,11,スワームチェンジ
 211,12,群聚变形
+211,14,Agrupamiento
 212,1,ふしょく
 212,3,부식
 212,4,腐蝕
@@ -2119,6 +2330,7 @@ ability_id,local_language_id,name
 212,9,Corrosion
 212,11,ふしょく
 212,12,腐蚀
+212,14,Corrosión
 213,1,ぜったいねむり
 213,3,절대안깸
 213,4,絕對睡眠
@@ -2129,6 +2341,7 @@ ability_id,local_language_id,name
 213,9,Comatose
 213,11,ぜったいねむり
 213,12,绝对睡眠
+213,14,Letargo Perenne
 214,1,じょおうのいげん
 214,3,여왕의위엄
 214,4,女王的威嚴
@@ -2139,6 +2352,7 @@ ability_id,local_language_id,name
 214,9,Queenly Majesty
 214,11,じょおうのいげん
 214,12,女王的威严
+214,14,Regia Presencia
 215,1,とびだすなかみ
 215,3,내용물분출
 215,4,飛出的內在物
@@ -2149,6 +2363,7 @@ ability_id,local_language_id,name
 215,9,Innards Out
 215,11,とびだすなかみ
 215,12,飞出的内在物
+215,14,Revés
 216,1,おどりこ
 216,3,무희
 216,4,舞者
@@ -2159,6 +2374,7 @@ ability_id,local_language_id,name
 216,9,Dancer
 216,11,おどりこ
 216,12,舞者
+216,14,Pareja de Baile
 217,1,バッテリー
 217,3,배터리
 217,4,蓄電池
@@ -2169,6 +2385,7 @@ ability_id,local_language_id,name
 217,9,Battery
 217,11,バッテリー
 217,12,蓄电池
+217,14,Batería
 218,1,もふもふ
 218,3,복슬복슬
 218,4,毛茸茸
@@ -2179,6 +2396,7 @@ ability_id,local_language_id,name
 218,9,Fluffy
 218,11,もふもふ
 218,12,毛茸茸
+218,14,Peluche
 219,1,ビビッドボディ
 219,3,비비드바디
 219,4,鮮艷之軀
@@ -2189,6 +2407,7 @@ ability_id,local_language_id,name
 219,9,Dazzling
 219,11,ビビッドボディ
 219,12,鲜艳之躯
+219,14,Cuerpo Vívido
 220,1,ソウルハート
 220,3,소울하트
 220,4,魂心
@@ -2199,6 +2418,7 @@ ability_id,local_language_id,name
 220,9,Soul-Heart
 220,11,ソウルハート
 220,12,魂心
+220,14,Coránima
 221,1,カーリーヘアー
 221,3,컬리헤어
 221,4,捲髮
@@ -2209,6 +2429,7 @@ ability_id,local_language_id,name
 221,9,Tangling Hair
 221,11,カーリーヘアー
 221,12,卷发
+221,14,Rizos Rebeldes
 222,1,レシーバー
 222,3,리시버
 222,4,接球手
@@ -2219,6 +2440,7 @@ ability_id,local_language_id,name
 222,9,Receiver
 222,11,レシーバー
 222,12,接球手
+222,14,Receptor
 223,1,かがくのちから
 223,3,과학의힘
 223,4,化學之力
@@ -2229,6 +2451,7 @@ ability_id,local_language_id,name
 223,9,Power of Alchemy
 223,11,かがくのちから
 223,12,化学之力
+223,14,Reacción Química
 224,1,ビーストブースト
 224,3,비스트부스트
 224,4,異獸提升
@@ -2239,6 +2462,7 @@ ability_id,local_language_id,name
 224,9,Beast Boost
 224,11,ビーストブースト
 224,12,异兽提升
+224,14,Ultraimpulso
 225,1,ＡＲシステム
 225,3,AR시스템
 225,4,ＡＲ系統
@@ -2249,6 +2473,7 @@ ability_id,local_language_id,name
 225,9,RKS System
 225,11,ＡＲシステム
 225,12,ＡＲ系统
+225,14,Sistema Alfa
 226,1,エレキメイカー
 226,3,일렉트릭메이커
 226,4,電氣製造者
@@ -2259,6 +2484,7 @@ ability_id,local_language_id,name
 226,9,Electric Surge
 226,11,エレキメイカー
 226,12,电气制造者
+226,14,Electrogénesis
 227,1,サイコメイカー
 227,3,사이코메이커
 227,4,精神製造者
@@ -2269,6 +2495,7 @@ ability_id,local_language_id,name
 227,9,Psychic Surge
 227,11,サイコメイカー
 227,12,精神制造者
+227,14,Psicogénesis
 228,1,ミストメイカー
 228,3,미스트메이커
 228,4,薄霧製造者
@@ -2279,6 +2506,7 @@ ability_id,local_language_id,name
 228,9,Misty Surge
 228,11,ミストメイカー
 228,12,薄雾制造者
+228,14,Nebulogénesis
 229,1,グラスメイカー
 229,3,그래스메이커
 229,4,青草製造者
@@ -2289,6 +2517,7 @@ ability_id,local_language_id,name
 229,9,Grassy Surge
 229,11,グラスメイカー
 229,12,青草制造者
+229,14,Herbogénesis
 230,1,メタルプロテクト
 230,3,메탈프로텍트
 230,4,金屬防護
@@ -2299,6 +2528,7 @@ ability_id,local_language_id,name
 230,9,Full Metal Body
 230,11,メタルプロテクト
 230,12,金属防护
+230,14,Guardia Metálica
 231,1,ファントムガード
 231,3,스펙터가드
 231,4,幻影防守
@@ -2309,6 +2539,7 @@ ability_id,local_language_id,name
 231,9,Shadow Shield
 231,11,ファントムガード
 231,12,幻影防守
+231,14,Guardia Espectro
 232,1,プリズムアーマー
 232,3,프리즘아머
 232,4,稜鏡裝甲
@@ -2319,6 +2550,7 @@ ability_id,local_language_id,name
 232,9,Prism Armor
 232,11,プリズムアーマー
 232,12,棱镜装甲
+232,14,Armadura Prisma
 233,1,ブレインフォース
 233,3,브레인포스
 233,4,腦核之力
@@ -2329,6 +2561,7 @@ ability_id,local_language_id,name
 233,9,Neuroforce
 233,11,ブレインフォース
 233,12,脑核之力
+233,14,Fuerza Cerebral
 234,1,ふとうのけん
 234,3,불요의검
 234,4,不撓之劍
@@ -2339,6 +2572,7 @@ ability_id,local_language_id,name
 234,9,Intrepid Sword
 234,11,ふとうのけん
 234,12,不挠之剑
+234,14,Espada Indómita
 235,1,ふくつのたて
 235,3,불굴의방패
 235,4,不屈之盾
@@ -2349,6 +2583,7 @@ ability_id,local_language_id,name
 235,9,Dauntless Shield
 235,11,ふくつのたて
 235,12,不屈之盾
+235,14,Escudo Recio
 236,1,リベロ
 236,3,리베로
 236,4,自由者
@@ -2359,6 +2594,7 @@ ability_id,local_language_id,name
 236,9,Libero
 236,11,リベロ
 236,12,自由者
+236,14,Líbero
 237,1,たまひろい
 237,3,볼줍기
 237,4,撿球
@@ -2369,6 +2605,7 @@ ability_id,local_language_id,name
 237,9,Ball Fetch
 237,11,たまひろい
 237,12,捡球
+237,14,Recogebolas
 238,1,わたげ
 238,3,솜털
 238,4,棉絮
@@ -2379,6 +2616,7 @@ ability_id,local_language_id,name
 238,9,Cotton Down
 238,11,わたげ
 238,12,棉絮
+238,14,Pelusa
 239,1,スクリューおびれ
 239,3,스크루지느러미
 239,4,螺旋尾鰭
@@ -2389,6 +2627,7 @@ ability_id,local_language_id,name
 239,9,Propeller Tail
 239,11,スクリューおびれ
 239,12,螺旋尾鳍
+239,14,Hélice Caudal
 240,1,ミラーアーマー
 240,3,미러아머
 240,4,鏡甲
@@ -2399,6 +2638,7 @@ ability_id,local_language_id,name
 240,9,Mirror Armor
 240,11,ミラーアーマー
 240,12,镜甲
+240,14,Coraza Reflejo
 241,1,うのミサイル
 241,3,그대로꿀꺽미사일
 241,4,一口飛彈
@@ -2409,6 +2649,7 @@ ability_id,local_language_id,name
 241,9,Gulp Missile
 241,11,うのミサイル
 241,12,一口导弹
+241,14,Tragamisil
 242,1,すじがねいり
 242,3,굳건한신념
 242,4,堅毅
@@ -2419,6 +2660,7 @@ ability_id,local_language_id,name
 242,9,Stalwart
 242,11,すじがねいり
 242,12,坚毅
+242,14,Acérrimo
 243,1,じょうききかん
 243,3,증기기관
 243,4,蒸汽機
@@ -2429,6 +2671,7 @@ ability_id,local_language_id,name
 243,9,Steam Engine
 243,11,じょうききかん
 243,12,蒸汽机
+243,14,Combustible
 244,1,パンクロック
 244,3,펑크록
 244,4,龐克搖滾
@@ -2439,6 +2682,7 @@ ability_id,local_language_id,name
 244,9,Punk Rock
 244,11,パンクロック
 244,12,庞克摇滚
+244,14,Punk Rock
 245,1,すなはき
 245,3,모래뿜기
 245,4,吐沙
@@ -2449,6 +2693,7 @@ ability_id,local_language_id,name
 245,9,Sand Spit
 245,11,すなはき
 245,12,吐沙
+245,14,Expulsarena
 246,1,こおりのりんぷん
 246,3,얼음인분
 246,4,冰鱗粉
@@ -2459,6 +2704,7 @@ ability_id,local_language_id,name
 246,9,Ice Scales
 246,11,こおりのりんぷん
 246,12,冰鳞粉
+246,14,Escama de Hielo
 247,1,じゅくせい
 247,3,숙성
 247,4,熟成
@@ -2469,6 +2715,7 @@ ability_id,local_language_id,name
 247,9,Ripen
 247,11,じゅくせい
 247,12,熟成
+247,14,Maduración
 248,1,アイスフェイス
 248,3,아이스페이스
 248,4,結凍頭
@@ -2479,6 +2726,7 @@ ability_id,local_language_id,name
 248,9,Ice Face
 248,11,アイスフェイス
 248,12,结冻头
+248,14,Cara de Hielo
 249,1,パワースポット
 249,3,파워스폿
 249,4,能量點
@@ -2489,6 +2737,7 @@ ability_id,local_language_id,name
 249,9,Power Spot
 249,11,パワースポット
 249,12,能量点
+249,14,Fuente Energía
 250,1,ぎたい
 250,3,의태
 250,4,擬態
@@ -2499,6 +2748,7 @@ ability_id,local_language_id,name
 250,9,Mimicry
 250,11,ぎたい
 250,12,拟态
+250,14,Mimetismo
 251,1,バリアフリー
 251,3,배리어프리
 251,4,除障
@@ -2509,6 +2759,7 @@ ability_id,local_language_id,name
 251,9,Screen Cleaner
 251,11,バリアフリー
 251,12,除障
+251,14,Antibarrera
 252,1,はがねのせいしん
 252,3,강철정신
 252,4,鋼之意志
@@ -2519,6 +2770,7 @@ ability_id,local_language_id,name
 252,9,Steely Spirit
 252,11,はがねのせいしん
 252,12,钢之意志
+252,14,Alma Acerada
 253,1,ほろびのボディ
 253,3,멸망의바디
 253,4,滅亡之軀
@@ -2529,6 +2781,7 @@ ability_id,local_language_id,name
 253,9,Perish Body
 253,11,ほろびのボディ
 253,12,灭亡之躯
+253,14,Cuerpo Mortal
 254,1,さまようたましい
 254,3,떠도는영혼
 254,4,遊魂
@@ -2539,6 +2792,7 @@ ability_id,local_language_id,name
 254,9,Wandering Spirit
 254,11,さまようたましい
 254,12,游魂
+254,14,Alma Errante
 255,1,ごりむちゅう
 255,3,무아지경
 255,4,一猩一意
@@ -2549,6 +2803,7 @@ ability_id,local_language_id,name
 255,9,Gorilla Tactics
 255,11,ごりむちゅう
 255,12,一猩一意
+255,14,Monotema
 256,1,かがくへんかガス
 256,3,화학변화가스
 256,4,化學變化氣體
@@ -2559,6 +2814,7 @@ ability_id,local_language_id,name
 256,9,Neutralizing Gas
 256,11,かがくへんかガス
 256,12,化学变化气体
+256,14,Gas Reactivo
 257,1,パステルベール
 257,3,파스텔베일
 257,4,粉彩護幕
@@ -2569,6 +2825,7 @@ ability_id,local_language_id,name
 257,9,Pastel Veil
 257,11,パステルベール
 257,12,粉彩护幕
+257,14,Velo Pastel
 258,1,はらぺこスイッチ
 258,3,꼬르륵스위치
 258,4,飽了又餓
@@ -2579,6 +2836,7 @@ ability_id,local_language_id,name
 258,9,Hunger Switch
 258,11,はらぺこスイッチ
 258,12,饱了又饿
+258,14,Mutapetito
 259,1,クイックドロウ
 259,3,퀵드로
 259,4,速擊
@@ -2589,6 +2847,7 @@ ability_id,local_language_id,name
 259,9,Quick Draw
 259,11,クイックドロウ
 259,12,速击
+259,14,Mano Rápida
 260,1,ふかしのこぶし
 260,3,보이지않는주먹
 260,4,無形拳
@@ -2599,6 +2858,7 @@ ability_id,local_language_id,name
 260,9,Unseen Fist
 260,11,ふかしのこぶし
 260,12,无形拳
+260,14,Puño Invisible
 261,1,きみょうなくすり
 261,3,기묘한약
 261,4,怪藥
@@ -2609,6 +2869,7 @@ ability_id,local_language_id,name
 261,9,Curious Medicine
 261,11,きみょうなくすり
 261,12,怪药
+261,14,Medicina Extraña
 262,1,トランジスタ
 262,3,트랜지스터
 262,4,電晶體
@@ -2619,6 +2880,7 @@ ability_id,local_language_id,name
 262,9,Transistor
 262,11,トランジスタ
 262,12,电晶体
+262,14,Transistor
 263,1,りゅうのあぎと
 263,3,용의턱
 263,4,龍顎
@@ -2629,6 +2891,7 @@ ability_id,local_language_id,name
 263,9,Dragon’s Maw
 263,11,りゅうのあぎと
 263,12,龙颚
+263,14,Mandíbula Dragón
 264,1,しろのいななき
 264,3,백의울음
 264,4,蒼白嘶鳴
@@ -2639,6 +2902,7 @@ ability_id,local_language_id,name
 264,9,Chilling Neigh
 264,11,しろのいななき
 264,12,苍白嘶鸣
+264,14,Relincho Blanco
 265,1,くろのいななき
 265,3,흑의울음
 265,4,漆黑嘶鳴
@@ -2649,6 +2913,7 @@ ability_id,local_language_id,name
 265,9,Grim Neigh
 265,11,くろのいななき
 265,12,漆黑嘶鸣
+265,14,Relincho Negro
 266,1,じんばいったい
 266,3,혼연일체
 266,4,人馬一體
@@ -2659,6 +2924,7 @@ ability_id,local_language_id,name
 266,9,As One
 266,11,じんばいったい
 266,12,人马一体
+266,14,Unidad Ecuestre
 267,1,じんばいったい
 267,3,혼연일체
 267,4,人馬一體
@@ -2669,6 +2935,7 @@ ability_id,local_language_id,name
 267,9,As One
 267,11,じんばいったい
 267,12,人马一体
+267,14,Unidad Ecuestre
 268,1,とれないにおい
 268,5,Odeur Tenace
 268,6,Duftschwade
@@ -2676,6 +2943,7 @@ ability_id,local_language_id,name
 268,8,Odore Tenace
 268,9,Lingering Aroma
 268,11,とれないにおい
+268,14,Olor Persistente
 269,1,こぼれダネ
 269,5,Semencier
 269,6,Streusaat
@@ -2683,6 +2951,7 @@ ability_id,local_language_id,name
 269,8,Spargisemi
 269,9,Seed Sower
 269,11,こぼれダネ
+269,14,Disemillar
 270,1,ねつこうかん
 270,5,Thermodynamique
 270,6,Thermowandel
@@ -2690,6 +2959,7 @@ ability_id,local_language_id,name
 270,8,Termoscambio
 270,9,Thermal Exchange
 270,11,ねつこうかん
+270,14,Termoscambio
 271,1,いかりのこうら
 271,5,Courroupace
 271,6,Wutpanzer
@@ -2697,6 +2967,7 @@ ability_id,local_language_id,name
 271,8,Iraguscio
 271,9,Anger Shell
 271,11,いかりのこうら
+271,14,Coraza Ira
 272,1,きよめのしお
 272,5,Sel Purificateur
 272,6,Läutersalz
@@ -2704,6 +2975,7 @@ ability_id,local_language_id,name
 272,8,Sale Purificante
 272,9,Purifying Salt
 272,11,きよめのしお
+272,14,Sal Purificadora
 273,1,こんがりボディ
 273,5,Bien Cuit
 273,6,Knusperkruste
@@ -2711,6 +2983,7 @@ ability_id,local_language_id,name
 273,8,Bentostato
 273,9,Well-Baked Body
 273,11,こんがりボディ
+273,14,Cuerpo Horneado
 274,1,かぜのり
 274,5,Aéroporté
 274,6,Windreiter
@@ -2718,6 +2991,7 @@ ability_id,local_language_id,name
 274,8,Vento Propizio
 274,9,Wind Rider
 274,11,かぜのり
+274,14,Surcavientos
 275,1,ばんけん
 275,5,Chien de Garde
 275,6,Wachhund
@@ -2725,6 +2999,7 @@ ability_id,local_language_id,name
 275,8,Cane da Guardia
 275,9,Guard Dog
 275,11,ばんけん
+275,14,Perro Guardián
 276,1,いわはこび
 276,5,Porte-Roche
 276,6,Steinträger
@@ -2732,6 +3007,7 @@ ability_id,local_language_id,name
 276,8,Portamassi
 276,9,Rocky Payload
 276,11,いわはこび
+276,14,Transportarrocas
 277,1,ふうりょくでんき
 277,5,Turbine Éolienne
 277,6,Windkraft
@@ -2739,6 +3015,7 @@ ability_id,local_language_id,name
 277,8,Energia Eolica
 277,9,Wind Power
 277,11,ふうりょくでんき
+277,14,Energía Eólica
 278,1,マイティチェンジ
 278,5,Supermutation
 278,6,Superwechsel
@@ -2746,6 +3023,7 @@ ability_id,local_language_id,name
 278,8,Supercambio
 278,9,Zero to Hero
 278,11,マイティチェンジ
+278,14,Cambio Heroico
 279,1,しれいとう
 279,5,Commandant
 279,6,Kommandant
@@ -2753,6 +3031,7 @@ ability_id,local_language_id,name
 279,8,Torre di Comando
 279,9,Commander
 279,11,しれいとう
+279,14,Comandar
 280,1,でんきにかえる
 280,5,Grecharge
 280,6,Dynamo
@@ -2760,6 +3039,7 @@ ability_id,local_language_id,name
 280,8,Convertivolt
 280,9,Electromorphosis
 280,11,でんきにかえる
+280,14,Dinamo
 281,1,こだいかっせい
 281,5,Paléosynthèse
 281,6,Paläosynthese
@@ -2767,6 +3047,7 @@ ability_id,local_language_id,name
 281,8,Paleoattivazione
 281,9,Protosynthesis
 281,11,こだいかっせい
+281,14,Paleosíntesis
 282,1,クォークチャージ
 282,5,Charge Quantique
 282,6,Quantenantrieb
@@ -2774,6 +3055,7 @@ ability_id,local_language_id,name
 282,8,Carica Quark
 282,9,Quark Drive
 282,11,クォークチャージ
+282,14,Carga Cuark
 283,1,おうごんのからだ
 283,5,Corps en Or
 283,6,Goldkörper
@@ -2781,6 +3063,7 @@ ability_id,local_language_id,name
 283,8,Corpo Aureo
 283,9,Good as Gold
 283,11,おうごんのからだ
+283,14,Cuerpo Áureo
 284,1,わざわいのうつわ
 284,5,Urne du Fléau
 284,6,Unheilsgefäß
@@ -2788,6 +3071,7 @@ ability_id,local_language_id,name
 284,8,Vaso Nefasto
 284,9,Vessel of Ruin
 284,11,わざわいのうつわ
+284,14,Caldero Debacle
 285,1,わざわいのつるぎ
 285,5,Épée du Fléau
 285,6,Unheilsschwert
@@ -2795,6 +3079,7 @@ ability_id,local_language_id,name
 285,8,Spada Nefasta
 285,9,Sword of Ruin
 285,11,わざわいのつるぎ
+285,14,Espada Debacle
 286,1,わざわいのおふだ
 286,5,Bois du Fléau
 286,6,Unheilstafeln
@@ -2802,6 +3087,7 @@ ability_id,local_language_id,name
 286,8,Amuleto Nefasto
 286,9,Tablets of Ruin
 286,11,わざわいのおふだ
+286,14,Tablilla Debacle
 287,1,わざわいのたま
 287,5,Perles du Fléau
 287,6,Unheilsjuwelen
@@ -2809,6 +3095,7 @@ ability_id,local_language_id,name
 287,8,Monile Nefasto
 287,9,Beads of Ruin
 287,11,わざわいのたま
+287,14,Abalorio Debacle
 288,1,ひひいろのこどう
 288,5,Pouls Orichalque
 288,6,Orichalkum-Puls
@@ -2816,6 +3103,7 @@ ability_id,local_language_id,name
 288,8,Ritmo d’Oricalco
 288,9,Orichalcum Pulse
 288,11,ひひいろのこどう
+288,14,Latido Oricalco
 289,1,ハドロンエンジン
 289,5,Moteur à Hadrons
 289,6,Hadronen-Motor
@@ -2823,6 +3111,7 @@ ability_id,local_language_id,name
 289,8,Motore Adronico
 289,9,Hadron Engine
 289,11,ハドロンエンジン
+289,14,Motor Hadrónico
 290,1,びんじょう
 290,5,Opportuniste
 290,6,Profiteur
@@ -2830,6 +3119,7 @@ ability_id,local_language_id,name
 290,8,Scrocco
 290,9,Opportunist
 290,11,びんじょう
+290,14,Oportunista
 291,1,はんすう
 291,5,Ruminant
 291,6,Wiederkäuer
@@ -2837,6 +3127,7 @@ ability_id,local_language_id,name
 291,8,Ruminante
 291,9,Cud Chew
 291,11,はんすう
+291,14,Rumia
 292,1,きれあじ
 292,5,Incisif
 292,6,Scharfkantig
@@ -2844,6 +3135,7 @@ ability_id,local_language_id,name
 292,8,Affilama
 292,9,Sharpness
 292,11,きれあじ
+292,14,Cortante
 293,1,そうだいしょう
 293,5,Général Suprême
 293,6,Feldherr
@@ -2851,6 +3143,7 @@ ability_id,local_language_id,name
 293,8,Generale Supremo
 293,9,Supreme Overlord
 293,11,そうだいしょう
+293,14,General Supremo
 294,1,きょうえん
 294,5,Collab
 294,6,Synchronauftritt
@@ -2858,6 +3151,7 @@ ability_id,local_language_id,name
 294,8,Coprotagonismo
 294,9,Costar
 294,11,きょうえん
+294,14,Unísono
 295,1,どくげしょう
 295,5,Dépôt Toxique
 295,6,Giftbelag
@@ -2865,6 +3159,7 @@ ability_id,local_language_id,name
 295,8,Mantossina
 295,9,Toxic Debris
 295,11,どくげしょう
+295,14,Capa Tóxica
 296,1,テイルアーマー
 296,5,Armure Caudale
 296,6,Schweifrüstung
@@ -2872,6 +3167,7 @@ ability_id,local_language_id,name
 296,8,Codarmatura
 296,9,Armor Tail
 296,11,テイルアーマー
+296,14,Cola Armadura
 297,1,どしょく
 297,5,Absorbe-Terre
 297,6,Bodenschmaus
@@ -2879,6 +3175,7 @@ ability_id,local_language_id,name
 297,8,Mangiaterra
 297,9,Earth Eater
 297,11,どしょく
+297,14,Geofagia
 298,1,きんしのちから
 298,5,Force Fongique
 298,6,Myzelienkraft
@@ -2886,6 +3183,7 @@ ability_id,local_language_id,name
 298,8,Micoforza
 298,9,Mycelium Might
 298,11,きんしのちから
+298,14,Poder Fúngico
 299,1,しんがん
 299,3,심안
 299,4,心眼
@@ -2895,6 +3193,7 @@ ability_id,local_language_id,name
 299,9,Mind’s Eye
 299,11,しんがん
 299,12,心眼
+299,14,Ojo Mental
 300,1,かんろなミツ
 300,3,감미로운꿀
 300,4,甘露之蜜
@@ -2905,6 +3204,7 @@ ability_id,local_language_id,name
 300,9,Supersweet Syrup
 300,11,かんろなミツ
 300,12,甘露之蜜
+300,14,Néctar Dulce
 301,1,おもてなし
 301,3,대접
 301,4,款待
@@ -2915,6 +3215,7 @@ ability_id,local_language_id,name
 301,9,Hospitality
 301,11,おもてなし
 301,12,款待
+301,14,Hospitalidad
 302,1,どくのくさり
 302,3,독사슬
 302,4,毒鎖鏈
@@ -2925,6 +3226,7 @@ ability_id,local_language_id,name
 302,9,Toxic Chain
 302,11,どくのくさり
 302,12,毒锁链
+302,14,Cadena Tóxica
 303,1,おもかげやどし
 303,3,초상투영
 303,4,面影輝映
@@ -2935,6 +3237,7 @@ ability_id,local_language_id,name
 303,9,Embody Aspect
 303,11,おもかげやどし
 303,12,面影辉映
+303,14,Evocarrecuerdos
 304,1,テラスチェンジ
 304,3,테라체인지
 304,4,太晶變形
@@ -2945,6 +3248,7 @@ ability_id,local_language_id,name
 304,9,Tera Shift
 304,11,テラスチェンジ
 304,12,太晶变形
+304,14,Teracambio
 305,1,テラスシェル
 305,3,테라셸
 305,4,太晶甲殼
@@ -2955,6 +3259,7 @@ ability_id,local_language_id,name
 305,9,Tera Shell
 305,11,テラスシェル
 305,12,太晶甲壳
+305,14,Teracaparazón
 306,1,ゼロフォーミング
 306,3,제로포밍
 306,4,歸零化境
@@ -2965,6 +3270,7 @@ ability_id,local_language_id,name
 306,9,Teraform Zero
 306,11,ゼロフォーミング
 306,12,归零化境
+306,14,Teraformación 0
 307,1,どくくぐつ
 307,3,독조종
 307,4,毒傀儡
@@ -2975,6 +3281,7 @@ ability_id,local_language_id,name
 307,9,Poison Puppeteer
 307,11,どくくぐつ
 307,12,毒傀儡
+307,14,Títere Tóxico
 308,1,かんつうドリル
 308,9,Piercing Drill
 308,11,かんつうドリル

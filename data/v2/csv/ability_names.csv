@@ -86,7 +86,7 @@ ability_id,local_language_id,name
 8,9,Sand Veil
 8,11,すながくれ
 8,12,沙隐
-8,14,Velo Arena
+8,14,Velo de Arena
 9,1,せいでんき
 9,3,정전기
 9,4,靜電
@@ -97,7 +97,7 @@ ability_id,local_language_id,name
 9,9,Static
 9,11,せいでんき
 9,12,静电
-9,14,Elec. Estática
+9,14,Electricidad Estática
 10,1,ちくでん
 10,3,축전
 10,4,蓄電
@@ -108,7 +108,7 @@ ability_id,local_language_id,name
 10,9,Volt Absorb
 10,11,ちくでん
 10,12,蓄电
-10,14,Absorbe Elec
+10,14,Absorbevoltios
 11,1,ちょすい
 11,3,저수
 11,4,儲水
@@ -119,7 +119,7 @@ ability_id,local_language_id,name
 11,9,Water Absorb
 11,11,ちょすい
 11,12,储水
-11,14,Absorbe Agua
+11,14,Absorbeagua
 12,1,どんかん
 12,3,둔감
 12,4,遲鈍
@@ -130,7 +130,7 @@ ability_id,local_language_id,name
 12,9,Oblivious
 12,11,どんかん
 12,12,迟钝
-12,14,Despiste
+12,14,Despistado
 13,1,ノーてんき
 13,3,날씨부정
 13,4,無關天氣
@@ -196,7 +196,7 @@ ability_id,local_language_id,name
 18,9,Flash Fire
 18,11,もらいび
 18,12,引火
-18,14,Absorbe Fuego
+18,14,Absorbefuego
 19,1,りんぷん
 19,3,인분
 19,4,鱗粉
@@ -328,7 +328,7 @@ ability_id,local_language_id,name
 30,9,Natural Cure
 30,11,しぜんかいふく
 30,12,自然回复
-30,14,Cura Natural
+30,14,Curación Natural
 31,1,ひらいしん
 31,3,피뢰침
 31,4,避雷針
@@ -394,7 +394,7 @@ ability_id,local_language_id,name
 36,9,Trace
 36,11,トレース
 36,12,复制
-36,14,Rastro
+36,14,Calco
 37,1,ちからもち
 37,3,천하장사
 37,4,大力士
@@ -427,7 +427,7 @@ ability_id,local_language_id,name
 39,9,Inner Focus
 39,11,せいしんりょく
 39,12,精神力
-39,14,Foco Interno
+39,14,Fuerza Mental
 40,1,マグマのよろい
 40,3,마그마의무장
 40,4,熔岩鎧甲
@@ -438,7 +438,7 @@ ability_id,local_language_id,name
 40,9,Magma Armor
 40,11,マグマのよろい
 40,12,熔岩铠甲
-40,14,Escudo Magma
+40,14,Escudo de Magma
 41,1,みずのベール
 41,3,수의베일
 41,4,水幕
@@ -471,7 +471,7 @@ ability_id,local_language_id,name
 43,9,Soundproof
 43,11,ぼうおん
 43,12,隔音
-43,14,Insonorizar
+43,14,Insonorización
 44,1,あめうけざら
 44,3,젖은접시
 44,4,雨盤
@@ -482,7 +482,7 @@ ability_id,local_language_id,name
 44,9,Rain Dish
 44,11,あめうけざら
 44,12,雨盘
-44,14,Cura Lluvia
+44,14,Curación Pluvial
 45,1,すなおこし
 45,3,모래날림
 45,4,揚沙
@@ -493,7 +493,7 @@ ability_id,local_language_id,name
 45,9,Sand Stream
 45,11,すなおこし
 45,12,扬沙
-45,14,Chorro Arena
+45,14,Chorro de Arena
 46,1,プレッシャー
 46,3,프레셔
 46,4,壓迫感
@@ -526,7 +526,7 @@ ability_id,local_language_id,name
 48,9,Early Bird
 48,11,はやおき
 48,12,早起
-48,14,Madrugar
+48,14,Madrugador
 49,1,ほのおのからだ
 49,3,불꽃몸
 49,4,火焰之軀
@@ -537,7 +537,7 @@ ability_id,local_language_id,name
 49,9,Flame Body
 49,11,ほのおのからだ
 49,12,火焰之躯
-49,14,Cuerpo Llama
+49,14,Cuerpo de Fuego
 50,1,にげあし
 50,3,도주
 50,4,逃跑
@@ -559,7 +559,7 @@ ability_id,local_language_id,name
 51,9,Keen Eye
 51,11,するどいめ
 51,12,锐利目光
-51,14,Vista Lince
+51,14,Perspicacia
 52,1,かいりきバサミ
 52,3,괴력집게
 52,4,怪力鉗
@@ -581,7 +581,7 @@ ability_id,local_language_id,name
 53,9,Pickup
 53,11,ものひろい
 53,12,捡拾
-53,14,Recogida
+53,14,Recolección
 54,1,なまけ
 54,3,게으름
 54,4,懶惰
@@ -724,7 +724,7 @@ ability_id,local_language_id,name
 66,9,Blaze
 66,11,もうか
 66,12,猛火
-66,14,Mar Llamas
+66,14,Mar de Llamas
 67,1,げきりゅう
 67,3,급류
 67,4,激流
@@ -845,7 +845,7 @@ ability_id,local_language_id,name
 77,9,Tangled Feet
 77,11,ちどりあし
 77,12,蹒跚
-77,14,Tumbos
+77,14,Tambaleo
 78,1,でんきエンジン
 78,3,전기엔진
 78,4,電氣引擎
@@ -1065,7 +1065,7 @@ ability_id,local_language_id,name
 97,9,Sniper
 97,11,スナイパー
 97,12,狙击手
-97,14,Francotirador
+97,14,Puntería
 98,1,マジックガード
 98,3,매직가드
 98,4,魔法防守
@@ -1131,7 +1131,7 @@ ability_id,local_language_id,name
 103,9,Klutz
 103,11,ぶきよう
 103,12,笨拙
-103,14,Zoquete
+103,14,Torpeza
 104,1,かたやぶり
 104,3,틀깨기
 104,4,破格
@@ -1153,7 +1153,7 @@ ability_id,local_language_id,name
 105,9,Super Luck
 105,11,きょううん
 105,12,超幸运
-105,14,Afortunado
+105,14,Supersuerte
 106,1,ゆうばく
 106,3,유폭
 106,4,引爆
@@ -1164,7 +1164,7 @@ ability_id,local_language_id,name
 106,9,Aftermath
 106,11,ゆうばく
 106,12,引爆
-106,14,Detonación
+106,14,Secuela
 107,1,きけんよち
 107,3,위험예지
 107,4,危險預知
@@ -1197,7 +1197,7 @@ ability_id,local_language_id,name
 109,9,Unaware
 109,11,てんねん
 109,12,纯朴
-109,14,Ignorante
+109,14,Ignorancia
 110,1,いろめがね
 110,3,색안경
 110,4,有色眼鏡
@@ -1263,7 +1263,7 @@ ability_id,local_language_id,name
 115,9,Ice Body
 115,11,アイスボディ
 115,12,冰冻之躯
-115,14,Gélido
+115,14,Cuerpo de Hielo
 116,1,ハードロック
 116,3,하드록
 116,4,堅硬岩石
@@ -1307,7 +1307,7 @@ ability_id,local_language_id,name
 119,9,Frisk
 119,11,おみとおし
 119,12,察觉
-119,14,Cacheo
+119,14,Inspección
 120,1,すてみ
 120,3,이판사판
 120,4,捨身
@@ -1439,7 +1439,7 @@ ability_id,local_language_id,name
 131,9,Healer
 131,11,いやしのこころ
 131,12,治愈之心
-131,14,Alma Cura
+131,14,Alma Sanadora
 132,1,フレンドガード
 132,3,프렌드가드
 132,4,友情防守
@@ -1549,7 +1549,7 @@ ability_id,local_language_id,name
 141,9,Moody
 141,11,ムラっけ
 141,12,心情不定
-141,14,Veleta
+141,14,Temperamental
 142,1,ぼうじん
 142,3,방진
 142,4,防塵
@@ -1571,7 +1571,7 @@ ability_id,local_language_id,name
 143,9,Poison Touch
 143,11,どくしゅ
 143,12,毒手
-143,14,Toque Tóxico
+143,14,Contacto Tóxico
 144,1,さいせいりょく
 144,3,재생력
 144,4,再生力
@@ -1736,7 +1736,7 @@ ability_id,local_language_id,name
 158,9,Prankster
 158,11,いたずらごころ
 158,12,恶作剧之心
-158,14,Bromista
+158,14,Timador
 159,1,すなのちから
 159,3,모래의힘
 159,4,沙之力
@@ -1747,7 +1747,7 @@ ability_id,local_language_id,name
 159,9,Sand Force
 159,11,すなのちから
 159,12,沙之力
-159,14,Poder Arena
+159,14,Poder Arenoso
 160,1,てつのトゲ
 160,3,철가시
 160,4,鐵刺
@@ -1813,7 +1813,7 @@ ability_id,local_language_id,name
 165,9,Aroma Veil
 165,11,アロマベール
 165,12,芳香幕
-165,14,Velo Aroma
+165,14,Velo Aromático
 166,1,フラワーベール
 166,3,플라워베일
 166,4,花幕
@@ -1824,7 +1824,7 @@ ability_id,local_language_id,name
 166,9,Flower Veil
 166,11,フラワーベール
 166,12,花幕
-166,14,Velo Flor
+166,14,Velo Florido
 167,1,ほおぶくろ
 167,3,볼주머니
 167,4,頰囊
@@ -1835,7 +1835,7 @@ ability_id,local_language_id,name
 167,9,Cheek Pouch
 167,11,ほおぶくろ
 167,12,颊囊
-167,14,Carrillo
+167,14,Mejillas
 168,1,へんげんじざい
 168,3,변환자재
 168,4,變幻自如
@@ -1956,7 +1956,7 @@ ability_id,local_language_id,name
 178,9,Mega Launcher
 178,11,メガランチャー
 178,12,超级发射器
-178,14,Megadisparador
+178,14,Megalanzador
 179,1,くさのけがわ
 179,3,풀모피
 179,4,草之毛皮
@@ -2187,7 +2187,7 @@ ability_id,local_language_id,name
 199,9,Water Bubble
 199,11,すいほう
 199,12,水泡
-199,14,Pompa
+199,14,Acuaburbuja
 200,1,はがねつかい
 200,3,강철술사
 200,4,鋼能力者
@@ -2209,7 +2209,7 @@ ability_id,local_language_id,name
 201,9,Berserk
 201,11,ぎゃくじょう
 201,12,怒火冲天
-201,14,Cólera
+201,14,Ira
 202,1,ゆきかき
 202,3,눈치우기
 202,4,撥雪
@@ -3039,7 +3039,7 @@ ability_id,local_language_id,name
 280,8,Convertivolt
 280,9,Electromorphosis
 280,11,でんきにかえる
-280,14,Dinamo
+280,14,Dínamo
 281,1,こだいかっせい
 281,5,Paléosynthèse
 281,6,Paläosynthese
@@ -3285,15 +3285,19 @@ ability_id,local_language_id,name
 308,1,かんつうドリル
 308,9,Piercing Drill
 308,11,かんつうドリル
+308,14,Turbotaladro
 309,1,ドラゴンスキン
 309,9,Dragonize
 309,11,ドラゴンスキン
+309,14,Piel Dracónica
 310,1,メガソーラー
 310,9,Mega Sol
 310,11,メガソーラー
+310,14,Megasolar
 311,1,とびだすハバネロ
 311,9,Spicy Spray
 311,11,とびだすハバネロ
+311,14,Salpicante
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

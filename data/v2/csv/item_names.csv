@@ -1358,7 +1358,7 @@ item_id,local_language_id,name
 128,9,Pecha Berry
 128,11,モモンのみ
 128,12,桃桃果
-128,14,Baya Meloc
+128,14,Baya Duraz
 129,1,チーゴのみ
 129,3,복분열매
 129,4,莓莓果
@@ -1435,7 +1435,7 @@ item_id,local_language_id,name
 135,9,Sitrus Berry
 135,11,オボンのみ
 135,12,文柚果
-135,14,Baya Zidra
+135,14,Baya Citrón
 136,1,フィラのみ
 136,3,무화열매
 136,4,勿花果
@@ -2227,7 +2227,7 @@ item_id,local_language_id,name
 207,9,Focus Band
 207,11,きあいのハチマキ
 207,12,气势头带
-207,14,Cinta Focus
+207,14,Cinta Aguante
 208,1,しあわせタマゴ
 208,3,행복의알
 208,4,幸運蛋
@@ -2337,7 +2337,7 @@ item_id,local_language_id,name
 217,9,Black Glasses
 217,11,くろいメガネ
 217,12,黑色眼镜
-217,14,Gafas de Sol
+217,14,Lentes de Sol
 218,1,くろおび
 218,3,검은띠
 218,4,黑帶
@@ -2403,7 +2403,7 @@ item_id,local_language_id,name
 223,9,Never-Melt Ice
 223,11,とけないこおり
 223,12,不融冰
-223,14,Antiderretir
+223,14,Hielo Perpetuo
 224,1,のろいのおふだ
 224,3,저주의부적
 224,4,詛咒之符
@@ -2480,7 +2480,7 @@ item_id,local_language_id,name
 230,9,Shell Bell
 230,11,かいがらのすず
 230,12,贝壳之铃
-230,14,Cascabel Concha
+230,14,Cascabel Nácar
 231,1,うしおのおこう
 231,3,바닷물향로
 231,4,海潮薰香
@@ -2722,7 +2722,7 @@ item_id,local_language_id,name
 252,9,Focus Sash
 252,11,きあいのタスキ
 252,12,气势披带
-252,14,Banda Focus
+252,14,Banda Aguante
 253,1,フォーカスレンズ
 253,3,포커스렌즈
 253,4,對焦鏡
@@ -19688,6 +19688,7 @@ item_id,local_language_id,name
 2105,5,Plume Enchantée
 2105,9,Fairy Feather
 2105,11,ようせいのハネ
+2105,14,Pluma Feérica
 2106,1,いどのめん
 2106,5,Masque du Puits
 2106,9,Wellspring Mask

@@ -400,7 +400,7 @@ move_id,local_language_id,name
 37,4,大鬧一番
 37,5,Mania
 37,6,Fuchtler
-37,7,Golpe
+37,7,Saña
 37,8,Colpo
 37,9,Thrash
 37,11,あばれる
@@ -422,7 +422,7 @@ move_id,local_language_id,name
 39,4,搖尾巴
 39,5,Mimi-Queue
 39,6,Rutenschlag
-39,7,Látigo
+39,7,Agitacola
 39,8,Colpocoda
 39,9,Tail Whip
 39,11,しっぽをふる
@@ -1412,7 +1412,7 @@ move_id,local_language_id,name
 129,4,高速星星
 129,5,Météores
 129,6,Sternschauer
-129,7,Rapidez
+129,7,Meteoros
 129,8,Comete
 129,9,Swift
 129,11,スピードスター
@@ -1478,7 +1478,7 @@ move_id,local_language_id,name
 135,4,生蛋
 135,5,E-Coque
 135,6,Weichei
-135,7,Amortiguador
+135,7,Ovocuración
 135,8,Covauova
 135,9,Soft-Boiled
 135,11,タマゴうみ
@@ -1489,7 +1489,7 @@ move_id,local_language_id,name
 136,4,飛膝踢
 136,5,Pied Voltige
 136,6,Turmkick
-136,7,Pat. Salto Alta
+136,7,Patada Salto Alta
 136,8,Calcinvolo
 136,9,High Jump Kick
 136,11,とびひざげり
@@ -1929,7 +1929,7 @@ move_id,local_language_id,name
 176,4,紋理２
 176,5,Conversion 2
 176,6,Umwandlung2
-176,7,Conversión2
+176,7,Conversión 2
 176,8,Conversione2
 176,9,Conversion 2
 176,11,テクスチャー２
@@ -2204,7 +2204,7 @@ move_id,local_language_id,name
 201,4,沙暴
 201,5,Tempête de Sable
 201,6,Sandsturm
-201,7,Tormenta Arena
+201,7,Tormenta de Arena
 201,8,Terrempesta
 201,9,Sandstorm
 201,11,すなあらし
@@ -2270,7 +2270,7 @@ move_id,local_language_id,name
 207,4,虛張聲勢
 207,5,Vantardise
 207,6,Angeberei
-207,7,Contoneo
+207,7,Fanfarronear
 207,8,Bullo
 207,9,Swagger
 207,11,いばる
@@ -2358,7 +2358,7 @@ move_id,local_language_id,name
 215,4,治癒鈴聲
 215,5,Glas de Soin
 215,6,Vitalglocke
-215,7,Campana Cura
+215,7,Cascabel Cura
 215,8,Rintoccasana
 215,9,Heal Bell
 215,11,いやしのすず
@@ -2556,7 +2556,7 @@ move_id,local_language_id,name
 233,4,借力摔
 233,5,Corps Perdu
 233,6,Überwurf
-233,7,Tiro Vital
+233,7,Llave Vital
 233,8,Vitaltiro
 233,9,Vital Throw
 233,11,あてみなげ
@@ -2578,7 +2578,7 @@ move_id,local_language_id,name
 235,4,光合作用
 235,5,Synthèse
 235,6,Synthese
-235,7,Síntesis
+235,7,Fotosíntesis
 235,8,Sintesi
 235,9,Synthesis
 235,11,こうごうせい
@@ -2677,7 +2677,7 @@ move_id,local_language_id,name
 244,4,自我暗示
 244,5,Boost
 244,6,Psycho-Plus
-244,7,Más Psique
+244,7,Autosugestión
 244,8,Psicamisù
 244,9,Psych Up
 244,11,じこあんじ
@@ -2688,7 +2688,7 @@ move_id,local_language_id,name
 245,4,神速
 245,5,Vitesse Extrême
 245,6,Turbotempo
-245,7,Veloc. Extrema
+245,7,Velocidad Extrema
 245,8,Extrarapido
 245,9,Extreme Speed
 245,11,しんそく
@@ -2886,7 +2886,7 @@ move_id,local_language_id,name
 263,4,硬撐
 263,5,Façade
 263,6,Fassade
-263,7,Imagen
+263,7,Fachada
 263,8,Facciata
 263,9,Facade
 263,11,からげんき
@@ -3227,7 +3227,7 @@ move_id,local_language_id,name
 294,4,螢火
 294,5,Lumi-Queue
 294,6,Schweifglanz
-294,7,Ráfaga
+294,7,Luminicola
 294,8,Codadiluce
 294,9,Tail Glow
 294,11,ほたるび
@@ -3557,7 +3557,7 @@ move_id,local_language_id,name
 324,4,信號光束
 324,5,Rayon Signal
 324,6,Ampelleuchte
-324,7,Doble Rayo
+324,7,Rayo Señal
 324,8,Segnoraggio
 324,9,Signal Beam
 324,11,シグナルビーム
@@ -3777,7 +3777,7 @@ move_id,local_language_id,name
 344,4,伏特攻擊
 344,5,Électacle
 344,6,Volttackle
-344,7,Placaje Eléc
+344,7,Placaje Eléctrico
 344,8,Locomovolt
 344,9,Volt Tackle
 344,11,ボルテッカー
@@ -4294,7 +4294,7 @@ move_id,local_language_id,name
 391,4,心靈互換
 391,5,Permucœur
 391,6,Statustausch
-391,7,Cambia Almas
+391,7,Cambiaalmas
 391,8,Cuorbaratto
 391,9,Heart Swap
 391,11,ハートスワップ
@@ -4613,7 +4613,7 @@ move_id,local_language_id,name
 420,4,冰礫
 420,5,Éclats Glace
 420,6,Eissplitter
-420,7,Canto Helado
+420,7,Esquirla Helada
 420,8,Geloscheggia
 420,9,Ice Shard
 420,11,こおりのつぶて
@@ -4723,7 +4723,7 @@ move_id,local_language_id,name
 430,4,加農光炮
 430,5,Luminocanon
 430,6,Lichtkanone
-430,7,Foco Resplandor
+430,7,Cañón Resplandor
 430,8,Cannonflash
 430,9,Flash Cannon
 430,11,ラスターカノン
@@ -5108,7 +5108,7 @@ move_id,local_language_id,name
 465,4,種子閃光
 465,5,Fulmigraine
 465,6,Schocksamen
-465,7,Fogonazo
+465,7,Fulgor Semilla
 465,8,Infuriaseme
 465,9,Seed Flare
 465,11,シードフレア
@@ -5152,7 +5152,7 @@ move_id,local_language_id,name
 469,4,廣域防守
 469,5,Garde Large
 469,6,Rundumschutz
-469,7,Vastaguardia
+469,7,Vasta Guardia
 469,8,Bodyguard
 469,9,Wide Guard
 469,11,ワイドガード
@@ -5350,7 +5350,7 @@ move_id,local_language_id,name
 487,4,浸水
 487,5,Détrempage
 487,6,Überflutung
-487,7,Anegar
+487,7,Empapar
 487,8,Inondazione
 487,9,Soak
 487,11,みずびたし
@@ -6494,7 +6494,7 @@ move_id,local_language_id,name
 591,4,鑽石風暴
 591,5,Orage Adamantin
 591,6,Diamantsturm
-591,7,Torm. Diamantes
+591,7,Tormenta de Diamantes
 591,8,Diamantempesta
 591,9,Diamond Storm
 591,11,ダイヤストーム
@@ -9092,6 +9092,7 @@ move_id,local_language_id,name
 827,9,Dire Claw
 827,11,フェイタルクロー
 827,14,Garra Nociva
+827,7,Garra Nociva
 828,1,バリアーラッシュ
 828,4,屏障猛攻
 828,5,Sprint Bouclier
@@ -9099,6 +9100,7 @@ move_id,local_language_id,name
 828,9,Psyshield Bash
 828,11,バリアーラッシュ
 828,14,Asalto Barrera
+828,7,Asalto Barrera
 829,1,パワーシフト
 829,4,力量转换
 829,5,Échange Force
@@ -9106,6 +9108,7 @@ move_id,local_language_id,name
 829,9,Power Shift
 829,11,パワーシフト
 829,14,Cambiapoder
+829,7,Cambiapoder
 830,1,がんせきアックス
 830,4,岩斧
 830,5,Hache de Pierre
@@ -9113,6 +9116,7 @@ move_id,local_language_id,name
 830,9,Stone Axe
 830,11,がんせきアックス
 830,14,Hachazo Pétreo
+830,7,Hachazo Pétreo
 831,1,はるのあらし
 831,4,阳春风暴
 831,5,Typhon Passionné
@@ -9120,6 +9124,7 @@ move_id,local_language_id,name
 831,9,Springtide Storm
 831,11,はるのあらし
 831,14,Ciclón Primavera
+831,7,Ciclón Primavera
 832,1,しんぴのちから
 832,4,神秘之力
 832,5,Force Mystique
@@ -9127,6 +9132,7 @@ move_id,local_language_id,name
 832,9,Mystical Power
 832,11,しんぴのちから
 832,14,Poder Místico
+832,7,Poder Místico
 833,1,だいふんげき
 833,4,大愤慨
 833,5,Grand Courroux
@@ -9134,6 +9140,7 @@ move_id,local_language_id,name
 833,9,Raging Fury
 833,11,だいふんげき
 833,14,Erupción de Ira
+833,7,Erupción de Ira
 834,1,ウェーブタックル
 834,4,波动冲
 834,5,Aquatacle
@@ -9141,6 +9148,7 @@ move_id,local_language_id,name
 834,9,Wave Crash
 834,11,ウェーブタックル
 834,14,Acuatacleada
+834,7,Envite Acuático
 835,1,クロロブラスト
 835,4,叶绿爆震
 835,5,Herblast
@@ -9148,6 +9156,7 @@ move_id,local_language_id,name
 835,9,Chloroblast
 835,11,クロロブラスト
 835,14,Clorofiláser
+835,7,Clorofiláser
 836,1,ひょうざんおろし
 836,4,冰山风
 836,5,Bise Glaciaire
@@ -9155,6 +9164,7 @@ move_id,local_language_id,name
 836,9,Mountain Gale
 836,11,ひょうざんおろし
 836,14,Viento Carámbano
+836,7,Viento Carámbano
 837,1,しょうりのまい
 837,4,胜利之舞
 837,5,Danse Victoire
@@ -9162,6 +9172,7 @@ move_id,local_language_id,name
 837,9,Victory Dance
 837,11,しょうりのまい
 837,14,Danza Triunfal
+837,7,Danza Triunfal
 838,1,ぶちかまし
 838,4,突飞猛扑
 838,5,Assaut Frontal
@@ -9169,6 +9180,7 @@ move_id,local_language_id,name
 838,9,Headlong Rush
 838,11,ぶちかまし
 838,14,Asalto Frontal
+838,7,Arremetida
 839,1,どくばりセンボン
 839,4,毒千针
 839,5,Multitoxik
@@ -9176,6 +9188,7 @@ move_id,local_language_id,name
 839,9,Barb Barrage
 839,11,どくばりセンボン
 839,14,Mil Púas Tóxicas
+839,7,Mil Púas Tóxicas
 840,1,オーラウイング
 840,4,气场之翼
 840,5,Ailes Psycho
@@ -9183,6 +9196,7 @@ move_id,local_language_id,name
 840,9,Esper Wing
 840,11,オーラウイング
 840,14,Ala Aural
+840,7,Ala Aural
 841,1,うらみつらみ
 841,4,冤冤相报
 841,5,Cœur de Rancœur
@@ -9190,6 +9204,7 @@ move_id,local_language_id,name
 841,9,Bitter Malice
 841,11,うらみつらみ
 841,14,Rencor Reprimido
+841,7,Rencor Reprimido
 842,1,たてこもる
 842,4,闭关
 842,5,Mur Fumigène
@@ -9197,6 +9212,7 @@ move_id,local_language_id,name
 842,9,Shelter
 842,11,たてこもる
 842,14,Retracción
+842,7,Retracción
 843,1,３ぼんのや
 843,4,三连箭
 843,5,Triple Flèche
@@ -9204,6 +9220,7 @@ move_id,local_language_id,name
 843,9,Triple Arrows
 843,11,３ぼんのや
 843,14,Triple Flecha
+843,7,Triple Flecha
 844,1,ひゃっきやこう
 844,4,群魔乱舞
 844,5,Cortège Funèbre
@@ -9211,6 +9228,7 @@ move_id,local_language_id,name
 844,9,Infernal Parade
 844,11,ひゃっきやこう
 844,14,Marcha Espectral
+844,7,Marcha Espectral
 845,1,ひけん・ちえなみ
 845,4,秘剑・千重涛
 845,5,Vagues à Lames
@@ -9218,6 +9236,7 @@ move_id,local_language_id,name
 845,9,Ceaseless Edge
 845,11,ひけん・ちえなみ
 845,14,Corte Metralla
+845,7,Tajo Metralla
 846,1,こがらしあらし
 846,4,枯叶风暴
 846,5,Typhon Hivernal
@@ -9225,6 +9244,7 @@ move_id,local_language_id,name
 846,9,Bleakwind Storm
 846,11,こがらしあらし
 846,14,Vendaval Gélido
+846,7,Vendaval Gélido
 847,1,かみなりあらし
 847,4,鸣雷风暴
 847,5,Typhon Fulgurant
@@ -9232,6 +9252,7 @@ move_id,local_language_id,name
 847,9,Wildbolt Storm
 847,11,かみなりあらし
 847,14,Electormenta
+847,7,Electormenta
 848,1,ねっさのあらし
 848,4,热沙风暴
 848,5,Typhon Pyrosable
@@ -9239,6 +9260,7 @@ move_id,local_language_id,name
 848,9,Sandsear Storm
 848,11,ねっさのあらし
 848,14,Tifón de Arena
+848,7,Simún de Arena
 849,1,みかづきのいのり
 849,4,新月祈祷
 849,5,Prière Lunaire
@@ -9246,6 +9268,7 @@ move_id,local_language_id,name
 849,9,Lunar Blessing
 849,11,みかづきのいのり
 849,14,Plegaria Lunar
+849,7,Plegaria Lunar
 850,1,ブレイブチャージ
 850,4,勇气填充
 850,5,Extravaillance
@@ -9253,6 +9276,7 @@ move_id,local_language_id,name
 850,9,Take Heart
 850,11,ブレイブチャージ
 850,14,Bálsamo Osado
+850,7,Bálsamo Osado
 851,1,テラバースト
 851,4,太晶爆发
 851,5,Téra Explosion
@@ -9260,6 +9284,7 @@ move_id,local_language_id,name
 851,9,Tera Blast
 851,11,テラバースト
 851,14,Teraexplosión
+851,7,Teraexplosión
 852,1,スレッドトラップ
 852,4,线阱
 852,5,Piège de Fil
@@ -9267,6 +9292,7 @@ move_id,local_language_id,name
 852,9,Silk Trap
 852,11,スレッドトラップ
 852,14,Telatrampa
+852,7,Telatrampa
 853,1,かかとおとし
 853,4,下压踢
 853,5,Talon-Marteau
@@ -9274,6 +9300,7 @@ move_id,local_language_id,name
 853,9,Axe Kick
 853,11,かかとおとし
 853,14,Patada Hacha
+853,7,Patada Hacha
 854,1,おはかまいり
 854,4,扫墓
 854,5,Hommage Posthume
@@ -9281,6 +9308,7 @@ move_id,local_language_id,name
 854,9,Last Respects
 854,11,おはかまいり
 854,14,Homenaje Póstumo
+854,7,Homenaje Póstumo
 855,1,ルミナコリジョン
 855,4,琉光冲激
 855,5,Lumino-Impact
@@ -9288,6 +9316,7 @@ move_id,local_language_id,name
 855,9,Lumina Crash
 855,11,ルミナコリジョン
 855,14,Fotocolisión
+855,7,Fotocolisión
 856,1,いっちょうあがり
 856,4,上菜
 856,5,Plat du Jour
@@ -9295,6 +9324,7 @@ move_id,local_language_id,name
 856,9,Order Up
 856,11,いっちょうあがり
 856,14,Emplatar
+856,7,Oído Cocina
 857,1,ジェットパンチ
 857,4,喷射拳
 857,5,Poing Sonique
@@ -9302,6 +9332,7 @@ move_id,local_language_id,name
 857,9,Jet Punch
 857,11,ジェットパンチ
 857,14,Puño Jet
+857,7,Puño Jet
 858,1,ハバネロエキス
 858,4,辣椒精华
 858,5,Habanerage
@@ -9309,6 +9340,7 @@ move_id,local_language_id,name
 858,9,Spicy Extract
 858,11,ハバネロエキス
 858,14,Extracto Picante
+858,7,Extracto Picante
 859,1,ホイールスピン
 859,4,疾速转轮
 859,5,Dérapage
@@ -9316,6 +9348,7 @@ move_id,local_language_id,name
 859,9,Spin Out
 859,11,ホイールスピン
 859,14,Quemarrueda
+859,7,Quemarrueda
 860,1,ネズミざん
 860,4,鼠数儿
 860,5,Prolifération
@@ -9323,6 +9356,7 @@ move_id,local_language_id,name
 860,9,Population Bomb
 860,11,ネズミざん
 860,14,Proliferación
+860,7,Proliferación
 861,1,アイススピナー
 861,4,冰旋
 861,5,Cryo-Pirouette
@@ -9330,6 +9364,7 @@ move_id,local_language_id,name
 861,9,Ice Spinner
 861,11,アイススピナー
 861,14,Pirueta Helada
+861,7,Pirueta Helada
 862,1,きょけんとつげき
 862,4,巨剑突击
 862,5,Charge Glaive
@@ -9337,6 +9372,7 @@ move_id,local_language_id,name
 862,9,Glaive Rush
 862,11,きょけんとつげき
 862,14,Asalto Espadón
+862,7,Asalto Espadón
 863,1,さいきのいのり
 863,4,复生祈祷
 863,5,Second Souffle
@@ -9344,6 +9380,7 @@ move_id,local_language_id,name
 863,9,Revival Blessing
 863,11,さいきのいのり
 863,14,Plegaria Vital
+863,7,Plegaria Vital
 864,1,しおづけ
 864,4,盐腌
 864,5,Salaison
@@ -9351,6 +9388,7 @@ move_id,local_language_id,name
 864,9,Salt Cure
 864,11,しおづけ
 864,14,Salación
+864,7,Salazón
 865,1,トリプルダイブ
 865,4,三连钻
 865,5,Triple Plongeon
@@ -9358,6 +9396,7 @@ move_id,local_language_id,name
 865,9,Triple Dive
 865,11,トリプルダイブ
 865,14,Triple Inmersión
+865,7,Triple Inmersión
 866,1,キラースピン
 866,4,晶光转转
 866,5,Toupie Éclat
@@ -9365,6 +9404,7 @@ move_id,local_language_id,name
 866,9,Mortal Spin
 866,11,キラースピン
 866,14,Giro Mortífero
+866,7,Giro Mortífero
 867,1,うつしえ
 867,4,描绘
 867,5,Décalquage
@@ -9372,6 +9412,7 @@ move_id,local_language_id,name
 867,9,Doodle
 867,11,うつしえ
 867,14,Plagio
+867,7,Decalcomanía
 868,1,みをけずる
 868,4,甩肉
 868,5,Décharnement
@@ -9379,6 +9420,7 @@ move_id,local_language_id,name
 868,9,Fillet Away
 868,11,みをけずる
 868,14,Fileteo
+868,7,Deslome
 869,1,ドゲザン
 869,4,仆刀
 869,5,Génusection
@@ -9386,6 +9428,7 @@ move_id,local_language_id,name
 869,9,Kowtow Cleave
 869,11,ドゲザン
 869,14,Genufendiente
+869,7,Genufendiente
 870,1,トリックフラワー
 870,4,千变万花
 870,5,Magie Florale
@@ -9393,6 +9436,7 @@ move_id,local_language_id,name
 870,9,Flower Trick
 870,11,トリックフラワー
 870,14,Truco Floral
+870,7,Truco Floral
 871,1,フレアソング
 871,4,闪焰高歌
 871,5,Chant Flamboyant
@@ -9400,6 +9444,7 @@ move_id,local_language_id,name
 871,9,Torch Song
 871,11,フレアソング
 871,14,Canto Ígneo
+871,7,Canto Ardiente
 872,1,アクアステップ
 872,4,流水旋舞
 872,5,Danse Aquatique
@@ -9407,6 +9452,7 @@ move_id,local_language_id,name
 872,9,Aqua Step
 872,11,アクアステップ
 872,14,Danza Acuática
+872,7,Danza Acuática
 873,1,レイジングブル
 873,4,怒牛
 873,5,Taurogne
@@ -9414,6 +9460,7 @@ move_id,local_language_id,name
 873,9,Raging Bull
 873,11,レイジングブル
 873,14,Furia Taurina
+873,7,Furia Taurina
 874,1,ゴールドラッシュ
 874,4,淘金潮
 874,5,Ruée d'Or
@@ -9421,6 +9468,7 @@ move_id,local_language_id,name
 874,9,Make It Rain
 874,11,ゴールドラッシュ
 874,14,Fiebre Dorada
+874,7,Fiebre Dorada
 875,1,サイコブレイド 
 875,3,사이코블레이드
 875,4,精神劍
@@ -9450,6 +9498,7 @@ move_id,local_language_id,name
 877,9,Ruination
 877,11,カタストロフィ
 877,14,Calamidad
+877,7,Calamidad
 878,1,アクセルブレイク
 878,4,全开猛撞
 878,5,Nitro Crash
@@ -9457,6 +9506,7 @@ move_id,local_language_id,name
 878,9,Collision Course
 878,11,アクセルブレイク
 878,14,Nitrochoque
+878,7,Nitrochoque
 879,1,イナズマドライブ
 879,4,闪电猛冲
 879,5,Turbo Volt
@@ -9464,6 +9514,7 @@ move_id,local_language_id,name
 879,9,Electro Drift
 879,11,イナズマドライブ
 879,14,Electroderrape
+879,7,Electroderrape
 880,1,しっぽきり
 880,4,断尾
 880,5,Queulonage
@@ -9471,6 +9522,7 @@ move_id,local_language_id,name
 880,9,Shed Tail
 880,11,しっぽきり
 880,14,Autotomía
+880,7,Autotomía
 881,1,さむいギャグ
 881,4,冷笑话
 881,5,Neigeux de Mots
@@ -9478,6 +9530,7 @@ move_id,local_language_id,name
 881,9,Chilly Reception
 881,11,さむいギャグ
 881,14,Respuesta Fría
+881,7,Fría Acogida
 882,1,おかたづけ
 882,4,大扫除
 882,5,Grand Nettoyage
@@ -9485,6 +9538,7 @@ move_id,local_language_id,name
 882,9,Tidy Up
 882,11,おかたづけ
 882,14,Limpieza General
+882,7,Limpieza General
 883,1,ゆきげしき
 883,4,雪景
 883,5,Chute de Neige
@@ -9492,6 +9546,7 @@ move_id,local_language_id,name
 883,9,Snowscape
 883,11,ゆきげしき
 883,14,Paisaje Nevado
+883,7,Paisaje Nevado
 884,1,とびつく
 884,4,虫扑
 884,5,Bond
@@ -9499,6 +9554,7 @@ move_id,local_language_id,name
 884,9,Pounce
 884,11,とびつく
 884,14,Brinco
+884,7,Brinco
 885,1,くさわけ
 885,4,起草
 885,5,Désherbaffe
@@ -9506,6 +9562,7 @@ move_id,local_language_id,name
 885,9,Trailblaze
 885,11,くさわけ
 885,14,Abrecaminos
+885,7,Abrecaminos
 886,1,ひやみず
 886,4,泼冷水
 886,5,Douche Froide
@@ -9513,6 +9570,7 @@ move_id,local_language_id,name
 886,9,Chilling Water
 886,11,ひやみず
 886,14,Agua Fría
+886,7,Agua Fría
 887,1,ハイパードリル
 887,4,强力钻
 887,5,Hyperceuse
@@ -9520,6 +9578,7 @@ move_id,local_language_id,name
 887,9,Hyper Drill
 887,11,ハイパードリル
 887,14,Hipertaladro
+887,7,Hipertaladro
 888,1,ツインビーム
 888,4,双光束
 888,5,Double Laser
@@ -9527,6 +9586,7 @@ move_id,local_language_id,name
 888,9,Twin Beam
 888,11,ツインビーム
 888,14,Láser Doble
+888,7,Láser Doble
 889,1,ふんどのこぶし
 889,4,愤怒之拳
 889,5,Poing de Colère
@@ -9534,6 +9594,7 @@ move_id,local_language_id,name
 889,9,Rage Fist
 889,11,ふんどのこぶし
 889,14,Puño Furia
+889,7,Puño Furia
 890,1,アーマーキャノン
 890,4,铠农炮
 890,5,Canon Blindé
@@ -9541,6 +9602,7 @@ move_id,local_language_id,name
 890,9,Armor Cannon
 890,11,アーマーキャノン
 890,14,Cañón Armadura
+890,7,Cañón Armadura
 891,1,むねんのつるぎ
 891,4,悔念剑
 891,5,Lame en Peine
@@ -9548,6 +9610,7 @@ move_id,local_language_id,name
 891,9,Bitter Blade
 891,11,むねんのつるぎ
 891,14,Espada Lamento
+891,7,Espada Lamento
 892,1,でんこうそうげき
 892,4,电光双击
 892,5,Double Décharge
@@ -9555,6 +9618,7 @@ move_id,local_language_id,name
 892,9,Double Shock
 892,11,でんこうそうげき
 892,14,Electropalmas
+892,7,Electropalmas
 893,1,デカハンマー
 893,4,巨力锤
 893,5,Marteau Mastoc
@@ -9562,6 +9626,7 @@ move_id,local_language_id,name
 893,9,Gigaton Hammer
 893,11,デカハンマー
 893,14,Martillo Colosal
+893,7,Martillo Colosal
 894,1,ほうふく
 894,4,复仇
 894,5,Vindicte
@@ -9569,6 +9634,7 @@ move_id,local_language_id,name
 894,9,Comeuppance
 894,11,ほうふく
 894,14,Resarcimiento
+894,7,Resarcimiento
 895,1,アクアカッター
 895,4,水波刀
 895,5,Tranch'Aqua
@@ -9576,6 +9642,7 @@ move_id,local_language_id,name
 895,9,Aqua Cutter
 895,11,アクアカッター
 895,14,Corte Acuático
+895,7,Tajo Acuático
 896,1,バーンアクセル
 896,4,灼热暴冲
 896,5,Crash Brûlant
@@ -9583,6 +9650,7 @@ move_id,local_language_id,name
 896,9,Blazing Torque
 896,11,バーンアクセル
 896,14,Pirochoque
+896,7,Pirochoque
 897,1,ダークアクセル
 897,4,黑暗暴冲
 897,5,Crash Obscur
@@ -9590,6 +9658,7 @@ move_id,local_language_id,name
 897,9,Wicked Torque
 897,11,ダークアクセル
 897,14,Ominochoque
+897,7,Ominochoque
 898,1,ポイズンアクセル
 898,4,剧毒暴冲
 898,5,Crash Toxique
@@ -9597,6 +9666,7 @@ move_id,local_language_id,name
 898,9,Noxious Torque
 898,11,ポイズンアクセル
 898,14,Ponzochoque
+898,7,Ponzochoque
 899,1,ファイトアクセル
 899,4,格斗暴冲
 899,5,Crash Musclé
@@ -9604,6 +9674,7 @@ move_id,local_language_id,name
 899,9,Combat Torque
 899,11,ファイトアクセル
 899,14,Pugnachoque
+899,7,Pugnachoque
 900,1,マジカルアクセル
 900,4,魔法暴冲
 900,5,Crash Magique
@@ -9611,26 +9682,31 @@ move_id,local_language_id,name
 900,9,Magical Torque
 900,11,マジカルアクセル
 900,14,Feerichoque
+900,7,Feerichoque
 901,1,ブラッドムーン
 901,5,Lune Rouge
 901,9,Blood Moon
 901,11,ブラッドムーン
 901,14,Luna Roja
+901,7,Luna Roja
 902,1,シャカシャカほう
 902,5,Mortier Matcha
 902,9,Matcha Gotcha
 902,11,シャカシャカほう
 902,14,Cañón Batidor
+902,7,Cañón Batidor
 903,1,みずあめボム
 903,5,Bombe au Sirop
 903,9,Syrup Bomb
 903,11,みずあめボム
 903,14,Bomba Caramelo
+903,7,Bomba Caramelo
 904,1,ツタこんぼう
 904,5,Massue Liane
 904,9,Ivy Cudgel
 904,11,ツタこんぼう
 904,14,Garrote Liana
+904,7,Garrote Liana
 905,1,エレクトロビーム
 905,3,일렉트로빔
 905,4,電光束

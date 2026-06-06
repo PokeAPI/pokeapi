@@ -2222,7 +2222,7 @@ item_id,local_language_id,name
 207,4,氣勢頭帶
 207,5,Bandeau
 207,6,Fokusband
-207,7,Cinta Focus
+207,7,Cinta Aguante
 207,8,Bandana
 207,9,Focus Band
 207,11,きあいのハチマキ
@@ -2398,7 +2398,7 @@ item_id,local_language_id,name
 223,4,不融冰
 223,5,Glace Éternelle
 223,6,Ewiges Eis
-223,7,Antiderretir
+223,7,Hielo Perpetuo
 223,8,Gelomai
 223,9,Never-Melt Ice
 223,11,とけないこおり
@@ -2442,7 +2442,7 @@ item_id,local_language_id,name
 227,4,龍之牙
 227,5,Croc Dragon
 227,6,Drachenzahn
-227,7,Colmillo Dragón
+227,7,Colmillo de Dragón
 227,8,Dentedidrago
 227,9,Dragon Fang
 227,11,りゅうのキバ
@@ -2717,7 +2717,7 @@ item_id,local_language_id,name
 252,4,氣勢披帶
 252,5,Ceinture Force
 252,6,Fokusgurt
-252,7,Banda Focus
+252,7,Banda Aguante
 252,8,Focalnastro
 252,9,Focus Sash
 252,11,きあいのタスキ
@@ -19689,6 +19689,7 @@ item_id,local_language_id,name
 2105,9,Fairy Feather
 2105,11,ようせいのハネ
 2105,14,Pluma Feérica
+2105,7,Pluma Feérica
 2106,1,いどのめん
 2106,5,Masque du Puits
 2106,9,Wellspring Mask

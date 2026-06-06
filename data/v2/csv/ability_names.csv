@@ -92,7 +92,7 @@ ability_id,local_language_id,name
 9,4,靜電
 9,5,Statik
 9,6,Statik
-9,7,Elec. Estática
+9,7,Electricidad Estática
 9,8,Statico
 9,9,Static
 9,11,せいでんき
@@ -103,7 +103,7 @@ ability_id,local_language_id,name
 10,4,蓄電
 10,5,Absorbe-Volt
 10,6,Voltabsorber
-10,7,Absorbe Elec
+10,7,Absorbe Electricidad
 10,8,Assorbivolt
 10,9,Volt Absorb
 10,11,ちくでん
@@ -389,7 +389,7 @@ ability_id,local_language_id,name
 36,4,複製
 36,5,Calque
 36,6,Erfassen
-36,7,Rastro
+36,7,Calco
 36,8,Traccia
 36,9,Trace
 36,11,トレース
@@ -422,7 +422,7 @@ ability_id,local_language_id,name
 39,4,精神力
 39,5,Attention
 39,6,Konzentrator
-39,7,Foco Interno
+39,7,Fuerza Mental
 39,8,Forza Interiore
 39,9,Inner Focus
 39,11,せいしんりょく
@@ -3286,18 +3286,22 @@ ability_id,local_language_id,name
 308,9,Piercing Drill
 308,11,かんつうドリル
 308,14,Turbotaladro
+308,7,Turbotaladro
 309,1,ドラゴンスキン
 309,9,Dragonize
 309,11,ドラゴンスキン
 309,14,Piel Dracónica
+309,7,Piel Dragontina
 310,1,メガソーラー
 310,9,Mega Sol
 310,11,メガソーラー
 310,14,Megasolar
+310,7,Megasolar
 311,1,とびだすハバネロ
 311,9,Spicy Spray
 311,11,とびだすハバネロ
 311,14,Salpicante
+311,7,Salpicante
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

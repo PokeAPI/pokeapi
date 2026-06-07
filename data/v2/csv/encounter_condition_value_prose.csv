@@ -324,3 +324,5 @@ encounter_condition_value_id,local_language_id,name
 201,9,Give Hippowdon in a Trade
 202,9,Mr. Backlot hasn't mentioned any Pokemon
 203,9,Mr. Backlot has mentioned seeing this Pokemon in the garden
+204,9,Not during the Bug-Catching Contest
+205,9,During the Bug-Catching Contest

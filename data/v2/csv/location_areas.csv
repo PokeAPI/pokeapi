@@ -724,7 +724,7 @@ id,location_id,game_index,identifier
 841,237,0,
 842,247,0,
 843,868,0,
-844,869,0,
+844,869,0,main
 845,870,0,main
 846,870,0,garbage
 847,871,0,
@@ -1245,3 +1245,5 @@ id,location_id,game_index,identifier
 1362,175,0,
 1363,243,0,
 1364,347,0,
+1365,869,0,lake
+1366,869,0,lakeside

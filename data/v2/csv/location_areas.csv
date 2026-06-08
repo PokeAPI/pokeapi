@@ -786,7 +786,7 @@ id,location_id,game_index,identifier
 903,915,0,beach
 904,916,0,
 905,917,0,
-906,918,0,
+906,918,0,main
 907,919,0,
 908,920,0,
 909,921,0,
@@ -1247,3 +1247,4 @@ id,location_id,game_index,identifier
 1364,347,0,
 1365,869,0,lake
 1366,869,0,lakeside
+1367,918,0,gym

@@ -2178,7 +2178,7 @@ location_area_id,local_language_id,name
 842,5,Ruines Sinjoh
 843,9,Route 1
 844,9,Route 2
-845,9,Route 3
+845,9,Route 3 (East)
 906,9,Motostoke
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
@@ -2402,3 +2402,4 @@ location_area_id,local_language_id,name
 1365,9,Route 2 (Lake)
 1366,9,Route 2 (Lakeside)
 1367,9,Motostoke (Gym)
+1368,9,Route 3 (West)

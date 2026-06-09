@@ -5092,6 +5092,65 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return final_data
 
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["generation", "stats"],
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "examples": ["generation-vi"]},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": ["https://pokeapi.co/api/v2/generation/6/"],
+                            },
+                        },
+                    },
+                    "stats": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["base_stat", "effort", "stat"],
+                            "properties": {
+                                "base_stat": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "examples": [45],
+                                },
+                                "effort": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "examples": [0],
+                                },
+                                "stat": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "examples": ["speed"],
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "examples": [
+                                                "https://pokeapi.co/api/v2/stat/6/"
+                                            ],
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
     def get_past_pokemon_stats(self, obj):
         pokemon_past_stat_objects = PokemonStatPast.objects.filter(pokemon=obj)
         pokemon_past_stats = PokemonStatPastSerializer(

@@ -1,35 +1,37 @@
-FROM python:3.13.7-alpine AS builder
+FROM python:3.14-alpine as builder
 
-ENV PYTHONUNBUFFERED=1
+ENV UV_LINK_MODE=copy
+ENV UV_COMPILE_BYTECODE=1
+ENV UV_PROJECT_ENVIRONMENT=/code/.venv
 
-RUN mkdir /code
+COPY --from=ghcr.io/astral-sh/uv:0.11.19 /uv /uvx /bin/
+
 WORKDIR /code
 
-ADD requirements.txt /code/
-RUN apk add --no-cache postgresql-libs libstdc++
-RUN apk add --no-cache --virtual .build-deps gcc g++ musl-dev \
-    postgresql-dev binutils rust cargo && \
-    python3 -m pip install -r requirements.txt --no-cache-dir
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --locked --no-install-project --no-dev
 
-FROM python:3.13.7-alpine
+FROM python:3.14-alpine
 # git is a dependency for the meta endpoint
 RUN apk add --no-cache git
 
 ENV PYTHONUNBUFFERED=1
 ENV DJANGO_SETTINGS_MODULE='config.docker-compose'
+ENV PATH="/code/.venv/bin:$PATH"
 
-RUN mkdir /code
 WORKDIR /code
-
-COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
-COPY --from=builder /usr/local/bin /usr/local/bin
-
-ADD . /code/
 
 RUN addgroup -g 1000 -S pokeapi && \
     adduser -u 1000 -S pokeapi -G pokeapi
+
+COPY --chown=pokeapi:pokeapi . /code/
+
+COPY --from=builder --chown=pokeapi:pokeapi /code/.venv /code/.venv
+
 USER pokeapi
 
-CMD ["gunicorn", "config.wsgi:application", "-c", "gunicorn.conf.py"]
-
 EXPOSE 80
+
+CMD ["gunicorn", "config.wsgi:application", "-c", "gunicorn.conf.py"]

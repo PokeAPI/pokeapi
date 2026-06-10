@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: cimg/python:3.13.7
+      - image: cimg/python:3.14
     steps:
       - checkout
       - run:
@@ -13,7 +13,7 @@ jobs:
             git submodule update --remote
       - run:
           name: Install deps
-          command: make dev-install
+          command: make install
       - run:
           name: Linting
           command: make format-check
@@ -25,7 +25,7 @@ jobs:
           command: make openapi-generate
   build:
     docker:
-      - image: cimg/python:3.13.7
+      - image: cimg/python:3.14
     steps:
       - checkout
       - run:
@@ -35,7 +35,7 @@ jobs:
             git submodule update --remote
       - run:
           name: Install deps
-          command: make install
+          command: make install-base
       - run:
           name: Run migrations
           command: make setup

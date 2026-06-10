@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Lint
         run: |
           set -e
@@ -21,21 +21,31 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.19"
+          enable-cache: true
       - name: Generate OpenAPI schema
         run: |
-          make install
+          make install-base
           make openapi-generate
   sqlite:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.19"
+          enable-cache: true
       - name: Start pokeapi
         run: |
-          make install
+          make install-base
           make migrate
           make build-db
           nohup make serve &
@@ -46,27 +56,58 @@ jobs:
         run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
   postgres:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: pokeapi
+          POSTGRES_PASSWORD: pokeapi
+          POSTGRES_DB: pokeapi
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.11.19"
+          enable-cache: true
+      - name: Install dependencies
+        run: make install-base
+      - name: Run migrations & build database
+        run: |
+          make setup
+          make build-db
       - name: Build
         run: |
           docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
           make docker-migrate
           make docker-build-db
       - name: Dump DB
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.dump"
-      - name: Copy dump
-        run: docker compose cp db:/tmp/pokeapi.dump ./
-      - name: Down services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml down -v
-      - name: Start services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-      - name: Import database
+        run: pg_dump -h localhost -U pokeapi -Fc -N 'hdb_*' pokeapi > pokeapi.dump
+        env:
+          PGPASSWORD: pokeapi
+      - name: Drop and recreate database
         run: |
-          docker compose cp ./pokeapi.dump db:/tmp/
-          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
+          psql -h localhost -U pokeapi -d postgres -c "DROP DATABASE pokeapi;"
+          psql -h localhost -U pokeapi -d postgres -c "CREATE DATABASE pokeapi;"
+        env:
+          PGPASSWORD: pokeapi
+      - name: Import database
+        run: pg_restore -h localhost -U pokeapi -d pokeapi pokeapi.dump
+        env:
+          PGPASSWORD: pokeapi
+      - name: Start pokeapi
+        run: |
+          nohup make serve &
+          sleep 3
       - name: Test data
         run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

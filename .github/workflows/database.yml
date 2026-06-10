@@ -53,7 +53,10 @@ jobs:
       - name: Dump DB
         run: stat db.sqlite3
       - name: Test data
-        run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+        run: |
+          name=$(curl -fsSL http://localhost:8000/api/v2/pokemon/1/ | jq -r '.name')
+          echo "Returned name: $name"
+          test "$name" = "bulbasaur"
   postgres:
     runs-on: ubuntu-latest
     services:
@@ -110,4 +113,7 @@ jobs:
           nohup make serve &
           sleep 3
       - name: Test data
-        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+        run: |
+          name=$(curl -fsSL http://localhost:8000/api/v2/pokemon/1/ | jq -r '.name')
+          echo "Returned name: $name"
+          test "$name" = "bulbasaur"

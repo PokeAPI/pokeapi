@@ -27,7 +27,7 @@ jobs:
       - name: Start pokeapi
         run: |
           make install-base
-          make migrate
+          make setup
           make build-db
           nohup make serve &
           sleep 3

@@ -21,7 +21,7 @@ jobs:
           name: Generate OpenAPI schema
           command: make openapi-generate
 
-  test:
+  run-tests:
     parameters:
       python_version:
         type: string
@@ -40,6 +40,14 @@ jobs:
       - run:
           name: Run tests
           command: make test
+
+  test:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: All tests passed
+          command: echo "All matrix tests completed successfully"
 
   build:
     docker:
@@ -84,10 +92,13 @@ workflows:
   test-and-deploy:
     jobs:
       - static-checks
-      - test:
+      - run-tests:
           matrix:
             parameters:
               python_version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+      - test:
+          requires:
+            - run-tests
       - build
       - deploy:
           requires:
@@ -102,10 +113,13 @@ workflows:
   weekly:
     jobs:
       - static-checks
-      - test:
+      - run-tests:
           matrix:
             parameters:
               python_version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+      - test:
+          requires:
+            - run-tests
       - build
       - deploy:
           requires:

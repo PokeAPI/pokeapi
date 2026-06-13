@@ -2196,6 +2196,7 @@ location_area_id,local_language_id,name
 896,9,Hulbury
 906,9,Motostoke
 907,9,Motostoke Outskirts
+919,9,Slumbering Weald (Entrance)
 939,9,Turffield
 942,9,Wegehurst
 1167,9,Lighthouse Basement
@@ -2421,3 +2422,4 @@ location_area_id,local_language_id,name
 1366,9,Route 2 (Lakeside)
 1367,9,Motostoke (Gym)
 1368,9,Route 3 (West)
+1369,9,Slumbering Weald (Deep)

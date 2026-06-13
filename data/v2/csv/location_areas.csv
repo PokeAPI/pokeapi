@@ -798,7 +798,7 @@ id,location_id,game_index,identifier
 916,928,0,main
 917,928,0,2
 918,929,0,
-919,930,0,
+919,930,0,main
 920,931,0,
 921,932,0,
 922,933,0,main
@@ -1248,3 +1248,4 @@ id,location_id,game_index,identifier
 1366,869,0,lakeside
 1367,918,0,gym
 1368,870,0,west
+1369,930,0,deep

@@ -212,3 +212,15 @@ id,encounter_condition_id,identifier,is_default
 211,11,item-fossilized-fish,0
 212,9,story-progress-master-dojo-complete-first-trial,0
 213,9,story-progress-master-dojo-complete-third-trial,0
+214,24,alolan-diglett-found-5,0
+215,24,alolan-diglett-found-10,0
+216,24,alolan-diglett-found-20,0
+217,24,alolan-diglett-found-30,0
+218,24,alolan-diglett-found-40,0
+219,24,alolan-diglett-found-50,0
+220,24,alolan-diglett-found-75,0
+221,24,alolan-diglett-found-100,0
+222,24,alolan-diglett-found-150,0
+223,7,starter-grookey,0
+224,7,starter-scorbunny,0
+225,7,starter-sobble,0

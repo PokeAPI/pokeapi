@@ -245,3 +245,12 @@ id,encounter_condition_id,identifier,is_default
 244,15,trade-weezing-galar,1
 245,15,trade-exeggutor,1
 246,15,trade-marowak,1
+247,25,weather-normal,1
+248,25,weather-overcast,0
+249,25,weather-raining,0
+250,25,weather-thunderstorm,0
+251,25,weather-snowing,0
+252,25,weather-snowstorm,0
+253,25,weather-sandstorm,0
+254,25,weather-intense-sun,0
+255,25,weather-fog,0

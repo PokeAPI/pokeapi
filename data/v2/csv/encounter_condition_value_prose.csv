@@ -367,3 +367,12 @@ encounter_condition_value_id,local_language_id,name
 244,9,Give Galarian Weezing in a Trade
 245,9,Give Exeggutor in a Trade
 246,9,Give Marowak in a Trade
+247,9,During normal weather
+248,9,During overcast weather
+249,9,During rainy weather
+250,9,During a thunderstorm
+251,9,During snowy weather
+252,9,During a snowstorm
+253,9,During a sandstorm
+254,9,During intense sun
+255,9,During foggy weather

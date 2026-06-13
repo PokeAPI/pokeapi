@@ -2191,11 +2191,13 @@ location_area_id,local_language_id,name
 856,9,Route 10 (Main)
 857,9,Route 10 (Near Station)
 861,9,Battle Tower
+869,9,Circhester
 876,9,Fields of Honor
 879,9,Freezington
 882,9,Galar Mine
 883,9,Galar Mine No. 2
 891,9,Glimwood Tangle
+892,9,Hammerlocke
 896,9,Hulbury
 904,9,Master Dojo
 905,9,Max Lair
@@ -2203,8 +2205,11 @@ location_area_id,local_language_id,name
 907,9,Motostoke Outskirts
 912,9,Postwick
 919,9,Slumbering Weald (Entrance)
+924,9,Spikemuth
+932,9,Stow-on-Side
 939,9,Turffield
 942,9,Wegehurst
+945,9,Wyndon
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
 1167,5,Phare de la Liberté
@@ -2432,3 +2437,6 @@ location_area_id,local_language_id,name
 1370,9,Energy Plant Tower Summit
 1371,9,Meetup Spot
 1372,9,Postwick (Leon's Room)
+1373,9,Motostoke Pokémon Center
+1374,9,Turffield (Gym)
+1375,9,Ballonlea (Gym)

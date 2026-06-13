@@ -202,5 +202,7 @@ id,encounter_condition_id,identifier,is_default
 201,15,trade-hippowdon,1
 202,21,backlot-not-mentioned,1
 203,21,backlot-mentioned,0
+204,22,bug-catching-contest-no,1
+205,22,bug-catching-contest-yes,0
 206,23,johto-safari-not-displaced,1
 207,23,johto-safari-displaced,0

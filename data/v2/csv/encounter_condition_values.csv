@@ -204,3 +204,5 @@ id,encounter_condition_id,identifier,is_default
 203,21,backlot-mentioned,0
 204,22,bug-catching-contest-no,1
 205,22,bug-catching-contest-yes,0
+206,23,save-data-from-lets-go-pikachu,0
+207,23,save-data-from-lets-go-eevee,0

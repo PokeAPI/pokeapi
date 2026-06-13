@@ -206,3 +206,7 @@ id,encounter_condition_id,identifier,is_default
 205,22,bug-catching-contest-yes,0
 206,23,save-data-from-lets-go-pikachu,0
 207,23,save-data-from-lets-go-eevee,0
+208,11,item-fossilized-bird,0
+209,11,item-fossilized-drake,0
+210,11,item-fossilized-dino,0
+211,11,item-fossilized-fish,0

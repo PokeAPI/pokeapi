@@ -210,3 +210,5 @@ id,encounter_condition_id,identifier,is_default
 209,11,item-fossilized-drake,0
 210,11,item-fossilized-dino,0
 211,11,item-fossilized-fish,0
+212,9,story-progress-master-dojo-complete-first-trial,0
+213,9,story-progress-master-dojo-complete-third-trial,0

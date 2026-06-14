@@ -254,3 +254,4 @@ id,encounter_condition_id,identifier,is_default
 253,25,weather-sandstorm,0
 254,25,weather-intense-sun,0
 255,25,weather-fog,0
+256,9,story-progress-before-hall-of-fame,1

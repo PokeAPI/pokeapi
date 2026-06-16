@@ -1716,6 +1716,15 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Specific form required for evolution (null = any form)",
     )
 
+    evolved_form = models.ForeignKey(
+        "Pokemon",
+        blank=True,
+        null=True,
+        related_name="evolved_form",
+        on_delete=models.CASCADE,
+        help_text="Specific form of the evolved species",
+    )
+
     used_move = models.ForeignKey(
         Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE
     )

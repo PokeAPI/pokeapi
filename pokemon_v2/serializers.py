@@ -5696,6 +5696,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
     region = RegionSummarySerializer()
     base_form = PokemonSummarySerializer()
+    evolved_form = PokemonSummarySerializer()
     used_move = MoveSummarySerializer()
 
     class Meta:
@@ -5723,6 +5724,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "turn_upside_down",
             "region",
             "base_form",
+            "evolved_form",
             "used_move",
             "min_move_count",
             "min_steps",
@@ -5787,6 +5789,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "used_move",
                                         "region",
                                         "base_form",
+                                        "evolved_form",
                                     ],
                                     "properties": {
                                         "gender": {
@@ -5955,6 +5958,18 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             },
                                         },
                                         "base_form": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
+                                        "evolved_form": {
                                             "type": "object",
                                             "nullable": True,
                                             "required": ["name", "url"],

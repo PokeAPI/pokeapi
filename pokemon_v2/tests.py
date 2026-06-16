@@ -1844,6 +1844,8 @@ class APIData:
         cls,
         evolved_species=None,
         evolution_trigger=None,
+        version_group=None,
+        is_default=0,
         party_species=None,
         trade_species=None,
         evolution_item=None,
@@ -1882,6 +1884,8 @@ class APIData:
         pokemon_evolution = PokemonEvolution.objects.create(
             evolved_species=evolved_species,
             evolution_trigger=evolution_trigger,
+            version_group=version_group,
+            is_default=is_default,
             evolution_item=evolution_item,
             min_level=min_level,
             gender=gender,

@@ -1638,6 +1638,16 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE,
     )
 
+    version_group = models.ForeignKey(
+        VersionGroup,
+        related_name="version_group",
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE,
+    )
+
+    is_default = models.BooleanField(default=False)
+
     min_level = models.IntegerField(blank=True, null=True)
 
     location = models.ForeignKey(

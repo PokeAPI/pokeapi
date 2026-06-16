@@ -5702,6 +5702,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PokemonEvolution
         fields = (
+            "version_group",
+            "is_default",
             "item",
             "trigger",
             "gender",
@@ -5763,6 +5765,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                 "items": {
                                     "type": "object",
                                     "required": [
+                                        "version_group",
+                                        "is_default",
                                         "gender",
                                         "held_item",
                                         "item",
@@ -5792,6 +5796,23 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "evolved_form",
                                     ],
                                     "properties": {
+                                        "version_group": {
+                                            "type": "object",
+                                            "nullable": False,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "examples": [1],
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "examples": [2],
+                                                },
+                                            },
+                                        },
+                                        "is_default": {"type": "boolean"},
                                         "gender": {
                                             "type": "",
                                             "nullable": True,

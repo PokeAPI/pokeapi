@@ -64,61 +64,28 @@ jobs:
           test "$name" = "bulbasaur"
   postgres:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_USER: pokeapi
-          POSTGRES_PASSWORD: pokeapi
-          POSTGRES_DB: pokeapi
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
           submodules: recursive
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          version: "0.11.19"
-          enable-cache: true
-      - name: Install dependencies
-        run: make install-base
-      - name: Run migrations & build database
-        run: |
-          make setup
-          make build-db
-      - name: Build
+      - name: Build and start services
         run: |
           docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+      - name: Run migrations and build database
+        run: |
           make docker-migrate
           make docker-build-db
       - name: Dump DB
-        run: pg_dump -h localhost -U pokeapi -Fc -N 'hdb_*' pokeapi > pokeapi.dump
-        env:
-          PGPASSWORD: pokeapi
+        run: docker compose exec -T db pg_dump -U ash -Fc -N 'hdb_*' pokeapi > pokeapi.dump
       - name: Drop and recreate database
         run: |
-          psql -h localhost -U pokeapi -d postgres -c "DROP DATABASE pokeapi;"
-          psql -h localhost -U pokeapi -d postgres -c "CREATE DATABASE pokeapi;"
-        env:
-          PGPASSWORD: pokeapi
+          docker compose exec -T db psql -U ash -d postgres -c "DROP DATABASE pokeapi WITH (FORCE);"
+          docker compose exec -T db psql -U ash -d postgres -c "CREATE DATABASE pokeapi;"
       - name: Import database
-        run: pg_restore -h localhost -U pokeapi -d pokeapi pokeapi.dump
-        env:
-          PGPASSWORD: pokeapi
-      - name: Start pokeapi
-        run: |
-          nohup make serve &
-          sleep 3
+        run: docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.dump
       - name: Test data
         run: |
-          name=$(curl -fsSL http://localhost:8000/api/v2/pokemon/1/ | jq -r '.name')
+          name=$(curl -fsSL http://localhost/api/v2/pokemon/1/ | jq -r '.name')
           echo "Returned name: $name"
           test "$name" = "bulbasaur"

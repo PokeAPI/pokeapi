@@ -1,4 +1,4 @@
-FROM python:3.14-alpine as builder
+FROM python:3.14-alpine AS builder
 
 ENV UV_LINK_MODE=copy
 ENV UV_COMPILE_BYTECODE=1

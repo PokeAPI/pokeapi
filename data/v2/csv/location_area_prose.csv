@@ -2176,6 +2176,20 @@ location_area_id,local_language_id,name
 842,9,Sinjoy Ruins
 842,6,Sinjoh-Ruinen
 842,5,Ruines Sinjoh
+843,9,Route 1
+844,9,Route 2
+845,9,Route 3 (East)
+847,9,Route 4
+848,9,Route 5
+849,9,Route 6
+882,9,Galar Mine
+883,9,Galar Mine No. 2
+891,9,Glimwood Tangle
+896,9,Hulbury
+906,9,Motostoke
+907,9,Motostoke Outskirts
+939,9,Turffield
+942,9,Wegehurst
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
 1167,5,Phare de la Liberté
@@ -2395,3 +2409,7 @@ location_area_id,local_language_id,name
 1362,9,Floaroma Meadow
 1363,9,Safari Zone Gate
 1364,9,Accumula Town
+1365,9,Route 2 (Lake)
+1366,9,Route 2 (Lakeside)
+1367,9,Motostoke (Gym)
+1368,9,Route 3 (West)

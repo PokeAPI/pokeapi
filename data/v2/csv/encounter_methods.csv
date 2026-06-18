@@ -18,7 +18,7 @@ id,identifier,order
 17,rough-terrain,9
 18,gift,18
 19,gift-egg,19
-20,only-one,20
+20,static-encounter,20
 21,pokeflute,21
 22,headbutt-low,22
 23,headbutt-normal,23
@@ -53,4 +53,5 @@ id,identifier,order
 52,snag-rematch,52
 53,pokespot,53
 54,hidden-grotto,54
-55,honey-tree,54
+55,honey-tree,55
+56,trash-can,56

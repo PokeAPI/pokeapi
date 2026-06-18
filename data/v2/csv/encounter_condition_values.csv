@@ -204,3 +204,9 @@ id,encounter_condition_id,identifier,is_default
 203,21,backlot-mentioned,0
 204,22,bug-catching-contest-no,1
 205,22,bug-catching-contest-yes,0
+206,23,berry-tree-red,1
+207,23,berry-tree-blue,1
+208,23,berry-tree-purple,1
+209,23,berry-tree-green,1
+210,23,berry-tree-yellow,1
+211,23,berry-tree-pink,1

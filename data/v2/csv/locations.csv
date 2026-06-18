@@ -709,7 +709,7 @@ id,region_id,identifier
 725,7,hauoli-cemetery
 726,7,melemele-meadow
 727,7,seaward-cave
-728,7,berry-fields
+728,7,alola-berry-fields
 729,7,verdant-cavern--trial-site
 730,7,verdant-cavern--totems-den
 731,7,alola-route-4
@@ -1095,3 +1095,4 @@ id,region_id,identifier
 1111,11,cipher-key-lair
 1112,11,citadark-isle
 1113,1,kanto-underground-path
+1114,6,kalos-berry-fields

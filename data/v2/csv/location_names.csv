@@ -3364,11 +3364,11 @@ location_id,local_language_id,name,subtitle
 728,1,きのみばたけ,
 728,3,나무열매 밭,
 728,4,樹果園,
-728,5,Champ de Baies,
-728,6,Beerenfelder,
-728,7,Huerto de Bayas,
-728,8,Orto delle Bacche,
-728,9,Berry Fields,
+728,5,Champ de Baies d'Alola,
+728,6,Alola-Beerenfelder,
+728,7,Huerto de Bayas de Alola,
+728,8,Orto delle Bacche di Alola,
+728,9,Alola Berry Fields,
 728,11,きのみ畑,
 728,12,树果园,
 729,1,しげみのどうくつ,しれんのま
@@ -4957,3 +4957,4 @@ location_id,local_language_id,name,subtitle
 1111,9,Cipher Key Lair,
 1112,9,Citadark Isle,
 1113,9,Kanto Underground Path,
+1114,6,Kalos Berry Fields

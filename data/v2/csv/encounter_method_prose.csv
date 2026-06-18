@@ -54,8 +54,8 @@ encounter_method_id,local_language_id,name
 18,5,Reçu en cadeau
 19,9,Receive egg as a gift
 19,5,Œuf reçu en cadeau
-20,9,"Static encounter, only one chance"
-20,5,"Rencontre statique, chance unique"
+20,9,"Static encounter"
+20,5,"Rencontre statique"
 21,9,Playing Pokéflute
 21,5,En jouant de la Pokéflûte
 22,9,Headbutting a low encounter rate tree
@@ -103,3 +103,5 @@ encounter_method_id,local_language_id,name
 53,9,"Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness."
 54,9,Finding a Pokemon in a Hidden Grotto
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
+35,9,Interacting with a Berry Tree
+56,9,Interacting with a Trash Can

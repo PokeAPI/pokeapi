@@ -1696,6 +1696,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     needs_multiplayer = models.BooleanField(default=False)
 
+    near_special_rock = models.BooleanField(default=False)
+
     # Regional evolution fields
     region = models.ForeignKey(
         "Region",

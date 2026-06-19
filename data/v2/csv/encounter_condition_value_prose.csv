@@ -326,5 +326,5 @@ encounter_condition_value_id,local_language_id,name
 203,9,Mr. Backlot has mentioned seeing this Pokemon in the garden
 204,9,Not during the Bug-Catching Contest
 205,9,During the Bug-Catching Contest
-206,9,Not displaced by block-based encounter
-207,9,Displaced by block-based encounter
+206,9,Encounter slot active when no block-based encounter is replacing it
+207,9,Encounter slot requires specific block placement to unlock

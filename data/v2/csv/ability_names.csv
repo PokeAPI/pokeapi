@@ -3400,7 +3400,6 @@ ability_id,local_language_id,name
 308,9,Piercing Drill
 308,11,かんつうドリル
 308,14,Turbotaladro
-308,7,Turbotaladro
 308,12,贯穿钻
 308,13,Broca Pervasiva
 309,1,ドラゴンスキン
@@ -3413,7 +3412,6 @@ ability_id,local_language_id,name
 309,9,Dragonize
 309,11,ドラゴンスキン
 309,14,Piel Dracónica
-309,7,Piel Dragontina
 309,12,龙皮肤
 310,1,メガソーラー
 310,3,메가솔라
@@ -3425,7 +3423,6 @@ ability_id,local_language_id,name
 310,9,Mega Sol
 310,11,メガソーラー
 310,14,Megasolar
-310,7,Megasolar
 310,12,超级日光
 311,1,とびだすハバネロ
 311,3,하바네로분출
@@ -3437,7 +3434,6 @@ ability_id,local_language_id,name
 311,9,Spicy Spray
 311,11,とびだすハバネロ
 311,14,Salpicante
-311,7,Salpicante
 311,12,辣椒喷发
 10001,9,Mountaineer
 10002,9,Wave Rider

@@ -75,7 +75,7 @@ N'affecte pas les Pokémon avec Ventouse ou sous l'effet de Racines."
 29,9,Immediately ends wild battles.  Forces trainers to switch Pokémon.,"Switches the target out for another of its trainer’s Pokémon selected at random.  Wild battles end immediately.
 
 Doesn’t affect Pokémon with Suction Cups or under the effect of Ingrain."
-30,5,Touche 2-5 fois en un tour.,"Inflige des dégâts réguliers.  Touche 2–5 fois en un tour.  
+30,5,Touche 2-5 fois en un tour.,"Inflige des dégâts réguliers.  Touche 2–5 fois en un tour.
 
 A 3/8 chances chacune de frapper 2 ou 3 fois, et 1/8 chance chacune de frapper 4 ou 5 fois.  Moyenne à 3 coups par utilisation."
 30,9,Hits 2-5 times in one turn.,"Inflicts regular damage.  Hits 2–5 times in one turn.
@@ -179,9 +179,9 @@ This effect is passed on by Baton Pass."
 54,9,Raises the user’s Special Attack by two stages.,Raises the user’s Special Attack by two stages.
 55,5,Augmente la Défense Spéciale du lanceur de deux niveaux.,Augmente la Défense Spéciale du lanceur de deux niveaux.
 55,9,Raises the user’s Special Defense by two stages.,Raises the user’s Special Defense by two stages.
-58,5,Le lanceur devient une copie de la cible jusqu'à ce qu'il quitte le combat.,"Le lanceur copie l'espèce, poids, type, talent, stats calculées (sauf PV), et capacités de la cible.  Les capacités copiées auront toutes 5 PP restants.  Les IVs sont copiés aux fins de Puissance Cachée, mais les stats ne sont pas recalculées.  
+58,5,Le lanceur devient une copie de la cible jusqu'à ce qu'il quitte le combat.,"Le lanceur copie l'espèce, poids, type, talent, stats calculées (sauf PV), et capacités de la cible.  Les capacités copiées auront toutes 5 PP restants.  Les IVs sont copiés aux fins de Puissance Cachée, mais les stats ne sont pas recalculées.
 
-Bandeau Choix, Mouchoir Choix, et Lunettes Choix restent en place, et le lanceur doit sélectionner une nouvelle capacité.  
+Bandeau Choix, Mouchoir Choix, et Lunettes Choix restent en place, et le lanceur doit sélectionner une nouvelle capacité.
 
 Cette capacité ne peut pas être copiée par Mimique, ni forcée par Encore."
 58,9,User becomes a copy of the target until it leaves battle.,"User copies the target’s species, weight, type, ability, calculated stats (except HP), and moves.  Copied moves will all have 5 PP remaining.  IVs are copied for the purposes of Hidden Power, but stats are not recalculated.
@@ -433,9 +433,9 @@ Pokémon with Sticky Hold or Multitype are immune to the item theft effect.
 The target cannot recover its item with Recycle.
 
 This move cannot be selected by Assist or Metronome."
-107,5,Empêche la cible de quitter le combat.,"La cible ne peut pas se retirer normalement.  Ignore les modifications de précision et d'esquive.  
+107,5,Empêche la cible de quitter le combat.,"La cible ne peut pas se retirer normalement.  Ignore les modifications de précision et d'esquive.
 
-Cet effet prend fin quand le lanceur quitte le terrain.  La cible peut toujours s'échapper en utilisant Relais, Demi-Tour, ou un Carapace Mue.  
+Cet effet prend fin quand le lanceur quitte le terrain.  La cible peut toujours s'échapper en utilisant Relais, Demi-Tour, ou un Carapace Mue.
 
 Le lanceur et la cible transmettent tous les deux cet effet avec Relais."
 107,9,Prevents the target from leaving battle.,"The target cannot switch out normally.  Ignores accuracy and evasion modifiers.  This effect ends when the user leaves the field.
@@ -445,7 +445,7 @@ The target may still escape by using Baton Pass, U-turn, or a Shed Shell.
 Both the user and the target pass on this effect with Baton Pass."
 108,5,La cible perd 1/4 de ses PV max à chaque tour tant qu'elle est endormie.,"Fonctionne seulement sur les Pokémon endormis.  Donne des cauchemars à la cible, lui infligeant 1/4 de ses PV max à chaque tour.  Si la cible se réveille ou quitte le terrain, cet effet prend fin."
 108,9,Target loses 1/4 its max HP every turn as long as it’s asleep.,"Only works on sleeping Pokémon.  Gives the target a nightmare, damaging it for 1/4 its max HP every turn.  If the target wakes up or leaves the field, this effect ends."
-109,5,Augmente l'esquive du lanceur de deux niveaux.,"Augmente l'esquive de la cible de deux niveaux.  
+109,5,Augmente l'esquive du lanceur de deux niveaux.,"Augmente l'esquive de la cible de deux niveaux.
 
 Écrasement et Bulldoboule ont une puissance double contre les Pokémon qui ont utilisé cette capacité depuis leur entrée sur le terrain."
 109,9,Raises the user’s evasion by two stages.,"Raises the user’s evasion by two stages.
@@ -661,7 +661,7 @@ The following move effects are passed:
 * Substitute; the doll’s HP is unchanged
 
 The replacement Pokémon does not trigger effects that respond to Pokémon switching in."
-129,5,"A une puissance double contre, et peut frapper, les Pokémon qui tentent de se retirer.","Inflige des dégâts réguliers.  Si la cible tente de se retirer ce tour avant que le lanceur agisse, cette capacité frappe la cible avant qu'elle parte et a une puissance double.  
+129,5,"A une puissance double contre, et peut frapper, les Pokémon qui tentent de se retirer.","Inflige des dégâts réguliers.  Si la cible tente de se retirer ce tour avant que le lanceur agisse, cette capacité frappe la cible avant qu'elle parte et a une puissance double.
 
 Cet effet peut toujours frapper un Pokémon qui se retire quand il a un Clonage en place ou quand un allié a utilisé Par Ici."
 129,9,"Has double power against, and can hit, Pokémon attempting to switch out.","Inflicts regular damage.  If the target attempts to switch out this turn before the user acts, this move hits the target before it leaves and has double power.
@@ -827,7 +827,7 @@ Cette capacité ne peut pas être copiée par Mimique."
 144,9,Discards the user’s stat changes and copies the target’s.,"Discards the user’s stat changes and copies the target’s.
 
 This move cannot be copied by Mirror Move."
-145,5,Inflige le double des dégâts que le lanceur a reçu de la dernière attaque spéciale qu'il a subi.,"Cible le dernier Pokémon adverse à frapper le lanceur avec une capacité spéciale ce tour.  Inflige le double des dégâts que cette capacité a fait au lanceur.  S'il n'y a pas de cible éligible, cette capacité échouera.  Les immunités de type s'appliquent, mais les autres effets de type sont ignorés.  
+145,5,Inflige le double des dégâts que le lanceur a reçu de la dernière attaque spéciale qu'il a subi.,"Cible le dernier Pokémon adverse à frapper le lanceur avec une capacité spéciale ce tour.  Inflige le double des dégâts que cette capacité a fait au lanceur.  S'il n'y a pas de cible éligible, cette capacité échouera.  Les immunités de type s'appliquent, mais les autres effets de type sont ignorés.
 
 Cette capacité ne peut pas être copiée par Mimique, ni sélectionnée par Assistance ou Métronome."
 145,9,Inflicts twice the damage the user received from the last special hit it took.,"Targets the last opposing Pokémon to hit the user with a special move this turn.  Inflicts twice the damage that move did to the user.  If there is no eligible target, this move will fail.  Type immunity applies, but other type effects are ignored.
@@ -851,13 +851,13 @@ Si la cible est dans son premier tour de Tunnel, cette capacité frappera avec u
 148,9,Inflicts regular damage and can hit Dig users.,"Inflicts regular damage.
 
 If the target is in the first turn of Dig, this move will hit with double power."
-149,5,Touche la cible deux tours plus tard.,"Inflige des dégats réguliers sans type à la fin du troisième tour, commençant avec celui-ci.  Cette capacité ne peut pas réaliser de coup critique.  Si la cible se retire, son remplaçant sera touché à la place.  Les dégâts sont calculés au moment où cette capacité est utilisée; les changements de stat et retraits pendant ce temps ne changeront pas les dégâts infligés.  Aucune capacité avec cet effet ne peut être utilisée contre la même cible à nouveau jusqu'à la fin du troisième tour.  
+149,5,Touche la cible deux tours plus tard.,"Inflige des dégats réguliers sans type à la fin du troisième tour, commençant avec celui-ci.  Cette capacité ne peut pas réaliser de coup critique.  Si la cible se retire, son remplaçant sera touché à la place.  Les dégâts sont calculés au moment où cette capacité est utilisée; les changements de stat et retraits pendant ce temps ne changeront pas les dégâts infligés.  Aucune capacité avec cet effet ne peut être utilisée contre la même cible à nouveau jusqu'à la fin du troisième tour.
 
-Cet effet passe à travers Garde Mystik.  
+Cet effet passe à travers Garde Mystik.
 
-Si la cible est protégée par Abri ou Détection le tour où cette capacité est utilisée, cette capacité échouera.  Cependant, les dégâts du troisième tour frapperont à travers la protection.  
+Si la cible est protégée par Abri ou Détection le tour où cette capacité est utilisée, cette capacité échouera.  Cependant, les dégâts du troisième tour frapperont à travers la protection.
 
-Les dégâts sont appliquées à la fin du tour, donc ils ignorent Ténacité et Ceinture Force.  
+Les dégâts sont appliquées à la fin du tour, donc ils ignorent Ténacité et Ceinture Force.
 
 Cette capacité ne peut pas être copiée par Mimique."
 149,9,Hits the target two turns later.,"Inflicts typeless regular damage at the end of the third turn, starting with this one.  This move cannot score a critical hit.  If the target switches out, its replacement will be hit instead.  Damage is calculated at the time this move is used; stat changes and switching out during the delay won’t change the damage inflicted.  No move with this effect can be used against the same target again until after the end of the third turn.
@@ -1229,9 +1229,9 @@ If either Pokémon has Multitype or Wonder Guard, this move will fail."
 195,9,"If the user faints this turn, the PP of the move that fainted it drops to 0.","If the user faints before it next acts, the move that fainted it will have its PP dropped to 0.  End-of-turn damage does not trigger this effect."
 196,5,"Vole la capacité de la cible, si elle se cible elle-même.","La prochaine fois qu'un Pokémon utilise une capacité bénéfique sur elle-même ou elle-même et ses alliés ce tour, le lanceur de cette capacité volera la capacité et l'utilisera elle-même.  Les capacités qui peuvent être volées par cette capacité sont identifiées par la marque ""saisissable"".
 
-Si deux Pokémon utilisent cette capacité le même tour, le Pokémon le plus rapide volera la première capacité bénéfique, et le Pokémon plus lent va ensuite la voler à nouveau—ainsi, seulement le Pokémon le plus lent utilisant cette capacité gagnera finalement un effet volé de capacité. 
+Si deux Pokémon utilisent cette capacité le même tour, le Pokémon le plus rapide volera la première capacité bénéfique, et le Pokémon plus lent va ensuite la voler à nouveau—ainsi, seulement le Pokémon le plus lent utilisant cette capacité gagnera finalement un effet volé de capacité.
 
-Si le voleur vole Boost, elle ciblera le Pokémon qui a utilisé Boost.  Si le lanceur était la cible originale de Boost, et que le Pokémon qui l'a utilisé à l'origine est affecté par Pression, elle ne perdra qu'1 PP. 
+Si le voleur vole Boost, elle ciblera le Pokémon qui a utilisé Boost.  Si le lanceur était la cible originale de Boost, et que le Pokémon qui l'a utilisé à l'origine est affecté par Pression, elle ne perdra qu'1 PP.
 
 Cette capacité ne peut pas être copiée par Mimique, ni sélectionnée par Assistance ou Métronome. "
 196,9,"Steals the target’s move, if it’s self-targeted.","The next time a Pokémon uses a beneficial move on itself or itself and its ally this turn, the user of this move will steal the move and use it itself.  Moves which may be stolen by this move are identified by the ""snatchable"" flag.
@@ -1341,7 +1341,7 @@ Waterfall      | Puts target to sleep
 206,9,Lowers the target’s Attack and Defense by one stage.,Lowers the target’s Attack and Defense by one stage.
 207,5,Augmente la Défense et la Défense Spéciale du lanceur d'un niveau.,Augmente la Défense et Défense Spéciale du lanceur d'un niveau.
 207,9,Raises the user’s Defense and Special Defense by one stage.,Raises the user’s Defense and Special Defense by one stage.
-208,5,Inflige des dégâts réguliers et peut frapper les utilisateurs de Rebond et Vol.,"Inflige des dégâts réguliers.  
+208,5,Inflige des dégâts réguliers et peut frapper les utilisateurs de Rebond et Vol.,"Inflige des dégâts réguliers.
 
 Cette capacité peut frapper un Pokémon sous l'effet de Rebond, Vol, ou Chute Libre."
 208,9,Inflicts regular damage and can hit Bounce and Fly users.,"Inflicts regular damage.
@@ -1453,9 +1453,9 @@ Cette capacité ne peut pas être copiée par Mimique, ni sélectionnée par Ass
 224,9,Hits through Protect and Detect.,"Inflicts regular damage.  Removes the effects of Detect or Protect from the target before hitting.
 
 This move cannot be copied by Mirror Move, nor selected by Assist or Metronome."
-225,5,"Si la cible a une baie, inflige le double de dégâts et utilise la baie.","Inflige des dégâts réguliers.  
+225,5,"Si la cible a une baie, inflige le double de dégâts et utilise la baie.","Inflige des dégâts réguliers.
 
-Si la cible tient une baie, cette capacité a une puissance double, et le lanceur prend la baie et l'utilise immédiatement.  Si la cible tient une Baie Jaboca ou Baie Pommo,la baie est toujours supprimée, mais a aucun effet.  
+Si la cible tient une baie, cette capacité a une puissance double, et le lanceur prend la baie et l'utilise immédiatement.  Si la cible tient une Baie Jaboca ou Baie Pommo,la baie est toujours supprimée, mais a aucun effet.
 
 Si cette capacité est super efficace et que la cible tient une baie qui peut réduire les dégâts de cette capacité, elle le fera, et ne sera pas volée."
 225,9,"If target has a berry, inflicts double damage and uses the berry.","Inflicts regular damage.  If the target is holding a berry, this move has double power, and the user takes the berry and uses it immediately.
@@ -1465,9 +1465,9 @@ If the target is holding a Jaboca Berry or Rowap Berry, the berry is still remov
 If this move is super effective and the target is holding a berry that can reduce this move’s damage, it will do so, and will not be stolen."
 226,5,"Pendant trois tours, les Pokémon alliés ont une Vitesse doublée.","Pour les trois prochains tours, tous les Pokémon du côté du terrain du lanceur ont leur Vitesse d'origine doublée.  Cet effet reste si le lanceur quitte le terrain."
 226,9,"For three turns, friendly Pokémon have doubled Speed.","For the next three turns, all Pokémon on the user’s side of the field have their original Speed doubled.  This effect remains if the user leaves the field."
-227,5,Augmente une stat aléatoire d'un Pokémon allié de deux niveaux.,"Augmente l'une des stats de la cible de deux niveaux.  La stat augmentée est choisie au hasard parmi n'importe quelle stat qui peut être augmentée de deux niveaux.  Si aucune stat n'est éligible, cette capacité échouera.  
+227,5,Augmente une stat aléatoire d'un Pokémon allié de deux niveaux.,"Augmente l'une des stats de la cible de deux niveaux.  La stat augmentée est choisie au hasard parmi n'importe quelle stat qui peut être augmentée de deux niveaux.  Si aucune stat n'est éligible, cette capacité échouera.
 
-Si la cible a un Clonage, cette capacité n'aura pas d'effet, même si le lanceur est la cible.  
+Si la cible a un Clonage, cette capacité n'aura pas d'effet, même si le lanceur est la cible.
 
 Cette capacité ne peut pas être copiée par Mimique."
 227,9,Raises one of a friendly Pokémon’s stats at random by two stages.,"Raises one of the target’s stats by two stages.  The raised stat is chosen at random from any stats that can be raised by two stages.  If no stat is eligible, this move will fail.
@@ -1541,7 +1541,7 @@ If this move is activated by another move, the activating move’s PP is used to
 237,9,Prevents target from restoring its HP for five turns.,"For the next five turns, the target may not use any moves that only restore HP, and move effects that heal the target are disabled.  Moves that steal HP may still be used, but will only inflict damage and not heal the target."
 238,5,"La puissance augmente contre les cibles avec plus de PV restants, jusqu'à un maximum de 121 de puissance.","Inflige des dégâts réguliers.  La puissance est directement reliée aux PV relatifs restants de la cible, donnée par `1 + 120 * PV actuels / PV max`, jusqu'à un maximum de 121."
 238,9,"Power increases against targets with more HP remaining, up to a maximum of 121 power.","Inflicts regular damage.  Power directly relates to the target’s relative remaining HP, given by `1 + 120 * current HP / max HP`, to a maximum of 121."
-239,5,Le lanceur échange son Attaque et sa Défense.,"L'Attaque et Défense d'origine du lanceur sont échangées.  
+239,5,Le lanceur échange son Attaque et sa Défense.,"L'Attaque et Défense d'origine du lanceur sont échangées.
 
 Cet effet est transmis par Relais."
 239,9,User swaps Attack and Defense.,"The user’s original Attack and Defense are swapped.
@@ -1761,9 +1761,9 @@ Note: This effect is technically shared by both Techno Blast and Judgment; howev
 271,9,"User faints, and its replacement is fully healed.","User faints.  Its replacement’s HP and PP are fully restored, and any major status effect is removed."
 272,5,A une chance de diminuer la Défense Spéciale de la cible de de deux niveaux.,Inflige des dégâts réguliers.  A une chance de diminuer la Défense Spéciale de la cible de deux niveaux.
 272,9,Has a chance to lower the target’s Special Defense by two stages.,Inflicts regular damage.  Has a chance to lower the target’s Special Defense by two stages.
-273,5,"Le lanceur disparaît, évitant toutes les attaques, et frappe au prochain tour.  Touche à travers Abri et Détection.","Inflige des dégâts réguliers.  Le lanceur disparaît pendant un tour, devenant immunisé aux attaques, et frappe au second tour.  
+273,5,"Le lanceur disparaît, évitant toutes les attaques, et frappe au prochain tour.  Touche à travers Abri et Détection.","Inflige des dégâts réguliers.  Le lanceur disparaît pendant un tour, devenant immunisé aux attaques, et frappe au second tour.
 
-Cette capacité ignore les effets de Détection et Abri.  
+Cette capacité ignore les effets de Détection et Abri.
 
 Cette capacité ne peut pas être sélectionnée par Blabla Dodo."
 273,9,"User vanishes, dodging all attacks, and hits next turn.  Hits through Protect and Detect.","Inflicts regular damage.  User vanishes for one turn, becoming immune to attack, and hits on the second turn.
@@ -1907,19 +1907,19 @@ This move cannot be selected by Assist or Metronome."
 310,9,Heals the target for half its max HP.,Heals the target for half its max HP.
 311,5,A une puissance double si la cible a une altération majeure de statut.,"Inflige des dégâts réguliers.  Si la cible a une altération majeure de statut, cette capacité a une puissance double."
 311,9,Has double power if the target has a major status ailment.,"Inflicts regular damage.  If the target has a major status ailment, this move has double power."
-312,5,"Emporte la cible dans les airs, évitant toutes les attaques contre eux, et la lâche au prochain tour.","Inflige des dégâts réguliers.  Le lanceur porte la cible haut dans les airs pendant un tour, pendant lequel aucune capacité ne frappera l'un ou l'autre Pokémon et aucun ne peut agir.  Au prochain tour, le lanceur lâche la cible, infligeant des dégâts et mettant fin à l'effet.  
+312,5,"Emporte la cible dans les airs, évitant toutes les attaques contre eux, et la lâche au prochain tour.","Inflige des dégâts réguliers.  Le lanceur porte la cible haut dans les airs pendant un tour, pendant lequel aucune capacité ne frappera l'un ou l'autre Pokémon et aucun ne peut agir.  Au prochain tour, le lanceur lâche la cible, infligeant des dégâts et mettant fin à l'effet.
 
-Si la cible est de type Vol, cette capacité fonctionnera normalement mais n'infligera pas de dégât.  
+Si la cible est de type Vol, cette capacité fonctionnera normalement mais n'infligera pas de dégât.
 
-Tornade, Vent Violent, Stratopercut, Anti-Air, Fatal-Foudre, Ouragan, et Cyclone peuvent frapper le lanceur et la cible pendant cet effet.  Tornade et Ouragan auront une puissance double additionnelle.  
+Tornade, Vent Violent, Stratopercut, Anti-Air, Fatal-Foudre, Ouragan, et Cyclone peuvent frapper le lanceur et la cible pendant cet effet.  Tornade et Ouragan auront une puissance double additionnelle.
 
-Les dégâts de Grêle et Tempête de Sable s'appliquent toujours pendant cet effet.  
+Les dégâts de Grêle et Tempête de Sable s'appliquent toujours pendant cet effet.
 
-L'un des Pokémon peut être touché pendant cet effet si aussi sous l'effet de Verrouillage, Lire-Esprit, ou Annule Garde.  
+L'un des Pokémon peut être touché pendant cet effet si aussi sous l'effet de Verrouillage, Lire-Esprit, ou Annule Garde.
 
-Cette capacité ne peut pas être utilisée quand Gravité est active.  
+Cette capacité ne peut pas être utilisée quand Gravité est active.
 
-Cette capacité ne peut pas être sélectionnée par Blabla Dodo.  
+Cette capacité ne peut pas être sélectionnée par Blabla Dodo.
 
 *Bug*: Si Gravité est utilisée pendant un combat double ou triple quand cette capacité est active, cette capacité n'est pas correctement annulée sur la cible, et elle reste dans les airs indéfiniment.  Comme cette capacité empêche la cible d'agir, le seul moyen de l'enlever du terrain par la suite est de la mettre KO."
 312,9,"Carries the target high into the air, dodging all attacks against either, and drops it next turn.","Inflicts regular damage.  User carries the target high into the air for one turn, during which no moves will hit either Pokémon and neither can act.  On the following turn, the user drops the target, inflicting damage and ending the effect.
@@ -2195,7 +2195,7 @@ If a Pokémon is holding a Terrain Extender when creating Psychic Terrain (by an
 405,9,Lowers the user’s Defense by one stage after inflicting damage.,Inflicts regular damage.  Lowers the user’s Defense by one stage.
 406,5,Inflige des dégâts réguliers avec aucun effet additionnel.,Inflige des dégâts réguliers.
 406,9,Inflicts regular damage with no additional effect.,Inflicts regular damage.
-407,5,"Réduit les dégâts pendant cinq tours, mais doit être utilisé pendant la grêle.","Place l'effet du Voile Aurore sur le côté du terrain du lanceur pendant les 5 prochains tours.  Si la météo n'est pas Grêle, ou que la météo est désactivée par les effets de Ciel Gris ou Air Lock, cette capacité échouera.  
+407,5,"Réduit les dégâts pendant cinq tours, mais doit être utilisé pendant la grêle.","Place l'effet du Voile Aurore sur le côté du terrain du lanceur pendant les 5 prochains tours.  Si la météo n'est pas Grêle, ou que la météo est désactivée par les effets de Ciel Gris ou Air Lock, cette capacité échouera.
 
 N'importe quel dégât régulier infligé à un Pokémon affecté est réduit de ½.  (S'il y a plusieurs Pokémon sur le terrain affecté, la réduction est ⅓.)"
 407,9,"Reduces damage five turns, but must be used during hail.","Places the Aurora Veil effect on the user’s side of the field for the next 5 turns.  If the weather is not Hail, or the weather is disabled by the effects of Cloud Nine or Air Lock, this move will fail.
@@ -2227,10 +2227,10 @@ Any regular damage dealt to an affected Pokémon is reduced by ½.  (If there ar
 419,9,"Inflicts damage to all opposing Pokémon and increases the user’s Attack, Defense, Special Attack, Special Defense, and Speed by one stage each.","Inflicts sound-based damage to all opposing Pokémon and increases the user’s Attack, Defense, Special Attack, Special Defense, and Speed by one stage each. The user’s stats are not raised if the move fails to damage any opposing Pokémon."
 420,5,"Inflige des dégâts, et le lanceur prend des dégâts égaux à la moitié de ses PV max, arrondis à l'unité supérieure.","Inflige des dégâts, et le lanceur subit des dégâts égaux à la moitié de ses PV max, arrondis à l'unité supérieure. Le lanceur prend quand même des dégâts si la capacité est bloquée par Abri ou Clonage, manque sa cible, ou si la cible a Torche."
 420,9,"Inflicts damage, and the user takes damage equal to half of its max HP, rounded up.","Inflicts damage, and the user takes damage equal to half of its max HP, rounded up. The user still takes damage if the move is blocked by Protect or Substitute, misses, or if the target has Flash Fire."
-421,5,Met Mur Lumière du côté du terrain du lanceur après avoir infligé des dégâts.,"Inflige des dégâts réguliers, puis (si succès) place Mur Lumière du côté du terrain du lanceur."
-421,9,Sets Light Screen on the user’s side of the field after inflicting damage.,"Inflicts regular damage, then (if successful) sets Light Screen on the user’s side of the field."
-422,5,Met Mur Lumière du côté du terrain du lanceur après avoir infligé des dégâts.,"Inflige des dégâts réguliers, puis (si succès) place Protection du côté du terrain du lanceur."
-422,9,Sets Reflect on the user’s side of the field after inflicting damage.,"Inflicts regular damage, then (if successful) sets Reflect on the user’s side of the field."
+421,5,"Le lanceur attaque en libérant l'énergie concentrée dans son noyau.","Le lanceur attaque en émettant un laser depuis son noyau. Cette capacité inflige deux fois plus de dégâts si l'adversaire est un Pokémon Dynamax."
+421,9,"The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed.","The user unleashes a strong beam from its core. This move deals twice the damage if the target is Dynamaxed."
+422,5,"Le lanceur parvient toujours à viser la cible voulue, en ignorant l'effet des talents et des capacités capables de détourner les attaques.","Le lanceur parvient toujours à viser la cible voulue, en ignorant l'effet des talents et des capacités capables de détourner les attaques."
+422,9,"The user ignores the effects of opposing Pokémon's moves and Abilities that draw in moves, allowing this move to hit the chosen target.","The user ignores the effects of opposing Pokémon's moves and Abilities that draw in moves, allowing this move to hit the chosen target."
 423,5,Ensemence la cible après lui avoir infligé des dégâts.,"Inflige des dégâts réguliers, puis (si succès) place Vampigraine sur la cible."
 423,9,Seeds the target after inflicting damage.,"Inflicts regular damage, then (if successful) sets Leech Seed on the target."
 424,5,Soigne l'équipe entiere de ses effets majeurs de statut après avoir infligé des dégâts.,"Inflige des dégâts réguliers, puis (si succès) supprime les effets majeurs de statut de tous les Pokémon de l'équipe du lanceur."

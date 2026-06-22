@@ -4064,6 +4064,8 @@ components:
                     items:
                       type: object
                       required:
+                      - version_group
+                      - is_default
                       - gender
                       - held_item
                       - item
@@ -4090,7 +4092,26 @@ components:
                       - used_move
                       - region
                       - base_form
+                      - evolved_form
                       properties:
+                        version_group:
+                          type: object
+                          nullable: false
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                              examples:
+                              - 1
+                            url:
+                              type: string
+                              format: uri
+                              examples:
+                              - 2
+                        is_default:
+                          type: boolean
                         gender:
                           type: object
                           nullable: true
@@ -4237,6 +4258,18 @@ components:
                               type: string
                               format: uri
                         base_form:
+                          type: object
+                          nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
+                        evolved_form:
                           type: object
                           nullable: true
                           required:

@@ -2937,6 +2937,8 @@ ability_id,local_language_id,name
 267,12,人马一体
 267,14,Unidad Ecuestre
 268,1,とれないにおい
+268,3,가시지않는향기
+268,4,甩不掉的氣味
 268,5,Odeur Tenace
 268,6,Duftschwade
 268,7,Olor Persistente
@@ -2944,23 +2946,36 @@ ability_id,local_language_id,name
 268,9,Lingering Aroma
 268,11,とれないにおい
 268,14,Olor Persistente
+268,12,甩不掉的气味
 269,1,こぼれダネ
+269,3,넘치는씨
+269,4,掉出種子
 269,5,Semencier
 269,6,Streusaat
 269,7,Disemillar
 269,8,Spargisemi
 269,9,Seed Sower
+269,10,Rozsévání
 269,11,こぼれダネ
 269,14,Disemillar
+269,12,掉出种子
+269,13,Semear
 270,1,ねつこうかん
+270,3,열교환
+270,4,熱交換
 270,5,Thermodynamique
 270,6,Thermowandel
-270,7,Termoscambio
+270,7,Termoconversión
 270,8,Termoscambio
 270,9,Thermal Exchange
+270,10,Tepelná výměna
 270,11,ねつこうかん
 270,14,Termoscambio
+270,12,热交换
+270,13,Termoconversão
 271,1,いかりのこうら
+271,3,분노의껍질
+271,4,憤怒甲殼
 271,5,Courroupace
 271,6,Wutpanzer
 271,7,Coraza Ira
@@ -2968,7 +2983,10 @@ ability_id,local_language_id,name
 271,9,Anger Shell
 271,11,いかりのこうら
 271,14,Coraza Ira
+271,12,愤怒甲壳
 272,1,きよめのしお
+272,3,정화의소금
+272,4,潔淨之鹽
 272,5,Sel Purificateur
 272,6,Läutersalz
 272,7,Sal Purificadora
@@ -2976,7 +2994,10 @@ ability_id,local_language_id,name
 272,9,Purifying Salt
 272,11,きよめのしお
 272,14,Sal Purificadora
+272,12,洁净之盐
 273,1,こんがりボディ
+273,3,노릇노릇바디
+273,4,焦香之軀
 273,5,Bien Cuit
 273,6,Knusperkruste
 273,7,Cuerpo Horneado
@@ -2984,7 +3005,11 @@ ability_id,local_language_id,name
 273,9,Well-Baked Body
 273,11,こんがりボディ
 273,14,Cuerpo Horneado
+273,12,焦香之躯
+273,13,Corpo Bem-passado
 274,1,かぜのり
+274,3,바람타기
+274,4,乘風
 274,5,Aéroporté
 274,6,Windreiter
 274,7,Surcavientos
@@ -2992,7 +3017,10 @@ ability_id,local_language_id,name
 274,9,Wind Rider
 274,11,かぜのり
 274,14,Surcavientos
+274,12,乘风
 275,1,ばんけん
+275,3,파수견
+275,4,看門犬
 275,5,Chien de Garde
 275,6,Wachhund
 275,7,Perro Guardián
@@ -3000,7 +3028,11 @@ ability_id,local_language_id,name
 275,9,Guard Dog
 275,11,ばんけん
 275,14,Perro Guardián
+275,12,看门犬
+275,13,Cão de Guarda
 276,1,いわはこび
+276,3,바위나르기
+276,4,搬岩
 276,5,Porte-Roche
 276,6,Steinträger
 276,7,Transportarrocas
@@ -3008,7 +3040,10 @@ ability_id,local_language_id,name
 276,9,Rocky Payload
 276,11,いわはこび
 276,14,Transportarrocas
+276,12,搬岩
 277,1,ふうりょくでんき
+277,3,풍력발전
+277,4,風力發電
 277,5,Turbine Éolienne
 277,6,Windkraft
 277,7,Energía Eólica
@@ -3016,7 +3051,10 @@ ability_id,local_language_id,name
 277,9,Wind Power
 277,11,ふうりょくでんき
 277,14,Energía Eólica
+277,12,风力发电
 278,1,マイティチェンジ
+278,3,마이티체인지
+278,4,全能變身
 278,5,Supermutation
 278,6,Superwechsel
 278,7,Cambio Heroico
@@ -3024,7 +3062,11 @@ ability_id,local_language_id,name
 278,9,Zero to Hero
 278,11,マイティチェンジ
 278,14,Cambio Heroico
+278,12,全能变身
+278,13,Do Abismo ao Heroísmo
 279,1,しれいとう
+279,3,사령탑
+279,4,發號施令
 279,5,Commandant
 279,6,Kommandant
 279,7,Comandar
@@ -3032,15 +3074,23 @@ ability_id,local_language_id,name
 279,9,Commander
 279,11,しれいとう
 279,14,Comandar
+279,12,发号施令
 280,1,でんきにかえる
+280,3,전기로바꾸기
+280,4,電力轉換
 280,5,Grecharge
 280,6,Dynamo
 280,7,Dinamo
 280,8,Convertivolt
 280,9,Electromorphosis
+280,10,Elektromorfóza
 280,11,でんきにかえる
 280,14,Dínamo
+280,12,电力转换
+280,13,Eletromorfose
 281,1,こだいかっせい
+281,3,고대활성
+281,4,古代活性
 281,5,Paléosynthèse
 281,6,Paläosynthese
 281,7,Paleosíntesis
@@ -3048,7 +3098,11 @@ ability_id,local_language_id,name
 281,9,Protosynthesis
 281,11,こだいかっせい
 281,14,Paleosíntesis
+281,12,古代活性
+281,13,Protossíntese
 282,1,クォークチャージ
+282,3,쿼크차지
+282,4,夸克充能
 282,5,Charge Quantique
 282,6,Quantenantrieb
 282,7,Carga Cuark
@@ -3056,7 +3110,10 @@ ability_id,local_language_id,name
 282,9,Quark Drive
 282,11,クォークチャージ
 282,14,Carga Cuark
+282,12,夸克充能
 283,1,おうごんのからだ
+283,3,황금몸
+283,4,黃金之軀
 283,5,Corps en Or
 283,6,Goldkörper
 283,7,Cuerpo Áureo
@@ -3064,7 +3121,10 @@ ability_id,local_language_id,name
 283,9,Good as Gold
 283,11,おうごんのからだ
 283,14,Cuerpo Áureo
+283,12,黄金之躯
 284,1,わざわいのうつわ
+284,3,재앙의그릇
+284,4,災禍之鼎
 284,5,Urne du Fléau
 284,6,Unheilsgefäß
 284,7,Caldero Debacle
@@ -3072,7 +3132,10 @@ ability_id,local_language_id,name
 284,9,Vessel of Ruin
 284,11,わざわいのうつわ
 284,14,Caldero Debacle
+284,12,灾祸之鼎
 285,1,わざわいのつるぎ
+285,3,재앙의검
+285,4,災禍之劍
 285,5,Épée du Fléau
 285,6,Unheilsschwert
 285,7,Espada Debacle
@@ -3080,7 +3143,10 @@ ability_id,local_language_id,name
 285,9,Sword of Ruin
 285,11,わざわいのつるぎ
 285,14,Espada Debacle
+285,12,灾祸之剑
 286,1,わざわいのおふだ
+286,3,재앙의목간
+286,4,災禍之簡
 286,5,Bois du Fléau
 286,6,Unheilstafeln
 286,7,Tablilla Debacle
@@ -3088,7 +3154,10 @@ ability_id,local_language_id,name
 286,9,Tablets of Ruin
 286,11,わざわいのおふだ
 286,14,Tablilla Debacle
+286,12,灾祸之简
 287,1,わざわいのたま
+287,3,재앙의구슬
+287,4,災禍之玉
 287,5,Perles du Fléau
 287,6,Unheilsjuwelen
 287,7,Abalorio Debacle
@@ -3096,7 +3165,10 @@ ability_id,local_language_id,name
 287,9,Beads of Ruin
 287,11,わざわいのたま
 287,14,Abalorio Debacle
+287,12,灾祸之玉
 288,1,ひひいろのこどう
+288,3,진홍빛고동
+288,4,緋紅脈動
 288,5,Pouls Orichalque
 288,6,Orichalkum-Puls
 288,7,Latido Oricalco
@@ -3104,7 +3176,10 @@ ability_id,local_language_id,name
 288,9,Orichalcum Pulse
 288,11,ひひいろのこどう
 288,14,Latido Oricalco
+288,12,绯红脉动
 289,1,ハドロンエンジン
+289,3,하드론엔진
+289,4,強子引擎
 289,5,Moteur à Hadrons
 289,6,Hadronen-Motor
 289,7,Motor Hadrónico
@@ -3112,7 +3187,11 @@ ability_id,local_language_id,name
 289,9,Hadron Engine
 289,11,ハドロンエンジン
 289,14,Motor Hadrónico
+289,12,强子引擎
+289,13,Motor Hadrônico
 290,1,びんじょう
+290,3,편승
+290,4,跟風
 290,5,Opportuniste
 290,6,Profiteur
 290,7,Oportunista
@@ -3120,7 +3199,10 @@ ability_id,local_language_id,name
 290,9,Opportunist
 290,11,びんじょう
 290,14,Oportunista
+290,12,跟风
 291,1,はんすう
+291,3,되새김질
+291,4,反芻
 291,5,Ruminant
 291,6,Wiederkäuer
 291,7,Rumia
@@ -3128,7 +3210,10 @@ ability_id,local_language_id,name
 291,9,Cud Chew
 291,11,はんすう
 291,14,Rumia
+291,12,反刍
 292,1,きれあじ
+292,3,예리함
+292,4,鋒銳
 292,5,Incisif
 292,6,Scharfkantig
 292,7,Cortante
@@ -3136,7 +3221,10 @@ ability_id,local_language_id,name
 292,9,Sharpness
 292,11,きれあじ
 292,14,Cortante
+292,12,锋锐
 293,1,そうだいしょう
+293,3,총대장
+293,4,大將
 293,5,Général Suprême
 293,6,Feldherr
 293,7,General Supremo
@@ -3144,7 +3232,11 @@ ability_id,local_language_id,name
 293,9,Supreme Overlord
 293,11,そうだいしょう
 293,14,General Supremo
+293,12,大将
+293,13,General Supremo
 294,1,きょうえん
+294,3,협연
+294,4,同台共演
 294,5,Collab
 294,6,Synchronauftritt
 294,7,Unísono
@@ -3152,7 +3244,10 @@ ability_id,local_language_id,name
 294,9,Costar
 294,11,きょうえん
 294,14,Unísono
+294,12,同台共演
 295,1,どくげしょう
+295,3,독치장
+295,4,毒滿地
 295,5,Dépôt Toxique
 295,6,Giftbelag
 295,7,Capa Tóxica
@@ -3160,7 +3255,11 @@ ability_id,local_language_id,name
 295,9,Toxic Debris
 295,11,どくげしょう
 295,14,Capa Tóxica
+295,12,毒满地
+295,13,Detritos Tóxicos
 296,1,テイルアーマー
+296,3,테일아머
+296,4,尾甲
 296,5,Armure Caudale
 296,6,Schweifrüstung
 296,7,Cola Armadura
@@ -3168,7 +3267,11 @@ ability_id,local_language_id,name
 296,9,Armor Tail
 296,11,テイルアーマー
 296,14,Cola Armadura
+296,12,尾甲
+296,13,Cauda de Armadura
 297,1,どしょく
+297,3,흙먹기
+297,4,食土
 297,5,Absorbe-Terre
 297,6,Bodenschmaus
 297,7,Geofagia
@@ -3176,7 +3279,10 @@ ability_id,local_language_id,name
 297,9,Earth Eater
 297,11,どしょく
 297,14,Geofagia
+297,12,食土
 298,1,きんしのちから
+298,3,균사의힘
+298,4,菌絲之力
 298,5,Force Fongique
 298,6,Myzelienkraft
 298,7,Poder Fúngico
@@ -3184,12 +3290,14 @@ ability_id,local_language_id,name
 298,9,Mycelium Might
 298,11,きんしのちから
 298,14,Poder Fúngico
+298,12,菌丝之力
 299,1,しんがん
 299,3,심안
 299,4,心眼
 299,5,Œil Révélateur
-299,7,Ojo Mental 
-299,8,Occhio Interiore 
+299,6,Geistiges Auge
+299,7,Ojo Mental
+299,8,Occhio Interiore
 299,9,Mind’s Eye
 299,11,しんがん
 299,12,心眼
@@ -3283,25 +3391,54 @@ ability_id,local_language_id,name
 307,12,毒傀儡
 307,14,Títere Tóxico
 308,1,かんつうドリル
+308,3,관통드릴
+308,4,貫穿鑽
+308,5,Transperceuse
+308,6,Stichbohrer
+308,7,Turbotaladro
+308,8,Punta Perforante
 308,9,Piercing Drill
 308,11,かんつうドリル
 308,14,Turbotaladro
 308,7,Turbotaladro
+308,12,贯穿钻
+308,13,Broca Pervasiva
 309,1,ドラゴンスキン
+309,3,드래곤스킨
+309,4,龍皮膚
+309,5,Peau Draconique
+309,6,Drachenschicht
+309,7,Piel Dragontina
+309,8,Pelledrago
 309,9,Dragonize
 309,11,ドラゴンスキン
 309,14,Piel Dracónica
 309,7,Piel Dragontina
+309,12,龙皮肤
 310,1,メガソーラー
+310,3,메가솔라
+310,4,超級日光
+310,5,Méga-Soleil
+310,6,Mega-Solarladung
+310,7,Megasolar
+310,8,Megasolar
 310,9,Mega Sol
 310,11,メガソーラー
 310,14,Megasolar
 310,7,Megasolar
+310,12,超级日光
 311,1,とびだすハバネロ
+311,3,하바네로분출
+311,4,辣椒噴發
+311,5,Habanéruption
+311,6,Chilispritzer
+311,7,Salpicante
+311,8,Spargipiccante
 311,9,Spicy Spray
 311,11,とびだすハバネロ
 311,14,Salpicante
 311,7,Salpicante
+311,12,辣椒喷发
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

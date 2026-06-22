@@ -1,5 +1,7 @@
 # New language CSV helpers
 
+> Owner: [@itsjavi](https://github.com/itsjavi) (122741)
+
 These scripts bootstrap a new language in `data/v2/csv` by copying an existing
 language's rows as the initial translation source.
 

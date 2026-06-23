@@ -1562,7 +1562,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10536,heatran-mega,mega,10311,31,1,1,1,2,649
 10537,darkrai-mega,mega,10312,31,1,1,1,2,657
 10538,golurk-mega,mega,10313,31,1,1,1,2,829
-10539,meowstic-mega-male,mega-male,10314,31,1,1,1,3,983
+10539,meowstic-male-mega,mega-male,10314,31,1,1,1,3,983
 10540,crabominable-mega,mega,10315,31,1,1,1,2,1067
 10541,golisopod-mega,mega,10316,31,1,1,1,2,1107
 10542,magearna-mega,mega,10317,31,1,1,1,3,1181
@@ -1577,4 +1577,4 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10551,pyroar-female,female,668,15,0,0,0,2,949
 10552,frillish-female,female,592,11,0,0,0,2,794
 10553,jellicent-female,female,593,11,0,0,0,2,795
-10554,meowstic-mega-female,mega-female,10326,31,1,1,1,4,984
+10554,meowstic-female-mega,mega-female,10326,31,1,1,1,4,984

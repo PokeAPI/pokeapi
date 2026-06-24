@@ -1,5 +1,5 @@
 pokemon_move_method_id,local_language_id,name,description
-1,5,Montée de niveau,Appris lorsqu’un Pokémon atteint un certain niveau.
+1,5,Montée de niveau,"Appris lorsqu’un Pokémon atteint un certain niveau."
 1,6,Level up,"Wird gelernt, wenn ein Pokémon ein bestimmtes Level erreicht."
 1,7,Nivel,Se aprende cuando un pokemon alcanza un cierto nivel.
 1,9,Level up,Learned when a Pokémon reaches a certain level.
@@ -36,3 +36,4 @@ pokemon_move_method_id,local_language_id,name,description
 10,9,Form Change,Appears when Rotom or Cosplay Pikachu changes form.  Disappears if the Pokémon becomes another form and this move can only be learned by form change.
 11,5,Boîte Zygarde,Peut être appris avec la Boîte Zygarde. Doît d’abord trouver les cellules Zygardes correspondantes dans Soleil/Lune. Toutes les capacités sont disponibles directement dans Ultra Soleil/Ultra Lune.
 11,9,Zygarde Cube,Can be taught using the Zygarde Cube.  Must find the corresponding Zygarde Core first in Sun/Moon.  All moves are available immediately in Ultra Sun/Ultra Moon.
+12,9,Train,Taught via the training menu in Pokémon Champions.

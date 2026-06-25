@@ -1001,17 +1001,17 @@ def _build_berries():
     def csv_record_to_objects(info):
         item = Item.objects.get(pk=int(info[1]))
         yield Berry(
-            id=int(info[0]),
-            item_id=int(info[1]),
-            name=item.name[: item.name.index("-")],
-            berry_firmness_id=int(info[2]),
-            natural_gift_power=int(info[3]),
-            natural_gift_type_id=int(info[4]),
-            size=int(info[5]),
-            max_harvest=int(info[6]),
-            growth_time=int(info[7]),
-            soil_dryness=int(info[8]),
-            smoothness=int(info[9]),
+            id=int(info[0]) if info[0] and info[0].strip() else None,
+            item_id=int(info[1]) if info[1] and info[1].strip() else None,
+            name=item.name[: item.name.index("-")] if "-" in item.name else item.name,
+            berry_firmness_id=int(info[2]) if info[2] and info[2].strip() else None,
+            natural_gift_power=int(info[3]) if info[3] and info[3].strip() else None,
+            natural_gift_type_id=int(info[4]) if info[4] and info[4].strip() else None,
+            size=int(info[5]) if info[5] and info[5].strip() else None,
+            max_harvest=int(info[6]) if info[6] and info[6].strip() else None,
+            growth_time=int(info[7]) if info[7] and info[7].strip() else None,
+            soil_dryness=int(info[8]) if info[8] and info[8].strip() else None,
+            smoothness=int(info[9]) if info[9] and info[9].strip() else None,
         )
 
     build_generic((Berry,), "berries.csv", csv_record_to_objects)

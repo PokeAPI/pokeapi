@@ -5685,6 +5685,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer):
 
 
 class PokemonEvolutionSerializer(serializers.ModelSerializer):
+    version_group = VersionGroupSummarySerializer()
     item = ItemSummarySerializer(source="evolution_item")
     held_item = ItemSummarySerializer()
     known_move = MoveSummarySerializer()

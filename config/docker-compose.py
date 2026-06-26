@@ -4,7 +4,7 @@ from .settings import *
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ.get("POSTGRES_DB", "pokeapi"),
         "USER": os.environ.get("POSTGRES_USER", "ash"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "pokemon"),
@@ -22,7 +22,5 @@ CACHES = {
         },
     }
 }
-
-DEBUG = False
 
 ALLOWED_HOSTS = ["*"]

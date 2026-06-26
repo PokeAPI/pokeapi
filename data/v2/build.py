@@ -128,32 +128,6 @@ def build_generic(model_classes, file_name, csv_record_to_objects):
         model_class.objects.bulk_create(batch)
 
 
-def scrub_str(string):
-    """
-    The purpose of this function is to scrub the weird template mark-up out of strings
-    that Veekun is using for their pokedex.
-    Example:
-        []{move:dragon-tail} will effect the opponents [HP]{mechanic:hp}.
-    Becomes:
-        dragon tail will effect the opponents HP.
-
-    If you find this results in weird strings please take a stab at improving or re-writing.
-    """
-    groups = re.findall(GROUP_RGX, string)
-    for group in groups:
-        if group[0]:
-            sub = group[0]
-        else:
-            sub = group[1].split(":")
-            if len(sub) >= 2:
-                sub = sub[1]
-            else:
-                sub = sub[0]
-            sub = sub.replace("-", " ")
-        string = re.sub(SUB_RGX, sub, string, 1)
-    return string
-
-
 ##############
 #  LANGUAGE  #
 ##############
@@ -351,8 +325,8 @@ def _build_abilities():
         yield AbilityEffectText(
             ability_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic((AbilityEffectText,), "ability_prose.csv", csv_record_to_objects)
@@ -361,7 +335,7 @@ def _build_abilities():
         yield AbilityChangeEffectText(
             ability_change_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -473,7 +447,7 @@ def _build_items():
         yield ItemFlingEffectEffectText(
             item_fling_effect_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -531,8 +505,8 @@ def _build_items():
         yield ItemEffectText(
             item_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic((ItemEffectText,), "item_prose.csv", csv_record_to_objects)
@@ -660,7 +634,10 @@ def _build_types():
                 sprites[generation][game] = {
                     "name_icon": file_path_or_none(
                         f"types/{generation}/{game}/{info[0]}.png"
-                    )
+                    ),
+                    "symbol_icon": file_path_or_none(
+                        f"types/{generation}/{game}/small/{info[0]}.png"
+                    ),
                 }
 
         yield TypeSprites(type_id=int(info[0]), sprites=sprites)
@@ -747,8 +724,8 @@ def _build_moves():
         yield MoveEffectEffectText(
             move_effect_id=int(info[0]),
             language_id=int(info[1]),
-            short_effect=scrub_str(info[2]),
-            effect=scrub_str(info[3]),
+            short_effect=info[2],
+            effect=info[3],
         )
 
     build_generic(
@@ -768,7 +745,7 @@ def _build_moves():
         yield MoveEffectChangeEffectText(
             move_effect_change_id=int(info[0]),
             language_id=int(info[1]),
-            effect=scrub_str(info[2]),
+            effect=info[2],
         )
 
     build_generic(
@@ -917,7 +894,7 @@ def _build_moves():
         yield MoveAttributeDescription(
             move_attribute_id=int(info[0]),
             language_id=int(info[1]),
-            description=scrub_str(info[3]),
+            description=info[3],
         )
 
     build_generic(
@@ -1388,7 +1365,7 @@ def _build_pokemons():
         yield PokemonSpeciesDescription(
             pokemon_species_id=int(info[0]),
             language_id=int(info[1]),
-            description=scrub_str(info[2]),
+            description=info[2],
         )
 
     build_generic(
@@ -2084,30 +2061,34 @@ def _build_pokemons():
             id=int(info[0]),
             evolved_species_id=int(info[1]),
             evolution_trigger_id=int(info[2]),
-            evolution_item_id=int(info[3]) if info[3] != "" else None,
-            min_level=int(info[4]) if info[4] != "" else None,
-            gender_id=int(info[5]) if info[5] != "" else None,
-            location_id=int(info[6]) if info[6] != "" else None,
-            held_item_id=int(info[7]) if info[7] != "" else None,
-            time_of_day=info[8],
-            known_move_id=int(info[9]) if info[9] != "" else None,
-            known_move_type_id=int(info[10]) if info[10] != "" else None,
-            min_happiness=int(info[11]) if info[11] != "" else None,
-            min_beauty=int(info[12]) if info[12] != "" else None,
-            min_affection=int(info[13]) if info[13] != "" else None,
-            relative_physical_stats=int(info[14]) if info[14] != "" else None,
-            party_species_id=int(info[15]) if info[15] != "" else None,
-            party_type_id=int(info[16]) if info[16] != "" else None,
-            trade_species_id=int(info[17]) if info[17] != "" else None,
-            needs_overworld_rain=bool(int(info[18])),
-            turn_upside_down=bool(int(info[19])),
-            needs_multiplayer=bool(int(info[20])),
-            region_id=int(info[21]) if info[21] != "" else None,
-            base_form_id=int(info[22]) if info[22] != "" else None,
-            used_move_id=int(info[23]) if info[23] != "" else None,
-            min_move_count=int(info[24]) if info[24] != "" else None,
-            min_steps=int(info[25]) if info[25] != "" else None,
-            min_damage_taken=int(info[26]) if info[26] != "" else None,
+            version_group_id=int(info[3]),
+            is_default=bool(int(info[4])),
+            evolution_item_id=int(info[5]) if info[5] != "" else None,
+            min_level=int(info[6]) if info[6] != "" else None,
+            gender_id=int(info[7]) if info[7] != "" else None,
+            location_id=int(info[8]) if info[8] != "" else None,
+            held_item_id=int(info[9]) if info[9] != "" else None,
+            time_of_day=info[10],
+            known_move_id=int(info[11]) if info[11] != "" else None,
+            known_move_type_id=int(info[12]) if info[12] != "" else None,
+            min_happiness=int(info[13]) if info[13] != "" else None,
+            min_beauty=int(info[14]) if info[14] != "" else None,
+            min_affection=int(info[15]) if info[15] != "" else None,
+            relative_physical_stats=int(info[16]) if info[16] != "" else None,
+            party_species_id=int(info[17]) if info[17] != "" else None,
+            party_type_id=int(info[18]) if info[18] != "" else None,
+            trade_species_id=int(info[19]) if info[19] != "" else None,
+            needs_overworld_rain=bool(int(info[20])),
+            turn_upside_down=bool(int(info[21])),
+            needs_multiplayer=bool(int(info[22])),
+            near_special_rock=bool(int(info[23])),
+            region_id=int(info[24]) if info[24] != "" else None,
+            base_form_id=int(info[25]) if info[25] != "" else None,
+            evolved_form_id=int(info[26]) if info[26] != "" else None,
+            used_move_id=int(info[27]) if info[27] != "" else None,
+            min_move_count=int(info[28]) if info[28] != "" else None,
+            min_steps=int(info[29]) if info[29] != "" else None,
+            min_damage_taken=int(info[30]) if info[30] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)
@@ -2280,6 +2261,17 @@ def _build_pokemons():
         )
 
     build_generic((PokemonStat,), "pokemon_stats.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield PokemonStatPast(
+            pokemon_id=int(info[0]),
+            generation_id=int(info[1]),
+            stat_id=int(info[2]),
+            base_stat=int(info[3]),
+            effort=int(info[4]),
+        )
+
+    build_generic((PokemonStatPast,), "pokemon_stats_past.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
         yield PokemonType(

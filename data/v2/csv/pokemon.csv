@@ -590,8 +590,8 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 589,escavalier,589,10,330,173,711,1
 590,foongus,590,2,10,59,712,1
 591,amoonguss,591,6,105,162,713,1
-592,frillish,592,12,330,67,714,1
-593,jellicent,593,22,1350,168,715,1
+592,frillish-male,592,12,330,67,714,1
+593,jellicent-male,593,22,1350,168,715,1
 594,alomomola,594,12,316,165,716,1
 595,joltik,595,1,6,64,717,1
 596,galvantula,596,8,143,165,718,1
@@ -666,7 +666,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 665,spewpa,665,3,84,75,797,1
 666,vivillon,666,12,170,185,798,1
 667,litleo,667,6,135,74,799,1
-668,pyroar,668,15,815,177,800,1
+668,pyroar-male,668,15,815,177,800,1
 669,flabebe,669,1,1,61,801,1
 670,floette,670,2,9,130,802,1
 671,florges,671,11,100,248,804,1
@@ -923,7 +923,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 922,pawmo,922,4,65,123,955,1
 923,pawmot,923,9,410,245,956,1
 924,tandemaus,924,3,18,61,945,1
-925,maushold-family-of-four,925,3,23,165,946,1
+925,maushold-family-of-four,925,3,28,165,946,1
 926,fidough,926,3,109,62,970,1
 927,dachsbun,927,5,149,167,971,1
 928,smoliv,928,3,65,52,935,1
@@ -1280,7 +1280,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10254,oinkologne-female,916,10,1200,171,,0
 10255,dudunsparce-three-segment,982,45,474,182,,0
 10256,palafin-hero,964,18,974,160,,0
-10257,maushold-family-of-three,925,3,28,165,,0
+10257,maushold-family-of-three,925,3,23,165,,0
 10258,tatsugiri-droopy,978,3,80,166,,0
 10259,tatsugiri-stretchy,978,3,80,166,,0
 10260,squawkabilly-blue-plumage,931,6,24,146,,0
@@ -1304,7 +1304,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10278,clefable-mega,36,17,423,,,0
 10279,victreebel-mega,71,45,1255,,,0
 10280,starmie-mega,121,23,800,,,0
-10281,dragonite-mega,149,55,2900,,,0
+10281,dragonite-mega,149,22,2900,,,0
 10282,meganium-mega,154,24,2010,,,0
 10283,feraligatr-mega,160,23,1088,,,0
 10284,skarmory-mega,227,17,404,,,0
@@ -1337,7 +1337,7 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10311,heatran-mega,485,28,5700,,,0
 10312,darkrai-mega,491,30,2400,,,0
 10313,golurk-mega,623,40,3300,,,0
-10314,meowstic-mega,678,8,101,,,0
+10314,meowstic-male-mega,678,8,101,,,0
 10315,crabominable-mega,740,26,2528,,,0
 10316,golisopod-mega,768,23,1480,,,0
 10317,magearna-mega,801,13,2481,,,0
@@ -1349,3 +1349,4 @@ id,identifier,species_id,height,weight,base_experience,order,is_default
 10323,tatsugiri-droopy-mega,978,6,240,,,0
 10324,tatsugiri-stretchy-mega,978,6,240,,,0
 10325,baxcalibur-mega,998,21,3150,,,0
+10326,meowstic-female-mega,678,8,101,,,0

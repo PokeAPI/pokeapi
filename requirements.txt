@@ -1,5 +1,4 @@
-Django==4.2.27
-Unipath==1.1
+Django==5.2.10
 coverage==7.13.1
 django-cors-headers==4.9.0
 django-redis==6.0.0
@@ -7,7 +6,5 @@ django-cachalot==2.8.0
 djangorestframework==3.16.1
 gunicorn==23.0.0
 psycopg[binary]==3.3.2
-python-dateutil==2.9.0
-python-mimeparse==2.0.0
 drf-spectacular==0.29.0
 legacy-cgi; python_version >= '3.13'

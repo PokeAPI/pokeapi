@@ -605,7 +605,9 @@ class RegionDetailSerializer(serializers.ModelSerializer):
     locations = LocationSummarySerializer(many=True, read_only=True, source="location")
     version_groups = serializers.SerializerMethodField("get_region_version_groups")
     pokedexes = PokedexSummarySerializer(many=True, read_only=True, source="pokedex")
-    main_generation = GenerationSummarySerializer(read_only=True, source="generation")
+    main_generation = GenerationSummarySerializer(
+        read_only=True, source="generation", allow_null=True
+    )
 
     class Meta:
         model = Region
@@ -3254,9 +3256,7 @@ class MoveChangeSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
-                        ],
+                        "examples": ["Inflicts regular damage."],
                     },
                     "short_effect": {
                         "type": "string",
@@ -3637,9 +3637,7 @@ class MoveDetailSerializer(serializers.ModelSerializer):
                 "properties": {
                     "effect": {
                         "type": "string",
-                        "examples": [
-                            "Inflicts [regular damage]{mechanic:regular-damage}."
-                        ],
+                        "examples": ["Inflicts regular damage."],
                     },
                     "short_effect": {
                         "type": "string",
@@ -4318,6 +4316,15 @@ class PokemonStatSerializer(serializers.ModelSerializer):
         fields = ("base_stat", "effort", "stat")
 
 
+class PokemonStatPastSerializer(serializers.ModelSerializer):
+    generation = GenerationSummarySerializer()
+    stat = StatSummarySerializer()
+
+    class Meta:
+        model = PokemonStatPast
+        fields = ("base_stat", "effort", "generation", "stat")
+
+
 #########################
 #  POKEMON SERIALIZERS  #
 #########################
@@ -4340,6 +4347,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     moves = serializers.SerializerMethodField("get_pokemon_moves")
     species = PokemonSpeciesSummarySerializer(source="pokemon_species")
     stats = PokemonStatSerializer(many=True, read_only=True, source="pokemonstat")
+    past_stats = serializers.SerializerMethodField("get_past_pokemon_stats")
     types = serializers.SerializerMethodField("get_pokemon_types")
     past_types = serializers.SerializerMethodField("get_past_pokemon_types")
     forms = PokemonFormSummarySerializer(
@@ -4371,6 +4379,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             "sprites",
             "cries",
             "stats",
+            "past_stats",
             "types",
             "past_types",
         )
@@ -5083,6 +5092,98 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
         return final_data
 
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["generation", "stats"],
+                "properties": {
+                    "generation": {
+                        "type": "object",
+                        "required": ["name", "url"],
+                        "properties": {
+                            "name": {"type": "string", "examples": ["generation-vi"]},
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": ["https://pokeapi.co/api/v2/generation/6/"],
+                            },
+                        },
+                    },
+                    "stats": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": ["base_stat", "effort", "stat"],
+                            "properties": {
+                                "base_stat": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "examples": [45],
+                                },
+                                "effort": {
+                                    "type": "integer",
+                                    "format": "int32",
+                                    "examples": [0],
+                                },
+                                "stat": {
+                                    "type": "object",
+                                    "required": ["name", "url"],
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "examples": ["speed"],
+                                        },
+                                        "url": {
+                                            "type": "string",
+                                            "format": "uri",
+                                            "examples": [
+                                                "https://pokeapi.co/api/v2/stat/6/"
+                                            ],
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        }
+    )
+    def get_past_pokemon_stats(self, obj):
+        pokemon_past_stat_objects = PokemonStatPast.objects.filter(pokemon=obj)
+        pokemon_past_stats = PokemonStatPastSerializer(
+            pokemon_past_stat_objects, many=True, context=self.context
+        ).data
+
+        # post-process to the form we want
+        current_generation = ""
+        past_obj = {}
+        final_data = []
+        for pokemon_past_stat in pokemon_past_stats:
+            generation = pokemon_past_stat["generation"]["name"]
+            if generation != current_generation:
+                current_generation = generation
+                past_obj = {}
+
+                # create past stats object for this generation
+                past_obj["generation"] = pokemon_past_stat["generation"]
+                del pokemon_past_stat["generation"]
+
+                # create stats array
+                past_obj["stats"] = [pokemon_past_stat]
+
+                # add to past stats array
+                final_data.append(past_obj)
+
+            else:
+                # add to existing array for this generation
+                del pokemon_past_stat["generation"]
+                past_obj["stats"].append(pokemon_past_stat)
+
+        return final_data
+
     # {
     #   "slot": 1,
     #   "type": {
@@ -5593,13 +5694,16 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
     trade_species = PokemonSpeciesSummarySerializer()
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
-    region_id = RegionSummarySerializer(source="region")
-    base_form_id = PokemonSpeciesSummarySerializer(source="base_form")
+    region = RegionSummarySerializer()
+    base_form = PokemonSummarySerializer()
+    evolved_form = PokemonSummarySerializer()
     used_move = MoveSummarySerializer()
 
     class Meta:
         model = PokemonEvolution
         fields = (
+            "version_group",
+            "is_default",
             "item",
             "trigger",
             "gender",
@@ -5611,6 +5715,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "min_happiness",
             "min_beauty",
             "min_affection",
+            "near_special_rock",
             "needs_multiplayer",
             "needs_overworld_rain",
             "party_species",
@@ -5619,8 +5724,9 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer):
             "time_of_day",
             "trade_species",
             "turn_upside_down",
-            "region_id",
-            "base_form_id",
+            "region",
+            "base_form",
+            "evolved_form",
             "used_move",
             "min_move_count",
             "min_steps",
@@ -5659,6 +5765,8 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                 "items": {
                                     "type": "object",
                                     "required": [
+                                        "version_group",
+                                        "is_default",
                                         "gender",
                                         "held_item",
                                         "item",
@@ -5672,6 +5780,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "min_level",
                                         "min_move_count",
                                         "min_steps",
+                                        "near_special_rock",
                                         "needs_multiplayer",
                                         "needs_overworld_rain",
                                         "party_species",
@@ -5682,10 +5791,28 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                         "trigger",
                                         "turn_upside_down",
                                         "used_move",
-                                        "region_id",
-                                        "base_form_id",
+                                        "region",
+                                        "base_form",
+                                        "evolved_form",
                                     ],
                                     "properties": {
+                                        "version_group": {
+                                            "type": "object",
+                                            "nullable": False,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string",
+                                                    "examples": [1],
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                    "examples": [2],
+                                                },
+                                            },
+                                        },
+                                        "is_default": {"type": "boolean"},
                                         "gender": {
                                             "type": "",
                                             "nullable": True,
@@ -5792,6 +5919,10 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "format": "int32",
                                             "nullable": True,
                                         },
+                                        "near_special_rock": {
+                                            "type": "boolean",
+                                            "nullable": True,
+                                        },
                                         "needs_multiplayer": {
                                             "type": "boolean",
                                             "nullable": True,
@@ -5835,7 +5966,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                             "type": "",
                                             "nullable": True,
                                         },
-                                        "region_id": {
+                                        "region": {
                                             "type": "object",
                                             "nullable": True,
                                             "required": ["name", "url"],
@@ -5847,7 +5978,19 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer):
                                                 },
                                             },
                                         },
-                                        "base_form_id": {
+                                        "base_form": {
+                                            "type": "object",
+                                            "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {
+                                                    "type": "string",
+                                                    "format": "uri",
+                                                },
+                                            },
+                                        },
+                                        "evolved_form": {
                                             "type": "object",
                                             "nullable": True,
                                             "required": ["name", "url"],

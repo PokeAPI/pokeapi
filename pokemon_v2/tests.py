@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *
@@ -730,7 +731,8 @@ class APIData:
                     sprites[generation][game] = None
                 else:
                     sprites[generation][game] = {
-                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png"
+                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png",
+                        "symbol_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/small/{type.id}.png",
                     }
 
         type_sprites = TypeSprites.objects.create(
@@ -1657,6 +1659,21 @@ class APIData:
         return pokemon_stat
 
     @classmethod
+    def setup_pokemon_past_stat_data(cls, pokemon, generation, base_stat=10, effort=10):
+        stat = cls.setup_stat_data(name="stt for pkmn")
+
+        pokemon_stat_past = PokemonStatPast(
+            pokemon=pokemon,
+            generation=generation,
+            stat=stat,
+            base_stat=base_stat,
+            effort=effort,
+        )
+        pokemon_stat_past.save()
+
+        return pokemon_stat_past
+
+    @classmethod
     def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):
         type = type or cls.setup_type_data(name="tp for pkmn")
 
@@ -1827,6 +1844,8 @@ class APIData:
         cls,
         evolved_species=None,
         evolution_trigger=None,
+        version_group=None,
+        is_default=0,
         party_species=None,
         trade_species=None,
         evolution_item=None,
@@ -1844,7 +1863,11 @@ class APIData:
         relative_physical_stats=0,
         needs_overworld_rain=False,
         turn_upside_down=False,
+        region=None,
+        base_form=None,
+        evolved_form=None,
         needs_multiplayer=False,
+        near_special_rock=False,
         used_move=None,
         min_move_count=None,
         min_steps=None,
@@ -1861,6 +1884,8 @@ class APIData:
         pokemon_evolution = PokemonEvolution.objects.create(
             evolved_species=evolved_species,
             evolution_trigger=evolution_trigger,
+            version_group=version_group,
+            is_default=is_default,
             evolution_item=evolution_item,
             min_level=min_level,
             gender=gender,
@@ -1878,7 +1903,11 @@ class APIData:
             trade_species=trade_species,
             needs_overworld_rain=needs_overworld_rain,
             turn_upside_down=turn_upside_down,
+            region=region,
+            base_form=base_form,
+            evolved_form=evolved_form,
             needs_multiplayer=needs_multiplayer,
+            near_special_rock=near_special_rock,
             used_move=used_move,
             min_move_count=min_move_count,
             min_steps=min_steps,
@@ -3643,6 +3672,12 @@ class APITests(APIData, APITestCase):
                     json.loads(response.data["sprites"])[generation][game]["name_icon"],
                     sprites_data[generation][game]["name_icon"],
                 )
+                self.assertEqual(
+                    json.loads(response.data["sprites"])[generation][game][
+                        "symbol_icon"
+                    ],
+                    sprites_data[generation][game]["symbol_icon"],
+                )
 
     # Pokedex Tests
     def test_pokedex_api(self):
@@ -4904,6 +4939,9 @@ class APITests(APIData, APITestCase):
             pokemon=pokemon, generation=generation
         )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_past_stat = self.setup_pokemon_past_stat_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
@@ -5028,6 +5066,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["stats"][0]["stat"]["url"],
             "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_stat.stat.pk),
+        )
+        # past stat params
+        past_stats_obj = response.data["past_stats"][0]
+        self.assertEqual(
+            past_stats_obj["generation"]["name"],
+            pokemon_past_stat.generation.name,
+        )
+        self.assertEqual(
+            past_stats_obj["generation"]["url"],
+            "{}{}/generation/{}/".format(
+                TEST_HOST, API_V2, pokemon_past_stat.generation.pk
+            ),
+        )
+
+        past_stats_stats_obj = past_stats_obj["stats"][0]
+        self.assertEqual(past_stats_stats_obj["base_stat"], pokemon_past_stat.base_stat)
+        self.assertEqual(past_stats_stats_obj["effort"], pokemon_past_stat.effort)
+        self.assertEqual(
+            past_stats_stats_obj["stat"]["name"], pokemon_past_stat.stat.name
+        )
+        self.assertEqual(
+            past_stats_stats_obj["stat"]["url"],
+            "{}{}/stat/{}/".format(TEST_HOST, API_V2, pokemon_past_stat.stat.pk),
         )
         # type params
         self.assertEqual(response.data["types"][0]["slot"], pokemon_type.slot)
@@ -5719,6 +5780,9 @@ class APITests(APIData, APITestCase):
             pokemon=pokemon, generation=generation
         )
         pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
+        pokemon_past_stat = self.setup_pokemon_past_stat_data(
+            pokemon=pokemon, generation=generation
+        )
         pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
         pokemon_past_type = self.setup_pokemon_past_type_data(
             pokemon=pokemon, generation=generation
@@ -5811,3 +5875,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    # Meta Tests
+    def test_meta_api(self):
+        response = self.client.get("{}/meta/".format(API_V2))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(datetime.fromtimestamp(int(response.data["deploy_date"])))
+        self.assertEqual(10, len(response.data["deploy_date"]))
+        self.assertEqual(40, len(response.data["hash"]))
+        self.assertIn("tag", response.data)

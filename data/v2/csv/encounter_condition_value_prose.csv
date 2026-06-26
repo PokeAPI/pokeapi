@@ -332,3 +332,6 @@ encounter_condition_value_id,local_language_id,name
 209,9,Interact with a Green Berry Tree
 210,9,Interact with a Yellow Berry Tree
 211,9,Interact with a Pink Berry Tree
+212,9,Interact with a Shaking Trash Can (Daily)
+213,9,Interact with a Shaking Trash Can (Tuesday)
+214,9,Interact with a Shaking Trash Can (Thursday)

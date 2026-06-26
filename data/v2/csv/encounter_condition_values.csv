@@ -210,3 +210,6 @@ id,encounter_condition_id,identifier,is_default
 209,23,berry-tree-green,1
 210,23,berry-tree-yellow,1
 211,23,berry-tree-pink,1
+212,24,daily-trash-can,1
+213,24,tuesday-trash-can,1
+214,24,thursday-trash-can,1

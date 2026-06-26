@@ -1001,7 +1001,7 @@ def _build_berries():
     def csv_record_to_objects(info):
         item = Item.objects.get(pk=int(info[1]))
         yield Berry(
-            id=int(info[0]) if info[0] and info[0].strip() else None,
+            id=int(info[0]),
             item_id=int(info[1]) if info[1] and info[1].strip() else None,
             name=item.name[: item.name.index("-")] if "-" in item.name else item.name,
             berry_firmness_id=int(info[2]) if info[2] and info[2].strip() else None,

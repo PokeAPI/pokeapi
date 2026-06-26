@@ -79,6 +79,7 @@ encounter_method_id,local_language_id,name
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
 34,9,Fishing at bubbling spots in the water
+35,9,Interacting with a Berry Tree
 38,9,Walking in the overworld
 38,5,En marchant dans le monde extérieur
 39,9,Surfing in the overworld
@@ -103,9 +104,9 @@ encounter_method_id,local_language_id,name
 53,9,"Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness."
 54,9,Finding a Pokemon in a Hidden Grotto
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
-35,9,Interacting with a Berry Tree
-56,9,Interacting with a Trash Can
-57,9,Ambushed by a Wild Pokemon from a Rustling Bush
-58,9,Ambushed by a Wild Pokemon from the Ceiling of a Cave
-59,9,Ambushed by a Wild Pokemon from the Ground
-60,9,Ambushed by a Wild Pokemon from the Sky
+56,9,Overworld spawn coming from underground
+57,9,Interacting with a Trash Can
+58,9,Ambushed by a Wild Pokemon from a Rustling Bush
+59,9,Ambushed by a Wild Pokemon from the Ceiling of a Cave
+60,9,Ambushed by a Wild Pokemon from the Ground
+61,9,Ambushed by a Wild Pokemon from the Sky

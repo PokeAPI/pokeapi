@@ -54,8 +54,9 @@ id,identifier,order
 53,pokespot,53
 54,hidden-grotto,54
 55,honey-tree,55
-56,trash-can,56
-57,rustling-bush-ambush,57
-58,ceiling-ambush,58
-59,ground-ambush,59
-60,sky-ambush,60
+56,overworld-dirt,56
+57,trash-can,57
+58,rustling-bush-ambush,58
+59,ceiling-ambush,59
+60,ground-ambush,60
+61,sky-ambush,61

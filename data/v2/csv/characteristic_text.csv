@@ -9,6 +9,7 @@ characteristic_id,local_language_id,message
 1,9,Loves to eat
 1,11,食べるのが　大好き
 1,12,非常喜欢吃东西
+1,14,Le encanta comer
 2,1,ちからが　じまん
 2,3,힘자랑이 특기임
 2,4,以力氣大為傲
@@ -19,6 +20,7 @@ characteristic_id,local_language_id,message
 2,9,Proud of its power
 2,11,力が　自慢
 2,12,以力气大为傲
+2,14,Se enorgullece de su fuerza
 3,1,からだが　じょうぶ
 3,3,몸이 튼튼함
 3,4,身體強壯
@@ -29,6 +31,7 @@ characteristic_id,local_language_id,message
 3,9,Sturdy body
 3,11,体が　丈夫
 3,12,身体强壮
+3,14,Se caracteriza por su cuerpo resistente
 4,1,こうきしんが　つよい
 4,3,호기심이 강함
 4,4,好奇心強
@@ -39,6 +42,7 @@ characteristic_id,local_language_id,message
 4,9,Highly curious
 4,11,好奇心が　強い
 4,12,好奇心强
+4,14,Siente mucha curiosidad por todo
 5,1,きが　つよい
 5,3,기가 센 성격임
 5,4,性格強勢
@@ -49,6 +53,7 @@ characteristic_id,local_language_id,message
 5,9,Strong willed
 5,11,気が　強い
 5,12,性格强势
+5,14,Se distingue por su gran fuerza de voluntad
 6,1,かけっこが　すき
 6,3,달리기를 좋아함
 6,4,喜歡比誰跑得快
@@ -59,6 +64,7 @@ characteristic_id,local_language_id,message
 6,9,Likes to run
 6,11,駆けっこが　好き
 6,12,喜欢比谁跑得快
+6,14,Le gusta ir muy rápido
 7,1,ひるねを　よくする
 7,3,낮잠을 잘 잠
 7,4,經常睡午覺
@@ -69,6 +75,7 @@ characteristic_id,local_language_id,message
 7,9,Takes plenty of siestas
 7,11,昼寝を　よくする
 7,12,经常睡午觉
+7,14,A menudo se duerme
 8,1,あばれることが　すき
 8,3,난동부리기를 좋아함
 8,4,喜歡胡鬧
@@ -79,6 +86,7 @@ characteristic_id,local_language_id,message
 8,9,Likes to thrash about
 8,11,暴れることが　好き
 8,12,喜欢胡闹
+8,14,Le gusta revolverse
 9,1,うたれ　づよい
 9,3,맷집이 강함
 9,4,抗打能力強
@@ -89,6 +97,7 @@ characteristic_id,local_language_id,message
 9,9,Capable of taking hits
 9,11,打たれ強い
 9,12,抗打能力强
+9,14,Encaja bien los ataques
 10,1,イタズラが　すき
 10,3,장난을 좋아함
 10,4,喜歡惡作劇
@@ -99,6 +108,7 @@ characteristic_id,local_language_id,message
 10,9,Mischievous
 10,11,イタズラが　好き
 10,12,喜欢恶作剧
+10,14,Le gusta hacer travesuras
 11,1,ちょっぴり　みえっぱり
 11,3,조금 겉치레를 좋아함
 11,4,有一點點愛慕虛榮
@@ -109,6 +119,7 @@ characteristic_id,local_language_id,message
 11,9,Somewhat vain
 11,11,ちょっぴり　みえっぱり
 11,12,有一点点爱慕虚荣
+11,14,Es un poco petulante
 12,1,ものおとに　びんかん
 12,3,주위 소리에 민감함
 12,4,對聲音敏感
@@ -119,6 +130,7 @@ characteristic_id,local_language_id,message
 12,9,Alert to sounds
 12,11,物音に　敏感
 12,12,对声音敏感
+12,14,Siempre tiene el oído alerta
 13,1,いねむりが　おおい
 13,3,말뚝잠이 많음
 13,4,常常打瞌睡
@@ -129,6 +141,7 @@ characteristic_id,local_language_id,message
 13,9,Nods off a lot
 13,11,居眠りが　多い
 13,12,常常打瞌睡
+13,14,Duerme mucho
 14,1,ちょっと　おこりっぽい
 14,3,약간 화를 잘 내는 성미임
 14,4,有點容易生氣
@@ -139,6 +152,7 @@ characteristic_id,local_language_id,message
 14,9,A little quick tempered
 14,11,ちょっと　怒りっぽい
 14,12,有点容易生气
+14,14,A veces se enfada
 15,1,ねばり　づよい
 15,3,끈질김
 15,4,頑強不屈
@@ -149,6 +163,7 @@ characteristic_id,local_language_id,message
 15,9,Highly persistent
 15,11,粘り強い
 15,12,顽强不屈
+15,14,Es muy persistente
 16,1,ぬけめが　ない
 16,3,빈틈이 없음
 16,4,做事萬無一失
@@ -159,6 +174,7 @@ characteristic_id,local_language_id,message
 16,9,Thoroughly cunning
 16,11,抜け目が　ない
 16,12,做事万无一失
+16,14,Es muy sagaz
 17,1,まけんきが　つよい
 17,3,오기가 센 성격임
 17,4,爭強好勝
@@ -169,6 +185,7 @@ characteristic_id,local_language_id,message
 17,9,Strongly defiant
 17,11,負けん気が　強い
 17,12,争强好胜
+17,14,Es muy insolente
 18,1,おっちょこちょい
 18,3,촐랑대는 성격임
 18,4,冒冒失失
@@ -179,6 +196,7 @@ characteristic_id,local_language_id,message
 18,9,Impetuous and silly
 18,11,おっちょこちょい
 18,12,冒冒失失
+18,14,Es de carácter simple e impetuoso
 19,1,ものを　よく　ちらかす
 19,3,물건을 잘 어지름
 19,4,經常亂扔東西
@@ -189,6 +207,7 @@ characteristic_id,local_language_id,message
 19,9,Scatters things often
 19,11,ものを　よく　散らかす
 19,12,经常乱扔东西
+19,14,Suele desordenar cosas
 20,1,ケンカを　するのが　すき
 20,3,싸움을 좋아함
 20,4,喜歡打架
@@ -199,6 +218,7 @@ characteristic_id,local_language_id,message
 20,9,Likes to fight
 20,11,ケンカを　するのが　好き
 20,12,喜欢打架
+20,14,Le gusta luchar
 21,1,しんぼう　づよい
 21,3,인내심이 강함
 21,4,能吃苦耐勞
@@ -209,6 +229,7 @@ characteristic_id,local_language_id,message
 21,9,Good endurance
 21,11,辛抱強い
 21,12,能吃苦耐劳
+21,14,Se caracteriza por ser muy resistente
 22,1,かんがえごとが　おおい
 22,3,걱정거리가 많음
 22,4,經常思考
@@ -219,6 +240,7 @@ characteristic_id,local_language_id,message
 22,9,Often lost in thought
 22,11,考え事が　多い
 22,12,经常思考
+22,14,A menudo está en Babia
 23,1,まけずぎらい
 23,3,지기 싫어함
 23,4,不服輸
@@ -229,6 +251,7 @@ characteristic_id,local_language_id,message
 23,9,Hates to lose
 23,11,負けず嫌い
 23,12,不服输
+23,14,Odia perder
 24,1,すこし　おちょうしもの
 24,3,약간 우쭐쟁이임
 24,4,有點容易得意忘形
@@ -239,6 +262,7 @@ characteristic_id,local_language_id,message
 24,9,Somewhat of a clown
 24,11,すこし　お調子者
 24,12,有点容易得意忘形
+24,14,Le encanta hacer payasadas
 25,1,のんびりするのが　すき
 25,3,유유자적함을 좋아함
 25,4,喜歡悠然自在
@@ -249,6 +273,7 @@ characteristic_id,local_language_id,message
 25,9,Likes to relax
 25,11,のんびりするのが　好き
 25,12,喜欢悠然自在
+25,14,Le gusta relajarse
 26,1,ちのけが　おおい
 26,3,혈기가 왕성함
 26,4,血氣方剛
@@ -259,6 +284,7 @@ characteristic_id,local_language_id,message
 26,9,Quick tempered
 26,11,血の気が　多い
 26,12,血气方刚
+26,14,Tiene mal genio
 27,1,がまん　づよい
 27,3,잘 참음
 27,4,善於忍耐
@@ -269,6 +295,7 @@ characteristic_id,local_language_id,message
 27,9,Good perseverance
 27,11,我慢強い
 27,12,善于忍耐
+27,14,Es muy perseverante
 28,1,とても　きちょうめん
 28,3,매우 꼼꼼함
 28,4,一絲不苟
@@ -279,6 +306,7 @@ characteristic_id,local_language_id,message
 28,9,Very finicky
 28,11,とても　きちょうめん
 28,12,一丝不苟
+28,14,Es muy tiquismiquis
 29,1,ちょっぴり　ごうじょう
 29,3,조금 고집통이임
 29,4,有一點點固執
@@ -289,6 +317,7 @@ characteristic_id,local_language_id,message
 29,9,Somewhat stubborn
 29,11,ちょっぴり　強情
 29,12,有一点点固执
+29,14,Es un poco cabezota
 30,1,にげるのが　はやい
 30,3,도망에는 선수임
 30,4,逃得快
@@ -299,3 +328,4 @@ characteristic_id,local_language_id,message
 30,9,Quick to flee
 30,11,逃げるのが　はやい
 30,12,逃得快
+30,14,Huye rápido

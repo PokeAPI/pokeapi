@@ -4420,6 +4420,10 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         sprites = sprites_object.sprites
         if obj.pokemon_species.gender_rate == 8:
+            if isinstance(sprites, str):
+                parsed = json.loads(sprites)
+                self._fill_female_sprites(parsed)
+                return json.dumps(parsed)
             self._fill_female_sprites(sprites)
         return sprites
 

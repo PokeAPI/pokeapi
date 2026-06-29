@@ -261,6 +261,6 @@ id,encounter_condition_id,identifier,is_default
 260,26,berry-tree-green,1
 261,26,berry-tree-yellow,1
 262,26,berry-tree-pink,1
-263,27,daily-trash-can,1
-264,27,tuesday-trash-can,1
-265,27,thursday-trash-can,1
+263,27,trash-can-type-daily,1
+264,27,trash-can-type-tuesday,1
+265,27,trash-can-type-thursday,1

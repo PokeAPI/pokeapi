@@ -6,7 +6,7 @@ import json
 import os
 from typing import Optional
 
-CSVDIR = os.path.join(os.path.dirname(__file__), "../data/v2/csv")
+CSVDIR = os.path.join(os.path.dirname(__file__), "../../../data/v2/csv")
 
 
 def read_csv(

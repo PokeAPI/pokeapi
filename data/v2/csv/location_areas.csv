@@ -734,7 +734,7 @@ id,location_id,game_index,identifier
 852,875,0,steamdrift-way
 853,876,0,main
 854,876,0,circhester-bay
-855,876,0,outer-spikemouth
+855,876,0,outer-spikemuth
 856,877,0,main
 857,877,0,near-station
 858,878,0,
@@ -755,8 +755,7 @@ id,location_id,game_index,identifier
 873,890,0,
 874,891,0,
 875,892,0,
-876,893,0,main
-877,893,0,beach
+876,893,0,
 878,894,0,
 879,895,0,
 880,896,0,
@@ -796,9 +795,9 @@ id,location_id,game_index,identifier
 914,926,0,
 915,927,0,
 916,928,0,main
-917,928,0,2
+917,928,0,area-2
 918,929,0,
-919,930,0,
+919,930,0,main
 920,931,0,
 921,932,0,
 922,933,0,main
@@ -1248,3 +1247,11 @@ id,location_id,game_index,identifier
 1366,869,0,lakeside
 1367,918,0,gym
 1368,870,0,west
+1369,930,0,deep
+1370,1114,0,tower-summit
+1371,1115,0,
+1372,924,0,leons-room
+1373,918,0,pokemon-center
+1374,945,0,gym
+1375,880,0,gym
+1376,1116,0,

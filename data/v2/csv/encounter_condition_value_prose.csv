@@ -326,68 +326,119 @@ encounter_condition_value_id,local_language_id,name
 203,9,Mr. Backlot has mentioned seeing this Pokemon in the garden
 204,9,Not during the Bug-Catching Contest
 205,9,During the Bug-Catching Contest
-206,9,Encounter slot active when no block-based encounter is replacing it
-207,9,At least 2 Plains block points placed
-208,9,At least 3 Plains block points placed
-209,9,At least 4 Plains block points placed
-210,9,At least 5 Plains block points placed
-211,9,At least 6 Plains block points placed
-212,9,At least 10 Plains block points placed
-213,9,At least 12 Plains block points placed
-214,9,At least 14 Plains block points placed
-215,9,At least 15 Plains block points placed
-216,9,At least 24 Plains block points placed
-217,9,At least 28 Plains block points placed
-218,9,At least 35 Plains block points placed
-219,9,At least 49 Plains block points placed
-220,9,At least 3 Forest block points placed
-221,9,At least 4 Forest block points placed
-222,9,At least 5 Forest block points placed
-223,9,At least 8 Forest block points placed
-224,9,At least 10 Forest block points placed
-225,9,At least 14 Forest block points placed
-226,9,At least 15 Forest block points placed
-227,9,At least 18 Forest block points placed
-228,9,At least 20 Forest block points placed
-229,9,At least 28 Forest block points placed
-230,9,At least 35 Forest block points placed
-231,9,At least 42 Forest block points placed
-232,9,At least 49 Forest block points placed
-233,9,At least 56 Forest block points placed
-234,9,At least 3 Peak block points placed
-235,9,At least 4 Peak block points placed
-236,9,At least 5 Peak block points placed
-237,9,At least 6 Peak block points placed
-238,9,At least 8 Peak block points placed
-239,9,At least 10 Peak block points placed
-240,9,At least 15 Peak block points placed
-241,9,At least 21 Peak block points placed
-242,9,At least 24 Peak block points placed
-243,9,At least 28 Peak block points placed
-244,9,At least 35 Peak block points placed
-245,9,At least 42 Peak block points placed
-246,9,At least 49 Peak block points placed
-247,9,At least 56 Peak block points placed
-248,9,At least 63 Peak block points placed
-249,9,At least 2 Water block points placed
-250,9,At least 3 Water block points placed
-251,9,At least 4 Water block points placed
-252,9,At least 5 Water block points placed
-253,9,At least 6 Water block points placed
-254,9,At least 7 Water block points placed
-255,9,At least 8 Water block points placed
-256,9,At least 9 Water block points placed
-257,9,At least 10 Water block points placed
-258,9,At least 12 Water block points placed
-259,9,At least 13 Water block points placed
-260,9,At least 14 Water block points placed
-261,9,At least 15 Water block points placed
-262,9,At least 16 Water block points placed
-263,9,At least 18 Water block points placed
-264,9,At least 20 Water block points placed
-265,9,At least 24 Water block points placed
-266,9,At least 28 Water block points placed
-267,9,At least 30 Water block points placed
-268,9,At least 35 Water block points placed
-269,9,At least 42 Water block points placed
-270,9,At least 49 Water block points placed
+206,9,Have save data from Let's Go Pikachu
+207,9,Have save data from Let's Go Eevee
+208,9,Have Fossilized Bird in bag
+209,9,Have Fossilized Drake in bag
+210,9,Have Fossilized Dino in bag
+211,9,Have Fossilized Fish in bag
+212,9,Complete the Master Dojo's first trial
+213,9,Complete all three Master Dojo trials
+214,9,Find 5 Alolan Diglett in Isle of Armor
+215,9,Find 10 Alolan Diglett in Isle of Armor
+216,9,Find 20 Alolan Diglett in Isle of Armor
+217,9,Find 30 Alolan Diglett in Isle of Armor
+218,9,Find 40 Alolan Diglett in Isle of Armor
+219,9,Find 50 Alolan Diglett in Isle of Armor
+220,9,Find 75 Alolan Diglett in Isle of Armor
+221,9,Find 100 Alolan Diglett in Isle of Armor
+222,9,Find 150 Alolan Diglett in Isle of Armor
+223,9,Grookey as starter
+224,9,Scorbunny as starter
+225,9,Sobble as starter
+226,9,Save Freezington from the onslaught from Glastrier or Spectrier
+227,9,Catch 5 Ultra Beasts in Dynamax Adventures
+228,9,Give Bunnelby in a Trade
+229,9,Give Galarian Meowth in a Trade
+230,9,Give Minccino in a Trade
+231,9,Give Toxel in a Trade
+232,9,Give Maractus in a Trade
+233,9,Give Galarian Yamask in a Trade
+234,9,Give Vanillish in a Trade
+235,9,Give Obstagoon in a Trade
+236,9,Give Frosmoth in a Trade
+237,9,Give Galarian Farfetch'd in a Trade
+238,9,Give Galarian Corsola in a Trade
+239,9,Give Galarian Ponyta in a Trade
+240,9,Give Galarian Mr. Mime in a Trade
+241,9,Give Galarian Darumaka in a Trade
+242,9,Give Galarian Zigzagoon in a Trade
+243,9,Give Galarian Stunfisk in a Trade
+244,9,Give Galarian Weezing in a Trade
+245,9,Give Exeggutor in a Trade
+246,9,Give Marowak in a Trade
+247,9,During normal weather
+248,9,During overcast weather
+249,9,During rainy weather
+250,9,During a thunderstorm
+251,9,During snowy weather
+252,9,During a snowstorm
+253,9,During a sandstorm
+254,9,During intense sun
+255,9,During foggy weather
+256,9,Before entering the Hall of Fame
+257,9,Encounter slot active when no block-based encounter is replacing it
+258,9,At least 2 Plains block points placed
+259,9,At least 3 Plains block points placed
+260,9,At least 4 Plains block points placed
+261,9,At least 5 Plains block points placed
+262,9,At least 6 Plains block points placed
+263,9,At least 10 Plains block points placed
+264,9,At least 12 Plains block points placed
+265,9,At least 14 Plains block points placed
+266,9,At least 15 Plains block points placed
+267,9,At least 24 Plains block points placed
+268,9,At least 28 Plains block points placed
+269,9,At least 35 Plains block points placed
+270,9,At least 49 Plains block points placed
+271,9,At least 3 Forest block points placed
+272,9,At least 4 Forest block points placed
+273,9,At least 5 Forest block points placed
+274,9,At least 8 Forest block points placed
+275,9,At least 10 Forest block points placed
+276,9,At least 14 Forest block points placed
+277,9,At least 15 Forest block points placed
+278,9,At least 18 Forest block points placed
+279,9,At least 20 Forest block points placed
+280,9,At least 28 Forest block points placed
+281,9,At least 35 Forest block points placed
+282,9,At least 42 Forest block points placed
+283,9,At least 49 Forest block points placed
+284,9,At least 56 Forest block points placed
+285,9,At least 3 Peak block points placed
+286,9,At least 4 Peak block points placed
+287,9,At least 5 Peak block points placed
+288,9,At least 6 Peak block points placed
+289,9,At least 8 Peak block points placed
+290,9,At least 10 Peak block points placed
+291,9,At least 15 Peak block points placed
+292,9,At least 21 Peak block points placed
+293,9,At least 24 Peak block points placed
+294,9,At least 28 Peak block points placed
+295,9,At least 35 Peak block points placed
+296,9,At least 42 Peak block points placed
+297,9,At least 49 Peak block points placed
+298,9,At least 56 Peak block points placed
+299,9,At least 63 Peak block points placed
+300,9,At least 2 Water block points placed
+301,9,At least 3 Water block points placed
+302,9,At least 4 Water block points placed
+303,9,At least 5 Water block points placed
+304,9,At least 6 Water block points placed
+305,9,At least 7 Water block points placed
+306,9,At least 8 Water block points placed
+307,9,At least 9 Water block points placed
+308,9,At least 10 Water block points placed
+309,9,At least 12 Water block points placed
+310,9,At least 13 Water block points placed
+311,9,At least 14 Water block points placed
+312,9,At least 15 Water block points placed
+313,9,At least 16 Water block points placed
+314,9,At least 18 Water block points placed
+315,9,At least 20 Water block points placed
+316,9,At least 24 Water block points placed
+317,9,At least 28 Water block points placed
+318,9,At least 30 Water block points placed
+319,9,At least 35 Water block points placed
+320,9,At least 42 Water block points placed
+321,9,At least 49 Water block points placed

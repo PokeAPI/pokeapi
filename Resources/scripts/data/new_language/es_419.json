@@ -1,0 +1,59 @@
+{
+  "source_language_id": 7,
+  "target_language": {
+    "id": 14,
+    "iso639": "es",
+    "iso3166": "mx",
+    "identifier": "es-419",
+    "official": 1,
+    "order": 14
+  },
+  "source_language_names": {
+    "1": "Japonés Hiragana y Katakana",
+    "2": "Romaji",
+    "3": "Coreano",
+    "4": "Chino tradicional",
+    "5": "Francés",
+    "6": "Alemán",
+    "7": "Español",
+    "8": "Italiano",
+    "9": "Inglés",
+    "10": "Checo",
+    "11": "Japonés",
+    "12": "Chino simplificado",
+    "13": "Portugués brasileño",
+    "14": "Español latinoamericano"
+  },
+  "target_local_language_names": {
+    "1": "Japonés Hiragana y Katakana",
+    "2": "Romaji",
+    "3": "Coreano",
+    "4": "Chino tradicional",
+    "5": "Francés",
+    "6": "Alemán",
+    "7": "Español",
+    "8": "Italiano",
+    "9": "Inglés",
+    "10": "Checo",
+    "11": "Japonés",
+    "12": "Chino simplificado",
+    "13": "Portugués brasileño",
+    "14": "Español latinoamericano"
+  },
+  "target_language_names": {
+    "1": "ラテンアメリカスペイン語",
+    "2": "Raten Amerika Supein-go",
+    "3": "라틴 아메리카 스페인어",
+    "4": "拉丁美洲西班牙文",
+    "5": "Espagnol latino américain",
+    "6": "Lateinamerikanisches Spanisch",
+    "7": "Español latinoamericano",
+    "8": "Spagnolo latinoamericano",
+    "9": "Latin American Spanish",
+    "10": "Latinskoamerická španělština",
+    "11": "ラテンアメリカスペイン語",
+    "12": "拉丁美洲西班牙语",
+    "13": "Espanhol latino americano",
+    "14": "Español latinoamericano"
+  }
+}

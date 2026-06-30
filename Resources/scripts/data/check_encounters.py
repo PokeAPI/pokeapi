@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# Written by @jemarq04 (37006684)
+# Run check_encounters.py --help for a description of its arguments
+
 import argparse
 import csv
 import json
@@ -55,7 +58,10 @@ def main():
         help="first encounter ID to load",
     )
     parser.add_argument(
-        "--slot", action="store_true", help="store information from encounter_slots.csv"
+        "-s",
+        "--slot",
+        action="store_true",
+        help="store information from encounter_slots.csv",
     )
     parser.add_argument(
         "-f",
@@ -64,6 +70,7 @@ def main():
         help="write files to directory even if it exists",
     )
     parser.add_argument(
+        "-S",
         "--summary",
         action="store_true",
         help="just provide percentages for each pokemon",

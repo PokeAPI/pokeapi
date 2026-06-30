@@ -31,8 +31,6 @@ jobs:
           platforms: linux/amd64,linux/arm64 #,linux/arm/v7,linux/arm/v6
           tags: pokeapi/pokeapi:local
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha,scope=docker
-          cache-to: type=gha,scope=docker,mode=max
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
   k8s:
@@ -63,8 +61,6 @@ jobs:
           platforms: local
           tags: pokeapi/pokeapi:local
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha,scope=docker
-          cache-to: type=gha,scope=docker,mode=max
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
       - name: Lint k8s

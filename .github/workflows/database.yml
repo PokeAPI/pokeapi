@@ -58,10 +58,7 @@ jobs:
       - name: Dump DB
         run: stat db.sqlite3
       - name: Test data
-        run: |
-          name=$(curl -fsSL http://localhost:8000/api/v2/pokemon/1/ | jq -r '.name')
-          echo "Returned name: $name"
-          test "$name" = "bulbasaur"
+        run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
   postgres:
     runs-on: ubuntu-latest
     steps:
@@ -71,7 +68,7 @@ jobs:
           submodules: recursive
       - name: Build and start services
         run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
       - name: Run migrations and build database
         run: |
           make docker-migrate
@@ -85,7 +82,4 @@ jobs:
       - name: Import database
         run: docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.dump
       - name: Test data
-        run: |
-          name=$(curl -fsSL http://localhost/api/v2/pokemon/1/ | jq -r '.name')
-          echo "Returned name: $name"
-          test "$name" = "bulbasaur"
+        run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

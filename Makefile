@@ -12,7 +12,6 @@ help:
 
 check-uv:
 	@command -v uv >/dev/null 2>&1 \
-		&& echo "uv is installed: $$(uv --version)" \
 		|| { \
 			echo >&2 "uv is not installed. Install it from: https://docs.astral.sh/uv/getting-started/installation/"; \
 			exit 1; \

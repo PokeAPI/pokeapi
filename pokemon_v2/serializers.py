@@ -3892,6 +3892,15 @@ class PokemonFormNameSerializer(serializers.ModelSerializer):
         model = PokemonFormName
         fields = ("name", "pokemon_name", "language")
 
+class PokemonFormTriggerSerializer(serializers.ModelSerializer):
+    method = serializers.CharField(source="form_method.name", read_only=True)
+    item = ItemSummarySerializer()
+    ability = AbilitySummarySerializer()
+    move = MoveSummarySerializer()
+
+    class Meta:
+        model = PokemonFormCondition
+        fields = ("method", "item", "ability", "move")
 
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
     pokemon = PokemonSummarySerializer()
@@ -3900,6 +3909,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     form_names = serializers.SerializerMethodField("get_pokemon_form_names")
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
     types = serializers.SerializerMethodField("get_pokemon_form_types")
+    trigger_conditions = serializers.SerializerMethodField("get_pokemon_form_triggers")
 
     class Meta:
         model = PokemonForm
@@ -3918,6 +3928,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "form_names",
             "names",
             "types",
+            "trigger_conditions",
         )
 
     @extend_schema_field(
@@ -4082,6 +4093,52 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 del form_type["pokemon"]
 
         return form_types
+
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["method", "name", "url"],
+                "properties": {
+                    "method": {
+                        "type": "string",
+                        "examples": ["held-item"],
+                    },
+                    "name": {
+                        "type": "string",
+                        "examples": ["venusaurite"],
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": ["https://pokeapi.co/api/v2/item/698/"],
+                    },
+                },
+            },
+        }
+    )
+    def get_pokemon_form_triggers(self, obj):
+        conditions = PokemonFormCondition.objects.filter(
+            pokemon_form=obj
+        )
+        conditions_data = PokemonFormTriggerSerializer(
+            conditions, many=True, context=self.context
+        ).data
+
+        triggers = []
+        for condition in conditions_data:
+            method = condition.pop("method", None)
+            if not method:
+                continue
+            trigger = {"method": method}
+            for value in condition.values():
+                if value:
+                    trigger.update(value)
+                    break
+            triggers.append(trigger)
+        return triggers
+    
 
 
 #################################

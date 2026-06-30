@@ -1620,6 +1620,21 @@ class APIData:
         return pokemon_form
 
     @classmethod
+    def setup_pokemon_form_method_data(cls, name="frm mthd for pkmn frm"):
+        pokemon_form_method = PokemonFormMethod(name=name)
+        pokemon_form_method.save()
+        return pokemon_form_method
+
+    @classmethod
+    def setup_pokemon_form_condition_data(cls, pokemon_form, form_method=None, item=None, ability=None, move=None):
+        form_method = form_method or cls.setup_pokemon_form_method_data(name="frm mthd for pkmn frm")
+        item = item or cls.setup_item_data(name="itm for pkmn frm")
+
+        pokemon_form_condition = PokemonFormCondition(pokemon_form=pokemon_form, form_method=form_method, item=item, ability=ability, move=move)
+        pokemon_form_condition.save()
+        return pokemon_form_condition
+
+    @classmethod
     def setup_pokemon_ability_data(cls, pokemon, ability=None, is_hidden=False, slot=1):
         ability = ability or cls.setup_ability_data(name="ablty for pkmn")
 
@@ -5265,6 +5280,7 @@ class APITests(APIData, APITestCase):
         )
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
         pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
+        pokemon_form_condition = self.setup_pokemon_form_condition_data(pokemon_form)
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
@@ -5316,6 +5332,10 @@ class APITests(APIData, APITestCase):
             response.data["types"][0]["type"]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_form_type.type.pk),
         )
+
+        self.assertEqual(response.data["trigger_conditions"][0]["method"], pokemon_form_condition.form_method.name)
+        self.assertEqual(response.data["trigger_conditions"][0]["name"], pokemon_form_condition.item.name)
+        self.assertEqual(response.data["trigger_conditions"][0]["url"], "{}{}/item/{}/".format(TEST_HOST, API_V2, pokemon_form_condition.item.pk))
 
     # Evolution test
     def test_evolution_trigger_api(self):

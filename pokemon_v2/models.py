@@ -1774,6 +1774,17 @@ class PokemonFormSprites(HasPokemonForm):
     sprites = models.JSONField()
 
 
+class PokemonFormMethod(HasName):
+    pass
+
+
+class PokemonFormCondition(HasPokemonForm):
+    form_method = models.ForeignKey(PokemonFormMethod, on_delete=models.CASCADE)
+    item = models.ForeignKey(Item, blank=True, null=True, on_delete=models.CASCADE)
+    ability = models.ForeignKey(Ability, blank=True, null=True, on_delete=models.CASCADE)
+    move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
+
+
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):
     pass
 

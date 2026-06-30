@@ -255,3 +255,12 @@ id,encounter_condition_id,identifier,is_default
 254,25,weather-intense-sun,0
 255,25,weather-fog,0
 256,9,story-progress-before-hall-of-fame,1
+257,26,berry-tree-type-red,1
+258,26,berry-tree-type-blue,1
+259,26,berry-tree-type-purple,1
+260,26,berry-tree-type-green,1
+261,26,berry-tree-type-yellow,1
+262,26,berry-tree-type-pink,1
+263,27,trash-can-type-daily,1
+264,27,trash-can-type-tuesday,1
+265,27,trash-can-type-thursday,1

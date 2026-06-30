@@ -709,7 +709,7 @@ id,region_id,identifier
 725,7,hauoli-cemetery
 726,7,melemele-meadow
 727,7,seaward-cave
-728,7,berry-fields
+728,7,alola-berry-fields
 729,7,verdant-cavern--trial-site
 730,7,verdant-cavern--totems-den
 731,7,alola-route-4
@@ -1098,3 +1098,4 @@ id,region_id,identifier
 1114,8,energy-plant
 1115,8,meetup-spot
 1116,8,isle-of-armor-caves
+1117,6,kalos-berry-fields

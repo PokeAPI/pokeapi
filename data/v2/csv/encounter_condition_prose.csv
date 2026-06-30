@@ -44,3 +44,5 @@ encounter_condition_id,local_language_id,name
 23,9,Have save data from another Pokémon game
 24,9,Find a certain number of Alolan Diglett in Isle of Armor
 25,9,"During specific weather conditions like sun, rain, or snow"
+26,9,Berry Tree Type
+27,9,Trash Can Type

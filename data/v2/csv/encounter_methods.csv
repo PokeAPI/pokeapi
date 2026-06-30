@@ -18,7 +18,7 @@ id,identifier,order
 17,rough-terrain,9
 18,gift,18
 19,gift-egg,19
-20,only-one,20
+20,static,20
 21,pokeflute,21
 22,headbutt-low,22
 23,headbutt-normal,23
@@ -31,7 +31,7 @@ id,identifier,order
 30,devon-scope,30
 31,feebas-tile-fishing,31
 32,island-scan,32
-33,sos-encounter,33
+33,sos,33
 34,bubbling-spots,34
 35,berry-trees,35
 36,npc-trade,36
@@ -55,3 +55,8 @@ id,identifier,order
 54,hidden-grotto,54
 55,honey-tree,55
 56,overworld-dirt,56
+57,trash-can-ambush,57
+58,rustling-bush-ambush,58
+59,ceiling-ambush,59
+60,ground-ambush,60
+61,sky-ambush,61

@@ -147,7 +147,13 @@ def main():
     # Group encounters by location area
     location_area_encounters = {}
     for enc in encounters.values():
-        location_area_identifier = enc["location_area_id"]["location_id"]["identifier"]
+        location_identifier = enc["location_area_id"]["location_id"]["identifier"]
+        if args.locations and not any(
+            loc == location_identifier for loc in args.locations
+        ):
+            continue
+
+        location_area_identifier = location_identifier
         if enc["location_area_id"]["identifier"]:
             location_area_identifier += f"-{enc['location_area_id']['identifier']}"
 

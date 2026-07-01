@@ -5257,6 +5257,36 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["count"], 1)
         self.assertEqual(response.data["results"][0]["name"], pokemon.name)
 
+    def test_pokemon_api_female_only_sprites_fallback(self):
+        pokemon_species = self.setup_pokemon_species_data(
+            name="female only pkmn spcs", gender_rate=8
+        )
+        pokemon = self.setup_pokemon_data(
+            pokemon_species=pokemon_species, name="female only pkmn"
+        )
+        self.setup_pokemon_form_data(pokemon=pokemon, name="female only pkmn form")
+        pokemon_sprites = self.setup_pokemon_sprites_data(
+            pokemon=pokemon, front_default=True, front_female=False
+        )
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        response = self.client.get(
+            "{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"}
+        )
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        sprites_data = json.loads(pokemon_sprites.sprites)
+        response_sprites = json.loads(response.data["sprites"])
+
+        self.assertIsNotNone(response_sprites["front_default"])
+        self.assertEqual(
+            response_sprites["front_female"], response_sprites["front_default"]
+        )
+        self.assertEqual(
+            response_sprites["other"]["showdown"]["front_female"],
+            response_sprites["other"]["showdown"]["front_default"],
+        )
+
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)

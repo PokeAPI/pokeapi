@@ -377,7 +377,7 @@ encounter_condition_value_id,local_language_id,name
 254,9,During intense sun
 255,9,During foggy weather
 256,9,Before entering the Hall of Fame
-257,9,Encounter slot active when no block-based encounter is replacing it
+257,9,Not replaced by block-based encounter
 258,9,At least 2 Plains block points placed
 259,9,At least 3 Plains block points placed
 260,9,At least 4 Plains block points placed

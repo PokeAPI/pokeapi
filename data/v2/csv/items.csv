@@ -2175,3 +2175,5 @@ id,identifier,category_id,cost,fling_power,fling_effect_id
 2230,black-augurite,10,0,,
 2231,peat-block,10,0,,
 2232,metal-alloy,10,0,,
+2233,hopo-berry,28,300,,
+2234,roseli-berry,7,200,10,

@@ -1620,17 +1620,27 @@ class APIData:
         return pokemon_form
 
     @classmethod
-    def setup_pokemon_form_method_data(cls, name="frm mthd for pkmn frm"):
-        pokemon_form_method = PokemonFormMethod(name=name)
-        pokemon_form_method.save()
-        return pokemon_form_method
+    def setup_pokemon_form_trigger_data(cls, name="frm trgr for pkmn frm"):
+        pokemon_form_trigger = PokemonFormTrigger(name=name)
+        pokemon_form_trigger.save()
+        return pokemon_form_trigger
 
     @classmethod
-    def setup_pokemon_form_condition_data(cls, pokemon_form, form_method=None, item=None, ability=None, move=None):
-        form_method = form_method or cls.setup_pokemon_form_method_data(name="frm mthd for pkmn frm")
+    def setup_pokemon_form_condition_data(
+        cls, pokemon_form, form_trigger=None, item=None, ability=None, move=None
+    ):
+        form_trigger = form_trigger or cls.setup_pokemon_form_trigger_data(
+            name="frm trgr for pkmn frm"
+        )
         item = item or cls.setup_item_data(name="itm for pkmn frm")
 
-        pokemon_form_condition = PokemonFormCondition(pokemon_form=pokemon_form, form_method=form_method, item=item, ability=ability, move=move)
+        pokemon_form_condition = PokemonFormCondition(
+            pokemon_form=pokemon_form,
+            form_trigger=form_trigger,
+            item=item,
+            ability=ability,
+            move=move,
+        )
         pokemon_form_condition.save()
         return pokemon_form_condition
 
@@ -5333,9 +5343,18 @@ class APITests(APIData, APITestCase):
             "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_form_type.type.pk),
         )
 
-        self.assertEqual(response.data["trigger_conditions"][0]["method"], pokemon_form_condition.form_method.name)
-        self.assertEqual(response.data["trigger_conditions"][0]["name"], pokemon_form_condition.item.name)
-        self.assertEqual(response.data["trigger_conditions"][0]["url"], "{}{}/item/{}/".format(TEST_HOST, API_V2, pokemon_form_condition.item.pk))
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["trigger"],
+            pokemon_form_condition.form_trigger.name,
+        )
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["name"],
+            pokemon_form_condition.item.name,
+        )
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, pokemon_form_condition.item.pk),
+        )
 
     # Evolution test
     def test_evolution_trigger_api(self):

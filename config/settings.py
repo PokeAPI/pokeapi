@@ -149,7 +149,7 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
-    "VERSION": "2.7.0",
+    "VERSION": "2.10.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "OAS_VERSION": "3.1.0",
     "COMPONENT_SPLIT_REQUEST": True,

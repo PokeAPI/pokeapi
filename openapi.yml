@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: PokéAPI
-  version: 2.7.0
+  version: 2.10.0
   description: "All the Pokémon data you'll ever need in one place, easily accessible
     through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is
     a full RESTful API linked to an extensive database detailing everything about

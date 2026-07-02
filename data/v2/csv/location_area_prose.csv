@@ -2190,12 +2190,16 @@ location_area_id,local_language_id,name
 855,9,Route 9 (Outer Spikemuth)
 856,9,Route 10 (Main)
 857,9,Route 10 (Near Station)
+858,9,Axew's Eye
 861,9,Battle Tower
 869,9,Circhester
+872,9,Dappled Grove
+875,9,East Lake Axewell
 876,9,Fields of Honor
 879,9,Freezington
 882,9,Galar Mine
 883,9,Galar Mine No. 2
+890,9,Giant's Seat
 891,9,Glimwood Tangle
 892,9,Hammerlocke
 896,9,Hulbury
@@ -2203,14 +2207,19 @@ location_area_id,local_language_id,name
 905,9,Max Lair
 906,9,Motostoke
 907,9,Motostoke Outskirts
+909,9,North Lake Miloch
 912,9,Postwick
 916,9,Rolling Fields (Main Area)
 917,9,Rolling Fields (Area 2)
 919,9,Slumbering Weald (Entrance)
+922,9,South Lake Miloch (Main Area)
+923,9,South Lake Miloch (Area 2)
 924,9,Spikemuth
 932,9,Stow-on-Side
 939,9,Turffield
+941,9,Watchtower Ruins
 942,9,Wegehurst
+943,9,West Lake Axewell
 945,9,Wyndon
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller

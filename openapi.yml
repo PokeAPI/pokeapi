@@ -4064,6 +4064,8 @@ components:
                     items:
                       type: object
                       required:
+                      - version_group
+                      - is_default
                       - gender
                       - held_item
                       - item
@@ -4077,6 +4079,7 @@ components:
                       - min_level
                       - min_move_count
                       - min_steps
+                      - near_special_rock
                       - needs_multiplayer
                       - needs_overworld_rain
                       - party_species
@@ -4089,7 +4092,26 @@ components:
                       - used_move
                       - region
                       - base_form
+                      - evolved_form
                       properties:
+                        version_group:
+                          type: object
+                          nullable: false
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                              examples:
+                              - 1
+                            url:
+                              type: string
+                              format: uri
+                              examples:
+                              - 2
+                        is_default:
+                          type: boolean
                         gender:
                           type: object
                           nullable: true
@@ -4184,6 +4206,9 @@ components:
                           type: integer
                           format: int32
                           nullable: true
+                        near_special_rock:
+                          type: boolean
+                          nullable: true
                         needs_multiplayer:
                           type: boolean
                           nullable: true
@@ -4233,6 +4258,18 @@ components:
                               type: string
                               format: uri
                         base_form:
+                          type: object
+                          nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
+                        evolved_form:
                           type: object
                           nullable: true
                           required:
@@ -8152,7 +8189,62 @@ components:
             $ref: '#/components/schemas/PokemonStat'
           readOnly: true
         past_stats:
-          type: string
+          type: array
+          items:
+            type: object
+            required:
+            - generation
+            - stats
+            properties:
+              generation:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    examples:
+                    - generation-vi
+                  url:
+                    type: string
+                    format: uri
+                    examples:
+                    - https://pokeapi.co/api/v2/generation/6/
+              stats:
+                type: array
+                items:
+                  type: object
+                  required:
+                  - base_stat
+                  - effort
+                  - stat
+                  properties:
+                    base_stat:
+                      type: integer
+                      format: int32
+                      examples:
+                      - 45
+                    effort:
+                      type: integer
+                      format: int32
+                      examples:
+                      - 0
+                    stat:
+                      type: object
+                      required:
+                      - name
+                      - url
+                      properties:
+                        name:
+                          type: string
+                          examples:
+                          - speed
+                        url:
+                          type: string
+                          format: uri
+                          examples:
+                          - https://pokeapi.co/api/v2/stat/6/
           readOnly: true
         types:
           type: array

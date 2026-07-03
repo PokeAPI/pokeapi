@@ -7,6 +7,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 201,8,A,
 201,9,A,Unown A
 201,11,Ａ,
+201,14,A,
 351,1,ポワルンのすがた,
 351,3,캐스퐁의 모습,
 351,4,飄浮泡泡的樣子,
@@ -17,6 +18,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 351,9,Normal,
 351,11,ポワルンのすがた,
 351,12,飘浮泡泡的样子,
+351,14,Forma de Castform,
 382,1,カイオーガのすがた,
 382,3,가이오가의 모습,
 382,4,蓋歐卡的樣子,
@@ -26,6 +28,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 382,9,Kyogre,
 382,11,カイオーガのすがた,
 382,12,盖欧卡的样子,
+382,14,Kyogre,
 383,1,グラードンのすがた,
 383,3,그란돈의 모습,
 383,4,固拉多的樣子,
@@ -35,6 +38,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 383,9,Groudon,
 383,11,グラードンのすがた,
 383,12,固拉多的样子,
+383,14,Groudon,
 386,1,ノーマルフォルム,
 386,3,노말폼,
 386,4,普通形態,
@@ -45,6 +49,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 386,9,Normal Forme,Normal Deoxys
 386,11,ノーマルフォルム,
 386,12,普通形态,
+386,14,Forma Normal,
 412,1,くさきのミノ,
 412,3,초목도롱,
 412,5,Cape Plante,Cheniti Plante
@@ -53,6 +58,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 412,8,Manto Pianta,
 412,9,Plant Cloak,Plant Burmy
 412,11,くさきのミノ,
+412,14,Tronco Planta,
 413,1,くさきのミノ,
 413,3,초목도롱,
 413,4,草木蓑衣,
@@ -63,6 +69,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 413,9,Plant Cloak,Plant Wormadam
 413,11,くさきのミノ,
 413,12,草木蓑衣,
+413,14,Tronco Planta,
 421,1,ネガフォルム,
 421,3,네거폼,
 421,4,陰天形態,
@@ -73,6 +80,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 421,9,Overcast Form,Overcast Cherrim
 421,11,ネガフォルム,
 421,12,阴天形态,
+421,14,Forma Encapotado,
 422,1,にしのうみ,
 422,3,서쪽바다,
 422,4,西海,
@@ -83,6 +91,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 422,9,West Sea,West Shellos
 422,11,にしのうみ,
 422,12,西海,
+422,14,Mar Oeste,
 423,1,にしのうみ,
 423,3,서쪽바다,
 423,4,西海,
@@ -93,6 +102,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 423,9,West Sea,West Gastrodon
 423,11,にしのうみ,
 423,12,西海,
+423,14,Mar Oeste,
 479,1,ロトムのすがた,
 479,3,로토무의 모습,
 479,4,洛托姆的樣子,
@@ -103,6 +113,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 479,9,Rotom,
 479,11,ロトムのすがた,
 479,12,洛托姆的样子,
+479,14,Forma de Rotom,
 487,1,アナザーフォルム,
 487,3,어나더폼,
 487,4,別種形態,
@@ -113,6 +124,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 487,9,Altered Forme,Altered Giratina
 487,11,アナザーフォルム,
 487,12,别种形态,
+487,14,Forma Modificada,
 492,1,ランドフォルム,
 492,3,랜드폼,
 492,4,陸上形態,
@@ -123,6 +135,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 492,9,Land Forme,Land Shaymin
 492,11,ランドフォルム,
 492,12,陆上形态,
+492,14,Forma Tierra,
 493,1,ノーマルタイプ,
 493,5,Normal,Arceus Normal
 493,6,Normalform,Arceus
@@ -130,6 +143,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 493,8,Tipo Normale,
 493,9,Normal Type,Normal Arceus
 493,11,ノーマルタイプ,
+493,14,Tipo Normal,
 550,1,あかすじのすがた,
 550,3,적색근의 모습,
 550,4,紅條紋的樣子,
@@ -140,6 +154,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 550,9,Red-Striped Form,Red-Striped Basculin
 550,11,あかすじのすがた,
 550,12,红条纹的样子,
+550,14,Forma Raya Roja,
 555,1,ノーマルモード,
 555,3,노말모드,
 555,4,普通模式,
@@ -150,6 +165,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 555,9,Standard Mode,Standard Darmanitan
 555,11,ノーマルモード,
 555,12,普通模式,
+555,14,Modo Normal,
 585,1,はるのすがた,
 585,3,봄의 모습,
 585,5,Forme Printemps,Vivaldaim Printemps
@@ -158,6 +174,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 585,8,Forma Primavera,
 585,9,Spring Form,Spring Deerling
 585,11,はるのすがた,
+585,14,Forma Primavera,
 586,1,はるのすがた,
 586,3,봄의 모습,
 586,5,Forme Printemps,Haydaim Printemps
@@ -166,6 +183,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 586,8,Forma Primavera,
 586,9,Spring Form,Spring Sawsbuck
 586,11,はるのすがた,
+586,14,Forma Primavera,
 592,1,オスのすがた,
 592,3,수컷의 모습,
 592,4,雄性的樣子,
@@ -176,6 +194,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 592,9,Male,Male Frillish
 592,11,オスのすがた,
 592,12,雄性的样子,
+592,14,Macho,
 593,1,オスのすがた,
 593,3,수컷의 모습,
 593,4,雄性的樣子,
@@ -186,6 +205,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 593,9,Male,Male Jellicent
 593,11,オスのすがた,
 593,12,雄性的样子,
+593,14,Macho,
 641,1,けしんフォルム,
 641,3,화신폼,
 641,4,化身形態,
@@ -196,6 +216,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 641,9,Incarnate Forme,Incarnate Tornadus
 641,11,けしんフォルム,
 641,12,化身形态,
+641,14,Forma Avatar,
 642,1,けしんフォルム,
 642,3,화신폼,
 642,4,化身形態,
@@ -206,6 +227,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 642,9,Incarnate Forme,Incarnate Thundurus
 642,11,けしんフォルム,
 642,12,化身形态,
+642,14,Forma Avatar,
 645,1,けしんフォルム,
 645,3,화신폼,
 645,4,化身形態,
@@ -216,6 +238,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 645,9,Incarnate Forme,Incarnate Landorus
 645,11,けしんフォルム,
 645,12,化身形态,
+645,14,Forma Avatar,
 646,1,キュレムのすがた,
 646,3,큐레무의 모습,
 646,4,酋雷姆的樣子,
@@ -226,6 +249,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 646,9,Kyurem,
 646,11,キュレムのすがた,
 646,12,酋雷姆的样子,
+646,14,Forma de Kyurem,
 647,1,いつものすがた,
 647,3,평상시 모습,
 647,4,平常的樣子,
@@ -236,6 +260,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 647,9,Ordinary Form,Ordinary Keldeo
 647,11,いつものすがた,
 647,12,平常的样子,
+647,14,Forma Habitual,
 648,1,ボイスフォルム,
 648,3,보이스폼,
 648,4,歌聲形態,
@@ -246,6 +271,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 648,9,Aria Forme,Aria Meloetta
 648,11,ボイスフォルム,
 648,12,歌声形态,
+648,14,Forma Lírica,
 666,1,はなぞののもよう,
 666,3,화원의 모양,
 666,5,Motif Floraison,Prismillon Floraison
@@ -254,6 +280,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 666,8,Motivo Giardinfiore,
 666,9,Meadow Pattern,Meadow Vivillon
 666,11,はなぞののもよう,
+666,14,Motivo Floral,
 668,1,オスのすがた,
 668,3,수컷의 모습,
 668,4,雄性的樣子,
@@ -264,6 +291,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 668,9,Male,Male Pyroar
 668,11,オスのすがた,
 668,12,雄性的样子,
+668,14,Macho,
 669,1,あかいはな,
 669,3,빨간 꽃,
 669,5,Fleur Rouge,Flabébé Rouge
@@ -272,6 +300,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 669,8,Fiore Rosso,
 669,9,Red Flower,Red Flabébé
 669,11,あかいはな,
+669,14,Flor Roja,
 670,1,あかいはな,
 670,3,빨간 꽃,
 670,5,Fleur Rouge,Floette Rouge
@@ -280,6 +309,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 670,8,Fiore Rosso,
 670,9,Red Flower,Red Floette
 670,11,あかいはな,
+670,14,Flor Roja,
 671,1,あかいはな,
 671,3,빨간 꽃,
 671,5,Fleur Rouge,Florges Rouge
@@ -288,6 +318,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 671,8,Fiore Rosso,
 671,9,Red Flower,Red Florges
 671,11,あかいはな,
+671,14,Flor Roja,
 676,1,やせいのすがた,
 676,3,야생의 모습,
 676,5,Forme Sauvage,Couafarel Sauvage
@@ -296,6 +327,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 676,8,Forma Selvatica,
 676,9,Natural Form,Natural Furfrou
 676,11,やせいのすがた,
+676,14,Forma Salvaje,
 678,1,オスのすがた,
 678,3,수컷의 모습,
 678,4,雄性的樣子,
@@ -306,6 +338,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 678,9,Male,Male Meowstic
 678,11,オスのすがた,
 678,12,雄性的样子,
+678,14,Macho,
 681,1,シールドフォルム,
 681,3,실드폼,
 681,4,盾牌形態,
@@ -316,6 +349,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 681,9,Shield Forme,Shield Aegislash
 681,11,シールドフォルム,
 681,12,盾牌形态,
+681,14,Forma Escudo,
 710,1,ふつうのサイズ,
 710,3,보통 사이즈,
 710,4,普通尺寸,
@@ -326,6 +360,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 710,9,Average Size,Average Pumpkaboo
 710,11,ふつうのサイズ,
 710,12,普通尺寸,
+710,14,Tamaño Normal,
 711,1,ふつうのサイズ,
 711,3,보통 사이즈,
 711,4,普通尺寸,
@@ -336,6 +371,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 711,9,Average Size,Average Gourgeist
 711,11,ふつうのサイズ,
 711,12,普通尺寸,
+711,14,Tamaño Normal,
 716,1,アクティブモード,
 716,3,액티브모드,
 716,4,活躍模式,
@@ -346,6 +382,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 716,9,Active Mode,Active Xerneas
 716,11,アクティブモード,
 716,12,活跃模式,
+716,14,Modo Activo,
 718,1,５０％フォルム,
 718,3,50%폼,
 718,4,５０％形態,
@@ -356,6 +393,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 718,9,50% Forme,
 718,11,５０％フォルム,
 718,12,５０％形态,
+718,14,Forma 50%,
 720,1,いましめられしフーパ,
 720,3,굴레에 빠진 후파,
 720,4,懲戒胡帕,
@@ -366,6 +404,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 720,9,Hoopa Confined,Confined Hoopa
 720,11,いましめられしフーパ,
 720,12,惩戒胡帕,
+720,14,Hoopa Contenido,
 741,1,めらめらスタイル,
 741,3,이글이글스타일,
 741,4,熱辣熱辣風格,
@@ -376,6 +415,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 741,9,Baile Style,Baile Oricorio
 741,11,めらめらスタイル,
 741,12,热辣热辣风格,
+741,14,Estilo Apasionado,
 745,1,まひるのすがた,
 745,3,한낮의 모습,
 745,4,白晝的樣子,
@@ -386,6 +426,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 745,9,Midday Form,Midday Lycanroc
 745,11,まひるのすがた,
 745,12,白昼的样子,
+745,14,Forma Diurna,
 746,1,たんどくのすがた,
 746,3,단독의 모습,
 746,4,單獨的樣子,
@@ -396,6 +437,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 746,9,Solo Form,Solo Wishiwashi
 746,11,たんどくのすがた,
 746,12,单独的样子,
+746,14,Forma Individual,
 773,1,タイプ：ノーマル,
 773,3,타입:노말,
 773,4,屬性：一般,
@@ -406,6 +448,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 773,9,Type: Normal,
 773,11,タイプ：ノーマル,
 773,12,属性：一般,
+773,14,Tipo: Normal,
 774,1,りゅうせいのすがた,
 774,3,유성의 모습,
 774,4,流星的樣子,
@@ -416,6 +459,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 774,9,Meteor Form,Red Meteor Minior
 774,11,りゅうせいのすがた,
 774,12,流星的样子,
+774,14,Forma Meteorito,
 778,1,ばけたすがた,
 778,3,둔갑한 모습,
 778,4,化形的樣子,
@@ -426,6 +470,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 778,9,Disguised Form,Disguised Mimikyu
 778,11,ばけたすがた,
 778,12,化形的样子,
+778,14,Forma Encubierta,
 849,1,ハイなすがた,
 849,3,하이한 모습,
 849,4,高調的樣子,
@@ -436,6 +481,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 849,9,Amped Form,Amped Toxtricity
 849,11,ハイなすがた,
 849,12,高调的样子,
+849,14,Forma Aguda,
 854,1,がんさくフォルム,
 854,5,Forme Contrefaçon,Théffroi Contrefaçon
 854,6,Fälschungsform,Fatalitee (Fälschung)
@@ -456,6 +502,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 869,9,Vanilla Cream Strawberry Sweet,Vanilla Cream Strawberry Sweet Alcremie
 869,11,ミルキィバニラ,
 869,12,奶香香草,
+869,14,Crema de Vainilla,
 875,1,アイスフェイス,
 875,3,아이스페이스,
 875,4,結凍頭,
@@ -466,6 +513,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 875,9,Ice Face,Ice Eiscue
 875,11,アイスフェイス,
 875,12,结冻头,
+875,14,Cara de Hielo,
 876,1,オスのすがた,
 876,3,수컷의 모습,
 876,4,雄性的樣子,
@@ -476,6 +524,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 876,9,Male,Male Indeedee
 876,11,オスのすがた,
 876,12,雄性的样子,
+876,14,Macho,
 877,1,まんぷくもよう,
 877,3,배부른 모양,
 877,4,滿腹花紋,
@@ -486,6 +535,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 877,9,Full Belly Mode,Full Belly Morpeko
 877,11,まんぷくもよう,
 877,12,满腹花纹,
+877,14,Forma Saciada,
 888,1,れきせんのゆうしゃ,
 888,3,역전의 용사,
 888,4,百戰勇者,
@@ -496,6 +546,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 888,9,Hero of Many Battles,Zacian
 888,11,れきせんのゆうしゃ,
 888,12,百战勇者,
+888,14,Guerrero Avezado,
 889,1,れきせんのゆうしゃ,
 889,3,역전의 용사,
 889,4,百戰勇者,
@@ -506,6 +557,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 889,9,Hero of Many Battles,Zamazenta
 889,11,れきせんのゆうしゃ,
 889,12,百战勇者,
+889,14,Guerrero Avezado,
 892,1,いちげきのかた,
 892,3,일격의 태세,
 892,4,一擊流,
@@ -516,6 +568,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 892,9,Single Strike Style,Single Strike Urshifu
 892,11,いちげきのかた,
 892,12,一击流,
+892,14,Estilo Brusco,
 902,1,オスのすがた,
 902,5,Mâle,Paragruel Mâle
 902,9,Male,Male Basculegion
@@ -570,6 +623,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1012,9,Counterfeit Form,Counterfeit Form Poltchageist
 1012,11,マガイモノのすがた,
 1012,12,高檔貨的樣子,
+1012,14,Forma Fraudulenta,
 1013,1,ボンサクのすがた,
 1013,3,범작의 모습,
 1013,4,凡作的樣子,
@@ -580,6 +634,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1013,9,Unremarkable Form,Unremarkable Form Sinistcha
 1013,11,ボンサクのすがた,
 1013,12,凡作的样子,
+1013,14,Forma Mediocre,
 1017,1,みどりのめん,
 1017,3,벽록의가면,
 1017,4,碧草面具,
@@ -590,12 +645,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1017,9,Teal Mask,Teal Mask Ogerpon
 1017,11,みどりのめん,
 1017,12,碧草面具,
+1017,14,Máscara Turquesa,
 1024,1,ノーマルフォルム,
 1024,5,Forme Normale,Terapagos Forme Normale
 1024,7,Forma normal,
 1024,8,Forma Normale,
 1024,9,Normal Form,Normal Form Terapagos
 1024,11,ノーマルフォルム,
+1024,14,Forma normal,
 10001,1,Ｂ,
 10001,3,B,
 10001,5,B,Zarbi B
@@ -604,6 +661,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10001,8,B,
 10001,9,B,Unown B
 10001,11,Ｂ,
+10001,14,B,
 10002,1,Ｃ,
 10002,3,C,
 10002,5,C,Zarbi C
@@ -612,6 +670,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10002,8,C,
 10002,9,C,Unown C
 10002,11,Ｃ,
+10002,14,C,
 10003,1,Ｄ,
 10003,3,D,
 10003,5,D,Zarbi D
@@ -620,6 +679,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10003,8,D,
 10003,9,D,Unown D
 10003,11,Ｄ,
+10003,14,D,
 10004,1,Ｅ,
 10004,3,E,
 10004,5,E,Zarbi E
@@ -628,6 +688,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10004,8,E,
 10004,9,E,Unown E
 10004,11,Ｅ,
+10004,14,E,
 10005,1,Ｆ,
 10005,3,F,
 10005,5,F,Zarbi F
@@ -636,6 +697,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10005,8,F,
 10005,9,F,Unown F
 10005,11,Ｆ,
+10005,14,F,
 10006,1,Ｇ,
 10006,3,G,
 10006,5,G,Zarbi G
@@ -644,6 +706,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10006,8,G,
 10006,9,G,Unown G
 10006,11,Ｇ,
+10006,14,G,
 10007,1,Ｈ,
 10007,3,H,
 10007,5,H,Zarbi H
@@ -652,6 +715,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10007,8,H,
 10007,9,H,Unown H
 10007,11,Ｈ,
+10007,14,H,
 10008,1,Ｉ,
 10008,3,I,
 10008,5,I,Zarbi I
@@ -660,6 +724,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10008,8,I,
 10008,9,I,Unown I
 10008,11,Ｉ,
+10008,14,I,
 10009,1,Ｊ,
 10009,3,J,
 10009,5,J,Zarbi J
@@ -668,6 +733,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10009,8,J,
 10009,9,J,Unown J
 10009,11,Ｊ,
+10009,14,J,
 10010,1,Ｋ,
 10010,3,K,
 10010,5,K,Zarbi K
@@ -676,6 +742,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10010,8,K,
 10010,9,K,Unown K
 10010,11,Ｋ,
+10010,14,K,
 10011,1,Ｌ,
 10011,3,L,
 10011,5,L,Zarbi L
@@ -684,6 +751,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10011,8,L,
 10011,9,L,Unown L
 10011,11,Ｌ,
+10011,14,L,
 10012,1,Ｍ,
 10012,3,M,
 10012,5,M,Zarbi M
@@ -692,6 +760,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10012,8,M,
 10012,9,M,Unown M
 10012,11,Ｍ,
+10012,14,M,
 10013,1,Ｎ,
 10013,3,N,
 10013,5,N,Zarbi N
@@ -700,6 +769,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10013,8,N,
 10013,9,N,Unown N
 10013,11,Ｎ,
+10013,14,N,
 10014,1,Ｏ,
 10014,3,O,
 10014,5,O,Zarbi O
@@ -708,6 +778,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10014,8,O,
 10014,9,O,Unown O
 10014,11,Ｏ,
+10014,14,O,
 10015,1,Ｐ,
 10015,3,P,
 10015,5,P,Zarbi P
@@ -716,6 +787,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10015,8,P,
 10015,9,P,Unown P
 10015,11,Ｐ,
+10015,14,P,
 10016,1,Ｑ,
 10016,3,Q,
 10016,5,Q,Zarbi Q
@@ -724,6 +796,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10016,8,Q,
 10016,9,Q,Unown Q
 10016,11,Ｑ,
+10016,14,Q,
 10017,1,Ｒ,
 10017,3,R,
 10017,5,R,Zarbi R
@@ -732,6 +805,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10017,8,R,
 10017,9,R,Unown R
 10017,11,Ｒ,
+10017,14,R,
 10018,1,Ｓ,
 10018,3,S,
 10018,5,S,Zarbi S
@@ -740,6 +814,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10018,8,S,
 10018,9,S,Unown S
 10018,11,Ｓ,
+10018,14,S,
 10019,1,Ｔ,
 10019,3,T,
 10019,5,T,Zarbi T
@@ -748,6 +823,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10019,8,T,
 10019,9,T,Unown T
 10019,11,Ｔ,
+10019,14,T,
 10020,1,Ｕ,
 10020,3,U,
 10020,5,U,Zarbi U
@@ -756,6 +832,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10020,8,U,
 10020,9,U,Unown U
 10020,11,Ｕ,
+10020,14,U,
 10021,1,Ｖ,
 10021,3,V,
 10021,5,V,Zarbi V
@@ -764,6 +841,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10021,8,V,
 10021,9,V,Unown V
 10021,11,Ｖ,
+10021,14,V,
 10022,1,Ｗ,
 10022,3,W,
 10022,5,W,Zarbi W
@@ -772,6 +850,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10022,8,W,
 10022,9,W,Unown W
 10022,11,Ｗ,
+10022,14,W,
 10023,1,Ｘ,
 10023,3,X,
 10023,5,X,Zarbi X
@@ -780,6 +859,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10023,8,X,
 10023,9,X,Unown X
 10023,11,Ｘ,
+10023,14,X,
 10024,1,Ｙ,
 10024,3,Y,
 10024,5,Y,Zarbi Y
@@ -788,6 +868,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10024,8,Y,
 10024,9,Y,Unown Y
 10024,11,Ｙ,
+10024,14,Y,
 10025,1,Ｚ,
 10025,3,Z,
 10025,5,Z,Zarbi Z
@@ -796,6 +877,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10025,8,Z,
 10025,9,Z,Unown Z
 10025,11,Ｚ,
+10025,14,Z,
 10026,1,!,
 10026,3,!,
 10026,5,!,Zarbi !
@@ -804,6 +886,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10026,8,!,
 10026,9,!,Unown !
 10026,11,!,
+10026,14,!,
 10027,1,?,
 10027,3,?,
 10027,5,?,Zarbi ?
@@ -812,6 +895,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10027,8,?,
 10027,9,?,Unown ?
 10027,11,?,
+10027,14,?,
 10028,1,たいようのすがた,
 10028,3,태양의 모습,
 10028,4,太陽的樣子,
@@ -822,6 +906,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10028,9,Sunny Form,Sunny Castform
 10028,11,たいようのすがた,
 10028,12,太阳的样子,
+10028,14,Forma Sol,
 10029,1,あまみずのすがた,
 10029,3,빗방울의 모습,
 10029,4,雨水的樣子,
@@ -832,6 +917,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10029,9,Rainy Form,Rainy Castform
 10029,11,あまみずのすがた,
 10029,12,雨水的样子,
+10029,14,Forma Lluvia,
 10030,1,ゆきぐものすがた,
 10030,3,설운의 모습,
 10030,4,雪雲的樣子,
@@ -842,6 +928,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10030,9,Snowy Form,Snowy Castform
 10030,11,ゆきぐものすがた,
 10030,12,雪云的样子,
+10030,14,Forma Nieve,
 10031,1,アタックフォルム,
 10031,3,어택폼,
 10031,4,攻擊形態,
@@ -852,6 +939,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10031,9,Attack Forme,Attack Deoxys
 10031,11,アタックフォルム,
 10031,12,攻击形态,
+10031,14,Forma Ataque,
 10032,1,ディフェンスフォルム,
 10032,3,디펜스폼,
 10032,4,防禦形態,
@@ -862,6 +950,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10032,9,Defense Forme,Defense Deoxys
 10032,11,ディフェンスフォルム,
 10032,12,防御形态,
+10032,14,Forma Defensa,
 10033,1,スピードフォルム,
 10033,3,스피드폼,
 10033,4,速度形態,
@@ -872,6 +961,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10033,9,Speed Forme,Speed Deoxys
 10033,11,スピードフォルム,
 10033,12,速度形态,
+10033,14,Forma Velocidad,
 10034,1,すなちのミノ,
 10034,3,모래땅도롱,
 10034,5,Cape Sable,Cheniti Sable
@@ -880,6 +970,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10034,8,Manto Sabbia,
 10034,9,Sandy Cloak,Sandy Burmy
 10034,11,すなちのミノ,
+10034,14,Tronco Arena,
 10035,1,ゴミのミノ,
 10035,3,슈레도롱,
 10035,5,Cape Déchet,Cheniti Déchet
@@ -888,6 +979,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10035,8,Manto Scarti,
 10035,9,Trash Cloak,Trash Burmy
 10035,11,ゴミのミノ,
+10035,14,Tronco Basura,
 10036,1,すなちのミノ,
 10036,3,모래땅도롱,
 10036,4,砂土蓑衣,
@@ -898,6 +990,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10036,9,Sandy Cloak,Sandy Wormadam
 10036,11,すなちのミノ,
 10036,12,砂土蓑衣,
+10036,14,Tronco Arena,
 10037,1,ゴミのミノ,
 10037,3,슈레도롱,
 10037,4,垃圾蓑衣,
@@ -908,6 +1001,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10037,9,Trash Cloak,Trash Wormadam
 10037,11,ゴミのミノ,
 10037,12,垃圾蓑衣,
+10037,14,Tronco Basura,
 10038,1,ポジフォルム,
 10038,3,포지폼,
 10038,4,晴天形態,
@@ -918,6 +1012,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10038,9,Sunshine Form,Sunshine Cherrim
 10038,11,ポジフォルム,
 10038,12,晴天形态,
+10038,14,Forma Soleado,
 10039,1,ひがしのうみ,
 10039,3,동쪽바다,
 10039,4,東海,
@@ -928,6 +1023,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10039,9,East Sea,East Shellos
 10039,11,ひがしのうみ,
 10039,12,东海,
+10039,14,Mar Este,
 10040,1,ひがしのうみ,
 10040,3,동쪽바다,
 10040,4,東海,
@@ -938,6 +1034,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10040,9,East Sea,East Gastrodon
 10040,11,ひがしのうみ,
 10040,12,东海,
+10040,14,Mar Este,
 10041,1,むしタイプ,
 10041,5,Insecte,Arceus Insecte
 10041,6,Käfer,Arceus (Käfer)
@@ -945,6 +1042,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10041,8,Tipo Coleottero,
 10041,9,Bug Type,Bug Arceus
 10041,11,むしタイプ,
+10041,14,Tipo Bicho,
 10042,1,あくタイプ,
 10042,5,Ténèbres,Arceus Ténèbres
 10042,6,Unlicht,Arceus (Unlicht)
@@ -952,6 +1050,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10042,8,Tipo Buio,
 10042,9,Dark Type,Dark Arceus
 10042,11,あくタイプ,
+10042,14,Tipo Siniestro,
 10043,1,ドラゴンタイプ,
 10043,5,Dragon,Arceus Dragon
 10043,6,Drache,Arceus (Drache)
@@ -959,6 +1058,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10043,8,Tipo Drago,
 10043,9,Dragon Type,Dragon Arceus
 10043,11,ドラゴンタイプ,
+10043,14,Tipo Dragón,
 10044,1,でんきタイプ,
 10044,5,Électrik,Arceus Électrik
 10044,6,Elektro,Arceus (Elektro)
@@ -966,6 +1066,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10044,8,Tipo Elettro,
 10044,9,Electric Type,Electric Arceus
 10044,11,でんきタイプ,
+10044,14,Tipo Eléctrico,
 10045,1,かくとうタイプ,
 10045,5,Combat,Arceus Combat
 10045,6,Kampf,Arceus (Kampf)
@@ -973,6 +1074,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10045,8,Tipo Lotta,
 10045,9,Fighting Type,Fighting Arceus
 10045,11,かくとうタイプ,
+10045,14,Tipo Lucha,
 10046,1,ほのおタイプ,
 10046,5,Feu,Arceus Feu
 10046,6,Feuer,Arceus (Feuer)
@@ -980,6 +1082,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10046,8,Tipo Fuoco,
 10046,9,Fire Type,Fire Arceus
 10046,11,ほのおタイプ,
+10046,14,Tipo Fuego,
 10047,1,ひこうタイプ,
 10047,5,Vol,Arceus Vol
 10047,6,Flug,Arceus (Flug)
@@ -987,6 +1090,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10047,8,Tipo Volante,
 10047,9,Flying Type,Flying Arceus
 10047,11,ひこうタイプ,
+10047,14,Tipo Volador,
 10048,1,ゴーストタイプ,
 10048,5,Spectre,Arceus Spectre
 10048,6,Geist,Arceus (Geist)
@@ -994,6 +1098,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10048,8,Tipo Spettro,
 10048,9,Ghost Type,Ghost Arceus
 10048,11,ゴーストタイプ,
+10048,14,Tipo Fantasma,
 10049,1,くさタイプ,
 10049,5,Plante,Arceus Plante
 10049,6,Pflanze,Arceus (Pflanze)
@@ -1001,6 +1106,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10049,8,Tipo Erba,
 10049,9,Grass Type,Grass Arceus
 10049,11,くさタイプ,
+10049,14,Tipo Planta,
 10050,1,じめんタイプ,
 10050,5,Sol,Arceus Sol
 10050,6,Boden,Arceus (Boden)
@@ -1008,6 +1114,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10050,8,Tipo Terra,
 10050,9,Ground Type,Ground Arceus
 10050,11,じめんタイプ,
+10050,14,Tipo Tierra,
 10051,1,こおりタイプ,
 10051,5,Glace,Arceus Glace
 10051,6,Eis,Arceus (Eis)
@@ -1015,6 +1122,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10051,8,Tipo Ghiaccio,
 10051,9,Ice Type,Ice Arceus
 10051,11,こおりタイプ,
+10051,14,Tipo Hielo,
 10052,1,どくタイプ,
 10052,5,Poison,Arceus Poison
 10052,6,Gift,Arceus (Gift)
@@ -1022,6 +1130,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10052,8,Tipo Veleno,
 10052,9,Poison Type,Poison Arceus
 10052,11,どくタイプ,
+10052,14,Tipo Veneno,
 10053,1,エスパータイプ,
 10053,5,Psy,Arceus Psy
 10053,6,Psycho,Arceus (Psycho)
@@ -1029,6 +1138,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10053,8,Tipo Psico,
 10053,9,Psychic Type,Psychic Arceus
 10053,11,エスパータイプ,
+10053,14,Tipo Psíquico,
 10054,1,いわタイプ,
 10054,5,Roche,Arceus Roche
 10054,6,Gestein,Arceus (Gestein)
@@ -1036,6 +1146,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10054,8,Tipo Roccia,
 10054,9,Rock Type,Rock Arceus
 10054,11,いわタイプ,
+10054,14,Tipo Roca,
 10055,1,はがねタイプ,
 10055,5,Acier,Arceus Acier
 10055,6,Stahl,Arceus (Stahl)
@@ -1043,6 +1154,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10055,8,Tipo Acciaio,
 10055,9,Steel Type,Steel Arceus
 10055,11,はがねタイプ,
+10055,14,Tipo Acero,
 10056,1,みずタイプ,
 10056,5,Eau,Arceus Eau
 10056,6,Wasser,Arceus (Wasser)
@@ -1050,6 +1162,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10056,8,Tipo Acqua,
 10056,9,Water Type,Water Arceus
 10056,11,みずタイプ,
+10056,14,Tipo Agua,
 10057,1,？？？タイプ,
 10057,5,???,Arceus ???
 10057,6,???,Arceus (???)
@@ -1057,6 +1170,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10057,8,Tipo ???,
 10057,9,??? Type,??? Arceus
 10057,11,？？？タイプ,
+10057,14,Tipo ???,
 10058,1,ヒートロトム,
 10058,3,히트로토무,
 10058,4,加熱洛托姆,
@@ -1067,6 +1181,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10058,9,Heat Rotom,Heat Rotom
 10058,11,ヒートロトム,
 10058,12,加热洛托姆,
+10058,14,Rotom Calor,
 10059,1,ウォッシュロトム,
 10059,3,워시로토무,
 10059,4,清洗洛托姆,
@@ -1077,6 +1192,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10059,9,Wash Rotom,Wash Rotom
 10059,11,ウォッシュロトム,
 10059,12,清洗洛托姆,
+10059,14,Rotom Lavado,
 10060,1,フロストロトム,
 10060,3,프로스트로토무,
 10060,4,結冰洛托姆,
@@ -1087,6 +1203,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10060,9,Frost Rotom,Frost Rotom
 10060,11,フロストロトム,
 10060,12,结冰洛托姆,
+10060,14,Rotom Frío,
 10061,1,スピンロトム,
 10061,3,스핀로토무,
 10061,4,旋轉洛托姆,
@@ -1097,6 +1214,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10061,9,Fan Rotom,Fan Rotom
 10061,11,スピンロトム,
 10061,12,旋转洛托姆,
+10061,14,Rotom Ventilador,
 10062,1,カットロトム,
 10062,3,커트로토무,
 10062,4,切割洛托姆,
@@ -1107,6 +1225,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10062,9,Mow Rotom,Mow Rotom
 10062,11,カットロトム,
 10062,12,切割洛托姆,
+10062,14,Rotom Corte,
 10063,1,オリジンフォルム,
 10063,3,오리진폼,
 10063,4,起源形態,
@@ -1117,6 +1236,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10063,9,Origin Forme,Origin Giratina
 10063,11,オリジンフォルム,
 10063,12,起源形态,
+10063,14,Forma Origen,
 10064,1,スカイフォルム,
 10064,3,스카이폼,
 10064,4,天空形態,
@@ -1127,6 +1247,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10064,9,Sky Forme,Sky Shaymin
 10064,11,スカイフォルム,
 10064,12,天空形态,
+10064,14,Forma Cielo,
 10065,5,Troizépi,Pichu Troizépi
 10065,6,Strubbelohrform,Strubbelohr-Pichu
 10065,9,Spiky-eared,Spiky-eared Pichu
@@ -1140,6 +1261,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10066,9,Blue-Striped Form,Blue-Striped Basculin
 10066,11,あおすじのすがた,
 10066,12,蓝条纹的样子,
+10066,14,Forma Raya Azul,
 10067,1,ダルマモード,
 10067,3,달마모드,
 10067,4,達摩模式,
@@ -1150,6 +1272,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10067,9,Zen Mode,Zen Darmanitan
 10067,11,ダルマモード,
 10067,12,达摩模式,
+10067,14,Modo Daruma,
 10068,1,なつのすがた,
 10068,3,여름의 모습,
 10068,5,Forme Été,Vivaldaim Été
@@ -1158,6 +1281,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10068,8,Forma Estate,
 10068,9,Summer Form,Summer Deerling
 10068,11,なつのすがた,
+10068,14,Forma Verano,
 10069,1,あきのすがた,
 10069,3,가을의 모습,
 10069,5,Forme Automne,Vivaldaim Automne
@@ -1166,6 +1290,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10069,8,Forma Autunno,
 10069,9,Autumn Form,Autumn Deerling
 10069,11,あきのすがた,
+10069,14,Forma Otoño,
 10070,1,ふゆのすがた,
 10070,3,겨울의 모습,
 10070,5,Forme Hiver,Vivaldaim Hiver
@@ -1174,6 +1299,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10070,8,Forma Inverno,
 10070,9,Winter Form,Winter Deerling
 10070,11,ふゆのすがた,
+10070,14,Forma Invierno,
 10071,1,なつのすがた,
 10071,3,여름의 모습,
 10071,5,Forme Été,Haydaim Été
@@ -1182,6 +1308,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10071,8,Forma Estate,
 10071,9,Summer Form,Summer Sawsbuck
 10071,11,なつのすがた,
+10071,14,Forma Verano,
 10072,1,あきのすがた,
 10072,3,가을의 모습,
 10072,5,Forme Automne,Haydaim Automne
@@ -1190,6 +1317,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10072,8,Forma Autunno,
 10072,9,Autumn Form,Autumn Sawsbuck
 10072,11,あきのすがた,
+10072,14,Forma Otoño,
 10073,1,ふゆのすがた,
 10073,3,겨울의 모습,
 10073,5,Forme Hiver,Haydaim Hiver
@@ -1198,6 +1326,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10073,8,Forma Inverno,
 10073,9,Winter Form,Winter Sawsbuck
 10073,11,ふゆのすがた,
+10073,14,Forma Invierno,
 10074,1,ステップフォルム,
 10074,3,스텝폼,
 10074,4,舞步形態,
@@ -1208,6 +1337,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10074,9,Pirouette Forme,Pirouette Meloetta
 10074,11,ステップフォルム,
 10074,12,舞步形态,
+10074,14,Forma Danza,
 10075,1,アクアカセット,
 10075,3,아쿠아카세트,
 10075,5,Module Aqua,Genesect Aqua
@@ -1216,6 +1346,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10075,8,Idromodulo,
 10075,9,Douse Drive,Douse Genesect
 10075,11,アクアカセット,
+10075,14,HidroROM,
 10076,1,イナズマカセット,
 10076,3,번개카세트,
 10076,5,Module Choc,Genesect Choc
@@ -1224,6 +1355,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10076,8,Voltmodulo,
 10076,9,Shock Drive,Shock Genesect
 10076,11,イナズマカセット,
+10076,14,FulgoROM,
 10077,1,ブレイズカセット,
 10077,3,블레이즈카세트,
 10077,5,Module Pyro,Genesect Pyro
@@ -1232,6 +1364,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10077,8,Piromodulo,
 10077,9,Burn Drive,Burn Genesect
 10077,11,ブレイズカセット,
+10077,14,PiroROM,
 10078,1,フリーズカセット,
 10078,3,프리즈카세트,
 10078,5,Module Cryo,Genesect Cryo
@@ -1240,6 +1373,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10078,8,Gelomodulo,
 10078,9,Chill Drive,Chill Genesect
 10078,11,フリーズカセット,
+10078,14,CrioROM,
 10079,1,れいじゅうフォルム,
 10079,3,영물폼,
 10079,4,靈獸形態,
@@ -1250,6 +1384,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10079,9,Therian Forme,Therian Tornadus
 10079,11,れいじゅうフォルム,
 10079,12,灵兽形态,
+10079,14,Forma Tótem,
 10080,1,れいじゅうフォルム,
 10080,3,영물폼,
 10080,4,靈獸形態,
@@ -1260,6 +1395,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10080,9,Therian Forme,Therian Thundurus
 10080,11,れいじゅうフォルム,
 10080,12,灵兽形态,
+10080,14,Forma Tótem,
 10081,1,れいじゅうフォルム,
 10081,3,영물폼,
 10081,4,靈獸形態,
@@ -1270,6 +1406,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10081,9,Therian Forme,Therian Landorus
 10081,11,れいじゅうフォルム,
 10081,12,灵兽形态,
+10081,14,Forma Tótem,
 10082,1,ブラックキュレム,
 10082,3,블랙큐레무,
 10082,4,闇黑酋雷姆,
@@ -1280,6 +1417,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10082,9,Black Kyurem,Black Kyurem
 10082,11,ブラックキュレム,
 10082,12,暗黑酋雷姆,
+10082,14,Kyurem Negro,
 10083,1,ホワイトキュレム,
 10083,3,화이트큐레무,
 10083,4,焰白酋雷姆,
@@ -1290,6 +1428,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10083,9,White Kyurem,White Kyurem
 10083,11,ホワイトキュレム,
 10083,12,焰白酋雷姆,
+10083,14,Kyurem Blanco,
 10084,1,かくごのすがた,
 10084,3,각오의 모습,
 10084,4,覺悟的樣子,
@@ -1300,6 +1439,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10084,9,Resolute Form,Resolute Keldeo
 10084,11,かくごのすがた,
 10084,12,觉悟的样子,
+10084,14,Forma Brío,
 10085,1,フェアリータイプ,
 10085,5,Fée,Arceus Fée
 10085,6,Fee,Arceus (Fee)
@@ -1307,6 +1447,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10085,8,Tipo Folletto,
 10085,9,Fairy Type,Fairy Arceus
 10085,11,フェアリータイプ,
+10085,14,Tipo Hada,
 10086,1,ひょうせつのもよう,
 10086,3,빙설의 모양,
 10086,5,Motif Blizzard,Prismillon Blizzard
@@ -1315,6 +1456,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10086,8,Motivo Nevi Perenni,
 10086,9,Icy Snow Pattern,Icy Snow Vivillon
 10086,11,ひょうせつのもよう,
+10086,14,Motivo Polar,
 10087,1,ゆきぐにのもよう,
 10087,3,설국의 모양,
 10087,5,Motif Banquise,Prismillon Banquise
@@ -1323,6 +1465,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10087,8,Motivo Nordico,
 10087,9,Polar Pattern,Polar Vivillon
 10087,11,ゆきぐにのもよう,
+10087,14,Motivo Taiga,
 10088,1,せつげんのもよう,
 10088,3,설원의 모양,
 10088,5,Motif Glace,Prismillon Glace
@@ -1331,6 +1474,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10088,8,Motivo Manto di Neve,
 10088,9,Tundra Pattern,Tundra Vivillon
 10088,11,せつげんのもよう,
+10088,14,Motivo Tundra,
 10089,1,たいりくのもよう,
 10089,3,대륙의 모양,
 10089,5,Motif Continent,Prismillon Continent
@@ -1339,6 +1483,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10089,8,Motivo Continentale,
 10089,9,Continental Pattern,Continental Vivillon
 10089,11,たいりくのもよう,
+10089,14,Motivo Continental,
 10090,1,ていえんのもよう,
 10090,3,정원의 모양,
 10090,5,Motif Verdure,Prismillon Verdure
@@ -1347,6 +1492,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10090,8,Motivo Prato,
 10090,9,Garden Pattern,Garden Vivillon
 10090,11,ていえんのもよう,
+10090,14,Motivo Vergel,
 10091,1,みやびなもよう,
 10091,3,우아한 모양,
 10091,5,Motif Monarchie,Prismillon Monarchie
@@ -1355,6 +1501,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10091,8,Motivo Eleganza,
 10091,9,Elegant Pattern,Elegant Vivillon
 10091,11,みやびなもよう,
+10091,14,Motivo Oriental,
 10092,1,モダンなもよう,
 10092,3,모던한 모양,
 10092,5,Motif Métropole,Prismillon Métropole
@@ -1363,6 +1510,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10092,8,Motivo Trendy,
 10092,9,Modern Pattern,Modern Vivillon
 10092,11,モダンなもよう,
+10092,14,Motivo Moderno,
 10093,1,マリンのもよう,
 10093,3,마린의 모양,
 10093,5,Motif Rivage,Prismillon Rivage
@@ -1371,6 +1519,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10093,8,Motivo Marino,
 10093,9,Marine Pattern,Marine Vivillon
 10093,11,マリンのもよう,
+10093,14,Motivo Marino,
 10094,1,ぐんとうのもよう,
 10094,3,군도의 모양,
 10094,5,Motif Archipel,Prismillon Archipel
@@ -1379,6 +1528,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10094,8,Motivo Arcipelago,
 10094,9,Archipelago Pattern,Archipelago Vivillon
 10094,11,ぐんとうのもよう,
+10094,14,Motivo Isleño,
 10095,1,こうやのもよう,
 10095,3,황야의 모양,
 10095,5,Motif Sécheresse,Prismillon Sécheresse
@@ -1387,6 +1537,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10095,8,Motivo Deserto,
 10095,9,High Plains Pattern,High Plains Vivillon
 10095,11,こうやのもよう,
+10095,14,Motivo Estepa,
 10096,1,さじんのもよう,
 10096,3,사진의 모양,
 10096,5,Motif Sable,Prismillon Sable
@@ -1395,6 +1546,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10096,8,Motivo Sabbia,
 10096,9,Sandstorm Pattern,Sandstorm Vivillon
 10096,11,さじんのもよう,
+10096,14,Motivo Desierto,
 10097,1,たいがのもよう,
 10097,3,대하의 모양,
 10097,5,Motif Delta,Prismillon Delta
@@ -1403,6 +1555,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10097,8,Motivo Fluviale,
 10097,9,River Pattern,River Vivillon
 10097,11,たいがのもよう,
+10097,14,Motivo Oasis,
 10098,1,スコールのもよう,
 10098,3,스콜의 모양,
 10098,5,Motif Cyclone,Prismillon Cyclone
@@ -1411,6 +1564,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10098,8,Motivo Pluviale,
 10098,9,Monsoon Pattern,Monsoon Vivillon
 10098,11,スコールのもよう,
+10098,14,Motivo Monzón,
 10099,1,サバンナのもよう,
 10099,3,사바나의 모양,
 10099,5,Motif Mangrove,Prismillon Mangrove
@@ -1419,6 +1573,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10099,8,Motivo Savana,
 10099,9,Savanna Pattern,Savanna Vivillon
 10099,11,サバンナのもよう,
+10099,14,Motivo Pantano,
 10100,1,たいようのもよう,
 10100,3,태양의 모양,
 10100,5,Motif Zénith,Prismillon Zénith
@@ -1427,6 +1582,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10100,8,Motivo Solare,
 10100,9,Sun Pattern,Sun Vivillon
 10100,11,たいようのもよう,
+10100,14,Motivo Solar,
 10101,1,オーシャンのもよう,
 10101,3,오션의 모양,
 10101,5,Motif Soleil Levant,Prismillon Soleil Levant
@@ -1435,6 +1591,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10101,8,Motivo Oceanico,
 10101,9,Ocean Pattern,Ocean Vivillon
 10101,11,オーシャンのもよう,
+10101,14,Motivo Océano,
 10102,1,ジャングルのもよう,
 10102,3,정글의 모양,
 10102,5,Motif Jungle,Prismillon Jungle
@@ -1443,6 +1600,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10102,8,Motivo Giungla,
 10102,9,Jungle Pattern,Jungle Vivillon
 10102,11,ジャングルのもよう,
+10102,14,Motivo Jungla,
 10103,1,きいろのはな,
 10103,3,노란 꽃,
 10103,5,Fleur Jaune,Flabébé Jaune
@@ -1451,6 +1609,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10103,8,Fiore Giallo,
 10103,9,Yellow Flower,Yellow Flabébé
 10103,11,きいろのはな,
+10103,14,Flor Amarilla,
 10104,1,オレンジいろのはな,
 10104,3,오렌지색 꽃,
 10104,5,Fleur Orange,Flabébé Orange
@@ -1459,6 +1618,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10104,8,Fiore Arancione,
 10104,9,Orange Flower,Orange Flabébé
 10104,11,オレンジいろのはな,
+10104,14,Flor Naranja,
 10105,1,あおいはな,
 10105,3,파란 꽃,
 10105,5,Fleur Bleue,Flabébé Bleu
@@ -1467,6 +1627,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10105,8,Fiore Blu,
 10105,9,Blue Flower,Blue Flabébé
 10105,11,あおいはな,
+10105,14,Flor Azul,
 10106,1,しろいはな,
 10106,3,하얀 꽃,
 10106,5,Fleur Blanche,Flabébé Blanc
@@ -1475,6 +1636,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10106,8,Fiore Bianco,
 10106,9,White Flower,White Flabébé
 10106,11,しろいはな,
+10106,14,Flor Blanca,
 10107,1,きいろのはな,
 10107,3,노란 꽃,
 10107,5,Fleur Jaune,Floette Jaune
@@ -1483,6 +1645,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10107,8,Fiore Giallo,
 10107,9,Yellow Flower,Yellow Floette
 10107,11,きいろのはな,
+10107,14,Flor Amarilla,
 10108,1,オレンジいろのはな,
 10108,3,오렌지색 꽃,
 10108,5,Fleur Orange,Floette Orange
@@ -1491,6 +1654,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10108,8,Fiore Arancione,
 10108,9,Orange Flower,Orange Floette
 10108,11,オレンジいろのはな,
+10108,14,Flor Naranja,
 10109,1,あおいはな,
 10109,3,파란 꽃,
 10109,5,Fleur Bleue,Floette Bleu
@@ -1499,6 +1663,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10109,8,Fiore Blu,
 10109,9,Blue Flower,Blue Floette
 10109,11,あおいはな,
+10109,14,Flor Azul,
 10110,1,しろいはな,
 10110,3,하얀 꽃,
 10110,5,Fleur Blanche,Floette Blanc
@@ -1507,6 +1672,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10110,8,Fiore Bianco,
 10110,9,White Flower,White Floette
 10110,11,しろいはな,
+10110,14,Flor Blanca,
 10111,1,きいろのはな,
 10111,3,노란 꽃,
 10111,5,Fleur Jaune,Florges Jaune
@@ -1515,6 +1681,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10111,8,Fiore Giallo,
 10111,9,Yellow Flower,Yellow Florges
 10111,11,きいろのはな,
+10111,14,Flor Amarilla,
 10112,1,オレンジいろのはな,
 10112,3,오렌지색 꽃,
 10112,5,Fleur Orange,Florges Orange
@@ -1523,6 +1690,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10112,8,Fiore Arancione,
 10112,9,Orange Flower,Orange Florges
 10112,11,オレンジいろのはな,
+10112,14,Flor Naranja,
 10113,1,あおいはな,
 10113,3,파란 꽃,
 10113,5,Fleur Bleue,Florges Bleu
@@ -1531,6 +1699,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10113,8,Fiore Blu,
 10113,9,Blue Flower,Blue Florges
 10113,11,あおいはな,
+10113,14,Flor Azul,
 10114,1,しろいはな,
 10114,3,하얀 꽃,
 10114,5,Fleur Blanche,Florges Blanc
@@ -1539,6 +1708,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10114,8,Fiore Bianco,
 10114,9,White Flower,White Florges
 10114,11,しろいはな,
+10114,14,Flor Blanca,
 10115,1,ハートカット,
 10115,3,하트컷,
 10115,5,Coupe Cœur,Couafarel Cœur
@@ -1547,6 +1717,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10115,8,Taglio Cuore,
 10115,9,Heart Trim,Heart Furfrou
 10115,11,ハートカット,
+10115,14,Corte Corazón,
 10116,1,スターカット,
 10116,3,스타컷,
 10116,5,Coupe Étoile,Couafarel Étoile
@@ -1555,6 +1726,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10116,8,Taglio Stella,
 10116,9,Star Trim,Star Furfrou
 10116,11,スターカット,
+10116,14,Corte Estrella,
 10117,1,ダイヤカット,
 10117,3,다이아컷,
 10117,5,Coupe Diamant,Couafarel Diamant
@@ -1563,6 +1735,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10117,8,Taglio Diamante,
 10117,9,Diamond Trim,Diamond Furfrou
 10117,11,ダイヤカット,
+10117,14,Corte Rombo,
 10118,1,レディカット,
 10118,3,레이디컷,
 10118,5,Coupe Demoiselle,Couafarel Demoiselle
@@ -1571,6 +1744,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10118,8,Taglio Signorina,
 10118,9,Debutante Trim,Debutante Furfrou
 10118,11,レディカット,
+10118,14,Corte Señorita,
 10119,1,マダムカット,
 10119,3,마담컷,
 10119,5,Coupe Madame,Couafarel Madame
@@ -1579,6 +1753,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10119,8,Taglio Gentildonna,
 10119,9,Matron Trim,Matron Furfrou
 10119,11,マダムカット,
+10119,14,Corte Dama,
 10120,1,ジェントルカット,
 10120,3,젠틀컷,
 10120,5,Coupe Monsieur,Couafarel Monsieur
@@ -1587,6 +1762,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10120,8,Taglio Gentiluomo,
 10120,9,Dandy Trim,Dandy Furfrou
 10120,11,ジェントルカット,
+10120,14,Corte Caballero,
 10121,1,クイーンカット,
 10121,3,퀸컷,
 10121,5,Coupe Reine,Couafarel Reine
@@ -1595,6 +1771,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10121,8,Taglio Regina,
 10121,9,La Reine Trim,La Reine Furfrou
 10121,11,クイーンカット,
+10121,14,Corte Aristocrático,
 10122,1,カブキカット,
 10122,3,가부키컷,
 10122,5,Coupe Kabuki,Couafarel Kabuki
@@ -1603,6 +1780,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10122,8,Taglio Kabuki,
 10122,9,Kabuki Trim,Kabuki Furfrou
 10122,11,カブキカット,
+10122,14,Corte Kabuki,
 10123,1,キングダムカット,
 10123,3,킹덤컷,
 10123,5,Coupe Pharaon,Couafarel Pharaon
@@ -1611,6 +1789,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10123,8,Taglio Faraone,
 10123,9,Pharaoh Trim,Pharaoh Furfrou
 10123,11,キングダムカット,
+10123,14,Corte Faraónico,
 10124,1,メスのすがた,
 10124,3,암컷의 모습,
 10124,4,雌性的樣子,
@@ -1621,6 +1800,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10124,9,Female,Female Meowstic
 10124,11,メスのすがた,
 10124,12,雌性的样子,
+10124,14,Hembra,
 10125,1,ブレードフォルム,
 10125,3,블레이드폼,
 10125,4,刀劍形態,
@@ -1631,6 +1811,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10125,9,Blade Forme,Blade Aegislash
 10125,11,ブレードフォルム,
 10125,12,刀剑形态,
+10125,14,Forma Filo,
 10126,1,ちいさいサイズ,
 10126,3,작은 사이즈,
 10126,4,小尺寸,
@@ -1641,6 +1822,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10126,9,Small Size,Small Pumpkaboo
 10126,11,ちいさいサイズ,
 10126,12,小尺寸,
+10126,14,Tamaño Pequeño,
 10127,1,おおきいサイズ,
 10127,3,큰 사이즈,
 10127,4,大尺寸,
@@ -1651,6 +1833,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10127,9,Large Size,Large Pumpkaboo
 10127,11,おおきいサイズ,
 10127,12,大尺寸,
+10127,14,Tamaño Grande,
 10128,1,とくだいサイズ,
 10128,3,특대 사이즈,
 10128,4,特大尺寸,
@@ -1661,6 +1844,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10128,9,Super Size,Super Pumpkaboo
 10128,11,とくだいサイズ,
 10128,12,特大尺寸,
+10128,14,Tamaño Extragrande,
 10129,1,ちいさいサイズ,
 10129,3,작은 사이즈,
 10129,4,小尺寸,
@@ -1671,6 +1855,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10129,9,Small Size,Small Gourgeist
 10129,11,ちいさいサイズ,
 10129,12,小尺寸,
+10129,14,Tamaño Pequeño,
 10130,1,おおきいサイズ,
 10130,3,큰 사이즈,
 10130,4,大尺寸,
@@ -1681,6 +1866,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10130,9,Large Size,Large Gourgeist
 10130,11,おおきいサイズ,
 10130,12,大尺寸,
+10130,14,Tamaño Grande,
 10131,1,とくだいサイズ,
 10131,3,특대 사이즈,
 10131,4,特大尺寸,
@@ -1691,6 +1877,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10131,9,Super Size,Super Gourgeist
 10131,11,とくだいサイズ,
 10131,12,特大尺寸,
+10131,14,Tamaño Extragrande,
 10132,1,リラックスモード,
 10132,3,릴랙스모드,
 10132,4,放鬆模式,
@@ -1701,6 +1888,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10132,9,Neutral Mode,Neutral Xerneas
 10132,11,リラックスモード,
 10132,12,放松模式,
+10132,14,Modo Relajado,
 10133,1,メガフシギバナ,
 10133,3,메가이상해꽃,
 10133,4,超級妙蛙花,
@@ -1711,6 +1899,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10133,9,Mega Venusaur,Mega Venusaur
 10133,11,メガフシギバナ,
 10133,12,超级妙蛙花,
+10133,14,Mega-Venusaur,
 10134,1,メガリザードンＸ,
 10134,3,메가리자몽X,
 10134,4,超級噴火龍Ｘ,
@@ -1721,6 +1910,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10134,9,Mega Charizard X,Mega Charizard X
 10134,11,メガリザードンＸ,
 10134,12,超级喷火龙Ｘ,
+10134,14,Mega-Charizard X,
 10135,1,メガリザードンＹ,
 10135,3,메가리자몽Y,
 10135,4,超級噴火龍Ｙ,
@@ -1731,6 +1921,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10135,9,Mega Charizard Y,Mega Charizard Y
 10135,11,メガリザードンＹ,
 10135,12,超级喷火龙Ｙ,
+10135,14,Mega-Charizard Y,
 10136,1,メガカメックス,
 10136,3,메가거북왕,
 10136,4,超級水箭龜,
@@ -1741,6 +1932,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10136,9,Mega Blastoise,Mega Blastoise
 10136,11,メガカメックス,
 10136,12,超级水箭龟,
+10136,14,Mega-Blastoise,
 10137,1,メガフーディン,
 10137,3,메가후딘,
 10137,4,超級胡地,
@@ -1751,6 +1943,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10137,9,Mega Alakazam,Mega Alakazam
 10137,11,メガフーディン,
 10137,12,超级胡地,
+10137,14,Mega-Alakazam,
 10138,1,メガゲンガー,
 10138,3,메가팬텀,
 10138,4,超級耿鬼,
@@ -1761,6 +1954,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10138,9,Mega Gengar,Mega Gengar
 10138,11,メガゲンガー,
 10138,12,超级耿鬼,
+10138,14,Mega-Gengar,
 10139,1,メガガルーラ,
 10139,3,메가캥카,
 10139,4,超級袋獸,
@@ -1771,6 +1965,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10139,9,Mega Kangaskhan,Mega Kangaskhan
 10139,11,メガガルーラ,
 10139,12,超级袋兽,
+10139,14,Mega-Kangaskhan,
 10140,1,メガカイロス,
 10140,3,메가쁘사이저,
 10140,4,超級凱羅斯,
@@ -1781,6 +1976,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10140,9,Mega Pinsir,Mega Pinsir
 10140,11,メガカイロス,
 10140,12,超级凯罗斯,
+10140,14,Mega-Pinsir,
 10141,1,メガギャラドス,
 10141,3,메가갸라도스,
 10141,4,超級暴鯉龍,
@@ -1791,6 +1987,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10141,9,Mega Gyarados,Mega Gyarados
 10141,11,メガギャラドス,
 10141,12,超级暴鲤龙,
+10141,14,Mega-Gyarados,
 10142,1,メガプテラ,
 10142,3,메가프테라,
 10142,4,超級化石翼龍,
@@ -1801,6 +1998,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10142,9,Mega Aerodactyl,Mega Aerodactyl
 10142,11,メガプテラ,
 10142,12,超级化石翼龙,
+10142,14,Mega-Aerodactyl,
 10143,1,メガミュウツーＸ,
 10143,3,메가뮤츠X,
 10143,4,超級超夢Ｘ,
@@ -1811,6 +2009,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10143,9,Mega Mewtwo X,Mega Mewtwo X
 10143,11,メガミュウツーＸ,
 10143,12,超级超梦Ｘ,
+10143,14,Mega-Mewtwo X,
 10144,1,メガミュウツーＹ,
 10144,3,메가뮤츠Y,
 10144,4,超級超夢Ｙ,
@@ -1821,6 +2020,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10144,9,Mega Mewtwo Y,Mega Mewtwo Y
 10144,11,メガミュウツーＹ,
 10144,12,超级超梦Ｙ,
+10144,14,Mega-Mewtwo Y,
 10145,1,メガデンリュウ,
 10145,3,메가전룡,
 10145,4,超級電龍,
@@ -1831,6 +2031,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10145,9,Mega Ampharos,Mega Ampharos
 10145,11,メガデンリュウ,
 10145,12,超级电龙,
+10145,14,Mega-Ampharos,
 10146,1,メガハッサム,
 10146,3,메가핫삼,
 10146,4,超級巨鉗螳螂,
@@ -1841,6 +2042,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10146,9,Mega Scizor,Mega Scizor
 10146,11,メガハッサム,
 10146,12,超级巨钳螳螂,
+10146,14,Mega-Scizor,
 10147,1,メガヘラクロス,
 10147,3,메가헤라크로스,
 10147,4,超級赫拉克羅斯,
@@ -1851,6 +2053,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10147,9,Mega Heracross,Mega Heracross
 10147,11,メガヘラクロス,
 10147,12,超级赫拉克罗斯,
+10147,14,Mega-Heracross,
 10148,1,メガヘルガー,
 10148,3,메가헬가,
 10148,4,超級黑魯加,
@@ -1861,6 +2064,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10148,9,Mega Houndoom,Mega Houndoom
 10148,11,メガヘルガー,
 10148,12,超级黑鲁加,
+10148,14,Mega-Houndoom,
 10149,1,メガバンギラス,
 10149,3,메가마기라스,
 10149,4,超級班基拉斯,
@@ -1871,6 +2075,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10149,9,Mega Tyranitar,Mega Tyranitar
 10149,11,メガバンギラス,
 10149,12,超级班基拉斯,
+10149,14,Mega-Tyranitar,
 10150,1,メガバシャーモ,
 10150,3,메가번치코,
 10150,4,超級火焰雞,
@@ -1881,6 +2086,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10150,9,Mega Blaziken,Mega Blaziken
 10150,11,メガバシャーモ,
 10150,12,超级火焰鸡,
+10150,14,Mega-Blaziken,
 10151,1,メガサーナイト,
 10151,3,메가가디안,
 10151,4,超級沙奈朵,
@@ -1891,6 +2097,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10151,9,Mega Gardevoir,Mega Gardevoir
 10151,11,メガサーナイト,
 10151,12,超级沙奈朵,
+10151,14,Mega-Gardevoir,
 10152,1,メガクチート,
 10152,3,메가입치트,
 10152,4,超級大嘴娃,
@@ -1901,6 +2108,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10152,9,Mega Mawile,Mega Mawile
 10152,11,メガクチート,
 10152,12,超级大嘴娃,
+10152,14,Mega-Mawile,
 10153,1,メガボスゴドラ,
 10153,3,메가보스로라,
 10153,4,超級波士可多拉,
@@ -1911,6 +2119,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10153,9,Mega Aggron,Mega Aggron
 10153,11,メガボスゴドラ,
 10153,12,超级波士可多拉,
+10153,14,Mega-Aggron,
 10154,1,メガチャーレム,
 10154,3,메가요가램,
 10154,4,超級恰雷姆,
@@ -1921,6 +2130,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10154,9,Mega Medicham,Mega Medicham
 10154,11,メガチャーレム,
 10154,12,超级恰雷姆,
+10154,14,Mega-Medicham,
 10155,1,メガライボルト,
 10155,3,메가썬더볼트,
 10155,4,超級雷電獸,
@@ -1931,6 +2141,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10155,9,Mega Manectric,Mega Manectric
 10155,11,メガライボルト,
 10155,12,超级雷电兽,
+10155,14,Mega-Manectric,
 10156,1,メガジュペッタ,
 10156,3,메가다크펫,
 10156,4,超級詛咒娃娃,
@@ -1941,6 +2152,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10156,9,Mega Banette,Mega Banette
 10156,11,メガジュペッタ,
 10156,12,超级诅咒娃娃,
+10156,14,Mega-Banette,
 10157,1,メガアブソル,
 10157,3,메가앱솔,
 10157,4,超級阿勃梭魯,
@@ -1951,6 +2163,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10157,9,Mega Absol,Mega Absol
 10157,11,メガアブソル,
 10157,12,超级阿勃梭鲁,
+10157,14,Mega-Absol,
 10158,1,メガガブリアス,
 10158,3,메가한카리아스,
 10158,4,超級烈咬陸鯊,
@@ -1961,6 +2174,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10158,9,Mega Garchomp,Mega Garchomp
 10158,11,メガガブリアス,
 10158,12,超级烈咬陆鲨,
+10158,14,Mega-Garchomp,
 10159,1,メガルカリオ,
 10159,3,메가루카리오,
 10159,4,超級路卡利歐,
@@ -1971,6 +2185,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10159,9,Mega Lucario,Mega Lucario
 10159,11,メガルカリオ,
 10159,12,超级路卡利欧,
+10159,14,Mega-Lucario,
 10160,1,メガユキノオー,
 10160,3,메가눈설왕,
 10160,4,超級暴雪王,
@@ -1981,6 +2196,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10160,9,Mega Abomasnow,Mega Abomasnow
 10160,11,メガユキノオー,
 10160,12,超级暴雪王,
+10160,14,Mega-Abomasnow,
 10161,1,ファンシーなもよう,
 10161,3,팬시한 모양,
 10161,5,Motif Fantaisie,Prismillon Fantaisie
@@ -1989,6 +2205,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10161,8,Motivo Sbarazzino,
 10161,9,Fancy Pattern,Fancy Vivillon
 10161,11,ファンシーなもよう,
+10161,14,Motivo Fantasía,
 10162,1,ボールのもよう,
 10162,3,볼의 모양,
 10162,5,Motif Poké Ball,Prismillon Poké Ball
@@ -1997,6 +2214,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10162,8,Motivo Poké Ball,
 10162,9,Poké Ball Pattern,Poké Ball Vivillon
 10162,11,ボールのもよう,
+10162,14,Motivo Poké Ball,
 10163,1,えいえんのはな,
 10163,3,영원의 꽃,
 10163,5,Fleur Éternelle,Floette Éternel
@@ -2005,6 +2223,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10163,8,Fiore Eterno,
 10163,9,Eternal Flower,Eternal Floette
 10163,11,えいえんのはな,
+10163,14,Flor Eterna,
 10164,1,メガラティアス,
 10164,3,메가라티아스,
 10164,4,超級拉帝亞斯,
@@ -2015,6 +2234,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10164,9,Mega Latias,Mega Latias
 10164,11,メガラティアス,
 10164,12,超级拉帝亚斯,
+10164,14,Mega-Latias,
 10165,1,メガラティオス,
 10165,3,메가라티오스,
 10165,4,超級拉帝歐斯,
@@ -2025,6 +2245,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10165,9,Mega Latios,Mega Latios
 10165,11,メガラティオス,
 10165,12,超级拉帝欧斯,
+10165,14,Mega-Latios,
 10166,1,メガラグラージ,
 10166,3,메가대짱이,
 10166,4,超級巨沼怪,
@@ -2035,6 +2256,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10166,9,Mega Swampert,Mega Swampert
 10166,11,メガラグラージ,
 10166,12,超级巨沼怪,
+10166,14,Mega-Swampert,
 10167,1,メガジュカイン,
 10167,3,메가나무킹,
 10167,4,超級蜥蜴王,
@@ -2045,6 +2267,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10167,9,Mega Sceptile,Mega Sceptile
 10167,11,メガジュカイン,
 10167,12,超级蜥蜴王,
+10167,14,Mega-Sceptile,
 10168,1,メガヤミラミ,
 10168,3,메가깜까미,
 10168,4,超級勾魂眼,
@@ -2055,6 +2278,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10168,9,Mega Sableye,Mega Sableye
 10168,11,メガヤミラミ,
 10168,12,超级勾魂眼,
+10168,14,Mega-Sableye,
 10169,1,メガチルタリス,
 10169,3,메가파비코리,
 10169,4,超級七夕青鳥,
@@ -2065,6 +2289,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10169,9,Mega Altaria,Mega Altaria
 10169,11,メガチルタリス,
 10169,12,超级七夕青鸟,
+10169,14,Mega-Altaria,
 10170,1,メガエルレイド,
 10170,3,메가엘레이드,
 10170,4,超級艾路雷朵,
@@ -2075,6 +2300,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10170,9,Mega Gallade,Mega Gallade
 10170,11,メガエルレイド,
 10170,12,超级艾路雷朵,
+10170,14,Mega-Gallade,
 10171,1,メガタブンネ,
 10171,3,메가다부니,
 10171,4,超級差不多娃娃,
@@ -2085,6 +2311,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10171,9,Mega Audino,Mega Audino
 10171,11,メガタブンネ,
 10171,12,超级差不多娃娃,
+10171,14,Mega-Audino,
 10172,1,メガサメハダー,
 10172,3,메가샤크니아,
 10172,4,超級巨牙鯊,
@@ -2095,6 +2322,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10172,9,Mega Sharpedo,Mega Sharpedo
 10172,11,メガサメハダー,
 10172,12,超级巨牙鲨,
+10172,14,Mega-Sharpedo,
 10173,1,メガヤドラン,
 10173,3,메가야도란,
 10173,4,超級呆殼獸,
@@ -2105,6 +2333,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10173,9,Mega Slowbro,Mega Slowbro
 10173,11,メガヤドラン,
 10173,12,超级呆壳兽,
+10173,14,Mega-Slowbro,
 10174,1,メガハガネール,
 10174,3,메가강철톤,
 10174,4,超級大鋼蛇,
@@ -2115,6 +2344,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10174,9,Mega Steelix,Mega Steelix
 10174,11,メガハガネール,
 10174,12,超级大钢蛇,
+10174,14,Mega-Steelix,
 10175,1,メガピジョット,
 10175,3,메가피죤투,
 10175,4,超級大比鳥,
@@ -2125,6 +2355,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10175,9,Mega Pidgeot,Mega Pidgeot
 10175,11,メガピジョット,
 10175,12,超级大比鸟,
+10175,14,Mega-Pidgeot,
 10176,1,メガオニゴーリ,
 10176,3,메가얼음귀신,
 10176,4,超級冰鬼護,
@@ -2135,6 +2366,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10176,9,Mega Glalie,Mega Glalie
 10176,11,メガオニゴーリ,
 10176,12,超级冰鬼护,
+10176,14,Mega-Glalie,
 10177,1,メガディアンシー,
 10177,3,메가디안시,
 10177,4,超級蒂安希,
@@ -2145,6 +2377,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10177,9,Mega Diancie,Mega Diancie
 10177,11,メガディアンシー,
 10177,12,超级蒂安希,
+10177,14,Mega-Diancie,
 10178,1,メガメタグロス,
 10178,3,메가메타그로스,
 10178,4,超級巨金怪,
@@ -2155,6 +2388,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10178,9,Mega Metagross,Mega Metagross
 10178,11,メガメタグロス,
 10178,12,超级巨金怪,
+10178,14,Mega-Metagross,
 10179,1,ゲンシカイキのすがた,
 10179,3,원시회귀의 모습,
 10179,4,原始回歸的樣子,
@@ -2165,6 +2399,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10179,9,Primal Reversion,Primal Kyogre
 10179,11,ゲンシカイキのすがた,
 10179,12,原始回归的样子,
+10179,14,Regresión Primigenia,
 10180,1,ゲンシカイキのすがた,
 10180,3,원시회귀의 모습,
 10180,4,原始回歸的樣子,
@@ -2175,6 +2410,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10180,9,Primal Reversion,Primal Groudon
 10180,11,ゲンシカイキのすがた,
 10180,12,原始回归的样子,
+10180,14,Regresión Primigenia,
 10181,1,メガレックウザ,
 10181,3,메가레쿠쟈,
 10181,4,超級烈空坐,
@@ -2185,6 +2421,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10181,9,Mega Rayquaza,Mega Rayquaza
 10181,11,メガレックウザ,
 10181,12,超级烈空坐,
+10181,14,Mega-Rayquaza,
 10182,1,ハードロック・ピカチュウ,
 10182,5,Pikachu Rockeur,Pikachu Rockeur
 10182,6,Cosplayform,Rock Star Pikachu
@@ -2225,6 +2462,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10188,9,Hoopa Unbound,Hoopa Unbound
 10188,11,ときはなたれしフーパ,
 10188,12,解放胡帕,
+10188,14,Hoopa Desatado,
 10189,1,メガバクーダ,
 10189,3,메가폭타,
 10189,4,超級噴火駝,
@@ -2235,6 +2473,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10189,9,Mega Camerupt,Mega Camerupt
 10189,11,メガバクーダ,
 10189,12,超级喷火驼,
+10189,14,Mega-Camerupt,
 10190,1,メガミミロップ,
 10190,3,메가이어롭,
 10190,4,超級長耳兔,
@@ -2245,6 +2484,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10190,9,Mega Lopunny,Mega Lopunny
 10190,11,メガミミロップ,
 10190,12,超级长耳兔,
+10190,14,Mega-Lopunny,
 10191,1,メガボーマンダ,
 10191,3,메가보만다,
 10191,4,超級暴飛龍,
@@ -2255,6 +2495,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10191,9,Mega Salamence,Mega Salamence
 10191,11,メガボーマンダ,
 10191,12,超级暴飞龙,
+10191,14,Mega-Salamence,
 10192,1,メガスピアー,
 10192,3,메가독침붕,
 10192,4,超級大針蜂,
@@ -2265,6 +2506,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10192,9,Mega Beedrill,Mega Beedrill
 10192,11,メガスピアー,
 10192,12,超级大针蜂,
+10192,14,Mega-Beedrill,
 10193,1,アローラのすがた,
 10193,3,알로라의 모습,
 10193,4,阿羅拉的樣子,
@@ -2275,6 +2517,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10193,9,Alolan Form,Alolan Rattata
 10193,11,アローラのすがた,
 10193,12,阿罗拉的样子,
+10193,14,Forma de Alola,
 10194,1,アローラのすがた,
 10194,3,알로라의 모습,
 10194,4,阿羅拉的樣子,
@@ -2285,6 +2528,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10194,9,Alolan Form,Alolan Raticate
 10194,11,アローラのすがた,
 10194,12,阿罗拉的样子,
+10194,14,Forma de Alola,
 10195,5,,Rattatac d’Alola Dominant
 10195,6,Totemform,Totem Alola Rattikarl
 10195,9,,Totem Alolan Raticate
@@ -2298,6 +2542,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10196,9,Original Cap,Original Cap Pikachu
 10196,11,オリジナルキャップ,
 10196,12,初始帽子,
+10196,14,Gorra Original,
 10197,1,ホウエンキャップ,
 10197,3,호연캡,
 10197,4,豐緣帽子,
@@ -2308,6 +2553,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10197,9,Hoenn Cap,Hoenn Cap Pikachu
 10197,11,ホウエンキャップ,
 10197,12,丰缘帽子,
+10197,14,Gorra Hoenn,
 10198,1,シンオウキャップ,
 10198,3,신오캡,
 10198,4,神奧帽子,
@@ -2318,6 +2564,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10198,9,Sinnoh Cap,Sinnoh Cap Pikachu
 10198,11,シンオウキャップ,
 10198,12,神奥帽子,
+10198,14,Gorra Sinnoh,
 10199,1,イッシュキャップ,
 10199,3,하나캡,
 10199,4,合眾帽子,
@@ -2328,6 +2575,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10199,9,Unova Cap,Unova Cap Pikachu
 10199,11,イッシュキャップ,
 10199,12,合众帽子,
+10199,14,Gorra Teselia,
 10200,1,カロスキャップ,
 10200,3,칼로스캡,
 10200,4,卡洛斯帽子,
@@ -2338,6 +2586,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10200,9,Kalos Cap,Kalos Cap Pikachu
 10200,11,カロスキャップ,
 10200,12,卡洛斯帽子,
+10200,14,Gorra Kalos,
 10201,1,アローラキャップ,
 10201,3,알로라캡,
 10201,4,阿羅拉帽子,
@@ -2348,6 +2597,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10201,9,Alola Cap,Alola Cap Pikachu
 10201,11,アローラキャップ,
 10201,12,阿罗拉帽子,
+10201,14,Gorra Alola,
 10202,1,アローラのすがた,
 10202,3,알로라의 모습,
 10202,4,阿羅拉的樣子,
@@ -2358,6 +2608,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10202,9,Alolan Form,Alolan Raichu
 10202,11,アローラのすがた,
 10202,12,阿罗拉的样子,
+10202,14,Forma de Alola,
 10203,1,アローラのすがた,
 10203,3,알로라의 모습,
 10203,4,阿羅拉的樣子,
@@ -2368,6 +2619,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10203,9,Alolan Form,Alolan Sandshrew
 10203,11,アローラのすがた,
 10203,12,阿罗拉的样子,
+10203,14,Forma de Alola,
 10204,1,アローラのすがた,
 10204,3,알로라의 모습,
 10204,4,阿羅拉的樣子,
@@ -2378,6 +2630,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10204,9,Alolan Form,Alolan Sandslash
 10204,11,アローラのすがた,
 10204,12,阿罗拉的样子,
+10204,14,Forma de Alola,
 10205,1,アローラのすがた,
 10205,3,알로라의 모습,
 10205,4,阿羅拉的樣子,
@@ -2388,6 +2641,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10205,9,Alolan Form,Alolan Vulpix
 10205,11,アローラのすがた,
 10205,12,阿罗拉的样子,
+10205,14,Forma de Alola,
 10206,1,アローラのすがた,
 10206,3,알로라의 모습,
 10206,4,阿羅拉的樣子,
@@ -2398,6 +2652,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10206,9,Alolan Form,Alolan Ninetales
 10206,11,アローラのすがた,
 10206,12,阿罗拉的样子,
+10206,14,Forma de Alola,
 10207,1,アローラのすがた,
 10207,3,알로라의 모습,
 10207,4,阿羅拉的樣子,
@@ -2408,6 +2663,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10207,9,Alolan Form,Alolan Diglett
 10207,11,アローラのすがた,
 10207,12,阿罗拉的样子,
+10207,14,Forma de Alola,
 10208,1,アローラのすがた,
 10208,3,알로라의 모습,
 10208,4,阿羅拉的樣子,
@@ -2418,6 +2674,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10208,9,Alolan Form,Alolan Dugtrio
 10208,11,アローラのすがた,
 10208,12,阿罗拉的样子,
+10208,14,Forma de Alola,
 10209,1,アローラのすがた,
 10209,3,알로라의 모습,
 10209,4,阿羅拉的樣子,
@@ -2428,6 +2685,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10209,9,Alolan Form,Alolan Meowth
 10209,11,アローラのすがた,
 10209,12,阿罗拉的样子,
+10209,14,Forma de Alola,
 10210,1,アローラのすがた,
 10210,3,알로라의 모습,
 10210,4,阿羅拉的樣子,
@@ -2438,6 +2696,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10210,9,Alolan Form,Alolan Persian
 10210,11,アローラのすがた,
 10210,12,阿罗拉的样子,
+10210,14,Forma de Alola,
 10211,1,アローラのすがた,
 10211,3,알로라의 모습,
 10211,4,阿羅拉的樣子,
@@ -2448,6 +2707,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10211,9,Alolan Form,Alolan Geodude
 10211,11,アローラのすがた,
 10211,12,阿罗拉的样子,
+10211,14,Forma de Alola,
 10212,1,アローラのすがた,
 10212,3,알로라의 모습,
 10212,4,阿羅拉的樣子,
@@ -2458,6 +2718,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10212,9,Alolan Form,Alolan Graveler
 10212,11,アローラのすがた,
 10212,12,阿罗拉的样子,
+10212,14,Forma de Alola,
 10213,1,アローラのすがた,
 10213,3,알로라의 모습,
 10213,4,阿羅拉的樣子,
@@ -2468,6 +2729,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10213,9,Alolan Form,Alolan Golem
 10213,11,アローラのすがた,
 10213,12,阿罗拉的样子,
+10213,14,Forma de Alola,
 10214,1,アローラのすがた,
 10214,3,알로라의 모습,
 10214,4,阿羅拉的樣子,
@@ -2478,6 +2740,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10214,9,Alolan Form,Alolan Grimer
 10214,11,アローラのすがた,
 10214,12,阿罗拉的样子,
+10214,14,Forma de Alola,
 10215,1,アローラのすがた,
 10215,3,알로라의 모습,
 10215,4,阿羅拉的樣子,
@@ -2488,6 +2751,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10215,9,Alolan Form,Alolan Muk
 10215,11,アローラのすがた,
 10215,12,阿罗拉的样子,
+10215,14,Forma de Alola,
 10216,1,アローラのすがた,
 10216,3,알로라의 모습,
 10216,4,阿羅拉的樣子,
@@ -2498,6 +2762,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10216,9,Alolan Form,Alolan Exeggutor
 10216,11,アローラのすがた,
 10216,12,阿罗拉的样子,
+10216,14,Forma de Alola,
 10217,1,アローラのすがた,
 10217,3,알로라의 모습,
 10217,4,阿羅拉的樣子,
@@ -2508,6 +2773,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10217,9,Alolan Form,Alolan Marowak
 10217,11,アローラのすがた,
 10217,12,阿罗拉的样子,
+10217,14,Forma de Alola,
 10218,5,,Amphinobi Synergie
 10218,6,Freundschaftsaktform,Battle Bond Quajutsu
 10218,9,,Battle Bond Greninja
@@ -2521,6 +2787,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10219,9,Ash-Greninja,Ash’s Greninja
 10219,11,サトシゲッコウガ,
 10219,12,小智版甲贺忍蛙,
+10219,14,Forma Ash,
 10220,1,１０％フォルム,
 10220,3,10%폼,
 10220,4,１０％形態,
@@ -2531,6 +2798,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10220,9,10% Forme,10% Zygarde
 10220,11,１０％フォルム,
 10220,12,１０％形态,
+10220,14,Forma 10%,
 10221,1,５０％フォルム,
 10221,3,50%폼,
 10221,4,５０％形態,
@@ -2541,6 +2809,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10221,9,50% Forme,50% Zygarde
 10221,11,５０％フォルム,
 10221,12,５０％形态,
+10221,14,Forma 50%,
 10222,1,パーフェクトフォルム,
 10222,3,퍼펙트폼,
 10222,4,完全體形態,
@@ -2551,6 +2820,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10222,9,Complete Forme,Complete Zygarde
 10222,11,パーフェクトフォルム,
 10222,12,完全体形态,
+10222,14,Forma Completa,
 10223,5,,Argouste Dominant
 10223,6,Totemform,Totem Manguspektor
 10223,9,,Totem Gumshoos
@@ -2567,6 +2837,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10225,9,Pom-Pom Style,Pom-pom Oricorio
 10225,11,ぱちぱちスタイル,
 10225,12,啪滋啪滋风格,
+10225,14,Estilo Animado,
 10226,1,ふらふらスタイル,
 10226,3,훌라훌라스타일,
 10226,4,呼拉呼拉風格,
@@ -2577,6 +2848,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10226,9,Pa’u Style,Pa’u Oricorio
 10226,11,ふらふらスタイル,
 10226,12,呼拉呼拉风格,
+10226,14,Estilo Plácido,
 10227,1,まいまいスタイル,
 10227,3,하늘하늘스타일,
 10227,4,輕盈輕盈風格,
@@ -2587,6 +2859,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10227,9,Sensu Style,Sensu Oricorio
 10227,11,まいまいスタイル,
 10227,12,轻盈轻盈风格,
+10227,14,Estilo Refinado,
 10228,1,まよなかのすがた,
 10228,3,한밤중의 모습,
 10228,4,黑夜的樣子,
@@ -2597,6 +2870,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10228,9,Midnight Form,Midnight Lycanroc
 10228,11,まよなかのすがた,
 10228,12,黑夜的样子,
+10228,14,Forma Nocturna,
 10229,1,むれたすがた,
 10229,3,군집의 모습,
 10229,4,魚群的樣子,
@@ -2607,6 +2881,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10229,9,School Form,School Wishiwashi
 10229,11,むれたすがた,
 10229,12,鱼群的样子,
+10229,14,Forma Banco,
 10230,5,,Floramantis Dominant
 10230,6,Totemform,Totem Mantidea
 10230,9,,Totem Lurantis
@@ -2623,6 +2898,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10232,9,Type: Fighting,
 10232,11,タイプ：ファイト,
 10232,12,属性：战斗,
+10232,14,Tipo: Lucha,
 10233,1,タイプ：フライング,
 10233,3,타입:플라잉,
 10233,4,屬性：飛翔,
@@ -2633,6 +2909,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10233,9,Type: Flying,
 10233,11,タイプ：フライング,
 10233,12,属性：飞翔,
+10233,14,Tipo: Volador,
 10234,1,タイプ：ポイズン,
 10234,3,타입:포이즌,
 10234,4,屬性：毒,
@@ -2643,6 +2920,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10234,9,Type: Poison,
 10234,11,タイプ：ポイズン,
 10234,12,属性：毒,
+10234,14,Tipo: Veneno,
 10235,1,タイプ：グラウンド,
 10235,3,타입:그라운드,
 10235,4,屬性：大地,
@@ -2653,6 +2931,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10235,9,Type: Ground,
 10235,11,タイプ：グラウンド,
 10235,12,属性：大地,
+10235,14,Tipo: Tierra,
 10236,1,タイプ：ロック,
 10236,3,타입:락,
 10236,4,屬性：岩石,
@@ -2663,6 +2942,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10236,9,Type: Rock,
 10236,11,タイプ：ロック,
 10236,12,属性：岩石,
+10236,14,Tipo: Roca,
 10237,1,タイプ：バグ,
 10237,3,타입:버그,
 10237,4,屬性：蟲子,
@@ -2673,6 +2953,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10237,9,Type: Bug,
 10237,11,タイプ：バグ,
 10237,12,属性：虫子,
+10237,14,Tipo: Bicho,
 10238,1,タイプ：ゴースト,
 10238,3,타입:고스트,
 10238,4,屬性：幽靈,
@@ -2683,6 +2964,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10238,9,Type: Ghost,
 10238,11,タイプ：ゴースト,
 10238,12,属性：幽灵,
+10238,14,Tipo: Fantasma,
 10239,1,タイプ：スチール,
 10239,3,타입:스틸,
 10239,4,屬性：鋼鐵,
@@ -2693,6 +2975,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10239,9,Type: Steel,
 10239,11,タイプ：スチール,
 10239,12,属性：钢铁,
+10239,14,Tipo: Acero,
 10240,1,タイプ：ファイヤー,
 10240,3,타입:파이어,
 10240,4,屬性：火焰,
@@ -2703,6 +2986,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10240,9,Type: Fire,
 10240,11,タイプ：ファイヤー,
 10240,12,属性：火焰,
+10240,14,Tipo: Fuego,
 10241,1,タイプ：ウオーター,
 10241,3,타입:워터,
 10241,4,屬性：清水,
@@ -2713,6 +2997,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10241,9,Type: Water,
 10241,11,タイプ：ウオーター,
 10241,12,属性：清水,
+10241,14,Tipo: Agua,
 10242,1,タイプ：グラス,
 10242,3,타입:그래스,
 10242,4,屬性：青草,
@@ -2723,6 +3008,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10242,9,Type: Grass,
 10242,11,タイプ：グラス,
 10242,12,属性：青草,
+10242,14,Tipo: Planta,
 10243,1,タイプ：エレクトロ,
 10243,3,타입:일렉트릭,
 10243,4,屬性：電子,
@@ -2733,6 +3019,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10243,9,Type: Electric,
 10243,11,タイプ：エレクトロ,
 10243,12,属性：电子,
+10243,14,Tipo: Eléctrico,
 10244,1,タイプ：サイキック,
 10244,3,타입:사이킥,
 10244,4,屬性：精神,
@@ -2743,6 +3030,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10244,9,Type: Psychic,
 10244,11,タイプ：サイキック,
 10244,12,属性：精神,
+10244,14,Tipo: Psíquico,
 10245,1,タイプ：アイス,
 10245,3,타입:아이스,
 10245,4,屬性：冰雪,
@@ -2753,6 +3041,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10245,9,Type: Ice,
 10245,11,タイプ：アイス,
 10245,12,属性：冰雪,
+10245,14,Tipo: Hielo,
 10246,1,タイプ：ドラゴン,
 10246,3,타입:드래곤,
 10246,4,屬性：龍,
@@ -2763,6 +3052,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10246,9,Type: Dragon,
 10246,11,タイプ：ドラゴン,
 10246,12,属性：龙,
+10246,14,Tipo: Dragón,
 10247,1,タイプ：ダーク,
 10247,3,타입:다크,
 10247,4,屬性：黑暗,
@@ -2773,6 +3063,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10247,9,Type: Dark,
 10247,11,タイプ：ダーク,
 10247,12,属性：黑暗,
+10247,14,Tipo: Siniestro,
 10248,1,タイプ：フェアリー,
 10248,3,타입:페어리,
 10248,4,屬性：妖精,
@@ -2783,6 +3074,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10248,9,Type: Fairy,
 10248,11,タイプ：フェアリー,
 10248,12,属性：妖精,
+10248,14,Tipo: Hada,
 10249,1,りゅうせいのすがた,
 10249,3,유성의 모습,
 10249,4,流星的樣子,
@@ -2793,6 +3085,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10249,9,Meteor Form,Orange Meteor Minior
 10249,11,りゅうせいのすがた,
 10249,12,流星的样子,
+10249,14,Forma Meteorito,
 10250,1,りゅうせいのすがた,
 10250,3,유성의 모습,
 10250,4,流星的樣子,
@@ -2803,6 +3096,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10250,9,Meteor Form,Yellow Meteor Minior
 10250,11,りゅうせいのすがた,
 10250,12,流星的样子,
+10250,14,Forma Meteorito,
 10251,1,りゅうせいのすがた,
 10251,3,유성의 모습,
 10251,4,流星的樣子,
@@ -2813,6 +3107,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10251,9,Meteor Form,Green Meteor Minior
 10251,11,りゅうせいのすがた,
 10251,12,流星的样子,
+10251,14,Forma Meteorito,
 10252,1,りゅうせいのすがた,
 10252,3,유성의 모습,
 10252,4,流星的樣子,
@@ -2823,6 +3118,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10252,9,Meteor Form,Blue Meteor Minior
 10252,11,りゅうせいのすがた,
 10252,12,流星的样子,
+10252,14,Forma Meteorito,
 10253,1,りゅうせいのすがた,
 10253,3,유성의 모습,
 10253,4,流星的樣子,
@@ -2833,6 +3129,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10253,9,Meteor Form,Indigo Meteor Minior
 10253,11,りゅうせいのすがた,
 10253,12,流星的样子,
+10253,14,Forma Meteorito,
 10254,1,りゅうせいのすがた,
 10254,3,유성의 모습,
 10254,4,流星的樣子,
@@ -2843,6 +3140,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10254,9,Meteor Form,Violet Meteor Minior
 10254,11,りゅうせいのすがた,
 10254,12,流星的样子,
+10254,14,Forma Meteorito,
 10255,1,あかいろのコア,
 10255,3,빨간색 코어,
 10255,4,紅色核心,
@@ -2853,6 +3151,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10255,9,Red Core,Red Core Minior
 10255,11,あかいろのコア,
 10255,12,红色核心,
+10255,14,Núcleo Rojo,
 10256,1,だいだいいろのコア,
 10256,3,주황색 코어,
 10256,4,橙色核心,
@@ -2863,6 +3162,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10256,9,Orange Core,Orange Core Minior
 10256,11,だいだいいろのコア,
 10256,12,橙色核心,
+10256,14,Núcleo Naranja,
 10257,1,きいろのコア,
 10257,3,노란색 코어,
 10257,4,黃色核心,
@@ -2873,6 +3173,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10257,9,Yellow Core,Yellow Core Minior
 10257,11,きいろのコア,
 10257,12,黄色核心,
+10257,14,Núcleo Amarillo,
 10258,1,みどりいろのコア,
 10258,3,초록색 코어,
 10258,4,綠色核心,
@@ -2883,6 +3184,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10258,9,Green Core,Green Core Minior
 10258,11,みどりいろのコア,
 10258,12,绿色核心,
+10258,14,Núcleo Verde,
 10259,1,みずいろのコア,
 10259,3,옥색 코어,
 10259,4,淺藍色核心,
@@ -2893,6 +3195,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10259,9,Blue Core,Blue Core Minior
 10259,11,みずいろのコア,
 10259,12,浅蓝色核心,
+10259,14,Núcleo Azul,
 10260,1,あおいろのコア,
 10260,3,파란색 코어,
 10260,4,藍色核心,
@@ -2903,6 +3206,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10260,9,Indigo Core,Indigo Core Minior
 10260,11,あおいろのコア,
 10260,12,蓝色核心,
+10260,14,Núcleo Añil,
 10261,1,むらさきいろのコア,
 10261,3,보라색 코어,
 10261,4,紫色核心,
@@ -2913,6 +3217,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10261,9,Violet Core,Violet Core Minior
 10261,11,むらさきいろのコア,
 10261,12,紫色核心,
+10261,14,Núcleo Violeta,
 10262,1,ばれたすがた,
 10262,3,들킨 모습,
 10262,4,現形的樣子,
@@ -2923,6 +3228,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10262,9,Busted Form,Busted Mimikyu
 10262,11,ばれたすがた,
 10262,12,现形的样子,
+10262,14,Forma Descubierta,
 10263,5,,Mimiqui Dominant
 10263,6,Totemform,Totem Mimigma (Getarnt)
 10263,9,,Totem Disguised Mimikyu
@@ -2942,6 +3248,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10266,9,Original Color,Original Magearna
 10266,11,５００ねんまえのいろ,
 10266,12,５００年前的颜色,
+10266,14,Color Vetusto,
 10267,1,キミにきめたキャップ,
 10267,3,너로정했다캡,
 10267,4,就決定是你了之帽子,
@@ -2952,6 +3259,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10267,9,Partner Cap,Partner Cap Pikachu
 10267,11,キミにきめたキャップ,
 10267,12,就决定是你了之帽子,
+10267,14,Gorra Compañero,
 10268,3,알로라의 모습,
 10268,5,,Ossatueur d’Alola Dominant
 10268,6,Totemform,Totem Alola Knogga
@@ -2974,6 +3282,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10311,9,Dusk Form,Dusk Lycanroc
 10311,11,たそがれのすがた,
 10311,12,黄昏的样子,
+10311,14,Forma Crepuscular,
 10312,5,,Tarenbulle Dominant
 10312,6,Totemform,Totem Aranestro
 10312,9,,Totem Araquanid
@@ -2990,6 +3299,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10314,9,Dusk Mane,Dusk Necrozma
 10314,11,たそがれのたてがみ,
 10314,12,黄昏之鬃,
+10314,14,Melena Crepuscular,
 10315,1,あかつきのつばさ,
 10315,3,새벽의 날개,
 10315,4,拂曉之翼,
@@ -3000,6 +3310,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10315,9,Dawn Wings,Dawn Necrozma
 10315,11,あかつきのつばさ,
 10315,12,拂晓之翼,
+10315,14,Alas del Alba,
 10316,1,ウルトラネクロズマ,
 10316,3,울트라네크로즈마,
 10316,4,究極奈克洛茲瑪,
@@ -3010,6 +3321,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10316,9,Ultra Necrozma,Ultra Necrozma
 10316,11,ウルトラネクロズマ,
 10316,12,究极奈克洛兹玛,
+10316,14,Ultra-Necrozma,
 10317,5,,Pikachu Partenaire
 10317,6,Partnerform,Partner Pikachu
 10317,9,,Partner Pikachu
@@ -3026,6 +3338,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10319,9,World Cap,World Cap Pikachu
 10319,11,ワールドキャップ,
 10319,12,世界帽子,
+10319,14,Gorra Trotamundos,
 10320,1,ガラルのすがた,
 10320,3,가라르의 모습,
 10320,4,伽勒爾的樣子,
@@ -3036,6 +3349,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10320,9,Galarian Form,Galarian Meowth
 10320,11,ガラルのすがた,
 10320,12,伽勒尔的样子,
+10320,14,Forma de Galar,
 10321,1,ガラルのすがた,
 10321,3,가라르의 모습,
 10321,4,伽勒爾的樣子,
@@ -3046,6 +3360,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10321,9,Galarian Form,Galarian Ponyta
 10321,11,ガラルのすがた,
 10321,12,伽勒尔的样子,
+10321,14,Forma de Galar,
 10322,1,ガラルのすがた,
 10322,3,가라르의 모습,
 10322,4,伽勒爾的樣子,
@@ -3056,6 +3371,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10322,9,Galarian Form,Galarian Rapidash
 10322,11,ガラルのすがた,
 10322,12,伽勒尔的样子,
+10322,14,Forma de Galar,
 10323,1,ガラルのすがた,
 10323,3,가라르의 모습,
 10323,4,伽勒爾的樣子,
@@ -3066,6 +3382,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10323,9,Galarian Form,Galarian Slowpoke
 10323,11,ガラルのすがた,
 10323,12,伽勒尔的样子,
+10323,14,Forma de Galar,
 10324,1,ガラルのすがた,
 10324,3,가라르의 모습,
 10324,4,伽勒爾的樣子,
@@ -3076,6 +3393,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10324,9,Galarian Form,Galarian Slowbro
 10324,11,ガラルのすがた,
 10324,12,伽勒尔的样子,
+10324,14,Forma de Galar,
 10325,1,ガラルのすがた,
 10325,3,가라르의 모습,
 10325,4,伽勒爾的樣子,
@@ -3086,6 +3404,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10325,9,Galarian Form,Galarian Farfetch’d
 10325,11,ガラルのすがた,
 10325,12,伽勒尔的样子,
+10325,14,Forma de Galar,
 10326,1,ガラルのすがた,
 10326,3,가라르의 모습,
 10326,4,伽勒爾的樣子,
@@ -3096,6 +3415,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10326,9,Galarian Form,Galarian Weezing
 10326,11,ガラルのすがた,
 10326,12,伽勒尔的样子,
+10326,14,Forma de Galar,
 10327,1,ガラルのすがた,
 10327,3,가라르의 모습,
 10327,4,伽勒爾的樣子,
@@ -3106,6 +3426,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10327,9,Galarian Form,Galarian Mr. Mime
 10327,11,ガラルのすがた,
 10327,12,伽勒尔的样子,
+10327,14,Forma de Galar,
 10328,1,ガラルのすがた,
 10328,3,가라르의 모습,
 10328,4,伽勒爾的樣子,
@@ -3116,6 +3437,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10328,9,Galarian Form,Galarian Articuno
 10328,11,ガラルのすがた,
 10328,12,伽勒尔的样子,
+10328,14,Forma de Galar,
 10329,1,ガラルのすがた,
 10329,3,가라르의 모습,
 10329,4,伽勒爾的樣子,
@@ -3126,6 +3448,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10329,9,Galarian Form,Galarian Zapdos
 10329,11,ガラルのすがた,
 10329,12,伽勒尔的样子,
+10329,14,Forma de Galar,
 10330,1,ガラルのすがた,
 10330,3,가라르의 모습,
 10330,4,伽勒爾的樣子,
@@ -3136,6 +3459,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10330,9,Galarian Form,Galarian Moltres
 10330,11,ガラルのすがた,
 10330,12,伽勒尔的样子,
+10330,14,Forma de Galar,
 10331,1,ガラルのすがた,
 10331,3,가라르의 모습,
 10331,4,伽勒爾的樣子,
@@ -3146,6 +3470,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10331,9,Galarian Form,Galarian Slowking
 10331,11,ガラルのすがた,
 10331,12,伽勒尔的样子,
+10331,14,Forma de Galar,
 10332,1,ガラルのすがた,
 10332,3,가라르의 모습,
 10332,4,伽勒爾的樣子,
@@ -3156,6 +3481,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10332,9,Galarian Form,Galarian Corsola
 10332,11,ガラルのすがた,
 10332,12,伽勒尔的样子,
+10332,14,Forma de Galar,
 10333,1,ガラルのすがた,
 10333,3,가라르의 모습,
 10333,4,伽勒爾的樣子,
@@ -3166,6 +3492,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10333,9,Galarian Form,Galarian Zigzagoon
 10333,11,ガラルのすがた,
 10333,12,伽勒尔的样子,
+10333,14,Forma de Galar,
 10334,1,ガラルのすがた,
 10334,3,가라르의 모습,
 10334,4,伽勒爾的樣子,
@@ -3176,6 +3503,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10334,9,Galarian Form,Galarian Linoone
 10334,11,ガラルのすがた,
 10334,12,伽勒尔的样子,
+10334,14,Forma de Galar,
 10335,1,ガラルのすがた,
 10335,3,가라르의 모습,
 10335,4,伽勒爾的樣子,
@@ -3186,6 +3514,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10335,9,Galarian Form,Galarian Darumaka
 10335,11,ガラルのすがた,
 10335,12,伽勒尔的样子,
+10335,14,Forma de Galar,
 10336,1,ガラルのすがた,
 10336,3,가라르의 모습,
 10336,4,伽勒爾的樣子,
@@ -3196,6 +3525,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10336,9,Galarian Form,Standard Galarian Darmanitan
 10336,11,ガラルのすがた,
 10336,12,伽勒尔的样子,
+10336,14,Forma de Galar,
 10337,1,ダルマモード,
 10337,3,달마모드,
 10337,4,達摩模式,
@@ -3206,6 +3536,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10337,9,Zen Mode,Zen Galarian Darmanitan
 10337,11,ダルマモード,
 10337,12,达摩模式,
+10337,14,Modo Daruma,
 10338,1,ガラルのすがた,
 10338,3,가라르의 모습,
 10338,4,伽勒爾的樣子,
@@ -3216,6 +3547,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10338,9,Galarian Form,Galarian Yamask
 10338,11,ガラルのすがた,
 10338,12,伽勒尔的样子,
+10338,14,Forma de Galar,
 10339,1,ガラルのすがた,
 10339,3,가라르의 모습,
 10339,4,伽勒爾的樣子,
@@ -3226,6 +3558,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10339,9,Galarian Form,Galarian Stunfisk
 10339,11,ガラルのすがた,
 10339,12,伽勒尔的样子,
+10339,14,Forma de Galar,
 10340,1,１０％フォルム,
 10340,3,10%폼,
 10340,4,１０％形態,
@@ -3236,6 +3569,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10340,9,10% Forme,10% Zygarde
 10340,11,１０％フォルム,
 10340,12,１０％形态,
+10340,14,Forma 10%,
 10341,1,うのみのすがた,
 10341,3,그대로 삼킨 모습,
 10341,4,一口吞的樣子,
@@ -3246,6 +3580,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10341,9,Gulping Form,Gulping Cramorant
 10341,11,うのみのすがた,
 10341,12,一口吞的样子,
+10341,14,Forma Tragatodo,
 10342,1,まるのみのすがた,
 10342,3,통째로 삼킨 모습,
 10342,4,大口吞的樣子,
@@ -3256,6 +3591,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10342,9,Gorging Form,Gorging Cramorant
 10342,11,まるのみのすがた,
 10342,12,大口吞的样子,
+10342,14,Forma Engulletodo,
 10343,1,ローなすがた,
 10343,3,로우한 모습,
 10343,4,低調的樣子,
@@ -3266,6 +3602,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10343,9,Low Key Form,Low Key Toxtricity
 10343,11,ローなすがた,
 10343,12,低调的样子,
+10343,14,Forma Grave,
 10344,1,しんさくフォルム,
 10344,5,Forme Authentique,Théffroi Authentique
 10344,6,Originalform,Fatalitee (Original)
@@ -3286,6 +3623,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10346,9,Ruby Cream Strawberry Sweet,Ruby Cream Strawberry Sweet Alcremie
 10346,11,ミルキィルビー,
 10346,12,奶香红钻,
+10346,14,Crema Rosa,
 10347,1,ミルキィまっちゃ,
 10347,3,밀키말차,
 10347,4,奶香抹茶,
@@ -3296,6 +3634,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10347,9,Matcha Cream Strawberry Sweet,Matcha Cream Strawberry Sweet Alcremie
 10347,11,ミルキィまっちゃ,
 10347,12,奶香抹茶,
+10347,14,Crema de Té,
 10348,1,ミルキィミント,
 10348,3,밀키민트,
 10348,4,奶香薄荷,
@@ -3306,6 +3645,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10348,9,Mint Cream Strawberry Sweet,Mint Cream Strawberry Sweet Alcremie
 10348,11,ミルキィミント,
 10348,12,奶香薄荷,
+10348,14,Crema de Menta,
 10349,1,ミルキィレモン,
 10349,3,밀키레몬,
 10349,4,奶香檸檬,
@@ -3316,6 +3656,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10349,9,Lemon Cream Strawberry Sweet,Lemon Cream Strawberry Sweet Alcremie
 10349,11,ミルキィレモン,
 10349,12,奶香柠檬,
+10349,14,Crema de Limón,
 10350,1,ミルキィソルト,
 10350,3,밀키솔트,
 10350,4,奶香雪鹽,
@@ -3326,6 +3667,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10350,9,Salted Cream Strawberry Sweet,Salted Cream Strawberry Sweet Alcremie
 10350,11,ミルキィソルト,
 10350,12,奶香雪盐,
+10350,14,Crema Salada,
 10351,1,ルビーミックス,
 10351,3,루비믹스,
 10351,4,紅鑽綜合,
@@ -3336,6 +3678,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10351,9,Ruby Swirl Strawberry Sweet,Ruby Swirl Strawberry Sweet Alcremie
 10351,11,ルビーミックス,
 10351,12,红钻综合,
+10351,14,Mezcla Rosa,
 10352,1,キャラメルミックス,
 10352,3,캐러멜믹스,
 10352,4,焦糖綜合,
@@ -3346,6 +3689,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10352,9,Caramel Swirl Strawberry Sweet,Caramel Swirl Strawberry Sweet Alcremie
 10352,11,キャラメルミックス,
 10352,12,焦糖综合,
+10352,14,Mezcla Caramelo,
 10353,1,トリプルミックス,
 10353,3,트리플믹스,
 10353,4,三色綜合,
@@ -3356,6 +3700,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10353,9,Rainbow Swirl Strawberry Sweet,Rainbow Swirl Strawberry Sweet Alcremie
 10353,11,トリプルミックス,
 10353,12,三色综合,
+10353,14,Tres Sabores,
 10354,1,ナイスフェイス,
 10354,3,나이스페이스,
 10354,4,解凍頭,
@@ -3366,6 +3711,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10354,9,Noice Face,Noice Eiscue
 10354,11,ナイスフェイス,
 10354,12,解冻头,
+10354,14,Cara Deshielo,
 10355,1,メスのすがた,
 10355,3,암컷의 모습,
 10355,4,雌性的樣子,
@@ -3376,6 +3722,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10355,9,Female,Female Indeedee
 10355,11,メスのすがた,
 10355,12,雌性的样子,
+10355,14,Hembra,
 10356,1,はらぺこもよう,
 10356,3,배고픈 모양,
 10356,4,空腹花紋,
@@ -3386,6 +3733,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10356,9,Hangry Mode,Hangry Morpeko
 10356,11,はらぺこもよう,
 10356,12,空腹花纹,
+10356,14,Forma Voraz,
 10357,1,けんのおう,
 10357,3,검왕,
 10357,4,劍之王,
@@ -3396,6 +3744,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10357,9,Crowned Sword,Crowned Zacian
 10357,11,けんのおう,
 10357,12,剑之王,
+10357,14,Espada Suprema,
 10358,1,たてのおう,
 10358,3,방패왕,
 10358,4,盾之王,
@@ -3406,6 +3755,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10358,9,Crowned Shield,Crowned Zamazenta
 10358,11,たてのおう,
 10358,12,盾之王,
+10358,14,Escudo Supremo,
 10359,1,ムゲンダイマックス,
 10359,3,무한다이맥스,
 10359,4,無極巨化,
@@ -3416,6 +3766,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10359,9,Eternamax,Eternamax Eternatus
 10359,11,ムゲンダイマックス,
 10359,12,无极巨化,
+10359,14,Dinamax Infinito,
 10360,1,れんげきのかた,
 10360,3,연격의 태세,
 10360,4,連擊流,
@@ -3426,6 +3777,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10360,9,Rapid Strike Style,Rapid Strike Urshifu
 10360,11,れんげきのかた,
 10360,12,连击流,
+10360,14,Estilo Fluido,
 10361,1,とうちゃん,
 10361,3,아빠,
 10361,4,阿爸,
@@ -3436,6 +3788,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10361,9,Dada,Dada Zarude
 10361,11,とうちゃん,
 10361,12,阿爸,
+10361,14,Papá,
 10362,1,はくばじょうのすがた,
 10362,3,백마 탄 모습,
 10362,4,騎白馬的樣子,
@@ -3446,6 +3799,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10362,9,Ice Rider,Ice Calyrex
 10362,11,はくばじょうのすがた,
 10362,12,骑白马的样子,
+10362,14,Jinete Glacial,
 10363,1,こくばじょうのすがた,
 10363,3,흑마 탄 모습,
 10363,4,騎黑馬的樣子,
@@ -3456,6 +3810,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10363,9,Shadow Rider,Shadow Calyrex
 10363,11,こくばじょうのすがた,
 10363,12,骑黑马的样子,
+10363,14,Jinete Espectral,
 10364,1,キョダイマックスのすがた,
 10364,5,Forme Gigamax,Florizarre Gigamax
 10364,6,Gigadynamax-Form,Gigadynamax-Bisaflor
@@ -3829,6 +4184,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10441,9,Bloodmoon,Bloodmoon Ursaluna
 10441,11,アカツキ,
 10441,12,赫月,
+10441,14,Luna Carmesí,
 10442,1,いどのめん,
 10442,3,우물의가면,
 10442,4,水井面具,
@@ -3839,6 +4195,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10442,9,Wellspring Mask,Wellspring Mask Ogerpon
 10442,11,いどのめん,
 10442,12,水井面具,
+10442,14,Máscara Fuente,
 10443,1,かまどのめん,
 10443,3,화덕의가면,
 10443,4,火灶面具,
@@ -3849,6 +4206,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10443,9,Hearthflame Mask,Hearthflame Mask Ogerpon
 10443,11,かまどのめん,
 10443,12,火灶面具,
+10443,14,Máscara Horno,
 10444,1,いしずえのめん,
 10444,3,주춧돌의가면,
 10444,4,礎石面具,
@@ -3859,6 +4217,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10444,9,Cornerstone Mask,Cornerstone Mask Ogerpon
 10444,11,いしずえのめん,
 10444,12,礎石面具,
+10444,14,Máscara Cimiento,
 10445,1,テラスタルフォルム,
 10445,5,Forme Téracristal,Terapagos Téracristal
 10445,6,Terakristall-Form,
@@ -3866,12 +4225,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10445,8,Forma Teracristal,
 10445,9,Terastal Form,Terastal Form Terapagos
 10445,11,テラスタルフォルム,
+10445,14,Forma teracristal,
 10446,1,ステラフォルム,
 10446,5,Forme Stellaire,Terapagos Stellaire
 10446,6,Stellarform,
 10446,7,Forma astral,
 10446,9,Stellar Form,Stellar Form Terapagos
 10446,11,ステラフォルム,
+10446,14,Forma astral,
 10447,1,タカイモノのすがた,
 10447,3,알짜배기의 모습,
 10447,4,高檔貨的樣子,
@@ -3882,6 +4243,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10447,9,Artisan Form,Artisan Form Poltchageist
 10447,11,タカイモノのすがた,
 10447,12,高档货的样子,
+10447,14,Forma Opulenta,
 10448,1,ケッサクのすがた,
 10448,3,걸작의 모습,
 10448,4,傑作的樣子,
@@ -3892,6 +4254,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10448,9,Masterpiece Form,Masterpiece Form Sinistcha
 10448,11,ケッサクのすがた,
 10448,12,杰作的样子,
+10448,14,Forma Exquisita,
 10449,5,Lait Vanille Baie en Sucre,Charmilly Lait Vanille Baie en Sucre
 10449,9,Vanilla Cream Berry Sweet,Vanilla Cream Berry Sweet Alcremie
 10450,5,Lait Ruby Baie en Sucre,Charmilly Lait Ruby Baie en Sucre
@@ -4202,6 +4565,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10551,9,Female,Female Pyroar
 10551,11,メスのすがた,
 10551,12,雌性的样子,
+10551,14,Hembra,
 10552,1,メスのすがた,
 10552,3,암컷의 모습,
 10552,4,雌性的樣子,
@@ -4212,6 +4576,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10552,9,Female,Female Frillish
 10552,11,メスのすがた,
 10552,12,雌性的样子,
+10552,14,Hembra,
 10553,1,メスのすがた,
 10553,3,암컷의 모습,
 10553,4,雌性的樣子,
@@ -4222,3 +4587,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10553,9,Female,Female Jellicent
 10553,11,メスのすがた,
 10553,12,雌性的样子,
+10553,14,Hembra,
+10554,1,メガニャオニクス,
+10554,5,Méga-Mistigrix,Méga-Mistigrix
+10554,9,Mega Meowstic,Mega Meowstic
+10554,11,メガニャオニクス,

@@ -1638,6 +1638,16 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         on_delete=models.CASCADE,
     )
 
+    version_group = models.ForeignKey(
+        VersionGroup,
+        related_name="version_group",
+        blank=True,
+        null=True,
+        on_delete=models.CASCADE,
+    )
+
+    is_default = models.BooleanField(default=False)
+
     min_level = models.IntegerField(blank=True, null=True)
 
     location = models.ForeignKey(
@@ -1696,6 +1706,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     needs_multiplayer = models.BooleanField(default=False)
 
+    near_special_rock = models.BooleanField(default=False)
+
     # Regional evolution fields
     region = models.ForeignKey(
         "Region",
@@ -1712,6 +1724,15 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         related_name="base_form_evolutions",
         on_delete=models.CASCADE,
         help_text="Specific form required for evolution (null = any form)",
+    )
+
+    evolved_form = models.ForeignKey(
+        "Pokemon",
+        blank=True,
+        null=True,
+        related_name="evolved_form",
+        on_delete=models.CASCADE,
+        help_text="Specific form of the evolved species",
     )
 
     used_move = models.ForeignKey(

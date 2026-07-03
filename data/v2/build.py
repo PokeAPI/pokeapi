@@ -1002,8 +1002,8 @@ def _build_berries():
         item = Item.objects.get(pk=int(info[1]))
         yield Berry(
             id=int(info[0]),
-            item_id=int(info[1]) if info[1] and info[1].strip() else None,
-            name=item.name[: item.name.index("-")] if "-" in item.name else item.name,
+            item_id=int(info[1]),
+            name=item.name[: -len("-berry")] if item.name.endswith("-berry") else item.name,
             berry_firmness_id=int(info[2]) if info[2] and info[2].strip() else None,
             natural_gift_power=int(info[3]) if info[3] and info[3].strip() else None,
             natural_gift_type_id=int(info[4]) if info[4] and info[4].strip() else None,

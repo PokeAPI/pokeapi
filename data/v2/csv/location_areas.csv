@@ -767,7 +767,7 @@ id,location_id,game_index,identifier
 886,1041,0,area-2
 887,1041,0,area-3
 888,901,0,
-889,902,0,
+889,902,0,main
 890,903,0,
 891,904,0,
 892,905,0,
@@ -1255,3 +1255,4 @@ id,location_id,game_index,identifier
 1374,945,0,gym
 1375,880,0,gym
 1376,1116,0,
+1377,902,0,area-2

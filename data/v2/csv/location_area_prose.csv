@@ -2204,6 +2204,7 @@ location_area_id,local_language_id,name
 885,9,Giant's Cap (Main Area)
 886,9,Giant's Cap (Area 2)
 887,9,Giant's Cap (Area 3)
+889,9,Giant's Mirror (Main Area)
 890,9,Giant's Seat
 891,9,Glimwood Tangle
 892,9,Hammerlocke
@@ -2461,3 +2462,4 @@ location_area_id,local_language_id,name
 1374,9,Turffield (Gym)
 1375,9,Ballonlea (Gym)
 1376,9,Random caves across the Isle of Armor
+1377,9,Giant's Mirror (Area 2)

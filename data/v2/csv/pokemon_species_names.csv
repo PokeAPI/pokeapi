@@ -9252,7 +9252,7 @@ pokemon_species_id,local_language_id,name,genus
 771,12,拳海参,海参宝可梦
 771,14,Pyukumuku,Pokémon Pepino Mar
 772,1,タイプ：ヌル,じんこうポケモン
-772,2,Null,
+772,2,Type:Null,
 772,3,타입:널,인공포켓몬
 772,4,屬性：空,人工寶可夢
 772,5,Type:0,Pokémon Multigénome

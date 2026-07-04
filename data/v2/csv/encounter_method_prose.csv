@@ -104,3 +104,5 @@ encounter_method_id,local_language_id,name
 54,9,Finding a Pokemon in a Hidden Grotto
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
 56,9,Overworld spawn coming from underground
+57,9,Special overworld spawn in a fixed location.
+58,9,Special overworld spawn in a fixed location in the water.

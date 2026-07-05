@@ -120,7 +120,7 @@ pokemon_species_id,local_language_id,name,genus
 10,12,绿毛虫,虫宝宝宝可梦
 10,14,Caterpie,Pokémon Gusano
 11,1,トランセル,さなぎポケモン
-11,2,Trancell,
+11,2,Transel,
 11,3,단데기,번데기포켓몬
 11,4,鐵甲蛹,蛹寶可夢
 11,5,Chrysacier,Pokémon Cocon
@@ -1140,7 +1140,7 @@ pokemon_species_id,local_language_id,name,genus
 95,12,大岩蛇,岩蛇宝可梦
 95,14,Onix,Pokémon Serpiente Roca
 96,1,スリープ,さいみんポケモン
-96,2,Sleep,
+96,2,Sleepe,
 96,3,슬리프,최면포켓몬
 96,4,催眠貘,催眠寶可夢
 96,5,Soporifik,Pokémon Hypnose
@@ -2352,7 +2352,7 @@ pokemon_species_id,local_language_id,name,genus
 196,12,太阳伊布,太阳宝可梦
 196,14,Espeon,Pokémon Sol
 197,1,ブラッキー,げっこうポケモン
-197,2,Blacky,
+197,2,Bracky,
 197,3,블래키,달빛포켓몬
 197,4,月亮伊布,月光寶可夢
 197,5,Noctali,Pokémon Lune
@@ -2928,7 +2928,7 @@ pokemon_species_id,local_language_id,name,genus
 244,12,炎帝,火山宝可梦
 244,14,Entei,Pokémon Volcán
 245,1,スイクン,オーロラポケモン
-245,2,Suikun,
+245,2,Suicune,
 245,3,스이쿤,오로라포켓몬
 245,4,水君,極光寶可夢
 245,5,Suicune,Pokémon Aurore
@@ -3132,7 +3132,7 @@ pokemon_species_id,local_language_id,name,genus
 261,12,土狼犬,紧咬宝可梦
 261,14,Poochyena,Pokémon Mordisco
 262,1,グラエナ,かみつきポケモン
-262,2,Guraena,
+262,2,Graena,
 262,3,그라에나,물어뜯기포켓몬
 262,4,大狼犬,緊咬寶可夢
 262,5,Grahyèna,Pokémon Morsure
@@ -3144,7 +3144,7 @@ pokemon_species_id,local_language_id,name,genus
 262,12,大狼犬,紧咬宝可梦
 262,14,Mightyena,Pokémon Mordisco
 263,1,ジグザグマ,まめだぬきポケモン
-263,2,Ziguzaguma,
+263,2,Jiguzaguma,
 263,3,지그제구리,앙증너구리포켓몬
 263,4,蛇紋熊,豆貍寶可夢
 263,5,Zigzaton,Pokémon Petit Raton
@@ -3828,7 +3828,7 @@ pokemon_species_id,local_language_id,name,genus
 319,12,巨牙鲨,凶暴宝可梦
 319,14,Sharpedo,Pokémon Voraz
 320,1,ホエルコ,たまくじらポケモン
-320,2,Whalko,
+320,2,Hoeruko,
 320,3,고래왕자,둥근고래포켓몬
 320,4,吼吼鯨,球鯨寶可夢
 320,5,Wailmer,Pokémon Baleinboule
@@ -3948,7 +3948,7 @@ pokemon_species_id,local_language_id,name,genus
 329,12,超音波幼虫,振动宝可梦
 329,14,Vibrava,Pokémon Vibrante
 330,1,フライゴン,せいれいポケモン
-330,2,Frygon,
+330,2,Flygon,
 330,3,플라이곤,정령포켓몬
 330,4,沙漠蜻蜓,神秘寶可夢
 330,5,Libégon,Pokémon Mystique
@@ -4680,7 +4680,7 @@ pokemon_species_id,local_language_id,name,genus
 390,12,小火焰猴,小猴宝可梦
 390,14,Chimchar,Pokémon Chimpancé
 391,1,モウカザル,やんちゃポケモン
-391,2,Mōkazaru,
+391,2,Moukazaru,
 391,3,파이숭이,개구쟁이포켓몬
 391,4,猛火猴,頑皮寶可夢
 391,5,Chimpenfeu,Pokémon Garnement
@@ -4692,7 +4692,7 @@ pokemon_species_id,local_language_id,name,genus
 391,12,猛火猴,顽皮宝可梦
 391,14,Monferno,Pokémon Juguetón
 392,1,ゴウカザル,かえんポケモン
-392,2,Gōkazaru,
+392,2,Goukazaru,
 392,3,초염몽,화염포켓몬
 392,4,烈焰猴,火焰寶可夢
 392,5,Simiabraz,Pokémon Flamme
@@ -4776,7 +4776,7 @@ pokemon_species_id,local_language_id,name,genus
 398,12,姆克鹰,猛禽宝可梦
 398,14,Staraptor,Pokémon Depredador
 399,1,ビッパ,まるねずみポケモン
-399,2,Bipper,
+399,2,Bippa,
 399,3,비버니,둥글쥐포켓몬
 399,4,大牙狸,圓鼠寶可夢
 399,5,Keunotor,Pokémon Souridodue
@@ -4788,7 +4788,7 @@ pokemon_species_id,local_language_id,name,genus
 399,12,大牙狸,圆鼠宝可梦
 399,14,Bidoof,Pokémon Gran Ratón
 400,1,ビーダル,ビーバーポケモン
-400,2,Beadull,
+400,2,Beadaru,
 400,3,비버통,비버포켓몬
 400,4,大尾狸,河狸寶可夢
 400,5,Castorno,Pokémon Castor
@@ -4812,7 +4812,7 @@ pokemon_species_id,local_language_id,name,genus
 401,12,圆法师,蟋蟀宝可梦
 401,14,Kricketot,Pokémon Grillo
 402,1,コロトック,こおろぎポケモン
-402,2,Korotok,
+402,2,Korotock,
 402,3,귀뚤톡크,귀뚜라미포켓몬
 402,4,音箱蟀,蟋蟀寶可夢
 402,5,Mélokrik,Pokémon Criquet
@@ -4896,7 +4896,7 @@ pokemon_species_id,local_language_id,name,genus
 408,12,头盖龙,头锤宝可梦
 408,14,Cranidos,Pokémon Cabezazo
 409,1,ラムパルド,ずつきポケモン
-409,2,Rampard,
+409,2,Rampald,
 409,3,램펄드,박치기포켓몬
 409,4,戰槌龍,頭錘寶可夢
 409,5,Charkos,Pokémon Coud’Boule
@@ -4920,7 +4920,7 @@ pokemon_species_id,local_language_id,name,genus
 410,12,盾甲龙,护盾宝可梦
 410,14,Shieldon,Pokémon Escudo
 411,1,トリデプス,シールドポケモン
-411,2,Trideps,
+411,2,Torideps,
 411,3,바리톱스,실드포켓몬
 411,4,護城龍,護盾寶可夢
 411,5,Bastiodon,Pokémon Bouclier
@@ -4956,7 +4956,7 @@ pokemon_species_id,local_language_id,name,genus
 413,12,结草贵妇,蓑衣虫宝可梦
 413,14,Wormadam,Pokémon Larva
 414,1,ガーメイル,ミノガポケモン
-414,2,Garmeil,
+414,2,Gamale,
 414,3,나메일,나방포켓몬
 414,4,紳士蛾,蓑衣蛾寶可夢
 414,5,Papilord,Pokémon Phalène
@@ -4980,7 +4980,7 @@ pokemon_species_id,local_language_id,name,genus
 415,12,三蜜蜂,幼蜂宝可梦
 415,14,Combee,Pokémon Abejita
 416,1,ビークイン,はちのすポケモン
-416,2,Beequeen,
+416,2,Beequen,
 416,3,비퀸,벌집포켓몬
 416,4,蜂女王,蜂巢寶可夢
 416,5,Apireine,Pokémon Ruche
@@ -5016,7 +5016,7 @@ pokemon_species_id,local_language_id,name,genus
 418,12,泳圈鼬,海鼬宝可梦
 418,14,Buizel,Pokémon Nutria Mar.
 419,1,フローゼル,うみイタチポケモン
-419,2,Flowsel,
+419,2,Floazel,
 419,3,플로젤,바다족제비포켓몬
 419,4,浮潛鼬,海鼬寶可夢
 419,5,Mustéflott,Pokémon Aquabelette
@@ -5064,7 +5064,7 @@ pokemon_species_id,local_language_id,name,genus
 422,12,无壳海兔,海兔宝可梦
 422,14,Shellos,Pokémon Babosa Marina
 423,1,トリトドン,ウミウシポケモン
-423,2,Toritodon,
+423,2,Tritodon,
 423,3,트리토돈,갯민숭달팽이포켓몬
 423,4,海兔獸,海兔寶可夢
 423,5,Tritosor,Pokémon Aqualimace
@@ -5136,7 +5136,7 @@ pokemon_species_id,local_language_id,name,genus
 428,12,长耳兔,兔子宝可梦
 428,14,Lopunny,Pokémon Conejo
 429,1,ムウマージ,マジカルポケモン
-429,2,Mumage,
+429,2,Mumargi,
 429,3,무우마직,매지컬포켓몬
 429,4,夢妖魔,魔法寶可夢
 429,5,Magirêve,Pokémon Magique
@@ -5148,7 +5148,7 @@ pokemon_species_id,local_language_id,name,genus
 429,12,梦妖魔,魔法宝可梦
 429,14,Mismagius,Pokémon Mágico
 430,1,ドンカラス,おおボスポケモン
-430,2,Donkarasu,
+430,2,Dongkarasu,
 430,3,돈크로우,큰형님포켓몬
 430,4,烏鴉頭頭,大頭目寶可夢
 430,5,Corboss,Pokémon Big Boss
@@ -5172,7 +5172,7 @@ pokemon_species_id,local_language_id,name,genus
 431,12,魅力喵,装乖宝可梦
 431,14,Glameow,Pokémon Gastuto
 432,1,ブニャット,とらねこポケモン
-432,2,Bunyat,
+432,2,Bunyatto,
 432,3,몬냥이,얼룩고양이포켓몬
 432,4,東施喵,虎斑貓寶可夢
 432,5,Chaffreux,Pokémon Chatigre
@@ -5196,7 +5196,7 @@ pokemon_species_id,local_language_id,name,genus
 433,12,铃铛响,铃铛宝可梦
 433,14,Chingling,Pokémon Campana
 434,1,スカンプー,スカンクポケモン
-434,2,Skunpoo,
+434,2,Skunpuu,
 434,3,스컹뿡,스컹크포켓몬
 434,4,臭鼬噗,臭鼬寶可夢
 434,5,Moufouette,Pokémon Moufette
@@ -5220,7 +5220,7 @@ pokemon_species_id,local_language_id,name,genus
 435,12,坦克臭鼬,臭鼬宝可梦
 435,14,Skuntank,Pokémon Mofeta
 436,1,ドーミラー,せいどうポケモン
-436,2,Domirror,
+436,2,Dohmirror,
 436,3,동미러,청동포켓몬
 436,4,銅鏡怪,青銅寶可夢
 436,5,Archéomire,Pokémon Bronze
@@ -5232,7 +5232,7 @@ pokemon_species_id,local_language_id,name,genus
 436,12,铜镜怪,青铜宝可梦
 436,14,Bronzor,Pokémon Bronce
 437,1,ドータクン,どうたくポケモン
-437,2,Dotakun,
+437,2,Dohtakun,
 437,3,동탁군,동탁포켓몬
 437,4,青銅鐘,銅鐘寶可夢
 437,5,Archéodong,Pokémon Clochebronze
@@ -5328,7 +5328,7 @@ pokemon_species_id,local_language_id,name,genus
 444,12,尖牙陆鲨,洞穴宝可梦
 444,14,Gabite,Pokémon Cueva
 445,1,ガブリアス,マッハポケモン
-445,2,Gablias,
+445,2,Gaburias,
 445,3,한카리아스,마하포켓몬
 445,4,烈咬陸鯊,音速寶可夢
 445,5,Carchacrok,Pokémon Supersonic
@@ -5376,7 +5376,7 @@ pokemon_species_id,local_language_id,name,genus
 448,12,路卡利欧,波导宝可梦
 448,14,Lucario,Pokémon Aura
 449,1,ヒポポタス,カバポケモン
-449,2,Hipopotas,
+449,2,Hippopotas,
 449,3,히포포타스,하마포켓몬
 449,4,沙河馬,河馬寶可夢
 449,5,Hippopotas,Pokémon Hippo
@@ -5388,7 +5388,7 @@ pokemon_species_id,local_language_id,name,genus
 449,12,沙河马,河马宝可梦
 449,14,Hippopotas,Pokémon Hipo
 450,1,カバルドン,じゅうりょうポケモン
-450,2,Kabarudon,
+450,2,Kabaldon,
 450,3,하마돈,중량포켓몬
 450,4,河馬獸,重量寶可夢
 450,5,Hippodocus,Pokémon Poids Lourd
@@ -5400,7 +5400,7 @@ pokemon_species_id,local_language_id,name,genus
 450,12,河马兽,重量宝可梦
 450,14,Hippowdon,Pokémon Peso Pesado
 451,1,スコルピ,さそりポケモン
-451,2,Scorpi,
+451,2,Scorupi,
 451,3,스콜피,전갈포켓몬
 451,4,鉗尾蠍,蠍子寶可夢
 451,5,Rapion,Pokémon Scorpion
@@ -5544,7 +5544,7 @@ pokemon_species_id,local_language_id,name,genus
 462,12,自爆磁怪,磁场宝可梦
 462,14,Magnezone,Pokémon Magnético
 463,1,ベロベルト,なめまわしポケモン
-463,2,Beroberto,
+463,2,Berobelt,
 463,3,내룸벨트,핥기포켓몬
 463,4,大舌舔,舔舔寶可夢
 463,5,Coudlangue,Pokémon Lécheur
@@ -5556,7 +5556,7 @@ pokemon_species_id,local_language_id,name,genus
 463,12,大舌舔,舔舔宝可梦
 463,14,Lickilicky,Pokémon Lametazo
 464,1,ドサイドン,ドリルポケモン
-464,2,Dosydon,
+464,2,Dosidon,
 464,3,거대코뿌리,드릴포켓몬
 464,4,超甲狂犀,鑽錐寶可夢
 464,5,Rhinastoc,Pokémon Perceur
@@ -5676,7 +5676,7 @@ pokemon_species_id,local_language_id,name,genus
 473,12,象牙猪,双牙宝可梦
 473,14,Mamoswine,Pokémon Doscolmillos
 474,1,ポリゴンＺ,バーチャルポケモン
-474,2,PorygonZ,
+474,2,Porygon-Z,
 474,3,폴리곤Z,가상포켓몬
 474,4,多邊獸Ｚ,虛擬寶可夢
 474,5,Porygon-Z,Pokémon Virtuel
@@ -5688,7 +5688,7 @@ pokemon_species_id,local_language_id,name,genus
 474,12,多边兽乙型,虚拟宝可梦
 474,14,Porygon-Z,Pokémon Virtual
 475,1,エルレイド,やいばポケモン
-475,2,Erlade,
+475,2,Erureido,
 475,3,엘레이드,검포켓몬
 475,4,艾路雷朵,利刃寶可夢
 475,5,Gallame,Pokémon Lame
@@ -5844,7 +5844,7 @@ pokemon_species_id,local_language_id,name,genus
 487,12,骑拉帝纳,反抗宝可梦
 487,14,Giratina,Pokémon Renegado
 488,1,クレセリア,みかづきポケモン
-488,2,Crecelia,
+488,2,Cresselia,
 488,3,크레세리아,초승달포켓몬
 488,4,克雷色利亞,新月寶可夢
 488,5,Cresselia,Pokémon Lunaire
@@ -7032,7 +7032,7 @@ pokemon_species_id,local_language_id,name,genus
 586,12,萌芽鹿,季节宝可梦
 586,14,Sawsbuck,Pokémon Estacional
 587,1,エモンガ,モモンガポケモン
-587,2,Emonga,
+587,2,Emolga,
 587,3,에몽가,하늘다람쥐포켓몬
 587,4,電飛鼠,飛鼠寶可夢
 587,5,Emolga,Pokémon Pteromys
@@ -9408,7 +9408,7 @@ pokemon_species_id,local_language_id,name,genus
 784,12,杖尾鳞甲龙,鳞片宝可梦
 784,14,Kommo-o,Pokémon Escamas
 785,1,カプ・コケコ,とちがみポケモン
-785,2,Kokeko,
+785,2,Kapu-Kokeko,
 785,3,카푸꼬꼬꼭,토속신포켓몬
 785,4,卡璞・鳴鳴,土地神寶可夢
 785,5,Tokorico,Pokémon Tutélaire
@@ -9420,7 +9420,7 @@ pokemon_species_id,local_language_id,name,genus
 785,12,卡璞・鸣鸣,土地神宝可梦
 785,14,Tapu Koko,Pokémon Dios Nativo
 786,1,カプ・テテフ,とちがみポケモン
-786,2,Tetefu,
+786,2,Kapu-Tetefu,
 786,3,카푸나비나,토속신포켓몬
 786,4,卡璞・蝶蝶,土地神寶可夢
 786,5,Tokopiyon,Pokémon Tutélaire
@@ -9432,7 +9432,7 @@ pokemon_species_id,local_language_id,name,genus
 786,12,卡璞・蝶蝶,土地神宝可梦
 786,14,Tapu Lele,Pokémon Dios Nativo
 787,1,カプ・ブルル,とちがみポケモン
-787,2,Bulul,
+787,2,Kapu-Bulul,
 787,3,카푸브루루,토속신포켓몬
 787,4,卡璞・哞哞,土地神寶可夢
 787,5,Tokotoro,Pokémon Tutélaire
@@ -9444,7 +9444,7 @@ pokemon_species_id,local_language_id,name,genus
 787,12,卡璞・哞哞,土地神宝可梦
 787,14,Tapu Bulu,Pokémon Dios Nativo
 788,1,カプ・レヒレ,とちがみポケモン
-788,2,Rehire,
+788,2,Kapu-Rehire,
 788,3,카푸느지느,토속신포켓몬
 788,4,卡璞・鰭鰭,土地神寶可夢
 788,5,Tokopisco,Pokémon Tutélaire
@@ -10824,7 +10824,7 @@ pokemon_species_id,local_language_id,name,genus
 902,12,幽尾玄鱼,大鱼宝可梦
 902,14,Basculegion,
 903,1,オオニューラ,クライミングポケモン
-903,2,Oonyura,
+903,2,Ohnyula,
 903,3,포푸니크,클라이밍포켓몬
 903,4,大狃拉,攀崖寶可夢
 903,5,Farfurex,Pokémon Grimpeur
@@ -10836,7 +10836,7 @@ pokemon_species_id,local_language_id,name,genus
 903,12,大狃拉,攀崖宝可梦
 903,14,Sneasler,
 904,1,ハリーマン,けんざんポケモン
-904,2,Hariman,
+904,2,Haryman,
 904,3,장침바루,침붕포켓몬몬
 904,4,萬針魚,劍山寶可夢
 904,5,Qwilpik,Pokémon Épineux
@@ -12120,6 +12120,7 @@ pokemon_species_id,local_language_id,name,genus
 1010,12,铁斑叶,悖谬宝可梦
 1010,14,Ferroverdor,
 1011,1,カミッチュ,
+1011,2,Kamicchu,
 1011,3,과미르,사과사탕포켓몬
 1011,4,裹蜜蟲,
 1011,5,Pomdramour,Sirop Pomme
@@ -12131,6 +12132,7 @@ pokemon_species_id,local_language_id,name,genus
 1011,12,裹蜜虫,
 1011,14,Dipplin,
 1012,1,チャデス,
+1012,2,Chadeath,
 1012,3,차데스,말차포켓몬
 1012,4,斯魔茶,
 1012,5,Poltchageist,Matcha
@@ -12142,6 +12144,7 @@ pokemon_species_id,local_language_id,name,genus
 1012,12,斯魔茶,
 1012,14,Poltchageist,
 1013,1,ヤバソチャ,
+1013,2,Yabasocha,
 1013,3,그우린차,말차포켓몬
 1013,4,來悲粗茶,
 1013,5,Théffroyable,Matcha
@@ -12153,6 +12156,7 @@ pokemon_species_id,local_language_id,name,genus
 1013,12,来悲粗茶,
 1013,14,Sinistcha,
 1014,1,イイネイヌ,
+1014,2,Iineinu,
 1014,3,조타구,수하포켓몬
 1014,4,夠讚狗,
 1014,5,Félicanis,Serviteur
@@ -12164,6 +12168,7 @@ pokemon_species_id,local_language_id,name,genus
 1014,12,够赞狗,
 1014,14,Okidogi,
 1015,1,マシマシラ,
+1015,2,Mashimashira,
 1015,3,이야후,수하포켓몬
 1015,4,願增猿,
 1015,5,Fortusimia,Serviteur
@@ -12175,6 +12180,7 @@ pokemon_species_id,local_language_id,name,genus
 1015,12,愿增猿,
 1015,14,Munkidori,
 1016,1,キチキギス,
+1016,2,Kichikigisu,
 1016,3,기로치,수하포켓몬
 1016,4,吉雉雞,
 1016,5,Favianos,Serviteur
@@ -12186,6 +12192,7 @@ pokemon_species_id,local_language_id,name,genus
 1016,12,吉雉鸡,
 1016,14,Fezandipiti,
 1017,1,オーガポン,
+1017,2,Ogerpon,
 1017,3,오거폰,가면포켓몬
 1017,4,厄鬼椪,
 1017,5,Ogerpon,Masque
@@ -12197,6 +12204,7 @@ pokemon_species_id,local_language_id,name,genus
 1017,12,厄诡椪,
 1017,14,Ogerpon,
 1018,1,ブリジュラス,ごうきんポケモン
+1018,2,Briduras,
 1018,3,브리두라스,합금포켓몬
 1018,4,鋁鋼橋龍,
 1018,5,Pondralugon,Alliage
@@ -12208,6 +12216,7 @@ pokemon_species_id,local_language_id,name,genus
 1018,12,铝钢桥龙,
 1018,14,Archaludon,
 1019,1,カミツオロチ,りんごオロチポケモン
+1019,2,Kamitsuorochi,
 1019,3,과미드라,사과이무기포켓몬
 1019,4,蜜集大蛇,
 1019,5,Pomdorochi,Hydre Pomme
@@ -12219,6 +12228,7 @@ pokemon_species_id,local_language_id,name,genus
 1019,12,蜜集大蛇,
 1019,14,Hydrapple,
 1020,1,ウガツホムラ,パラドックスポケモン
+1020,2,Ugatsuhomura,
 1020,3,꿰뚫는화염,패러독스포켓몬
 1020,4,破空焰,
 1020,5,Feu-Perçant,Paradoxe
@@ -12230,6 +12240,7 @@ pokemon_species_id,local_language_id,name,genus
 1020,12,破空焰,
 1020,14,Flamariete,
 1021,1,タケルライコ,パラドックスポケモン
+1021,2,Takeruraiko,
 1021,3,날뛰는우레,패러독스포켓몬
 1021,4,猛雷鼓,
 1021,5,Ire-Foudre,Paradoxe
@@ -12241,6 +12252,7 @@ pokemon_species_id,local_language_id,name,genus
 1021,12,猛雷鼓,
 1021,14,Electrofuria,
 1022,1,テツノイワオ,パラドックスポケモン
+1022,2,Tetsunoiwao,
 1022,3,무쇠암석,패러독스포켓몬
 1022,4,铁磐岩,
 1022,5,Roc-de-Fer,Paradoxe
@@ -12252,6 +12264,7 @@ pokemon_species_id,local_language_id,name,genus
 1022,12,鐵磐岩,
 1022,14,Ferromole,
 1023,1,テツノカシラ,パラドックスポケモン
+1023,2,Tetsunokashira,
 1023,3,무쇠감투,패러독스포켓몬
 1023,4,铁头壳,
 1023,5,Chef-de-Fer,Paradoxe
@@ -12263,6 +12276,7 @@ pokemon_species_id,local_language_id,name,genus
 1023,12,鐵頭殼,
 1023,14,Ferrotesta,
 1024,1,テラパゴス,テラスタルポケモン
+1024,2,Terapagos,
 1024,3,테라파고스,테라스탈포켓몬
 1024,4,太樂巴戈斯,
 1024,5,Terapagos,Téracristal
@@ -12274,6 +12288,7 @@ pokemon_species_id,local_language_id,name,genus
 1024,12,太乐巴戈斯,
 1024,14,Terapagos,
 1025,1,モモワロウ,しはいポケモン
+1025,2,Momowarou,
 1025,3,복숭악동,지배포켓몬
 1025,4,桃歹郎,
 1025,5,Pêchaminus,Emprise

@@ -26,11 +26,8 @@ jobs:
         run: |
           docker compose cp db:/tmp/pokeapi.pgdump ./
           ls -larth
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          version: "0.11.19"
-          enable-cache: true
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
       - name: Start pokeapi
         run: |
           rm -rf .venv

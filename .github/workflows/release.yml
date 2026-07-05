@@ -40,7 +40,7 @@ jobs:
           nohup make serve &
           sleep 3
       - name: Release tag
-        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
+        uses: softprops/action-gh-release@v3.0.1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
@@ -50,7 +50,7 @@ jobs:
             db.sqlite3
           generate_release_notes: true
       - name: Release master
-        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
+        uses: softprops/action-gh-release@v3.0.1
         if: github.ref == 'refs/heads/master'
         with:
           draft: true

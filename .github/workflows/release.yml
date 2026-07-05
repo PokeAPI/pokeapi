@@ -31,9 +31,9 @@ jobs:
         with:
           version: "0.11.19"
           enable-cache: true
-          python-version: ${{ matrix.python-version }}
       - name: Start pokeapi
         run: |
+          rm -rf .venv
           make install-base
           make setup
           make build-db

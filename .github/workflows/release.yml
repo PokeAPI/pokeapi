@@ -53,7 +53,12 @@ jobs:
         uses: softprops/action-gh-release@v3.0.1
         if: github.ref == 'refs/heads/master'
         with:
-          draft: true
+          body: |
+            **Release Information:**
+            * **Date:** ${{ steps.date.outputs.current_time }}
+            * **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+          draft: false
+          prerelease: true
           name: master
           tag_name: master
           fail_on_unmatched_files: true

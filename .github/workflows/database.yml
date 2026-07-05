@@ -41,6 +41,8 @@ jobs:
           submodules: recursive
       - name: Setup uv
         uses: ./.github/actions/setup-uv
+        with:
+          python-version: ${{ matrix.python-version }}
       - name: Start pokeapi
         run: |
           make install-base

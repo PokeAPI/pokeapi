@@ -441,3 +441,5 @@ encounter_condition_value_id,local_language_id,name
 318,9,At least 35 Water block points placed
 319,9,At least 42 Water block points placed
 320,9,At least 49 Water block points placed
+321,9,Have Cover Fossil in bag
+322,9,Have Plume Fossil in bag

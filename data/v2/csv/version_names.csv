@@ -335,26 +335,26 @@ version_id,local_language_id,name
 34,9,Shield
 34,12,盾
 34,14,Escudo
-35,1,鎧の孤島
-35,3,갑옷의 외딴섬
-35,4,鎧之孤島
-35,5,L’île solitaire de l’Armure
-35,6,Die Insel der Rüstung
-35,7,La isla de la armadura
-35,8,L’isola solitaria dell’armatura
-35,9,The Isle of Armor
-35,12,铠之孤岛
-35,14,La isla de la armadura
-36,1,冠の雪原
-36,3,왕관의 설원
-36,4,冠之雪原
-36,5,Les terres enneigées de la Couronne
-36,6,Die Schneelande der Krone
-36,7,Las nieves de la corona
-36,8,Le terre innevate della corona
-36,9,The Crown Tundra
-36,12,冠之雪原
-36,14,Las nieves de la corona
+35,1,ソード: 鎧の孤島
+35,3,소드: 갑옷의 외딴섬
+35,4,劍: 鎧之孤島
+35,5,Épée: L’île solitaire de l’Armure
+35,6,Schwert: Die Insel der Rüstung
+35,7,Espada: La isla de la armadura
+35,8,Spada: L’isola solitaria dell’armatura
+35,9,Sword: The Isle of Armor
+35,12,剑: 铠之孤岛
+35,14,Espada: La isla de la armadura
+36,1,ソード: 冠の雪原
+36,3,소드: 왕관의 설원
+36,4,劍: 冠之雪原
+36,5,Épée: Les terres enneigées de la Couronne
+36,6,Schwert: Die Schneelande der Krone
+36,7,Espada: Las nieves de la corona
+36,8,Spada: Le terre innevate della corona
+36,9,Sword: The Crown Tundra
+36,12,剑: 冠之雪原
+36,14,Espada: Las nieves de la corona
 37,1,ブリリアントダイヤモンド
 37,3,브릴리언트 다이아몬드
 37,4,晶燦鑽石
@@ -405,22 +405,22 @@ version_id,local_language_id,name
 41,9,Violet
 41,12,紫
 41,14,Púrpura
-42,1,碧の仮面
-42,5,Le Masque Turquoise
-42,6,Die Türkisgrüne Maske
-42,7,La máscara turquesa
-42,8,La maschera turchese
-42,9,The Teal Mask
-42,12,碧之假面
-42,14,La máscara turquesa
-43,1,藍の円盤
-43,5,Le Disque Indigo
-43,6,Die Indigoblaue Scheibe
-43,7,El disco índigo
-43,8,Il disco indaco
-43,9,The Indigo Disk
-43,12,藍之圓盤
-43,14,El disco índigo
+42,1,スカーレット: 碧の仮面
+42,5,Écarlate: Le Masque Turquoise
+42,6,Karmesin: Die Türkisgrüne Maske
+42,7,Escarlata: La máscara turquesa
+42,8,Scarlatto: La maschera turchese
+42,9,Scarlet: The Teal Mask
+42,12,朱: 碧之假面
+42,14,Escarlata: La máscara turquesa
+43,1,スカーレット: 藍の円盤
+43,5,Écarlate: Le Disque Indigo
+43,6,Karmesin: Die Indigoblaue Scheibe
+43,7,Escarlata: El disco índigo
+43,8,Scarlatto: Il disco indaco
+43,9,Scarlet: The Indigo Disk
+43,12,朱: 藍之圓盤
+43,14,Escarlata: El disco índigo
 44,1,赤
 44,3,레드
 44,5,Rouge
@@ -467,3 +467,39 @@ version_id,local_language_id,name
 48,12,超次元爆涌
 48,14,Megadimensión
 49,9,Champions
+50,1,シールド: 鎧の孤島
+50,3,실드: 갑옷의 외딴섬
+50,4,盾: 鎧之孤島
+50,5,Bouclier: L’île solitaire de l’Armure
+50,6,Schild: Die Insel der Rüstung
+50,7,Escudo: La isla de la armadura
+50,8,Scudo: L’isola solitaria dell’armatura
+50,9,Shield: The Isle of Armor
+50,12,盾: 铠之孤岛
+50,14,Escudo: La isla de la armadura
+51,1,シールド: 冠の雪原
+51,3,실드: 왕관의 설원
+51,4,盾: 冠之雪原
+51,5,Bouclier: Les terres enneigées de la Couronne
+51,6,Schild: Die Schneelande der Krone
+51,7,Escudo: Las nieves de la corona
+51,8,Scudo: Le terre innevate della corona
+51,9,Shield: The Crown Tundra
+51,12,盾: 冠之雪原
+51,14,Escudo: Las nieves de la corona
+52,1,バイオレット: 碧の仮面
+52,5,Violet: Le Masque Turquoise
+52,6,Purpur: Die Türkisgrüne Maske
+52,7,Púrpura: La máscara turquesa
+52,8,Violetto: La maschera turchese
+52,9,Violet: The Teal Mask
+52,12,紫: 碧之假面
+52,14,Púrpura: La máscara turquesa
+53,1,バイオレット: 藍の円盤
+53,5,Violet: Le Disque Indigo
+53,6,Purpur: Die Indigoblaue Scheibe
+53,7,Púrpura: El disco índigo
+53,8,Violetto: Il disco indaco
+53,9,Violet: The Indigo Disk
+53,12,紫: 藍之圓盤
+53,14,Púrpura: El disco índigo

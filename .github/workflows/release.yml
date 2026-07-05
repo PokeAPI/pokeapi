@@ -2,6 +2,8 @@ name: Release
 
 on:
   push:
+    branches:
+      - master
     tags:
       - '*.*.*'
 
@@ -31,7 +33,7 @@ jobs:
           make build-db
           nohup make serve &
           sleep 3
-      - name: Release
+      - name: Release tag
         uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
         if: startsWith(github.ref, 'refs/tags/')
         with:
@@ -41,3 +43,14 @@ jobs:
             pokeapi.pgdump
             db.sqlite3
           generate_release_notes: true
+      - name: Release master
+        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
+        if: github.ref == 'refs/heads/master'
+        with:
+          draft: true
+          name: 'master'
+          fail_on_unmatched_files: true
+          files: |
+            pokeapi.pgdump
+            db.sqlite3
+          generate_release_notes: false

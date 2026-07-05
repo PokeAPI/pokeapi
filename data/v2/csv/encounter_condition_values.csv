@@ -319,3 +319,5 @@ id,encounter_condition_id,identifier,is_default
 318,26,johto-safari-blocks-water-min-35,0
 319,26,johto-safari-blocks-water-min-42,0
 320,26,johto-safari-blocks-water-min-49,0
+321,11,item-cover-fossil,0
+322,11,item-plume-fossil,0

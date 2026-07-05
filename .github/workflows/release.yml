@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+        id: checkout
         uses: actions/checkout@v6
         with:
           submodules: recursive
@@ -55,7 +56,7 @@ jobs:
         with:
           body: |
             **Release Information:**
-            * **Date:** ${{ steps.date.outputs.current_time }}
+            * **Date:** ${{ steps.checkout.outputs.current_time }}
             * **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
           draft: false
           prerelease: true

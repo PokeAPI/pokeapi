@@ -9257,6 +9257,7 @@ move_id,local_language_id,name
 845,14,Corte Metralla
 845,7,Tajo Metralla
 846,1,こがらしあらし
+846,3,찬바람폭풍
 846,4,枯叶风暴
 846,5,Typhon Hivernal
 846,8,Tempesta Boreale
@@ -9265,6 +9266,7 @@ move_id,local_language_id,name
 846,14,Vendaval Gélido
 846,7,Vendaval Gélido
 847,1,かみなりあらし
+847,3,번개폭풍
 847,4,鸣雷风暴
 847,5,Typhon Fulgurant
 847,8,Tempesta Tonante
@@ -9273,6 +9275,7 @@ move_id,local_language_id,name
 847,14,Electormenta
 847,7,Electormenta
 848,1,ねっさのあらし
+848,3,열사의폭풍
 848,4,热沙风暴
 848,5,Typhon Pyrosable
 848,8,Tempesta Ardente
@@ -9281,6 +9284,7 @@ move_id,local_language_id,name
 848,14,Tifón de Arena
 848,7,Simún de Arena
 849,1,みかづきのいのり
+849,3,초승달의기도
 849,4,新月祈祷
 849,5,Prière Lunaire
 849,8,Invocaluna
@@ -9289,6 +9293,7 @@ move_id,local_language_id,name
 849,14,Plegaria Lunar
 849,7,Plegaria Lunar
 850,1,ブレイブチャージ
+850,3,브레이브차지
 850,4,勇气填充
 850,5,Extravaillance
 850,8,Baldimpulso
@@ -9297,6 +9302,7 @@ move_id,local_language_id,name
 850,14,Bálsamo Osado
 850,7,Bálsamo Osado
 851,1,テラバースト
+851,3,테라버스트
 851,4,太晶爆发
 851,5,Téra Explosion
 851,8,Terascoppio
@@ -9305,6 +9311,7 @@ move_id,local_language_id,name
 851,14,Teraexplosión
 851,7,Teraexplosión
 852,1,スレッドトラップ
+852,3,스레드트랩
 852,4,线阱
 852,5,Piège de Fil
 852,8,Telatrappola
@@ -9313,6 +9320,7 @@ move_id,local_language_id,name
 852,14,Telatrampa
 852,7,Telatrampa
 853,1,かかとおとし
+853,3,발꿈치찍기
 853,4,下压踢
 853,5,Talon-Marteau
 853,8,Calcio ad Ascia
@@ -9321,6 +9329,7 @@ move_id,local_language_id,name
 853,14,Patada Hacha
 853,7,Patada Hacha
 854,1,おはかまいり
+854,3,성묘
 854,4,扫墓
 854,5,Hommage Posthume
 854,8,Omaggio ai KO
@@ -9329,6 +9338,7 @@ move_id,local_language_id,name
 854,14,Homenaje Póstumo
 854,7,Homenaje Póstumo
 855,1,ルミナコリジョン
+855,3,루미나콜리전
 855,4,琉光冲激
 855,5,Lumino-Impact
 855,8,Fotocollisione
@@ -9337,6 +9347,7 @@ move_id,local_language_id,name
 855,14,Fotocolisión
 855,7,Fotocolisión
 856,1,いっちょうあがり
+856,3,한판내기
 856,4,上菜
 856,5,Plat du Jour
 856,8,Alta Cucina
@@ -9345,6 +9356,7 @@ move_id,local_language_id,name
 856,14,Emplatar
 856,7,Oído Cocina
 857,1,ジェットパンチ
+857,3,제트펀치
 857,4,喷射拳
 857,5,Poing Sonique
 857,8,Pugnojet
@@ -9353,6 +9365,7 @@ move_id,local_language_id,name
 857,14,Puño Jet
 857,7,Puño Jet
 858,1,ハバネロエキス
+858,3,하바네로엑기스
 858,4,辣椒精华
 858,5,Habanerage
 858,8,Essenza Piccante
@@ -9361,6 +9374,7 @@ move_id,local_language_id,name
 858,14,Extracto Picante
 858,7,Extracto Picante
 859,1,ホイールスピン
+859,3,휠스핀
 859,4,疾速转轮
 859,5,Dérapage
 859,8,Slittaruote
@@ -9369,6 +9383,7 @@ move_id,local_language_id,name
 859,14,Quemarrueda
 859,7,Quemarrueda
 860,1,ネズミざん
+860,3,찍찍베기
 860,4,鼠数儿
 860,5,Prolifération
 860,8,Infestazione

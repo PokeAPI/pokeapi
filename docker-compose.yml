@@ -1,4 +1,3 @@
-version: '2.4'
 services:
   cache:
     image: redis:7.4.2-alpine3.21
@@ -15,7 +14,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
-      test: pg_isready
+      test: pg_isready -U $${POSTGRES_USER:-ash} -d $${POSTGRES_DB:-pokeapi}
       interval: 10s
       timeout: 5s
       retries: 5
@@ -27,11 +26,6 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
       POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
-    volumes:
-      - .:/code
-    links:
-      - db
-      - cache
     depends_on:
       db:
         condition: service_healthy
@@ -60,7 +54,7 @@ services:
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://${POSTGRES_USER:-ash}:${POSTGRES_PASSWORD:-pokemon}@db:5432/${POSTGRES_DB:-pokeapi}
-      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
       HASURA_GRAPHQL_DEV_MODE: "false"
       HASURA_GRAPHQL_LOG_LEVEL: "warn"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log

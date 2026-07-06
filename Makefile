@@ -1,12 +1,7 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
-gqlv1beta_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml -f Resources/compose/docker-compose-prod-graphql-v1beta.yml
-
-# Auto-detect Python and pip commands
-PYTHON := $(shell which python3 2>/dev/null || which python 2>/dev/null || echo python3)
-PIP := $(shell which pip3 2>/dev/null || which pip 2>/dev/null || echo pip3)
+gql_compose_config = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
 
 .PHONY: help
 .SILENT:
@@ -14,41 +9,48 @@ PIP := $(shell which pip3 2>/dev/null || which pip 2>/dev/null || echo pip3)
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?# .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?# "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-install:  # Install base requirements to run project
-	$(PIP) install -r requirements.txt
+check-uv:
+	@command -v uv >/dev/null 2>&1 \
+		|| { \
+			echo >&2 "uv is not installed. Install it from: https://docs.astral.sh/uv/getting-started/installation/"; \
+			exit 1; \
+		}
 
-dev-install:  # Install developer requirements + base requirements
-	$(PIP) install -r test-requirements.txt
+install: check-uv  # Install requirements for local development
+	uv sync --locked --all-extras --dev
 
-setup:  # Set up the project database
-	$(PYTHON) manage.py migrate ${local_config}
+install-base: check-uv  # Install minimal requirements for runtime/pipeline environments
+	uv sync --locked --no-dev
 
-build-db:  # Build database
-	echo "from data.v2.build import build_all; build_all()" | $(PYTHON) manage.py shell ${local_config}
+setup: check-uv   # Set up the project database
+	uv run manage.py migrate ${local_config}
+
+build-db: check-uv  # Build database
+	echo "from data.v2.build import build_all; build_all()" | uv run manage.py shell ${local_config}
 
 wipe-sqlite-db:  # Delete's the project database
 	rm -rf db.sqlite3
 
-serve:  # Run the project locally
-	$(PYTHON) manage.py runserver ${local_config}
+serve: check-uv   # Run the project locally
+	uv run manage.py runserver ${local_config}
 
-test:  # Run tests
-	$(PYTHON) manage.py test ${local_config}
+test: check-uv  # Run tests
+	uv run manage.py test ${local_config}
 
 clean:  # Remove any pyc files
 	find . -type f -name '*.pyc' -delete
 
-migrate:  # Run any outstanding migrations
-	$(PYTHON) manage.py migrate ${local_config}
+migrate: check-uv   # Run any outstanding migrations
+	uv run manage.py migrate ${local_config}
 
-make-migrations:  # Create migrations files if schema has changed
-	$(PYTHON) manage.py makemigrations ${local_config}
+make-migrations: check-uv  # Create migrations files if schema has changed
+	uv run manage.py makemigrations ${local_config}
 
-shell:  # Load a shell
-	$(PYTHON) manage.py shell ${local_config}
+shell: check-uv  # Load a shell
+	uv run manage.py shell ${local_config}
 
-openapi-generate:
-	$(PYTHON) manage.py spectacular --color --file openapi.yml ${local_config}
+openapi-generate: check-uv
+	uv run manage.py spectacular --color --file openapi.yml ${local_config}
 
 docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d
@@ -86,11 +88,11 @@ docker-prod:
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
-format:  # Format the source code
-	black . --extend-exclude '.+/scripts/.+'
+format: check-uv   # Format the source code
+	uv run black . --extend-exclude '.+/scripts/.+'
 
-format-check:  # Check the source code has been formatted
-	black . --check --extend-exclude '.+/scripts/.+'
+format-check: check-uv  # Check the source code has been formatted
+	uv run black . --check --extend-exclude '.+/scripts/.+'
 
 pull:
 	git checkout master
@@ -108,12 +110,6 @@ sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
 
 # read-env-file:  # Exports ./.env into shell environment variables
 # 	export `egrep -v '^#' .env | xargs`
-
-hasura-export-v1beta:
-	hasura md export --project graphql/v1beta
-
-hasura-apply-v1beta:
-	hasura md apply --project graphql/v1beta
 
 hasura-export:  # Export Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
 	hasura md export --project graphql/v1beta2
@@ -155,23 +151,6 @@ down-graphql-prod:
 	docker container rm $(docker container ls -aq) -f
 	docker system prune --all --volumes --force
 	docker volume prune --all --force
-	sync; echo 3 > /proc/sys/vm/drop_caches
-
-update-graphql-v1beta-data-prod:
-	docker compose ${gqlv1beta_compose_config} stop
-	git pull origin master
-	git submodule update --remote --merge
-	docker compose ${gqlv1beta_compose_config} up --pull always -d app cache db
-	sync; echo 3 > /proc/sys/vm/drop_caches
-	make docker-migrate
-	make docker-build-db
-	docker compose ${gqlv1beta_compose_config} stop app cache
-	docker compose ${gqlv1beta_compose_config} up --pull always -d graphql-engine graphiql
-	sleep 120
-	make hasura-apply-v1beta
-	docker compose ${gqlv1beta_compose_config} up --pull always -d web
-	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
-	docker image prune -af
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
 # Nginx doesn't start if upstream graphql-engine is down

@@ -26,6 +26,9 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
       POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
+    volumes:
+      - .:/code
+      - /code/.venv/ # Ignore the venv to prevent conflicts between the host and container environments
     depends_on:
       db:
         condition: service_healthy
@@ -34,7 +37,7 @@ services:
     restart: always
 
   web:
-    image: nginx:1.27.3-alpine3.20
+    image: nginx:1.31.2-alpine3.23
     ports:
       - "80:80"
       - "443:443"
@@ -54,7 +57,7 @@ services:
     restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://${POSTGRES_USER:-ash}:${POSTGRES_PASSWORD:-pokemon}@db:5432/${POSTGRES_DB:-pokeapi}
-      HASURA_GRAPHQL_ENABLE_CONSOLE: "false"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_DEV_MODE: "false"
       HASURA_GRAPHQL_LOG_LEVEL: "warn"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log

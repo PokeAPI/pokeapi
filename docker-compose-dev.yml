@@ -4,16 +4,4 @@ services:
       context: .
       dockerfile: ./Resources/docker/app/Dockerfile
 
-    environment:
-      - DEBUG=True
-
-    # For development, we want to mount the code into the container so that changes are reflected immediately without needing to rebuild the image.
-    volumes:
-      - .:/code
-      - /code/.venv/  # Ignore the virtual environment directory to prevent conflicts between the host and container environments.
-  
-  graphql-engine:
-    environment:
-      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
-
 # docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d

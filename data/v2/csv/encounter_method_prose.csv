@@ -106,3 +106,4 @@ encounter_method_id,local_language_id,name
 56,9,Overworld spawn coming from underground or within a swamp.
 57,9,Special overworld spawn in a fixed location.
 58,9,Special overworld spawn in a fixed location in the water.
+59,9,Get chased by territorial Pokémon when entering the water.

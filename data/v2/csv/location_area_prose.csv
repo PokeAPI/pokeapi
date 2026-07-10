@@ -2190,27 +2190,86 @@ location_area_id,local_language_id,name
 855,9,Route 9 (Outer Spikemuth)
 856,9,Route 10 (Main)
 857,9,Route 10 (Near Station)
+858,9,Axew's Eye
+859,9,Ballimere Lake
+860,9,Ballonlea
 861,9,Battle Tower
+862,9,Brawler's Cave
+863,9,Bridge Field
+864,9,Challenge Beach
+868,9,Challenge Road
 869,9,Circhester
+870,9,Courageous Cavern
+871,9,Crown Shrine
+872,9,Dappled Grove
+873,9,Dusty Bowl
+874,9,Dyna Tree Hill
+875,9,East Lake Axewell
 876,9,Fields of Honor
+878,9,Forest of Focus
 879,9,Freezington
+880,9,Frigid Sea
+881,9,Frostpoint Field
 882,9,Galar Mine
 883,9,Galar Mine No. 2
+884,9,Giant's Bed
+885,9,Giant's Cap (Main Area)
+886,9,Giant's Cap (Area 2)
+887,9,Giant's Cap (Area 3)
+888,9,Giant's Foot
+889,9,Giant's Mirror (Main Area)
+890,9,Giant's Seat
 891,9,Glimwood Tangle
 892,9,Hammerlocke
+893,9,Hammerlocke Hills
+894,9,Honeycalm Island
+895,9,Honeycalm Sea
 896,9,Hulbury
+897,9,Iceberg Ruins
+898,9,Insular Sea
+899,9,Iron Ruins
+900,9,Lake of Outrage
+901,9,Lakeside Cave
+902,9,Loop Lagoon
 904,9,Master Dojo
 905,9,Max Lair
 906,9,Motostoke
 907,9,Motostoke Outskirts
+908,9,Motostoke Riverbank
+909,9,North Lake Miloch
+910,9,Old Cemetery
+911,9,Path to the Peak
 912,9,Postwick
+913,9,Potbottom Desert
+914,9,Roaring-Sea Caves
+915,9,Rock Peak Ruins
 916,9,Rolling Fields (Main Area)
 917,9,Rolling Fields (Area 2)
+918,9,Slippery Slope
 919,9,Slumbering Weald (Entrance)
+920,9,Snowslide Slope
+921,9,Soothing Wetlands
+922,9,South Lake Miloch (Main Area)
+923,9,South Lake Miloch (Area 2)
 924,9,Spikemuth
+925,9,Spit-Decision Ruins
+927,9,Stepping-Stone Sea (Main Area)
+928,9,Stepping-Stone Sea (Area 2)
+929,9,Stony Wilderness (Main Area)
+930,9,Stony Wilderness (Area 2)
+931,9,Stony Wilderness (Area 3)
 932,9,Stow-on-Side
+933,9,Three-Point Pass
+934,9,Tower of Darkness
+935,9,Tower of Waters
+936,9,Training Lowlands
+938,9,Tunnel to the Top
 939,9,Turffield
+940,9,Warm-Up Tunnel
+941,9,Watchtower Ruins
 942,9,Wegehurst
+943,9,West Lake Axewell
+944,9,Workout Sea
 945,9,Wyndon
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
@@ -2443,3 +2502,5 @@ location_area_id,local_language_id,name
 1374,9,Turffield (Gym)
 1375,9,Ballonlea (Gym)
 1376,9,Random caves across the Isle of Armor
+1377,9,Nacrene Museum
+1378,9,Giant's Mirror (Area 2)

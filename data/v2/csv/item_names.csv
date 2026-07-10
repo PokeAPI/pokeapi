@@ -22,7 +22,7 @@ item_id,local_language_id,name
 2,12,高级球
 2,14,Ultra Ball
 3,1,スーパーボール
-3,3,수퍼볼
+3,3,슈퍼볼
 3,4,超級球
 3,5,Super Ball
 3,6,Superball
@@ -55,7 +55,7 @@ item_id,local_language_id,name
 5,12,狩猎球
 5,14,Safari Ball
 6,1,ネットボール
-6,3,넷트볼
+6,3,네트볼
 6,4,捕網球
 6,5,Filet Ball
 6,6,Netzball
@@ -88,7 +88,7 @@ item_id,local_language_id,name
 8,12,巢穴球
 8,14,Nido Ball
 9,1,リピートボール
-9,3,리피드볼
+9,3,리피트볼
 9,4,重複球
 9,5,Bis Ball
 9,6,Wiederball
@@ -99,7 +99,7 @@ item_id,local_language_id,name
 9,12,重复球
 9,14,Acopio Ball
 10,1,タイマーボール
-10,3,타이마볼
+10,3,타이머볼
 10,4,計時球
 10,5,Chrono Ball
 10,6,Timerball
@@ -121,7 +121,7 @@ item_id,local_language_id,name
 11,12,豪华球
 11,14,Lujo Ball
 12,1,プレミアボール
-12,3,프레미어볼
+12,3,프리미어볼
 12,4,紀念球
 12,5,Honor Ball
 12,6,Premierball
@@ -2779,7 +2779,7 @@ item_id,local_language_id,name
 257,12,红线
 257,14,Lazo Destino
 258,1,くろいヘドロ
-258,3,검은진흙
+258,3,검은오물
 258,4,黑色污泥
 258,5,Boue Noire
 258,6,Giftschleim
@@ -2988,7 +2988,7 @@ item_id,local_language_id,name
 276,12,水滴石板
 276,14,Tabla Linfa
 277,1,いかずちプレート
-277,3,우뢰플레이트
+277,3,우레플레이트
 277,4,雷電石板
 277,5,Plaque Volt
 277,6,Blitztafel
@@ -4664,7 +4664,7 @@ item_id,local_language_id,name
 429,12,大木的信
 429,14,Carta Prof. Oak
 430,1,みかづきのはね
-430,3,초승달날개
+430,3,초승달깃털
 430,4,新月之羽
 430,5,Lun’Aile
 430,6,Lunarfeder
@@ -4961,7 +4961,7 @@ item_id,local_language_id,name
 456,12,公园球
 456,14,Parque Ball
 457,1,コンペボール
-457,3,콤페볼
+457,3,컴퍼티션볼
 457,4,競賽球
 457,5,Compét’Ball
 457,6,Turnierball
@@ -5225,7 +5225,7 @@ item_id,local_language_id,name
 480,12,机械零件
 480,14,Maquinaria
 481,1,ぎんいろのはね
-481,3,은빛날개
+481,3,은빛깃털
 481,4,銀色之羽
 481,5,Argent’Aile
 481,6,Silberflügel
@@ -5236,7 +5236,7 @@ item_id,local_language_id,name
 481,12,银色之羽
 481,14,Ala Plateada
 482,1,にじいろのはね
-482,3,무지갯빛날개
+482,3,무지갯빛깃털
 482,4,虹色之羽
 482,5,Arc-en-Ci’Aile
 482,6,Buntschwinge
@@ -6472,7 +6472,7 @@ item_id,local_language_id,name
 605,12,钢之宝石
 605,14,Gema Acero
 606,1,たいりょくのハネ
-606,3,체력날개
+606,3,체력깃털
 606,4,體力之羽
 606,5,Plume Santé
 606,6,Heilfeder
@@ -6483,7 +6483,7 @@ item_id,local_language_id,name
 606,12,体力之羽
 606,14,Pluma Vigor
 607,1,きんりょくのハネ
-607,3,근력날개
+607,3,근력깃털
 607,4,肌力之羽
 607,5,Plume Force
 607,6,Kraftfeder
@@ -6494,7 +6494,7 @@ item_id,local_language_id,name
 607,12,肌力之羽
 607,14,Pluma Músculo
 608,1,ていこうのハネ
-608,3,저항력날개
+608,3,저항력깃털
 608,4,抵抗之羽
 608,5,Plume Armure
 608,6,Abwehrfeder
@@ -6505,7 +6505,7 @@ item_id,local_language_id,name
 608,12,抵抗之羽
 608,14,Pluma Aguante
 609,1,ちりょくのハネ
-609,3,지력날개
+609,3,지력깃털
 609,4,智力之羽
 609,5,Plume Esprit
 609,6,Geniefeder
@@ -6516,7 +6516,7 @@ item_id,local_language_id,name
 609,12,智力之羽
 609,14,Pluma Intelecto
 610,1,せいしんのハネ
-610,3,정신력날개
+610,3,정신력깃털
 610,4,精神之羽
 610,5,Plume Mental
 610,6,Espritfeder
@@ -6527,7 +6527,7 @@ item_id,local_language_id,name
 610,12,精神之羽
 610,14,Pluma Mente
 611,1,しゅんぱつのハネ
-611,3,순발력날개
+611,3,순발력깃털
 611,4,瞬發之羽
 611,5,Plume Sprint
 611,6,Flinkfeder
@@ -6538,7 +6538,7 @@ item_id,local_language_id,name
 611,12,瞬发之羽
 611,14,Pluma Ímpetu
 612,1,きれいなハネ
-612,3,고운날개
+612,3,고운깃털
 612,4,美麗之羽
 612,5,Jolie Plume
 612,6,Prachtfeder
@@ -6560,7 +6560,7 @@ item_id,local_language_id,name
 613,12,背盖化石
 613,14,Fósil Tapa
 614,1,はねのカセキ
-614,3,날개화석
+614,3,깃털화석
 614,4,羽毛化石
 614,5,Fossile Plume
 614,6,Federfossil
@@ -8113,7 +8113,7 @@ item_id,local_language_id,name
 770,12,得文的物品
 770,14,Piezas Devon
 772,1,ポロックキット
-772,3,포켓몬스넥키트
+772,3,포켓몬스낵키트
 772,4,寶可方塊組合
 772,5,Kit Pokébloc
 772,6,Pokériegel-Set
@@ -8278,7 +8278,7 @@ item_id,local_language_id,name
 789,12,超级领针
 789,14,Megabroche
 790,1,メガティアラ
-790,3,메가티아러
+790,3,메가티아라
 790,4,超級頭冠
 790,5,Méga-Tiare
 790,6,Mega-Diadem
@@ -8454,7 +8454,7 @@ item_id,local_language_id,name
 806,12,惩戒之壶
 806,14,Vasija Castigo
 807,1,メガブレス
-807,3,메가블레스
+807,3,메가브레스
 807,4,超級護腕
 807,5,Méga-Manchette
 807,6,Mega-Armband
@@ -8751,7 +8751,7 @@ item_id,local_language_id,name
 835,12,皮卡丘Ｚ
 835,14,Pikastal Z
 836,1,ぎんのおうかん
-836,3,은왕관
+836,3,은색병뚜껑
 836,4,銀色王冠
 836,5,Capsule d’Argent
 836,6,Silberkronkorken
@@ -8762,7 +8762,7 @@ item_id,local_language_id,name
 836,12,银色王冠
 836,14,Chapa Plateada
 837,1,きんのおうかん
-837,3,금왕관
+837,3,금색병뚜껑
 837,4,金色王冠
 837,5,Capsule d’Or
 837,6,Goldkronkorken
@@ -9202,7 +9202,7 @@ item_id,local_language_id,name
 905,12,大地存储碟
 905,14,Disco Tierra
 906,1,ロックメモリ
-906,3,락메모리
+906,3,록메모리
 906,4,岩石記憶碟
 906,5,ROM Roche
 906,6,Gesteins-Disc

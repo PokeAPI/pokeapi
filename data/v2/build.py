@@ -1003,15 +1003,15 @@ def _build_berries():
         yield Berry(
             id=int(info[0]),
             item_id=int(info[1]),
-            name=item.name[: -len("-berry")] if item.name.endswith("-berry") else item.name,
-            berry_firmness_id=int(info[2]) if info[2] and info[2].strip() else None,
-            natural_gift_power=int(info[3]) if info[3] and info[3].strip() else None,
-            natural_gift_type_id=int(info[4]) if info[4] and info[4].strip() else None,
-            size=int(info[5]) if info[5] and info[5].strip() else None,
-            max_harvest=int(info[6]) if info[6] and info[6].strip() else None,
-            growth_time=int(info[7]) if info[7] and info[7].strip() else None,
-            soil_dryness=int(info[8]) if info[8] and info[8].strip() else None,
-            smoothness=int(info[9]) if info[9] and info[9].strip() else None,
+            name=item.name.split("-berry")[0],
+            berry_firmness_id=int(info[2]) if info[2] else None,
+            natural_gift_power=int(info[3]) if info[3] else None,
+            natural_gift_type_id=int(info[4]) if info[4] else None,
+            size=int(info[5]) if info[5] else None,
+            max_harvest=int(info[6]) if info[6] else None,
+            growth_time=int(info[7]) if info[7] else None,
+            soil_dryness=int(info[8]) if info[8] else None,
+            smoothness=int(info[9]) if info[9] else None,
         )
 
     build_generic((Berry,), "berries.csv", csv_record_to_objects)

@@ -103,6 +103,7 @@ encounter_method_id,local_language_id,name
 53,9,"Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness."
 54,9,Finding a Pokemon in a Hidden Grotto
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
-56,9,Overworld spawn coming from underground
+56,9,Overworld spawn coming from underground or within a swamp.
 57,9,Special overworld spawn in a fixed location.
 58,9,Special overworld spawn in a fixed location in the water.
+59,9,Get chased by territorial Pokémon when entering the water.

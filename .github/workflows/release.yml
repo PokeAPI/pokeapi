@@ -46,7 +46,7 @@ jobs:
             pokeapi.pgdump
             db.sqlite3
           generate_release_notes: true
-      - name: Release master
+      - name: Release master branch
         uses: softprops/action-gh-release@v3.0.1
         if: github.ref == 'refs/heads/master'
         with:
@@ -56,8 +56,8 @@ jobs:
             * **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
           draft: false
           prerelease: true
-          name: master
-          tag_name: master
+          name: master-branch
+          tag_name: master-branch
           fail_on_unmatched_files: true
           files: |
             pokeapi.pgdump

@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("pokemon_v2", "0028_pokemonevolution_evolved_form_and_more"),
+        ("pokemon_v2", "0029_pokemonformtrigger_pokemonformcondition"),
     ]
 
     operations = [

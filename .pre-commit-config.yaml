@@ -7,9 +7,13 @@ repos:
       - id: check-json
       - id: check-toml
       - id: check-yaml
+        args:
+          - --allow-multiple-documents
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: pretty-format-json
+        args:
+          - --no-sort-keys
       - id: sort-simple-yaml
       - id: trailing-whitespace
         args:

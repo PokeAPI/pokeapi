@@ -1,0 +1,31 @@
+repos:
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: check-ast
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: pretty-format-json
+      - id: sort-simple-yaml
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-blanket-type-ignore
+      - id: python-use-type-annotations
+
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: Ruff Format
+        entry: ruff format . 
+        language: python
+        

@@ -90,10 +90,10 @@ docker-prod:
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format: check-uv   # Format the source code
-	uv run black . --extend-exclude '.+/scripts/.+'
+	uv run ruff format .
 
 format-check: check-uv  # Check the source code has been formatted
-	uv run black . --check --extend-exclude '.+/scripts/.+'
+	uv run ruff format . --check
 
 pull:
 	git checkout master

@@ -42,6 +42,7 @@ repos:
         entry: uv run ruff format .
         language: system
         types_or: [python, pyi]
+        pass_filenames: false
 
       - id: build-and-test
         name: Build and Test

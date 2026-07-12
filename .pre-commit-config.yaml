@@ -20,17 +20,18 @@ repos:
         args:
           - --markdown-linebreak-ext=md
 
-  - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
-    hooks:
-      - id: python-check-blanket-noqa
-      - id: python-check-blanket-type-ignore
-      - id: python-use-type-annotations
+  # TODO: Enable in the future when adding the ruff linter
+  # - repo: https://github.com/pre-commit/pygrep-hooks
+  #   rev: v1.9.0
+  #   hooks:
+  #     - id: python-check-blanket-noqa
+  #     - id: python-check-blanket-type-ignore
+  #     - id: python-use-type-annotations
 
   - repo: local
     hooks:
       - id: ruff-format
         name: Ruff Format
-        entry: ruff format . 
+        entry: ruff format .
         language: python
         types_or: [python, pyi]

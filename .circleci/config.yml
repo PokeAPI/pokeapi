@@ -16,7 +16,7 @@ jobs:
           command: make install
       - run:
           name: Pre-commit checks
-          command: SKIP=ruff-format pre-commit run --all-files --show-diff-on-failure
+          command: SKIP=ruff-format uv run pre-commit run --all-files --show-diff-on-failure
       - run:
           name: Format Check
           command: make format-check

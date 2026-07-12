@@ -33,12 +33,26 @@ repos:
       - id: check-csv
         name: Check CSV
         entry: uv run ./Resources/scripts/check_csv.py
-        language: python
+        language: system
         args: [--encoding, utf-8]
         files: \.csv$
 
       - id: ruff-format
         name: Ruff Format
-        entry: ruff format .
-        language: python
+        entry: uv run ruff format .
+        language: system
         types_or: [python, pyi]
+
+      - id: build-and-test
+        name: Build and Test
+        entry: >-
+          python -c "
+          import subprocess, sys;
+          run = lambda cmd, inp=None: subprocess.run(cmd, input=inp, text=True).returncode == 0 or sys.exit(1);
+          run(['uv', 'run', 'manage.py', 'migrate', '--settings=config.local']);
+          run(['uv', 'run', 'manage.py', 'shell', '--settings=config.local'], inp='from data.v2.build import build_all; build_all()\n');
+          run(['uv', 'run', 'manage.py', 'test', '--settings=config.local'])
+          "
+        language: system
+        pass_filenames: false
+        always_run: true

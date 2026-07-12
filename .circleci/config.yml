@@ -15,6 +15,9 @@ jobs:
           name: Install deps
           command: make install
       - run:
+          name: Pre-commit checks
+          command: SKIP=ruff-format,build-and-test pre-commit run --all-files --show-diff-on-failure
+      - run:
           name: Format Check
           command: make format-check
       - run:

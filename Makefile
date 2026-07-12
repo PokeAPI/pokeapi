@@ -23,6 +23,12 @@ install: check-uv  # Install requirements for local development
 install-base: check-uv  # Install minimal requirements for runtime/pipeline environments
 	uv sync --locked --no-dev
 
+pre-commit-install: check-uv  # Install pre-commit hooks
+	uv run pre-commit install
+
+pre-commit: check-uv  # Run pre-commit hooks
+	uv run pre-commit run --all-files
+
 setup: check-uv   # Set up the project database
 	uv run manage.py migrate ${local_config}
 

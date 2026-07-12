@@ -14,6 +14,7 @@ repos:
       - id: pretty-format-json
         args:
           - --no-sort-keys
+          - --no-ensure-ascii
       - id: sort-simple-yaml
       - id: trailing-whitespace
         args:
@@ -32,4 +33,4 @@ repos:
         name: Ruff Format
         entry: ruff format . 
         language: python
-        
+        types_or: [python, pyi]

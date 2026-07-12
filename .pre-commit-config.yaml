@@ -30,6 +30,13 @@ repos:
 
   - repo: local
     hooks:
+      - id: check-csv
+        name: Check CSV
+        entry: uv run ./Resources/scripts/check_csv.py
+        language: python
+        args: [--encoding, utf-8]
+        files: \.csv$
+
       - id: ruff-format
         name: Ruff Format
         entry: ruff format .

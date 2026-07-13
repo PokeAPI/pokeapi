@@ -5282,6 +5282,62 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["count"], 1)
         self.assertEqual(response.data["results"][0]["name"], pokemon.name)
 
+    def test_pokemon_moves_with_non_contiguous_version_group_and_method_ids(self):
+        # Regression test for #1567: get_pokemon_moves used to look up
+        # VersionGroup/MoveLearnMethod summaries by list position
+        # (id - 1), assuming ids were a contiguous 1-indexed sequence.
+        # Deleting a row (or otherwise creating a gap) breaks that
+        # assumption and returns the wrong version group / learn method,
+        # or raises an IndexError.
+        pokemon_species = self.setup_pokemon_species_data(
+            name="pkmn species for id gap test"
+        )
+        pokemon = self.setup_pokemon_data(
+            pokemon_species=pokemon_species, name="pkm for id gap test"
+        )
+        self.setup_pokemon_sprites_data(pokemon=pokemon)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        # Create and delete a version group and a move learn method so
+        # that the ids actually used below are not contiguous starting
+        # from 1.
+        doomed_version_group = self.setup_version_group_data(name="doomed ver grp")
+        doomed_version_group.delete()
+
+        doomed_move_learn_method = self.setup_move_learn_method_data(
+            name="doomed mv lrn mthd"
+        )
+        doomed_move_learn_method.delete()
+
+        move = self.setup_move_data(name="mv for id gap test")
+        version_group = self.setup_version_group_data(name="ver grp after gap")
+        pokemon_move = self.setup_pokemon_move_data(
+            pokemon=pokemon, move=move, version_group=version_group, level=5
+        )
+
+        response = self.client.get(
+            "{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"}
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        version_detail = response.data["moves"][0]["version_group_details"][0]
+        self.assertEqual(version_detail["version_group"]["name"], version_group.name)
+        self.assertEqual(
+            version_detail["version_group"]["url"],
+            "{}{}/version-group/{}/".format(TEST_HOST, API_V2, version_group.pk),
+        )
+        self.assertEqual(
+            version_detail["move_learn_method"]["name"],
+            pokemon_move.move_learn_method.name,
+        )
+        self.assertEqual(
+            version_detail["move_learn_method"]["url"],
+            "{}{}/move-learn-method/{}/".format(
+                TEST_HOST, API_V2, pokemon_move.move_learn_method.pk
+            ),
+        )
+
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)

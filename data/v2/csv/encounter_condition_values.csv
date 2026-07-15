@@ -326,8 +326,8 @@ id,encounter_condition_id,identifier,is_default
 325,10,other-find-50-grassland-footprints,0
 326,10,other-find-50-iron-will-footprints,0
 327,10,other-regirock-regice-registeel-regieleki-regidrago-in-party,0
-328,10,other-choose-regieleki,0
-329,10,other-choose-regidrago,0
+328,10,other-choose-regieleki-pattern,0
+329,10,other-choose-regidrago-pattern,0
 330,10,other-grow-iceroot-carrot,0
 331,10,other-grow-shaderoot-carrot,0
 332,10,other-talked-to-32-people,0

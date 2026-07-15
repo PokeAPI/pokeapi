@@ -4847,14 +4847,26 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         }
     )
     def get_pokemon_moves(self, obj):
-        version_objects = VersionGroup.objects.all()
-        version_data = VersionGroupSummarySerializer(
-            version_objects, many=True, context=self.context
-        ).data
-        method_objects = MoveLearnMethod.objects.all()
-        method_data = MoveLearnMethodSummarySerializer(
-            method_objects, many=True, context=self.context
-        ).data
+        version_objects = VersionGroup.objects.all().order_by("id")
+        version_data = {
+            version_object.id: data
+            for version_object, data in zip(
+                version_objects,
+                VersionGroupSummarySerializer(
+                    version_objects, many=True, context=self.context
+                ).data,
+            )
+        }
+        method_objects = MoveLearnMethod.objects.all().order_by("id")
+        method_data = {
+            method_object.id: data
+            for method_object, data in zip(
+                method_objects,
+                MoveLearnMethodSummarySerializer(
+                    method_objects, many=True, context=self.context
+                ).data,
+            )
+        }
 
         # Get moves related to this pokemon and pull out unique Move IDs.
         # Note that it's important to order by the same column we're using to
@@ -4884,11 +4896,9 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail = OrderedDict()
 
                 version_detail["level_learned_at"] = move["level"]
-                version_detail["version_group"] = version_data[
-                    move["version_group"] - 1
-                ]
+                version_detail["version_group"] = version_data[move["version_group"]]
                 version_detail["move_learn_method"] = method_data[
-                    move["move_learn_method"] - 1
+                    move["move_learn_method"]
                 ]
                 version_detail["order"] = move["order"]
 

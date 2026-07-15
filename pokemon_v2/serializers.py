@@ -4476,7 +4476,34 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
     )
     def get_pokemon_sprites(self, obj):
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
-        return sprites_object.sprites
+        sprites = sprites_object.sprites
+        if obj.pokemon_species.gender_rate == 8:
+            if isinstance(sprites, str):
+                parsed = json.loads(sprites)
+                self._fill_female_sprites(parsed)
+                return json.dumps(parsed)
+            self._fill_female_sprites(sprites)
+        return sprites
+
+    _FEMALE_FALLBACKS = {
+        "front_female": "front_default",
+        "back_female": "back_default",
+        "front_shiny_female": "front_shiny",
+        "back_shiny_female": "back_shiny",
+    }
+
+    def _fill_female_sprites(self, node):
+        if not isinstance(node, dict):
+            return
+        for female_key, default_key in self._FEMALE_FALLBACKS.items():
+            if (
+                female_key in node
+                and node[female_key] is None
+                and node.get(default_key) is not None
+            ):
+                node[female_key] = node[default_key]
+        for value in node.values():
+            self._fill_female_sprites(value)
 
     @extend_schema_field(
         field={

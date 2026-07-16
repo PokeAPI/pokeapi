@@ -110,6 +110,11 @@ class PokeapiCommonViewset(
     tags=["pokemon"],
     summary="Get ability",
 )
+@extend_schema_view(
+    list=extend_schema(
+        summary="List abilities",
+    )
+)
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
     serializer_class = AbilityDetailSerializer

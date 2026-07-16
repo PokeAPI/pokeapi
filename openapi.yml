@@ -20,7 +20,7 @@ paths:
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
         for greater detail.
-      summary: Get ability
+      summary: List abilities
       parameters:
       - name: limit
         required: false
@@ -8304,6 +8304,29 @@ components:
                     examples:
                     - https://pokeapi.co/api/v2/type/7/
           readOnly: true
+        trigger_conditions:
+          type: array
+          items:
+            type: object
+            required:
+            - trigger
+            - name
+            - url
+            properties:
+              trigger:
+                type: string
+                examples:
+                - held-item
+              name:
+                type: string
+                examples:
+                - venusaurite
+              url:
+                type: string
+                format: uri
+                examples:
+                - https://pokeapi.co/api/v2/item/698/
+          readOnly: true
       required:
       - form_name
       - form_names
@@ -8312,6 +8335,7 @@ components:
       - names
       - pokemon
       - sprites
+      - trigger_conditions
       - types
       - version_group
     PokemonFormSummary:

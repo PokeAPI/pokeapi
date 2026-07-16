@@ -20,6 +20,7 @@ paths:
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
         for greater detail.
+      summary: Get ability
       parameters:
       - name: limit
         required: false
@@ -57,6 +58,7 @@ paths:
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
         for greater detail.
+      summary: Get ability
       parameters:
       - in: path
         name: id
@@ -1542,6 +1544,7 @@ paths:
       operationId: meta_list
       description: Returns metadata about the current deployed version of the API,
         including the git commit hash, deploy date, and tag (if any).
+      summary: Get API metadata
       tags:
       - utility
       security:

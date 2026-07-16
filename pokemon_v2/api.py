@@ -108,6 +108,7 @@ class PokeapiCommonViewset(
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
+    summary="Get ability",
 )
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
@@ -1063,6 +1064,7 @@ class PokemonEncounterView(APIView):
 
 @extend_schema(
     description="Returns metadata about the current deployed version of the API, including the git commit hash, deploy date, and tag (if any).",
+    summary="Get API metadata",
     tags=["utility"],
     responses={
         200: {

@@ -151,6 +151,7 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
     "VERSION": "2.10.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "AUTHENTICATION_WHITELIST": [],
     "OAS_VERSION": "3.1.0",
     "COMPONENT_SPLIT_REQUEST": True,
     "TAGS": [

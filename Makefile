@@ -179,11 +179,11 @@ update-graphql-data-prod:
 	docker compose ${gql_compose_config} stop web graphql-engine app cache
 	docker compose ${gql_compose_config} down -v db
 	docker compose ${gql_compose_config} up --pull always -d db
-	sleep 10
+	until docker compose ${gql_compose_config} ps db | grep -q "healthy"; do sleep 1; done
 	docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.pgdump
 	rm -f pokeapi.pgdump
 	docker compose ${gql_compose_config} up --pull always -d graphql-engine
-	sleep 30
+	until docker compose ${gql_compose_config} ps graphql-engine | grep -q "healthy"; do sleep 1; done
 	make hasura-apply
 	docker compose ${gql_compose_config} up --pull always -d web
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'

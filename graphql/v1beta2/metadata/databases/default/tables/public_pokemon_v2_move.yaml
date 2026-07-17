@@ -109,7 +109,21 @@ array_relationships:
         table:
           name: pokemon_v2_movename
           schema: public
-  - name: pokemonevolutions
+  - name: pokemonevolutionsByUsedMoveId
+    using:
+      foreign_key_constraint_on:
+        column: used_move_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonformconditions
+    using:
+      foreign_key_constraint_on:
+        column: move_id
+        table:
+          name: pokemon_v2_pokemonformcondition
+          schema: public
+  - name: pokemonevolutionsByKnownMoveId
     using:
       foreign_key_constraint_on:
         column: known_move_id

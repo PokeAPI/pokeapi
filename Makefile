@@ -1,7 +1,7 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-gql_compose_config_old = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
+gql_compose_config_deprecated = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
 gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 
 .PHONY: help
@@ -159,15 +159,15 @@ update-graphql-data-prod-old:
 	docker compose ${gql_compose_config} stop
 	git pull origin master
 	git submodule update --remote --merge
-	docker compose ${gql_compose_config_old} up --pull always -d app cache db
+	docker compose ${gql_compose_config_deprecated} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	make docker-migrate
 	make docker-build-db
-	docker compose ${gql_compose_config_old} stop app cache
-	docker compose ${gql_compose_config_old} up --pull always -d graphql-engine graphiql
+	docker compose ${gql_compose_config_deprecated} stop app cache
+	docker compose ${gql_compose_config_deprecated} up --pull always -d graphql-engine graphiql
 	sleep 120
 	make hasura-apply
-	docker compose ${gql_compose_config_old} up --pull always -d web
+	docker compose ${gql_compose_config_deprecated} up --pull always -d web
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
 	docker image prune -af
 	sync; echo 3 > /proc/sys/vm/drop_caches

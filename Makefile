@@ -187,5 +187,5 @@ update-graphql-data-prod:
 	make hasura-apply
 	docker compose ${gql_compose_config} up --pull always -d web
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
-	docker image prune -af
+	docker image prune -f
 	sync; echo 3 > /proc/sys/vm/drop_caches

@@ -74,6 +74,13 @@ array_relationships:
         table:
           name: pokemon_v2_pokedexversiongroup
           schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: version_group_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
   - name: pokemonforms
     using:
       foreign_key_constraint_on:

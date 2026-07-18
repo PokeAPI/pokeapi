@@ -84,6 +84,13 @@ array_relationships:
         table:
           name: pokemon_v2_machine
           schema: public
+  - name: pokemonformconditions
+    using:
+      foreign_key_constraint_on:
+        column: item_id
+        table:
+          name: pokemon_v2_pokemonformcondition
+          schema: public
   - name: pokemonevolutions
     using:
       foreign_key_constraint_on:

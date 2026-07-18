@@ -7,7 +7,7 @@ spec:
     spec:
       initContainers:
         - name: data-download
-          image: alpine:3.21.2
+          image: alpine:3.24.1
           command: ['ls']
           args: ['/tmp/csv']
       containers:

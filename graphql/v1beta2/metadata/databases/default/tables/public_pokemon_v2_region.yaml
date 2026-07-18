@@ -36,6 +36,13 @@ array_relationships:
         table:
           name: pokemon_v2_pokedex
           schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: region_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
   - name: regionnames
     using:
       foreign_key_constraint_on:

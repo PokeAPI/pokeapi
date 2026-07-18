@@ -1,18 +1,18 @@
 services:
   cache:
-    image: redis:7.4.2-alpine3.21
+    image: redis:8.6.4-alpine
     volumes:
       - redis_data:/data
     restart: always
 
   db:
-    image: postgres:17.2-alpine3.21
+    image: postgres:18.4-alpine3.24
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pokemon}
       POSTGRES_USER: ${POSTGRES_USER:-ash}
       POSTGRES_DB: ${POSTGRES_DB:-pokeapi}
     volumes:
-      - pg_data:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/
     healthcheck:
       test: pg_isready -U $${POSTGRES_USER:-ash} -d $${POSTGRES_DB:-pokeapi}
       interval: 10s
@@ -48,7 +48,8 @@ services:
       - ./Resources/nginx/ssl:/ssl:ro
       - graphql_cache:/tmp/cache
   graphql-engine:
-    image: hasura/graphql-engine:v2.48.1
+    image: hasura/graphql-engine:v2.49.4
+    user: 1001:1001
     ports:
       - "8080:8080"
     depends_on:

@@ -134,6 +134,7 @@
 - "!include public_pokemon_v2_pokemonspeciesname.yaml"
 - "!include public_pokemon_v2_pokemonsprites.yaml"
 - "!include public_pokemon_v2_pokemonstat.yaml"
+- "!include public_pokemon_v2_pokemonstatpast.yaml"
 - "!include public_pokemon_v2_pokemontype.yaml"
 - "!include public_pokemon_v2_pokemontypepast.yaml"
 - "!include public_pokemon_v2_region.yaml"

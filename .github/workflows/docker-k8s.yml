@@ -66,11 +66,11 @@ jobs:
       - name: Lint k8s
         run: (cd Resources/k8s/kustomize && yamllint .)
       - name: Create k8s Kind Cluster
-        uses: helm/kind-action@v1.13.0
+        uses: helm/kind-action@v1.14.0
         with:
           cluster_name: pokeapi
           config: Resources/kind/config-ga.yaml
-          version: v0.31.0
+          version: v0.32.0
       - name: Create deployment configuration
         run: |
           cp Resources/k8s/kustomize/base/secrets/postgres.env.sample Resources/k8s/kustomize/base/secrets/postgres.env

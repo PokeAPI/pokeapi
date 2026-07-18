@@ -1193,10 +1193,16 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
     )
     def get_encounters(self, obj):
         # get versions for later use
-        version_objects = Version.objects.all()
-        version_data = VersionSummarySerializer(
-            version_objects, many=True, context=self.context
-        ).data
+        version_objects = Version.objects.all().order_by("id")
+        version_data = {
+            version_object.id: data
+            for version_object, data in zip(
+                version_objects,
+                VersionSummarySerializer(
+                    version_objects, many=True, context=self.context
+                ).data,
+            )
+        }
 
         # all encounters associated with location area
         all_encounters = Encounter.objects.filter(location_area=obj).order_by("pokemon")
@@ -1219,7 +1225,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             # each pokemon has multiple versions it could be encountered in
             for ver in poke_encounters.values("version").distinct():
                 version_detail = OrderedDict()
-                version_detail["version"] = version_data[ver["version"] - 1]
+                version_detail["version"] = version_data[ver["version"]]
                 version_detail["max_chance"] = 0
                 version_detail["encounter_details"] = []
 

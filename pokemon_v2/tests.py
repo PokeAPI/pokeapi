@@ -3298,6 +3298,42 @@ class APITests(APIData, APITestCase):
             ),
         )
 
+    def test_location_area_encounters_with_non_contiguous_version_ids(self):
+        # Regression test: get_encounters used to look up Version
+        # summaries by list position (id - 1), assuming ids were a
+        # contiguous 1-indexed sequence. Deleting a row (or otherwise
+        # creating a gap) breaks that assumption and returns the wrong
+        # version, or raises an IndexError.
+        location_area = self.setup_location_area_data(name="lctn area for id gap test")
+
+        # Create and delete a version so that the id actually used
+        # below is not contiguous starting from 1.
+        doomed_version = self.setup_version_data(name="doomed ver")
+        doomed_version.delete()
+
+        version = self.setup_version_data(name="ver after gap")
+        pokemon = self.setup_pokemon_data(name="pkmn for id gap test")
+        encounter_slot = self.setup_encounter_slot_data(rarity=30)
+        encounter = self.setup_encounter_data(
+            location_area=location_area,
+            encounter_slot=encounter_slot,
+            pokemon=pokemon,
+            version=version,
+        )
+
+        response = self.client.get(
+            "{}/location-area/{}/".format(API_V2, location_area.pk)
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        version_detail = response.data["pokemon_encounters"][0]["version_details"][0]
+        self.assertEqual(version_detail["version"]["name"], version.name)
+        self.assertEqual(
+            version_detail["version"]["url"],
+            "{}{}/version/{}/".format(TEST_HOST, API_V2, encounter.version.pk),
+        )
+
     # Contest Tests
     def test_contest_type_api(self):
         contest_type = self.setup_contest_type_data(name="base cntst tp")

@@ -334,3 +334,11 @@ id,encounter_condition_id,identifier,is_default
 333,10,other-eat-curry-with-cobalion-terrakion-virizion,0
 334,11,item-reins-of-unity,0
 335,10,other-witness-galarian-bird-fight,0
+336,27,max-den-rarity-common,0
+337,27,max-den-rarity-rare,0
+338,28,max-den-rating-1-star,0
+339,28,max-den-rating-2-star,0
+340,28,max-den-rating-3-star,0
+341,28,max-den-rating-4-star,0
+342,28,max-den-rating-5-star,0
+343,27,max-den-rarity-special,0

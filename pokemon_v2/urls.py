@@ -38,7 +38,7 @@ router.register(r"language", LanguageResource)
 router.register(r"location", LocationResource)
 router.register(r"location-area", LocationAreaResource)
 router.register(r"machine", MachineResource)
-router.register(r"meta", PokeapiMetaViewset, basename="meta")
+
 router.register(r"move", MoveResource)
 router.register(r"move-ailment", MoveMetaAilmentResource)
 router.register(r"move-battle-style", MoveBattleStyleResource)
@@ -71,6 +71,7 @@ router.register(r"version-group", VersionGroupResource)
 ###########################
 
 urlpatterns = [
+    path("api/v2/meta/", PokeapiMetaView.as_view(), name="meta"),
     path("api/v2/", include(router.urls)),
     re_path(
         r"^api/v2/pokemon/(?P<pokemon_id>\d+)/encounters",

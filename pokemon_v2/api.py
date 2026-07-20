@@ -1082,8 +1082,8 @@ class PokemonEncounterView(APIView):
         }
     },
 )
-class PokeapiMetaViewset(viewsets.ViewSet):
-    def list(self, request):
+class PokeapiMetaView(APIView):
+    def get(self, request):
         try:
             git_hash = (
                 subprocess.check_output(

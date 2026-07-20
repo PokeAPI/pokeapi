@@ -13,6 +13,33 @@ info:
     around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n
     \   "
 paths:
+  /api/v2/meta/:
+    get:
+      operationId: meta_retrieve
+      description: Returns metadata about the current deployed version of the API,
+        including the git commit hash, deploy date, and tag (if any).
+      summary: Get API metadata
+      tags:
+      - utility
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  deploy_date:
+                    type: string
+                    nullable: true
+                  hash:
+                    type: string
+                    nullable: true
+                  tag:
+                    type: string
+                    nullable: true
+          description: ''
   /api/v2/ability/:
     get:
       operationId: ability_list
@@ -1538,35 +1565,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MachineDetail'
-          description: ''
-  /api/v2/meta/:
-    get:
-      operationId: meta_list
-      description: Returns metadata about the current deployed version of the API,
-        including the git commit hash, deploy date, and tag (if any).
-      summary: Get API metadata
-      tags:
-      - utility
-      security:
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    deploy_date:
-                      type: string
-                      nullable: true
-                    hash:
-                      type: string
-                      nullable: true
-                    tag:
-                      type: string
-                      nullable: true
           description: ''
   /api/v2/move/:
     get:

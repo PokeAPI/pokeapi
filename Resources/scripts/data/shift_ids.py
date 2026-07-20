@@ -44,6 +44,13 @@ def shift_encs(args):
     write_shifted_entries("encounter_condition_value_map", "encounter_id", args)
 
 
+def shift_methods(args):
+    write_shifted_entries("encounter_methods", "id", args)
+    write_shifted_entries("encounter_method_prose", "encounter_method_id", args)
+    write_shifted_entries("encounter_slots", "encounter_method_id", args)
+    write_shifted_entries("location_area_encounter_rates", "encounter_method_id", args)
+
+
 def shift_slots(args):
     write_shifted_entries("encounter_slots", "id", args)
     write_shifted_entries("encounters", "encounter_slot_id", args)
@@ -78,6 +85,7 @@ def shift_areas(args):
 
 ENDPOINT_FUNC_MAP = {
     "encounters": shift_encs,
+    "encounter_methods": shift_methods,
     "encounter_slots": shift_slots,
     "encounter_conditions": shift_conds,
     "encounter_condition_values": shift_cond_vals,

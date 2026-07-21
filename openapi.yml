@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: PokéAPI
-  version: 2.7.0
+  version: 2.10.0
   description: "All the Pokémon data you'll ever need in one place, easily accessible
     through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is
     a full RESTful API linked to an extensive database detailing everything about
@@ -13,6 +13,33 @@ info:
     around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n
     \   "
 paths:
+  /api/v2/meta/:
+    get:
+      operationId: meta_retrieve
+      description: Returns metadata about the current deployed version of the API,
+        including the git commit hash, deploy date, and tag (if any).
+      summary: Get API metadata
+      tags:
+      - utility
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  deploy_date:
+                    type: string
+                    nullable: true
+                  hash:
+                    type: string
+                    nullable: true
+                  tag:
+                    type: string
+                    nullable: true
+          description: ''
   /api/v2/ability/:
     get:
       operationId: ability_list
@@ -20,6 +47,7 @@ paths:
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
         for greater detail.
+      summary: List abilities
       parameters:
       - name: limit
         required: false
@@ -42,8 +70,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -59,6 +85,7 @@ paths:
         overworld. Pokémon have multiple possible abilities but can have only one
         ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability)
         for greater detail.
+      summary: Get ability
       parameters:
       - in: path
         name: id
@@ -69,8 +96,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -109,8 +134,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -137,8 +160,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -175,8 +196,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -201,8 +220,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -240,8 +257,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -267,8 +282,6 @@ paths:
       tags:
       - berries
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -307,8 +320,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -335,8 +346,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -374,8 +383,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -401,8 +408,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -438,8 +443,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -463,8 +466,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -503,8 +504,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -531,8 +530,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -569,8 +566,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -595,8 +590,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -633,8 +626,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -659,8 +650,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -697,8 +686,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -723,8 +710,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -762,8 +747,6 @@ paths:
       tags:
       - evolution
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -789,8 +772,6 @@ paths:
       tags:
       - evolution
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -828,8 +809,6 @@ paths:
       tags:
       - evolution
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -855,8 +834,6 @@ paths:
       tags:
       - evolution
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -895,8 +872,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -923,8 +898,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -963,8 +936,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -991,8 +962,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1030,8 +999,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1057,8 +1024,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1096,8 +1061,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1123,8 +1086,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1161,8 +1122,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1187,8 +1146,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1225,8 +1182,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1251,8 +1206,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1289,8 +1242,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1315,8 +1266,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1352,8 +1301,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1377,8 +1324,6 @@ paths:
       tags:
       - items
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1414,8 +1359,6 @@ paths:
       tags:
       - utility
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1439,8 +1382,6 @@ paths:
       tags:
       - utility
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1477,8 +1418,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1503,8 +1442,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1535,8 +1472,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1561,8 +1496,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1600,8 +1533,6 @@ paths:
       tags:
       - machines
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1627,8 +1558,6 @@ paths:
       tags:
       - machines
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1636,36 +1565,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MachineDetail'
-          description: ''
-  /api/v2/meta/:
-    get:
-      operationId: meta_list
-      description: Returns metadata about the current deployed version of the API,
-        including the git commit hash, deploy date, and tag (if any).
-      tags:
-      - utility
-      security:
-      - cookieAuth: []
-      - basicAuth: []
-      - {}
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    deploy_date:
-                      type: string
-                      nullable: true
-                    hash:
-                      type: string
-                      nullable: true
-                    tag:
-                      type: string
-                      nullable: true
           description: ''
   /api/v2/move/:
     get:
@@ -1697,8 +1596,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1725,8 +1622,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1764,8 +1659,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1791,8 +1684,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1829,8 +1720,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1855,8 +1744,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1892,8 +1779,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1917,8 +1802,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1954,8 +1837,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1979,8 +1860,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2016,8 +1895,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2041,8 +1918,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2079,8 +1954,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2105,8 +1978,6 @@ paths:
       tags:
       - moves
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2143,8 +2014,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2169,8 +2038,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2207,8 +2074,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2233,8 +2098,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2274,8 +2137,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2303,8 +2164,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2345,8 +2204,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2375,8 +2232,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2415,8 +2270,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2443,8 +2296,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2483,8 +2334,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2511,8 +2360,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2549,8 +2396,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2575,8 +2420,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2612,8 +2455,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2637,8 +2478,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2677,8 +2516,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2705,8 +2542,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2745,8 +2580,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2773,8 +2606,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2812,8 +2643,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2839,8 +2668,6 @@ paths:
       tags:
       - location
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2878,8 +2705,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2905,8 +2730,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2943,8 +2766,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -2969,8 +2790,6 @@ paths:
       tags:
       - contests
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3009,8 +2828,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3037,8 +2854,6 @@ paths:
       tags:
       - pokemon
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3074,8 +2889,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3099,8 +2912,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3136,8 +2947,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3161,8 +2970,6 @@ paths:
       tags:
       - games
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -3186,8 +2993,6 @@ paths:
       tags:
       - encounters
       security:
-      - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -8497,6 +8302,29 @@ components:
                     examples:
                     - https://pokeapi.co/api/v2/type/7/
           readOnly: true
+        trigger_conditions:
+          type: array
+          items:
+            type: object
+            required:
+            - trigger
+            - name
+            - url
+            properties:
+              trigger:
+                type: string
+                examples:
+                - held-item
+              name:
+                type: string
+                examples:
+                - venusaurite
+              url:
+                type: string
+                format: uri
+                examples:
+                - https://pokeapi.co/api/v2/item/698/
+          readOnly: true
       required:
       - form_name
       - form_names
@@ -8505,6 +8333,7 @@ components:
       - names
       - pokemon
       - sprites
+      - trigger_conditions
       - types
       - version_group
     PokemonFormSummary:
@@ -9788,14 +9617,6 @@ components:
       required:
       - name
       - url
-  securitySchemes:
-    basicAuth:
-      type: http
-      scheme: basic
-    cookieAuth:
-      type: apiKey
-      in: cookie
-      name: sessionid
 servers:
 - url: https://pokeapi.co
 tags:

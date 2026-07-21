@@ -2190,27 +2190,86 @@ location_area_id,local_language_id,name
 855,9,Route 9 (Outer Spikemuth)
 856,9,Route 10 (Main)
 857,9,Route 10 (Near Station)
+858,9,Axew's Eye
+859,9,Ballimere Lake
+860,9,Ballonlea
 861,9,Battle Tower
+862,9,Brawler's Cave
+863,9,Bridge Field
+864,9,Challenge Beach
+868,9,Challenge Road
 869,9,Circhester
+870,9,Courageous Cavern
+871,9,Crown Shrine
+872,9,Dappled Grove
+873,9,Dusty Bowl
+874,9,Dyna Tree Hill
+875,9,East Lake Axewell
 876,9,Fields of Honor
+878,9,Forest of Focus
 879,9,Freezington
+880,9,Frigid Sea
+881,9,Frostpoint Field
 882,9,Galar Mine
 883,9,Galar Mine No. 2
+884,9,Giant's Bed
+885,9,Giant's Cap (Main Area)
+886,9,Giant's Cap (Area 2)
+887,9,Giant's Cap (Area 3)
+888,9,Giant's Foot
+889,9,Giant's Mirror (Main Area)
+890,9,Giant's Seat
 891,9,Glimwood Tangle
 892,9,Hammerlocke
+893,9,Hammerlocke Hills
+894,9,Honeycalm Island
+895,9,Honeycalm Sea
 896,9,Hulbury
+897,9,Iceberg Ruins
+898,9,Insular Sea
+899,9,Iron Ruins
+900,9,Lake of Outrage
+901,9,Lakeside Cave
+902,9,Loop Lagoon
 904,9,Master Dojo
 905,9,Max Lair
 906,9,Motostoke
 907,9,Motostoke Outskirts
+908,9,Motostoke Riverbank
+909,9,North Lake Miloch
+910,9,Old Cemetery
+911,9,Path to the Peak
 912,9,Postwick
+913,9,Potbottom Desert
+914,9,Roaring-Sea Caves
+915,9,Rock Peak Ruins
 916,9,Rolling Fields (Main Area)
 917,9,Rolling Fields (Area 2)
+918,9,Slippery Slope
 919,9,Slumbering Weald (Entrance)
+920,9,Snowslide Slope
+921,9,Soothing Wetlands
+922,9,South Lake Miloch (Main Area)
+923,9,South Lake Miloch (Area 2)
 924,9,Spikemuth
+925,9,Spit-Decision Ruins
+927,9,Stepping-Stone Sea (Main Area)
+928,9,Stepping-Stone Sea (Area 2)
+929,9,Stony Wilderness (Main Area)
+930,9,Stony Wilderness (Area 2)
+931,9,Stony Wilderness (Area 3)
 932,9,Stow-on-Side
+933,9,Three-Point Pass
+934,9,Tower of Darkness
+935,9,Tower of Waters
+936,9,Training Lowlands
+938,9,Tunnel to the Top
 939,9,Turffield
+940,9,Warm-Up Tunnel
+941,9,Watchtower Ruins
 942,9,Wegehurst
+943,9,West Lake Axewell
+944,9,Workout Sea
 945,9,Wyndon
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
@@ -2443,3 +2502,109 @@ location_area_id,local_language_id,name
 1374,9,Turffield (Gym)
 1375,9,Ballonlea (Gym)
 1376,9,Random caves across the Isle of Armor
+1377,9,Nacrene Museum
+1378,9,Giant's Mirror (Area 2)
+1379,9,Distortion World
+1380,9,Galar Wild Areas
+1381,9,The Isle of Armor
+1382,9,The Crown Tundra
+1383,9,All Max Dens in the Galar Wild Area
+1384,9,Rolling Fields (Max Den A)
+1385,9,Rolling Fields (Max Den B)
+1386,9,Rolling Fields (Max Den C)
+1387,9,Rolling Fields (Max Den D)
+1388,9,Rolling Fields (Max Den E)
+1389,9,Rolling Fields (Max Den F)
+1390,9,Rolling Fields (Max Den G)
+1391,9,Rolling Fields (Max Den H)
+1392,9,Rolling Fields (Max Den I)
+1393,9,Dappled Grove (Max Den A)
+1394,9,Dappled Grove (Max Den B)
+1395,9,Dappled Grove (Max Den C)
+1396,9,Dappled Grove (Max Den D)
+1397,9,Dappled Grove (Max Den E)
+1398,9,West Lake Axewell (Max Den A)
+1399,9,West Lake Axewell (Max Den B)
+1400,9,West Lake Axewell (Max Den C)
+1401,9,West Lake Axewell (Max Den D)
+1402,9,West Lake Axewell (Max Den E)
+1403,9,West Lake Axewell (Max Den F)
+1404,9,Watchtower Ruins (Max Den A)
+1405,9,Watchtower Ruins (Max Den C)
+1406,9,East Lake Axewell (Max Den A)
+1407,9,East Lake Axewell (Max Den B)
+1408,9,East Lake Axewell (Max Den C)
+1409,9,East Lake Axewell (Max Den D)
+1410,9,East Lake Axewell (Max Den E)
+1411,9,Axew's Eye (Max Den A)
+1412,9,North Lake Miloch (Max Den A)
+1413,9,North Lake Miloch (Max Den B)
+1414,9,North Lake Miloch (Max Den C)
+1415,9,North Lake Miloch (Max Den D)
+1416,9,North Lake Miloch (Max Den E)
+1417,9,North Lake Miloch (Max Den F)
+1418,9,Giant's Seat (Max Den A)
+1419,9,Giant's Seat (Max Den B)
+1420,9,Giant's Seat (Max Den C)
+1421,9,Giant's Seat (Max Den D)
+1422,9,Giant's Seat (Max Den E)
+1423,9,South Lake Miloch (Max Den A)
+1424,9,South Lake Miloch (Max Den B)
+1425,9,South Lake Miloch (Max Den C)
+1426,9,South Lake Miloch (Max Den D)
+1427,9,South Lake Miloch (Max Den E)
+1428,9,Motostoke Riverbank (Max Den A)
+1429,9,Motostoke Riverbank (Max Den B)
+1430,9,Motostoke Riverbank (Max Den C)
+1431,9,Motostoke Riverbank (Max Den D)
+1432,9,Bridge Field (Max Den A)
+1433,9,Bridge Field (Max Den B)
+1434,9,Bridge Field (Max Den C)
+1435,9,Bridge Field (Max Den D)
+1436,9,Bridge Field (Max Den E)
+1437,9,Bridge Field (Max Den F)
+1438,9,Bridge Field (Max Den G)
+1439,9,Bridge Field (Max Den H)
+1440,9,Bridge Field (Max Den I)
+1441,9,Stony Wilderness (Max Den A)
+1442,9,Stony Wilderness (Max Den B)
+1443,9,Stony Wilderness (Max Den C)
+1444,9,Stony Wilderness (Max Den D)
+1445,9,Stony Wilderness (Max Den E)
+1446,9,Stony Wilderness (Max Den F)
+1447,9,Stony Wilderness (Max Den G)
+1448,9,Stony Wilderness (Max Den H)
+1449,9,Stony Wilderness (Max Den I)
+1450,9,Stony Wilderness (Max Den J)
+1451,9,Stony Wilderness (Max Den K)
+1452,9,Stony Wilderness (Max Den L)
+1453,9,Giant's Cap (Max Den A)
+1454,9,Giant's Cap (Max Den B)
+1455,9,Giant's Cap (Max Den C)
+1456,9,Giant's Cap (Max Den D)
+1457,9,Giant's Cap (Max Den E)
+1458,9,Dusty Bowl (Max Den A)
+1459,9,Dusty Bowl (Max Den B)
+1460,9,Dusty Bowl (Max Den C)
+1461,9,Dusty Bowl (Max Den D)
+1462,9,Dusty Bowl (Max Den E)
+1463,9,Dusty Bowl (Max Den F)
+1464,9,Dusty Bowl (Max Den G)
+1465,9,Dusty Bowl (Max Den H)
+1466,9,Dusty Bowl (Max Den I)
+1467,9,Giant's Mirror (Max Den A)
+1468,9,Giant's Mirror (Max Den B)
+1469,9,Giant's Mirror (Max Den C)
+1470,9,Giant's Mirror (Max Den D)
+1471,9,Giant's Mirror (Max Den E)
+1472,9,Lake of Outrage (Max Den A)
+1473,9,Lake of Outrage (Max Den B)
+1474,9,Lake of Outrage (Max Den C)
+1475,9,Lake of Outrage (Max Den D)
+1476,9,Hammerlocke Hills (Max Den A)
+1477,9,Hammerlocke Hills (Max Den B)
+1478,9,Hammerlocke Hills (Max Den C)
+1479,9,Hammerlocke Hills (Max Den D)
+1480,9,Hammerlocke Hills (Max Den E)
+1481,9,Hammerlocke Hills (Max Den F)
+1482,9,Hammerlocke Hills (Max Den G)

@@ -1193,10 +1193,16 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
     )
     def get_encounters(self, obj):
         # get versions for later use
-        version_objects = Version.objects.all()
-        version_data = VersionSummarySerializer(
-            version_objects, many=True, context=self.context
-        ).data
+        version_objects = Version.objects.all().order_by("id")
+        version_data = {
+            version_object.id: data
+            for version_object, data in zip(
+                version_objects,
+                VersionSummarySerializer(
+                    version_objects, many=True, context=self.context
+                ).data,
+            )
+        }
 
         # all encounters associated with location area
         all_encounters = Encounter.objects.filter(location_area=obj).order_by("pokemon")
@@ -1219,7 +1225,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             # each pokemon has multiple versions it could be encountered in
             for ver in poke_encounters.values("version").distinct():
                 version_detail = OrderedDict()
-                version_detail["version"] = version_data[ver["version"] - 1]
+                version_detail["version"] = version_data[ver["version"]]
                 version_detail["max_chance"] = 0
                 version_detail["encounter_details"] = []
 
@@ -3893,6 +3899,17 @@ class PokemonFormNameSerializer(serializers.ModelSerializer):
         fields = ("name", "pokemon_name", "language")
 
 
+class PokemonFormConditionSerializer(serializers.ModelSerializer):
+    trigger = serializers.CharField(source="form_trigger.name", read_only=True)
+    item = ItemSummarySerializer()
+    ability = AbilitySummarySerializer()
+    move = MoveSummarySerializer()
+
+    class Meta:
+        model = PokemonFormCondition
+        fields = ("trigger", "item", "ability", "move")
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
@@ -3900,6 +3917,9 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     form_names = serializers.SerializerMethodField("get_pokemon_form_names")
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
     types = serializers.SerializerMethodField("get_pokemon_form_types")
+    trigger_conditions = serializers.SerializerMethodField(
+        "get_pokemon_form_triggers_conditions"
+    )
 
     class Meta:
         model = PokemonForm
@@ -3918,6 +3938,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "form_names",
             "names",
             "types",
+            "trigger_conditions",
         )
 
     @extend_schema_field(
@@ -4082,6 +4103,49 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                 del form_type["pokemon"]
 
         return form_types
+
+    @extend_schema_field(
+        field={
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["trigger", "name", "url"],
+                "properties": {
+                    "trigger": {
+                        "type": "string",
+                        "examples": ["held-item"],
+                    },
+                    "name": {
+                        "type": "string",
+                        "examples": ["venusaurite"],
+                    },
+                    "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "examples": ["https://pokeapi.co/api/v2/item/698/"],
+                    },
+                },
+            },
+        }
+    )
+    def get_pokemon_form_triggers_conditions(self, obj):
+        conditions = PokemonFormCondition.objects.filter(pokemon_form=obj)
+        conditions_data = PokemonFormConditionSerializer(
+            conditions, many=True, context=self.context
+        ).data
+
+        triggers = []
+        for condition in conditions_data:
+            trigger_value = condition.pop("trigger", None)
+            if not trigger_value:
+                continue
+            trigger = {"trigger": trigger_value}
+            for value in condition.values():
+                if value:
+                    trigger.update(value)
+                    break
+            triggers.append(trigger)
+        return triggers
 
 
 #################################
@@ -4789,14 +4853,26 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
         }
     )
     def get_pokemon_moves(self, obj):
-        version_objects = VersionGroup.objects.all()
-        version_data = VersionGroupSummarySerializer(
-            version_objects, many=True, context=self.context
-        ).data
-        method_objects = MoveLearnMethod.objects.all()
-        method_data = MoveLearnMethodSummarySerializer(
-            method_objects, many=True, context=self.context
-        ).data
+        version_objects = VersionGroup.objects.all().order_by("id")
+        version_data = {
+            version_object.id: data
+            for version_object, data in zip(
+                version_objects,
+                VersionGroupSummarySerializer(
+                    version_objects, many=True, context=self.context
+                ).data,
+            )
+        }
+        method_objects = MoveLearnMethod.objects.all().order_by("id")
+        method_data = {
+            method_object.id: data
+            for method_object, data in zip(
+                method_objects,
+                MoveLearnMethodSummarySerializer(
+                    method_objects, many=True, context=self.context
+                ).data,
+            )
+        }
 
         # Get moves related to this pokemon and pull out unique Move IDs.
         # Note that it's important to order by the same column we're using to
@@ -4826,11 +4902,9 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
                 version_detail = OrderedDict()
 
                 version_detail["level_learned_at"] = move["level"]
-                version_detail["version_group"] = version_data[
-                    move["version_group"] - 1
-                ]
+                version_detail["version_group"] = version_data[move["version_group"]]
                 version_detail["move_learn_method"] = method_data[
-                    move["move_learn_method"] - 1
+                    move["move_learn_method"]
                 ]
                 version_detail["order"] = move["order"]
 

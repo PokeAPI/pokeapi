@@ -1,6 +1,6 @@
 #  To build out the data you'll need to jump into the Django shell
 #
-#     $ python manage.py shell
+#     $ uv run manage.py shell
 #
 #  and run the build script with
 #
@@ -2211,6 +2211,26 @@ def _build_pokemons():
         )
 
     build_generic((PokemonFormType,), "pokemon_form_types.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield PokemonFormTrigger(id=int(info[0]), name=info[1])
+
+    build_generic(
+        (PokemonFormTrigger,), "pokemon_form_triggers.csv", csv_record_to_objects
+    )
+
+    def csv_record_to_objects(info):
+        yield PokemonFormCondition(
+            pokemon_form_id=int(info[0]),
+            form_trigger_id=int(info[1]),
+            item_id=int(info[2]) if info[2] != "" else None,
+            ability_id=int(info[3]) if info[3] != "" else None,
+            move_id=int(info[4]) if info[4] != "" else None,
+        )
+
+    build_generic(
+        (PokemonFormCondition,), "pokemon_form_conditions.csv", csv_record_to_objects
+    )
 
     def csv_record_to_objects(info):
         yield PokemonGameIndex(

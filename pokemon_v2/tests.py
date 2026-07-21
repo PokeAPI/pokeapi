@@ -2887,9 +2887,7 @@ class APITests(APIData, APITestCase):
             version=version,
         )
 
-        response = self.client.get(
-            "{}/location-area/{}/".format(API_V2, location_area.pk)
-        )
+        response = self.client.get("{}/location-area/{}/".format(API_V2, location_area.pk))
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -4551,12 +4549,8 @@ class APITests(APIData, APITestCase):
         # Deleting a row (or otherwise creating a gap) breaks that
         # assumption and returns the wrong version group / learn method,
         # or raises an IndexError.
-        pokemon_species = self.setup_pokemon_species_data(
-            name="pkmn species for id gap test"
-        )
-        pokemon = self.setup_pokemon_data(
-            pokemon_species=pokemon_species, name="pkm for id gap test"
-        )
+        pokemon_species = self.setup_pokemon_species_data(name="pkmn species for id gap test")
+        pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species, name="pkm for id gap test")
         self.setup_pokemon_sprites_data(pokemon=pokemon)
         self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
 
@@ -4566,20 +4560,14 @@ class APITests(APIData, APITestCase):
         doomed_version_group = self.setup_version_group_data(name="doomed ver grp")
         doomed_version_group.delete()
 
-        doomed_move_learn_method = self.setup_move_learn_method_data(
-            name="doomed mv lrn mthd"
-        )
+        doomed_move_learn_method = self.setup_move_learn_method_data(name="doomed mv lrn mthd")
         doomed_move_learn_method.delete()
 
         move = self.setup_move_data(name="mv for id gap test")
         version_group = self.setup_version_group_data(name="ver grp after gap")
-        pokemon_move = self.setup_pokemon_move_data(
-            pokemon=pokemon, move=move, version_group=version_group, level=5
-        )
+        pokemon_move = self.setup_pokemon_move_data(pokemon=pokemon, move=move, version_group=version_group, level=5)
 
-        response = self.client.get(
-            "{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"}
-        )
+        response = self.client.get("{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"})
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -4595,9 +4583,7 @@ class APITests(APIData, APITestCase):
         )
         self.assertEqual(
             version_detail["move_learn_method"]["url"],
-            "{}{}/move-learn-method/{}/".format(
-                TEST_HOST, API_V2, pokemon_move.move_learn_method.pk
-            ),
+            "{}{}/move-learn-method/{}/".format(TEST_HOST, API_V2, pokemon_move.move_learn_method.pk),
         )
 
     def test_pokemon_form_api(self):

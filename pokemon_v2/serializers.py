@@ -1138,9 +1138,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer):
             version_object.id: data
             for version_object, data in zip(
                 version_objects,
-                VersionSummarySerializer(
-                    version_objects, many=True, context=self.context
-                ).data,
+                VersionSummarySerializer(version_objects, many=True, context=self.context).data,
             )
         }
 
@@ -4553,9 +4551,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             version_object.id: data
             for version_object, data in zip(
                 version_objects,
-                VersionGroupSummarySerializer(
-                    version_objects, many=True, context=self.context
-                ).data,
+                VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data,
             )
         }
         method_objects = MoveLearnMethod.objects.all().order_by("id")
@@ -4563,9 +4559,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
             method_object.id: data
             for method_object, data in zip(
                 method_objects,
-                MoveLearnMethodSummarySerializer(
-                    method_objects, many=True, context=self.context
-                ).data,
+                MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data,
             )
         }
 
@@ -4596,9 +4590,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer):
 
                 version_detail["level_learned_at"] = move["level"]
                 version_detail["version_group"] = version_data[move["version_group"]]
-                version_detail["move_learn_method"] = method_data[
-                    move["move_learn_method"]
-                ]
+                version_detail["move_learn_method"] = method_data[move["move_learn_method"]]
                 version_detail["order"] = move["order"]
 
                 pokemon_move_details["version_group_details"].append(version_detail)

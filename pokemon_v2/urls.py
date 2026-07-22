@@ -1,17 +1,38 @@
-from django.urls import include, path, re_path
-
 #####################################
 #
 #   V2 API setup using Django Rest
 #
 #####################################
 
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, Any
+
+from django.urls import include, path, re_path
 from rest_framework import routers
+from rest_framework.reverse import reverse as drf_reverse
+
 from pokemon_v2.api import *
 
-# pylint: disable=invalid-name
+if TYPE_CHECKING:
+    from rest_framework.request import Request
+    from rest_framework.response import Response
 
-router = routers.DefaultRouter()
+
+class PokeAPIRootView(routers.APIRootView):
+    def get(self, request: Request, *args: Any, **kwargs: Any) -> Response:
+        response = super().get(request, *args, **kwargs)
+        response.data["meta"] = drf_reverse("meta", request=request)
+        response.data = dict(sorted(response.data.items()))
+        return response
+
+
+class PokeAPIRouter(routers.DefaultRouter):
+    APIRootView = PokeAPIRootView
+
+
+router = PokeAPIRouter()
+
 
 router.register(r"ability", AbilityResource)
 router.register(r"berry", BerryResource)
@@ -38,7 +59,6 @@ router.register(r"language", LanguageResource)
 router.register(r"location", LocationResource)
 router.register(r"location-area", LocationAreaResource)
 router.register(r"machine", MachineResource)
-
 router.register(r"move", MoveResource)
 router.register(r"move-ailment", MoveMetaAilmentResource)
 router.register(r"move-battle-style", MoveBattleStyleResource)

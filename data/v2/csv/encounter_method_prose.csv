@@ -54,8 +54,8 @@ encounter_method_id,local_language_id,name
 18,5,Reçu en cadeau
 19,9,Receive egg as a gift
 19,5,Œuf reçu en cadeau
-20,9,"Static encounter, only one chance"
-20,5,"Rencontre statique, chance unique"
+20,9,Static encounter
+20,5,Rencontre statique
 21,9,Playing Pokéflute
 21,5,En jouant de la Pokéflûte
 22,9,Headbutting a low encounter rate tree
@@ -79,6 +79,7 @@ encounter_method_id,local_language_id,name
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
 34,9,Fishing at bubbling spots in the water
+35,9,Interacting with a Berry Tree
 38,9,Walking in the overworld
 38,5,En marchant dans le monde extérieur
 39,9,Surfing in the overworld
@@ -98,9 +99,9 @@ encounter_method_id,local_language_id,name
 48,9,Receiving a Manaphy from Pokemon Ranger
 49,9,"Receiving a Pikachu, Electivire, or Magmar from Pokemon Battle Revolution"
 50,9,Receiving an egg from the Pokemon center in New York City that contains the special move Wish.
-51,9,"Snagging a Pokemon from a trainer in Pokemon Colosseum or Pokemon XD: Gale of Darkness."
+51,9,Snagging a Pokemon from a trainer in Pokemon Colosseum or Pokemon XD: Gale of Darkness.
 52,9,"Snagging a Pokemon from a trainer in Pokemon Colosseum or Pokemon XD: Gale of Darkness, after you have failed to capture them once."
-53,9,"Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness."
+53,9,Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness.
 54,9,Finding a Pokemon in a Hidden Grotto
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
 56,9,Overworld spawn coming from underground or within a swamp.
@@ -109,3 +110,8 @@ encounter_method_id,local_language_id,name
 59,9,Get chased by territorial Pokémon when entering the water.
 60,9,Capture during a Dynamax Adventure.
 61,9,Catch a wild Dynamax or Gigantamas Pokémon in a Max Raid battle.
+62,9,Ambushed by a Wild Pokemon from a Trash Can
+63,9,Ambushed by a Wild Pokemon from a Rustling Bush
+64,9,Ambushed by a Wild Pokemon from the Ceiling of a Cave
+65,9,Ambushed by a Wild Pokemon from the Ground
+66,9,Ambushed by a Wild Pokemon from the Sky

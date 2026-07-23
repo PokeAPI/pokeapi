@@ -2425,6 +2425,22 @@ def _build_encounters():
         csv_record_to_objects,
     )
 
+    def csv_record_to_objects(info):
+        yield EncounterPokemonDetail(
+            encounter_id=int(info[0]),
+            min_perfect_ivs=int(info[1]) if info[1] != "" else None,
+            min_perfect_evs=int(info[2]) if info[2] != "" else None,
+            always_shiny=bool(int(info[3])),
+            never_shiny=bool(int(info[4])),
+            is_alpha=bool(int(info[5])),
+        )
+
+    build_generic(
+        (EncounterPokemonDetail,),
+        "encounter_pokemon_details.csv",
+        csv_record_to_objects,
+    )
+
 
 ##############
 #  PAL PARK  #

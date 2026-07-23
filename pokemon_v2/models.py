@@ -1182,6 +1182,22 @@ class EncounterConditionValueMap(models.Model):
     )
 
 
+class EncounterPokemonDetail(models.Model):
+    encounter = models.ForeignKey(
+        Encounter, blank=True, null=True, on_delete=models.CASCADE
+    )
+
+    min_perfect_ivs = models.IntegerField(blank=True, null=True)
+
+    min_perfect_evs = models.IntegerField(blank=True, null=True)
+
+    always_shiny = models.BooleanField(default=False)
+
+    never_shiny = models.BooleanField(default=False)
+
+    is_alpha = models.BooleanField(default=False)
+
+
 #################
 #  MOVE MODELS  #
 #################

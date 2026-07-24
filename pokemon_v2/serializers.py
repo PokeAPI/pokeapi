@@ -960,10 +960,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             encounter_pokemon_details, many=True, context=self.context
         ).data
 
-        pokemon_details = []
-        for map in data:
-            detail = {key: val for key, val in map.items() if val}
-            pokemon_details.append(detail)
+        pokemon_details = list(data)
 
         return pokemon_details
 

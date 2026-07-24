@@ -1958,6 +1958,16 @@ This Ability is not bypassed by Mold Breaker, Teravolt, or Turboblaze."
 264,9,"Boosts Attack after knocking out a Pokémon.","When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
 265,5,Booste l’Attaque Spéciale après avoir mis un Pokémon KO.,"Quand le Pokémon met une cible KO, il pousse un hennissement terrifiant, qui augmente sa stat d'Attaque Spéciale."
 265,9,"Boosts Special Attack after knocking out a Pokémon.","When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
+266,9,Combines the effects of Unnerve and Chilling Neigh.,"This Pokémon has the combined effects of Unnerve and Chilling Neigh.
+
+Opposing Pokémon cannot eat held Berries while this Pokémon is in battle. Affected Pokémon can still use Bug Bite or Pluck to eat a target's Berry.
+
+When this Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
+267,9,Combines the effects of Unnerve and Grim Neigh.,"This Pokémon has the combined effects of Unnerve and Grim Neigh.
+
+Opposing Pokémon cannot eat held Berries while this Pokémon is in battle. Affected Pokémon can still use Bug Bite or Pluck to eat a target's Berry.
+
+When this Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat."
 268,5,Un contact change le Talent de l’attaquant en Odeur Tenace.,Un contact avec le Pokémon change le Talent de l'attaquant en Odeur Tenace.
 268,9,"Contact changes the attacker's Ability to Lingering Aroma.","Contact with the Pokémon changes the attacker’s Ability to Lingering Aroma."
 269,5,Change le sol en Champ Herbu quand le Pokémon est frappé par une attaque.,Change le sol en Champ Herbu quand le Pokémon est frappé par une attaque.

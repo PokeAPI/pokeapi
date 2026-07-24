@@ -960,7 +960,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             encounter_pokemon_details, many=True, context=self.context
         ).data
 
-        pokemon_details = list(data)
+        pokemon_details = data[0] if len(data) else {}
 
         return pokemon_details
 

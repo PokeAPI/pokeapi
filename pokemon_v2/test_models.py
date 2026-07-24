@@ -15,6 +15,25 @@ class AbilityTestCase(TestCase):
         self.assertEqual(smell.generation_id, 3)
 
 
+class EncounterPokemonDetailTestCase(TestCase):
+    def test_unique_encounter_pokemon_details(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        with open(os.path.join(csv_dir, "encounter_pokemon_details.csv")) as infile:
+            reader = csv.DictReader(infile)
+            encounter_ids = []
+            duplicate_ids = []
+            for row in reader:
+                if row["encounter_id"] in encounter_ids:
+                    duplicate_ids.append(row["encounter_id"])
+                else:
+                    encounter_ids.append(row["encounter_id"])
+
+            if duplicate_ids:
+                self.fail(
+                    f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}"
+                )
+
+
 class CSVResourceNameValidationTestCase(TestCase):
     """
     Test that all resource identifiers in CSV files follow ASCII slug format.

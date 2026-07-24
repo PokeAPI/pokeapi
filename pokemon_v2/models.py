@@ -964,21 +964,21 @@ class Berry(HasName, HasItem):
         on_delete=models.CASCADE,
     )
 
-    natural_gift_power = models.IntegerField()
+    natural_gift_power = models.IntegerField(blank=True, null=True)
 
     natural_gift_type = models.ForeignKey(
         Type, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE
     )
 
-    size = models.IntegerField()
+    size = models.IntegerField(blank=True, null=True)
 
-    max_harvest = models.IntegerField()
+    max_harvest = models.IntegerField(blank=True, null=True)
 
-    growth_time = models.IntegerField()
+    growth_time = models.IntegerField(blank=True, null=True)
 
-    soil_dryness = models.IntegerField()
+    soil_dryness = models.IntegerField(blank=True, null=True)
 
-    smoothness = models.IntegerField()
+    smoothness = models.IntegerField(blank=True, null=True)
 
 
 # Berry Flavors are a bit of a hack because their relationship

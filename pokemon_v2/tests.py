@@ -2019,26 +2019,6 @@ class APIData:
         return encounter_condition_value_map
 
     @classmethod
-    def setup_encounter_pokemon_detail_data(
-        cls,
-        encounter,
-        min_perfect_ivs=None,
-        always_shiny=False,
-        never_shiny=False,
-        is_alpha=False,
-    ):
-        encounter_pokemon_detail = EncounterPokemonDetail.objects.create(
-            encounter=encounter,
-            min_perfect_ivs=min_perfect_ivs,
-            always_shiny=always_shiny,
-            never_shiny=never_shiny,
-            is_alpha=is_alpha,
-        )
-        encounter_pokemon_detail.save()
-
-        return encounter_pokemon_detail
-
-    @classmethod
     def setup_encounter_slot_data(cls, encounter_method=None, slot=0, rarity=0):
         encounter_method = encounter_method or cls.setup_encounter_method_data(
             name="encntr mthd for encntr slt"

@@ -1189,8 +1189,6 @@ class EncounterPokemonDetail(models.Model):
 
     min_perfect_ivs = models.IntegerField(blank=True, null=True)
 
-    min_perfect_evs = models.IntegerField(blank=True, null=True)
-
     always_shiny = models.BooleanField(default=False)
 
     never_shiny = models.BooleanField(default=False)

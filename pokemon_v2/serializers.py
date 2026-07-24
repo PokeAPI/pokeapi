@@ -916,7 +916,6 @@ class EncounterPokemonDetailSerializer(serializers.ModelSerializer):
         model = EncounterPokemonDetail
         fields = (
             "min_perfect_ivs",
-            "min_perfect_evs",
             "always_shiny",
             "never_shiny",
             "is_alpha",

@@ -2023,7 +2023,6 @@ class APIData:
         cls,
         encounter,
         min_perfect_ivs=None,
-        min_perfect_evs=None,
         always_shiny=False,
         never_shiny=False,
         is_alpha=False,
@@ -2031,7 +2030,6 @@ class APIData:
         encounter_pokemon_detail = EncounterPokemonDetail.objects.create(
             encounter=encounter,
             min_perfect_ivs=min_perfect_ivs,
-            min_perfect_evs=min_perfect_evs,
             always_shiny=always_shiny,
             never_shiny=never_shiny,
             is_alpha=is_alpha,

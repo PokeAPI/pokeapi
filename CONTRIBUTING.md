@@ -18,6 +18,13 @@ git checkout -b my_new_branch
 ```
 - Write some code, fix something, and add a test to prove that it works. **No pull request will be accepted without tests passing, or without new tests if new features are added.**
 
+- Make sure your code passes the pre-commit hooks, if you have the hooks installed it should run automatically on commit. You can run them manually with:
+```bash
+make pre-commit  
+# or
+uv run pre-commit run --all-files
+```
+
 - Commit your code and push it to GitHub
 
 - [Open a new pull request](https://help.github.com/articles/creating-a-pull-request/) and describe the changes you have made.

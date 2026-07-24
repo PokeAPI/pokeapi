@@ -1,0 +1,60 @@
+repos:
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: check-ast
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+        args:
+          - --allow-multiple-documents
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: pretty-format-json
+        args:
+          - --no-sort-keys
+          - --no-ensure-ascii
+      - id: sort-simple-yaml
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+
+  # TODO: Enable in the future when adding the ruff linter
+  # - repo: https://github.com/pre-commit/pygrep-hooks
+  #   rev: v1.9.0
+  #   hooks:
+  #     - id: python-check-blanket-noqa
+  #     - id: python-check-blanket-type-ignore
+  #     - id: python-use-type-annotations
+
+  - repo: local
+    hooks:
+      - id: check-csv
+        name: Check CSV
+        entry: uv run ./Resources/scripts/check_csv.py
+        language: system
+        args: [--encoding, utf-8]
+        files: \.csv$
+
+      - id: ruff-format
+        name: Ruff Format
+        entry: uv run ruff format .
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
+
+      - id: build-and-test
+        name: Build and Test
+        entry: >-
+          python -c "
+          import subprocess, sys;
+          run = lambda cmd, inp=None: subprocess.run(cmd, input=inp, text=True).returncode == 0 or sys.exit(1);
+          run(['uv', 'run', 'manage.py', 'migrate', '--settings=config.local']);
+          run(['uv', 'run', 'manage.py', 'shell', '--settings=config.local'], inp='from data.v2.build import build_all; build_all()\n');
+          run(['uv', 'run', 'manage.py', 'test', '--settings=config.local'])
+          "
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [manual]

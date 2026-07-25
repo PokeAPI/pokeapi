@@ -28,15 +28,30 @@ Simple!
 
 ## AI assisted coding
 
-Using AI assisted coding tools for auto complete, test generation, etc is allowed so long as a human is the overall primary author of a pull request.
+The types of AI-assisted coding that will be accepted:
+
+- Scaffolding for common framework patterns
+- Scaffolding for test patterns/test generation
+- Mass file editing for tedious repetitive changes
+
+The types of AI changes that will **NOT** be accepted:
+
+- Fully automated code generation
+- AI generated comments and responses in code review
+- Lack of understanding of the change
 
 Contributions from supervised AI assisted coding agents who build the majority (or all of) a change, such as [co pilot tasks](https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks/), will be accepted only on the following basis:
 
 1. A human can verifiably prove they have reviewed and checked that the contribution does what it says it does.
-2. The human author provides evidence of the prompt given to the AI agent, and the logs of it producing the change. (For example - co pilot tasks produces a public log).
-3. The human author explicitly calls out that an supervised AI agent created the change when they make a pull request.
+2. If requested, the human author must provide evidence of the prompt given to the AI agent, and the logs of it producing the change. (For example - co pilot tasks produces a public log).
+3. If requested, the human author explicitly calls out that an supervised AI agent created the change when they make a pull request.
 4. The human author is prepared to own the change (just like any other change they make) and fix any issues that arise from it.
 
+### Maintainers decision is final
+
+If you cannot sufficiently demonstrate good use of AI tooling we will close your change.
+
+We contribute to this project in our free time. Our time is valuable. Our time is not to be spent doing the thinking for you because you outsourced work to an LLM coding agent.
 
 ## Financial contributions
 

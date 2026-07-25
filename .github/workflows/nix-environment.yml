@@ -1,0 +1,48 @@
+name: Nix Environment
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  nix-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+      
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Evaluate default.nix
+        run: nix-instantiate default.nix
+      
+      - name: Test Nix shellHook runs automatically
+        run: |
+          nix-shell --run "
+            echo 'ShellHook completed successfully' &&
+            uv --version &&
+            test -d .venv && echo 'Virtual environment exists' || (echo 'Virtual environment not found' && exit 1)
+          "
+      
+      - name: Start pokeapi in Nix environment
+        run: |
+          nix-shell --run "
+            make install-base &&
+            make setup &&
+            make build-db
+          "
+      
+      - name: Test pokeapi serves correctly
+        run: |
+          nix-shell --run "
+            nohup make serve &
+            sleep 3 &&
+            curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
+          "

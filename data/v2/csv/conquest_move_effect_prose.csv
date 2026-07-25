@@ -41,7 +41,7 @@ In the turn in-between, the user can use this move again, but it will miss any t
 51,9,Uses $target’s item if it is consumable.,"Inflicts regular damage.  The user steals $target’s item, if the item can be consumed in battle, and uses it on itself, or destroys it if it would have no effect."
 52,9,Never misses.,"Inflicts regular damage.  Always has 100% accuracy.
 
-This move still misses Pokémon under the effects of []{move:dig} or []{move:sky-drop} and can still be dodged by abilities such as []{ability:instinct}."
+This move still misses Pokémon under the effects of Dig or Sky Drop and can still be dodged by abilities such as Instinct."
 58,9,Has a $effect_chance% chance to lower $target’s range by one tile.,Inflicts regular damage.  Has a $effect_chance% chance to lower $target’s range by one tile.
 59,9,Lowers the user’s Attack and Defense.,Inflicts regular damage.  Lowers the user’s Attack and Defense afterward.
 60,9,Inflicts regular damage with no additional effect.,Inflicts regular damage.

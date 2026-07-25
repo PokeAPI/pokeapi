@@ -7,13 +7,16 @@ language_id,local_language_id,name
 1,8,Giapponese Hiragana e Katakana
 1,9,Japanese Hiragana and Katakana
 1,13,Japonês em Hiragana e Katakana
+1,14,Japonés Hiragana y Katakana
 2,1,ローマ字
 2,3,정식 로마자
 2,5,Romaji
 2,6,Rōmaji
+2,7,Romaji
 2,8,Giapponese rōmaji
 2,9,Japanese romaji
 2,13,Japonês em romaji
+2,14,Romaji
 3,1,韓国語
 3,3,한국어
 3,5,Coréen
@@ -22,14 +25,16 @@ language_id,local_language_id,name
 3,8,Coreano
 3,9,Korean
 3,13,Coreano
+3,14,Coreano
 4,1,中国語
 4,3,중국어
 4,5,Chinois
 4,6,Chinesisch
-4,7,Chino
+4,7,Chino tradicional
 4,8,Cinese tradizionale
 4,9,Traditional chinese
 4,13,Chinês tradicional
+4,14,Chino tradicional
 5,1,フランス語
 5,3,프랑스어
 5,5,Français
@@ -38,6 +43,7 @@ language_id,local_language_id,name
 5,8,Francese
 5,9,French
 5,13,Francês
+5,14,Francés
 6,1,ドイツ語
 6,3,도이치어
 6,5,Allemand
@@ -46,6 +52,7 @@ language_id,local_language_id,name
 6,8,Tedesco
 6,9,German
 6,13,Alemão
+6,14,Alemán
 7,1,スペイン語
 7,3,스페인어
 7,5,Espagnol
@@ -53,6 +60,7 @@ language_id,local_language_id,name
 7,7,Español
 7,9,Spanish
 7,13,Espanhol
+7,14,Español
 8,1,イタリア語
 8,3,이탈리아어
 8,5,Italien
@@ -61,6 +69,7 @@ language_id,local_language_id,name
 8,8,Italiano
 8,9,Italian
 8,13,Italiano
+8,14,Italiano
 9,1,英語
 9,3,영어
 9,5,Anglais
@@ -69,6 +78,7 @@ language_id,local_language_id,name
 9,8,Inglese
 9,9,English
 9,13,Inglês
+9,14,Inglés
 10,1,チェコ語
 10,3,체코어
 10,5,Tchèque
@@ -77,12 +87,17 @@ language_id,local_language_id,name
 10,8,Ceco
 10,9,Czech
 10,13,Tcheco
+10,14,Checo
+11,7,Japonés
 11,8,Giapponese
 11,9,Japanese
 11,13,Japonês
+11,14,Japonés
+12,7,Chino simplificado
 12,8,Cinese semplificato
 12,9,Simplified chinese
 12,13,Chinês simplificado
+12,14,Chino simplificado
 13,2,Burajiru porutogaru-go
 13,3,브라질 포르투갈어
 13,5,Portugais brésilien
@@ -92,3 +107,18 @@ language_id,local_language_id,name
 13,9,Brazilian portuguese
 13,10,Brazilská portugalština
 13,13,Português brasileiro
+13,14,Portugués brasileño
+14,1,ラテンアメリカスペイン語
+14,2,Raten Amerika Supein-go
+14,3,라틴 아메리카 스페인어
+14,4,拉丁美洲西班牙文
+14,5,Espagnol latino américain
+14,6,Lateinamerikanisches Spanisch
+14,7,Español latinoamericano
+14,8,Spagnolo latinoamericano
+14,9,Latin American Spanish
+14,10,Latinskoamerická španělština
+14,11,ラテンアメリカスペイン語
+14,12,拉丁美洲西班牙语
+14,13,Espanhol latino americano
+14,14,Español latinoamericano

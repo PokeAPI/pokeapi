@@ -1,4 +1,5 @@
 import re
+import subprocess
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -107,6 +108,12 @@ class PokeapiCommonViewset(
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
+    summary="Get ability",
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List abilities",
+    )
 )
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
@@ -1074,3 +1081,63 @@ class PokemonEncounterView(APIView):
             )
 
         return Response(encounters_list)
+
+
+@extend_schema(
+    description="Returns metadata about the current deployed version of the API, including the git commit hash, deploy date, and tag (if any).",
+    summary="Get API metadata",
+    tags=["utility"],
+    responses={
+        200: {
+            "type": "object",
+            "properties": {
+                "deploy_date": {"type": "string", "nullable": True},
+                "hash": {"type": "string", "nullable": True},
+                "tag": {"type": "string", "nullable": True},
+            },
+        }
+    },
+)
+class PokeapiMetaView(APIView):
+    def get(self, request):
+        try:
+            git_hash = (
+                subprocess.check_output(
+                    ["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL
+                )
+                .decode()
+                .strip()
+            )
+        except Exception:
+            git_hash = None
+
+        try:
+            deploy_date = (
+                subprocess.check_output(
+                    ["git", "log", "-1", "--format=%ct"], stderr=subprocess.DEVNULL
+                )
+                .decode()
+                .strip()
+            )
+        except Exception:
+            deploy_date = None
+
+        try:
+            tag_output = (
+                subprocess.check_output(
+                    ["git", "tag", "--points-at", "HEAD"], stderr=subprocess.DEVNULL
+                )
+                .decode()
+                .strip()
+            )
+            tag = tag_output if tag_output else None
+        except Exception:
+            tag = None
+
+        return Response(
+            {
+                "deploy_date": deploy_date,
+                "hash": git_hash,
+                "tag": tag,
+            }
+        )

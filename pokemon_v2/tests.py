@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
 from pokemon_v2.models import *
@@ -728,7 +729,8 @@ class APIData:
                     sprites[generation][game] = None
                 else:
                     sprites[generation][game] = {
-                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png"
+                        "name_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/{type.id}.png",
+                        "symbol_icon": f"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/{generation}/{game}/small/{type.id}.png",
                     }
 
         type_sprites = TypeSprites.objects.create(
@@ -1616,6 +1618,31 @@ class APIData:
         return pokemon_form
 
     @classmethod
+    def setup_pokemon_form_trigger_data(cls, name="frm trgr for pkmn frm"):
+        pokemon_form_trigger = PokemonFormTrigger(name=name)
+        pokemon_form_trigger.save()
+        return pokemon_form_trigger
+
+    @classmethod
+    def setup_pokemon_form_condition_data(
+        cls, pokemon_form, form_trigger=None, item=None, ability=None, move=None
+    ):
+        form_trigger = form_trigger or cls.setup_pokemon_form_trigger_data(
+            name="frm trgr for pkmn frm"
+        )
+        item = item or cls.setup_item_data(name="itm for pkmn frm")
+
+        pokemon_form_condition = PokemonFormCondition(
+            pokemon_form=pokemon_form,
+            form_trigger=form_trigger,
+            item=item,
+            ability=ability,
+            move=move,
+        )
+        pokemon_form_condition.save()
+        return pokemon_form_condition
+
+    @classmethod
     def setup_pokemon_ability_data(cls, pokemon, ability=None, is_hidden=False, slot=1):
         ability = ability or cls.setup_ability_data(name="ablty for pkmn")
 
@@ -1840,6 +1867,8 @@ class APIData:
         cls,
         evolved_species=None,
         evolution_trigger=None,
+        version_group=None,
+        is_default=0,
         party_species=None,
         trade_species=None,
         evolution_item=None,
@@ -1857,7 +1886,11 @@ class APIData:
         relative_physical_stats=0,
         needs_overworld_rain=False,
         turn_upside_down=False,
+        region=None,
+        base_form=None,
+        evolved_form=None,
         needs_multiplayer=False,
+        near_special_rock=False,
         used_move=None,
         min_move_count=None,
         min_steps=None,
@@ -1874,6 +1907,8 @@ class APIData:
         pokemon_evolution = PokemonEvolution.objects.create(
             evolved_species=evolved_species,
             evolution_trigger=evolution_trigger,
+            version_group=version_group,
+            is_default=is_default,
             evolution_item=evolution_item,
             min_level=min_level,
             gender=gender,
@@ -1891,7 +1926,11 @@ class APIData:
             trade_species=trade_species,
             needs_overworld_rain=needs_overworld_rain,
             turn_upside_down=turn_upside_down,
+            region=region,
+            base_form=base_form,
+            evolved_form=evolved_form,
             needs_multiplayer=needs_multiplayer,
+            near_special_rock=near_special_rock,
             used_move=used_move,
             min_move_count=min_move_count,
             min_steps=min_steps,
@@ -3256,6 +3295,42 @@ class APITests(APIData, APITestCase):
             ),
         )
 
+    def test_location_area_encounters_with_non_contiguous_version_ids(self):
+        # Regression test: get_encounters used to look up Version
+        # summaries by list position (id - 1), assuming ids were a
+        # contiguous 1-indexed sequence. Deleting a row (or otherwise
+        # creating a gap) breaks that assumption and returns the wrong
+        # version, or raises an IndexError.
+        location_area = self.setup_location_area_data(name="lctn area for id gap test")
+
+        # Create and delete a version so that the id actually used
+        # below is not contiguous starting from 1.
+        doomed_version = self.setup_version_data(name="doomed ver")
+        doomed_version.delete()
+
+        version = self.setup_version_data(name="ver after gap")
+        pokemon = self.setup_pokemon_data(name="pkmn for id gap test")
+        encounter_slot = self.setup_encounter_slot_data(rarity=30)
+        encounter = self.setup_encounter_data(
+            location_area=location_area,
+            encounter_slot=encounter_slot,
+            pokemon=pokemon,
+            version=version,
+        )
+
+        response = self.client.get(
+            "{}/location-area/{}/".format(API_V2, location_area.pk)
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        version_detail = response.data["pokemon_encounters"][0]["version_details"][0]
+        self.assertEqual(version_detail["version"]["name"], version.name)
+        self.assertEqual(
+            version_detail["version"]["url"],
+            "{}{}/version/{}/".format(TEST_HOST, API_V2, encounter.version.pk),
+        )
+
     # Contest Tests
     def test_contest_type_api(self):
         contest_type = self.setup_contest_type_data(name="base cntst tp")
@@ -3654,6 +3729,12 @@ class APITests(APIData, APITestCase):
                 self.assertEqual(
                     json.loads(response.data["sprites"])[generation][game]["name_icon"],
                     sprites_data[generation][game]["name_icon"],
+                )
+                self.assertEqual(
+                    json.loads(response.data["sprites"])[generation][game][
+                        "symbol_icon"
+                    ],
+                    sprites_data[generation][game]["symbol_icon"],
                 )
 
     # Pokedex Tests
@@ -5234,6 +5315,62 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["count"], 1)
         self.assertEqual(response.data["results"][0]["name"], pokemon.name)
 
+    def test_pokemon_moves_with_non_contiguous_version_group_and_method_ids(self):
+        # Regression test for #1567: get_pokemon_moves used to look up
+        # VersionGroup/MoveLearnMethod summaries by list position
+        # (id - 1), assuming ids were a contiguous 1-indexed sequence.
+        # Deleting a row (or otherwise creating a gap) breaks that
+        # assumption and returns the wrong version group / learn method,
+        # or raises an IndexError.
+        pokemon_species = self.setup_pokemon_species_data(
+            name="pkmn species for id gap test"
+        )
+        pokemon = self.setup_pokemon_data(
+            pokemon_species=pokemon_species, name="pkm for id gap test"
+        )
+        self.setup_pokemon_sprites_data(pokemon=pokemon)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        # Create and delete a version group and a move learn method so
+        # that the ids actually used below are not contiguous starting
+        # from 1.
+        doomed_version_group = self.setup_version_group_data(name="doomed ver grp")
+        doomed_version_group.delete()
+
+        doomed_move_learn_method = self.setup_move_learn_method_data(
+            name="doomed mv lrn mthd"
+        )
+        doomed_move_learn_method.delete()
+
+        move = self.setup_move_data(name="mv for id gap test")
+        version_group = self.setup_version_group_data(name="ver grp after gap")
+        pokemon_move = self.setup_pokemon_move_data(
+            pokemon=pokemon, move=move, version_group=version_group, level=5
+        )
+
+        response = self.client.get(
+            "{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"}
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        version_detail = response.data["moves"][0]["version_group_details"][0]
+        self.assertEqual(version_detail["version_group"]["name"], version_group.name)
+        self.assertEqual(
+            version_detail["version_group"]["url"],
+            "{}{}/version-group/{}/".format(TEST_HOST, API_V2, version_group.pk),
+        )
+        self.assertEqual(
+            version_detail["move_learn_method"]["name"],
+            pokemon_move.move_learn_method.name,
+        )
+        self.assertEqual(
+            version_detail["move_learn_method"]["url"],
+            "{}{}/move-learn-method/{}/".format(
+                TEST_HOST, API_V2, pokemon_move.move_learn_method.pk
+            ),
+        )
+
     def test_pokemon_form_api(self):
         pokemon_species = self.setup_pokemon_species_data()
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species)
@@ -5242,6 +5379,7 @@ class APITests(APIData, APITestCase):
         )
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
         pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
+        pokemon_form_condition = self.setup_pokemon_form_condition_data(pokemon_form)
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
@@ -5292,6 +5430,19 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["types"][0]["type"]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, pokemon_form_type.type.pk),
+        )
+
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["trigger"],
+            pokemon_form_condition.form_trigger.name,
+        )
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["name"],
+            pokemon_form_condition.item.name,
+        )
+        self.assertEqual(
+            response.data["trigger_conditions"][0]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, pokemon_form_condition.item.pk),
         )
 
     # Evolution test
@@ -5852,3 +6003,12 @@ class APITests(APIData, APITestCase):
         self.assertEqual(uppercase_response.status_code, status.HTTP_200_OK)
 
         self.assertEqual(lowercase_response.data, uppercase_response.data)
+
+    # Meta Tests
+    def test_meta_api(self):
+        response = self.client.get("{}/meta/".format(API_V2))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertTrue(datetime.fromtimestamp(int(response.data["deploy_date"])))
+        self.assertEqual(10, len(response.data["deploy_date"]))
+        self.assertEqual(40, len(response.data["hash"]))
+        self.assertIn("tag", response.data)

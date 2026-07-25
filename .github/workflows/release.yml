@@ -2,6 +2,8 @@ name: Release
 
 on:
   push:
+    branches:
+      - master
     tags:
       - '*.*.*'
 
@@ -10,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: Start pokeapi (docker)
@@ -24,15 +26,18 @@ jobs:
         run: |
           docker compose cp db:/tmp/pokeapi.pgdump ./
           ls -larth
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
       - name: Start pokeapi
         run: |
-          make install
-          make migrate
+          rm -rf .venv
+          make install-base
+          make setup
           make build-db
           nohup make serve &
           sleep 3
-      - name: Release
-        uses: softprops/action-gh-release@72f2c25fcb47643c292f7107632f7a47c1df5cd8
+      - name: Release tag
+        uses: softprops/action-gh-release@v3.0.1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
@@ -41,3 +46,20 @@ jobs:
             pokeapi.pgdump
             db.sqlite3
           generate_release_notes: true
+      - name: Release master branch
+        uses: softprops/action-gh-release@v3.0.1
+        if: github.ref == 'refs/heads/master'
+        with:
+          body: |
+            **Release Information:**
+            * **Date:** ${{ github.event.head_commit.timestamp }}
+            * **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+          draft: false
+          prerelease: true
+          name: master-branch
+          tag_name: master-branch
+          fail_on_unmatched_files: true
+          files: |
+            pokeapi.pgdump
+            db.sqlite3
+          generate_release_notes: false

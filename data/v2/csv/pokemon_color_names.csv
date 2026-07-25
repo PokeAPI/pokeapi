@@ -9,6 +9,7 @@ pokemon_color_id,local_language_id,name
 1,9,Black
 1,11,黒色
 1,12,黑色
+1,14,Negro
 2,1,あおいろ
 2,3,파랑
 2,4,藍色
@@ -19,6 +20,7 @@ pokemon_color_id,local_language_id,name
 2,9,Blue
 2,11,青色
 2,12,蓝色
+2,14,Azul
 3,1,ちゃいろ
 3,3,갈색
 3,4,褐色
@@ -29,6 +31,7 @@ pokemon_color_id,local_language_id,name
 3,9,Brown
 3,11,茶色
 3,12,褐色
+3,14,Marrón
 4,1,はいいろ
 4,3,회색
 4,4,灰色
@@ -39,6 +42,7 @@ pokemon_color_id,local_language_id,name
 4,9,Gray
 4,11,灰色
 4,12,灰色
+4,14,Gris
 5,1,みどりいろ
 5,3,초록
 5,4,綠色
@@ -49,6 +53,7 @@ pokemon_color_id,local_language_id,name
 5,9,Green
 5,11,緑色
 5,12,绿色
+5,14,Verde
 6,1,ももいろ
 6,3,담홍
 6,4,粉紅色
@@ -59,6 +64,7 @@ pokemon_color_id,local_language_id,name
 6,9,Pink
 6,11,桃色
 6,12,粉红色
+6,14,Rosa
 7,1,むらさきいろ
 7,3,보라
 7,4,紫色
@@ -69,6 +75,7 @@ pokemon_color_id,local_language_id,name
 7,9,Purple
 7,11,紫色
 7,12,紫色
+7,14,Morado
 8,1,あかいろ
 8,3,빨강
 8,4,紅色
@@ -79,6 +86,7 @@ pokemon_color_id,local_language_id,name
 8,9,Red
 8,11,赤色
 8,12,红色
+8,14,Rojo
 9,1,しろいろ
 9,3,하양
 9,4,白色
@@ -89,6 +97,7 @@ pokemon_color_id,local_language_id,name
 9,9,White
 9,11,白色
 9,12,白色
+9,14,Blanco
 10,1,きいろ
 10,3,노랑
 10,4,黃色
@@ -99,3 +108,4 @@ pokemon_color_id,local_language_id,name
 10,9,Yellow
 10,11,黄色
 10,12,黄色
+10,14,Amarillo

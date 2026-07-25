@@ -37,8 +37,10 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
-- Install the requirements using pip:
-
+- Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python environment management.
+  
+- Install the requirements using the Makefile commands:
+  
     ```sh
     make install
     # This will install all the required packages and libraries for using PokeAPI
@@ -116,7 +118,7 @@ make docker-make-migrations
 make docker-migrate
 ```
 
-## GraphQL <a id="graphql"></a> &nbsp; <a href="ttps://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
+## GraphQL <a id="graphql"></a> &nbsp; <a href="https://github.com/hasura/graphql-engine"><img height="29px" src="https://graphql-engine-cdn.hasura.io/img/powered_by_hasura_blue.svg"/></a>
 
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
@@ -172,6 +174,7 @@ This k8s setup creates all k8s resources inside the _Namespace_ `pokeapi`, run `
 |Dart|[prathanbomb/pokedart](https://github.com/prathanbomb/pokedart)| |
 |Go|[mtslzr/pokeapi-go](https://github.com/mtslzr/pokeapi-go)|Auto caching |
 |Go|[JoshGuarino/PokeGo](https://github.com/JoshGuarino/PokeGo) |Auto caching |
+|Godot|[UbeJelly/PokeDot](https://github.com/UbeJelly/PokeDot) | |
 |Haxe|[KinoCreatesGames/poke-api](https://github.com/KinoCreatesGames/poke-api) |Auto caching |
 |PHP |[lmerotta/phpokeapi](https://github.com/lmerotta/phpokeapi)|Auto caching, lazy loading |
 |PowerShell|[Celerium/PokeAPI-PowerShellWrapper](https://github.com/Celerium/PokeAPI-PowerShellWrapper)| |

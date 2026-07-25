@@ -9,6 +9,7 @@ nature_id,local_language_id,name
 1,9,Hardy
 1,11,がんばりや
 1,12,勤奋
+1,14,Fuerte
 2,1,ずぶとい
 2,3,대담
 2,4,大膽
@@ -19,6 +20,7 @@ nature_id,local_language_id,name
 2,9,Bold
 2,11,ずぶとい
 2,12,大胆
+2,14,Osada
 3,1,ひかえめ
 3,3,조심
 3,4,內斂
@@ -29,6 +31,7 @@ nature_id,local_language_id,name
 3,9,Modest
 3,11,ひかえめ
 3,12,内敛
+3,14,Modesta
 4,1,おだやか
 4,3,차분
 4,4,溫和
@@ -39,6 +42,7 @@ nature_id,local_language_id,name
 4,9,Calm
 4,11,おだやか
 4,12,温和
+4,14,Serena
 5,1,おくびょう
 5,3,겁쟁이
 5,4,膽小
@@ -49,6 +53,7 @@ nature_id,local_language_id,name
 5,9,Timid
 5,11,おくびょう
 5,12,胆小
+5,14,Miedosa
 6,1,さみしがり
 6,3,외로움
 6,4,怕寂寞
@@ -59,6 +64,7 @@ nature_id,local_language_id,name
 6,9,Lonely
 6,11,さみしがり
 6,12,怕寂寞
+6,14,Huraña
 7,1,すなお
 7,3,온순
 7,4,坦率
@@ -69,6 +75,7 @@ nature_id,local_language_id,name
 7,9,Docile
 7,11,すなお
 7,12,坦率
+7,14,Dócil
 8,1,おっとり
 8,3,의젓
 8,4,慢吞吞
@@ -79,6 +86,7 @@ nature_id,local_language_id,name
 8,9,Mild
 8,11,おっとり
 8,12,慢吞吞
+8,14,Afable
 9,1,おとなしい
 9,3,얌전
 9,4,溫順
@@ -89,6 +97,7 @@ nature_id,local_language_id,name
 9,9,Gentle
 9,11,おとなしい
 9,12,温顺
+9,14,Amable
 10,1,せっかち
 10,3,성급
 10,4,急躁
@@ -99,6 +108,7 @@ nature_id,local_language_id,name
 10,9,Hasty
 10,11,せっかち
 10,12,急躁
+10,14,Activa
 11,1,いじっぱり
 11,3,고집
 11,4,固執
@@ -109,6 +119,7 @@ nature_id,local_language_id,name
 11,9,Adamant
 11,11,いじっぱり
 11,12,固执
+11,14,Firme
 12,1,わんぱく
 12,3,장난꾸러기
 12,4,淘氣
@@ -119,6 +130,7 @@ nature_id,local_language_id,name
 12,9,Impish
 12,11,わんぱく
 12,12,淘气
+12,14,Agitada
 13,1,てれや
 13,3,수줍음
 13,4,害羞
@@ -129,6 +141,7 @@ nature_id,local_language_id,name
 13,9,Bashful
 13,11,てれや
 13,12,害羞
+13,14,Tímida
 14,1,しんちょう
 14,3,신중
 14,4,慎重
@@ -139,6 +152,7 @@ nature_id,local_language_id,name
 14,9,Careful
 14,11,しんちょう
 14,12,慎重
+14,14,Cauta
 15,1,うっかりや
 15,3,덜렁
 15,4,馬虎
@@ -149,6 +163,7 @@ nature_id,local_language_id,name
 15,9,Rash
 15,11,うっかりや
 15,12,马虎
+15,14,Alocada
 16,1,ようき
 16,3,명랑
 16,4,爽朗
@@ -159,6 +174,7 @@ nature_id,local_language_id,name
 16,9,Jolly
 16,11,ようき
 16,12,爽朗
+16,14,Alegre
 17,1,やんちゃ
 17,3,개구쟁이
 17,4,頑皮
@@ -169,6 +185,7 @@ nature_id,local_language_id,name
 17,9,Naughty
 17,11,やんちゃ
 17,12,顽皮
+17,14,Pícara
 18,1,のうてんき
 18,3,촐랑
 18,4,樂天
@@ -179,6 +196,7 @@ nature_id,local_language_id,name
 18,9,Lax
 18,11,のうてんき
 18,12,乐天
+18,14,Floja
 19,1,きまぐれ
 19,3,변덕
 19,4,浮躁
@@ -189,6 +207,7 @@ nature_id,local_language_id,name
 19,9,Quirky
 19,11,きまぐれ
 19,12,浮躁
+19,14,Rara
 20,1,むじゃき
 20,3,천진난만
 20,4,天真
@@ -199,6 +218,7 @@ nature_id,local_language_id,name
 20,9,Naive
 20,11,むじゃき
 20,12,天真
+20,14,Ingenua
 21,1,ゆうかん
 21,3,용감
 21,4,勇敢
@@ -209,6 +229,7 @@ nature_id,local_language_id,name
 21,9,Brave
 21,11,ゆうかん
 21,12,勇敢
+21,14,Audaz
 22,1,のんき
 22,3,무사태평
 22,4,悠閒
@@ -219,6 +240,7 @@ nature_id,local_language_id,name
 22,9,Relaxed
 22,11,のんき
 22,12,悠闲
+22,14,Plácida
 23,1,れいせい
 23,3,냉정
 23,4,冷靜
@@ -229,6 +251,7 @@ nature_id,local_language_id,name
 23,9,Quiet
 23,11,れいせい
 23,12,冷静
+23,14,Mansa
 24,1,なまいき
 24,3,건방
 24,4,自大
@@ -239,6 +262,7 @@ nature_id,local_language_id,name
 24,9,Sassy
 24,11,なまいき
 24,12,自大
+24,14,Grosera
 25,1,まじめ
 25,3,성실
 25,4,認真
@@ -249,3 +273,4 @@ nature_id,local_language_id,name
 25,9,Serious
 25,11,まじめ
 25,12,认真
+25,14,Seria

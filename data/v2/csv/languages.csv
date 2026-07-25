@@ -11,4 +11,5 @@ id,iso639,iso3166,identifier,official,order
 10,cs,cz,cs,0,12
 11,ja,jp,ja,1,2
 12,zh,cn,zh-hans,1,6
-13,pt,br,pt-br,0,13
+13,pt,br,pt-br,1,13
+14,es,mx,es-419,1,14

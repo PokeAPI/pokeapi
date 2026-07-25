@@ -1,6 +1,5 @@
 import re
 import subprocess
-from typing import Optional
 
 from rest_framework import viewsets
 from rest_framework.request import Request
@@ -29,7 +28,7 @@ class ListOrDetailSerialRelation:
     for list or detail view.
     """
 
-    list_serializer_class: Optional[type[BaseSerializer]] = None
+    list_serializer_class: type[BaseSerializer] | None = None
 
     def get_serializer_class(self) -> type[BaseSerializer]:
         if self.action == "list" and self.list_serializer_class is not None:
@@ -98,7 +97,7 @@ class PokeapiCommonViewset(
     ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
 ):
     @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request: Request, pk: Optional[str] = None) -> Response:
+    def retrieve(self, request: Request, pk: str | None = None) -> Response:
         return super().retrieve(request, pk)
 
     pass

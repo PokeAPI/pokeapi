@@ -3317,16 +3317,10 @@ components:
       required:
       - firmness
       - flavors
-      - growth_time
       - id
       - item
-      - max_harvest
       - name
-      - natural_gift_power
       - natural_gift_type
-      - size
-      - smoothness
-      - soil_dryness
     BerryFirmnessDetail:
       type: object
       properties:

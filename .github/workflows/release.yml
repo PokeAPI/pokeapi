@@ -9,7 +9,7 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'PokeAPI/pokeapi'
+    if: ${{ !github.event.repository.fork }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -77,9 +77,7 @@ CACHES = {
     }
 }
 
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-"
-)
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-")
 
 CUSTOM_APPS = ("pokemon_v2",)
 

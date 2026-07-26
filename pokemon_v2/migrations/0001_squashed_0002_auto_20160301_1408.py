@@ -1485,9 +1485,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="movemeta",
             name="move",
-            field=models.OneToOneField(
-                on_delete=models.CASCADE, related_name="movemeta", to="pokemon_v2.Move"
-            ),
+            field=models.OneToOneField(on_delete=models.CASCADE, related_name="movemeta", to="pokemon_v2.Move"),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -1573,9 +1571,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="move",
             name="type",
-            field=models.ForeignKey(
-                on_delete=models.CASCADE, blank=True, to="pokemon_v2.Type", null=True
-            ),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to="pokemon_v2.Type", null=True),
             preserve_default=True,
         ),
         migrations.AlterField(
@@ -3213,9 +3209,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="pokemonevolution",
             name="known_move",
-            field=models.ForeignKey(
-                on_delete=models.CASCADE, blank=True, to="pokemon_v2.Move", null=True
-            ),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to="pokemon_v2.Move", null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -3823,9 +3817,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="evolutionchain",
             name="baby_trigger_item",
-            field=models.ForeignKey(
-                on_delete=models.CASCADE, blank=True, to="pokemon_v2.Item", null=True
-            ),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to="pokemon_v2.Item", null=True),
             preserve_default=True,
         ),
         migrations.AddField(
@@ -4229,9 +4221,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="generation",
             name="region",
-            field=models.ForeignKey(
-                on_delete=models.CASCADE, blank=True, to="pokemon_v2.Region", null=True
-            ),
+            field=models.ForeignKey(on_delete=models.CASCADE, blank=True, to="pokemon_v2.Region", null=True),
             preserve_default=True,
         ),
         migrations.AddField(

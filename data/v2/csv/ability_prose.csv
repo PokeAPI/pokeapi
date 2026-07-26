@@ -35,7 +35,7 @@ Diese Fähigkeit ist identisch mit Panzerhaut."
 4,9,Protects against critical hits.,"Moves cannot score critical hits against this Pokémon.
 
 This ability functions identically to Shell Armor."
-5,5,"Empêche d'être mis KO en ayant tous ses PV, laissant 1 PV à la place.  Protège contre les capacités OHKO peu importe son nombre de PV.","Quand ce Pokémon a tous ses PV, n'importe quel coup qui devrait le mettre KO lui laisse 1 PV à la place.  Peu importe son nombre actuel de PV, il est aussi immunisé contre les capacités OHKO: Abîme, Guillotine, Empal’Korne, et Glaciation.  
+5,5,"Empêche d'être mis KO en ayant tous ses PV, laissant 1 PV à la place.  Protège contre les capacités OHKO peu importe son nombre de PV.","Quand ce Pokémon a tous ses PV, n'importe quel coup qui devrait le mettre KO lui laisse 1 PV à la place.  Peu importe son nombre actuel de PV, il est aussi immunisé contre les capacités OHKO: Abîme, Guillotine, Empal’Korne, et Glaciation.
 
 Si ce Pokémon porte une Ceinture Force, ce talent s'applique en priorité et l'objet ne sera pas utilisé."
 5,6,"Verhindert K.O.-Treffer bei vollen KP, das Pokémon behält 1 KP. Schützt gegen K.O.-Attacken.","Wenn das Pokémon volle KP hat, lässt jeder Treffer der das Pokémon besiegt hätte ein KP übrig. Das Pokémon ist immun gegen die K.O.-Attacken Geofissur, Guillotine, Hornbohrer und Eiseskälte.
@@ -99,7 +99,7 @@ Der Effekt gilt auch für Attacken die keinen Schaden verursachen, wie z.B. Donn
 This ability will not take effect if this Pokémon is Ground-type and thus immune to Electric moves.  Electric moves will ignore this Pokémon's Substitute.
 
 This effect includes non-damaging moves, i.e. Thunder Wave."
-11,5,"Absorbe les capacités Eau, soignant 1/4 des PV max.","Lorsqu'une capacité de type Eau touche ce Pokémon, elle lui soigne 1/4 de ses PV max, annulant tous les autres effets. 
+11,5,"Absorbe les capacités Eau, soignant 1/4 des PV max.","Lorsqu'une capacité de type Eau touche ce Pokémon, elle lui soigne 1/4 de ses PV max, annulant tous les autres effets.
 
 Les capacités Eau ignorent le Clonage de ce Pokémon."
 11,6,Absorbiert Wasser Attacken und heilt 1/4 der maximalen KP.,"Wenn ein Pokémon mit dieser Fähigkeit von einer Wasser Attacke getroffen wird, wird es um 1/4 seiner maximalen KP geheilt. Jeder andere Effekt der Attacke wird ignoriert.
@@ -126,9 +126,9 @@ Diese Fähigkeit ist identisch mit Klimaschutz."
 13,9,"Negates all effects of weather, but does not prevent the weather itself.","While this Pokémon is in battle, weather can still be in play, but will not have any of its effects.
 
 This ability functions identically to Air Lock."
-14,5,Augmente la précision des capacités de 30%.,"Les capacités de ce Pokémon gagnent 30% de précision.  
+14,5,Augmente la précision des capacités de 30%.,"Les capacités de ce Pokémon gagnent 30% de précision.
 
-Ce talent n'a pas d'effet sur les capacités OHKO (Abîme, Guillotine, Empal’Korne, et Glaciation).  
+Ce talent n'a pas d'effet sur les capacités OHKO (Abîme, Guillotine, Empal’Korne, et Glaciation).
 
 Monde extérieur: Si le Pokémon en tête d'équipe a ce talent, les chances qu'un Pokémon sauvage porte un objet particulier augmente de 50%, 5%, ou 1% à 60%, 20%, ou 5%, respectivement."
 14,6,Erhöht die Genauigkeit von Attacken um 30%.,"Die Attacken eines Pokémon mit dieser Fähigkeit haben eine um 30% erhöhte Genauigkeit.
@@ -195,7 +195,7 @@ Die Fähigkeit hat keinen Effekt, wenn das Pokémon eingefroren ist. Der Bonus b
 18,9,"Protects against Fire moves.  Once one has been blocked, the Pokémon's own Fire moves inflict 1.5× damage until it leaves battle.","This Pokémon is immune to Fire-type moves.  Once this Pokémon has been hit by a Fire move, its own Fire moves will inflict 1.5× as much damage until it leaves battle.
 
 This ability has no effect while the Pokémon is frozen.  The Fire damage bonus is retained even if the Pokémon is frozen and thawed or the ability is lost or disabled.  Fire moves will ignore this Pokémon's Substitute.  This ability takes effect even on non-damaging moves, i.e. Will-O-Wisp."
-19,5,Protège contre les effets additionnels des capacités subies.,"Ce Pokémon est immunisé contre les effets additionnels des capacités utilisées contre lui.  
+19,5,Protège contre les effets additionnels des capacités subies.,"Ce Pokémon est immunisé contre les effets additionnels des capacités utilisées contre lui.
 
 Un effet additionnel est une possibilité qu'une capacité, listée comme une ""probabilité d'effet"", inflige une altération de statut, cause un changement de stat, ou apeure la cible en plus de l'effet principal de la capacité.  Par exemple, la paralysie de Éclair est un effet additionnel, mais celle de Cage Éclair ne l'est pas, ni le retrait d'objet de Sabotage et l'augmentation de taux de coups critiques de Tranch’Air."
 19,6,Schützt vor Zusatzeffekten von Attacken.,"Ein Pokémon mit dieser Fähigkeit ist immun gegen Zusatzeffekt von Attacken.
@@ -228,11 +228,11 @@ Außerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle i
 Dragon Tail and Circle Throw still inflict damage against this Pokémon.
 
 Overworld: If the lead Pokémon has this ability, the success rate while fishing is increased."
-22,5,Diminue l'Attaque des adversaires d'un niveau en entrant au combat.,"Quand ce Pokémon entre au combat, l'Attaque de l'adversaire est diminuée d'un niveau.  Dans un combat double, les deux adversaires sont affectés.  
+22,5,Diminue l'Attaque des adversaires d'un niveau en entrant au combat.,"Quand ce Pokémon entre au combat, l'Attaque de l'adversaire est diminuée d'un niveau.  Dans un combat double, les deux adversaires sont affectés.
 
-Ce talent prend aussi effet quand acquis durant un combat, mais ne prendre pas effet a nouveau si perdu et récupéré sans quitter le combat.  
+Ce talent prend aussi effet quand acquis durant un combat, mais ne prendre pas effet a nouveau si perdu et récupéré sans quitter le combat.
 
-Ce talent n'a pas d'effet sur un adversaire qui a un Clonage.  
+Ce talent n'a pas d'effet sur un adversaire qui a un Clonage.
 
 Monde extérieur: Si le premier Pokémon de l'équipe a ce talent, n'importe quelle rencontre aléatoire avec un Pokémon de cinq niveaux ou moins que lui a 50% de chances d'être passée."
 22,6,Senkt den Angriff des Gegners um 1 Stufe beim Betreten des Kampfes.,"Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, wird der Angriff des Gegners um 1 Stufe gesenkt. Im Mehrfachkämpfen werden alle Gegner beeinflusst.
@@ -1684,7 +1684,7 @@ Wenn mehrere Statuswerte gesenkt löst die Fähigkeit für jeden Statuswert aus.
 175,5,Empêche les Pokémon alliés de dormir.,Les Pokémon alliés ne peuvent pas s'endormir pendant le combat.
 175,6,Hindert Partner am einschlafen.,Pokémon können nicht einschlafen solange sich ein Pokémon mit dieser Fähigkeit im Team befindet.
 175,9,Prevents friendly Pokémon from sleeping.,Prevents friendly Pokémon from sleeping.
-176,5,"Change Exagide en Forme Assaut avant d'utiliser une capacité offensive, ou en Forme Parade avant d'utiliser Bouclier Royal.","Permet à Exagide de changer de forme selon les capacités qu'il utilise.  Ainsi, Exagide arrivant toujours sur le terrain en Forme Parade, les capacités offensives lui permettent de passer sous sa Forme Assaut. 
+176,5,"Change Exagide en Forme Assaut avant d'utiliser une capacité offensive, ou en Forme Parade avant d'utiliser Bouclier Royal.","Permet à Exagide de changer de forme selon les capacités qu'il utilise.  Ainsi, Exagide arrivant toujours sur le terrain en Forme Parade, les capacités offensives lui permettent de passer sous sa Forme Assaut.
 
 Les capacités de statut n'ont pas d'influence (le Pokémon ne change pas de forme), et la capacité Bouclier Royal lui permet de passer sous sa Forme Parade. "
 176,6,"Wechselt die Form von Aegislash zur Klingenform, wenn eine Attacke mit Schaden eingesetzt wird, oder zur Schildform, wenn Königsschild eingesetzt wird.","Lässt Durengard zur Klingenform wechseln, wenn es einen Attacke einsetzt die Schaden verursacht, oder zur Schildform, wenn Königsschild eingesetzt wird.
@@ -1696,10 +1696,10 @@ Die Fähigkeit hat keinen Effekt für Pokémon außer Durengard."
 177,5,Augmente la priorité des capacités Vol d'un niveau.,Les capacités de type Vol de ce Pokémon voient leur priorité augmentée de 1.
 177,6,Erhöht die Priorität von Flug Attacken um 1 Stufe.,"Wenn ein Pokémon diese Fähigkeit hat, erhöht sich die Priorität seiner Flug Attacken um 1 Stufe."
 177,9,Raises Flying moves' priority by one stage.,Raises Flying moves' priority by one stage.
-178,5,Renforce les capacités à base d’aura ou de vibrations d’1.5× leur puissance.,Les capacités à aura ou vibrations de ce Pokémon voient leur puissance (ou les soins en ce qui concerne Vibra Soin) augmentée de 50 %. 
+178,5,Renforce les capacités à base d’aura ou de vibrations d’1.5× leur puissance.,Les capacités à aura ou vibrations de ce Pokémon voient leur puissance (ou les soins en ce qui concerne Vibra Soin) augmentée de 50 %.
 178,6,Verstärkt Aura- und Pulsattacken um 50%.,"Die Aura- und Pulsattacken von Pokémon mit dieser Fähigkeit sind 1,5× so stark wie sonst. Zu den Attacken zählen auch Aquawelle und Ursprungswoge und Heilwoge heilt um 75% statt 50% der maximalen KP."
 178,9,Strengthens aura and pulse moves to 1.5× their power.,Strengthens aura and pulse moves to 1.5× their power.
-179,5,Booste la Défense quand le Champ Herbu est en place.,Ce Pokémon voit sa Défense augmenter de 50 % tant qu'un Champ Herbu est actif. 
+179,5,Booste la Défense quand le Champ Herbu est en place.,Ce Pokémon voit sa Défense augmenter de 50 % tant qu'un Champ Herbu est actif.
 179,6,Erhöht die Verteidigung um 50% während dem Effekt von Grasfeld.,"Während der Effekt von Grasfeld aktiv ist, haben Pokémon mit dieser Fähigkeit eine 1,5× so hohe Verteidigung wie sonst."
 179,9,Boosts Defense while Grassy Terrain is in effect.,Boosts Defense while Grassy Terrain is in effect.
 180,5,Transmet l’objet tenu du porteur à un allié quand l’allié utilise son objet.,"Si un Pokémon allié consomme son objet tenu, comme une Baie, alors ce Pokémon lui donnera l'objet que lui-même tient. "
@@ -1858,7 +1858,7 @@ This ability cannot be copied or replaced.  This ability only takes effect for Z
 222,9,"When an ally faints, this Pokémon gains its Ability.","When an ally faints, this Pokémon gains its Ability."
 223,5,"Quand un allié est mis KO, ce Pokémon gagne son Talent.","Quand un allié est mis KO, ce Pokémon gagne son Talent."
 223,9,"When an ally faints, this Pokémon gains its Ability.","When an ally faints, this Pokémon gains its Ability."
-224,5,Augmente la plus stat la plus élevée de ce Pokémon d’une niveau quand il met KO un autre Pokémon. ,Augmente la plus stat la plus élevée de ce Pokémon d’une niveau quand il met KO un autre Pokémon. 
+224,5,Augmente la plus stat la plus élevée de ce Pokémon d’une niveau quand il met KO un autre Pokémon. ,Augmente la plus stat la plus élevée de ce Pokémon d’une niveau quand il met KO un autre Pokémon.
 224,9,Raises this Pokémon's highest stat by one stage when it faints another Pokémon.,Raises this Pokémon's highest stat by one stage when it faints another Pokémon.
 225,5,Change le type de ce Pokémon pour correspondre à sa ROM. ,"Change le type de ce Pokémon pour correspondre à sa ROM tenue.
 

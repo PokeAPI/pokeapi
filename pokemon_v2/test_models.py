@@ -92,28 +92,18 @@ class CSVResourceNameValidationTestCase(TestCase):
         # Report violations
         if violations:
             error_lines.append(
-                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(
-                    len(violations)
-                )
+                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(len(violations))
             )
             error_lines.append("\nIdentifiers must match pattern: ^[a-z0-9-]+$")
             error_lines.append("\nInvalid identifiers found in CSV files:")
 
             for v in violations:
-                error_lines.append(
-                    "  - {file} (row {row}, id={id}): {identifier}".format(**v)
-                )
+                error_lines.append("  - {file} (row {row}, id={id}): {identifier}".format(**v))
 
-            error_lines.append(
-                "\nThese identifiers contain invalid characters and must be normalized."
-            )
-            error_lines.append(
-                "Update the CSV files in data/v2/csv/ to fix these identifiers."
-            )
+            error_lines.append("\nThese identifiers contain invalid characters and must be normalized.")
+            error_lines.append("Update the CSV files in data/v2/csv/ to fix these identifiers.")
             error_lines.append("\nSuggested fixes:")
-            error_lines.append(
-                "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove"
-            )
+            error_lines.append("  - Remove Unicode apostrophes (') and replace with regular hyphens or remove")
             error_lines.append("  - Remove Unicode letters (ñ → n)")
             error_lines.append("  - Remove parentheses and other special characters")
             error_lines.append("  - Convert to lowercase")

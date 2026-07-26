@@ -46,11 +46,14 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     # This will install all the required packages and libraries for using PokeAPI
     ```
 
-- Install the pre-commit hooks using the Makefile commands:
+- Install the pre-commit hooks using the Makefile commands (optional but recommended):
 
     ```sh
     make pre-commit-install
     ```
+
+    > [!NOTE]
+    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
 
 - Set up the local development environment using the following command:
 

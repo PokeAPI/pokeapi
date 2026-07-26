@@ -10,6 +10,7 @@ on:
 
 jobs:
   docker:
+    if: ${{ !github.event.repository.fork }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

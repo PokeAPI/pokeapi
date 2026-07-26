@@ -10,6 +10,7 @@ on:
 
 jobs:
   docker:
+    if: github.repository == 'PokeAPI/pokeapi'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

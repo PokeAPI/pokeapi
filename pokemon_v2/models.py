@@ -1169,9 +1169,7 @@ class EncounterConditionValueMap(models.Model):
 
 
 class EncounterPokemonDetail(models.Model):
-    encounter = models.ForeignKey(
-        Encounter, blank=True, null=True, on_delete=models.CASCADE
-    )
+    encounter = models.ForeignKey(Encounter, blank=True, null=True, on_delete=models.CASCADE)
 
     min_perfect_ivs = models.IntegerField(blank=True, null=True)
 

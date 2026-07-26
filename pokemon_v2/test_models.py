@@ -29,9 +29,7 @@ class EncounterPokemonDetailTestCase(TestCase):
                     encounter_ids.append(row["encounter_id"])
 
             if duplicate_ids:
-                self.fail(
-                    f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}"
-                )
+                self.fail(f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}")
 
 
 class CSVResourceNameValidationTestCase(TestCase):

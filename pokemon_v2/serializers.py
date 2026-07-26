@@ -916,9 +916,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
 
     def get_encounter_pokemon_details(self, obj):
         encounter_pokemon_details = EncounterPokemonDetail.objects.filter(encounter=obj)
-        data = EncounterPokemonDetailSerializer(
-            encounter_pokemon_details, many=True, context=self.context
-        ).data
+        data = EncounterPokemonDetailSerializer(encounter_pokemon_details, many=True, context=self.context).data
 
         pokemon_details = data[0] if len(data) else None
 

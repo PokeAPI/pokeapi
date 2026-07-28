@@ -873,11 +873,23 @@ class EncounterSlotSerializer(serializers.ModelSerializer):
         fields = ("id", "slot", "chance", "encounter_method", "version_group")
 
 
+class EncounterPokemonDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EncounterPokemonDetail
+        fields = (
+            "min_perfect_ivs",
+            "always_shiny",
+            "never_shiny",
+            "is_alpha",
+        )
+
+
 class EncounterDetailSerializer(serializers.ModelSerializer):
     version = VersionSummarySerializer()
     location_area = LocationAreaSummarySerializer()
     pokemon = PokemonSummarySerializer()
     condition_values = serializers.SerializerMethodField("get_encounter_conditions")
+    pokemon_details = serializers.SerializerMethodField("get_encounter_pokemon_details")
 
     class Meta:
         model = Encounter
@@ -889,6 +901,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             "pokemon",
             "location_area",
             "condition_values",
+            "pokemon_details",
         )
 
     def get_encounter_conditions(self, obj):
@@ -900,6 +913,14 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             values.append(map["condition_value"])
 
         return values
+
+    def get_encounter_pokemon_details(self, obj):
+        encounter_pokemon_details = EncounterPokemonDetail.objects.filter(encounter=obj)
+        data = EncounterPokemonDetailSerializer(encounter_pokemon_details, many=True, context=self.context).data
+
+        pokemon_details = data[0] if len(data) else None
+
+        return pokemon_details
 
 
 class LocationAreaEncounterRateSerializer(serializers.ModelSerializer):

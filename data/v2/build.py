@@ -384,9 +384,7 @@ def _build_items():
     build_generic((Currency,), "currencies.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
-        yield CurrencyName(
-            currency_id=int(info[0]), language_id=int(info[1]), name=info[2]
-        )
+        yield CurrencyName(currency_id=int(info[0]), language_id=int(info[1]), name=info[2])
 
     build_generic((CurrencyName,), "currency_names.csv", csv_record_to_objects)
 
@@ -485,9 +483,7 @@ def _build_items():
             item_id=int(info[0]),
             version_group_id=int(info[1]),
             currency_id=int(info[2]) if has_currency_id and info[2] else 1,
-            purchase_price=(
-                int(info[purchase_price_index]) if info[purchase_price_index] else None
-            ),
+            purchase_price=(int(info[purchase_price_index]) if info[purchase_price_index] else None),
             sell_price=int(info[sell_price_index]) if info[sell_price_index] else None,
         )
 

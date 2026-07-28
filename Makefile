@@ -23,6 +23,12 @@ install: check-uv  # Install requirements for local development
 install-base: check-uv  # Install minimal requirements for runtime/pipeline environments
 	uv sync --locked --no-dev
 
+pre-commit-install: check-uv  # Install pre-commit hooks
+	uv run pre-commit install
+
+pre-commit: check-uv  # Run pre-commit hooks
+	uv run pre-commit run --all-files
+
 setup: check-uv   # Set up the project database
 	uv run manage.py migrate ${local_config}
 
@@ -90,10 +96,10 @@ docker-prod:
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format: check-uv   # Format the source code
-	uv run black . --extend-exclude '.+/scripts/.+'
+	uv run ruff format .
 
 format-check: check-uv  # Check the source code has been formatted
-	uv run black . --check --extend-exclude '.+/scripts/.+'
+	uv run ruff format . --check
 
 pull:
 	git checkout master

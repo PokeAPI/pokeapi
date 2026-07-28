@@ -38,13 +38,22 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
 - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python environment management.
-  
+
 - Install the requirements using the Makefile commands:
-  
+
     ```sh
     make install
     # This will install all the required packages and libraries for using PokeAPI
     ```
+
+- Install the pre-commit hooks using the Makefile commands (optional but recommended):
+
+    ```sh
+    make pre-commit-install
+    ```
+
+    > [!NOTE]
+    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
 
 - Set up the local development environment using the following command:
 

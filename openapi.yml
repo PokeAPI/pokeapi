@@ -297,7 +297,7 @@ paths:
         IV. A Pokémon's Characteristic is determined by the remainder of its highest
         IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic)
         for greater detail.
-      summary: List charecterictics
+      summary: List characteristics
       parameters:
       - name: limit
         required: false

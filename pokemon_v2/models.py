@@ -183,6 +183,7 @@ __all__: tuple[str, ...] = (
     "PokemonEvolution",
     "PokemonForm",
     "PokemonFormCondition",
+    "PokemonFormFlavorText",
     "PokemonFormGeneration",
     "PokemonFormName",
     "PokemonFormSprites",
@@ -1826,6 +1827,10 @@ class PokemonSpeciesDescription(HasPokemonSpecies, IsDescription):
 
 
 class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
+    pass
+
+
+class PokemonFormFlavorText(IsFlavorText, HasPokemonForm, HasVersion):
     pass
 
 

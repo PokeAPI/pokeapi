@@ -1566,6 +1566,10 @@ class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
     pass
 
 
+class PokemonFormFlavorText(IsFlavorText, HasPokemonForm, HasVersion):
+    pass
+
+
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
     height = models.IntegerField(blank=True, null=True)
 

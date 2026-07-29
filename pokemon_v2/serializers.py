@@ -3668,6 +3668,16 @@ class PokemonFormConditionSerializer(serializers.ModelSerializer):
         fields = ("trigger", "item", "ability", "move")
 
 
+class PokemonFormFlavorTextSerializer(serializers.ModelSerializer):
+    flavor_text = serializers.CharField()
+    language = LanguageSummarySerializer()
+    version = VersionSummarySerializer()
+
+    class Meta:
+        model = PokemonFormFlavorText
+        fields = ("flavor_text", "language", "version")
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
@@ -3676,6 +3686,9 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
     types = serializers.SerializerMethodField("get_pokemon_form_types")
     trigger_conditions = serializers.SerializerMethodField("get_pokemon_form_triggers_conditions")
+    flavor_text_entries = PokemonFormFlavorTextSerializer(
+        many=True, read_only=True, source="pokemonformflavortext"
+    )
 
     class Meta:
         model = PokemonForm
@@ -3695,6 +3708,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             "names",
             "types",
             "trigger_conditions",
+            "flavor_text_entries",
         )
 
     @extend_schema_field(

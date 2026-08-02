@@ -4,3 +4,27 @@ exclude = [
     "data/v2/cries",
     "data/v2/sprites",
 ]
+
+[lint]
+extend-select = [
+    "A",      # flake8-builtins: shadowing builtins
+    "ANN",    # flake8-annotations: missing type annotations
+    "B",      # flake8-bugbear: likely bugs
+    "C4",     # flake8-comprehensions: simplify comprehensions
+    "DJ",     # flake8-django: django best practices
+    "E",      # pycodestyle: PEP 8 errors
+    "ERA",    # eradicate: commented-out code
+    "FURB",   # refurb: modernize and simplify
+    "I",      # isort: import sorting
+    "N",      # pep8-naming: naming conventions
+    "PERF",   # Perflint: performance anti-patterns
+    "PGH003", # pygrep-hooks: blanket type: ignore
+    "PYI",    # flake8-pyi: stub file best practices
+    "RUF",    # Ruff-specific: assorted rules
+    "SIM",    # flake8-simplify: simplify expressions
+    "TC",     # flake8-type-checking: TYPE_CHECKING imports
+    "TID",    # flake8-tidy-imports: tidy imports
+    "UP",     # pyupgrade: modern Python syntax
+    "W",      # pycodestyle: PEP 8 warnings
+]
+preview = true

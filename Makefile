@@ -101,6 +101,15 @@ format: check-uv   # Format the source code
 format-check: check-uv  # Check the source code has been formatted
 	uv run ruff format . --check
 
+lint-check: check-uv  # Lint the source code
+	uv run ruff check .
+
+lint-fix: check-uv  # Lint the source code and fix issues
+	uv run ruff check . --fix 
+
+typecheck: check-uv  # Type-check the source code with ty
+	uv run ty check
+
 pull:
 	git checkout master
 	git pull

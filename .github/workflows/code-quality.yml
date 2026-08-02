@@ -1,0 +1,89 @@
+name: Code Quality
+
+on:
+  pull_request:
+
+jobs:
+  # Detect which files changed so the lint/typecheck jobs can skip
+  # themselves when nothing relevant was touched.
+  changed:
+    name: Detect changed files
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.filter.outputs.run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Check changed files
+        uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            run:
+              - "**.py"
+              - "**.toml"
+              - "Makefile"
+              - "uv.lock"
+              - ".github/workflows/code-quality.yml"
+
+  ruff:
+    name: Ruff (lint)
+    needs: changed
+    if: needs.changed.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    # TODO: remove once the codebase is fully lint-clean
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
+      - name: Install dependencies
+        run: make install
+      - name: Lint
+        run: make lint-check
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Ruff lint results"
+            echo
+            echo "<details><summary>Expand to see all errors (backlog while the codebase is being linted incrementally)</summary>"
+            echo
+            echo '```'
+            uv run ruff check --output-format=concise . || true
+            echo '```'
+            echo
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  ty:
+    name: ty (type-check)
+    needs: changed
+    if: needs.changed.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    # TODO: remove once the codebase is fully typed
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
+      - name: Install dependencies
+        run: make install
+      - name: Type-check
+        run: make typecheck
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## ty type-check results"
+            echo
+            echo "<details><summary>Expand to see all errors (backlog while the codebase is being typed incrementally)</summary>"
+            echo
+            echo '```'
+            uv run ty check --output-format=concise || true
+            echo '```'
+            echo
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"

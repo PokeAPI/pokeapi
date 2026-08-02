@@ -2,6 +2,10 @@ name: Code Quality
 
 on:
   pull_request:
+  push:
+    branches-ignore:
+      - master
+      - staging
 
 jobs:
   # Detect which files changed so the lint/typecheck jobs can skip

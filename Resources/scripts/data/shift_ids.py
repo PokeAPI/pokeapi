@@ -5,14 +5,14 @@
 #  Helpful script to deal with any merge conflicts for certain endpoints.
 #  Currently includes endpoints relevant to encounter PRs
 
-import os
-import csv
 import argparse
+import csv
+import os
 
-CSVDIR = os.path.join(os.path.dirname(__file__), "../../../data/v2/csv")
+CSVDIR = os.path.join(os.path.dirname(__file__), "../data/v2/csv")
 
 
-def write_shifted_entries(filename: str, key: str, args):
+def write_shifted_entries(filename: str, args, *keys):
     if not filename.endswith(".csv"):
         filename += ".csv"
 
@@ -25,8 +25,9 @@ def write_shifted_entries(filename: str, key: str, args):
     # Shift IDs
     result = []
     for entry in entries:
-        if int(entry[key]) >= args.start_id:
-            entry[key] = str(int(entry[key]) + args.shift)
+        for key in keys:
+            if int(entry[key]) >= args.start_id:
+                entry[key] = str(int(entry[key]) + args.shift)
         result.append(entry)
 
     # Write CSV
@@ -40,47 +41,47 @@ def write_shifted_entries(filename: str, key: str, args):
 
 
 def shift_encs(args):
-    write_shifted_entries("encounters", "id", args)
-    write_shifted_entries("encounter_condition_value_map", "encounter_id", args)
+    write_shifted_entries("encounters", args, "id")
+    write_shifted_entries("encounter_condition_value_map", args, "encounter_id")
 
 
 def shift_methods(args):
-    write_shifted_entries("encounter_methods", "id", args)
-    write_shifted_entries("encounter_method_prose", "encounter_method_id", args)
-    write_shifted_entries("encounter_slots", "encounter_method_id", args)
-    write_shifted_entries("location_area_encounter_rates", "encounter_method_id", args)
+    write_shifted_entries("encounter_methods", args, "id", "order")
+    write_shifted_entries("encounter_method_prose", args, "encounter_method_id")
+    write_shifted_entries("encounter_slots", args, "encounter_method_id")
+    write_shifted_entries("location_area_encounter_rates", args, "encounter_method_id")
 
 
 def shift_slots(args):
-    write_shifted_entries("encounter_slots", "id", args)
-    write_shifted_entries("encounters", "encounter_slot_id", args)
+    write_shifted_entries("encounter_slots", args, "id")
+    write_shifted_entries("encounters", args, "encounter_slot_id")
 
 
 def shift_conds(args):
-    write_shifted_entries("encounter_conditions", "id", args)
-    write_shifted_entries("encounter_condition_prose", "encounter_condition_id", args)
-    write_shifted_entries("encounter_condition_values", "encounter_condition_id", args)
+    write_shifted_entries("encounter_conditions", args, "id")
+    write_shifted_entries("encounter_condition_prose", args, "encounter_condition_id")
+    write_shifted_entries("encounter_condition_values", args, "encounter_condition_id")
 
 
 def shift_cond_vals(args):
-    write_shifted_entries("encounter_condition_values", "id", args)
-    write_shifted_entries("encounter_condition_value_prose", "encounter_condition_value_id", args)
-    write_shifted_entries("encounter_condition_value_map", "encounter_condition_value_id", args)
+    write_shifted_entries("encounter_condition_values", args, "id")
+    write_shifted_entries("encounter_condition_value_prose", args, "encounter_condition_value_id")
+    write_shifted_entries("encounter_condition_value_map", args, "encounter_condition_value_id")
 
 
 def shift_locs(args):
-    write_shifted_entries("locations", "id", args)
-    write_shifted_entries("location_names", "location_id", args)
-    write_shifted_entries("location_areas", "location_id", args)
-    write_shifted_entries("location_game_indices", "location_id", args)
-    write_shifted_entries("pokemon_evolution", "location_id", args)
+    write_shifted_entries("locations", args, "id")
+    write_shifted_entries("location_names", args, "location_id")
+    write_shifted_entries("location_areas", args, "location_id")
+    write_shifted_entries("location_game_indices", args, "location_id")
+    write_shifted_entries("pokemon_evolution", args, "location_id")
 
 
 def shift_areas(args):
-    write_shifted_entries("location_areas", "id", args)
-    write_shifted_entries("location_area_prose", "location_area_id", args)
-    write_shifted_entries("encounters", "location_area_id", args)
-    write_shifted_entries("location_area_encounter_rates", "location_area_id", args)
+    write_shifted_entries("location_areas", args, "id")
+    write_shifted_entries("location_area_prose", args, "location_area_id")
+    write_shifted_entries("encounters", args, "location_area_id")
+    write_shifted_entries("location_area_encounter_rates", args, "location_area_id")
 
 
 ENDPOINT_FUNC_MAP = {

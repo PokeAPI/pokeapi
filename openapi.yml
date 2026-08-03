@@ -8318,6 +8318,19 @@ components:
                 format: uri
                 examples:
                 - https://pokeapi.co/api/v2/item/698/
+              base_form:
+                type: object
+                nullable: true
+                properties:
+                  name:
+                    type: string
+                    examples:
+                    - necrozma-dusk
+                  url:
+                    type: string
+                    format: uri
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon-form/10314/
           readOnly: true
       required:
       - form_name

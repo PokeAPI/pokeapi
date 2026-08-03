@@ -1757,6 +1757,13 @@ class PokemonFormCondition(HasPokemonForm):
     item = models.ForeignKey(Item, blank=True, null=True, on_delete=models.CASCADE)
     ability = models.ForeignKey(Ability, blank=True, null=True, on_delete=models.CASCADE)
     move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
+    base_form = models.ForeignKey(
+        PokemonForm,
+        blank=True,
+        null=True,
+        related_name="base_form_conditions",
+        on_delete=models.CASCADE,
+    )
 
 
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):

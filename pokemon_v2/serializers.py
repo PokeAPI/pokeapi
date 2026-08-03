@@ -3662,10 +3662,11 @@ class PokemonFormConditionSerializer(serializers.ModelSerializer):
     item = ItemSummarySerializer()
     ability = AbilitySummarySerializer()
     move = MoveSummarySerializer()
+    base_form = PokemonFormSummarySerializer()
 
     class Meta:
         model = PokemonFormCondition
-        fields = ("trigger", "item", "ability", "move")
+        fields = ("trigger", "item", "ability", "move", "base_form")
 
 
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
@@ -3868,6 +3869,21 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                         "format": "uri",
                         "examples": ["https://pokeapi.co/api/v2/item/698/"],
                     },
+                    "base_form": {
+                        "type": "object",
+                        "nullable": True,
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "examples": ["necrozma-dusk"],
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": ["https://pokeapi.co/api/v2/pokemon-form/10314/"],
+                            },
+                        },
+                    },
                 },
             },
         }
@@ -3881,11 +3897,14 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             trigger_value = condition.pop("trigger", None)
             if not trigger_value:
                 continue
+            base_form = condition.pop("base_form", None)
             trigger = {"trigger": trigger_value}
             for value in condition.values():
                 if value:
                     trigger.update(value)
                     break
+            if base_form:
+                trigger["base_form"] = base_form
             triggers.append(trigger)
         return triggers
 

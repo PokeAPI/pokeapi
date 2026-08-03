@@ -1907,6 +1907,7 @@ def _build_pokemons():
             item_id=int(info[2]) if info[2] != "" else None,
             ability_id=int(info[3]) if info[3] != "" else None,
             move_id=int(info[4]) if info[4] != "" else None,
+            base_form_id=int(info[5]) if info[5] != "" else None,
         )
 
     build_generic((PokemonFormCondition,), "pokemon_form_conditions.csv", csv_record_to_objects)

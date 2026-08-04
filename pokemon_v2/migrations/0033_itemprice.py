@@ -6,7 +6,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("pokemon_v2", "0030_alter_berry_growth_time_alter_berry_max_harvest_and_more"),
+        ("pokemon_v2", "0032_pokemonformcondition_base_form"),
     ]
 
     operations = [

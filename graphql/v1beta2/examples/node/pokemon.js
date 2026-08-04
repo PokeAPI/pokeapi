@@ -93,7 +93,6 @@ function fetchPokemon_details(name="starmie") {
             fireRedItems: pokemonitems(where: {version: {name: {_eq: "firered"}}}) {
               item {
                 name
-                cost
               }
               rarity
             }

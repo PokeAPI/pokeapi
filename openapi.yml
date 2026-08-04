@@ -1332,6 +1332,64 @@ paths:
               schema:
                 $ref: '#/components/schemas/ItemPocketDetail'
           description: ''
+  /api/v2/currency/:
+    get:
+      operationId: currency_list
+      description: Currencies used to buy items.
+      summary: List currencies
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
+      tags:
+      - items
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCurrencySummaryList'
+          description: ''
+  /api/v2/currency/{id}/:
+    get:
+      operationId: currency_retrieve
+      description: Currencies used to buy items.
+      summary: Get currency
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - items
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CurrencyDetail'
+          description: ''
   /api/v2/language/:
     get:
       operationId: language_list
@@ -3624,6 +3682,48 @@ components:
       required:
       - name
       - url
+    CurrencyDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 200
+        names:
+          type: array
+          items:
+            $ref: '#/components/schemas/CurrencyName'
+          readOnly: true
+      required:
+      - id
+      - name
+      - names
+    CurrencyName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
+    CurrencySummary:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        url:
+          type: string
+          format: uri
+          readOnly: true
+      required:
+      - name
+      - url
     EggGroupDetail:
       type: object
       properties:
@@ -4546,12 +4646,6 @@ components:
         name:
           type: string
           maxLength: 200
-        cost:
-          type:
-          - integer
-          - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
         fling_power:
           type:
           - integer
@@ -4594,6 +4688,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ItemGameIndex'
+          readOnly: true
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemPrice'
           readOnly: true
         names:
           type: array
@@ -4716,6 +4815,7 @@ components:
       - machines
       - name
       - names
+      - prices
       - sprites
     ItemEffectText:
       type: object
@@ -4864,6 +4964,28 @@ components:
       required:
       - name
       - url
+    ItemPrice:
+      type: object
+      properties:
+        purchase_price:
+          type:
+          - integer
+          - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
+        sell_price:
+          type:
+          - integer
+          - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
+        currency:
+          $ref: '#/components/schemas/CurrencySummary'
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+      required:
+      - currency
+      - version_group
     ItemSummary:
       type: object
       properties:
@@ -6394,6 +6516,29 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ContestTypeSummary'
+    PaginatedCurrencySummaryList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/CurrencySummary'
     PaginatedEggGroupSummaryList:
       type: object
       required:

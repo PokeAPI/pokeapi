@@ -39,6 +39,13 @@ array_relationships:
         table:
           name: pokemon_v2_itemflavortext
           schema: public
+  - name: itemprices
+    using:
+      foreign_key_constraint_on:
+        column: version_group_id
+        table:
+          name: pokemon_v2_itemprice
+          schema: public
   - name: machines
     using:
       foreign_key_constraint_on:

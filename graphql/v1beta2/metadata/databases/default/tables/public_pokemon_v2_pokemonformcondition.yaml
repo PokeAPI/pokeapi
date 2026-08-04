@@ -10,6 +10,9 @@ object_relationships:
   - name: ability
     using:
       foreign_key_constraint_on: ability_id
+  - name: base_form
+    using:
+      foreign_key_constraint_on: base_form_id
   - name: item
     using:
       foreign_key_constraint_on: item_id

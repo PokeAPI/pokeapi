@@ -1932,6 +1932,7 @@ def _build_pokemons():
             item_id=int(info[2]) if info[2] != "" else None,
             ability_id=int(info[3]) if info[3] != "" else None,
             move_id=int(info[4]) if info[4] != "" else None,
+            base_form_id=int(info[5]) if info[5] != "" else None,
         )
 
     build_generic((PokemonFormCondition,), "pokemon_form_conditions.csv", csv_record_to_objects)
@@ -2106,6 +2107,21 @@ def _build_encounters():
     build_generic(
         (EncounterConditionValueMap,),
         "encounter_condition_value_map.csv",
+        csv_record_to_objects,
+    )
+
+    def csv_record_to_objects(info):
+        yield EncounterPokemonDetail(
+            encounter_id=int(info[0]),
+            min_perfect_ivs=int(info[1]) if info[1] != "" else None,
+            always_shiny=bool(int(info[2])),
+            never_shiny=bool(int(info[3])),
+            is_alpha=bool(int(info[4])),
+        )
+
+    build_generic(
+        (EncounterPokemonDetail,),
+        "encounter_pokemon_details.csv",
         csv_record_to_objects,
     )
 

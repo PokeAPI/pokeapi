@@ -1264,6 +1264,20 @@ def _build_pokemons():
     )
 
     def csv_record_to_objects(info):
+        yield PokemonFormFlavorText(
+            pokemon_form_id=int(info[0]),
+            version_id=int(info[1]),
+            language_id=int(info[2]),
+            flavor_text=info[3],
+        )
+
+    build_generic(
+        (PokemonFormFlavorText,),
+        "pokemon_form_flavor_text.csv",
+        csv_record_to_objects,
+    )
+
+    def csv_record_to_objects(info):
         yield Pokemon(
             id=int(info[0]),
             name=info[1],

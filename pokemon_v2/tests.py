@@ -1,7 +1,9 @@
 import json
 from datetime import datetime
+
 from rest_framework import status
 from rest_framework.test import APITestCase
+
 from pokemon_v2.models import *
 
 # pylint: disable=redefined-builtin
@@ -3166,6 +3168,7 @@ class APITests(APIData, APITestCase):
         past_damage_relations = response.data["past_damage_relations"]
         gen_data = past_damage_relations[0]["generation"]
         self.assertEqual(gen_data["name"], generation.name)
+        assert past_no_damage_to_relation.generation is not None
         self.assertEqual(
             gen_data["url"],
             "{}{}/generation/{}/".format(TEST_HOST, API_V2, past_no_damage_to_relation.generation.pk),

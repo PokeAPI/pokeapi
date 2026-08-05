@@ -105,7 +105,7 @@ lint-check: check-uv  # Lint the source code
 	uv run ruff check .
 
 lint-fix: check-uv  # Lint the source code and fix issues
-	uv run ruff check . --fix 
+	uv run ruff check . --fix
 
 typecheck: check-uv  # Type-check the source code with ty
 	uv run ty check

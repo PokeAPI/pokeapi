@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING, Any
 from django.urls import include, path, re_path
 from rest_framework import routers
 from rest_framework.reverse import reverse as drf_reverse
+from typing_extensions import override
 
 from pokemon_v2.api import *
 
@@ -20,6 +21,7 @@ if TYPE_CHECKING:
 
 
 class PokeAPIRootView(routers.APIRootView):
+    @override
     def get(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         response = super().get(request, *args, **kwargs)
         response.data["meta"] = drf_reverse("meta", request=request)

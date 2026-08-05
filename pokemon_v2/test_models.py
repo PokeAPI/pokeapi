@@ -1,18 +1,23 @@
 import csv
 import os
 import re
+
 from django.conf import settings
 from django.test import TestCase
+from typing_extensions import override
+
 from pokemon_v2.models import *
 
 
 class AbilityTestCase(TestCase):
+    @override
     def setUp(self):
         Ability.objects.create(name="Smell", generation_id=3, is_main_series=True)
 
     def fields_are_valid(self):
         smell = Ability.objects.get(name="Smell")
-        self.assertEqual(smell.generation_id, 3)
+        assert smell.generation is not None
+        self.assertEqual(smell.generation.pk, 3)
 
 
 class EncounterPokemonDetailTestCase(TestCase):
@@ -73,7 +78,7 @@ class CSVResourceNameValidationTestCase(TestCase):
                 with open(csv_path, "r", encoding="utf-8") as csvfile:
                     reader = csv.DictReader(csvfile)
 
-                    if "identifier" not in reader.fieldnames:
+                    if "identifier" not in (reader.fieldnames or []):
                         continue
 
                     for row_num, row in enumerate(reader, start=2):

@@ -1,13 +1,18 @@
 import re
 import subprocess
+from typing import Any
+
+from django.db.models import Q, QuerySet
+from django.http import Http404
+from django.shortcuts import get_object_or_404
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import OpenApiParameter, extend_schema, extend_schema_view
 from rest_framework import viewsets
 from rest_framework.response import Response
+from rest_framework.serializers import BaseSerializer
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from django.http import Http404
-from django.db.models import Q
-from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
-from drf_spectacular.types import OpenApiTypes
+from rest_framework.viewsets import ReadOnlyModelViewSet
+from typing_extensions import override
 
 from .models import *
 from .serializers import *
@@ -19,42 +24,46 @@ from .serializers import *
 ###########################
 
 
-class ListOrDetailSerialRelation:
+class ListOrDetailSerialRelation(viewsets.GenericViewSet[Any]):
     """
-    Mixin to allow association with separate serializers
-    for list or detail view.
+    Mixin to allow association with separate serializers for list or detail view.
     """
 
-    list_serializer_class = None
+    list_serializer_class: type[BaseSerializer[Any]] | None = None
 
-    def get_serializer_class(self):
-        if self.action == "list" and self.list_serializer_class is not None:
-            return self.list_serializer_class
+    @override
+    def get_serializer_class(self) -> type[BaseSerializer[Any]]:
+        if self.action == "list":
+            if self.list_serializer_class is not None:
+                return self.list_serializer_class
+            raise AttributeError("list_serializer_class must be set for list view")
+        if self.serializer_class is None:
+            raise AttributeError("serializer_class must be set for detail view")
         return self.serializer_class
 
 
-class NameOrIdRetrieval:
+class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
     """
-    Mixin to allow retrieval of resources by
-    pk (in this case ID) or by name
+    Mixin to allow retrieval of resources by pk (in this case ID) or by name.
     """
 
     idPattern = re.compile(r"^-?[0-9]+$")
     # Allow alphanumeric, hyphen, plus, and space (Space added for test cases using name for lookup, ex: 'base pkm')
     namePattern = re.compile(r"^[0-9A-Za-z\-\+ ]+$")
 
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        filter = self.request.GET.get("q", "")
+    @override
+    def get_queryset(self) -> QuerySet[Any]:
+        queryset: QuerySet[Any] = ReadOnlyModelViewSet[Any].get_queryset(self)  # type: ignore[arg-type]
+        filter_q = self.request.GET.get("q", "")
 
-        if filter:
-            queryset = queryset.filter(Q(name__icontains=filter))
+        if filter_q:
+            queryset = queryset.filter(Q(name__icontains=filter_q))
 
         return queryset
 
-    def get_object(self):
-        queryset = self.get_queryset()
-        queryset = self.filter_queryset(queryset)
+    @override
+    def get_object(self) -> Any:
+        queryset = self.filter_queryset(self.get_queryset())
         lookup = self.kwargs["pk"]
 
         if self.idPattern.match(lookup):
@@ -90,12 +99,11 @@ retrieve_path_parameter = OpenApiParameter(
 
 
 @extend_schema_view(list=extend_schema(parameters=[q_query_string_parameter]))
-class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
+class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet[Any]):
+    @override
     @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
-
-    pass
 
 
 ##########
@@ -497,7 +505,7 @@ class LocationResource(PokeapiCommonViewset):
         summary="List location areas",
     )
 )
-class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
+class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet[LocationArea]):
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer

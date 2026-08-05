@@ -13,7 +13,7 @@ jobs:
           submodules: recursive
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: pokeapi/pokeapi
       - name: Set up QEMU
@@ -42,7 +42,7 @@ jobs:
           submodules: recursive
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: pokeapi/pokeapi
       - name: Set up QEMU

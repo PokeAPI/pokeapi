@@ -3119,7 +3119,34 @@ components:
         pokemon:
           type: array
           items:
-            $ref: '#/components/schemas/AbilityPokemon'
+            type: object
+            required:
+            - is_hidden
+            - slot
+            - pokemon
+            properties:
+              is_hidden:
+                type: boolean
+              slot:
+                type: integer
+                format: int32
+                examples:
+                - 3
+              pokemon:
+                type: object
+                required:
+                - name
+                - url
+                properties:
+                  name:
+                    type: string
+                    examples:
+                    - gloom
+                  url:
+                    type: string
+                    format: uri
+                    examples:
+                    - https://pokeapi.co/api/v2/pokemon/44/
           readOnly: true
       required:
       - effect_changes
@@ -3169,20 +3196,6 @@ components:
       required:
       - language
       - name
-    AbilityPokemon:
-      type: object
-      properties:
-        is_hidden:
-          type: boolean
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-      required:
-      - pokemon
-      - slot
     AbilitySummary:
       type: object
       properties:

@@ -1,13 +1,221 @@
-import json
+# ruff: noqa: F405
+# pyright: reportIncompatibleVariableOverride=false
+from __future__ import annotations
+
 from collections import OrderedDict
+from typing import TYPE_CHECKING, Any
 
 from django.urls import reverse
-from drf_spectacular.utils import extend_schema_field
+from drf_spectacular.utils import extend_schema_field  # pyright: ignore[reportUnknownVariableType]
 from rest_framework import serializers
 
-from .models import *
+from .models import *  # noqa: F403
 
-# pylint: disable=redefined-builtin
+if TYPE_CHECKING:
+    from rest_framework.utils.serializer_helpers import ReturnDict, ReturnList
+
+__all__: tuple[str, ...] = (
+    "AbilityChangeEffectTextSerializer",
+    "AbilityChangeSerializer",
+    "AbilityDetailSerializer",
+    "AbilityEffectTextSerializer",
+    "AbilityFlavorTextSerializer",
+    "AbilityNameSerializer",
+    "AbilitySummarySerializer",
+    "BerryDetailSerializer",
+    "BerryFirmnessDetailSerializer",
+    "BerryFirmnessNameSerializer",
+    "BerryFirmnessSummarySerializer",
+    "BerryFlavorDetailSerializer",
+    "BerryFlavorMapSerializer",
+    "BerryFlavorNameSerializer",
+    "BerryFlavorSummarySerializer",
+    "BerrySummarySerializer",
+    "CharacteristicDescriptionSerializer",
+    "CharacteristicDetailSerializer",
+    "CharacteristicSummarySerializer",
+    "ContestComboSerializer",
+    "ContestEffectDetailSerializer",
+    "ContestEffectEffectTextSerializer",
+    "ContestEffectFlavorTextSerializer",
+    "ContestEffectSummarySerializer",
+    "ContestTypeDetailSerializer",
+    "ContestTypeNameSerializer",
+    "ContestTypeSummarySerializer",
+    "EggGroupDetailSerializer",
+    "EggGroupNameSerializer",
+    "EggGroupSummarySerializer",
+    "EncounterConditionDetailSerializer",
+    "EncounterConditionNameSerializer",
+    "EncounterConditionSummarySerializer",
+    "EncounterConditionValueDetailSerializer",
+    "EncounterConditionValueMapSerializer",
+    "EncounterConditionValueNameSerializer",
+    "EncounterConditionValueSummarySerializer",
+    "EncounterDetailSerializer",
+    "EncounterMethodDetailSerializer",
+    "EncounterMethodNameSerializer",
+    "EncounterMethodSummarySerializer",
+    "EncounterPokemonDetailSerializer",
+    "EncounterSlotSerializer",
+    "EvolutionChainDetailSerializer",
+    "EvolutionChainSummarySerializer",
+    "EvolutionTriggerDetailSerializer",
+    "EvolutionTriggerNameSerializer",
+    "EvolutionTriggerSummarySerializer",
+    "ExperienceSerializer",
+    "GenderDetailSerializer",
+    "GenderSummarySerializer",
+    "GenerationDetailSerializer",
+    "GenerationNameSerializer",
+    "GenerationSummarySerializer",
+    "GrowthRateDescriptionSerializer",
+    "GrowthRateDetailSerializer",
+    "GrowthRateSummarySerializer",
+    "ItemAttributeDescriptionSerializer",
+    "ItemAttributeDetailSerializer",
+    "ItemAttributeMapSerializer",
+    "ItemAttributeNameSerializer",
+    "ItemAttributeSummarySerializer",
+    "ItemCategoryDetailSerializer",
+    "ItemCategoryNameSerializer",
+    "ItemCategorySummarySerializer",
+    "ItemDetailSerializer",
+    "ItemEffectTextSerializer",
+    "ItemFlavorTextSerializer",
+    "ItemFlingEffectDetailSerializer",
+    "ItemFlingEffectEffectTextSerializer",
+    "ItemFlingEffectSummarySerializer",
+    "ItemGameIndexSerializer",
+    "ItemNameSerializer",
+    "ItemPocketDetailSerializer",
+    "ItemPocketNameSerializer",
+    "ItemPocketSummarySerializer",
+    "ItemSpritesSerializer",
+    "ItemSummarySerializer",
+    "LanguageDetailSerializer",
+    "LanguageNameSerializer",
+    "LanguageSummarySerializer",
+    "LocationAreaDetailSerializer",
+    "LocationAreaEncounterRateSerializer",
+    "LocationAreaNameSerializer",
+    "LocationAreaSummarySerializer",
+    "LocationDetailSerializer",
+    "LocationGameIndexSerializer",
+    "LocationNameSerializer",
+    "LocationSummarySerializer",
+    "MachineDetailSerializer",
+    "MachineSummarySerializer",
+    "MoveBattleStyleDetailSerializer",
+    "MoveBattleStyleNameSerializer",
+    "MoveBattleStyleSummarySerializer",
+    "MoveChangeSerializer",
+    "MoveDamageClassDescriptionSerializer",
+    "MoveDamageClassDetailSerializer",
+    "MoveDamageClassNameSerializer",
+    "MoveDamageClassSummarySerializer",
+    "MoveDetailSerializer",
+    "MoveEffectChangeEffectTextSerializer",
+    "MoveEffectChangeSerializer",
+    "MoveEffectEffectTextSerializer",
+    "MoveFlavorTextSerializer",
+    "MoveLearnMethodDescriptionSerializer",
+    "MoveLearnMethodDetailSerializer",
+    "MoveLearnMethodNameSerializer",
+    "MoveLearnMethodSummarySerializer",
+    "MoveMetaAilmentDetailSerializer",
+    "MoveMetaAilmentNameSerializer",
+    "MoveMetaAilmentSummarySerializer",
+    "MoveMetaCategoryDescriptionSerializer",
+    "MoveMetaCategoryDetailSerializer",
+    "MoveMetaCategorySummarySerializer",
+    "MoveMetaSerializer",
+    "MoveMetaStatChangeSerializer",
+    "MoveNameSerializer",
+    "MoveSummarySerializer",
+    "MoveTargetDescriptionSerializer",
+    "MoveTargetDetailSerializer",
+    "MoveTargetNameSerializer",
+    "MoveTargetSummarySerializer",
+    "NatureBattleStylePreferenceSerializer",
+    "NatureDetailSerializer",
+    "NatureNameSerializer",
+    "NaturePokeathlonStatSerializer",
+    "NatureSummarySerializer",
+    "PalParkAreaDetailSerializer",
+    "PalParkAreaNameSerializer",
+    "PalParkAreaSummarySerializer",
+    "PalParkSerializer",
+    "PokeathlonStatDetailSerializer",
+    "PokeathlonStatNameSerializer",
+    "PokeathlonStatSummarySerializer",
+    "PokedexDescriptionSerializer",
+    "PokedexDetailSerializer",
+    "PokedexNameSerializer",
+    "PokedexSummarySerializer",
+    "PokedexVersionGroupSerializer",
+    "PokemonAbilityPastSerializer",
+    "PokemonAbilitySerializer",
+    "PokemonColorDetailSerializer",
+    "PokemonColorNameSerializer",
+    "PokemonColorSummarySerializer",
+    "PokemonDetailSerializer",
+    "PokemonDexEntrySerializer",
+    "PokemonDexNumberSerializer",
+    "PokemonEggGroupSerializer",
+    "PokemonEvolutionSerializer",
+    "PokemonFormConditionSerializer",
+    "PokemonFormDetailSerializer",
+    "PokemonFormNameSerializer",
+    "PokemonFormSpritesSerializer",
+    "PokemonFormSummarySerializer",
+    "PokemonFormTypeSerializer",
+    "PokemonGameIndexSerializer",
+    "PokemonHabitatDetailSerializer",
+    "PokemonHabitatNameSerializer",
+    "PokemonHabitatSummarySerializer",
+    "PokemonItemSerializer",
+    "PokemonMoveSerializer",
+    "PokemonShapeDetailSerializer",
+    "PokemonShapeNameSerializer",
+    "PokemonShapeSummarySerializer",
+    "PokemonSpeciesDescriptionSerializer",
+    "PokemonSpeciesDetailSerializer",
+    "PokemonSpeciesEvolutionSerializer",
+    "PokemonSpeciesFlavorTextSerializer",
+    "PokemonSpeciesNameSerializer",
+    "PokemonSpeciesSummarySerializer",
+    "PokemonStatPastSerializer",
+    "PokemonStatSerializer",
+    "PokemonSummarySerializer",
+    "PokemonTypePastSerializer",
+    "PokemonTypeSerializer",
+    "RegionDetailSerializer",
+    "RegionNameSerializer",
+    "RegionSummarySerializer",
+    "StatDetailSerializer",
+    "StatNameSerializer",
+    "StatSummarySerializer",
+    "SuperContestComboSerializer",
+    "SuperContestEffectDetailSerializer",
+    "SuperContestEffectFlavorTextSerializer",
+    "SuperContestEffectSummarySerializer",
+    "TypeDetailSerializer",
+    "TypeEfficacyPastSerializer",
+    "TypeEfficacySerializer",
+    "TypeGameIndexSerializer",
+    "TypeNameSerializer",
+    "TypeSpriteSerializer",
+    "TypeSummarySerializer",
+    "VersionDetailSerializer",
+    "VersionGroupDetailSerializer",
+    "VersionGroupMoveLearnMethodSerializer",
+    "VersionGroupRegionSerializer",
+    "VersionGroupSummarySerializer",
+    "VersionNameSerializer",
+    "VersionSummarySerializer",
+)
+
 
 # PokeAPI v2 serializers in order of dependency
 
@@ -497,13 +705,12 @@ class CharacteristicDetailSerializer(serializers.ModelSerializer[Characteristic]
             "examples": [[0, 5, 10, 15, 20, 25, 30]],
         }
     )
-    def get_values(self, obj):
+    def get_values(self, obj: Characteristic) -> list[int]:
         mod = obj.gene_mod_5
-        values = []
+        values: list[int] = []
         while mod <= 31:
             values.append(mod)
             mod += 5
-
         return values
 
 
@@ -640,13 +847,11 @@ class RegionDetailSerializer(serializers.ModelSerializer[Region]):
             },
         }
     )
-    def get_region_version_groups(self, obj):
+    def get_region_version_groups(self, obj: Region) -> list[str]:
         vg_regions = VersionGroupRegion.objects.filter(region=obj)
         data = VersionGroupRegionSerializer(vg_regions, many=True, context=self.context).data
-        groups = []
 
-        for group in data:
-            groups.append(group["version_group"])
+        groups = [group["version_group"] for group in data]
 
         return groups
 
@@ -725,7 +930,7 @@ class GenderDetailSerializer(serializers.ModelSerializer[Gender]):
             },
         }
     )
-    def get_species(self, obj):
+    def get_species(self, obj: Gender) -> list[dict[str, Any]]:
         species_objects = []
 
         if obj.name == "female":
@@ -762,7 +967,7 @@ class GenderDetailSerializer(serializers.ModelSerializer[Gender]):
             },
         }
     )
-    def get_required(self, obj):
+    def get_required(self, obj: Gender) -> list[dict[str, Any]]:
         evo_objects = PokemonEvolution.objects.filter(gender=obj)
         species_list = []
 
@@ -918,17 +1123,15 @@ class EncounterDetailSerializer(serializers.ModelSerializer[Encounter]):
             "pokemon_details",
         )
 
-    def get_encounter_conditions(self, obj):
+    def get_encounter_conditions(self, obj: Encounter) -> list[dict[str, Any]]:
         condition_values = EncounterConditionValueMap.objects.filter(encounter=obj)
         data = EncounterConditionValueMapSerializer(condition_values, many=True, context=self.context).data
-        values = []
 
-        for map in data:
-            values.append(map["condition_value"])
+        values = [map["condition_value"] for map in data]
 
         return values
 
-    def get_encounter_pokemon_details(self, obj):
+    def get_encounter_pokemon_details(self, obj: Encounter) -> ReturnDict[str, Any] | None:
         encounter_pokemon_details = EncounterPokemonDetail.objects.filter(encounter=obj)
         data = EncounterPokemonDetailSerializer(encounter_pokemon_details, many=True, context=self.context).data
 
@@ -1024,7 +1227,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer[LocationArea]):
             },
         }
     )
-    def get_method_rates(self, obj):
+    def get_method_rates(self, obj: LocationAreaEncounterRate) -> list[dict[str, Any]]:
         # Get encounters related to this area and pull out unique encounter methods
         encounter_rates = LocationAreaEncounterRate.objects.filter(location_area=obj).order_by("encounter_method_id")
         method_ids = encounter_rates.values("encounter_method_id").distinct()
@@ -1166,7 +1369,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer[LocationArea]):
             },
         }
     )
-    def get_encounters(self, obj):
+    def get_encounters(self, obj: LocationArea) -> list[dict[str, Any]]:
         # get versions for later use
         version_objects = Version.objects.all().order_by("id")
         version_data = {
@@ -1174,6 +1377,7 @@ class LocationAreaDetailSerializer(serializers.ModelSerializer[LocationArea]):
             for version_object, data in zip(
                 version_objects,
                 VersionSummarySerializer(version_objects, many=True, context=self.context).data,
+                strict=False,
             )
         }
 
@@ -1461,7 +1665,7 @@ class StatDetailSerializer(serializers.ModelSerializer[Stat]):
             },
         }
     )
-    def get_moves_that_affect(self, obj):
+    def get_moves_that_affect(self, obj: Stat) -> dict[str, list[dict[str, Any]]]:
         stat_change_objects = MoveMetaStatChange.objects.filter(stat=obj)
         stat_changes = MoveMetaStatChangeSerializer(stat_change_objects, many=True, context=self.context).data
         changes = OrderedDict([("increase", []), ("decrease", [])])
@@ -1513,7 +1717,7 @@ class StatDetailSerializer(serializers.ModelSerializer[Stat]):
             },
         }
     )
-    def get_natures_that_affect(self, obj):
+    def get_natures_that_affect(self, obj: Stat) -> dict[str, ReturnList[ReturnDict[str, Any]]]:
         increase_objects = Nature.objects.filter(increased_stat=obj)
         increases = NatureSummarySerializer(increase_objects, many=True, context=self.context).data
         decrease_objects = Nature.objects.filter(decreased_stat=obj)
@@ -1541,7 +1745,7 @@ class StatDetailSerializer(serializers.ModelSerializer[Stat]):
             },
         }
     )
-    def get_items_that_affect(self, obj):
+    def get_items_that_affect(self, obj: Stat) -> list[ReturnDict[str, Any]]:
         """
         Get items that affect this stat (like vitamins, X-items, etc.)
         """
@@ -1682,7 +1886,7 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer[ItemAttribute]):
             },
         }
     )
-    def get_attribute_items(self, obj):
+    def get_attribute_items(self, obj: ItemAttribute) -> list[dict[str, Any]]:
         item_map_objects = ItemAttributeMap.objects.filter(item_attribute=obj)
         items = []
 
@@ -1870,7 +2074,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             },
         }
     )
-    def get_item_machines(self, obj):
+    def get_item_machines(self, obj: Item) -> list[dict[str, Any]]:
         machine_objects = Machine.objects.filter(item=obj)
 
         machines = []
@@ -1897,7 +2101,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             },
         }
     )
-    def get_item_sprites(self, obj):
+    def get_item_sprites(self, obj: Item) -> dict[str, str | None]:
         sprites_object = ItemSprites.objects.get(item_id=obj)
         return sprites_object.sprites
 
@@ -1918,7 +2122,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             },
         }
     )
-    def get_item_attributes(self, obj):
+    def get_item_attributes(self, obj: Item) -> list[dict[str, Any]]:
         item_attribute_maps = ItemAttributeMap.objects.filter(item=obj)
         serializer = ItemAttributeMapSerializer(item_attribute_maps, many=True, context=self.context)
         data = serializer.data
@@ -1985,7 +2189,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             },
         }
     )
-    def get_held_by_pokemon(self, obj):
+    def get_held_by_pokemon(self, obj: Item) -> list[dict[str, Any]]:
         pokemon_items = PokemonItem.objects.filter(item=obj).order_by("pokemon_id")
         pokemon_ids = pokemon_items.values("pokemon_id").distinct()
         pokemon_list = []
@@ -2026,7 +2230,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             },
         }
     )
-    def get_baby_trigger_for(self, obj):
+    def get_baby_trigger_for(self, obj: ItemFlingEffect) -> ReturnDict[str, Any] | None:
         try:
             chain_object = EvolutionChain.objects.get(baby_trigger_item=obj)
             data = EvolutionChainSummarySerializer(chain_object, context=self.context).data
@@ -2116,7 +2320,7 @@ class NatureDetailSerializer(serializers.ModelSerializer[Nature]):
             },
         }
     )
-    def get_pokeathlon_stats(self, obj):
+    def get_pokeathlon_stats(self, obj: Nature) -> ReturnList[ReturnDict[str, Any]]:
         pokeathlon_stat_objects = NaturePokeathlonStat.objects.filter(nature=obj)
         pokeathlon_stats = NaturePokeathlonStatSerializer(pokeathlon_stat_objects, many=True, context=self.context).data
 
@@ -2194,7 +2398,7 @@ class BerryFlavorDetailSerializer(serializers.ModelSerializer[BerryFlavor]):
             },
         }
     )
-    def get_berries_with_flavor(self, obj):
+    def get_berries_with_flavor(self, obj: BerryFlavor) -> ReturnList[ReturnDict[str, Any]]:
         flavor_map_objects = BerryFlavorMap.objects.filter(berry_flavor=obj, potency__gt=0).order_by("potency")
         flavor_maps = BerryFlavorMapSerializer(flavor_map_objects, many=True, context=self.context).data
 
@@ -2256,7 +2460,7 @@ class BerryDetailSerializer(serializers.ModelSerializer[Berry]):
             },
         }
     )
-    def get_berry_flavors(self, obj):
+    def get_berry_flavors(self, obj: Berry) -> list[dict[str, Any]]:
         flavor_map_objects = BerryFlavorMap.objects.filter(berry=obj)
         flavor_maps = BerryFlavorMapSerializer(flavor_map_objects, many=True, context=self.context).data
         flavors = []
@@ -2318,12 +2522,10 @@ class EggGroupDetailSerializer(serializers.ModelSerializer[EggGroup]):
             },
         }
     )
-    def get_species(self, obj):
+    def get_species(self, obj: EggGroup) -> list[dict[str, Any]]:
         results = PokemonEggGroup.objects.filter(egg_group=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
-        associated_species = []
-        for species in data:
-            associated_species.append(species["species"])
+        associated_species = [species["species"] for species in data]
 
         return associated_species
 
@@ -2458,14 +2660,16 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
             ],
         }
     )
-    def get_type_sprites(self, obj):
+    def get_type_sprites(self, obj: Type) -> dict[str, str | None]:
         sprites_object = TypeSprites.objects.get(type_id=obj)
         return sprites_object.sprites
 
     # adds an entry for the given type with the given damage
     # factor in the given direction to the set of relations
 
-    def add_type_entry(self, relations, type, damage_factor, direction="_damage_to"):
+    def add_type_entry(
+        self, relations: dict[str, list[Any]], type: Type, damage_factor: int, direction: str = "_damage_to"
+    ) -> None:
         if damage_factor == 200:
             relations["double" + direction].append(TypeSummarySerializer(type, context=self.context).data)
         elif damage_factor == 50:
@@ -2578,8 +2782,8 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
             },
         }
     )
-    def get_type_relationships(self, obj):
-        relations = OrderedDict()
+    def get_type_relationships(self, obj: Type) -> dict[str, list[dict[str, Any]]]:
+        relations: dict[str, list[dict[str, Any]]] = OrderedDict()
         relations["no_damage_to"] = []
         relations["half_damage_to"] = []
         relations["double_damage_to"] = []
@@ -2611,7 +2815,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
     # takes a list of past type relations by generation and
     # returns a list of lists where each list has the entries
     # for a single generation
-    def group_relations_by_generation(self, serializer_data):
+    def group_relations_by_generation(self, serializer_data: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
         data_by_gen = []
 
         current_generation = ""
@@ -2631,7 +2835,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
 
     # removes the entry for the given type in
     # the given direction from the set of relations
-    def remove_type_entry(self, relations, type, direction="_damage_to"):
+    def remove_type_entry(self, relations: dict[str, list[Any]], type: Type, direction: str = "_damage_to") -> None:
         for k in ["double", "half", "no"]:
             rel_list = relations[k + direction]
             for i, o in enumerate(rel_list):
@@ -2781,7 +2985,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
             },
         }
     )
-    def get_type_past_relationships(self, obj):
+    def get_type_past_relationships(self, obj: Type) -> list[dict[str, Any]]:
         # collect data from DB
         damage_type_results = list(TypeEfficacyPast.objects.filter(damage_type=obj))
         target_type_results = list(TypeEfficacyPast.objects.filter(target_type=obj))
@@ -2851,10 +3055,10 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
 
         return final_data
 
-    def remove_newer_types(self, relations, current_gen):
+    def remove_newer_types(self, relations: list[dict[str, Any]], current_gen: Generation) -> list[dict[str, Any]]:
         return list(filter(lambda x: self.type_is_present(x, current_gen), relations))
 
-    def type_is_present(self, type, current_gen):
+    def type_is_present(self, type: dict[str, Any], current_gen: Generation) -> bool:
         type_obj = Type.objects.get(name=type["name"])
         assert type_obj.generation is not None, f"Type {type_obj.name!r} has no generation set"
         gen_introduced = Generation.objects.get(pk=type_obj.generation.pk)
@@ -2889,7 +3093,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
             },
         }
     )
-    def get_type_pokemon(self, obj):
+    def get_type_pokemon(self, obj: Type) -> ReturnList[ReturnDict[str, Any]]:
         poke_type_objects = PokemonType.objects.filter(type=obj)
         poke_types = PokemonTypeSerializer(poke_type_objects, many=True, context=self.context).data
 
@@ -3002,7 +3206,7 @@ class MoveMetaAilmentDetailSerializer(serializers.ModelSerializer[MoveMetaAilmen
             },
         }
     )
-    def get_ailment_moves(self, obj):
+    def get_ailment_moves(self, obj: MoveMetaAilment) -> list[dict[str, Any]]:
         move_meta_objects = MoveMeta.objects.filter(move_meta_ailment=obj)
         moves = []
 
@@ -3049,7 +3253,7 @@ class MoveMetaCategoryDetailSerializer(serializers.ModelSerializer[MoveMetaCateg
             },
         }
     )
-    def get_category_moves(self, obj):
+    def get_category_moves(self, obj: MoveMetaCategory) -> list[dict[str, Any]]:
         move_meta_objects = MoveMeta.objects.filter(move_meta_category=obj)
         moves = []
 
@@ -3172,7 +3376,7 @@ class MoveChangeSerializer(serializers.ModelSerializer[MoveChange]):
             },
         }
     )
-    def get_effects(self, obj):
+    def get_effects(self, obj: MoveTarget) -> ReturnList[ReturnDict[str, Any]]:
         effect_texts = MoveEffectEffectText.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectEffectTextSerializer(effect_texts, many=True, context=self.context).data
 
@@ -3282,7 +3486,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_learned_by_pokemon(self, obj):
+    def get_learned_by_pokemon(self, obj: Move) -> list[dict[str, Any]]:
         pokemon_moves = PokemonMove.objects.filter(move_id=obj).order_by("pokemon_id")
 
         pokemon_list = []
@@ -3331,7 +3535,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_move_machines(self, obj):
+    def get_move_machines(self, obj: Move) -> list[dict[str, Any]]:
         machine_objects = Machine.objects.filter(move=obj)
 
         machines = []
@@ -3441,7 +3645,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_combos(self, obj):
+    def get_combos(self, obj: Move) -> dict[str, Any] | None:
         normal_before_objects = ContestCombo.objects.filter(first_move=obj)
         normal_before_data = ContestComboSerializer(normal_before_objects, many=True, context=self.context).data
         normal_after_objects = ContestCombo.objects.filter(second_move=obj)
@@ -3516,7 +3720,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_effect_text(self, obj):
+    def get_effect_text(self, obj: Move) -> ReturnList[ReturnDict[str, Any]]:
         effect_texts = MoveEffectEffectText.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectEffectTextSerializer(effect_texts, many=True, context=self.context).data
         if len(data) > 0:
@@ -3574,7 +3778,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_effect_change_text(self, obj):
+    def get_effect_change_text(self, obj: Move) -> ReturnList[ReturnDict[str, Any]]:
         effect_changes = MoveEffectChange.objects.filter(move_effect=obj.move_effect)
         data = MoveEffectChangeSerializer(effect_changes, many=True, context=self.context).data
 
@@ -3604,7 +3808,7 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
             },
         }
     )
-    def get_move_stat_change(self, obj):
+    def get_move_stat_change(self, obj: Move) -> ReturnList[ReturnDict[str, Any]]:
         stat_change_objects = MoveMetaStatChange.objects.filter(move=obj)
         stat_changes = MoveMetaStatChangeSerializer(stat_change_objects, many=True, context=self.context).data
 
@@ -3673,7 +3877,7 @@ class PalParkAreaDetailSerializer(serializers.ModelSerializer[PalParkArea]):
             },
         }
     )
-    def get_encounters(self, obj):
+    def get_encounters(self, obj: PalParkArea) -> list[dict[str, Any]]:
         pal_park_objects = PalPark.objects.filter(pal_park_area=obj)
         parks = PalParkSerializer(pal_park_objects, many=True, context=self.context).data
         encounters = []
@@ -3789,7 +3993,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             },
         }
     )
-    def get_pokemon_form_names(self, obj):
+    def get_pokemon_form_names(self, obj: PokemonForm) -> ReturnList[ReturnDict[str, Any]]:
         form_results = PokemonFormName.objects.filter(pokemon_form=obj, name__regex=".+")
         form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
 
@@ -3824,7 +4028,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             },
         }
     )
-    def get_pokemon_form_pokemon_names(self, obj):
+    def get_pokemon_form_pokemon_names(self, obj: PokemonForm) -> ReturnList[ReturnDict[str, Any]]:
         form_results = PokemonFormName.objects.filter(pokemon_form=obj, pokemon_name__regex=".+")
         form_serializer = PokemonFormNameSerializer(form_results, many=True, context=self.context)
 
@@ -3870,7 +4074,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             ],
         }
     )
-    def get_pokemon_form_sprites(self, obj):
+    def get_pokemon_form_sprites(self, obj: PokemonForm) -> dict[str, str | None]:
         sprites_object = PokemonFormSprites.objects.get(pokemon_form_id=obj)
         return sprites_object.sprites
 
@@ -3898,7 +4102,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             },
         }
     )
-    def get_pokemon_form_types(self, obj):
+    def get_pokemon_form_types(self, obj: PokemonForm) -> ReturnList[ReturnDict[str, Any]]:
         form_type_objects = PokemonFormType.objects.filter(pokemon_form=obj)
         form_types = PokemonFormTypeSerializer(form_type_objects, many=True, context=self.context).data
 
@@ -3955,7 +4159,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             },
         }
     )
-    def get_pokemon_form_triggers_conditions(self, obj):
+    def get_pokemon_form_triggers_conditions(self, obj: PokemonForm) -> list[dict[str, Any]]:
         conditions = PokemonFormCondition.objects.filter(pokemon_form=obj)
         conditions_data = PokemonFormConditionSerializer(conditions, many=True, context=self.context).data
 
@@ -4051,15 +4255,13 @@ class MoveLearnMethodDetailSerializer(serializers.ModelSerializer[MoveLearnMetho
             },
         }
     )
-    def get_method_version_groups(self, obj):
+    def get_method_version_groups(self, obj: MoveLearnMethod) -> list[dict[str, Any]]:
         version_group_objects = VersionGroupMoveLearnMethod.objects.filter(move_learn_method=obj)
         version_group_data = VersionGroupMoveLearnMethodSerializer(
             version_group_objects, many=True, context=self.context
         ).data
-        groups = []
 
-        for vg in version_group_data:
-            groups.append(vg["version_group"])
+        groups = [vg["version_group"] for vg in version_group_data]
 
         return groups
 
@@ -4108,7 +4310,7 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer[PokemonShape]):
             },
         }
     )
-    def get_shape_names(self, obj):
+    def get_shape_names(self, obj: PokemonShape) -> ReturnList[ReturnDict[str, Any]]:
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(results, many=True, context=self.context)
         data = serializer.data
@@ -4158,7 +4360,7 @@ class PokemonShapeDetailSerializer(serializers.ModelSerializer[PokemonShape]):
             },
         }
     )
-    def get_shape_awesome_names(self, obj):
+    def get_shape_awesome_names(self, obj: PokemonShape) -> ReturnList[ReturnDict[str, Any]]:
         results = PokemonShapeName.objects.filter(pokemon_shape_id=obj)
         serializer = PokemonShapeNameSerializer(results, many=True, context=self.context)
         data = serializer.data
@@ -4288,7 +4490,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             ],
         }
     )
-    def get_pokemon_sprites(self, obj):
+    def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None]:
         sprites_object = PokemonSprites.objects.get(pokemon_id=obj)
         return sprites_object.sprites
 
@@ -4310,7 +4512,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_pokemon_cries(self, obj):
+    def get_pokemon_cries(self, obj: Pokemon) -> dict[str, str | None]:
         cries_object = PokemonCries.objects.get(pokemon_id=obj)
         return cries_object.cries
 
@@ -4652,13 +4854,14 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_pokemon_moves(self, obj):
+    def get_pokemon_moves(self, obj: Pokemon) -> list[dict[str, Any]]:
         version_objects = VersionGroup.objects.all().order_by("id")
         version_data = {
             version_object.id: data
             for version_object, data in zip(
                 version_objects,
                 VersionGroupSummarySerializer(version_objects, many=True, context=self.context).data,
+                strict=False,
             )
         }
         method_objects = MoveLearnMethod.objects.all().order_by("id")
@@ -4667,6 +4870,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             for method_object, data in zip(
                 method_objects,
                 MoveLearnMethodSummarySerializer(method_objects, many=True, context=self.context).data,
+                strict=False,
             )
         }
 
@@ -4771,7 +4975,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_pokemon_held_items(self, obj):
+    def get_pokemon_held_items(self, obj: Pokemon) -> list[dict[str, Any]]:
         # Get items related to this pokemon and pull out unique Item IDs
         pokemon_items = PokemonItem.objects.filter(pokemon_id=obj).order_by("item_id")
         item_ids = pokemon_items.values("item_id").distinct()
@@ -4835,7 +5039,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_pokemon_abilities(self, obj):
+    def get_pokemon_abilities(self, obj: Pokemon) -> list[dict[str, Any]]:
         pokemon_ability_objects = PokemonAbility.objects.filter(pokemon=obj)
         data = PokemonAbilitySerializer(pokemon_ability_objects, many=True, context=self.context).data
         abilities = []
@@ -4915,7 +5119,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_past_pokemon_abilities(self, obj):
+    def get_past_pokemon_abilities(self, obj: Pokemon) -> list[dict[str, Any]]:
         pokemon_past_ability_objects = PokemonAbilityPast.objects.filter(pokemon=obj)
         pokemon_past_abilities = PokemonAbilityPastSerializer(
             pokemon_past_ability_objects, many=True, context=self.context
@@ -5007,7 +5211,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_past_pokemon_stats(self, obj):
+    def get_past_pokemon_stats(self, obj: Pokemon) -> list[dict[str, Any]]:
         pokemon_past_stat_objects = PokemonStatPast.objects.filter(pokemon=obj)
         pokemon_past_stats = PokemonStatPastSerializer(pokemon_past_stat_objects, many=True, context=self.context).data
 
@@ -5069,7 +5273,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_pokemon_types(self, obj):
+    def get_pokemon_types(self, obj: Pokemon) -> ReturnList[ReturnDict[str, Any]]:
         poke_type_objects = PokemonType.objects.filter(pokemon=obj)
         poke_types = PokemonTypeSerializer(poke_type_objects, many=True, context=self.context).data
 
@@ -5147,7 +5351,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             },
         }
     )
-    def get_past_pokemon_types(self, obj):
+    def get_past_pokemon_types(self, obj: Pokemon) -> list[dict[str, Any]]:
         poke_past_type_objects = PokemonTypePast.objects.filter(pokemon=obj)
         poke_past_types = PokemonTypePastSerializer(poke_past_type_objects, many=True, context=self.context).data
 
@@ -5186,7 +5390,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             "examples": ["https://pokeapi.co/api/v2/pokemon/1/encounters"],
         }
     )
-    def get_encounters(self, obj):
+    def get_encounters(self, obj: Pokemon) -> str:
         return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
 
 
@@ -5226,7 +5430,7 @@ class EvolutionTriggerDetailSerializer(serializers.HyperlinkedModelSerializer[Ev
             },
         }
     )
-    def get_species(self, obj):
+    def get_species(self, obj: EvolutionTrigger) -> list[dict[str, Any]]:
         evo_objects = PokemonEvolution.objects.filter(evolution_trigger=obj)
         species_list = []
         species_names = set()
@@ -5353,7 +5557,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             },
         }
     )
-    def get_pokemon_names(self, obj):
+    def get_pokemon_names(self, obj: PokemonSpecies) -> ReturnList[ReturnDict[str, Any]]:
         species_results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         species_serializer = PokemonSpeciesNameSerializer(species_results, many=True, context=self.context)
 
@@ -5395,7 +5599,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             },
         }
     )
-    def get_pokemon_genera(self, obj):
+    def get_pokemon_genera(self, obj: PokemonSpecies) -> list[dict[str, Any]]:
         results = PokemonSpeciesName.objects.filter(pokemon_species=obj)
         serializer = PokemonSpeciesNameSerializer(results, many=True, context=self.context)
         data = serializer.data
@@ -5425,12 +5629,10 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             },
         }
     )
-    def get_pokemon_egg_groups(self, obj):
+    def get_pokemon_egg_groups(self, obj: PokemonSpecies) -> list[dict[str, Any]]:
         results = PokemonEggGroup.objects.filter(pokemon_species=obj)
         data = PokemonEggGroupSerializer(results, many=True, context=self.context).data
-        groups = []
-        for group in data:
-            groups.append(group["egg_group"])
+        groups = [group["egg_group"] for group in data]
 
         return groups
 
@@ -5458,7 +5660,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             },
         }
     )
-    def get_pokemon_varieties(self, obj):
+    def get_pokemon_varieties(self, obj: PokemonSpecies) -> list[dict[str, Any]]:
         results = Pokemon.objects.filter(pokemon_species=obj)
         summary_data = PokemonSummarySerializer(results, many=True, context=self.context).data
         detail_data = PokemonDetailSerializer(results, many=True, context=self.context).data
@@ -5502,7 +5704,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             },
         }
     )
-    def get_encounters(self, obj):
+    def get_encounters(self, obj: PokemonSpecies) -> list[dict[str, Any]]:
         pal_park_objects = PalPark.objects.filter(pokemon_species=obj)
         parks = PalParkSerializer(pal_park_objects, many=True, context=self.context).data
         encounters = []
@@ -5645,7 +5847,6 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
                                         },
                                         "is_default": {"type": "boolean"},
                                         "gender": {
-                                            "type": "",
                                             "nullable": True,
                                             "type": "object",
                                             "required": ["name", "url"],
@@ -5694,12 +5895,22 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
                                             },
                                         },
                                         "known_move": {
-                                            "type": "",
+                                            "type": "object",
                                             "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {"type": "string", "format": "uri"},
+                                            },
                                         },
                                         "known_move_type": {
-                                            "type": "",
+                                            "type": "object",
                                             "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {"type": "string", "format": "uri"},
+                                            },
                                         },
                                         "location": {
                                             "type": "object",
@@ -5794,8 +6005,13 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
                                         },
                                         "turn_upside_down": {"type": "boolean"},
                                         "used_move": {
-                                            "type": "",
+                                            "type": "object",
                                             "nullable": True,
+                                            "required": ["name", "url"],
+                                            "properties": {
+                                                "name": {"type": "string"},
+                                                "url": {"type": "string", "format": "uri"},
+                                            },
                                         },
                                         "region": {
                                             "type": "object",
@@ -5868,7 +6084,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
             },
         }
     )
-    def build_chain(self, obj):
+    def build_chain(self, obj: EvolutionChain) -> dict[str, Any]:
         chain_id = obj.id
 
         pokemon_objects = PokemonSpecies.objects.filter(evolution_chain_id=chain_id).order_by("order")
@@ -5884,7 +6100,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
         return chain
 
     # converts a list of Pokemon species evolution data into a tree representing the evolution chain
-    def build_evolution_tree(self, species_evolution_data):
+    def build_evolution_tree(self, species_evolution_data: list[dict[str, Any]]) -> dict[str, Any]:
         evolution_tree = OrderedDict()
         evolution_tree["species"] = species_evolution_data[0]
         evolution_tree["children"] = []
@@ -5915,7 +6131,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
 
     # serializes an evolution chain link recursively
     # chain_link is a tree representing an evolution chain
-    def build_chain_link_entry(self, chain_link, summary_data):
+    def build_chain_link_entry(self, chain_link: dict[str, Any], summary_data: list[dict[str, Any]]) -> dict[str, Any]:
         entry = OrderedDict()
         evolution_data = None
 
@@ -6028,7 +6244,7 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer[Poke
             },
         }
     )
-    def get_natures_that_affect(self, obj):
+    def get_natures_that_affect(self, obj: PokeathlonStat) -> dict[str, list[dict[str, Any]]]:
         stat_change_objects = NaturePokeathlonStat.objects.filter(pokeathlon_stat=obj)
         stat_changes = NaturePokeathlonStatSerializer(stat_change_objects, many=True, context=self.context).data
         changes = OrderedDict([("increase", []), ("decrease", [])])
@@ -6110,7 +6326,7 @@ class PokedexDetailSerializer(serializers.ModelSerializer[Pokedex]):
             },
         }
     )
-    def get_pokedex_entries(self, obj):
+    def get_pokedex_entries(self, obj: Pokedex) -> ReturnList[ReturnDict[str, Any]]:
         results = PokemonDexNumber.objects.filter(pokedex=obj).order_by("pokedex_number")
         serializer = PokemonDexNumberSerializer(results, many=True, context=self.context)
         data = serializer.data
@@ -6137,13 +6353,11 @@ class PokedexDetailSerializer(serializers.ModelSerializer[Pokedex]):
             },
         }
     )
-    def get_pokedex_version_groups(self, obj):
+    def get_pokedex_version_groups(self, obj: Pokedex) -> list[str]:
         dex_group_objects = PokedexVersionGroup.objects.filter(pokedex=obj)
         dex_groups = PokedexVersionGroupSerializer(dex_group_objects, many=True, context=self.context).data
-        results = []
 
-        for dex_group in dex_groups:
-            results.append(dex_group["version_group"])
+        results = [dex_group["version_group"] for dex_group in dex_groups]
 
         return results
 
@@ -6211,13 +6425,11 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer[VersionGroup]):
             },
         }
     )
-    def get_version_group_regions(self, obj):
+    def get_version_group_regions(self, obj: VersionGroup) -> list[str]:
         vg_regions = VersionGroupRegion.objects.filter(version_group=obj)
         data = VersionGroupRegionSerializer(vg_regions, many=True, context=self.context).data
-        regions = []
 
-        for region in data:
-            regions.append(region["region"])
+        regions = [region["region"] for region in data]
 
         return regions
 
@@ -6240,15 +6452,13 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer[VersionGroup]):
             },
         }
     )
-    def get_learn_methods(self, obj):
+    def get_learn_methods(self, obj: VersionGroup) -> list[str]:
         learn_method_objects = VersionGroupMoveLearnMethod.objects.filter(version_group=obj)
         learn_method_data = VersionGroupMoveLearnMethodSerializer(
             learn_method_objects, many=True, context=self.context
         ).data
-        methods = []
 
-        for method in learn_method_data:
-            methods.append(method["move_learn_method"])
+        methods = [method["move_learn_method"] for method in learn_method_data]
 
         return methods
 
@@ -6269,12 +6479,10 @@ class VersionGroupDetailSerializer(serializers.ModelSerializer[VersionGroup]):
             },
         }
     )
-    def get_version_groups_pokedexes(self, obj):
+    def get_version_groups_pokedexes(self, obj: VersionGroup) -> list[str]:
         dex_group_objects = PokedexVersionGroup.objects.filter(version_group=obj)
         dex_groups = PokedexVersionGroupSerializer(dex_group_objects, many=True, context=self.context).data
-        results = []
 
-        for dex_group in dex_groups:
-            results.append(dex_group["pokedex"])
+        results = [dex_group["pokedex"] for dex_group in dex_groups]
 
         return results

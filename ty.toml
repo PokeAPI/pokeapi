@@ -1,5 +1,7 @@
 [src]
 include = [
+    "config",
+    "data/v2/*.py",
     "pokemon_v2",
 ]
 

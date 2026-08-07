@@ -1,6 +1,6 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
-docker_config = --settings=config.docker-compose
+docker_config = --settings=config.docker_compose
 gql_compose_config_deprecated = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
 gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 

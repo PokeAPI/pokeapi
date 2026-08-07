@@ -2,16 +2,22 @@ openapi: 3.1.0
 info:
   title: PokéAPI
   version: 2.10.0
-  description: "All the Pokémon data you'll ever need in one place, easily accessible
-    through a modern free open-source RESTful API.\n\n## What is this?\n\nThis is
-    a full RESTful API linked to an extensive database detailing everything about
-    the Pokémon main game series.\n\nWe've covered everything from Pokémon to Berry
-    Flavors.\n\n## Where do I start?\n\nWe have awesome [documentation](https://pokeapi.co/docs/v2)
-    on how to use this API. It takes minutes to get started.\n\nThis API will always
-    be publicly available and will never require any extensive setup process to consume.\n\nCreated
-    by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing)
-    around the world. Pokémon and Pokémon character names are trademarks of Nintendo.\n
-    \   "
+  description: |-
+    All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.
+
+    ## What is this?
+
+    This is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
+
+    We've covered everything from Pokémon to Berry Flavors.
+
+    ## Where do I start?
+
+    We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.
+
+    This API will always be publicly available and will never require any extensive setup process to consume.
+
+    Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
 paths:
   /api/v2/meta/:
     get:
@@ -28,17 +34,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  deploy_date:
-                    type: string
-                    nullable: true
-                  hash:
-                    type: string
-                    nullable: true
-                  tag:
-                    type: string
-                    nullable: true
+                $ref: '#/components/schemas/PokeapiMetaResponse'
           description: ''
   /api/v2/ability/:
     get:
@@ -3038,7 +3034,7 @@ paths:
           description: ''
   /api/v2/pokemon/{pokemon_id}/encounters:
     get:
-      operationId: pokemon_encounters_retrieve
+      operationId: pokemon_encounters_list
       description: Handles Pokemon Encounters as a sub-resource.
       summary: Get pokemon encounter
       parameters:
@@ -3059,97 +3055,7 @@ paths:
               schema:
                 type: array
                 items:
-                  type: object
-                  required:
-                  - location_area
-                  - version_details
-                  properties:
-                    location_area:
-                      type: object
-                      required:
-                      - name
-                      - url
-                      properties:
-                        name:
-                          type: string
-                          example: cerulean-city-area
-                        url:
-                          type: string
-                          format: uri
-                          example: https://pokeapi.co/api/v2/location-area/281/
-                    version_details:
-                      type: array
-                      items:
-                        type: object
-                        required:
-                        - encounter_details
-                        - max_chance
-                        - version
-                        properties:
-                          encounter_details:
-                            type: array
-                            items:
-                              type: object
-                              required:
-                              - chance
-                              - condition_values
-                              - max_level
-                              - method
-                              - min_level
-                              properties:
-                                chance:
-                                  type: number
-                                  example: 100
-                                condition_values:
-                                  type: array
-                                  items:
-                                    type: object
-                                    required:
-                                    - name
-                                    - url
-                                    properties:
-                                      name:
-                                        type: string
-                                        example: story-progress-beat-red
-                                      url:
-                                        type: string
-                                        format: uri
-                                        example: https://pokeapi.co/api/v2/encounter-condition-value/55/
-                                max_level:
-                                  type: number
-                                  example: 10
-                                method:
-                                  type: object
-                                  required:
-                                  - name
-                                  - url
-                                  properties:
-                                    name:
-                                      type: string
-                                      example: gift
-                                    url:
-                                      type: string
-                                      format: uri
-                                      example: https://pokeapi.co/api/v2/encounter-method/18/
-                                min_level:
-                                  type: number
-                                  example: 10
-                          max_chance:
-                            type: number
-                            example: 100
-                          version:
-                            type: object
-                            required:
-                            - name
-                            - url
-                            properties:
-                              name:
-                                type: string
-                                example: red
-                              url:
-                                type: string
-                                format: uri
-                                example: https://pokeapi.co/api/v2/version/1/
+                  $ref: '#/components/schemas/PokemonEncounterResponse'
           description: ''
 components:
   schemas:
@@ -3213,34 +3119,7 @@ components:
         pokemon:
           type: array
           items:
-            type: object
-            required:
-            - is_hidden
-            - slot
-            - pokemon
-            properties:
-              is_hidden:
-                type: boolean
-              slot:
-                type: integer
-                format: int32
-                examples:
-                - 3
-              pokemon:
-                type: object
-                required:
-                - name
-                - url
-                properties:
-                  name:
-                    type: string
-                    examples:
-                    - gloom
-                  url:
-                    type: string
-                    format: uri
-                    examples:
-                    - https://pokeapi.co/api/v2/pokemon/44/
+            $ref: '#/components/schemas/AbilityPokemon'
           readOnly: true
       required:
       - effect_changes
@@ -3290,6 +3169,20 @@ components:
       required:
       - language
       - name
+    AbilityPokemon:
+      type: object
+      properties:
+        is_hidden:
+          type: boolean
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+      required:
+      - pokemon
+      - slot
     AbilitySummary:
       type: object
       properties:
@@ -3313,27 +3206,39 @@ components:
           type: string
           maxLength: 200
         growth_time:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         max_harvest:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         natural_gift_power:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         size:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         smoothness:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         soil_dryness:
-          type: integer
+          type:
+          - integer
+          - 'null'
           maximum: 2147483647
           minimum: -2147483648
         firmness:
@@ -4012,8 +3917,8 @@ components:
                         is_default:
                           type: boolean
                         gender:
-                          type: object
                           nullable: true
+                          type: object
                           required:
                           - name
                           - url
@@ -4060,11 +3965,29 @@ components:
                               examples:
                               - 2
                         known_move:
-                          type: ''
+                          type: object
                           nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
                         known_move_type:
-                          type: ''
+                          type: object
                           nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
                         location:
                           type: object
                           nullable: true
@@ -4142,8 +4065,17 @@ components:
                         turn_upside_down:
                           type: boolean
                         used_move:
-                          type: ''
+                          type: object
                           nullable: true
+                          required:
+                          - name
+                          - url
+                          properties:
+                            name:
+                              type: string
+                            url:
+                              type: string
+                              format: uri
                         region:
                           type: object
                           nullable: true
@@ -7560,6 +7492,25 @@ components:
       required:
       - name
       - url
+    PokeapiMetaResponse:
+      type: object
+      properties:
+        deploy_date:
+          type:
+          - string
+          - 'null'
+        hash:
+          type:
+          - string
+          - 'null'
+        tag:
+          type:
+          - string
+          - 'null'
+      required:
+      - deploy_date
+      - hash
+      - tag
     PokeathlonStatDetail:
       type: object
       properties:
@@ -8298,6 +8249,54 @@ components:
       required:
       - entry_number
       - pokedex
+    PokemonEncounterDetailResponse:
+      type: object
+      properties:
+        chance:
+          type: integer
+        condition_values:
+          type: array
+          items:
+            $ref: '#/components/schemas/EncounterConditionValueSummary'
+        max_level:
+          type: integer
+        method:
+          $ref: '#/components/schemas/EncounterMethodSummary'
+        min_level:
+          type: integer
+      required:
+      - chance
+      - condition_values
+      - max_level
+      - method
+      - min_level
+    PokemonEncounterResponse:
+      type: object
+      properties:
+        location_area:
+          $ref: '#/components/schemas/LocationAreaSummary'
+        version_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonEncounterVersionDetailResponse'
+      required:
+      - location_area
+      - version_details
+    PokemonEncounterVersionDetailResponse:
+      type: object
+      properties:
+        version:
+          $ref: '#/components/schemas/VersionSummary'
+        max_chance:
+          type: integer
+        encounter_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonEncounterDetailResponse'
+      required:
+      - encounter_details
+      - max_chance
+      - version
     PokemonFormDetail:
       type: object
       properties:

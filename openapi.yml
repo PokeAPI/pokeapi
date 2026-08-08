@@ -3119,7 +3119,7 @@ components:
         pokemon:
           type: array
           items:
-            $ref: '#/components/schemas/_AbilityPokemonDetail'
+            $ref: '#/components/schemas/AbilityPokemonDetail'
           readOnly: true
       required:
       - effect_changes
@@ -3169,6 +3169,20 @@ components:
       required:
       - language
       - name
+    AbilityPokemonDetail:
+      type: object
+      properties:
+        is_hidden:
+          type: boolean
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+      required:
+      - pokemon
+      - slot
     AbilitySummary:
       type: object
       properties:
@@ -3232,7 +3246,7 @@ components:
         flavors:
           type: array
           items:
-            $ref: '#/components/schemas/_BerryFlavorDetailMap'
+            $ref: '#/components/schemas/BerryFlavorMap'
           readOnly: true
         item:
           $ref: '#/components/schemas/ItemSummary'
@@ -3293,6 +3307,18 @@ components:
       required:
       - name
       - url
+    BerryFlavorBerryMap:
+      type: object
+      properties:
+        potency:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        berry:
+          $ref: '#/components/schemas/BerrySummary'
+      required:
+      - berry
+      - potency
     BerryFlavorDetail:
       type: object
       properties:
@@ -3305,7 +3331,7 @@ components:
         berries:
           type: array
           items:
-            $ref: '#/components/schemas/_BerryFlavorMapDetail'
+            $ref: '#/components/schemas/BerryFlavorBerryMap'
           readOnly: true
         contest_type:
           $ref: '#/components/schemas/ContestTypeSummary'
@@ -3320,6 +3346,18 @@ components:
       - id
       - name
       - names
+    BerryFlavorMap:
+      type: object
+      properties:
+        potency:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        flavor:
+          $ref: '#/components/schemas/BerryFlavorSummary'
+      required:
+      - flavor
+      - potency
     BerryFlavorName:
       type: object
       properties:
@@ -3770,12 +3808,33 @@ components:
           $ref: '#/components/schemas/ItemSummary'
         chain:
           allOf:
-          - $ref: '#/components/schemas/_EvolutionChainDetail'
+          - $ref: '#/components/schemas/EvolutionChainLink'
           readOnly: true
       required:
       - baby_trigger_item
       - chain
       - id
+    EvolutionChainLink:
+      type: object
+      properties:
+        is_baby:
+          type: boolean
+        species:
+          $ref: '#/components/schemas/PokemonSpeciesSummary'
+        evolution_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonEvolution'
+        evolves_to:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+      required:
+      - evolution_details
+      - evolves_to
+      - is_baby
+      - species
     EvolutionChainSummary:
       type: object
       properties:
@@ -3859,7 +3918,7 @@ components:
         pokemon_species_details:
           type: array
           items:
-            $ref: '#/components/schemas/_GenderPokemonSpecies'
+            $ref: '#/components/schemas/GenderPokemonSpecies'
           readOnly: true
         required_for_evolution:
           type: array
@@ -3871,6 +3930,16 @@ components:
       - name
       - pokemon_species_details
       - required_for_evolution
+    GenderPokemonSpecies:
+      type: object
+      properties:
+        rate:
+          type: integer
+        pokemon_species:
+          $ref: '#/components/schemas/PokemonSpeciesSummary'
+      required:
+      - pokemon_species
+      - rate
     GenderSummary:
       type: object
       properties:
@@ -4183,11 +4252,11 @@ components:
         held_by_pokemon:
           type: array
           items:
-            $ref: '#/components/schemas/_ItemHeldByPokemon'
+            $ref: '#/components/schemas/PokemonHeldItem'
           readOnly: true
         sprites:
           allOf:
-          - $ref: '#/components/schemas/_ItemSpritesDetail'
+          - $ref: '#/components/schemas/ItemSprites'
           readOnly: true
         baby_trigger_for:
           oneOf:
@@ -4197,7 +4266,7 @@ components:
         machines:
           type: array
           items:
-            $ref: '#/components/schemas/_ItemMachineDetail'
+            $ref: '#/components/schemas/ItemMachine'
           readOnly: true
       required:
       - attributes
@@ -4302,6 +4371,16 @@ components:
       required:
       - game_index
       - generation
+    ItemMachine:
+      type: object
+      properties:
+        machine:
+          $ref: '#/components/schemas/MachineSummary'
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+      required:
+      - machine
+      - version_group
     ItemName:
       type: object
       properties:
@@ -4383,6 +4462,15 @@ components:
       required:
       - currency
       - version_group
+    ItemSprites:
+      type: object
+      properties:
+        default:
+          type:
+          - string
+          - 'null'
+      required:
+      - default
     ItemSummary:
       type: object
       properties:
@@ -4464,7 +4552,7 @@ components:
         encounter_method_rates:
           type: array
           items:
-            $ref: '#/components/schemas/_LocationAreaEncounterRate'
+            $ref: '#/components/schemas/LocationAreaEncounterRate'
           readOnly: true
         location:
           $ref: '#/components/schemas/LocationSummary'
@@ -4476,7 +4564,7 @@ components:
         pokemon_encounters:
           type: array
           items:
-            $ref: '#/components/schemas/_LocationAreaPokemonEncounter'
+            $ref: '#/components/schemas/LocationAreaPokemonEncounter'
           readOnly: true
       required:
       - encounter_method_rates
@@ -4486,6 +4574,55 @@ components:
       - name
       - names
       - pokemon_encounters
+    LocationAreaEncounterDetail:
+      type: object
+      properties:
+        min_level:
+          type: integer
+        max_level:
+          type: integer
+        chance:
+          type: integer
+          default: 0
+        method:
+          $ref: '#/components/schemas/EncounterMethodSummary'
+        condition_values:
+          type: array
+          items:
+            $ref: '#/components/schemas/EncounterConditionValueSummary'
+          readOnly: true
+        pokemon_details:
+          oneOf:
+          - $ref: '#/components/schemas/EncounterPokemonDetail'
+          - type: 'null'
+          readOnly: true
+      required:
+      - condition_values
+      - max_level
+      - min_level
+      - pokemon_details
+    LocationAreaEncounterRate:
+      type: object
+      properties:
+        encounter_method:
+          $ref: '#/components/schemas/EncounterMethodSummary'
+        version_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationAreaEncounterVersionDetail'
+      required:
+      - encounter_method
+      - version_details
+    LocationAreaEncounterVersionDetail:
+      type: object
+      properties:
+        rate:
+          type: integer
+        version:
+          $ref: '#/components/schemas/VersionSummary'
+      required:
+      - rate
+      - version
     LocationAreaName:
       type: object
       properties:
@@ -4497,6 +4634,33 @@ components:
       required:
       - language
       - name
+    LocationAreaPokemonEncounter:
+      type: object
+      properties:
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+        version_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationAreaPokemonEncounterVersion'
+      required:
+      - pokemon
+      - version_details
+    LocationAreaPokemonEncounterVersion:
+      type: object
+      properties:
+        version:
+          $ref: '#/components/schemas/VersionSummary'
+        max_chance:
+          type: integer
+        encounter_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/LocationAreaEncounterDetail'
+      required:
+      - encounter_details
+      - max_chance
+      - version
     LocationAreaSummary:
       type: object
       properties:
@@ -4684,6 +4848,34 @@ components:
       - effect_entries
       - type
       - version_group
+    MoveComboUsage:
+      type: object
+      properties:
+        use_before:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/MoveSummary'
+        use_after:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/MoveSummary'
+      required:
+      - use_after
+      - use_before
+    MoveCombos:
+      type: object
+      properties:
+        normal:
+          $ref: '#/components/schemas/MoveComboUsage'
+        super:
+          $ref: '#/components/schemas/MoveComboUsage'
+      required:
+      - normal
+      - super
     MoveDamageClassDescription:
       type: object
       properties:
@@ -4785,7 +4977,7 @@ components:
           minimum: -2147483648
         contest_combos:
           oneOf:
-          - $ref: '#/components/schemas/_MoveCombosDetail'
+          - $ref: '#/components/schemas/MoveCombos'
           - type: 'null'
           readOnly: true
         contest_type:
@@ -4823,7 +5015,7 @@ components:
         stat_changes:
           type: array
           items:
-            $ref: '#/components/schemas/_MoveMetaStatChangeDetail'
+            $ref: '#/components/schemas/MoveMetaStatChange'
           readOnly: true
         super_contest_effect:
           $ref: '#/components/schemas/SuperContestEffectSummary'
@@ -4834,7 +5026,7 @@ components:
         machines:
           type: array
           items:
-            $ref: '#/components/schemas/_ItemMachineDetail'
+            $ref: '#/components/schemas/ItemMachine'
           readOnly: true
         flavor_text_entries:
           type: array
@@ -5148,6 +5340,18 @@ components:
       required:
       - name
       - url
+    MoveMetaStatChange:
+      type: object
+      properties:
+        change:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        stat:
+          $ref: '#/components/schemas/StatSummary'
+      required:
+      - change
+      - stat
     MoveName:
       type: object
       properties:
@@ -5159,6 +5363,18 @@ components:
       required:
       - language
       - name
+    MoveStatChange:
+      type: object
+      properties:
+        change:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        move:
+          $ref: '#/components/schemas/MoveSummary'
+      required:
+      - change
+      - move
     MoveSummary:
       type: object
       properties:
@@ -5278,7 +5494,7 @@ components:
         pokeathlon_stat_changes:
           type: array
           items:
-            $ref: '#/components/schemas/_NaturePokeathlonStatDetail'
+            $ref: '#/components/schemas/NaturePokeathlonStat'
           readOnly: true
         move_battle_style_preferences:
           type: array
@@ -5312,6 +5528,18 @@ components:
       required:
       - language
       - name
+    NaturePokeathlonStat:
+      type: object
+      properties:
+        max_change:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        pokeathlon_stat:
+          $ref: '#/components/schemas/PokeathlonStatSummary'
+      required:
+      - max_change
+      - pokeathlon_stat
     NatureSummary:
       type: object
       properties:
@@ -6469,7 +6697,7 @@ components:
         pokemon_encounters:
           type: array
           items:
-            $ref: '#/components/schemas/_PalParkEncounterDetail'
+            $ref: '#/components/schemas/PalParkEncounter'
           readOnly: true
       required:
       - id
@@ -6500,6 +6728,24 @@ components:
       required:
       - name
       - url
+    PalParkEncounter:
+      type: object
+      properties:
+        base_score:
+          type:
+          - integer
+          - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
+        rate:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        pokemon_species:
+          $ref: '#/components/schemas/PokemonSpeciesSummary'
+      required:
+      - pokemon_species
+      - rate
     PokeapiMetaResponse:
       type: object
       properties:
@@ -6519,6 +6765,32 @@ components:
       - deploy_date
       - hash
       - tag
+    PokeathlonStatAffectingNature:
+      type: object
+      properties:
+        max_change:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        nature:
+          $ref: '#/components/schemas/NatureSummary'
+      required:
+      - max_change
+      - nature
+    PokeathlonStatAffectingNatures:
+      type: object
+      properties:
+        increase:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokeathlonStatAffectingNature'
+        decrease:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokeathlonStatAffectingNature'
+      required:
+      - decrease
+      - increase
     PokeathlonStatDetail:
       type: object
       properties:
@@ -6530,7 +6802,7 @@ components:
           maxLength: 200
         affecting_natures:
           allOf:
-          - $ref: '#/components/schemas/_PokeathlonStatAffectingNatures'
+          - $ref: '#/components/schemas/PokeathlonStatAffectingNatures'
           readOnly: true
         names:
           type: array
@@ -6600,7 +6872,7 @@ components:
         pokemon_entries:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonDexNumberDetail'
+            $ref: '#/components/schemas/PokemonDexNumber'
           readOnly: true
         region:
           $ref: '#/components/schemas/RegionSummary'
@@ -6641,6 +6913,34 @@ components:
       required:
       - name
       - url
+    PokemonAbility:
+      type: object
+      properties:
+        is_hidden:
+          type: boolean
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        ability:
+          $ref: '#/components/schemas/AbilitySummary'
+      required:
+      - ability
+      - slot
+    PokemonAbilityPast:
+      type: object
+      properties:
+        is_hidden:
+          type: boolean
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        ability:
+          $ref: '#/components/schemas/AbilitySummary'
+      required:
+      - ability
+      - slot
     PokemonColorDetail:
       type: object
       properties:
@@ -6689,6 +6989,20 @@ components:
       required:
       - name
       - url
+    PokemonCries:
+      type: object
+      properties:
+        latest:
+          type:
+          - string
+          - 'null'
+        legacy:
+          type:
+          - string
+          - 'null'
+      required:
+      - latest
+      - legacy
     PokemonDetail:
       type: object
       properties:
@@ -6727,12 +7041,12 @@ components:
         abilities:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonAbilityDetail'
+            $ref: '#/components/schemas/PokemonAbility'
           readOnly: true
         past_abilities:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonPastAbilityDetail'
+            $ref: '#/components/schemas/PokemonPastAbility'
           readOnly: true
         forms:
           type: array
@@ -6747,7 +7061,7 @@ components:
         held_items:
           type: array
           items:
-            $ref: '#/components/schemas/_ItemHeldByPokemon'
+            $ref: '#/components/schemas/PokemonHeldItem'
           readOnly: true
         location_area_encounters:
           type: string
@@ -6755,17 +7069,17 @@ components:
         moves:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonMoveDetail'
+            $ref: '#/components/schemas/PokemonMove'
           readOnly: true
         species:
           $ref: '#/components/schemas/PokemonSpeciesSummary'
         sprites:
           allOf:
-          - $ref: '#/components/schemas/_PokemonSpritesDetail'
+          - $ref: '#/components/schemas/PokemonSprites'
           readOnly: true
         cries:
           allOf:
-          - $ref: '#/components/schemas/_PokemonCriesDetail'
+          - $ref: '#/components/schemas/PokemonCries'
           readOnly: true
         stats:
           type: array
@@ -6775,17 +7089,17 @@ components:
         past_stats:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonPastStatDetail'
+            $ref: '#/components/schemas/PokemonPastStat'
           readOnly: true
         types:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonTypeDetail'
+            $ref: '#/components/schemas/PokemonType'
           readOnly: true
         past_types:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonPastTypeDetail'
+            $ref: '#/components/schemas/PokemonPastType'
           readOnly: true
       required:
       - abilities
@@ -6814,6 +7128,16 @@ components:
       required:
       - entry_number
       - pokedex
+    PokemonDexNumber:
+      type: object
+      properties:
+        entry_number:
+          type: integer
+        pokemon_species:
+          $ref: '#/components/schemas/PokemonSpeciesSummary'
+      required:
+      - entry_number
+      - pokemon_species
     PokemonEncounterDetailResponse:
       type: object
       properties:
@@ -7014,22 +7338,22 @@ components:
         form_names:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonFormNameDetail'
+            $ref: '#/components/schemas/PokemonFormName'
           readOnly: true
         names:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonFormNameDetail'
+            $ref: '#/components/schemas/PokemonFormName'
           readOnly: true
         types:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonFormTypeDetail'
+            $ref: '#/components/schemas/PokemonFormType'
           readOnly: true
         trigger_conditions:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonFormTriggerConditionDetail'
+            $ref: '#/components/schemas/PokemonFormTriggerCondition'
           readOnly: true
       required:
       - form_name
@@ -7042,6 +7366,17 @@ components:
       - trigger_conditions
       - types
       - version_group
+    PokemonFormName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
     PokemonFormSprites:
       type: object
       properties:
@@ -7061,6 +7396,28 @@ components:
       required:
       - name
       - url
+    PokemonFormTriggerCondition:
+      type: object
+      properties:
+        trigger:
+          type: string
+        base_form:
+          $ref: '#/components/schemas/PokemonFormSummary'
+      required:
+      - base_form
+      - trigger
+    PokemonFormType:
+      type: object
+      properties:
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        type:
+          $ref: '#/components/schemas/TypeSummary'
+      required:
+      - slot
+      - type
     PokemonGameIndex:
       type: object
       properties:
@@ -7121,6 +7478,102 @@ components:
       required:
       - name
       - url
+    PokemonHeldItem:
+      type: object
+      properties:
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+        version_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonHeldItemVersion'
+      required:
+      - pokemon
+      - version_details
+    PokemonHeldItemVersion:
+      type: object
+      properties:
+        rarity:
+          type: integer
+        version:
+          $ref: '#/components/schemas/VersionSummary'
+      required:
+      - rarity
+      - version
+    PokemonMove:
+      type: object
+      properties:
+        move:
+          $ref: '#/components/schemas/MoveSummary'
+        version_group_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonMoveVersionGroup'
+      required:
+      - move
+      - version_group_details
+    PokemonMoveVersionGroup:
+      type: object
+      properties:
+        level_learned_at:
+          type: integer
+        move_learn_method:
+          $ref: '#/components/schemas/MoveLearnMethodSummary'
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+        order:
+          type: integer
+      required:
+      - level_learned_at
+      - move_learn_method
+      - version_group
+    PokemonPastAbility:
+      type: object
+      properties:
+        abilities:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonAbilityPast'
+        generation:
+          $ref: '#/components/schemas/GenerationSummary'
+      required:
+      - abilities
+      - generation
+    PokemonPastStat:
+      type: object
+      properties:
+        generation:
+          $ref: '#/components/schemas/GenerationSummary'
+        stats:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonStat'
+      required:
+      - generation
+      - stats
+    PokemonPastType:
+      type: object
+      properties:
+        generation:
+          $ref: '#/components/schemas/GenerationSummary'
+        types:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypePokemon'
+      required:
+      - generation
+      - types
+    PokemonShapeAwesomeName:
+      type: object
+      properties:
+        awesome_name:
+          type: string
+          maxLength: 30
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - awesome_name
+      - language
     PokemonShapeDetail:
       type: object
       properties:
@@ -7133,12 +7586,12 @@ components:
         awesome_names:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonShapeAwesomeNameDetail'
+            $ref: '#/components/schemas/PokemonShapeAwesomeName'
           readOnly: true
         names:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonShapeNameDetail'
+            $ref: '#/components/schemas/PokemonShapeName'
           readOnly: true
         pokemon_species:
           type: array
@@ -7151,6 +7604,17 @@ components:
       - name
       - names
       - pokemon_species
+    PokemonShapeName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
     PokemonShapeSummary:
       type: object
       properties:
@@ -7250,12 +7714,12 @@ components:
         names:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonSpeciesNameDetail'
+            $ref: '#/components/schemas/PokemonSpeciesName'
           readOnly: true
         pal_park_encounters:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonSpeciesPalParkEncounterDetail'
+            $ref: '#/components/schemas/PokemonSpeciesPalParkEncounter'
           readOnly: true
         form_descriptions:
           type: array
@@ -7270,12 +7734,12 @@ components:
         genera:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonSpeciesGenusDetail'
+            $ref: '#/components/schemas/PokemonSpeciesGenus'
           readOnly: true
         varieties:
           type: array
           items:
-            $ref: '#/components/schemas/_PokemonSpeciesVarietyDetail'
+            $ref: '#/components/schemas/PokemonSpeciesVariety'
           readOnly: true
       required:
       - color
@@ -7308,6 +7772,46 @@ components:
       - flavor_text
       - language
       - version
+    PokemonSpeciesGenus:
+      type: object
+      properties:
+        genus:
+          type: string
+          maxLength: 30
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - genus
+      - language
+    PokemonSpeciesName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
+    PokemonSpeciesPalParkEncounter:
+      type: object
+      properties:
+        base_score:
+          type:
+          - integer
+          - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
+        rate:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        area:
+          $ref: '#/components/schemas/PalParkAreaSummary'
+      required:
+      - area
+      - rate
     PokemonSpeciesSummary:
       type: object
       properties:
@@ -7321,6 +7825,25 @@ components:
       required:
       - name
       - url
+    PokemonSpeciesVariety:
+      type: object
+      properties:
+        is_default:
+          type: boolean
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+      required:
+      - is_default
+      - pokemon
+    PokemonSprites:
+      type: object
+      properties:
+        front_default:
+          type:
+          - string
+          - 'null'
+      required:
+      - front_default
     PokemonStat:
       type: object
       properties:
@@ -7351,6 +7874,18 @@ components:
       required:
       - name
       - url
+    PokemonType:
+      type: object
+      properties:
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        type:
+          $ref: '#/components/schemas/TypeSummary'
+      required:
+      - slot
+      - type
     RegionDetail:
       type: object
       properties:
@@ -7417,6 +7952,34 @@ components:
       required:
       - name
       - url
+    StatAffectingMoves:
+      type: object
+      properties:
+        increase:
+          type: array
+          items:
+            $ref: '#/components/schemas/MoveStatChange'
+        decrease:
+          type: array
+          items:
+            $ref: '#/components/schemas/MoveStatChange'
+      required:
+      - decrease
+      - increase
+    StatAffectingNatures:
+      type: object
+      properties:
+        increase:
+          type: array
+          items:
+            $ref: '#/components/schemas/NatureSummary'
+        decrease:
+          type: array
+          items:
+            $ref: '#/components/schemas/NatureSummary'
+      required:
+      - decrease
+      - increase
     StatDetail:
       type: object
       properties:
@@ -7434,11 +7997,11 @@ components:
           type: boolean
         affecting_moves:
           allOf:
-          - $ref: '#/components/schemas/_StatAffectingMoves'
+          - $ref: '#/components/schemas/StatAffectingMoves'
           readOnly: true
         affecting_natures:
           allOf:
-          - $ref: '#/components/schemas/_StatAffectingNatures'
+          - $ref: '#/components/schemas/StatAffectingNatures'
           readOnly: true
         affecting_items:
           type: array
@@ -7548,12 +8111,12 @@ components:
           maxLength: 200
         damage_relations:
           allOf:
-          - $ref: '#/components/schemas/_TypeRelationshipsDetail'
+          - $ref: '#/components/schemas/TypeRelationships'
           readOnly: true
         past_damage_relations:
           type: array
           items:
-            $ref: '#/components/schemas/_TypePastRelationshipsDetail'
+            $ref: '#/components/schemas/TypePastRelationships'
           readOnly: true
         game_indices:
           type: array
@@ -7572,7 +8135,7 @@ components:
         pokemon:
           type: array
           items:
-            $ref: '#/components/schemas/_TypePokemonDetail'
+            $ref: '#/components/schemas/TypePokemon'
           readOnly: true
         moves:
           type: array
@@ -7618,6 +8181,62 @@ components:
       required:
       - language
       - name
+    TypePastRelationships:
+      type: object
+      properties:
+        generation:
+          $ref: '#/components/schemas/GenerationSummary'
+        damage_relations:
+          $ref: '#/components/schemas/TypeRelationships'
+      required:
+      - damage_relations
+      - generation
+    TypePokemon:
+      type: object
+      properties:
+        slot:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+      required:
+      - pokemon
+      - slot
+    TypeRelationships:
+      type: object
+      properties:
+        no_damage_to:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+        half_damage_to:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+        double_damage_to:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+        no_damage_from:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+        half_damage_from:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+        double_damage_from:
+          type: array
+          items:
+            $ref: '#/components/schemas/TypeSummary'
+      required:
+      - double_damage_from
+      - double_damage_to
+      - half_damage_from
+      - half_damage_to
+      - no_damage_from
+      - no_damage_to
     TypeSprite:
       type: object
       properties:
@@ -7744,642 +8363,6 @@ components:
       required:
       - name
       - url
-    _AbilityPokemonDetail:
-      type: object
-      properties:
-        is_hidden:
-          type: boolean
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-      required:
-      - pokemon
-      - slot
-    _BerryFlavorDetailMap:
-      type: object
-      properties:
-        potency:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        flavor:
-          $ref: '#/components/schemas/BerryFlavorSummary'
-      required:
-      - flavor
-      - potency
-    _BerryFlavorMapDetail:
-      type: object
-      properties:
-        potency:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        berry:
-          $ref: '#/components/schemas/BerrySummary'
-      required:
-      - berry
-      - potency
-    _EvolutionChainDetail:
-      type: object
-      properties:
-        is_baby:
-          type: boolean
-        species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
-        evolution_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/PokemonEvolution'
-        evolves_to:
-          type: array
-          items:
-            type: object
-            additionalProperties: {}
-      required:
-      - evolution_details
-      - evolves_to
-      - is_baby
-      - species
-    _GenderPokemonSpecies:
-      type: object
-      properties:
-        rate:
-          type: integer
-        pokemon_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
-      required:
-      - pokemon_species
-      - rate
-    _ItemHeldByPokemon:
-      type: object
-      properties:
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-        version_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/_ItemHeldByPokemonVersionDetail'
-      required:
-      - pokemon
-      - version_details
-    _ItemHeldByPokemonVersionDetail:
-      type: object
-      properties:
-        rarity:
-          type: integer
-        version:
-          $ref: '#/components/schemas/VersionSummary'
-      required:
-      - rarity
-      - version
-    _ItemMachineDetail:
-      type: object
-      properties:
-        machine:
-          $ref: '#/components/schemas/MachineSummary'
-        version_group:
-          $ref: '#/components/schemas/VersionGroupSummary'
-      required:
-      - machine
-      - version_group
-    _ItemSpritesDetail:
-      type: object
-      properties:
-        default:
-          type:
-          - string
-          - 'null'
-      required:
-      - default
-    _LocationAreaEncounterDetail:
-      type: object
-      properties:
-        min_level:
-          type: integer
-        max_level:
-          type: integer
-        chance:
-          type: integer
-          default: 0
-        method:
-          $ref: '#/components/schemas/EncounterMethodSummary'
-        condition_values:
-          type: array
-          items:
-            $ref: '#/components/schemas/EncounterConditionValueSummary'
-          readOnly: true
-        pokemon_details:
-          oneOf:
-          - $ref: '#/components/schemas/EncounterPokemonDetail'
-          - type: 'null'
-          readOnly: true
-      required:
-      - condition_values
-      - max_level
-      - min_level
-      - pokemon_details
-    _LocationAreaEncounterRate:
-      type: object
-      properties:
-        encounter_method:
-          $ref: '#/components/schemas/EncounterMethodSummary'
-        version_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/_LocationAreaEncounterVersionDetail'
-      required:
-      - encounter_method
-      - version_details
-    _LocationAreaEncounterVersionDetail:
-      type: object
-      properties:
-        rate:
-          type: integer
-        version:
-          $ref: '#/components/schemas/VersionSummary'
-      required:
-      - rate
-      - version
-    _LocationAreaPokemonEncounter:
-      type: object
-      properties:
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-        version_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/_LocationAreaPokemonEncounterVersionDetail'
-      required:
-      - pokemon
-      - version_details
-    _LocationAreaPokemonEncounterVersionDetail:
-      type: object
-      properties:
-        version:
-          $ref: '#/components/schemas/VersionSummary'
-        max_chance:
-          type: integer
-        encounter_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/_LocationAreaEncounterDetail'
-      required:
-      - encounter_details
-      - max_chance
-      - version
-    _MoveComboUsageDetail:
-      type: object
-      properties:
-        use_before:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/MoveSummary'
-        use_after:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/MoveSummary'
-      required:
-      - use_after
-      - use_before
-    _MoveCombosDetail:
-      type: object
-      properties:
-        normal:
-          $ref: '#/components/schemas/_MoveComboUsageDetail'
-        super:
-          $ref: '#/components/schemas/_MoveComboUsageDetail'
-      required:
-      - normal
-      - super
-    _MoveMetaStatChangeDetail:
-      type: object
-      properties:
-        change:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        stat:
-          $ref: '#/components/schemas/StatSummary'
-      required:
-      - change
-      - stat
-    _MoveStatChangeDetail:
-      type: object
-      properties:
-        change:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        move:
-          $ref: '#/components/schemas/MoveSummary'
-      required:
-      - change
-      - move
-    _NaturePokeathlonStatAffect:
-      type: object
-      properties:
-        max_change:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        nature:
-          $ref: '#/components/schemas/NatureSummary'
-      required:
-      - max_change
-      - nature
-    _NaturePokeathlonStatDetail:
-      type: object
-      properties:
-        max_change:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        pokeathlon_stat:
-          $ref: '#/components/schemas/PokeathlonStatSummary'
-      required:
-      - max_change
-      - pokeathlon_stat
-    _PalParkEncounterDetail:
-      type: object
-      properties:
-        base_score:
-          type:
-          - integer
-          - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
-        rate:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        pokemon_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
-      required:
-      - pokemon_species
-      - rate
-    _PokeathlonStatAffectingNatures:
-      type: object
-      properties:
-        increase:
-          type: array
-          items:
-            $ref: '#/components/schemas/_NaturePokeathlonStatAffect'
-        decrease:
-          type: array
-          items:
-            $ref: '#/components/schemas/_NaturePokeathlonStatAffect'
-      required:
-      - decrease
-      - increase
-    _PokemonAbilityDetail:
-      type: object
-      properties:
-        is_hidden:
-          type: boolean
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        ability:
-          $ref: '#/components/schemas/AbilitySummary'
-      required:
-      - ability
-      - slot
-    _PokemonAbilityPastDetail:
-      type: object
-      properties:
-        is_hidden:
-          type: boolean
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        ability:
-          $ref: '#/components/schemas/AbilitySummary'
-      required:
-      - ability
-      - slot
-    _PokemonCriesDetail:
-      type: object
-      properties:
-        latest:
-          type:
-          - string
-          - 'null'
-        legacy:
-          type:
-          - string
-          - 'null'
-      required:
-      - latest
-      - legacy
-    _PokemonDexNumberDetail:
-      type: object
-      properties:
-        entry_number:
-          type: integer
-        pokemon_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
-      required:
-      - entry_number
-      - pokemon_species
-    _PokemonFormNameDetail:
-      type: object
-      properties:
-        name:
-          type: string
-          maxLength: 200
-        language:
-          $ref: '#/components/schemas/LanguageSummary'
-      required:
-      - language
-      - name
-    _PokemonFormTriggerConditionDetail:
-      type: object
-      properties:
-        trigger:
-          type: string
-        base_form:
-          $ref: '#/components/schemas/PokemonFormSummary'
-      required:
-      - base_form
-      - trigger
-    _PokemonFormTypeDetail:
-      type: object
-      properties:
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        type:
-          $ref: '#/components/schemas/TypeSummary'
-      required:
-      - slot
-      - type
-    _PokemonMoveDetail:
-      type: object
-      properties:
-        move:
-          $ref: '#/components/schemas/MoveSummary'
-        version_group_details:
-          type: array
-          items:
-            $ref: '#/components/schemas/_PokemonMoveVersionGroupDetail'
-      required:
-      - move
-      - version_group_details
-    _PokemonMoveVersionGroupDetail:
-      type: object
-      properties:
-        level_learned_at:
-          type: integer
-        move_learn_method:
-          $ref: '#/components/schemas/MoveLearnMethodSummary'
-        version_group:
-          $ref: '#/components/schemas/VersionGroupSummary'
-        order:
-          type: integer
-      required:
-      - level_learned_at
-      - move_learn_method
-      - version_group
-    _PokemonPastAbilityDetail:
-      type: object
-      properties:
-        abilities:
-          type: array
-          items:
-            $ref: '#/components/schemas/_PokemonAbilityPastDetail'
-        generation:
-          $ref: '#/components/schemas/GenerationSummary'
-      required:
-      - abilities
-      - generation
-    _PokemonPastStatDetail:
-      type: object
-      properties:
-        generation:
-          $ref: '#/components/schemas/GenerationSummary'
-        stats:
-          type: array
-          items:
-            $ref: '#/components/schemas/_PokemonStatDetail'
-      required:
-      - generation
-      - stats
-    _PokemonPastTypeDetail:
-      type: object
-      properties:
-        generation:
-          $ref: '#/components/schemas/GenerationSummary'
-        types:
-          type: array
-          items:
-            $ref: '#/components/schemas/_TypePokemonDetail'
-      required:
-      - generation
-      - types
-    _PokemonShapeAwesomeNameDetail:
-      type: object
-      properties:
-        awesome_name:
-          type: string
-          maxLength: 30
-        language:
-          $ref: '#/components/schemas/LanguageSummary'
-      required:
-      - awesome_name
-      - language
-    _PokemonShapeNameDetail:
-      type: object
-      properties:
-        name:
-          type: string
-          maxLength: 200
-        language:
-          $ref: '#/components/schemas/LanguageSummary'
-      required:
-      - language
-      - name
-    _PokemonSpeciesGenusDetail:
-      type: object
-      properties:
-        genus:
-          type: string
-          maxLength: 30
-        language:
-          $ref: '#/components/schemas/LanguageSummary'
-      required:
-      - genus
-      - language
-    _PokemonSpeciesNameDetail:
-      type: object
-      properties:
-        name:
-          type: string
-          maxLength: 200
-        language:
-          $ref: '#/components/schemas/LanguageSummary'
-      required:
-      - language
-      - name
-    _PokemonSpeciesPalParkEncounterDetail:
-      type: object
-      properties:
-        base_score:
-          type:
-          - integer
-          - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
-        rate:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        area:
-          $ref: '#/components/schemas/PalParkAreaSummary'
-      required:
-      - area
-      - rate
-    _PokemonSpeciesVarietyDetail:
-      type: object
-      properties:
-        is_default:
-          type: boolean
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-      required:
-      - is_default
-      - pokemon
-    _PokemonSpritesDetail:
-      type: object
-      properties:
-        front_default:
-          type:
-          - string
-          - 'null'
-      required:
-      - front_default
-    _PokemonStatDetail:
-      type: object
-      properties:
-        base_stat:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        effort:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        stat:
-          $ref: '#/components/schemas/StatSummary'
-      required:
-      - base_stat
-      - effort
-      - stat
-    _PokemonTypeDetail:
-      type: object
-      properties:
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        type:
-          $ref: '#/components/schemas/TypeSummary'
-      required:
-      - slot
-      - type
-    _StatAffectingMoves:
-      type: object
-      properties:
-        increase:
-          type: array
-          items:
-            $ref: '#/components/schemas/_MoveStatChangeDetail'
-        decrease:
-          type: array
-          items:
-            $ref: '#/components/schemas/_MoveStatChangeDetail'
-      required:
-      - decrease
-      - increase
-    _StatAffectingNatures:
-      type: object
-      properties:
-        increase:
-          type: array
-          items:
-            $ref: '#/components/schemas/NatureSummary'
-        decrease:
-          type: array
-          items:
-            $ref: '#/components/schemas/NatureSummary'
-      required:
-      - decrease
-      - increase
-    _TypePastRelationshipsDetail:
-      type: object
-      properties:
-        generation:
-          $ref: '#/components/schemas/GenerationSummary'
-        damage_relations:
-          $ref: '#/components/schemas/_TypeRelationshipsDetail'
-      required:
-      - damage_relations
-      - generation
-    _TypePokemonDetail:
-      type: object
-      properties:
-        slot:
-          type: integer
-          maximum: 2147483647
-          minimum: -2147483648
-        pokemon:
-          $ref: '#/components/schemas/PokemonSummary'
-      required:
-      - pokemon
-      - slot
-    _TypeRelationshipsDetail:
-      type: object
-      properties:
-        no_damage_to:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-        half_damage_to:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-        double_damage_to:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-        no_damage_from:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-        half_damage_from:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-        double_damage_from:
-          type: array
-          items:
-            $ref: '#/components/schemas/TypeSummary'
-      required:
-      - double_damage_from
-      - double_damage_to
-      - half_damage_from
-      - half_damage_to
-      - no_damage_from
-      - no_damage_to
 servers:
 - url: https://pokeapi.co
 tags:

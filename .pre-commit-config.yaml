@@ -50,6 +50,13 @@ repos:
         types_or: [python, pyi]
         pass_filenames: false
 
+      - id: generate-openapi
+        name: Generate OpenAPI Schema
+        entry: uv run manage.py spectacular --file openapi.yml --settings=config.docker_compose
+        language: system
+        files: ^(pokemon_v2/|config/|openapi\.yml)
+        pass_filenames: false
+
       - id: build-and-test
         name: Build and Test
         entry: >-

@@ -5,6 +5,7 @@ import re
 import subprocess
 from typing import TYPE_CHECKING, Any, cast
 
+from django.core.exceptions import FieldError
 from django.db.models import Q, QuerySet
 from django.http import Http404
 from django.shortcuts import get_object_or_404
@@ -34,6 +35,7 @@ __all__: tuple[str, ...] = (
     "CharacteristicResource",
     "ContestEffectResource",
     "ContestTypeResource",
+    "CurrencyResource",
     "EggGroupResource",
     "EncounterConditionResource",
     "EncounterConditionValueResource",
@@ -142,7 +144,10 @@ class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
             resp = get_object_or_404(queryset, pk=lookup_id)
 
         elif self.NAME_PATTERN.match(lookup):
-            resp = get_object_or_404(queryset, name__iexact=lookup)
+            try:
+                resp = get_object_or_404(queryset, name__iexact=lookup)
+            except FieldError as err:
+                raise Http404 from err
 
         else:
             raise Http404

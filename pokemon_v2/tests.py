@@ -4324,6 +4324,10 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["height"], pokemon.height)
         self.assertEqual(response.data["weight"], pokemon.weight)
         self.assertEqual(response.data["base_experience"], pokemon.base_experience)
+        self.assertEqual(
+            response.data["location_area_encounters"],
+            "{}{}/pokemon/{}/encounters".format(TEST_HOST, API_V2, pokemon.pk),
+        )
         # species params
         self.assertEqual(response.data["species"]["name"], pokemon_species.name)
         self.assertEqual(

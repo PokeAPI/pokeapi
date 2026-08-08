@@ -6,9 +6,9 @@ import itertools
 from typing import TYPE_CHECKING, Any, ClassVar, cast
 
 from django.db.models import Q
-from django.urls import reverse
 from drf_spectacular.utils import extend_schema_field  # pyright: ignore[reportUnknownVariableType]
 from rest_framework import serializers
+from rest_framework.reverse import reverse
 
 from .models import *  # noqa: F403
 
@@ -45,6 +45,9 @@ __all__: tuple[str, ...] = (
     "ContestTypeDetailSerializer",
     "ContestTypeNameSerializer",
     "ContestTypeSummarySerializer",
+    "CurrencyDetailSerializer",
+    "CurrencyNameSerializer",
+    "CurrencySummarySerializer",
     "EggGroupDetailSerializer",
     "EggGroupNameSerializer",
     "EggGroupSummarySerializer",
@@ -1051,7 +1054,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer[Encounter]):
         condition_values = EncounterConditionValueMap.objects.filter(encounter=obj)
         data = cast(
             "ReturnList[ReturnDict[str, Any]]",
-            EncounterConditionValueMapSerializer(condition_values, context=self.context).data,
+            EncounterConditionValueMapSerializer(condition_values, many=True, context=self.context).data,
         )
         return [item["condition_value"] for item in data]
 
@@ -1637,7 +1640,7 @@ class _ItemHeldByPokemonSerializer(serializers.Serializer[Any]):
     version_details = _ItemHeldByPokemonVersionDetailSerializer(many=True)
 
 
-class _MoveMachineDetailSerializer(serializers.ModelSerializer[Machine]):
+class _ItemMachineDetailSerializer(serializers.ModelSerializer[Machine]):
     machine = MachineSummarySerializer(source="*")
     version_group = VersionGroupSummarySerializer()
 
@@ -1680,12 +1683,12 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
             "machines",
         )
 
-    @extend_schema_field(_MoveMachineDetailSerializer(many=True))
+    @extend_schema_field(_ItemMachineDetailSerializer(many=True))
     def get_item_machines(self, obj: Item) -> list[ReturnDict[str, Any]]:
         machine_objects = Machine.objects.filter(item=obj).select_related("version_group")
         return cast(
             "list[ReturnDict[str, Any]]",
-            _MoveMachineDetailSerializer(machine_objects, many=True, context=self.context).data,
+            _ItemMachineDetailSerializer(machine_objects, many=True, context=self.context).data,
         )
 
     @extend_schema_field(_ItemSpritesDetailSerializer)
@@ -2431,15 +2434,6 @@ class _MoveMetaStatChangeDetailSerializer(serializers.ModelSerializer[MoveMetaSt
         fields = ("change", "stat")
 
 
-class _ItemMachineDetailSerializer(serializers.ModelSerializer[Machine]):
-    item = ItemSummarySerializer()
-    version_group = VersionGroupSummarySerializer()
-
-    class Meta:
-        model = Machine
-        fields = ("item", "version_group")
-
-
 class MoveDetailSerializer(serializers.ModelSerializer[Move]):
     generation = GenerationSummarySerializer()
     type = TypeSummarySerializer()
@@ -2702,8 +2696,6 @@ class _PokemonTypeDetailSerializer(serializers.ModelSerializer[PokemonType]):
 
 class _PokemonFormTriggerConditionDetailSerializer(serializers.Serializer[Any]):
     trigger = serializers.CharField()
-    name = serializers.CharField()
-    url = serializers.CharField()
     base_form = PokemonFormSummarySerializer()
 
 
@@ -2799,7 +2791,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
     @extend_schema_field(_PokemonFormTriggerConditionDetailSerializer(many=True))
     def get_pokemon_form_triggers_conditions(self, obj: PokemonForm) -> list[dict[str, Any]]:
         conditions = PokemonFormCondition.objects.filter(pokemon_form=obj).select_related(
-            "form_trigger", "item", "ability", "move"
+            "form_trigger", "item", "ability", "move", "base_form"
         )
         conditions_data = cast(
             "ReturnList[ReturnDict[str, Any]]",
@@ -2811,10 +2803,10 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             if trigger_value := condition.get("trigger"):
                 trigger = {"trigger": trigger_value}
                 for key, value in condition.items():
-                    if key != "trigger" and value:
+                    if key not in ("trigger", "base_form") and value:
                         trigger.update(value)
                         break
-                if (base_form := condition.get("base_form")):
+                if base_form := condition.get("base_form"):
                     trigger["base_form"] = base_form
                 triggers.append(trigger)
 
@@ -3296,7 +3288,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
 
     @extend_schema_field(serializers.CharField)
     def get_encounters(self, obj: Pokemon) -> str:
-        return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk})
+        return reverse("pokemon_encounters", kwargs={"pokemon_id": obj.pk}, request=self.context.get("request"))
 
 
 #################################
@@ -3636,9 +3628,17 @@ class PokeathlonStatNameSerializer(serializers.HyperlinkedModelSerializer[Pokeat
         fields = ("name", "language")
 
 
+class _NaturePokeathlonStatAffectSerializer(serializers.ModelSerializer[NaturePokeathlonStat]):
+    nature = NatureSummarySerializer()
+
+    class Meta:
+        model = NaturePokeathlonStat
+        fields = ("max_change", "nature")
+
+
 class _PokeathlonStatAffectingNaturesSerializer(serializers.Serializer[Any]):
-    increase = _NaturePokeathlonStatDetailSerializer(many=True)
-    decrease = _NaturePokeathlonStatDetailSerializer(many=True)
+    increase = _NaturePokeathlonStatAffectSerializer(many=True)
+    decrease = _NaturePokeathlonStatAffectSerializer(many=True)
 
 
 class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer[PokeathlonStat]):
@@ -3657,11 +3657,11 @@ class PokeathlonStatDetailSerializer(serializers.HyperlinkedModelSerializer[Poke
         return {
             "increase": cast(
                 "ReturnList[ReturnDict[str, Any]]",
-                _NaturePokeathlonStatDetailSerializer(increases, many=True, context=self.context).data,
+                _NaturePokeathlonStatAffectSerializer(increases, many=True, context=self.context).data,
             ),
             "decrease": cast(
                 "ReturnList[ReturnDict[str, Any]]",
-                _NaturePokeathlonStatDetailSerializer(decreases, many=True, context=self.context).data,
+                _NaturePokeathlonStatAffectSerializer(decreases, many=True, context=self.context).data,
             ),
         }
 

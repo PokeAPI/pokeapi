@@ -1856,19 +1856,19 @@ def _build_pokemons():
             "front_shiny": try_form_image_names(poke_sprites + "shiny/", info, "png"),
             "back_default": try_form_image_names(poke_sprites + "back/", info, "png"),
             "back_shiny": try_form_image_names(poke_sprites + "back/shiny/", info, "png"),
-            "front_female": try_image_names(poke_sprites + "female/", info, "png"),
-            "front_shiny_female": try_image_names(poke_sprites + "shiny/female/", info, "png"),
-            "back_female": try_image_names(poke_sprites + "back/female/", info, "png"),
-            "back_shiny_female": try_image_names(poke_sprites + "back/shiny/female/", info, "png"),
+            "front_female": try_form_image_names(poke_sprites + "female/", info, "png"),
+            "front_shiny_female": try_form_image_names(poke_sprites + "shiny/female/", info, "png"),
+            "back_female": try_form_image_names(poke_sprites + "back/female/", info, "png"),
+            "back_shiny_female": try_form_image_names(poke_sprites + "back/shiny/female/", info, "png"),
             "versions": {
                 "generation-viii": {
                     "brilliant-diamond-shining-pearl": {
-                        "front_default": try_image_names(
+                        "front_default": try_form_image_names(
                             poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/",
                             info,
                             "png",
                         ),
-                        "front_female": try_image_names(
+                        "front_female": try_form_image_names(
                             poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/female/",
                             info,
                             "png",
@@ -1877,12 +1877,12 @@ def _build_pokemons():
                 },
                 "generation-ix": {
                     "scarlet-violet": {
-                        "front_default": try_image_names(
+                        "front_default": try_form_image_names(
                             poke_sprites + "versions/generation-ix/scarlet-violet/",
                             info,
                             "png",
                         ),
-                        "front_female": try_image_names(
+                        "front_female": try_form_image_names(
                             poke_sprites + "versions/generation-ix/scarlet-violet/female/",
                             info,
                             "png",

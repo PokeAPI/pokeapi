@@ -38,4 +38,4 @@ preview = true
 "data/v2/build.py" = ["ANN", "ERA001", "F403", "F405"]
 "data/v2/__init__.py" = ["F403", "F405"]
 # Django migration generated code
-"pokemon_v2/migrations/*.py" = ["RUF012", "ERA001", "E501", "N"]
+"pokemon_v2/migrations/*.py" = ["RUF012", "ERA001"]

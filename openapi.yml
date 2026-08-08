@@ -3528,6 +3528,48 @@ components:
           items:
             $ref: '#/components/schemas/CurrencyName'
           readOnly: true
+      required:
+      - id
+      - name
+      - names
+    CurrencyName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
+    CurrencySummary:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        url:
+          type: string
+          format: uri
+          readOnly: true
+      required:
+      - name
+      - url
+    EggGroupDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 200
+        names:
+          type: array
+          items:
+            $ref: '#/components/schemas/EggGroupName'
+          readOnly: true
         pokemon_species:
           type: array
           items:
@@ -4155,7 +4197,7 @@ components:
         machines:
           type: array
           items:
-            $ref: '#/components/schemas/_MoveMachineDetail'
+            $ref: '#/components/schemas/_ItemMachineDetail'
           readOnly: true
       required:
       - attributes
@@ -7796,12 +7838,12 @@ components:
     _ItemMachineDetail:
       type: object
       properties:
-        item:
-          $ref: '#/components/schemas/ItemSummary'
+        machine:
+          $ref: '#/components/schemas/MachineSummary'
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
       required:
-      - item
+      - machine
       - version_group
     _ItemSpritesDetail:
       type: object
@@ -7916,16 +7958,6 @@ components:
       required:
       - normal
       - super
-    _MoveMachineDetail:
-      type: object
-      properties:
-        machine:
-          $ref: '#/components/schemas/MachineSummary'
-        version_group:
-          $ref: '#/components/schemas/VersionGroupSummary'
-      required:
-      - machine
-      - version_group
     _MoveMetaStatChangeDetail:
       type: object
       properties:
@@ -7950,6 +7982,18 @@ components:
       required:
       - change
       - move
+    _NaturePokeathlonStatAffect:
+      type: object
+      properties:
+        max_change:
+          type: integer
+          maximum: 2147483647
+          minimum: -2147483648
+        nature:
+          $ref: '#/components/schemas/NatureSummary'
+      required:
+      - max_change
+      - nature
     _NaturePokeathlonStatDetail:
       type: object
       properties:
@@ -7986,11 +8030,11 @@ components:
         increase:
           type: array
           items:
-            $ref: '#/components/schemas/_NaturePokeathlonStatDetail'
+            $ref: '#/components/schemas/_NaturePokeathlonStatAffect'
         decrease:
           type: array
           items:
-            $ref: '#/components/schemas/_NaturePokeathlonStatDetail'
+            $ref: '#/components/schemas/_NaturePokeathlonStatAffect'
       required:
       - decrease
       - increase
@@ -8062,14 +8106,11 @@ components:
       properties:
         trigger:
           type: string
-        name:
-          type: string
-        url:
-          type: string
+        base_form:
+          $ref: '#/components/schemas/PokemonFormSummary'
       required:
-      - name
+      - base_form
       - trigger
-      - url
     _PokemonFormTypeDetail:
       type: object
       properties:

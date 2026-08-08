@@ -407,6 +407,7 @@ dependencies = [
     { name = "gunicorn" },
     { name = "legacy-cgi", marker = "python_full_version >= '3.13'" },
     { name = "psycopg", extra = ["binary"] },
+    { name = "typing-extensions" },
 ]
 
 [package.dev-dependencies]
@@ -430,6 +431,7 @@ requires-dist = [
     { name = "gunicorn", specifier = "==23.0.0" },
     { name = "legacy-cgi", marker = "python_full_version >= '3.13'", specifier = ">=2.6.4" },
     { name = "psycopg", extras = ["binary"], specifier = "==3.3.2" },
+    { name = "typing-extensions", specifier = ">=4.15.0" },
 ]
 
 [package.metadata.requires-dev]

@@ -595,8 +595,8 @@ def _build_types():
             "generation-ix": ["scarlet-violet"],
         }
         sprites = {}
-        for generation in game_map:
-            for game in game_map[generation]:
+        for generation, games in game_map.items():
+            for game in games:
                 if generation not in sprites:
                     sprites[generation] = {}
                 sprites[generation][game] = {
@@ -1833,11 +1833,11 @@ def _build_pokemons():
 
     build_generic((PokemonForm,), "pokemon_forms.csv", csv_record_to_objects)
 
-    def try_image_names(path, info, extension):
+    def try_form_image_names(path, info, extension):
         form_identifier = info[2]
         pokemon_id = info[3]
         pokemon = Pokemon.objects.get(pk=int(pokemon_id))
-        species_id = pokemon.pokemon_species_id
+        species_id = getattr(pokemon.pokemon_species, "pk", 0)
         is_default = int(info[5])
         if form_identifier:
             form_file_name = f"{species_id}-{form_identifier}.{extension}"
@@ -1852,10 +1852,10 @@ def _build_pokemons():
     def csv_record_to_objects(info):
         poke_sprites = "pokemon/"
         sprites = {
-            "front_default": try_image_names(poke_sprites, info, "png"),
-            "front_shiny": try_image_names(poke_sprites + "shiny/", info, "png"),
-            "back_default": try_image_names(poke_sprites + "back/", info, "png"),
-            "back_shiny": try_image_names(poke_sprites + "back/shiny/", info, "png"),
+            "front_default": try_form_image_names(poke_sprites, info, "png"),
+            "front_shiny": try_form_image_names(poke_sprites + "shiny/", info, "png"),
+            "back_default": try_form_image_names(poke_sprites + "back/", info, "png"),
+            "back_shiny": try_form_image_names(poke_sprites + "back/shiny/", info, "png"),
             "front_female": try_image_names(poke_sprites + "female/", info, "png"),
             "front_shiny_female": try_image_names(poke_sprites + "shiny/female/", info, "png"),
             "back_female": try_image_names(poke_sprites + "back/female/", info, "png"),

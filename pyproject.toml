@@ -15,6 +15,7 @@ dependencies = [
     "gunicorn==23.0.0",
     "legacy-cgi>=2.6.4 ; python_full_version >= '3.13'",
     "psycopg[binary]==3.3.2",
+    "typing-extensions>=4.15.0",
 ]
 
 [dependency-groups]

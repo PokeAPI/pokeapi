@@ -99,7 +99,7 @@ class CSVResourceNameValidationTestCase(TestCase):
                                 }
                             )
 
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001
                 violations.append(
                     {
                         "file": filename,

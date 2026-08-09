@@ -54,6 +54,17 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     > [!NOTE]
     > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
 
+- Lint, format, and typecheck your code changes:
+
+    ```sh
+    make lint-check   # or: uv run ruff check .
+    make format       # or: uv run ruff format .
+    make typecheck    # or: uv run ty check
+    ```
+
+> [!NOTE]
+> As of right now we are not strictly enforcing linting and typechecking, but we will be in the future. Please try to make sure your code passes these checks.
+
 - Set up the local development environment using the following command:
 
     ```sh

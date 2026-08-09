@@ -1,6 +1,7 @@
 # ruff: noqa: F405
 from __future__ import annotations
 
+import itertools
 import re
 import subprocess
 from typing import TYPE_CHECKING, Any, cast
@@ -202,7 +203,7 @@ class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewse
     )
 )
 class AbilityResource(PokeapiCommonViewset):
-    queryset = Ability.objects.all()
+    queryset = Ability.objects.select_related("generation")
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
@@ -956,7 +957,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
     ),
 )
 class PokemonResource(PokeapiCommonViewset):
-    queryset = Pokemon.objects.all()
+    queryset = Pokemon.objects.select_related("pokemon_species").prefetch_related("pokemonsprites", "pokemoncries")
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
 
@@ -1106,6 +1107,11 @@ class PokemonEncounterResponseSerializer(serializers.Serializer[dict[str, Any]])
     version_details = PokemonEncounterVersionDetailResponseSerializer(many=True)
 
 
+class PokemonLocationAreaEncounterSerializer(serializers.Serializer[Any]):
+    location_area = LocationAreaSummarySerializer()
+    version_details = LocationAreaPokemonEncounterVersionSerializer(many=True)
+
+
 @extend_schema(
     description="Handles Pokemon Encounters as a sub-resource.",
     summary="Get pokemon encounter",
@@ -1121,69 +1127,47 @@ class PokemonEncounterView(APIView):
         except Pokemon.DoesNotExist as e:
             raise Http404 from e
 
-        encounter_objects = Encounter.objects.filter(pokemon=pokemon)
+        encounters = (
+            Encounter.objects.filter(pokemon=pokemon)
+            .select_related(
+                "location_area",
+                "version",
+                "encounter_slot",
+                "encounter_slot__encounter_method",
+            )
+            .prefetch_related(
+                "encounterconditionvaluemap_set",
+                "encounterconditionvaluemap_set__encounter_condition_value",
+                "encounterpokemondetail_set",
+            )
+            .order_by("location_area_id", "version_id", "encounter_slot_id")
+        )
 
-        area_ids = encounter_objects.values_list("location_area", flat=True).distinct().order_by("location_area")
-
-        location_area_objects = LocationArea.objects.filter(pk__in=area_ids)
-        version_objects = Version.objects
-
-        encounters_list: list[dict[str, Any]] = []
-
-        for area_id in area_ids:
-            location_area = location_area_objects.get(pk=area_id)
-
-            area_encounters = encounter_objects.filter(location_area_id=area_id)
-
-            version_ids = area_encounters.values_list("version_id", flat=True).distinct().order_by("version_id")
-            version_details_list: list[dict[str, Any]] = []
-
-            for version_id in version_ids:
-                version = version_objects.get(pk=version_id)
-
-                version_encounters = area_encounters.filter(version_id=version_id).order_by("encounter_slot_id")
-
-                encounters_data = cast(
-                    "ReturnList[ReturnDict[str, Any]]",
-                    EncounterDetailSerializer(version_encounters, many=True, context=self.context).data,  # pyright: ignore[reportUnknownMemberType]
-                )
-
-                max_chance: int = 0
-                encounter_details_list: list[dict[str, Any]] = []
-
-                for encounter in encounters_data:
-                    slot = EncounterSlot.objects.get(pk=encounter["encounter_slot"])
-                    slot_data = cast("ReturnDict[str, Any]", EncounterSlotSerializer(slot, context=self.context).data)  # pyright: ignore[reportUnknownMemberType]
-
-                    del encounter["pokemon"]
-                    del encounter["encounter_slot"]
-                    del encounter["location_area"]
-                    del encounter["version"]
-                    encounter["chance"] = slot_data["chance"]
-                    max_chance += cast("int", slot_data["chance"])
-                    encounter["method"] = slot_data["encounter_method"]
-
-                    encounter_details_list.append(encounter)
-
-                version_details_list.append(
+        grouped_data: list[dict[str, Any]] = []
+        for location_area, area_group in itertools.groupby(encounters, key=lambda e: e.location_area):
+            version_details: list[dict[str, Any]] = []
+            for version, ver_group in itertools.groupby(area_group, key=lambda e: e.version):
+                encounter_list = list(ver_group)
+                max_chance = sum(e.encounter_slot.rarity for e in encounter_list if e.encounter_slot)
+                version_details.append(
                     {
-                        "version": cast("dict[str, Any]", VersionSummarySerializer(version, context=self.context).data),  # pyright: ignore[reportUnknownMemberType]
+                        "version": version,
                         "max_chance": max_chance,
-                        "encounter_details": encounter_details_list,
+                        "encounter_details": encounter_list,
                     }
                 )
-
-            encounters_list.append(
+            grouped_data.append(
                 {
-                    "location_area": cast(
-                        "dict[str, Any]",
-                        LocationAreaSummarySerializer(location_area, context=self.context).data,  # pyright: ignore[reportUnknownMemberType]
-                    ),
-                    "version_details": version_details_list,
+                    "location_area": location_area,
+                    "version_details": version_details,
                 }
             )
 
-        return Response(encounters_list)
+        data = cast(
+            "ReturnList[ReturnDict[str, Any]]",
+            PokemonLocationAreaEncounterSerializer(grouped_data, many=True, context=self.context).data,  # pyright: ignore[reportUnknownMemberType]
+        )
+        return Response(data)
 
 
 class PokeapiMetaResponseSerializer(serializers.Serializer[dict[str, Any]]):

@@ -989,7 +989,7 @@ class LocationAreaEncounterDetailSerializer(serializers.Serializer[Any]):
 
     @extend_schema_field(EncounterConditionValueSummarySerializer(many=True))
     def get_encounter_conditions(self, obj: Encounter) -> list[ReturnDict[str, Any]]:
-        condition_maps = EncounterConditionValueMap.objects.filter(encounter=obj)
+        condition_maps = cast("Any", obj).encounterconditionvaluemap_set.all()
         return [
             cast(
                 "ReturnDict[str, Any]",
@@ -1000,7 +1000,8 @@ class LocationAreaEncounterDetailSerializer(serializers.Serializer[Any]):
 
     @extend_schema_field(EncounterPokemonDetailSerializer(allow_null=True))
     def get_encounter_pokemon_details(self, obj: Encounter) -> ReturnDict[str, Any] | None:
-        details = EncounterPokemonDetail.objects.filter(encounter=obj).first()
+        details_list = list(cast("Any", obj).encounterpokemondetail_set.all())
+        details = details_list[0] if details_list else None
         return cast(
             "ReturnDict[str, Any] | None",
             EncounterPokemonDetailSerializer(details, context=self.context).data if details else None,
@@ -1211,7 +1212,7 @@ class AbilityDetailSerializer(serializers.ModelSerializer[Ability]):
 
     @extend_schema_field(AbilityPokemonDetailSerializer(many=True))
     def get_ability_pokemon(self, obj: Ability) -> ReturnList[ReturnDict[str, Any]]:
-        pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj)
+        pokemon_ability_objects = PokemonAbility.objects.filter(ability=obj).select_related("pokemon")
         return cast(
             "ReturnList[ReturnDict[str, Any]]",
             AbilityPokemonDetailSerializer(pokemon_ability_objects, many=True, context=self.context).data,
@@ -2922,13 +2923,13 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
 
     @extend_schema_field(PokemonSpritesSerializer)
     def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None]:
-        sprites_object = PokemonSprites.objects.filter(pokemon_id=obj).first()
-        return sprites_object.sprites if sprites_object else {}
+        sprites_list = list(cast("Any", obj).pokemonsprites.all())
+        return sprites_list[0].sprites if sprites_list else {}
 
     @extend_schema_field(PokemonCriesSerializer)
     def get_pokemon_cries(self, obj: Pokemon) -> dict[str, str | None]:
-        cries_object = PokemonCries.objects.filter(pokemon_id=obj).first()
-        return cries_object.cries if cries_object else {}
+        cries_list = list(cast("Any", obj).pokemoncries.all())
+        return cries_list[0].cries if cries_list else {}
 
     @extend_schema_field(PokemonMoveSerializer(many=True))
     def get_pokemon_moves(self, obj: Pokemon) -> list[dict[str, Any]]:
@@ -2938,9 +2939,12 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             .order_by("move__id", "version_group_id")
         )
 
+        vg_cache: dict[int, Any] = {}
+        mlm_cache: dict[int, Any] = {}
+
         moves_grouped: dict[int, dict[str, Any]] = {}
         for pm in pokemon_moves:
-            if pm.move is None:
+            if pm.move is None or pm.version_group is None or pm.move_learn_method is None:
                 continue
 
             move_pk = pm.move.pk
@@ -2950,13 +2954,21 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
                     "version_group_details": [],
                 }
 
+            vg_pk = pm.version_group.pk
+            if vg_pk not in vg_cache:
+                vg_cache[vg_pk] = VersionGroupSummarySerializer(pm.version_group, context=self.context).data
+            version_group_data = vg_cache[vg_pk]
+
+            mlm_pk = pm.move_learn_method.pk
+            if mlm_pk not in mlm_cache:
+                mlm_cache[mlm_pk] = MoveLearnMethodSummarySerializer(pm.move_learn_method, context=self.context).data
+            move_learn_method_data = mlm_cache[mlm_pk]
+
             moves_grouped[move_pk]["version_group_details"].append(
                 {
                     "level_learned_at": pm.level,
-                    "version_group": VersionGroupSummarySerializer(pm.version_group, context=self.context).data,
-                    "move_learn_method": MoveLearnMethodSummarySerializer(
-                        pm.move_learn_method, context=self.context
-                    ).data,
+                    "version_group": version_group_data,
+                    "move_learn_method": move_learn_method_data,
                     "order": pm.order,
                 }
             )
@@ -2971,9 +2983,11 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             .order_by("item__id", "version_id")
         )
 
+        version_cache: dict[int, Any] = {}
+
         items_grouped: dict[int, dict[str, Any]] = {}
         for pi in pokemon_items:
-            if pi.item is None:
+            if pi.item is None or pi.version is None:
                 continue
 
             item_pk = pi.item.pk
@@ -2983,10 +2997,14 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
                     "version_details": [],
                 }
 
+            v_pk = pi.version.pk
+            if v_pk not in version_cache:
+                version_cache[v_pk] = VersionSummarySerializer(pi.version, context=self.context).data
+
             items_grouped[item_pk]["version_details"].append(
                 {
                     "rarity": pi.rarity,
-                    "version": VersionSummarySerializer(pi.version, context=self.context).data,
+                    "version": version_cache[v_pk],
                 }
             )
 

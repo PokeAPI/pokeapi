@@ -19,6 +19,9 @@ object_relationships:
   - name: TypeByPartyTypeId
     using:
       foreign_key_constraint_on: party_type_id
+  - name: baseformid
+    using:
+      foreign_key_constraint_on: base_form_id
   - name: evolutiontrigger
     using:
       foreign_key_constraint_on: evolution_trigger_id
@@ -34,18 +37,21 @@ object_relationships:
   - name: move
     using:
       foreign_key_constraint_on: known_move_id
+  - name: pokemon
+    using:
+      foreign_key_constraint_on: evolved_form_id
+  - name: versiongroup
+    using:
+      foreign_key_constraint_on: version_group_id
   - name: pokemonspecy
     using:
       foreign_key_constraint_on: evolved_species_id
-  - name: type
-    using:
-      foreign_key_constraint_on: known_move_type_id
   - name: region
     using:
       foreign_key_constraint_on: region_id
-  - name: baseformid
+  - name: type
     using:
-      foreign_key_constraint_on: base_form_id
+      foreign_key_constraint_on: known_move_type_id
   - name: usedmove
     using:
       foreign_key_constraint_on: used_move_id

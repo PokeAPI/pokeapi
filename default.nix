@@ -1,17 +1,10 @@
 with import <nixpkgs> { };
-pkgs.mkShell {
-  name = "onix-shellder";
-  venvDir = "./.venv";
-  buildInputs = [
-    python313Packages.python
-    python313Packages.venvShellHook
 
-    # Required dependencies
+mkShell {
+  packages = [
+    uv
 
-    # Python
-    python313Packages.black
-
-    # misc
+    # non-Python system libraries your project needs
     taglib
     openssl
     git
@@ -21,16 +14,8 @@ pkgs.mkShell {
     zlib
   ];
 
-  # Runs after creating the virtual environment
-  postVenvCreation = ''
+  shellHook = ''
     unset SOURCE_DATE_EPOCH
-    pip install -r requirements.txt
+    uv sync --locked --all-extras --dev
   '';
-
-  postShellHook = ''
-    unset SOURCE_DATE_EPOCH
-    # use z shell, run exit to get back to default bash
-    zsh -l
-  '';
-
 }

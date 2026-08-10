@@ -18,6 +18,27 @@ array_relationships:
         table:
           name: pokemon_v2_encounter
           schema: public
+  - name: pokemonevolutionsbyevolvedformid
+    using:
+      foreign_key_constraint_on:
+        column: evolved_form_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonevolutions
+    using:
+      foreign_key_constraint_on:
+        column: base_form_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: pokemonstatpasts
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemonstatpast
+          schema: public
   - name: pokemonabilities
     using:
       foreign_key_constraint_on:

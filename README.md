@@ -30,19 +30,29 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 - [Kubernetes](#kubernetes)
 - [Wrappers](#wrappers)
 - [Donations](#donations)
-- [Join Us On Slack!](#join-us-on-slack)
 - [Contributing](#contributing)
 
 ## Setup <a id="setup"></a> &nbsp; [![pyVersion313](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3137/)
 
 - Download this source code into a working directory, be sure to use the flag `--recurse-submodules` to clone also our submodules.
 
-- Install the requirements using pip:
+- Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python environment management.
+
+- Install the requirements using the Makefile commands:
 
     ```sh
     make install
     # This will install all the required packages and libraries for using PokeAPI
     ```
+
+- Install the pre-commit hooks using the Makefile commands (optional but recommended):
+
+    ```sh
+    make pre-commit-install
+    ```
+
+    > [!NOTE]
+    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
 
 - Set up the local development environment using the following command:
 
@@ -121,7 +131,7 @@ make docker-migrate
 When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](https://github.com/hasura/graphql-engine) server is started as well. It's possible to track all the PokeAPI tables and foreign keys by simply
 
 ```sh
-# hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html
+# hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/2.0/hasura-cli/install-hasura-cli
 # hasura cli's version has to greater than v2.48.1
 make hasura-apply
 ```
@@ -191,7 +201,7 @@ Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource o
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
-
+<!--
 ## Join Us On Slack!
 
 > **Warning**
@@ -203,7 +213,7 @@ This way we can keep issues here a bit more organized and helpful in the long ru
 [Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-38w145rww-I_ROYnZME2n1c7mQXppEAQ) easily!
 
 Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
-
+-->
 ## Contributing
 
 This project exists thanks to all the people who [contribute](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md)

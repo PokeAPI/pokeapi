@@ -46,6 +46,13 @@ array_relationships:
         table:
           name: pokemon_v2_move
           schema: public
+  - name: pokemonstatpasts
+    using:
+      foreign_key_constraint_on:
+        column: generation_id
+        table:
+          name: pokemon_v2_pokemonstatpast
+          schema: public
   - name: pokemonabilitypasts
     using:
       foreign_key_constraint_on:

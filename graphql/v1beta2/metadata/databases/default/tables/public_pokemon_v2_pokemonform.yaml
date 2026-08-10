@@ -14,6 +14,13 @@ object_relationships:
     using:
       foreign_key_constraint_on: version_group_id
 array_relationships:
+  - name: pokemonformconditions
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonformcondition
+          schema: public
   - name: pokemonformgenerations
     using:
       foreign_key_constraint_on:

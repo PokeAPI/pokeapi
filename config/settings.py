@@ -77,9 +77,7 @@ CACHES = {
     }
 }
 
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-"
-)
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-")
 
 CUSTOM_APPS = ("pokemon_v2",)
 
@@ -149,8 +147,9 @@ Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI co
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
-    "VERSION": "2.7.0",
+    "VERSION": "2.10.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "AUTHENTICATION_WHITELIST": [],
     "OAS_VERSION": "3.1.0",
     "COMPONENT_SPLIT_REQUEST": True,
     "TAGS": [

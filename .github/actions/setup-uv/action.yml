@@ -1,0 +1,16 @@
+name: Setup uv
+description: Setup uv for use in a workflow
+
+inputs:
+  python-version:
+    description: Python version to use. Falls back to .python-version if omitted.
+    required: false
+
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@v7
+      with:
+        version: "0.11.19"
+        enable-cache: true
+        python-version: ${{ inputs.python-version }}

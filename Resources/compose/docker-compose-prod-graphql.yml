@@ -1,12 +1,6 @@
-version: '2.4'
 services:
   cache:
     restart: "no"
-
-  db:
-    environment:
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-      POSTGRES_USER: "${POSTGRES_USER}"
 
   app:
     image: pokeapi/pokeapi:master
@@ -19,18 +13,15 @@ services:
         condition: service_started
       graphql-engine:
         condition: service_healthy
-    logging:
-      driver: gcplogs
 
   graphql-engine:
     cpus: 0.7
     memswap_limit: 3g
     mem_limit: 700m
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-pokeapi}"
-      HASURA_GRAPHQL_ADMIN_SECRET: "${HASURA_GRAPHQL_ADMIN_SECRET}"
       HASURA_GRAPHQL_SCHEMA_SYNC_POLL_INTERVAL: 0
       HASURA_GRAPHQL_EVENTS_HTTP_POOL_SIZE: 10
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
 
   graphiql:
     image: pokeapi/graphiql:v1beta2-2.1.0

@@ -211,19 +211,19 @@ This item can only be used in the Great Marsh or Safari Zone."
 :   Ressuscite un Pokémon KO et restaure ses PV au maximum.  Diminuse le bonheur de 10/10/15."
 37,9,"Revives with full HP, but lowers happiness.","Used on a party Pokémon
 :   Revives a fainted Pokémon and restores its HP to full.  Decreases happiness by 10/10/15."
-38,5,Restaure 10 PP pour une capacité.,"Utilisé sur un Pokémon de l'équipe 
+38,5,Restaure 10 PP pour une capacité.,"Utilisé sur un Pokémon de l'équipe
 :   Restaure 10 PP pour une capacité sélectionnée."
 38,9,Restores 10 PP for one move.,"Used on a party Pokémon
 :   Restores 10 PP for a selected move."
-39,5,Restaure les PP au maximum pour une capacité.,"Utilisé sur un Pokémon de l'équipe 
+39,5,Restaure les PP au maximum pour une capacité.,"Utilisé sur un Pokémon de l'équipe
 :   Restaure tous les PP pour une capacité sélectionnée."
 39,9,Restores PP to full for one move.,"Used on a party Pokémon
 :   Restores PP to full for a selected move."
-40,5,Restaure 10 PP pour toutes les capacités.,"Utilisé sur un Pokémon de l'équipe 
+40,5,Restaure 10 PP pour toutes les capacités.,"Utilisé sur un Pokémon de l'équipe
 :   Restaure 10 PP de chaque capacité."
 40,9,Restores 10 PP for each move.,"Used on a party Pokémon
 :   Restores 10 PP for each move."
-41,5,Restaure tous les PP de toutes les capacités.,"Utilisé sur un Pokémon de l'équipe 
+41,5,Restaure tous les PP de toutes les capacités.,"Utilisé sur un Pokémon de l'équipe
 :   Restaure tous les PP de chaque capacité."
 41,9,Restores PP to full for each move.,"Used on a party Pokémon
 :   Restores PP to full for each move."
@@ -263,11 +263,11 @@ This item can only be used in the Great Marsh or Safari Zone."
 :   Augmente le niveau de 1.  Augmente le bonheur de 5/3/2."
 50,9,Causes a level-up and raises happiness.,"Used on a party Pokémon
 :   Increases level by 1.  Increases happiness by 5/3/2."
-51,5,Augmente les PP max d'une capacité de 20%.,"Utilisé sur un Pokémon de l'équipe 
+51,5,Augmente les PP max d'une capacité de 20%.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les PP max d'une capacité de 20% de ses PP max originaux, jusqu'à un maximum de 1.6×.  Augmente le bonheur de 5/3/2."
 51,9,Raises a move’s max PP by 20%.,"Used on a party Pokémon
 :   Increases a selected move’s max PP by 20% its original max PP, to a maximum of 1.6×.  Increases happiness by 5/3/2."
-52,5,Augmente l'effort en Défense Spéciale et le bonheur.,"Utilisé sur un Pokémon de l'équipe 
+52,5,Augmente l'effort en Défense Spéciale et le bonheur.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente ses EV de Défense Spéciale de 10, mais ne l'augmente pas au delà de 100.  Augmente le bonheur de 5/3/2."
 52,9,Raises Special Defense and happiness.,"Used on a party Pokémon
 :   Increases Special Defense effort by 10, but won’t increase it beyond 100.  Increases happiness by 5/3/2."
@@ -414,7 +414,7 @@ In Platinum, trade to move tutors on Route 212, in Snowpoint City, and in the Su
 In HeartGold and SoulSilver, trade one for an Aguav Berry, a Lum Berry, and a Rawst Berry with the Juggler near the Pokémon Center in Violet City.
 
 In HeartGold and SoulSilver, trade one for a Durin Berry, a Hondew Berry, and a Wepear Berry with the Juggler near the Pal Park entrance in Fuchsia City."
-76,5,"Pendant 200 pas, empêche les rencontres sauvages de niveau inférieur au Pokémon en tête de votre équipe.","Utilisé en dehors d'un combat 
+76,5,"Pendant 200 pas, empêche les rencontres sauvages de niveau inférieur au Pokémon en tête de votre équipe.","Utilisé en dehors d'un combat
 :   Le dresseur passe les rencontres avec les Pokémon sauvages d'un niveau inférieur à celui du Pokémon en tête d'équipe. Cet effet prend fin après que le dresseur marche 200 pas."
 76,9,"For 200 steps, prevents wild encounters of level lower than your party’s lead Pokémon.","Used outside of battle
 :   Trainer will skip encounters with wild Pokémon of a lower level than the lead party Pokémon.  This effect wears off after the trainer takes 200 steps."
@@ -748,7 +748,7 @@ Used on a party Pokémon
 :   Quand le porteur a 1/2 de ses PV max restants ou moins, cela consomme cet objet pour restaurer 1/8 de ses PV max. Si le porteur déteste les saveurs sucrées (i.e., a une nature qui diminue la Vitesse), il sera également confus."
 138,9,Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pokémon that dislike sweet flavor.,"Held in battle
 :   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/8 its max HP.  If the holder dislikes sweet flavors (i.e., has a nature that lowers Speed), it will also become confused."
-139,5,Tenu: Consommé à 1/2 des PV max pour regagner 1/8 des PV max. Peut rendre confus les Pokémon qui n'aime pas les saveurs amères.,"Tenu au combat 
+139,5,Tenu: Consommé à 1/2 des PV max pour regagner 1/8 des PV max. Peut rendre confus les Pokémon qui n'aime pas les saveurs amères.,"Tenu au combat
 :   Quand le porteur a 1/2 de ses PV max restants ou moins, cela consomme cet objet pour restaurer 1/8 de ses PV max. Si le porteur déteste les saveurs amères (i.e., a une nature qui diminue la Défense Spéciale), il sera également confus."
 139,9,Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pokémon that dislike bitter flavor.,"Held in battle
 :   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/8 its max HP.  If the holder dislikes bitter flavors (i.e., has a nature that lowers Special Defense), it will also become confused."
@@ -904,7 +904,7 @@ Used on a party Pokémon
 :   Quand le porteur a 1/4 de ses PV max restants ou moins, cela consomme cet objet pour augmenter une stat aléatoire de deux niveaux."
 184,9,Held: Consumed at 1/4 max HP to boost a random stat by two stages.,"Held in battle
 :   When the holder has 1/4 its max HP remaining or less, it consumes this item to raise a random stat by two stages."
-185,5,Tenu: Consommé quand touché par une attaque super efficace pour restaurer 1/4 des PV max.,"Tenu au combat 
+185,5,Tenu: Consommé quand touché par une attaque super efficace pour restaurer 1/4 des PV max.,"Tenu au combat
 :   Quand le porteur subit des dégâts super efficaces, cela consomme cet objet pour restaurer 1/4 de ses PV max."
 185,9,Held: Consumed when struck by a super-effective attack to restore 1/4 max HP.,"Held in battle
 :   When the holder takes super-effective damage, it consumes this item to restore 1/4 its max HP."
@@ -912,19 +912,19 @@ Used on a party Pokémon
 :   Quand le porteur a 1/4 de ses PV max restants ou moins, cela consomme cet objet, et sa prochaine capacité utilisée aura sa précision de base augmentée de 20%."
 186,9,Held: Consumed at 1/4 max HP to boost accuracy of next move by 20%. (Gen IV: Perfect accuracy),"Held in battle
 :   When the holder has 1/4 its max HP remaining or less, it consumes this item, and its next used move has 1.2× its normal accuracy."
-187,5,Tenu: Consommé à 1/4 des PV en utilisant une capacité pour être prioritaire.,"Tenu au combat 
+187,5,Tenu: Consommé à 1/4 des PV en utilisant une capacité pour être prioritaire.,"Tenu au combat
 :   Quand le porteur a 1/4 de ses PV max restants ou moins, cela consomme cet objet.  Au prochain tour, le porteur agira en premier parmi les capacités de même priorité, peu importe sa Vitesse."
 187,9,Held: Consumed at 1/4 max HP when using a move to go first.,"Held in battle
 :   When the holder has 1/4 its max HP remaining or less, it consumes this item.  On the following turn, the holder will act first among moves with the same priority, regardless of Speed."
-188,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité physique.,"Tenu au combat 
+188,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité physique.,"Tenu au combat
 :   Quand le porteur suvit des dégâts physiques, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses PV max en dégâts."
 188,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a physical attack.,"Held in battle
 :   When the holder takes physical damage, it consumes this item to damage the attacking Pokémon for 1/8 its max HP."
-189,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité spéciale.,"Tenu au combat 
+189,5,Tenu: Consommé pour infliger 1/8 des PV max à l'adversaire quand le porteur est touché par une capacité spéciale.,"Tenu au combat
 :   Quand le porteur suvit des dégâts spéciaux, cela consomme cet objet pour infliger au Pokémon attaquant 1/8 de ses PV max en dégâts."
 189,9,Held: Consumed to deal 1/8 attacker’s max HP when holder is struck by a special attack.,"Held in battle
 :   When the holder takes special damage, it consumes this item to damage the attacking Pokémon for 1/8 its max HP."
-190,5,Tenu: Augmente l'esquive du porteur de 1/9 (11 1/9%).,"Tenu au combat 
+190,5,Tenu: Augmente l'esquive du porteur de 1/9 (11 1/9%).,"Tenu au combat
 :   Les capacités ciblant le porteur ont 90% de chances de toucher."
 190,9,Held: Increases the holder’s evasion by 1/9 (11 1/9%).,"Held in battle
 :   Moves targeting the holder have 0.9× chance to hit."
@@ -932,10 +932,10 @@ Used on a party Pokémon
 :   À la fin de chaque tour, si n'importe quelle stat du porteur a une modification de stat négative, le porteur consomme cet objet pour annuler les modifications de ces stats."
 191,9,Held: Resets all lowered stats to normal at end of turn. Consumed after use.,"Held in battle
 :   At the end of each turn, if any of the holder’s stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."
-192,5,"Tenu: Le porteur gagne deux fois plus d'EV des combats, mais a sa Vitesse divisée par deux en combat.","Tenu 
-:   Quand le porteur devrait gagner des EV grâce à un combat, il gagne le double de ces EV à la place.  
+192,5,"Tenu: Le porteur gagne deux fois plus d'EV des combats, mais a sa Vitesse divisée par deux en combat.","Tenu
+:   Quand le porteur devrait gagner des EV grâce à un combat, il gagne le double de ces EV à la place.
 
-Tenu au combat 
+Tenu au combat
 :   Le porteur a la moitié de sa Vitesse."
 192,9,"Held: Holder gains double effort values from battles, but has halved Speed in battle.","Held
 :   When the holder would gain effort due to battle, it gains double that effort instead.
@@ -945,7 +945,7 @@ Held in battle
 193,5,Tenu: La moitié de l'expérience gagnée par un combat est attribuée au Pokémon portant cet objet.,"Tenu
 :   L'expérience est séparée entre deux groupes: Les Pokémon qui ont participé au combat, et les Pokémon qui portent cet objet.  Chaque Pokémon gagne de l’expérience comme s'il avait combattu seul, divisé par le nombre de Pokémon dans son groupe, ensuite divisé par le nombre de groupes. Les Pokémon portant cet objet qui ont aussi participé au combat gagne l'expérience en double.
 
-    Les Pokémon KO ne gagnent jamais d'expérience, et les groupes vides sont 
+    Les Pokémon KO ne gagnent jamais d'expérience, et les groupes vides sont
 ignorés; ainsi, si un Pokémon seul qui porte cet objet et que le seul Pokémon qui a combattu est mis KO par Explosion, le porteur gagnera toute l'expérience."
 193,9,Held: Half the experience from a battle is split between Pokémon holding this item.,"Held
 :   Experience is split across two groups: Pokémon who participated in battle, and Pokémon holding this item.  Each Pokémon earns experience as though it had battled alone, divided by the number of Pokémon in its group, then divided by the number of groups. Pokémon holding this item who also participated in battle effectively earn experience twice.
@@ -956,11 +956,11 @@ ignored; thus, if a single Pokémon is holding this item and the only Pokémon w
 :   Quand le porteur tente d'utiliser une capacité, il y a 3/16 chances d'agir en premier parmi les capacités de même priorité.  Si plusieurs Pokémon ont cet effet en même temps, la Vitesse est utilisée pour départager comme normalement, mais l'effet de Distorsion est ignoré."
 194,9,Held: Holder has a 3/16 (18.75%) chance to move first.,"Held in battle
 :   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same priority.  If multiple Pokémon have this effect at the same time, Speed is the tie-breaker as normal, but the effect of Trick Room is ignored."
-195,5,Tenu: Double le bonheur gagné par le porteur.,"Tenu 
+195,5,Tenu: Double le bonheur gagné par le porteur.,"Tenu
 :   Quand le porteur devrait gagner du bonheur pour n'importe quelle raison, il gagne le double de ce montant à la place."
 195,9,Held: Doubles the happiness earned by the holder.,"Held
 :   When the holder would earn happiness for any reason, it earns twice that amount instead."
-196,5,"Tenu: Utilisé pour soigner l'amour. Gén V : Supprime aussi Provoc, Encore, Tourmente, Entrave, et Corps Maudit.","Tenu au combat 
+196,5,"Tenu: Utilisé pour soigner l'amour. Gén V : Supprime aussi Provoc, Encore, Tourmente, Entrave, et Corps Maudit.","Tenu au combat
 :   Quand le porteur est amoureux, cela consomme cet objet pour soigner l'amour."
 196,9,"Held: Consumed to cure infatuation. Gen V: Also removes Taunt, Encore, Torment, Disable, and Cursed Body.","Held in battle
 :   When the holder is attracted, it consumes this item to cure the attraction."
@@ -1248,11 +1248,11 @@ Held by a Multitype Pokémon: Holder’s type becomes Steel."
 301,9,Traded on a Porygon2: Holder evolves into Porygon-Z.,Held by Porygon2: Evolves the holder into Porygon-Z when traded.
 302,5,Échangé sur un Téraclope: Le porteur évolue en Noctunoir.,Tenu par Téraclope: Fait évoluer le porteur en Noctunoir quand échangé.
 302,9,Traded on a Dusclops: Holder evolves into Dusknoir.,Held by Dusclops: Evolves the holder into Dusknoir when traded.
-303,5,Tenu: Augmente le taux de coups critiques du porteur d'un niveau. Porté par un Farfuret en montant de niveau la nuit: Le porteur évolue en Dimoret.,"Tenu: Augmente le compteur de coups critiques du porteur de 1. 
+303,5,Tenu: Augmente le taux de coups critiques du porteur d'un niveau. Porté par un Farfuret en montant de niveau la nuit: Le porteur évolue en Dimoret.,"Tenu: Augmente le compteur de coups critiques du porteur de 1.
 Tenu par Farfuret: Fait évoluer le porteur en Dimoret quand il monte de niveau la nuit."
 303,9,Held: Raises the holder’s critical hit ratio by one stage. Held by a Sneasel while levelling up at night: Holder evolves into Weavile.,"Held: Raises the holder’s critical hit counter by 1.
 Held by Sneasel: Evolves the holder into Weavile when it levels up during the night."
-304,5,Tenu: Les capacités offensives ont 10% de chance d'apeurer leur cible. Porté par un Scorplane en montant de niveau: Le porteur évolue en Scorvol.,"Tenu: Quand le porteur attaque avec la plupart des capacités offensives, fournit 11.7% (30/256) de chances supplémentaires d'apeurer la cible. 
+304,5,Tenu: Les capacités offensives ont 10% de chance d'apeurer leur cible. Porté par un Scorplane en montant de niveau: Le porteur évolue en Scorvol.,"Tenu: Quand le porteur attaque avec la plupart des capacités offensives, fournit 11.7% (30/256) de chances supplémentaires d'apeurer la cible.
 Porté par Scorplane: Fait évoluer la cible en Scorvol lorsqu'il monte de niveau."
 304,9,Held: Damaging moves gain a 10% chance to make their target flinch. Held by a Gligar while levelling up: Holder evolves into Gliscor.,"Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.
 Held by Gligar: Evolves the holder into Gliscor when it levels up."
@@ -1591,9 +1591,9 @@ This item cannot be directly used from the bag."
 :   Attempts to catch a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
     If the wild Pokémon was encountered by fishing, the wild Pokémon’s catch rate is 3× normal."
-450,5,Le taux de succès dépend des niveaux du Pokémon de l'utilisateur et de la cible. Fait à partir de Noigrume Rge.,"Utilisé par un dresseur en combat 
+450,5,Le taux de succès dépend des niveaux du Pokémon de l'utilisateur et de la cible. Fait à partir de Noigrume Rge.,"Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
-      
+
 Si le niveau du Pokémon du dresseur est plus grand de:
 
      * quatre fois celui du Pokémon sauvage, le taux de capture du Pokémon sauvage 8× le normal.
@@ -1607,15 +1607,15 @@ Si le niveau du Pokémon du dresseur est plus grand de:
     * four times the wild Pokémon’s, the wild Pokémon’s catch rate is 8× normal.
     * than twice the wild Pokémon’s, the wild Pokémon’s catch rate is 4× normal.
     * the wild Pokémon’s, the wild Pokémon’s catch rate is 2× normal."
-451,5,4× plus efficace sur les familles de Pokémon qui contiennent une évolution avec une Pierre Lune. Fait à partir de Noigrume Jne.,"Utilisé par un dresseur en combat 
+451,5,4× plus efficace sur les familles de Pokémon qui contiennent une évolution avec une Pierre Lune. Fait à partir de Noigrume Jne.,"Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
-      
+
 Si le Pokémon sauvage est un Mélofée, Nidoran♂, Nidoran♀, Rondoudou, Skitty, ou une de leurs évolutions, le Pokémon sauvage a 4× son taux de capture."
 451,9,4× effectiveness on familes of Pokémon with a Moon Stone evolution. Made from Ylw Apricorn.,"Used by trainer in battle
 :   Attempts to catch a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
     If the wild Pokémon is a Clefairy, Nidoran♂, Nidoran♀, Jigglypuff, Skitty, or any evolution thereof, the wild Pokémon has 4× its catch rate."
-452,5,A un bonus ou une pénalité fixe sur le taux de capture selon la classe de poids de la cible. Fait à partir de Noigrume Noi.,"Utilisé par un dresseur en combat 
+452,5,A un bonus ou une pénalité fixe sur le taux de capture selon la classe de poids de la cible. Fait à partir de Noigrume Noi.,"Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
 
     Si le Pokémon sauvage pèse:
@@ -1633,7 +1633,7 @@ Si le Pokémon sauvage est un Mélofée, Nidoran♂, Nidoran♀, Rondoudou, Skit
     * 307.2 kg (677.3 lb) or more, its catch rate is 30 more than normal.
     * 204.8 kg (451.5 lb) or more, its catch rate is 20 more than normal.
     * less than 204.8 kg (451.5 lb), its catch rate is 20 less than normal."
-453,5,4× plus efficace sur un Pokémon avec une vitesse de base de 100 ou plus. (Gén II: Pokémon Errant ou Fuyard). Fait à partir de Noigrume Blc.,"Utilisé par un dresseur en combat 
+453,5,4× plus efficace sur un Pokémon avec une vitesse de base de 100 ou plus. (Gén II: Pokémon Errant ou Fuyard). Fait à partir de Noigrume Blc.,"Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
 
 :   Si la Vitesse de base du Pokémon sauvage est 100 ou plus, son taux de capture est 4× le normal."
@@ -1641,7 +1641,7 @@ Si le Pokémon sauvage est un Mélofée, Nidoran♂, Nidoran♀, Rondoudou, Skit
 :   Attempts to catch a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
 :   If the wild Pokémon’s base speed is 100 or more, its catch rate is 4× normal."
-454,5,Les Pokémon capturés commencent avec 200 de bonheur. Fait à partir de Noigrume Ver.,"Utilisé par un dresseur en combat 
+454,5,Les Pokémon capturés commencent avec 200 de bonheur. Fait à partir de Noigrume Ver.,"Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
 
     Si capturé, le bonheur du Pokémon sauvage commence à 200."
@@ -1649,7 +1649,7 @@ Si le Pokémon sauvage est un Mélofée, Nidoran♂, Nidoran♀, Rondoudou, Skit
 :   Attempts to catch a wild Pokémon.  If used in a trainer battle, nothing happens and the ball is lost.
 
     If caught, the wild Pokémon’s happiness starts at 200."
-455,5,"8× plus efficace sur le sexe opposé, de la même espèce du Pokémon Actif. Fait à partir de Noigrume Ros.","Utilisé par un dresseur en combat 
+455,5,"8× plus efficace sur le sexe opposé, de la même espèce du Pokémon Actif. Fait à partir de Noigrume Ros.","Utilisé par un dresseur en combat
 :   Tente de capturer un Pokémon sauvage.  Si utilisé en combat de dresseurs, rien ne se passe et la ball est perdue.
 
     Si le Pokémon du dresseur et le Pokémon sauvage sont de la même espèce mais de genre opposés, le taux de capture du Pokémon sauvage est 8× le normal."
@@ -1699,7 +1699,7 @@ This item can only be used in Pal Park."
 468,9,Summons Kyogre to the Embedded Tower.,Causes Kyogre to appear in the Embedded Tower.
 469,5,Invoque Rayquaza à la Tour Enfouie.,Fait apparaître Rayquaza à la Tour Enfouie.
 469,9,Summons Rayquaza to the Embedded Tower.,Causes Rayquaza to appear in the Embedded Tower.
-470,5,S: Invoque Latias H: Invoque Latios.,"Quand amené au musée de Argenta, Latias ou Latios attaque le dresseur.  
+470,5,S: Invoque Latias H: Invoque Latios.,"Quand amené au musée de Argenta, Latias ou Latios attaque le dresseur.
 
 Le Pokémon qui apparaît sera celui que l'on ne peut pas rencontrer errant dans la nature."
 470,9,S: Summons Latias H: Summons Latios.,"When taken to the Pewter City museum, causes Latias or Latios to attack the trainer.
@@ -2114,8 +2114,8 @@ Held
     This effect does not apply during Gravity or Ingrain.
 
     When the holder takes damage from a move, this item is consumed."
-585,5,"Tenu: Quand le porteur subit des dégâts d'une capacité, l'adversaire se retire pour un autre Pokémon aléatoire de l'équipe. Consommé après utilisation.","Tenu 
-:   Quand le porteur subit des dommages directs d'une capacité et n'est pas mis KO, il est retiré pour un autre au hasard, Pokémon non KO de son équipe. 
+585,5,"Tenu: Quand le porteur subit des dégâts d'une capacité, l'adversaire se retire pour un autre Pokémon aléatoire de l'équipe. Consommé après utilisation.","Tenu
+:   Quand le porteur subit des dommages directs d'une capacité et n'est pas mis KO, il est retiré pour un autre au hasard, Pokémon non KO de son équipe.
 Cet effet ne s'active pas si un autre effet empêche le porteur de se retirer."
 585,9,"Held: When the holder takes damage from a move, the opponent switches out for another random party Pokémon. Consumed after use.","Held
 :   When the holder takes damage directly from a move and does not faint, it switches out for another random, non-fainted Pokémon in its party.
@@ -2136,8 +2136,8 @@ This effect does not activate if another effect prevents the holder from switchi
 :   Quand le porteur subit des dégâts de type Électrik d'une capacité, son Attaque augmente d'un niveau et cet objet est consommé."
 589,9,Held: Raises the holder’s Attack by one stage when it takes Electric-type damage.,"Held
 :   When the holder takes Electric-type damage from a move, its Attack rises by one stage and this item is consumed."
-590,5,"Tenu: Lorsque le porteur subit des dégâts d'une capacité, il se retire pour un Pokémon de l'équipe au choix du Dresseur.","Tenu 
-:   Quand le porteur subit des dommages directs d'une capacité et n'est pas mis KO, il est retiré pour un autre Pokémon non KO de son équipe, choisi par le Dresseur. 
+590,5,"Tenu: Lorsque le porteur subit des dégâts d'une capacité, il se retire pour un Pokémon de l'équipe au choix du Dresseur.","Tenu
+:   Quand le porteur subit des dommages directs d'une capacité et n'est pas mis KO, il est retiré pour un autre Pokémon non KO de son équipe, choisi par le Dresseur.
 Cet effet ne s'active pas si un autre effet empêche le porteur de se retirer."
 590,9,"Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer’s choice.","Held
 :   When the holder takes damage directly from a move and does not faint, it switches out for another non-fainted Pokémon in its party, as chosen by the Trainer.
@@ -2202,27 +2202,27 @@ This effect does not activate if another effect prevents the holder from switchi
 :   Lorsque le porteur utilise une capacité offensive de type Acier, la puissance de la capacité augmente de 50% et cet objet est consommé."
 605,9,"Held: When the holder uses a damaging Steel-type move, the move has 1.5× power and this item is consumed.","Held
 :   When the holder uses a damaging Steel-type move, the move has 1.5× power and this item is consumed."
-606,5,Augmente les EV de PV de 1.,"Utilisé sur un Pokémon de l'équipe 
+606,5,Augmente les EV de PV de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV de PV de la cible de 1."
 606,9,Increases HP effort by 1.,"Used on a party Pokémon
 :   Increases the target’s HP effort by 1."
-607,5,Augmente les EV d'Attaque de 1.,"Utilisé sur un Pokémon de l'équipe 
+607,5,Augmente les EV d'Attaque de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV d'Attaque de la cible de 1."
 607,9,Increases Attack effort by 1.,"Used on a party Pokémon
 :   Increases the target’s Attack effort by 1."
-608,5,Augmente les EV de Défense de 1.,"Utilisé sur un Pokémon de l'équipe 
+608,5,Augmente les EV de Défense de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV de Défense de la cible de 1."
 608,9,Increases Defense effort by 1.,"Used on a party Pokémon
 :   Increases the target’s Defense effort by 1."
-609,5,Augmente les EV d'Attaque Spéciale de 1.,"Utilisé sur un Pokémon de l'équipe 
+609,5,Augmente les EV d'Attaque Spéciale de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV d'Attaque Spéciale de la cible de 1."
 609,9,Increases Special Attack effort by 1.,"Used on a party Pokémon
 :   Increases the target’s Special Attack effort by 1."
-610,5,Augmente les EV de Défense Spéciale de 1.,"Utilisé sur un Pokémon de l'équipe 
+610,5,Augmente les EV de Défense Spéciale de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV de Défense Spéciale de la cible de 1."
 610,9,Increases Special Defense effort by 1.,"Used on a party Pokémon
 :   Increases the target’s Special Defense effort by 1."
-611,5,Augmente les EV de Vitesse de 1.,"Utilisé sur un Pokémon de l'équipe 
+611,5,Augmente les EV de Vitesse de 1.,"Utilisé sur un Pokémon de l'équipe
 :   Augmente les EV de Vitesse de la cible de 1."
 611,9,Increases Speed effort by 1.,"Used on a party Pokémon
 :   Increases the target’s Speed effort by 1."
@@ -2238,7 +2238,7 @@ This effect does not activate if another effect prevents the holder from switchi
 616,9,Activates Pass Powers.,Acts as currency to activate Pass Powers in the Entralink.
 617,5,Capture les Pokémon trouvés dans le Dream World.,"Ne peut être utilisé seulement dans la forêt du Heylink, pour capturer les Pokémon rencontrés dans le Dream World.
 
-Utilisé au combat 
+Utilisé au combat
 :   Capture un Pokémon sauvage sans échouer."
 617,9,Catches Pokémon found in the Dream World.,"Can only be used in Entree Forest, to catch Pokémon encountered in the Dream World.
 
@@ -2278,157 +2278,157 @@ Used in battle
 :   Soigne n'importe quelle altération de statut et la confusion."
 632,9,Cures any status ailment and confusion.,"Used on a party Pokémon
 :   Cures any status ailment and confusion."
-633,5,Augmente le taux de coups critiques de deux niveaux en combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente le taux de coups critiques de la cible de deux niveaux. 
+633,5,Augmente le taux de coups critiques de deux niveaux en combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente le taux de coups critiques de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 633,9,Raises critical hit rate by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s critical hit rate by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-634,5,Augmente la Vitesse de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Vitesse de la cible de deux niveaux. 
+634,5,Augmente la Vitesse de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Vitesse de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 634,9,Raises Speed by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Speed by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-635,5,Augmente l'Attaque Spéciale de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque Spéciale de la cible de deux niveaux. 
+635,5,Augmente l'Attaque Spéciale de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque Spéciale de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 635,9,Raises Special Attack by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Attack by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-636,5,Augmente la Défense Spéciale de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Défense Spéciale de la cible de deux niveaux. 
+636,5,Augmente la Défense Spéciale de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Défense Spéciale de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 636,9,Raises Special Defense by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Defense by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-637,5,Augmente la Défense de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Défense de la cible de deux niveaux. 
+637,5,Augmente la Défense de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Défense de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 637,9,Raises Defense by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Defense by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-638,5,Augmente l'Attaque de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque de la cible de deux niveaux. 
+638,5,Augmente l'Attaque de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 638,9,Raises Attack by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Attack by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-639,5,Augmente la précision de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la précision de la cible de deux niveaux. 
+639,5,Augmente la précision de deux niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la précision de la cible de deux niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 639,9,Raises accuracy by two stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s accuracy by two stages.
 This item can only be obtained or used via the Wonder Launcher."
-640,5,Augmente la Vitesse de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Vitesse de la cible de trois niveaux. 
+640,5,Augmente la Vitesse de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Vitesse de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 640,9,Raises Speed by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Speed by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-641,5,Augmente l'Attaque Spéciale de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque Spéciale de la cible de trois niveaux. 
+641,5,Augmente l'Attaque Spéciale de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque Spéciale de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 641,9,Raises Special Attack by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Attack by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-642,5,Augmente la Défense Spéciale de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque Spéciale de la cible de trois niveaux. 
+642,5,Augmente la Défense Spéciale de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque Spéciale de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 642,9,Raises Special Defense by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Defense by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-643,5,Augmente la Défense de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Défense de la cible de trois niveaux. 
+643,5,Augmente la Défense de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Défense de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 643,9,Raises Defense by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Defense by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-644,5,Augmente l'Attaque de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque de la cible de trois niveaux. 
+644,5,Augmente l'Attaque de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 644,9,Raises Attack by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Attack by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-645,5,Augmente la précision de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la précision de la cible de trois niveaux. 
+645,5,Augmente la précision de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la précision de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 645,9,Raises accuracy by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s accuracy by three stages.
 This item can only be obtained or used via the Wonder Launcher."
-646,5,Augmente la Vitesse de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Vitesse de la cible de six niveaux. 
+646,5,Augmente la Vitesse de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Vitesse de la cible de six niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 646,9,Raises Speed by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Speed by six stages.
 This item can only be obtained or used via the Wonder Launcher."
-647,5,Augmente l'Attaque Spéciale de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque Spéciale de la cible de six niveaux. 
+647,5,Augmente l'Attaque Spéciale de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque Spéciale de la cible de six niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 647,9,Raises Special Attack by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Attack by six stages.
 This item can only be obtained or used via the Wonder Launcher."
-648,5,Augmente la Défense Spéciale de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque Spéciale de la cible de six niveaux. 
+648,5,Augmente la Défense Spéciale de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque Spéciale de la cible de six niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 648,9,Raises Special Defense by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Special Defense by six stages.
 This item can only be obtained or used via the Wonder Launcher."
-649,5,Augmente la Défense de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente la Défense de la cible de six niveaux. 
+649,5,Augmente la Défense de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente la Défense de la cible de six niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 649,9,Raises Defense by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Defense by six stages.
 This item can only be obtained or used via the Wonder Launcher."
-650,5,Augmente l'Attaque de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque de la cible de six niveaux. 
+650,5,Augmente l'Attaque de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque de la cible de six niveaux.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 650,9,Raises Attack by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s Attack by six stages.
 
 This item can only be obtained or used via the Wonder Launcher."
-651,5,Augmente la précision de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Augmente l'Attaque de la cible de six niveaux. 
+651,5,Augmente la précision de six niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Augmente l'Attaque de la cible de six niveaux.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 651,9,Raises accuracy by six stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle
 :   Raises the target’s accuracy by six stages.
 
 This item can only be obtained or used via the Wonder Launcher."
-652,5,Force l'activation du talent d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Sélectionne un autre Pokémon allié au hasard.  Si le talent de ce Pokémon est normalement activé par une condition—i.e., non continu ou passif—son effet est activé de force. 
+652,5,Force l'activation du talent d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Sélectionne un autre Pokémon allié au hasard.  Si le talent de ce Pokémon est normalement activé par une condition—i.e., non continu ou passif—son effet est activé de force.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 652,9,Forcibly activates a friendly Pokémon’s ability.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  If that Pokémon’s ability is normally activated by some condition—i.e., is not continuous and passive—its effect is forcibly activated.
 
 This item can only be obtained or used via the Wonder Launcher."
-653,5,Force un Pokémon allié à lâcher son objet tenu.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Sélectionne un autre Pokémon allié au hasard.  Si ce Pokémon tient un objet, cet objet est retiré pour la durée du combat. 
+653,5,Force un Pokémon allié à lâcher son objet tenu.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Sélectionne un autre Pokémon allié au hasard.  Si ce Pokémon tient un objet, cet objet est retiré pour la durée du combat.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 653,9,Forces a friendly Pokémon to drop its held item.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  If that Pokémon is holding an item, that item is removed for the duration of the battle.
 
 This item can only be obtained or used via the Wonder Launcher."
-654,5,Force l'activation de l'objet tenu d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Sélectionne un autre Pokémon allié au hasard.  Si ce Pokémon tient un objet normalement activé par une condition—i.e., non continu ou passif—son effet est activé de force. 
+654,5,Force l'activation de l'objet tenu d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Sélectionne un autre Pokémon allié au hasard.  Si ce Pokémon tient un objet normalement activé par une condition—i.e., non continu ou passif—son effet est activé de force.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 654,9,Forcibly activates a friendly Pokémon’s held item.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  If that Pokémon is holding an item normally activated by some condition—i.e., not continuous and passive—its effect is forcibly activated.
 
 This item can only be obtained or used via the Wonder Launcher."
-655,5,Réinitialise les changements de stat d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat 
-:   Sélectionne un autre Pokémon allié au hasard.  Retire toutes les modifications de stat de ce Pokémon. 
+655,5,Réinitialise les changements de stat d'un Pokémon allié.,"Utilisé sur un Pokémon de l'équipe au combat
+:   Sélectionne un autre Pokémon allié au hasard.  Retire toutes les modifications de stat de ce Pokémon.
 
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 655,9,Resets a friendly Pokémon’s stat changes.,"Used on a party Pokémon in battle
 :   Selects another friendly Pokémon at random.  Removes all of that Pokémon’s stat changes.
 
 This item can only be obtained or used via the Wonder Launcher."
-656,5,Augmente le taux de coups critiques de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat 
+656,5,Augmente le taux de coups critiques de trois niveaux au combat.  Shooter Miracle seulement.,"Utilisé sur un Pokémon de l'équipe au combat
 :   Augmente le taux de coups critiques de la cible de trois niveaux.
 Cet objet ne peut être obtenu ou utilisé que via le Shooter Miracle."
 656,9,Raises critical hit rate by three stages in battle.  Wonder Launcher only.,"Used on a party Pokémon in battle

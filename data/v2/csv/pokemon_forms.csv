@@ -1339,7 +1339,7 @@ id,identifier,form_identifier,pokemon_id,introduced_in_version_group_id,is_defau
 10313,togedemaru-totem,totem,10154,18,1,0,0,2,1147
 10314,necrozma-dusk,dusk,10155,18,1,0,0,2,1176
 10315,necrozma-dawn,dawn,10156,18,1,0,0,3,1177
-10316,necrozma-ultra,ultra,10157,18,1,0,0,4,1178
+10316,necrozma-ultra,ultra,10157,18,1,1,0,4,1178
 10317,pikachu-starter,starter,10158,19,1,0,0,15,50
 10318,eevee-starter,starter,10159,19,1,0,0,2,222
 10319,pikachu-world-cap,world-cap,10160,20,1,0,0,16,51

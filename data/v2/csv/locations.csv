@@ -709,7 +709,7 @@ id,region_id,identifier
 725,7,hauoli-cemetery
 726,7,melemele-meadow
 727,7,seaward-cave
-728,7,berry-fields
+728,7,alola-berry-fields
 729,7,verdant-cavern--trial-site
 730,7,verdant-cavern--totems-den
 731,7,alola-route-4
@@ -862,7 +862,7 @@ id,region_id,identifier
 878,8,axews-eye
 879,8,ballimere-lake
 880,8,ballonlea
-881,8,battle-tower
+881,8,galar-battle-tower
 882,8,brawlers-cave
 883,8,bridge-field
 884,8,challenge-beach
@@ -1095,3 +1095,11 @@ id,region_id,identifier
 1111,11,cipher-key-lair
 1112,11,citadark-isle
 1113,1,kanto-underground-path
+1114,8,energy-plant
+1115,8,meetup-spot
+1116,8,isle-of-armor-caves
+1117,8,roaming-galar-wild-area
+1118,8,roaming-isle-of-armor
+1119,8,roaming-crown-tundra
+1120,8,galar-wild-area-max-dens
+1121,6,kalos-berry-fields

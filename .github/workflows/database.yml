@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Lint
         run: |
           set -e
@@ -21,22 +21,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
       - name: Generate OpenAPI schema
         run: |
-          make install
+          make install-base
           make openapi-generate
   sqlite:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
+        with:
+          python-version: ${{ matrix.python-version }}
       - name: Start pokeapi
         run: |
-          make install
-          make migrate
+          make install-base
+          make setup
           make build-db
           nohup make serve &
           sleep 3
@@ -48,25 +58,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           submodules: recursive
-      - name: Build
+      - name: Build and start services
         run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
+      - name: Run migrations and build database
+        run: |
           make docker-migrate
           make docker-build-db
       - name: Dump DB
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.dump"
-      - name: Copy dump
-        run: docker compose cp db:/tmp/pokeapi.dump ./
-      - name: Down services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml down -v
-      - name: Start services
-        run: docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-      - name: Import database
+        run: docker compose exec -T db pg_dump -U ash -Fc -N 'hdb_*' pokeapi > pokeapi.dump
+      - name: Drop and recreate database
         run: |
-          docker compose cp ./pokeapi.dump db:/tmp/
-          docker compose exec -T -u postgres db sh -c "cd /tmp && pg_restore -h localhost -U ash -d pokeapi pokeapi.dump"
+          docker compose exec -T db psql -U ash -d postgres -c "DROP DATABASE pokeapi WITH (FORCE);"
+          docker compose exec -T db psql -U ash -d postgres -c "CREATE DATABASE pokeapi;"
+      - name: Import database
+        run: docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.dump
       - name: Test data
         run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

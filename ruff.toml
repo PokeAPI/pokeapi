@@ -1,0 +1,6 @@
+line-length = 120
+exclude = [
+    "**/scripts",
+    "data/v2/cries",
+    "data/v2/sprites",
+]

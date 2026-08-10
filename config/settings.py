@@ -1,5 +1,7 @@
+# ruff: noqa: E501
 # Production settings
 import os
+import textwrap
 from pathlib import Path
 from typing import TypedDict
 
@@ -124,8 +126,6 @@ CACHES: dict[str, CacheSettings] = {
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-")
 
-CUSTOM_APPS = ("pokemon_v2",)
-
 INSTALLED_APPS = (
     "django.contrib.admin",
     "django.contrib.auth",
@@ -136,7 +136,7 @@ INSTALLED_APPS = (
     "rest_framework",
     "cachalot",
     "drf_spectacular",
-    *CUSTOM_APPS,
+    "pokemon_v2",
 )
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -174,21 +174,25 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 SPECTACULAR_SETTINGS: SpectacularSettings = {
     "TITLE": "PokéAPI",
-    "DESCRIPTION": (
-        "All the Pokémon data you'll ever need in one place, easily accessible through a modern "
-        "free open-source RESTful API.\n\n"
-        "## What is this?\n\n"
-        "This is a full RESTful API linked to an extensive database detailing everything about "
-        "the Pokémon main game series.\n\n"
-        "We've covered everything from Pokémon to Berry Flavors.\n\n"
-        "## Where do I start?\n\n"
-        "We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. "
-        "It takes minutes to get started.\n\n"
-        "This API will always be publicly available and will never require any extensive setup process to consume.\n\n"
-        "Created by [**Paul Hallett**](https://github.com/phalt) and other "
-        "[**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. "
-        "Pokémon and Pokémon character names are trademarks of Nintendo."
-    ),
+    "DESCRIPTION": textwrap.dedent(
+        """
+        All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.
+
+        ## What is this?
+
+        This is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
+
+        We've covered everything from Pokémon to Berry Flavors.
+
+        ## Where do I start?
+
+        We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.
+
+        This API will always be publicly available and will never require any extensive setup process to consume.
+
+        Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
+        """
+    ).strip(),
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},
@@ -200,13 +204,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
     "TAGS": [
         {
             "name": "pokemon",
-            "description": (
-                "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using"
-                " Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but"
-                " may take on a variant which makes it differ from other Pokémon of the same species, such as base"
-                " stats, available abilities and typings. See"
-                " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail."
-            ),
+            "description": "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon",
@@ -222,10 +220,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "berries",
-            "description": (
-                "Berries can be soft or hard. Check out"
-                " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail."
-            ),
+            "description": "Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Berry",
@@ -233,11 +228,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "items",
-            "description": (
-                "An item is an object in the games which the player can pick up, keep in their bag, and use in some"
-                " manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a"
-                " new area."
-            ),
+            "description": "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Item",
@@ -245,10 +236,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "machines",
-            "description": (
-                "Machines are the representation of items that teach moves to Pokémon. They vary from version to"
-                " version, so it is not certain that one specific TM or HM corresponds to a single Machine."
-            ),
+            "description": "Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/TM",
@@ -256,10 +244,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "location",
-            "description": (
-                "Locations that can be visited within the games. Locations make up sizable portions of regions, like"
-                " cities or routes."
-            ),
+            "description": "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_index_number",
@@ -267,10 +252,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "contest",
-            "description": (
-                "Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in Contest"
-                " Halls"
-            ),
+            "description": "Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in Contest Halls",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Contest",
@@ -278,11 +260,7 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
         },
         {
             "name": "moves",
-            "description": (
-                "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves"
-                " (including those learned by Hidden Machine) can be used outside of battle as well, usually for the"
-                " purpose of removing obstacles or exploring new areas."
-            ),
+            "description": "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
             "externalDocs": {
                 "description": "Find more info here",
                 "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_locations_by_name",

@@ -1,4 +1,4 @@
-# ruff: noqa: F405
+# ruff: noqa: F405, E501
 from __future__ import annotations
 
 import itertools
@@ -158,10 +158,7 @@ class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
 
 q_query_string_parameter = OpenApiParameter(
     name="q",
-    description=(
-        "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied"
-        " on the `name` property. "
-    ),
+    description="> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive query applied on the `name` property. ",
     location=OpenApiParameter.QUERY,
     type=OpenApiTypes.STR,
 )
@@ -189,11 +186,7 @@ class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewse
 
 
 @extend_schema(
-    description=(
-        "Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible"
-        " abilities but can have only one ability at a time. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail."
-    ),
+    description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
     summary="Get ability",
 )
@@ -209,11 +202,7 @@ class AbilityResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even"
-        " damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry)"
-        " for greater detail."
-    ),
+    description="Berries are small fruits that can provide HP and status condition restoration, stat enhancement, and even damage negation when eaten by Pokémon. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Berry) for greater detail.",
     tags=["berries"],
     summary="Get a berry",
 )
@@ -229,10 +218,7 @@ class BerryResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Berries can be soft or hard. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail."
-    ),
+    description="Berries can be soft or hard. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Category:Berries_by_firmness) for greater detail.",
     tags=["berries"],
     summary="Get berry by firmness",
 )
@@ -248,10 +234,7 @@ class BerryFirmnessResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**."
-        " Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail."
-    ),
+    description="Flavors determine whether a Pokémon will benefit or suffer from eating a berry based on their **nature**. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Flavor) for greater detail.",
     summary="Get berries by flavor",
     tags=["berries"],
 )
@@ -267,11 +250,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined"
-        " by the remainder of its highest IV divided by 5 (gene_modulo). Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail."
-    ),
+    description="Characteristics indicate which stat contains a Pokémon's highest IV. A Pokémon's Characteristic is determined by the remainder of its highest IV divided by 5 (gene_modulo). Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Characteristic) for greater detail.",
     summary="Get characteristic",
     tags=["pokemon"],
 )
@@ -303,10 +282,7 @@ class ContestEffectResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail."
-    ),
+    description="Contest types are categories judges used to weigh a Pokémon's condition in Pokémon contests. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Contest_condition) for greater detail.",
     summary="Get contest type",
     tags=["contests"],
 )
@@ -322,11 +298,7 @@ class ContestTypeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either"
-        " one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater"
-        " detail."
-    ),
+    description="Egg Groups are categories which determine which Pokémon are able to interbreed. Pokémon may belong to either one or two Egg Groups. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Egg_Group) for greater detail.",
     summary="Get egg group",
     tags=["pokemon"],
 )
@@ -358,10 +330,7 @@ class EncounterConditionResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Encounter condition values are the various states that an encounter condition can have, i.e., time of day can"
-        " be either day or night."
-    ),
+    description="Encounter condition values are the various states that an encounter condition can have, i.e., time of day can be either day or night.",
     summary="Get encounter condition value",
     tags=["encounters"],
 )
@@ -377,10 +346,7 @@ class EncounterConditionValueResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out"
-        " Bulbapedia for greater detail."
-    ),
+    description="Methods by which the player might can encounter Pokémon in the wild, e.g., walking in tall grass. Check out Bulbapedia for greater detail.",
     summary="Get encounter method",
     tags=["encounters"],
 )
@@ -396,10 +362,7 @@ class EncounterMethodResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Evolution chains are essentially family trees. They start with the lowest stage within a family and detail"
-        " evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy."
-    ),
+    description="Evolution chains are essentially family trees. They start with the lowest stage within a family and detail evolution conditions for each as well as Pokémon they can evolve into up through the hierarchy.",
     summary="Get evolution chain",
     tags=["evolution"],
 )
@@ -415,10 +378,7 @@ class EvolutionChainResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail."
-    ),
+    description="Evolution triggers are the events and conditions that cause a Pokémon to evolve. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Methods_of_evolution) for greater detail.",
     summary="Get evolution trigger",
     tags=["evolution"],
 )
@@ -434,11 +394,7 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each"
-        " generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation"
-        " are released."
-    ),
+    description="A generation is a grouping of the Pokémon games that separates them based on the Pokémon they include. In each generation, a new set of Pokémon, Moves, Abilities and Types that did not exist in the previous generation are released.",
     summary="Get genration",
     tags=["games"],
 )
@@ -454,11 +410,7 @@ class GenerationResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual"
-        " differences or even different evolutionary lines. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail."
-    ),
+    description="Genders were introduced in Generation II for the purposes of breeding Pokémon but can also result in visual differences or even different evolutionary lines. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Gender) for greater detail.",
     summary="Get gender",
     tags=["pokemon"],
 )
@@ -474,10 +426,7 @@ class GenderResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Growth rates are the speed with which Pokémon gain levels through experience. Check out"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail."
-    ),
+    description="Growth rates are the speed with which Pokémon gain levels through experience. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Experience) for greater detail.",
     summary="Get growth rate",
     tags=["pokemon"],
 )
@@ -493,10 +442,7 @@ class GrowthRateResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "An item is an object in the games which the player can pick up, keep in their bag, and use in some manner."
-        " They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area."
-    ),
+    description="An item is an object in the games which the player can pick up, keep in their bag, and use in some manner. They have various uses, including healing, powering up, helping catch Pokémon, or to access a new area.",
     summary="Get item",
     tags=["items"],
 )
@@ -608,10 +554,7 @@ class LanguageResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or"
-        " routes."
-    ),
+    description="Locations that can be visited within the games. Locations make up sizable portions of regions, like cities or routes.",
     summary="Get location",
     tags=["location"],
 )
@@ -627,10 +570,7 @@ class LocationResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of"
-        " possible Pokémon encounters."
-    ),
+    description="Location areas are sections of areas, such as floors in a building or cave. Each area has its own set of possible Pokémon encounters.",
     summary="Get location area",
     tags=["location"],
 )
@@ -646,10 +586,7 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
 
 
 @extend_schema(
-    description=(
-        "Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it"
-        " is not certain that one specific TM or HM corresponds to a single Machine."
-    ),
+    description="Machines are the representation of items that teach moves to Pokémon. They vary from version to version, so it is not certain that one specific TM or HM corresponds to a single Machine.",
     summary="Get machine",
     tags=["machines"],
 )
@@ -665,11 +602,7 @@ class MachineResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including"
-        " those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing"
-        " obstacles or exploring new areas."
-    ),
+    description="Moves are the skills of Pokémon in battle. In battle, a Pokémon uses one move each turn. Some moves (including those learned by Hidden Machine) can be used outside of battle as well, usually for the purpose of removing obstacles or exploring new areas.",
     summary="Get move",
     tags=["moves"],
 )
@@ -701,10 +634,7 @@ class MoveDamageClassResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Move Ailments are status conditions caused by moves used during battle. See"
-        " [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail."
-    ),
+    description="Move Ailments are status conditions caused by moves used during battle. See [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Status_condition) for greater detail.",
     summary="Get move meta ailment",
     tags=["moves"],
 )
@@ -720,10 +650,7 @@ class MoveMetaAilmentResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Styles of moves when used in the Battle Palace. See"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail."
-    ),
+    description="Styles of moves when used in the Battle Palace. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Battle_Frontier_(Generation_III)) for greater detail.",
     summary="Get move battle style",
     tags=["moves"],
 )
@@ -771,9 +698,7 @@ class MoveLearnMethodResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves."
-    ),
+    description="Targets moves can be directed at during battle. Targets can be Pokémon, environments or even other moves.",
     summary="Get move target",
     tags=["moves"],
 )
@@ -789,10 +714,7 @@ class MoveTargetResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature)"
-        " for greater detail."
-    ),
+    description="Natures influence how a Pokémon's stats grow. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Nature) for greater detail.",
     summary="Get nature",
     tags=["pokemon"],
 )
@@ -808,9 +730,7 @@ class NatureResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Areas used for grouping Pokémon encounters in Pal Park. They're like habitats that are specific to Pal Park."
-    ),
+    description="Areas used for grouping Pokémon encounters in Pal Park. They're like habitats that are specific to Pal Park.",
     summary="Get pal park area",
     tags=["location"],
 )
@@ -826,11 +746,7 @@ class PalParkAreaResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons,"
-        " competitions happen on different courses; one for each of the different Pokéathlon stats. See"
-        " [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail."
-    ),
+    description="Pokeathlon Stats are different attributes of a Pokémon's performance in Pokéathlons. In Pokéathlons, competitions happen on different courses; one for each of the different Pokéathlon stats. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9athlon) for greater detail.",
     summary="Get pokeathlon stat",
     tags=["pokemon"],
 )
@@ -846,12 +762,7 @@ class PokeathlonStatResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining"
-        " information of the various Pokémon in a given region with the exception of the national dex and some smaller"
-        " dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for"
-        " greater detail."
-    ),
+    description="A Pokédex is a handheld electronic encyclopedia device; one which is capable of recording and retaining information of the various Pokémon in a given region with the exception of the national dex and some smaller dexes related to portions of a region. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pokedex) for greater detail.",
     summary="Get pokedex",
     tags=["games"],
 )
@@ -867,11 +778,7 @@ class PokedexResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most"
-        " apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are"
-        " listed as red or brown."
-    ),
+    description="Colors used for sorting Pokémon in a Pokédex. The color listed in the Pokédex is usually the color most apparent or covering each Pokémon's body. No orange category exists; Pokémon that are primarily orange are listed as red or brown.",
     summary="Get pokemon color",
     tags=["pokemon"],
 )
@@ -887,11 +794,7 @@ class PokemonColorResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic."
-        " For variations within a Pokémon species, which do differ in more than just visuals, the 'Pokémon' entity is"
-        " used to represent such a variety."
-    ),
+    description="Some Pokémon may appear in one of multiple, visually different forms. These differences are purely cosmetic. For variations within a Pokémon species, which do differ in more than just visuals, the 'Pokémon' entity is used to represent such a variety.",
     summary="Get pokemon form",
     tags=["pokemon"],
 )
@@ -907,10 +810,7 @@ class PokemonFormResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or"
-        " legendary Pokémon."
-    ),
+    description="Habitats are generally different terrain Pokémon can be found in but can also be areas designated for rare or legendary Pokémon.",
     summary="Get pokemom habita",
     tags=["pokemon"],
 )
@@ -942,12 +842,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and"
-        " trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant"
-        " which makes it differ from other Pokémon of the same species, such as base stats, available abilities and"
-        " typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail."
-    ),
+    description="Pokémon are the creatures that inhabit the world of the Pokémon games. They can be caught using Pokéballs and trained by battling with other Pokémon. Each Pokémon belongs to a specific species but may take on a variant which makes it differ from other Pokémon of the same species, such as base stats, available abilities and typings. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_(species)) for greater detail.",
     summary="Get pokemon",
     tags=["pokemon"],
 )
@@ -963,11 +858,7 @@ class PokemonResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across"
-        " all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be"
-        " found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant."
-    ),
+    description="A Pokémon Species forms the basis for at least one Pokémon. Attributes of a Pokémon species are shared across all varieties of Pokémon within the species. A good example is Wormadam; Wormadam is the species which can be found in three different varieties, Wormadam-Trash, Wormadam-Sandy and Wormadam-Plant.",
     summary="Get pokemon species",
     tags=["pokemon"],
 )
@@ -983,10 +874,7 @@ class PokemonSpeciesResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "A region is an organized area of the Pokémon world. Most often, the main difference between regions is the"
-        " species of Pokémon that can be encountered within them."
-    ),
+    description="A region is an organized area of the Pokémon world. Most often, the main difference between regions is the species of Pokémon that can be encountered within them.",
     summary="Get region",
     tags=["location"],
 )
@@ -1002,10 +890,7 @@ class RegionResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain"
-        " levels and can be altered momentarily by effects in battles."
-    ),
+    description="Stats determine certain aspects of battles. Each Pokémon has a value for each stat which grows as they gain levels and can be altered momentarily by effects in battles.",
     summary="Get stat",
     tags=["pokemon"],
 )
@@ -1037,11 +922,7 @@ class SuperContestEffectResource(PokeapiCommonViewset):
 
 
 @extend_schema(
-    description=(
-        "Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is"
-        " super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon"
-        " it is completely ineffective against."
-    ),
+    description="Types are properties for Pokémon and their moves. Each type has three properties: which types of Pokémon it is super effective against, which types of Pokémon it is not very effective against, and which types of Pokémon it is completely ineffective against.",
     summary="Get types",
     tags=["pokemon"],
 )
@@ -1177,10 +1058,7 @@ class PokeapiMetaResponseSerializer(serializers.Serializer[dict[str, Any]]):
 
 
 @extend_schema(
-    description=(
-        "Returns metadata about the current deployed version of the API, including the git commit hash, deploy date,"
-        " and tag (if any)."
-    ),
+    description="Returns metadata about the current deployed version of the API, including the git commit hash, deploy date, and tag (if any).",
     summary="Get API metadata",
     tags=["utility"],
     responses={"200": PokeapiMetaResponseSerializer},

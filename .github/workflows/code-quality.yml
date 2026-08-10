@@ -2,38 +2,26 @@ name: Code Quality
 
 on:
   pull_request:
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "Makefile"
+      - "uv.lock"
+      - ".github/workflows/code-quality.yml"
   push:
     branches-ignore:
       - master
       - staging
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "Makefile"
+      - "uv.lock"
+      - ".github/workflows/code-quality.yml"
 
 jobs:
-  # Detect which files changed so the lint/typecheck jobs can skip
-  # themselves when nothing relevant was touched.
-  changed:
-    name: Detect changed files
-    runs-on: ubuntu-latest
-    outputs:
-      run: ${{ steps.filter.outputs.run }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-      - name: Check changed files
-        uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            run:
-              - "**.py"
-              - "**.toml"
-              - "Makefile"
-              - "uv.lock"
-              - ".github/workflows/code-quality.yml"
-
   ruff:
     name: Ruff (lint)
-    needs: changed
-    if: needs.changed.outputs.run == 'true'
     runs-on: ubuntu-latest
     # TODO: remove once the codebase is fully lint-clean
     continue-on-error: true
@@ -63,8 +51,6 @@ jobs:
 
   ty:
     name: ty (type-check)
-    needs: changed
-    if: needs.changed.outputs.run == 'true'
     runs-on: ubuntu-latest
     # TODO: remove once the codebase is fully typed
     continue-on-error: true

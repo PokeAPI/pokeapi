@@ -11,7 +11,6 @@
 #  wipe it and rewrite each row using the data found in data/v2/csv.
 
 
-import contextlib
 import csv
 import os
 import os.path
@@ -787,10 +786,12 @@ def _build_moves():
 
     build_generic((MoveFlavorText,), "move_flavor_text.csv", csv_record_to_objects)
 
+    existing_effect_ids = set(MoveEffect.objects.values_list("pk", flat=True))
+
     def csv_record_to_objects(info):
-        move_effect = None
-        with contextlib.suppress(BaseException):
-            move_effect = MoveEffect.objects.get(pk=int(info[6])) if info[6] != "" else None
+        effect_id = int(info[6]) if info[6] != "" else None
+        if effect_id not in existing_effect_ids:
+            effect_id = None
 
         yield MoveChange(
             move_id=int(info[0]),
@@ -799,7 +800,7 @@ def _build_moves():
             power=int(info[3]) if info[3] != "" else None,
             pp=int(info[4]) if info[4] != "" else None,
             accuracy=int(info[5]) if info[5] != "" else None,
-            move_effect_id=move_effect.pk if move_effect else None,
+            move_effect_id=effect_id,
             move_effect_chance=int(info[7]) if info[7] != "" else None,
         )
 

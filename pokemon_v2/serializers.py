@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import itertools
-from typing import TYPE_CHECKING, Any, ClassVar, cast
+from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
 from drf_spectacular.utils import extend_schema_field  # pyright: ignore[reportUnknownVariableType]
@@ -15,7 +15,17 @@ from .models import *  # noqa: F403
 if TYPE_CHECKING:
     from collections.abc import Sequence
 
+    from django.db import models
     from rest_framework.utils.serializer_helpers import ReturnDict, ReturnList
+
+    class EncounterWithRelations(Protocol):
+        encounterconditionvaluemap_set: models.Manager[EncounterConditionValueMap]
+        encounterpokemondetail_set: models.Manager[EncounterPokemonDetail]
+
+    class PokemonWithRelations(Protocol):
+        pokemonsprites: models.Manager[PokemonSprites]
+        pokemoncries: models.Manager[PokemonCries]
+
 
 __all__: tuple[str, ...] = (
     "AbilityChangeEffectTextSerializer",
@@ -989,7 +999,7 @@ class LocationAreaEncounterDetailSerializer(serializers.Serializer[Any]):
 
     @extend_schema_field(EncounterConditionValueSummarySerializer(many=True))
     def get_encounter_conditions(self, obj: Encounter) -> list[ReturnDict[str, Any]]:
-        condition_maps = cast("Any", obj).encounterconditionvaluemap_set.all()
+        condition_maps = cast("EncounterWithRelations", obj).encounterconditionvaluemap_set.all()
         return [
             cast(
                 "ReturnDict[str, Any]",
@@ -1000,7 +1010,7 @@ class LocationAreaEncounterDetailSerializer(serializers.Serializer[Any]):
 
     @extend_schema_field(EncounterPokemonDetailSerializer(allow_null=True))
     def get_encounter_pokemon_details(self, obj: Encounter) -> ReturnDict[str, Any] | None:
-        details_list = list(cast("Any", obj).encounterpokemondetail_set.all())
+        details_list = list(cast("EncounterWithRelations", obj).encounterpokemondetail_set.all())
         details = details_list[0] if details_list else None
         return cast(
             "ReturnDict[str, Any] | None",
@@ -2923,12 +2933,12 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
 
     @extend_schema_field(PokemonSpritesSerializer)
     def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None]:
-        sprites_list = list(cast("Any", obj).pokemonsprites.all())
+        sprites_list = list(cast("PokemonWithRelations", obj).pokemonsprites.all())
         return sprites_list[0].sprites if sprites_list else {}
 
     @extend_schema_field(PokemonCriesSerializer)
     def get_pokemon_cries(self, obj: Pokemon) -> dict[str, str | None]:
-        cries_list = list(cast("Any", obj).pokemoncries.all())
+        cries_list = list(cast("PokemonWithRelations", obj).pokemoncries.all())
         return cries_list[0].cries if cries_list else {}
 
     @extend_schema_field(PokemonMoveSerializer(many=True))

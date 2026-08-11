@@ -8,11 +8,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name="pokemonevolution",
-            name="time_of_day",
-            field=models.CharField(blank=True, default="", max_length=10),
-        ),
         migrations.AddField(
             model_name="pokemonformcondition",
             name="base_form",

@@ -3,6 +3,7 @@ pokemon_form_id,form_trigger_id,trigger_item_id,trigger_ability_id,trigger_move_
 681,4,,176,,
 718,1,884,,,
 741,2,889,,,
+746,4,,208,,10229
 1017,1,2102,,,
 10028,4,,59,,
 10029,4,,59,,
@@ -97,7 +98,7 @@ pokemon_form_id,form_trigger_id,trigger_item_id,trigger_ability_id,trigger_move_
 10225,2,890,,,
 10226,2,891,,,
 10227,2,892,,,
-10229,4,,208,,
+10229,4,,208,,746
 10232,1,902,,,
 10233,1,903,,,
 10234,1,904,,,

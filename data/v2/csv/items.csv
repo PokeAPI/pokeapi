@@ -2220,3 +2220,5 @@ id,identifier,category_id,cost,fling_power,fling_effect_id
 2275,baxcalibrite,44,0,80,
 2276,tatsugirinite,44,0,80,
 2277,glimmoranite,44,0,80,
+2278,hopo-berry,28,300,,
+2279,roseli-berry,7,200,10,

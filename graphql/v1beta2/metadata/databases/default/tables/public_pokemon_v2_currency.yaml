@@ -1,0 +1,34 @@
+table:
+  name: pokemon_v2_currency
+  schema: public
+configuration:
+  column_config: {}
+  custom_column_names: {}
+  custom_name: currency
+  custom_root_fields: {}
+array_relationships:
+  - name: currencynames
+    using:
+      foreign_key_constraint_on:
+        column: currency_id
+        table:
+          name: pokemon_v2_currencyname
+          schema: public
+  - name: itemprices
+    using:
+      foreign_key_constraint_on:
+        column: currency_id
+        table:
+          name: pokemon_v2_itemprice
+          schema: public
+select_permissions:
+  - role: anon
+    permission:
+      columns: '*'
+      filter: {}
+      limit: 100000
+      allow_aggregations: true
+      query_root_fields:
+        - select
+        - select_aggregate
+      subscription_root_fields: []

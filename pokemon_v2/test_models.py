@@ -15,6 +15,23 @@ class AbilityTestCase(TestCase):
         self.assertEqual(smell.generation_id, 3)
 
 
+class EncounterPokemonDetailTestCase(TestCase):
+    def test_unique_encounter_pokemon_details(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        with open(os.path.join(csv_dir, "encounter_pokemon_details.csv")) as infile:
+            reader = csv.DictReader(infile)
+            encounter_ids = []
+            duplicate_ids = []
+            for row in reader:
+                if row["encounter_id"] in encounter_ids:
+                    duplicate_ids.append(row["encounter_id"])
+                else:
+                    encounter_ids.append(row["encounter_id"])
+
+            if duplicate_ids:
+                self.fail(f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}")
+
+
 class CSVResourceNameValidationTestCase(TestCase):
     """
     Test that all resource identifiers in CSV files follow ASCII slug format.
@@ -92,28 +109,18 @@ class CSVResourceNameValidationTestCase(TestCase):
         # Report violations
         if violations:
             error_lines.append(
-                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(
-                    len(violations)
-                )
+                "\n\nFound {} resource(s) with invalid identifiers (not ASCII slugs):".format(len(violations))
             )
             error_lines.append("\nIdentifiers must match pattern: ^[a-z0-9-]+$")
             error_lines.append("\nInvalid identifiers found in CSV files:")
 
             for v in violations:
-                error_lines.append(
-                    "  - {file} (row {row}, id={id}): {identifier}".format(**v)
-                )
+                error_lines.append("  - {file} (row {row}, id={id}): {identifier}".format(**v))
 
-            error_lines.append(
-                "\nThese identifiers contain invalid characters and must be normalized."
-            )
-            error_lines.append(
-                "Update the CSV files in data/v2/csv/ to fix these identifiers."
-            )
+            error_lines.append("\nThese identifiers contain invalid characters and must be normalized.")
+            error_lines.append("Update the CSV files in data/v2/csv/ to fix these identifiers.")
             error_lines.append("\nSuggested fixes:")
-            error_lines.append(
-                "  - Remove Unicode apostrophes (') and replace with regular hyphens or remove"
-            )
+            error_lines.append("  - Remove Unicode apostrophes (') and replace with regular hyphens or remove")
             error_lines.append("  - Remove Unicode letters (ñ → n)")
             error_lines.append("  - Remove parentheses and other special characters")
             error_lines.append("  - Convert to lowercase")

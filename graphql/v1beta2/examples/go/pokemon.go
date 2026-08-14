@@ -75,7 +75,6 @@ query pokemon_details($name: String) {
 		fireRedItems: pokemonitems(where: {version: {name: {_eq: "firered"}}}) {
 			item {
 			name
-			cost
 			}
 			rarity
 		}

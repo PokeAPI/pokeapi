@@ -90,9 +90,7 @@ retrieve_path_parameter = OpenApiParameter(
 
 
 @extend_schema_view(list=extend_schema(parameters=[q_query_string_parameter]))
-class PokeapiCommonViewset(
-    ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet
-):
+class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
     @extend_schema(parameters=[retrieve_path_parameter])
     def retrieve(self, request, pk=None):
         return super().retrieve(request, pk)
@@ -108,6 +106,12 @@ class PokeapiCommonViewset(
 @extend_schema(
     description="Abilities provide passive effects for Pokémon in battle or in the overworld. Pokémon have multiple possible abilities but can have only one ability at a time. Check out [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Ability) for greater detail.",
     tags=["pokemon"],
+    summary="Get ability",
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List abilities",
+    )
 )
 class AbilityResource(PokeapiCommonViewset):
     queryset = Ability.objects.all()
@@ -170,7 +174,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List charecterictics",
+        summary="List characteristics",
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
@@ -433,6 +437,22 @@ class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
+
+
+@extend_schema(
+    description="Currencies used to buy items.",
+    summary="Get currency",
+    tags=["items"],
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List currencies",
+    )
+)
+class CurrencyResource(PokeapiCommonViewset):
+    queryset = Currency.objects.all()
+    serializer_class = CurrencyDetailSerializer
+    list_serializer_class = CurrencySummarySerializer
 
 
 @extend_schema(
@@ -988,11 +1008,7 @@ class PokemonEncounterView(APIView):
 
         encounter_objects = Encounter.objects.filter(pokemon=pokemon)
 
-        area_ids = (
-            encounter_objects.values_list("location_area", flat=True)
-            .distinct()
-            .order_by("location_area")
-        )
+        area_ids = encounter_objects.values_list("location_area", flat=True).distinct().order_by("location_area")
 
         location_area_objects = LocationArea.objects.filter(pk__in=area_ids)
         version_objects = Version.objects
@@ -1004,23 +1020,15 @@ class PokemonEncounterView(APIView):
 
             area_encounters = encounter_objects.filter(location_area_id=area_id)
 
-            version_ids = (
-                area_encounters.values_list("version_id", flat=True)
-                .distinct()
-                .order_by("version_id")
-            )
+            version_ids = area_encounters.values_list("version_id", flat=True).distinct().order_by("version_id")
             version_details_list = []
 
             for version_id in version_ids:
                 version = version_objects.get(pk=version_id)
 
-                version_encounters = area_encounters.filter(
-                    version_id=version_id
-                ).order_by("encounter_slot_id")
+                version_encounters = area_encounters.filter(version_id=version_id).order_by("encounter_slot_id")
 
-                encounters_data = EncounterDetailSerializer(
-                    version_encounters, many=True, context=self.context
-                ).data
+                encounters_data = EncounterDetailSerializer(version_encounters, many=True, context=self.context).data
 
                 max_chance = 0
                 encounter_details_list = []
@@ -1041,9 +1049,7 @@ class PokemonEncounterView(APIView):
 
                 version_details_list.append(
                     {
-                        "version": VersionSummarySerializer(
-                            version, context=self.context
-                        ).data,
+                        "version": VersionSummarySerializer(version, context=self.context).data,
                         "max_chance": max_chance,
                         "encounter_details": encounter_details_list,
                     }
@@ -1051,9 +1057,7 @@ class PokemonEncounterView(APIView):
 
             encounters_list.append(
                 {
-                    "location_area": LocationAreaSummarySerializer(
-                        location_area, context=self.context
-                    ).data,
+                    "location_area": LocationAreaSummarySerializer(location_area, context=self.context).data,
                     "version_details": version_details_list,
                 }
             )
@@ -1063,6 +1067,7 @@ class PokemonEncounterView(APIView):
 
 @extend_schema(
     description="Returns metadata about the current deployed version of the API, including the git commit hash, deploy date, and tag (if any).",
+    summary="Get API metadata",
     tags=["utility"],
     responses={
         200: {
@@ -1075,24 +1080,16 @@ class PokemonEncounterView(APIView):
         }
     },
 )
-class PokeapiMetaViewset(viewsets.ViewSet):
-    def list(self, request):
+class PokeapiMetaView(APIView):
+    def get(self, request):
         try:
-            git_hash = (
-                subprocess.check_output(
-                    ["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL
-                )
-                .decode()
-                .strip()
-            )
+            git_hash = subprocess.check_output(["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL).decode().strip()
         except Exception:
             git_hash = None
 
         try:
             deploy_date = (
-                subprocess.check_output(
-                    ["git", "log", "-1", "--format=%ct"], stderr=subprocess.DEVNULL
-                )
+                subprocess.check_output(["git", "log", "-1", "--format=%ct"], stderr=subprocess.DEVNULL)
                 .decode()
                 .strip()
             )
@@ -1101,9 +1098,7 @@ class PokeapiMetaViewset(viewsets.ViewSet):
 
         try:
             tag_output = (
-                subprocess.check_output(
-                    ["git", "tag", "--points-at", "HEAD"], stderr=subprocess.DEVNULL
-                )
+                subprocess.check_output(["git", "tag", "--points-at", "HEAD"], stderr=subprocess.DEVNULL)
                 .decode()
                 .strip()
             )

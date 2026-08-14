@@ -1,7 +1,8 @@
 veekun_pokedex_repository = ../pokedex
 local_config = --settings=config.local
 docker_config = --settings=config.docker-compose
-gql_compose_config = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
+gql_compose_config_deprecated = -f docker-compose.yml -f docker-compose-dev.yml -f Resources/compose/docker-compose-prod-graphql.yml
+gql_compose_config = -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml
 
 .PHONY: help
 .SILENT:
@@ -21,6 +22,12 @@ install: check-uv  # Install requirements for local development
 
 install-base: check-uv  # Install minimal requirements for runtime/pipeline environments
 	uv sync --locked --no-dev
+
+pre-commit-install: check-uv  # Install pre-commit hooks
+	uv run pre-commit install
+
+pre-commit: check-uv  # Run pre-commit hooks
+	uv run pre-commit run --all-files
 
 setup: check-uv   # Set up the project database
 	uv run manage.py migrate ${local_config}
@@ -78,7 +85,7 @@ docker-stop:  # (Docker) Stop containers
 	docker compose stop
 
 docker-down:  # (Docker) Stop and removes containers and networks
-	docker compose down
+	docker compose down --remove-orphans -v
 
 docker-test:  # (Docker) Run tests
 	docker compose exec -T app python manage.py test ${local_config}
@@ -89,10 +96,10 @@ docker-prod:
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
 
 format: check-uv   # Format the source code
-	uv run black . --extend-exclude '.+/scripts/.+'
+	uv run ruff format .
 
 format-check: check-uv  # Check the source code has been formatted
-	uv run black . --check --extend-exclude '.+/scripts/.+'
+	uv run ruff format . --check
 
 pull:
 	git checkout master
@@ -145,7 +152,7 @@ start-graphql-prod:
 	git pull origin master
 	git submodule update --init
 	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
-	docker compose stop app
+	docker compose stop app cache
 
 down-graphql-prod:
 	docker container rm $(docker container ls -aq) -f
@@ -154,19 +161,37 @@ down-graphql-prod:
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
 # Nginx doesn't start if upstream graphql-engine is down
-update-graphql-data-prod:
+update-graphql-data-prod-old:
 	docker compose ${gql_compose_config} stop
 	git pull origin master
 	git submodule update --remote --merge
-	docker compose ${gql_compose_config} up --pull always -d app cache db
+	docker compose ${gql_compose_config_deprecated} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	make docker-migrate
 	make docker-build-db
-	docker compose ${gql_compose_config} stop app cache
-	docker compose ${gql_compose_config} up --pull always -d graphql-engine graphiql
+	docker compose ${gql_compose_config_deprecated} stop app cache
+	docker compose ${gql_compose_config_deprecated} up --pull always -d graphql-engine graphiql
 	sleep 120
+	make hasura-apply
+	docker compose ${gql_compose_config_deprecated} up --pull always -d web
+	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
+	docker image prune -af
+	sync; echo 3 > /proc/sys/vm/drop_caches
+
+update-graphql-data-prod:
+	git pull origin master
+	git submodule update --remote --merge
+	curl -Ss -L -O https://github.com/PokeAPI/pokeapi/releases/download/master-branch/pokeapi.pgdump
+	docker compose ${gql_compose_config} stop web graphql-engine app cache
+	docker compose ${gql_compose_config} down -v db
+	docker compose ${gql_compose_config} up --pull always -d db
+	until docker compose ${gql_compose_config} ps db | grep -q "(healthy)"; do sleep 1; done
+	docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.pgdump
+	rm -f pokeapi.pgdump
+	docker compose ${gql_compose_config} up --pull always -d graphql-engine
+	until docker compose ${gql_compose_config} ps graphql-engine | grep -q "(healthy)"; do sleep 1; done
 	make hasura-apply
 	docker compose ${gql_compose_config} up --pull always -d web
 	docker compose exec -T web sh -c 'rm -rf /tmp/cache/*'
-	docker image prune -af
+	docker image prune -f
 	sync; echo 3 > /proc/sys/vm/drop_caches

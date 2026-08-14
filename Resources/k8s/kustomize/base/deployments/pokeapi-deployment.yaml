@@ -16,7 +16,7 @@ spec:
     spec:
       initContainers:
         - name: postgres-connection-checker
-          image: postgres:17.2-alpine3.21
+          image: postgres:18.4-alpine3.24
           command: ['sh', '-c']
           args:
             - until pg_isready -h postgresql -p 5432; do
@@ -24,7 +24,7 @@ spec:
               sleep 2;
               done;
         - name: data-download
-          image: alpine:3.21.2
+          image: alpine:3.24.1
           command: ['sh', '-c']
           args:
             - apk add --update git &&

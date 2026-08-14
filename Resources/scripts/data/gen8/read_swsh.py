@@ -189,7 +189,7 @@ class TextFile():
 		with open(path, "rb") as f:
 			try:
 				# First four bytes is "magic"; needs to be 0x42544841
-				testMagic = struct.unpack("<I", f.read(4))[0]	
+				testMagic = struct.unpack("<I", f.read(4))[0]
 				if (testMagic == this.__magic):
 					# Next four bytes is the number of entries to read
 					count = struct.unpack("<I", f.read(4))[0]

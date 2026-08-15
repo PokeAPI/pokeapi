@@ -116,6 +116,12 @@ class GrowthRateSummarySerializer(serializers.HyperlinkedModelSerializer):
         fields = ("name", "url")
 
 
+class CurrencySummarySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Currency
+        fields = ("name", "url")
+
+
 class ItemPocketSummarySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ItemPocket
@@ -873,11 +879,23 @@ class EncounterSlotSerializer(serializers.ModelSerializer):
         fields = ("id", "slot", "chance", "encounter_method", "version_group")
 
 
+class EncounterPokemonDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EncounterPokemonDetail
+        fields = (
+            "min_perfect_ivs",
+            "always_shiny",
+            "never_shiny",
+            "is_alpha",
+        )
+
+
 class EncounterDetailSerializer(serializers.ModelSerializer):
     version = VersionSummarySerializer()
     location_area = LocationAreaSummarySerializer()
     pokemon = PokemonSummarySerializer()
     condition_values = serializers.SerializerMethodField("get_encounter_conditions")
+    pokemon_details = serializers.SerializerMethodField("get_encounter_pokemon_details")
 
     class Meta:
         model = Encounter
@@ -889,6 +907,7 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             "pokemon",
             "location_area",
             "condition_values",
+            "pokemon_details",
         )
 
     def get_encounter_conditions(self, obj):
@@ -900,6 +919,14 @@ class EncounterDetailSerializer(serializers.ModelSerializer):
             values.append(map["condition_value"])
 
         return values
+
+    def get_encounter_pokemon_details(self, obj):
+        encounter_pokemon_details = EncounterPokemonDetail.objects.filter(encounter=obj)
+        data = EncounterPokemonDetailSerializer(encounter_pokemon_details, many=True, context=self.context).data
+
+        pokemon_details = data[0] if len(data) else None
+
+        return pokemon_details
 
 
 class LocationAreaEncounterRateSerializer(serializers.ModelSerializer):
@@ -1659,6 +1686,27 @@ class ItemAttributeDetailSerializer(serializers.ModelSerializer):
         return items
 
 
+###########################
+#  CURRENCY SERIALIZERS  #
+###########################
+
+
+class CurrencyNameSerializer(serializers.ModelSerializer):
+    language = LanguageSummarySerializer()
+
+    class Meta:
+        model = CurrencyName
+        fields = ("name", "language")
+
+
+class CurrencyDetailSerializer(serializers.ModelSerializer):
+    names = CurrencyNameSerializer(many=True, read_only=True, source="currencyname")
+
+    class Meta:
+        model = Currency
+        fields = ("id", "name", "names")
+
+
 ###################################
 #  ITEM FLING EFFECT SERIALIZERS  #
 ###################################
@@ -1708,6 +1756,20 @@ class ItemGameIndexSerializer(serializers.ModelSerializer):
         fields = ("game_index", "generation")
 
 
+class ItemPriceSerializer(serializers.ModelSerializer):
+    currency = CurrencySummarySerializer()
+    version_group = VersionGroupSummarySerializer()
+
+    class Meta:
+        model = ItemPrice
+        fields = (
+            "purchase_price",
+            "sell_price",
+            "currency",
+            "version_group",
+        )
+
+
 class ItemNameSerializer(serializers.ModelSerializer):
     language = LanguageSummarySerializer()
 
@@ -1725,6 +1787,7 @@ class ItemSpritesSerializer(serializers.ModelSerializer):
 class ItemDetailSerializer(serializers.ModelSerializer):
     names = ItemNameSerializer(many=True, read_only=True, source="itemname")
     game_indices = ItemGameIndexSerializer(many=True, read_only=True, source="itemgameindex")
+    prices = ItemPriceSerializer(many=True, read_only=True, source="itemprice")
     effect_entries = ItemEffectTextSerializer(many=True, read_only=True, source="itemeffecttext")
     flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
     category = ItemCategorySummarySerializer(source="item_category")
@@ -1740,7 +1803,6 @@ class ItemDetailSerializer(serializers.ModelSerializer):
         fields = (
             "id",
             "name",
-            "cost",
             "fling_power",
             "fling_effect",
             "attributes",
@@ -1748,6 +1810,7 @@ class ItemDetailSerializer(serializers.ModelSerializer):
             "effect_entries",
             "flavor_text_entries",
             "game_indices",
+            "prices",
             "names",
             "held_by_pokemon",
             "sprites",
@@ -3641,10 +3704,11 @@ class PokemonFormConditionSerializer(serializers.ModelSerializer):
     item = ItemSummarySerializer()
     ability = AbilitySummarySerializer()
     move = MoveSummarySerializer()
+    base_form = PokemonFormSummarySerializer()
 
     class Meta:
         model = PokemonFormCondition
-        fields = ("trigger", "item", "ability", "move")
+        fields = ("trigger", "item", "ability", "move", "base_form")
 
 
 class PokemonFormDetailSerializer(serializers.ModelSerializer):
@@ -3847,6 +3911,21 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
                         "format": "uri",
                         "examples": ["https://pokeapi.co/api/v2/item/698/"],
                     },
+                    "base_form": {
+                        "type": "object",
+                        "nullable": True,
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "examples": ["necrozma-dusk"],
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri",
+                                "examples": ["https://pokeapi.co/api/v2/pokemon-form/10314/"],
+                            },
+                        },
+                    },
                 },
             },
         }
@@ -3860,11 +3939,14 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer):
             trigger_value = condition.pop("trigger", None)
             if not trigger_value:
                 continue
+            base_form = condition.pop("base_form", None)
             trigger = {"trigger": trigger_value}
             for value in condition.values():
                 if value:
                     trigger.update(value)
                     break
+            if base_form:
+                trigger["base_form"] = base_form
             triggers.append(trigger)
         return triggers
 

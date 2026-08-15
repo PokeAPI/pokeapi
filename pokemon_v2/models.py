@@ -57,6 +57,19 @@ class HasContestEffect(models.Model):
         abstract = True
 
 
+class HasCurrency(models.Model):
+    currency = models.ForeignKey(
+        "Currency",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
 class HasSuperContestEffect(models.Model):
     super_contest_effect = models.ForeignKey(
         "SuperContestEffect",
@@ -819,6 +832,14 @@ class EggGroupName(IsName, HasEggGroup):
 #################
 
 
+class Currency(HasName):
+    pass
+
+
+class CurrencyName(IsName, HasCurrency, HasLanguage):
+    pass
+
+
 class ItemPocket(HasName):
     pass
 
@@ -844,8 +865,6 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-    cost = models.IntegerField(blank=True, null=True)
-
     fling_power = models.IntegerField(blank=True, null=True)
 
 
@@ -879,6 +898,11 @@ class ItemAttributeMap(HasItem, HasItemAttribute):
 
 class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
     pass
+
+
+class ItemPrice(HasItem, HasVersionGroup, HasCurrency):
+    purchase_price = models.IntegerField(blank=True, null=True)
+    sell_price = models.IntegerField(blank=True, null=True)
 
 
 class ItemSprites(HasItem):
@@ -960,21 +984,21 @@ class Berry(HasName, HasItem):
         on_delete=models.CASCADE,
     )
 
-    natural_gift_power = models.IntegerField()
+    natural_gift_power = models.IntegerField(blank=True, null=True)
 
     natural_gift_type = models.ForeignKey(
         Type, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE
     )
 
-    size = models.IntegerField()
+    size = models.IntegerField(blank=True, null=True)
 
-    max_harvest = models.IntegerField()
+    max_harvest = models.IntegerField(blank=True, null=True)
 
-    growth_time = models.IntegerField()
+    growth_time = models.IntegerField(blank=True, null=True)
 
-    soil_dryness = models.IntegerField()
+    soil_dryness = models.IntegerField(blank=True, null=True)
 
-    smoothness = models.IntegerField()
+    smoothness = models.IntegerField(blank=True, null=True)
 
 
 # Berry Flavors are a bit of a hack because their relationship
@@ -1166,6 +1190,18 @@ class EncounterConditionValueMap(models.Model):
     encounter_condition_value = models.ForeignKey(
         EncounterConditionValue, blank=True, null=True, on_delete=models.CASCADE
     )
+
+
+class EncounterPokemonDetail(models.Model):
+    encounter = models.ForeignKey(Encounter, blank=True, null=True, on_delete=models.CASCADE)
+
+    min_perfect_ivs = models.IntegerField(blank=True, null=True)
+
+    always_shiny = models.BooleanField(default=False)
+
+    never_shiny = models.BooleanField(default=False)
+
+    is_alpha = models.BooleanField(default=False)
 
 
 #################
@@ -1745,6 +1781,13 @@ class PokemonFormCondition(HasPokemonForm):
     item = models.ForeignKey(Item, blank=True, null=True, on_delete=models.CASCADE)
     ability = models.ForeignKey(Ability, blank=True, null=True, on_delete=models.CASCADE)
     move = models.ForeignKey(Move, blank=True, null=True, on_delete=models.CASCADE)
+    base_form = models.ForeignKey(
+        PokemonForm,
+        blank=True,
+        null=True,
+        related_name="base_form_conditions",
+        on_delete=models.CASCADE,
+    )
 
 
 class PokemonGameIndex(HasPokemon, HasGameIndex, HasVersion):

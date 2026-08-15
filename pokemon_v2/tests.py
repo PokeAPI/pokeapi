@@ -298,13 +298,11 @@ class APIData:
         item_category=None,
         item_fling_effect=None,
         name="itm",
-        cost=100,
         fling_power=100,
     ):
         item = Item.objects.create(
             name=name,
             item_category=item_category,
-            cost=cost,
             fling_power=fling_power,
             item_fling_effect=item_fling_effect,
         )
@@ -1478,7 +1476,9 @@ class APIData:
         return pokemon_form_trigger
 
     @classmethod
-    def setup_pokemon_form_condition_data(cls, pokemon_form, form_trigger=None, item=None, ability=None, move=None):
+    def setup_pokemon_form_condition_data(
+        cls, pokemon_form, form_trigger=None, item=None, ability=None, move=None, base_form=None
+    ):
         form_trigger = form_trigger or cls.setup_pokemon_form_trigger_data(name="frm trgr for pkmn frm")
         item = item or cls.setup_item_data(name="itm for pkmn frm")
 
@@ -1488,6 +1488,7 @@ class APIData:
             item=item,
             ability=ability,
             move=move,
+            base_form=base_form,
         )
         pokemon_form_condition.save()
         return pokemon_form_condition
@@ -2431,7 +2432,6 @@ class APITests(APIData, APITestCase):
         # base params
         self.assertEqual(response.data["id"], item.pk)
         self.assertEqual(response.data["name"], item.name)
-        self.assertEqual(response.data["cost"], item.cost)
         self.assertEqual(response.data["fling_power"], item.fling_power)
         # name params
         self.assertEqual(response.data["names"][0]["name"], item_name.name)
@@ -4593,6 +4593,8 @@ class APITests(APIData, APITestCase):
         pokemon_form_sprites = self.setup_pokemon_form_sprites_data(pokemon_form)
         pokemon_form_type = self.setup_pokemon_form_type_data(pokemon_form)
         pokemon_form_condition = self.setup_pokemon_form_condition_data(pokemon_form)
+        base_pokemon_form = self.setup_pokemon_form_data(pokemon=pokemon, name="base pkm form for condition")
+        self.setup_pokemon_form_condition_data(pokemon_form, base_form=base_pokemon_form)
 
         response = self.client.get(
             "{}/pokemon-form/{}/".format(API_V2, pokemon_form.pk),
@@ -4650,6 +4652,15 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["trigger_conditions"][0]["url"],
             "{}{}/item/{}/".format(TEST_HOST, API_V2, pokemon_form_condition.item.pk),
+        )
+        # a condition can name the sibling form it transforms from
+        self.assertEqual(
+            response.data["trigger_conditions"][1]["base_form"]["name"],
+            base_pokemon_form.name,
+        )
+        self.assertEqual(
+            response.data["trigger_conditions"][1]["base_form"]["url"],
+            "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, base_pokemon_form.pk),
         )
 
     # Evolution test

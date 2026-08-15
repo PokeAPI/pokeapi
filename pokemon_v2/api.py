@@ -174,7 +174,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 )
 @extend_schema_view(
     list=extend_schema(
-        summary="List charecterictics",
+        summary="List characteristics",
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
@@ -437,6 +437,22 @@ class ItemPocketResource(PokeapiCommonViewset):
     queryset = ItemPocket.objects.all()
     serializer_class = ItemPocketDetailSerializer
     list_serializer_class = ItemPocketSummarySerializer
+
+
+@extend_schema(
+    description="Currencies used to buy items.",
+    summary="Get currency",
+    tags=["items"],
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List currencies",
+    )
+)
+class CurrencyResource(PokeapiCommonViewset):
+    queryset = Currency.objects.all()
+    serializer_class = CurrencyDetailSerializer
+    list_serializer_class = CurrencySummarySerializer
 
 
 @extend_schema(

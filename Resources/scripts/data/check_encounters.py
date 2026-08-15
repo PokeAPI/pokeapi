@@ -89,12 +89,15 @@ def main():
         parser.error(f"output directory already exists: {args.outdir}")
     if args.first_encounter is None:
         print("WARNING: argument -e/--first-encounter not provided. a LOT of files will be written!")
+    if not os.path.isdir(CSVDIR):
+        parser.error(f"invalid directory {CSVDIR}")
 
     # Read encounter CSV files
     encounters = read_csv("encounters", after=args.first_encounter)
     encounter_condition_value_map = read_csv(
         "encounter_condition_value_map", after=args.first_encounter, non_unique=True
     )
+    encounter_pokemon_details = read_csv("encounter_pokemon_details", after=args.first_encounter, non_unique=True)
 
     # Gather CSV information for other sources
     sources = {
@@ -139,6 +142,19 @@ def main():
                 encounters[enc_id]["encounter_conditions"].append(sources["encounter_condition_value"][cond_id])
             else:
                 encounters[enc_id]["encounter_conditions"] = [sources["encounter_condition_value"][cond_id]]
+
+    # Link encounter pokemon details to relevant encounters
+    for entry in encounter_pokemon_details.values():
+        enc_id = entry["encounter_id"]
+        if enc_id in encounters:
+            if "pokemon_details" in encounters[enc_id]:
+                encounters[enc_id]["pokemon_details"].append(
+                    {key: val for key, val in entry.items() if key != "encounter_id"}
+                )
+            else:
+                encounters[enc_id]["pokemon_details"] = {
+                    key: val for key, val in entry.items() if key != "encounter_id"
+                }
 
     # Group encounters by location area
     location_area_encounters = {}
@@ -230,6 +246,13 @@ def main():
                 output["encounters"][-1]["encounter_conditions"] = [
                     cond["identifier"] for cond in enc["encounter_conditions"]
                 ]
+
+            # Add encounter pokemon details, if they exist
+            if "pokemon_details" in enc:
+                output["encounters"][-1]["pokemon_details"] = [
+                    {key: val for key, val in enc["pokemon_details"].items() if val}
+                ]
+
         if args.sort_by_natdex:
             output["encounters"] = list(
                 sorted(

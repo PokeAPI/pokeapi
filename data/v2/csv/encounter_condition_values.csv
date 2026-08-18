@@ -353,3 +353,7 @@ id,encounter_condition_id,identifier,is_default
 352,30,trash-can-type-thursday,1
 353,15,trade-nidoran-f,1
 354,15,trade-nidorina,1
+355,15,trade-machop,1
+356,15,trade-buizel,1
+357,15,trade-medicham,1
+358,15,trade-finneon,1

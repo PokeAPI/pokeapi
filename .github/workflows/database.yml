@@ -2,6 +2,10 @@ name: Database
 
 on:
   pull_request:
+  push:
+    branches-ignore:
+      - master
+      - staging
 
 jobs:
   csv:

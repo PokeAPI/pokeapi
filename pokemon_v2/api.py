@@ -1,71 +1,154 @@
+# ruff: noqa: F405, E501
+from __future__ import annotations
+
+import itertools
 import re
 import subprocess
-from rest_framework import viewsets
+from typing import TYPE_CHECKING, Any, cast
+
+from django.core.exceptions import FieldError
+from django.db.models import Q, QuerySet
+from django.http import Http404
+from django.shortcuts import get_object_or_404
+from drf_spectacular.types import OpenApiTypes
+from drf_spectacular.utils import (
+    OpenApiParameter,
+    extend_schema,  # pyright: ignore[reportUnknownVariableType]
+    extend_schema_view,  # pyright: ignore[reportUnknownVariableType]
+)
+from rest_framework import serializers, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from django.http import Http404
-from django.db.models import Q
-from drf_spectacular.utils import extend_schema, extend_schema_view, OpenApiParameter
-from drf_spectacular.types import OpenApiTypes
+from typing_extensions import override
 
-from .models import *
-from .serializers import *
+from .models import *  # noqa: F403
+from .serializers import *  # noqa: F403
 
-# pylint: disable=no-member, attribute-defined-outside-init
+if TYPE_CHECKING:
+    from rest_framework.request import Request
+    from rest_framework.utils.serializer_helpers import ReturnDict, ReturnList
+
+__all__: tuple[str, ...] = (
+    "AbilityResource",
+    "BerryFirmnessResource",
+    "BerryFlavorResource",
+    "BerryResource",
+    "CharacteristicResource",
+    "ContestEffectResource",
+    "ContestTypeResource",
+    "CurrencyResource",
+    "EggGroupResource",
+    "EncounterConditionResource",
+    "EncounterConditionValueResource",
+    "EncounterMethodResource",
+    "EvolutionChainResource",
+    "EvolutionTriggerResource",
+    "GenderResource",
+    "GenerationResource",
+    "GrowthRateResource",
+    "ItemAttributeResource",
+    "ItemCategoryResource",
+    "ItemFlingEffectResource",
+    "ItemPocketResource",
+    "ItemResource",
+    "LanguageResource",
+    "ListOrDetailSerialRelation",
+    "LocationAreaResource",
+    "LocationResource",
+    "MachineResource",
+    "MoveBattleStyleResource",
+    "MoveDamageClassResource",
+    "MoveLearnMethodResource",
+    "MoveMetaAilmentResource",
+    "MoveMetaCategoryResource",
+    "MoveResource",
+    "MoveTargetResource",
+    "NameOrIdRetrieval",
+    "NatureResource",
+    "PalParkAreaResource",
+    "PokeapiCommonViewset",
+    "PokeapiMetaResponseSerializer",
+    "PokeapiMetaView",
+    "PokeathlonStatResource",
+    "PokedexResource",
+    "PokemonColorResource",
+    "PokemonEncounterDetailResponseSerializer",
+    "PokemonEncounterResponseSerializer",
+    "PokemonEncounterVersionDetailResponseSerializer",
+    "PokemonEncounterView",
+    "PokemonFormResource",
+    "PokemonHabitatResource",
+    "PokemonResource",
+    "PokemonShapeResource",
+    "PokemonSpeciesResource",
+    "RegionResource",
+    "StatResource",
+    "SuperContestEffectResource",
+    "TypeResource",
+    "VersionGroupResource",
+    "VersionResource",
+)
+
 
 ###########################
 #  BEHAVIOR ABSTRACTIONS  #
 ###########################
 
 
-class ListOrDetailSerialRelation:
+class ListOrDetailSerialRelation(viewsets.GenericViewSet[Any]):
     """
-    Mixin to allow association with separate serializers
-    for list or detail view.
+    Mixin to allow association with separate serializers for list or detail view.
     """
 
-    list_serializer_class = None
+    list_serializer_class: type[serializers.BaseSerializer[Any]] | None = None
 
-    def get_serializer_class(self):
-        if self.action == "list" and self.list_serializer_class is not None:
-            return self.list_serializer_class
+    @override
+    def get_serializer_class(self) -> type[serializers.BaseSerializer[Any]]:
+        if self.action == "list":
+            if self.list_serializer_class is not None:
+                return self.list_serializer_class
+            raise AttributeError("list_serializer_class must be set for list view")
+        if self.serializer_class is None:
+            raise AttributeError("serializer_class must be set for detail view")
         return self.serializer_class
 
 
-class NameOrIdRetrieval:
+class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
     """
-    Mixin to allow retrieval of resources by
-    pk (in this case ID) or by name
+    Mixin to allow retrieval of resources by pk (in this case ID) or by name.
     """
 
-    idPattern = re.compile(r"^-?[0-9]+$")
+    ID_PATTERN = re.compile(r"^-?[0-9]+$")
     # Allow alphanumeric, hyphen, plus, and space (Space added for test cases using name for lookup, ex: 'base pkm')
-    namePattern = re.compile(r"^[0-9A-Za-z\-\+ ]+$")
+    NAME_PATTERN = re.compile(r"^[0-9A-Za-z\-\+ ]+$")
 
-    def get_queryset(self):
+    @override
+    def get_queryset(self) -> QuerySet[Any]:
         queryset = super().get_queryset()
-        filter = self.request.GET.get("q", "")
+        filter_q = self.request.GET.get("q", "")
 
-        if filter:
-            queryset = queryset.filter(Q(name__icontains=filter))
+        if filter_q:
+            queryset = queryset.filter(Q(name__icontains=filter_q))
 
         return queryset
 
-    def get_object(self):
-        queryset = self.get_queryset()
-        queryset = self.filter_queryset(queryset)
+    @override
+    def get_object(self) -> Any:
+        queryset = self.filter_queryset(self.get_queryset())
         lookup = self.kwargs["pk"]
 
-        if self.idPattern.match(lookup):
+        if self.ID_PATTERN.match(lookup):
             lookup_id = int(lookup)
             if abs(lookup_id) > 2147483647:
                 raise Http404
 
-            resp = get_object_or_404(queryset, pk=lookup)
+            resp = get_object_or_404(queryset, pk=lookup_id)
 
-        elif self.namePattern.match(lookup):
-            resp = get_object_or_404(queryset, name__iexact=lookup)
+        elif self.NAME_PATTERN.match(lookup):
+            try:
+                resp = get_object_or_404(queryset, name__iexact=lookup)
+            except FieldError as err:
+                raise Http404 from err
 
         else:
             raise Http404
@@ -90,12 +173,11 @@ retrieve_path_parameter = OpenApiParameter(
 
 
 @extend_schema_view(list=extend_schema(parameters=[q_query_string_parameter]))
-class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet):
+class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewsets.ReadOnlyModelViewSet[Any]):
+    @override
     @extend_schema(parameters=[retrieve_path_parameter])
-    def retrieve(self, request, pk=None):
-        return super().retrieve(request, pk)
-
-    pass
+    def retrieve(self, request: Request, *args: Any, pk: str | int | None = None, **kwargs: Any) -> Response:
+        return super().retrieve(request, *args, pk=pk, **kwargs)
 
 
 ##########
@@ -114,7 +196,7 @@ class PokeapiCommonViewset(ListOrDetailSerialRelation, NameOrIdRetrieval, viewse
     )
 )
 class AbilityResource(PokeapiCommonViewset):
-    queryset = Ability.objects.all()
+    queryset = Ability.objects.select_related("generation")
     serializer_class = AbilityDetailSerializer
     list_serializer_class = AbilitySummarySerializer
 
@@ -497,7 +579,7 @@ class LocationResource(PokeapiCommonViewset):
         summary="List location areas",
     )
 )
-class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet):
+class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet[LocationArea]):
     queryset = LocationArea.objects.all()
     serializer_class = LocationAreaDetailSerializer
     list_serializer_class = LocationAreaSummarySerializer
@@ -770,7 +852,7 @@ class PokemonShapeResource(PokeapiCommonViewset):
     ),
 )
 class PokemonResource(PokeapiCommonViewset):
-    queryset = Pokemon.objects.all()
+    queryset = Pokemon.objects.select_related("pokemon_species").prefetch_related("pokemonsprites", "pokemoncries")
     serializer_class = PokemonDetailSerializer
     list_serializer_class = PokemonSummarySerializer
 
@@ -887,204 +969,105 @@ class VersionGroupResource(PokeapiCommonViewset):
     list_serializer_class = VersionGroupSummarySerializer
 
 
+class PokemonEncounterDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
+    chance = serializers.IntegerField()
+    condition_values = EncounterConditionValueSummarySerializer(many=True)
+    max_level = serializers.IntegerField()
+    method = EncounterMethodSummarySerializer()
+    min_level = serializers.IntegerField()
+
+
+class PokemonEncounterVersionDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
+    version = VersionSummarySerializer()
+    max_chance = serializers.IntegerField()
+    encounter_details = PokemonEncounterDetailResponseSerializer(many=True)
+
+
+class PokemonEncounterResponseSerializer(serializers.Serializer[dict[str, Any]]):
+    location_area = LocationAreaSummarySerializer()
+    version_details = PokemonEncounterVersionDetailResponseSerializer(many=True)
+
+
+class PokemonLocationAreaEncounterSerializer(serializers.Serializer[Any]):
+    location_area = LocationAreaSummarySerializer()
+    version_details = LocationAreaPokemonEncounterVersionSerializer(many=True)
+
+
 @extend_schema(
     description="Handles Pokemon Encounters as a sub-resource.",
     summary="Get pokemon encounter",
     tags=["encounters"],
-    responses={
-        "200": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "required": ["location_area", "version_details"],
-                "properties": {
-                    "location_area": {
-                        "type": "object",
-                        "required": ["name", "url"],
-                        "properties": {
-                            "name": {"type": "string", "example": "cerulean-city-area"},
-                            "url": {
-                                "type": "string",
-                                "format": "uri",
-                                "example": "https://pokeapi.co/api/v2/location-area/281/",
-                            },
-                        },
-                    },
-                    "version_details": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "required": ["encounter_details", "max_chance", "version"],
-                            "properties": {
-                                "encounter_details": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object",
-                                        "required": [
-                                            "chance",
-                                            "condition_values",
-                                            "max_level",
-                                            "method",
-                                            "min_level",
-                                        ],
-                                        "properties": {
-                                            "chance": {
-                                                "type": "number",
-                                                "example": 100,
-                                            },
-                                            "condition_values": {
-                                                "type": "array",
-                                                "items": {
-                                                    "type": "object",
-                                                    "required": ["name", "url"],
-                                                    "properties": {
-                                                        "name": {
-                                                            "type": "string",
-                                                            "example": "story-progress-beat-red",
-                                                        },
-                                                        "url": {
-                                                            "type": "string",
-                                                            "format": "uri",
-                                                            "example": "https://pokeapi.co/api/v2/encounter-condition-value/55/",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                            "max_level": {
-                                                "type": "number",
-                                                "example": 10,
-                                            },
-                                            "method": {
-                                                "type": "object",
-                                                "required": ["name", "url"],
-                                                "properties": {
-                                                    "name": {
-                                                        "type": "string",
-                                                        "example": "gift",
-                                                    },
-                                                    "url": {
-                                                        "type": "string",
-                                                        "format": "uri",
-                                                        "example": "https://pokeapi.co/api/v2/encounter-method/18/",
-                                                    },
-                                                },
-                                            },
-                                            "min_level": {
-                                                "type": "number",
-                                                "example": 10,
-                                            },
-                                        },
-                                    },
-                                },
-                                "max_chance": {"type": "number", "example": 100},
-                                "version": {
-                                    "type": "object",
-                                    "required": ["name", "url"],
-                                    "properties": {
-                                        "name": {"type": "string", "example": "red"},
-                                        "url": {
-                                            "type": "string",
-                                            "format": "uri",
-                                            "example": "https://pokeapi.co/api/v2/version/1/",
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-        }
-    },
+    responses={"200": PokemonEncounterResponseSerializer(many=True)},
 )
 class PokemonEncounterView(APIView):
-    def get(self, request, pokemon_id):
-        self.context = dict(request=request)
+    def get(self, request: Request, pokemon_id: int) -> Response:
+        self.context = {"request": request}
 
         try:
             pokemon = Pokemon.objects.get(pk=pokemon_id)
-        except Pokemon.DoesNotExist:
-            raise Http404
+        except Pokemon.DoesNotExist as e:
+            raise Http404 from e
 
-        encounter_objects = Encounter.objects.filter(pokemon=pokemon)
+        encounters = (
+            Encounter.objects.filter(pokemon=pokemon)
+            .select_related(
+                "location_area",
+                "version",
+                "encounter_slot",
+                "encounter_slot__encounter_method",
+            )
+            .prefetch_related(
+                "encounterconditionvaluemap_set",
+                "encounterconditionvaluemap_set__encounter_condition_value",
+                "encounterpokemondetail_set",
+            )
+            .order_by("location_area_id", "version_id", "encounter_slot_id")
+        )
 
-        area_ids = encounter_objects.values_list("location_area", flat=True).distinct().order_by("location_area")
-
-        location_area_objects = LocationArea.objects.filter(pk__in=area_ids)
-        version_objects = Version.objects
-
-        encounters_list = []
-
-        for area_id in area_ids:
-            location_area = location_area_objects.get(pk=area_id)
-
-            area_encounters = encounter_objects.filter(location_area_id=area_id)
-
-            version_ids = area_encounters.values_list("version_id", flat=True).distinct().order_by("version_id")
-            version_details_list = []
-
-            for version_id in version_ids:
-                version = version_objects.get(pk=version_id)
-
-                version_encounters = area_encounters.filter(version_id=version_id).order_by("encounter_slot_id")
-
-                encounters_data = EncounterDetailSerializer(version_encounters, many=True, context=self.context).data
-
-                max_chance = 0
-                encounter_details_list = []
-
-                for encounter in encounters_data:
-                    slot = EncounterSlot.objects.get(pk=encounter["encounter_slot"])
-                    slot_data = EncounterSlotSerializer(slot, context=self.context).data
-
-                    del encounter["pokemon"]
-                    del encounter["encounter_slot"]
-                    del encounter["location_area"]
-                    del encounter["version"]
-                    encounter["chance"] = slot_data["chance"]
-                    max_chance += slot_data["chance"]
-                    encounter["method"] = slot_data["encounter_method"]
-
-                    encounter_details_list.append(encounter)
-
-                version_details_list.append(
+        grouped_data: list[dict[str, Any]] = []
+        for location_area, area_group in itertools.groupby(encounters, key=lambda e: e.location_area):
+            version_details: list[dict[str, Any]] = []
+            for version, ver_group in itertools.groupby(area_group, key=lambda e: e.version):
+                encounter_list = list(ver_group)
+                max_chance = sum(e.encounter_slot.rarity for e in encounter_list if e.encounter_slot)
+                version_details.append(
                     {
-                        "version": VersionSummarySerializer(version, context=self.context).data,
+                        "version": version,
                         "max_chance": max_chance,
-                        "encounter_details": encounter_details_list,
+                        "encounter_details": encounter_list,
                     }
                 )
-
-            encounters_list.append(
+            grouped_data.append(
                 {
-                    "location_area": LocationAreaSummarySerializer(location_area, context=self.context).data,
-                    "version_details": version_details_list,
+                    "location_area": location_area,
+                    "version_details": version_details,
                 }
             )
 
-        return Response(encounters_list)
+        data = cast(
+            "ReturnList[ReturnDict[str, Any]]",
+            PokemonLocationAreaEncounterSerializer(grouped_data, many=True, context=self.context).data,  # pyright: ignore[reportUnknownMemberType]
+        )
+        return Response(data)
+
+
+class PokeapiMetaResponseSerializer(serializers.Serializer[dict[str, Any]]):
+    deploy_date = serializers.CharField(allow_null=True)
+    hash = serializers.CharField(allow_null=True)
+    tag = serializers.CharField(allow_null=True)
 
 
 @extend_schema(
     description="Returns metadata about the current deployed version of the API, including the git commit hash, deploy date, and tag (if any).",
     summary="Get API metadata",
     tags=["utility"],
-    responses={
-        200: {
-            "type": "object",
-            "properties": {
-                "deploy_date": {"type": "string", "nullable": True},
-                "hash": {"type": "string", "nullable": True},
-                "tag": {"type": "string", "nullable": True},
-            },
-        }
-    },
+    responses={"200": PokeapiMetaResponseSerializer},
 )
 class PokeapiMetaView(APIView):
-    def get(self, request):
+    def get(self, _request: Request) -> Response:
         try:
             git_hash = subprocess.check_output(["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL).decode().strip()
-        except Exception:
+        except (subprocess.CalledProcessError, OSError, ValueError):
             git_hash = None
 
         try:
@@ -1093,7 +1076,7 @@ class PokeapiMetaView(APIView):
                 .decode()
                 .strip()
             )
-        except Exception:
+        except (subprocess.CalledProcessError, OSError, ValueError):
             deploy_date = None
 
         try:
@@ -1102,8 +1085,8 @@ class PokeapiMetaView(APIView):
                 .decode()
                 .strip()
             )
-            tag = tag_output if tag_output else None
-        except Exception:
+            tag = tag_output or None
+        except (subprocess.CalledProcessError, OSError, ValueError):
             tag = None
 
         return Response(

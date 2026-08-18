@@ -1,3 +1,4 @@
+# ruff: noqa: F405
 #####################################
 #
 #   V2 API setup using Django Rest
@@ -8,11 +9,12 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any
 
-from django.urls import include, path, re_path
+from django.urls import URLPattern, URLResolver, include, path, re_path
 from rest_framework import routers
 from rest_framework.reverse import reverse as drf_reverse
+from typing_extensions import override
 
-from pokemon_v2.api import *
+from pokemon_v2.api import *  # noqa: F403
 
 if TYPE_CHECKING:
     from rest_framework.request import Request
@@ -20,6 +22,7 @@ if TYPE_CHECKING:
 
 
 class PokeAPIRootView(routers.APIRootView):
+    @override
     def get(self, request: Request, *args: Any, **kwargs: Any) -> Response:
         response = super().get(request, *args, **kwargs)
         response.data["meta"] = drf_reverse("meta", request=request)
@@ -91,7 +94,7 @@ router.register(r"version-group", VersionGroupResource)
 #
 ###########################
 
-urlpatterns = [
+urlpatterns: list[URLPattern | URLResolver] = [
     path("api/v2/meta/", PokeapiMetaView.as_view(), name="meta"),
     path("api/v2/", include(router.urls)),
     re_path(

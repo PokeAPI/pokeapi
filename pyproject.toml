@@ -15,11 +15,15 @@ dependencies = [
     "gunicorn==23.0.0",
     "legacy-cgi>=2.6.4 ; python_full_version >= '3.13'",
     "psycopg[binary]==3.3.2",
+    "typing-extensions>=4.15.0",
 ]
 
 [dependency-groups]
 dev = [
     "coverage==7.13.1",
+    "django-types>=0.24.0",
+    "djangorestframework-stubs>=3.17.1",
     "pre-commit>=4.6.0",
     "ruff>=0.15.21",
+    "ty>=0.0.65",
 ]

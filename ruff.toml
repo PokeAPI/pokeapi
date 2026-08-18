@@ -4,3 +4,38 @@ exclude = [
     "data/v2/cries",
     "data/v2/sprites",
 ]
+
+[lint]
+extend-select = [
+    "A",      # flake8-builtins: shadowing builtins
+    "ANN",    # flake8-annotations: missing type annotations
+    "B",      # flake8-bugbear: likely bugs
+    "C4",     # flake8-comprehensions: simplify comprehensions
+    "DJ",     # flake8-django: django best practices
+    "E",      # pycodestyle: PEP 8 errors
+    "ERA",    # eradicate: commented-out code
+    "FURB",   # refurb: modernize and simplify
+    "I",      # isort: import sorting
+    "N",      # pep8-naming: naming conventions
+    "PERF",   # Perflint: performance anti-patterns
+    "PGH003", # pygrep-hooks: blanket type: ignore
+    "PYI",    # flake8-pyi: stub file best practices
+    "RUF",    # Ruff-specific: assorted rules
+    "SIM",    # flake8-simplify: simplify expressions
+    "TC",     # flake8-type-checking: TYPE_CHECKING imports
+    "TID",    # flake8-tidy-imports: tidy imports
+    "F",      # Pyflakes: core Python error detection
+    "UP",     # pyupgrade: modern Python syntax
+    "W",      # pycodestyle: PEP 8 warnings
+]
+preview = true
+
+[lint.per-file-ignores]
+# TODO: Test files
+"pokemon_v2/tests.py" = ["ANN", "UP032", "F403", "F405"]
+"pokemon_v2/test_models.py" = ["ANN", "F403", "F405"]
+# TODO: Data loading scripts
+"data/v2/build.py" = ["ANN", "ERA001", "F403", "F405"]
+"data/v2/__init__.py" = ["F403", "F405"]
+# Django migration generated code
+"pokemon_v2/migrations/*.py" = ["RUF012", "ERA001"]

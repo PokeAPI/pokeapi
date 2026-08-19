@@ -741,7 +741,7 @@ id,identifier,generation_id,type_id,power,pp,accuracy,priority,target_id,damage_
 740,sparkly-swirl,7,18,120,5,85,0,10,3,1,,,,
 741,veevee-volley,7,1,,20,,0,10,2,1,,,,
 742,double-iron-bash,7,9,60,5,100,0,10,2,45,30,,,
-743,max-guard,8,1,,10,,4,7,1,112,,,,
+743,max-guard,8,1,,10,,4,7,1,112,,,
 744,dynamax-cannon,8,16,100,5,100,0,10,3,421,100,,,,
 745,snipe-shot,8,11,80,15,100,0,10,3,422,100,,,,
 746,jaw-lock,8,17,80,10,100,0,10,2,445,100,,,,

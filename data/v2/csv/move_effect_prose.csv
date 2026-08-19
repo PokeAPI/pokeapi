@@ -2195,12 +2195,8 @@ If a Pokémon is holding a Terrain Extender when creating Psychic Terrain (by an
 405,9,Lowers the user’s Defense by one stage after inflicting damage.,Inflicts regular damage.  Lowers the user’s Defense by one stage.
 406,5,Inflige des dégâts réguliers avec aucun effet additionnel.,Inflige des dégâts réguliers.
 406,9,Inflicts regular damage with no additional effect.,Inflicts regular damage.
-407,5,"Réduit les dégâts pendant cinq tours, mais doit être utilisé pendant la grêle.","Place l'effet du Voile Aurore sur le côté du terrain du lanceur pendant les 5 prochains tours.  Si la météo n'est pas Grêle, ou que la météo est désactivée par les effets de Ciel Gris ou Air Lock, cette capacité échouera.
-
-N'importe quel dégât régulier infligé à un Pokémon affecté est réduit de ½.  (S'il y a plusieurs Pokémon sur le terrain affecté, la réduction est ⅓.)"
-407,9,"Reduces damage five turns, but must be used during hail.","Places the Aurora Veil effect on the user’s side of the field for the next 5 turns.  If the weather is not Hail, or the weather is disabled by the effects of Cloud Nine or Air Lock, this move will fail.
-
-Any regular damage dealt to an affected Pokémon is reduced by ½.  (If there are multiple Pokémon on the affected field, the reduction is ⅓.)"
+407,5,"Réduit les dégâts pendant cinq tours, mais doit être utilisé pendant la grêle.","Place l'effet du Voile Aurore sur le côté du terrain du lanceur pendant les 5 prochains tours.  Si la météo n'est pas Grêle, ou que la météo est désactivée par les effets de Ciel Gris ou Air Lock, cette capacité échouera. N'importe quel dégât régulier infligé à un Pokémon affecté est réduit de ½.  (S'il y a plusieurs Pokémon sur le terrain affecté, la réduction est ⅓.)"
+407,9,"Reduces damage five turns, but must be used during hail.","Places the Aurora Veil effect on the user’s side of the field for the next 5 turns.  If the weather is not Hail, or the weather is disabled by the effects of Cloud Nine or Air Lock, this move will fail. Any regular damage dealt to an affected Pokémon is reduced by ½.  (If there are multiple Pokémon on the affected field, the reduction is ⅓.)"
 408,5,Inflige des dégâts seulement si le lanceur a été touché par une capacité physique ce tour.,"Inflige des dégâts réguliers.  Si le lanceur n'a pas encore été frappé par une attaque physique adverse ce tour, cette capacité échouera."
 408,9,Only inflicts damage if the user was hit by a physical move this turn.,"Inflicts regular damage.  If the user was not yet hit by an opponent’s physical move this turn, this move will fail."
 409,5,A une puissance double si la dernière capacité du lanceur a échoué.,"Inflige des dégâts réguliers. La puissance est doublée si la dernière capacité du lanceur a échoué pour n'importe quelle raison (i.e., a produit le message ""Mais cela échoue."") ou était inefficace dû aux types."

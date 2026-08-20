@@ -1,0 +1,16 @@
+[src]
+include = [
+    "config",
+    "data/v2/*.py",
+    "pokemon_v2",
+]
+
+[rules]
+blanket-ignore-comment = "error"
+missing-override-decorator = "error"
+missing-type-argument = "error"
+
+division-by-zero = "warn"
+possibly-missing-attribute = "warn"
+possibly-missing-import = "warn"
+possibly-unresolved-reference = "warn"

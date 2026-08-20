@@ -1,0 +1,79 @@
+name: Code Quality
+
+on:
+  pull_request:
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "Makefile"
+      - "uv.lock"
+      - ".github/workflows/code-quality.yml"
+  push:
+    branches-ignore:
+      - master
+      - staging
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "Makefile"
+      - "uv.lock"
+      - ".github/workflows/code-quality.yml"
+
+jobs:
+  ruff:
+    name: Ruff (lint)
+    runs-on: ubuntu-latest
+    # TODO: remove once the codebase is fully lint-clean
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
+      - name: Install dependencies
+        run: make install
+      - name: Lint
+        run: make lint-check || true
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Ruff lint results"
+            echo
+            echo "<details><summary>Expand to see all errors (backlog while the codebase is being linted incrementally)</summary>"
+            echo
+            echo '```'
+            uv run ruff check --output-format=concise . || true
+            echo '```'
+            echo
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  ty:
+    name: ty (type-check)
+    runs-on: ubuntu-latest
+    # TODO: remove once the codebase is fully typed
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup uv
+        uses: ./.github/actions/setup-uv
+      - name: Install dependencies
+        run: make install
+      - name: Type-check
+        run: make typecheck || true
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## ty type-check results"
+            echo
+            echo "<details><summary>Expand to see all errors (backlog while the codebase is being typed incrementally)</summary>"
+            echo
+            echo '```'
+            uv run ty check --output-format=concise || true
+            echo '```'
+            echo
+            echo "</details>"
+          } >> "$GITHUB_STEP_SUMMARY"

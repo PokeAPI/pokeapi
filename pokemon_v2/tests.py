@@ -1,10 +1,10 @@
 import json
-from datetime import datetime
+from datetime import datetime, timezone
+
 from rest_framework import status
 from rest_framework.test import APITestCase
-from pokemon_v2.models import *
 
-# pylint: disable=redefined-builtin
+from pokemon_v2.models import *
 
 TEST_HOST = "http://testserver"
 API_V2 = "/api/v2"
@@ -598,13 +598,13 @@ class APIData:
 
         generation = generation or cls.setup_generation_data(name="rgn for " + name)
 
-        type = Type(name=name, generation=generation, move_damage_class=move_damage_class)
-        type.save()
+        type_obj = Type(name=name, generation=generation, move_damage_class=move_damage_class)
+        type_obj.save()
 
-        return type
+        return type_obj
 
     @classmethod
-    def setup_type_name_data(cls, type, name="tp nm"):
+    def setup_type_name_data(cls, type, name="tp nm"):  # noqa: A002
         language = cls.setup_language_data(name="lang for " + name)
 
         type_name = TypeName.objects.create(language=language, name=name, type=type)
@@ -613,7 +613,7 @@ class APIData:
         return type_name
 
     @classmethod
-    def setup_type_game_index_data(cls, type, game_index=0):
+    def setup_type_game_index_data(cls, type, game_index=0):  # noqa: A002
         generation = cls.setup_generation_data(name="gen for tp gm indx")
 
         type_game_index = TypeGameIndex.objects.create(type=type, game_index=game_index, generation=generation)
@@ -621,7 +621,7 @@ class APIData:
 
         return type_game_index
 
-    def setup_type_sprites_data(cls, type):
+    def setup_type_sprites_data(self, type):  # noqa: A002
         game_map = {
             "generation-iii": [
                 "colosseum",
@@ -646,14 +646,14 @@ class APIData:
             "generation-ix": ["scarlet-violet"],
         }
         sprites = {}
-        for generation in game_map.keys():
-            for game in game_map[generation]:
+        for generation, games in game_map.items():
+            for game in games:
                 if generation not in sprites:
                     sprites[generation] = {}
 
-                if type.id == 18 and generation.endswith(("-iii", "-iv", "-v")):
-                    sprites[generation][game] = None
-                elif type.id == 19 and generation.endswith(("-iii", "-iv", "-v", "-vi", "-vii", "-viii")):
+                if (type.id == 18 and generation.endswith(("-iii", "-iv", "-v"))) or (
+                    type.id == 19 and generation.endswith(("-iii", "-iv", "-v", "-vi", "-vii", "-viii"))
+                ):
                     sprites[generation][game] = None
                 else:
                     sprites[generation][game] = {
@@ -885,7 +885,7 @@ class APIData:
         move_damage_class=None,
         move_effect=None,
         move_target=None,
-        type=None,
+        type=None,  # noqa: A002
         name="mv",
         power=20,
         pp=20,
@@ -901,7 +901,7 @@ class APIData:
 
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
-        type = type or cls.setup_type_data(name="tp for " + name)
+        type_obj = type or cls.setup_type_data(name="tp for " + name)
 
         move_target = move_target or cls.setup_move_target_data(name="mv trgt for " + name)
 
@@ -910,7 +910,7 @@ class APIData:
         move = Move.objects.create(
             name=name,
             generation=generation,
-            type=type,
+            type=type_obj,
             power=power,
             pp=pp,
             accuracy=accuracy,
@@ -980,7 +980,7 @@ class APIData:
     def setup_move_change_data(
         cls,
         move=None,
-        type=None,
+        type=None,  # noqa: A002
         move_effect=None,
         version_group=None,
         power=20,
@@ -1432,10 +1432,10 @@ class APIData:
         return pokemon_form_sprites
 
     @classmethod
-    def setup_pokemon_form_type_data(cls, pokemon_form, type=None, slot=1):
-        type = type or cls.setup_type_data(name="tp for pkmn frm")
+    def setup_pokemon_form_type_data(cls, pokemon_form, type=None, slot=1):  # noqa: A002
+        type_obj = type or cls.setup_type_data(name="tp for pkmn frm")
 
-        form_type = PokemonFormType(pokemon_form=pokemon_form, type=type, slot=slot)
+        form_type = PokemonFormType(pokemon_form=pokemon_form, type=type_obj, slot=slot)
         form_type.save()
 
         return form_type
@@ -1542,19 +1542,19 @@ class APIData:
         return pokemon_stat_past
 
     @classmethod
-    def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):
-        type = type or cls.setup_type_data(name="tp for pkmn")
+    def setup_pokemon_type_data(cls, pokemon, type=None, slot=1):  # noqa: A002
+        type_obj = type or cls.setup_type_data(name="tp for pkmn")
 
-        pokemon_type = PokemonType(pokemon=pokemon, type=type, slot=slot)
+        pokemon_type = PokemonType(pokemon=pokemon, type=type_obj, slot=slot)
         pokemon_type.save()
 
         return pokemon_type
 
     @classmethod
-    def setup_pokemon_past_type_data(cls, pokemon, generation, type=None, slot=1):
-        type = type or cls.setup_type_data(name="tp for pkmn")
+    def setup_pokemon_past_type_data(cls, pokemon, generation, type=None, slot=1):  # noqa: A002
+        type_obj = type or cls.setup_type_data(name="tp for pkmn")
 
-        pokemon_type_past = PokemonTypePast(pokemon=pokemon, generation=generation, type=type, slot=slot)
+        pokemon_type_past = PokemonTypePast(pokemon=pokemon, generation=generation, type=type_obj, slot=slot)
         pokemon_type_past.save()
 
         return pokemon_type_past
@@ -2026,7 +2026,7 @@ class APITests(APIData, APITestCase):
         ability = self.setup_ability_data(name="ablty for base gen", generation=generation)
         move = self.setup_move_data(name="mv for base gen", generation=generation)
         pokemon_species = self.setup_pokemon_species_data(name="pkmn spcs for base gen", generation=generation)
-        type = self.setup_type_data(name="tp for base gen", generation=generation)
+        type_obj = self.setup_type_data(name="tp for base gen", generation=generation)
         version_group = self.setup_version_group_data(name="ver grp for base gen", generation=generation)
 
         response = self.client.get("{}/generation/{}/".format(API_V2, generation.pk))
@@ -2060,10 +2060,10 @@ class APITests(APIData, APITestCase):
             "{}{}/move/{}/".format(TEST_HOST, API_V2, move.pk),
         )
         # type params
-        self.assertEqual(response.data["types"][0]["name"], type.name)
+        self.assertEqual(response.data["types"][0]["name"], type_obj.name)
         self.assertEqual(
             response.data["types"][0]["url"],
-            "{}{}/type/{}/".format(TEST_HOST, API_V2, type.pk),
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, type_obj.pk),
         )
         # species params
         self.assertEqual(response.data["pokemon_species"][0]["name"], pokemon_species.name)
@@ -2604,8 +2604,8 @@ class APITests(APIData, APITestCase):
         )
 
     def test_berry_api(self):
-        type = self.setup_type_data(name="tp fr base bry")
-        berry = self.setup_berry_data(name="base bry", natural_gift_type=type)
+        type_obj = self.setup_type_data(name="tp fr base bry")
+        berry = self.setup_berry_data(name="base bry", natural_gift_type=type_obj)
         berry_flavor = self.setup_berry_flavor_data(name="bry flvr for base bry")
         berry_flavor_map = self.setup_berry_flavor_map_data(berry=berry, berry_flavor=berry_flavor)
 
@@ -2640,10 +2640,10 @@ class APITests(APIData, APITestCase):
             "{}{}/berry-flavor/{}/".format(TEST_HOST, API_V2, berry_flavor.pk),
         )
         # natural gift type
-        self.assertEqual(response.data["natural_gift_type"]["name"], type.name)
+        self.assertEqual(response.data["natural_gift_type"]["name"], type_obj.name)
         self.assertEqual(
             response.data["natural_gift_type"]["url"],
-            "{}{}/type/{}/".format(TEST_HOST, API_V2, type.pk),
+            "{}{}/type/{}/".format(TEST_HOST, API_V2, type_obj.pk),
         )
 
     # Growth Rate Tests
@@ -3166,6 +3166,7 @@ class APITests(APIData, APITestCase):
         past_damage_relations = response.data["past_damage_relations"]
         gen_data = past_damage_relations[0]["generation"]
         self.assertEqual(gen_data["name"], generation.name)
+        assert past_no_damage_to_relation.generation is not None
         self.assertEqual(
             gen_data["url"],
             "{}{}/generation/{}/".format(TEST_HOST, API_V2, past_no_damage_to_relation.generation.pk),
@@ -3229,7 +3230,7 @@ class APITests(APIData, APITestCase):
 
         sprites_data = json.loads(type_sprites.sprites)
 
-        for generation in game_map.keys():
+        for generation in game_map:
             for game in game_map[generation]:
                 self.assertEqual(
                     json.loads(response.data["sprites"])[generation][game]["name_icon"],
@@ -4282,7 +4283,7 @@ class APITests(APIData, APITestCase):
         # assert that we only got one move record back.
         pokemon_move = self.setup_move_data(name="mv for pkmn")
         pokemon_moves = []
-        for move in range(0, 4):
+        for move in range(4):
             version_group = self.setup_version_group_data(name="ver grp " + str(move) + " for pkmn")
             new_move = self.setup_pokemon_move_data(
                 pokemon=pokemon,
@@ -4323,6 +4324,10 @@ class APITests(APIData, APITestCase):
         self.assertEqual(response.data["height"], pokemon.height)
         self.assertEqual(response.data["weight"], pokemon.weight)
         self.assertEqual(response.data["base_experience"], pokemon.base_experience)
+        self.assertEqual(
+            response.data["location_area_encounters"],
+            "{}{}/pokemon/{}/encounters".format(TEST_HOST, API_V2, pokemon.pk),
+        )
         # species params
         self.assertEqual(response.data["species"]["name"], pokemon_species.name)
         self.assertEqual(
@@ -4453,23 +4458,23 @@ class APITests(APIData, APITestCase):
         for i, val in enumerate(pokemon_moves):  # pylint: disable=unused-variable
             version = response.data["moves"][0]["version_group_details"][i]
             # Learn Level
-            expected = pokemon_moves[i].level
+            expected = val.level
             actual = version["level_learned_at"]
             self.assertEqual(expected, actual)
             # Version Group Name
-            expected = pokemon_moves[i].version_group.name
+            expected = val.version_group.name
             actual = version["version_group"]["name"]
             self.assertEqual(expected, actual)
             # Version Group URL
-            expected = "{}{}/version-group/{}/".format(TEST_HOST, API_V2, pokemon_moves[i].version_group.pk)
+            expected = "{}{}/version-group/{}/".format(TEST_HOST, API_V2, val.version_group.pk)
             actual = version["version_group"]["url"]
             self.assertEqual(expected, actual)
             # Learn Method Name
-            expected = pokemon_moves[i].move_learn_method.name
+            expected = val.move_learn_method.name
             actual = version["move_learn_method"]["name"]
             self.assertEqual(expected, actual)
             # Learn Method URL
-            expected = "{}{}/move-learn-method/{}/".format(TEST_HOST, API_V2, pokemon_moves[i].move_learn_method.pk)
+            expected = "{}{}/move-learn-method/{}/".format(TEST_HOST, API_V2, val.move_learn_method.pk)
             actual = version["move_learn_method"]["url"]
             self.assertEqual(expected, actual)
         # game indices params
@@ -4495,7 +4500,7 @@ class APITests(APIData, APITestCase):
         sprites_data = json.loads(pokemon_sprites.sprites)
         cries_data = json.loads(pokemon_cries.cries)
         response_sprites_data = json.loads(response.data["sprites"])
-        response_cries_data = json.loads(response.data["cries"])
+        json.loads(response.data["cries"])
 
         # sprite params
         self.assertEqual(
@@ -4853,28 +4858,28 @@ class APITests(APIData, APITestCase):
             evolves_from_species=basic,
             evolution_chain=evolution_chain,
         )
-        stage_one_first_evolution = self.setup_pokemon_evolution_data(evolved_species=stage_one_first, min_level=7)
+        self.setup_pokemon_evolution_data(evolved_species=stage_one_first, min_level=7)
 
         stage_two_first = self.setup_pokemon_species_data(
             name="beautifly",
             evolves_from_species=stage_one_first,
             evolution_chain=evolution_chain,
         )
-        stage_two_first_evolution = self.setup_pokemon_evolution_data(evolved_species=stage_two_first, min_level=10)
+        self.setup_pokemon_evolution_data(evolved_species=stage_two_first, min_level=10)
 
         stage_one_second = self.setup_pokemon_species_data(
             name="cascoon",
             evolves_from_species=basic,
             evolution_chain=evolution_chain,
         )
-        stage_one_second_evolution = self.setup_pokemon_evolution_data(evolved_species=stage_one_second, min_level=7)
+        self.setup_pokemon_evolution_data(evolved_species=stage_one_second, min_level=7)
 
         stage_two_second = self.setup_pokemon_species_data(
             name="dustox",
             evolves_from_species=stage_one_second,
             evolution_chain=evolution_chain,
         )
-        stage_two_second_evolution = self.setup_pokemon_evolution_data(evolved_species=stage_two_second, min_level=10)
+        self.setup_pokemon_evolution_data(evolved_species=stage_two_second, min_level=10)
 
         response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
 
@@ -5037,24 +5042,24 @@ class APITests(APIData, APITestCase):
         # Set up pokemon data
         pokemon_species = self.setup_pokemon_species_data(name="pkmn spcs for base pkmn")
         pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species, name="base pkm")
-        pokemon_form = self.setup_pokemon_form_data(pokemon=pokemon, name="pkm form for base pkmn")
+        self.setup_pokemon_form_data(pokemon=pokemon, name="pkm form for base pkmn")
         generation = self.setup_generation_data(name="base gen")
-        pokemon_ability = self.setup_pokemon_ability_data(pokemon=pokemon)
-        pokemon_past_ability = self.setup_pokemon_past_ability_data(pokemon=pokemon, generation=generation)
-        pokemon_stat = self.setup_pokemon_stat_data(pokemon=pokemon)
-        pokemon_past_stat = self.setup_pokemon_past_stat_data(pokemon=pokemon, generation=generation)
-        pokemon_type = self.setup_pokemon_type_data(pokemon=pokemon)
-        pokemon_past_type = self.setup_pokemon_past_type_data(pokemon=pokemon, generation=generation)
-        pokemon_item = self.setup_pokemon_item_data(pokemon=pokemon)
-        pokemon_sprites = self.setup_pokemon_sprites_data(pokemon=pokemon)
-        pokemon_cries = self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
-        pokemon_game_index = self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
+        self.setup_pokemon_ability_data(pokemon=pokemon)
+        self.setup_pokemon_past_ability_data(pokemon=pokemon, generation=generation)
+        self.setup_pokemon_stat_data(pokemon=pokemon)
+        self.setup_pokemon_past_stat_data(pokemon=pokemon, generation=generation)
+        self.setup_pokemon_type_data(pokemon=pokemon)
+        self.setup_pokemon_past_type_data(pokemon=pokemon, generation=generation)
+        self.setup_pokemon_item_data(pokemon=pokemon)
+        self.setup_pokemon_sprites_data(pokemon=pokemon)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+        self.setup_pokemon_game_index_data(pokemon=pokemon, game_index=10)
         # To test issue #85, we will create one move that has multiple
         # learn levels in different version groups.  Later, we'll
         # assert that we only got one move record back.
         pokemon_move = self.setup_move_data(name="mv for pkmn")
         pokemon_moves = []
-        for move in range(0, 4):
+        for move in range(4):
             version_group = self.setup_version_group_data(name="ver grp " + str(move) + " for pkmn")
             new_move = self.setup_pokemon_move_data(
                 pokemon=pokemon,
@@ -5105,7 +5110,7 @@ class APITests(APIData, APITestCase):
 
         # Same test with /language endpoint
         language = self.setup_language_data(name="base-lang")
-        language_name = self.setup_language_name_data(language, name="base-lang-name")
+        self.setup_language_name_data(language, name="base-lang-name")
 
         lowercase_name = language.name.lower()
         uppercase_name = language.name.upper()
@@ -5128,7 +5133,7 @@ class APITests(APIData, APITestCase):
     def test_meta_api(self):
         response = self.client.get("{}/meta/".format(API_V2))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertTrue(datetime.fromtimestamp(int(response.data["deploy_date"])))
+        self.assertTrue(datetime.fromtimestamp(int(response.data["deploy_date"]), tz=timezone.utc))
         self.assertEqual(10, len(response.data["deploy_date"]))
         self.assertEqual(40, len(response.data["hash"]))
         self.assertIn("tag", response.data)

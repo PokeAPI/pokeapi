@@ -351,3 +351,5 @@ id,encounter_condition_id,identifier,is_default
 350,30,trash-can-type-daily,1
 351,30,trash-can-type-tuesday,1
 352,30,trash-can-type-thursday,1
+353,15,trade-nidoran-f,1
+354,15,trade-nidorina,1

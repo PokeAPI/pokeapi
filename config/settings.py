@@ -1,14 +1,61 @@
+# ruff: noqa: E501
 # Production settings
 import os
+import textwrap
 from pathlib import Path
+from typing import TypedDict
+
+
+class DatabaseSettings(TypedDict, total=False):
+    ENGINE: str
+    NAME: str | Path
+    USER: str
+    PASSWORD: str
+    HOST: str
+    PORT: str | int | None
+    CONN_MAX_AGE: int | None
+
+
+class CacheSettings(TypedDict, total=False):
+    BACKEND: str
+    LOCATION: str
+    OPTIONS: dict[str, str | int | None] | None
+
+
+class DRFSettings(TypedDict, total=False):
+    DEFAULT_RENDERER_CLASSES: tuple[str, ...]
+    DEFAULT_PARSER_CLASSES: tuple[str, ...]
+    DEFAULT_PAGINATION_CLASS: str | None
+    PAGE_SIZE: int | None
+    DEFAULT_SCHEMA_CLASS: str
+
+
+class TemplateSettings(TypedDict, total=False):
+    BACKEND: str
+    DIRS: list[str]
+    APP_DIRS: bool
+    OPTIONS: dict[str, list[str] | bool | None]
+
+
+class SpectacularSettings(TypedDict, total=False):
+    TITLE: str
+    DESCRIPTION: str
+    SORT_OPERATIONS: bool
+    SERVERS: list[dict[str, str]]
+    EXTERNAL_DOCS: dict[str, str]
+    VERSION: str
+    SERVE_INCLUDE_SCHEMA: bool
+    AUTHENTICATION_WHITELIST: list[str]
+    OAS_VERSION: str
+    COMPONENT_SPLIT_REQUEST: bool
+    TAGS: list[dict[str, str | dict[str, str]]]
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = False
+DEBUG: bool = False
 
-TEMPLATE_DEBUG = DEBUG
-
-ADMINS = (os.environ.get("ADMINS", "admin,admin@noemail.com").split(","),)
+ADMINS = [tuple(admin.split(",")) for admin in os.environ.get("ADMINS", "admin,admin@noemail.com").split(";")]
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
@@ -55,7 +102,7 @@ ROOT_URLCONF = "config.urls"
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-DATABASES = {
+DATABASES: dict[str, DatabaseSettings] = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "pokeapi_co_db",
@@ -67,7 +114,7 @@ DATABASES = {
     }
 }
 
-CACHES = {
+CACHES: dict[str, CacheSettings] = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/1",
@@ -79,8 +126,6 @@ CACHES = {
 
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-a(!_5+l3$#l1f4n!x+&ns_+8$4q@df*3rh$n#2h@l$2gti7!7-")
 
-CUSTOM_APPS = ("pokemon_v2",)
-
 INSTALLED_APPS = (
     "django.contrib.admin",
     "django.contrib.auth",
@@ -91,25 +136,25 @@ INSTALLED_APPS = (
     "rest_framework",
     "cachalot",
     "drf_spectacular",
-) + CUSTOM_APPS
+    "pokemon_v2",
+)
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOW_METHODS = "GET"
+CORS_ALLOW_METHODS = ("GET",)
 
 CORS_URLS_REGEX = r"^/api/.*$"
 
-REST_FRAMEWORK = {
+REST_FRAMEWORK: DRFSettings = {
     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
-    "DEFAULT_PARSER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+    "DEFAULT_PARSER_CLASSES": ("rest_framework.parsers.JSONParser",),
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 20,
-    "PAGINATE_BY": 20,
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 
-TEMPLATES = [
+TEMPLATES: list[TemplateSettings] = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [],
@@ -120,30 +165,34 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
+            "debug": DEBUG,
         },
     },
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
-SPECTACULAR_SETTINGS = {
+SPECTACULAR_SETTINGS: SpectacularSettings = {
     "TITLE": "PokéAPI",
-    "DESCRIPTION": """All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.
+    "DESCRIPTION": textwrap.dedent(
+        """
+        All the Pokémon data you'll ever need in one place, easily accessible through a modern free open-source RESTful API.
 
-## What is this?
+        ## What is this?
 
-This is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
+        This is a full RESTful API linked to an extensive database detailing everything about the Pokémon main game series.
 
-We've covered everything from Pokémon to Berry Flavors.
+        We've covered everything from Pokémon to Berry Flavors.
 
-## Where do I start?
+        ## Where do I start?
 
-We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.
+        We have awesome [documentation](https://pokeapi.co/docs/v2) on how to use this API. It takes minutes to get started.
 
-This API will always be publicly available and will never require any extensive setup process to consume.
+        This API will always be publicly available and will never require any extensive setup process to consume.
 
-Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
-    """,
+        Created by [**Paul Hallett**](https://github.com/phalt) and other [**PokéAPI contributors**](https://github.com/PokeAPI/pokeapi#contributing) around the world. Pokémon and Pokémon character names are trademarks of Nintendo.
+        """
+    ).strip(),
     "SORT_OPERATIONS": False,
     "SERVERS": [{"url": "https://pokeapi.co"}],
     "EXTERNAL_DOCS": {"url": "https://pokeapi.co/docs/v2"},

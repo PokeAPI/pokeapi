@@ -18,7 +18,7 @@ FROM python:3.14-alpine
 RUN apk add --no-cache git
 
 ENV PYTHONUNBUFFERED=1
-ENV DJANGO_SETTINGS_MODULE='config.docker-compose'
+ENV DJANGO_SETTINGS_MODULE='config.docker_compose'
 ENV PATH="/code/.venv/bin:$PATH"
 
 WORKDIR /code

@@ -20,14 +20,6 @@ repos:
         args:
           - --markdown-linebreak-ext=md
 
-  # TODO: Enable in the future when adding the ruff linter
-  # - repo: https://github.com/pre-commit/pygrep-hooks
-  #   rev: v1.9.0
-  #   hooks:
-  #     - id: python-check-blanket-noqa
-  #     - id: python-check-blanket-type-ignore
-  #     - id: python-use-type-annotations
-
   - repo: local
     hooks:
       - id: check-csv
@@ -37,11 +29,32 @@ repos:
         args: [--encoding, utf-8]
         files: \.csv$
 
+      - id: ruff-check
+        name: Ruff Check
+        entry: uv run ruff check .
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
+
       - id: ruff-format
         name: Ruff Format
         entry: uv run ruff format .
         language: system
         types_or: [python, pyi]
+        pass_filenames: false
+
+      - id: ty-check
+        name: Ty Check
+        entry: uv run ty check
+        language: system
+        types_or: [python, pyi]
+        pass_filenames: false
+
+      - id: generate-openapi
+        name: Generate OpenAPI Schema
+        entry: uv run manage.py spectacular --file openapi.yml --settings=config.docker_compose
+        language: system
+        files: ^(pokemon_v2/|config/|openapi\.yml)
         pass_filenames: false
 
       - id: build-and-test

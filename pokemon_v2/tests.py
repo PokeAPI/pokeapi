@@ -1309,6 +1309,7 @@ class APIData:
         is_legendary=False,
         is_mythical=False,
         order=1,
+        pk=None,
     ):
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
@@ -1321,6 +1322,7 @@ class APIData:
         pokemon_habitat = pokemon_habitat or cls.setup_pokemon_habitat_data(name="pkm hbtt for " + name)
 
         pokemon_species = PokemonSpecies.objects.create(
+            pk=pk,
             name=name,
             generation=generation,
             evolves_from_species=evolves_from_species,
@@ -1573,10 +1575,11 @@ class APIData:
         return pokemon_item
 
     @classmethod
-    def setup_pokemon_move_data(cls, pokemon, move, version_group, level=0, order=1):
-        move_learn_method = cls.setup_move_learn_method_data(name="mv lrn mthd for pkmn")
+    def setup_pokemon_move_data(cls, pokemon, move, version_group, level=0, order=1, move_learn_method=None, pk=None):
+        move_learn_method = move_learn_method or cls.setup_move_learn_method_data(name="mv lrn mthd for pkmn")
 
         pokemon_move = PokemonMove.objects.create(
+            pk=pk,
             pokemon=pokemon,
             version_group=version_group,
             move=move,
@@ -2684,6 +2687,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["pokemon_species"][0]["url"],
             "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
+        )
+
+    def test_reverse_relation_lists_are_ordered_by_pk(self):
+        # Lists coming straight from a reverse relation have no order_by() of
+        # their own, so they fall back to the manager ordering by pk. The pks
+        # are inserted out of order, since an unordered query returns them in
+        # insertion order and would pass either way.
+        growth_rate = self.setup_growth_rate_data(name="grth rt for ordering")
+        species = [
+            self.setup_pokemon_species_data(
+                pk=pk,
+                growth_rate=growth_rate,
+                name="pkmn spcs for ordering {}".format(pk),
+            )
+            for pk in (30, 10, 20)
+        ]
+
+        response = self.client.get("{}/growth-rate/{}/".format(API_V2, growth_rate.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            [entry["name"] for entry in response.data["pokemon_species"]],
+            [entry.name for entry in sorted(species, key=lambda entry: entry.pk)],
         )
 
     # Location Tests
@@ -4589,6 +4615,38 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             version_detail["move_learn_method"]["url"],
             "{}{}/move-learn-method/{}/".format(TEST_HOST, API_V2, pokemon_move.move_learn_method.pk),
+        )
+
+    def test_pokemon_moves_version_group_details_are_deterministically_ordered(self):
+        # A pokemon can learn the same move in the same version group more than
+        # once, so these rows tie on every other order_by() field and fall back
+        # to the pk. The pks are inserted out of order on purpose.
+        pokemon_species = self.setup_pokemon_species_data(name="pkmn spcs for mv ordering")
+        pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species, name="pkmn for mv ordering")
+        self.setup_pokemon_sprites_data(pokemon=pokemon)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        move = self.setup_move_data(name="mv for mv ordering")
+        version_group = self.setup_version_group_data(name="ver grp for mv ordering")
+        move_learn_method = self.setup_move_learn_method_data(name="mv lrn mthd for mv ordering")
+
+        for pk, order in ((30, 3), (10, 1), (20, 2)):
+            self.setup_pokemon_move_data(
+                pk=pk,
+                pokemon=pokemon,
+                move=move,
+                version_group=version_group,
+                move_learn_method=move_learn_method,
+                level=5,
+                order=order,
+            )
+
+        response = self.client.get("{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            [detail["order"] for detail in response.data["moves"][0]["version_group_details"]],
+            [1, 2, 3],
         )
 
     def test_pokemon_form_api(self):

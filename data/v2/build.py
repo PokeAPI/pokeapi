@@ -1938,6 +1938,20 @@ def _build_pokemons():
     build_generic((PokemonFormCondition,), "pokemon_form_conditions.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        yield PokemonFormFlavorText(
+            pokemon_form_id=int(info[0]),
+            version_id=int(info[1]),
+            language_id=int(info[2]),
+            flavor_text=info[3],
+        )
+
+    build_generic(
+        (PokemonFormFlavorText,),
+        "pokemon_form_flavor_text.csv",
+        csv_record_to_objects,
+    )
+
+    def csv_record_to_objects(info):
         yield PokemonGameIndex(pokemon_id=int(info[0]), version_id=int(info[1]), game_index=int(info[2]))
 
     build_generic((PokemonGameIndex,), "pokemon_game_indices.csv", csv_record_to_objects)

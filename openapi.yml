@@ -7355,7 +7355,13 @@ components:
           items:
             $ref: '#/components/schemas/PokemonFormTriggerCondition'
           readOnly: true
+        flavor_text_entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonFormFlavorText'
+          readOnly: true
       required:
+      - flavor_text_entries
       - form_name
       - form_names
       - id
@@ -7366,6 +7372,19 @@ components:
       - trigger_conditions
       - types
       - version_group
+    PokemonFormFlavorText:
+      type: object
+      properties:
+        flavor_text:
+          type: string
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+        version:
+          $ref: '#/components/schemas/VersionSummary'
+      required:
+      - flavor_text
+      - language
+      - version
     PokemonFormName:
       type: object
       properties:

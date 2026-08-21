@@ -212,19 +212,11 @@ Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource o
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
-<!--
-## Join Us On Slack!
 
-> **Warning**
-> Currently no maintainer has enough free time to support the community on Slack. Our Slack is in an unmaintained status.
+## Join Us On Discord!
 
-Have a question or just want to discuss new ideas and improvements? Hit us up on Slack. ~~Consider talking with us here before creating a new issue.~~
-This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
+We have [a Discord server](https://discord.gg/tTGKJxtb8S). It is a simple place where people can chat with each other in a respecful manner. Not all maintainers/code contributors are signed up and your question might not be answered. Consider opening an [issue](https://github.com/PokeAPI/pokeapi/issues) if you want more visibility or you want to talk to the maintainers. Be excellent to each other :smile:
 
-[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-38w145rww-I_ROYnZME2n1c7mQXppEAQ) easily!
-
-Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
--->
 ## Contributing
 
 This project exists thanks to all the people who [contribute](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md)

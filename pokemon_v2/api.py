@@ -1021,7 +1021,7 @@ class PokemonEncounterView(APIView):
                 "encounterconditionvaluemap_set__encounter_condition_value",
                 "encounterpokemondetail_set",
             )
-            .order_by("location_area_id", "version_id", "encounter_slot_id")
+            .order_by("location_area_id", "version_id", "encounter_slot_id", "pk")
         )
 
         grouped_data: list[dict[str, Any]] = []

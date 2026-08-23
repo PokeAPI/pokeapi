@@ -52,7 +52,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     ```
 
     > [!NOTE]
-    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
+    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before committing and pushing your changes.
 
 - Lint, format, and typecheck your code changes:
 
@@ -151,7 +151,7 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+A set of examples is provided in the directory [/graphql/v1beta/examples](./graphql/v1beta/examples) and [/graphql/v1beta2/examples](./graphql/v1beta2/examples) of this repository.
 
 ## Kubernetes <a id="kubernetes"></a> &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 

@@ -151,7 +151,7 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples is provided in the directory [/graphql/v1beta/examples](./graphql/v1beta/examples) and [/graphql/v1beta2/examples](./graphql/v1beta2/examples) of this repository.
+A set of examples is provided in the [/graphql/v1beta/examples](./graphql/v1beta/examples) and [/graphql/v1beta2/examples](./graphql/v1beta2/examples) directories of this repository.
 
 ## Kubernetes <a id="kubernetes"></a> &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 

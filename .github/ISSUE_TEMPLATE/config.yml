@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Questions
+    url: https://github.com/pokeapi/pokeapi/discussions
+    about: Any questions or comments can be posted to our discussions page
   - name: Join our Discord
     url: https://discord.com/invite/tTGKJxtb8S
     about: To connect with other PokeAPI users and contributors, join our Discord

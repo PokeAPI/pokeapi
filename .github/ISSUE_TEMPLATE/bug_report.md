@@ -37,5 +37,5 @@ case here, feel free to skip this step and open the PR! If you'd like to open it
 to discussion first or simply make an issue to keep track of the timeline,
 continue here.
 
-[ ] I plan on making a PR for this issue.
-[ ] Anyone is open to making a PR for this issue.
+- [ ] I plan on making a PR for this issue.
+- [ ] Anyone is open to making a PR for this issue.

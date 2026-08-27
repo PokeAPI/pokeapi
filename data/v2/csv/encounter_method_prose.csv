@@ -78,8 +78,18 @@ encounter_method_id,local_language_id,name
 30,5,En utilisant le Devon Scope
 31,9,Fishing in a Feebas Tile
 31,5,En pêchant sur une tuile à Barpau
+32,9,Island Scan
+32,5,Scan des Îles
+33,9,SOS Battle
+33,5,Combat SOS
 34,9,Fishing at bubbling spots in the water
+34,5,En pêchant sur un point à bulles
 35,9,Interacting with a Berry Tree
+35,5,En interagissant avec un arbre à baies
+36,9,Trade with an NPC
+36,5,Échange avec un PNJ
+37,9,SOS Battle from bubbling spots
+37,5,Combat SOS dans les points à bulles
 38,9,Walking in the overworld
 38,5,En marchant dans le monde extérieur
 39,9,Surfing in the overworld
@@ -93,25 +103,48 @@ encounter_method_id,local_language_id,name
 43,5,Apparition rare dans l'eau avec un parfum ou un combo capture
 43,9,Rare spawn in water with lure or catch combo
 44,9,"Encountering 5 Pokemon within grass, flowers, or within a cave"
+44,5,"Rencontrer 5 Pokémon dans l'herbe, les fleurs ou une grotte" 
 45,9,Receiving a Jirachi from the USA Colosseum Bonus Disc
+45,5,Recevoir un Jirachi depuis le disque bonus Pokémon Colosseum aux États-Unis
 46,9,Receiving a Celebi or Pikachu from the Japanese Colosseum Bonus Disc
+46,5,Recevoir depuis le disque bonus Pokemon Colosseum au Japon
 47,9,Receiving a Jirachi from the PAL copy of Pokemon channel
+47,5,Recevoir depuis la version PAL de Pokémon Channel
 48,9,Receiving a Manaphy from Pokemon Ranger
+48,5,Recevoir un œuf depuis Pokémon Ranger
 49,9,"Receiving a Pikachu, Electivire, or Magmar from Pokemon Battle Revolution"
+49,5,"Recevoir depuis Pokémon Battle Revolution"
 50,9,Receiving an egg from the Pokemon center in New York City that contains the special move Wish.
+50,5,Recevoir un œuf du Pokémon Center de New York contenant l'attaque spéciale Vœu
 51,9,Snagging a Pokemon from a trainer in Pokemon Colosseum or Pokemon XD: Gale of Darkness.
+51,5,Snatcher un Pokémon d'un dresseur
 52,9,"Snagging a Pokemon from a trainer in Pokemon Colosseum or Pokemon XD: Gale of Darkness, after you have failed to capture them once."
+52,5,"Snatcher un Pokémon d'un dresseur, après avoir manqué la capture une première fois"
 53,9,Finding a Wild Pokemon at any of the three Pokespots in Pokemon XD: Gale of Darkness.
+53,5,Poké Place
 54,9,Finding a Pokemon in a Hidden Grotto
+54,5,Trouée cachée
 55,9,Slathering a Honey Tree with Honey and waiting for a Pokémon to appear.
+55,5,Arbre à Miel
 56,9,Overworld spawn coming from underground or within a swamp.
+56,5,Apparition dans le monde extérieur depuis sous-terre ou un marais
 57,9,Special overworld spawn in a fixed location.
+57,5,Apparition sur un emplacement fixe dans le monde extérieur 
 58,9,Special overworld spawn in a fixed location in the water.
+58,5,Apparition sur un emplacement fixe sur l'eau dans le monde extérieur 
 59,9,Get chased by territorial Pokémon when entering the water.
+59,5,Se faire poursuivre par un Pokémon territorial dans l'eau
 60,9,Capture during a Dynamax Adventure.
+60,5,Expédition Dynamax
 61,9,Catch a wild Dynamax or Gigantamax Pokémon in a Max Raid battle.
+61,5,Raid Dynamax
 62,9,Ambushed by a Wild Pokemon from a Trash Can
+62,5,Embuscade depuis une poubelle
 63,9,Ambushed by a Wild Pokemon from a Rustling Bush
+63,5,Embuscade depuis un buisson qui remue
 64,9,Ambushed by a Wild Pokemon from the Ceiling of a Cave
+64,5,Embuscade depuis le plafond d'une grotte
 65,9,Ambushed by a Wild Pokemon from the Ground
+65,5,Embuscade depuis la terre
 66,9,Ambushed by a Wild Pokemon from the Sky
+66,5,Embuscade depuis le ciel

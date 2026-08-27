@@ -103,7 +103,7 @@ encounter_method_id,local_language_id,name
 43,5,Apparition rare dans l'eau avec un parfum ou un combo capture
 43,9,Rare spawn in water with lure or catch combo
 44,9,"Encountering 5 Pokemon within grass, flowers, or within a cave"
-44,5,"Rencontrer 5 Pokémon dans l'herbe, les fleurs ou une grotte" 
+44,5,"Rencontrer 5 Pokémon dans l'herbe, les fleurs ou une grotte"
 45,9,Receiving a Jirachi from the USA Colosseum Bonus Disc
 45,5,Recevoir un Jirachi depuis le disque bonus Pokémon Colosseum aux États-Unis
 46,9,Receiving a Celebi or Pikachu from the Japanese Colosseum Bonus Disc
@@ -129,9 +129,9 @@ encounter_method_id,local_language_id,name
 56,9,Overworld spawn coming from underground or within a swamp.
 56,5,Apparition dans le monde extérieur depuis sous-terre ou un marais
 57,9,Special overworld spawn in a fixed location.
-57,5,Apparition sur un emplacement fixe dans le monde extérieur 
+57,5,Apparition sur un emplacement fixe dans le monde extérieur
 58,9,Special overworld spawn in a fixed location in the water.
-58,5,Apparition sur un emplacement fixe sur l'eau dans le monde extérieur 
+58,5,Apparition sur un emplacement fixe sur l'eau dans le monde extérieur
 59,9,Get chased by territorial Pokémon when entering the water.
 59,5,Se faire poursuivre par un Pokémon territorial dans l'eau
 60,9,Capture during a Dynamax Adventure.

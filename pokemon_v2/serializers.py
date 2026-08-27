@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import itertools
+import json
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -2933,10 +2934,37 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             "past_types",
         )
 
+    _FEMALE_FALLBACKS: ClassVar[dict[str, str]] = {
+        "front_female": "front_default",
+        "back_female": "back_default",
+        "front_shiny_female": "front_shiny",
+        "back_shiny_female": "back_shiny",
+    }
+
     @extend_schema_field(PokemonSpritesSerializer)
-    def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None]:
+    def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None] | str:
         sprites_list = list(cast("PokemonWithRelations", obj).pokemonsprites.all())
-        return sprites_list[0].sprites if sprites_list else {}
+        if not sprites_list:
+            return {}
+        sprites: Any = sprites_list[0].sprites
+        if obj.pokemon_species is None or obj.pokemon_species.gender_rate != 8:
+            return sprites
+        if isinstance(sprites, str):
+            parsed = json.loads(sprites)
+            self._fill_female_sprites(parsed)
+            return json.dumps(parsed)
+        self._fill_female_sprites(sprites)
+        return sprites
+
+    def _fill_female_sprites(self, node: object) -> None:
+        if not isinstance(node, dict):
+            return
+        sprites = cast("dict[str, Any]", node)
+        for female_key, default_key in self._FEMALE_FALLBACKS.items():
+            if female_key in sprites and sprites[female_key] is None and sprites.get(default_key) is not None:
+                sprites[female_key] = sprites[default_key]
+        for value in sprites.values():
+            self._fill_female_sprites(value)
 
     @extend_schema_field(PokemonCriesSerializer)
     def get_pokemon_cries(self, obj: Pokemon) -> dict[str, str | None]:

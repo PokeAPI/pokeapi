@@ -2573,6 +2573,16 @@ class PokemonShapeAwesomeNameSerializer(serializers.ModelSerializer[PokemonShape
         fields = ("awesome_name", "language")
 
 
+class PokemonFormFlavorTextSerializer(serializers.ModelSerializer[PokemonFormFlavorText]):
+    flavor_text = serializers.CharField()
+    language = LanguageSummarySerializer()
+    version = VersionSummarySerializer()
+
+    class Meta:
+        model = PokemonFormFlavorText
+        fields = ("flavor_text", "language", "version")
+
+
 class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
     pokemon = PokemonSummarySerializer()
     version_group = VersionGroupSummarySerializer()
@@ -2581,6 +2591,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
     names = serializers.SerializerMethodField("get_pokemon_form_pokemon_names")
     types = serializers.SerializerMethodField("get_pokemon_form_types")
     trigger_conditions = serializers.SerializerMethodField("get_pokemon_form_triggers_conditions")
+    flavor_text_entries = PokemonFormFlavorTextSerializer(many=True, read_only=True, source="pokemonformflavortext")
 
     class Meta:
         model = PokemonForm
@@ -2600,6 +2611,7 @@ class PokemonFormDetailSerializer(serializers.ModelSerializer[PokemonForm]):
             "names",
             "types",
             "trigger_conditions",
+            "flavor_text_entries",
         )
 
     @extend_schema_field(PokemonFormNameSerializer(many=True))

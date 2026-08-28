@@ -1396,6 +1396,12 @@ def _build_pokemons():
                             info,
                             "png",
                         ),
+                        "animated": {
+                            "front_default": try_image_names(poke_sprites + gen_ii + "crystal/animated/", info, "gif"),
+                            "front_shiny": try_image_names(
+                                poke_sprites + gen_ii + "crystal/animated/shiny/", info, "gif"
+                            ),
+                        },
                     },
                     "gold": {
                         "front_default": try_image_names(poke_sprites + gen_ii + "gold/", info, "png"),
@@ -1628,7 +1634,13 @@ def _build_pokemons():
                                 "gif",
                             ),
                         },
-                    }
+                    },
+                    "icons": {
+                        "front_default": try_image_names(poke_sprites + gen_v + "icons/", info, "png"),
+                        "animated": {
+                            "front_default": try_image_names(poke_sprites + gen_v + "icons/animated/", info, "png"),
+                        },
+                    },
                 },
                 "generation-vi": {
                     "omegaruby-alphasapphire": {

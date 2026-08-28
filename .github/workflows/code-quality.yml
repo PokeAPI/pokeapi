@@ -10,7 +10,7 @@ on:
       - Makefile
       - .github/workflows/code-quality.yml
   push:
-    branches:
+    branches-ignore:
       - master
       - staging
     paths: *paths

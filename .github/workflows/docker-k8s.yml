@@ -2,6 +2,14 @@ name: Container
 
 on:
   pull_request:
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "**.lock"
+      - "data/**"
+      - "Resources/k8s/**"
+      - Makefile
+      - .github/workflows/docker-k8s.yml
 
 jobs:
   docker:

@@ -2,10 +2,19 @@ name: Database
 
 on:
   pull_request:
+    paths: &paths
+      - "**.py"
+      - "**.toml"
+      - "**.lock"
+      - "data/**"
+      - "docker-compose**"
+      - Makefile
+      - .github/workflows/database.yml
   push:
     branches-ignore:
       - master
       - staging
+    paths: *paths
 
 jobs:
   csv:

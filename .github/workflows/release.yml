@@ -2,6 +2,11 @@ name: Release
 
 on:
   push:
+    paths:
+      - "**.py"
+      - "data/**"
+      - Makefile
+      - .github/workflows/release.yml
     branches:
       - master
     tags:

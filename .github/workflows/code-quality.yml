@@ -6,7 +6,6 @@ on:
       - "**.py"
       - "**.toml"
       - "**.lock"
-      - default.nix
       - Makefile
       - .github/workflows/code-quality.yml
   push:

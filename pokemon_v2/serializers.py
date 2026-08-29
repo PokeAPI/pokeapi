@@ -2945,10 +2945,30 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
             "past_types",
         )
 
+    _FEMALE_FALLBACKS: ClassVar[dict[str, str]] = {
+        "front_female": "front_default",
+        "back_female": "back_default",
+        "front_shiny_female": "front_shiny",
+        "back_shiny_female": "back_shiny",
+    }
+
     @extend_schema_field(PokemonSpritesSerializer)
-    def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, str | None]:
+    def get_pokemon_sprites(self, obj: Pokemon) -> dict[str, Any]:
         sprites_list = list(cast("PokemonWithRelations", obj).pokemonsprites.all())
-        return sprites_list[0].sprites if sprites_list else {}
+        if not sprites_list:
+            return {}
+        sprites = sprites_list[0].sprites
+        if obj.pokemon_species and obj.pokemon_species.gender_rate == 8:
+            self._fill_female_sprites(sprites)
+        return sprites
+
+    def _fill_female_sprites(self, sprites: dict[str, Any]) -> None:
+        for female_key, default_key in self._FEMALE_FALLBACKS.items():
+            if female_key in sprites and sprites[female_key] is None and sprites.get(default_key) is not None:
+                sprites[female_key] = sprites[default_key]
+        for value in sprites.values():
+            if isinstance(value, dict):
+                self._fill_female_sprites(value)
 
     @extend_schema_field(PokemonCriesSerializer)
     def get_pokemon_cries(self, obj: Pokemon) -> dict[str, str | None]:

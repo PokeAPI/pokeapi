@@ -1631,7 +1631,7 @@ class APIData:
 
         pokemon_sprites = PokemonSprites.objects.create(
             pokemon=pokemon,
-            sprites=json.dumps(sprites | {"other": {"showdown": showdown}}),
+            sprites=sprites | {"other": {"showdown": showdown}},
         )
         pokemon_sprites.save()
 
@@ -4523,9 +4523,9 @@ class APITests(APIData, APITestCase):
             "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, pokemon_form.pk),
         )
 
-        sprites_data = json.loads(pokemon_sprites.sprites)
+        sprites_data = pokemon_sprites.sprites
         cries_data = json.loads(pokemon_cries.cries)
-        response_sprites_data = json.loads(response.data["sprites"])
+        response_sprites_data = response.data["sprites"]
         json.loads(response.data["cries"])
 
         # sprite params
@@ -4660,7 +4660,7 @@ class APITests(APIData, APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-        response_sprites = json.loads(response.data["sprites"])
+        response_sprites = response.data["sprites"]
 
         self.assertIsNotNone(response_sprites["front_default"])
         self.assertEqual(response_sprites["front_female"], response_sprites["front_default"])

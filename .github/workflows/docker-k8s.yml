@@ -118,8 +118,8 @@ jobs:
         uses: actions/checkout@v6
       - name: Build dev environment
         run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
-          sleep 30
+          make docker-dev-up
+          sleep 5
       - name: Assert containers running
         run: |
           last_command=$(docker ps | grep 'pokeapi-' | wc -l)

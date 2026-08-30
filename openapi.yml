@@ -838,6 +838,70 @@ paths:
               schema:
                 $ref: '#/components/schemas/EvolutionTriggerDetail'
           description: ''
+  /api/v2/evolution-variable/:
+    get:
+      operationId: evolution_variable_list
+      description: Evolution variables represent parameters (such as Encryption Constant
+        and Personality Value) used in boolean expressions for form-branching evolutions.
+        Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Personality_value)
+        for greater detail.
+      summary: List evolution variables
+      parameters:
+      - name: limit
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: offset
+        required: false
+        in: query
+        description: The initial index from which to return the results.
+        schema:
+          type: integer
+      - in: query
+        name: q
+        schema:
+          type: string
+        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
+          query applied on the `name` property. "
+      tags:
+      - evolution
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedEvolutionVariableSummaryList'
+          description: ''
+  /api/v2/evolution-variable/{id}/:
+    get:
+      operationId: evolution_variable_retrieve
+      description: Evolution variables represent parameters (such as Encryption Constant
+        and Personality Value) used in boolean expressions for form-branching evolutions.
+        Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Personality_value)
+        for greater detail.
+      summary: Get evolution variable
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        description: This parameter can be a string or an integer.
+        required: true
+      tags:
+      - evolution
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EvolutionVariableDetail'
+          description: ''
   /api/v2/generation/:
     get:
       operationId: generation_list
@@ -3892,6 +3956,74 @@ components:
       required:
       - name
       - url
+    EvolutionVariableDescription:
+      type: object
+      properties:
+        description:
+          type: string
+          maxLength: 2000
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+    EvolutionVariableDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 200
+        symbol:
+          type: string
+          maxLength: 10
+        data_type:
+          type: string
+          maxLength: 20
+        version_group:
+          $ref: '#/components/schemas/VersionGroupSummary'
+        names:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionVariableName'
+          readOnly: true
+        descriptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionVariableDescription'
+          readOnly: true
+      required:
+      - descriptions
+      - id
+      - name
+      - names
+      - symbol
+      - version_group
+    EvolutionVariableName:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        language:
+          $ref: '#/components/schemas/LanguageSummary'
+      required:
+      - language
+      - name
+    EvolutionVariableSummary:
+      type: object
+      properties:
+        name:
+          type: string
+          maxLength: 200
+        url:
+          type: string
+          format: uri
+          readOnly: true
+      required:
+      - name
+      - url
     Experience:
       type: object
       properties:
@@ -5875,6 +6007,29 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/EvolutionTriggerSummary'
+    PaginatedEvolutionVariableSummaryList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=400&limit=100
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?offset=200&limit=100
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionVariableSummary'
     PaginatedGenderSummaryList:
       type: object
       required:
@@ -7260,6 +7415,8 @@ components:
           $ref: '#/components/schemas/RegionSummary'
         base_form:
           $ref: '#/components/schemas/PokemonSummary'
+        required_form:
+          $ref: '#/components/schemas/PokemonFormSummary'
         evolved_form:
           $ref: '#/components/schemas/PokemonSummary'
         used_move:
@@ -7282,17 +7439,31 @@ components:
           - 'null'
           maximum: 2147483647
           minimum: -2147483648
+        needs_one_of_natures:
+          type: array
+          items:
+            $ref: '#/components/schemas/NatureSummary'
+          readOnly: true
+        condition_expression:
+          type:
+          - object
+          - 'null'
+          additionalProperties: {}
+          readOnly: true
       required:
       - base_form
+      - condition_expression
       - evolved_form
       - held_item
       - item
       - known_move
       - known_move_type
       - location
+      - needs_one_of_natures
       - party_species
       - party_type
       - region
+      - required_form
       - trade_species
       - trigger
       - used_move

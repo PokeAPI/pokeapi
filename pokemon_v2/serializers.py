@@ -3371,9 +3371,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     location = LocationSummarySerializer()
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
     region = RegionSummarySerializer()
-    base_form = PokemonSummarySerializer()
-    required_form = PokemonFormSummarySerializer()
-    evolved_form = PokemonSummarySerializer()
+    required_pokemon_form = PokemonFormSummarySerializer()
+    evolved_pokemon_form = PokemonFormSummarySerializer()
     used_move = MoveSummarySerializer()
     needs_one_of_natures = serializers.SerializerMethodField("get_needs_one_of_natures")
     condition_expression = serializers.SerializerMethodField("get_condition_expression")
@@ -3404,9 +3403,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "trade_species",
             "turn_upside_down",
             "region",
-            "base_form",
-            "required_form",
-            "evolved_form",
+            "required_pokemon_form",
+            "evolved_pokemon_form",
             "used_move",
             "min_move_count",
             "min_steps",

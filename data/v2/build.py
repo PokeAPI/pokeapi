@@ -1865,15 +1865,14 @@ def _build_pokemons():
             needs_multiplayer=bool(int(info[22])),
             near_special_rock=bool(int(info[23])),
             region_id=int(info[24]) if info[24] != "" else None,
-            base_form_id=int(info[25]) if info[25] != "" else None,
-            evolved_form_id=int(info[26]) if info[26] != "" else None,
+            required_pokemon_form_id=int(info[25]) if info[25] != "" else None,
+            evolved_pokemon_form_id=int(info[26]) if info[26] != "" else None,
             used_move_id=int(info[27]) if info[27] != "" else None,
             min_move_count=int(info[28]) if info[28] != "" else None,
             min_steps=int(info[29]) if info[29] != "" else None,
             min_damage_taken=int(info[30]) if info[30] != "" else None,
             needs_one_of_natures=int(info[31]) if len(info) > 31 and info[31] != "" else None,
             condition_expression=info[32] if len(info) > 32 else "",
-            required_form_id=int(info[33]) if len(info) > 33 and info[33] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

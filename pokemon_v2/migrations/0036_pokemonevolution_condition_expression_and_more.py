@@ -10,6 +10,14 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RemoveField(
+            model_name="pokemonevolution",
+            name="base_form",
+        ),
+        migrations.RemoveField(
+            model_name="pokemonevolution",
+            name="evolved_form",
+        ),
         migrations.AddField(
             model_name="pokemonevolution",
             name="condition_expression",
@@ -31,13 +39,25 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="pokemonevolution",
-            name="required_form",
+            name="required_pokemon_form",
             field=models.ForeignKey(
                 blank=True,
-                help_text="Specific temporary form required for evolution (e.g. Burmy cloaks)",
+                help_text="Specific form required for evolution (e.g. burmy-plant, sinistea-antique)",
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                related_name="required_form_evolutions",
+                related_name="required_in_evolutions",
+                to="pokemon_v2.pokemonform",
+            ),
+        ),
+        migrations.AddField(
+            model_name="pokemonevolution",
+            name="evolved_pokemon_form",
+            field=models.ForeignKey(
+                blank=True,
+                help_text="Specific form resulting from evolution (e.g. polteageist-antique, wormadam-sandy)",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="evolved_into_evolutions",
                 to="pokemon_v2.pokemonform",
             ),
         ),

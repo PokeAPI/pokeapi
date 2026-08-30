@@ -2013,22 +2013,22 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Region where this evolution can occur (null = any region)",
     )
 
-    base_form = models.ForeignKey(
-        "Pokemon",
+    required_pokemon_form = models.ForeignKey(
+        "PokemonForm",
         blank=True,
         null=True,
-        related_name="base_form_evolutions",
+        related_name="required_in_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form required for evolution (null = any form)",
+        help_text="Specific form required for evolution (e.g. burmy-plant, sinistea-antique)",
     )
 
-    evolved_form = models.ForeignKey(
-        "Pokemon",
+    evolved_pokemon_form = models.ForeignKey(
+        "PokemonForm",
         blank=True,
         null=True,
-        related_name="evolved_form",
+        related_name="evolved_into_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form of the evolved species",
+        help_text="Specific form resulting from evolution (e.g. polteageist-antique, wormadam-sandy)",
     )
 
     used_move = models.ForeignKey(Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE)
@@ -2050,15 +2050,6 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         blank=True,
         default="",
         help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
-    )
-
-    required_form = models.ForeignKey(
-        "PokemonForm",
-        blank=True,
-        null=True,
-        related_name="required_form_evolutions",
-        on_delete=models.CASCADE,
-        help_text="Specific temporary form required for evolution (e.g. Burmy cloaks)",
     )
 
 

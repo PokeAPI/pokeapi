@@ -27,3 +27,9 @@ dev = [
     "ruff>=0.15.21",
     "ty>=0.0.65",
 ]
+
+[tool.uv]
+exclude-dependencies = [
+    "django-stubs",
+    "django-stubs-ext",
+]

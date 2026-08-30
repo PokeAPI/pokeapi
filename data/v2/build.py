@@ -1084,6 +1084,35 @@ def _build_evolutions():
 
     build_generic((EvolutionTriggerName,), "evolution_trigger_prose.csv", csv_record_to_objects)
 
+    def csv_record_to_objects(info):
+        yield EvolutionVariable(
+            id=int(info[0]),
+            name=info[1],
+            symbol=info[2],
+            data_type=info[3],
+            version_group_id=int(info[4]),
+        )
+
+    build_generic((EvolutionVariable,), "evolution_variables.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield EvolutionVariableName(
+            evolution_variable_id=int(info[0]),
+            language_id=int(info[1]),
+            name=info[2],
+        )
+        yield EvolutionVariableDescription(
+            evolution_variable_id=int(info[0]),
+            language_id=int(info[1]),
+            description=info[3],
+        )
+
+    build_generic(
+        (EvolutionVariableName, EvolutionVariableDescription),
+        "evolution_variable_prose.csv",
+        csv_record_to_objects,
+    )
+
 
 #############
 #  POKEDEX  #
@@ -1794,6 +1823,22 @@ def _build_pokemons():
     build_generic((PokemonEggGroup,), "pokemon_egg_groups.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        yield PokemonForm(
+            id=int(info[0]),
+            name=info[1],
+            form_name=info[2],
+            pokemon_id=int(info[3]),
+            version_group_id=int(info[4]),
+            is_default=bool(int(info[5])),
+            is_battle_only=bool(int(info[6])),
+            is_mega=bool(int(info[7])),
+            form_order=int(info[8]),
+            order=int(info[9]),
+        )
+
+    build_generic((PokemonForm,), "pokemon_forms.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield PokemonEvolution(
             id=int(info[0]),
             evolved_species_id=int(info[1]),
@@ -1826,25 +1871,12 @@ def _build_pokemons():
             min_move_count=int(info[28]) if info[28] != "" else None,
             min_steps=int(info[29]) if info[29] != "" else None,
             min_damage_taken=int(info[30]) if info[30] != "" else None,
+            needs_one_of_natures=int(info[31]) if len(info) > 31 and info[31] != "" else None,
+            condition_expression=info[32] if len(info) > 32 else "",
+            required_form_id=int(info[33]) if len(info) > 33 and info[33] != "" else None,
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)
-
-    def csv_record_to_objects(info):
-        yield PokemonForm(
-            id=int(info[0]),
-            name=info[1],
-            form_name=info[2],
-            pokemon_id=int(info[3]),
-            version_group_id=int(info[4]),
-            is_default=bool(int(info[5])),
-            is_battle_only=bool(int(info[6])),
-            is_mega=bool(int(info[7])),
-            form_order=int(info[8]),
-            order=int(info[9]),
-        )
-
-    build_generic((PokemonForm,), "pokemon_forms.csv", csv_record_to_objects)
 
     def try_form_image_names(path, info, extension):
         form_identifier = info[2]

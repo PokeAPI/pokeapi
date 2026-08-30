@@ -7413,12 +7413,10 @@ components:
           type: boolean
         region:
           $ref: '#/components/schemas/RegionSummary'
-        base_form:
-          $ref: '#/components/schemas/PokemonSummary'
-        required_form:
+        required_pokemon_form:
           $ref: '#/components/schemas/PokemonFormSummary'
-        evolved_form:
-          $ref: '#/components/schemas/PokemonSummary'
+        evolved_pokemon_form:
+          $ref: '#/components/schemas/PokemonFormSummary'
         used_move:
           $ref: '#/components/schemas/MoveSummary'
         min_move_count:
@@ -7451,9 +7449,8 @@ components:
           additionalProperties: {}
           readOnly: true
       required:
-      - base_form
       - condition_expression
-      - evolved_form
+      - evolved_pokemon_form
       - held_item
       - item
       - known_move
@@ -7463,7 +7460,7 @@ components:
       - party_species
       - party_type
       - region
-      - required_form
+      - required_pokemon_form
       - trade_species
       - trigger
       - used_move

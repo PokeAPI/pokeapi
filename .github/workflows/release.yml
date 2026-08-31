@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "**.py"
+      - "**.toml"
+      - "**.lock"
       - "data/**"
       - Makefile
       - .github/actions/setup-uv/action.yml

@@ -1,0 +1,36 @@
+name: Bug report
+description: Create a report to help us improve
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the PokéAPI project. To make sure we're effective, please check the following:
+
+        - Make sure your issue hasn't already been submitted on the issues tab. (It has search functionality!)
+          - We're still missing data! If you notice anything is missing, check our current issues to make sure no one else has noticed it as well.
+        - Provide a clear description of the issue.
+        - Provide a clear description of the expected behavior.
+        - Provide a clear description of the steps to reproduce.
+
+        Thank you!
+  - type: textarea
+    attributes:
+      label: Describe the Bug
+      description: Please describe the issue you're seeing and what you'd expect to find. If you're correcting data, please provide any sources that back up what you're mentioning.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: Please describe how to reproduce the bug (e.g. the file or PokéAPI website that shows the problem). For missing data, you can point to existing endpoints that should have it, or just put "Missing data".
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Resolving the Bug
+      description: A lot of issues can be resolved with a quick PR to the API -- if that is the case here, feel free to skip this step and open the PR! If you'd like to open it to discussion first or simply make an issue to keep track of the timeline, continue here.
+      options:
+        - Anyone is open to making a PR for this issue.
+        - I plan on making a PR for this issue.
+      default: 0

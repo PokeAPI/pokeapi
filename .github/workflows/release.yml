@@ -38,7 +38,6 @@ jobs:
           make install-base
           make setup
           make build-db
-          nohup make serve &
           sleep 3
       - name: Release tag
         uses: softprops/action-gh-release@v3.0.2

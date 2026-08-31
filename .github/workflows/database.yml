@@ -7,6 +7,7 @@ on:
       - "**.toml"
       - "**.lock"
       - "data/**"
+      - "Resources/docker/app/Dockerfile"
       - "Resources/nginx/**"
       - "docker-compose**"
       - Makefile

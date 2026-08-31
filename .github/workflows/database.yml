@@ -2,10 +2,22 @@ name: Database
 
 on:
   pull_request:
+    paths: &paths
+      - "**.py"
+      - "**.toml"
+      - "**.lock"
+      - "data/**"
+      - "Resources/docker/app/Dockerfile"
+      - "Resources/nginx/**"
+      - "docker-compose**"
+      - Makefile
+      - .github/actions/setup-uv/action.yml
+      - .github/workflows/database.yml
   push:
     branches-ignore:
       - master
       - staging
+    paths: *paths
 
 jobs:
   csv:
@@ -66,19 +78,14 @@ jobs:
         with:
           submodules: recursive
       - name: Build and start services
-        run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
+        run: make docker-dev-up
       - name: Run migrations and build database
         run: |
           make docker-migrate
           make docker-build-db
       - name: Dump DB
-        run: docker compose exec -T db pg_dump -U ash -Fc -N 'hdb_*' pokeapi > pokeapi.dump
-      - name: Drop and recreate database
-        run: |
-          docker compose exec -T db psql -U ash -d postgres -c "DROP DATABASE pokeapi WITH (FORCE);"
-          docker compose exec -T db psql -U ash -d postgres -c "CREATE DATABASE pokeapi;"
+        run: make docker-dump-db
       - name: Import database
-        run: docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.dump
+        run: make docker-restore-db
       - name: Test data
         run: curl -Ss http://localhost/api/v2/pokemon/1/ | grep -q 'bulbasaur'

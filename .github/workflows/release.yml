@@ -2,6 +2,14 @@ name: Release
 
 on:
   push:
+    paths:
+      - "**.py"
+      - "**.toml"
+      - "**.lock"
+      - "data/**"
+      - Makefile
+      - .github/actions/setup-uv/action.yml
+      - .github/workflows/release.yml
     branches:
       - master
     tags:
@@ -18,27 +26,24 @@ jobs:
           submodules: recursive
       - name: Start pokeapi (docker)
         run: |
-          docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d
+          make docker-dev-up
           make docker-migrate
           make docker-build-db
       - name: Dump PG db
-        run: docker compose exec -T -u postgres db sh -c "cd /tmp && pg_dump -h localhost -Fc -U ash -N 'hdb_*' pokeapi > pokeapi.pgdump"
-      - name: Copy PG dump
-        run: |
-          docker compose cp db:/tmp/pokeapi.pgdump ./
-          ls -larth
+        run: make docker-dump-db
+      - name: List folder
+        run: ls -larth
       - name: Setup uv
         uses: ./.github/actions/setup-uv
-      - name: Start pokeapi
+      - name: Generate SQLite db
         run: |
           rm -rf .venv
           make install-base
           make setup
           make build-db
-          nohup make serve &
           sleep 3
       - name: Release tag
-        uses: softprops/action-gh-release@v3.0.1
+        uses: softprops/action-gh-release@v3.0.2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
@@ -48,7 +53,7 @@ jobs:
             db.sqlite3
           generate_release_notes: true
       - name: Release master branch
-        uses: softprops/action-gh-release@v3.0.1
+        uses: softprops/action-gh-release@v3.0.2
         if: github.ref == 'refs/heads/master'
         with:
           body: |

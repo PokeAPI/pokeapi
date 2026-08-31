@@ -11,6 +11,7 @@ on:
       - "Resources/nginx/**"
       - "docker-compose**"
       - Makefile
+      - .github/actions/setup-uv/action.yml
       - .github/workflows/database.yml
   push:
     branches-ignore:

@@ -6,6 +6,7 @@ on:
       - "**.py"
       - "data/**"
       - Makefile
+      - .github/actions/setup-uv/action.yml
       - .github/workflows/release.yml
     branches:
       - master

@@ -2049,8 +2049,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     condition_expression = models.CharField(
         max_length=100,
         blank=True,
-        null=True,
-        default=None,
+        default="",
         help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
     )
 

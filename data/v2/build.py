@@ -1746,9 +1746,10 @@ def _build_pokemons():
                             info,
                             "png",
                         ),
+                    },
                     "champions": {
                         "front_default": try_image_names(poke_sprites + gen_ix + "champions/", info, "png"),
-                    }
+                    },
                 },
             },
         }

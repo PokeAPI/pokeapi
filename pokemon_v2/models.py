@@ -1,4 +1,5 @@
 # pyright: reportIncompatibleVariableOverride=false
+# ruff: noqa: E501
 from __future__ import annotations
 
 from typing import Any, ClassVar, TypeVar
@@ -2019,7 +2020,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         null=True,
         related_name="required_in_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form required for evolution (e.g. burmy-plant, sinistea-antique)",
+        help_text="Specific form required for evolution (null = any form; e.g. burmy-plant, sinistea-antique)",
     )
 
     evolved_pokemon_form = models.ForeignKey(
@@ -2028,7 +2029,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         null=True,
         related_name="evolved_into_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form resulting from evolution (e.g. polteageist-antique, wormadam-sandy)",
+        help_text="Specific form resulting from evolution (null = default form; e.g. polteageist-antique, wormadam-sandy)",
     )
 
     used_move = models.ForeignKey(Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE)
@@ -2048,7 +2049,8 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     condition_expression = models.CharField(
         max_length=100,
         blank=True,
-        default="",
+        null=True,
+        default=None,
         help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
     )
 

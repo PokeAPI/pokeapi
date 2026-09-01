@@ -23,9 +23,10 @@ class Migration(migrations.Migration):
             name="condition_expression",
             field=models.CharField(
                 blank=True,
-                default="",
+                default=None,
                 help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
                 max_length=100,
+                null=True,
             ),
         ),
         migrations.AddField(
@@ -42,7 +43,7 @@ class Migration(migrations.Migration):
             name="required_pokemon_form",
             field=models.ForeignKey(
                 blank=True,
-                help_text="Specific form required for evolution (e.g. burmy-plant, sinistea-antique)",
+                help_text="Specific form required for evolution (null = any form; e.g. burmy-plant, sinistea-antique)",
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
                 related_name="required_in_evolutions",
@@ -54,7 +55,7 @@ class Migration(migrations.Migration):
             name="evolved_pokemon_form",
             field=models.ForeignKey(
                 blank=True,
-                help_text="Specific form resulting from evolution (e.g. polteageist-antique, wormadam-sandy)",
+                help_text="Specific form resulting from evolution (null = default form; e.g. polteageist-antique, wormadam-sandy)",
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
                 related_name="evolved_into_evolutions",

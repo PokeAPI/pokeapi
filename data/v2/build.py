@@ -1345,6 +1345,12 @@ def _build_pokemons():
             },
             "versions": {
                 "generation-i": {
+                    "red-green-japan": {
+                        "front_default": try_image_names(poke_sprites + gen_i + "red-green-japan/", info, "png"),
+                        "front_gray": try_image_names(poke_sprites + gen_i + "red-green-japan/gray/", info, "png"),
+                        "back_default": try_image_names(poke_sprites + gen_i + "red-green-japan/back/", info, "png"),
+                        "back_gray": try_image_names(poke_sprites + gen_i + "red-green-japan/back/gray/", info, "png"),
+                    },
                     "red-blue": {
                         "front_default": try_image_names(poke_sprites + gen_i + "red-blue/", info, "png"),
                         "front_gray": try_image_names(poke_sprites + gen_i + "red-blue/gray/", info, "png"),
@@ -1365,8 +1371,14 @@ def _build_pokemons():
                         "back_default": try_image_names(poke_sprites + gen_i + "yellow/back/", info, "png"),
                         "back_gray": try_image_names(poke_sprites + gen_i + "yellow/back/gray/", info, "png"),
                         "front_transparent": try_image_names(poke_sprites + gen_i + "yellow/transparent/", info, "png"),
+                        "front_transparent_gray": try_image_names(poke_sprites + gen_i + "yellow/transparent/gray", info, "png"),
                         "back_transparent": try_image_names(
                             poke_sprites + gen_i + "yellow/transparent/back/",
+                            info,
+                            "png",
+                        ),
+                        "back_transparent_gray": try_image_names(
+                            poke_sprites + gen_i + "yellow/transparent/back/gray",
                             info,
                             "png",
                         ),

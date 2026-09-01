@@ -2,9 +2,17 @@ name: Nix Environment
 
 on:
   pull_request:
+    paths: &paths
+      - "**.py"
+      - "**.toml"
+      - "**.lock"
+      - default.nix
+      - Makefile
+      - .github/workflows/nix-environment.yml
   push:
     branches:
       - master
+    paths: *paths
 
 jobs:
   nix-test:

@@ -119,6 +119,7 @@
 - "!include public_pokemon_v2_pokemonevolution.yaml"
 - "!include public_pokemon_v2_pokemonform.yaml"
 - "!include public_pokemon_v2_pokemonformcondition.yaml"
+- "!include public_pokemon_v2_pokemonformflavortext.yaml"
 - "!include public_pokemon_v2_pokemonformgeneration.yaml"
 - "!include public_pokemon_v2_pokemonformname.yaml"
 - "!include public_pokemon_v2_pokemonformsprites.yaml"

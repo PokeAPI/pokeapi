@@ -52,7 +52,7 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     ```
 
     > [!NOTE]
-    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before commiting and pushing your changes.
+    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before committing and pushing your changes.
 
 - Lint, format, and typecheck your code changes:
 
@@ -151,7 +151,7 @@ When finished browse http://localhost:8080 and you will find the admin console. 
 
 A free public GraphiQL console is browsable at the address https://beta.pokeapi.co/graphql/console/. The relative GraphQL endpoint is accessible at https://beta.pokeapi.co/graphql/v1beta
 
-A set of examples is provided in the directory [/graphql/examples](./graphql/examples) of this repository.
+A set of examples is provided in the [/graphql/v1beta/examples](./graphql/v1beta/examples) and [/graphql/v1beta2/examples](./graphql/v1beta2/examples) directories of this repository.
 
 ## Kubernetes <a id="kubernetes"></a> &nbsp; [![Build Docker image and create k8s with it](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml/badge.svg)](https://github.com/PokeAPI/pokeapi/actions/workflows/docker-k8s.yml)
 
@@ -212,19 +212,11 @@ Help to keep PokéAPI running! If you're using PokéAPI as a teaching resource o
 Thank you to all our backers! [Become a backer](https://opencollective.com/pokeapi#backer)
 
 <a href="https://opencollective.com/pokeapi#backers" target="_blank"><img src="https://opencollective.com/pokeapi/backers.svg?width=890"></a>
-<!--
-## Join Us On Slack!
 
-> **Warning**
-> Currently no maintainer has enough free time to support the community on Slack. Our Slack is in an unmaintained status.
+## Join Us On Discord!
 
-Have a question or just want to discuss new ideas and improvements? Hit us up on Slack. ~~Consider talking with us here before creating a new issue.~~
-This way we can keep issues here a bit more organized and helpful in the long run. Be excellent to each other :smile:
+We have [a Discord server](https://discord.gg/tTGKJxtb8S). It is a simple place where people can chat with each other in a respecful manner. Not all maintainers/code contributors are signed up and your question might not be answered. Consider opening an [issue](https://github.com/PokeAPI/pokeapi/issues) if you want more visibility or you want to talk to the maintainers. Be excellent to each other :smile:
 
-[Sign up](https://join.slack.com/t/pokeapi/shared_invite/zt-38w145rww-I_ROYnZME2n1c7mQXppEAQ) easily!
-
-Once you've signed up visit [PokéAPI on Slack](https://pokeapi.slack.com)
--->
 ## Contributing
 
 This project exists thanks to all the people who [contribute](https://github.com/PokeAPI/pokeapi/blob/master/CONTRIBUTING.md)

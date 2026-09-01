@@ -1,10 +1,12 @@
 # pyright: reportIncompatibleVariableOverride=false
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, ClassVar, TypeVar
 
 from django.db import models
-from typing_extensions import override
+from typing_extensions import Self, override
+
+_ModelT = TypeVar("_ModelT", bound=models.Model)
 
 __all__: tuple[str, ...] = (
     "Ability",
@@ -165,6 +167,7 @@ __all__: tuple[str, ...] = (
     "PalPark",
     "PalParkArea",
     "PalParkAreaName",
+    "PokeApiManager",
     "PokeApiModel",
     "PokeathlonStat",
     "PokeathlonStatName",
@@ -183,6 +186,7 @@ __all__: tuple[str, ...] = (
     "PokemonEvolution",
     "PokemonForm",
     "PokemonFormCondition",
+    "PokemonFormFlavorText",
     "PokemonFormGeneration",
     "PokemonFormName",
     "PokemonFormSprites",
@@ -230,7 +234,24 @@ __all__: tuple[str, ...] = (
 ############################
 
 
+class PokeApiManager(models.Manager[_ModelT]):
+    """Default manager ordering every queryset by primary key, so that the API
+    serializes lists deterministically. Call sites needing another order
+    override it with ``order_by()``.
+
+    A ``distinct(*fields)`` call has to spell out a matching ``order_by()``,
+    since PostgreSQL requires the leading ``ORDER BY`` expressions to match the
+    ``DISTINCT ON`` ones. A plain ``distinct()`` is unaffected.
+    """
+
+    @override
+    def get_queryset(self) -> models.QuerySet[_ModelT]:
+        return super().get_queryset().order_by("pk")
+
+
 class PokeApiModel(models.Model):
+    objects: ClassVar[PokeApiManager[Self]] = PokeApiManager()
+
     class Meta:
         abstract = True
 
@@ -1826,6 +1847,10 @@ class PokemonSpeciesDescription(HasPokemonSpecies, IsDescription):
 
 
 class PokemonSpeciesFlavorText(IsFlavorText, HasPokemonSpecies, HasVersion):
+    pass
+
+
+class PokemonFormFlavorText(IsFlavorText, HasPokemonForm, HasVersion):
     pass
 
 

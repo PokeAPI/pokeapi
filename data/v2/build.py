@@ -1408,6 +1408,12 @@ def _build_pokemons():
                             info,
                             "png",
                         ),
+                        "animated": {
+                            "front_default": try_image_names(poke_sprites + gen_ii + "crystal/animated/", info, "gif"),
+                            "front_shiny": try_image_names(
+                                poke_sprites + gen_ii + "crystal/animated/shiny/", info, "gif"
+                            ),
+                        },
                     },
                     "gold": {
                         "front_default": try_image_names(poke_sprites + gen_ii + "gold/", info, "png"),
@@ -1640,7 +1646,13 @@ def _build_pokemons():
                                 "gif",
                             ),
                         },
-                    }
+                    },
+                    "icons": {
+                        "front_default": try_image_names(poke_sprites + gen_v + "icons/", info, "png"),
+                        "animated": {
+                            "front_default": try_image_names(poke_sprites + gen_v + "icons/animated/", info, "png"),
+                        },
+                    },
                 },
                 "generation-vi": {
                     "omegaruby-alphasapphire": {
@@ -1948,6 +1960,20 @@ def _build_pokemons():
         )
 
     build_generic((PokemonFormCondition,), "pokemon_form_conditions.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
+        yield PokemonFormFlavorText(
+            pokemon_form_id=int(info[0]),
+            version_id=int(info[1]),
+            language_id=int(info[2]),
+            flavor_text=info[3],
+        )
+
+    build_generic(
+        (PokemonFormFlavorText,),
+        "pokemon_form_flavor_text.csv",
+        csv_record_to_objects,
+    )
 
     def csv_record_to_objects(info):
         yield PokemonGameIndex(pokemon_id=int(info[0]), version_id=int(info[1]), game_index=int(info[2]))

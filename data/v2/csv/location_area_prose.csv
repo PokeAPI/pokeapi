@@ -2177,100 +2177,195 @@ location_area_id,local_language_id,name
 842,6,Sinjoh-Ruinen
 842,5,Ruines Sinjoh
 843,9,Route 1
+843,5,Route 1
 844,9,Route 2
+844,5,Route 2
 845,9,Route 3 (East)
+845,5,Route 3 (Est)
 847,9,Route 4
+847,5,Route 4
 848,9,Route 5
+848,5,Route 5
 849,9,Route 6
+850,5,Route 6
 850,9,Route 7
+850,5,Route 7
 851,9,Route 8 (Main)
+851,5,Route 8 (Principale)
 852,9,Route 8 (Steamdrift Way)
+852,5,Route 8 (Sentier des Sources)
 853,9,Route 9 (Main)
+853,5,Route 9 (Principale)
 854,9,Route 9 (Circhester Bay)
+854,5,Route 9 (Baie de Ludester)
 855,9,Route 9 (Outer Spikemuth)
+855,5,Route 9 (Abords de Smashings)
 856,9,Route 10 (Main)
+856,5,Route 10 (Principale)
 857,9,Route 10 (Near Station)
+857,5,Route 10 (Gare de White Hill)
 858,9,Axew's Eye
+858,5,Œil du lac
 859,9,Ballimere Lake
+859,5,Lac Poké Ball
 860,9,Ballonlea
+860,5,Corrifey
 861,9,Battle Tower
+861,5,Tour de Combat
 862,9,Brawlers' Cave
+862,5,Grotte du Pugilat
 863,9,Bridge Field
+863,5,Prairie Entre-Ponts
 864,9,Challenge Beach
+864,5,Plage de l'Épreuve
 868,9,Challenge Road
+868,5,Route de l'Épreuve
 869,9,Circhester
+869,5,Ludester
 870,9,Courageous Cavern
+870,5,Caverne Pugnacité
 871,9,Crown Shrine
+871,5,Temple Couronne
 872,9,Dappled Grove
+872,5,Bois de Clairjour
 873,9,Dusty Bowl
+873,5,Fosse des Sables
 874,9,Dyna Tree Hill
+874,5,Butte du Dynarbre
 875,9,East Lake Axewell
+875,5,Lac Coupenotte Est
 876,9,Fields of Honor
+876,5,Plaine Salutation
 878,9,Forest of Focus
+878,5,Forêt Flexion
 879,9,Freezington
+879,5,Hameau Gelé
 880,9,Frigid Sea
+880,5,Mer Banquise
 881,9,Frostpoint Field
+881,5,Plaine Granfroy
 882,9,Galar Mine
+882,5,Mine de Galar
 883,9,Galar Mine No. 2
+883,5,Mine de Galar n°2
 884,9,Giant's Bed
+884,5,Repos du Géant
 885,9,Giant's Cap (Main Area)
+885,5,Coiffe du Géant (Zone principale)
 886,9,Giant's Cap (Area 2)
+886,5,Coiffe du Géant (Zone 2)
 887,9,Giant's Cap (Area 3)
+887,5,Coiffe du Géant (Zone 3)
 888,9,Giant's Foot
+888,5,Empreinte du Géant
 889,9,Giant's Mirror (Main Area)
+889,5,Miroir du Géant (Zone principale)
 890,9,Giant's Seat
+890,5,Siège du Géant
 891,9,Glimwood Tangle
+891,5,Forêt de Lumirinth
 892,9,Hammerlocke
+892,5,Kickenham
 893,9,Hammerlocke Hills
+893,5,Plateau de Kickenham
 894,9,Honeycalm Island
+894,5,Îlot Calméole
 895,9,Honeycalm Sea
+895,5,Mer Calméole
 896,9,Hulbury
+896,5,Skifford
 897,9,Iceberg Ruins
+897,5,Ruines Iceberg
 898,9,Insular Sea
+898,5,Mer Isol'Îlots
 899,9,Iron Ruins
+899,5,Ruines de Fer
 900,9,Lake of Outrage
+900,5,Lac Ouragan
 901,9,Lakeside Cave
+901,5,Grotte du Lac
 902,9,Loop Lagoon
+902,5,Lagun Circulaire
 904,9,Master Dojo
+904,5,Dojo de la Maîtrise
 905,9,Max Lair
+905,5,Grand Antre Dynamax
 906,9,Motostoke
+906,5,Motorby
 907,9,Motostoke Outskirts
+907,5,Abords de Motorby
 908,9,Motostoke Riverbank
+908,5,Berges de Motorby
 909,9,North Lake Miloch
+909,5,Lac Milobellus Nord
 910,9,Old Cemetery
+910,5,Cimetière Ancien
 911,9,Path to the Peak
+911,5,Sentier Blanche-Cime
 912,9,Postwick
+912,5,Paddoxton
 913,9,Potbottom Desert
+913,5,Sables de Kudsac
 914,9,Roaring-Sea Caves
+914,5,Cavernes Gronde-Mer
 915,9,Rock Peak Ruins
+915,5,Ruines Pic Roche
 916,9,Rolling Fields (Main Area)
+916,5,Plaine Verdoyante (Zone principale)
 917,9,Rolling Fields (Area 2)
+917,5,Plaine Verdoyante (Zone 2)
 918,9,Slippery Slope
+918,5,Plateau Beau-Gant
 919,9,Slumbering Weald (Entrance)
+919,5,Forêt de Sleepwood (Première partie)
 920,9,Snowslide Slope
+920,5,Pente Enneigée
 921,9,Soothing Wetlands
+921,5,Lande Boldair
 922,9,South Lake Miloch (Main Area)
+922,5,Lac Milobellus Sud (Zone principale)
 923,9,South Lake Miloch (Area 2)
+923,5,Lac Milobellus Sud (Zone 2)
 924,9,Spikemuth
-925,9,Spit-Decision Ruins
+924,5,Smashings
+925,9,Split-Decision Ruins
+925,5,Ruines du Choix
 927,9,Stepping-Stone Sea (Main Area)
+927,5,Mer Align-Îlots (Zone principale)
 928,9,Stepping-Stone Sea (Area 2)
+928,5,Mer Align-Îlots (Zone 2)
 929,9,Stony Wilderness (Main Area)
+929,5,Plaine Rocheuse (Zone principale)
 930,9,Stony Wilderness (Area 2)
+930,5,Plaine Rocheuse (Zone 2)
 931,9,Stony Wilderness (Area 3)
+931,5,Plaine Rocheuse (Zone 3)
 932,9,Stow-on-Side
+932,5,Old Chister
 933,9,Three-Point Pass
+933,5,Croisée Trois-Voies
 934,9,Tower of Darkness
+934,5,Tour des Ténèbres
 935,9,Tower of Waters
+935,5,Tour de l'Eau
 936,9,Training Lowlands
+936,5,Plaine des Efforts
 938,9,Tunnel to the Top
+938,5,Galeries Monte-Pic
 939,9,Turffield
+939,5,Greenbury
 940,9,Warm-Up Tunnel
+940,5,Voie des Étirements
 941,9,Watchtower Ruins
-942,9,Wegehurst
+941,5,Tour en ruines
+942,9,Wedgehurst
+942,5,Brasswick
 943,9,West Lake Axewell
+943,5,Lac Coupenotte Ouest
 944,9,Workout Sea
+944,5,Mer Eau-Hisse
 945,9,Wyndon
+945,5,Winscor
 1167,9,Lighthouse Basement
 1167,6,Leuchtturm Keller
 1167,5,Phare de la Liberté
@@ -2341,321 +2436,637 @@ location_area_id,local_language_id,name
 1199,6,Mount Lanakila Krater
 1199,5,Mont Lanakila Cratère
 1215,9,Mirage Island (West Of Dewford Town)
+1215,5,Île Mirage (Ouest de Myokara
 1216,9,Mirage Island (West Of Route 104)
+1216,5,Île Mirage (Ouest de la Route 104)
 1217,9,Mirage Island (Route 114)
+1217,5,Île Mirage (Route 114)
 1218,9,Mirage Island (Route 124)
+1218,5,Île Mirage (Route 124)
 1219,9,Mirage Island (Route 132)
+1219,5,Île Mirage (Route 132)
 1220,9,Mirage Island (South of Route 134)
-1221,9,Mirage Island (South of Pacofidlog)
+1220,5,Île Mirage (Sud de la Route 134)
+1221,9,Mirage Island (South of Pacifidlog)
+1221,5,Île Mirage (Sud de Pacifiville)
 1222,9,Mirage Island (East of Shoal Cave)
+1222,5,Île Mirage (Est de la Grotte Tréfonds)
 1223,9,Mirage Island
+1223,5,Île Mirage
 1224,9,Mirage Forest (North of Lilycove)
+1224,5,Forêt Mirage (Nord de Nénucrique)
 1225,9,Mirage Forest (South of Route 132)
+1225,5,Forêt Mirage (Sud de la Route 132
 1226,9,Mirage Forest (East of Mossdeep)
+1226,5,Forêt Mirage (Est d'Algatia)
 1227,9,Mirage Forest (South of Route 109)
+1227,5,Forêt Mirage (Sud de la Route 109)
 1228,9,Mirage Forest (North of Route 124)
+1228,5,Forêt Mirage (Nord de la Route 124)
 1229,9,Mirage Forest (West of Route 114)
+1229,5,Forêt Mirage (Ouest de la Route 114)
 1230,9,Mirage Forest (West of Route 105)
+1230,5,Forêt Mirage (Ouest de la Route 105)
 1231,9,Mirage Forest (South of Route 111)
+1231,5,Forêt Mirage (Sud de la Route 111)
 1232,9,Outskirt Stand (Outside)
+1232,5,Station Service
 1233,9,Phenac City (Mayor's House)
+1233,5,Phénacit (Maison du Maire)
 1234,9,Snagem Hideout 1F
+1234,5,Repaire Team Snatch (RdC)
 1235,9,Shadow Pokémon Lab B2F
+1235,5,Laboratoire de Pokémon Obscurs (2e sous-sol)
 1236,9,Phenac City (West Exit)
+1236,5,Phénacit (Sortie Ouest)
 1237,9,Phenac City (East Exit)
+1237,5,Phénacit (Sortie Est)
 1238,9,Phenac City (South Exit)
+1238,5,Phénacit (Sortie Sud)
 1239,9,Pyrite Town (Duel Square)
+1239,5,Pyrite (Place des Duels)
 1240,9,Pyrite Town (Entrance)
+1240,5,Pyrite (Entrée)
 1241,9,Pyrite Bldg 1F
+1241,5,Immeuble de Pyrite (RdC)
 1242,9,Pyrite Cave (Miror's Hideout)
+1242,5,Cavernes de Pyrite (Salle de Bouledisco)
 1243,9,Pyrite Bldg 4F
+1243,5,Immeuble de Pyrite (3e ét.)
 1244,9,Pyrite Cave (Outside)
+1244,5,Cavernes de Pyrite (Extérieur)
 1245,9,Pyrite Cave (South Sewers)
+1245,5,Cavernes de Pyrite (Égouts sud)
 1246,9,Pyrite Cave B1F
+1246,5,Cavernes de Pyrite (1e sous-sol)
 1247,9,Pyrite Cave B1F (Post Sewers)
+1247,5,Cavernes de Pyrite (1e sous-sol - après les égouts)
 1248,9,Realgam Tower
+1248,5,Tour Titanite
 1249,9,Phenac City Stadium
+1249,5,Colisée de Phénacit
 1250,9,Pyrite Town (Duking's House)
+1250,5,Pyrite (Maison de Doking)
 1251,9,Shadow Pokémon Lab B1F
+1251,5,Laboratoire de Pokémon Obscurs (1e sous-sol)
 1252,9,Agate Village (Relic Forest)
+1252,5,Samaragd (Forêt Sacrée)
 1253,9,The Under Colosseum
+1253,5,Colosseum de Suerebe
 1254,9,Mt. Battle 10F
+1254,5,Mont Bataille (10e ét.)
 1255,9,The Under
+1255,5,Suerebe
 1256,9,The Under (TV Studio)
+1256,5,Suerebe (Studio TV)
 1257,9,The Under (Subway)
+1257,5,Suerebe (Métro)
 1258,9,Snagem Hideout 2F
+1258,5,Repaire Team Snatch (1e ét.)
 1259,9,Realgam Tower Colosseum
+1259,5,Colosseum de la Tour Titanite
 1260,9,The Under (Deep Colosseum)
+1260,5,Suerebe (Colosseum de Targare)
 1261,9,Mt. Battle 100F
+1261,5,Mont Bataille (100e ét.)
 1262,9,Phenac City (Card E Room)
+1262,5,Phénacit (Salle Carte E)
 1263,9,Pokemon HQ Lab
+1263,5,Laboratoire Pokémon
 1264,9,Pokemon HQ Lab (Outside)
+1264,5,Laboratoire Pokémon (Extérieur)
 1265,9,Gateon Port (Across Bridge)
+1265,5,Port Amarrée (Après le pont)
 1266,9,Gateon Port (Lighthouse Top)
+1266,5,Port Amarrée (Sommet du Phare)
 1267,9,Cipher Lab (Outside)
+1267,5,Laboratoire de Pokémon Obscurs (Extérieur)
 1268,9,Cipher Lab B2F
+1268,5,Laboratoire de Pokémon Obscurs (2e sous-sol)
 1269,9,Cipher Lab B1F
+1269,5,Laboratoire de Pokémon Obscurs (1e sous-sol)
 1270,9,Cave Pokespot
+1270,5,Poké Place Grotte
 1271,9,ONBS 2F
+1271,5,ONBS (1e ét.)
 1272,9,ONBS 3F
+1272,5,ONBS (2e ét.)
 1273,9,ONBS Roof
+1273,5,ONBS (Toit)
 1274,9,ONBS 4F
+1274,5,ONBS (3e ét.)
 1275,9,Phenac City Prestige Precept Center
+1275,5,Centre de Formation Pokémon de Phénacité
 1276,9,Cipher Key Lair (Outside)
+1276,5,Repaire Ombre (Extérieur)
 1277,9,Cipher Key Lair 1F
+1277,5,Repaire Ombre (RdC)
 1278,9,Cipher Key Lair 2F
+1278,5,Repaire Ombre (1e ét.)
 1279,9,Cipher Key Lair 3F
+1279,5,Repaire Ombre (2e ét.)
 1280,9,Cipher Key Lair 4F
+1280,5,Reapire Ombre (3e ét.)
 1281,9,Cipher Key Lair Roof
+1281,5,Repaire Ombre (Toit)
 1282,9,Cipher Key Lair 5F
+1282,5,Repaire Ombre (5e ét.)
 1283,9,Citadark Isle (Outside)
+1283,5,Île Ténébra (Extérieur)
 1284,9,Citadark Isle 1F
+1284,5,Île Ténébra (RdC)
 1285,9,Citadark Isle B1F
+1285,5,Île Ténébra (1e sous-sol)
 1286,9,Citadark Isle 2F
+1286,5,Île Ténébra (1e ét.)
 1287,9,Citadark Isle 3F
+1287,5,Île Ténébra (2e ét.)
 1288,9,Citadark Isle 6F
+1288,5,Île Ténébra (5e ét.)
 1289,9,Citadark Isle Dome Exterior
+1289,5,Île Ténébra (Extérieur du Dôme)
 1290,9,Citadark Isle Dome B1F
+1290,5,Île Ténébra (Dôme - 1e sous-sol)
 1291,9,Citadark Isle Dome 1F
+1291,5,Île Ténébra (Dôme - RdC)
 1292,9,Citadark Isle Dome 2F
+1292,5,Île Ténébra (Dôme - 1e ét.)
 1293,9,Gateon Port
+1293,5,Port Amarrée
 1294,9,Rock Pokespot
+1294,5,Poké Place Roche
 1295,9,Oasis Pokespot
+1295,5,Poké Place Oasis
 1296,9,Mt. Battle Lobby
+1296,5,Mont Bataille (Hall)
 1297,9,Outskirt Stand (Inside)
+1297,5,Station Service (Intérieur)
 1298,9,Pyrite Town Colosseum
+1298,5,Colosseum de Pyrite
 1299,9,Phenac City Stadium (Outside)
+1299,5,Colosseum de Phénacit (Extérieur)
 1300,9,Celadon City Prize Corner
+1300,5,Casino de Céladopole
 1301,9,Goldenrod City Game Corner
+1301,5,Casino de Doublonville
 1302,9,Kanto Underground Path
+1302,5,Souterrain de Kanto
 1303,9,Violet City (Southwest House)
+1303,5,Mauville (Maison au Sud-Ouest)
 1304,9,Goldenrod City Department Store 5F
+1304,5,Centre Commercial de Doublonville (4e ét.)
 1305,9,Mirage Cave (South of Pacifidlog)
+1305,5,Grotte Mirage (Sud de Pacifiville)
 1306,9,Mirage Cave (North of Route 132)
+1306,5,Grotte Mirage (Nord de la Route 132)
 1307,9,Mirage Cave (North of Fallarbor)
+1307,5,Grotte Mirage (Nord d'Autéquia)
 1308,9,Mirage Cave (North of Fortree)
+1308,5,Grotte Mirage (Nord de Cimetronelle)
 1309,9,Mirage Cave (South East of Route 129)
+1309,5,Grotte Mirage (Sud-Est de la Route 129)
 1310,9,Mirage Cave (South of Route 107)
+1310,5,Grotte Mirage (Sud de la Route 107)
 1311,9,Mirage Cave (North of Route 124)
+1311,5,Grotte Mirage (Nord de la Route 124)
 1312,9,Mirage Cave (West of Rustboro)
+1312,5,Grotte Mirage (Ouest de Mérouville)
 1313,9,Mirage Mountain (East of Mossdeep)
+1313,5,Mont Mirage (Est d'Algatia)
 1314,9,Mirage Mountain (North of Mossdeep)
+1314,5,Mont Mirage (Nord d'Algatia)
 1315,9,Mirage Mountain (South East of Route 129)
+1315,5,Mont Mirage (Sud-Est de la Route 129
 1316,9,Mirage Mountain (North of Lilycove)
+1316,5,Mont Mirage (Nord de Nénucrique)
 1317,9,Mirage Mountain (West of Route 104)
+1317,5,Mont Mirage (Ouest de la Route 104)
 1318,9,Mirage Mountain (South of Route 129)
+1318,5,Mont Mirage (Sud de la Route 129)
 1319,9,Mirage Mountain (South of Route 131)
+1319,5,Mont Mirage (Sud de la Route 131)
 1320,9,Mirage Mountain (North East of Route 125)
+1320,5,Mont Mirage (Nord-Est de la Route 125)
 1321,9,Fortree City
+1321,5,Cimetronelle
 1322,9,Friend Safari (Normal)
+1322,5,Safari des Amis (Normal)
 1323,9,Friend Safari (Fire)
+1323,5,Safari des Amis (Feu)
 1324,9,Friend Safari (Fighting)
+1324,5,Safari des Amis (Combat)
 1325,9,Friend Safari (Water)
+1325,5,Safari des Amis (Eau)
 1326,9,Friend Safari (Flying)
+1326,5,Safari des Amis (Vol)
 1327,9,Friend Safari (Grass)
+1327,5,Safari des Amis (Plante)
 1328,9,Friend Safari (Poison)
+1328,5,Safari des Amis (Poison)
 1329,9,Friend Safari (Electric)
+1329,5,Safari des Amis (Électrik)
 1330,9,Friend Safari (Ground)
+1330,5,Safari des Amis (Sol)
 1331,9,Friend Safari (Psychic)
+1331,5,Safari des Amis (Psy)
 1332,9,Friend Safari (Rock)
+1332,5,Safari des Amis (Roche)
 1333,9,Friend Safari (Ice)
+1333,5,Safari des Amis (Glace)
 1334,9,Friend Safari (Bug)
+1334,5,Safari des Amis (Insecte)
 1335,9,Friend Safari (Dragon)
+1335,5,Safari des Amis (Dragon)
 1336,9,Friend Safari (Ghost)
+1336,5,Safari des Amis (Spectre)
 1337,9,Friend Safari (Dark)
+1337,5,Safari des Amis (Ténèbres)
 1338,9,Friend Safari (Steel)
+1338,5,Safari des Amis (Acier)
 1339,9,Friend Safari (Fairy)
+1339,5,Safari des Amis (Fée)
 1340,9,Route 2 (Hidden Grotto)
+1340,5,Route 2 (Trouée Cachée)
 1341,9,Route 3 (Hidden Grotto – Dark Grass)
+1341,5,Route 3 (Trouée Cachée - Herbe sombre)
 1342,9,Route 3 (Hidden Grotto – Pond)
+1342,5,Route 3 (Trouée Cachée - Étang)
 1343,9,Route 5 (Hidden Grotto)
+1343,5,Route 5 (Trouée Cachée)
 1344,9,Route 6 (Hidden Grotto – Near Pokemon Breeder)
+1344,5,Route 6 (Trouée Cachée - Proche de l'Éleveuse)
 1345,9,Route 6 (Hidden Grotto – Mistralton Cave)
+1345,5,Route 6 (Trouée Cachée - Grotte Parsemille)
 1346,9,Route 7 (Hidden Grotto)
+1346,5,Route 7 (Trouée Cachée)
 1347,9,Route 9 (Hidden Grotto)
+1347,5,Route 9 (Trouée Cachée)
 1348,9,Route 13 (Hidden Grotto – Giant Chasm)
+1348,5,Route 13 (Trouée Cachée - Grotte Cyclopéenne)
 1349,9,Route 13 (Hidden Grotto – Stairs)
+1349,5,Route 13 (Trouée Cachée - Escaliers)
 1350,9,Route 18 (Hidden Grotto)
+1350,5,Route 18 (Trouée Cachée)
 1351,9,Route 22 (Hidden Grotto)
+1351,5,Route 22 (Trouée Cachée)
 1352,9,Route 23 (Hidden Grotto)
+1352,5,Route 23 (Trouée Cachée)
 1353,9,Floccesy Ranch (Hidden Grotto)
+1353,5,Ranch d'Amaillide (Trouée Cachée)
 1354,9,Lostlorn Forest (Hidden Grotto)
+1354,5,Bois des Illusions (Trouée Cachée)
 1355,9,Giant Chasm (Hidden Grotto)
+1355,5,Grotte Cyclopéenne (Trouée Cachée)
 1356,9,Abundant Shrine (Hidden Grotto – Near Youngster)
+1356,5,Autel Abondance (Trouée Cachée - Proche du Gamin)
 1357,9,Abundant Shrine (Hidden Grotto – Shrine)
+1357,5,Autel Abondance (Trouée Cachée - Temple)
 1358,9,Pinwheel Forest (Hidden Grotto – Outer area)
+1358,5,Forêt d'Empoigne (Trouée Cachée - Extérieur)
 1359,9,Pinwheel Forest (Hidden Grotto – Inner area)
+1359,5,Forêt d'Empoigne (Trouée Cachée - Intérieur)
 1360,9,Oreburgh Mining Museum
+1360,5,Musée Minier de Charbourg
 1361,9,Pewter Museum of Science
+1361,5,Musée des Sciences d'Argenta
 1362,9,Floaroma Meadow
+1362,5,Pré de Floraville
 1363,9,Safari Zone Gate
+1363,5,Porte du Parc Safari
 1364,9,Accumula Town
+1364,5,Arabelle
 1365,9,Route 2 (Lake)
+1365,5,Route 2 (Lac)
 1366,9,Route 2 (Lakeside)
+1366,5,Route 2 (Chemin au Nord-Ouest du Lac)
 1367,9,Motostoke (Gym)
+1367,5,Motorby (Arène)
 1368,9,Route 3 (West)
+1368,5,Route 3 (Ouest)
 1369,9,Slumbering Weald (Deep)
+1369,5,Forêt de Sleepwood (Deuxime partie)
 1370,9,Energy Plant Tower Summit
+1370,5,Sommet de la Tour
 1371,9,Meetup Spot
+1371,5,Sentier de la Gare
 1372,9,Postwick (Leon's Room)
+1372,5,Paddoxton (Chambre de Tarak)
 1373,9,Motostoke Pokémon Center
+1373,5,Motorby (Centre Pokémon)
 1374,9,Turffield (Gym)
+1374,5,Greenbury (Arène)
 1375,9,Ballonlea (Gym)
+1375,5,Corrifey (Arène)
 1376,9,Random caves across the Isle of Armor
+1376,5,Grottes aléatoires d'Isolarmure
 1377,9,Nacrene Museum
+1377,5,Musée de Maillard
 1378,9,Giant's Mirror (Area 2)
+1378,5,Miroir du Géant (Zone 2)
 1379,9,Distortion World
+1379,5,Monde Distorsion
 1380,9,Galar Wild Areas
+1380,5,Terres Sauvages de Galar
 1381,9,The Isle of Armor
+1381,5,Isolarmure
 1382,9,The Crown Tundra
+1382,5,Couronneige
 1383,9,All Max Dens in the Galar Wild Area
+1383,5,Tous les Antres Dynamax des Terres Sauvages
 1384,9,Rolling Fields (Max Den A)
+1384,5,Plaine Verdoyante (Antre D)
 1385,9,Rolling Fields (Max Den B)
+1385,5,Plaine Verdoyante (Antre F)
 1386,9,Rolling Fields (Max Den C)
+1386,5,Plaine Verdoyante (Antre A)
 1387,9,Rolling Fields (Max Den D)
+1387,5,Plaine Verdoyante (Antre I)
 1388,9,Rolling Fields (Max Den E)
+1388,5,Plaine Verdoyante (Antre C)
 1389,9,Rolling Fields (Max Den F)
+1389,5,Plaine Verdoyante (Antre E)
 1390,9,Rolling Fields (Max Den G)
+1390,5,Plaine Verdoyante (Antre B)
 1391,9,Rolling Fields (Max Den H)
+1391,5,Plaine Verdoyante (Antre H)
 1392,9,Rolling Fields (Max Den I)
+1392,5,Plaine Verdoyante (Antre G)
 1393,9,Dappled Grove (Max Den A)
+1393,5,Bois de Clairjour (Antre E)
 1394,9,Dappled Grove (Max Den B)
+1394,5,Bois de Clairjour (Antre D)
 1395,9,Dappled Grove (Max Den C)
+1395,5,Bois de Clairjour (Antre C)
 1396,9,Dappled Grove (Max Den D)
+1396,5,Bois de Clairjour (Antre B)
 1397,9,Dappled Grove (Max Den E)
+1397,5,Bois de Clairjour (Antre A)
 1398,9,West Lake Axewell (Max Den A)
+1398,5,Lac Coupenotte Ouest (Antre D)
 1399,9,West Lake Axewell (Max Den B)
+1399,5,Lac Coupenotte Ouest (Antre C)
 1400,9,West Lake Axewell (Max Den C)
+1400,5,Lac Coupenotte Ouest (Antre B)
 1401,9,West Lake Axewell (Max Den D)
+1401,5,Lac Coupenotte Ouest (Antre A)
 1402,9,West Lake Axewell (Max Den E)
+1402,5,Lac Coupenotte Ouest (Antre F)
 1403,9,West Lake Axewell (Max Den F)
+1403,5,Lac Coupenotte Ouest (Antre E)
 1404,9,Watchtower Ruins (Max Den A)
+1404,5,Tour en ruines (Antre B)
 1405,9,Watchtower Ruins (Max Den C)
+1405,5,Tour en ruines (Antre A)
 1406,9,East Lake Axewell (Max Den A)
+1406,5,Lac Coupenotte Est (Antre D)
 1407,9,East Lake Axewell (Max Den B)
+1407,5,Lac Coupenotte Est (Antre C)
 1408,9,East Lake Axewell (Max Den C)
+1408,5,Lac Coupenotte Est (Antre B)
 1409,9,East Lake Axewell (Max Den D)
+1409,5,Lac Coupenotte Est (Antre A)
 1410,9,East Lake Axewell (Max Den E)
+1410,5,Lac Coupenotte Est (Antre E)
 1411,9,Axew's Eye (Max Den A)
+1411,5,Œil du Lac (Antre A)
 1412,9,North Lake Miloch (Max Den A)
+1412,5,Lac Milobellus Nord (Antre D)
 1413,9,North Lake Miloch (Max Den B)
+1413,5,Lac Milobellus Nord (Antre E)
 1414,9,North Lake Miloch (Max Den C)
+1414,5,Lac Milobellus Nord (Antre A)
 1415,9,North Lake Miloch (Max Den D)
+1415,5,Lac Milobellus Nord (Antre B)
 1416,9,North Lake Miloch (Max Den E)
+1416,5,Lac Milobellus Nord (Antre F)
 1417,9,North Lake Miloch (Max Den F)
+1417,5,Lac Milobellus Nord (Antre C)
 1418,9,Giant's Seat (Max Den A)
+1418,5,Siège du Géant (Antre E)
 1419,9,Giant's Seat (Max Den B)
+1419,5,Siège du Géant (Antre D)
 1420,9,Giant's Seat (Max Den C)
+1420,5,Siège du Géant (Antre C)
 1421,9,Giant's Seat (Max Den D)
+1421,5,Siège du Géant (Antre B)
 1422,9,Giant's Seat (Max Den E)
+1422,5,Siège du Géant (Antre A)
 1423,9,South Lake Miloch (Max Den A)
+1423,5,Lac Milobellus Sud (Antre B)
 1424,9,South Lake Miloch (Max Den B)
+1424,5,Lac Milobellus Sud (Antre A)
 1425,9,South Lake Miloch (Max Den C)
+1425,5,Lac Milobellus Sud (Antre C)
 1426,9,South Lake Miloch (Max Den D)
+1426,5,Lac Milobellus Sud (Antre D)
 1427,9,South Lake Miloch (Max Den E)
+1427,5,Lac Milobellus Sud (Antre E)
 1428,9,Motostoke Riverbank (Max Den A)
+1428,5,Berges de Motorby (Antre D)
 1429,9,Motostoke Riverbank (Max Den B)
+1429,5,Berges de Motorby (Antre C)
 1430,9,Motostoke Riverbank (Max Den C)
+1430,5,Berges de Motorby (Antre B)
 1431,9,Motostoke Riverbank (Max Den D)
+1431,5,Berges de Motorby (Antre A)
 1432,9,Bridge Field (Max Den A)
+1432,5,Prairie Entre-Ponts (Antre I)
 1433,9,Bridge Field (Max Den B)
+1433,5,Prairie Entre-Ponts (Antre H)
 1434,9,Bridge Field (Max Den C)
+1434,5,Prairie Entre-Ponts (Antre G)
 1435,9,Bridge Field (Max Den D)
+1435,5,Prairie Entre-Ponts (Antre C)
 1436,9,Bridge Field (Max Den E)
+1436,5,Prairie Entre-Ponts (Antre B)
 1437,9,Bridge Field (Max Den F)
+1437,5,Prairie Entre-Ponts (Antre E)
 1438,9,Bridge Field (Max Den G)
+1438,5,Prairie Entre-Ponts (Antre F)
 1439,9,Bridge Field (Max Den H)
+1439,5,Prairie Entre-Ponts (Antre D)
 1440,9,Bridge Field (Max Den I)
+1440,5,Prairie Entre-Ponts (Antre A)
 1441,9,Stony Wilderness (Max Den A)
+1441,5,Plaine Rocheuse (Antre J)
 1442,9,Stony Wilderness (Max Den B)
+1442,5,Plaine Rocheuse (Antre I)
 1443,9,Stony Wilderness (Max Den C)
+1443,5,Plaine Rocheuse (Antre G)
 1444,9,Stony Wilderness (Max Den D)
+1444,5,Plaine Rocheuse (Antre F)
 1445,9,Stony Wilderness (Max Den E)
+1445,5,Plaine Rocheuse (Antre C)
 1446,9,Stony Wilderness (Max Den F)
+1446,5,Plaine Rocheuse (Antre A)
 1447,9,Stony Wilderness (Max Den G)
+1447,5,Plaine Rocheuse (Antre B)
 1448,9,Stony Wilderness (Max Den H)
+1448,5,Plaine Rocheuse (Antre K)
 1449,9,Stony Wilderness (Max Den I)
+1449,5,Plaine Rocheuse (Antre D)
 1450,9,Stony Wilderness (Max Den J)
+1450,5,Plaine Rocheuse (Antre E)
 1451,9,Stony Wilderness (Max Den K)
+1451,5,Plaine Rocheuse (Antre H)
 1452,9,Stony Wilderness (Max Den L)
+1452,5,Plaine Rocheuse (Antre L)
 1453,9,Giant's Cap (Max Den A)
+1453,5,Coiffe du Géant (Antre E)
 1454,9,Giant's Cap (Max Den B)
+1454,5,Coiffe du Géant (Antre D)
 1455,9,Giant's Cap (Max Den C)
+1455,5,Coiffe du Géant (Antre C)
 1456,9,Giant's Cap (Max Den D)
+1456,5,Coiffe du Géant (Antre B)
 1457,9,Giant's Cap (Max Den E)
+1457,5,Coiffe du Géant (Antre A)
 1458,9,Dusty Bowl (Max Den A)
+1458,5,Fosse des Sables (Antre I)
 1459,9,Dusty Bowl (Max Den B)
+1459,5,Fosse des Sables (Antre H)
 1460,9,Dusty Bowl (Max Den C)
+1460,5,Fosse des Sables (Antre G)
 1461,9,Dusty Bowl (Max Den D)
+1461,5,Fosse des Sables (Antre D)
 1462,9,Dusty Bowl (Max Den E)
+1462,5,Fosse des Sables (Antre B)
 1463,9,Dusty Bowl (Max Den F)
+1463,5,Fosse des Sables (Antre E)
 1464,9,Dusty Bowl (Max Den G)
+1464,5,Fosse des Sables (Antre F)
 1465,9,Dusty Bowl (Max Den H)
+1465,5,Fosse des Sables (Antre C)
 1466,9,Dusty Bowl (Max Den I)
+1466,5,Fosse des Sables (Antre A)
 1467,9,Giant's Mirror (Max Den A)
+1467,5,Miroir du Géant (Antre E)
 1468,9,Giant's Mirror (Max Den B)
+1468,5,Miroir du Géant (Antre D)
 1469,9,Giant's Mirror (Max Den C)
+1469,5,Miroir du Géant (Antre C)
 1470,9,Giant's Mirror (Max Den D)
+1470,5,Miroir du Géant (Antre B)
 1471,9,Giant's Mirror (Max Den E)
+1471,5,Miroir du Géant (Antre A)
 1472,9,Lake of Outrage (Max Den A)
+1472,5,Lac Ouragan (Antre D)
 1473,9,Lake of Outrage (Max Den B)
+1473,5,Lac Ouragan (Antre A)
 1474,9,Lake of Outrage (Max Den C)
+1474,5,Lac Ouragan (Antre C)
 1475,9,Lake of Outrage (Max Den D)
+1475,5,Lac Ouragan (Antre B)
 1476,9,Hammerlocke Hills (Max Den A)
+1476,5,Plateau de Kickenham (Antre F)
 1477,9,Hammerlocke Hills (Max Den B)
+1477,5,Plateau de Kickenham (Antre A)
 1478,9,Hammerlocke Hills (Max Den C)
+1478,5,Plateau de Kickenham (Antre E)
 1479,9,Hammerlocke Hills (Max Den D)
+1479,5,Plateau de Kickenham (Antre G)
 1480,9,Hammerlocke Hills (Max Den E)
+1480,5,Plateau de Kickenham (Antre D)
 1481,9,Hammerlocke Hills (Max Den F)
+1481,5,Plateau de Kickenham (Antre B)
 1482,9,Hammerlocke Hills (Max Den G)
+1482,5,Plateau de Kickenham (Antre C)
 1484,9,Fields of Honor (Max Den A)
+1484,5,Plaine Salutation (Antre I)
 1485,9,Fields of Honor (Max Den B)
+1485,5,Plaine Salutation (Antre J)
 1486,9,Fields of Honor (Max Den C)
+1486,5,Plaine Salutation (Antre F)
 1487,9,Fields of Honor (Max Den D)
+1487,5,Plaine Salutation (Antre H)
 1488,9,Fields of Honor (Max Den E)
+1488,5,Plaine Salutation (Antre G)
 1489,9,Fields of Honor (Max Den F)
+1489,5,Plaine Salutation (Antre D)
 1490,9,Fields of Honor (Max Den G)
+1490,5,Plaine Salutation (Antre C)
 1491,9,Fields of Honor (Max Den H)
+1491,5,Plaine Salutation (Antre B)
 1492,9,Fields of Honor (Max Den I)
+1492,5,Plaine Salutation (Antre I)
 1493,9,Fields of Honor (Max Den J)
+1493,5,Plaine Salutation (Antre E)
 1494,9,Soothing Wetlands (Max Den A)
+1494,5,Lande Boldair (Antre G)
 1495,9,Soothing Wetlands (Max Den B)
+1405,5,Lande Boldair (Antre E)
 1496,9,Soothing Wetlands (Max Den C)
+1496,5,Lande Boldair (Antre C)
 1497,9,Soothing Wetlands (Max Den D)
+1497,5,Lande Boldair (Antre H)
 1498,9,Soothing Wetlands (Max Den E)
+1498,5,Lande Boldair (Antre B)
 1499,9,Soothing Wetlands (Max Den F)
+1499,5,Lande Boldair (Antre A)
 1500,9,Soothing Wetlands (Max Den G)
+1500,5,Lande Boldair (Antre I)
 1501,9,Soothing Wetlands (Max Den H)
+1501,5,Lande Boldair (Antre F)
 1502,9,Soothing Wetlands (Max Den I)
+1502,5,Lande Boldair (Antre D)
 1503,9,Forest of Focus (Max Den A)
+1503,5,Forêt Flexion (Antre F)
 1504,9,Forest of Focus (Max Den B)
+1504,5,Forêt Flexion (Antre C)
 1505,9,Forest of Focus (Max Den C)
+1505,5,Forêt Flexion (Antre A)
 1506,9,Forest of Focus (Max Den D)
+1506,5,Forêt Flexion (Antre B)
 1507,9,Forest of Focus (Max Den E)
+1507,5,Forêt Flexion (Antre D)
 1508,9,Forest of Focus (Max Den F)
+1508,5,Forêt Flexion (Antre E)
 1509,9,Challenge Beach (Max Den A)
+1509,5,Plage de l'Épreuve (Antre C)
 1510,9,Challenge Beach (Max Den B)
+1510,5,Plage de l'Épreuve (Antre A)
 1511,9,Challenge Beach (Max Den C)
+1511,5,Plage de l'Épreuve (Antre D)
 1512,9,Challenge Beach (Max Den D)
+1512,5,Plage de l'Épreuve (Antre E)
 1513,9,Challenge Beach (Max Den E)
+1513,5,Plage de l'Épreuve (Antre F)
 1514,9,Challenge Beach (Max Den F)
+1514,5,Plage de l'Épreuve (Antre G)
 1515,9,Challenge Beach (Max Den G)
+1515,5,Plage de l'Épreuve (Antre B)
 1516,9,Challenge Beach (Max Den H)
+1516,5,Plage de l'Épreuve (Antre H)
 1517,9,Brawlers' Cave (Max Den A)
+1517,5,Grotte du Pugilat (Antre A)
 1518,9,Challenge Road (Max Den A)
+1518,5,Route de l'Épreuve (Antre D)
 1519,9,Challenge Road (Max Den B)
+1519,5,Route de l'Épreuve (Antre B)
 1520,9,Challenge Road (Max Den C)
+1520,5,Route de l'Épreuve (Antre C)
 1521,9,Challenge Road (Max Den D)
+1522,5,Route de l'Épreuve (Antre A)
 1522,9,Courageous Cavern (Max Den A)
+1522,5,Caverne Pugnacité (Antre D)
 1523,9,Courageous Cavern (Max Den B)
+1523,5,Caverne Pugnacité (Antre B)
 1524,9,Courageous Cavern (Max Den C)
+1524,5,Caverne Pugnacité (Antre A)
 1525,9,Courageous Cavern (Max Den D)
+1525,5,Caverne Pugnacité (Antre C)
 1526,9,Courageous Cavern (Max Den E)
+1526,5,Caverne Pugnacité (Antre E)
 1527,9,Courageous Cavern (Max Den F)
+1527,5,Caverne Pugnacité (Antre F)
 1528,9,Loop Lagoon (Max Den A)
+1528,5,Lagune Circulaire (Antre D)
 1529,9,Loop Lagoon (Max Den B)
+1529,5,Lagune Circulaire (Antre B)
 1530,9,Loop Lagoon (Max Den C)
+1530,5,Lagune Circulaire (Antre C)
 1531,9,Loop Lagoon (Max Den D)
+1531,5,Lagune Circulaire (Antre A)
 1532,9,Training Lowlands (Max Den A)
 1533,9,Training Lowlands (Max Den B)
 1534,9,Training Lowlands (Max Den C)
@@ -2724,9 +3135,11 @@ location_area_id,local_language_id,name
 1597,9,Path to the Peak (Max Den B)
 1598,9,Path to the Peak (Max Den C)
 1599,9,Crown Shrine (Max Den A)
+1599,5,Temple Couronne (Antre A)
 1600,9,Three-Point Pass (Max Den A)
 1601,9,Three-Point Pass (Max Den B)
 1602,9,Dyna Tree Hill (Max Den A)
+1602,5,Butte du Dynarbre (Antre A)
 1603,9,Giant's Bed (Max Den A)
 1604,9,Giant's Bed (Max Den B)
 1605,9,Giant's Bed (Max Den C)
@@ -2784,3 +3197,15 @@ location_area_id,local_language_id,name
 1657,9,Ballimere Lake (Max Den O)
 1658,9,Ballimere Lake (Max Den P)
 1659,9,Ballimere Lake (Max Den Q)
+1660,9,Oreburgh City (Northwest House)
+1660,5,Charbourg (Maison au Nord-Ouest)
+1661,9,Eterna City Condominiums
+1661,5,Résidence de Vestigion
+1662,9,Snowpoint City (Northwest House)
+1662,5,Frimapic (Maison au Nord-Ouest)
+1663,9,Route 226 (Island House)
+1663,5,Route 226 (Maison sur l'Île)
+1664,9,Saffron City Magnet Train Station
+1664,5,Gare de Safrania
+1665,9,Olivine City Gym
+1665,5,Arène d'Oliville

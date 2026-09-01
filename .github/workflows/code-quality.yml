@@ -2,22 +2,18 @@ name: Code Quality
 
 on:
   pull_request:
-    paths:
+    paths: &paths
       - "**.py"
       - "**.toml"
-      - "Makefile"
-      - "uv.lock"
-      - ".github/workflows/code-quality.yml"
+      - "**.lock"
+      - Makefile
+      - .github/actions/setup-uv/action.yml
+      - .github/workflows/code-quality.yml
   push:
     branches-ignore:
       - master
       - staging
-    paths:
-      - "**.py"
-      - "**.toml"
-      - "Makefile"
-      - "uv.lock"
-      - ".github/workflows/code-quality.yml"
+    paths: *paths
 
 jobs:
   ruff:

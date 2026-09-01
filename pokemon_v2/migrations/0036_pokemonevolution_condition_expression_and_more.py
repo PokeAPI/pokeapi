@@ -23,10 +23,9 @@ class Migration(migrations.Migration):
             name="condition_expression",
             field=models.CharField(
                 blank=True,
-                default=None,
+                default="",
                 help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
                 max_length=100,
-                null=True,
             ),
         ),
         migrations.AddField(

@@ -1872,7 +1872,7 @@ def _build_pokemons():
             min_steps=int(info[29]) if info[29] != "" else None,
             min_damage_taken=int(info[30]) if info[30] != "" else None,
             needs_one_of_natures=int(info[31]) if info[31] != "" else None,
-            condition_expression=info[32] if info[32] != "" else None,
+            condition_expression=info[32],
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

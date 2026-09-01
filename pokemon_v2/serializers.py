@@ -2967,7 +2967,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
         sprites_list = list(cast("PokemonWithRelations", obj).pokemonsprites.all())
         if not sprites_list:
             return {}
-        sprites = cast("dict[str, Any]", sprites_list[0].sprites)
+        sprites = sprites_list[0].sprites
         if obj.pokemon_species and obj.pokemon_species.gender_rate == 8:
             self._fill_female_sprites(sprites)
         return sprites

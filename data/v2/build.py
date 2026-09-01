@@ -1925,7 +1925,11 @@ def _build_pokemons():
                         ),
                     },
                     "champions": {
-                        "front_default": try_image_names(poke_sprites + gen_ix + "champions/", info, "png"),
+                        "front_default": try_form_image_names(
+                            poke_sprites + "versions/generation-ix/champions/",
+                            info,
+                            "png",
+                        ),
                     },
                 },
             },

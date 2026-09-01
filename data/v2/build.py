@@ -591,7 +591,7 @@ def _build_types():
                 "legends-arceus",
                 "sword-shield",
             ],
-            "generation-ix": ["scarlet-violet"],
+            "generation-ix": ["champions", "scarlet-violet"],
         }
         sprites = {}
         for generation, games in game_map.items():
@@ -1923,7 +1923,10 @@ def _build_pokemons():
                             info,
                             "png",
                         ),
-                    }
+                    },
+                    "champions": {
+                        "front_default": try_image_names(poke_sprites + gen_ix + "champions/", info, "png"),
+                    },
                 },
             },
         }

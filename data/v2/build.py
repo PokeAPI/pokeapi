@@ -1,16 +1,3 @@
-#  To build out the data you'll need to jump into the Django shell
-#
-#     $ uv run manage.py shell
-#
-#  and run the build script with
-#
-#     $ from data.v2.build import build_all
-#     $ build_all()
-#
-#  Each time the build script is run it will iterate over each table in the database,
-#  wipe it and rewrite each row using the data found in data/v2/csv.
-
-
 import csv
 import os
 import os.path
@@ -20,9 +7,9 @@ from django.db import connection
 
 from pokemon_v2.models import *
 
-# why this way? how about use `__file__`
-DATA_LOCATION = "data/v2/csv/"
-DATA_LOCATION2 = os.path.join(os.path.dirname(__file__), "csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_LOCATION = os.path.join(BASE_DIR, "csv")
+
 GROUP_RGX = r"\[(.*?)\]\{(.*?)\}"
 SUB_RGX = r"\[.*?\]\{.*?\}"
 
@@ -42,20 +29,20 @@ SOUND_DIR = "{prefix}{{file_name}}".format(
         "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/",
     )
 )
-IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
-CRIES_DIR = os.getcwd() + "/data/v2/cries/cries/"
+IMAGE_DIR = os.path.join(BASE_DIR, "sprites", "sprites")
+CRIES_DIR = os.path.join(BASE_DIR, "cries", "cries")
 RESOURCE_IMAGES: list[str] = []
 RESOURCE_CRIES: list[str] = []
 
 for root, _dirs, files in os.walk(IMAGE_DIR):
     for file in files:
-        image_path = os.path.join(root.replace(IMAGE_DIR, ""), file)
+        image_path = os.path.relpath(os.path.join(root, file), IMAGE_DIR)
         image_path = image_path.replace("\\", "/")  # convert Windows-style path to Unix
         RESOURCE_IMAGES.append(image_path)
 
 for root, _dirs, files in os.walk(CRIES_DIR):
     for file in files:
-        cry_path = os.path.join(root.replace(CRIES_DIR, ""), file)
+        cry_path = os.path.relpath(os.path.join(root, file), CRIES_DIR)
         cry_path = cry_path.replace("\\", "/")  # convert Windows-style path to Unix
         RESOURCE_CRIES.append(cry_path)
 
@@ -75,7 +62,8 @@ def with_iter(context, iterable=None):
 
 def load_data(file_name):
     # with_iter closes the file when it has finished
-    return csv.reader(with_iter(open(DATA_LOCATION + file_name, encoding="utf8")), delimiter=",")
+    file_path = os.path.join(DATA_LOCATION, file_name)
+    return csv.reader(with_iter(open(file_path, encoding="utf8")), delimiter=",")
 
 
 def clear_table(model):
@@ -261,9 +249,9 @@ def _build_stats():
     build_generic((PokeathlonStatName,), "pokeathlon_stat_names.csv", csv_record_to_objects)
 
 
-# ###############
-# #  ABILITIES  #
-# ###############
+###############
+#  ABILITIES  #
+###############
 
 
 def _build_abilities():
@@ -372,9 +360,9 @@ def _build_growth_rates():
     build_generic((GrowthRateDescription,), "growth_rate_prose.csv", csv_record_to_objects)
 
 
-# ###########
-# #  ITEMS  #
-# ###########
+###########
+#  ITEMS  #
+###########
 
 
 def _build_items():
@@ -1359,8 +1347,16 @@ def _build_pokemons():
                         "front_transparent": try_image_names(
                             poke_sprites + gen_i + "red-blue/transparent/", info, "png"
                         ),
+                        "front_transparent_gray": try_image_names(
+                            poke_sprites + gen_i + "red-blue/transparent/gray", info, "png"
+                        ),
                         "back_transparent": try_image_names(
                             poke_sprites + gen_i + "red-blue/transparent/back/",
+                            info,
+                            "png",
+                        ),
+                        "back_transparent_gray": try_image_names(
+                            poke_sprites + gen_i + "red-blue/transparent/back/gray",
                             info,
                             "png",
                         ),
@@ -1738,7 +1734,10 @@ def _build_pokemons():
                             info,
                             "png",
                         ),
-                    }
+                    },
+                    "champions": {
+                        "front_default": try_image_names(poke_sprites + gen_ix + "champions/", info, "png"),
+                    },
                 },
             },
         }

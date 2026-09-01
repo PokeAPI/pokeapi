@@ -1871,7 +1871,7 @@ def _build_pokemons():
             min_move_count=int(info[28]) if info[28] != "" else None,
             min_steps=int(info[29]) if info[29] != "" else None,
             min_damage_taken=int(info[30]) if info[30] != "" else None,
-            needs_one_of_natures=int(info[31]) if info[31] != "" else None,
+            nature_bitmask=int(info[31]) if info[31] != "" else None,
             condition_expression=info[32],
         )
 

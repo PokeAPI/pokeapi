@@ -3374,7 +3374,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     required_pokemon_form = PokemonFormSummarySerializer()
     evolved_pokemon_form = PokemonFormSummarySerializer()
     used_move = MoveSummarySerializer()
-    needs_one_of_natures = serializers.SerializerMethodField("get_needs_one_of_natures")
+    allowed_natures = serializers.SerializerMethodField("get_allowed_natures")
     condition_expression = serializers.SerializerMethodField("get_condition_expression")
 
     class Meta:
@@ -3409,15 +3409,15 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "min_move_count",
             "min_steps",
             "min_damage_taken",
-            "needs_one_of_natures",
+            "allowed_natures",
             "condition_expression",
         )
 
     @extend_schema_field(NatureSummarySerializer(many=True))
-    def get_needs_one_of_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
-        if obj.needs_one_of_natures is None:
+    def get_allowed_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
+        if obj.nature_bitmask is None:
             return None
-        nature_ids = [i for i in range(1, 26) if (obj.needs_one_of_natures & (1 << (i - 1)))]
+        nature_ids = [i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))]
         if not nature_ids:
             return None
         natures = Nature.objects.filter(id__in=nature_ids).order_by("id")

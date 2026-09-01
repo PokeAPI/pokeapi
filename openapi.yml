@@ -7437,7 +7437,7 @@ components:
           - 'null'
           maximum: 2147483647
           minimum: -2147483648
-        needs_one_of_natures:
+        allowed_natures:
           type: array
           items:
             $ref: '#/components/schemas/NatureSummary'
@@ -7449,6 +7449,7 @@ components:
           additionalProperties: {}
           readOnly: true
       required:
+      - allowed_natures
       - condition_expression
       - evolved_pokemon_form
       - held_item
@@ -7456,7 +7457,6 @@ components:
       - known_move
       - known_move_type
       - location
-      - needs_one_of_natures
       - party_species
       - party_type
       - region

@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="pokemonevolution",
-            name="needs_one_of_natures",
+            name="nature_bitmask",
             field=models.IntegerField(
                 blank=True,
                 help_text="25-bit bitmask of allowed nature IDs (1 << (nature_id - 1))",

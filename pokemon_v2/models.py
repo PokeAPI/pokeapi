@@ -2040,7 +2040,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     min_damage_taken = models.IntegerField(blank=True, null=True)
 
-    needs_one_of_natures = models.IntegerField(
+    nature_bitmask = models.IntegerField(
         blank=True,
         null=True,
         help_text="25-bit bitmask of allowed nature IDs (1 << (nature_id - 1))",

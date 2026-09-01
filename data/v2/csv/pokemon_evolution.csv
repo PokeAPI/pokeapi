@@ -1,4 +1,4 @@
-id,evolved_species_id,evolution_trigger_id,version_group_id,is_default,trigger_item_id,minimum_level,gender_id,location_id,held_item_id,time_of_day,known_move_id,known_move_type_id,minimum_happiness,minimum_beauty,minimum_affection,relative_physical_stats,party_species_id,party_type_id,trade_species_id,needs_overworld_rain,turn_upside_down,needs_multiplayer,near_special_rock,region_id,required_pokemon_form_id,evolved_pokemon_form_id,used_move_id,minimum_move_count,minimum_steps,minimum_damage_taken,needs_one_of_natures,condition_expression
+id,evolved_species_id,evolution_trigger_id,version_group_id,is_default,trigger_item_id,minimum_level,gender_id,location_id,held_item_id,time_of_day,known_move_id,known_move_type_id,minimum_happiness,minimum_beauty,minimum_affection,relative_physical_stats,party_species_id,party_type_id,trade_species_id,needs_overworld_rain,turn_upside_down,needs_multiplayer,near_special_rock,region_id,required_pokemon_form_id,evolved_pokemon_form_id,used_move_id,minimum_move_count,minimum_steps,minimum_damage_taken,nature_bitmask,condition_expression
 1,2,1,1,1,,16,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,
 2,3,1,1,1,,32,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,
 3,5,1,1,1,,16,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,
@@ -562,7 +562,7 @@ id,evolved_species_id,evolution_trigger_id,version_group_id,is_default,trigger_i
 564,268,1,15,1,,7,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,EC 16 >> 10 % 5 >=
 565,413,1,8,1,,20,1,,,,,,,,,,,,,0,0,0,0,,10034,10036,,,,,,
 566,413,1,8,1,,20,1,,,,,,,,,,,,,0,0,0,0,,10035,10037,,,,,,
-567,809,17,19,1,1136,,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,
+567,809,17,19,1,,,,,,,,,,,,,,,,0,0,0,0,,,,,,,,,
 570,670,1,15,1,,19,,,,,,,,,,,,,,0,0,0,0,,10103,10107,,,,,,
 571,670,1,15,1,,19,,,,,,,,,,,,,,0,0,0,0,,10104,10108,,,,,,
 572,670,1,15,1,,19,,,,,,,,,,,,,,0,0,0,0,,10105,10109,,,,,,

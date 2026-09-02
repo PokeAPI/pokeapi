@@ -2050,7 +2050,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         max_length=100,
         blank=True,
         default="",
-        help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')",
+        help_text="Condition expression using evolution variables (e.g. 'EC % 100 == 0')",
     )
 
 

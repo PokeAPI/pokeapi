@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import itertools
+import re
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -3430,8 +3431,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
-        tokens = obj.condition_expression.split()
-        variables = EvolutionVariable.objects.filter(symbol__in=tokens)
+        symbols = re.findall(r"[A-Za-z_]+", obj.condition_expression)
+        variables = EvolutionVariable.objects.filter(symbol__in=symbols)
         return {
             "expression": obj.condition_expression,
             "variables": EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data,

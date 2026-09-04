@@ -102,6 +102,53 @@ def resolve_existing_id(raw_value, existing_ids):
     return value if value in existing_ids else None
 
 
+def move_from_csv_row(info, existing_effect_ids):
+    """
+    Build a ``Move`` from one row of ``moves.csv``.
+
+    Columns: id, identifier, generation_id, type_id, power, pp, accuracy, priority,
+    target_id, damage_class_id, effect_id, effect_chance, contest_type_id,
+    contest_effect_id, super_contest_effect_id.
+    """
+    return Move(
+        id=int(info[0]),
+        name=info[1],
+        generation_id=int(info[2]),
+        type_id=int(info[3]),
+        power=int(info[4]) if info[4] != "" else None,
+        pp=int(info[5]) if info[5] != "" else None,
+        accuracy=int(info[6]) if info[6] != "" else None,
+        priority=int(info[7]) if info[7] != "" else None,
+        move_target_id=int(info[8]) if info[8] != "" else None,
+        move_damage_class_id=int(info[9]) if info[9] != "" else None,
+        move_effect_id=resolve_existing_id(info[10], existing_effect_ids),
+        move_effect_chance=int(info[11]) if info[11] != "" else None,
+        contest_type_id=int(info[12]) if info[12] != "" else None,
+        contest_effect_id=int(info[13]) if info[13] != "" else None,
+        super_contest_effect_id=int(info[14]) if info[14] != "" else None,
+    )
+
+
+def move_change_from_csv_row(info, existing_effect_ids):
+    """
+    Build a ``MoveChange`` from one row of ``move_changelog.csv``.
+
+    Columns: move_id, changed_in_version_group_id, type_id, power, pp, accuracy,
+    priority, target_id, effect_id, effect_chance. ``MoveChange`` has no priority or
+    target field, so columns 6 and 7 are skipped.
+    """
+    return MoveChange(
+        move_id=int(info[0]),
+        version_group_id=int(info[1]),
+        type_id=int(info[2]) if info[2] != "" else None,
+        power=int(info[3]) if info[3] != "" else None,
+        pp=int(info[4]) if info[4] != "" else None,
+        accuracy=int(info[5]) if info[5] != "" else None,
+        move_effect_id=resolve_existing_id(info[8], existing_effect_ids),
+        move_effect_chance=int(info[9]) if info[9] != "" else None,
+    )
+
+
 def build_generic(model_classes, file_name, csv_record_to_objects):
     batches = {}
     for model_class in model_classes:
@@ -769,23 +816,7 @@ def _build_moves():
     )
 
     def csv_record_to_objects(info):
-        yield Move(
-            id=int(info[0]),
-            name=info[1],
-            generation_id=int(info[2]),
-            type_id=int(info[3]),
-            power=int(info[4]) if info[4] != "" else None,
-            pp=int(info[5]) if info[5] != "" else None,
-            accuracy=int(info[6]) if info[6] != "" else None,
-            priority=int(info[7]) if info[7] != "" else None,
-            move_target_id=int(info[8]) if info[8] != "" else None,
-            move_damage_class_id=int(info[9]) if info[9] != "" else None,
-            move_effect_id=resolve_existing_id(info[10], existing_effect_ids),
-            move_effect_chance=int(info[11]) if info[11] != "" else None,
-            contest_type_id=int(info[12]) if info[12] != "" else None,
-            contest_effect_id=int(info[13]) if info[13] != "" else None,
-            super_contest_effect_id=int(info[14]) if info[14] != "" else None,
-        )
+        yield move_from_csv_row(info, existing_effect_ids)
 
     build_generic((Move,), "moves.csv", csv_record_to_objects)
 
@@ -805,16 +836,7 @@ def _build_moves():
     build_generic((MoveFlavorText,), "move_flavor_text.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
-        yield MoveChange(
-            move_id=int(info[0]),
-            version_group_id=int(info[1]),
-            type_id=int(info[2]) if info[2] != "" else None,
-            power=int(info[3]) if info[3] != "" else None,
-            pp=int(info[4]) if info[4] != "" else None,
-            accuracy=int(info[5]) if info[5] != "" else None,
-            move_effect_id=resolve_existing_id(info[6], existing_effect_ids),
-            move_effect_chance=int(info[7]) if info[7] != "" else None,
-        )
+        yield move_change_from_csv_row(info, existing_effect_ids)
 
     build_generic((MoveChange,), "move_changelog.csv", csv_record_to_objects)
 

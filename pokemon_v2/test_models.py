@@ -173,3 +173,41 @@ class CSVResourceNameValidationTestCase(TestCase):
                 self.VALID_IDENTIFIER_PATTERN.match(identifier),
                 f"{identifier} should be invalid but was accepted",
             )
+
+
+class MoveEffectReferenceValidationTestCase(TestCase):
+    """
+    Test that CSV-referenced move effect ids are filtered against the effects that
+    actually get built, for both ``Move`` and ``MoveChange``.
+
+    Regression test for https://github.com/PokeAPI/pokeapi/issues/1663.
+    """
+
+    def test_resolve_existing_id(self):
+        # Imported lazily: data.v2.build opens a DB cursor at import time.
+        from data.v2.build import resolve_existing_id
+
+        existing_ids = {1, 2, 3}
+
+        self.assertEqual(resolve_existing_id("2", existing_ids), 2)
+        self.assertIsNone(resolve_existing_id("999", existing_ids))
+        self.assertIsNone(resolve_existing_id("", existing_ids))
+
+    def test_csv_effect_references_resolve_to_built_effects(self):
+        from data.v2.build import resolve_existing_id
+
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+
+        with open(os.path.join(csv_dir, "move_effects.csv"), encoding="utf-8") as infile:
+            existing_ids = {int(row["id"]) for row in csv.DictReader(infile)}
+        self.assertTrue(existing_ids)
+
+        for filename in ("moves.csv", "move_changelog.csv"):
+            with open(os.path.join(csv_dir, filename), encoding="utf-8") as infile:
+                for row_num, row in enumerate(csv.DictReader(infile), start=2):
+                    resolved = resolve_existing_id(row["effect_id"], existing_ids)
+                    self.assertTrue(
+                        resolved is None or resolved in existing_ids,
+                        f"{filename} row {row_num}: effect_id {row['effect_id']!r} resolved to {resolved!r}, "
+                        "which is not a built move effect",
+                    )

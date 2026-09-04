@@ -89,6 +89,19 @@ def clear_table(model):
         DB_CURSOR.execute("SELECT setval(pg_get_serial_sequence(" + "'" + table_name + "'" + ",'id'), 1, false);")
 
 
+def resolve_existing_id(raw_value, existing_ids):
+    """
+    Turn a CSV foreign-key column into an id that is safe to assign.
+
+    Returns None for an empty column or for an id that is not in ``existing_ids``
+    (i.e. the referenced row was never built), otherwise the integer id.
+    """
+    if raw_value == "":
+        return None
+    value = int(raw_value)
+    return value if value in existing_ids else None
+
+
 def build_generic(model_classes, file_name, csv_record_to_objects):
     batches = {}
     for model_class in model_classes:
@@ -679,6 +692,11 @@ def _build_moves():
 
     build_generic((MoveEffect,), "move_effects.csv", csv_record_to_objects)
 
+    # Effect ids referenced from other CSVs are only valid if the effect was actually
+    # built above. Compute the set once, here, so every later builder can filter
+    # against it instead of assigning dangling foreign keys.
+    existing_effect_ids = set(MoveEffect.objects.values_list("pk", flat=True))
+
     def csv_record_to_objects(info):
         yield MoveEffectEffectText(
             move_effect_id=int(info[0]),
@@ -762,7 +780,7 @@ def _build_moves():
             priority=int(info[7]) if info[7] != "" else None,
             move_target_id=int(info[8]) if info[8] != "" else None,
             move_damage_class_id=int(info[9]) if info[9] != "" else None,
-            move_effect_id=int(info[10]) if info[10] != "" else None,
+            move_effect_id=resolve_existing_id(info[10], existing_effect_ids),
             move_effect_chance=int(info[11]) if info[11] != "" else None,
             contest_type_id=int(info[12]) if info[12] != "" else None,
             contest_effect_id=int(info[13]) if info[13] != "" else None,
@@ -786,13 +804,7 @@ def _build_moves():
 
     build_generic((MoveFlavorText,), "move_flavor_text.csv", csv_record_to_objects)
 
-    existing_effect_ids = set(MoveEffect.objects.values_list("pk", flat=True))
-
     def csv_record_to_objects(info):
-        effect_id = int(info[6]) if info[6] != "" else None
-        if effect_id not in existing_effect_ids:
-            effect_id = None
-
         yield MoveChange(
             move_id=int(info[0]),
             version_group_id=int(info[1]),
@@ -800,7 +812,7 @@ def _build_moves():
             power=int(info[3]) if info[3] != "" else None,
             pp=int(info[4]) if info[4] != "" else None,
             accuracy=int(info[5]) if info[5] != "" else None,
-            move_effect_id=effect_id,
+            move_effect_id=resolve_existing_id(info[6], existing_effect_ids),
             move_effect_chance=int(info[7]) if info[7] != "" else None,
         )
 

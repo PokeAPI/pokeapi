@@ -21,8 +21,8 @@ evolution_trigger_id,local_language_id,name
 8,9,Land three critical hits in a battle
 9,5,Aller quelque part après avoir encaissé des dommages
 9,9,Go somewhere after taking damage
-10,5,Autre
-10,9,Other
+10,5,Montée de niveau en combat
+10,9,Level up in battle
 11,5,Utiliser une capacité sous style agile
 11,9,Use move in agile style
 12,5,Utiliser une capacité sous style puissant
@@ -35,3 +35,7 @@ evolution_trigger_id,local_language_id,name
 15,9,Defeat three Bisharp that hold a Leader's Crest
 16,5,Collectionner 999 Pièces Mordudor
 16,9,Collect 999 Gimmighoul Coins
+17,5,Donner 400 Bonbons Meltan dans Pokémon GO
+17,9,Feed 400 Meltan Candies in Pokémon GO
+18,5,Non classé
+18,9,Unclassified

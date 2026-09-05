@@ -1,10 +1,11 @@
 # pyright: reportIncompatibleVariableOverride=false
+# ruff: noqa: E501
 from __future__ import annotations
 
 from typing import Any, ClassVar, TypeVar
 
 from django.db import models
-from typing_extensions import Self, override
+from typing_extensions import override
 
 _ModelT = TypeVar("_ModelT", bound=models.Model)
 
@@ -46,6 +47,9 @@ __all__: tuple[str, ...] = (
     "EvolutionChain",
     "EvolutionTrigger",
     "EvolutionTriggerName",
+    "EvolutionVariable",
+    "EvolutionVariableDescription",
+    "EvolutionVariableName",
     "Experience",
     "Gender",
     "Generation",
@@ -62,6 +66,7 @@ __all__: tuple[str, ...] = (
     "HasEncounterCondition",
     "HasEncounterMethod",
     "HasEvolutionTrigger",
+    "HasEvolutionVariable",
     "HasFlavorText",
     "HasFlingEffect",
     "HasGameIndex",
@@ -250,7 +255,7 @@ class PokeApiManager(models.Manager[_ModelT]):
 
 
 class PokeApiModel(models.Model):
-    objects: ClassVar[PokeApiManager[Self]] = PokeApiManager()
+    objects: ClassVar[PokeApiManager[Any]] = PokeApiManager()
 
     class Meta:
         abstract = True
@@ -412,6 +417,19 @@ class HasEncounterCondition(PokeApiModel):
 class HasEvolutionTrigger(PokeApiModel):
     evolution_trigger = models.ForeignKey(
         "EvolutionTrigger",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasEvolutionVariable(PokeApiModel):
+    evolution_variable = models.ForeignKey(
+        "EvolutionVariable",
         blank=True,
         null=True,
         related_name="%(class)s",
@@ -1780,6 +1798,19 @@ class EvolutionTriggerName(HasEvolutionTrigger, IsName):
     pass
 
 
+class EvolutionVariable(HasName, HasVersionGroup):
+    symbol = models.CharField(max_length=10)
+    data_type = models.CharField(max_length=20, default="uint32")
+
+
+class EvolutionVariableName(HasEvolutionVariable, IsName):
+    pass
+
+
+class EvolutionVariableDescription(HasEvolutionVariable, IsDescription):
+    pass
+
+
 ####################
 #  POKEDEX MODELS  #
 ####################
@@ -1983,22 +2014,22 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Region where this evolution can occur (null = any region)",
     )
 
-    base_form = models.ForeignKey(
-        "Pokemon",
+    required_pokemon_form = models.ForeignKey(
+        "PokemonForm",
         blank=True,
         null=True,
-        related_name="base_form_evolutions",
+        related_name="required_in_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form required for evolution (null = any form)",
+        help_text="Specific form required for evolution (null = any form; e.g. burmy-plant, sinistea-antique)",
     )
 
-    evolved_form = models.ForeignKey(
-        "Pokemon",
+    evolved_pokemon_form = models.ForeignKey(
+        "PokemonForm",
         blank=True,
         null=True,
-        related_name="evolved_form",
+        related_name="evolved_into_evolutions",
         on_delete=models.CASCADE,
-        help_text="Specific form of the evolved species",
+        help_text="Specific form resulting from evolution (null = default form; e.g. polteageist-antique, wormadam-sandy)",
     )
 
     used_move = models.ForeignKey(Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE)
@@ -2008,6 +2039,19 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
     min_steps = models.IntegerField(blank=True, null=True)
 
     min_damage_taken = models.IntegerField(blank=True, null=True)
+
+    nature_bitmask = models.IntegerField(
+        blank=True,
+        null=True,
+        help_text="25-bit bitmask of allowed nature IDs (1 << (nature_id - 1))",
+    )
+
+    condition_expression = models.CharField(
+        max_length=100,
+        blank=True,
+        default="",
+        help_text="Condition expression using evolution variables (e.g. 'EC % 100 == 0')",
+    )
 
 
 class PokemonForm(HasName, HasPokemon, HasOrder):

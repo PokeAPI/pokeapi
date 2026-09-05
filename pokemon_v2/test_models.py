@@ -37,6 +37,61 @@ class EncounterPokemonDetailTestCase(TestCase):
                 self.fail(f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}")
 
 
+class EvolutionCSVDataIntegrityTestCase(TestCase):
+    """Test data integrity of new evolution foreign keys and evolution variables."""
+
+    def test_required_and_evolved_pokemon_form_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        forms_path = os.path.join(csv_dir, "pokemon_forms.csv")
+        with open(forms_path, encoding="utf-8") as f:
+            valid_form_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                required_pokemon_form_id = row.get("required_pokemon_form_id", "").strip()
+                evolved_pokemon_form_id = row.get("evolved_pokemon_form_id", "").strip()
+                if required_pokemon_form_id:
+                    self.assertIn(
+                        required_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{required_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+                if evolved_pokemon_form_id:
+                    self.assertIn(
+                        evolved_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{evolved_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+
+    def test_evolution_triggers_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        triggers_path = os.path.join(csv_dir, "evolution_triggers.csv")
+        with open(triggers_path, encoding="utf-8") as f:
+            valid_trigger_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                trigger_id = row.get("evolution_trigger_id", "").strip()
+                if trigger_id:
+                    self.assertIn(
+                        trigger_id,
+                        valid_trigger_ids,
+                        f"Row {row['id']}: evolution_trigger_id '{trigger_id}' doesn't exist in evolution_triggers.csv",
+                    )
+
+    def test_evolution_variables_integrity(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        var_path = os.path.join(csv_dir, "evolution_variables.csv")
+        with open(var_path, encoding="utf-8") as f:
+            var_rows = list(csv.DictReader(f))
+            self.assertTrue(len(var_rows) >= 2, "Expected at least 2 evolution variables (EC, PID)")
+            symbols = {r["symbol"] for r in var_rows}
+            self.assertIn("EC", symbols)
+            self.assertIn("PID", symbols)
+
+
 class CSVResourceNameValidationTestCase(TestCase):
     """
     Test that all resource identifiers in CSV files follow ASCII slug format.

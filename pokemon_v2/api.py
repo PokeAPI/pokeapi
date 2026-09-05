@@ -43,6 +43,7 @@ __all__: tuple[str, ...] = (
     "EncounterMethodResource",
     "EvolutionChainResource",
     "EvolutionTriggerResource",
+    "EvolutionVariableResource",
     "GenderResource",
     "GenerationResource",
     "GrowthRateResource",
@@ -391,6 +392,22 @@ class EvolutionTriggerResource(PokeapiCommonViewset):
     queryset = EvolutionTrigger.objects.all()
     serializer_class = EvolutionTriggerDetailSerializer
     list_serializer_class = EvolutionTriggerSummarySerializer
+
+
+@extend_schema(
+    description="Evolution variables represent parameters (such as Encryption Constant and Personality Value) used in boolean expressions for form-branching evolutions. Check out [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Personality_value) for greater detail.",
+    summary="Get evolution variable",
+    tags=["evolution"],
+)
+@extend_schema_view(
+    list=extend_schema(
+        summary="List evolution variables",
+    )
+)
+class EvolutionVariableResource(PokeapiCommonViewset):
+    queryset = EvolutionVariable.objects.all()
+    serializer_class = EvolutionVariableDetailSerializer
+    list_serializer_class = EvolutionVariableSummarySerializer
 
 
 @extend_schema(

@@ -9,3 +9,7 @@ patches:
     target:
       kind: Deployment
       labelSelector: component=pokeapi
+  - path: load-graphql-patch.yaml
+    target:
+      kind: Job
+      name: load-graphql

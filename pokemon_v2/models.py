@@ -2053,6 +2053,12 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         help_text="Condition expression using evolution variables (e.g. 'EC % 100 == 0')",
     )
 
+    percentage_chance = models.FloatField(
+        blank=True,
+        null=True,
+        help_text="Percentage chance of evolution under this condition (0-100)",
+    )
+
 
 class PokemonForm(HasName, HasPokemon, HasOrder):
     form_name = models.CharField(max_length=30)

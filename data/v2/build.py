@@ -1873,6 +1873,7 @@ def _build_pokemons():
             min_damage_taken=int(info[30]) if info[30] != "" else None,
             nature_bitmask=int(info[31]) if info[31] != "" else None,
             condition_expression=info[32],
+            percentage_chance=(float(info[33]) if len(info) > 33 and info[33] != "" else None),
         )
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)

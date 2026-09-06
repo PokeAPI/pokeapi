@@ -3908,6 +3908,28 @@ components:
           readOnly: true
       required:
       - url
+    EvolutionConditionExpression:
+      type: object
+      properties:
+        expression:
+          type: string
+          description: Condition expression using evolution variables (e.g. 'EC %
+            100 == 0')
+        percentage_chance:
+          type:
+          - number
+          - 'null'
+          format: double
+          description: Percentage chance of evolution under this condition (0-100)
+        variables:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionVariableSummary'
+          description: Evolution variables referenced in the expression
+      required:
+      - expression
+      - percentage_chance
+      - variables
     EvolutionTriggerDetail:
       type: object
       properties:
@@ -7443,10 +7465,9 @@ components:
             $ref: '#/components/schemas/NatureSummary'
           readOnly: true
         condition_expression:
-          type:
-          - object
-          - 'null'
-          additionalProperties: {}
+          oneOf:
+          - $ref: '#/components/schemas/EvolutionConditionExpression'
+          - type: 'null'
           readOnly: true
       required:
       - allowed_natures

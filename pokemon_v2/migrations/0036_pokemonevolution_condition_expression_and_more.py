@@ -30,6 +30,15 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="pokemonevolution",
+            name="percentage_chance",
+            field=models.FloatField(
+                blank=True,
+                help_text="Percentage chance of evolution under this condition (0-100)",
+                null=True,
+            ),
+        ),
+        migrations.AddField(
+            model_name="pokemonevolution",
             name="nature_bitmask",
             field=models.IntegerField(
                 blank=True,

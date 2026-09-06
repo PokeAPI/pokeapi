@@ -79,6 +79,7 @@ __all__: tuple[str, ...] = (
     "EvolutionChainDetailSerializer",
     "EvolutionChainLinkSerializer",
     "EvolutionChainSummarySerializer",
+    "EvolutionConditionExpressionSerializer",
     "EvolutionTriggerDetailSerializer",
     "EvolutionTriggerNameSerializer",
     "EvolutionTriggerSummarySerializer",
@@ -349,6 +350,20 @@ class EvolutionVariableSummarySerializer(serializers.HyperlinkedModelSerializer[
     class Meta:
         model = EvolutionVariable
         fields = ("name", "url")
+
+
+class EvolutionConditionExpressionSerializer(serializers.Serializer[Any]):
+    expression = serializers.CharField(
+        help_text="Condition expression using evolution variables (e.g. 'EC % 100 == 0')"
+    )
+    percentage_chance = serializers.FloatField(
+        allow_null=True,
+        help_text="Percentage chance of evolution under this condition (0-100)",
+    )
+    variables = EvolutionVariableSummarySerializer(
+        many=True,
+        help_text="Evolution variables referenced in the expression",
+    )
 
 
 class EvolutionChainSummarySerializer(serializers.HyperlinkedModelSerializer[EvolutionChain]):
@@ -3427,7 +3442,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             NatureSummarySerializer(natures, many=True, context=self.context).data,
         )
 
-    @extend_schema_field(serializers.DictField(allow_null=True))
+    @extend_schema_field(EvolutionConditionExpressionSerializer(allow_null=True))
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
@@ -3435,6 +3450,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
         variables = EvolutionVariable.objects.filter(symbol__in=symbols)
         return {
             "expression": obj.condition_expression,
+            "percentage_chance": obj.percentage_chance,
             "variables": EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data,
         }
 

@@ -3913,8 +3913,8 @@ components:
       properties:
         expression:
           type: string
-          description: Condition expression using evolution variables (e.g. 'EC %
-            100 == 0')
+          description: Evaluatable RPN condition expression using evolution variables
+            (e.g. 'EC 100 % 0 ==')
         percentage_chance:
           type:
           - number

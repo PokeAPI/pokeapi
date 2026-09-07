@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import itertools
-import re
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -354,7 +353,7 @@ class EvolutionVariableSummarySerializer(serializers.HyperlinkedModelSerializer[
 
 class EvolutionConditionExpressionSerializer(serializers.Serializer[Any]):
     expression = serializers.CharField(
-        help_text="Condition expression using evolution variables (e.g. 'EC % 100 == 0')"
+        help_text="Evaluatable RPN condition expression using evolution variables (e.g. 'EC 100 % 0 ==')"
     )
     percentage_chance = serializers.FloatField(
         allow_null=True,
@@ -3446,8 +3445,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
-        symbols = re.findall(r"[A-Za-z_]+", obj.condition_expression)
-        variables = EvolutionVariable.objects.filter(symbol__in=symbols)
+        tokens = obj.condition_expression.split()
+        variables = EvolutionVariable.objects.filter(symbol__in=tokens)
         return {
             "expression": obj.condition_expression,
             "percentage_chance": obj.percentage_chance,

@@ -789,7 +789,7 @@ def _build_moves():
     existing_effect_ids = set(MoveEffect.objects.values_list("pk", flat=True))
 
     def csv_record_to_objects(info):
-        effect_id = int(info[6]) if info[6] != "" else None
+        effect_id = int(info[8]) if info[8] != "" else None
         if effect_id not in existing_effect_ids:
             effect_id = None
 
@@ -801,7 +801,7 @@ def _build_moves():
             pp=int(info[4]) if info[4] != "" else None,
             accuracy=int(info[5]) if info[5] != "" else None,
             move_effect_id=effect_id,
-            move_effect_chance=int(info[7]) if info[7] != "" else None,
+            move_effect_chance=int(info[9]) if info[9] != "" else None,
         )
 
     build_generic((MoveChange,), "move_changelog.csv", csv_record_to_objects)

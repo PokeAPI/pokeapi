@@ -5,5 +5,3 @@ nodes:
     extraMounts:
       - hostPath: /home/runner/work/pokeapi/pokeapi/data/v2/
         containerPath: /code/pokeapi/data/v2/
-      - hostPath: /home/runner/work/pokeapi/pokeapi/graphql/v1beta2/
-        containerPath: /code/pokeapi/graphql/v1beta2/

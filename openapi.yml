@@ -3810,10 +3810,39 @@ components:
           allOf:
           - $ref: '#/components/schemas/EvolutionChainLink'
           readOnly: true
+        transformations:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionChainTransformation'
+          readOnly: true
       required:
       - baby_trigger_item
       - chain
       - id
+      - transformations
+    EvolutionChainFormTransformation:
+      type: object
+      properties:
+        form:
+          $ref: '#/components/schemas/PokemonFormSummary'
+        trigger:
+          type: string
+          readOnly: true
+        item:
+          $ref: '#/components/schemas/ItemSummary'
+        ability:
+          $ref: '#/components/schemas/AbilitySummary'
+        move:
+          $ref: '#/components/schemas/MoveSummary'
+        base_form:
+          $ref: '#/components/schemas/PokemonFormSummary'
+      required:
+      - ability
+      - base_form
+      - form
+      - item
+      - move
+      - trigger
     EvolutionChainLink:
       type: object
       properties:
@@ -3844,6 +3873,18 @@ components:
           readOnly: true
       required:
       - url
+    EvolutionChainTransformation:
+      type: object
+      properties:
+        species:
+          $ref: '#/components/schemas/PokemonSpeciesSummary'
+        forms:
+          type: array
+          items:
+            $ref: '#/components/schemas/EvolutionChainFormTransformation'
+      required:
+      - forms
+      - species
     EvolutionTriggerDetail:
       type: object
       properties:

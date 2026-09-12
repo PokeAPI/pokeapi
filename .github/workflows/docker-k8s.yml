@@ -104,8 +104,10 @@ jobs:
           make k8s-migrate
           make k8s-build-db
           bash Resources/scripts/wait.sh http://localhost:8001/api/v1/namespaces/pokeapi/services/pokeapi/proxy/api/v2/pal-park-area/5/
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
+      - name: Setup upterm session
+        uses: owenthereal/action-upterm@v1
+        with:
+          detached: true
       - name: K8s wait for job
         run: |
           kubectl wait --timeout=600s --for=condition=complete job/load-graphql

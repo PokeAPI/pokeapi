@@ -18,7 +18,7 @@ spec:
               done;
       containers:
         - name: load-graphql
-          image: buildpack-deps:bookworm-scm
+          image: buildpack-deps:stable-scm
           env:
             - name: HASURA_GRAPHQL_ADMIN_SECRET
               valueFrom:

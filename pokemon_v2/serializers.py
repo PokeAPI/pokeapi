@@ -76,8 +76,10 @@ __all__: tuple[str, ...] = (
     "EncounterPokemonDetailSerializer",
     "EncounterSlotSerializer",
     "EvolutionChainDetailSerializer",
+    "EvolutionChainFormTransformationSerializer",
     "EvolutionChainLinkSerializer",
     "EvolutionChainSummarySerializer",
+    "EvolutionChainTransformationSerializer",
     "EvolutionTriggerDetailSerializer",
     "EvolutionTriggerNameSerializer",
     "EvolutionTriggerSummarySerializer",
@@ -3372,6 +3374,24 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
         )
 
 
+class EvolutionChainFormTransformationSerializer(serializers.ModelSerializer[PokemonFormCondition]):
+    form = PokemonFormSummarySerializer(source="pokemon_form")
+    trigger = serializers.CharField(source="form_trigger.name", read_only=True)
+    item = ItemSummarySerializer()
+    ability = AbilitySummarySerializer()
+    move = MoveSummarySerializer()
+    base_form = PokemonFormSummarySerializer()
+
+    class Meta:
+        model = PokemonFormCondition
+        fields = ("form", "trigger", "item", "ability", "move", "base_form")
+
+
+class EvolutionChainTransformationSerializer(serializers.Serializer[Any]):
+    species = PokemonSpeciesSummarySerializer()
+    forms = EvolutionChainFormTransformationSerializer(many=True)
+
+
 class EvolutionChainLinkSerializer(serializers.Serializer[Any]):
     is_baby = serializers.BooleanField()
     species = PokemonSpeciesSummarySerializer()
@@ -3382,6 +3402,7 @@ class EvolutionChainLinkSerializer(serializers.Serializer[Any]):
 class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]):
     baby_trigger_item = ItemSummarySerializer()
     chain = serializers.SerializerMethodField("build_chain")
+    transformations = serializers.SerializerMethodField("build_transformations")
 
     POKEMON_EVOLUTION_FK_FIELDS: ClassVar[list[str]] = [
         field.name
@@ -3391,7 +3412,7 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
 
     class Meta:
         model = EvolutionChain
-        fields = ("id", "baby_trigger_item", "chain")
+        fields = ("id", "baby_trigger_item", "chain", "transformations")
 
     @extend_schema_field(EvolutionChainLinkSerializer)
     def build_chain(self, obj: EvolutionChain) -> dict[str, Any]:
@@ -3463,6 +3484,41 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
             "evolution_details": evolution_data or [],
             "evolves_to": [self.build_chain_link_entry(c, summary_data) for c in chain_link["children"]],
         }
+
+    # collects the reversible form changes of every species in the chain (mega evolution,
+    # primal reversion, gigantamax, in-battle transformations), grouped by species
+    @extend_schema_field(EvolutionChainTransformationSerializer(many=True))
+    def build_transformations(self, obj: EvolutionChain) -> list[dict[str, Any]]:
+        conditions = (
+            PokemonFormCondition.objects.filter(pokemon_form__pokemon__pokemon_species__evolution_chain=obj)
+            .select_related(
+                "form_trigger",
+                "item",
+                "ability",
+                "move",
+                "base_form",
+                "pokemon_form__pokemon__pokemon_species",
+            )
+            .order_by(
+                "pokemon_form__pokemon__pokemon_species__order",
+                "pokemon_form__pokemon__pokemon_species__pk",
+                "pokemon_form__order",
+                "pk",
+            )
+        )
+
+        return [
+            {
+                "species": PokemonSpeciesSummarySerializer(species, context=self.context).data,
+                "forms": EvolutionChainFormTransformationSerializer(
+                    list(species_conditions), many=True, context=self.context
+                ).data,
+            }
+            for species, species_conditions in itertools.groupby(
+                conditions,
+                key=lambda condition: condition.pokemon_form.pokemon.pokemon_species,
+            )
+        ]
 
 
 ############################

@@ -4837,6 +4837,7 @@ class APITests(APIData, APITestCase):
 
         # base params
         self.assertEqual(response.data["id"], evolution_chain.pk)
+        self.assertEqual(response.data["transformations"], [])
         # baby trigger params
         self.assertEqual(response.data["baby_trigger_item"]["name"], baby_trigger_item.name)
         self.assertEqual(
@@ -4920,6 +4921,73 @@ class APITests(APIData, APITestCase):
             stage_two_second_data["evolution_details"][0]["party_type"]["url"],
             "{}{}/type/{}/".format(TEST_HOST, API_V2, stage_two_second_party_type.pk),
         )
+
+    # verifies that the reversible form changes of the chain's species are exposed
+    def test_evolution_chain_api_transformations(self):
+        evolution_chain = self.setup_evolution_chain_data()
+
+        basic = self.setup_pokemon_species_data(name="bsc for evo chn trnsfrm", evolution_chain=evolution_chain)
+        evolved = self.setup_pokemon_species_data(
+            name="evlvd for evo chn trnsfrm",
+            evolves_from_species=basic,
+            evolution_chain=evolution_chain,
+            order=2,
+        )
+        self.setup_pokemon_evolution_data(evolved_species=evolved, min_level=16)
+
+        evolved_pokemon = self.setup_pokemon_data(pokemon_species=evolved, name="pkmn for evo chn trnsfrm")
+        default_form = self.setup_pokemon_form_data(
+            pokemon=evolved_pokemon, name="dflt frm for evo chn trnsfrm", order=1, form_order=1
+        )
+        mega_form = self.setup_pokemon_form_data(
+            pokemon=evolved_pokemon,
+            name="mg frm for evo chn trnsfrm",
+            order=2,
+            form_order=2,
+            is_mega=True,
+        )
+        mega_stone = self.setup_item_data(name="itm for evo chn trnsfrm")
+        form_trigger = self.setup_pokemon_form_trigger_data(name="frm trgr for evo chn trnsfrm")
+        self.setup_pokemon_form_condition_data(
+            pokemon_form=mega_form,
+            form_trigger=form_trigger,
+            item=mega_stone,
+            base_form=default_form,
+        )
+
+        response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        # the chain itself is untouched by the transformations
+        self.assertEqual(response.data["chain"]["species"]["name"], basic.name)
+        self.assertEqual(response.data["chain"]["evolves_to"][0]["species"]["name"], evolved.name)
+        self.assertEqual(response.data["chain"]["evolves_to"][0]["evolves_to"], [])
+
+        transformations = response.data["transformations"]
+        self.assertEqual(len(transformations), 1)
+        self.assertEqual(transformations[0]["species"]["name"], evolved.name)
+        self.assertEqual(
+            transformations[0]["species"]["url"],
+            "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, evolved.pk),
+        )
+
+        forms = transformations[0]["forms"]
+        self.assertEqual(len(forms), 1)
+        self.assertEqual(forms[0]["form"]["name"], mega_form.name)
+        self.assertEqual(
+            forms[0]["form"]["url"],
+            "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, mega_form.pk),
+        )
+        self.assertEqual(forms[0]["trigger"], form_trigger.name)
+        self.assertEqual(forms[0]["item"]["name"], mega_stone.name)
+        self.assertEqual(
+            forms[0]["item"]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, mega_stone.pk),
+        )
+        self.assertEqual(forms[0]["base_form"]["name"], default_form.name)
+        self.assertIsNone(forms[0]["ability"])
+        self.assertIsNone(forms[0]["move"])
 
     # verifies that the wurmple evolution chain is serialized correctly
     def test_evolution_chain_api_wurmple_bugfix(self):

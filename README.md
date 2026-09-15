@@ -143,7 +143,7 @@ When you start PokéAPI with the above Docker Compose setup, an [Hasura Engine](
 
 ```sh
 # hasura cli needs to be installed and available in your $PATH: https://hasura.io/docs/2.0/hasura-cli/install-hasura-cli
-# hasura cli's version has to greater than v2.48.1
+# hasura cli's version has to greater than v2.50.2
 make hasura-apply
 ```
 

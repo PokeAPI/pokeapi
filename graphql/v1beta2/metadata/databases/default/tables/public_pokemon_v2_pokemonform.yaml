@@ -14,10 +14,17 @@ object_relationships:
     using:
       foreign_key_constraint_on: version_group_id
 array_relationships:
-  - name: pokemonformconditions
+  - name: PokemonevolutionsByRequiredPokemonFormId
     using:
       foreign_key_constraint_on:
-        column: base_form_id
+        column: required_pokemon_form_id
+        table:
+          name: pokemon_v2_pokemonevolution
+          schema: public
+  - name: PokemonformconditionsByPokemonFormId
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_form_id
         table:
           name: pokemon_v2_pokemonformcondition
           schema: public
@@ -28,12 +35,12 @@ array_relationships:
         table:
           name: pokemon_v2_pokemonevolution
           schema: public
-  - name: pokemonevolutionsByRequiredPokemonFormId
+  - name: pokemonformconditions
     using:
       foreign_key_constraint_on:
-        column: required_pokemon_form_id
+        column: base_form_id
         table:
-          name: pokemon_v2_pokemonevolution
+          name: pokemon_v2_pokemonformcondition
           schema: public
   - name: pokemonformflavortexts
     using:

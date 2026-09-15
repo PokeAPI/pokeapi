@@ -350,6 +350,34 @@ array_relationships:
         table:
           name: pokemon_v2_pokedexname
           schema: public
+  - name: currencynames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_currencyname
+          schema: public
+  - name: evolutionvariabledescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_evolutionvariabledescription
+          schema: public
+  - name: evolutionvariablenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_evolutionvariablename
+          schema: public
+  - name: pokemonformflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_pokemonformflavortext
+          schema: public
   - name: pokemoncolornames
     using:
       foreign_key_constraint_on:

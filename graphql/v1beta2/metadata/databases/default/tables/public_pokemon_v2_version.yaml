@@ -25,6 +25,13 @@ array_relationships:
         table:
           name: pokemon_v2_locationareaencounterrate
           schema: public
+  - name: pokemonformflavortexts
+    using:
+      foreign_key_constraint_on:
+        column: version_id
+        table:
+          name: pokemon_v2_pokemonformflavortext
+          schema: public
   - name: pokemongameindices
     using:
       foreign_key_constraint_on:

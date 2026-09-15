@@ -84,6 +84,13 @@ array_relationships:
         table:
           name: pokemon_v2_contesttypename
           schema: public
+  - name: currencynames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_currencyname
+          schema: public
   - name: egggroupnames
     using:
       foreign_key_constraint_on:
@@ -118,6 +125,20 @@ array_relationships:
         column: language_id
         table:
           name: pokemon_v2_evolutiontriggername
+          schema: public
+  - name: evolutionvariabledescriptions
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_evolutionvariabledescription
+          schema: public
+  - name: evolutionvariablenames
+    using:
+      foreign_key_constraint_on:
+        column: language_id
+        table:
+          name: pokemon_v2_evolutionvariablename
           schema: public
   - name: generationnames
     using:
@@ -350,26 +371,12 @@ array_relationships:
         table:
           name: pokemon_v2_pokedexname
           schema: public
-  - name: currencynames
+  - name: pokemoncolornames
     using:
       foreign_key_constraint_on:
         column: language_id
         table:
-          name: pokemon_v2_currencyname
-          schema: public
-  - name: evolutionvariabledescriptions
-    using:
-      foreign_key_constraint_on:
-        column: language_id
-        table:
-          name: pokemon_v2_evolutionvariabledescription
-          schema: public
-  - name: evolutionvariablenames
-    using:
-      foreign_key_constraint_on:
-        column: language_id
-        table:
-          name: pokemon_v2_evolutionvariablename
+          name: pokemon_v2_pokemoncolorname
           schema: public
   - name: pokemonformflavortexts
     using:
@@ -377,13 +384,6 @@ array_relationships:
         column: language_id
         table:
           name: pokemon_v2_pokemonformflavortext
-          schema: public
-  - name: pokemoncolornames
-    using:
-      foreign_key_constraint_on:
-        column: language_id
-        table:
-          name: pokemon_v2_pokemoncolorname
           schema: public
   - name: pokemonformnames
     using:

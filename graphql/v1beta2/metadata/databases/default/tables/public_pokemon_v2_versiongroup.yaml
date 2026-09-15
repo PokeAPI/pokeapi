@@ -32,6 +32,13 @@ array_relationships:
         table:
           name: pokemon_v2_encounterslot
           schema: public
+  - name: evolutionvariables
+    using:
+      foreign_key_constraint_on:
+        column: version_group_id
+        table:
+          name: pokemon_v2_evolutionvariable
+          schema: public
   - name: itemflavortexts
     using:
       foreign_key_constraint_on:
@@ -80,13 +87,6 @@ array_relationships:
         column: version_group_id
         table:
           name: pokemon_v2_pokedexversiongroup
-          schema: public
-  - name: evolutionvariables
-    using:
-      foreign_key_constraint_on:
-        column: version_group_id
-        table:
-          name: pokemon_v2_evolutionvariable
           schema: public
   - name: pokemonevolutions
     using:

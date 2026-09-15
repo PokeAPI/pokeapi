@@ -47,10 +47,6 @@ jobs:
   k8s:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup upterm session
-        uses: owenthereal/action-upterm@v1
-        with:
-          detached: true
       - name: Checkout
         uses: actions/checkout@v6
         with:

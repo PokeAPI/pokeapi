@@ -94,4 +94,3 @@ jobs:
       - name: Crawl API
         run: |
           uvx --from pokeapi-ditto ditto clone --src-url http://localhost/ --dest-dir ./out
-      

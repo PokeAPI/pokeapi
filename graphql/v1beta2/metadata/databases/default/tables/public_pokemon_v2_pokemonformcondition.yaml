@@ -7,21 +7,21 @@ configuration:
   custom_name: pokemonformcondition
   custom_root_fields: {}
 object_relationships:
+  - name: pokemon_form
+    using:
+      foreign_key_constraint_on: pokemon_form_id
   - name: ability
     using:
       foreign_key_constraint_on: ability_id
-  - name: base_form
-    using:
-      foreign_key_constraint_on: base_form_id
   - name: item
     using:
       foreign_key_constraint_on: item_id
   - name: move
     using:
       foreign_key_constraint_on: move_id
-  - name: pokemonform
+  - name: base_form
     using:
-      foreign_key_constraint_on: pokemon_form_id
+      foreign_key_constraint_on: base_form_id
   - name: pokemonformtrigger
     using:
       foreign_key_constraint_on: form_trigger_id

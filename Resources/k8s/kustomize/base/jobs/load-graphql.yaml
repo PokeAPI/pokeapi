@@ -34,7 +34,7 @@ spec:
           args:
             - |
               set -e
-              curl -L https://github.com/hasura/graphql-engine/releases/download/v2.48.1/cli-hasura-linux-amd64 -o /usr/local/bin/hasura
+              curl -L https://github.com/hasura/graphql-engine/releases/download/v2.50.3/cli-hasura-linux-amd64 -o /usr/local/bin/hasura
               chmod +x /usr/local/bin/hasura
               cd /tmp
               git clone https://github.com/PokeAPI/pokeapi.git

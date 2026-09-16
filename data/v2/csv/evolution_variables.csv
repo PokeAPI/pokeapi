@@ -1,0 +1,3 @@
+id,identifier,symbol,data_type,version_group_id
+1,encryption-constant,EC,uint32,15
+2,personality-value,PID,uint32,5

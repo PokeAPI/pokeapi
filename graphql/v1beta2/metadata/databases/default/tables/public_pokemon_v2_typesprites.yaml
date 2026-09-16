@@ -7,6 +7,6 @@ configuration:
   custom_name: typesprites
   custom_root_fields: {}
 object_relationships:
-  - name: pokemon_v2_type
+  - name: type
     using:
       foreign_key_constraint_on: type_id

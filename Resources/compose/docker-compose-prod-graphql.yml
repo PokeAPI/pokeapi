@@ -13,6 +13,10 @@ services:
         condition: service_started
       graphql-engine:
         condition: service_healthy
+    logging:
+      driver: gcplogs
+      options:
+        gcp-project: 'pokeapi-215911'
 
   graphql-engine:
     cpus: 0.7

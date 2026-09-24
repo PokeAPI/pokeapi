@@ -3238,7 +3238,7 @@ class EvolutionVariableDetailSerializer(serializers.HyperlinkedModelSerializer[E
 
     class Meta:
         model = EvolutionVariable
-        fields = ("id", "name", "symbol", "data_type", "version_group", "names", "descriptions")
+        fields = ("id", "name", "symbol", "data_type", "source", "version_group", "names", "descriptions")
 
 
 class PokemonSpeciesDescriptionSerializer(serializers.ModelSerializer[PokemonSpeciesDescription]):

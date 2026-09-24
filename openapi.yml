@@ -4003,6 +4003,12 @@ components:
         data_type:
           type: string
           maxLength: 20
+        source:
+          type: string
+          description: 'Where the value comes from: ''pokemon'' for data stored on
+            the Pokemon (e.g. EC, PID), ''player-input'' for an action taken by the
+            player while evolving (e.g. SPIN_DIR, SPIN_SEC)'
+          maxLength: 20
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
         names:

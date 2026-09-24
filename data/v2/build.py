@@ -15,6 +15,9 @@ import csv
 import os
 import os.path
 import re
+from collections.abc import Callable
+from copy import deepcopy
+from typing import Any
 
 from django.db import connection
 
@@ -44,20 +47,511 @@ SOUND_DIR = "{prefix}{{file_name}}".format(
 )
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 CRIES_DIR = os.getcwd() + "/data/v2/cries/cries/"
-RESOURCE_IMAGES: list[str] = []
-RESOURCE_CRIES: list[str] = []
+RESOURCE_IMAGES: set[str] = set()
+RESOURCE_CRIES: set[str] = set()
 
 for root, _dirs, files in os.walk(IMAGE_DIR):
     for file in files:
         image_path = os.path.join(root.replace(IMAGE_DIR, ""), file)
         image_path = image_path.replace("\\", "/")  # convert Windows-style path to Unix
-        RESOURCE_IMAGES.append(image_path)
+        RESOURCE_IMAGES.add(image_path)
 
 for root, _dirs, files in os.walk(CRIES_DIR):
     for file in files:
         cry_path = os.path.join(root.replace(CRIES_DIR, ""), file)
         cry_path = cry_path.replace("\\", "/")  # convert Windows-style path to Unix
-        RESOURCE_CRIES.append(cry_path)
+        RESOURCE_CRIES.add(cry_path)
+
+
+POKEMON_SPRITE_CONFIG: dict[str, Any] = {
+    "front_default": ("pokemon/", "png"),
+    "front_female": ("pokemon/female/", "png"),
+    "front_shiny": ("pokemon/shiny/", "png"),
+    "front_shiny_female": ("pokemon/shiny/female/", "png"),
+    "back_default": ("pokemon/back/", "png"),
+    "back_female": ("pokemon/back/female/", "png"),
+    "back_shiny": ("pokemon/back/shiny/", "png"),
+    "back_shiny_female": ("pokemon/back/shiny/female/", "png"),
+    "other": {
+        "dream_world": {
+            "front_default": ("pokemon/other/dream-world/", "svg"),
+            "front_female": ("pokemon/other/dream-world/female/", "svg"),
+        },
+        "home": {
+            "front_default": ("pokemon/other/home/", "png"),
+            "front_female": ("pokemon/other/home/female/", "png"),
+            "front_shiny": ("pokemon/other/home/shiny/", "png"),
+            "front_shiny_female": ("pokemon/other/home/shiny/female/", "png"),
+        },
+        "official-artwork": {
+            "front_default": ("pokemon/other/official-artwork/", "png"),
+            "front_shiny": ("pokemon/other/official-artwork/shiny/", "png"),
+            "versions": {
+                "generation-i": {
+                    "red-and-blue": {
+                        "front_default": (
+                            "pokemon/other/official-artwork/versions/generation-i/red-and-blue/",
+                            "png",
+                        )
+                    },
+                    "red-and-green": {
+                        "front_default": (
+                            "pokemon/other/official-artwork/versions/generation-i/red-and-green/",
+                            "png",
+                        )
+                    },
+                },
+                "generation-ii": {
+                    "gold-and-silver": {
+                        "front_default": (
+                            "pokemon/other/official-artwork/versions/generation-ii/gold-and-silver/",
+                            "png",
+                        )
+                    }
+                },
+            },
+        },
+        "showdown": {
+            "front_default": ("pokemon/other/showdown/", "gif"),
+            "front_female": ("pokemon/other/showdown/female/", "gif"),
+            "front_shiny": ("pokemon/other/showdown/shiny/", "gif"),
+            "front_shiny_female": ("pokemon/other/showdown/shiny/female/", "gif"),
+            "back_default": ("pokemon/other/showdown/back/", "gif"),
+            "back_female": ("pokemon/other/showdown/back/female/", "gif"),
+            "back_shiny": ("pokemon/other/showdown/back/shiny/", "gif"),
+            "back_shiny_female": ("pokemon/other/showdown/back/shiny/female/", "gif"),
+        },
+    },
+    "versions": {
+        "generation-i": {
+            "red-blue": {
+                "front_default": ("pokemon/versions/generation-i/red-blue/", "png"),
+                "front_gray": ("pokemon/versions/generation-i/red-blue/gray/", "png"),
+                "front_transparent": ("pokemon/versions/generation-i/red-blue/transparent/", "png"),
+                "front_transparent_gray": (
+                    "pokemon/versions/generation-i/red-blue/transparent/gray/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-i/red-blue/back/", "png"),
+                "back_gray": ("pokemon/versions/generation-i/red-blue/back/gray/", "png"),
+                "back_transparent": ("pokemon/versions/generation-i/red-blue/transparent/back/", "png"),
+                "back_transparent_gray": (
+                    "pokemon/versions/generation-i/red-blue/transparent/back/gray/",
+                    "png",
+                ),
+            },
+            "red-green-japan": {
+                "front_default": ("pokemon/versions/generation-i/red-green-japan/", "png"),
+                "front_gray": ("pokemon/versions/generation-i/red-green-japan/gray/", "png"),
+                "back_default": ("pokemon/versions/generation-i/red-green-japan/back/", "png"),
+                "back_gray": ("pokemon/versions/generation-i/red-green-japan/back/gray/", "png"),
+            },
+            "yellow": {
+                "front_default": ("pokemon/versions/generation-i/yellow/", "png"),
+                "front_gbc": ("pokemon/versions/generation-i/yellow/gbc/", "png"),
+                "front_gray": ("pokemon/versions/generation-i/yellow/gray/", "png"),
+                "front_transparent": ("pokemon/versions/generation-i/yellow/transparent/", "png"),
+                "front_transparent_gray": (
+                    "pokemon/versions/generation-i/yellow/transparent/gray/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-i/yellow/back/", "png"),
+                "back_gbc": ("pokemon/versions/generation-i/yellow/back/gbc/", "png"),
+                "back_gray": ("pokemon/versions/generation-i/yellow/back/gray/", "png"),
+                "back_transparent": ("pokemon/versions/generation-i/yellow/transparent/back/", "png"),
+                "back_transparent_gray": (
+                    "pokemon/versions/generation-i/yellow/transparent/back/gray/",
+                    "png",
+                ),
+            },
+        },
+        "generation-ii": {
+            "crystal": {
+                "front_default": ("pokemon/versions/generation-ii/crystal/", "png"),
+                "front_shiny": ("pokemon/versions/generation-ii/crystal/shiny/", "png"),
+                "front_transparent": ("pokemon/versions/generation-ii/crystal/transparent/", "png"),
+                "front_shiny_transparent": (
+                    "pokemon/versions/generation-ii/crystal/transparent/shiny/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-ii/crystal/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-ii/crystal/back/shiny/", "png"),
+                "back_transparent": ("pokemon/versions/generation-ii/crystal/transparent/back/", "png"),
+                "back_shiny_transparent": (
+                    "pokemon/versions/generation-ii/crystal/transparent/back/shiny/",
+                    "png",
+                ),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-ii/crystal/animated/", "gif"),
+                    "front_shiny": ("pokemon/versions/generation-ii/crystal/animated/shiny/", "gif"),
+                },
+            },
+            "gold": {
+                "front_default": ("pokemon/versions/generation-ii/gold/", "png"),
+                "front_shiny": ("pokemon/versions/generation-ii/gold/shiny/", "png"),
+                "front_transparent": ("pokemon/versions/generation-ii/gold/transparent/", "png"),
+                "front_shiny_transparent": (
+                    "pokemon/versions/generation-ii/gold/transparent/shiny/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-ii/gold/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-ii/gold/back/shiny/", "png"),
+                "back_transparent": ("pokemon/versions/generation-ii/gold/transparent/back/", "png"),
+                "back_shiny_transparent": (
+                    "pokemon/versions/generation-ii/gold/transparent/back/shiny/",
+                    "png",
+                ),
+            },
+            "silver": {
+                "front_default": ("pokemon/versions/generation-ii/silver/", "png"),
+                "front_shiny": ("pokemon/versions/generation-ii/silver/shiny/", "png"),
+                "front_transparent": ("pokemon/versions/generation-ii/silver/transparent/", "png"),
+                "front_shiny_transparent": (
+                    "pokemon/versions/generation-ii/silver/transparent/shiny/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-ii/silver/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-ii/silver/back/shiny/", "png"),
+                "back_transparent": ("pokemon/versions/generation-ii/silver/transparent/back/", "png"),
+                "back_shiny_transparent": (
+                    "pokemon/versions/generation-ii/silver/transparent/back/shiny/",
+                    "png",
+                ),
+            },
+        },
+        "generation-iii": {
+            "emerald": {
+                "front_default": ("pokemon/versions/generation-iii/emerald/", "png"),
+                "front_shiny": ("pokemon/versions/generation-iii/emerald/shiny/", "png"),
+                "back_default": ("pokemon/versions/generation-iii/emerald/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-iii/emerald/back/shiny/", "png"),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-iii/emerald/animated/", "png"),
+                    "front_shiny": ("pokemon/versions/generation-iii/emerald/animated/shiny/", "png"),
+                    "back_default": ("pokemon/versions/generation-iii/emerald/animated/back/", "png"),
+                    "back_shiny": (
+                        "pokemon/versions/generation-iii/emerald/animated/back/shiny/",
+                        "png",
+                    ),
+                },
+            },
+            "firered-leafgreen": {
+                "front_default": ("pokemon/versions/generation-iii/firered-leafgreen/", "png"),
+                "front_shiny": ("pokemon/versions/generation-iii/firered-leafgreen/shiny/", "png"),
+                "back_default": ("pokemon/versions/generation-iii/firered-leafgreen/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-iii/firered-leafgreen/back/shiny/", "png"),
+            },
+            "icons": {
+                "front_default": ("pokemon/versions/generation-iii/icons/", "png"),
+            },
+            "ruby-sapphire": {
+                "front_default": ("pokemon/versions/generation-iii/ruby-sapphire/", "png"),
+                "front_shiny": ("pokemon/versions/generation-iii/ruby-sapphire/shiny/", "png"),
+                "back_default": ("pokemon/versions/generation-iii/ruby-sapphire/back/", "png"),
+                "back_shiny": ("pokemon/versions/generation-iii/ruby-sapphire/back/shiny/", "png"),
+            },
+        },
+        "generation-iv": {
+            "diamond-pearl": {
+                "front_default": ("pokemon/versions/generation-iv/diamond-pearl/", "png"),
+                "front_female": ("pokemon/versions/generation-iv/diamond-pearl/female/", "png"),
+                "front_shiny": ("pokemon/versions/generation-iv/diamond-pearl/shiny/", "png"),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-iv/diamond-pearl/shiny/female/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-iv/diamond-pearl/back/", "png"),
+                "back_female": ("pokemon/versions/generation-iv/diamond-pearl/back/female/", "png"),
+                "back_shiny": ("pokemon/versions/generation-iv/diamond-pearl/back/shiny/", "png"),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-iv/diamond-pearl/back/shiny/female/",
+                    "png",
+                ),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-iv/diamond-pearl/animated/", "png"),
+                    "front_female": ("pokemon/versions/generation-iv/diamond-pearl/animated/female/", "png"),
+                    "front_shiny": ("pokemon/versions/generation-iv/diamond-pearl/animated/shiny/", "png"),
+                    "front_shiny_female": (
+                        "pokemon/versions/generation-iv/diamond-pearl/animated/shiny/female/",
+                        "png",
+                    ),
+                },
+            },
+            "heartgold-soulsilver": {
+                "front_default": ("pokemon/versions/generation-iv/heartgold-soulsilver/", "png"),
+                "front_female": (
+                    "pokemon/versions/generation-iv/heartgold-soulsilver/female/",
+                    "png",
+                ),
+                "front_shiny": ("pokemon/versions/generation-iv/heartgold-soulsilver/shiny/", "png"),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-iv/heartgold-soulsilver/shiny/female/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-iv/heartgold-soulsilver/back/", "png"),
+                "back_female": (
+                    "pokemon/versions/generation-iv/heartgold-soulsilver/back/female/",
+                    "png",
+                ),
+                "back_shiny": ("pokemon/versions/generation-iv/heartgold-soulsilver/back/shiny/", "png"),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-iv/heartgold-soulsilver/back/shiny/female/",
+                    "png",
+                ),
+                "animated": {
+                    "front_default": (
+                        "pokemon/versions/generation-iv/heartgold-soulsilver/animated/",
+                        "png",
+                    ),
+                    "front_female": (
+                        "pokemon/versions/generation-iv/heartgold-soulsilver/animated/female/",
+                        "png",
+                    ),
+                    "front_shiny": (
+                        "pokemon/versions/generation-iv/heartgold-soulsilver/animated/shiny/",
+                        "png",
+                    ),
+                    "front_shiny_female": (
+                        "pokemon/versions/generation-iv/heartgold-soulsilver/animated/shiny/female/",
+                        "png",
+                    ),
+                },
+            },
+            "icons": {
+                "front_default": ("pokemon/versions/generation-iv/icons/", "png"),
+            },
+            "platinum": {
+                "front_default": ("pokemon/versions/generation-iv/platinum/", "png"),
+                "front_female": ("pokemon/versions/generation-iv/platinum/female/", "png"),
+                "front_shiny": ("pokemon/versions/generation-iv/platinum/shiny/", "png"),
+                "front_shiny_female": ("pokemon/versions/generation-iv/platinum/shiny/female/", "png"),
+                "back_default": ("pokemon/versions/generation-iv/platinum/back/", "png"),
+                "back_female": ("pokemon/versions/generation-iv/platinum/back/female/", "png"),
+                "back_shiny": ("pokemon/versions/generation-iv/platinum/back/shiny/", "png"),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-iv/platinum/back/shiny/female/",
+                    "png",
+                ),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-iv/platinum/animated/", "png"),
+                    "front_female": ("pokemon/versions/generation-iv/platinum/animated/female/", "png"),
+                    "front_shiny": ("pokemon/versions/generation-iv/platinum/animated/shiny/", "png"),
+                    "front_shiny_female": (
+                        "pokemon/versions/generation-iv/platinum/animated/shiny/female/",
+                        "png",
+                    ),
+                },
+            },
+        },
+        "generation-v": {
+            "black-white": {
+                "front_default": ("pokemon/versions/generation-v/black-white/", "png"),
+                "front_female": ("pokemon/versions/generation-v/black-white/female/", "png"),
+                "front_shiny": ("pokemon/versions/generation-v/black-white/shiny/", "png"),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-v/black-white/shiny/female/",
+                    "png",
+                ),
+                "back_default": ("pokemon/versions/generation-v/black-white/back/", "png"),
+                "back_female": ("pokemon/versions/generation-v/black-white/back/female/", "png"),
+                "back_shiny": ("pokemon/versions/generation-v/black-white/back/shiny/", "png"),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-v/black-white/back/shiny/female/",
+                    "png",
+                ),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-v/black-white/animated/", "gif"),
+                    "front_female": (
+                        "pokemon/versions/generation-v/black-white/animated/female/",
+                        "gif",
+                    ),
+                    "front_shiny": (
+                        "pokemon/versions/generation-v/black-white/animated/shiny/",
+                        "gif",
+                    ),
+                    "front_shiny_female": (
+                        "pokemon/versions/generation-v/black-white/animated/shiny/female/",
+                        "gif",
+                    ),
+                    "back_default": (
+                        "pokemon/versions/generation-v/black-white/animated/back/",
+                        "gif",
+                    ),
+                    "back_female": (
+                        "pokemon/versions/generation-v/black-white/animated/back/female/",
+                        "gif",
+                    ),
+                    "back_shiny": (
+                        "pokemon/versions/generation-v/black-white/animated/back/shiny/",
+                        "gif",
+                    ),
+                    "back_shiny_female": (
+                        "pokemon/versions/generation-v/black-white/animated/back/shiny/female/",
+                        "gif",
+                    ),
+                },
+            },
+            "icons": {
+                "front_default": ("pokemon/versions/generation-v/icons/", "png"),
+                "animated": {
+                    "front_default": ("pokemon/versions/generation-v/icons/animated/", "png"),
+                },
+            },
+        },
+        "generation-vi": {
+            "icons": {
+                "front_default": ("pokemon/versions/generation-vi/icons/", "png"),
+                "front_female": ("pokemon/versions/generation-vi/icons/female/", "png"),
+            },
+            "omegaruby-alphasapphire": {
+                "front_default": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/",
+                    "png",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/female/",
+                    "png",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/",
+                    "png",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/female/",
+                    "png",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/",
+                    "png",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/female/",
+                    "png",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/shiny/",
+                    "png",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/shiny/female/",
+                    "png",
+                ),
+            },
+            "x-y": {
+                "front_default": ("pokemon/versions/generation-vi/x-y/", "png"),
+                "front_female": ("pokemon/versions/generation-vi/x-y/female/", "png"),
+                "front_shiny": ("pokemon/versions/generation-vi/x-y/shiny/", "png"),
+                "front_shiny_female": ("pokemon/versions/generation-vi/x-y/shiny/female/", "png"),
+                "back_default": ("pokemon/versions/generation-vi/x-y/back/", "png"),
+                "back_female": ("pokemon/versions/generation-vi/x-y/back/female/", "png"),
+                "back_shiny": ("pokemon/versions/generation-vi/x-y/back/shiny/", "png"),
+                "back_shiny_female": ("pokemon/versions/generation-vi/x-y/back/shiny/female/", "png"),
+            },
+        },
+        "generation-vii": {
+            "icons": {
+                "front_default": ("pokemon/versions/generation-vii/icons/", "png"),
+                "front_female": ("pokemon/versions/generation-vii/icons/female/", "png"),
+            },
+            "lets-go-pikachu-lets-go-eevee": {
+                "front_default": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/",
+                    "gif",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/female/",
+                    "gif",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/shiny/",
+                    "gif",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/shiny/female/",
+                    "gif",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/back/",
+                    "gif",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/back/female/",
+                    "gif",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/back/shiny/",
+                    "gif",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/back/shiny/female/",
+                    "gif",
+                ),
+                "icons": {
+                    "front_default": (
+                        "pokemon/versions/generation-vii/lets-go-pikachu-lets-go-eevee/icons/",
+                        "png",
+                    )
+                },
+            },
+            "ultra-sun-ultra-moon": {
+                "front_default": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/",
+                    "gif",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/female/",
+                    "gif",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/",
+                    "gif",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/female/",
+                    "gif",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/",
+                    "gif",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/female/",
+                    "gif",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/shiny/",
+                    "gif",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/shiny/female/",
+                    "gif",
+                ),
+            },
+        },
+        "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+                "front_default": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/",
+                    "png",
+                )
+            },
+            "icons": {
+                "front_default": ("pokemon/versions/generation-viii/icons/", "png"),
+                "front_female": ("pokemon/versions/generation-viii/icons/female/", "png"),
+            },
+        },
+        "generation-ix": {
+            "champions": {
+                "front_default": ("pokemon/versions/generation-ix/champions/", "png"),
+                "front_shiny": ("pokemon/versions/generation-ix/champions/shiny/", "png"),
+            },
+            "scarlet-violet": {
+                "front_default": ("pokemon/versions/generation-ix/scarlet-violet/", "png"),
+                "front_female": ("pokemon/versions/generation-ix/scarlet-violet/female/", "png"),
+            },
+        },
+    },
+}
 
 
 def file_path_or_none(file_name, image_file=True):
@@ -1193,6 +1687,46 @@ def _build_locations():
 #############
 
 
+def _resolve_sprite_config(config: dict[str, Any], lookup: Callable[[str, str], str | None]) -> dict[str, Any]:
+    resolved: dict[str, Any] = {}
+    for name, value in config.items():
+        if isinstance(value, dict):
+            resolved[name] = _resolve_sprite_config(value, lookup)
+        else:
+            path, extension = value
+            resolved[name] = lookup(path, extension)
+    return resolved
+
+
+def _pokemon_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
+    pokemon_id, identifier, species_id = info[:3]
+    file_names = [pokemon_id]
+    if "-" in identifier:
+        file_names.append(f"{species_id}-{identifier.split('-', 1)[1]}")
+
+    def lookup(path: str, extension: str) -> str | None:
+        for file_name in file_names:
+            sprite = file_path_or_none(f"{path}{file_name}.{extension}")
+            if sprite:
+                return sprite
+        return None
+
+    return lookup
+
+
+def _pokemon_form_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
+    form_identifier = info[2]
+    pokemon_id = int(info[3])
+    file_name = f"{pokemon_id}-{form_identifier}" if form_identifier else None
+
+    def lookup(path: str, extension: str) -> str | None:
+        if file_name is None:
+            return None
+        return file_path_or_none(f"{path}{file_name}.{extension}")
+
+    return lookup
+
+
 def _build_pokemons():
     def csv_record_to_objects(info):
         yield PokemonColor(id=int(info[0]), name=info[1])
@@ -1306,459 +1840,8 @@ def _build_pokemons():
 
     build_generic((Pokemon,), "pokemon.csv", csv_record_to_objects)
 
-    def try_image_names(path, info, extension):
-        # poke_sprites = "pokemon/{0}"
-        pokemon_id = info[0]
-        identifier = info[1]
-        species_id = info[2]
-        if "-" in identifier:
-            form_file_name = "{}.{}".format(
-                species_id + "-" + identifier.split("-", 1)[1],
-                extension,
-            )
-            id_file_name = f"{pokemon_id}.{extension}"
-            file_name = id_file_name if file_path_or_none(path + id_file_name) else form_file_name
-        else:
-            file_name = f"{info[0]}.{extension}"
-        return file_path_or_none(path + file_name)
-
     def csv_record_to_objects(info):
-        poke_sprites = "pokemon/"
-        dream_world = "other/dream-world/"
-        home = "other/home/"
-        official_art = "other/official-artwork/"
-        showdown = "other/showdown/"
-        gen_i = "versions/generation-i/"
-        gen_ii = "versions/generation-ii/"
-        gen_iii = "versions/generation-iii/"
-        gen_iv = "versions/generation-iv/"
-        gen_v = "versions/generation-v/"
-        gen_vi = "versions/generation-vi/"
-        gen_vii = "versions/generation-vii/"
-        gen_viii = "versions/generation-viii/"
-        gen_ix = "versions/generation-ix/"
-        sprites = {
-            "front_default": try_image_names(poke_sprites, info, "png"),
-            "front_female": try_image_names(poke_sprites + "female/", info, "png"),
-            "front_shiny": try_image_names(poke_sprites + "shiny/", info, "png"),
-            "front_shiny_female": try_image_names(poke_sprites + "shiny/female/", info, "png"),
-            "back_default": try_image_names(poke_sprites + "back/", info, "png"),
-            "back_female": try_image_names(poke_sprites + "back/female/", info, "png"),
-            "back_shiny": try_image_names(poke_sprites + "back/shiny/", info, "png"),
-            "back_shiny_female": try_image_names(poke_sprites + "back/shiny/female/", info, "png"),
-            "other": {
-                "dream_world": {
-                    "front_default": try_image_names(poke_sprites + dream_world, info, "svg"),
-                    "front_female": try_image_names(poke_sprites + dream_world + "female/", info, "svg"),
-                },
-                "home": {
-                    "front_default": try_image_names(poke_sprites + home, info, "png"),
-                    "front_female": try_image_names(poke_sprites + home + "female/", info, "png"),
-                    "front_shiny": try_image_names(poke_sprites + home + "shiny/", info, "png"),
-                    "front_shiny_female": try_image_names(poke_sprites + home + "shiny/female/", info, "png"),
-                },
-                "official-artwork": {
-                    "front_default": try_image_names(poke_sprites + official_art, info, "png"),
-                    "front_shiny": try_image_names(poke_sprites + official_art + "shiny/", info, "png"),
-                },
-                "showdown": {
-                    "front_default": try_image_names(poke_sprites + showdown, info, "gif"),
-                    "front_shiny": try_image_names(poke_sprites + showdown + "shiny/", info, "gif"),
-                    "front_female": try_image_names(poke_sprites + showdown + "female/", info, "gif"),
-                    "front_shiny_female": try_image_names(poke_sprites + showdown + "shiny/female/", info, "gif"),
-                    "back_default": try_image_names(poke_sprites + showdown + "back/", info, "gif"),
-                    "back_shiny": try_image_names(poke_sprites + showdown + "back/shiny/", info, "gif"),
-                    "back_female": try_image_names(poke_sprites + showdown + "back/female/", info, "gif"),
-                    "back_shiny_female": try_image_names(poke_sprites + showdown + "back/shiny/female", info, "gif"),
-                },
-            },
-            "versions": {
-                "generation-i": {
-                    "red-blue": {
-                        "front_default": try_image_names(poke_sprites + gen_i + "red-blue/", info, "png"),
-                        "front_gray": try_image_names(poke_sprites + gen_i + "red-blue/gray/", info, "png"),
-                        "back_default": try_image_names(poke_sprites + gen_i + "red-blue/back/", info, "png"),
-                        "back_gray": try_image_names(poke_sprites + gen_i + "red-blue/back/gray/", info, "png"),
-                        "front_transparent": try_image_names(
-                            poke_sprites + gen_i + "red-blue/transparent/", info, "png"
-                        ),
-                        "back_transparent": try_image_names(
-                            poke_sprites + gen_i + "red-blue/transparent/back/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "yellow": {
-                        "front_default": try_image_names(poke_sprites + gen_i + "yellow/", info, "png"),
-                        "front_gray": try_image_names(poke_sprites + gen_i + "yellow/gray/", info, "png"),
-                        "back_default": try_image_names(poke_sprites + gen_i + "yellow/back/", info, "png"),
-                        "back_gray": try_image_names(poke_sprites + gen_i + "yellow/back/gray/", info, "png"),
-                        "front_transparent": try_image_names(poke_sprites + gen_i + "yellow/transparent/", info, "png"),
-                        "back_transparent": try_image_names(
-                            poke_sprites + gen_i + "yellow/transparent/back/",
-                            info,
-                            "png",
-                        ),
-                    },
-                },
-                "generation-ii": {
-                    "crystal": {
-                        "front_default": try_image_names(poke_sprites + gen_ii + "crystal/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_ii + "crystal/shiny/", info, "png"),
-                        "back_default": try_image_names(poke_sprites + gen_ii + "crystal/back/", info, "png"),
-                        "back_shiny": try_image_names(poke_sprites + gen_ii + "crystal/back/shiny/", info, "png"),
-                        "front_transparent": try_image_names(
-                            poke_sprites + gen_ii + "crystal/transparent/", info, "png"
-                        ),
-                        "front_shiny_transparent": try_image_names(
-                            poke_sprites + gen_ii + "crystal/transparent/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_transparent": try_image_names(
-                            poke_sprites + gen_ii + "crystal/transparent/back/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny_transparent": try_image_names(
-                            poke_sprites + gen_ii + "crystal/transparent/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "animated": {
-                            "front_default": try_image_names(poke_sprites + gen_ii + "crystal/animated/", info, "gif"),
-                            "front_shiny": try_image_names(
-                                poke_sprites + gen_ii + "crystal/animated/shiny/", info, "gif"
-                            ),
-                        },
-                    },
-                    "gold": {
-                        "front_default": try_image_names(poke_sprites + gen_ii + "gold/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_ii + "gold/shiny/", info, "png"),
-                        "back_default": try_image_names(poke_sprites + gen_ii + "gold/back/", info, "png"),
-                        "back_shiny": try_image_names(poke_sprites + gen_ii + "gold/back/shiny/", info, "png"),
-                        "front_transparent": try_image_names(poke_sprites + gen_ii + "gold/transparent/", info, "png"),
-                    },
-                    "silver": {
-                        "front_default": try_image_names(poke_sprites + gen_ii + "silver/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_ii + "silver/shiny/", info, "png"),
-                        "back_default": try_image_names(poke_sprites + gen_ii + "silver/back/", info, "png"),
-                        "back_shiny": try_image_names(poke_sprites + gen_ii + "silver/back/shiny/", info, "png"),
-                        "front_transparent": try_image_names(
-                            poke_sprites + gen_ii + "silver/transparent/", info, "png"
-                        ),
-                    },
-                },
-                "generation-iii": {
-                    "emerald": {
-                        "front_default": try_image_names(poke_sprites + gen_iii + "emerald/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_iii + "emerald/shiny/", info, "png"),
-                    },
-                    "firered-leafgreen": {
-                        "front_default": try_image_names(poke_sprites + gen_iii + "firered-leafgreen/", info, "png"),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_iii + "firered-leafgreen/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(
-                            poke_sprites + gen_iii + "firered-leafgreen/back/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_iii + "firered-leafgreen/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "ruby-sapphire": {
-                        "front_default": try_image_names(poke_sprites + gen_iii + "ruby-sapphire/", info, "png"),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_iii + "ruby-sapphire/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(
-                            poke_sprites + gen_iii + "ruby-sapphire/back/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_iii + "ruby-sapphire/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                    },
-                },
-                "generation-iv": {
-                    "diamond-pearl": {
-                        "front_default": try_image_names(poke_sprites + gen_iv + "diamond-pearl/", info, "png"),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/female/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(poke_sprites + gen_iv + "diamond-pearl/back/", info, "png"),
-                        "back_female": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/back/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "diamond-pearl/back/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "heartgold-soulsilver": {
-                        "front_default": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/female/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/back/",
-                            info,
-                            "png",
-                        ),
-                        "back_female": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/back/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "heartgold-soulsilver/back/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "platinum": {
-                        "front_default": try_image_names(poke_sprites + gen_iv + "platinum/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_iv + "platinum/female/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_iv + "platinum/shiny/", info, "png"),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "platinum/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(poke_sprites + gen_iv + "platinum/back/", info, "png"),
-                        "back_female": try_image_names(
-                            poke_sprites + gen_iv + "platinum/back/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_iv + "platinum/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny_female": try_image_names(
-                            poke_sprites + gen_iv + "platinum/back/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                },
-                "generation-v": {
-                    "black-white": {
-                        "front_default": try_image_names(poke_sprites + gen_v + "black-white/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_v + "black-white/female/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_v + "black-white/shiny/", info, "png"),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_v + "black-white/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_default": try_image_names(poke_sprites + gen_v + "black-white/back/", info, "png"),
-                        "back_female": try_image_names(
-                            poke_sprites + gen_v + "black-white/back/female/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny": try_image_names(
-                            poke_sprites + gen_v + "black-white/back/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "back_shiny_female": try_image_names(
-                            poke_sprites + gen_v + "black-white/back/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                        "animated": {
-                            "front_default": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/",
-                                info,
-                                "gif",
-                            ),
-                            "front_female": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/female/",
-                                info,
-                                "gif",
-                            ),
-                            "front_shiny": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/shiny/",
-                                info,
-                                "gif",
-                            ),
-                            "front_shiny_female": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/shiny/female/",
-                                info,
-                                "gif",
-                            ),
-                            "back_default": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/back/",
-                                info,
-                                "gif",
-                            ),
-                            "back_female": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/back/female/",
-                                info,
-                                "gif",
-                            ),
-                            "back_shiny": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/back/shiny/",
-                                info,
-                                "gif",
-                            ),
-                            "back_shiny_female": try_image_names(
-                                poke_sprites + gen_v + "black-white/animated/back/shiny/female/",
-                                info,
-                                "gif",
-                            ),
-                        },
-                    },
-                    "icons": {
-                        "front_default": try_image_names(poke_sprites + gen_v + "icons/", info, "png"),
-                        "animated": {
-                            "front_default": try_image_names(poke_sprites + gen_v + "icons/animated/", info, "png"),
-                        },
-                    },
-                },
-                "generation-vi": {
-                    "omegaruby-alphasapphire": {
-                        "front_default": try_image_names(
-                            poke_sprites + gen_vi + "omegaruby-alphasapphire/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_vi + "omegaruby-alphasapphire/female/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_vi + "omegaruby-alphasapphire/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_vi + "omegaruby-alphasapphire/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "x-y": {
-                        "front_default": try_image_names(poke_sprites + gen_vi + "x-y/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_vi + "x-y/female/", info, "png"),
-                        "front_shiny": try_image_names(poke_sprites + gen_vi + "x-y/shiny/", info, "png"),
-                        "front_shiny_female": try_image_names(poke_sprites + gen_vi + "x-y/shiny/female/", info, "png"),
-                    },
-                },
-                "generation-vii": {
-                    "ultra-sun-ultra-moon": {
-                        "front_default": try_image_names(
-                            poke_sprites + gen_vii + "ultra-sun-ultra-moon/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_vii + "ultra-sun-ultra-moon/female/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny": try_image_names(
-                            poke_sprites + gen_vii + "ultra-sun-ultra-moon/shiny/",
-                            info,
-                            "png",
-                        ),
-                        "front_shiny_female": try_image_names(
-                            poke_sprites + gen_vii + "ultra-sun-ultra-moon/shiny/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                    "icons": {
-                        "front_default": try_image_names(poke_sprites + gen_vii + "icons/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_vii + "icons/female/", info, "png"),
-                    },
-                },
-                "generation-viii": {
-                    "icons": {
-                        "front_default": try_image_names(poke_sprites + gen_viii + "icons/", info, "png"),
-                        "front_female": try_image_names(poke_sprites + gen_viii + "icons/female/", info, "png"),
-                    },
-                    "brilliant-diamond-shining-pearl": {
-                        "front_default": try_image_names(
-                            poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_viii + "brilliant-diamond-shining-pearl/female/",
-                            info,
-                            "png",
-                        ),
-                    },
-                },
-                "generation-ix": {
-                    "scarlet-violet": {
-                        "front_default": try_image_names(poke_sprites + gen_ix + "scarlet-violet/", info, "png"),
-                        "front_female": try_image_names(
-                            poke_sprites + gen_ix + "scarlet-violet/female/",
-                            info,
-                            "png",
-                        ),
-                    }
-                },
-            },
-        }
+        sprites = _resolve_sprite_config(POKEMON_SPRITE_CONFIG, _pokemon_sprite_lookup(info))
         yield PokemonSprites(
             id=int(info[0]),
             pokemon=Pokemon.objects.get(pk=int(info[0])),
@@ -1878,64 +1961,14 @@ def _build_pokemons():
 
     build_generic((PokemonEvolution,), "pokemon_evolution.csv", csv_record_to_objects)
 
-    def try_form_image_names(path, info, extension):
-        form_identifier = info[2]
-        pokemon_id = info[3]
-        pokemon = Pokemon.objects.get(pk=int(pokemon_id))
-        species_id = getattr(pokemon.pokemon_species, "pk", 0)
-        is_default = int(info[5])
-        if form_identifier:
-            form_file_name = f"{species_id}-{form_identifier}.{extension}"
-            id_file_name = f"{pokemon_id}.{extension}"
-            file_name = id_file_name if file_path_or_none(path + id_file_name) else form_file_name
-            if id_file_name and form_file_name and (not is_default):
-                file_name = form_file_name
-        else:
-            file_name = f"{species_id}.{extension}"
-        return file_path_or_none(path + file_name)
+    pokemon_sprites_by_id = dict(PokemonSprites.objects.values_list("pokemon_id", "sprites"))
 
     def csv_record_to_objects(info):
-        poke_sprites = "pokemon/"
-        sprites = {
-            "front_default": try_form_image_names(poke_sprites, info, "png"),
-            "front_shiny": try_form_image_names(poke_sprites + "shiny/", info, "png"),
-            "back_default": try_form_image_names(poke_sprites + "back/", info, "png"),
-            "back_shiny": try_form_image_names(poke_sprites + "back/shiny/", info, "png"),
-            "front_female": try_form_image_names(poke_sprites + "female/", info, "png"),
-            "front_shiny_female": try_form_image_names(poke_sprites + "shiny/female/", info, "png"),
-            "back_female": try_form_image_names(poke_sprites + "back/female/", info, "png"),
-            "back_shiny_female": try_form_image_names(poke_sprites + "back/shiny/female/", info, "png"),
-            "versions": {
-                "generation-viii": {
-                    "brilliant-diamond-shining-pearl": {
-                        "front_default": try_form_image_names(
-                            poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_form_image_names(
-                            poke_sprites + "versions/generation-viii/brilliant-diamond-shining-pearl/female/",
-                            info,
-                            "png",
-                        ),
-                    }
-                },
-                "generation-ix": {
-                    "scarlet-violet": {
-                        "front_default": try_form_image_names(
-                            poke_sprites + "versions/generation-ix/scarlet-violet/",
-                            info,
-                            "png",
-                        ),
-                        "front_female": try_form_image_names(
-                            poke_sprites + "versions/generation-ix/scarlet-violet/female/",
-                            info,
-                            "png",
-                        ),
-                    }
-                },
-            },
-        }
+        if info[2]:
+            lookup = _pokemon_form_sprite_lookup(info)
+            sprites = _resolve_sprite_config(POKEMON_SPRITE_CONFIG, lookup)
+        else:
+            sprites = deepcopy(pokemon_sprites_by_id.get(int(info[3]), {}))
         yield PokemonFormSprites(id=int(info[0]), pokemon_form_id=int(info[0]), sprites=sprites)
 
     build_generic((PokemonFormSprites,), "pokemon_forms.csv", csv_record_to_objects)

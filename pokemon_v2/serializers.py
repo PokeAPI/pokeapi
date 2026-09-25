@@ -1154,7 +1154,7 @@ class LocationNameSerializer(serializers.ModelSerializer[LocationName]):
 
 
 class LocationDetailSerializer(serializers.ModelSerializer[Location]):
-    region = RegionSummarySerializer()
+    region = RegionSummarySerializer(allow_null=True)
     names = LocationNameSerializer(many=True, read_only=True, source="locationname")
     game_indices = LocationGameIndexSerializer(many=True, read_only=True, source="locationgameindex")
     areas = LocationAreaSummarySerializer(many=True, read_only=True, source="locationarea")

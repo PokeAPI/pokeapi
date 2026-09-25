@@ -4838,7 +4838,9 @@ components:
           type: string
           maxLength: 200
         region:
-          $ref: '#/components/schemas/RegionSummary'
+          oneOf:
+          - $ref: '#/components/schemas/RegionSummary'
+          - type: 'null'
         names:
           type: array
           items:

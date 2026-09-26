@@ -9,7 +9,7 @@ item_id,local_language_id,name
 1,9,Master Ball
 1,11,マスターボール
 1,12,大师球
-1,14,Master Ball
+1,14,Masterbola
 2,1,ハイパーボール
 2,3,하이퍼볼
 2,4,高級球
@@ -20,7 +20,7 @@ item_id,local_language_id,name
 2,9,Ultra Ball
 2,11,ハイパーボール
 2,12,高级球
-2,14,Ultra Ball
+2,14,Ultrabola
 3,1,スーパーボール
 3,3,슈퍼볼
 3,4,超級球
@@ -31,7 +31,7 @@ item_id,local_language_id,name
 3,9,Great Ball
 3,11,スーパーボール
 3,12,超级球
-3,14,Super Ball
+3,14,Superbola
 4,1,モンスターボール
 4,3,몬스터볼
 4,4,精靈球
@@ -42,7 +42,7 @@ item_id,local_language_id,name
 4,9,Poké Ball
 4,11,モンスターボール
 4,12,精灵球
-4,14,Poké Ball
+4,14,Pokébola
 5,1,サファリボール
 5,3,사파리볼
 5,4,狩獵球
@@ -53,7 +53,7 @@ item_id,local_language_id,name
 5,9,Safari Ball
 5,11,サファリボール
 5,12,狩猎球
-5,14,Safari Ball
+5,14,Safaribola
 6,1,ネットボール
 6,3,네트볼
 6,4,捕網球
@@ -64,7 +64,7 @@ item_id,local_language_id,name
 6,9,Net Ball
 6,11,ネットボール
 6,12,捕网球
-6,14,Malla Ball
+6,14,Mallabola
 7,1,ダイブボール
 7,3,다이브볼
 7,4,潛水球
@@ -75,7 +75,7 @@ item_id,local_language_id,name
 7,9,Dive Ball
 7,11,ダイブボール
 7,12,潜水球
-7,14,Buceo Ball
+7,14,Buceobola
 8,1,ネストボール
 8,3,네스트볼
 8,4,巢穴球
@@ -86,7 +86,7 @@ item_id,local_language_id,name
 8,9,Nest Ball
 8,11,ネストボール
 8,12,巢穴球
-8,14,Nido Ball
+8,14,Nidobola
 9,1,リピートボール
 9,3,리피트볼
 9,4,重複球
@@ -97,7 +97,7 @@ item_id,local_language_id,name
 9,9,Repeat Ball
 9,11,リピートボール
 9,12,重复球
-9,14,Acopio Ball
+9,14,Acopiobola
 10,1,タイマーボール
 10,3,타이머볼
 10,4,計時球
@@ -108,7 +108,7 @@ item_id,local_language_id,name
 10,9,Timer Ball
 10,11,タイマーボール
 10,12,计时球
-10,14,Turno Ball
+10,14,Turnobola
 11,1,ゴージャスボール
 11,3,럭셔리볼
 11,4,豪華球
@@ -119,7 +119,7 @@ item_id,local_language_id,name
 11,9,Luxury Ball
 11,11,ゴージャスボール
 11,12,豪华球
-11,14,Lujo Ball
+11,14,Lujobola
 12,1,プレミアボール
 12,3,프리미어볼
 12,4,紀念球
@@ -130,7 +130,7 @@ item_id,local_language_id,name
 12,9,Premier Ball
 12,11,プレミアボール
 12,12,纪念球
-12,14,Honor Ball
+12,14,Honorbola
 13,1,ダークボール
 13,3,다크볼
 13,4,黑暗球
@@ -141,7 +141,7 @@ item_id,local_language_id,name
 13,9,Dusk Ball
 13,11,ダークボール
 13,12,黑暗球
-13,14,Ocaso Ball
+13,14,Ocasobola
 14,1,ヒールボール
 14,3,힐볼
 14,4,治癒球
@@ -152,7 +152,7 @@ item_id,local_language_id,name
 14,9,Heal Ball
 14,11,ヒールボール
 14,12,治愈球
-14,14,Sana Ball
+14,14,Sanabola
 15,1,クイックボール
 15,3,퀵볼
 15,4,先機球
@@ -163,7 +163,7 @@ item_id,local_language_id,name
 15,9,Quick Ball
 15,11,クイックボール
 15,12,先机球
-15,14,Veloz Ball
+15,14,Velozbola
 16,1,プレシャスボール
 16,3,프레셔스볼
 16,4,貴重球
@@ -174,7 +174,7 @@ item_id,local_language_id,name
 16,9,Cherish Ball
 16,11,プレシャスボール
 16,12,贵重球
-16,14,Gloria Ball
+16,14,Gloriabola
 17,1,キズぐすり
 17,3,상처약
 17,4,傷藥
@@ -4882,7 +4882,7 @@ item_id,local_language_id,name
 449,9,Lure Ball
 449,11,ルアーボール
 449,12,诱饵球
-449,14,Cebo Ball
+449,14,Señuelobola
 450,1,レベルボール
 450,3,레벨볼
 450,4,等級球
@@ -4893,7 +4893,7 @@ item_id,local_language_id,name
 450,9,Level Ball
 450,11,レベルボール
 450,12,等级球
-450,14,Nivel Ball
+450,14,Nivelabola
 451,1,ムーンボール
 451,3,문볼
 451,4,月亮球
@@ -4904,7 +4904,7 @@ item_id,local_language_id,name
 451,9,Moon Ball
 451,11,ムーンボール
 451,12,月亮球
-451,14,Luna Ball
+451,14,Lunabola
 452,1,ヘビーボール
 452,3,헤비볼
 452,4,沉重球
@@ -4915,7 +4915,7 @@ item_id,local_language_id,name
 452,9,Heavy Ball
 452,11,ヘビーボール
 452,12,沉重球
-452,14,Peso Ball
+452,14,Pesabola
 453,1,スピードボール
 453,3,스피드볼
 453,4,速度球
@@ -4926,7 +4926,7 @@ item_id,local_language_id,name
 453,9,Fast Ball
 453,11,スピードボール
 453,12,速度球
-453,14,Rapid Ball
+453,14,Rapibola
 454,1,フレンドボール
 454,3,프렌드볼
 454,4,友友球
@@ -4937,7 +4937,7 @@ item_id,local_language_id,name
 454,9,Friend Ball
 454,11,フレンドボール
 454,12,友友球
-454,14,Amigo Ball
+454,14,Amigobola
 455,1,ラブラブボール
 455,3,러브러브볼
 455,4,甜蜜球
@@ -4948,7 +4948,7 @@ item_id,local_language_id,name
 455,9,Love Ball
 455,11,ラブラブボール
 455,12,甜蜜球
-455,14,Amor Ball
+455,14,Amorbola
 456,1,パークボール
 456,3,파크볼
 456,4,公園球
@@ -4959,7 +4959,7 @@ item_id,local_language_id,name
 456,9,Park Ball
 456,11,パークボール
 456,12,公园球
-456,14,Parque Ball
+456,14,Parquebola
 457,1,コンペボール
 457,3,컴퍼티션볼
 457,4,競賽球
@@ -4970,7 +4970,7 @@ item_id,local_language_id,name
 457,9,Sport Ball
 457,11,コンペボール
 457,12,竞赛球
-457,14,Competi Ball
+457,14,Competibola
 458,1,あかぼんぐり
 458,3,빨간규토리
 458,4,紅球果
@@ -6602,7 +6602,7 @@ item_id,local_language_id,name
 617,9,Dream Ball
 617,11,ドリームボール
 617,12,梦境球
-617,14,Ensueño Ball
+617,14,Ensueñobola
 618,1,ポケじゃらし
 618,3,포켓풀
 618,4,寶可尾草
@@ -9002,7 +9002,7 @@ item_id,local_language_id,name
 887,9,Beast Ball
 887,11,ウルトラボール
 887,12,究极球
-887,14,Ente Ball
+887,14,Entebola
 888,1,おおきいマラサダ
 888,3,큰 말라사다
 888,4,大馬拉薩達
@@ -17534,6 +17534,7 @@ item_id,local_language_id,name
 1663,9,Strange Ball
 1663,11,ストレンジボール
 1663,12,奇异球
+1663,14,Extrañabola
 1664,1,レジェンドプレート
 1664,3,레전드플레이트
 1664,4,傳說石板
@@ -22973,6 +22974,7 @@ item_id,local_language_id,name
 2219,9,Strange Ball
 2219,11,ストレンジボール
 2219,12,奇异球
+2219,14,Extrañabola
 2220,3,몬스터볼
 2220,4,精靈球
 2220,5,Poké Ball
@@ -22982,6 +22984,7 @@ item_id,local_language_id,name
 2220,9,Poké Ball
 2220,11,モンスターボール
 2220,12,精灵球
+2220,14,Pokébola
 2221,3,슈퍼볼
 2221,4,超級球
 2221,5,Super Ball
@@ -22991,6 +22994,7 @@ item_id,local_language_id,name
 2221,9,Great Ball
 2221,11,スーパーボール
 2221,12,超级球
+2221,14,Superbola
 2222,3,하이퍼볼
 2222,4,高級球
 2222,5,Hyper Ball
@@ -23000,6 +23004,7 @@ item_id,local_language_id,name
 2222,9,Ultra Ball
 2222,11,ハイパーボール
 2222,12,高级球
+2222,14,Ultrabola
 2223,3,헤비볼
 2223,4,沉重球
 2223,5,Masse Ball
@@ -23009,6 +23014,7 @@ item_id,local_language_id,name
 2223,9,Heavy Ball
 2223,11,ヘビーボール
 2223,12,沉重球
+2223,7,Pesabola
 2224,3,메가톤볼
 2224,4,超重球
 2224,5,Mégamasse Ball
@@ -23018,6 +23024,7 @@ item_id,local_language_id,name
 2224,9,Leaden Ball
 2224,11,メガトンボール
 2224,12,超重球
+2224,14,Kilobola
 2225,3,기가톤볼
 2225,4,巨重球
 2225,5,Gigamasse Ball
@@ -23027,6 +23034,7 @@ item_id,local_language_id,name
 2225,9,Gigaton Ball
 2225,11,ギガトンボール
 2225,12,巨重球
+2225,14,Quintalbola
 2226,3,페더볼
 2226,4,飛羽球
 2226,5,Plume Ball
@@ -23036,6 +23044,7 @@ item_id,local_language_id,name
 2226,9,Feather Ball
 2226,11,フェザーボール
 2226,12,飞羽球
+2226,14,Plumabola
 2227,3,윙볼
 2227,4,飛翼球
 2227,5,Envol Ball
@@ -23045,6 +23054,7 @@ item_id,local_language_id,name
 2227,9,Wing Ball
 2227,11,ウイングボール
 2227,12,飞翼球
+2227,14,Alabola
 2228,3,제트볼
 2228,4,飛梭球
 2228,5,Propulse Ball
@@ -23054,6 +23064,7 @@ item_id,local_language_id,name
 2228,9,Jet Ball
 2228,11,ジェットボール
 2228,12,飞梭球
+2228,14,Areobola
 2229,3,오리진볼
 2229,4,起源球
 2229,5,Origine Ball
@@ -23063,6 +23074,7 @@ item_id,local_language_id,name
 2229,9,Origin Ball
 2229,11,オリジンボール
 2229,12,起源球
+2229,14,Origenbola
 2230,3,검은휘석
 2230,4,黑奇石
 2230,5,Obsidienne

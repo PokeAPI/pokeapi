@@ -2634,7 +2634,7 @@ item_id,local_language_id,name
 244,9,Wise Glasses
 244,11,ものしりメガネ
 244,12,博识眼镜
-244,14,Gafas Especiales
+244,14,Lentes Especiales
 245,1,たつじんのおび
 245,3,달인의띠
 245,4,達人帶
@@ -2667,7 +2667,7 @@ item_id,local_language_id,name
 247,9,Life Orb
 247,11,いのちのたま
 247,12,生命宝珠
-247,14,Vidasfera
+247,14,Vidaesfera
 248,1,パワフルハーブ
 248,3,파워풀허브
 248,4,強力香草
@@ -2942,7 +2942,7 @@ item_id,local_language_id,name
 272,9,Shed Shell
 272,11,きれいなぬけがら
 272,12,美丽空壳
-272,14,Muda Concha
+272,14,Muda de Piel
 273,1,おおきなねっこ
 273,3,큰뿌리
 273,4,大根莖
@@ -6239,7 +6239,7 @@ item_id,local_language_id,name
 584,9,Air Balloon
 584,11,ふうせん
 584,12,气球
-584,14,Globo Helio
+584,14,Globo con Helio
 585,1,レッドカード
 585,3,레드카드
 585,4,紅牌
@@ -6305,7 +6305,7 @@ item_id,local_language_id,name
 590,9,Eject Button
 590,11,だっしゅつボタン
 590,12,逃脱按键
-590,14,Botón Escape
+590,14,Botón de Escape
 591,1,ほのおのジュエル
 591,3,불꽃주얼
 591,4,火之寶石
@@ -9156,7 +9156,7 @@ item_id,local_language_id,name
 901,9,Grassy Seed
 901,11,グラスシード
 901,12,青草种子
-901,14,Semilla Hierba
+901,14,Semilla Césped
 902,1,ファイトメモリ
 902,3,파이팅메모리
 902,4,戰鬥記憶碟

@@ -1,6 +1,8 @@
 import json
 from datetime import datetime, timezone
 
+from django.db import connection
+from django.test.utils import CaptureQueriesContext
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -4975,6 +4977,43 @@ class APITests(APIData, APITestCase):
 
         stage_one_second_data = basic_data["evolves_to"][1]
         self.assertEqual(len(stage_one_second_data["evolves_to"]), 1)
+
+    # verifies that building the evolution chain tree issues a constant number of
+    # queries instead of one PokemonEvolution query per non-root species in the chain
+    def test_evolution_chain_api_query_count_does_not_scale_with_chain_size(self):
+        def build_branching_chain(branch_count):
+            evolution_chain = self.setup_evolution_chain_data()
+            basic = self.setup_pokemon_species_data(
+                name=f"bsc for evo chn qc {branch_count}",
+                evolution_chain=evolution_chain,
+            )
+            for i in range(branch_count):
+                branch_species = self.setup_pokemon_species_data(
+                    name=f"brnch {i} for evo chn qc {branch_count}",
+                    evolves_from_species=basic,
+                    evolution_chain=evolution_chain,
+                )
+                self.setup_pokemon_evolution_data(evolved_species=branch_species, min_level=7)
+            return evolution_chain
+
+        small_chain = build_branching_chain(branch_count=1)
+        large_chain = build_branching_chain(branch_count=6)
+
+        with CaptureQueriesContext(connection) as small_queries:
+            small_response = self.client.get("{}/evolution-chain/{}/".format(API_V2, small_chain.pk))
+        with CaptureQueriesContext(connection) as large_queries:
+            large_response = self.client.get("{}/evolution-chain/{}/".format(API_V2, large_chain.pk))
+
+        self.assertEqual(small_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(large_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(large_response.data["chain"]["evolves_to"]), 6)
+
+        # before the fix, each additional branch added its own PokemonEvolution query
+        # (one per non-root species), so 5 extra branches meant 5 extra queries here
+        self.assertEqual(
+            len(large_queries.captured_queries),
+            len(small_queries.captured_queries),
+        )
 
     # Encounter Tests
     def test_encounter_method_api(self):

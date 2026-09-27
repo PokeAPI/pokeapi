@@ -403,7 +403,7 @@ POKEMON_SPRITE_CONFIG: dict[str, Any] = {
                 "front_default": ("pokemon/versions/generation-vi/icons/", "png"),
                 "front_female": ("pokemon/versions/generation-vi/icons/female/", "png"),
             },
-            "omegaruby-alphasapphire": {
+            "omega-ruby-alpha-sapphire": {
                 "front_default": (
                     "pokemon/versions/generation-vi/omegaruby-alphasapphire/",
                     "png",

@@ -1,12 +1,14 @@
 import csv
 import os
 import re
+from unittest import mock
 
 from django.conf import settings
 from django.test import TestCase
 from typing_extensions import override
 
-from data.v2.build import POKEMON_SPRITE_CONFIG
+from data.v2 import build
+from data.v2.build import POKEMON_SPRITE_CONFIG, _pokemon_form_sprite_lookup
 from pokemon_v2.models import *
 
 
@@ -249,3 +251,23 @@ class PokemonSpriteConfigTestCase(TestCase):
                     path.startswith(f"pokemon/versions/generation-vi/{folder}/"),
                     f"{group} path {path} is not under the {folder}/ sprites folder",
                 )
+
+    # https://github.com/PokeAPI/pokeapi/issues/1687: unown-a's front sprite is stored as
+    # 201.png, not 201-a.png, so default forms must fall back to the bare pokemon id
+    def test_form_sprite_lookup_falls_back_to_pokemon_id_for_default_forms(self):
+        # pokemon_forms.csv columns: id, identifier, form_identifier, pokemon_id, introduced_in, is_default
+        unown_a = ["201", "unown-a", "a", "201", "3", "1"]
+        unown_b = ["10001", "unown-b", "b", "201", "3", "0"]
+        images = {"pokemon/201.png", "pokemon/back/201-a.png", "pokemon/back/201.png"}
+
+        with mock.patch.object(build, "RESOURCE_IMAGES", images):
+            unown_a_lookup = _pokemon_form_sprite_lookup(unown_a)
+            unown_b_lookup = _pokemon_form_sprite_lookup(unown_b)
+
+            self.assertEqual(unown_a_lookup("pokemon/", "png"), build.MEDIA_DIR.format(file_name="pokemon/201.png"))
+            # a form-specific sprite still takes precedence over the fallback
+            self.assertEqual(
+                unown_a_lookup("pokemon/back/", "png"), build.MEDIA_DIR.format(file_name="pokemon/back/201-a.png")
+            )
+            # non-default forms never borrow the base pokemon's sprite
+            self.assertIsNone(unown_b_lookup("pokemon/", "png"))

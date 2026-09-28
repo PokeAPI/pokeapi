@@ -1718,12 +1718,21 @@ def _pokemon_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
 def _pokemon_form_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
     form_identifier = info[2]
     pokemon_id = int(info[3])
-    file_name = f"{pokemon_id}-{form_identifier}" if form_identifier else None
+    is_default = info[5] == "1"
+
+    file_names = []
+    if form_identifier:
+        file_names.append(f"{pokemon_id}-{form_identifier}")
+    # a default form's sprites are usually stored under the bare pokemon id (e.g. unown-a -> 201.png)
+    if is_default or not form_identifier:
+        file_names.append(str(pokemon_id))
 
     def lookup(path: str, extension: str) -> str | None:
-        if file_name is None:
-            return None
-        return file_path_or_none(f"{path}{file_name}.{extension}")
+        for file_name in file_names:
+            sprite = file_path_or_none(f"{path}{file_name}.{extension}")
+            if sprite:
+                return sprite
+        return None
 
     return lookup
 

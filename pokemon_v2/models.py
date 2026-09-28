@@ -1802,6 +1802,13 @@ class EvolutionVariable(HasName, HasVersionGroup):
     symbol = models.CharField(max_length=10)
     data_type = models.CharField(max_length=20, default="uint32")
 
+    source = models.CharField(
+        max_length=20,
+        default="pokemon",
+        help_text="Where the value comes from: 'pokemon' for data stored on the Pokemon (e.g. EC, PID), "
+        "'player-input' for an action taken by the player while evolving (e.g. SPIN_DIR, SPIN_SEC)",
+    )
+
 
 class EvolutionVariableName(HasEvolutionVariable, IsName):
     pass

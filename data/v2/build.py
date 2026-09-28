@@ -1585,6 +1585,7 @@ def _build_evolutions():
             symbol=info[2],
             data_type=info[3],
             version_group_id=int(info[4]),
+            source=info[5],
         )
 
     build_generic((EvolutionVariable,), "evolution_variables.csv", csv_record_to_objects)

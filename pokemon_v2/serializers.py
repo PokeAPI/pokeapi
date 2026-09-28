@@ -1155,7 +1155,7 @@ class LocationNameSerializer(serializers.ModelSerializer[LocationName]):
 
 
 class LocationDetailSerializer(serializers.ModelSerializer[Location]):
-    region = RegionSummarySerializer()
+    region = RegionSummarySerializer(allow_null=True)
     names = LocationNameSerializer(many=True, read_only=True, source="locationname")
     game_indices = LocationGameIndexSerializer(many=True, read_only=True, source="locationgameindex")
     areas = LocationAreaSummarySerializer(many=True, read_only=True, source="locationarea")
@@ -3239,7 +3239,7 @@ class EvolutionVariableDetailSerializer(serializers.HyperlinkedModelSerializer[E
 
     class Meta:
         model = EvolutionVariable
-        fields = ("id", "name", "symbol", "data_type", "version_group", "names", "descriptions")
+        fields = ("id", "name", "symbol", "data_type", "source", "version_group", "names", "descriptions")
 
 
 class PokemonSpeciesDescriptionSerializer(serializers.ModelSerializer[PokemonSpeciesDescription]):

@@ -1,3 +1,5 @@
-id,identifier,symbol,data_type,version_group_id
-1,encryption-constant,EC,uint32,15
-2,personality-value,PID,uint32,5
+id,identifier,symbol,data_type,version_group_id,source
+1,encryption-constant,EC,uint32,15,pokemon
+2,personality-value,PID,uint32,5,pokemon
+3,spin-direction,SPIN_DIR,uint8,20,player-input
+4,spin-duration,SPIN_SEC,uint8,20,player-input

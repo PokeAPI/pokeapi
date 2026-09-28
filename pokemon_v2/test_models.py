@@ -6,7 +6,7 @@ from django.conf import settings
 from django.test import TestCase
 from typing_extensions import override
 
-from data.v2.build import POKEMON_SPRITE_CONFIG, _resolve_sprite_config
+from data.v2.build import POKEMON_SPRITE_CONFIG
 from pokemon_v2.models import *
 
 
@@ -232,17 +232,20 @@ class CSVResourceNameValidationTestCase(TestCase):
 
 
 class PokemonSpriteConfigTestCase(TestCase):
-    # regression test for https://github.com/PokeAPI/pokeapi/issues/1684:
-    # the generation-vi Omega Ruby/Alpha Sapphire sprite dict key must match
-    # the real version-group name ("omega-ruby-alpha-sapphire"), not the
-    # sprites repo's folder name ("omegaruby-alphasapphire") used in the paths.
-    def test_generation_vi_oras_sprite_key_matches_version_group_name(self):
+    def test_generation_vi_sprite_group_keys_and_paths(self):
+        # keys are version-group names, while paths use the sprites repo's folder names,
+        # which don't always match (https://github.com/PokeAPI/pokeapi/issues/1684)
+        expected_folders = {
+            "icons": "icons",
+            "omega-ruby-alpha-sapphire": "omegaruby-alphasapphire",
+            "x-y": "x-y",
+        }
         gen_vi = POKEMON_SPRITE_CONFIG["versions"]["generation-vi"]
-        self.assertIn("omega-ruby-alpha-sapphire", gen_vi)
-        self.assertNotIn("omegaruby-alphasapphire", gen_vi)
 
-    def test_resolved_sprite_config_uses_version_group_name_as_key(self):
-        resolved = _resolve_sprite_config(POKEMON_SPRITE_CONFIG, lambda path, extension: f"{path}.{extension}")
-        gen_vi = resolved["versions"]["generation-vi"]
-        self.assertIn("omega-ruby-alpha-sapphire", gen_vi)
-        self.assertNotIn("omegaruby-alphasapphire", gen_vi)
+        self.assertEqual(set(gen_vi), set(expected_folders))
+        for group, folder in expected_folders.items():
+            for path, _extension in gen_vi[group].values():
+                self.assertTrue(
+                    path.startswith(f"pokemon/versions/generation-vi/{folder}/"),
+                    f"{group} path {path} is not under the {folder}/ sprites folder",
+                )

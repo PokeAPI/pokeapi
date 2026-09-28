@@ -3489,10 +3489,13 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
         )
 
         evolutions_by_species: dict[int, list[PokemonEvolution]] = defaultdict(list)
-        for evolution in PokemonEvolution.objects.filter(evolved_species__evolution_chain=obj).select_related(
-            *self.POKEMON_EVOLUTION_FK_FIELDS
-        ):
-            evolutions_by_species[evolution.evolved_species_id].append(evolution)  # pyright: ignore[reportAttributeAccessIssue]
+        if any(species["evolves_from_species"] for species in ref_data):
+            for evolution in (
+                PokemonEvolution.objects.filter(evolved_species__evolution_chain=obj)
+                .select_related(*self.POKEMON_EVOLUTION_FK_FIELDS)
+                .order_by("pk")
+            ):
+                evolutions_by_species[evolution.evolved_species_id].append(evolution)  # pyright: ignore[reportAttributeAccessIssue]
 
         evolution_tree = self.build_evolution_tree(ref_data)
         return self.build_chain_link_entry(evolution_tree, summary_data, evolutions_by_species)

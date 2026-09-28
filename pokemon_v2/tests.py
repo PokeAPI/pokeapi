@@ -5015,6 +5015,44 @@ class APITests(APIData, APITestCase):
             len(small_queries.captured_queries),
         )
 
+    def test_evolution_chain_api_single_species_chain_skips_evolution_query(self):
+        evolution_chain = self.setup_evolution_chain_data()
+        self.setup_pokemon_species_data(name="sngl for evo chn", evolution_chain=evolution_chain)
+
+        with CaptureQueriesContext(connection) as queries:
+            response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["chain"]["evolution_details"], [])
+        self.assertFalse(any("pokemon_v2_pokemonevolution" in query["sql"] for query in queries.captured_queries))
+
+    # evolution_details must keep creation (pk) order when a species has many PokemonEvolution
+    # rows, e.g. Milcery -> Alcremie has one row per flavor/decoration combination
+    def test_evolution_chain_api_evolution_details_order_with_many_rows_for_same_species(self):
+        evolution_chain = self.setup_evolution_chain_data()
+        basic = self.setup_pokemon_species_data(
+            name="bsc for evo chn ordr",
+            evolution_chain=evolution_chain,
+        )
+        target = self.setup_pokemon_species_data(
+            name="trgt for evo chn ordr",
+            evolves_from_species=basic,
+            evolution_chain=evolution_chain,
+        )
+
+        expected_min_levels = [30, 10, 50, 20, 40]
+        for min_level in expected_min_levels:
+            self.setup_pokemon_evolution_data(evolved_species=target, min_level=min_level)
+
+        response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        target_data = response.data["chain"]["evolves_to"][0]
+        self.assertEqual(
+            [detail["min_level"] for detail in target_data["evolution_details"]],
+            expected_min_levels,
+        )
+
     # Encounter Tests
     def test_encounter_method_api(self):
         encounter_method = self.setup_encounter_method_data(name="base encntr mthd")

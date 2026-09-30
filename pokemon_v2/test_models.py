@@ -235,21 +235,16 @@ class CSVResourceNameValidationTestCase(TestCase):
 
 class PokemonSpriteConfigTestCase(TestCase):
     def test_generation_vi_sprite_group_keys_and_paths(self):
-        # keys are version-group names, while paths use the sprites repo's folder names,
-        # which don't always match (https://github.com/PokeAPI/pokeapi/issues/1684)
-        expected_folders = {
-            "icons": "icons",
-            "omega-ruby-alpha-sapphire": "omegaruby-alphasapphire",
-            "x-y": "x-y",
-        }
+        # keys are version-group names and each group's sprites live in a folder of the
+        # same name (https://github.com/PokeAPI/pokeapi/issues/1684)
         gen_vi = POKEMON_SPRITE_CONFIG["versions"]["generation-vi"]
 
-        self.assertEqual(set(gen_vi), set(expected_folders))
-        for group, folder in expected_folders.items():
-            for path, _extension in gen_vi[group].values():
+        self.assertEqual(set(gen_vi), {"icons", "omega-ruby-alpha-sapphire", "x-y"})
+        for group, sprites in gen_vi.items():
+            for path, _extension in sprites.values():
                 self.assertTrue(
-                    path.startswith(f"pokemon/versions/generation-vi/{folder}/"),
-                    f"{group} path {path} is not under the {folder}/ sprites folder",
+                    path.startswith(f"pokemon/versions/generation-vi/{group}/"),
+                    f"{group} path {path} is not under the {group}/ sprites folder",
                 )
 
     # https://github.com/PokeAPI/pokeapi/issues/1687: unown-a's front sprite is stored as

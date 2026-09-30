@@ -405,35 +405,35 @@ POKEMON_SPRITE_CONFIG: dict[str, Any] = {
             },
             "omega-ruby-alpha-sapphire": {
                 "front_default": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/",
                     "png",
                 ),
                 "front_female": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/female/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/female/",
                     "png",
                 ),
                 "front_shiny": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/shiny/",
                     "png",
                 ),
                 "front_shiny_female": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/female/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/shiny/female/",
                     "png",
                 ),
                 "back_default": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/back/",
                     "png",
                 ),
                 "back_female": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/female/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/back/female/",
                     "png",
                 ),
                 "back_shiny": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/shiny/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/back/shiny/",
                     "png",
                 ),
                 "back_shiny_female": (
-                    "pokemon/versions/generation-vi/omegaruby-alphasapphire/back/shiny/female/",
+                    "pokemon/versions/generation-vi/omega-ruby-alpha-sapphire/back/shiny/female/",
                     "png",
                 ),
             },

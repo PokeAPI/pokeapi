@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import itertools
+from collections import defaultdict
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -3487,8 +3488,17 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
             PokemonSpeciesEvolutionSerializer(pokemon_objects, many=True, context=self.context).data,
         )
 
+        evolutions_by_species: dict[int, list[PokemonEvolution]] = defaultdict(list)
+        if any(species["evolves_from_species"] for species in ref_data):
+            for evolution in (
+                PokemonEvolution.objects.filter(evolved_species__evolution_chain=obj)
+                .select_related(*self.POKEMON_EVOLUTION_FK_FIELDS)
+                .order_by("pk")
+            ):
+                evolutions_by_species[evolution.evolved_species_id].append(evolution)  # pyright: ignore[reportAttributeAccessIssue]
+
         evolution_tree = self.build_evolution_tree(ref_data)
-        return self.build_chain_link_entry(evolution_tree, summary_data)
+        return self.build_chain_link_entry(evolution_tree, summary_data, evolutions_by_species)
 
     # converts a list of Pokemon species evolution data into a tree representing the evolution chain
     def build_evolution_tree(self, species_evolution_data: ReturnList[ReturnDict[str, Any]]) -> dict[str, Any]:
@@ -3525,15 +3535,16 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
     # serializes an evolution chain link recursively
     # chain_link is a tree representing an evolution chain
     def build_chain_link_entry(
-        self, chain_link: dict[str, Any], summary_data: ReturnList[ReturnDict[str, Any]]
+        self,
+        chain_link: dict[str, Any],
+        summary_data: ReturnList[ReturnDict[str, Any]],
+        evolutions_by_species: dict[int, list[PokemonEvolution]],
     ) -> dict[str, Any]:
         species = chain_link["species"]
         evolution_data = None
 
         if species["evolves_from_species"]:
-            evolution_objects = PokemonEvolution.objects.filter(evolved_species=species["id"]).select_related(
-                *self.POKEMON_EVOLUTION_FK_FIELDS
-            )
+            evolution_objects = evolutions_by_species.get(species["id"], [])
             evolution_data = cast(
                 "ReturnList[ReturnDict[str, Any]]",
                 PokemonEvolutionSerializer(evolution_objects, many=True, context=self.context).data,
@@ -3543,7 +3554,9 @@ class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]
             "is_baby": species["is_baby"],
             "species": next(x for x in summary_data if x["name"] == species["name"]),
             "evolution_details": evolution_data or [],
-            "evolves_to": [self.build_chain_link_entry(c, summary_data) for c in chain_link["children"]],
+            "evolves_to": [
+                self.build_chain_link_entry(c, summary_data, evolutions_by_species) for c in chain_link["children"]
+            ],
         }
 
 

@@ -228,3 +228,106 @@ class CSVResourceNameValidationTestCase(TestCase):
                 self.VALID_IDENTIFIER_PATTERN.match(identifier),
                 f"{identifier} should be invalid but was accepted",
             )
+
+
+class MoveEffectReferenceValidationTestCase(TestCase):
+    """
+    Test that the row builders used by ``data.v2.build`` read the ``effect_id`` column
+    from the right position and only assign effect ids that were actually built,
+    for both ``Move`` (moves.csv) and ``MoveChange`` (move_changelog.csv).
+
+    Regression test for https://github.com/PokeAPI/pokeapi/issues/1663.
+    """
+
+    CSV_DIR = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+
+    def _read_rows(self, filename):
+        """Return (header, rows) using positional lists, exactly as the build script does."""
+        with open(os.path.join(self.CSV_DIR, filename), encoding="utf-8") as infile:
+            reader = csv.reader(infile)
+            header = next(reader)
+            return header, list(reader)
+
+    def _builders(self):
+        """
+        (csv file, row builder, columns that must be non-empty for the builder to run).
+        """
+        # Imported lazily: data.v2.build opens a DB cursor at import time.
+        from data.v2.build import move_change_from_csv_row, move_from_csv_row
+
+        return (
+            (
+                "moves.csv",
+                move_from_csv_row,
+                {"id": "1", "identifier": "pound", "generation_id": "1", "type_id": "1"},
+            ),
+            (
+                "move_changelog.csv",
+                move_change_from_csv_row,
+                {"move_id": "1", "changed_in_version_group_id": "1"},
+            ),
+        )
+
+    def test_resolve_existing_id(self):
+        from data.v2.build import resolve_existing_id
+
+        existing_ids = {1, 2, 3}
+
+        self.assertEqual(resolve_existing_id("2", existing_ids), 2)
+        self.assertIsNone(resolve_existing_id("999", existing_ids))
+        self.assertIsNone(resolve_existing_id("", existing_ids))
+
+    def test_builders_read_effect_columns_by_position(self):
+        """
+        The builders index rows positionally; make sure the position they use is the
+        one the CSV header calls ``effect_id`` / ``effect_chance``.
+        """
+        for filename, builder, required in self._builders():
+            with self.subTest(filename=filename):
+                header, _ = self._read_rows(filename)
+
+                # A synthetic row: every column empty except the required ones, and the
+                # two effect columns located by header name rather than by position.
+                row = [""] * len(header)
+                for column, value in required.items():
+                    row[header.index(column)] = value
+                row[header.index("effect_id")] = "7"
+                row[header.index("effect_chance")] = "30"
+
+                obj = builder(row, {7})
+                self.assertEqual(obj.move_effect_id, 7)
+                self.assertEqual(obj.move_effect_chance, 30)
+
+                # Same row, but the referenced effect was never built: must not dangle.
+                obj = builder(row, set())
+                self.assertIsNone(obj.move_effect_id)
+                self.assertEqual(obj.move_effect_chance, 30)
+
+    def test_csv_effect_references_match_built_effects(self):
+        """
+        Run every real CSV row through the production builder and compare the assigned
+        ``move_effect_id`` with an expectation derived independently by column name.
+        """
+        with open(os.path.join(self.CSV_DIR, "move_effects.csv"), encoding="utf-8") as infile:
+            existing_ids = {int(row["id"]) for row in csv.DictReader(infile)}
+        self.assertTrue(existing_ids)
+
+        for filename, builder, _ in self._builders():
+            with self.subTest(filename=filename):
+                header, rows = self._read_rows(filename)
+                effect_col = header.index("effect_id")
+
+                resolved_any = False
+                for row_num, row in enumerate(rows, start=2):
+                    raw = row[effect_col]
+                    expected = int(raw) if raw != "" and int(raw) in existing_ids else None
+                    actual = builder(row, existing_ids).move_effect_id
+                    self.assertEqual(
+                        actual,
+                        expected,
+                        f"{filename} row {row_num}: effect_id column is {raw!r}, "
+                        f"builder assigned {actual!r}, expected {expected!r}",
+                    )
+                    resolved_any = resolved_any or actual is not None
+
+                self.assertTrue(resolved_any, f"{filename}: no row resolved to a built effect")

@@ -11,12 +11,19 @@
 #  wipe it and rewrite each row using the data found in data/v2/csv.
 
 
+import contextlib
 import csv
+import gzip
+import json
 import os
 import os.path
+import pathlib
 import re
+import urllib.error
+import urllib.request
 from collections.abc import Callable
 from copy import deepcopy
+from email.utils import parsedate_to_datetime
 from typing import Any
 
 from django.db import connection
@@ -47,14 +54,98 @@ SOUND_DIR = "{prefix}{{file_name}}".format(
 )
 IMAGE_DIR = os.getcwd() + "/data/v2/sprites/sprites/"
 CRIES_DIR = os.getcwd() + "/data/v2/cries/cries/"
-RESOURCE_IMAGES: set[str] = set()
-RESOURCE_CRIES: set[str] = set()
 
-for root, _dirs, files in os.walk(IMAGE_DIR):
-    for file in files:
-        image_path = os.path.join(root.replace(IMAGE_DIR, ""), file)
-        image_path = image_path.replace("\\", "/")  # convert Windows-style path to Unix
-        RESOURCE_IMAGES.add(image_path)
+
+def _load_manifest_from_path(path: str) -> set[str] | None:
+    try:
+        with gzip.open(path, "rt", encoding="utf-8") as f:
+            return set(json.load(f))
+    except (OSError, json.JSONDecodeError) as e:
+        print(f"Warning: Failed to read local sprite manifest at {path}: {e}")
+        return None
+
+
+def _fetch_manifest(url: str, cache_file: str) -> set[str] | None:
+    try:
+        # Check freshness if cache_file exists
+        if os.path.isfile(cache_file):
+            try:
+                head_req = urllib.request.Request(url, method="HEAD")
+                with urllib.request.urlopen(head_req, timeout=10) as head_resp:
+                    last_mod_header = head_resp.headers.get("Last-Modified")
+                    if last_mod_header:
+                        remote_mtime = parsedate_to_datetime(last_mod_header).timestamp()
+                        if os.path.getmtime(cache_file) >= remote_mtime:
+                            return _load_manifest_from_path(cache_file)
+            except (OSError, urllib.error.URLError, ValueError):
+                pass
+
+        # Update manifest
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            raw_bytes: bytes = resp.read()
+            data = json.loads(gzip.decompress(raw_bytes).decode("utf-8"))
+
+            with contextlib.suppress(OSError):
+                pathlib.Path(cache_file).write_bytes(raw_bytes)
+                last_mod = resp.headers.get("Last-Modified")
+                if last_mod:
+                    mtime = parsedate_to_datetime(last_mod).timestamp()
+                    os.utime(cache_file, (mtime, mtime))
+
+            return set(data)
+    except (OSError, urllib.error.URLError, json.JSONDecodeError, gzip.BadGzipFile) as e:
+        print(f"Warning: Failed to fetch sprite manifest from {url}: {e}")
+        return None
+
+
+def _load_local_sprites() -> set[str]:
+    """Scan the local cloned sprites submodule directory."""
+    if not (os.path.isdir(IMAGE_DIR) and os.listdir(IMAGE_DIR)):
+        return set()
+
+    images: set[str] = set()
+    for root, _dirs, files in os.walk(IMAGE_DIR):
+        for file in files:
+            image_path = os.path.join(root.replace(IMAGE_DIR, ""), file)
+            images.add(image_path.replace("\\", "/"))
+    return images
+
+
+def _load_resource_images() -> set[str]:
+    use_local = os.environ.get("POKEAPI_USE_LOCAL_SPRITES", "").lower() in ("1", "true", "yes")
+    if use_local and (local_images := _load_local_sprites()):
+        return local_images
+
+    cache_file = os.path.join(os.path.dirname(__file__), "manifest.json.gz")
+    manifest_urls: list[str] = list(
+        filter(
+            None,
+            [
+                os.environ.get("POKEAPI_SPRITES_MANIFEST_URL", ""),
+                "https://pokeapi.github.io/sprites/manifest.json.gz",
+                "https://github.com/PokeAPI/sprites/releases/latest/download/manifest.json.gz",
+            ],
+        )
+    )
+
+    for url in manifest_urls:
+        if (data := _fetch_manifest(url, cache_file)) is not None:
+            return data
+
+    # If offline / all remote requests failed, use cached manifest if available
+    if os.path.isfile(cache_file) and (cached := _load_manifest_from_path(cache_file)) is not None:
+        return cached
+
+    # Fallback to local files if manifest is completely unavailable
+    if local_images := _load_local_sprites():
+        return local_images
+
+    print("Warning: Could not load sprite resources from local files or remote manifest. Sprites will be empty.")
+    return set()
+
+
+RESOURCE_IMAGES: set[str] = _load_resource_images()
+RESOURCE_CRIES: set[str] = set()
 
 for root, _dirs, files in os.walk(CRIES_DIR):
     for file in files:
@@ -532,12 +623,142 @@ POKEMON_SPRITE_CONFIG: dict[str, Any] = {
             "brilliant-diamond-shining-pearl": {
                 "front_default": (
                     "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/",
-                    "png",
-                )
+                    "webp",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/female/",
+                    "webp",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/shiny/",
+                    "webp",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/shiny/female/",
+                    "webp",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/back/",
+                    "webp",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/back/female/",
+                    "webp",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/back/shiny/",
+                    "webp",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/back/shiny/female/",
+                    "webp",
+                ),
+                "icons": {
+                    "front_default": (
+                        "pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/",
+                        "png",
+                    ),
+                },
             },
             "icons": {
                 "front_default": ("pokemon/versions/generation-viii/icons/", "png"),
                 "front_female": ("pokemon/versions/generation-viii/icons/female/", "png"),
+            },
+            "legends-arceus": {
+                "front_default": (
+                    "pokemon/versions/generation-viii/legends-arceus/",
+                    "webp",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-viii/legends-arceus/female/",
+                    "webp",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-viii/legends-arceus/shiny/",
+                    "webp",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-viii/legends-arceus/shiny/female/",
+                    "webp",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-viii/legends-arceus/back/",
+                    "webp",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-viii/legends-arceus/back/female/",
+                    "webp",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-viii/legends-arceus/back/shiny/",
+                    "webp",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-viii/legends-arceus/back/shiny/female/",
+                    "webp",
+                ),
+                "icons": {
+                    "front_default": (
+                        "pokemon/versions/generation-viii/legends-arceus/icons/",
+                        "png",
+                    ),
+                    "front_female": (
+                        "pokemon/versions/generation-viii/legends-arceus/icons/female/",
+                        "png",
+                    ),
+                    "front_shiny": (
+                        "pokemon/versions/generation-viii/legends-arceus/icons/shiny/",
+                        "png",
+                    ),
+                    "front_shiny_female": (
+                        "pokemon/versions/generation-viii/legends-arceus/icons/shiny/female/",
+                        "png",
+                    ),
+                },
+            },
+            "sword-shield": {
+                "front_default": (
+                    "pokemon/versions/generation-viii/sword-shield/",
+                    "webp",
+                ),
+                "front_female": (
+                    "pokemon/versions/generation-viii/sword-shield/female/",
+                    "webp",
+                ),
+                "front_shiny": (
+                    "pokemon/versions/generation-viii/sword-shield/shiny/",
+                    "webp",
+                ),
+                "front_shiny_female": (
+                    "pokemon/versions/generation-viii/sword-shield/shiny/female/",
+                    "webp",
+                ),
+                "back_default": (
+                    "pokemon/versions/generation-viii/sword-shield/back/",
+                    "webp",
+                ),
+                "back_female": (
+                    "pokemon/versions/generation-viii/sword-shield/back/female/",
+                    "webp",
+                ),
+                "back_shiny": (
+                    "pokemon/versions/generation-viii/sword-shield/back/shiny/",
+                    "webp",
+                ),
+                "back_shiny_female": (
+                    "pokemon/versions/generation-viii/sword-shield/back/shiny/female/",
+                    "webp",
+                ),
+                "icons": {
+                    "front_default": (
+                        "pokemon/versions/generation-viii/sword-shield/icons/",
+                        "png",
+                    ),
+                    "front_female": (
+                        "pokemon/versions/generation-viii/sword-shield/icons/female/",
+                        "png",
+                    ),
+                },
             },
         },
         "generation-ix": {
@@ -1718,12 +1939,20 @@ def _pokemon_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
 def _pokemon_form_sprite_lookup(info: list[str]) -> Callable[[str, str], str | None]:
     form_identifier = info[2]
     pokemon_id = int(info[3])
-    file_name = f"{pokemon_id}-{form_identifier}" if form_identifier else None
+    is_default = info[5] == "1"
+
+    file_names: list[str] = []
+    if form_identifier:
+        file_names.append(f"{pokemon_id}-{form_identifier}")
+    if is_default or not form_identifier:
+        file_names.append(str(pokemon_id))
 
     def lookup(path: str, extension: str) -> str | None:
-        if file_name is None:
-            return None
-        return file_path_or_none(f"{path}{file_name}.{extension}")
+        for file_name in file_names:
+            sprite = file_path_or_none(f"{path}{file_name}.{extension}")
+            if sprite:
+                return sprite
+        return None
 
     return lookup
 

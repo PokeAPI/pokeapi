@@ -34,14 +34,17 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
 
 ## Setup <a id="setup"></a> &nbsp; [![pyVersion313](https://img.shields.io/badge/python-3.13-blue.svg)](https://www.python.org/downloads/release/python-3137/)
 
-- Download this source code into a working directory:
+- Download this source code into a working directory and initialize the cries submodule:
 
     ```sh
     git clone https://github.com/PokeAPI/pokeapi.git
+    cd pokeapi
+    git submodule update --init data/v2/cries
     ```
 
-    > [!NOTE]
-    > Cloning submodules (such as the 10+ GB sprites repository) is completely optional! The database build system automatically downloads the lightweight sprite manifest when building data. If you wish to clone all submodules locally, you can pass `--recurse-submodules`.
+> [!NOTE]  
+> The `data/v2/cries` submodule (~25 MB) is required to build cry sound URLs.
+> The `sprites` submodule (10+ GB) is **optional**, the database build automatically downloads the lightweight sprite manifest when building data. If you wish to clone all submodules locally, you can pass `--recurse-submodules`.
 
 - Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for Python environment management.
 
@@ -58,8 +61,8 @@ A RESTful API for Pokémon - [pokeapi.co](https://pokeapi.co)
     make pre-commit-install
     ```
 
-    > [!NOTE]
-    > Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before committing and pushing your changes.
+> [!NOTE]
+> Pre-commit hooks are optional but recommended for maintaining code quality and consistency. If you do not want it to automatically run on every commit, you can run it manually with `make pre-commit` before committing and pushing your changes.
 
 - Lint, format, and typecheck your code changes:
 

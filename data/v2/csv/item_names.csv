@@ -608,7 +608,7 @@ item_id,local_language_id,name
 56,3,크리티컬커터
 56,4,要害攻擊
 56,5,Muscle +
-56,6,Angriffplus
+56,6,X-Volltreffer
 56,7,Crítico X
 56,8,Supercolpo
 56,9,Dire Hit
@@ -2056,7 +2056,7 @@ item_id,local_language_id,name
 192,3,교정깁스
 192,4,強制鍛鍊器
 192,5,Bracelet Macho
-192,6,Machoband
+192,6,Machoschiene
 192,7,Brazal Firme
 192,8,Crescicappa
 192,9,Macho Brace
@@ -2155,7 +2155,7 @@ item_id,local_language_id,name
 201,3,순결의부적
 201,4,潔淨之符
 201,5,Rune Purifiante
-201,6,Schutzband
+201,6,Schutzsticker
 201,7,Amuleto
 201,8,Velopuro
 201,9,Cleanse Tag
@@ -2188,7 +2188,7 @@ item_id,local_language_id,name
 204,3,심해의비늘
 204,4,深海鱗片
 204,5,Écaille Océan
-204,6,Abyssplatte
+204,6,Abyssschuppe
 204,7,Escama Marina
 204,8,Squamabissi
 204,9,Deep Sea Scale
@@ -2276,7 +2276,7 @@ item_id,local_language_id,name
 212,3,용의비늘
 212,4,龍之鱗片
 212,5,Écaille Draco
-212,6,Drachenhaut
+212,6,Drachenschuppe
 212,7,Escama Dragón
 212,8,Squama Drago
 212,9,Dragon Scale
@@ -2463,7 +2463,7 @@ item_id,local_language_id,name
 229,3,업그레이드
 229,4,升級資料
 229,5,Améliorator
-229,6,Up-Grade
+229,6,Upgrade
 229,7,Mejora
 229,8,Upgrade
 229,9,Upgrade
@@ -4615,7 +4615,7 @@ item_id,local_language_id,name
 425,3,고라파덕물뿌리개
 425,4,可達鴨噴壺
 425,5,Kwakarrosoir
-425,6,Entonkanne
+425,6,Enton-Kanne
 425,7,Psydugadera
 425,8,Sprayduck
 425,9,Sprayduck
@@ -4645,7 +4645,7 @@ item_id,local_language_id,name
 428,3,룸키
 428,4,房間鑰匙
 428,5,Clé Chambre
-428,6,B-Schlüssel
+428,6,Hotelschlüssel
 428,7,Llave Suite
 428,8,Chiave Suite
 428,9,Suite Key
@@ -4744,7 +4744,7 @@ item_id,local_language_id,name
 437,3,교환권1
 437,4,兌換券１
 437,5,Bon 1
-437,6,Kupon 1
+437,6,Coupon 1
 437,7,Cupón 1
 437,8,Coupon 1
 437,9,Coupon 1
@@ -4755,7 +4755,7 @@ item_id,local_language_id,name
 438,3,교환권2
 438,4,兌換券２
 438,5,Bon 2
-438,6,Kupon 2
+438,6,Coupon 2
 438,7,Cupón 2
 438,8,Coupon 2
 438,9,Coupon 2
@@ -4766,7 +4766,7 @@ item_id,local_language_id,name
 439,3,교환권3
 439,4,兌換券３
 439,5,Bon 3
-439,6,Kupon 3
+439,6,Coupon 3
 439,7,Cupón 3
 439,8,Coupon 3
 439,9,Coupon 3
@@ -5184,7 +5184,7 @@ item_id,local_language_id,name
 477,3,빨간비늘
 477,4,紅色鱗片
 477,5,Écaille Rouge
-477,6,Rote Haut
+477,6,Rote Schuppe
 477,7,Escama Roja
 477,8,Squama Rossa
 477,9,Red Scale
@@ -6585,7 +6585,7 @@ item_id,local_language_id,name
 616,3,딜구슬
 616,4,釋出之玉
 616,5,Offrisphère
-616,6,Transferorb
+616,6,Transfer-Orb
 616,7,Regalosfera
 616,8,Passabilia
 616,9,Pass Orb
@@ -6772,7 +6772,7 @@ item_id,local_language_id,name
 633,3,크리티컬커터2
 633,4,要害攻擊２
 633,5,Muscle 2
-633,6,Angriffplus2
+633,6,X-Volltreffer 2
 633,7,Crítico X 2
 633,8,Supercolpo 2
 633,9,Dire Hit 2
@@ -6981,7 +6981,7 @@ item_id,local_language_id,name
 652,3,스킬콜
 652,4,？？？
 652,5,Appel Talent
-652,6,Fähigk.-Appell
+652,6,Fähigkeiten-Appell
 652,7,Habilitador
 652,8,Chiamabilità
 652,9,Ability Urge
@@ -7025,7 +7025,7 @@ item_id,local_language_id,name
 656,3,크리티컬커터3
 656,4,要害攻擊３
 656,5,Muscle 3
-656,6,Angriffplus3
+656,6,X-Volltreffer 3
 656,7,Crítico X 3
 656,8,Supercolpo 3
 656,9,Dire Hit 3
@@ -7302,7 +7302,7 @@ item_id,local_language_id,name
 685,3,특성캡슐
 685,4,特性膠囊
 685,5,Pilule Talent
-685,6,Fähigk.-Kapsel
+685,6,Fähigkeiten-Kapsel
 685,7,Cáps. Habilidad
 685,8,Capsula abilità
 685,9,Ability Capsule
@@ -8952,7 +8952,7 @@ item_id,local_language_id,name
 883,3,주눅구슬
 883,4,膽怯球
 883,5,Orbe Frousse
-883,6,Zitterorb
+883,6,Zitter-Orb
 883,7,Nerviosfera
 883,8,Fifasfera
 883,9,Adrenaline Orb
@@ -17466,7 +17466,7 @@ item_id,local_language_id,name
 1657,3,특성패치
 1657,4,特性膏藥
 1657,5,Patch Talent
-1657,6,Fähigk.-Pflaster
+1657,6,Fähigkeiten-Pflaster
 1657,7,Parche Habilidad
 1657,8,Cerotto abilità
 1657,9,Ability Patch
@@ -22022,7 +22022,8 @@ item_id,local_language_id,name
 2117,12,瞬发粘糕
 2118,1,まっさらもち
 2118,5,Mochi Renouveau
-2118,9,Fresh Start Mochi
+2118,6,Neuanfangs-Mochi
+2118,9,Fresh-Start Mochi
 2118,11,まっさらもち
 2119,1,アーボのきば
 2119,3,아보의이빨
@@ -23475,7 +23476,7 @@ item_id,local_language_id,name
 2270,3,냐오닉스나이트
 2270,4,超能妙喵進化石
 2270,5,Psiaugonit
-2270,6,Mistigrixite
+2270,6,Psiaugonit
 2270,7,Meowsticita
 2270,8,Meowsticite
 2270,9,Meowsticite

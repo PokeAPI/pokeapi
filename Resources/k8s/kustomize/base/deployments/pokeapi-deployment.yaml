@@ -28,7 +28,8 @@ spec:
           command: ['sh', '-c']
           args:
             - apk add --update git &&
-              git clone --depth=1 --single-branch --branch=master --recurse-submodules --shallow-submodules https://github.com/PokeAPI/pokeapi.git &&
+              git clone --depth=1 --single-branch --branch=master https://github.com/PokeAPI/pokeapi.git &&
+              (cd pokeapi && git submodule update --init data/v2/cries) &&
               mv /code/pokeapi/data/v2/* /tmp/
           workingDir: /code
           volumeMounts:

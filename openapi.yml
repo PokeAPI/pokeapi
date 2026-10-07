@@ -7320,9 +7320,27 @@ components:
           type: integer
         pokemon_species:
           $ref: '#/components/schemas/PokemonSpeciesSummary'
+        varieties:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonDexNumberVariety'
       required:
       - entry_number
       - pokemon_species
+      - varieties
+    PokemonDexNumberVariety:
+      type: object
+      properties:
+        pokemon:
+          $ref: '#/components/schemas/PokemonSummary'
+        order:
+          type:
+          - integer
+          - 'null'
+          maximum: 2147483647
+          minimum: -2147483648
+      required:
+      - pokemon
     PokemonEncounterDetailResponse:
       type: object
       properties:

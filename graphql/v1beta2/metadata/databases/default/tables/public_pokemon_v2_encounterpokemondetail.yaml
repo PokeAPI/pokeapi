@@ -1,0 +1,7 @@
+table:
+  name: pokemon_v2_encounterpokemondetail
+  schema: public
+object_relationships:
+  - name: encounter
+    using:
+      foreign_key_constraint_on: encounter_id

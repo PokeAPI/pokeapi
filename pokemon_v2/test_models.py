@@ -1,11 +1,14 @@
 import csv
 import os
 import re
+from unittest import mock
 
 from django.conf import settings
 from django.test import TestCase
 from typing_extensions import override
 
+from data.v2 import build
+from data.v2.build import POKEMON_SPRITE_CONFIG, _pokemon_form_sprite_lookup
 from pokemon_v2.models import *
 
 
@@ -35,6 +38,61 @@ class EncounterPokemonDetailTestCase(TestCase):
 
             if duplicate_ids:
                 self.fail(f"Duplicate encounter ID(s) found in encounter_pokemon_details.csv: {duplicate_ids}")
+
+
+class EvolutionCSVDataIntegrityTestCase(TestCase):
+    """Test data integrity of new evolution foreign keys and evolution variables."""
+
+    def test_required_and_evolved_pokemon_form_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        forms_path = os.path.join(csv_dir, "pokemon_forms.csv")
+        with open(forms_path, encoding="utf-8") as f:
+            valid_form_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                required_pokemon_form_id = row.get("required_pokemon_form_id", "").strip()
+                evolved_pokemon_form_id = row.get("evolved_pokemon_form_id", "").strip()
+                if required_pokemon_form_id:
+                    self.assertIn(
+                        required_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{required_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+                if evolved_pokemon_form_id:
+                    self.assertIn(
+                        evolved_pokemon_form_id,
+                        valid_form_ids,
+                        f"Row {row['id']}: '{evolved_pokemon_form_id=}' doesn't exist in pokemon_forms.csv",
+                    )
+
+    def test_evolution_triggers_foreign_keys(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        triggers_path = os.path.join(csv_dir, "evolution_triggers.csv")
+        with open(triggers_path, encoding="utf-8") as f:
+            valid_trigger_ids = {row["id"] for row in csv.DictReader(f)}
+
+        evo_path = os.path.join(csv_dir, "pokemon_evolution.csv")
+        with open(evo_path, encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                trigger_id = row.get("evolution_trigger_id", "").strip()
+                if trigger_id:
+                    self.assertIn(
+                        trigger_id,
+                        valid_trigger_ids,
+                        f"Row {row['id']}: evolution_trigger_id '{trigger_id}' doesn't exist in evolution_triggers.csv",
+                    )
+
+    def test_evolution_variables_integrity(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        var_path = os.path.join(csv_dir, "evolution_variables.csv")
+        with open(var_path, encoding="utf-8") as f:
+            var_rows = list(csv.DictReader(f))
+            self.assertTrue(len(var_rows) >= 2, "Expected at least 2 evolution variables (EC, PID)")
+            symbols = {r["symbol"] for r in var_rows}
+            self.assertIn("EC", symbols)
+            self.assertIn("PID", symbols)
 
 
 class CSVResourceNameValidationTestCase(TestCase):
@@ -173,3 +231,38 @@ class CSVResourceNameValidationTestCase(TestCase):
                 self.VALID_IDENTIFIER_PATTERN.match(identifier),
                 f"{identifier} should be invalid but was accepted",
             )
+
+
+class PokemonSpriteConfigTestCase(TestCase):
+    def test_generation_vi_sprite_group_keys_and_paths(self):
+        # keys are version-group names and each group's sprites live in a folder of the
+        # same name (https://github.com/PokeAPI/pokeapi/issues/1684)
+        gen_vi = POKEMON_SPRITE_CONFIG["versions"]["generation-vi"]
+
+        self.assertEqual(set(gen_vi), {"icons", "omega-ruby-alpha-sapphire", "x-y"})
+        for group, sprites in gen_vi.items():
+            for path, _extension in sprites.values():
+                self.assertTrue(
+                    path.startswith(f"pokemon/versions/generation-vi/{group}/"),
+                    f"{group} path {path} is not under the {group}/ sprites folder",
+                )
+
+    # https://github.com/PokeAPI/pokeapi/issues/1687: unown-a's front sprite is stored as
+    # 201.png, not 201-a.png, so default forms must fall back to the bare pokemon id
+    def test_form_sprite_lookup_falls_back_to_pokemon_id_for_default_forms(self):
+        # pokemon_forms.csv columns: id, identifier, form_identifier, pokemon_id, introduced_in, is_default
+        unown_a = ["201", "unown-a", "a", "201", "3", "1"]
+        unown_b = ["10001", "unown-b", "b", "201", "3", "0"]
+        images = {"pokemon/201.png", "pokemon/back/201-a.png", "pokemon/back/201.png"}
+
+        with mock.patch.object(build, "RESOURCE_IMAGES", images):
+            unown_a_lookup = _pokemon_form_sprite_lookup(unown_a)
+            unown_b_lookup = _pokemon_form_sprite_lookup(unown_b)
+
+            self.assertEqual(unown_a_lookup("pokemon/", "png"), build.MEDIA_DIR.format(file_name="pokemon/201.png"))
+            # a form-specific sprite still takes precedence over the fallback
+            self.assertEqual(
+                unown_a_lookup("pokemon/back/", "png"), build.MEDIA_DIR.format(file_name="pokemon/back/201-a.png")
+            )
+            # non-default forms never borrow the base pokemon's sprite
+            self.assertIsNone(unown_b_lookup("pokemon/", "png"))

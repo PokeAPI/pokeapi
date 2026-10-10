@@ -27,6 +27,13 @@ array_relationships:
         table:
           name: pokemon_v2_encounterconditionvaluemap
           schema: public
+  - name: encounterpokemondetails
+    using:
+      foreign_key_constraint_on:
+        column: encounter_id
+        table:
+          name: pokemon_v2_encounterpokemondetail
+          schema: public
 select_permissions:
   - role: anon
     permission:

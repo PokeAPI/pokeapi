@@ -1,6 +1,8 @@
 import json
 from datetime import datetime, timezone
 
+from django.db import connection
+from django.test.utils import CaptureQueriesContext
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -1309,6 +1311,7 @@ class APIData:
         is_legendary=False,
         is_mythical=False,
         order=1,
+        pk=None,
     ):
         generation = generation or cls.setup_generation_data(name="gen for " + name)
 
@@ -1321,6 +1324,7 @@ class APIData:
         pokemon_habitat = pokemon_habitat or cls.setup_pokemon_habitat_data(name="pkm hbtt for " + name)
 
         pokemon_species = PokemonSpecies.objects.create(
+            pk=pk,
             name=name,
             generation=generation,
             evolves_from_species=evolves_from_species,
@@ -1573,10 +1577,11 @@ class APIData:
         return pokemon_item
 
     @classmethod
-    def setup_pokemon_move_data(cls, pokemon, move, version_group, level=0, order=1):
-        move_learn_method = cls.setup_move_learn_method_data(name="mv lrn mthd for pkmn")
+    def setup_pokemon_move_data(cls, pokemon, move, version_group, level=0, order=1, move_learn_method=None, pk=None):
+        move_learn_method = move_learn_method or cls.setup_move_learn_method_data(name="mv lrn mthd for pkmn")
 
         pokemon_move = PokemonMove.objects.create(
+            pk=pk,
             pokemon=pokemon,
             version_group=version_group,
             move=move,
@@ -1628,7 +1633,7 @@ class APIData:
 
         pokemon_sprites = PokemonSprites.objects.create(
             pokemon=pokemon,
-            sprites=json.dumps(sprites | {"other": {"showdown": showdown}}),
+            sprites=sprites | {"other": {"showdown": showdown}},
         )
         pokemon_sprites.save()
 
@@ -1700,8 +1705,8 @@ class APIData:
         needs_overworld_rain=False,
         turn_upside_down=False,
         region=None,
-        base_form=None,
-        evolved_form=None,
+        required_pokemon_form=None,
+        evolved_pokemon_form=None,
         needs_multiplayer=False,
         near_special_rock=False,
         used_move=None,
@@ -1736,8 +1741,8 @@ class APIData:
             needs_overworld_rain=needs_overworld_rain,
             turn_upside_down=turn_upside_down,
             region=region,
-            base_form=base_form,
-            evolved_form=evolved_form,
+            required_pokemon_form=required_pokemon_form,
+            evolved_pokemon_form=evolved_pokemon_form,
             needs_multiplayer=needs_multiplayer,
             near_special_rock=near_special_rock,
             used_move=used_move,
@@ -2684,6 +2689,29 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["pokemon_species"][0]["url"],
             "{}{}/pokemon-species/{}/".format(TEST_HOST, API_V2, pokemon_species.pk),
+        )
+
+    def test_reverse_relation_lists_are_ordered_by_pk(self):
+        # Lists coming straight from a reverse relation have no order_by() of
+        # their own, so they fall back to the manager ordering by pk. The pks
+        # are inserted out of order, since an unordered query returns them in
+        # insertion order and would pass either way.
+        growth_rate = self.setup_growth_rate_data(name="grth rt for ordering")
+        species = [
+            self.setup_pokemon_species_data(
+                pk=pk,
+                growth_rate=growth_rate,
+                name="pkmn spcs for ordering {}".format(pk),
+            )
+            for pk in (30, 10, 20)
+        ]
+
+        response = self.client.get("{}/growth-rate/{}/".format(API_V2, growth_rate.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            [entry["name"] for entry in response.data["pokemon_species"]],
+            [entry.name for entry in sorted(species, key=lambda entry: entry.pk)],
         )
 
     # Location Tests
@@ -4497,9 +4525,9 @@ class APITests(APIData, APITestCase):
             "{}{}/pokemon-form/{}/".format(TEST_HOST, API_V2, pokemon_form.pk),
         )
 
-        sprites_data = json.loads(pokemon_sprites.sprites)
+        sprites_data = pokemon_sprites.sprites
         cries_data = json.loads(pokemon_cries.cries)
-        response_sprites_data = json.loads(response.data["sprites"])
+        response_sprites_data = response.data["sprites"]
         json.loads(response.data["cries"])
 
         # sprite params
@@ -4589,6 +4617,58 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             version_detail["move_learn_method"]["url"],
             "{}{}/move-learn-method/{}/".format(TEST_HOST, API_V2, pokemon_move.move_learn_method.pk),
+        )
+
+    def test_pokemon_moves_version_group_details_are_deterministically_ordered(self):
+        # A pokemon can learn the same move in the same version group more than
+        # once, so these rows tie on every other order_by() field and fall back
+        # to the pk. The pks are inserted out of order on purpose.
+        pokemon_species = self.setup_pokemon_species_data(name="pkmn spcs for mv ordering")
+        pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species, name="pkmn for mv ordering")
+        self.setup_pokemon_sprites_data(pokemon=pokemon)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        move = self.setup_move_data(name="mv for mv ordering")
+        version_group = self.setup_version_group_data(name="ver grp for mv ordering")
+        move_learn_method = self.setup_move_learn_method_data(name="mv lrn mthd for mv ordering")
+
+        for pk, order in ((30, 3), (10, 1), (20, 2)):
+            self.setup_pokemon_move_data(
+                pk=pk,
+                pokemon=pokemon,
+                move=move,
+                version_group=version_group,
+                move_learn_method=move_learn_method,
+                level=5,
+                order=order,
+            )
+
+        response = self.client.get("{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            [detail["order"] for detail in response.data["moves"][0]["version_group_details"]],
+            [1, 2, 3],
+        )
+
+    def test_pokemon_api_female_only_sprites_fallback(self):
+        pokemon_species = self.setup_pokemon_species_data(name="female only pkmn spcs", gender_rate=8)
+        pokemon = self.setup_pokemon_data(pokemon_species=pokemon_species, name="female only pkmn")
+        self.setup_pokemon_form_data(pokemon=pokemon, name="female only pkmn form")
+        self.setup_pokemon_sprites_data(pokemon=pokemon, front_default=True, front_female=False)
+        self.setup_pokemon_cries_data(pokemon, latest=True, legacy=True)
+
+        response = self.client.get("{}/pokemon/{}/".format(API_V2, pokemon.pk), headers={"host": "testserver"})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        response_sprites = response.data["sprites"]
+
+        self.assertIsNotNone(response_sprites["front_default"])
+        self.assertEqual(response_sprites["front_female"], response_sprites["front_default"])
+        self.assertEqual(
+            response_sprites["other"]["showdown"]["front_female"],
+            response_sprites["other"]["showdown"]["front_default"],
         )
 
     def test_pokemon_form_api(self):
@@ -4897,6 +4977,81 @@ class APITests(APIData, APITestCase):
 
         stage_one_second_data = basic_data["evolves_to"][1]
         self.assertEqual(len(stage_one_second_data["evolves_to"]), 1)
+
+    # verifies that building the evolution chain tree issues a constant number of
+    # queries instead of one PokemonEvolution query per non-root species in the chain
+    def test_evolution_chain_api_query_count_does_not_scale_with_chain_size(self):
+        def build_branching_chain(branch_count):
+            evolution_chain = self.setup_evolution_chain_data()
+            basic = self.setup_pokemon_species_data(
+                name=f"bsc for evo chn qc {branch_count}",
+                evolution_chain=evolution_chain,
+            )
+            for i in range(branch_count):
+                branch_species = self.setup_pokemon_species_data(
+                    name=f"brnch {i} for evo chn qc {branch_count}",
+                    evolves_from_species=basic,
+                    evolution_chain=evolution_chain,
+                )
+                self.setup_pokemon_evolution_data(evolved_species=branch_species, min_level=7)
+            return evolution_chain
+
+        small_chain = build_branching_chain(branch_count=1)
+        large_chain = build_branching_chain(branch_count=6)
+
+        with CaptureQueriesContext(connection) as small_queries:
+            small_response = self.client.get("{}/evolution-chain/{}/".format(API_V2, small_chain.pk))
+        with CaptureQueriesContext(connection) as large_queries:
+            large_response = self.client.get("{}/evolution-chain/{}/".format(API_V2, large_chain.pk))
+
+        self.assertEqual(small_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(large_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(large_response.data["chain"]["evolves_to"]), 6)
+
+        # before the fix, each additional branch added its own PokemonEvolution query
+        # (one per non-root species), so 5 extra branches meant 5 extra queries here
+        self.assertEqual(
+            len(large_queries.captured_queries),
+            len(small_queries.captured_queries),
+        )
+
+    def test_evolution_chain_api_single_species_chain_skips_evolution_query(self):
+        evolution_chain = self.setup_evolution_chain_data()
+        self.setup_pokemon_species_data(name="sngl for evo chn", evolution_chain=evolution_chain)
+
+        with CaptureQueriesContext(connection) as queries:
+            response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["chain"]["evolution_details"], [])
+        self.assertFalse(any("pokemon_v2_pokemonevolution" in query["sql"] for query in queries.captured_queries))
+
+    # evolution_details must keep creation (pk) order when a species has many PokemonEvolution
+    # rows, e.g. Milcery -> Alcremie has one row per flavor/decoration combination
+    def test_evolution_chain_api_evolution_details_order_with_many_rows_for_same_species(self):
+        evolution_chain = self.setup_evolution_chain_data()
+        basic = self.setup_pokemon_species_data(
+            name="bsc for evo chn ordr",
+            evolution_chain=evolution_chain,
+        )
+        target = self.setup_pokemon_species_data(
+            name="trgt for evo chn ordr",
+            evolves_from_species=basic,
+            evolution_chain=evolution_chain,
+        )
+
+        expected_min_levels = [30, 10, 50, 20, 40]
+        for min_level in expected_min_levels:
+            self.setup_pokemon_evolution_data(evolved_species=target, min_level=min_level)
+
+        response = self.client.get("{}/evolution-chain/{}/".format(API_V2, evolution_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        target_data = response.data["chain"]["evolves_to"][0]
+        self.assertEqual(
+            [detail["min_level"] for detail in target_data["evolution_details"]],
+            expected_min_levels,
+        )
 
     # Encounter Tests
     def test_encounter_method_api(self):

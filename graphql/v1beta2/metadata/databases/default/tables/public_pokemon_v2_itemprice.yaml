@@ -7,12 +7,12 @@ configuration:
   custom_name: itemprice
   custom_root_fields: {}
 object_relationships:
-  - name: item
-    using:
-      foreign_key_constraint_on: item_id
   - name: currency
     using:
       foreign_key_constraint_on: currency_id
+  - name: item
+    using:
+      foreign_key_constraint_on: item_id
   - name: versiongroup
     using:
       foreign_key_constraint_on: version_group_id

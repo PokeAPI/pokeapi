@@ -62,6 +62,9 @@ openapi-generate: check-uv
 docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d
 
+docker-dev-up:  # (Docker) Build local pokeapi image and create services/volumes/networks
+	docker compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build
+
 docker-migrate:  # (Docker) Run any pending migrations
 	docker compose exec -T app python manage.py migrate ${docker_config}
 
@@ -94,6 +97,14 @@ docker-prod:
 	docker compose -f docker-compose.yml -f docker-compose.override.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 
 docker-setup: docker-up docker-migrate docker-build-db  # (Docker) Start services, prepare the latest DB schema, populate the DB
+
+docker-dump-db:
+	docker compose exec -T db pg_dump -U ash -Fc -N 'hdb_*' pokeapi > pokeapi.pgdump
+
+docker-restore-db:
+	docker compose exec -T db psql -U ash -d postgres -c "DROP DATABASE pokeapi WITH (FORCE);"
+	docker compose exec -T db psql -U ash -d postgres -c "CREATE DATABASE pokeapi;"
+	docker compose exec -T db pg_restore -U ash -d pokeapi < pokeapi.pgdump
 
 format: check-uv   # Format the source code
 	uv run ruff format .
@@ -159,7 +170,7 @@ k8s-delete:  # (k8s) Delete pokeapi namespace
 
 start-graphql-prod:
 	git pull origin master
-	git submodule update --init
+	git submodule update --init data/v2/cries
 	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 	docker compose stop app cache
 
@@ -173,7 +184,7 @@ down-graphql-prod:
 update-graphql-data-prod-old:
 	docker compose ${gql_compose_config} stop
 	git pull origin master
-	git submodule update --remote --merge
+	git submodule update --remote --merge data/v2/cries
 	docker compose ${gql_compose_config_deprecated} up --pull always -d app cache db
 	sync; echo 3 > /proc/sys/vm/drop_caches
 	make docker-migrate
@@ -189,7 +200,7 @@ update-graphql-data-prod-old:
 
 update-graphql-data-prod:
 	git pull origin master
-	git submodule update --remote --merge
+	git submodule update --remote --merge data/v2/cries
 	curl -Ss -L -O https://github.com/PokeAPI/pokeapi/releases/download/master-branch/pokeapi.pgdump
 	docker compose ${gql_compose_config} stop web graphql-engine app cache
 	docker compose ${gql_compose_config} down -v db

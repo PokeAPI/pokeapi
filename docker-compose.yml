@@ -48,7 +48,7 @@ services:
       - ./Resources/nginx/ssl:/ssl:ro
       - graphql_cache:/tmp/cache
   graphql-engine:
-    image: hasura/graphql-engine:v2.49.4
+    image: hasura/graphql-engine:v2.50.2
     user: 1001:1001
     ports:
       - "8080:8080"
@@ -66,6 +66,13 @@ services:
       HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anon
       HASURA_GRAPHQL_ENABLE_TELEMETRY: "false"
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
+    healthcheck:
+      test: ["CMD", "curl", "-k", "http://127.0.0.1:8080/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+      start_period: 30s
+      start_interval: 5s
 
 volumes:
   pg_data:

@@ -4,7 +4,7 @@
     [the PokeAPI Contributors](https://github.com/PokeAPI/pokeapi/graphs/contributors)
 
 - **Where to get help**:
-    [PokeAPI Slack](http://pokeapi.slack.com/).
+    [PokeAPI Discord](https://discord.gg/tTGKJxtb8S).
 
 - **Where to file issues**:
     [https://github.com/PokeAPI/pokeapi/issues](https://github.com/PokeAPI/pokeapi/issues)

@@ -2131,6 +2131,20 @@ def _build_pokemons():
     build_generic((PokemonDexNumber,), "pokemon_dex_numbers.csv", csv_record_to_objects)
 
     def csv_record_to_objects(info):
+        dex_number = PokemonDexNumber.objects.get(
+            pokedex_id=int(info[0]),
+            pokedex_number=int(info[1]),
+        )
+
+        yield PokemonDexNumberVariety(
+            pokemon_dex_number_id=dex_number.id,
+            pokemon_id=int(info[2]),
+            order=int(info[3]),
+        )
+
+    build_generic((PokemonDexNumberVariety,), "pokemon_dex_number_varieties.csv", csv_record_to_objects)
+
+    def csv_record_to_objects(info):
         yield PokemonEggGroup(pokemon_species_id=int(info[0]), egg_group_id=int(info[1]))
 
     build_generic((PokemonEggGroup,), "pokemon_egg_groups.csv", csv_record_to_objects)

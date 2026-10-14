@@ -22,8 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          submodules: recursive
+      - name: Pull cries submodule
+        run: git submodule update --init data/v2/cries
       - name: Start pokeapi (docker)
         run: |
           make docker-dev-up

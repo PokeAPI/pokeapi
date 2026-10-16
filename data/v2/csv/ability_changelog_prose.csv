@@ -7,7 +7,7 @@ ability_changelog_id,local_language_id,effect
 2,9,One Hit KO moves have no effect when used on this Pokemon.
 3,5,N'a pas d'effet en dehors du combat.
 3,6,Hat außerhalb vom Kampf keinen Effekt.
-3,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed. Pokémon that are immune to Electric-type moves can still be paralyzed by this ability. "
+3,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed. Pokémon that are immune to Electric-type moves can still be paralyzed by this ability."
 4,5,"N'absorbe pas les capacités Électrik non-offensives, i.e. Cage Éclair."
 4,6,"Elektro-Attacken die keinen Schaden anrichten, wie Donnerwelle, werden nicht absorbiert."
 4,9,"This Pokemon is immune to damaging Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by one."
@@ -22,7 +22,7 @@ ability_changelog_id,local_language_id,effect
 7,9,This Pokémon cannot be forced out of battle by moves such as Whirlwind. Dragon Tail and Circle Throw still inflict damage against this Pokémon. 
 8,5,N'a pas d'effet en dehors du combat.
 8,6,Hat außerhalb vom Kampf keinen Effekt.
-8,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute. "
+8,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute."
 9,5,N'a pas d'effet si acquis après être entré au combat.
 9,6,"Hat keinen Effekt, wenn die Fähigkeit nach Kampfbeginn erlangt wurde."
 9,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute.  Overworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
@@ -37,16 +37,16 @@ ability_changelog_id,local_language_id,effect
 12,9,"This Pokemon is only damaged by Fire Fang, supereffective moves, indirect damage."
 13,5,N'a pas d'effet en dehors du combat.
 13,6,Hat außerhalb vom Kampf keinen Effekt.
-13,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. "
+13,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment."
 14,5,Ne peut pas influencer les natures des Pokémon rencontrés en interagissant avec eux dans le monde extérieur.
 14,6,Kann das Wesen von Pokémon mit denen in der Spielwelt interagiert wird nicht verändern.
-14,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back bad poison when this Pokémon is badly poisoned. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle, static encounters, or roaming legendaries. "
+14,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back bad poison when this Pokémon is badly poisoned. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle, static encounters, or roaming legendaries."
 15,5,Ne transmet pas le poison grave comme poison régulier.
 15,6,Gibt schwere Vergiftung als normale Vergiftung zurück.
-15,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back badly poisoned as regular poison. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle or roaming legendaries. "
+15,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back badly poisoned as regular poison. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle or roaming legendaries."
 16,5,N'a pas d'effet en dehors du combat.
 16,6,Hat außerhalb vom Kampf keinen Effekt.
-16,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.  Does not redirect Hidden Power. "
+16,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself. Does not redirect Hidden Power."
 17,5,"N'affecte pas les capacités Électrik non-offensives, i.e. Cage Éclair. Augmente la fréquence des revanches dans le monde extérieur si un Pokémon de l'équipe a ce talent."
 17,6,"Betrifft keine Elektro-Attacken die keinen Schaden anrichten, wie Donnerwelle. Erhöht die Anzahl an Trainer-Anrufen wenn irgendein Pokémon im Team diese Fähigkeit hat."
 17,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.  Does not redirect Hidden Power. Overworld: Increases the frequency of Match Call calls on the overworld if any party Pokémon has this ability."
@@ -55,19 +55,19 @@ ability_changelog_id,local_language_id,effect
 18,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.  Does not redirect Hidden Power or Judgement."
 19,5,N'a pas d'effet en dehors du combat.
 19,6,Hat außerhalb vom Kampf keinen Effekt.
-19,9,"This Pokémon cannot be frozen. If a Pokémon is frozen and acquires this ability, it will immediately thaw out; this includes when regaining a lost ability upon leaving battle. "
+19,9,"This Pokémon cannot be frozen. If a Pokémon is frozen and acquires this ability, it will immediately thaw out; this includes when regaining a lost ability upon leaving battle."
 20,5,N'a pas d'effet en dehors du combat.
 20,6,Hat außerhalb vom Kampf keinen Effekt.
-20,9,"While this Pokémon is in battle, opposing Steel-type Pokémon cannot flee or switch out. Pokémon with Run Away can still flee. Pokémon can still switch out with the use of a move or item. "
+20,9,"While this Pokémon is in battle, opposing Steel-type Pokémon cannot flee or switch out. Pokémon with Run Away can still flee. Pokémon can still switch out with the use of a move or item."
 21,5,"Empêche Glas de Soin de soigner le Pokémon, que ce soit en combat ou non."
 21,6,"Hindert Vitalglocke daran, das Pokémon zu heilen, auch außerhalb vom Kampf."
 21,9,"This Pokémon is immune to moves flagged as being sound-based. Prevents Heal Bell from curing the Pokémon, whether or not it is in battle. Uproar still prevents this Pokémon from sleeping. This Pokémon can still receive a Perish Song counter through Baton Pass, and will retain a Perish Song counter if it acquires this ability after Perish Song is used. Howl, Roar of Time, Sonic Boom, and Yawn are not flagged as sound-based."
 22,5,N'a pas d'effet en dehors du combat.
 22,6,Hat außerhalb vom Kampf keinen Effekt.
-22,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP. When this Pokémon enters battle, all participating trainers are notified that it has this ability. "
+22,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP. When this Pokémon enters battle, all participating trainers are notified that it has this ability."
 23,5,N'affecte pas les capacités du Pokémon allié qui ciblent tous les autres Pokémon. La présence de ce talent n'est pas annoncée à son entrée au combat.
 23,6,Betrifft keine Attacken von Teammitgliedern die alle anderen Pokémon als Ziel haben. Diese Fähigkeit wird im Kampf nicht angekündigt.
-23,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect friendly Pokémon's moves that target all other Pokémon, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP. "
+23,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect friendly Pokémon's moves that target all other Pokémon, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP."
 24,5,N'a pas d'effet en dehors du combat.
 24,6,Hat außerhalb vom Kampf keinen Effekt.
 24,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being burned."
@@ -88,10 +88,10 @@ ability_changelog_id,local_language_id,effect
 29,9,"This Pokémon's physical moves do 1.5× as much regular damage, but have 0.8× their usual accuracy. Special moves are unaffected. Moves that do set damage, such as Seismic Toss, have their accuracy affected, but not their damage."
 30,5,N'a pas d'effet en dehors du combat.
 30,6,Hat außerhalb vom Kampf keinen Effekt.
-30,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being infatuated. "
+30,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being infatuated."
 31,5,N'a pas d'effet en dehors du combat.
 31,6,Hat außerhalb vom Kampf keinen Effekt.
-31,9,"This Pokémon's hold item cannot be removed by other Pokémon. Damaging moves that would remove this Pokémon's item can still inflict damage against this Pokémon, e.g. Knock Off. This Pokémon can still use moves that involve the loss of its own item, e.g. Fling or Trick. "
+31,9,"This Pokémon's hold item cannot be removed by other Pokémon. Damaging moves that would remove this Pokémon's item can still inflict damage against this Pokémon, e.g. Knock Off. This Pokémon can still use moves that involve the loss of its own item, e.g. Fling or Trick."
 32,5,Ne prend pas effet pendant le sommeil.
 32,6,Hat keinen Effekt während das Pokémon schläft.
 32,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, it has 1.5× its Attack. This Pokémon is not affected by the usual Attack cut from a burn. This bonus does not count as a stat modifier."
@@ -121,7 +121,7 @@ ability_changelog_id,local_language_id,effect
 40,9,"Moves used by or against this Pokémon never miss. One-hit KO moves are unaffected. Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly. Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through Detect or Protect. Overworld: If the lead Pokémon has this ability, the wild encounter rate is doubled. "
 41,5,Repos fonctionne de manière habituelle sous le soleil intense.
 41,6,Erholung funktioniert normal bei starkem Sonnenlicht.
-41,9,"This Pokémon cannot be given a major status ailment during strong sunlight. This ability does not heal prior status ailments. Rest works as usual during strong sunlight. Yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime. "
+41,9,"This Pokémon cannot be given a major status ailment during strong sunlight. This ability does not heal prior status ailments. Rest works as usual during strong sunlight. Yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime."
 42,5,Dégommage peut être utilisé de manière habituelle.
 42,6,Schleuder kann normal benutzt werden.
 42,9,"In battle, this Pokémon cannot use its held item, nor will the item have any passive effect on the battle, positive or negative. The Speed cut from the Iron Ball and the effort items (the Macho Brace, Power Weight, Power Bracer, Power Belt, Power Lens, Power Band, and Power Anklet) is unaffected. Items that do not directly affect the battle, such as the Exp. Share, the Amulet Coin, or the Soothe Bell, work as usual. All held items work as usual out of battle. Other moves that use the held item, such as Natural Gift and Switcheroo, work as usual."
@@ -133,13 +133,13 @@ ability_changelog_id,local_language_id,effect
 44,9,"When this Pokémon enters battle, it copies a random opponent's ability. This ability cannot copy Forecast, Multitype, or Trace."
 45,5,Peut copier Météo et Calque.
 45,6,Kann Prognose und Erfassen kopieren.
-45,9,"When this Pokémon enters battle, it copies a random opponent's ability. "
+45,9,"When this Pokémon enters battle, it copies a random opponent's ability."
 46,5,Fonctionne uniquement quand associé à Moins.
 46,6,Funktioniert nur wenn es mit Minus kombiniert wird.
-46,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Minus. 
+46,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Minus.
 47,5,Fonctionne uniquement quand associé à Plus.
 47,6,Funktioniert nur wenn es mit Plus kombiniert wird.
-47,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Plus. 
+47,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Plus.
 48,5,Les chances que l'effet s'active sont de 30%.
 48,6,"Die Chance, dass der Effekt eintritt, beträgt 30%."
 48,9,"After each turn, this Pokémon has a 30% of being cured of any major status ailment."

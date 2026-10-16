@@ -19,7 +19,7 @@ ability_changelog_id,local_language_id,effect
 6,9,"This Pokemon is immune to Fire-type moves, as long as it is not frozen. The first time it is hit by a Fire-type move, damage from its Fire-type attacks will be multiplied by 1.5 as long as it remains active and has this Ability. If this Pokemon has a non-volatile status condition, is a Fire type, or has a substitute, Will-O-Wisp will not activate this Ability."
 7,5,N'a pas d'effet en dehors du combat.
 7,6,Hat außerhalb vom Kampf keinen Effekt.
-7,9,This Pokémon cannot be forced out of battle by moves such as Whirlwind. Dragon Tail and Circle Throw still inflict damage against this Pokémon. 
+7,9,This Pokémon cannot be forced out of battle by moves such as Whirlwind. Dragon Tail and Circle Throw still inflict damage against this Pokémon.
 8,5,N'a pas d'effet en dehors du combat.
 8,6,Hat außerhalb vom Kampf keinen Effekt.
 8,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute."

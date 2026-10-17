@@ -4,154 +4,154 @@ ability_changelog_id,local_language_id,effect
 1,9,Has no effect in battle.
 2,5,N'empêche pas les KO réguliers en ayant tous ses PV.
 2,6,Verhindert keine regulären K.O. bei vollen KP.
-2,9,Does not prevent regular KOs from full HP.
+2,9,One Hit KO moves have no effect when used on this Pokemon.
 3,5,N'a pas d'effet en dehors du combat.
 3,6,Hat außerhalb vom Kampf keinen Effekt.
-3,9,Has no overworld effect.
+3,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being paralyzed. Pokémon that are immune to Electric-type moves can still be paralyzed by this ability."
 4,5,"N'absorbe pas les capacités Électrik non-offensives, i.e. Cage Éclair."
 4,6,"Elektro-Attacken die keinen Schaden anrichten, wie Donnerwelle, werden nicht absorbiert."
-4,9,"Does not absorb non-damaging Electric moves, i.e. Thunder Wave."
+4,9,"This Pokemon is immune to damaging Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by one."
 5,5,Se déclenche à chaque coup d'une capacité multi-coups.
 5,6,Löst bei Attacken die mehrmals Treffen bei jedem Treffer aus.
-5,9,Triggers on every hit of multiple-hit moves.
+5,9,"Whenever this Pokémon takes damage from a move, the Pokémon's type changes to match the move. If the Pokémon has two types, both are overridden. The Pokémon must directly take damage; for example, moves blocked by a Substitute will not trigger this ability, nor will moves that deal damage indirectly, such as Spikes. In Pokémon Colosseum and XD: Gale of Darkness, this ability does not take effect on Shadow-type moves."
 6,5,Feu Follet ne déclenche pas ce talent pour un Pokémon immunisé à la brûlure.
 6,6,Irrlicht triggert die Fähigkeit nicht bei Pokémon die immun gegen Verbrennung sind.
-6,9,Will-O-Wisp does not trigger this ability for Pokémon immune to burns.
+6,9,"This Pokemon is immune to Fire-type moves, as long as it is not frozen. The first time it is hit by a Fire-type move, damage from its Fire-type attacks will be multiplied by 1.5 as long as it remains active and has this Ability. If this Pokemon has a non-volatile status condition, is a Fire type, or has a substitute, Will-O-Wisp will not activate this Ability."
 7,5,N'a pas d'effet en dehors du combat.
 7,6,Hat außerhalb vom Kampf keinen Effekt.
-7,9,Has no overworld effect.
+7,9,This Pokémon cannot be forced out of battle by moves such as Whirlwind. Dragon Tail and Circle Throw still inflict damage against this Pokémon.
 8,5,N'a pas d'effet en dehors du combat.
 8,6,Hat außerhalb vom Kampf keinen Effekt.
-8,9,Has no overworld effect.
+8,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute."
 9,5,N'a pas d'effet si acquis après être entré au combat.
 9,6,"Hat keinen Effekt, wenn die Fähigkeit nach Kampfbeginn erlangt wurde."
-9,9,Does not take effect if acquired after entering battle.
+9,9,"When this Pokémon enters battle, the opponent's Attack is lowered by one stage. In a double battle, both opponents are affected. This ability has no effect on an opponent that has a Substitute.  Overworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
 10,5,Affecte les autres Pokémon avec ce talent.
 10,6,Betrifft andere Pokémon mit dieser Fähigkeit.
-10,9,Affects other Pokémon with this ability.
+10,9,"While this Pokémon is in battle, opposing Pokémon cannot flee or switch out. Pokémon with Run Away can still flee."
 11,5,Inflige seulement 1/16 des PV maximum du lanceur en dégâts.
 11,6,Verursacht nur 1/16 der maximalen KP des Angreifers Schaden.
-11,9,Inflicts only 1/16 of the attacker's maximum HP in damage.
+11,9,"Whenever a move makes contact with this Pokémon, the move's user takes 1/16 of its maximum HP in damage."
 12,5,Crocs Feu et les capacités qui infligent des dommages sans type ignorent ce talent peu importe le type.
 12,6,"Feuerzahn und Attacken die typenlosen Schaden verursachen, ignorieren diese Fähigkeit unabhängig von ihrem Typ."
-12,9,Fire Fang and moves that inflict typeless damage ignore this ability regardless of type.
+12,9,"This Pokemon is only damaged by Fire Fang, supereffective moves, indirect damage."
 13,5,N'a pas d'effet en dehors du combat.
 13,6,Hat außerhalb vom Kampf keinen Effekt.
-13,9,Has no overworld effect.
+13,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment."
 14,5,Ne peut pas influencer les natures des Pokémon rencontrés en interagissant avec eux dans le monde extérieur.
 14,6,Kann das Wesen von Pokémon mit denen in der Spielwelt interagiert wird nicht verändern.
-14,9,Cannot influence the natures of Pokémon encountered by interacting with them on the overworld.
+14,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back bad poison when this Pokémon is badly poisoned. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle, static encounters, or roaming legendaries."
 15,5,Ne transmet pas le poison grave comme poison régulier.
 15,6,Gibt schwere Vergiftung als normale Vergiftung zurück.
-15,9,Passes back bad poison as regular poison.
+15,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment. This ability passes back badly poisoned as regular poison. This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from Toxic Spikes or the burn from a Flame Orb. Overworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature. This does not work on Pokémon received outside of battle or roaming legendaries."
 16,5,N'a pas d'effet en dehors du combat.
 16,6,Hat außerhalb vom Kampf keinen Effekt.
-16,9,Has no overworld effect.
+16,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself. Does not redirect Hidden Power."
 17,5,"N'affecte pas les capacités Électrik non-offensives, i.e. Cage Éclair. Augmente la fréquence des revanches dans le monde extérieur si un Pokémon de l'équipe a ce talent."
 17,6,"Betrifft keine Elektro-Attacken die keinen Schaden anrichten, wie Donnerwelle. Erhöht die Anzahl an Trainer-Anrufen wenn irgendein Pokémon im Team diese Fähigkeit hat."
-17,9,"Does not affect non-damaging Electric moves, i.e. Thunder Wave.  Increases the frequency of Match Call calls on the overworld if any party Pokémon has this ability."
+17,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.  Does not redirect Hidden Power. Overworld: Increases the frequency of Match Call calls on the overworld if any party Pokémon has this ability."
 18,5,Redirige les capacités Électrik sans les annuler ou garantir aucun boost d'Attaque Spéciale. Ne redirige pas Puissance Cachée.
 18,6,"Leitet Elektro-Attacken um, ohne ihre Effekte zu deaktivieren oder einen Spezialangriff Bonus zu gewähren. Leitet Kraftreserve nicht um."
-18,9,Redirects Electric moves without negating them or granting any Special Attack boost.  Does not redirect Hidden Power.
+18,9,"If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.  Does not redirect Hidden Power or Judgement."
 19,5,N'a pas d'effet en dehors du combat.
 19,6,Hat außerhalb vom Kampf keinen Effekt.
-19,9,Has no overworld effect.
+19,9,"This Pokémon cannot be frozen. If a Pokémon is frozen and acquires this ability, it will immediately thaw out; this includes when regaining a lost ability upon leaving battle."
 20,5,N'a pas d'effet en dehors du combat.
 20,6,Hat außerhalb vom Kampf keinen Effekt.
-20,9,Has no overworld effect.
+20,9,"While this Pokémon is in battle, opposing Steel-type Pokémon cannot flee or switch out. Pokémon with Run Away can still flee. Pokémon can still switch out with the use of a move or item."
 21,5,"Empêche Glas de Soin de soigner le Pokémon, que ce soit en combat ou non."
 21,6,"Hindert Vitalglocke daran, das Pokémon zu heilen, auch außerhalb vom Kampf."
-21,9,"Prevents Heal Bell from curing the Pokémon, whether or not it is in battle."
+21,9,"This Pokémon is immune to moves flagged as being sound-based. Prevents Heal Bell from curing the Pokémon, whether or not it is in battle. Uproar still prevents this Pokémon from sleeping. This Pokémon can still receive a Perish Song counter through Baton Pass, and will retain a Perish Song counter if it acquires this ability after Perish Song is used. Howl, Roar of Time, Sonic Boom, and Yawn are not flagged as sound-based."
 22,5,N'a pas d'effet en dehors du combat.
 22,6,Hat außerhalb vom Kampf keinen Effekt.
-22,9,Has no overworld effect.
+22,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP. When this Pokémon enters battle, all participating trainers are notified that it has this ability."
 23,5,N'affecte pas les capacités du Pokémon allié qui ciblent tous les autres Pokémon. La présence de ce talent n'est pas annoncée à son entrée au combat.
 23,6,Betrifft keine Attacken von Teammitgliedern die alle anderen Pokémon als Ziel haben. Diese Fähigkeit wird im Kampf nicht angekündigt.
-23,9,Does not affect friendly Pokémon's moves that target all other Pokémon.  This ability's presence is not announced upon entering battle.
+23,9,"Moves targetting this Pokémon use one extra PP. This ability stacks if multiple targets have it. This ability still affects moves that fail or miss. This ability does not affect friendly Pokémon's moves that target all other Pokémon, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field. If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP."
 24,5,N'a pas d'effet en dehors du combat.
 24,6,Hat außerhalb vom Kampf keinen Effekt.
-24,9,Has no overworld effect.
+24,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being burned."
 25,5,N'a pas d'effet en dehors du combat.
 25,6,Hat außerhalb vom Kampf keinen Effekt.
-25,9,Has no overworld effect.
+25,9,This Pokémon cannot have its accuracy lowered. This ability does not prevent other Pokémon's evasion from making this Pokémon's moves less accurate.
 26,5,N'a pas d'effet en dehors du combat.
 26,6,Hat außerhalb vom Kampf keinen Effekt.
-26,9,Has no overworld effect.
+26,9,"This Pokémon's Attack cannot be lowered by other Pokémon. This ability does not prevent any Attack losses other than stat modifiers, such as the Attack cut from a burn."
 27,5,Double le rayon d'action de Coupe dans le monde extérieur si un Pokémon de l'équipe a ce talent.
 27,6,"Verdoppelt den Radius in dem Zerschneider Gras entfernt, wenn irgendein Pokémon im Team diese Fähigkeit hat."
-27,9,Doubles Cut's grass-cutting radius on the overworld if any party Pokémon has this ability.
+27,9,"This Pokémon's Attack cannot be lowered by other Pokémon. This ability does not prevent any Attack losses other than stat modifiers, such as the Attack cut from a burn. Overworld: Doubles Cut's grass-cutting radius on the overworld if any party Pokémon has this ability."
 28,5,N'a aucun effet en combat.
 28,6,Hat im Kampf keinen Effekt.
-28,9,Has no effect in battle.
+28,9,"After each battle, this Pokémon has a 10% chance of picking up an item if it is not already holding one. The items that may be found vary by game, and, since Pokémon Emerald, by the Pokémon's level. This ability is checked after the battle ends, at which point any temporary ability changes have worn off."
 29,5,N'a pas d'effet en dehors du combat.
 29,6,Hat außerhalb vom Kampf keinen Effekt.
-29,9,Has no overworld effect.
+29,9,"This Pokémon's physical moves do 1.5× as much regular damage, but have 0.8× their usual accuracy. Special moves are unaffected. Moves that do set damage, such as Seismic Toss, have their accuracy affected, but not their damage."
 30,5,N'a pas d'effet en dehors du combat.
 30,6,Hat außerhalb vom Kampf keinen Effekt.
-30,9,Has no overworld effect.
+30,9,"Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being infatuated."
 31,5,N'a pas d'effet en dehors du combat.
 31,6,Hat außerhalb vom Kampf keinen Effekt.
-31,9,Has no overworld effect.
+31,9,"This Pokémon's hold item cannot be removed by other Pokémon. Damaging moves that would remove this Pokémon's item can still inflict damage against this Pokémon, e.g. Knock Off. This Pokémon can still use moves that involve the loss of its own item, e.g. Fling or Trick."
 32,5,Ne prend pas effet pendant le sommeil.
 32,6,Hat keinen Effekt während das Pokémon schläft.
-32,9,Does not take effect during sleep.
+32,9,"Whenever this Pokémon is burned, paralyzed, or poisoned, it has 1.5× its Attack. This Pokémon is not affected by the usual Attack cut from a burn. This bonus does not count as a stat modifier."
 33,5,N'a pas d'effet en dehors du combat.
 33,6,Hat außerhalb vom Kampf keinen Effekt.
-33,9,Has no overworld effect.
+33,9,"When this Pokémon has 1/3 or less of its HP remaining, its Bug-type moves inflict 1.5× as much regular damage."
 34,5,Augmente la fréquence des cris entendus dans le monde extérieur si un Pokémon de l'équipe a ce talent.
 34,6,"Erhöht die Anzahl an Rufen die man außerhalb vom Kampf hört, wenn irgendein Pokémon im Team diese Fähigkeit hat."
-34,9,Increases the frequency of cries heard on the overworld if any party Pokémon has this ability.
+34,9,"When this Pokémon has 1/3 or less of its HP remaining, its Bug-type moves inflict 1.5× as much regular damage. Overworld: Increases the frequency of cries heard on the overworld if any party Pokémon has this ability."
 35,5,N'a pas d'effet en dehors du combat.
 35,6,Hat außerhalb vom Kampf keinen Effekt.
-35,9,Has no overworld effect.
+35,9,"While this Pokémon is in battle, opposing Pokémon cannot flee or switch out. Flying-type Pokémon and Pokémon in the air, e.g. due to Levitate are unaffected. Pokémon with Run Away can still flee. Pokémon can still switch out with the use of a move or item."
 36,5,N'a pas d'effet en dehors du combat.
 36,6,Hat außerhalb vom Kampf keinen Effekt.
-36,9,Has no overworld effect.
+36,9,"This Pokémon cannot be asleep. This causes Rest to fail altogether. If a Pokémon is asleep and acquires this ability, it will immediately wake up; this includes when regaining a lost ability upon leaving battle. This ability functions identically to Insomnia in battle."
 37,5,N'a pas d'effet en dehors du combat.
 37,6,Hat außerhalb vom Kampf keinen Effekt.
-37,9,Has no overworld effect.
+37,9,"This Pokémon cannot have its stats lowered by other Pokémon. This ability does not prevent any stat losses other than stat modifiers, such as the Speed cut from paralysis; nor self-inflicted stat drops, such as the Special Attack drop from Overheat; nor opponent-triggered stat boosts, such as the Attack boost from Swagger. This ability functions identically to Clear Body in battle."
 38,5,Le poison continue d'infliger des dégâts au Pokémon en dehors du combat.
 38,6,Vergiftung schadet dem Pokémon außerhalb vom Kampf.
-38,9,Poison still damages the Pokémon outside of battle.
+38,9,"If this Pokémon is poisoned, it will heal for 1/8 of its maximum HP after each turn rather than taking damage. This includes bad poison. This ability does not prevent poison damage while outside of a battle."
 39,5,"La paralysie ne peut pas empêcher le Pokémon de bouger, mais le malus de Vitesse est appliqué. Le poison continue d'infliger des dommages au Pokémon en dehors du combat."
 39,6,"Paralyse hindert das Pokémon nicht daran sich zu bewegen, aber der Initiative Malus bleibt. Vergiftung schadet dem Pokémon außerhalb vom Kampf."
-39,9,"Paralysis cannot prevent the Pokémon from moving, though the Speed cut is unaffected.  Poison still damages the Pokémon outside of battle."
+39,9,"This Pokémon is immune to damage not directly caused by a move. For example, this Pokémon takes no damage from from weather, recoil, status ailments, or Spikes, but it still suffers from the Attack cut when burned, and a Life Orb will still power up this Pokémon's moves without damaging it. Anything that directly depends on such damage will also not happen; for example, Leech Seed will neither hurt this Pokémon nor heal the opponent, and Pokémon with a Jaboca Berry or Rowap Berry will not consume the berry when hit by this Pokémon. The following are unaffected: Struggle, Pain Split (whether used by or against this Pokémon), Belly Drum, Substitute, Curse, moves that knock the user out, and damage from confusion. This Pokémon will neither lose nor regain HP if it drains HP from a Pokémon with Liquid Ooze. If this Pokémon is badly poisoned, the poison counter is still increased each turn; if the Pokémon loses this ability, it will begin taking as much damage as it would be if it had been taking increasing damage each turn. Paralysis cannot prevent the Pokémon from moving, though the Speed cut is unaffected.  Poison still damages the Pokémon outside of battle."
 40,5,"À cause d'un glitch, les capacités affectées par ce talent ont (100 - accuracy)% de chance de transpercer Détection ou Abri."
 40,6,Wegen eines Glitches haben Attacken die von dieser Fähigkeit beeinflusst sind eine (100 - Genauigkeit)% Chance durch den Scanner oder Schutzschild zu treffen.
-40,9,"Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through Detect or Protect."
+40,9,"Moves used by or against this Pokémon never miss. One-hit KO moves are unaffected. Moves affected by this ability can hit Pokémon during the preparation turn of moves like Dig or Fly. Due to a glitch, moves affected by this ability have a (100 - accuracy)% chance to hit through Detect or Protect. Overworld: If the lead Pokémon has this ability, the wild encounter rate is doubled. "
 41,5,Repos fonctionne de manière habituelle sous le soleil intense.
 41,6,Erholung funktioniert normal bei starkem Sonnenlicht.
-41,9,Rest works as usual during strong sunlight.
+41,9,"This Pokémon cannot be given a major status ailment during strong sunlight. This ability does not heal prior status ailments. Rest works as usual during strong sunlight. Yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime."
 42,5,Dégommage peut être utilisé de manière habituelle.
 42,6,Schleuder kann normal benutzt werden.
-42,9,Fling can be used as usual.
+42,9,"In battle, this Pokémon cannot use its held item, nor will the item have any passive effect on the battle, positive or negative. The Speed cut from the Iron Ball and the effort items (the Macho Brace, Power Weight, Power Bracer, Power Belt, Power Lens, Power Band, and Power Anklet) is unaffected. Items that do not directly affect the battle, such as the Exp. Share, the Amulet Coin, or the Soothe Bell, work as usual. All held items work as usual out of battle. Other moves that use the held item, such as Natural Gift and Switcheroo, work as usual."
 43,5,Redirige les capacités Eau sans les annuler ou garantir aucun boost d'Attaque Spéciale. Ne redirige pas Puissance Cachée.
 43,6,Leitet Wasser-Attacken um ohne den Spezialangriff Bonus zu gewähren. Leitet Kraftreserve nicht um.
-43,9,Redirects Water moves without negating them or granting any Special Attack boost.  Does not redirect Hidden Power.
+43,9,"If this Pokemon is not the target of a single-target Water-type move used by another Pokemon, this Pokemon redirects that move to itself. This ability counts hidden power as normal type."
 44,5,Peut copier Don Floral et Garde Mystik.
 44,6,Kann Pflanzengabe und Wunderwache kopieren.
-44,9,Can copy Flower Gift and Wonder Guard.
+44,9,"When this Pokémon enters battle, it copies a random opponent's ability. This ability cannot copy Forecast, Multitype, or Trace."
 45,5,Peut copier Météo et Calque.
 45,6,Kann Prognose und Erfassen kopieren.
-45,9,Can copy Forecast and Trace.
+45,9,"When this Pokémon enters battle, it copies a random opponent's ability."
 46,5,Fonctionne uniquement quand associé à Moins.
 46,6,Funktioniert nur wenn es mit Minus kombiniert wird.
-46,9,Powers up only when paired with Minus.
+46,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Minus.
 47,5,Fonctionne uniquement quand associé à Plus.
 47,6,Funktioniert nur wenn es mit Plus kombiniert wird.
-47,9,Powers up only when paired with Plus.
+47,9,This Pokémon has 1.5× its Special Attack if any friendly Pokémon has Plus.
 48,5,Les chances que l'effet s'active sont de 30%.
 48,6,"Die Chance, dass der Effekt eintritt, beträgt 30%."
-48,9,Chance of taking effect is 30%.
+48,9,"After each turn, this Pokémon has a 30% of being cured of any major status ailment."
 49,5,Triple Pied n'est pas affecté.
 49,6,Dreifachkick wird nicht beeinflusst.
-49,9,Triple Kick is unaffected.
+49,9,"This Pokémon always hits five times with two-to-five-hit moves, such as Icicle Spear."
 50,5,Lutte n'est pas affecté. Coup d’Main et Boul’Armure ne sont pas pris en compte.
 50,6,Verzweifler wird nicht beeinflusst. Rechte Hand und Einigler werden nicht beachtet.
-50,9,Struggle is unaffected.  Helping Hand and Defense Curl are not taken into account.
+50,9,"This Pokémon's moves have 1.5× their power if their base power is 60 or less. This includes moves of variable power, such as Hidden Power and Magnitude, when their power is 60 or less. Struggle is unaffected.  Helping Hand and Defense Curls boost to Rollout are not taken into account."
 51,5,N'a pas d'effet en dehors du combat.
 51,6,Hat außerhalb vom Kampf keinen Effekt.
-51,9,Has no overworld effect.
+51,9,"This Pokémon's moves have 1.3× their accuracy. This ability has no effect on the one-hit KO moves (Fissure, Guillotine, Horn Drill, and Sheer Cold)."
 52,5,Les chances que l'effet s'active sont de 33%.
 52,6,"Die Chance, dass der Effekt eintritt, beträgt 33%."
-52,9,Chance of taking effect is 33%.
+52,9,"After each turn, this Pokémon has a 33% of being cured of any major status ailment."

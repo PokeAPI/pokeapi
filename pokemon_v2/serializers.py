@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import itertools
 from collections import defaultdict
+from functools import cached_property
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -3429,14 +3430,24 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "condition_expression",
         )
 
+    # a ListSerializer reuses one child instance for every row, so these load once per
+    # list of evolution details instead of once per row
+    @cached_property
+    def _all_natures(self) -> list[Nature]:
+        return list(Nature.objects.order_by("id"))
+
+    @cached_property
+    def _all_evolution_variables(self) -> list[EvolutionVariable]:
+        return list(EvolutionVariable.objects.order_by("pk"))
+
     @extend_schema_field(NatureSummarySerializer(many=True))
     def get_allowed_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
         if obj.nature_bitmask is None:
             return None
-        nature_ids = [i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))]
+        nature_ids = {i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))}
         if not nature_ids:
             return None
-        natures = Nature.objects.filter(id__in=nature_ids).order_by("id")
+        natures = [nature for nature in self._all_natures if nature.pk in nature_ids]
         return cast(
             "list[dict[str, Any]]",
             NatureSummarySerializer(natures, many=True, context=self.context).data,
@@ -3446,8 +3457,8 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
-        tokens = obj.condition_expression.split()
-        variables = EvolutionVariable.objects.filter(symbol__in=tokens)
+        tokens = set(obj.condition_expression.split())
+        variables = [variable for variable in self._all_evolution_variables if variable.symbol in tokens]
         return {
             "expression": obj.condition_expression,
             "percentage_chance": obj.percentage_chance,

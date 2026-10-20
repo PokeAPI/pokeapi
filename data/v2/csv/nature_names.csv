@@ -86,7 +86,7 @@ nature_id,local_language_id,name
 8,9,Mild
 8,11,おっとり
 8,12,慢吞吞
-8,14,Afable
+8,14,Cordial
 9,1,おとなしい
 9,3,얌전
 9,4,溫順
@@ -196,7 +196,7 @@ nature_id,local_language_id,name
 18,9,Lax
 18,11,のうてんき
 18,12,乐天
-18,14,Floja
+18,14,Descuidada
 19,1,きまぐれ
 19,3,변덕
 19,4,浮躁
@@ -207,7 +207,7 @@ nature_id,local_language_id,name
 19,9,Quirky
 19,11,きまぐれ
 19,12,浮躁
-19,14,Rara
+19,14,Extravagante
 20,1,むじゃき
 20,3,천진난만
 20,4,天真
@@ -240,7 +240,7 @@ nature_id,local_language_id,name
 22,9,Relaxed
 22,11,のんき
 22,12,悠闲
-22,14,Plácida
+22,14,Relajada
 23,1,れいせい
 23,3,냉정
 23,4,冷靜
@@ -251,7 +251,7 @@ nature_id,local_language_id,name
 23,9,Quiet
 23,11,れいせい
 23,12,冷静
-23,14,Mansa
+23,14,Apacible
 24,1,なまいき
 24,3,건방
 24,4,自大

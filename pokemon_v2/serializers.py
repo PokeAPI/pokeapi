@@ -3632,13 +3632,22 @@ class PokedexDescriptionSerializer(serializers.HyperlinkedModelSerializer[Pokede
         fields = ("description", "language")
 
 
+class PokemonDexNumberVarietySerializer(serializers.ModelSerializer[PokemonDexNumberVariety]):
+    pokemon = PokemonSummarySerializer()
+
+    class Meta:
+        model = PokemonDexNumberVariety
+        fields = ("pokemon", "order")
+
+
 class PokemonDexNumberSerializer(serializers.ModelSerializer[PokemonDexNumber]):
     entry_number = serializers.IntegerField(source="pokedex_number")
     pokemon_species = PokemonSpeciesSummarySerializer()
+    varieties = PokemonDexNumberVarietySerializer(many=True, source="pokemondexnumbervariety")
 
     class Meta:
         model = PokemonDexNumber
-        fields = ("entry_number", "pokemon_species")
+        fields = ("entry_number", "pokemon_species", "varieties")
 
 
 class PokedexDetailSerializer(serializers.ModelSerializer[Pokedex]):

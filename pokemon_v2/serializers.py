@@ -3430,15 +3430,20 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "condition_expression",
         )
 
-    # a ListSerializer reuses one child instance for every row, so these load once per
-    # list of evolution details instead of once per row
+    # a ListSerializer reuses one child instance for every row, so these load and serialize
+    # once per list of evolution details instead of once per row
     @cached_property
-    def _all_natures(self) -> list[Nature]:
-        return list(Nature.objects.order_by("id"))
+    def _serialized_natures(self) -> list[tuple[int, dict[str, Any]]]:
+        natures = Nature.objects.order_by("id")
+        data = NatureSummarySerializer(natures, many=True, context=self.context).data
+        return [(nature.pk, item) for nature, item in zip(natures, data, strict=True)]
 
+    # a list of pairs rather than a dict, since symbols aren't unique across version groups
     @cached_property
-    def _all_evolution_variables(self) -> list[EvolutionVariable]:
-        return list(EvolutionVariable.objects.order_by("pk"))
+    def _serialized_evolution_variables(self) -> list[tuple[str, dict[str, Any]]]:
+        variables = EvolutionVariable.objects.order_by("pk")
+        data = EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data
+        return [(variable.symbol, item) for variable, item in zip(variables, data, strict=True)]
 
     @extend_schema_field(NatureSummarySerializer(many=True))
     def get_allowed_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
@@ -3447,22 +3452,17 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
         nature_ids = {i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))}
         if not nature_ids:
             return None
-        natures = [nature for nature in self._all_natures if nature.pk in nature_ids]
-        return cast(
-            "list[dict[str, Any]]",
-            NatureSummarySerializer(natures, many=True, context=self.context).data,
-        )
+        return [item for nature_id, item in self._serialized_natures if nature_id in nature_ids]
 
     @extend_schema_field(EvolutionConditionExpressionSerializer(allow_null=True))
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
         tokens = set(obj.condition_expression.split())
-        variables = [variable for variable in self._all_evolution_variables if variable.symbol in tokens]
         return {
             "expression": obj.condition_expression,
             "percentage_chance": obj.percentage_chance,
-            "variables": EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data,
+            "variables": [item for symbol, item in self._serialized_evolution_variables if symbol in tokens],
         }
 
 

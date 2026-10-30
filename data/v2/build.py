@@ -1539,7 +1539,7 @@ def _build_pokemons() -> None:
             order=int(info[5]) if info[5] != "" else None,
         )
 
-    build_generic((PokemonMove,), "pokemon_moves.csv", pokemon_moves_from_rows, batch_size=2_000)
+    build_generic((PokemonMove,), "pokemon_moves.csv", pokemon_moves_from_rows, batch_size=4_000)
 
     def pokemon_stats_from_rows(info: list[str]) -> Iterator[PokemonStat]:
         yield PokemonStat(

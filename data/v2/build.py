@@ -13,9 +13,10 @@
 
 import re
 from collections.abc import Iterator
+from contextlib import closing
 from copy import deepcopy
 
-from data.v2.utils.helpers import build_generic, load_data
+from data.v2.utils.helpers import BATCH_SIZE, build_generic, load_data
 from data.v2.utils.media import (
     POKEMON_SPRITE_CONFIG,
     TYPE_SPRITE_GAME_MAP,
@@ -1172,6 +1173,31 @@ def _build_locations() -> None:
     build_generic((LocationAreaName,), "location_area_prose.csv", location_area_names_from_rows)
 
 
+def _link_species_evolutions() -> None:
+    species_ids = set(PokemonSpecies.objects.values_list("pk", flat=True))
+
+    def species_id_from_csv(value: str) -> int:
+        species_id = int(value)
+        if species_id not in species_ids:
+            PokemonSpecies.objects.get(pk=species_id)
+        return species_id
+
+    species_links: list[PokemonSpecies] = []
+    with closing(load_data("pokemon_species.csv")) as data:
+        next(data, None)
+        for info in data:
+            if info[3] == "":
+                continue
+            parent_id = species_id_from_csv(info[3])
+            species_id = species_id_from_csv(info[0])
+            species_links.append(PokemonSpecies(pk=species_id, evolves_from_species_id=parent_id))
+            if len(species_links) >= BATCH_SIZE:
+                PokemonSpecies.objects.bulk_update(species_links, ["evolves_from_species"], batch_size=BATCH_SIZE)
+                species_links = []
+    if species_links:
+        PokemonSpecies.objects.bulk_update(species_links, ["evolves_from_species"], batch_size=BATCH_SIZE)
+
+
 def _build_pokemons() -> None:
     def pokemon_colors_from_rows(info: list[str]) -> Iterator[PokemonColor]:
         yield PokemonColor(id=int(info[0]), name=info[1])
@@ -1229,14 +1255,7 @@ def _build_pokemons() -> None:
     build_generic((PokemonSpecies,), "pokemon_species.csv", pokemon_species_from_rows)
 
     # PokemonSpecies.evolves_from_species can't be set until all the species are created
-    data = load_data("pokemon_species.csv")
-    for index, info in enumerate(data):
-        if index > 0:
-            evolves = PokemonSpecies.objects.get(pk=int(info[3])) if info[3] != "" else None
-            if evolves:
-                species = PokemonSpecies.objects.get(pk=int(info[0]))
-                species.evolves_from_species = evolves
-                species.save()
+    _link_species_evolutions()
 
     def pokemon_species_names_from_rows(info: list[str]) -> Iterator[PokemonSpeciesName]:
         yield PokemonSpeciesName(
@@ -1285,11 +1304,16 @@ def _build_pokemons() -> None:
 
     build_generic((Pokemon,), "pokemon.csv", pokemon_from_rows)
 
+    pokemon_ids = set(Pokemon.objects.values_list("pk", flat=True))
+
     def pokemon_sprites_from_rows(info: list[str]) -> Iterator[PokemonSprites]:
         sprites = resolve_sprite_config(POKEMON_SPRITE_CONFIG, pokemon_sprite_lookup(info))
+        pokemon_id = int(info[0])
+        if pokemon_id not in pokemon_ids:
+            Pokemon.objects.get(pk=pokemon_id)
         yield PokemonSprites(
-            id=int(info[0]),
-            pokemon=Pokemon.objects.get(pk=int(info[0])),
+            id=pokemon_id,
+            pokemon_id=pokemon_id,
             sprites=sprites,
         )
 
@@ -1307,9 +1331,12 @@ def _build_pokemons() -> None:
             "latest": try_cry_names(latest, info, "ogg"),
             "legacy": try_cry_names(legacy, info, "ogg"),
         }
+        pokemon_id = int(info[0])
+        if pokemon_id not in pokemon_ids:
+            Pokemon.objects.get(pk=pokemon_id)
         yield PokemonCries(
-            id=int(info[0]),
-            pokemon=Pokemon.objects.get(pk=int(info[0])),
+            id=pokemon_id,
+            pokemon_id=pokemon_id,
             cries=cries,
         )
 
@@ -1418,10 +1445,19 @@ def _build_pokemons() -> None:
 
     build_generic((PokemonFormSprites,), "pokemon_forms.csv", pokemon_form_sprites_from_rows)
 
+    form_ids = set(PokemonForm.objects.values_list("pk", flat=True))
+    language_ids = set(Language.objects.values_list("pk", flat=True))
+
     def pokemon_form_names_from_rows(info: list[str]) -> Iterator[PokemonFormName]:
+        form_id = int(info[0])
+        if form_id not in form_ids:
+            PokemonForm.objects.get(pk=form_id)
+        language_id = int(info[1])
+        if language_id not in language_ids:
+            Language.objects.get(pk=language_id)
         yield PokemonFormName(
-            pokemon_form=PokemonForm.objects.get(pk=int(info[0])),
-            language=Language.objects.get(pk=int(info[1])),
+            pokemon_form_id=form_id,
+            language_id=language_id,
             name=info[2],
             pokemon_name=info[3],
         )
@@ -1503,7 +1539,7 @@ def _build_pokemons() -> None:
             order=int(info[5]) if info[5] != "" else None,
         )
 
-    build_generic((PokemonMove,), "pokemon_moves.csv", pokemon_moves_from_rows)
+    build_generic((PokemonMove,), "pokemon_moves.csv", pokemon_moves_from_rows, batch_size=2_000)
 
     def pokemon_stats_from_rows(info: list[str]) -> Iterator[PokemonStat]:
         yield PokemonStat(
@@ -1603,7 +1639,7 @@ def _build_encounters() -> None:
             max_level=int(info[6]),
         )
 
-    build_generic((Encounter,), "encounters.csv", encounters_from_rows)
+    build_generic((Encounter,), "encounters.csv", encounters_from_rows, batch_size=2_000)
 
     def encounter_condition_values_from_rows(info: list[str]) -> Iterator[EncounterConditionValue]:
         yield EncounterConditionValue(
@@ -1639,6 +1675,7 @@ def _build_encounters() -> None:
         (EncounterConditionValueMap,),
         "encounter_condition_value_map.csv",
         encounter_condition_value_maps_from_rows,
+        batch_size=2_000,
     )
 
     def encounter_pokemon_details_from_rows(info: list[str]) -> Iterator[EncounterPokemonDetail]:

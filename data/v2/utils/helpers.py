@@ -31,7 +31,12 @@ def build_generic(
     model_classes: tuple[type[Model], ...],
     file_name: str,
     csv_record_to_objects: Callable[[list[str]], Iterable[Model]],
+    *,
+    batch_size: int = BATCH_SIZE,
 ) -> None:
+    if batch_size < 1:
+        raise ValueError("batch_size must be positive")
+
     batches: dict[type[Model], list[Model]] = {}
 
     for model_class in model_classes:
@@ -47,7 +52,7 @@ def build_generic(
                 batch = batches[model_class]
                 batch.append(obj)
 
-                if len(batch) >= BATCH_SIZE:
+                if len(batch) >= batch_size:
                     model_class.objects.bulk_create(batch)
                     batches[model_class] = []
 

@@ -9,6 +9,6 @@ node_modules
 .vscode
 *.env
 Resources/nginx/ssl/*
-!Resources/nginx/ssl/*.sample.*
+!Resources/nginx/ssl/*.prod.*
 .idea*
 data/v2/manifest.json*

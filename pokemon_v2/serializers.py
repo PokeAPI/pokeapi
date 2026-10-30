@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import itertools
 from collections import defaultdict
+from functools import cached_property
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
@@ -3429,29 +3430,36 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "condition_expression",
         )
 
+    @cached_property
+    def _serialized_natures(self) -> list[tuple[int, dict[str, Any]]]:
+        natures = Nature.objects.order_by("id")
+        data = NatureSummarySerializer(natures, many=True, context=self.context).data
+        return [(nature.pk, item) for nature, item in zip(natures, data, strict=True)]
+
+    @cached_property
+    def _serialized_evolution_variables(self) -> list[tuple[str, dict[str, Any]]]:
+        variables = EvolutionVariable.objects.order_by("pk")
+        data = EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data
+        return [(variable.symbol, item) for variable, item in zip(variables, data, strict=True)]
+
     @extend_schema_field(NatureSummarySerializer(many=True))
     def get_allowed_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
         if obj.nature_bitmask is None:
             return None
-        nature_ids = [i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))]
+        nature_ids = {i for i in range(1, 26) if (obj.nature_bitmask & (1 << (i - 1)))}
         if not nature_ids:
             return None
-        natures = Nature.objects.filter(id__in=nature_ids).order_by("id")
-        return cast(
-            "list[dict[str, Any]]",
-            NatureSummarySerializer(natures, many=True, context=self.context).data,
-        )
+        return [item for nature_id, item in self._serialized_natures if nature_id in nature_ids]
 
     @extend_schema_field(EvolutionConditionExpressionSerializer(allow_null=True))
     def get_condition_expression(self, obj: PokemonEvolution) -> dict[str, Any] | None:
         if not obj.condition_expression:
             return None
-        tokens = obj.condition_expression.split()
-        variables = EvolutionVariable.objects.filter(symbol__in=tokens)
+        tokens = set(obj.condition_expression.split())
         return {
             "expression": obj.condition_expression,
             "percentage_chance": obj.percentage_chance,
-            "variables": EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data,
+            "variables": [item for symbol, item in self._serialized_evolution_variables if symbol in tokens],
         }
 
 

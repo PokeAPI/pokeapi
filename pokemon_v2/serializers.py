@@ -3430,15 +3430,12 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
             "condition_expression",
         )
 
-    # a ListSerializer reuses one child instance for every row, so these load and serialize
-    # once per list of evolution details instead of once per row
     @cached_property
     def _serialized_natures(self) -> list[tuple[int, dict[str, Any]]]:
         natures = Nature.objects.order_by("id")
         data = NatureSummarySerializer(natures, many=True, context=self.context).data
         return [(nature.pk, item) for nature, item in zip(natures, data, strict=True)]
 
-    # a list of pairs rather than a dict, since symbols aren't unique across version groups
     @cached_property
     def _serialized_evolution_variables(self) -> list[tuple[str, dict[str, Any]]]:
         variables = EvolutionVariable.objects.order_by("pk")

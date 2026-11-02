@@ -7,8 +7,8 @@ from django.conf import settings
 from django.test import TestCase
 from typing_extensions import override
 
-from data.v2 import build
-from data.v2.build import POKEMON_SPRITE_CONFIG, _pokemon_form_sprite_lookup
+from data.v2.utils import media
+from data.v2.utils.media import POKEMON_SPRITE_CONFIG, pokemon_form_sprite_lookup
 from pokemon_v2.models import *
 
 
@@ -255,14 +255,14 @@ class PokemonSpriteConfigTestCase(TestCase):
         unown_b = ["10001", "unown-b", "b", "201", "3", "0"]
         images = {"pokemon/201.png", "pokemon/back/201-a.png", "pokemon/back/201.png"}
 
-        with mock.patch.object(build, "RESOURCE_IMAGES", images):
-            unown_a_lookup = _pokemon_form_sprite_lookup(unown_a)
-            unown_b_lookup = _pokemon_form_sprite_lookup(unown_b)
+        with mock.patch.object(media, "RESOURCE_IMAGES", images):
+            unown_a_lookup = pokemon_form_sprite_lookup(unown_a)
+            unown_b_lookup = pokemon_form_sprite_lookup(unown_b)
 
-            self.assertEqual(unown_a_lookup("pokemon/", "png"), build.MEDIA_DIR.format(file_name="pokemon/201.png"))
+            self.assertEqual(unown_a_lookup("pokemon/", "png"), media.MEDIA_DIR.format(file_name="pokemon/201.png"))
             # a form-specific sprite still takes precedence over the fallback
             self.assertEqual(
-                unown_a_lookup("pokemon/back/", "png"), build.MEDIA_DIR.format(file_name="pokemon/back/201-a.png")
+                unown_a_lookup("pokemon/back/", "png"), media.MEDIA_DIR.format(file_name="pokemon/back/201-a.png")
             )
             # non-default forms never borrow the base pokemon's sprite
             self.assertIsNone(unown_b_lookup("pokemon/", "png"))

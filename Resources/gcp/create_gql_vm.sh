@@ -49,7 +49,6 @@ fi
 
 curl -L https://raw.githubusercontent.com/hasura/graphql-engine/refs/heads/master/cli/get.sh | bash
 
-cp /root/pokeapi/Resources/nginx/ssl/cache.prod.conf /root/pokeapi/Resources/nginx/ssl/cache.conf
 cp /root/pokeapi/Resources/nginx/ssl/ssl.prod.conf /root/pokeapi/Resources/nginx/ssl/ssl.conf
 
 touch /root/done

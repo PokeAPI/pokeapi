@@ -27,8 +27,6 @@ paths:
       summary: Get API metadata
       tags:
       - utility
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -65,8 +63,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -89,10 +85,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -129,8 +126,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -153,10 +148,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -191,8 +187,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -213,10 +207,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -252,8 +247,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -275,10 +268,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - berries
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -307,16 +301,8 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
-          query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -339,10 +325,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -378,8 +365,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -401,10 +386,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -430,16 +416,8 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
-          query applied on the `name` property. "
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -459,10 +437,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -499,8 +478,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -523,10 +500,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -561,8 +539,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -583,10 +559,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -621,8 +598,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -643,10 +618,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -681,8 +657,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -703,10 +677,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -734,16 +709,8 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
-          query applied on the `name` property. "
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -765,10 +732,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -804,8 +772,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -827,10 +793,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -867,8 +834,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -891,10 +856,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - evolution
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -931,8 +897,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -955,10 +919,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -995,8 +960,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1019,10 +982,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1058,8 +1022,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1081,10 +1043,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1120,8 +1083,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1143,10 +1104,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1181,8 +1143,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1203,10 +1163,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1241,8 +1202,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1263,10 +1222,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1301,8 +1261,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1323,10 +1281,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1360,8 +1319,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1381,10 +1338,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1418,8 +1376,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1439,10 +1395,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - items
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1476,8 +1433,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - utility
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1497,10 +1452,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - utility
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1535,8 +1491,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1557,10 +1511,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1589,8 +1544,6 @@ paths:
           type: integer
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1611,10 +1564,11 @@ paths:
           type: integer
         description: A unique integer value identifying this location area.
         required: true
+        examples:
+          '1':
+            value: 1
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1642,16 +1596,8 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
-          query applied on the `name` property. "
       tags:
       - machines
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1673,10 +1619,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - machines
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1713,8 +1660,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1737,10 +1682,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1776,8 +1722,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1799,10 +1743,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1837,8 +1782,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1859,10 +1802,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1896,8 +1840,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1917,10 +1859,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1954,8 +1897,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -1975,10 +1916,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2012,8 +1954,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2033,10 +1973,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2071,8 +2012,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2093,10 +2032,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - moves
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2131,8 +2071,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2153,10 +2091,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2191,8 +2130,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2213,10 +2150,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2254,8 +2192,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2279,10 +2215,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2321,8 +2258,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2347,10 +2282,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2387,8 +2323,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2411,10 +2345,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2451,8 +2386,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2475,10 +2408,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2513,8 +2447,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2535,10 +2467,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2572,8 +2505,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2593,10 +2524,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2633,8 +2565,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2657,10 +2587,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2697,8 +2628,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2721,10 +2650,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2760,8 +2690,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2783,10 +2711,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - location
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2822,8 +2751,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2845,10 +2772,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2875,16 +2803,8 @@ paths:
         description: The initial index from which to return the results.
         schema:
           type: integer
-      - in: query
-        name: q
-        schema:
-          type: string
-        description: "> Only available locally and not at [pokeapi.co](https://pokeapi.co/docs/v2)\nCase-insensitive
-          query applied on the `name` property. "
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2905,10 +2825,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - contests
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2945,8 +2866,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -2969,10 +2888,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - pokemon
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3006,8 +2926,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3027,10 +2945,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3064,8 +2983,6 @@ paths:
           query applied on the `name` property. "
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3085,10 +3002,11 @@ paths:
           type: string
         description: This parameter can be a string or an integer.
         required: true
+        examples:
+          '1':
+            value: '1'
       tags:
       - games
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3105,13 +3023,14 @@ paths:
       - in: path
         name: pokemon_id
         schema:
-          type: string
-          pattern: ^\d+$
+          type: integer
+        description: A unique integer value identifying the Pokémon.
         required: true
+        examples:
+          '1':
+            value: 1
       tags:
       - encounters
-      security:
-      - {}
       responses:
         '200':
           content:
@@ -3306,7 +3225,9 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         firmness:
-          $ref: '#/components/schemas/BerryFirmnessSummary'
+          oneOf:
+          - $ref: '#/components/schemas/BerryFirmnessSummary'
+          - type: 'null'
         flavors:
           type: array
           items:
@@ -3315,7 +3236,9 @@ components:
         item:
           $ref: '#/components/schemas/ItemSummary'
         natural_gift_type:
-          $ref: '#/components/schemas/TypeSummary'
+          oneOf:
+          - $ref: '#/components/schemas/TypeSummary'
+          - type: 'null'
       required:
       - firmness
       - flavors
@@ -3869,7 +3792,9 @@ components:
           type: integer
           readOnly: true
         baby_trigger_item:
-          $ref: '#/components/schemas/ItemSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ItemSummary'
+          - type: 'null'
         chain:
           allOf:
           - $ref: '#/components/schemas/EvolutionChainLink'
@@ -3892,8 +3817,8 @@ components:
         evolves_to:
           type: array
           items:
-            type: object
-            additionalProperties: {}
+            $ref: '#/components/schemas/EvolutionChainLink'
+          readOnly: true
       required:
       - evolution_details
       - evolves_to
@@ -4376,7 +4301,9 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         fling_effect:
-          $ref: '#/components/schemas/ItemFlingEffectSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ItemFlingEffectSummary'
+          - type: 'null'
         attributes:
           type: array
           items:
@@ -4995,14 +4922,18 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         effect_chance:
-          type: integer
+          type:
+          - integer
+          - 'null'
         effect_entries:
           type: array
           items:
             $ref: '#/components/schemas/MoveEffectEffectText'
           readOnly: true
         type:
-          $ref: '#/components/schemas/TypeSummary'
+          oneOf:
+          - $ref: '#/components/schemas/TypeSummary'
+          - type: 'null'
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
       required:
@@ -5118,7 +5049,9 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         effect_chance:
-          type: integer
+          type:
+          - integer
+          - 'null'
         pp:
           type:
           - integer
@@ -5143,9 +5076,13 @@ components:
           - type: 'null'
           readOnly: true
         contest_type:
-          $ref: '#/components/schemas/ContestTypeSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ContestTypeSummary'
+          - type: 'null'
         contest_effect:
-          $ref: '#/components/schemas/ContestEffectSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ContestEffectSummary'
+          - type: 'null'
         damage_class:
           $ref: '#/components/schemas/MoveDamageClassSummary'
         effect_entries:
@@ -5161,8 +5098,9 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         meta:
-          allOf:
+          oneOf:
           - $ref: '#/components/schemas/MoveMeta'
+          - type: 'null'
           readOnly: true
         names:
           type: array
@@ -5180,7 +5118,9 @@ components:
             $ref: '#/components/schemas/MoveMetaStatChange'
           readOnly: true
         super_contest_effect:
-          $ref: '#/components/schemas/SuperContestEffectSummary'
+          oneOf:
+          - $ref: '#/components/schemas/SuperContestEffectSummary'
+          - type: 'null'
         target:
           $ref: '#/components/schemas/MoveTargetSummary'
         type:
@@ -5641,18 +5581,21 @@ components:
           type: string
           maxLength: 200
         decreased_stat:
-          $ref: '#/components/schemas/StatSummary'
+          oneOf:
+          - $ref: '#/components/schemas/StatSummary'
+          - type: 'null'
         increased_stat:
-          $ref: '#/components/schemas/StatSummary'
+          oneOf:
+          - $ref: '#/components/schemas/StatSummary'
+          - type: 'null'
         likes_flavor:
-          $ref: '#/components/schemas/BerryFlavorSummary'
+          oneOf:
+          - $ref: '#/components/schemas/BerryFlavorSummary'
+          - type: 'null'
         hates_flavor:
-          $ref: '#/components/schemas/BerryFlavorSummary'
-        berries:
-          type: array
-          items:
-            $ref: '#/components/schemas/BerrySummary'
-          readOnly: true
+          oneOf:
+          - $ref: '#/components/schemas/BerryFlavorSummary'
+          - type: 'null'
         pokeathlon_stat_changes:
           type: array
           items:
@@ -5669,7 +5612,6 @@ components:
             $ref: '#/components/schemas/NatureName'
           readOnly: true
       required:
-      - berries
       - decreased_stat
       - hates_flavor
       - id
@@ -5723,17 +5665,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/ability/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/ability/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5746,17 +5690,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/berry-firmness/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/berry-firmness/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5769,17 +5715,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/berry-flavor/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/berry-flavor/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5792,17 +5740,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/berry/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/berry/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5815,17 +5765,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/characteristic/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/characteristic/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5838,17 +5790,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/contest-effect/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/contest-effect/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5861,17 +5815,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/contest-type/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/contest-type/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5884,17 +5840,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/currency/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/currency/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5907,17 +5865,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/egg-group/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/egg-group/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5930,17 +5890,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/encounter-condition/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/encounter-condition/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5953,17 +5915,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/encounter-condition-value/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/encounter-condition-value/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5976,17 +5940,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/encounter-method/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/encounter-method/?offset=0&limit=20
         results:
           type: array
           items:
@@ -5999,17 +5965,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/evolution-chain/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/evolution-chain/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6022,17 +5990,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/evolution-trigger/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/evolution-trigger/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6045,17 +6015,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/evolution-variable/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/evolution-variable/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6068,17 +6040,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/gender/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/gender/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6091,17 +6065,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/generation/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/generation/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6114,17 +6090,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/growth-rate/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/growth-rate/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6137,17 +6115,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/item-attribute/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/item-attribute/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6160,17 +6140,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/item-category/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/item-category/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6183,17 +6165,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/item-fling-effect/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/item-fling-effect/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6206,17 +6190,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/item-pocket/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/item-pocket/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6229,17 +6215,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/item/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/item/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6252,17 +6240,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/language/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/language/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6275,17 +6265,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/location-area/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/location-area/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6298,17 +6290,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/location/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/location/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6321,17 +6315,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/machine/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/machine/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6344,17 +6340,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-battle-style/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-battle-style/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6367,17 +6365,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-damage-class/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-damage-class/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6390,17 +6390,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-learn-method/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-learn-method/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6413,17 +6415,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-ailment/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-ailment/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6436,17 +6440,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-category/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-category/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6459,17 +6465,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6482,17 +6490,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/move-target/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/move-target/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6505,17 +6515,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/nature/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/nature/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6528,17 +6540,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pal-park-area/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pal-park-area/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6551,17 +6565,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokeathlon-stat/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokeathlon-stat/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6574,17 +6590,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokedex/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokedex/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6597,17 +6615,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-color/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-color/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6620,17 +6640,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-form/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-form/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6643,17 +6665,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-habitat/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-habitat/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6666,17 +6690,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-shape/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-shape/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6689,17 +6715,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-species/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon-species/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6712,17 +6740,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/pokemon/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6735,17 +6765,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/region/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/region/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6758,17 +6790,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/stat/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/stat/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6781,17 +6815,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/super-contest-effect/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/super-contest-effect/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6804,17 +6840,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/type/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/type/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6827,17 +6865,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/version-group/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/version-group/?offset=0&limit=20
         results:
           type: array
           items:
@@ -6850,17 +6890,19 @@ components:
       properties:
         count:
           type: integer
-          example: 123
+          example: 100
         next:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=400&limit=100
+          example: https://pokeapi.co/api/v2/version/?offset=40&limit=20
         previous:
-          type: string
-          nullable: true
+          type:
+          - string
+          - 'null'
           format: uri
-          example: http://api.example.org/accounts/?offset=200&limit=100
+          example: https://pokeapi.co/api/v2/version/?offset=0&limit=20
         results:
           type: array
           items:
@@ -7060,7 +7102,9 @@ components:
             $ref: '#/components/schemas/PokemonDexNumber'
           readOnly: true
         region:
-          $ref: '#/components/schemas/RegionSummary'
+          oneOf:
+          - $ref: '#/components/schemas/RegionSummary'
+          - type: 'null'
         version_groups:
           type: array
           items:
@@ -7122,7 +7166,9 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         ability:
-          $ref: '#/components/schemas/AbilitySummary'
+          oneOf:
+          - $ref: '#/components/schemas/AbilitySummary'
+          - type: 'null'
       required:
       - ability
       - slot
@@ -7246,7 +7292,7 @@ components:
         held_items:
           type: array
           items:
-            $ref: '#/components/schemas/PokemonHeldItem'
+            $ref: '#/components/schemas/PokemonHeldItemSummary'
           readOnly: true
         location_area_encounters:
           type: string
@@ -7379,7 +7425,9 @@ components:
         is_default:
           type: boolean
         item:
-          $ref: '#/components/schemas/ItemSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ItemSummary'
+          - type: 'null'
         trigger:
           $ref: '#/components/schemas/EvolutionTriggerSummary'
         gender:
@@ -7387,13 +7435,21 @@ components:
           - integer
           - 'null'
         held_item:
-          $ref: '#/components/schemas/ItemSummary'
+          oneOf:
+          - $ref: '#/components/schemas/ItemSummary'
+          - type: 'null'
         known_move:
-          $ref: '#/components/schemas/MoveSummary'
+          oneOf:
+          - $ref: '#/components/schemas/MoveSummary'
+          - type: 'null'
         known_move_type:
-          $ref: '#/components/schemas/TypeSummary'
+          oneOf:
+          - $ref: '#/components/schemas/TypeSummary'
+          - type: 'null'
         location:
-          $ref: '#/components/schemas/LocationSummary'
+          oneOf:
+          - $ref: '#/components/schemas/LocationSummary'
+          - type: 'null'
         min_level:
           type:
           - integer
@@ -7425,9 +7481,13 @@ components:
         needs_overworld_rain:
           type: boolean
         party_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonSpeciesSummary'
+          - type: 'null'
         party_type:
-          $ref: '#/components/schemas/TypeSummary'
+          oneOf:
+          - $ref: '#/components/schemas/TypeSummary'
+          - type: 'null'
         relative_physical_stats:
           type:
           - integer
@@ -7438,17 +7498,27 @@ components:
           type: string
           maxLength: 10
         trade_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonSpeciesSummary'
+          - type: 'null'
         turn_upside_down:
           type: boolean
         region:
-          $ref: '#/components/schemas/RegionSummary'
+          oneOf:
+          - $ref: '#/components/schemas/RegionSummary'
+          - type: 'null'
         required_pokemon_form:
-          $ref: '#/components/schemas/PokemonFormSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonFormSummary'
+          - type: 'null'
         evolved_pokemon_form:
-          $ref: '#/components/schemas/PokemonFormSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonFormSummary'
+          - type: 'null'
         used_move:
-          $ref: '#/components/schemas/MoveSummary'
+          oneOf:
+          - $ref: '#/components/schemas/MoveSummary'
+          - type: 'null'
         min_move_count:
           type:
           - integer
@@ -7468,7 +7538,9 @@ components:
           maximum: 2147483647
           minimum: -2147483648
         allowed_natures:
-          type: array
+          type:
+          - array
+          - 'null'
           items:
             $ref: '#/components/schemas/NatureSummary'
           readOnly: true
@@ -7596,9 +7668,54 @@ components:
     PokemonFormSprites:
       type: object
       properties:
-        sprites: {}
+        front_default:
+          type:
+          - string
+          - 'null'
+        front_shiny:
+          type:
+          - string
+          - 'null'
+        front_female:
+          type:
+          - string
+          - 'null'
+        front_shiny_female:
+          type:
+          - string
+          - 'null'
+        back_default:
+          type:
+          - string
+          - 'null'
+        back_shiny:
+          type:
+          - string
+          - 'null'
+        back_female:
+          type:
+          - string
+          - 'null'
+        back_shiny_female:
+          type:
+          - string
+          - 'null'
+        other:
+          $ref: '#/components/schemas/PokemonSpritesOther'
+        versions:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties: {}
       required:
-      - sprites
+      - back_default
+      - back_female
+      - back_shiny
+      - back_shiny_female
+      - front_default
+      - front_female
+      - front_shiny
+      - front_shiny_female
     PokemonFormSummary:
       type: object
       properties:
@@ -7617,10 +7734,14 @@ components:
       properties:
         trigger:
           type: string
+        name:
+          type: string
+        url:
+          type: string
+          format: uri
         base_form:
           $ref: '#/components/schemas/PokemonFormSummary'
       required:
-      - base_form
       - trigger
     PokemonFormType:
       type: object
@@ -7706,6 +7827,18 @@ components:
       required:
       - pokemon
       - version_details
+    PokemonHeldItemSummary:
+      type: object
+      properties:
+        item:
+          $ref: '#/components/schemas/ItemSummary'
+        version_details:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonHeldItemVersion'
+      required:
+      - item
+      - version_details
     PokemonHeldItemVersion:
       type: object
       properties:
@@ -7738,7 +7871,9 @@ components:
         version_group:
           $ref: '#/components/schemas/VersionGroupSummary'
         order:
-          type: integer
+          type:
+          - integer
+          - 'null'
       required:
       - level_learned_at
       - move_learn_method
@@ -7775,7 +7910,7 @@ components:
         types:
           type: array
           items:
-            $ref: '#/components/schemas/TypePokemon'
+            $ref: '#/components/schemas/PokemonType'
       required:
       - generation
       - types
@@ -7920,11 +8055,15 @@ components:
         shape:
           $ref: '#/components/schemas/PokemonShapeSummary'
         evolves_from_species:
-          $ref: '#/components/schemas/PokemonSpeciesSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonSpeciesSummary'
+          - type: 'null'
         evolution_chain:
           $ref: '#/components/schemas/EvolutionChainSummary'
         habitat:
-          $ref: '#/components/schemas/PokemonHabitatSummary'
+          oneOf:
+          - $ref: '#/components/schemas/PokemonHabitatSummary'
+          - type: 'null'
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         names:
@@ -8058,8 +8197,162 @@ components:
           type:
           - string
           - 'null'
+        front_shiny:
+          type:
+          - string
+          - 'null'
+        front_female:
+          type:
+          - string
+          - 'null'
+        front_shiny_female:
+          type:
+          - string
+          - 'null'
+        back_default:
+          type:
+          - string
+          - 'null'
+        back_shiny:
+          type:
+          - string
+          - 'null'
+        back_female:
+          type:
+          - string
+          - 'null'
+        back_shiny_female:
+          type:
+          - string
+          - 'null'
+        other:
+          $ref: '#/components/schemas/PokemonSpritesOther'
+        versions:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties: {}
+      required:
+      - back_default
+      - back_female
+      - back_shiny
+      - back_shiny_female
+      - front_default
+      - front_female
+      - front_shiny
+      - front_shiny_female
+    PokemonSpritesOther:
+      type: object
+      properties:
+        dream_world:
+          $ref: '#/components/schemas/PokemonSpritesOtherDreamWorld'
+        home:
+          $ref: '#/components/schemas/PokemonSpritesOtherHome'
+        showdown:
+          $ref: '#/components/schemas/PokemonSpritesOtherShowdown'
+        official-artwork:
+          $ref: '#/components/schemas/PokemonSpritesOtherOfficialArtwork'
+    PokemonSpritesOtherDreamWorld:
+      type: object
+      properties:
+        front_default:
+          type:
+          - string
+          - 'null'
+        front_female:
+          type:
+          - string
+          - 'null'
       required:
       - front_default
+      - front_female
+    PokemonSpritesOtherHome:
+      type: object
+      properties:
+        front_default:
+          type:
+          - string
+          - 'null'
+        front_female:
+          type:
+          - string
+          - 'null'
+        front_shiny:
+          type:
+          - string
+          - 'null'
+        front_shiny_female:
+          type:
+          - string
+          - 'null'
+      required:
+      - front_default
+      - front_female
+      - front_shiny
+      - front_shiny_female
+    PokemonSpritesOtherOfficialArtwork:
+      type: object
+      properties:
+        front_default:
+          type:
+          - string
+          - 'null'
+        front_shiny:
+          type:
+          - string
+          - 'null'
+        versions:
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties: {}
+      required:
+      - front_default
+      - front_shiny
+    PokemonSpritesOtherShowdown:
+      type: object
+      properties:
+        front_default:
+          type:
+          - string
+          - 'null'
+        front_female:
+          type:
+          - string
+          - 'null'
+        front_shiny:
+          type:
+          - string
+          - 'null'
+        front_shiny_female:
+          type:
+          - string
+          - 'null'
+        back_default:
+          type:
+          - string
+          - 'null'
+        back_female:
+          type:
+          - string
+          - 'null'
+        back_shiny:
+          type:
+          - string
+          - 'null'
+        back_shiny_female:
+          type:
+          - string
+          - 'null'
+      required:
+      - back_default
+      - back_female
+      - back_shiny
+      - back_shiny_female
+      - front_default
+      - front_female
+      - front_shiny
+      - front_shiny_female
     PokemonStat:
       type: object
       properties:
@@ -8230,7 +8523,9 @@ components:
             $ref: '#/components/schemas/CharacteristicSummary'
           readOnly: true
         move_damage_class:
-          $ref: '#/components/schemas/MoveDamageClassSummary'
+          oneOf:
+          - $ref: '#/components/schemas/MoveDamageClassSummary'
+          - type: 'null'
         names:
           type: array
           items:
@@ -8342,7 +8637,9 @@ components:
         generation:
           $ref: '#/components/schemas/GenerationSummary'
         move_damage_class:
-          $ref: '#/components/schemas/MoveDamageClassSummary'
+          oneOf:
+          - $ref: '#/components/schemas/MoveDamageClassSummary'
+          - type: 'null'
         names:
           type: array
           items:
@@ -8359,8 +8656,11 @@ components:
             $ref: '#/components/schemas/MoveSummary'
           readOnly: true
         sprites:
-          allOf:
-          - $ref: '#/components/schemas/TypeSprite'
+          type: object
+          additionalProperties:
+            type: object
+            additionalProperties:
+              $ref: '#/components/schemas/TypeGameSprite'
           readOnly: true
       required:
       - damage_relations
@@ -8386,6 +8686,17 @@ components:
       required:
       - game_index
       - generation
+    TypeGameSprite:
+      type: object
+      properties:
+        name_icon:
+          type:
+          - string
+          - 'null'
+        symbol_icon:
+          type:
+          - string
+          - 'null'
     TypeName:
       type: object
       properties:
@@ -8453,12 +8764,6 @@ components:
       - half_damage_to
       - no_damage_from
       - no_damage_to
-    TypeSprite:
-      type: object
-      properties:
-        sprites: {}
-      required:
-      - sprites
     TypeSummary:
       type: object
       properties:
@@ -8647,3 +8952,4 @@ tags:
 - name: utility
 externalDocs:
   url: https://pokeapi.co/docs/v2
+security: []

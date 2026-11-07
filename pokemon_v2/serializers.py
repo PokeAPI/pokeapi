@@ -8,6 +8,7 @@ from functools import cached_property
 from typing import TYPE_CHECKING, Any, ClassVar, Protocol, cast
 
 from django.db.models import Q
+from drf_spectacular.helpers import lazy_serializer
 from drf_spectacular.utils import extend_schema_field  # pyright: ignore[reportUnknownVariableType]
 from rest_framework import serializers
 from rest_framework.reverse import reverse
@@ -211,6 +212,7 @@ __all__: tuple[str, ...] = (
     "PokemonHabitatNameSerializer",
     "PokemonHabitatSummarySerializer",
     "PokemonHeldItemSerializer",
+    "PokemonHeldItemSummarySerializer",
     "PokemonHeldItemVersionSerializer",
     "PokemonMoveSerializer",
     "PokemonMoveVersionGroupSerializer",
@@ -230,6 +232,11 @@ __all__: tuple[str, ...] = (
     "PokemonSpeciesPalParkEncounterSerializer",
     "PokemonSpeciesSummarySerializer",
     "PokemonSpeciesVarietySerializer",
+    "PokemonSpritesOtherDreamWorldSerializer",
+    "PokemonSpritesOtherHomeSerializer",
+    "PokemonSpritesOtherOfficialArtworkSerializer",
+    "PokemonSpritesOtherSerializer",
+    "PokemonSpritesOtherShowdownSerializer",
     "PokemonSpritesSerializer",
     "PokemonStatPastSerializer",
     "PokemonStatSerializer",
@@ -250,11 +257,11 @@ __all__: tuple[str, ...] = (
     "TypeDetailSerializer",
     "TypeEfficacyPastSerializer",
     "TypeGameIndexSerializer",
+    "TypeGameSpriteSerializer",
     "TypeNameSerializer",
     "TypePastRelationshipsSerializer",
     "TypePokemonSerializer",
     "TypeRelationshipsSerializer",
-    "TypeSpriteSerializer",
     "TypeSummarySerializer",
     "VersionDetailSerializer",
     "VersionGroupDetailSerializer",
@@ -1289,7 +1296,7 @@ class StatAffectingNaturesSerializer(serializers.Serializer[Any]):
 
 class StatDetailSerializer(serializers.ModelSerializer[Stat]):
     names = StatNameSerializer(many=True, read_only=True, source="statname")
-    move_damage_class = MoveDamageClassSummarySerializer()
+    move_damage_class = MoveDamageClassSummarySerializer(allow_null=True)
     characteristics = CharacteristicSummarySerializer(many=True, read_only=True, source="characteristic")
     affecting_moves = serializers.SerializerMethodField("get_moves_that_affect")
     affecting_natures = serializers.SerializerMethodField("get_natures_that_affect")
@@ -1555,6 +1562,11 @@ class PokemonHeldItemSerializer(serializers.Serializer[Any]):
     version_details = PokemonHeldItemVersionSerializer(many=True)
 
 
+class PokemonHeldItemSummarySerializer(serializers.Serializer[Any]):
+    item = ItemSummarySerializer()
+    version_details = PokemonHeldItemVersionSerializer(many=True)
+
+
 class ItemMachineSerializer(serializers.ModelSerializer[Machine]):
     machine = MachineSummarySerializer(source="*")
     version_group = VersionGroupSummarySerializer()
@@ -1572,7 +1584,7 @@ class ItemDetailSerializer(serializers.ModelSerializer[Item]):
     flavor_text_entries = ItemFlavorTextSerializer(many=True, read_only=True, source="itemflavortext")
     category = ItemCategorySummarySerializer(source="item_category")
     attributes = serializers.SerializerMethodField("get_item_attributes")
-    fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect")
+    fling_effect = ItemFlingEffectSummarySerializer(source="item_fling_effect", allow_null=True)
     held_by_pokemon = serializers.SerializerMethodField("get_held_by_pokemon")
     baby_trigger_for = serializers.SerializerMethodField("get_baby_trigger_for")
     sprites = serializers.SerializerMethodField("get_item_sprites")
@@ -1682,11 +1694,10 @@ class NaturePokeathlonStatSerializer(serializers.ModelSerializer[NaturePokeathlo
 
 class NatureDetailSerializer(serializers.ModelSerializer[Nature]):
     names = NatureNameSerializer(many=True, read_only=True, source="naturename")
-    decreased_stat = StatSummarySerializer()
-    increased_stat = StatSummarySerializer()
-    likes_flavor = BerryFlavorSummarySerializer()
-    hates_flavor = BerryFlavorSummarySerializer()
-    berries = BerrySummarySerializer(many=True, read_only=True, source="berry")
+    decreased_stat = StatSummarySerializer(allow_null=True)
+    increased_stat = StatSummarySerializer(allow_null=True)
+    likes_flavor = BerryFlavorSummarySerializer(allow_null=True)
+    hates_flavor = BerryFlavorSummarySerializer(allow_null=True)
     pokeathlon_stat_changes = serializers.SerializerMethodField("get_pokeathlon_stats")
     move_battle_style_preferences = NatureBattleStylePreferenceSerializer(
         many=True, read_only=True, source="naturebattlestylepreference"
@@ -1701,7 +1712,6 @@ class NatureDetailSerializer(serializers.ModelSerializer[Nature]):
             "increased_stat",
             "likes_flavor",
             "hates_flavor",
-            "berries",
             "pokeathlon_stat_changes",
             "move_battle_style_preferences",
             "names",
@@ -1786,8 +1796,8 @@ class BerryFlavorMapSerializer(serializers.ModelSerializer[BerryFlavorMap]):
 
 class BerryDetailSerializer(serializers.ModelSerializer[Berry]):
     item = ItemSummarySerializer()
-    natural_gift_type = TypeSummarySerializer()
-    firmness = BerryFirmnessSummarySerializer(source="berry_firmness")
+    natural_gift_type = TypeSummarySerializer(allow_null=True)
+    firmness = BerryFirmnessSummarySerializer(source="berry_firmness", allow_null=True)
     flavors = serializers.SerializerMethodField("get_berry_flavors")
 
     class Meta:
@@ -1875,10 +1885,9 @@ class TypeNameSerializer(serializers.ModelSerializer[TypeName]):
         fields = ("name", "language")
 
 
-class TypeSpriteSerializer(serializers.ModelSerializer[TypeSprites]):
-    class Meta:
-        model = TypeSprites
-        fields = ("sprites",)
+class TypeGameSpriteSerializer(serializers.Serializer[Any]):
+    name_icon = serializers.CharField(allow_null=True, required=False)
+    symbol_icon = serializers.CharField(allow_null=True, required=False)
 
 
 class TypeRelationshipsSerializer(serializers.Serializer[Any]):
@@ -1911,7 +1920,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
     generation = GenerationSummarySerializer()
     names = TypeNameSerializer(many=True, read_only=True, source="typename")
     game_indices = TypeGameIndexSerializer(many=True, read_only=True, source="typegameindex")
-    move_damage_class = MoveDamageClassSummarySerializer()
+    move_damage_class = MoveDamageClassSummarySerializer(allow_null=True)
     damage_relations = serializers.SerializerMethodField("get_type_relationships")
     past_damage_relations = serializers.SerializerMethodField("get_type_past_relationships")
     pokemon = serializers.SerializerMethodField("get_type_pokemon")
@@ -1944,7 +1953,7 @@ class TypeDetailSerializer(serializers.ModelSerializer[Type]):
             "sprites",
         )
 
-    @extend_schema_field(TypeSpriteSerializer)
+    @extend_schema_field(serializers.DictField(child=serializers.DictField(child=TypeGameSpriteSerializer())))
     def get_type_sprites(self, obj: Type) -> dict[str, str | None]:
         sprites_object = TypeSprites.objects.filter(type=obj).first()
         return sprites_object.sprites if sprites_object else {}
@@ -2264,9 +2273,9 @@ class MoveEffectEffectTextSerializer(serializers.ModelSerializer[MoveEffectEffec
 
 class MoveChangeSerializer(serializers.ModelSerializer[MoveChange]):
     version_group = VersionGroupSummarySerializer()
-    type = TypeSummarySerializer()
+    type = TypeSummarySerializer(allow_null=True)
     effect_entries = serializers.SerializerMethodField("get_effects")
-    effect_chance = serializers.IntegerField(source="move_effect_chance")
+    effect_chance = serializers.IntegerField(source="move_effect_chance", allow_null=True)
 
     class Meta:
         model = MoveChange
@@ -2340,16 +2349,16 @@ class MoveDetailSerializer(serializers.ModelSerializer[Move]):
     generation = GenerationSummarySerializer()
     type = TypeSummarySerializer()
     target = MoveTargetSummarySerializer(source="move_target")
-    contest_type = ContestTypeSummarySerializer()
-    contest_effect = ContestEffectSummarySerializer()
+    contest_type = ContestTypeSummarySerializer(allow_null=True)
+    contest_effect = ContestEffectSummarySerializer(allow_null=True)
     damage_class = MoveDamageClassSummarySerializer(source="move_damage_class")
-    meta = MoveMetaSerializer(read_only=True, source="movemeta")
+    meta = MoveMetaSerializer(read_only=True, source="movemeta", allow_null=True)
     names = MoveNameSerializer(many=True, read_only=True, source="movename")
     effect_entries = serializers.SerializerMethodField("get_effect_text")
-    effect_chance = serializers.IntegerField(source="move_effect_chance")
+    effect_chance = serializers.IntegerField(source="move_effect_chance", allow_null=True)
     contest_combos = serializers.SerializerMethodField("get_combos")
     stat_changes = serializers.SerializerMethodField("get_move_stat_change")
-    super_contest_effect = SuperContestEffectSummarySerializer()
+    super_contest_effect = SuperContestEffectSummarySerializer(allow_null=True)
     past_values = MoveChangeSerializer(many=True, read_only=True, source="movechange")
     effect_changes = serializers.SerializerMethodField("get_effect_change_text")
     machines = serializers.SerializerMethodField("get_move_machines")
@@ -2537,10 +2546,61 @@ class PokemonColorDetailSerializer(serializers.ModelSerializer[PokemonColor]):
 ##############################
 
 
-class PokemonFormSpritesSerializer(serializers.ModelSerializer[PokemonFormSprites]):
-    class Meta:
-        model = PokemonFormSprites
-        fields = ("sprites",)
+class PokemonSpritesOtherDreamWorldSerializer(serializers.Serializer[Any]):
+    front_default = serializers.CharField(allow_null=True)
+    front_female = serializers.CharField(allow_null=True)
+
+
+class PokemonSpritesOtherHomeSerializer(serializers.Serializer[Any]):
+    front_default = serializers.CharField(allow_null=True)
+    front_female = serializers.CharField(allow_null=True)
+    front_shiny = serializers.CharField(allow_null=True)
+    front_shiny_female = serializers.CharField(allow_null=True)
+
+
+class PokemonSpritesOtherOfficialArtworkSerializer(serializers.Serializer[Any]):
+    front_default = serializers.CharField(allow_null=True)
+    front_shiny = serializers.CharField(allow_null=True)
+    versions = serializers.DictField(child=serializers.DictField(child=serializers.JSONField()), required=False)
+
+
+class PokemonSpritesOtherShowdownSerializer(serializers.Serializer[Any]):
+    front_default = serializers.CharField(allow_null=True)
+    front_female = serializers.CharField(allow_null=True)
+    front_shiny = serializers.CharField(allow_null=True)
+    front_shiny_female = serializers.CharField(allow_null=True)
+    back_default = serializers.CharField(allow_null=True)
+    back_female = serializers.CharField(allow_null=True)
+    back_shiny = serializers.CharField(allow_null=True)
+    back_shiny_female = serializers.CharField(allow_null=True)
+
+
+class PokemonSpritesOtherSerializer(serializers.Serializer[Any]):
+    dream_world = PokemonSpritesOtherDreamWorldSerializer(required=False)
+    home = PokemonSpritesOtherHomeSerializer(required=False)
+    showdown = PokemonSpritesOtherShowdownSerializer(required=False)
+
+
+PokemonSpritesOtherSerializer._declared_fields["official-artwork"] = PokemonSpritesOtherOfficialArtworkSerializer(
+    required=False
+)
+
+
+class PokemonSpritesSerializer(serializers.Serializer[Any]):
+    front_default = serializers.CharField(allow_null=True)
+    front_shiny = serializers.CharField(allow_null=True)
+    front_female = serializers.CharField(allow_null=True)
+    front_shiny_female = serializers.CharField(allow_null=True)
+    back_default = serializers.CharField(allow_null=True)
+    back_shiny = serializers.CharField(allow_null=True)
+    back_female = serializers.CharField(allow_null=True)
+    back_shiny_female = serializers.CharField(allow_null=True)
+    other = PokemonSpritesOtherSerializer(required=False)
+    versions = serializers.DictField(child=serializers.DictField(child=serializers.JSONField()), required=False)
+
+
+class PokemonFormSpritesSerializer(PokemonSpritesSerializer):
+    pass
 
 
 class PokemonFormConditionSerializer(serializers.ModelSerializer[PokemonFormCondition]):
@@ -2581,7 +2641,9 @@ class PokemonTypeSerializer(serializers.ModelSerializer[PokemonType]):
 
 class PokemonFormTriggerConditionSerializer(serializers.Serializer[Any]):
     trigger = serializers.CharField()
-    base_form = PokemonFormSummarySerializer()
+    name = serializers.CharField(required=False)
+    url = serializers.URLField(required=False)
+    base_form = PokemonFormSummarySerializer(required=False)
 
 
 class PokemonShapeNameSerializer(serializers.ModelSerializer[PokemonShapeName]):
@@ -2833,10 +2895,6 @@ class PokemonAbilitySerializer(serializers.ModelSerializer[PokemonAbility]):
         fields = ("is_hidden", "slot", "ability")
 
 
-class PokemonSpritesSerializer(serializers.Serializer[Any]):
-    front_default = serializers.CharField(allow_null=True)
-
-
 class PokemonCriesSerializer(serializers.Serializer[Any]):
     latest = serializers.CharField(allow_null=True)
     legacy = serializers.CharField(allow_null=True)
@@ -2846,7 +2904,7 @@ class PokemonMoveVersionGroupSerializer(serializers.Serializer[Any]):
     level_learned_at = serializers.IntegerField()
     move_learn_method = MoveLearnMethodSummarySerializer()
     version_group = VersionGroupSummarySerializer()
-    order = serializers.IntegerField(required=False)
+    order = serializers.IntegerField(allow_null=True, required=False)
 
 
 class PokemonMoveSerializer(serializers.Serializer[Any]):
@@ -2855,7 +2913,7 @@ class PokemonMoveSerializer(serializers.Serializer[Any]):
 
 
 class PokemonAbilityPastSerializer(serializers.ModelSerializer[PokemonAbilityPast]):
-    ability = AbilitySummarySerializer()
+    ability = AbilitySummarySerializer(allow_null=True)
 
     class Meta:
         model = PokemonAbilityPast
@@ -2882,7 +2940,7 @@ class PokemonPastStatSerializer(serializers.Serializer[Any]):
 
 class PokemonPastTypeSerializer(serializers.Serializer[Any]):
     generation = GenerationSummarySerializer()
-    types = TypePokemonSerializer(many=True)
+    types = PokemonTypeSerializer(many=True)
 
 
 class PokemonSpeciesNameSerializer(serializers.ModelSerializer[PokemonSpeciesName]):
@@ -3046,7 +3104,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
 
         return list(moves_grouped.values())
 
-    @extend_schema_field(PokemonHeldItemSerializer(many=True))
+    @extend_schema_field(PokemonHeldItemSummarySerializer(many=True))
     def get_pokemon_held_items(self, obj: Pokemon) -> list[dict[str, Any]]:
         pokemon_items = (
             PokemonItem.objects.filter(pokemon=obj, item__isnull=False)
@@ -3285,9 +3343,9 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
     generation = GenerationSummarySerializer()
     growth_rate = GrowthRateSummarySerializer()
     color = PokemonColorSummarySerializer(source="pokemon_color")
-    habitat = PokemonHabitatSummarySerializer(source="pokemon_habitat")
+    habitat = PokemonHabitatSummarySerializer(source="pokemon_habitat", allow_null=True)
     shape = PokemonShapeSummarySerializer(source="pokemon_shape")
-    evolves_from_species = PokemonSpeciesSummarySerializer()
+    evolves_from_species = PokemonSpeciesSummarySerializer(allow_null=True)
     varieties = serializers.SerializerMethodField("get_pokemon_varieties")
     evolution_chain = EvolutionChainSummarySerializer()
     pal_park_encounters = serializers.SerializerMethodField("get_encounters")
@@ -3378,19 +3436,19 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
 
 class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
     version_group = VersionGroupSummarySerializer()
-    item = ItemSummarySerializer(source="evolution_item")
-    held_item = ItemSummarySerializer()
-    known_move = MoveSummarySerializer()
-    known_move_type = TypeSummarySerializer()
-    party_species = PokemonSpeciesSummarySerializer()
-    party_type = TypeSummarySerializer()
-    trade_species = PokemonSpeciesSummarySerializer()
-    location = LocationSummarySerializer()
+    item = ItemSummarySerializer(source="evolution_item", allow_null=True)
+    held_item = ItemSummarySerializer(allow_null=True)
+    known_move = MoveSummarySerializer(allow_null=True)
+    known_move_type = TypeSummarySerializer(allow_null=True)
+    party_species = PokemonSpeciesSummarySerializer(allow_null=True)
+    party_type = TypeSummarySerializer(allow_null=True)
+    trade_species = PokemonSpeciesSummarySerializer(allow_null=True)
+    location = LocationSummarySerializer(allow_null=True)
     trigger = EvolutionTriggerSummarySerializer(source="evolution_trigger")
-    region = RegionSummarySerializer()
-    required_pokemon_form = PokemonFormSummarySerializer()
-    evolved_pokemon_form = PokemonFormSummarySerializer()
-    used_move = MoveSummarySerializer()
+    region = RegionSummarySerializer(allow_null=True)
+    required_pokemon_form = PokemonFormSummarySerializer(allow_null=True)
+    evolved_pokemon_form = PokemonFormSummarySerializer(allow_null=True)
+    used_move = MoveSummarySerializer(allow_null=True)
     allowed_natures = serializers.SerializerMethodField("get_allowed_natures")
     condition_expression = serializers.SerializerMethodField("get_condition_expression")
 
@@ -3442,7 +3500,7 @@ class PokemonEvolutionSerializer(serializers.ModelSerializer[PokemonEvolution]):
         data = EvolutionVariableSummarySerializer(variables, many=True, context=self.context).data
         return [(variable.symbol, item) for variable, item in zip(variables, data, strict=True)]
 
-    @extend_schema_field(NatureSummarySerializer(many=True))
+    @extend_schema_field(NatureSummarySerializer(many=True, allow_null=True))
     def get_allowed_natures(self, obj: PokemonEvolution) -> list[dict[str, Any]] | None:
         if obj.nature_bitmask is None:
             return None
@@ -3467,11 +3525,15 @@ class EvolutionChainLinkSerializer(serializers.Serializer[Any]):
     is_baby = serializers.BooleanField()
     species = PokemonSpeciesSummarySerializer()
     evolution_details = PokemonEvolutionSerializer(many=True)
-    evolves_to = serializers.ListField(child=serializers.DictField())
+    evolves_to = serializers.SerializerMethodField()
+
+    @extend_schema_field(lazy_serializer("pokemon_v2.serializers.EvolutionChainLinkSerializer")(many=True))  # pyright: ignore[reportArgumentType]
+    def get_evolves_to(self, obj: dict[str, Any]) -> list[dict[str, Any]]:
+        return obj["evolves_to"]
 
 
 class EvolutionChainDetailSerializer(serializers.ModelSerializer[EvolutionChain]):
-    baby_trigger_item = ItemSummarySerializer()
+    baby_trigger_item = ItemSummarySerializer(allow_null=True)
     chain = serializers.SerializerMethodField("build_chain")
 
     POKEMON_EVOLUTION_FK_FIELDS: ClassVar[list[str]] = [
@@ -3650,7 +3712,7 @@ class PokemonDexNumberSerializer(serializers.ModelSerializer[PokemonDexNumber]):
 
 
 class PokedexDetailSerializer(serializers.ModelSerializer[Pokedex]):
-    region = RegionSummarySerializer()
+    region = RegionSummarySerializer(allow_null=True)
     names = PokedexNameSerializer(many=True, read_only=True, source="pokedexname")
     descriptions = PokedexDescriptionSerializer(many=True, read_only=True, source="pokedexdescription")
     pokemon_entries = serializers.SerializerMethodField("get_pokedex_entries")

@@ -2,8 +2,9 @@
 # Production settings
 import os
 import textwrap
+from collections.abc import Callable
 from pathlib import Path
-from typing import TypedDict
+from typing import Any, TypedDict
 
 
 class DatabaseSettings(TypedDict, total=False):
@@ -40,7 +41,7 @@ class TemplateSettings(TypedDict, total=False):
 class SpectacularSettings(TypedDict, total=False):
     TITLE: str
     DESCRIPTION: str
-    SORT_OPERATIONS: bool
+    SORT_OPERATIONS: bool | Callable[..., Any]
     SERVERS: list[dict[str, str]]
     EXTERNAL_DOCS: dict[str, str]
     VERSION: str
@@ -49,6 +50,7 @@ class SpectacularSettings(TypedDict, total=False):
     OAS_VERSION: str
     COMPONENT_SPLIT_REQUEST: bool
     TAGS: list[dict[str, str | dict[str, str]]]
+    POSTPROCESSING_HOOKS: list[str]
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -172,6 +174,35 @@ TEMPLATES: list[TemplateSettings] = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
+
+def postprocesss_openapi_schema(result: dict[str, Any], generator: object, **kwargs: object) -> dict[str, Any]:
+    # root-level security marking all endpoints as public
+    result["security"] = []
+
+    page_size = REST_FRAMEWORK.get("PAGE_SIZE")
+    schemas = result.get("components", {}).get("schemas", {})
+    paths: dict[str, dict[str, Any]] = result.get("paths", {})
+    for path, path_item in paths.items():
+        for operation in path_item.values():
+            if isinstance(operation, dict) and operation.get("security") in ([{}], []):  # pyright: ignore[reportUnknownMemberType]
+                operation.pop("security", None)  # pyright: ignore[reportUnknownMemberType]
+
+        if page_size is None:
+            continue
+        response = path_item.get("get", {}).get("responses", {}).get("200", {})
+        schema = response.get("content", {}).get("application/json", {}).get("schema", {})
+        reference = schema.get("$ref", "")
+        if reference.startswith("#/components/schemas/"):
+            schema = schemas.get(reference.rsplit("/", 1)[-1], {})
+        properties = schema.get("properties", {})
+        if not {"count", "results", "next", "previous"}.issubset(properties):
+            continue
+        # Examples represent links from the second page.
+        for field, offset in (("next", 2 * page_size), ("previous", 0)):
+            properties[field]["example"] = f"https://pokeapi.co{path}?offset={offset}&limit={page_size}"
+    return result
+
+
 SPECTACULAR_SETTINGS: SpectacularSettings = {
     "TITLE": "PokéAPI",
     "DESCRIPTION": textwrap.dedent(
@@ -201,6 +232,9 @@ SPECTACULAR_SETTINGS: SpectacularSettings = {
     "AUTHENTICATION_WHITELIST": [],
     "OAS_VERSION": "3.1.0",
     "COMPONENT_SPLIT_REQUEST": True,
+    "POSTPROCESSING_HOOKS": [
+        "config.settings.postprocesss_openapi_schema",
+    ],
     "TAGS": [
         {
             "name": "pokemon",

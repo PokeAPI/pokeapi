@@ -12,11 +12,13 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import (
+    OpenApiExample,
     OpenApiParameter,
     extend_schema,  # pyright: ignore[reportUnknownVariableType]
     extend_schema_view,  # pyright: ignore[reportUnknownVariableType]
 )
 from rest_framework import serializers, viewsets
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from typing_extensions import override
@@ -68,6 +70,7 @@ __all__: tuple[str, ...] = (
     "NatureResource",
     "PalParkAreaResource",
     "PokeapiCommonViewset",
+    "PokeapiLimitOffsetPagination",
     "PokeapiMetaResponseSerializer",
     "PokeapiMetaView",
     "PokeathlonStatResource",
@@ -96,11 +99,26 @@ __all__: tuple[str, ...] = (
 ###########################
 
 
+# DRF hardcodes for OpenAPI 3.0 schema, override to be 3.1.0 compliant
+class PokeapiLimitOffsetPagination(LimitOffsetPagination):
+    @override
+    def get_paginated_response_schema(self, schema: dict[str, Any]) -> dict[str, Any]:
+        response_schema = super().get_paginated_response_schema(schema)
+        properties = response_schema["properties"]
+        properties["count"]["example"] = 100
+        for field in ("next", "previous"):
+            properties[field].pop("nullable", None)
+            properties[field].pop("example", None)
+            properties[field]["type"] = ["string", "null"]
+        return response_schema
+
+
 class ListOrDetailSerialRelation(viewsets.GenericViewSet[Any]):
     """
     Mixin to allow association with separate serializers for list or detail view.
     """
 
+    pagination_class = PokeapiLimitOffsetPagination
     list_serializer_class: type[serializers.BaseSerializer[Any]] | None = None
 
     @override
@@ -128,7 +146,7 @@ class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
         queryset = super().get_queryset()
         filter_q = self.request.GET.get("q", "")
 
-        if filter_q:
+        if filter_q and any(field.name == "name" for field in queryset.model._meta.fields):
             queryset = queryset.filter(Q(name__icontains=filter_q))
 
         return queryset
@@ -164,12 +182,24 @@ q_query_string_parameter = OpenApiParameter(
     type=OpenApiTypes.STR,
 )
 
+exclude_q_query_string_parameter = OpenApiParameter(
+    name="q",
+    location=OpenApiParameter.QUERY,
+    exclude=True,
+)
+
 retrieve_path_parameter = OpenApiParameter(
     name="id",
     description="This parameter can be a string or an integer.",
     location=OpenApiParameter.PATH,
     type=OpenApiTypes.STR,
     required=True,
+    examples=[
+        OpenApiExample(
+            "1",
+            value="1",
+        ),
+    ],
 )
 
 
@@ -258,6 +288,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List characteristics",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
@@ -274,6 +305,7 @@ class CharacteristicResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List contest effects",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class ContestEffectResource(PokeapiCommonViewset):
@@ -370,6 +402,7 @@ class EncounterMethodResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List evolution chains",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -594,7 +627,21 @@ class LocationResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List location areas",
-    )
+    ),
+    retrieve=extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="A unique integer value identifying this location area.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.INT,
+                required=True,
+                examples=[
+                    OpenApiExample("1", value=1),
+                ],
+            )
+        ]
+    ),
 )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet[LocationArea]):
     queryset = LocationArea.objects.all()
@@ -610,6 +657,7 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
 @extend_schema_view(
     list=extend_schema(
         summary="List machines",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class MachineResource(PokeapiCommonViewset):
@@ -930,6 +978,7 @@ class StatResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List super contest effects",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class SuperContestEffectResource(PokeapiCommonViewset):
@@ -1014,6 +1063,18 @@ class PokemonLocationAreaEncounterSerializer(serializers.Serializer[Any]):
     description="Handles Pokemon Encounters as a sub-resource.",
     summary="Get pokemon encounter",
     tags=["encounters"],
+    parameters=[
+        OpenApiParameter(
+            name="pokemon_id",
+            description="A unique integer value identifying the Pokémon.",
+            location=OpenApiParameter.PATH,
+            type=OpenApiTypes.INT,
+            required=True,
+            examples=[
+                OpenApiExample("1", value=1),
+            ],
+        )
+    ],
     responses={"200": PokemonEncounterResponseSerializer(many=True)},
 )
 class PokemonEncounterView(APIView):

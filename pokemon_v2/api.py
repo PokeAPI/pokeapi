@@ -105,6 +105,12 @@ class PokeapiLimitOffsetPagination(LimitOffsetPagination):
     def get_paginated_response_schema(self, schema: dict[str, Any]) -> dict[str, Any]:
         response_schema = super().get_paginated_response_schema(schema)
         properties = response_schema["properties"]
+        properties["count"]["description"] = "The total number of resources available from this API."
+        properties["next"]["description"] = "The URL for the next page in the list, or null if there is no next page."
+        properties["previous"]["description"] = (
+            "The URL for the previous page in the list, or null if there is no previous page."
+        )
+        properties["results"]["description"] = "A list of API resources on this page."
         properties["count"]["example"] = 100
         for field in ("next", "previous"):
             properties[field].pop("nullable", None)
@@ -1036,27 +1042,39 @@ class VersionGroupResource(PokeapiCommonViewset):
 
 
 class PokemonEncounterDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    chance = serializers.IntegerField()
-    condition_values = EncounterConditionValueSummarySerializer(many=True)
-    max_level = serializers.IntegerField()
-    method = EncounterMethodSummarySerializer()
-    min_level = serializers.IntegerField()
+    chance = serializers.IntegerField(help_text="Percent chance that this encounter will occur.")
+    condition_values = EncounterConditionValueSummarySerializer(
+        many=True, help_text="A list of condition values that must be in effect for this encounter to occur."
+    )
+    max_level = serializers.IntegerField(help_text="The highest level the Pokémon could be encountered at.")
+    method = EncounterMethodSummarySerializer(help_text="The method by which this encounter happens.")
+    min_level = serializers.IntegerField(help_text="The lowest level the Pokémon could be encountered at.")
 
 
 class PokemonEncounterVersionDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    version = VersionSummarySerializer()
-    max_chance = serializers.IntegerField()
-    encounter_details = PokemonEncounterDetailResponseSerializer(many=True)
+    version = VersionSummarySerializer(help_text="The game version this encounter happens in.")
+    max_chance = serializers.IntegerField(help_text="The total percentage of all encounter potential.")
+    encounter_details = PokemonEncounterDetailResponseSerializer(
+        many=True, help_text="A list of encounters and their specifics."
+    )
 
 
 class PokemonEncounterResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    location_area = LocationAreaSummarySerializer()
-    version_details = PokemonEncounterVersionDetailResponseSerializer(many=True)
+    location_area = LocationAreaSummarySerializer(
+        help_text="The location area the referenced Pokémon can be encountered in."
+    )
+    version_details = PokemonEncounterVersionDetailResponseSerializer(
+        many=True, help_text="A list of versions and encounters with the referenced Pokémon that might happen."
+    )
 
 
 class PokemonLocationAreaEncounterSerializer(serializers.Serializer[Any]):
-    location_area = LocationAreaSummarySerializer()
-    version_details = LocationAreaPokemonEncounterVersionSerializer(many=True)
+    location_area = LocationAreaSummarySerializer(
+        help_text="The location area the referenced Pokémon can be encountered in."
+    )
+    version_details = LocationAreaPokemonEncounterVersionSerializer(
+        many=True, help_text="A list of versions and encounters with the referenced Pokémon that might happen."
+    )
 
 
 @extend_schema(
@@ -1130,9 +1148,9 @@ class PokemonEncounterView(APIView):
 
 
 class PokeapiMetaResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    deploy_date = serializers.CharField(allow_null=True)
-    hash = serializers.CharField(allow_null=True)
-    tag = serializers.CharField(allow_null=True)
+    deploy_date = serializers.CharField(allow_null=True, help_text="The deployment time as a Unix timestamp string.")
+    hash = serializers.CharField(allow_null=True, help_text="The source commit hash used for this deployment.")
+    tag = serializers.CharField(allow_null=True, help_text="The deployment tag, or null if the deployment has no tag.")
 
 
 @extend_schema(

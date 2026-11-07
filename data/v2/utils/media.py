@@ -5,7 +5,6 @@ import os
 import urllib.error
 import urllib.request
 from collections.abc import Callable
-from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
 
@@ -36,29 +35,40 @@ def _load_manifest_from_path(path: Path) -> set[str] | None:
 
 
 def _fetch_manifest(url: str, cache_file: Path) -> set[str] | None:
+    etag_file = cache_file.with_suffix(cache_file.suffix + ".etag")
     try:
+        cached = None
+        headers: dict[str, str] = {}
         if cache_file.is_file():
-            try:
-                head_req = urllib.request.Request(url, method="HEAD")
-                with urllib.request.urlopen(head_req, timeout=10) as head_resp:
-                    last_mod_header = head_resp.headers.get("Last-Modified")
-                    if last_mod_header:
-                        remote_mtime = parsedate_to_datetime(last_mod_header).timestamp()
-                        if cache_file.stat().st_mtime >= remote_mtime:
-                            return _load_manifest_from_path(cache_file)
-            except (OSError, urllib.error.URLError, ValueError):
-                pass
+            cached = _load_manifest_from_path(cache_file)
+            if cached is not None:
+                with contextlib.suppress(OSError, json.JSONDecodeError):
+                    metadata = json.loads(etag_file.read_text(encoding="utf-8"))
+                    if (
+                        isinstance(metadata, dict)
+                        and metadata.get("url") == url  # pyright: ignore[reportUnknownMemberType]
+                        and isinstance(metadata.get("etag"), str)  # pyright: ignore[reportUnknownMemberType]
+                    ):
+                        headers["If-None-Match"] = metadata["etag"]
 
-        with urllib.request.urlopen(url, timeout=30) as resp:
+        request = urllib.request.Request(url, headers=headers)
+        try:
+            response = urllib.request.urlopen(request, timeout=30)
+        except urllib.error.HTTPError as e:
+            if e.code == 304 and cached is not None:
+                return cached
+            raise
+
+        with response as resp:
             raw_bytes: bytes = resp.read()
             data = json.loads(gzip.decompress(raw_bytes).decode("utf-8"))
 
             with contextlib.suppress(OSError):
+                etag_file.unlink(missing_ok=True)
                 cache_file.write_bytes(raw_bytes)
-                last_mod = resp.headers.get("Last-Modified")
-                if last_mod:
-                    mtime = parsedate_to_datetime(last_mod).timestamp()
-                    os.utime(cache_file, (mtime, mtime))
+                etag = resp.headers.get("ETag")
+                if etag:
+                    etag_file.write_text(json.dumps({"url": url, "etag": etag}), encoding="utf-8")
 
             return set(data)
     except (OSError, urllib.error.URLError, json.JSONDecodeError, gzip.BadGzipFile) as e:

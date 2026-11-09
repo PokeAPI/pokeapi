@@ -12,11 +12,13 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import (
+    OpenApiExample,
     OpenApiParameter,
     extend_schema,  # pyright: ignore[reportUnknownVariableType]
     extend_schema_view,  # pyright: ignore[reportUnknownVariableType]
 )
 from rest_framework import serializers, viewsets
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from typing_extensions import override
@@ -68,6 +70,7 @@ __all__: tuple[str, ...] = (
     "NatureResource",
     "PalParkAreaResource",
     "PokeapiCommonViewset",
+    "PokeapiLimitOffsetPagination",
     "PokeapiMetaResponseSerializer",
     "PokeapiMetaView",
     "PokeathlonStatResource",
@@ -96,11 +99,32 @@ __all__: tuple[str, ...] = (
 ###########################
 
 
+# DRF hardcodes for OpenAPI 3.0 schema, override to be 3.1.0 compliant
+class PokeapiLimitOffsetPagination(LimitOffsetPagination):
+    @override
+    def get_paginated_response_schema(self, schema: dict[str, Any]) -> dict[str, Any]:
+        response_schema = super().get_paginated_response_schema(schema)
+        properties = response_schema["properties"]
+        properties["count"]["description"] = "The total number of resources available from this API."
+        properties["next"]["description"] = "The URL for the next page in the list, or null if there is no next page."
+        properties["previous"]["description"] = (
+            "The URL for the previous page in the list, or null if there is no previous page."
+        )
+        properties["results"]["description"] = "A list of API resources on this page."
+        properties["count"]["example"] = 100
+        for field in ("next", "previous"):
+            properties[field].pop("nullable", None)
+            properties[field].pop("example", None)
+            properties[field]["type"] = ["string", "null"]
+        return response_schema
+
+
 class ListOrDetailSerialRelation(viewsets.GenericViewSet[Any]):
     """
     Mixin to allow association with separate serializers for list or detail view.
     """
 
+    pagination_class = PokeapiLimitOffsetPagination
     list_serializer_class: type[serializers.BaseSerializer[Any]] | None = None
 
     @override
@@ -128,7 +152,7 @@ class NameOrIdRetrieval(viewsets.GenericViewSet[Any]):
         queryset = super().get_queryset()
         filter_q = self.request.GET.get("q", "")
 
-        if filter_q:
+        if filter_q and any(field.name == "name" for field in queryset.model._meta.fields):
             queryset = queryset.filter(Q(name__icontains=filter_q))
 
         return queryset
@@ -164,12 +188,24 @@ q_query_string_parameter = OpenApiParameter(
     type=OpenApiTypes.STR,
 )
 
+exclude_q_query_string_parameter = OpenApiParameter(
+    name="q",
+    location=OpenApiParameter.QUERY,
+    exclude=True,
+)
+
 retrieve_path_parameter = OpenApiParameter(
     name="id",
     description="This parameter can be a string or an integer.",
     location=OpenApiParameter.PATH,
     type=OpenApiTypes.STR,
     required=True,
+    examples=[
+        OpenApiExample(
+            "1",
+            value="1",
+        ),
+    ],
 )
 
 
@@ -258,6 +294,7 @@ class BerryFlavorResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List characteristics",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class CharacteristicResource(PokeapiCommonViewset):
@@ -274,6 +311,7 @@ class CharacteristicResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List contest effects",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class ContestEffectResource(PokeapiCommonViewset):
@@ -370,6 +408,7 @@ class EncounterMethodResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List evolution chains",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class EvolutionChainResource(PokeapiCommonViewset):
@@ -594,7 +633,21 @@ class LocationResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List location areas",
-    )
+    ),
+    retrieve=extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="id",
+                description="A unique integer value identifying this location area.",
+                location=OpenApiParameter.PATH,
+                type=OpenApiTypes.INT,
+                required=True,
+                examples=[
+                    OpenApiExample("1", value=1),
+                ],
+            )
+        ]
+    ),
 )
 class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelViewSet[LocationArea]):
     queryset = LocationArea.objects.all()
@@ -610,6 +663,7 @@ class LocationAreaResource(ListOrDetailSerialRelation, viewsets.ReadOnlyModelVie
 @extend_schema_view(
     list=extend_schema(
         summary="List machines",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class MachineResource(PokeapiCommonViewset):
@@ -930,6 +984,7 @@ class StatResource(PokeapiCommonViewset):
 @extend_schema_view(
     list=extend_schema(
         summary="List super contest effects",
+        parameters=[exclude_q_query_string_parameter],
     )
 )
 class SuperContestEffectResource(PokeapiCommonViewset):
@@ -987,33 +1042,57 @@ class VersionGroupResource(PokeapiCommonViewset):
 
 
 class PokemonEncounterDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    chance = serializers.IntegerField()
-    condition_values = EncounterConditionValueSummarySerializer(many=True)
-    max_level = serializers.IntegerField()
-    method = EncounterMethodSummarySerializer()
-    min_level = serializers.IntegerField()
+    chance = serializers.IntegerField(help_text="Percent chance that this encounter will occur.")
+    condition_values = EncounterConditionValueSummarySerializer(
+        many=True, help_text="A list of condition values that must be in effect for this encounter to occur."
+    )
+    max_level = serializers.IntegerField(help_text="The highest level the Pokémon could be encountered at.")
+    method = EncounterMethodSummarySerializer(help_text="The method by which this encounter happens.")
+    min_level = serializers.IntegerField(help_text="The lowest level the Pokémon could be encountered at.")
 
 
 class PokemonEncounterVersionDetailResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    version = VersionSummarySerializer()
-    max_chance = serializers.IntegerField()
-    encounter_details = PokemonEncounterDetailResponseSerializer(many=True)
+    version = VersionSummarySerializer(help_text="The game version this encounter happens in.")
+    max_chance = serializers.IntegerField(help_text="The total percentage of all encounter potential.")
+    encounter_details = PokemonEncounterDetailResponseSerializer(
+        many=True, help_text="A list of encounters and their specifics."
+    )
 
 
 class PokemonEncounterResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    location_area = LocationAreaSummarySerializer()
-    version_details = PokemonEncounterVersionDetailResponseSerializer(many=True)
+    location_area = LocationAreaSummarySerializer(
+        help_text="The location area the referenced Pokémon can be encountered in."
+    )
+    version_details = PokemonEncounterVersionDetailResponseSerializer(
+        many=True, help_text="A list of versions and encounters with the referenced Pokémon that might happen."
+    )
 
 
 class PokemonLocationAreaEncounterSerializer(serializers.Serializer[Any]):
-    location_area = LocationAreaSummarySerializer()
-    version_details = LocationAreaPokemonEncounterVersionSerializer(many=True)
+    location_area = LocationAreaSummarySerializer(
+        help_text="The location area the referenced Pokémon can be encountered in."
+    )
+    version_details = LocationAreaPokemonEncounterVersionSerializer(
+        many=True, help_text="A list of versions and encounters with the referenced Pokémon that might happen."
+    )
 
 
 @extend_schema(
     description="Handles Pokemon Encounters as a sub-resource.",
     summary="Get pokemon encounter",
     tags=["encounters"],
+    parameters=[
+        OpenApiParameter(
+            name="pokemon_id",
+            description="A unique integer value identifying the Pokémon.",
+            location=OpenApiParameter.PATH,
+            type=OpenApiTypes.INT,
+            required=True,
+            examples=[
+                OpenApiExample("1", value=1),
+            ],
+        )
+    ],
     responses={"200": PokemonEncounterResponseSerializer(many=True)},
 )
 class PokemonEncounterView(APIView):
@@ -1069,9 +1148,9 @@ class PokemonEncounterView(APIView):
 
 
 class PokeapiMetaResponseSerializer(serializers.Serializer[dict[str, Any]]):
-    deploy_date = serializers.CharField(allow_null=True)
-    hash = serializers.CharField(allow_null=True)
-    tag = serializers.CharField(allow_null=True)
+    deploy_date = serializers.CharField(allow_null=True, help_text="The deployment time as a Unix timestamp string.")
+    hash = serializers.CharField(allow_null=True, help_text="The source commit hash used for this deployment.")
+    tag = serializers.CharField(allow_null=True, help_text="The deployment tag, or null if the deployment has no tag.")
 
 
 @extend_schema(

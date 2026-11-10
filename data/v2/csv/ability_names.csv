@@ -3435,9 +3435,15 @@ ability_id,local_language_id,name
 311,11,とびだすハバネロ
 311,12,辣椒喷发
 311,14,Salpicante
+312,4,鰻鰻高升
 312,9,Eelevate
+312,12,鳗鳗高升
+313,4,火焰鬃毛
 313,9,Fire Mane
+313,12,火焰鬃毛
+314,4,波導防護
 314,9,Aura Guard
+314,12,波导防护
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

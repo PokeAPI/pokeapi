@@ -129,7 +129,7 @@ move_id,local_language_id,name
 12,8,Ghigliottina
 12,9,Guillotine
 12,11,ハサミギロチン
-12,12,断头钳
+12,12,极落钳
 12,14,Guillotina
 13,1,かまいたち
 13,3,칼바람
@@ -162,7 +162,7 @@ move_id,local_language_id,name
 15,8,Taglio
 15,9,Cut
 15,11,いあいぎり
-15,12,居合斩
+15,12,居合劈
 15,14,Corte
 16,1,かぜおこし
 16,3,바람일으키기
@@ -723,7 +723,7 @@ move_id,local_language_id,name
 66,8,Sottomissione
 66,9,Submission
 66,11,じごくぐるま
-66,12,地狱翻滚
+66,12,深渊翻滚
 66,14,Sumisión
 67,1,けたぐり
 67,3,안다리걸기
@@ -1317,7 +1317,7 @@ move_id,local_language_id,name
 120,8,Autodistruzione
 120,9,Self-Destruct
 120,11,じばく
-120,12,自爆
+120,12,玉石俱碎
 120,14,Autodestrucción
 121,1,タマゴばくだん
 121,3,알폭탄
@@ -1548,7 +1548,7 @@ move_id,local_language_id,name
 141,8,Sanguisuga
 141,9,Leech Life
 141,11,きゅうけつ
-141,12,吸血
+141,12,汲取
 141,14,Chupavidas
 142,1,あくまのキッス
 142,3,악마의키스
@@ -1735,7 +1735,7 @@ move_id,local_language_id,name
 158,8,Iperzanna
 158,9,Hyper Fang
 158,11,ひっさつまえば
-158,12,必杀门牙
+158,12,终结门牙
 158,14,Hipercolmillo
 159,1,かくばる
 159,3,각지기
@@ -1911,7 +1911,7 @@ move_id,local_language_id,name
 174,8,Maledizione
 174,9,Curse
 174,11,のろい
-174,12,诅咒
+174,12,咒术
 174,14,Maldición
 175,1,じたばた
 175,3,바둥바둥
@@ -1966,7 +1966,7 @@ move_id,local_language_id,name
 179,8,Contropiede
 179,9,Reversal
 179,11,きしかいせい
-179,12,起死回生
+179,12,绝处逢生
 179,14,Inversión
 180,1,うらみ
 180,3,원한
@@ -2021,7 +2021,7 @@ move_id,local_language_id,name
 184,8,Visotruce
 184,9,Scary Face
 184,11,こわいかお
-184,12,鬼面
+184,12,可怕面孔
 184,14,Cara Aterradora
 185,1,だましうち
 185,3,속여때리기
@@ -2142,7 +2142,7 @@ move_id,local_language_id,name
 195,8,Ultimocanto
 195,9,Perish Song
 195,11,ほろびのうた
-195,12,灭亡之歌
+195,12,终焉之歌
 195,14,Canto Mortal
 196,1,こごえるかぜ
 196,3,얼어붙은바람
@@ -2868,7 +2868,7 @@ move_id,local_language_id,name
 261,8,Fuocofatuo
 261,9,Will-O-Wisp
 261,11,おにび
-261,12,鬼火
+261,12,磷火
 261,14,Fuego Fatuo
 262,1,おきみやげ
 262,3,추억의선물
@@ -3176,7 +3176,7 @@ move_id,local_language_id,name
 289,8,Scippo
 289,9,Snatch
 289,11,よこどり
-289,12,抢夺
+289,12,化为己用
 289,14,Robo
 290,1,ひみつのちから
 290,3,비밀의힘
@@ -3605,7 +3605,7 @@ move_id,local_language_id,name
 328,8,Sabbiotomba
 328,9,Sand Tomb
 328,11,すなじごく
-328,12,流沙地狱
+328,12,流沙深渊
 328,14,Tumba de Arena
 329,1,ぜったいれいど
 329,3,절대영도
@@ -4430,7 +4430,7 @@ move_id,local_language_id,name
 403,8,Eterelama
 403,9,Air Slash
 403,11,エアスラッシュ
-403,12,空气斩
+403,12,空气之刃
 403,14,Corte Aéreo
 404,1,シザークロス
 404,3,시저크로스
@@ -5409,7 +5409,7 @@ move_id,local_language_id,name
 492,8,Ripicca
 492,9,Foul Play
 492,11,イカサマ
-492,12,欺诈
+492,12,移花接木
 492,14,Juego Sucio
 493,1,シンプルビーム
 493,3,심플빔
@@ -5607,7 +5607,7 @@ move_id,local_language_id,name
 510,8,Bruciatutto
 510,9,Incinerate
 510,11,やきつくす
-510,12,烧尽
+510,12,烧净
 510,14,Incinerar
 511,1,さきおくり
 511,3,순서미루기
@@ -5684,7 +5684,7 @@ move_id,local_language_id,name
 517,8,Marchiatura
 517,9,Inferno
 517,11,れんごく
-517,12,炼狱
+517,12,烈火深渊
 517,14,Infierno
 518,1,みずのちかい
 518,3,물의맹세
@@ -6278,7 +6278,7 @@ move_id,local_language_id,name
 571,8,Boscomalocchio
 571,9,Forest’s Curse
 571,11,もりののろい
-571,12,森林诅咒
+571,12,森林咒术
 571,14,Condena Silvana
 572,1,はなふぶき
 572,3,꽃보라
@@ -6718,7 +6718,7 @@ move_id,local_language_id,name
 611,8,Assillo
 611,9,Infestation
 611,11,まとわりつく
-611,12,死缠烂打
+611,12,纠缠不休
 611,14,Infestación
 612,1,グロウパンチ
 612,3,그로우펀치
@@ -6740,7 +6740,7 @@ move_id,local_language_id,name
 613,8,Ali del Fato
 613,9,Oblivion Wing
 613,11,デスウイング
-613,12,死亡之翼
+613,12,归天之翼
 613,14,Ala del Olvido
 614,1,サウザンアロー
 614,3,사우전드애로
@@ -7422,7 +7422,7 @@ move_id,local_language_id,name
 675,8,Colpo Infernale
 675,9,Throat Chop
 675,11,じごくづき
-675,12,地狱突刺
+675,12,深渊突刺
 675,14,Golpe al Cuello
 676,1,かふんだんご
 676,3,꽃가루경단
@@ -8115,7 +8115,7 @@ move_id,local_language_id,name
 738,8,Bombafrush
 738,9,Sappy Seed
 738,11,すくすくボンバー
-738,12,茁茁轰炸
+738,12,茁茁炸弹
 738,14,Leafitobombas
 739,1,こちこちフロスト
 739,3,꽁꽁프로스트

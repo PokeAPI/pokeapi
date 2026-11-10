@@ -2413,7 +2413,7 @@ item_id,local_language_id,name
 224,8,Spettrotarga
 224,9,Spell Tag
 224,11,のろいのおふだ
-224,12,诅咒之符
+224,12,咒术之符
 224,14,Hechizo
 225,1,まがったスプーン
 225,3,휘어진스푼
@@ -9914,7 +9914,7 @@ item_id,local_language_id,name
 970,8,Mimikyum Z
 970,9,Mimikium Z
 970,11,ミミッキュＺ
-970,12,谜拟ＱＺ
+970,12,谜拟丘Ｚ
 970,14,Mimikyustal Z
 971,1,ルガルガンＺ
 971,3,루가루암Z
@@ -9980,7 +9980,7 @@ item_id,local_language_id,name
 976,8,Mimikyum Z
 976,9,Mimikium Z
 976,11,ミミッキュＺ
-976,12,谜拟ＱＺ
+976,12,谜拟丘Ｚ
 976,14,Mimikyustal Z
 977,1,ルガルガンＺ
 977,3,루가루암Z

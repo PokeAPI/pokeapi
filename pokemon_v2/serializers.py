@@ -4214,10 +4214,10 @@ class PokemonMoveVersionGroupSerializer(serializers.Serializer[Any]):
         required=False,
         help_text="Order by which the pokemon will learn the move. A newly learnt move will replace the move with lowest order.",
     )
-    mastery = serializers.IntegerField(
+    enhancement_level = serializers.IntegerField(
         allow_null=True,
         required=False,
-        help_text="The level at which the move is mastered in Pokémon Legends: Arceus.",
+        help_text="The level at which move styles unlock in Pokémon Legends: Arceus or Plus Moves unlock in Pokémon Legends: Z-A. Null when no natural unlock level is recorded.",
     )
 
 
@@ -4500,7 +4500,7 @@ class PokemonDetailSerializer(serializers.ModelSerializer[Pokemon]):
                     "version_group": version_group_data,
                     "move_learn_method": move_learn_method_data,
                     "order": pm.order,
-                    "mastery": pm.mastery,
+                    "enhancement_level": pm.enhancement_level,
                 }
             )
 

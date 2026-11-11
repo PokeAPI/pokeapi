@@ -10108,129 +10108,212 @@ move_id,local_language_id,name
 919,11,じゃどくのくさり
 919,12,邪毒锁链
 919,14,Cadena Virulenta
+920,1,むにきすひかり
+920,3,니힐레이저
+920,4,歸無之光
+920,5,Lux Nihilum
+920,6,Tilgungslicht
+920,7,Luz Devastadora
+920,8,Tabula Laser
+920,9,Nihil Light
+920,11,無に帰す光
+920,12,归无之光
+920,14,Luz Devastadora
 10001,1,ダークラッシュ
+10001,3,다크러시
+10001,4,黑暗猛撞
 10001,5,Charge Noire
 10001,6,Cryptoschlag
 10001,7,Carga Oscura
 10001,8,Ombroraffica
 10001,9,Shadow Rush
+10001,11,ダークラッシュ
+10001,12,黑暗猛撞
 10001,14,Carga Oscura
 10002,1,ダークブラスト
+10002,3,다크블라스트
+10002,4,黑暗氣旋
 10002,5,Aéro Noir
 10002,6,Cryptostrahl
 10002,7,Soplo Oscuro
 10002,8,Ombrolame
 10002,9,Shadow Blast
+10002,11,ダークブラスト
+10002,12,黑暗气旋
 10002,14,Soplo Oscuro
 10003,1,ダークアタック
+10003,3,다크어택
+10003,4,黑暗突擊
 10003,5,Assaut Noir
 10003,6,Cryptoknall
 10003,7,Vigor Oscuro
 10003,8,Ombrattacco
 10003,9,Shadow Blitz
+10003,11,ダークアタック
+10003,12,黑暗突击
 10003,14,Vigor Oscuro
 10004,1,ダークサンダー
+10004,3,다크볼트
+10004,4,黑暗十萬伏特
 10004,5,Éclair Noir
 10004,6,Cryptoblitz
 10004,7,Rayo Oscuro
 10004,8,Fulminombra
 10004,9,Shadow Bolt
+10004,11,ダークサンダー
+10004,12,黑暗十万伏特
 10004,14,Rayo Oscuro
 10005,1,ダークブレイク
+10005,3,다크브레이크
+10005,4,黑暗碎擊
 10005,5,Bélier Noir
 10005,6,Cryptohieb
 10005,7,Brío Oscuro
 10005,8,Ombrospinta
 10005,9,Shadow Break
+10005,11,ダークブレイク
+10005,12,黑暗碎击
 10005,14,Brío Oscuro
 10006,1,ダークフリーズ
+10006,3,다크칠
+10006,4,黑暗急凍
 10006,5,Froid Noir
 10006,6,Cryptofrost
 10006,7,Hielo Oscuro
 10006,8,Gelodombra
 10006,9,Shadow Chill
+10006,11,ダークフリーズ
+10006,12,黑暗急冻
 10006,14,Hielo Oscuro
 10007,1,ダークエンド
+10007,3,다크엔드
+10007,4,黑暗終結
 10007,5,Retour Noir
 10007,6,Cryptoretour
 10007,7,Fin Oscuro
 10007,8,Fineoscuro
 10007,9,Shadow End
+10007,11,ダークエンド
+10007,12,黑暗终结
 10007,14,Fin Oscuro
 10008,1,ダークファイア
+10008,3,다크파이어
+10008,4,黑暗烈焰
 10008,5,Ardeur Noir
 10008,6,Cryptofeuer
 10008,7,Fuego Oscuro
 10008,8,Fuocoscuro
 10008,9,Shadow Fire
+10008,11,ダークファイア
+10008,12,黑暗烈焰
 10008,14,Fuego Oscuro
 10009,1,ダークレイブ
+10009,3,다크레이브
+10009,4,黑暗狂歡
 10009,5,Rage Noire
 10009,6,Cryptobeben
 10009,7,Rabia Oscura
 10009,8,Ombrolancia
 10009,9,Shadow Rave
+10009,11,ダークレイブ
+10009,12,黑暗狂欢
 10009,14,Rabia Oscura
 10010,1,ダークストーム
+10010,3,다크스톰
+10010,4,黑暗暴風
 10010,5,Typhon Noir
 10010,6,Cryptosturm
 10010,7,Tifón Oscuro
 10010,8,Turbinombra
 10010,9,Shadow Storm
+10010,11,ダークストーム
+10010,12,黑暗暴风
 10010,14,Tifón Oscuro
 10011,1,ダークウェーブ
+10011,3,다크웨이브
+10011,4,黑暗波動
 10011,5,Ondo Noire
 10011,6,Cryptowelle
 10011,7,Onda Oscura
 10011,8,Ondascura
 10011,9,Shadow Wave
+10011,11,ダークウェーブ
+10011,12,黑暗波动
 10011,14,Onda Oscura
 10012,1,ダークダウン
+10012,3,다크다운
+10012,4,黑暗降防
 10012,5,Souffle Noir
 10012,6,Cryptobann
 10012,7,Ocaso Oscuro
 10012,8,Declinoscuro
 10012,9,Shadow Down
+10012,11,ダークダウン
+10012,12,黑暗降防
 10012,14,Ocaso Oscuro
 10013,1,ダークハーフ
+10013,3,다크하프
+10013,4,黑暗半減
 10013,5,Chute Noire
 10013,6,Cryptozorn
 10013,7,Mitad Oscura
 10013,8,Iraoscura
 10013,9,Shadow Half
+10013,11,ダークハーフ
+10013,12,黑暗半减
 10013,14,Mitad Oscura
 10014,1,ダークホールド
+10014,3,다크홀드
+10014,4,黑暗束縛
 10014,5,Blocage Noir
 10014,6,Cryptofessel
 10014,7,Traba Oscura
 10014,8,Retedombra
 10014,9,Shadow Hold
+10014,11,ダークホールド
+10014,12,黑暗束缚
 10014,14,Traba Oscura
 10015,1,ダークミスト
+10015,3,다크미스트
+10015,4,黑暗黑霧
 10015,5,Brume Noire
 10015,6,Cryptodunst
 10015,7,Bruma Oscura
 10015,8,Nebbiascura
 10015,9,Shadow Mist
+10015,11,ダークミスト
+10015,12,黑暗黑雾
 10015,14,Bruma Oscura
 10016,1,ダークパニック
+10016,3,다크패닉
+10016,4,黑暗恐慌
 10016,5,Folie Noire
 10016,6,Cryptochaos
 10016,7,Miedo Oscuro
 10016,8,Ombrapanico
 10016,9,Shadow Panic
+10016,11,ダークパニック
+10016,12,黑暗恐慌
 10016,14,Miedo Oscuro
 10017,1,ダークリムーブ
+10017,3,다크셰드
+10017,4,黑暗消除
 10017,5,Percée Noire
 10017,6,Cryptobruch
 10017,7,Muda Oscura
 10017,8,Ombrannulla
 10017,9,Shadow Shed
+10017,11,ダークリムーブ
+10017,12,黑暗消除
 10017,14,Muda Oscura
 10018,1,ダークウェザー
+10018,3,다크스카이
+10018,4,黑暗天空
 10018,5,Ciel Noir
 10018,6,Cryptowetter
 10018,7,Cielo Oscuro
 10018,8,Cieloscuro
 10018,9,Shadow Sky
+10018,11,ダークウェザー
+10018,12,黑暗天空
 10018,14,Cielo Oscuro

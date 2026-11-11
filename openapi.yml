@@ -9092,6 +9092,12 @@ components:
           - 'null'
           description: Order by which the pokemon will learn the move. A newly learnt
             move will replace the move with lowest order.
+        mastery:
+          type:
+          - integer
+          - 'null'
+          description: 'The level at which the move is mastered in Pokémon Legends:
+            Arceus.'
       required:
       - level_learned_at
       - move_learn_method

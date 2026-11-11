@@ -3435,9 +3435,39 @@ ability_id,local_language_id,name
 311,11,とびだすハバネロ
 311,12,辣椒喷发
 311,14,Salpicante
+312,1,うなぎのぼり
+312,3,천정부지
+312,4,鰻鰻高升
+312,5,Lévitaboost
+312,6,Emporwindung
+312,7,Impulso Anguila
+312,8,Rapidascesa
 312,9,Eelevate
+312,11,うなぎのぼり
+312,12,鳗鳗高升
+312,14,Impulso Anguila
+313,1,ほのおのたてがみ
+313,3,불꽃의갈기
+313,4,火焰鬃毛
+313,5,Crinière de Feu
+313,6,Flammenmähne
+313,7,Crin de Fuego
+313,8,Pirocriniera
 313,9,Fire Mane
+313,11,ほのおのたてがみ
+313,12,火焰鬃毛
+313,14,Melena de Fuego
+314,1,はどうのぼうご
+314,3,파동의방호
+314,4,波導防護
+314,5,Aura Protectrice
+314,6,Aura-Abwehr
+314,7,Aura Protectora
+314,8,Ondascudo
 314,9,Aura Guard
+314,11,はどうのぼうご
+314,12,波导防护
+314,14,Aura Protectora
 10001,9,Mountaineer
 10002,9,Wave Rider
 10003,9,Skater

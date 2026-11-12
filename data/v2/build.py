@@ -147,6 +147,7 @@ from pokemon_v2.models import (
     PokemonColorName,
     PokemonCries,
     PokemonDexNumber,
+    PokemonDexNumberVariety,
     PokemonEggGroup,
     PokemonEvolution,
     PokemonForm,
@@ -1372,7 +1373,7 @@ def _build_pokemons() -> None:
 
     build_generic((PokemonDexNumber,), "pokemon_dex_numbers.csv", pokemon_dex_numbers_from_rows)
 
-    def csv_record_to_objects(info):
+    def csv_record_to_objects(info: list[str]) -> Iterator[PokemonDexNumberVariety]:
         dex_number = PokemonDexNumber.objects.get(
             pokedex_id=int(info[0]),
             pokedex_number=int(info[1]),

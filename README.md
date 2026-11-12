@@ -125,17 +125,6 @@ make migrate
 
 Run `make help` to see all tasks.
 
-When regenerating `openapi.yml`, use the PostgreSQL-backed settings to keep
-database-derived integer bounds consistent with the checked-in schema:
-
-```sh
-make openapi-generate-postgres
-```
-
-This expects a local PostgreSQL database. Set `POSTGRES_DB`, `POSTGRES_USER`,
-`POSTGRES_PASSWORD`, `POSTGRES_HOST`, and `POSTGRES_PORT` to override the
-defaults (`pokeapi`, `ash`, `pokemon`, `localhost`, and `5432`).
-
 ## Docker and Compose <a id="docker-and-compose"></a> &nbsp; [![docker hub](https://img.shields.io/docker/v/pokeapi/pokeapi?label=tag&sort=semver)](https://hub.docker.com/r/pokeapi/pokeapi)
 
 There is also a multi-container setup, managed by [Docker Compose V2](https://docs.docker.com/compose/). This setup allows you to deploy a production-like environment, with separate containers for each service, and is recommended if you need to simply spin up PokéAPI.

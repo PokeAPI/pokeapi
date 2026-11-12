@@ -26,6 +26,15 @@ make format       # or: uv run ruff format .
 make typecheck    # or: uv run ty check
 ```
 
+The `generate-openapi` pre-commit hook regenerates `openapi.yml`. To run it manually, use:
+
+```bash
+uv run manage.py spectacular --file openapi.yml --settings=config.docker_compose
+```
+
+This command does not need a running database: the configured database backend determines integer bounds in the
+schema, and schema generation does not query the database.
+
 > [!NOTE]
 > As of right now we are not strictly enforcing linting and typechecking, but we will be in the future. Please try to make sure your code passes these checks.
 

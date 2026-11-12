@@ -59,6 +59,9 @@ shell: check-uv  # Load a shell
 openapi-generate: check-uv
 	uv run manage.py spectacular --color --file openapi.yml ${local_config}
 
+openapi-generate-postgres: check-uv  # Generate OpenAPI schema using the local PostgreSQL database
+	uv run manage.py spectacular --color --file openapi.yml --settings=config.local_postgres
+
 docker-up:  # (Docker) Create services/volumes/networks
 	docker compose up -d
 

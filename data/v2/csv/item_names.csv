@@ -23401,7 +23401,7 @@ item_id,local_language_id,name
 2262,8,Raichuite X
 2262,9,Raichunite X
 2262,11,ライチュウナイトＸ
-2262,12,雷丘进化石X
+2262,12,雷丘进化石Ｘ
 2262,14,Raichunita X
 2263,3,라이츄나이트Y
 2263,4,雷丘進化石Ｙ
@@ -23411,7 +23411,7 @@ item_id,local_language_id,name
 2263,8,Raichuite Y
 2263,9,Raichunite Y
 2263,11,ライチュウナイトＹ
-2263,12,雷丘进化石Y
+2263,12,雷丘进化石Ｙ
 2263,14,Raichunita Y
 2264,3,치렁나이트
 2264,4,風鈴鈴進化石
@@ -23424,14 +23424,14 @@ item_id,local_language_id,name
 2264,12,风铃铃进化石
 2264,14,Chimechita
 2265,3,앱솔나이트Z
-2265,4,阿勃梭魯進化石Z
+2265,4,阿勃梭魯進化石Ｚ
 2265,5,Absolite Z
 2265,6,Absolnit Z
 2265,7,Absolita Z
 2265,8,Absolite Z
 2265,9,Absolite Z
 2265,11,アブソルナイトZ
-2265,12,阿勃梭鲁进化石Z
+2265,12,阿勃梭鲁进化石Ｚ
 2265,14,Absolita Z
 2266,3,찌르호크나이트
 2266,4,姆克鷹進化石
@@ -23444,24 +23444,24 @@ item_id,local_language_id,name
 2266,12,姆克鹰进化石
 2266,14,Staraptorita
 2267,3,한카리아스나이트Z
-2267,4,烈咬陸鯊進化石Z
+2267,4,烈咬陸鯊進化石Ｚ
 2267,5,Carchacrokite Z
 2267,6,Knakracknit Z
 2267,7,Garchompita Z
 2267,8,Garchompite Z
 2267,9,Garchompite Z
 2267,11,ガブリアスナイトZ
-2267,12,烈咬陆鲨进化石Z
+2267,12,烈咬陆鲨进化石Ｚ
 2267,14,Garchompita Z
 2268,3,루카리오나이트Z
-2268,4,路卡利歐進化石Z
+2268,4,路卡利歐進化石Ｚ
 2268,5,Lucarite Z
 2268,6,Lucarionit Z
 2268,7,Lucarita Z
 2268,8,Lucarite Z
 2268,9,Lucarionite Z
 2268,11,ルカリオナイトZ
-2268,12,路卡利欧进化石Z
+2268,12,路卡利欧进化石Ｚ
 2268,14,Lucarita Z
 2269,3,골루그나이트
 2269,4,泥偶巨人進化石

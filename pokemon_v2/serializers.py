@@ -5278,15 +5278,24 @@ class PokedexDescriptionSerializer(serializers.HyperlinkedModelSerializer[Pokede
         )
 
 
+class PokemonDexNumberVarietySerializer(serializers.ModelSerializer[PokemonDexNumberVariety]):
+    pokemon = PokemonSummarySerializer()
+
+    class Meta:
+        model = PokemonDexNumberVariety
+        fields = ("pokemon", "order")
+
+
 class PokemonDexNumberSerializer(serializers.ModelSerializer[PokemonDexNumber]):
     entry_number = serializers.IntegerField(
         source="pokedex_number", help_text="The index of this Pokémon species entry within the Pokédex."
     )
     pokemon_species = PokemonSpeciesSummarySerializer(help_text="The Pokémon species being encountered.")
+    varieties = PokemonDexNumberVarietySerializer(many=True, source="pokemondexnumbervariety")
 
     class Meta:
         model = PokemonDexNumber
-        fields = ("entry_number", "pokemon_species")
+        fields = ("entry_number", "pokemon_species", "varieties")
 
 
 class PokedexDetailSerializer(serializers.ModelSerializer[Pokedex]):

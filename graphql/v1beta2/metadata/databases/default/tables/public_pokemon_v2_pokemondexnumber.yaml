@@ -13,6 +13,14 @@ object_relationships:
   - name: pokemonspecy
     using:
       foreign_key_constraint_on: pokemon_species_id
+array_relationships:
+  - name: pokemondexnumbervarieties
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_dex_number_id
+        table:
+          name: pokemon_v2_pokemondexnumbervariety
+          schema: public
 select_permissions:
   - role: anon
     permission:

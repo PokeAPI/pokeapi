@@ -39,6 +39,13 @@ array_relationships:
         table:
           name: pokemon_v2_pokemoncries
           schema: public
+  - name: pokemondexnumbervarieties
+    using:
+      foreign_key_constraint_on:
+        column: pokemon_id
+        table:
+          name: pokemon_v2_pokemondexnumbervariety
+          schema: public
   - name: pokemonforms
     using:
       foreign_key_constraint_on:

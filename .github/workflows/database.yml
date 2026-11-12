@@ -34,7 +34,7 @@ jobs:
             ./csvlint -lazyquotes "$filename" # TODO: remove lazyquotes when https://github.com/Clever/csvlint/issues/45 will be addressed
           done
   openapi:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04-arm
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -45,7 +45,7 @@ jobs:
           make install-base
           make openapi-generate
   sqlite:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04-arm
     strategy:
       fail-fast: false
       matrix:
@@ -71,7 +71,7 @@ jobs:
       - name: Test data
         run: curl -Ss http://localhost:8000/api/v2/pokemon/1/ | grep -q 'bulbasaur'
   postgres:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04-arm
     steps:
       - name: Checkout
         uses: actions/checkout@v6

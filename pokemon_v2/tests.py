@@ -1,6 +1,7 @@
 import json
 from datetime import datetime, timezone
 
+from cachalot.api import cachalot_disabled
 from django.db import connection
 from django.test.utils import CaptureQueriesContext
 from rest_framework import status
@@ -5052,6 +5053,59 @@ class APITests(APIData, APITestCase):
             [detail["min_level"] for detail in target_data["evolution_details"]],
             expected_min_levels,
         )
+
+    # condition_expression and allowed_natures must not query once per evolution row
+    # (e.g. Milcery -> Alcremie has 63 rows, each with a condition_expression)
+    def test_evolution_chain_api_condition_and_nature_lookups_do_not_scale_with_rows(self):
+        ec_variable = EvolutionVariable.objects.create(name="ec for evo chn", symbol="EC")
+        EvolutionVariable.objects.create(name="pid for evo chn", symbol="PID")
+        natures = [self.setup_nature_data(name=f"ntr {i} for evo chn") for i in range(3)]
+        allowed = [natures[0], natures[2]]
+        nature_bitmask = sum(1 << (nature.pk - 1) for nature in allowed)
+
+        def build_chain(row_count):
+            evolution_chain = self.setup_evolution_chain_data()
+            basic = self.setup_pokemon_species_data(
+                name=f"bsc for evo chn cnd {row_count}", evolution_chain=evolution_chain
+            )
+            target = self.setup_pokemon_species_data(
+                name=f"trgt for evo chn cnd {row_count}",
+                evolves_from_species=basic,
+                evolution_chain=evolution_chain,
+            )
+            for _ in range(row_count):
+                evolution = self.setup_pokemon_evolution_data(evolved_species=target)
+                evolution.condition_expression = "EC 100 % 0 =="
+                evolution.nature_bitmask = nature_bitmask
+                evolution.save()
+            return evolution_chain
+
+        small_chain = build_chain(row_count=1)
+        large_chain = build_chain(row_count=5)
+
+        # inside the test transaction cachalot serves repeated identical queries from
+        # memory, which would hide the per-row queries this test is about
+        with cachalot_disabled():
+            with CaptureQueriesContext(connection) as small_queries:
+                self.client.get("{}/evolution-chain/{}/".format(API_V2, small_chain.pk))
+            with CaptureQueriesContext(connection) as large_queries:
+                response = self.client.get("{}/evolution-chain/{}/".format(API_V2, large_chain.pk))
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(large_queries.captured_queries), len(small_queries.captured_queries))
+
+        details = response.data["chain"]["evolves_to"][0]["evolution_details"]
+        self.assertEqual(len(details), 5)
+        for detail in details:
+            self.assertEqual(detail["condition_expression"]["expression"], "EC 100 % 0 ==")
+            self.assertEqual(
+                [variable["name"] for variable in detail["condition_expression"]["variables"]],
+                [ec_variable.name],
+            )
+            self.assertEqual(
+                [nature["name"] for nature in detail["allowed_natures"]],
+                [nature.name for nature in allowed],
+            )
 
     # Encounter Tests
     def test_encounter_method_api(self):

@@ -170,7 +170,6 @@ k8s-delete:  # (k8s) Delete pokeapi namespace
 
 start-graphql-prod:
 	git pull origin master
-	git submodule update --init data/v2/cries
 	docker compose -f docker-compose.yml -f Resources/compose/docker-compose-prod-graphql.yml up -d
 	docker compose stop app cache
 
@@ -200,7 +199,6 @@ update-graphql-data-prod-old:
 
 update-graphql-data-prod:
 	git pull origin master
-	git submodule update --remote --merge data/v2/cries
 	curl -Ss -L -O https://github.com/PokeAPI/pokeapi/releases/download/master-branch/pokeapi.pgdump
 	docker compose ${gql_compose_config} stop web graphql-engine app cache
 	docker compose ${gql_compose_config} down -v db

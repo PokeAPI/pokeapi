@@ -1537,6 +1537,7 @@ def _build_pokemons() -> None:
             move_learn_method_id=int(info[3]),
             level=int(info[4]),
             order=int(info[5]) if info[5] != "" else None,
+            enhancement_level=int(info[6]) if len(info) > 6 and info[6] != "" else None,
         )
 
     build_generic((PokemonMove,), "pokemon_moves.csv", pokemon_moves_from_rows, batch_size=4_000)

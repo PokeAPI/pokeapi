@@ -52,12 +52,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 386,14,Forma Normal,
 412,1,くさきのミノ,
 412,3,초목도롱,
+412,4,草木蓑衣,
 412,5,Cape Plante,Cheniti Plante
 412,6,Pflanzenumhang,Burmy (Pflanze)
 412,7,Tronco Planta,
 412,8,Manto Pianta,
 412,9,Plant Cloak,Plant Burmy
 412,11,くさきのミノ,
+412,12,草木蓑衣,
 412,14,Tronco Planta,
 413,1,くさきのミノ,
 413,3,초목도롱,
@@ -168,21 +170,25 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 555,14,Modo Normal,
 585,1,はるのすがた,
 585,3,봄의 모습,
+585,4,春天的樣子,
 585,5,Forme Printemps,Vivaldaim Printemps
 585,6,Frühlingsform,Sesokitz (Frühling)
 585,7,Forma Primavera,
 585,8,Forma Primavera,
 585,9,Spring Form,Spring Deerling
 585,11,はるのすがた,
+585,12,春天的样子,
 585,14,Forma Primavera,
 586,1,はるのすがた,
 586,3,봄의 모습,
+586,4,春天的樣子,
 586,5,Forme Printemps,Haydaim Printemps
 586,6,Frühlingsform,Kronjuwild (Frühling)
 586,7,Forma Primavera,
 586,8,Forma Primavera,
 586,9,Spring Form,Spring Sawsbuck
 586,11,はるのすがた,
+586,12,春天的样子,
 586,14,Forma Primavera,
 592,1,オスのすがた,
 592,3,수컷의 모습,
@@ -274,12 +280,14 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 648,14,Forma Lírica,
 666,1,はなぞののもよう,
 666,3,화원의 모양,
+666,4,花園花紋,
 666,5,Motif Floraison,Prismillon Floraison
 666,6,Blumenmeermuster,Vivillon (Blumen)
 666,7,Motivo Floral,
 666,8,Motivo Giardinfiore,
 666,9,Meadow Pattern,Meadow Vivillon
 666,11,はなぞののもよう,
+666,12,花园花纹,
 666,14,Motivo Floral,
 668,1,オスのすがた,
 668,3,수컷의 모습,
@@ -294,39 +302,47 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 668,14,Macho,
 669,1,あかいはな,
 669,3,빨간 꽃,
+669,4,紅花,
 669,5,Fleur Rouge,Flabébé Rouge
 669,6,Rotblütler,Flabébé (Rot)
 669,7,Flor Roja,
 669,8,Fiore Rosso,
 669,9,Red Flower,Red Flabébé
 669,11,あかいはな,
+669,12,红花,
 669,14,Flor Roja,
 670,1,あかいはな,
 670,3,빨간 꽃,
+670,4,紅花,
 670,5,Fleur Rouge,Floette Rouge
 670,6,Rotblütler,Floette (Rot)
 670,7,Flor Roja,
 670,8,Fiore Rosso,
 670,9,Red Flower,Red Floette
 670,11,あかいはな,
+670,12,红花,
 670,14,Flor Roja,
 671,1,あかいはな,
 671,3,빨간 꽃,
+671,4,紅花,
 671,5,Fleur Rouge,Florges Rouge
 671,6,Rotblütler,Florges (Rot)
 671,7,Flor Roja,
 671,8,Fiore Rosso,
 671,9,Red Flower,Red Florges
 671,11,あかいはな,
+671,12,红花,
 671,14,Flor Roja,
 676,1,やせいのすがた,
 676,3,야생의 모습,
+676,4,野生的樣子,
 676,5,Forme Sauvage,Couafarel Sauvage
 676,6,Zottelform,Coiffwaff
 676,7,Forma Salvaje,
 676,8,Forma Selvatica,
 676,9,Natural Form,Natural Furfrou
 676,11,やせいのすがた,
+676,12,野生的样子,
 676,14,Forma Salvaje,
 678,1,オスのすがた,
 678,3,수컷의 모습,
@@ -483,15 +499,19 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 849,12,高调的样子,
 849,14,Forma Aguda,
 854,1,がんさくフォルム,
+854,4,贗品形態,
 854,5,Forme Contrefaçon,Théffroi Contrefaçon
 854,6,Fälschungsform,Fatalitee (Fälschung)
 854,9,Phony Form,Phony Sinistea
 854,11,がんさくフォルム,
+854,12,赝品形态,
 855,1,がんさくフォルム,
+855,4,贗品形態,
 855,5,Forme Contrefaçon,Polthégeist Contrefaçon
 855,6,Fälschungsform,Mortipot (Fälschung)
 855,9,Phony Form,Phony Polteageist
 855,11,がんさくフォルム,
+855,12,赝品形态,
 869,1,ミルキィバニラ,
 869,3,밀키바닐라,
 869,4,奶香香草,
@@ -570,49 +590,71 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 892,12,一击流,
 892,14,Estilo Brusco,
 902,1,オスのすがた,
+902,4,雄性的樣子,
 902,5,Mâle,Paragruel Mâle
 902,9,Male,Male Basculegion
 902,11,オスのすがた,
+902,12,雄性的样子,
 905,1,けしんフォルム,
+905,4,化身形態,
 905,5,Forme Avatar,Amovénus Avatar
 905,9,Incarnate Forme,Incarnate Enamorus
 905,11,けしんフォルム,
+905,12,化身形态,
 916,1,オスのすがた,
+916,4,雄性的樣子,
 916,5,Mâle,Fragroin Mâle
 916,9,Male,Male Oinkologne
 916,11,オスのすがた,
+916,12,雄性的样子,
 925,1,４ひきかぞく,
+925,4,四隻家庭,
 925,5,Famille de Quatre,Famignol Famille de Quatre
 925,9,Family of Four,Maushold (Family of Four)
 925,11,４ひきかぞく,
+925,12,四只家庭,
 931,1,グリーンフェザー,
+931,4,綠羽毛,
 931,5,Plumage Vert,Tapatoès Plumage Vert
 931,9,Green Plumage,Green Plumage Squawkabilly
 931,11,グリーンフェザー,
+931,12,绿羽毛,
 964,1,ナイーブフォルム,
+964,4,平凡形態,
 964,5,Forme Ordinaire,Superdofin Forme Ordinaire
 964,9,Zero Form,Zero Form Palafin
 964,11,ナイーブフォルム,
+964,12,平凡形态,
 978,1,そったすがた,
+978,4,上弓姿勢,
 978,5,Forme Courbée,Nigirigon Forme Courbée
 978,9,Curly Form,Curly Form Tatsugiri
 978,11,そったすがた,
+978,12,上弓姿势,
 982,1,ふたふしフォルム,
+982,4,二節形態,
 982,5,Forme Double,Deusolourdo Forme Double
 982,9,Two-Segment Form,Two-Segment Form Dudunsparce
 982,11,ふたふしフォルム,
+982,12,二节形态,
 999,1,はこフォルム,
+999,4,寶箱形態,
 999,5,Forme Coffre,Mordudor Forme Coffre
 999,9,Chest Form,Chest Form Gimmighoul
 999,11,はこフォルム,
+999,12,宝箱形态,
 1007,1,かんぜんけいたい,
+1007,4,完全形態,
 1007,5,Forme Finale,Koraidon Forme Finale
 1007,9,Apex Build,
 1007,11,かんぜんけいたい,
+1007,12,完全形态,
 1008,1,コンプリートモード,
+1008,4,完整模式,
 1008,5,Mode Ultime,Miraidon Mode Ultime
 1008,9,Ultimate Mode,
 1008,11,コンプリートモード,
+1008,12,完整模式,
 1012,1,マガイモノのすがた,
 1012,3,가짜배기의 모습,
 1012,4,冒牌貨的樣子,
@@ -622,7 +664,7 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1012,8,Forma Taroccata,
 1012,9,Counterfeit Form,Counterfeit Form Poltchageist
 1012,11,マガイモノのすがた,
-1012,12,高檔貨的樣子,
+1012,12,冒牌货的样子,
 1012,14,Forma Fraudulenta,
 1013,1,ボンサクのすがた,
 1013,3,범작의 모습,
@@ -647,11 +689,13 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 1017,12,碧草面具,
 1017,14,Máscara Turquesa,
 1024,1,ノーマルフォルム,
+1024,4,普通形態,
 1024,5,Forme Normale,Terapagos Forme Normale
 1024,7,Forma normal,
 1024,8,Forma Normale,
 1024,9,Normal Form,Normal Form Terapagos
 1024,11,ノーマルフォルム,
+1024,12,普通形态,
 1024,14,Forma normal,
 10001,1,Ｂ,
 10001,3,B,
@@ -964,21 +1008,25 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10033,14,Forma Velocidad,
 10034,1,すなちのミノ,
 10034,3,모래땅도롱,
+10034,4,砂土蓑衣,
 10034,5,Cape Sable,Cheniti Sable
 10034,6,Sandumhang,Burmy (Sand)
 10034,7,Tronco Arena,
 10034,8,Manto Sabbia,
 10034,9,Sandy Cloak,Sandy Burmy
 10034,11,すなちのミノ,
+10034,12,砂土蓑衣,
 10034,14,Tronco Arena,
 10035,1,ゴミのミノ,
 10035,3,슈레도롱,
+10035,4,垃圾蓑衣,
 10035,5,Cape Déchet,Cheniti Déchet
 10035,6,Lumpenumhang,Burmy (Lumpen)
 10035,7,Tronco Basura,
 10035,8,Manto Scarti,
 10035,9,Trash Cloak,Trash Burmy
 10035,11,ゴミのミノ,
+10035,12,垃圾蓑衣,
 10035,14,Tronco Basura,
 10036,1,すなちのミノ,
 10036,3,모래땅도롱,
@@ -1275,57 +1323,69 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10067,14,Modo Daruma,
 10068,1,なつのすがた,
 10068,3,여름의 모습,
+10068,4,夏天的樣子,
 10068,5,Forme Été,Vivaldaim Été
 10068,6,Sommerform,Sesokitz (Sommer)
 10068,7,Forma Verano,
 10068,8,Forma Estate,
 10068,9,Summer Form,Summer Deerling
 10068,11,なつのすがた,
+10068,12,夏天的样子,
 10068,14,Forma Verano,
 10069,1,あきのすがた,
 10069,3,가을의 모습,
+10069,4,秋天的樣子,
 10069,5,Forme Automne,Vivaldaim Automne
 10069,6,Herbstform,Sesokitz (Herbst)
 10069,7,Forma Otoño,
 10069,8,Forma Autunno,
 10069,9,Autumn Form,Autumn Deerling
 10069,11,あきのすがた,
+10069,12,秋天的样子,
 10069,14,Forma Otoño,
 10070,1,ふゆのすがた,
 10070,3,겨울의 모습,
+10070,4,冬天的樣子,
 10070,5,Forme Hiver,Vivaldaim Hiver
 10070,6,Winterform,Sesokitz (Winter)
 10070,7,Forma Invierno,
 10070,8,Forma Inverno,
 10070,9,Winter Form,Winter Deerling
 10070,11,ふゆのすがた,
+10070,12,冬天的样子,
 10070,14,Forma Invierno,
 10071,1,なつのすがた,
 10071,3,여름의 모습,
+10071,4,夏天的樣子,
 10071,5,Forme Été,Haydaim Été
 10071,6,Sommerform,Kronjuwild (Sommer)
 10071,7,Forma Verano,
 10071,8,Forma Estate,
 10071,9,Summer Form,Summer Sawsbuck
 10071,11,なつのすがた,
+10071,12,夏天的样子,
 10071,14,Forma Verano,
 10072,1,あきのすがた,
 10072,3,가을의 모습,
+10072,4,秋天的樣子,
 10072,5,Forme Automne,Haydaim Automne
 10072,6,Herbstform,Kronjuwild (Herbst)
 10072,7,Forma Otoño,
 10072,8,Forma Autunno,
 10072,9,Autumn Form,Autumn Sawsbuck
 10072,11,あきのすがた,
+10072,12,秋天的样子,
 10072,14,Forma Otoño,
 10073,1,ふゆのすがた,
 10073,3,겨울의 모습,
+10073,4,冬天的樣子,
 10073,5,Forme Hiver,Haydaim Hiver
 10073,6,Winterform,Kronjuwild (Winter)
 10073,7,Forma Invierno,
 10073,8,Forma Inverno,
 10073,9,Winter Form,Winter Sawsbuck
 10073,11,ふゆのすがた,
+10073,12,冬天的样子,
 10073,14,Forma Invierno,
 10074,1,ステップフォルム,
 10074,3,스텝폼,
@@ -1340,39 +1400,47 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10074,14,Forma Danza,
 10075,1,アクアカセット,
 10075,3,아쿠아카세트,
+10075,4,水流卡帶,
 10075,5,Module Aqua,Genesect Aqua
 10075,6,Aquamodul,Genesect (Aquamodul)
 10075,7,HidroROM,
 10075,8,Idromodulo,
 10075,9,Douse Drive,Douse Genesect
 10075,11,アクアカセット,
+10075,12,水流卡带,
 10075,14,HidroROM,
 10076,1,イナズマカセット,
 10076,3,번개카세트,
+10076,4,閃電卡帶,
 10076,5,Module Choc,Genesect Choc
 10076,6,Blitzmodul,Genesect (Blitzmodul)
 10076,7,FulgoROM,
 10076,8,Voltmodulo,
 10076,9,Shock Drive,Shock Genesect
 10076,11,イナズマカセット,
+10076,12,闪电卡带,
 10076,14,FulgoROM,
 10077,1,ブレイズカセット,
 10077,3,블레이즈카세트,
+10077,4,火焰卡帶,
 10077,5,Module Pyro,Genesect Pyro
 10077,6,Flammenmodul,Genesect (Flammenmodul)
 10077,7,PiroROM,
 10077,8,Piromodulo,
 10077,9,Burn Drive,Burn Genesect
 10077,11,ブレイズカセット,
+10077,12,火焰卡带,
 10077,14,PiroROM,
 10078,1,フリーズカセット,
 10078,3,프리즈카세트,
+10078,4,冰凍卡帶,
 10078,5,Module Cryo,Genesect Cryo
 10078,6,Gefriermodul,Genesect (Gefriermodul)
 10078,7,CrioROM,
 10078,8,Gelomodulo,
 10078,9,Chill Drive,Chill Genesect
 10078,11,フリーズカセット,
+10078,12,冰冻卡带,
 10078,14,CrioROM,
 10079,1,れいじゅうフォルム,
 10079,3,영물폼,
@@ -1450,345 +1518,421 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10085,14,Tipo Hada,
 10086,1,ひょうせつのもよう,
 10086,3,빙설의 모양,
+10086,4,冰雪花紋,
 10086,5,Motif Blizzard,Prismillon Blizzard
 10086,6,Frostmuster,Vivillon (Frost)
 10086,7,Motivo Polar,
 10086,8,Motivo Nevi Perenni,
 10086,9,Icy Snow Pattern,Icy Snow Vivillon
 10086,11,ひょうせつのもよう,
+10086,12,冰雪花纹,
 10086,14,Motivo Polar,
 10087,1,ゆきぐにのもよう,
 10087,3,설국의 모양,
+10087,4,雪國花紋,
 10087,5,Motif Banquise,Prismillon Banquise
 10087,6,Schneefeldmuster,Vivillon (Schnee)
 10087,7,Motivo Taiga,
 10087,8,Motivo Nordico,
 10087,9,Polar Pattern,Polar Vivillon
 10087,11,ゆきぐにのもよう,
+10087,12,雪国花纹,
 10087,14,Motivo Taiga,
 10088,1,せつげんのもよう,
 10088,3,설원의 모양,
+10088,4,雪原花紋,
 10088,5,Motif Glace,Prismillon Glace
 10088,6,Flockenmuster,Vivillion (Flocken)
 10088,7,Motivo Tundra,
 10088,8,Motivo Manto di Neve,
 10088,9,Tundra Pattern,Tundra Vivillon
 10088,11,せつげんのもよう,
+10088,12,雪原花纹,
 10088,14,Motivo Tundra,
 10089,1,たいりくのもよう,
 10089,3,대륙의 모양,
+10089,4,大陸花紋,
 10089,5,Motif Continent,Prismillon Continent
 10089,6,Kontinentalmuster,Vivillion (Kontinental)
 10089,7,Motivo Continental,
 10089,8,Motivo Continentale,
 10089,9,Continental Pattern,Continental Vivillon
 10089,11,たいりくのもよう,
+10089,12,大陆花纹,
 10089,14,Motivo Continental,
 10090,1,ていえんのもよう,
 10090,3,정원의 모양,
+10090,4,庭園花紋,
 10090,5,Motif Verdure,Prismillon Verdure
 10090,6,Ziergartenmuster,Vivillion (Ziergatten)
 10090,7,Motivo Vergel,
 10090,8,Motivo Prato,
 10090,9,Garden Pattern,Garden Vivillon
 10090,11,ていえんのもよう,
+10090,12,庭园花纹,
 10090,14,Motivo Vergel,
 10091,1,みやびなもよう,
 10091,3,우아한 모양,
+10091,4,高雅花紋,
 10091,5,Motif Monarchie,Prismillon Monarchie
 10091,6,Prunkmuster,Vivillion (Prunk)
 10091,7,Motivo Oriental,
 10091,8,Motivo Eleganza,
 10091,9,Elegant Pattern,Elegant Vivillon
 10091,11,みやびなもよう,
+10091,12,高雅花纹,
 10091,14,Motivo Oriental,
 10092,1,モダンなもよう,
 10092,3,모던한 모양,
+10092,4,摩登花紋,
 10092,5,Motif Métropole,Prismillon Métropole
 10092,6,Innovationsmuster,Vivillion (Innovation)
 10092,7,Motivo Moderno,
 10092,8,Motivo Trendy,
 10092,9,Modern Pattern,Modern Vivillon
 10092,11,モダンなもよう,
+10092,12,摩登花纹,
 10092,14,Motivo Moderno,
 10093,1,マリンのもよう,
 10093,3,마린의 모양,
+10093,4,大海花紋,
 10093,5,Motif Rivage,Prismillon Rivage
 10093,6,Aquamarinmuster,Vivillion (Aquamarin)
 10093,7,Motivo Marino,
 10093,8,Motivo Marino,
 10093,9,Marine Pattern,Marine Vivillon
 10093,11,マリンのもよう,
+10093,12,大海花纹,
 10093,14,Motivo Marino,
 10094,1,ぐんとうのもよう,
 10094,3,군도의 모양,
+10094,4,群島花紋,
 10094,5,Motif Archipel,Prismillon Archipel
 10094,6,Archipelmuster,Vivillion (Archipel)
 10094,7,Motivo Isleño,
 10094,8,Motivo Arcipelago,
 10094,9,Archipelago Pattern,Archipelago Vivillon
 10094,11,ぐんとうのもよう,
+10094,12,群岛花纹,
 10094,14,Motivo Isleño,
 10095,1,こうやのもよう,
 10095,3,황야의 모양,
+10095,4,荒野花紋,
 10095,5,Motif Sécheresse,Prismillon Sécheresse
 10095,6,Dürremuster,Vivillion (Dürre)
 10095,7,Motivo Estepa,
 10095,8,Motivo Deserto,
 10095,9,High Plains Pattern,High Plains Vivillon
 10095,11,こうやのもよう,
+10095,12,荒野花纹,
 10095,14,Motivo Estepa,
 10096,1,さじんのもよう,
 10096,3,사진의 모양,
+10096,4,沙塵花紋,
 10096,5,Motif Sable,Prismillon Sable
 10096,6,Sandmuster,Vivillion (Sand)
 10096,7,Motivo Desierto,
 10096,8,Motivo Sabbia,
 10096,9,Sandstorm Pattern,Sandstorm Vivillon
 10096,11,さじんのもよう,
+10096,12,沙尘花纹,
 10096,14,Motivo Desierto,
 10097,1,たいがのもよう,
 10097,3,대하의 모양,
+10097,4,大河花紋,
 10097,5,Motif Delta,Prismillon Delta
 10097,6,Flussdeltamuster,Vivillion (Flussdelta)
 10097,7,Motivo Oasis,
 10097,8,Motivo Fluviale,
 10097,9,River Pattern,River Vivillon
 10097,11,たいがのもよう,
+10097,12,大河花纹,
 10097,14,Motivo Oasis,
 10098,1,スコールのもよう,
 10098,3,스콜의 모양,
+10098,4,驟雨花紋,
 10098,5,Motif Cyclone,Prismillon Cyclone
 10098,6,Monsunmuster,Vivillion (Monsun)
 10098,7,Motivo Monzón,
 10098,8,Motivo Pluviale,
 10098,9,Monsoon Pattern,Monsoon Vivillon
 10098,11,スコールのもよう,
+10098,12,骤雨花纹,
 10098,14,Motivo Monzón,
 10099,1,サバンナのもよう,
 10099,3,사바나의 모양,
+10099,4,熱帶草原花紋,
 10099,5,Motif Mangrove,Prismillon Mangrove
 10099,6,Savannenmuster,Vivillion (Savanne)
 10099,7,Motivo Pantano,
 10099,8,Motivo Savana,
 10099,9,Savanna Pattern,Savanna Vivillon
 10099,11,サバンナのもよう,
+10099,12,热带草原花纹,
 10099,14,Motivo Pantano,
 10100,1,たいようのもよう,
 10100,3,태양의 모양,
+10100,4,太陽花紋,
 10100,5,Motif Zénith,Prismillon Zénith
 10100,6,Sonnenmuster,Vivillion (Sonne)
 10100,7,Motivo Solar,
 10100,8,Motivo Solare,
 10100,9,Sun Pattern,Sun Vivillon
 10100,11,たいようのもよう,
+10100,12,太阳花纹,
 10100,14,Motivo Solar,
 10101,1,オーシャンのもよう,
 10101,3,오션의 모양,
+10101,4,大洋花紋,
 10101,5,Motif Soleil Levant,Prismillon Soleil Levant
 10101,6,Ozeanmuster,Vivillion (Ozean)
 10101,7,Motivo Océano,
 10101,8,Motivo Oceanico,
 10101,9,Ocean Pattern,Ocean Vivillon
 10101,11,オーシャンのもよう,
+10101,12,大洋花纹,
 10101,14,Motivo Océano,
 10102,1,ジャングルのもよう,
 10102,3,정글의 모양,
+10102,4,熱帶雨林花紋,
 10102,5,Motif Jungle,Prismillon Jungle
 10102,6,Dschungelmuster,Vivillion (Dschungel)
 10102,7,Motivo Jungla,
 10102,8,Motivo Giungla,
 10102,9,Jungle Pattern,Jungle Vivillon
 10102,11,ジャングルのもよう,
+10102,12,热带雨林花纹,
 10102,14,Motivo Jungla,
 10103,1,きいろのはな,
 10103,3,노란 꽃,
+10103,4,黃花,
 10103,5,Fleur Jaune,Flabébé Jaune
 10103,6,Gelbblütler,Flabébé (Gelb)
 10103,7,Flor Amarilla,
 10103,8,Fiore Giallo,
 10103,9,Yellow Flower,Yellow Flabébé
 10103,11,きいろのはな,
+10103,12,黄花,
 10103,14,Flor Amarilla,
 10104,1,オレンジいろのはな,
 10104,3,오렌지색 꽃,
+10104,4,橙花,
 10104,5,Fleur Orange,Flabébé Orange
 10104,6,Orangeblütler,Flabébé (Orange)
 10104,7,Flor Naranja,
 10104,8,Fiore Arancione,
 10104,9,Orange Flower,Orange Flabébé
 10104,11,オレンジいろのはな,
+10104,12,橙花,
 10104,14,Flor Naranja,
 10105,1,あおいはな,
 10105,3,파란 꽃,
+10105,4,藍花,
 10105,5,Fleur Bleue,Flabébé Bleu
 10105,6,Blaublütler,Flabébé (Blau)
 10105,7,Flor Azul,
 10105,8,Fiore Blu,
 10105,9,Blue Flower,Blue Flabébé
 10105,11,あおいはな,
+10105,12,蓝花,
 10105,14,Flor Azul,
 10106,1,しろいはな,
 10106,3,하얀 꽃,
+10106,4,白花,
 10106,5,Fleur Blanche,Flabébé Blanc
 10106,6,Weißblütler,Flabébé (Weiß)
 10106,7,Flor Blanca,
 10106,8,Fiore Bianco,
 10106,9,White Flower,White Flabébé
 10106,11,しろいはな,
+10106,12,白花,
 10106,14,Flor Blanca,
 10107,1,きいろのはな,
 10107,3,노란 꽃,
+10107,4,黃花,
 10107,5,Fleur Jaune,Floette Jaune
 10107,6,Gelbblütler,Floette (Gelb)
 10107,7,Flor Amarilla,
 10107,8,Fiore Giallo,
 10107,9,Yellow Flower,Yellow Floette
 10107,11,きいろのはな,
+10107,12,黄花,
 10107,14,Flor Amarilla,
 10108,1,オレンジいろのはな,
 10108,3,오렌지색 꽃,
+10108,4,橙花,
 10108,5,Fleur Orange,Floette Orange
 10108,6,Orangeblütler,Floette (Orange)
 10108,7,Flor Naranja,
 10108,8,Fiore Arancione,
 10108,9,Orange Flower,Orange Floette
 10108,11,オレンジいろのはな,
+10108,12,橙花,
 10108,14,Flor Naranja,
 10109,1,あおいはな,
 10109,3,파란 꽃,
+10109,4,藍花,
 10109,5,Fleur Bleue,Floette Bleu
 10109,6,Blaublütler,Floette (Blau)
 10109,7,Flor Azul,
 10109,8,Fiore Blu,
 10109,9,Blue Flower,Blue Floette
 10109,11,あおいはな,
+10109,12,蓝花,
 10109,14,Flor Azul,
 10110,1,しろいはな,
 10110,3,하얀 꽃,
+10110,4,白花,
 10110,5,Fleur Blanche,Floette Blanc
 10110,6,Weißblütler,Floette (Weiß)
 10110,7,Flor Blanca,
 10110,8,Fiore Bianco,
 10110,9,White Flower,White Floette
 10110,11,しろいはな,
+10110,12,白花,
 10110,14,Flor Blanca,
 10111,1,きいろのはな,
 10111,3,노란 꽃,
+10111,4,黃花,
 10111,5,Fleur Jaune,Florges Jaune
 10111,6,Gelbblütler,Florges (Gelb)
 10111,7,Flor Amarilla,
 10111,8,Fiore Giallo,
 10111,9,Yellow Flower,Yellow Florges
 10111,11,きいろのはな,
+10111,12,黄花,
 10111,14,Flor Amarilla,
 10112,1,オレンジいろのはな,
 10112,3,오렌지색 꽃,
+10112,4,橙花,
 10112,5,Fleur Orange,Florges Orange
 10112,6,Orangeblütler,Florges (Orange)
 10112,7,Flor Naranja,
 10112,8,Fiore Arancione,
 10112,9,Orange Flower,Orange Florges
 10112,11,オレンジいろのはな,
+10112,12,橙花,
 10112,14,Flor Naranja,
 10113,1,あおいはな,
 10113,3,파란 꽃,
+10113,4,藍花,
 10113,5,Fleur Bleue,Florges Bleu
 10113,6,Blaublütler,Florges (Blau)
 10113,7,Flor Azul,
 10113,8,Fiore Blu,
 10113,9,Blue Flower,Blue Florges
 10113,11,あおいはな,
+10113,12,蓝花,
 10113,14,Flor Azul,
 10114,1,しろいはな,
 10114,3,하얀 꽃,
+10114,4,白花,
 10114,5,Fleur Blanche,Florges Blanc
 10114,6,Weißblütler,Florges (Weiß)
 10114,7,Flor Blanca,
 10114,8,Fiore Bianco,
 10114,9,White Flower,White Florges
 10114,11,しろいはな,
+10114,12,白花,
 10114,14,Flor Blanca,
 10115,1,ハートカット,
 10115,3,하트컷,
+10115,4,心形造型,
 10115,5,Coupe Cœur,Couafarel Cœur
 10115,6,Herzchenschnitt,Coiffwaff (Herzchen)
 10115,7,Corte Corazón,
 10115,8,Taglio Cuore,
 10115,9,Heart Trim,Heart Furfrou
 10115,11,ハートカット,
+10115,12,心形造型,
 10115,14,Corte Corazón,
 10116,1,スターカット,
 10116,3,스타컷,
+10116,4,星形造型,
 10116,5,Coupe Étoile,Couafarel Étoile
 10116,6,Sternchenschnitt,Coiffwaff (Sternchen)
 10116,7,Corte Estrella,
 10116,8,Taglio Stella,
 10116,9,Star Trim,Star Furfrou
 10116,11,スターカット,
+10116,12,星形造型,
 10116,14,Corte Estrella,
 10117,1,ダイヤカット,
 10117,3,다이아컷,
+10117,4,菱形造型,
 10117,5,Coupe Diamant,Couafarel Diamant
 10117,6,Diamantenschnitt,Coiffwaff (Diamanten)
 10117,7,Corte Rombo,
 10117,8,Taglio Diamante,
 10117,9,Diamond Trim,Diamond Furfrou
 10117,11,ダイヤカット,
+10117,12,菱形造型,
 10117,14,Corte Rombo,
 10118,1,レディカット,
 10118,3,레이디컷,
+10118,4,淑女造型,
 10118,5,Coupe Demoiselle,Couafarel Demoiselle
 10118,6,Fräuleinschnitt,Coiffwaff (Fräulein)
 10118,7,Corte Señorita,
 10118,8,Taglio Signorina,
 10118,9,Debutante Trim,Debutante Furfrou
 10118,11,レディカット,
+10118,12,淑女造型,
 10118,14,Corte Señorita,
 10119,1,マダムカット,
 10119,3,마담컷,
+10119,4,貴婦造型,
 10119,5,Coupe Madame,Couafarel Madame
 10119,6,Damenschnitt,Coiffwaff (Damen)
 10119,7,Corte Dama,
 10119,8,Taglio Gentildonna,
 10119,9,Matron Trim,Matron Furfrou
 10119,11,マダムカット,
+10119,12,贵妇造型,
 10119,14,Corte Dama,
 10120,1,ジェントルカット,
 10120,3,젠틀컷,
+10120,4,紳士造型,
 10120,5,Coupe Monsieur,Couafarel Monsieur
 10120,6,Kavaliersschnitt,Coiffwaff (Kavalier)
 10120,7,Corte Caballero,
 10120,8,Taglio Gentiluomo,
 10120,9,Dandy Trim,Dandy Furfrou
 10120,11,ジェントルカット,
+10120,12,绅士造型,
 10120,14,Corte Caballero,
 10121,1,クイーンカット,
 10121,3,퀸컷,
+10121,4,女王造型,
 10121,5,Coupe Reine,Couafarel Reine
 10121,6,Königinnenschnitt,Coiffwaff (Königin)
 10121,7,Corte Aristocrático,
 10121,8,Taglio Regina,
 10121,9,La Reine Trim,La Reine Furfrou
 10121,11,クイーンカット,
+10121,12,女王造型,
 10121,14,Corte Aristocrático,
 10122,1,カブキカット,
 10122,3,가부키컷,
+10122,4,歌舞伎造型,
 10122,5,Coupe Kabuki,Couafarel Kabuki
 10122,6,Kabuki-Schnitt,Coiffwaff (Kabuki)
 10122,7,Corte Kabuki,
 10122,8,Taglio Kabuki,
 10122,9,Kabuki Trim,Kabuki Furfrou
 10122,11,カブキカット,
+10122,12,歌舞伎造型,
 10122,14,Corte Kabuki,
 10123,1,キングダムカット,
 10123,3,킹덤컷,
+10123,4,國王造型,
 10123,5,Coupe Pharaon,Couafarel Pharaon
 10123,6,Herrscherschnitt,Coiffwaff (Herrscher)
 10123,7,Corte Faraónico,
 10123,8,Taglio Faraone,
 10123,9,Pharaoh Trim,Pharaoh Furfrou
 10123,11,キングダムカット,
+10123,12,国王造型,
 10123,14,Corte Faraónico,
 10124,1,メスのすがた,
 10124,3,암컷의 모습,
@@ -2199,30 +2343,36 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10160,14,Mega-Abomasnow,
 10161,1,ファンシーなもよう,
 10161,3,팬시한 모양,
+10161,4,幻彩花紋,
 10161,5,Motif Fantaisie,Prismillon Fantaisie
 10161,6,Fantasiemuster,Vivillion (Fantasie)
 10161,7,Motivo Fantasía,
 10161,8,Motivo Sbarazzino,
 10161,9,Fancy Pattern,Fancy Vivillon
 10161,11,ファンシーなもよう,
+10161,12,幻彩花纹,
 10161,14,Motivo Fantasía,
 10162,1,ボールのもよう,
 10162,3,볼의 모양,
+10162,4,球球花紋,
 10162,5,Motif Poké Ball,Prismillon Poké Ball
 10162,6,Pokéball-Muster,Vivillion (Pokeball)
 10162,7,Motivo Poké Ball,
 10162,8,Motivo Poké Ball,
 10162,9,Poké Ball Pattern,Poké Ball Vivillon
 10162,11,ボールのもよう,
+10162,12,球球花纹,
 10162,14,Motivo Poké Ball,
 10163,1,えいえんのはな,
 10163,3,영원의 꽃,
+10163,4,永恆之花,
 10163,5,Fleur Éternelle,Floette Éternel
 10163,6,Ewigblütler,Floette (Ewigblütler)
 10163,7,Flor Eterna,
 10163,8,Fiore Eterno,
 10163,9,Eternal Flower,Eternal Floette
 10163,11,えいえんのはな,
+10163,12,永恒之花,
 10163,14,Flor Eterna,
 10164,1,メガラティアス,
 10164,3,메가라티아스,
@@ -3604,15 +3754,19 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10343,12,低调的样子,
 10343,14,Forma Grave,
 10344,1,しんさくフォルム,
+10344,4,真品形態,
 10344,5,Forme Authentique,Théffroi Authentique
 10344,6,Originalform,Fatalitee (Original)
 10344,9,Antique Form,Antique Sinistea
 10344,11,しんさくフォルム,
+10344,12,真品形态,
 10345,1,しんさくフォルム,
+10345,4,真品形態,
 10345,5,Forme Authentique,Polthégeist Authentique
 10345,6,Originalform,Mortipot (Original)
 10345,9,Antique Form,Antique Polteageist
 10345,11,しんさくフォルム,
+10345,12,真品形态,
 10346,1,ミルキィルビー,
 10346,3,밀키루비,
 10346,4,奶香紅鑽,
@@ -3982,198 +4136,284 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10397,9,Gigantamax Form,Gigantamax Low Key Toxtricity
 10397,11,ローなすがた・キョダイマックスのすがた,
 10398,1,ヒスイのすがた,
+10398,4,洗翠的樣子,
 10398,5,Forme de Hisui,Caninos de Hisui
 10398,6,Hisui-Form,Hisui Fukano
 10398,9,Hisuian Form,Hisuian Growlithe
 10398,11,ヒスイのすがた,
+10398,12,洗翠的样子,
 10399,1,ヒスイのすがた,
+10399,4,洗翠的樣子,
 10399,5,Forme de Hisui,Arcanin de Hisui
 10399,6,Hisui-Form,Hisui Arkani
 10399,9,Hisuian Form,Hisuian Arcanine
 10399,11,ヒスイのすがた,
+10399,12,洗翠的样子,
 10400,1,ヒスイのすがた,
+10400,4,洗翠的樣子,
 10400,5,Forme de Hisui,Voltorbe de Hisui
 10400,6,Hisui-Form,Hisui Voltobal
 10400,9,Hisuian Form,Hisuian Voltorb
 10400,11,ヒスイのすがた,
+10400,12,洗翠的样子,
 10401,1,ヒスイのすがた,
+10401,4,洗翠的樣子,
 10401,5,Forme de Hisui,Électrode de Hisui
 10401,6,Hisui-Form,Hisui Lektrobal
 10401,9,Hisuian Form,Hisuian Electrode
 10401,11,ヒスイのすがた,
+10401,12,洗翠的样子,
 10402,1,ヒスイのすがた,
+10402,4,洗翠的樣子,
 10402,5,Forme de Hisui,Typhlosion de Hisui
 10402,6,Hisui-Form,Hisui Tornupto
 10402,9,Hisuian Form,Hisuian Typhlosion
 10402,11,ヒスイのすがた,
+10402,12,洗翠的样子,
 10403,1,ヒスイのすがた,
+10403,4,洗翠的樣子,
 10403,5,Forme de Hisui,Qwilfish de Hisui
 10403,6,Hisui-Form,Hisui Baldorfish
 10403,9,Hisuian Form,Hisuian Qwilfish
 10403,11,ヒスイのすがた,
+10403,12,洗翠的样子,
 10404,1,ヒスイのすがた,
+10404,4,洗翠的樣子,
 10404,5,Forme de Hisui,Farfuret de Hisui
 10404,6,Hisui-Form,Hisui Sniebel
 10404,9,Hisuian Form,Hisuian Sneasel
 10404,11,ヒスイのすがた,
+10404,12,洗翠的样子,
 10405,1,ヒスイのすがた,
+10405,4,洗翠的樣子,
 10405,5,Forme de Hisui,Clamiral de Hisui
 10405,6,Hisui-Form,Hisui Admurai
 10405,9,Hisuian Form,Hisuian Samurott
 10405,11,ヒスイのすがた,
+10405,12,洗翠的样子,
 10406,1,ヒスイのすがた,
+10406,4,洗翠的樣子,
 10406,5,Forme de Hisui,Fragilady de Hisui
 10406,6,Hisui-Form,Hisui Dressella
 10406,9,Hisuian Form,Hisuian Lilligant
 10406,11,ヒスイのすがた,
+10406,12,洗翠的样子,
 10407,1,ヒスイのすがた,
+10407,4,洗翠的樣子,
 10407,5,Forme de Hisui,Zorua de Hisui
 10407,6,Hisui-Form,Hisui Zorua
 10407,9,Hisuian Form,Hisuian Zorua
 10407,11,ヒスイのすがた,
+10407,12,洗翠的样子,
 10408,1,ヒスイのすがた,
+10408,4,洗翠的樣子,
 10408,5,Forme de Hisui,Zoroark de Hisui
 10408,6,Hisui-Form,Hisui Zoroark
 10408,9,Hisuian Form,Hisuian Zoroark
 10408,11,ヒスイのすがた,
+10408,12,洗翠的样子,
 10409,1,ヒスイのすがた,
+10409,4,洗翠的樣子,
 10409,5,Forme de Hisui,Gueriaigle de Hisui
 10409,6,Hisui-Form,Hisui Washakwil
 10409,9,Hisuian Form,Hisuian Braviary
 10409,11,ヒスイのすがた,
+10409,12,洗翠的样子,
 10410,1,ヒスイのすがた,
+10410,4,洗翠的樣子,
 10410,5,Forme de Hisui,Colimucus de Hisui
 10410,6,Hisui-Form,Hisui Viscargot
 10410,9,Hisuian Form,Hisuian Sliggoo
 10410,11,ヒスイのすがた,
+10410,12,洗翠的样子,
 10411,1,ヒスイのすがた,
+10411,4,洗翠的樣子,
 10411,5,Forme de Hisui,Muplodocus de Hisui
 10411,6,Hisui-Form,Hisui Viscogon
 10411,9,Hisuian Form,Hisuian Goodra
 10411,11,ヒスイのすがた,
+10411,12,洗翠的样子,
 10412,1,ヒスイのすがた,
+10412,4,洗翠的樣子,
 10412,5,Forme de Hisui,Séracrawl de Hisui
 10412,6,Hisui-Form,Hisui Arktilas
 10412,9,Hisuian Form,Hisuian Avalugg
 10412,11,ヒスイのすがた,
+10412,12,洗翠的样子,
 10413,1,ヒスイのすがた,
+10413,4,洗翠的樣子,
 10413,5,Forme de Hisui,Archéduc de Hisui
 10413,6,Hisui-Form,Hisui Silvarro
 10413,9,Hisuian Form,Hisuian Decidueye
 10413,11,ヒスイのすがた,
+10413,12,洗翠的样子,
 10414,1,オリジンフォルム,
+10414,4,起源形態,
 10414,5,Forme Originelle,Diagla Originel
 10414,6,Urform,Ur-Dialga
 10414,9,Origin Forme,Origin Dialga
 10414,11,オリジンフォルム,
+10414,12,起源形态,
 10415,1,オリジンフォルム,
+10415,4,起源形態,
 10415,5,Forme Originelle,Palkia Originel
 10415,6,Urform,Ur-Palkia
 10415,9,Origin Forme,Origin Palkia
 10415,11,オリジンフォルム,
+10415,12,起源形态,
 10416,1,しろすじのすがた,
+10416,4,白條紋的樣子,
 10416,5,Motif Blanc,Bargantua Blanc
 10416,6,Weißlinienform,Weißliniges Barschuft
 10416,9,White-Striped Form,White-Striped Basculin
 10416,11,しろすじのすがた,
+10416,12,白条纹的样子,
 10417,1,メスのすがた,
+10417,4,雌性的樣子,
 10417,5,Femelle,Paragruel Femelle
 10417,6,Weiblich,Barschuft ♀
 10417,9,Female,Female Basculegion
 10417,11,メスのすがた,
+10417,12,雌性的样子,
 10418,1,れいじゅうフォルム,
+10418,4,靈獸形態,
 10418,5,Forme Totémique,Amovénus Totémique
 10418,6,Tiergeistform,Enamorus (Tiergeist)
 10418,9,Therian Forme,Therian Enamorus
 10418,11,れいじゅうフォルム,
+10418,12,灵兽形态,
 10419,1,パルデアのすがた,
+10419,4,帕底亞的樣子（鬥戰種）,
 10419,5,Forme de Paldéa,Tauros de Paldéa Race Combative
 10419,9,Paldean Form (Combat Breed),Paldean Tauros (Combat Breed)
 10419,11,パルデアのすがた,
+10419,12,帕底亚的样子（斗战种）,
 10420,1,パルデアのすがた,
+10420,4,帕底亞的樣子（火熾種）,
 10420,5,Forme de Paldéa,Tauros de Paldéa Race Flamboyante
 10420,9,Paldean Form (Blaze Breed),Paldean Tauros (Blaze Breed)
 10420,11,パルデアのすがた,
+10420,12,帕底亚的样子（火炽种）,
 10421,1,パルデアのすがた,
+10421,4,帕底亞的樣子（水瀾種）,
 10421,5,Forme de Paldéa,Tauros de Paldéa Race Aquatique
 10421,9,Paldean Form (Aqua Breed),Paldean Tauros (Aqua Breed)
 10421,11,パルデアのすがた,
+10421,12,帕底亚的样子（水澜种）,
 10422,1,パルデアのすがた,
+10422,4,帕底亞的樣子,
 10422,5,Forme de Paldéa,Axoloto de Paldéa
 10422,9,Paldean Form,Paldean Wooper
 10422,11,パルデアのすがた,
+10422,12,帕底亚的样子,
 10423,1,メスのすがた,
+10423,4,雌性的樣子,
 10423,5,Femelle,Fragroin Femelle
 10423,9,Female,Female Oinkologne
 10423,11,メスのすがた,
+10423,12,雌性的样子,
 10424,1,みつふしフォルム,
+10424,4,三節形態,
 10424,5,Forme Triple,Deusolourdo Forme Triple
 10424,9,Three-Segment Form,Three-Segment Form Dudunsparce
 10424,11,みつふしフォルム,
+10424,12,三节形态,
 10425,1,マイティフォルム,
+10425,4,全能形態,
 10425,5,Forme Super,Superdofin Forme Super
 10425,9,Hero Form,Hero Form Palafin
 10425,11,マイティフォルム,
+10425,12,全能形态,
 10426,1,３びきかぞく,
+10426,4,三隻家庭,
 10426,5,Famille de Trois,Famignol Famille de Trois
 10426,9,Family of Three,Maushold (Family of Three)
 10426,11,３びきかぞく,
+10426,12,三只家庭,
 10427,1,たれたすがた,
+10427,4,下垂姿勢,
 10427,5,Forme Affalée,Nigirigon Forme Affalée
 10427,9,Droopy Form,Droopy Form Tatsugiri
 10427,11,たれたすがた,
+10427,12,下垂姿势,
 10428,1,のびたすがた,
+10428,4,平挺姿勢,
 10428,5,Forme Raide,Nigirigon Forme Raide
 10428,9,Stretchy Form,Stretchy Form Tatsugiri
 10428,11,のびたすがた,
+10428,12,平挺姿势,
 10429,1,ブルーフェザー,
+10429,4,藍羽毛,
 10429,5,Plumage Bleu,Tapatoès Plumage Bleu
 10429,9,Blue Plumage,Blue Plumage Squawkabilly
 10429,11,ブルーフェザー,
+10429,12,蓝羽毛,
 10430,1,イエローフェザー,
+10430,4,黃羽毛,
 10430,5,Plumage Jaune,Tapatoès Plumage Jaune
 10430,9,Yellow Plumage,Yellow Plumage Squawkabilly
 10430,11,イエローフェザー,
+10430,12,黄羽毛,
 10431,1,ホワイトフェザー,
+10431,4,白羽毛,
 10431,5,Plumage Blanc,Tapatoès Plumage Blanc
 10431,9,White Plumage,White Plumage Squawkabilly
 10431,11,ホワイトフェザー,
+10431,12,白羽毛,
 10432,1,とほフォルム,
+10432,4,徒步形態,
 10432,5,Forme Marche,Mordudor Forme Marche
 10432,9,Roaming Form,Roaming Form Gimmighoul
 10432,11,とほフォルム,
+10432,12,徒步形态,
 10433,1,せいげんけいたい,
+10433,4,制限形態,
 10433,5,Forme Limitée,Koraidon Forme Limitée
 10433,9,Limited Build,
 10433,11,せいげんけいたい,
+10433,12,制限形态,
 10434,1,しっそうけいたい,
+10434,4,疾馳形態,
 10434,5,Forme de Course,Koraidon Forme de Course
 10434,9,Sprinting Build,
 10434,11,しっそうけいたい,
+10434,12,疾驰形态,
 10435,1,ゆうえいけいたい,
+10435,4,破浪形態,
 10435,5,Forme de Nage,Koraidon Forme de Nage
 10435,9,Swimming Build,
 10435,11,ゆうえいけいたい,
+10435,12,破浪形态,
 10436,1,かっくうけいたい,
+10436,4,乘風形態,
 10436,5,Forme de Vol,Koraidon Forme de Vol
 10436,9,Gliding Build,
 10436,11,かっくうけいたい,
+10436,12,乘风形态,
 10437,1,リミテッドモード,
+10437,4,受限模式,
 10437,5,Mode Bridé,Miraidon Mode Bridé
 10437,9,Low-Power Mode,
 10437,11,リミテッドモード,
+10437,12,受限模式,
 10438,1,ドライブモード,
+10438,4,行駛模式,
 10438,5,Mode Terrestre,Miraidon Mode Terrestre
 10438,9,Drive Mode,
 10438,11,ドライブモード,
+10438,12,行驶模式,
 10439,1,フロートモード,
+10439,4,浮水模式,
 10439,5,Mode Aquatique,Miraidon Mode Aquatique
 10439,9,Aquatic Mode,
 10439,11,フロートモード,
+10439,12,浮水模式,
 10440,1,グライドモード,
+10440,4,滑翔模式,
 10440,5,Mode Aérien,Miraidon Mode Aérien
 10440,9,Glide Mode,
 10440,11,グライドモード,
+10440,12,滑翔模式,
 10441,1,アカツキ,
 10441,3,붉은 달,
 10441,4,赫月,
@@ -4216,22 +4456,26 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10444,8,Maschera Fondamenta,
 10444,9,Cornerstone Mask,Cornerstone Mask Ogerpon
 10444,11,いしずえのめん,
-10444,12,礎石面具,
+10444,12,础石面具,
 10444,14,Máscara Cimiento,
 10445,1,テラスタルフォルム,
+10445,4,太晶形態,
 10445,5,Forme Téracristal,Terapagos Téracristal
 10445,6,Terakristall-Form,
 10445,7,Forma teracristal,
 10445,8,Forma Teracristal,
 10445,9,Terastal Form,Terastal Form Terapagos
 10445,11,テラスタルフォルム,
+10445,12,太晶形态,
 10445,14,Forma teracristal,
 10446,1,ステラフォルム,
+10446,4,星晶形態,
 10446,5,Forme Stellaire,Terapagos Stellaire
 10446,6,Stellarform,
 10446,7,Forma astral,
 10446,9,Stellar Form,Stellar Form Terapagos
 10446,11,ステラフォルム,
+10446,12,星晶形态,
 10446,14,Forma astral,
 10447,1,タカイモノのすがた,
 10447,3,알짜배기의 모습,
@@ -4364,197 +4608,293 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10502,5,Mélange Tricolore Ruban en Sucre,Charmilly Mélange Tricolore Ruban en Sucre
 10502,9,Rainbow Swirl Ribbon Sweet,Rainbow Swirl Ribbon Sweet Alcremie
 10503,1,メガピクシー,
+10503,4,超級皮可西,
 10503,5,Méga-Mélodelfe,Méga-Mélodelfe
 10503,9,Mega Clefable,Mega Clefable
 10503,11,メガピクシー,
+10503,12,超级皮可西,
 10504,1,メガウツボット,
+10504,4,超級大食花,
 10504,5,Méga-Empiflor,Méga-Empiflor
 10504,9,Mega Victreebel,Mega Victreebel
 10504,11,メガウツボット,
+10504,12,超级大食花,
 10505,1,メガスターミー,
+10505,4,超級寶石海星,
 10505,5,Méga-Staross,Méga-Staross
 10505,9,Mega Starmie,Mega Starmie
 10505,11,メガスターミー,
+10505,12,超级宝石海星,
 10506,1,メガカイリュー,
+10506,4,超級快龍,
 10506,5,Méga-Dracolosse,Méga-Dracolosse
 10506,9,Mega Dragonite,Mega Dragonite
 10506,11,メガカイリュー,
+10506,12,超级快龙,
 10507,1,メガメガニウム,
+10507,4,超級大竺葵,
 10507,5,Méga-Méganium,Méga-Méganium
 10507,9,Mega Meganium,Mega Meganium
 10507,11,メガメガニウム,
+10507,12,超级大竺葵,
 10508,1,メガオーダイル,
+10508,4,超級大力鱷,
 10508,5,Méga-Aligatueur,Méga-Aligatueur
 10508,9,Mega Feraligatr,Mega Feraligatr
 10508,11,メガオーダイル,
+10508,12,超级大力鳄,
 10509,1,メガエアームド,
+10509,4,超級盔甲鳥,
 10509,5,Méga-Airmure,Méga-Airmure
 10509,9,Mega Skarmory,Mega Skarmory
 10509,11,メガエアームド,
+10509,12,超级盔甲鸟,
 10510,1,メガユキメノコ,
+10510,4,超級雪妖女,
 10510,5,Méga-Momartik,Méga-Momartik
 10510,9,Mega Froslass,Mega Froslass
 10510,11,メガユキメノコ,
+10510,12,超级雪妖女,
 10511,1,メガエンブオー,
+10511,4,超級炎武王,
 10511,5,Méga-Roitiflam,Méga-Roitiflam
 10511,9,Mega Emboar,Mega Emboar
 10511,11,メガエンブオー,
+10511,12,超级炎武王,
 10512,1,メガドリュウズ,
+10512,4,超級龍頭地鼠,
 10512,5,Méga-Minotaupe,Méga-Minotaupe
 10512,9,Mega Excadrill,Mega Excadrill
 10512,11,メガドリュウズ,
+10512,12,超级龙头地鼠,
 10513,1,メガペンドラー,
+10513,4,超級蜈蚣王,
 10513,5,Méga-Brutapode,Méga-Brutapode
 10513,9,Mega Scolipede,Mega Scolipede
 10513,11,メガペンドラー,
+10513,12,超级蜈蚣王,
 10514,1,メガズルズキン,
+10514,4,超級頭巾混混,
 10514,5,Méga-Baggaïd,Méga-Baggaïd
 10514,9,Mega Scrafty,Mega Scrafty
 10514,11,メガズルズキン,
+10514,12,超级头巾混混,
 10515,1,メガシビルドン,
+10515,4,超級麻麻鰻魚王,
 10515,5,Méga-Ohmassacre,Méga-Ohmassacre
 10515,9,Mega Eelektross,Mega Eelektross
 10515,11,メガシビルドン,
+10515,12,超级麻麻鳗鱼王,
 10516,1,メガシャンデラ,
+10516,4,超級水晶燈火靈,
 10516,5,Méga-Lugulabre,Méga-Lugulabre
 10516,9,Mega Chandelure,Mega Chandelure
 10516,11,メガシャンデラ,
+10516,12,超级水晶灯火灵,
 10517,1,メガブリガロン,
+10517,4,超級布里卡隆,
 10517,5,Méga-Blindépique,Méga-Blindépique
 10517,9,Mega Chesnaught,Mega Chesnaught
 10517,11,メガブリガロン,
+10517,12,超级布里卡隆,
 10518,1,メガマフォクシー,
+10518,4,超級妖火紅狐,
 10518,5,Méga-Goupelin,Méga-Goupelin
 10518,9,Mega Delphox,Mega Delphox
 10518,11,メガマフォクシー,
+10518,12,超级妖火红狐,
 10519,1,メガゲッコウガ,
+10519,4,超級甲賀忍蛙,
 10519,5,Méga-Amphinobi,Méga-Amphinobi
 10519,9,Mega Greninja,Mega Greninja
 10519,11,メガゲッコウガ,
+10519,12,超级甲贺忍蛙,
 10520,1,メガカエンジシ,
+10520,4,超級火炎獅,
 10520,5,Méga-Némélios,Méga-Némélios
 10520,9,Mega Pyroar,Mega Pyroar
 10520,11,メガカエンジシ,
+10520,12,超级火炎狮,
 10521,1,メガフラエッテ,
+10521,4,超級花葉蒂,
 10521,5,Méga-Floette,Méga-Floette
 10521,9,Mega Floette,Mega Floette
 10521,11,メガフラエッテ,
+10521,12,超级花叶蒂,
 10522,1,メガカラマネロ,
+10522,4,超級烏賊王,
 10522,5,Méga-Sepiatroce,Méga-Sepiatroce
 10522,9,Mega Malamar,Mega Malamar
 10522,11,メガカラマネロ,
+10522,12,超级乌贼王,
 10523,1,メガガメノデス,
+10523,4,超級龜足巨鎧,
 10523,5,Méga-Golgopathe,Méga-Golgopathe
 10523,9,Mega Barbaracle,Mega Barbaracle
 10523,11,メガガメノデス,
+10523,12,超级龟足巨铠,
 10524,1,メガドラミドロ,
+10524,4,超級毒藻龍,
 10524,5,Méga-Kravarech,Méga-Kravarech
 10524,9,Mega Dragalge,Mega Dragalge
 10524,11,メガドラミドロ,
+10524,12,超级毒藻龙,
 10525,1,メガルチャブル,
+10525,4,超級摔角鷹人,
 10525,5,Méga-Brutalibré,Méga-Brutalibré
 10525,9,Mega Hawlucha,Mega Hawlucha
 10525,11,メガルチャブル,
+10525,12,超级摔角鹰人,
 10526,1,メガジガルデ,
+10526,4,超級基格爾德,
 10526,5,Méga-Zygarde,Méga-Zygarde
 10526,9,Mega Zygarde,Mega Zygarde
 10526,11,メガジガルデ,
+10526,12,超级基格尔德,
 10527,1,メガジジーロン,
+10527,4,超級老翁龍,
 10527,5,Méga-Draïeul,Méga-Draïeul
 10527,9,Mega Drampa,Mega Drampa
 10527,11,メガジジーロン,
+10527,12,超级老翁龙,
 10528,1,メガタイレーツ,
+10528,4,超級列陣兵,
 10528,5,Méga-Hexadron,Méga-Hexadron
 10528,9,Mega Falinks,Mega Falinks
 10528,11,メガタイレーツ,
+10528,12,超级列阵兵,
 10529,1,メガライチュウX,
+10529,4,超級雷丘Ｘ,
 10529,5,Méga-Raichu X,Méga-Raichu X
 10529,9,Mega Raichu X,Mega Raichu X
 10529,11,メガライチュウX,
+10529,12,超级雷丘Ｘ,
 10530,1,メガライチュウY,
+10530,4,超級雷丘Ｙ,
 10530,5,Méga-Raichu Y,Méga-Raichu Y
 10530,9,Mega Raichu Y,Mega Raichu Y
 10530,11,メガライチュウY,
+10530,12,超级雷丘Ｙ,
 10531,1,メガチリーン,
+10531,4,超級風鈴鈴,
 10531,5,Méga-Éoko,Méga-Éoko
 10531,9,Mega Chimecho,Mega Chimecho
 10531,11,メガチリーン,
+10531,12,超级风铃铃,
 10532,1,メガアブソルZ,
+10532,4,超級阿勃梭魯Ｚ,
 10532,5,Méga-Absol Z,Méga-Absol Z
 10532,9,Mega Absol Z,Mega Absol Z
 10532,11,メガアブソルZ,
+10532,12,超级阿勃梭鲁Ｚ,
 10533,1,メガムクホーク,
+10533,4,超級姆克鷹,
 10533,5,Méga-Étouraptor,Méga-Étouraptor
 10533,9,Mega Staraptor,Mega Staraptor
 10533,11,メガムクホーク,
+10533,12,超级姆克鹰,
 10534,1,メガガブリアスZ,
+10534,4,超級烈咬陸鯊Ｚ,
 10534,5,Méga-Carchacrok Z,Méga-Carchacrok Z
 10534,9,Mega Garchomp Z,Mega Garchomp Z
 10534,11,メガガブリアスZ,
+10534,12,超级烈咬陆鲨Ｚ,
 10535,1,メガルカリオZ,
+10535,4,超級路卡利歐Ｚ,
 10535,5,Méga-Lucario Z,Méga-Lucario Z
 10535,9,Mega Lucario Z,Mega Lucario Z
 10535,11,メガルカリオZ,
+10535,12,超级路卡利欧Ｚ,
 10536,1,メガヒードラン,
+10536,4,超級席多藍恩,
 10536,5,Méga-Heatran,Méga-Heatran
 10536,9,Mega Heatran,Mega Heatran
 10536,11,メガヒードラン,
+10536,12,超级席多蓝恩,
 10537,1,メガダークライ,
+10537,4,超級達克萊伊,
 10537,5,Méga-Darkrai,Méga-Darkrai
 10537,9,Mega Darkrai,Mega Darkrai
 10537,11,メガダークライ,
+10537,12,超级达克莱伊,
 10538,1,メガゴルーグ,
+10538,4,超級泥偶巨人,
 10538,5,Méga-Golemastoc,Méga-Golemastoc
 10538,9,Mega Golurk,Mega Golurk
 10538,11,メガゴルーグ,
+10538,12,超级泥偶巨人,
 10539,1,メガニャオニクス,
+10539,4,超級超能妙喵,
 10539,5,Méga-Mistigrix,Méga-Mistigrix
 10539,9,Mega Meowstic,Mega Meowstic
 10539,11,メガニャオニクス,
+10539,12,超级超能妙喵,
 10540,1,メガケケンカニ,
+10540,4,超級好勝毛蟹,
 10540,5,Méga-Crabominable,Méga-Crabominable
 10540,9,Mega Crabominable,Mega Crabominable
 10540,11,メガケケンカニ,
+10540,12,超级好胜毛蟹,
 10541,1,メガグソクムシャ,
+10541,4,超級具甲武者,
 10541,5,Méga-Sarmuraï,Méga-Sarmuraï
 10541,9,Mega Golisopod,Mega Golisopod
 10541,11,メガグソクムシャ,
+10541,12,超级具甲武者,
 10542,1,メガマギアナ,
+10542,4,超級瑪機雅娜,
 10542,5,Méga-Magearna,Méga-Magearna
 10542,9,Mega Magearna,Mega Magearna
 10542,11,メガマギアナ,
+10542,12,超级玛机雅娜,
 10543,1,メガマギアナ,
+10543,4,超級瑪機雅娜,
 10543,5,Méga-Magearna Couleur du Passé,Méga-Magearna Couleur du Passé
 10543,9,Mega Original Magearna,Mega Original Magearna
 10543,11,メガマギアナ,
+10543,12,超级玛机雅娜,
 10544,1,メガゼラオラ,
+10544,4,超級捷拉奧拉,
 10544,5,Méga-Zeraora,Méga-Zeraora
 10544,9,Mega Zeraora,Mega Zeraora
 10544,11,メガゼラオラ,
+10544,12,超级捷拉奥拉,
 10545,1,メガスコヴィラン,
+10545,4,超級狠辣椒,
 10545,5,Méga-Scovilain,Méga-Scovilain
 10545,9,Mega Scovillain,Mega Scovillain
 10545,11,メガスコヴィラン,
+10545,12,超级狠辣椒,
 10546,1,メガキラフロル,
+10546,4,超級晶光花,
 10546,5,Méga-Floréclat,Méga-Floréclat
 10546,9,Mega Glimmora,Mega Glimmora
 10546,11,メガキラフロル,
+10546,12,超级晶光花,
 10547,1,メガシャリタツ,
+10547,4,超級米立龍,
 10547,5,Méga-Nigirigon Forme Courbée,Méga-Nigirigon Forme Courbée
 10547,9,Mega Curly Tatsugiri,Mega Curly Tatsugiri
 10547,11,メガシャリタツ,
+10547,12,超级米立龙,
 10548,1,メガシャリタツ,
+10548,4,超級米立龍,
 10548,5,Méga-Nigirigon Forme Affalée,Méga-Nigirigon Forme Affalée
 10548,9,Mega Droopy Tatsugiri,Mega Droopy Tatsugiri
 10548,11,メガシャリタツ,
+10548,12,超级米立龙,
 10549,1,メガシャリタツ,
+10549,4,超級米立龍,
 10549,5,Méga-Nigirigon Forme Raide,Méga-Nigirigon Forme Raide
 10549,9,Mega Stretchy Tatsugiri,Mega Stretchy Tatsugiri
 10549,11,メガシャリタツ,
+10549,12,超级米立龙,
 10550,1,メガセグレイブ,
+10550,4,超級戟脊龍,
 10550,5,Méga-Glaivodo,Méga-Glaivodo
 10550,9,Mega Baxcalibur,Mega Baxcalibur
 10550,11,メガセグレイブ,
+10550,12,超级戟脊龙,
 10551,1,メスのすがた,
 10551,3,암컷의 모습,
 10551,4,雌性的樣子,
@@ -4589,6 +4929,8 @@ pokemon_form_id,local_language_id,form_name,pokemon_name
 10553,12,雌性的样子,
 10553,14,Hembra,
 10554,1,メガニャオニクス,
+10554,4,超級超能妙喵,
 10554,5,Méga-Mistigrix,Méga-Mistigrix
 10554,9,Mega Meowstic,Mega Meowstic
 10554,11,メガニャオニクス,
+10554,12,超级超能妙喵,

@@ -7,7 +7,7 @@ version_id,local_language_id,name
 1,7,Rojo
 1,8,Rossa
 1,9,Red
-1,12,紅
+1,12,红
 1,14,Rojo
 2,1,青
 2,3,블루
@@ -17,7 +17,7 @@ version_id,local_language_id,name
 2,7,Azul
 2,8,Blu
 2,9,Blue
-2,12,藍
+2,12,蓝
 2,14,Azul
 3,1,ピカチュウ
 3,3,피카츄
@@ -47,7 +47,7 @@ version_id,local_language_id,name
 5,7,Plata
 5,8,Argento
 5,9,Silver
-5,12,銀
+5,12,银
 5,14,Plata
 6,1,クリスタル
 6,3,크리스탈
@@ -67,7 +67,7 @@ version_id,local_language_id,name
 7,7,Rubí
 7,8,Rubino
 7,9,Ruby
-7,12,紅寶石
+7,12,红宝石
 7,14,Rubí
 8,1,サファイア
 8,3,사파이어
@@ -77,7 +77,7 @@ version_id,local_language_id,name
 8,7,Zafiro
 8,8,Zaffiro
 8,9,Sapphire
-8,12,藍寶石
+8,12,蓝宝石
 8,14,Zafiro
 9,1,エメラルド
 9,3,에메랄드
@@ -87,7 +87,7 @@ version_id,local_language_id,name
 9,7,Esmeralda
 9,8,Smeraldo
 9,9,Emerald
-9,12,綠寶石
+9,12,绿宝石
 9,14,Esmeralda
 10,1,ファイアレッド
 10,3,파이어레드
@@ -97,7 +97,7 @@ version_id,local_language_id,name
 10,7,Rojo Fuego
 10,8,Rosso Fuoco
 10,9,FireRed
-10,12,火紅
+10,12,火红
 10,14,Rojo Fuego
 11,1,リーフグリーン
 11,3,리프그린
@@ -107,7 +107,7 @@ version_id,local_language_id,name
 11,7,Verde Hoja
 11,8,Verde Foglia
 11,9,LeafGreen
-11,12,葉綠
+11,12,叶绿
 11,14,Verde Hoja
 12,1,ダイヤモンド
 12,3,디아루가
@@ -157,7 +157,7 @@ version_id,local_language_id,name
 16,7,Plata SoulSilver
 16,8,Argento SoulSilver
 16,9,SoulSilver
-16,12,魂銀
+16,12,魂银
 16,14,Plata SoulSilver
 17,1,ブラック
 17,3,블랙
@@ -406,6 +406,7 @@ version_id,local_language_id,name
 41,12,紫
 41,14,Púrpura
 42,1,スカーレット: 碧の仮面
+42,4,朱: 碧之假面
 42,5,Écarlate: Le Masque Turquoise
 42,6,Karmesin: Die Türkisgrüne Maske
 42,7,Escarlata: La máscara turquesa
@@ -414,12 +415,13 @@ version_id,local_language_id,name
 42,12,朱: 碧之假面
 42,14,Escarlata: La máscara turquesa
 43,1,スカーレット: 藍の円盤
+43,4,朱: 藍之圓盤
 43,5,Écarlate: Le Disque Indigo
 43,6,Karmesin: Die Indigoblaue Scheibe
 43,7,Escarlata: El disco índigo
 43,8,Scarlatto: Il disco indaco
 43,9,Scarlet: The Indigo Disk
-43,12,朱: 藍之圓盤
+43,12,朱: 蓝之圆盘
 43,14,Escarlata: El disco índigo
 44,1,赤
 44,3,레드
@@ -488,6 +490,7 @@ version_id,local_language_id,name
 51,12,盾: 冠之雪原
 51,14,Escudo: Las nieves de la corona
 52,1,バイオレット: 碧の仮面
+52,4,紫: 碧之假面
 52,5,Violet: Le Masque Turquoise
 52,6,Purpur: Die Türkisgrüne Maske
 52,7,Púrpura: La máscara turquesa
@@ -496,10 +499,11 @@ version_id,local_language_id,name
 52,12,紫: 碧之假面
 52,14,Púrpura: La máscara turquesa
 53,1,バイオレット: 藍の円盤
+53,4,紫: 藍之圓盤
 53,5,Violet: Le Disque Indigo
 53,6,Purpur: Die Indigoblaue Scheibe
 53,7,Púrpura: El disco índigo
 53,8,Violetto: Il disco indaco
 53,9,Violet: The Indigo Disk
-53,12,紫: 藍之圓盤
+53,12,紫: 蓝之圆盘
 53,14,Púrpura: El disco índigo

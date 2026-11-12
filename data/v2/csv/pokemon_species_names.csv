@@ -3741,7 +3741,7 @@ pokemon_species_id,local_language_id,name,genus
 312,8,Minun,Pokémon Incitamento
 312,9,Minun,Cheering Pokémon
 312,11,マイナン,おうえんポケモン
-312,12,負电拍拍,加油宝可梦
+312,12,负电拍拍,加油宝可梦
 312,14,Minun,Pokémon Ánimo
 313,1,バルビート,ほたるポケモン
 313,2,Barubeat,
@@ -11462,7 +11462,7 @@ pokemon_species_id,local_language_id,name,genus
 956,1,クエスパトラ,ダチョウポケモン
 956,2,Cuespatra,
 956,3,클레스퍼트라,타조포켓몬
-956,4,超能艷鴕,鴕鳥寶可夢
+956,4,超能豔鴕,鴕鳥寶可夢
 956,5,Cléopsytra,Autruche
 956,6,Psiopatra,Strauß
 956,7,Espathra,
@@ -11673,7 +11673,7 @@ pokemon_species_id,local_language_id,name,genus
 973,8,Flamigo,
 973,9,Flamigo,Synchronize Pokémon
 973,11,カラミンゴ,
-973,12,纏红鹤,同步宝可梦
+973,12,缠红鹤,同步宝可梦
 973,14,Flamigo,
 974,1,アルクジラ,りくくじらポケモン
 974,2,Arukujira,
@@ -11786,7 +11786,7 @@ pokemon_species_id,local_language_id,name,genus
 983,1,ドドゲザン,だいとうポケモン
 983,2,Dodogezan,
 983,3,대도각참,대도포켓몬
-983,4,仆刀將軍,大刀寶可夢
+983,4,仆斬將軍,大刀寶可夢
 983,5,Scalpereur,Pourfendant
 983,6,Gladimperio,Langschwert
 983,7,Kingambit,
@@ -11877,7 +11877,7 @@ pokemon_species_id,local_language_id,name,genus
 990,8,Solcoferreo,
 990,9,Iron Treads,Paradox Pokémon
 990,11,テツノワダチ,
-990,12,铁轍迹,悖谬宝可梦
+990,12,铁辙迹,悖谬宝可梦
 990,14,Ferrodada,
 991,1,テツノツツミ,パラドックスポケモン
 991,2,Tetsunotsutsumi,
@@ -12122,180 +12122,180 @@ pokemon_species_id,local_language_id,name,genus
 1011,1,カミッチュ,
 1011,2,Kamicchu,
 1011,3,과미르,사과사탕포켓몬
-1011,4,裹蜜蟲,
+1011,4,裹蜜蟲,糖蘋果寶可夢
 1011,5,Pomdramour,Sirop Pomme
 1011,6,Sirapfel,
 1011,7,Dipplin,
 1011,8,Dipplin,
 1011,9,Dipplin,Candy Apple Pokémon
 1011,11,カミッチュ,
-1011,12,裹蜜虫,
+1011,12,裹蜜虫,糖苹果宝可梦
 1011,14,Dipplin,
 1012,1,チャデス,
 1012,2,Chadeath,
 1012,3,차데스,말차포켓몬
-1012,4,斯魔茶,
+1012,4,斯魔茶,抹茶寶可夢
 1012,5,Poltchageist,Matcha
 1012,6,Mortcha,
 1012,7,Poltchageist,
 1012,8,Poltchageist,
 1012,9,Poltchageist,Matcha Pokémon
 1012,11,チャデス,
-1012,12,斯魔茶,
+1012,12,斯魔茶,抹茶宝可梦
 1012,14,Poltchageist,
 1013,1,ヤバソチャ,
 1013,2,Yabasocha,
 1013,3,그우린차,말차포켓몬
-1013,4,來悲粗茶,
+1013,4,來悲粗茶,抹茶寶可夢
 1013,5,Théffroyable,Matcha
 1013,6,Fatalitcha,
 1013,7,Sinistcha,
 1013,8,Sinistcha,
 1013,9,Sinistcha,Matcha Pokémon
 1013,11,ヤバソチャ,
-1013,12,来悲粗茶,
+1013,12,来悲粗茶,抹茶宝可梦
 1013,14,Sinistcha,
 1014,1,イイネイヌ,
 1014,2,Iineinu,
 1014,3,조타구,수하포켓몬
-1014,4,夠讚狗,
+1014,4,夠讚狗,隨從寶可夢
 1014,5,Félicanis,Serviteur
 1014,6,Boninu,
 1014,7,Okidogi,
 1014,8,Okidogi,
 1014,9,Okidogi,Retainer Pokémon
 1014,11,イイネイヌ,
-1014,12,够赞狗,
+1014,12,够赞狗,随从宝可梦
 1014,14,Okidogi,
 1015,1,マシマシラ,
 1015,2,Mashimashira,
 1015,3,이야후,수하포켓몬
-1015,4,願增猿,
+1015,4,願增猿,隨從寶可夢
 1015,5,Fortusimia,Serviteur
 1015,6,Benesaru,
 1015,7,Munkidori,
 1015,8,Munkidori,
 1015,9,Munkidori,Retainer Pokémon
 1015,11,マシマシラ,
-1015,12,愿增猿,
+1015,12,愿增猿,随从宝可梦
 1015,14,Munkidori,
 1016,1,キチキギス,
 1016,2,Kichikigisu,
 1016,3,기로치,수하포켓몬
-1016,4,吉雉雞,
+1016,4,吉雉雞,隨從寶可夢
 1016,5,Favianos,Serviteur
 1016,6,Beatori,
 1016,7,Fezandipiti,
 1016,8,Fezandipiti,
 1016,9,Fezandipiti,Retainer Pokémon
 1016,11,キチキギス,
-1016,12,吉雉鸡,
+1016,12,吉雉鸡,随从宝可梦
 1016,14,Fezandipiti,
 1017,1,オーガポン,
 1017,2,Ogerpon,
 1017,3,오거폰,가면포켓몬
-1017,4,厄鬼椪,
+1017,4,厄鬼椪,面具寶可夢
 1017,5,Ogerpon,Masque
 1017,6,Ogerpon,
 1017,7,Ogerpon,
 1017,8,Ogerpon,
 1017,9,Ogerpon,Mask Pokémon
 1017,11,オーガポン,
-1017,12,厄诡椪,
+1017,12,厄诡椪,面具宝可梦
 1017,14,Ogerpon,
 1018,1,ブリジュラス,ごうきんポケモン
 1018,2,Briduras,
 1018,3,브리두라스,합금포켓몬
-1018,4,鋁鋼橋龍,
+1018,4,鋁鋼橋龍,合金寶可夢
 1018,5,Pondralugon,Alliage
 1018,6,Briduradon,
 1018,7,Archaludon,
 1018,8,Archaludon,
 1018,9,Archaludon,Alloy Pokémon
 1018,11,ブリジュラス,ごうきんポケモン
-1018,12,铝钢桥龙,
+1018,12,铝钢桥龙,合金宝可梦
 1018,14,Archaludon,
 1019,1,カミツオロチ,りんごオロチポケモン
 1019,2,Kamitsuorochi,
 1019,3,과미드라,사과이무기포켓몬
-1019,4,蜜集大蛇,
+1019,4,蜜集大蛇,蘋果大蛇寶可夢
 1019,5,Pomdorochi,Hydre Pomme
 1019,6,Hydrapfel,
 1019,7,Hydrapple,
 1019,8,Hydrapple,
 1019,9,Hydrapple,Apple Hydra Pokémon
 1019,11,カミツオロチ,りんごオロチポケモン
-1019,12,蜜集大蛇,
+1019,12,蜜集大蛇,苹果大蛇宝可梦
 1019,14,Hydrapple,
 1020,1,ウガツホムラ,パラドックスポケモン
 1020,2,Ugatsuhomura,
 1020,3,꿰뚫는화염,패러독스포켓몬
-1020,4,破空焰,
+1020,4,破空焰,悖謬寶可夢
 1020,5,Feu-Perçant,Paradoxe
 1020,6,Keilflamme,
 1020,7,Flamariete,
 1020,8,Vampeaguzze,
 1020,9,Gouging Fire,Paradox Pokémon
 1020,11,ウガツホムラ,パラドックスポケモン
-1020,12,破空焰,
+1020,12,破空焰,悖谬宝可梦
 1020,14,Flamariete,
 1021,1,タケルライコ,パラドックスポケモン
 1021,2,Takeruraiko,
 1021,3,날뛰는우레,패러독스포켓몬
-1021,4,猛雷鼓,
+1021,4,猛雷鼓,悖謬寶可夢
 1021,5,Ire-Foudre,Paradoxe
 1021,6,Furienblitz,
 1021,7,Electrofuria,
 1021,8,Furiatonante,
 1021,9,Raging Bolt,Paradox Pokémon
 1021,11,タケルライコ,パラドックスポケモン
-1021,12,猛雷鼓,
+1021,12,猛雷鼓,悖谬宝可梦
 1021,14,Electrofuria,
 1022,1,テツノイワオ,パラドックスポケモン
 1022,2,Tetsunoiwao,
 1022,3,무쇠암석,패러독스포켓몬
-1022,4,鐵磐岩,
+1022,4,鐵磐岩,悖謬寶可夢
 1022,5,Roc-de-Fer,Paradoxe
 1022,6,Eisenfels,
 1022,7,Ferromole,
 1022,8,Massoferreo,
 1022,9,Iron Boulder,Paradox Pokémon
 1022,11,テツノイワオ,パラドックスポケモン
-1022,12,铁磐岩,
+1022,12,铁磐岩,悖谬宝可梦
 1022,14,Ferromole,
 1023,1,テツノカシラ,パラドックスポケモン
 1023,2,Tetsunokashira,
 1023,3,무쇠감투,패러독스포켓몬
-1023,4,鐵頭殼,
+1023,4,鐵頭殼,悖謬寶可夢
 1023,5,Chef-de-Fer,Paradoxe
 1023,6,Eisenhaupt,
 1023,7,Ferrotesta,
 1023,8,Capoferreo,
 1023,9,Iron Crown,Paradox Pokémon
 1023,11,テツノカシラ,パラドックスポケモン
-1023,12,铁头壳,
+1023,12,铁头壳,悖谬宝可梦
 1023,14,Ferrotesta,
 1024,1,テラパゴス,テラスタルポケモン
 1024,2,Terapagos,
 1024,3,테라파고스,테라스탈포켓몬
-1024,4,太樂巴戈斯,
+1024,4,太樂巴戈斯,太晶寶可夢
 1024,5,Terapagos,Téracristal
 1024,6,Terapagos,
 1024,7,Terapagos,
 1024,8,Terapagos,
 1024,9,Terapagos,Tera Pokémon
 1024,11,テラパゴス,テラスタルポケモン
-1024,12,太乐巴戈斯,
+1024,12,太乐巴戈斯,太晶宝可梦
 1024,14,Terapagos,
 1025,1,モモワロウ,しはいポケモン
 1025,2,Momowarou,
 1025,3,복숭악동,지배포켓몬
-1025,4,桃歹郎,
+1025,4,桃歹郎,支配寶可夢
 1025,5,Pêchaminus,Emprise
 1025,6,Infamomo,
 1025,7,Pecharunt,
 1025,8,Pecharunt,
 1025,9,Pecharunt,Subjugation Pokémon
 1025,11,モモワロウ,しはいポケモン
-1025,12,桃歹郎,
+1025,12,桃歹郎,支配宝可梦
 1025,14,Pecharunt,

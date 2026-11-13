@@ -27,9 +27,7 @@ make typecheck    # or: uv run ty check
 ```
 
 > [!NOTE]
-> The `generate-openapi` pre-commit hook uses the configured database backend to determine integer bounds without querying a running database; after model or schema changes, run pre-commit to regenerate `openapi.yml`, and run pre-commit locally before opening a pull request to catch CI failures early.
->
-> As of right now we are not strictly enforcing linting and typechecking, but we will be in the future. Please try to make sure your code passes these checks.
+> Run `pre-commit` locally before opening a pull request to catch CI failures early this handles formatting, linting, type checking, and regenerating `openapi.yml` after model or schema changes. If you don't have `pre-commit` set up, you can run the checks defined in `.pre-commit-config.yaml` manually.
 
 - Commit your code and push it to GitHub
 

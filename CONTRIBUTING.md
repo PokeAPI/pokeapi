@@ -27,7 +27,7 @@ make typecheck    # or: uv run ty check
 ```
 
 > [!NOTE]
-> Run `pre-commit` locally before opening a pull request to catch CI failures early this handles formatting, linting, type checking, and regenerating `openapi.yml` after model or schema changes. If you don't have `pre-commit` set up, you can run the checks defined in `.pre-commit-config.yaml` manually.
+> Run `pre-commit` locally before opening a pull request to catch CI failures early. It regenerates `openapi.yml` after model or schema changes. If you have not set up `pre-commit`, run the checks defined in `.pre-commit-config.yaml` manually.
 
 - Commit your code and push it to GitHub
 

@@ -27,7 +27,7 @@ make typecheck    # or: uv run ty check
 ```
 
 > [!NOTE]
-> As of right now we are not strictly enforcing linting and typechecking, but we will be in the future. Please try to make sure your code passes these checks.
+> Run `pre-commit` locally before opening a pull request to catch CI failures early. It regenerates `openapi.yml` after model or schema changes. If you have not set up `pre-commit`, run the checks defined in `.pre-commit-config.yaml` manually.
 
 - Commit your code and push it to GitHub
 

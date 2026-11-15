@@ -32573,8 +32573,6 @@ prioridad."
 214,25,11,相手に　威圧感を　あたえこちらに　むかって　先制技を出せない　ようにする。
 214,25,12,向对手施加威慑力， 使其无法对我方使出先制招式。
 214,25,14,Intimida al rival y le impide usar movimientos con prioridad contra él y sus aliados.
-214,26,5,"L’adversaire est impressionné par la majesté\ndu Pokémon, ce qui l’empêche de viser ce dernier\net ses alliés avec une capacité prioritaire."
-214,26,9,"When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
 215,17,1,"あいてに　たおされたとき
 ＨＰの　のこりの　ぶんだけ
 あいてに　ダメージを　あたえる。"
@@ -35029,6 +35027,8 @@ boca. Al recibir daño, ataca escupiéndola al rival."
 241,25,11,なみのりか　ダイビングを　すると獲物を　くわえてくる。　ダメージを受けると　獲物を　吐きだして　攻撃。
 241,25,12,冲浪或潜水时会叼来猎物。 受到伤害时， 会吐出猎物进行攻击。
 241,25,14,"Tras usar Surf o Buceo, emerge con una presa en la boca. Al recibir daño, ataca escupiéndola."
+241,26,5,"Quand le Pokémon utilise Surf ou Plongée, il revient avec une proie. Lorsqu’il subit des dégâts par la suite, il attaque en recrachant sa proie."
+241,26,9,"When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
 242,20,1,"あいての　わざを　ひきうける
 とくせいや　わざの
 えいきょうを　むし　できる。"

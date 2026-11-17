@@ -685,7 +685,9 @@ class HasNature(PokeApiModel):
 
 
 class HasOrder(PokeApiModel):
-    order = models.SmallIntegerField(blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(32767)])
+    order = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(32767)]
+    )
 
     class Meta:
         abstract = True
@@ -1673,17 +1675,29 @@ class MoveMeta(HasMetaAilment, HasMetaCategory):
         on_delete=models.CASCADE,
     )
 
-    min_hits = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)])
+    min_hits = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)]
+    )
 
-    max_hits = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)])
+    max_hits = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)]
+    )
 
-    min_turns = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)])
+    min_turns = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)]
+    )
 
-    max_turns = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)])
+    max_turns = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)]
+    )
 
-    drain = models.SmallIntegerField(blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)])
+    drain = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)]
+    )
 
-    healing = models.SmallIntegerField(blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)])
+    healing = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)]
+    )
 
     crit_rate = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(8)])
 
@@ -1888,7 +1902,9 @@ class PokemonSpecies(HasName, HasGeneration, HasPokemonColor, HasPokemonShape, H
         on_delete=models.CASCADE,
     )
 
-    gender_rate = models.SmallIntegerField(blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(8)])
+    gender_rate = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(8)]
+    )
 
     capture_rate = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
@@ -1989,7 +2005,9 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     is_default = models.BooleanField(default=False)
 
-    min_level = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(100)])
+    min_level = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(100)]
+    )
 
     location = models.ForeignKey(
         Location,
@@ -2015,7 +2033,9 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     min_affection = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
-    relative_physical_stats = models.SmallIntegerField(blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(1)])
+    relative_physical_stats = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(1)]
+    )
 
     party_species = models.ForeignKey(
         PokemonSpecies,

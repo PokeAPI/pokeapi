@@ -462,7 +462,7 @@ class HasFlingEffect(PokeApiModel):
 
 
 class HasGameIndex(PokeApiModel):
-    game_index = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
+    game_index = models.PositiveIntegerField(validators=[MaxValueValidator(2147483647)])
 
     class Meta:
         abstract = True

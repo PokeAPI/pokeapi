@@ -4775,7 +4775,7 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The internal id of an API resource within game data.
         generation:
@@ -5004,7 +5004,7 @@ components:
           maxLength: 200
         game_index:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The internal id of an API resource within game data.
         encounter_method_rates:
@@ -5215,7 +5215,7 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The internal id of an API resource within game data.
         generation:
@@ -8944,7 +8944,7 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The internal id of an API resource within game data.
         version:
@@ -10125,7 +10125,7 @@ components:
       properties:
         game_index:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The internal id of an API resource within game data.
         generation:

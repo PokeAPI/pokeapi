@@ -1453,7 +1453,7 @@ class EncounterSlot(HasVersionGroup, HasEncounterMethod):
     slot = models.PositiveSmallIntegerField(
         blank=True,
         null=True,
-        validators=[MinValueValidator(1), MaxValueValidator(12)],
+        validators=[MinValueValidator(0), MaxValueValidator(20)],
     )
 
     rarity = models.PositiveSmallIntegerField(
@@ -1502,7 +1502,7 @@ class EncounterConditionValueMap(PokeApiModel):
 class EncounterPokemonDetail(PokeApiModel):
     encounter = models.ForeignKey(Encounter, blank=True, null=True, on_delete=models.CASCADE)
 
-    min_perfect_ivs = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(31)])
+    min_perfect_ivs = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(6)])
 
     always_shiny = models.BooleanField(default=False)
 
@@ -1527,7 +1527,7 @@ class Move(
     HasContestEffect,
     HasSuperContestEffect,
 ):
-    power = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(250)])
+    power = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
     pp = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(40)])
 
@@ -1676,19 +1676,19 @@ class MoveMeta(HasMetaAilment, HasMetaCategory):
     )
 
     min_hits = models.PositiveSmallIntegerField(
-        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)]
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(6)]
     )
 
     max_hits = models.PositiveSmallIntegerField(
-        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(5)]
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(10)]
     )
 
     min_turns = models.PositiveSmallIntegerField(
-        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)]
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(15)]
     )
 
     max_turns = models.PositiveSmallIntegerField(
-        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(10)]
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(15)]
     )
 
     drain = models.SmallIntegerField(
@@ -1736,7 +1736,7 @@ class MoveMetaStatChange(HasMove, HasStat):
 class Experience(HasGrowthRate):
     level = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
 
-    experience = models.PositiveIntegerField(validators=[MaxValueValidator(32767)])
+    experience = models.PositiveIntegerField(validators=[MaxValueValidator(2147483647)])
 
 
 ###################
@@ -2200,8 +2200,8 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
-    level = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
-    mastery = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MaxValueValidator(32767)])
+    level = models.PositiveSmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+    mastery = models.PositiveIntegerField(null=True, blank=True, validators=[MaxValueValidator(2147483647)])
 
 
 class PokemonShape(HasName):

@@ -147,6 +147,7 @@ from pokemon_v2.models import (
     PokemonColorName,
     PokemonCries,
     PokemonDexNumber,
+    PokemonDexNumberVariety,
     PokemonEggGroup,
     PokemonEvolution,
     PokemonForm,
@@ -1371,6 +1372,20 @@ def _build_pokemons() -> None:
         )
 
     build_generic((PokemonDexNumber,), "pokemon_dex_numbers.csv", pokemon_dex_numbers_from_rows)
+
+    def csv_record_to_objects(info: list[str]) -> Iterator[PokemonDexNumberVariety]:
+        dex_number = PokemonDexNumber.objects.get(
+            pokedex_id=int(info[0]),
+            pokedex_number=int(info[1]),
+        )
+
+        yield PokemonDexNumberVariety(
+            pokemon_dex_number_id=dex_number.id,
+            pokemon_id=int(info[2]),
+            order=int(info[3]),
+        )
+
+    build_generic((PokemonDexNumberVariety,), "pokemon_dex_number_varieties.csv", csv_record_to_objects)
 
     def pokemon_egg_groups_from_rows(info: list[str]) -> Iterator[PokemonEggGroup]:
         yield PokemonEggGroup(pokemon_species_id=int(info[0]), egg_group_id=int(info[1]))

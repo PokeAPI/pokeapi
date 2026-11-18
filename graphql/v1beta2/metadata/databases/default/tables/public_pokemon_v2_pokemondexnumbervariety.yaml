@@ -1,0 +1,10 @@
+table:
+  name: pokemon_v2_pokemondexnumbervariety
+  schema: public
+object_relationships:
+  - name: pokemon
+    using:
+      foreign_key_constraint_on: pokemon_id
+  - name: pokemondexnumber
+    using:
+      foreign_key_constraint_on: pokemon_dex_number_id

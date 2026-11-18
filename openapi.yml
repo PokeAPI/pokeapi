@@ -3949,7 +3949,7 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 31
+          maximum: 6
           minimum: 0
           description: The minimum number of perfect IVs, or null if unspecified.
         always_shiny:
@@ -4201,7 +4201,7 @@ components:
           description: The level gained.
         experience:
           type: integer
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The amount of experience required to reach the referenced level.
       required:
@@ -5547,7 +5547,7 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 250
+          maximum: 32767
           minimum: 0
           description: The base power of this move, or null if it has no fixed base
             power.
@@ -5834,32 +5834,32 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 5
-          minimum: 1
+          maximum: 6
+          minimum: 2
           description: The minimum number of times this move hits. Null if it always
             only hits once.
         max_hits:
           type:
           - integer
           - 'null'
-          maximum: 5
-          minimum: 1
+          maximum: 10
+          minimum: 2
           description: The maximum number of times this move hits. Null if it always
             only hits once.
         min_turns:
           type:
           - integer
           - 'null'
-          maximum: 10
-          minimum: 1
+          maximum: 15
+          minimum: 2
           description: The minimum number of turns this move continues to take effect.
             Null if it always only lasts one turn.
         max_turns:
           type:
           - integer
           - 'null'
-          maximum: 10
-          minimum: 1
+          maximum: 15
+          minimum: 2
           description: The maximum number of turns this move continues to take effect.
             Null if it always only lasts one turn.
         drain:

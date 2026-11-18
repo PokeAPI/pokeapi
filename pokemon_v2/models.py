@@ -2201,7 +2201,7 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
     level = models.PositiveSmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
-    mastery = models.PositiveIntegerField(null=True, blank=True, validators=[MaxValueValidator(2147483647)])
+    enhancement_level = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MaxValueValidator(100)])
 
 
 class PokemonShape(HasName):

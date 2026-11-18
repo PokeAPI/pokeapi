@@ -9,7 +9,7 @@ allLines.forEach(function (line) {
     if (count === 5) {
         line = line + ","
     }else if ( count === 6) {
-        console.log('found mastery')
+        console.log('found enhancement_level')
     } else if (count < 5) {
         console.log('?')
     }

@@ -1,4 +1,4 @@
-FROM python:3.14-alpine AS builder
+FROM python:3.15-alpine AS builder
 
 ENV UV_LINK_MODE=copy
 ENV UV_COMPILE_BYTECODE=1
@@ -13,7 +13,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-install-project --no-dev
 
-FROM python:3.14-alpine
+FROM python:3.15-alpine
 # git is a dependency for the meta endpoint
 RUN apk add --no-cache git
 

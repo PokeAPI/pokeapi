@@ -1186,8 +1186,8 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 
 
 class ItemPrice(HasItem, HasVersionGroup, HasCurrency):
-    purchase_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
-    sell_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
+    purchase_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(2147483647)])
+    sell_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(2147483647)])
 
 
 class ItemSprites(HasItem):
@@ -1453,7 +1453,7 @@ class EncounterSlot(HasVersionGroup, HasEncounterMethod):
     slot = models.PositiveSmallIntegerField(
         blank=True,
         null=True,
-        validators=[MinValueValidator(0), MaxValueValidator(20)],
+        validators=[MinValueValidator(0), MaxValueValidator(32767)],
     )
 
     rarity = models.PositiveSmallIntegerField(

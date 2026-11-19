@@ -4877,7 +4877,7 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The purchase price in this currency and version group, or null
             if unavailable.
@@ -4885,7 +4885,7 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 32767
+          maximum: 2147483647
           minimum: 0
           description: The sell price in this currency and version group, or null
             if unavailable.

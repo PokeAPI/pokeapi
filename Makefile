@@ -56,7 +56,7 @@ make-migrations: check-uv  # Create migrations files if schema has changed
 shell: check-uv  # Load a shell
 	uv run manage.py shell ${local_config}
 
-openapi-generate: check-uv
+openapi-generate: check-uv  # Generate Openapi schema
 	uv run manage.py spectacular --color --file openapi.yml ${local_config}
 
 docker-up:  # (Docker) Create services/volumes/networks
@@ -129,14 +129,11 @@ pull-veekun:
 	git -C ${veekun_pokedex_repository} checkout master-pokeapi
 	git -C ${veekun_pokedex_repository} pull
 
-sync-from-veekun: pull pull-veekun  # Copy data from ../pokedex to this repository
+sync-from-veekun: pull pull-veekun
 	cp -a ${veekun_pokedex_repository}/pokedex/data/csv/. ./data/v2/csv
 
-sync-to-veekun: pull pull-veekun  # Copy data from this repository to ../pokedex
+sync-to-veekun: pull pull-veekun
 	cp -a ./data/v2/csv/. ${veekun_pokedex_repository}/pokedex/data/csv
-
-# read-env-file:  # Exports ./.env into shell environment variables
-# 	export `egrep -v '^#' .env | xargs`
 
 hasura-export:  # Export Hasura configuration, be sure to have set HASURA_GRAPHQL_ADMIN_SECRET
 	hasura md export --project graphql/v1beta2
@@ -179,7 +176,6 @@ down-graphql-prod:
 	docker volume prune --all --force
 	sync; echo 3 > /proc/sys/vm/drop_caches
 
-# Nginx doesn't start if upstream graphql-engine is down
 update-graphql-data-prod-old:
 	docker compose ${gql_compose_config} stop
 	git pull origin master

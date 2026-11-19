@@ -3193,8 +3193,8 @@ components:
           description: Whether or not this a hidden ability for the referenced Pokémon.
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 3
+          minimum: 1
           description: Pokémon have 3 ability 'slots' which hold references to possible
             abilities they could have. This is the slot of this ability for the referenced
             pokemon.
@@ -3235,46 +3235,46 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: Time it takes the tree to grow one stage, in hours. Berry trees
             go through four of these growth stages before they can be picked.
         max_harvest:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 15
+          minimum: 0
           description: The maximum number of these berries that can grow on one tree
             in Generation IV.
         natural_gift_power:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The power of the move "Natural Gift" when used with this Berry.
         size:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The size of this Berry, in millimeters.
         smoothness:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 60
+          minimum: 20
           description: The smoothness of this Berry, used in making Pokéblocks or
             Poffins.
         soil_dryness:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 35
+          minimum: 4
           description: The speed at which this Berry dries out the soil as it grows.
             A higher rate means the soil dries more quickly.
         firmness:
@@ -3368,8 +3368,8 @@ components:
       properties:
         potency:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: How powerful the referenced flavor is for this berry.
         berry:
           allOf:
@@ -3416,8 +3416,8 @@ components:
       properties:
         potency:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: How powerful the referenced flavor is for this berry.
         flavor:
           allOf:
@@ -3537,13 +3537,13 @@ components:
           description: The identifier for this resource.
         appeal:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base number of hearts the user of this move gets.
         jam:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base number of hearts the user's opponent loses.
         effect_entries:
           type: array
@@ -3900,8 +3900,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: -1
           description: A good value for sorting.
         names:
           type: array
@@ -3949,8 +3949,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 6
+          minimum: 0
           description: The minimum number of perfect IVs, or null if unspecified.
         always_shiny:
           type: boolean
@@ -4196,13 +4196,13 @@ components:
       properties:
         level:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 1
           description: The level gained.
         experience:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The amount of experience required to reach the referenced level.
       required:
       - experience
@@ -4584,8 +4584,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 130
+          minimum: 0
           description: The power of the move Fling when used with this item.
         fling_effect:
           oneOf:
@@ -4776,7 +4776,7 @@ components:
         game_index:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The internal id of an API resource within game data.
         generation:
           allOf:
@@ -4878,7 +4878,7 @@ components:
           - integer
           - 'null'
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The purchase price in this currency and version group, or null
             if unavailable.
         sell_price:
@@ -4886,7 +4886,7 @@ components:
           - integer
           - 'null'
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The sell price in this currency and version group, or null
             if unavailable.
         currency:
@@ -5005,7 +5005,7 @@ components:
         game_index:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The internal id of an API resource within game data.
         encounter_method_rates:
           type: array
@@ -5216,7 +5216,7 @@ components:
         game_index:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The internal id of an API resource within game data.
         generation:
           allOf:
@@ -5345,23 +5345,23 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: The percent value of how likely this move is to be successful.
         power:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 250
+          minimum: 0
           description: The base power before the listed version group, or null if
             power did not change.
         pp:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 40
+          minimum: 0
           description: Power points. The number of times this move can be used.
         effect_chance:
           type:
@@ -5518,8 +5518,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: The percent value of how likely this move is to be successful.
         effect_chance:
           type:
@@ -5531,15 +5531,15 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 40
+          minimum: 0
           description: Power points. The number of times this move can be used.
         priority:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 8
+          minimum: -8
           description: A value between -8 and 8. Sets the order in which moves are
             executed during battle. See [Bulbapedia](http://bulbapedia.bulbagarden.net/wiki/Priority)
             for greater detail.
@@ -5547,8 +5547,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base power of this move, or null if it has no fixed base
             power.
         contest_combos:
@@ -5834,78 +5834,78 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 6
+          minimum: 2
           description: The minimum number of times this move hits. Null if it always
             only hits once.
         max_hits:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 10
+          minimum: 2
           description: The maximum number of times this move hits. Null if it always
             only hits once.
         min_turns:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 15
+          minimum: 2
           description: The minimum number of turns this move continues to take effect.
             Null if it always only lasts one turn.
         max_turns:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 15
+          minimum: 2
           description: The maximum number of turns this move continues to take effect.
             Null if it always only lasts one turn.
         drain:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: -100
           description: HP drain (if positive) or Recoil damage (if negative), in percent
             of damage done.
         healing:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: -100
           description: The amount of hp gained by the attacking Pokemon, in percent
             of it's maximum HP.
         crit_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 8
+          minimum: 0
           description: Critical hit rate bonus.
         ailment_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: The likelihood this attack will cause an ailment.
         flinch_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: The likelihood this attack will cause the target Pokémon to
             flinch.
         stat_chance:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: The likelihood this attack will cause a stat change in the
             target Pokémon.
       required:
@@ -6030,8 +6030,8 @@ components:
       properties:
         change:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 6
+          minimum: -6
           description: The amount of change.
         stat:
           allOf:
@@ -6059,8 +6059,8 @@ components:
       properties:
         change:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 6
+          minimum: -6
           description: The maximum amount of change to the referenced stat.
         move:
           allOf:
@@ -6167,13 +6167,13 @@ components:
       properties:
         low_hp_preference:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: Chance of using the move, in percent, if HP is under one half.
         high_hp_preference:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 0
           description: Chance of using the move, in percent, if HP is over one half.
         move_battle_style:
           allOf:
@@ -6263,8 +6263,8 @@ components:
       properties:
         max_change:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 2
+          minimum: -2
           description: The amount of change.
         pokeathlon_stat:
           allOf:
@@ -7903,14 +7903,14 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base score given to the player when this Pokémon is caught
             during a pal park run.
         rate:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base rate for encountering this Pokémon in this pal park
             area.
         pokemon_species:
@@ -7947,8 +7947,8 @@ components:
       properties:
         max_change:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 2
+          minimum: -2
           description: The maximum amount of change to the referenced Pokéathlon stat.
         nature:
           allOf:
@@ -8135,8 +8135,8 @@ components:
           description: Whether or not this is a hidden ability.
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 3
+          minimum: 1
           description: The slot this ability occupies in this Pokémon species.
         ability:
           allOf:
@@ -8153,8 +8153,8 @@ components:
           description: Whether or not this is a hidden ability.
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 3
+          minimum: 1
           description: The slot this ability occupies in this Pokémon species.
         ability:
           oneOf:
@@ -8252,15 +8252,15 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base experience gained for defeating this Pokémon.
         height:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The height of this Pokémon in decimetres.
         is_default:
           type: boolean
@@ -8269,16 +8269,16 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: -1
           description: Order for sorting. Almost national order, except families are
             grouped together.
         weight:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The weight of this Pokémon in hectograms.
         abilities:
           type: array
@@ -8531,32 +8531,32 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 100
+          minimum: 1
           description: The minimum required level of the evolving Pokémon species
             to evolve into this Pokémon species.
         min_happiness:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The minimum required level of happiness the evolving Pokémon
             species to evolve into this Pokémon species.
         min_beauty:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The minimum required level of beauty the evolving Pokémon species
             to evolve into this Pokémon species.
         min_affection:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The minimum required level of affection the evolving Pokémon
             species to evolve into this Pokémon species.
         near_special_rock:
@@ -8588,8 +8588,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 1
+          minimum: -1
           description: The required relation between the Pokémon's Attack and Defense
             stats. 1 means Attack > Defense. 0 means Attack = Defense. -1 means Attack
             < Defense.
@@ -8632,24 +8632,24 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The minimum number of times a move must be used in order to
             evolve into this Pokémon species.
         min_steps:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The minimum number of steps that must be taken in order to
             evolve into this Pokémon species.
         min_damage_taken:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The minimum amount of damage taken during the evolution trigger
             event in order to evolve into this Pokémon species.
         allowed_natures:
@@ -8699,8 +8699,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: -1
           description: The order in which forms should be sorted within all forms.
             Multiple forms may have equal order, in which case they should fall back
             on sorting by name.
@@ -8708,8 +8708,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The order in which forms should be sorted within a species'
             forms.
         is_default:
@@ -8929,8 +8929,8 @@ components:
       properties:
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 2
+          minimum: 1
           description: The order the Pokémon's types are listed in.
         type:
           allOf:
@@ -8945,7 +8945,7 @@ components:
         game_index:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The internal id of an API resource within game data.
         version:
           allOf:
@@ -9262,32 +9262,32 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: -1
           description: The order in which species should be sorted. Based on National
             Dex order, except families are grouped together and sorted by stage.
         gender_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 8
+          minimum: -1
           description: The chance of this Pokémon being female, in eighths; or -1
             for genderless.
         capture_rate:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The base capture rate; up to 255. The higher the number, the
             easier the catch.
         base_happiness:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The happiness when caught by a normal Pokéball; up to 255.
             The higher the number, the happier the Pokémon.
         is_baby:
@@ -9303,8 +9303,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: 'Initial hatch counter: one must walk Y × (hatch_counter +
             1) steps before this Pokémon''s egg hatches, unless utilizing bonuses
             like Flame Body''s. Y varies per generation. In Generations II, III, and
@@ -9477,14 +9477,14 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base score given to the player when the referenced Pokémon
             is caught during a pal park run.
         rate:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The base rate for encountering the referenced Pokémon in this
             pal park area.
         area:
@@ -9745,13 +9745,13 @@ components:
       properties:
         base_stat:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 1
           description: The base value of the stat.
         effort:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 255
+          minimum: 0
           description: The effort points (EV) the Pokémon has in the stat.
         stat:
           allOf:
@@ -9781,8 +9781,8 @@ components:
       properties:
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 2
+          minimum: 1
           description: The order the Pokémon's types are listed in.
         type:
           allOf:
@@ -9914,8 +9914,8 @@ components:
           maxLength: 200
         game_index:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: ID the games use for this stat.
         is_battle_only:
           type: boolean
@@ -10002,8 +10002,8 @@ components:
           description: The identifier for this resource.
         appeal:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: 0
           description: The level of appeal this super contest effect has.
         flavor_text_entries:
           type: array
@@ -10133,7 +10133,7 @@ components:
         game_index:
           type: integer
           maximum: 2147483647
-          minimum: -2147483648
+          minimum: 0
           description: The internal id of an API resource within game data.
         generation:
           allOf:
@@ -10191,8 +10191,8 @@ components:
       properties:
         slot:
           type: integer
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 2
+          minimum: 1
           description: The order the Pokémon's types are listed in.
         pokemon:
           allOf:
@@ -10301,8 +10301,8 @@ components:
           type:
           - integer
           - 'null'
-          maximum: 2147483647
-          minimum: -2147483648
+          maximum: 32767
+          minimum: -1
           description: Order for sorting. Almost by date of release, except similar
             versions are grouped together.
         generation:

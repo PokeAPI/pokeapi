@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any, ClassVar, TypeVar
 
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from typing_extensions import override
 
@@ -461,7 +462,7 @@ class HasFlingEffect(PokeApiModel):
 
 
 class HasGameIndex(PokeApiModel):
-    game_index = models.IntegerField()
+    game_index = models.PositiveIntegerField(validators=[MaxValueValidator(2147483647)])
 
     class Meta:
         abstract = True
@@ -684,7 +685,9 @@ class HasNature(PokeApiModel):
 
 
 class HasOrder(PokeApiModel):
-    order = models.IntegerField(blank=True, null=True)
+    order = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(32767)]
+    )
 
     class Meta:
         abstract = True
@@ -871,7 +874,7 @@ class HasTypeEfficacy(PokeApiModel):
         on_delete=models.CASCADE,
     )
 
-    damage_factor = models.IntegerField()
+    damage_factor = models.PositiveSmallIntegerField(validators=[MaxValueValidator(200)])
 
     class Meta:
         abstract = True
@@ -1072,7 +1075,7 @@ class TypeSprites(HasType):
 class Stat(HasName, HasMoveDamageClass):
     is_battle_only = models.BooleanField(default=False)
 
-    game_index = models.IntegerField()
+    game_index = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class StatName(IsName, HasStat):
@@ -1085,7 +1088,7 @@ class StatName(IsName, HasStat):
 
 
 class Characteristic(HasStat):
-    gene_mod_5 = models.IntegerField()
+    gene_mod_5 = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class CharacteristicDescription(HasCharacteristic, IsDescription):
@@ -1143,7 +1146,11 @@ class ItemFlingEffectEffectText(HasLanguage, HasEffect, HasFlingEffect):
 
 
 class Item(HasName, HasItemCategory, HasFlingEffect):
-    fling_power = models.IntegerField(blank=True, null=True)
+    fling_power = models.PositiveSmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MaxValueValidator(130)],
+    )
 
 
 class ItemEffectText(HasItem, HasLanguage, HasEffect, HasShortEffect):
@@ -1179,8 +1186,8 @@ class ItemGameIndex(HasItem, HasGeneration, HasGameIndex):
 
 
 class ItemPrice(HasItem, HasVersionGroup, HasCurrency):
-    purchase_price = models.IntegerField(blank=True, null=True)
-    sell_price = models.IntegerField(blank=True, null=True)
+    purchase_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(2147483647)])
+    sell_price = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(2147483647)])
 
 
 class ItemSprites(HasItem):
@@ -1203,9 +1210,9 @@ class ContestTypeName(HasContestType, IsName):
 
 
 class ContestEffect(PokeApiModel):
-    appeal = models.IntegerField()
+    appeal = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
-    jam = models.IntegerField()
+    jam = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class ContestEffectEffectText(HasLanguage, HasEffect, HasContestEffect):
@@ -1262,21 +1269,33 @@ class Berry(HasName, HasItem):
         on_delete=models.CASCADE,
     )
 
-    natural_gift_power = models.IntegerField(blank=True, null=True)
+    natural_gift_power = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
     natural_gift_type = models.ForeignKey(
         Type, blank=True, null=True, related_name="%(class)s", on_delete=models.CASCADE
     )
 
-    size = models.IntegerField(blank=True, null=True)
+    size = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    max_harvest = models.IntegerField(blank=True, null=True)
+    max_harvest = models.PositiveSmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MaxValueValidator(15)],
+    )
 
-    growth_time = models.IntegerField(blank=True, null=True)
+    growth_time = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    soil_dryness = models.IntegerField(blank=True, null=True)
+    soil_dryness = models.PositiveSmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MinValueValidator(4), MaxValueValidator(35)],
+    )
 
-    smoothness = models.IntegerField(blank=True, null=True)
+    smoothness = models.PositiveSmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MinValueValidator(20), MaxValueValidator(60)],
+    )
 
 
 # Berry Flavors are a bit of a hack because their relationship
@@ -1317,7 +1336,7 @@ class BerryFlavorMap(PokeApiModel):
         on_delete=models.CASCADE,
     )
 
-    potency = models.IntegerField()
+    potency = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 ########################
@@ -1359,7 +1378,7 @@ class Nature(HasName):
         on_delete=models.CASCADE,
     )
 
-    game_index = models.IntegerField()
+    game_index = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class NatureName(IsName, HasNature):
@@ -1367,7 +1386,7 @@ class NatureName(IsName, HasNature):
 
 
 class NaturePokeathlonStat(HasNature, HasPokeathlonStat):
-    max_change = models.IntegerField()
+    max_change = models.SmallIntegerField(validators=[MinValueValidator(-2), MaxValueValidator(2)])
 
 
 class NatureBattleStylePreference(HasNature):
@@ -1379,9 +1398,13 @@ class NatureBattleStylePreference(HasNature):
         on_delete=models.CASCADE,
     )
 
-    low_hp_preference = models.IntegerField()
+    low_hp_preference = models.PositiveSmallIntegerField(
+        validators=[MaxValueValidator(100)],
+    )
 
-    high_hp_preference = models.IntegerField()
+    high_hp_preference = models.PositiveSmallIntegerField(
+        validators=[MaxValueValidator(100)],
+    )
 
 
 #####################
@@ -1410,7 +1433,7 @@ class LocationAreaName(IsName, HasLocationArea):
 
 
 class LocationAreaEncounterRate(HasEncounterMethod, HasLocationArea, HasVersion):
-    rate = models.IntegerField()
+    rate = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 ######################
@@ -1427,17 +1450,23 @@ class EncounterMethodName(HasEncounterMethod, IsName):
 
 
 class EncounterSlot(HasVersionGroup, HasEncounterMethod):
-    slot = models.IntegerField(blank=True, null=True)
+    slot = models.PositiveSmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MinValueValidator(0), MaxValueValidator(32767)],
+    )
 
-    rarity = models.IntegerField()
+    rarity = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(100)],
+    )
 
 
 class Encounter(HasVersion, HasLocationArea, HasPokemon):
     encounter_slot = models.ForeignKey(EncounterSlot, blank=True, null=True, on_delete=models.CASCADE)
 
-    min_level = models.IntegerField()
+    min_level = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
 
-    max_level = models.IntegerField()
+    max_level = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
 
 
 class EncounterCondition(HasName):
@@ -1473,7 +1502,7 @@ class EncounterConditionValueMap(PokeApiModel):
 class EncounterPokemonDetail(PokeApiModel):
     encounter = models.ForeignKey(Encounter, blank=True, null=True, on_delete=models.CASCADE)
 
-    min_perfect_ivs = models.IntegerField(blank=True, null=True)
+    min_perfect_ivs = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(6)])
 
     always_shiny = models.BooleanField(default=False)
 
@@ -1498,15 +1527,19 @@ class Move(
     HasContestEffect,
     HasSuperContestEffect,
 ):
-    power = models.IntegerField(blank=True, null=True)
+    power = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    pp = models.IntegerField(blank=True, null=True)
+    pp = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(40)])
 
-    accuracy = models.IntegerField(blank=True, null=True)
+    accuracy = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
-    priority = models.IntegerField(blank=True, null=True)
+    priority = models.SmallIntegerField(
+        blank=True,
+        null=True,
+        validators=[MinValueValidator(-8), MaxValueValidator(8)],
+    )
 
-    move_effect_chance = models.IntegerField(blank=True, null=True)
+    move_effect_chance = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
 
 class MoveName(HasMove, IsName):
@@ -1518,13 +1551,13 @@ class MoveFlavorText(HasMove, HasVersionGroup, IsFlavorText):
 
 
 class MoveChange(HasMove, HasVersionGroup, HasType, HasMoveEffect):
-    power = models.IntegerField(blank=True, null=True)
+    power = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(250)])
 
-    pp = models.IntegerField(blank=True, null=True)
+    pp = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(40)])
 
-    accuracy = models.IntegerField(blank=True, null=True)
+    accuracy = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
-    move_effect_chance = models.IntegerField(blank=True, null=True)
+    move_effect_chance = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
 
 ##############################
@@ -1642,25 +1675,37 @@ class MoveMeta(HasMetaAilment, HasMetaCategory):
         on_delete=models.CASCADE,
     )
 
-    min_hits = models.IntegerField(blank=True, null=True)
+    min_hits = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(6)]
+    )
 
-    max_hits = models.IntegerField(blank=True, null=True)
+    max_hits = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(10)]
+    )
 
-    min_turns = models.IntegerField(blank=True, null=True)
+    min_turns = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(15)]
+    )
 
-    max_turns = models.IntegerField(blank=True, null=True)
+    max_turns = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(2), MaxValueValidator(15)]
+    )
 
-    drain = models.IntegerField(blank=True, null=True)
+    drain = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)]
+    )
 
-    healing = models.IntegerField(blank=True, null=True)
+    healing = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-100), MaxValueValidator(100)]
+    )
 
-    crit_rate = models.IntegerField(blank=True, null=True)
+    crit_rate = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(8)])
 
-    ailment_chance = models.IntegerField(blank=True, null=True)
+    ailment_chance = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
-    flinch_chance = models.IntegerField(blank=True, null=True)
+    flinch_chance = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
-    stat_chance = models.IntegerField(blank=True, null=True)
+    stat_chance = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(100)])
 
 
 class MoveMetaAilment(HasName):
@@ -1680,7 +1725,7 @@ class MoveMetaCategoryDescription(HasMetaCategory, IsDescription):
 
 
 class MoveMetaStatChange(HasMove, HasStat):
-    change = models.IntegerField()
+    change = models.SmallIntegerField(validators=[MinValueValidator(-6), MaxValueValidator(6)])
 
 
 #######################
@@ -1689,9 +1734,9 @@ class MoveMetaStatChange(HasMove, HasStat):
 
 
 class Experience(HasGrowthRate):
-    level = models.IntegerField()
+    level = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
 
-    experience = models.IntegerField()
+    experience = models.PositiveIntegerField(validators=[MaxValueValidator(2147483647)])
 
 
 ###################
@@ -1709,7 +1754,7 @@ class Gender(HasName):
 
 
 class Machine(HasGrowthRate, HasItem):
-    machine_number = models.IntegerField()
+    machine_number = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
     version_group = models.ForeignKey(VersionGroup, blank=True, null=True, on_delete=models.CASCADE)
 
@@ -1757,9 +1802,9 @@ class PalPark(HasPokemonSpecies):
         on_delete=models.CASCADE,
     )
 
-    base_score = models.IntegerField(blank=True, null=True)
+    base_score = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    rate = models.IntegerField()
+    rate = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 ##########################
@@ -1768,7 +1813,7 @@ class PalPark(HasPokemonSpecies):
 
 
 class SuperContestEffect(PokeApiModel):
-    appeal = models.IntegerField()
+    appeal = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class SuperContestEffectFlavorText(IsFlavorText, HasSuperContestEffect):
@@ -1857,11 +1902,13 @@ class PokemonSpecies(HasName, HasGeneration, HasPokemonColor, HasPokemonShape, H
         on_delete=models.CASCADE,
     )
 
-    gender_rate = models.IntegerField(blank=True, null=True)
+    gender_rate = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(8)]
+    )
 
-    capture_rate = models.IntegerField(blank=True, null=True)
+    capture_rate = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
-    base_happiness = models.IntegerField(blank=True, null=True)
+    base_happiness = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
     is_baby = models.BooleanField(default=False)
 
@@ -1869,7 +1916,7 @@ class PokemonSpecies(HasName, HasGeneration, HasPokemonColor, HasPokemonShape, H
 
     is_mythical = models.BooleanField(default=False)
 
-    hatch_counter = models.IntegerField(blank=True, null=True)
+    hatch_counter = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
     has_gender_differences = models.BooleanField(default=False)
 
@@ -1893,11 +1940,11 @@ class PokemonFormFlavorText(IsFlavorText, HasPokemonForm, HasVersion):
 
 
 class Pokemon(HasName, HasPokemonSpecies, HasOrder):
-    height = models.IntegerField(blank=True, null=True)
+    height = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    weight = models.IntegerField(blank=True, null=True)
+    weight = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    base_experience = models.IntegerField(blank=True, null=True)
+    base_experience = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
     is_default = models.BooleanField(default=False)
 
@@ -1905,14 +1952,14 @@ class Pokemon(HasName, HasPokemonSpecies, HasOrder):
 class PokemonAbility(HasPokemon, HasAbility):
     is_hidden = models.BooleanField(default=False)
 
-    slot = models.IntegerField()
+    slot = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(3)])
 
 
 # model for a Pokemon's abilities that were used until a given generation
 class PokemonAbilityPast(HasPokemon, HasAbility, HasGeneration):
     is_hidden = models.BooleanField(default=False)
 
-    slot = models.IntegerField()
+    slot = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(3)])
 
 
 class PokemonColor(HasName):
@@ -1924,7 +1971,7 @@ class PokemonColorName(HasPokemonColor, IsName):
 
 
 class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
-    pokedex_number = models.IntegerField()
+    pokedex_number = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
 
 
 class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
@@ -1958,7 +2005,9 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     is_default = models.BooleanField(default=False)
 
-    min_level = models.IntegerField(blank=True, null=True)
+    min_level = models.PositiveSmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(1), MaxValueValidator(100)]
+    )
 
     location = models.ForeignKey(
         Location,
@@ -1978,13 +2027,15 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         Type, related_name="known_move", blank=True, null=True, on_delete=models.CASCADE
     )
 
-    min_happiness = models.IntegerField(blank=True, null=True)
+    min_happiness = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
-    min_beauty = models.IntegerField(blank=True, null=True)
+    min_beauty = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
-    min_affection = models.IntegerField(blank=True, null=True)
+    min_affection = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(255)])
 
-    relative_physical_stats = models.IntegerField(blank=True, null=True)
+    relative_physical_stats = models.SmallIntegerField(
+        blank=True, null=True, validators=[MinValueValidator(-1), MaxValueValidator(1)]
+    )
 
     party_species = models.ForeignKey(
         PokemonSpecies,
@@ -2041,13 +2092,13 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
 
     used_move = models.ForeignKey(Move, related_name="used_move", blank=True, null=True, on_delete=models.CASCADE)
 
-    min_move_count = models.IntegerField(blank=True, null=True)
+    min_move_count = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    min_steps = models.IntegerField(blank=True, null=True)
+    min_steps = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    min_damage_taken = models.IntegerField(blank=True, null=True)
+    min_damage_taken = models.PositiveIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
-    nature_bitmask = models.IntegerField(
+    nature_bitmask = models.PositiveIntegerField(
         blank=True,
         null=True,
         help_text="25-bit bitmask of allowed nature IDs (1 << (nature_id - 1))",
@@ -2064,6 +2115,7 @@ class PokemonEvolution(HasEvolutionTrigger, HasGender):
         blank=True,
         null=True,
         help_text="Percentage chance of evolution under this condition (0-100)",
+        validators=[MinValueValidator(0.0), MaxValueValidator(100.0)],
     )
 
 
@@ -2078,7 +2130,7 @@ class PokemonForm(HasName, HasPokemon, HasOrder):
 
     is_mega = models.BooleanField(default=False)
 
-    form_order = models.IntegerField(blank=True, null=True)
+    form_order = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
 
 class PokemonFormGeneration(HasPokemonForm, HasGeneration, HasGameIndex):
@@ -2130,7 +2182,7 @@ class PokemonHabitatName(IsName):
 
 
 class PokemonItem(HasPokemon, HasVersion, HasItem):
-    rarity = models.IntegerField()
+    rarity = models.PositiveSmallIntegerField(validators=[MaxValueValidator(100)])
 
 
 # PokemonMoveMethod
@@ -2148,8 +2200,8 @@ class MoveLearnMethodDescription(IsDescription, HasMoveLearnMethod):
 
 
 class PokemonMove(HasPokemon, HasMoveLearnMethod, HasVersionGroup, HasMove, HasOrder):
-    level = models.IntegerField()
-    enhancement_level = models.IntegerField(null=True, blank=True)
+    level = models.PositiveSmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+    enhancement_level = models.PositiveSmallIntegerField(null=True, blank=True, validators=[MaxValueValidator(100)])
 
 
 class PokemonShape(HasName):
@@ -2169,28 +2221,28 @@ class PokemonShapeName(IsName):
 
 
 class PokemonStat(HasPokemon, HasStat):
-    base_stat = models.IntegerField()
+    base_stat = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(255)])
 
-    effort = models.IntegerField()
+    effort = models.PositiveSmallIntegerField(validators=[MaxValueValidator(255)])
 
 
 class PokemonStatPast(HasPokemon, HasStat, HasGeneration):
-    base_stat = models.IntegerField()
+    base_stat = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(255)])
 
-    effort = models.IntegerField()
+    effort = models.PositiveSmallIntegerField(validators=[MaxValueValidator(255)])
 
 
 class PokemonType(HasPokemon, HasType):
-    slot = models.IntegerField()
+    slot = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(2)])
 
 
 class PokemonFormType(HasPokemonForm, HasType):
-    slot = models.IntegerField()
+    slot = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(2)])
 
 
 # model for a Pokemon's types that were used until a given generation
 class PokemonTypePast(HasPokemon, HasType, HasGeneration):
-    slot = models.IntegerField()
+    slot = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(2)])
 
 
 class PokemonSprites(HasPokemon):

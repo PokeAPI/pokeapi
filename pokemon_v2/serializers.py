@@ -4820,6 +4820,10 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
     pal_park_encounters = serializers.SerializerMethodField(
         "get_encounters", help_text="A list of encounters that can be had with this Pokémon species in pal park."
     )
+    legal_balls = serializers.SerializerMethodField(
+        "get_legal_balls",
+        help_text="A list of Poké Balls this Pokémon species can legally be found in, in any form in any mainline game.",
+    )
 
     class Meta:
         model = PokemonSpecies
@@ -4847,6 +4851,7 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
             "generation",
             "names",
             "pal_park_encounters",
+            "legal_balls",
             "form_descriptions",
             "flavor_text_entries",
             "genera",
@@ -4916,6 +4921,14 @@ class PokemonSpeciesDetailSerializer(serializers.ModelSerializer[PokemonSpecies]
         return cast(
             "ReturnList[ReturnDict[str, Any]]",
             PokemonSpeciesPalParkEncounterSerializer(pal_park_objects, many=True, context=self.context).data,
+        )
+
+    @extend_schema_field(ItemSummarySerializer(many=True))
+    def get_legal_balls(self, obj: PokemonSpecies) -> ReturnList[ReturnDict[str, Any]]:
+        balls = Item.objects.filter(pokemonspeciesballlegality__pokemon_species=obj).order_by("id")
+        return cast(
+            "ReturnList[ReturnDict[str, Any]]",
+            ItemSummarySerializer(balls, many=True, context=self.context).data,
         )
 
 

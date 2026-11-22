@@ -9376,6 +9376,13 @@ components:
           readOnly: true
           description: A list of encounters that can be had with this Pokémon species
             in pal park.
+        legal_balls:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemSummary'
+          readOnly: true
+          description: A list of Poké Balls this Pokémon species can legally be found
+            in, in any form in any mainline game.
         form_descriptions:
           type: array
           items:
@@ -9413,6 +9420,7 @@ components:
       - growth_rate
       - habitat
       - id
+      - legal_balls
       - name
       - names
       - pal_park_encounters

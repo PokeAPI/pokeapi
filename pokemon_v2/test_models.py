@@ -95,6 +95,60 @@ class EvolutionCSVDataIntegrityTestCase(TestCase):
             self.assertIn("PID", symbols)
 
 
+class BallLegalityCSVDataIntegrityTestCase(TestCase):
+    """Test data integrity of pokemon_species_ball_legality.csv."""
+
+    BALLS = frozenset(
+        {
+            "poke-ball",
+            "great-ball",
+            "ultra-ball",
+            "premier-ball",
+            "nest-ball",
+            "repeat-ball",
+            "dive-ball",
+            "net-ball",
+            "timer-ball",
+            "luxury-ball",
+            "dusk-ball",
+            "heal-ball",
+            "quick-ball",
+            "safari-ball",
+            "sport-ball",
+            "fast-ball",
+            "friend-ball",
+            "heavy-ball",
+            "level-ball",
+            "love-ball",
+            "lure-ball",
+            "moon-ball",
+            "dream-ball",
+            "beast-ball",
+        }
+    )
+
+    def test_ball_legality_rows(self):
+        csv_dir = os.path.join(settings.BASE_DIR, "data", "v2", "csv")
+        with open(os.path.join(csv_dir, "pokemon_species.csv"), encoding="utf-8") as f:
+            valid_species_ids = {row["id"] for row in csv.DictReader(f)}
+        with open(os.path.join(csv_dir, "items.csv"), encoding="utf-8") as f:
+            ball_ids = {row["id"] for row in csv.DictReader(f) if row["identifier"] in self.BALLS}
+        self.assertEqual(len(ball_ids), len(self.BALLS), "Not every ball exists in items.csv")
+
+        seen = set()
+        with open(os.path.join(csv_dir, "pokemon_species_ball_legality.csv"), encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                key = (row["pokemon_species_id"], row["item_id"])
+                if row["pokemon_species_id"] not in valid_species_ids:
+                    self.fail(f"{key}: pokemon_species_id doesn't exist in pokemon_species.csv")
+                if row["item_id"] not in ball_ids:
+                    self.fail(f"{key}: item_id is not a supported ball")
+                if key in seen:
+                    self.fail(f"{key}: duplicate row")
+                seen.add(key)
+        self.assertTrue(seen, "pokemon_species_ball_legality.csv has no rows")
+
+
 class CSVResourceNameValidationTestCase(TestCase):
     """
     Test that all resource identifiers in CSV files follow ASCII slug format.

@@ -165,6 +165,7 @@ from pokemon_v2.models import (
     PokemonShape,
     PokemonShapeName,
     PokemonSpecies,
+    PokemonSpeciesBallLegality,
     PokemonSpeciesDescription,
     PokemonSpeciesFlavorText,
     PokemonSpeciesName,
@@ -1717,6 +1718,17 @@ def _build_pal_parks() -> None:
     build_generic((PalPark,), "pal_park.csv", pal_parks_from_rows)
 
 
+def _build_ball_legality() -> None:
+    def ball_legality_from_rows(info: list[str]) -> Iterator[PokemonSpeciesBallLegality]:
+        yield PokemonSpeciesBallLegality(pokemon_species_id=int(info[0]), item_id=int(info[1]))
+
+    build_generic(
+        (PokemonSpeciesBallLegality,),
+        "pokemon_species_ball_legality.csv",
+        ball_legality_from_rows,
+    )
+
+
 def build_all() -> None:
     _build_languages()
     _build_regions()
@@ -1743,6 +1755,7 @@ def build_all() -> None:
     _build_pokemons()
     _build_encounters()
     _build_pal_parks()
+    _build_ball_legality()
 
 
 if __name__ == "__main__":

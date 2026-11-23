@@ -1914,6 +1914,10 @@ class APIData:
 
         return pal_park
 
+    @classmethod
+    def setup_pokemon_species_ball_legality_data(cls, pokemon_species, item):
+        return PokemonSpeciesBallLegality.objects.create(pokemon_species=pokemon_species, item=item)
+
 
 # Tests
 class APITests(APIData, APITestCase):
@@ -4132,6 +4136,11 @@ class APITests(APIData, APITestCase):
 
         pal_park = self.setup_pal_park_data(pokemon_species=pokemon_species)
 
+        beast_ball = self.setup_item_data(name="beast-ball")
+        dream_ball = self.setup_item_data(name="dream-ball")
+        self.setup_pokemon_species_ball_legality_data(pokemon_species, beast_ball)
+        self.setup_pokemon_species_ball_legality_data(pokemon_species, dream_ball)
+
         dex_number = self.setup_pokemon_dex_entry_data(
             pokemon_species=pokemon_species, pokedex=pokedex, entry_number=44
         )
@@ -4290,6 +4299,38 @@ class APITests(APIData, APITestCase):
         self.assertEqual(
             response.data["pal_park_encounters"][0]["area"]["url"],
             "{}{}/pal-park-area/{}/".format(TEST_HOST, API_V2, pal_park.pal_park_area.pk),
+        )
+        # legal ball params
+        self.assertEqual(
+            [ball["name"] for ball in response.data["legal_balls"]],
+            [beast_ball.name, dream_ball.name],
+        )
+        self.assertEqual(
+            response.data["legal_balls"][0]["url"],
+            "{}{}/item/{}/".format(TEST_HOST, API_V2, beast_ball.pk),
+        )
+
+    def test_pokemon_species_legal_balls(self):
+        pokemon_species = self.setup_pokemon_species_data(name="pkmn spcs for lgl blls")
+        other_species = self.setup_pokemon_species_data(name="othr pkmn spcs for lgl blls")
+        poke_ball = self.setup_item_data(name="poke-ball")
+        beast_ball = self.setup_item_data(name="beast-ball")
+        self.setup_pokemon_species_ball_legality_data(other_species, poke_ball)
+
+        url = "{}/pokemon-species/{}/".format(API_V2, pokemon_species.pk)
+
+        # no legal balls -> empty list, and another species' balls don't leak in
+        response = self.client.get(url, headers={"host": "testserver"})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["legal_balls"], [])
+
+        # results are ordered by item id, not by insertion order
+        self.setup_pokemon_species_ball_legality_data(pokemon_species, beast_ball)
+        self.setup_pokemon_species_ball_legality_data(pokemon_species, poke_ball)
+        response = self.client.get(url, headers={"host": "testserver"})
+        self.assertEqual(
+            [ball["name"] for ball in response.data["legal_balls"]],
+            [poke_ball.name, beast_ball.name],
         )
 
     def test_pokemon_api(self):

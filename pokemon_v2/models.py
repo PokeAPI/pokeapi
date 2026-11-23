@@ -206,6 +206,7 @@ __all__: tuple[str, ...] = (
     "PokemonShape",
     "PokemonShapeName",
     "PokemonSpecies",
+    "PokemonSpeciesBallLegality",
     "PokemonSpeciesDescription",
     "PokemonSpeciesFlavorText",
     "PokemonSpeciesName",
@@ -1805,6 +1806,10 @@ class PalPark(HasPokemonSpecies):
     base_score = models.PositiveSmallIntegerField(blank=True, null=True, validators=[MaxValueValidator(32767)])
 
     rate = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
+
+
+class PokemonSpeciesBallLegality(HasPokemonSpecies, HasItem):
+    """A Poke Ball (item) this species can legally be found in, in any mainline game and any form."""
 
 
 ##########################

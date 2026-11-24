@@ -188,6 +188,7 @@ __all__: tuple[str, ...] = (
     "PokemonColorName",
     "PokemonCries",
     "PokemonDexNumber",
+    "PokemonDexNumberVariety",
     "PokemonEggGroup",
     "PokemonEvolution",
     "PokemonForm",
@@ -735,6 +736,19 @@ class HasPokemon(PokeApiModel):
 class HasPokemonColor(PokeApiModel):
     pokemon_color = models.ForeignKey(
         "PokemonColor",
+        blank=True,
+        null=True,
+        related_name="%(class)s",
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        abstract = True
+
+
+class HasPokemonDexNumber(PokeApiModel):
+    pokemon_dex_number = models.ForeignKey(
+        "PokemonDexNumber",
         blank=True,
         null=True,
         related_name="%(class)s",
@@ -1972,6 +1986,10 @@ class PokemonColorName(HasPokemonColor, IsName):
 
 class PokemonDexNumber(HasPokemonSpecies, HasPokedex):
     pokedex_number = models.PositiveSmallIntegerField(validators=[MaxValueValidator(32767)])
+
+
+class PokemonDexNumberVariety(HasPokemonDexNumber, HasPokemon, HasOrder):
+    pass
 
 
 class PokemonEggGroup(HasPokemonSpecies, HasEggGroup):
